@@ -73,57 +73,6 @@ func (s *MarketingEventsExternal) DeleteMarketingV3MarketingEventsEventsExternal
 	return res, nil
 }
 
-func (s *MarketingEventsExternal) GetMarketingV3MarketingEventsEventsSearchDoSearch(ctx context.Context, request operations.GetMarketingV3MarketingEventsEventsSearchDoSearchRequest) (*operations.GetMarketingV3MarketingEventsEventsSearchDoSearchResponse, error) {
-	baseURL := s._serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/marketing/v3/marketing-events/events/search"
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetMarketingV3MarketingEventsEventsSearchDoSearchResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.CollectionResponseMarketingEventExternalUniqueIdentifierNoPaging
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.CollectionResponseMarketingEventExternalUniqueIdentifierNoPaging = out
-		}
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	}
-
-	return res, nil
-}
-
 func (s *MarketingEventsExternal) GetMarketingV3MarketingEventsEventsExternalEventIDGetByID(ctx context.Context, request operations.GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDRequest) (*operations.GetMarketingV3MarketingEventsEventsExternalEventIDGetByIDResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/marketing/v3/marketing-events/events/{externalEventId}", request.PathParams)

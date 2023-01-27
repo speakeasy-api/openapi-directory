@@ -21,6 +21,17 @@ const (
 	EndpointStateEnumUpdating         EndpointStateEnum = "UPDATING"
 )
 
+// EndpointInput
+// Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
+type EndpointInput struct {
+	Description      *string               `json:"description,omitempty"`
+	Labels           map[string]string     `json:"labels,omitempty"`
+	Network          *string               `json:"network,omitempty"`
+	Severity         *EndpointSeverityEnum `json:"severity,omitempty"`
+	ThreatExceptions []string              `json:"threatExceptions,omitempty"`
+	TrafficLogs      *bool                 `json:"trafficLogs,omitempty"`
+}
+
 // Endpoint
 // Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
 type Endpoint struct {
@@ -33,16 +44,7 @@ type Endpoint struct {
 	Network                *string               `json:"network,omitempty"`
 	Severity               *EndpointSeverityEnum `json:"severity,omitempty"`
 	State                  *EndpointStateEnum    `json:"state,omitempty"`
+	ThreatExceptions       []string              `json:"threatExceptions,omitempty"`
 	TrafficLogs            *bool                 `json:"trafficLogs,omitempty"`
 	UpdateTime             *string               `json:"updateTime,omitempty"`
-}
-
-// EndpointInput
-// Endpoint describes a single IDS endpoint. It defines a forwarding rule to which packets can be sent for IDS inspection.
-type EndpointInput struct {
-	Description *string               `json:"description,omitempty"`
-	Labels      map[string]string     `json:"labels,omitempty"`
-	Network     *string               `json:"network,omitempty"`
-	Severity    *EndpointSeverityEnum `json:"severity,omitempty"`
-	TrafficLogs *bool                 `json:"trafficLogs,omitempty"`
 }

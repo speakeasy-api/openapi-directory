@@ -34,6 +34,7 @@ type Cluster struct {
 	EnableKubernetesAlpha          *bool                           `json:"enableKubernetesAlpha,omitempty"`
 	EnableTpu                      *bool                           `json:"enableTpu,omitempty"`
 	Endpoint                       *string                         `json:"endpoint,omitempty"`
+	Etag                           *string                         `json:"etag,omitempty"`
 	ExpireTime                     *string                         `json:"expireTime,omitempty"`
 	ID                             *string                         `json:"id,omitempty"`
 	IdentityServiceConfig          *IdentityServiceConfig          `json:"identityServiceConfig,omitempty"`
@@ -101,6 +102,7 @@ type ClusterInput struct {
 	EnableKubernetesAlpha          *bool                           `json:"enableKubernetesAlpha,omitempty"`
 	EnableTpu                      *bool                           `json:"enableTpu,omitempty"`
 	Endpoint                       *string                         `json:"endpoint,omitempty"`
+	Etag                           *string                         `json:"etag,omitempty"`
 	ExpireTime                     *string                         `json:"expireTime,omitempty"`
 	IdentityServiceConfig          *IdentityServiceConfig          `json:"identityServiceConfig,omitempty"`
 	InitialClusterVersion          *string                         `json:"initialClusterVersion,omitempty"`

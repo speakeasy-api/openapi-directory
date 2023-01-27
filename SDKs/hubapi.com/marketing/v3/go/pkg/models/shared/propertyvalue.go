@@ -85,16 +85,18 @@ const (
 )
 
 type PropertyValue struct {
-	Name                    string                  `json:"name"`
-	RequestID               string                  `json:"requestId"`
-	SelectedByUser          bool                    `json:"selectedByUser"`
-	SelectedByUserTimestamp int64                   `json:"selectedByUserTimestamp"`
-	Source                  PropertyValueSourceEnum `json:"source"`
-	SourceID                string                  `json:"sourceId"`
-	SourceLabel             string                  `json:"sourceLabel"`
-	SourceMetadata          string                  `json:"sourceMetadata"`
-	SourceVid               []int64                 `json:"sourceVid"`
-	Timestamp               int64                   `json:"timestamp"`
-	UpdatedByUserID         *int32                  `json:"updatedByUserId,omitempty"`
-	Value                   string                  `json:"value"`
+	Name                               string                  `json:"name"`
+	PersistenceTimestamp               *int64                  `json:"persistenceTimestamp,omitempty"`
+	RequestID                          string                  `json:"requestId"`
+	SelectedByUser                     bool                    `json:"selectedByUser"`
+	SelectedByUserTimestamp            int64                   `json:"selectedByUserTimestamp"`
+	Source                             PropertyValueSourceEnum `json:"source"`
+	SourceID                           string                  `json:"sourceId"`
+	SourceLabel                        string                  `json:"sourceLabel"`
+	SourceMetadata                     string                  `json:"sourceMetadata"`
+	SourceVid                          []int64                 `json:"sourceVid"`
+	Timestamp                          int64                   `json:"timestamp"`
+	UpdatedByUserID                    *int32                  `json:"updatedByUserId,omitempty"`
+	UseTimestampAsPersistenceTimestamp *bool                   `json:"useTimestampAsPersistenceTimestamp,omitempty"`
+	Value                              string                  `json:"value"`
 }

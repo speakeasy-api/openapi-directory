@@ -108,6 +108,7 @@ func main() {
 
 * `WorkloadmanagerProjectsLocationsEvaluationsCreate` - Creates a new Evaluation in a given project and location.
 * `WorkloadmanagerProjectsLocationsEvaluationsList` - Lists Evaluations in a given project and location.
+* `WorkloadmanagerProjectsLocationsInsightsWriteInsight` - Write the data insights to workload manager data warehouse.
 * `WorkloadmanagerProjectsLocationsList` - Lists information about the supported locations for this service.
 * `WorkloadmanagerProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `WorkloadmanagerProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.

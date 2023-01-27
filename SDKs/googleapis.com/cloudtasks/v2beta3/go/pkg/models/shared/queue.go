@@ -21,6 +21,7 @@ const (
 // A queue is a container of related tasks. Queues are configured to manage how those tasks are dispatched. Configurable properties include rate limits, retry options, queue types, and others.
 type Queue struct {
 	AppEngineHTTPQueue       *AppEngineHTTPQueue       `json:"appEngineHttpQueue,omitempty"`
+	HTTPTarget               *HTTPTarget               `json:"httpTarget,omitempty"`
 	Name                     *string                   `json:"name,omitempty"`
 	PurgeTime                *string                   `json:"purgeTime,omitempty"`
 	RateLimits               *RateLimits               `json:"rateLimits,omitempty"`

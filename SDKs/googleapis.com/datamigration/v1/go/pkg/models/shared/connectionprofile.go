@@ -34,6 +34,7 @@ type ConnectionProfile struct {
 	Labels      map[string]string              `json:"labels,omitempty"`
 	Mysql       *MySQLConnectionProfile        `json:"mysql,omitempty"`
 	Name        *string                        `json:"name,omitempty"`
+	Oracle      *OracleConnectionProfile       `json:"oracle,omitempty"`
 	Postgresql  *PostgreSQLConnectionProfile   `json:"postgresql,omitempty"`
 	Provider    *ConnectionProfileProviderEnum `json:"provider,omitempty"`
 	State       *ConnectionProfileStateEnum    `json:"state,omitempty"`
@@ -50,6 +51,7 @@ type ConnectionProfileInput struct {
 	Labels      map[string]string                 `json:"labels,omitempty"`
 	Mysql       *MySQLConnectionProfileInput      `json:"mysql,omitempty"`
 	Name        *string                           `json:"name,omitempty"`
+	Oracle      *OracleConnectionProfileInput     `json:"oracle,omitempty"`
 	Postgresql  *PostgreSQLConnectionProfileInput `json:"postgresql,omitempty"`
 	Provider    *ConnectionProfileProviderEnum    `json:"provider,omitempty"`
 	State       *ConnectionProfileStateEnum       `json:"state,omitempty"`

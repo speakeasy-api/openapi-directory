@@ -8,6 +8,8 @@ const (
 	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumCloudPubsub                 GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "CLOUD_PUBSUB"
 	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumDataprocMetastore           GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "DATAPROC_METASTORE"
 	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumDataplex                    GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "DATAPLEX"
+	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumCloudSQL                    GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "CLOUD_SQL"
+	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumLooker                      GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "LOOKER"
 )
 
 // GoogleCloudDatacatalogV1DataplexExternalTable

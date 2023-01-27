@@ -77,7 +77,7 @@ func main() {
 * `CloudsupportCasesEscalate` - Escalate a case. Escalating a case will initiate the Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
 * `CloudsupportCasesGet` - Retrieve the specified case.
 * `CloudsupportCasesList` - Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
-* `CloudsupportCasesPatch` - Update the specified case. Only a subset of fields (display_name, description, time_zone, subscriber_email_addresses, related_resources, severity, priority, primary_contact, and labels) can be updated.
+* `CloudsupportCasesPatch` - Update the specified case. Only a subset of fields can be updated.
 * `CloudsupportCasesSearch` - Search cases using the specified query.
 
 ### media

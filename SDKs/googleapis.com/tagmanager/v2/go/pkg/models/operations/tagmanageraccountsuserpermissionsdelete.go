@@ -124,6 +124,7 @@ const (
 	TagmanagerAccountsUserPermissionsDeleteTypeEnumServerPageLocationURL                               TagmanagerAccountsUserPermissionsDeleteTypeEnum = "serverPageLocationUrl"
 	TagmanagerAccountsUserPermissionsDeleteTypeEnumServerPageLocationPath                              TagmanagerAccountsUserPermissionsDeleteTypeEnum = "serverPageLocationPath"
 	TagmanagerAccountsUserPermissionsDeleteTypeEnumServerPageLocationHostname                          TagmanagerAccountsUserPermissionsDeleteTypeEnum = "serverPageLocationHostname"
+	TagmanagerAccountsUserPermissionsDeleteTypeEnumVisitorRegion                                       TagmanagerAccountsUserPermissionsDeleteTypeEnum = "visitorRegion"
 )
 
 type TagmanagerAccountsUserPermissionsDeleteQueryParams struct {

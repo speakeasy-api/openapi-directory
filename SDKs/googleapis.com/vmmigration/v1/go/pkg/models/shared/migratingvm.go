@@ -20,6 +20,7 @@ const (
 // MigratingVM
 // MigratingVm describes the VM that will be migrated from a Source environment and its replication state.
 type MigratingVM struct {
+	AwsSourceVMDetails          *AwsSourceVMDetails          `json:"awsSourceVmDetails,omitempty"`
 	ComputeEngineTargetDefaults *ComputeEngineTargetDefaults `json:"computeEngineTargetDefaults,omitempty"`
 	CreateTime                  *string                      `json:"createTime,omitempty"`
 	CurrentSyncInfo             *ReplicationCycle            `json:"currentSyncInfo,omitempty"`
@@ -42,6 +43,7 @@ type MigratingVM struct {
 // MigratingVMInput
 // MigratingVm describes the VM that will be migrated from a Source environment and its replication state.
 type MigratingVMInput struct {
+	AwsSourceVMDetails          *AwsSourceVMDetails               `json:"awsSourceVmDetails,omitempty"`
 	ComputeEngineTargetDefaults *ComputeEngineTargetDefaultsInput `json:"computeEngineTargetDefaults,omitempty"`
 	CurrentSyncInfo             *ReplicationCycle                 `json:"currentSyncInfo,omitempty"`
 	Description                 *string                           `json:"description,omitempty"`

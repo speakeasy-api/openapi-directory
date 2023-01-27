@@ -9,6 +9,7 @@ const (
 	DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnumSetVolume              DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum = "SET_VOLUME"
 	DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnumWipeUsers              DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum = "WIPE_USERS"
 	DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnumRemotePowerwash        DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum = "REMOTE_POWERWASH"
+	DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnumDeviceStartCrdSession  DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum = "DEVICE_START_CRD_SESSION"
 )
 
 // DirectoryChromeosdevicesIssueCommandRequest

@@ -253,6 +253,55 @@ func (s *Projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkCl
 	return res, nil
 }
 
+// RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissed - Mark the Recommendation State as Dismissed. Users can use this method to indicate to the Recommender API that an ACTIVE recommendation has to be marked back as DISMISSED. MarkRecommendationDismissed can be applied to recommendations in ACTIVE state. Requires the recommender.*.update IAM permission for the specified recommender.
+func (s *Projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedRequest) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:markDismissed", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkDismissedResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudRecommenderV1Recommendation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudRecommenderV1Recommendation = out
+		}
+	}
+
+	return res, nil
+}
+
 // RecommenderProjectsLocationsRecommendersRecommendationsMarkFailed - Marks the Recommendation State as Failed. Users can use this method to indicate to the Recommender API that they have applied the recommendation themselves, and the operation failed. This stops the recommendation content from being updated. Associated insights are frozen and placed in the ACCEPTED state. MarkRecommendationFailed can be applied to recommendations in ACTIVE, CLAIMED, SUCCEEDED, or FAILED state. Requires the recommender.*.update IAM permission for the specified recommender.
 func (s *Projects) RecommenderProjectsLocationsRecommendersRecommendationsMarkFailed(ctx context.Context, request operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedRequest) (*operations.RecommenderProjectsLocationsRecommendersRecommendationsMarkFailedResponse, error) {
 	baseURL := s._serverURL

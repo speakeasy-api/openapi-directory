@@ -74,7 +74,7 @@ func main() {
 
 ### comments
 
-* `DriveCommentsCreate` - Creates a new comment on a file.
+* `DriveCommentsCreate` - Creates a comment on a file.
 * `DriveCommentsDelete` - Deletes a comment.
 * `DriveCommentsGet` - Gets a comment by ID.
 * `DriveCommentsList` - Lists a file's comments.
@@ -82,7 +82,7 @@ func main() {
 
 ### drives
 
-* `DriveDrivesCreate` - Creates a new shared drive.
+* `DriveDrivesCreate` - Creates a shared drive.
 * `DriveDrivesDelete` - Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
 * `DriveDrivesGet` - Gets a shared drive's metadata by ID.
 * `DriveDrivesHide` - Hides a shared drive from the default view.
@@ -93,7 +93,7 @@ func main() {
 ### files
 
 * `DriveFilesCopy` - Creates a copy of a file and applies any requested updates with patch semantics. Folders cannot be copied.
-* `DriveFilesCreate` - Creates a new file.
+* `DriveFilesCreate` - Creates a file.
 * `DriveFilesDelete` - Permanently deletes a file owned by the user without moving it to the trash. If the file belongs to a shared drive the user must be an organizer on the parent. If the target is a folder, all descendants owned by the user are also deleted.
 * `DriveFilesEmptyTrash` - Permanently deletes all of the user's trashed files.
 * `DriveFilesExport` - Exports a Google Workspace document to the requested MIME type and returns exported byte content. Note that the exported content is limited to 10MB.
@@ -115,7 +115,7 @@ func main() {
 
 ### replies
 
-* `DriveRepliesCreate` - Creates a new reply to a comment.
+* `DriveRepliesCreate` - Creates a reply to a comment.
 * `DriveRepliesDelete` - Deletes a reply.
 * `DriveRepliesGet` - Gets a reply by ID.
 * `DriveRepliesList` - Lists a comment's replies.

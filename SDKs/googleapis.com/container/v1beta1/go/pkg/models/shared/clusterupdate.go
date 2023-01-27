@@ -17,6 +17,14 @@ const (
 	ClusterUpdateDesiredPrivateIpv6GoogleAccessEnumPrivateIpv6GoogleAccessBidirectional ClusterUpdateDesiredPrivateIpv6GoogleAccessEnum = "PRIVATE_IPV6_GOOGLE_ACCESS_BIDIRECTIONAL"
 )
 
+type ClusterUpdateDesiredStackTypeEnum string
+
+const (
+	ClusterUpdateDesiredStackTypeEnumStackTypeUnspecified ClusterUpdateDesiredStackTypeEnum = "STACK_TYPE_UNSPECIFIED"
+	ClusterUpdateDesiredStackTypeEnumIpv4                 ClusterUpdateDesiredStackTypeEnum = "IPV4"
+	ClusterUpdateDesiredStackTypeEnumIpv4Ipv6             ClusterUpdateDesiredStackTypeEnum = "IPV4_IPV6"
+)
+
 // ClusterUpdate
 // ClusterUpdate describes an update to the cluster. Exactly one update can be applied to a cluster with each request, so at most one field can be provided.
 type ClusterUpdate struct {
@@ -60,9 +68,11 @@ type ClusterUpdate struct {
 	DesiredResourceUsageExportConfig      *ResourceUsageExportConfig                       `json:"desiredResourceUsageExportConfig,omitempty"`
 	DesiredServiceExternalIpsConfig       *ServiceExternalIPsConfig                        `json:"desiredServiceExternalIpsConfig,omitempty"`
 	DesiredShieldedNodes                  *ShieldedNodes                                   `json:"desiredShieldedNodes,omitempty"`
+	DesiredStackType                      *ClusterUpdateDesiredStackTypeEnum               `json:"desiredStackType,omitempty"`
 	DesiredTpuConfig                      *TpuConfig                                       `json:"desiredTpuConfig,omitempty"`
 	DesiredVerticalPodAutoscaling         *VerticalPodAutoscaling                          `json:"desiredVerticalPodAutoscaling,omitempty"`
 	DesiredWorkloadAltsConfig             *WorkloadAltsConfig                              `json:"desiredWorkloadAltsConfig,omitempty"`
 	DesiredWorkloadCertificates           *WorkloadCertificates                            `json:"desiredWorkloadCertificates,omitempty"`
 	DesiredWorkloadIdentityConfig         *WorkloadIdentityConfig                          `json:"desiredWorkloadIdentityConfig,omitempty"`
+	Etag                                  *string                                          `json:"etag,omitempty"`
 }

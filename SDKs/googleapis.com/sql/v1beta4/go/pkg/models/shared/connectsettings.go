@@ -34,6 +34,7 @@ const (
 	ConnectSettingsDatabaseVersionEnumMysql8028                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_28"
 	ConnectSettingsDatabaseVersionEnumMysql8029                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_29"
 	ConnectSettingsDatabaseVersionEnumMysql8030                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_30"
+	ConnectSettingsDatabaseVersionEnumMysql8031                     ConnectSettingsDatabaseVersionEnum = "MYSQL_8_0_31"
 	ConnectSettingsDatabaseVersionEnumSqlserver2019Standard         ConnectSettingsDatabaseVersionEnum = "SQLSERVER_2019_STANDARD"
 	ConnectSettingsDatabaseVersionEnumSqlserver2019Enterprise       ConnectSettingsDatabaseVersionEnum = "SQLSERVER_2019_ENTERPRISE"
 	ConnectSettingsDatabaseVersionEnumSqlserver2019Express          ConnectSettingsDatabaseVersionEnum = "SQLSERVER_2019_EXPRESS"

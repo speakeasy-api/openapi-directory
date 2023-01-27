@@ -14,7 +14,7 @@ type HTTPClient interface {
 	Do(req *http.Request) (*http.Response, error)
 }
 
-// SDK Documentation: https://developers.google.com/actions/smarthome/create-app#request-sync
+// SDK Documentation: https://developers.home.google.com/cloud-to-cloud/get-started
 type SDK struct {
 	AgentUsers *AgentUsers
 	Devices    *Devices

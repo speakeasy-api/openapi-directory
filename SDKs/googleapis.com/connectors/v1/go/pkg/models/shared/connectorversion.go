@@ -7,6 +7,7 @@ const (
 	ConnectorVersionLaunchStageEnumPreview                ConnectorVersionLaunchStageEnum = "PREVIEW"
 	ConnectorVersionLaunchStageEnumGa                     ConnectorVersionLaunchStageEnum = "GA"
 	ConnectorVersionLaunchStageEnumDeprecated             ConnectorVersionLaunchStageEnum = "DEPRECATED"
+	ConnectorVersionLaunchStageEnumPrivatePreview         ConnectorVersionLaunchStageEnum = "PRIVATE_PREVIEW"
 )
 
 // ConnectorVersion

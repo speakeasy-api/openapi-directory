@@ -14,6 +14,7 @@ const (
 	ParameterMetadataParamTypeEnumPubsubTopic        ParameterMetadataParamTypeEnum = "PUBSUB_TOPIC"
 	ParameterMetadataParamTypeEnumPubsubSubscription ParameterMetadataParamTypeEnum = "PUBSUB_SUBSCRIPTION"
 	ParameterMetadataParamTypeEnumBigqueryTable      ParameterMetadataParamTypeEnum = "BIGQUERY_TABLE"
+	ParameterMetadataParamTypeEnumJavascriptUdfFile  ParameterMetadataParamTypeEnum = "JAVASCRIPT_UDF_FILE"
 )
 
 // ParameterMetadata

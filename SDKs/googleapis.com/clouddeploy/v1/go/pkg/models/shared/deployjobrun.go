@@ -7,6 +7,7 @@ const (
 	DeployJobRunFailureCauseEnumCloudBuildUnavailable   DeployJobRunFailureCauseEnum = "CLOUD_BUILD_UNAVAILABLE"
 	DeployJobRunFailureCauseEnumExecutionFailed         DeployJobRunFailureCauseEnum = "EXECUTION_FAILED"
 	DeployJobRunFailureCauseEnumDeadlineExceeded        DeployJobRunFailureCauseEnum = "DEADLINE_EXCEEDED"
+	DeployJobRunFailureCauseEnumCloudBuildRequestFailed DeployJobRunFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
 )
 
 // DeployJobRun

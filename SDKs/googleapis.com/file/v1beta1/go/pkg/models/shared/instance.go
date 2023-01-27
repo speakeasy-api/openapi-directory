@@ -1,5 +1,13 @@
 package shared
 
+type InstanceProtocolEnum string
+
+const (
+	InstanceProtocolEnumFileProtocolUnspecified InstanceProtocolEnum = "FILE_PROTOCOL_UNSPECIFIED"
+	InstanceProtocolEnumNfsV3                   InstanceProtocolEnum = "NFS_V3"
+	InstanceProtocolEnumNfsV41                  InstanceProtocolEnum = "NFS_V4_1"
+)
+
 type InstanceStateEnum string
 
 const (
@@ -51,6 +59,7 @@ type Instance struct {
 	MultiShareEnabled  *bool                           `json:"multiShareEnabled,omitempty"`
 	Name               *string                         `json:"name,omitempty"`
 	Networks           []NetworkConfig                 `json:"networks,omitempty"`
+	Protocol           *InstanceProtocolEnum           `json:"protocol,omitempty"`
 	SatisfiesPzs       *bool                           `json:"satisfiesPzs,omitempty"`
 	State              *InstanceStateEnum              `json:"state,omitempty"`
 	StatusMessage      *string                         `json:"statusMessage,omitempty"`
@@ -61,13 +70,14 @@ type Instance struct {
 // InstanceInput
 // A Filestore instance.
 type InstanceInput struct {
-	CapacityGb        *string              `json:"capacityGb,omitempty"`
-	Description       *string              `json:"description,omitempty"`
-	Etag              *string              `json:"etag,omitempty"`
-	FileShares        []FileShareConfig    `json:"fileShares,omitempty"`
-	KmsKeyName        *string              `json:"kmsKeyName,omitempty"`
-	Labels            map[string]string    `json:"labels,omitempty"`
-	MultiShareEnabled *bool                `json:"multiShareEnabled,omitempty"`
-	Networks          []NetworkConfigInput `json:"networks,omitempty"`
-	Tier              *InstanceTierEnum    `json:"tier,omitempty"`
+	CapacityGb        *string               `json:"capacityGb,omitempty"`
+	Description       *string               `json:"description,omitempty"`
+	Etag              *string               `json:"etag,omitempty"`
+	FileShares        []FileShareConfig     `json:"fileShares,omitempty"`
+	KmsKeyName        *string               `json:"kmsKeyName,omitempty"`
+	Labels            map[string]string     `json:"labels,omitempty"`
+	MultiShareEnabled *bool                 `json:"multiShareEnabled,omitempty"`
+	Networks          []NetworkConfigInput  `json:"networks,omitempty"`
+	Protocol          *InstanceProtocolEnum `json:"protocol,omitempty"`
+	Tier              *InstanceTierEnum     `json:"tier,omitempty"`
 }

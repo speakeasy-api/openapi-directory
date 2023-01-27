@@ -2,7 +2,7 @@ package shared
 
 // Product
 //
-//	Required product attributes are primarily defined by the products data specification. See the Products Data Specification Help Center article for information. Product data. After inserting, updating, or deleting a product, it may take several minutes before changes take effect.
+//	Required product attributes are primarily defined by the product data specification. See the Product Data Specification Help Center article for information. Product data. After inserting, updating, or deleting a product, it may take several minutes before changes take effect.
 type Product struct {
 	AdditionalImageLinks         []string                       `json:"additionalImageLinks,omitempty"`
 	AdditionalSizeType           *string                        `json:"additionalSizeType,omitempty"`
@@ -48,6 +48,7 @@ type Product struct {
 	IsBundle                     *bool                          `json:"isBundle,omitempty"`
 	ItemGroupID                  *string                        `json:"itemGroupId,omitempty"`
 	Kind                         *string                        `json:"kind,omitempty"`
+	LifestyleImageLinks          []string                       `json:"lifestyleImageLinks,omitempty"`
 	Link                         *string                        `json:"link,omitempty"`
 	LinkTemplate                 *string                        `json:"linkTemplate,omitempty"`
 	LoyaltyPoints                *LoyaltyPoints                 `json:"loyaltyPoints,omitempty"`

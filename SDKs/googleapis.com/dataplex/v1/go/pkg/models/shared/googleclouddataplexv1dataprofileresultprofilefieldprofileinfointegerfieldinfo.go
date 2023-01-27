@@ -1,7 +1,7 @@
 package shared
 
 // GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo
-// IntegerFieldInfo defines output for any integer type field.
+// The profile information for an integer type field.
 type GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo struct {
 	Average           *float64 `json:"average,omitempty"`
 	Max               *string  `json:"max,omitempty"`

@@ -12,7 +12,8 @@ const (
 // DirectoryChromeosdevicesCommandResult
 // The result of executing a command.
 type DirectoryChromeosdevicesCommandResult struct {
-	ErrorMessage *string                                          `json:"errorMessage,omitempty"`
-	ExecuteTime  *string                                          `json:"executeTime,omitempty"`
-	Result       *DirectoryChromeosdevicesCommandResultResultEnum `json:"result,omitempty"`
+	CommandResultPayload *string                                          `json:"commandResultPayload,omitempty"`
+	ErrorMessage         *string                                          `json:"errorMessage,omitempty"`
+	ExecuteTime          *string                                          `json:"executeTime,omitempty"`
+	Result               *DirectoryChromeosdevicesCommandResultResultEnum `json:"result,omitempty"`
 }

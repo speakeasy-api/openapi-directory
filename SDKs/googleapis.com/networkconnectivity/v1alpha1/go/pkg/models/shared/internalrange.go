@@ -25,7 +25,7 @@ const (
 )
 
 // InternalRange
-// The InternalRange resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (it's usage and peering behavior). Networking resources can link to this range if they are created as belonging to it. Next id: 14
+// The internal range resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (its usage and peering behavior). Networking resources can link to this range if they are created as belonging to it.
 type InternalRange struct {
 	CreateTime      *string                     `json:"createTime,omitempty"`
 	Description     *string                     `json:"description,omitempty"`
@@ -43,7 +43,7 @@ type InternalRange struct {
 }
 
 // InternalRangeInput
-// The InternalRange resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (it's usage and peering behavior). Networking resources can link to this range if they are created as belonging to it. Next id: 14
+// The internal range resource for IPAM operations within a VPC network. Used to represent a private address range along with behavioral characterstics of that range (its usage and peering behavior). Networking resources can link to this range if they are created as belonging to it.
 type InternalRangeInput struct {
 	CreateTime      *string                     `json:"createTime,omitempty"`
 	Description     *string                     `json:"description,omitempty"`

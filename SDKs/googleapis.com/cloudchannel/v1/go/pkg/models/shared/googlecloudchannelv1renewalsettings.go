@@ -11,21 +11,11 @@ const (
 	GoogleCloudChannelV1RenewalSettingsPaymentPlanEnumOffline                GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum = "OFFLINE"
 )
 
-// GoogleCloudChannelV1RenewalSettingsInput
+// GoogleCloudChannelV1RenewalSettings
 // Renewal settings for renewable Offers.
-type GoogleCloudChannelV1RenewalSettingsInput struct {
+type GoogleCloudChannelV1RenewalSettings struct {
 	EnableRenewal   *bool                                               `json:"enableRenewal,omitempty"`
 	PaymentCycle    *GoogleCloudChannelV1Period                         `json:"paymentCycle,omitempty"`
 	PaymentPlan     *GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum `json:"paymentPlan,omitempty"`
 	ResizeUnitCount *bool                                               `json:"resizeUnitCount,omitempty"`
-}
-
-// GoogleCloudChannelV1RenewalSettings
-// Renewal settings for renewable Offers.
-type GoogleCloudChannelV1RenewalSettings struct {
-	EnableRenewal         *bool                                               `json:"enableRenewal,omitempty"`
-	PaymentCycle          *GoogleCloudChannelV1Period                         `json:"paymentCycle,omitempty"`
-	PaymentPlan           *GoogleCloudChannelV1RenewalSettingsPaymentPlanEnum `json:"paymentPlan,omitempty"`
-	ResizeUnitCount       *bool                                               `json:"resizeUnitCount,omitempty"`
-	ScheduledRenewalOffer *string                                             `json:"scheduledRenewalOffer,omitempty"`
 }

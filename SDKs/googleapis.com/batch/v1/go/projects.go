@@ -78,6 +78,48 @@ func (s *Projects) BatchProjectsLocationsJobsCreate(ctx context.Context, request
 	return res, nil
 }
 
+// BatchProjectsLocationsJobsGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+func (s *Projects) BatchProjectsLocationsJobsGetIamPolicy(ctx context.Context, request operations.BatchProjectsLocationsJobsGetIamPolicyRequest) (*operations.BatchProjectsLocationsJobsGetIamPolicyResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.BatchProjectsLocationsJobsGetIamPolicyResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Policy
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Policy = out
+		}
+	}
+
+	return res, nil
+}
+
 // BatchProjectsLocationsJobsList - List all Jobs for a project within a region.
 func (s *Projects) BatchProjectsLocationsJobsList(ctx context.Context, request operations.BatchProjectsLocationsJobsListRequest) (*operations.BatchProjectsLocationsJobsListResponse, error) {
 	baseURL := s._serverURL
@@ -120,6 +162,55 @@ func (s *Projects) BatchProjectsLocationsJobsList(ctx context.Context, request o
 	return res, nil
 }
 
+// BatchProjectsLocationsJobsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+func (s *Projects) BatchProjectsLocationsJobsSetIamPolicy(ctx context.Context, request operations.BatchProjectsLocationsJobsSetIamPolicyRequest) (*operations.BatchProjectsLocationsJobsSetIamPolicyResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.BatchProjectsLocationsJobsSetIamPolicyResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Policy
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Policy = out
+		}
+	}
+
+	return res, nil
+}
+
 // BatchProjectsLocationsJobsTaskGroupsTasksList - List Tasks associated with a job.
 func (s *Projects) BatchProjectsLocationsJobsTaskGroupsTasksList(ctx context.Context, request operations.BatchProjectsLocationsJobsTaskGroupsTasksListRequest) (*operations.BatchProjectsLocationsJobsTaskGroupsTasksListResponse, error) {
 	baseURL := s._serverURL
@@ -156,6 +247,55 @@ func (s *Projects) BatchProjectsLocationsJobsTaskGroupsTasksList(ctx context.Con
 			}
 
 			res.ListTasksResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// BatchProjectsLocationsJobsTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+func (s *Projects) BatchProjectsLocationsJobsTestIamPermissions(ctx context.Context, request operations.BatchProjectsLocationsJobsTestIamPermissionsRequest) (*operations.BatchProjectsLocationsJobsTestIamPermissionsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.BatchProjectsLocationsJobsTestIamPermissionsResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.TestIamPermissionsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TestIamPermissionsResponse = out
 		}
 	}
 
@@ -422,146 +562,6 @@ func (s *Projects) BatchProjectsLocationsStateReport(ctx context.Context, reques
 			}
 
 			res.ReportAgentStateResponse = out
-		}
-	}
-
-	return res, nil
-}
-
-// BatchProjectsLocationsTasksGetIamPolicy - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-func (s *Projects) BatchProjectsLocationsTasksGetIamPolicy(ctx context.Context, request operations.BatchProjectsLocationsTasksGetIamPolicyRequest) (*operations.BatchProjectsLocationsTasksGetIamPolicyResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:getIamPolicy", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.BatchProjectsLocationsTasksGetIamPolicyResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Policy
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Policy = out
-		}
-	}
-
-	return res, nil
-}
-
-// BatchProjectsLocationsTasksSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-func (s *Projects) BatchProjectsLocationsTasksSetIamPolicy(ctx context.Context, request operations.BatchProjectsLocationsTasksSetIamPolicyRequest) (*operations.BatchProjectsLocationsTasksSetIamPolicyResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:setIamPolicy", request.PathParams)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.BatchProjectsLocationsTasksSetIamPolicyResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Policy
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Policy = out
-		}
-	}
-
-	return res, nil
-}
-
-// BatchProjectsLocationsTasksTestIamPermissions - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-func (s *Projects) BatchProjectsLocationsTasksTestIamPermissions(ctx context.Context, request operations.BatchProjectsLocationsTasksTestIamPermissionsRequest) (*operations.BatchProjectsLocationsTasksTestIamPermissionsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{resource}:testIamPermissions", request.PathParams)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.BatchProjectsLocationsTasksTestIamPermissionsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.TestIamPermissionsResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.TestIamPermissionsResponse = out
 		}
 	}
 

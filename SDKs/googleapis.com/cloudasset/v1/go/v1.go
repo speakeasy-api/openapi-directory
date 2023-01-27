@@ -204,7 +204,7 @@ func (s *V1) CloudassetAnalyzeOrgPolicies(ctx context.Context, request operation
 	return res, nil
 }
 
-// CloudassetAnalyzeOrgPolicyGovernedAssets - Analyzes organization policies governed assets (GCP resources or policies) under a scope. This RPC supports custom constraints and the following 10 canned constraints: * storage.uniformBucketLevelAccess * iam.disableServiceAccountKeyCreation * iam.allowedPolicyMemberDomains * compute.vmExternalIpAccess * appengine.enforceServiceAccountActAsCheck * gcp.resourceLocations * compute.trustedImageProjects * compute.skipDefaultNetworkCreation * compute.requireOsLogin * compute.disableNestedVirtualization This RPC only returns either resources of types supported by [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types), or IAM policies.
+// CloudassetAnalyzeOrgPolicyGovernedAssets - Analyzes organization policies governed assets (Google Cloud resources or policies) under a scope. This RPC supports custom constraints and the following 10 canned constraints: * storage.uniformBucketLevelAccess * iam.disableServiceAccountKeyCreation * iam.allowedPolicyMemberDomains * compute.vmExternalIpAccess * appengine.enforceServiceAccountActAsCheck * gcp.resourceLocations * compute.trustedImageProjects * compute.skipDefaultNetworkCreation * compute.requireOsLogin * compute.disableNestedVirtualization This RPC only returns either resources of types supported by [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types), or IAM policies.
 func (s *V1) CloudassetAnalyzeOrgPolicyGovernedAssets(ctx context.Context, request operations.CloudassetAnalyzeOrgPolicyGovernedAssetsRequest) (*operations.CloudassetAnalyzeOrgPolicyGovernedAssetsResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:analyzeOrgPolicyGovernedAssets", request.PathParams)
@@ -470,7 +470,7 @@ func (s *V1) CloudassetSearchAllIamPolicies(ctx context.Context, request operati
 	return res, nil
 }
 
-// CloudassetSearchAllResources - Searches all Cloud resources within the specified scope, such as a project, folder, or organization. The caller must be granted the `cloudasset.assets.searchAllResources` permission on the desired scope, otherwise the request will be rejected.
+// CloudassetSearchAllResources - Searches all Google Cloud resources within the specified scope, such as a project, folder, or organization. The caller must be granted the `cloudasset.assets.searchAllResources` permission on the desired scope, otherwise the request will be rejected.
 func (s *V1) CloudassetSearchAllResources(ctx context.Context, request operations.CloudassetSearchAllResourcesRequest) (*operations.CloudassetSearchAllResourcesResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{scope}:searchAllResources", request.PathParams)

@@ -4,6 +4,7 @@ package shared
 // The cluster config.
 type ClusterConfig struct {
 	AutoscalingConfig     *AutoscalingConfig         `json:"autoscalingConfig,omitempty"`
+	AuxiliaryNodeGroups   []AuxiliaryNodeGroup       `json:"auxiliaryNodeGroups,omitempty"`
 	ConfigBucket          *string                    `json:"configBucket,omitempty"`
 	DataprocMetricConfig  *DataprocMetricConfig      `json:"dataprocMetricConfig,omitempty"`
 	EncryptionConfig      *EncryptionConfig          `json:"encryptionConfig,omitempty"`
@@ -25,6 +26,7 @@ type ClusterConfig struct {
 // The cluster config.
 type ClusterConfigInput struct {
 	AutoscalingConfig     *AutoscalingConfig         `json:"autoscalingConfig,omitempty"`
+	AuxiliaryNodeGroups   []AuxiliaryNodeGroupInput  `json:"auxiliaryNodeGroups,omitempty"`
 	ConfigBucket          *string                    `json:"configBucket,omitempty"`
 	DataprocMetricConfig  *DataprocMetricConfig      `json:"dataprocMetricConfig,omitempty"`
 	EncryptionConfig      *EncryptionConfig          `json:"encryptionConfig,omitempty"`

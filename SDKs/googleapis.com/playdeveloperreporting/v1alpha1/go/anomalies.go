@@ -41,7 +41,7 @@ func (s *Anomalies) PlaydeveloperreportingAnomaliesList(ctx context.Context, req
 
 	utils.PopulateQueryParams(ctx, req, request.QueryParams)
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

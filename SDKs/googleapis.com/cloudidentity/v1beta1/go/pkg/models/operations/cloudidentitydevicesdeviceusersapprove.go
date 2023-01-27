@@ -30,7 +30,7 @@ type CloudidentityDevicesDeviceUsersApproveSecurity struct {
 type CloudidentityDevicesDeviceUsersApproveRequest struct {
 	PathParams  CloudidentityDevicesDeviceUsersApprovePathParams
 	QueryParams CloudidentityDevicesDeviceUsersApproveQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
+	Request     *shared.ApproveDeviceUserRequest `request:"mediaType=application/json"`
 	Security    CloudidentityDevicesDeviceUsersApproveSecurity
 }
 

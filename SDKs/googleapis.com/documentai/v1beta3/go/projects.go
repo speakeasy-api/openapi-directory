@@ -155,6 +155,48 @@ func (s *Projects) DocumentaiProjectsLocationsOperationsCancel(ctx context.Conte
 	return res, nil
 }
 
+// DocumentaiProjectsLocationsProcessorTypesGet - Gets a processor type detail.
+func (s *Projects) DocumentaiProjectsLocationsProcessorTypesGet(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorTypesGetRequest) (*operations.DocumentaiProjectsLocationsProcessorTypesGetResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DocumentaiProjectsLocationsProcessorTypesGetResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudDocumentaiV1beta3ProcessorType
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudDocumentaiV1beta3ProcessorType = out
+		}
+	}
+
+	return res, nil
+}
+
 // DocumentaiProjectsLocationsProcessorTypesList - Lists the processor types that exist.
 func (s *Projects) DocumentaiProjectsLocationsProcessorTypesList(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorTypesListRequest) (*operations.DocumentaiProjectsLocationsProcessorTypesListResponse, error) {
 	baseURL := s._serverURL
@@ -618,48 +660,6 @@ func (s *Projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluat
 			}
 
 			res.GoogleLongrunningOperation = out
-		}
-	}
-
-	return res, nil
-}
-
-// DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsGet - Retrieves a specific evaluation.
-func (s *Projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsGet(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsGetRequest) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsGetResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{name}", request.PathParams)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsGetResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.GoogleCloudDocumentaiV1beta3Evaluation
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GoogleCloudDocumentaiV1beta3Evaluation = out
 		}
 	}
 

@@ -11,5 +11,5 @@ type GoogleCloudChannelV1CommitmentSettings struct {
 // GoogleCloudChannelV1CommitmentSettingsInput
 // Commitment settings for commitment-based offers.
 type GoogleCloudChannelV1CommitmentSettingsInput struct {
-	RenewalSettings *GoogleCloudChannelV1RenewalSettingsInput `json:"renewalSettings,omitempty"`
+	RenewalSettings *GoogleCloudChannelV1RenewalSettings `json:"renewalSettings,omitempty"`
 }

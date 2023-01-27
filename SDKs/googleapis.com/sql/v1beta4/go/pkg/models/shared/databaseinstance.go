@@ -34,6 +34,7 @@ const (
 	DatabaseInstanceDatabaseVersionEnumMysql8028                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_28"
 	DatabaseInstanceDatabaseVersionEnumMysql8029                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_29"
 	DatabaseInstanceDatabaseVersionEnumMysql8030                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_30"
+	DatabaseInstanceDatabaseVersionEnumMysql8031                     DatabaseInstanceDatabaseVersionEnum = "MYSQL_8_0_31"
 	DatabaseInstanceDatabaseVersionEnumSqlserver2019Standard         DatabaseInstanceDatabaseVersionEnum = "SQLSERVER_2019_STANDARD"
 	DatabaseInstanceDatabaseVersionEnumSqlserver2019Enterprise       DatabaseInstanceDatabaseVersionEnum = "SQLSERVER_2019_ENTERPRISE"
 	DatabaseInstanceDatabaseVersionEnumSqlserver2019Express          DatabaseInstanceDatabaseVersionEnum = "SQLSERVER_2019_EXPRESS"

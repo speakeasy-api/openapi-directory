@@ -45,7 +45,12 @@ func main() {
             },
             Network: "et",
             Severity: "SEVERITY_UNSPECIFIED",
-            TrafficLogs: true,
+            ThreatExceptions: []string{
+                "vitae",
+                "totam",
+                "dolores",
+            },
+            TrafficLogs: false,
         },
     }
     

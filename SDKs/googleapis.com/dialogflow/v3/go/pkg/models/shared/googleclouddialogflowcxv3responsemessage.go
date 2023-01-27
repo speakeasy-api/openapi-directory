@@ -3,6 +3,7 @@ package shared
 // GoogleCloudDialogflowCxV3ResponseMessage
 // Represents a response message that can be returned by a conversational agent. Response messages are also used for output audio synthesis. The approach is as follows: * If at least one OutputAudioText response is present, then all OutputAudioText responses are linearly concatenated, and the result is used for output audio synthesis. * If the OutputAudioText responses are a mixture of text and SSML, then the concatenated result is treated as SSML; otherwise, the result is treated as either text or SSML as appropriate. The agent designer should ideally use either text or SSML consistently throughout the bot design. * Otherwise, all Text responses are linearly concatenated, and the result is used for output audio synthesis. This approach allows for more sophisticated user experience scenarios, where the text displayed to the user may differ from what is heard.
 type GoogleCloudDialogflowCxV3ResponseMessage struct {
+	Channel               *string                                                        `json:"channel,omitempty"`
 	ConversationSuccess   *GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess   `json:"conversationSuccess,omitempty"`
 	EndInteraction        map[string]interface{}                                         `json:"endInteraction,omitempty"`
 	LiveAgentHandoff      *GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoff      `json:"liveAgentHandoff,omitempty"`
@@ -17,6 +18,7 @@ type GoogleCloudDialogflowCxV3ResponseMessage struct {
 // GoogleCloudDialogflowCxV3ResponseMessageInput
 // Represents a response message that can be returned by a conversational agent. Response messages are also used for output audio synthesis. The approach is as follows: * If at least one OutputAudioText response is present, then all OutputAudioText responses are linearly concatenated, and the result is used for output audio synthesis. * If the OutputAudioText responses are a mixture of text and SSML, then the concatenated result is treated as SSML; otherwise, the result is treated as either text or SSML as appropriate. The agent designer should ideally use either text or SSML consistently throughout the bot design. * Otherwise, all Text responses are linearly concatenated, and the result is used for output audio synthesis. This approach allows for more sophisticated user experience scenarios, where the text displayed to the user may differ from what is heard.
 type GoogleCloudDialogflowCxV3ResponseMessageInput struct {
+	Channel               *string                                                        `json:"channel,omitempty"`
 	ConversationSuccess   *GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess   `json:"conversationSuccess,omitempty"`
 	EndInteraction        map[string]interface{}                                         `json:"endInteraction,omitempty"`
 	LiveAgentHandoff      *GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoff      `json:"liveAgentHandoff,omitempty"`

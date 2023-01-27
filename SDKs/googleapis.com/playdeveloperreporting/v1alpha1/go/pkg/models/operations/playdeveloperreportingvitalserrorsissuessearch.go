@@ -45,9 +45,15 @@ type PlaydeveloperreportingVitalsErrorsIssuesSearchQueryParams struct {
 	UploadProtocol                   *string           `queryParam:"style=form,explode=true,name=upload_protocol"`
 }
 
+type PlaydeveloperreportingVitalsErrorsIssuesSearchSecurity struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
 type PlaydeveloperreportingVitalsErrorsIssuesSearchRequest struct {
 	PathParams  PlaydeveloperreportingVitalsErrorsIssuesSearchPathParams
 	QueryParams PlaydeveloperreportingVitalsErrorsIssuesSearchQueryParams
+	Security    PlaydeveloperreportingVitalsErrorsIssuesSearchSecurity
 }
 
 type PlaydeveloperreportingVitalsErrorsIssuesSearchResponse struct {

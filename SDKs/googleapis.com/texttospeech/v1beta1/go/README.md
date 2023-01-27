@@ -22,8 +22,8 @@ import (
 func main() {
     s := sdk.New()
     
-    req := operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioRequest{
-        Security: operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioSecurity{
+    req := operations.TexttospeechProjectsLocationsOperationsGetRequest{
+        Security: operations.TexttospeechProjectsLocationsOperationsGetSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -31,10 +31,10 @@ func main() {
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        PathParams: operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioPathParams{
-            Parent: "sit",
+        PathParams: operations.TexttospeechProjectsLocationsOperationsGetPathParams{
+            Name: "sit",
         },
-        QueryParams: operations.TexttospeechProjectsLocationsVoicesSynthesizeLongAudioQueryParams{
+        QueryParams: operations.TexttospeechProjectsLocationsOperationsGetQueryParams{
             DollarXgafv: "1",
             AccessToken: "culpa",
             Alt: "media",
@@ -47,35 +47,9 @@ func main() {
             UploadType: "nihil",
             UploadProtocol: "rerum",
         },
-        Request: &shared.SynthesizeLongAudioRequest{
-            AudioConfig: &shared.AudioConfig{
-                AudioEncoding: "OGG_OPUS",
-                EffectsProfileID: []string{
-                    "voluptatum",
-                },
-                Pitch: 26.200001,
-                SampleRateHertz: 161231572858529631,
-                SpeakingRate: 50.099998,
-                VolumeGainDb: 15.100000,
-            },
-            Input: &shared.SynthesisInput{
-                Ssml: "totam",
-                Text: "dolores",
-            },
-            OutputGcsURI: "illum",
-            Voice: &shared.VoiceSelectionParams{
-                CustomVoice: &shared.CustomVoiceParams{
-                    Model: "debitis",
-                    ReportedUsage: "REALTIME",
-                },
-                LanguageCode: "odio",
-                Name: "dolore",
-                SsmlGender: "SSML_VOICE_GENDER_UNSPECIFIED",
-            },
-        },
     }
     
-    res, err := s.Projects.TexttospeechProjectsLocationsVoicesSynthesizeLongAudio(ctx, req)
+    res, err := s.Projects.TexttospeechProjectsLocationsOperationsGet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -91,7 +65,9 @@ func main() {
 
 ### projects
 
-* `TexttospeechProjectsLocationsVoicesSynthesizeLongAudio` - Synthesizes long form text asynchronously.
+* `TexttospeechProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* `TexttospeechProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `TexttospeechProjectsLocationsSynthesizeLongAudio` - Synthesizes long form text asynchronously.
 
 ### text
 

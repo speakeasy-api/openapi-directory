@@ -27,7 +27,8 @@ const (
 // GoogleCloudDialogflowV2AgentAssistantFeedback
 // Detail feedback of Agent Assist result.
 type GoogleCloudDialogflowV2AgentAssistantFeedback struct {
-	AnswerRelevance     *GoogleCloudDialogflowV2AgentAssistantFeedbackAnswerRelevanceEnum     `json:"answerRelevance,omitempty"`
-	DocumentCorrectness *GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentCorrectnessEnum `json:"documentCorrectness,omitempty"`
-	DocumentEfficiency  *GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentEfficiencyEnum  `json:"documentEfficiency,omitempty"`
+	AnswerRelevance       *GoogleCloudDialogflowV2AgentAssistantFeedbackAnswerRelevanceEnum     `json:"answerRelevance,omitempty"`
+	DocumentCorrectness   *GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentCorrectnessEnum `json:"documentCorrectness,omitempty"`
+	DocumentEfficiency    *GoogleCloudDialogflowV2AgentAssistantFeedbackDocumentEfficiencyEnum  `json:"documentEfficiency,omitempty"`
+	SummarizationFeedback *GoogleCloudDialogflowV2AgentAssistantFeedbackSummarizationFeedback   `json:"summarizationFeedback,omitempty"`
 }

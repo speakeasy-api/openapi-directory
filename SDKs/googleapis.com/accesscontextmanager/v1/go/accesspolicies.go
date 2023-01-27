@@ -170,6 +170,97 @@ func (s *AccessPolicies) AccesscontextmanagerAccessPoliciesAccessLevelsReplaceAl
 	return res, nil
 }
 
+// AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreate - Creates a authorized orgs desc. The long-running operation from this RPC has a successful status after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs desc contains errors, an error response is returned for the first error encountered. The name of this `AuthorizedOrgsDesc` will be assigned during creation.
+func (s *AccessPolicies) AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreateRequest) (*operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreateResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizedOrgsDescs", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreateResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsList - Lists all authorized orgs descs for an access policy.
+func (s *AccessPolicies) AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsList(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListRequest) (*operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/authorizedOrgsDescs", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AccesscontextmanagerAccessPoliciesAuthorizedOrgsDescsListResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ListAuthorizedOrgsDescsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ListAuthorizedOrgsDescsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // AccesscontextmanagerAccessPoliciesCreate - Creates an access policy. This method fails if the organization already has an access policy. The long-running operation has a successful status after the access policy propagates to long-lasting storage. Syntactic and basic semantic errors are returned in `metadata` as a BadRequest proto.
 func (s *AccessPolicies) AccesscontextmanagerAccessPoliciesCreate(ctx context.Context, request operations.AccesscontextmanagerAccessPoliciesCreateRequest) (*operations.AccesscontextmanagerAccessPoliciesCreateResponse, error) {
 	baseURL := s._serverURL

@@ -43,44 +43,48 @@ const (
 // MigrationJobInput
 // Represents a Database Migration Service migration job object.
 type MigrationJobInput struct {
-	Destination            *string                 `json:"destination,omitempty"`
-	DestinationDatabase    *DatabaseType           `json:"destinationDatabase,omitempty"`
-	DisplayName            *string                 `json:"displayName,omitempty"`
-	DumpFlags              *DumpFlags              `json:"dumpFlags,omitempty"`
-	DumpPath               *string                 `json:"dumpPath,omitempty"`
-	Error                  *Status                 `json:"error,omitempty"`
-	Labels                 map[string]string       `json:"labels,omitempty"`
-	Name                   *string                 `json:"name,omitempty"`
-	ReverseSSHConnectivity *ReverseSSHConnectivity `json:"reverseSshConnectivity,omitempty"`
-	Source                 *string                 `json:"source,omitempty"`
-	SourceDatabase         *DatabaseType           `json:"sourceDatabase,omitempty"`
-	State                  *MigrationJobStateEnum  `json:"state,omitempty"`
-	StaticIPConnectivity   map[string]interface{}  `json:"staticIpConnectivity,omitempty"`
-	Type                   *MigrationJobTypeEnum   `json:"type,omitempty"`
-	VpcPeeringConnectivity *VpcPeeringConnectivity `json:"vpcPeeringConnectivity,omitempty"`
+	ConversionWorkspace    *ConversionWorkspaceInfo `json:"conversionWorkspace,omitempty"`
+	Destination            *string                  `json:"destination,omitempty"`
+	DestinationDatabase    *DatabaseType            `json:"destinationDatabase,omitempty"`
+	DisplayName            *string                  `json:"displayName,omitempty"`
+	DumpFlags              *DumpFlags               `json:"dumpFlags,omitempty"`
+	DumpPath               *string                  `json:"dumpPath,omitempty"`
+	Error                  *Status                  `json:"error,omitempty"`
+	Filter                 *string                  `json:"filter,omitempty"`
+	Labels                 map[string]string        `json:"labels,omitempty"`
+	Name                   *string                  `json:"name,omitempty"`
+	ReverseSSHConnectivity *ReverseSSHConnectivity  `json:"reverseSshConnectivity,omitempty"`
+	Source                 *string                  `json:"source,omitempty"`
+	SourceDatabase         *DatabaseType            `json:"sourceDatabase,omitempty"`
+	State                  *MigrationJobStateEnum   `json:"state,omitempty"`
+	StaticIPConnectivity   map[string]interface{}   `json:"staticIpConnectivity,omitempty"`
+	Type                   *MigrationJobTypeEnum    `json:"type,omitempty"`
+	VpcPeeringConnectivity *VpcPeeringConnectivity  `json:"vpcPeeringConnectivity,omitempty"`
 }
 
 // MigrationJob
 // Represents a Database Migration Service migration job object.
 type MigrationJob struct {
-	CreateTime             *string                 `json:"createTime,omitempty"`
-	Destination            *string                 `json:"destination,omitempty"`
-	DestinationDatabase    *DatabaseType           `json:"destinationDatabase,omitempty"`
-	DisplayName            *string                 `json:"displayName,omitempty"`
-	DumpFlags              *DumpFlags              `json:"dumpFlags,omitempty"`
-	DumpPath               *string                 `json:"dumpPath,omitempty"`
-	Duration               *string                 `json:"duration,omitempty"`
-	EndTime                *string                 `json:"endTime,omitempty"`
-	Error                  *Status                 `json:"error,omitempty"`
-	Labels                 map[string]string       `json:"labels,omitempty"`
-	Name                   *string                 `json:"name,omitempty"`
-	Phase                  *MigrationJobPhaseEnum  `json:"phase,omitempty"`
-	ReverseSSHConnectivity *ReverseSSHConnectivity `json:"reverseSshConnectivity,omitempty"`
-	Source                 *string                 `json:"source,omitempty"`
-	SourceDatabase         *DatabaseType           `json:"sourceDatabase,omitempty"`
-	State                  *MigrationJobStateEnum  `json:"state,omitempty"`
-	StaticIPConnectivity   map[string]interface{}  `json:"staticIpConnectivity,omitempty"`
-	Type                   *MigrationJobTypeEnum   `json:"type,omitempty"`
-	UpdateTime             *string                 `json:"updateTime,omitempty"`
-	VpcPeeringConnectivity *VpcPeeringConnectivity `json:"vpcPeeringConnectivity,omitempty"`
+	ConversionWorkspace    *ConversionWorkspaceInfo `json:"conversionWorkspace,omitempty"`
+	CreateTime             *string                  `json:"createTime,omitempty"`
+	Destination            *string                  `json:"destination,omitempty"`
+	DestinationDatabase    *DatabaseType            `json:"destinationDatabase,omitempty"`
+	DisplayName            *string                  `json:"displayName,omitempty"`
+	DumpFlags              *DumpFlags               `json:"dumpFlags,omitempty"`
+	DumpPath               *string                  `json:"dumpPath,omitempty"`
+	Duration               *string                  `json:"duration,omitempty"`
+	EndTime                *string                  `json:"endTime,omitempty"`
+	Error                  *Status                  `json:"error,omitempty"`
+	Filter                 *string                  `json:"filter,omitempty"`
+	Labels                 map[string]string        `json:"labels,omitempty"`
+	Name                   *string                  `json:"name,omitempty"`
+	Phase                  *MigrationJobPhaseEnum   `json:"phase,omitempty"`
+	ReverseSSHConnectivity *ReverseSSHConnectivity  `json:"reverseSshConnectivity,omitempty"`
+	Source                 *string                  `json:"source,omitempty"`
+	SourceDatabase         *DatabaseType            `json:"sourceDatabase,omitempty"`
+	State                  *MigrationJobStateEnum   `json:"state,omitempty"`
+	StaticIPConnectivity   map[string]interface{}   `json:"staticIpConnectivity,omitempty"`
+	Type                   *MigrationJobTypeEnum    `json:"type,omitempty"`
+	UpdateTime             *string                  `json:"updateTime,omitempty"`
+	VpcPeeringConnectivity *VpcPeeringConnectivity  `json:"vpcPeeringConnectivity,omitempty"`
 }

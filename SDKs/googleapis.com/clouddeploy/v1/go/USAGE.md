@@ -57,11 +57,14 @@ func main() {
                     Status: false,
                     UpdateTime: "debitis",
                 },
+                TargetsTypeCondition: &shared.TargetsTypeCondition{
+                    ErrorDetails: "vel",
+                    Status: false,
+                },
             },
-            Description: "vel",
-            Etag: "odio",
+            Description: "dolore",
+            Etag: "id",
             Labels: map[string]string{
-                "id": "aspernatur",
                 "accusantium": "totam",
             },
             Name: "commodi",

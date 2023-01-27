@@ -22,9 +22,15 @@ type PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetQueryParams struc
 	UploadProtocol *string           `queryParam:"style=form,explode=true,name=upload_protocol"`
 }
 
+type PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetSecurity struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
 type PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetRequest struct {
 	PathParams  PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetPathParams
 	QueryParams PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetQueryParams
+	Security    PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetSecurity
 }
 
 type PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse struct {

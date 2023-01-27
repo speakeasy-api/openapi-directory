@@ -124,6 +124,7 @@ const (
 	TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnumServerPageLocationURL                               TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum = "serverPageLocationUrl"
 	TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnumServerPageLocationPath                              TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum = "serverPageLocationPath"
 	TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnumServerPageLocationHostname                          TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum = "serverPageLocationHostname"
+	TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnumVisitorRegion                                       TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertTypeEnum = "visitorRegion"
 )
 
 type TagmanagerAccountsContainersWorkspacesBuiltInVariablesRevertQueryParams struct {

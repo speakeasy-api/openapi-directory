@@ -394,7 +394,7 @@ func (s *Cases) CloudsupportCasesList(ctx context.Context, request operations.Cl
 	return res, nil
 }
 
-// CloudsupportCasesPatch - Update the specified case. Only a subset of fields (display_name, description, time_zone, subscriber_email_addresses, related_resources, severity, priority, primary_contact, and labels) can be updated.
+// CloudsupportCasesPatch - Update the specified case. Only a subset of fields can be updated.
 func (s *Cases) CloudsupportCasesPatch(ctx context.Context, request operations.CloudsupportCasesPatchRequest) (*operations.CloudsupportCasesPatchResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{name}", request.PathParams)

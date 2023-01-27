@@ -3,6 +3,7 @@ package shared
 // EntityResult
 // The result of fetching an entity from Datastore.
 type EntityResult struct {
+	CreateTime *string `json:"createTime,omitempty"`
 	Cursor     *string `json:"cursor,omitempty"`
 	Entity     *Entity `json:"entity,omitempty"`
 	UpdateTime *string `json:"updateTime,omitempty"`

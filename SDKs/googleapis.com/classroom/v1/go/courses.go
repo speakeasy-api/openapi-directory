@@ -1437,7 +1437,7 @@ func (s *Courses) ClassroomCoursesList(ctx context.Context, request operations.C
 	return res, nil
 }
 
-// ClassroomCoursesPatch - Updates one or more fields in a course. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or for access errors. * `NOT_FOUND` if no course exists with the requested ID. * `INVALID_ARGUMENT` if invalid fields are specified in the update mask or if no update mask is supplied. * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable * InactiveCourseOwner
+// ClassroomCoursesPatch - Updates one or more fields in a course. This method returns the following error codes: * `PERMISSION_DENIED` if the requesting user is not permitted to modify the requested course or for access errors. * `NOT_FOUND` if no course exists with the requested ID. * `INVALID_ARGUMENT` if invalid fields are specified in the update mask or if no update mask is supplied. * `FAILED_PRECONDITION` for the following request errors: * CourseNotModifiable * InactiveCourseOwner * IneligibleOwner
 func (s *Courses) ClassroomCoursesPatch(ctx context.Context, request operations.ClassroomCoursesPatchRequest) (*operations.ClassroomCoursesPatchResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/courses/{id}", request.PathParams)

@@ -25,6 +25,7 @@ const (
 	FlagAppliesToEnumMysql8028                     FlagAppliesToEnum = "MYSQL_8_0_28"
 	FlagAppliesToEnumMysql8029                     FlagAppliesToEnum = "MYSQL_8_0_29"
 	FlagAppliesToEnumMysql8030                     FlagAppliesToEnum = "MYSQL_8_0_30"
+	FlagAppliesToEnumMysql8031                     FlagAppliesToEnum = "MYSQL_8_0_31"
 	FlagAppliesToEnumSqlserver2019Standard         FlagAppliesToEnum = "SQLSERVER_2019_STANDARD"
 	FlagAppliesToEnumSqlserver2019Enterprise       FlagAppliesToEnum = "SQLSERVER_2019_ENTERPRISE"
 	FlagAppliesToEnumSqlserver2019Express          FlagAppliesToEnum = "SQLSERVER_2019_EXPRESS"

@@ -23,6 +23,7 @@ const (
 type Execution struct {
 	Argument           *string                    `json:"argument,omitempty"`
 	CallLogLevel       *ExecutionCallLogLevelEnum `json:"callLogLevel,omitempty"`
+	Duration           *string                    `json:"duration,omitempty"`
 	EndTime            *string                    `json:"endTime,omitempty"`
 	Error              *Error                     `json:"error,omitempty"`
 	Name               *string                    `json:"name,omitempty"`

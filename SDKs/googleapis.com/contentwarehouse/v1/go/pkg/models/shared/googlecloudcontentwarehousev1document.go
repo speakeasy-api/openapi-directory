@@ -23,7 +23,6 @@ const (
 // GoogleCloudContentwarehouseV1Document
 // Defines the structure for content warehouse document proto.
 type GoogleCloudContentwarehouseV1Document struct {
-	AsyncEnabled           *bool                                                         `json:"asyncEnabled,omitempty"`
 	CloudAiDocument        *GoogleCloudDocumentaiV1Document                              `json:"cloudAiDocument,omitempty"`
 	ContentCategory        *GoogleCloudContentwarehouseV1DocumentContentCategoryEnum     `json:"contentCategory,omitempty"`
 	CreateTime             *string                                                       `json:"createTime,omitempty"`
@@ -38,8 +37,8 @@ type GoogleCloudContentwarehouseV1Document struct {
 	RawDocumentFileType    *GoogleCloudContentwarehouseV1DocumentRawDocumentFileTypeEnum `json:"rawDocumentFileType,omitempty"`
 	RawDocumentPath        *string                                                       `json:"rawDocumentPath,omitempty"`
 	ReferenceID            *string                                                       `json:"referenceId,omitempty"`
-	StructuredContentURI   *string                                                       `json:"structuredContentUri,omitempty"`
 	TextExtractionDisabled *bool                                                         `json:"textExtractionDisabled,omitempty"`
+	TextExtractionEnabled  *bool                                                         `json:"textExtractionEnabled,omitempty"`
 	Title                  *string                                                       `json:"title,omitempty"`
 	UpdateTime             *string                                                       `json:"updateTime,omitempty"`
 	Updater                *string                                                       `json:"updater,omitempty"`
@@ -48,7 +47,6 @@ type GoogleCloudContentwarehouseV1Document struct {
 // GoogleCloudContentwarehouseV1DocumentInput
 // Defines the structure for content warehouse document proto.
 type GoogleCloudContentwarehouseV1DocumentInput struct {
-	AsyncEnabled           *bool                                                         `json:"asyncEnabled,omitempty"`
 	CloudAiDocument        *GoogleCloudDocumentaiV1Document                              `json:"cloudAiDocument,omitempty"`
 	ContentCategory        *GoogleCloudContentwarehouseV1DocumentContentCategoryEnum     `json:"contentCategory,omitempty"`
 	Creator                *string                                                       `json:"creator,omitempty"`
@@ -62,8 +60,8 @@ type GoogleCloudContentwarehouseV1DocumentInput struct {
 	RawDocumentFileType    *GoogleCloudContentwarehouseV1DocumentRawDocumentFileTypeEnum `json:"rawDocumentFileType,omitempty"`
 	RawDocumentPath        *string                                                       `json:"rawDocumentPath,omitempty"`
 	ReferenceID            *string                                                       `json:"referenceId,omitempty"`
-	StructuredContentURI   *string                                                       `json:"structuredContentUri,omitempty"`
 	TextExtractionDisabled *bool                                                         `json:"textExtractionDisabled,omitempty"`
+	TextExtractionEnabled  *bool                                                         `json:"textExtractionEnabled,omitempty"`
 	Title                  *string                                                       `json:"title,omitempty"`
 	Updater                *string                                                       `json:"updater,omitempty"`
 }

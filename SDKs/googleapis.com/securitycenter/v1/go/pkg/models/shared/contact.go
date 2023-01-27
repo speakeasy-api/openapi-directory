@@ -1,7 +1,7 @@
 package shared
 
 // Contact
-// Representa a single contact's email address
+// The email address of a contact.
 type Contact struct {
 	Email *string `json:"email,omitempty"`
 }

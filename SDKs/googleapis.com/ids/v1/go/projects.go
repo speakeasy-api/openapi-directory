@@ -162,6 +162,55 @@ func (s *Projects) IdsProjectsLocationsEndpointsList(ctx context.Context, reques
 	return res, nil
 }
 
+// IdsProjectsLocationsEndpointsPatch - Updates the parameters of a single Endpoint.
+func (s *Projects) IdsProjectsLocationsEndpointsPatch(ctx context.Context, request operations.IdsProjectsLocationsEndpointsPatchRequest) (*operations.IdsProjectsLocationsEndpointsPatchResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.IdsProjectsLocationsEndpointsPatchResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
 // IdsProjectsLocationsEndpointsSetIamPolicy - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 func (s *Projects) IdsProjectsLocationsEndpointsSetIamPolicy(ctx context.Context, request operations.IdsProjectsLocationsEndpointsSetIamPolicyRequest) (*operations.IdsProjectsLocationsEndpointsSetIamPolicyResponse, error) {
 	baseURL := s._serverURL

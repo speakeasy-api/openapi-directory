@@ -1,0 +1,27 @@
+package shared
+
+type EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum string
+
+const (
+	EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnumUnspecified EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum = "UNSPECIFIED"
+	EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnumOnHold      EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum = "ON_HOLD"
+	EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnumInProcess   EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum = "IN_PROCESS"
+	EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnumSucceeded   EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum = "SUCCEEDED"
+	EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnumFailed      EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum = "FAILED"
+	EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnumCanceled    EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum = "CANCELED"
+	EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnumRetryOnHold EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum = "RETRY_ON_HOLD"
+	EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnumSuspended   EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum = "SUSPENDED"
+)
+
+// EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails
+// Contains the details of the execution info of this event: this includes the tasks execution details plus the event execution statistics. Next available id: 10
+type EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails struct {
+	EventAttemptStats              []EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats               `json:"eventAttemptStats,omitempty"`
+	EventExecutionSnapshot         []EnterpriseCrmFrontendsEventbusProtoEventExecutionSnapshot                      `json:"eventExecutionSnapshot,omitempty"`
+	EventExecutionState            *EnterpriseCrmFrontendsEventbusProtoEventExecutionDetailsEventExecutionStateEnum `json:"eventExecutionState,omitempty"`
+	EventRetriesFromBeginningCount *int32                                                                           `json:"eventRetriesFromBeginningCount,omitempty"`
+	LogFilePath                    *string                                                                          `json:"logFilePath,omitempty"`
+	NetworkAddress                 *string                                                                          `json:"networkAddress,omitempty"`
+	NextExecutionTime              *string                                                                          `json:"nextExecutionTime,omitempty"`
+	RyeLockUnheldCount             *int32                                                                           `json:"ryeLockUnheldCount,omitempty"`
+}

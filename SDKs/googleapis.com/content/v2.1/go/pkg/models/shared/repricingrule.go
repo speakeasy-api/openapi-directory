@@ -11,7 +11,7 @@ const (
 )
 
 // RepricingRule
-// Represents a repricing rule. A repricing rule is used by shopping serving to adjust transactable offer prices if conditions are met. Next ID: 24
+// Represents a repricing rule. A repricing rule is used by shopping serving to adjust transactable offer prices if conditions are met.
 type RepricingRule struct {
 	CogsBasedRule        *RepricingRuleCostOfGoodsSaleRule  `json:"cogsBasedRule,omitempty"`
 	CountryCode          *string                            `json:"countryCode,omitempty"`
@@ -28,7 +28,7 @@ type RepricingRule struct {
 }
 
 // RepricingRuleInput
-// Represents a repricing rule. A repricing rule is used by shopping serving to adjust transactable offer prices if conditions are met. Next ID: 24
+// Represents a repricing rule. A repricing rule is used by shopping serving to adjust transactable offer prices if conditions are met.
 type RepricingRuleInput struct {
 	CogsBasedRule        *RepricingRuleCostOfGoodsSaleRule  `json:"cogsBasedRule,omitempty"`
 	CountryCode          *string                            `json:"countryCode,omitempty"`

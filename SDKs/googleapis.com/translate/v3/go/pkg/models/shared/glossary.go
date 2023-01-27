@@ -1,7 +1,7 @@
 package shared
 
 // Glossary
-// Represents a glossary built from user provided data.
+// Represents a glossary built from user-provided data.
 type Glossary struct {
 	DisplayName      *string              `json:"displayName,omitempty"`
 	EndTime          *string              `json:"endTime,omitempty"`
@@ -14,7 +14,7 @@ type Glossary struct {
 }
 
 // GlossaryInput
-// Represents a glossary built from user provided data.
+// Represents a glossary built from user-provided data.
 type GlossaryInput struct {
 	DisplayName      *string              `json:"displayName,omitempty"`
 	InputConfig      *GlossaryInputConfig `json:"inputConfig,omitempty"`

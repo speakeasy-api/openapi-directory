@@ -30,7 +30,7 @@ type MetastoreProjectsLocationsServicesRemoveIamPolicySecurity struct {
 type MetastoreProjectsLocationsServicesRemoveIamPolicyRequest struct {
 	PathParams  MetastoreProjectsLocationsServicesRemoveIamPolicyPathParams
 	QueryParams MetastoreProjectsLocationsServicesRemoveIamPolicyQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
+	Request     *shared.RemoveIamPolicyRequest `request:"mediaType=application/json"`
 	Security    MetastoreProjectsLocationsServicesRemoveIamPolicySecurity
 }
 

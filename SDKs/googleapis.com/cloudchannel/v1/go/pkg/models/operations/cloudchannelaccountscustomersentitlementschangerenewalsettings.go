@@ -30,7 +30,7 @@ type CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsSecurity stru
 type CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsRequest struct {
 	PathParams  CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsPathParams
 	QueryParams CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsQueryParams
-	Request     *shared.GoogleCloudChannelV1ChangeRenewalSettingsRequestInput `request:"mediaType=application/json"`
+	Request     *shared.GoogleCloudChannelV1ChangeRenewalSettingsRequest `request:"mediaType=application/json"`
 	Security    CloudchannelAccountsCustomersEntitlementsChangeRenewalSettingsSecurity
 }
 

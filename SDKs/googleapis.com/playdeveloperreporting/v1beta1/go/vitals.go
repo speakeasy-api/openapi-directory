@@ -41,7 +41,7 @@ func (s *Vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet(ctx 
 
 	utils.PopulateQueryParams(ctx, req, request.QueryParams)
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -90,7 +90,7 @@ func (s *Vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery(ct
 
 	utils.PopulateQueryParams(ctx, req, request.QueryParams)
 
-	client := s._defaultClient
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

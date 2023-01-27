@@ -44,6 +44,7 @@ type InstanceInput struct {
 	EnableRbac                  *bool               `json:"enableRbac,omitempty"`
 	EnableStackdriverLogging    *bool               `json:"enableStackdriverLogging,omitempty"`
 	EnableStackdriverMonitoring *bool               `json:"enableStackdriverMonitoring,omitempty"`
+	EnableZoneSeparation        *bool               `json:"enableZoneSeparation,omitempty"`
 	EventPublishConfig          *EventPublishConfig `json:"eventPublishConfig,omitempty"`
 	Labels                      map[string]string   `json:"labels,omitempty"`
 	NetworkConfig               *NetworkConfig      `json:"networkConfig,omitempty"`
@@ -69,6 +70,7 @@ type Instance struct {
 	EnableRbac                  *bool                        `json:"enableRbac,omitempty"`
 	EnableStackdriverLogging    *bool                        `json:"enableStackdriverLogging,omitempty"`
 	EnableStackdriverMonitoring *bool                        `json:"enableStackdriverMonitoring,omitempty"`
+	EnableZoneSeparation        *bool                        `json:"enableZoneSeparation,omitempty"`
 	EventPublishConfig          *EventPublishConfig          `json:"eventPublishConfig,omitempty"`
 	GcsBucket                   *string                      `json:"gcsBucket,omitempty"`
 	Labels                      map[string]string            `json:"labels,omitempty"`

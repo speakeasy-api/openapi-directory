@@ -21,6 +21,7 @@ const (
 	DirectoryChromeosdevicesCommandTypeEnumSetVolume              DirectoryChromeosdevicesCommandTypeEnum = "SET_VOLUME"
 	DirectoryChromeosdevicesCommandTypeEnumWipeUsers              DirectoryChromeosdevicesCommandTypeEnum = "WIPE_USERS"
 	DirectoryChromeosdevicesCommandTypeEnumRemotePowerwash        DirectoryChromeosdevicesCommandTypeEnum = "REMOTE_POWERWASH"
+	DirectoryChromeosdevicesCommandTypeEnumDeviceStartCrdSession  DirectoryChromeosdevicesCommandTypeEnum = "DEVICE_START_CRD_SESSION"
 )
 
 // DirectoryChromeosdevicesCommand

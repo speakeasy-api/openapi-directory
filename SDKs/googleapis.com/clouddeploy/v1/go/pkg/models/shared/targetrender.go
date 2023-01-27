@@ -6,6 +6,7 @@ const (
 	TargetRenderFailureCauseEnumFailureCauseUnspecified TargetRenderFailureCauseEnum = "FAILURE_CAUSE_UNSPECIFIED"
 	TargetRenderFailureCauseEnumCloudBuildUnavailable   TargetRenderFailureCauseEnum = "CLOUD_BUILD_UNAVAILABLE"
 	TargetRenderFailureCauseEnumExecutionFailed         TargetRenderFailureCauseEnum = "EXECUTION_FAILED"
+	TargetRenderFailureCauseEnumCloudBuildRequestFailed TargetRenderFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
 )
 
 type TargetRenderRenderingStateEnum string

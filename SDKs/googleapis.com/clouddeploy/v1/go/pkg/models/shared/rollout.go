@@ -20,6 +20,7 @@ const (
 	RolloutDeployFailureCauseEnumReleaseFailed              RolloutDeployFailureCauseEnum = "RELEASE_FAILED"
 	RolloutDeployFailureCauseEnumReleaseAbandoned           RolloutDeployFailureCauseEnum = "RELEASE_ABANDONED"
 	RolloutDeployFailureCauseEnumVerificationConfigNotFound RolloutDeployFailureCauseEnum = "VERIFICATION_CONFIG_NOT_FOUND"
+	RolloutDeployFailureCauseEnumCloudBuildRequestFailed    RolloutDeployFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
 )
 
 type RolloutStateEnum string

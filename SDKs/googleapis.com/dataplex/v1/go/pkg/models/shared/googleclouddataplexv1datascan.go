@@ -19,7 +19,7 @@ const (
 )
 
 // GoogleCloudDataplexV1DataScan
-// Represents a user-visible job which provides the insights for the related data source. For examples: - Data Quality: generates queries based on the rules and run against the data to get data quality check results. - Data Profile: analyzes the data in table(s) and generates insights about the structure, content and relationships (such as null percent, cardinality, min/max/mean, etc).
+// Represents a user-visible job which provides the insights for the related data source.For example: Data Quality: generates queries based on the rules and runs against the data to get data quality check results. Data Profile: analyzes the data in table(s) and generates insights about the structure, content and relationships (such as null percent, cardinality, min/max/mean, etc).
 type GoogleCloudDataplexV1DataScan struct {
 	CreateTime        *string                                       `json:"createTime,omitempty"`
 	Data              *GoogleCloudDataplexV1DataSource              `json:"data,omitempty"`
@@ -40,7 +40,7 @@ type GoogleCloudDataplexV1DataScan struct {
 }
 
 // GoogleCloudDataplexV1DataScanInput
-// Represents a user-visible job which provides the insights for the related data source. For examples: - Data Quality: generates queries based on the rules and run against the data to get data quality check results. - Data Profile: analyzes the data in table(s) and generates insights about the structure, content and relationships (such as null percent, cardinality, min/max/mean, etc).
+// Represents a user-visible job which provides the insights for the related data source.For example: Data Quality: generates queries based on the rules and runs against the data to get data quality check results. Data Profile: analyzes the data in table(s) and generates insights about the structure, content and relationships (such as null percent, cardinality, min/max/mean, etc).
 type GoogleCloudDataplexV1DataScanInput struct {
 	Data              *GoogleCloudDataplexV1DataSource              `json:"data,omitempty"`
 	DataProfileResult *GoogleCloudDataplexV1DataProfileResult       `json:"dataProfileResult,omitempty"`

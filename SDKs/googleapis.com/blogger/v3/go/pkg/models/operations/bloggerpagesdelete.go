@@ -21,6 +21,7 @@ type BloggerPagesDeleteQueryParams struct {
 	QuotaUser      *string           `queryParam:"style=form,explode=true,name=quotaUser"`
 	UploadType     *string           `queryParam:"style=form,explode=true,name=uploadType"`
 	UploadProtocol *string           `queryParam:"style=form,explode=true,name=upload_protocol"`
+	UseTrash       *bool             `queryParam:"style=form,explode=true,name=useTrash"`
 }
 
 type BloggerPagesDeleteSecurity struct {

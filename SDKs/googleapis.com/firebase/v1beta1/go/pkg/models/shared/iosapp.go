@@ -16,6 +16,7 @@ type IosApp struct {
 	AppStoreID  *string          `json:"appStoreId,omitempty"`
 	BundleID    *string          `json:"bundleId,omitempty"`
 	DisplayName *string          `json:"displayName,omitempty"`
+	Etag        *string          `json:"etag,omitempty"`
 	Name        *string          `json:"name,omitempty"`
 	ProjectID   *string          `json:"projectId,omitempty"`
 	State       *IosAppStateEnum `json:"state,omitempty"`
@@ -29,6 +30,7 @@ type IosAppInput struct {
 	AppStoreID  *string `json:"appStoreId,omitempty"`
 	BundleID    *string `json:"bundleId,omitempty"`
 	DisplayName *string `json:"displayName,omitempty"`
+	Etag        *string `json:"etag,omitempty"`
 	Name        *string `json:"name,omitempty"`
 	TeamID      *string `json:"teamId,omitempty"`
 }

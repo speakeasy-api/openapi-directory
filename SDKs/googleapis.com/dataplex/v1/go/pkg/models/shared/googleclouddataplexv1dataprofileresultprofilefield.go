@@ -1,7 +1,7 @@
 package shared
 
 // GoogleCloudDataplexV1DataProfileResultProfileField
-// Represents a column field within a table schema.
+// A field within a table.
 type GoogleCloudDataplexV1DataProfileResultProfileField struct {
 	Mode    *string                                                        `json:"mode,omitempty"`
 	Name    *string                                                        `json:"name,omitempty"`

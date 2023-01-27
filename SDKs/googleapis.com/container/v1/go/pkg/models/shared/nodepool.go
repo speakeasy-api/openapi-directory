@@ -18,6 +18,7 @@ type NodePool struct {
 	Autoscaling       *NodePoolAutoscaling `json:"autoscaling,omitempty"`
 	Conditions        []StatusCondition    `json:"conditions,omitempty"`
 	Config            *NodeConfig          `json:"config,omitempty"`
+	Etag              *string              `json:"etag,omitempty"`
 	InitialNodeCount  *int32               `json:"initialNodeCount,omitempty"`
 	InstanceGroupUrls []string             `json:"instanceGroupUrls,omitempty"`
 	Locations         []string             `json:"locations,omitempty"`

@@ -14,6 +14,7 @@ type WebAppInput struct {
 	APIKeyID    *string  `json:"apiKeyId,omitempty"`
 	AppUrls     []string `json:"appUrls,omitempty"`
 	DisplayName *string  `json:"displayName,omitempty"`
+	Etag        *string  `json:"etag,omitempty"`
 	Name        *string  `json:"name,omitempty"`
 }
 
@@ -24,6 +25,7 @@ type WebApp struct {
 	AppID       *string          `json:"appId,omitempty"`
 	AppUrls     []string         `json:"appUrls,omitempty"`
 	DisplayName *string          `json:"displayName,omitempty"`
+	Etag        *string          `json:"etag,omitempty"`
 	Name        *string          `json:"name,omitempty"`
 	ProjectID   *string          `json:"projectId,omitempty"`
 	State       *WebAppStateEnum `json:"state,omitempty"`

@@ -37,35 +37,50 @@ func main() {
             UploadProtocol: "rerum",
         },
         Request: &shared.BatchTranslateDocumentRequest{
+            CustomizedAttribution: "dicta",
             FormatConversions: map[string]string{
-                "debitis": "voluptatum",
-                "et": "ut",
-                "dolorem": "et",
+                "voluptatum": "et",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
+                "dolorem": shared.TranslateTextGlossaryConfig{
+                    Glossary: "et",
+                    IgnoreCase: false,
+                },
                 "iste": shared.TranslateTextGlossaryConfig{
                     Glossary: "vitae",
+                    IgnoreCase: true,
+                },
+                "dolores": shared.TranslateTextGlossaryConfig{
+                    Glossary: "illum",
                     IgnoreCase: true,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "illum",
+                        InputURI: "odio",
+                    },
+                },
+                shared.BatchDocumentInputConfig{
+                    GcsSource: &shared.GcsSource{
+                        InputURI: "dolore",
                     },
                 },
             },
             Models: map[string]string{
-                "vel": "odio",
+                "aspernatur": "accusantium",
+                "totam": "commodi",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "dolore",
+                    OutputURIPrefix: "quis",
                 },
             },
-            SourceLanguageCode: "id",
+            SourceLanguageCode: "est",
             TargetLanguageCodes: []string{
-                "accusantium",
+                "odit",
+                "non",
+                "voluptas",
             },
         },
     }

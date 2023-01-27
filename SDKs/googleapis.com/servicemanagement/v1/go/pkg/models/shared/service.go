@@ -23,6 +23,7 @@ type Service struct {
 	Monitoring         *Monitoring                   `json:"monitoring,omitempty"`
 	Name               *string                       `json:"name,omitempty"`
 	ProducerProjectID  *string                       `json:"producerProjectId,omitempty"`
+	Publishing         *Publishing                   `json:"publishing,omitempty"`
 	Quota              *Quota                        `json:"quota,omitempty"`
 	SourceInfo         *SourceInfo                   `json:"sourceInfo,omitempty"`
 	SystemParameters   *SystemParameters             `json:"systemParameters,omitempty"`

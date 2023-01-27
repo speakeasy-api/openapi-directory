@@ -46,130 +46,152 @@ func main() {
             PrettyPrint: false,
             QuotaUser: "nihil",
             RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            SkipValidation: false,
+            UploadType: "debitis",
+            UploadProtocol: "voluptatum",
+            ValidateOnly: false,
         },
         Request: &shared.ConnectionProfileInput{
             Alloydb: &shared.AlloyDbConnectionProfileInput{
-                ClusterID: "voluptatum",
+                ClusterID: "ut",
                 Settings: &shared.AlloyDbSettingsInput{
                     InitialUser: &shared.UserPasswordInput{
-                        Password: "et",
-                        User: "ut",
+                        Password: "dolorem",
+                        User: "et",
                     },
                     Labels: map[string]string{
-                        "et": "voluptate",
                         "iste": "vitae",
-                        "totam": "dolores",
                     },
                     PrimaryInstanceSettings: &shared.PrimaryInstanceSettingsInput{
                         DatabaseFlags: map[string]string{
+                            "dolores": "illum",
                             "debitis": "vel",
                             "odio": "dolore",
-                            "id": "aspernatur",
                         },
-                        ID: "accusantium",
+                        ID: "id",
                         Labels: map[string]string{
-                            "commodi": "quis",
-                            "est": "aut",
-                            "odit": "non",
+                            "accusantium": "totam",
                         },
                         MachineConfig: &shared.MachineConfig{
-                            CPUCount: 167566062957544642,
+                            CPUCount: 6745438398739480977,
                         },
                     },
-                    VpcNetwork: "omnis",
+                    VpcNetwork: "quis",
                 },
             },
             Cloudsql: &shared.CloudSQLConnectionProfileInput{
                 Settings: &shared.CloudSQLSettingsInput{
-                    ActivationPolicy: "SQL_ACTIVATION_POLICY_UNSPECIFIED",
+                    ActivationPolicy: "ALWAYS",
                     AutoStorageIncrease: true,
-                    AvailabilityType: "REGIONAL",
-                    CmekKeyName: "officiis",
-                    Collation: "autem",
-                    DataDiskSizeGb: "consectetur",
+                    AvailabilityType: "ZONAL",
+                    CmekKeyName: "non",
+                    Collation: "voluptas",
+                    DataDiskSizeGb: "omnis",
                     DataDiskType: "SQL_DATA_DISK_TYPE_UNSPECIFIED",
                     DatabaseFlags: map[string]string{
-                        "qui": "recusandae",
+                        "sed": "officiis",
                     },
-                    DatabaseVersion: "POSTGRES_13",
+                    DatabaseVersion: "POSTGRES_12",
                     IPConfig: &shared.SQLIPConfig{
                         AuthorizedNetworks: []shared.SQLACLEntry{
                             shared.SQLACLEntry{
-                                ExpireTime: "eveniet",
-                                Label: "modi",
-                                TTL: "sint",
-                                Value: "inventore",
+                                ExpireTime: "nobis",
+                                Label: "odio",
+                                TTL: "qui",
+                                Value: "recusandae",
                             },
                         },
                         EnableIpv4: true,
-                        PrivateNetwork: "exercitationem",
+                        PrivateNetwork: "ipsum",
                         RequireSsl: true,
                     },
-                    RootPassword: "reprehenderit",
-                    SecondaryZone: "tempore",
-                    SourceID: "maiores",
-                    StorageAutoResizeLimit: "incidunt",
-                    Tier: "dolor",
+                    RootPassword: "modi",
+                    SecondaryZone: "sint",
+                    SourceID: "inventore",
+                    StorageAutoResizeLimit: "ut",
+                    Tier: "exercitationem",
                     UserLabels: map[string]string{
-                        "veritatis": "in",
-                        "et": "omnis",
-                        "ipsum": "ex",
+                        "reprehenderit": "tempore",
+                        "maiores": "incidunt",
+                        "dolor": "beatae",
                     },
-                    Zone: "dolores",
+                    Zone: "veritatis",
                 },
             },
-            DisplayName: "placeat",
+            DisplayName: "in",
             Error: &shared.Status{
-                Code: 2118716725206170867,
+                Code: 3508963237347473586,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "voluptas": "quam",
-                        "reprehenderit": "qui",
+                        "ex": "dolores",
                     },
                     map[string]interface{}{
-                        "unde": "in",
-                    },
-                    map[string]interface{}{
-                        "qui": "ut",
-                        "itaque": "ab",
+                        "vel": "rerum",
                     },
                 },
-                Message: "neque",
+                Message: "mollitia",
             },
             Labels: map[string]string{
-                "et": "accusantium",
-                "esse": "architecto",
-                "quam": "velit",
+                "quam": "reprehenderit",
+                "qui": "qui",
             },
             Mysql: &shared.MySQLConnectionProfileInput{
-                CloudSQLID: "cumque",
-                Host: "soluta",
-                Password: "sunt",
-                Port: 2408550365227740434,
+                CloudSQLID: "unde",
+                Host: "in",
+                Password: "autem",
+                Port: 8086159467323165929,
                 Ssl: &shared.SslConfigInput{
-                    CaCertificate: "magni",
-                    ClientCertificate: "et",
-                    ClientKey: "optio",
+                    CaCertificate: "ut",
+                    ClientCertificate: "itaque",
+                    ClientKey: "ab",
                 },
-                Username: "qui",
+                Username: "neque",
             },
-            Name: "earum",
-            Postgresql: &shared.PostgreSQLConnectionProfileInput{
-                CloudSQLID: "illo",
-                Host: "omnis",
-                Password: "ut",
-                Port: 7442289190031176026,
-                Ssl: &shared.SslConfigInput{
-                    CaCertificate: "dolor",
-                    ClientCertificate: "commodi",
-                    ClientKey: "error",
+            Name: "ullam",
+            Oracle: &shared.OracleConnectionProfileInput{
+                DatabaseService: "et",
+                ForwardSSHConnectivity: &shared.ForwardSSHTunnelConnectivity{
+                    Hostname: "accusantium",
+                    Password: "esse",
+                    Port: 5902760509050140210,
+                    PrivateKey: "quam",
+                    Username: "velit",
                 },
-                Username: "reprehenderit",
+                Host: "cumque",
+                Password: "soluta",
+                Port: 759605945513541974,
+                PrivateConnectivity: &shared.PrivateConnectivity{
+                    PrivateConnection: "voluptates",
+                },
+                StaticServiceIPConnectivity: map[string]interface{}{
+                    "et": "optio",
+                    "qui": "earum",
+                    "illo": "omnis",
+                },
+                Username: "ut",
+            },
+            Postgresql: &shared.PostgreSQLConnectionProfileInput{
+                CloudSQLID: "consequatur",
+                Host: "dolor",
+                Password: "commodi",
+                Port: 1925401661646756611,
+                PrivateServiceConnectConnectivity: &shared.PrivateServiceConnectConnectivity{
+                    ServiceAttachment: "reprehenderit",
+                },
+                Ssl: &shared.SslConfigInput{
+                    CaCertificate: "consectetur",
+                    ClientCertificate: "nostrum",
+                    ClientKey: "ut",
+                },
+                StaticIPConnectivity: map[string]interface{}{
+                    "sed": "a",
+                    "soluta": "aut",
+                    "quas": "consequuntur",
+                },
+                Username: "laudantium",
             },
             Provider: "AURORA",
-            State: "READY",
+            State: "FAILED",
         },
     }
     
@@ -191,6 +213,17 @@ func main() {
 
 * `DatamigrationProjectsLocationsConnectionProfilesCreate` - Creates a new connection profile in a given project and location.
 * `DatamigrationProjectsLocationsConnectionProfilesList` - Retrieves a list of all connection profiles in a given project and location.
+* `DatamigrationProjectsLocationsConversionWorkspacesApply` - Apply draft tree onto a specific destination database
+* `DatamigrationProjectsLocationsConversionWorkspacesCommit` - Marks all the data in the conversion workspace as committed.
+* `DatamigrationProjectsLocationsConversionWorkspacesConvert` - Creates a draft tree schema for the destination database.
+* `DatamigrationProjectsLocationsConversionWorkspacesCreate` - Creates a new conversion workspace in a given project and location.
+* `DatamigrationProjectsLocationsConversionWorkspacesDescribeConversionWorkspaceRevisions` - Retrieves a list of committed revisions of a specific conversion workspace.
+* `DatamigrationProjectsLocationsConversionWorkspacesDescribeDatabaseEntities` - Use this method to describe the database entities tree for a specific conversion workspace and a specific tree type. The DB Entities are not a resource like conversion workspace or mapping rule, and they can not be created, updated or deleted like one. Instead they are simple data objects describing the structure of the client database.
+* `DatamigrationProjectsLocationsConversionWorkspacesList` - Lists conversion workspaces in a given project and location.
+* `DatamigrationProjectsLocationsConversionWorkspacesMappingRulesImport` - Imports the mapping rules for a given conversion workspace. Supports various formats of external rules files.
+* `DatamigrationProjectsLocationsConversionWorkspacesRollback` - Rollbacks a conversion workspace to the last committed spanshot.
+* `DatamigrationProjectsLocationsConversionWorkspacesSearchBackgroundJobs` - Use this method to search/list the background jobs for a specific conversion workspace. The background jobs are not a resource like conversion workspace or mapping rule, and they can not be created, updated or deleted like one. Instead they are a way to expose the data plane jobs log.
+* `DatamigrationProjectsLocationsConversionWorkspacesSeed` - Imports a snapshot of the source database into the conversion workspace.
 * `DatamigrationProjectsLocationsList` - Lists information about the supported locations for this service.
 * `DatamigrationProjectsLocationsMigrationJobsCreate` - Creates a new migration job in a given project and location.
 * `DatamigrationProjectsLocationsMigrationJobsGenerateSSHScript` - Generate a SSH configuration script to configure the reverse SSH connectivity.
@@ -206,9 +239,11 @@ func main() {
 * `DatamigrationProjectsLocationsMigrationJobsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 * `DatamigrationProjectsLocationsMigrationJobsVerify` - Verify a migration job, making sure the destination can reach the source and that all configuration and prerequisites are met.
 * `DatamigrationProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `DatamigrationProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `DatamigrationProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `DatamigrationProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `DatamigrationProjectsLocationsPrivateConnectionsCreate` - Creates a new private connection in a given project and location.
+* `DatamigrationProjectsLocationsPrivateConnectionsDelete` - Deletes a single Database Migration Service private connection.
+* `DatamigrationProjectsLocationsPrivateConnectionsGet` - Gets details of a single private connection.
+* `DatamigrationProjectsLocationsPrivateConnectionsList` - Retrieves a list of private connections in a given project and location.
 
 <!-- End SDK Available Operations -->
 

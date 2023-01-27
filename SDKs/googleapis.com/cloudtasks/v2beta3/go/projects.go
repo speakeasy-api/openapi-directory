@@ -456,6 +456,55 @@ func (s *Projects) CloudtasksProjectsLocationsQueuesSetIamPolicy(ctx context.Con
 	return res, nil
 }
 
+// CloudtasksProjectsLocationsQueuesTasksBuffer - Creates and buffers a new task without the need to explicitly define a Task message. The queue must have HTTP target. To create the task with a custom ID, use the following format and set TASK_ID to your desired ID: projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID:buffer To create the task with an automatically generated ID, use the following format: projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks:buffer. Note: This feature is in its experimental stage. You must request access to the API through the [Cloud Tasks BufferTask Experiment Signup form](https://forms.gle/X8Zr5hiXH5tTGFqh8).
+func (s *Projects) CloudtasksProjectsLocationsQueuesTasksBuffer(ctx context.Context, request operations.CloudtasksProjectsLocationsQueuesTasksBufferRequest) (*operations.CloudtasksProjectsLocationsQueuesTasksBufferResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2beta3/{queue}/tasks/{taskId}:buffer", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CloudtasksProjectsLocationsQueuesTasksBufferResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BufferTaskResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BufferTaskResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // CloudtasksProjectsLocationsQueuesTasksCreate - Creates a task and adds it to a queue. Tasks cannot be updated after creation; there is no UpdateTask command. * The maximum task size is 100KB.
 func (s *Projects) CloudtasksProjectsLocationsQueuesTasksCreate(ctx context.Context, request operations.CloudtasksProjectsLocationsQueuesTasksCreateRequest) (*operations.CloudtasksProjectsLocationsQueuesTasksCreateResponse, error) {
 	baseURL := s._serverURL

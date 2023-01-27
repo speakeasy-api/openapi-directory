@@ -20,9 +20,9 @@ const (
 // Uri Override. When specified, all the HTTP tasks inside the queue will be partially or fully overridden depending on the configured values.
 type URIOverride struct {
 	Host                   *string                                `json:"host,omitempty"`
-	Path                   *string                                `json:"path,omitempty"`
+	PathOverride           *PathOverride                          `json:"pathOverride,omitempty"`
 	Port                   *string                                `json:"port,omitempty"`
-	Query                  *string                                `json:"query,omitempty"`
+	QueryOverride          *QueryOverride                         `json:"queryOverride,omitempty"`
 	Scheme                 *URIOverrideSchemeEnum                 `json:"scheme,omitempty"`
 	URIOverrideEnforceMode *URIOverrideURIOverrideEnforceModeEnum `json:"uriOverrideEnforceMode,omitempty"`
 }

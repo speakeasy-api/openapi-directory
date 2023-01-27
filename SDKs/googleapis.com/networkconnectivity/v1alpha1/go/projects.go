@@ -120,7 +120,7 @@ func (s *Projects) NetworkconnectivityProjectsLocationsGlobalHubsList(ctx contex
 	return res, nil
 }
 
-// NetworkconnectivityProjectsLocationsInternalRangesCreate - Creates a new InternalRange in a given project and location.
+// NetworkconnectivityProjectsLocationsInternalRangesCreate - Creates a new internal range in a given project and location.
 func (s *Projects) NetworkconnectivityProjectsLocationsInternalRangesCreate(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsInternalRangesCreateRequest) (*operations.NetworkconnectivityProjectsLocationsInternalRangesCreateResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/internalRanges", request.PathParams)
@@ -169,7 +169,7 @@ func (s *Projects) NetworkconnectivityProjectsLocationsInternalRangesCreate(ctx 
 	return res, nil
 }
 
-// NetworkconnectivityProjectsLocationsInternalRangesList - Lists InternalRanges in a given project and location.
+// NetworkconnectivityProjectsLocationsInternalRangesList - Lists internal ranges in a given project and location.
 func (s *Projects) NetworkconnectivityProjectsLocationsInternalRangesList(ctx context.Context, request operations.NetworkconnectivityProjectsLocationsInternalRangesListRequest) (*operations.NetworkconnectivityProjectsLocationsInternalRangesListResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1alpha1/{parent}/internalRanges", request.PathParams)

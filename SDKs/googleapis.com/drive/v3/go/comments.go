@@ -29,7 +29,7 @@ func NewComments(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// DriveCommentsCreate - Creates a new comment on a file.
+// DriveCommentsCreate - Creates a comment on a file.
 func (s *Comments) DriveCommentsCreate(ctx context.Context, request operations.DriveCommentsCreateRequest) (*operations.DriveCommentsCreateResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments", request.PathParams)

@@ -17,6 +17,7 @@ type HTTPClient interface {
 type SDK struct {
 	AttendanceSubscriberStateChanges *AttendanceSubscriberStateChanges
 	MarketingEventsExternal          *MarketingEventsExternal
+	Search                           *Search
 	SettingsExternal                 *SettingsExternal
 
 	_defaultClient  HTTPClient
@@ -79,6 +80,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.MarketingEventsExternal = NewMarketingEventsExternal(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Search = NewSearch(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

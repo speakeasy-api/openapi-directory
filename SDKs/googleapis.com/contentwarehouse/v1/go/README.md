@@ -95,88 +95,97 @@ func main() {
                             },
                         },
                     },
+                    RetrievalImportance: "LOW",
                     TextTypeOptions: map[string]interface{}{
-                        "eveniet": "modi",
-                    },
-                    TimestampTypeOptions: map[string]interface{}{
+                        "modi": "sint",
                         "inventore": "ut",
                     },
-                },
-                shared.GoogleCloudContentwarehouseV1PropertyDefinition{
-                    DateTimeTypeOptions: map[string]interface{}{
+                    TimestampTypeOptions: map[string]interface{}{
                         "aut": "reprehenderit",
                         "tempore": "maiores",
                         "incidunt": "dolor",
                     },
-                    DisplayName: "beatae",
-                    EnumTypeOptions: &shared.GoogleCloudContentwarehouseV1EnumTypeOptions{
-                        PossibleValues: []string{
-                            "in",
-                            "et",
-                        },
-                        ValidationCheckDisabled: false,
-                    },
-                    FloatTypeOptions: map[string]interface{}{
-                        "ex": "dolores",
-                    },
-                    IntegerTypeOptions: map[string]interface{}{
-                        "vel": "rerum",
-                    },
-                    IsFilterable: true,
-                    IsMetadata: true,
-                    IsRepeatable: true,
-                    IsRequired: false,
-                    IsSearchable: true,
-                    MapTypeOptions: map[string]interface{}{
-                        "unde": "in",
-                    },
-                    Name: "autem",
-                    PropertyTypeOptions: &shared.GoogleCloudContentwarehouseV1PropertyTypeOptions{
-                        PropertyDefinitions: []shared.GoogleCloudContentwarehouseV1PropertyDefinition{
-                            shared.GoogleCloudContentwarehouseV1PropertyDefinition{
-                            
-                            },
-                        },
-                    },
-                    TextTypeOptions: map[string]interface{}{
-                        "itaque": "ab",
-                        "neque": "ullam",
-                        "et": "accusantium",
-                    },
-                    TimestampTypeOptions: map[string]interface{}{
-                        "architecto": "quam",
-                        "velit": "cumque",
-                    },
                 },
                 shared.GoogleCloudContentwarehouseV1PropertyDefinition{
                     DateTimeTypeOptions: map[string]interface{}{
-                        "sunt": "voluptates",
+                        "veritatis": "in",
+                        "et": "omnis",
+                        "ipsum": "ex",
                     },
-                    DisplayName: "magni",
+                    DisplayName: "dolores",
                     EnumTypeOptions: &shared.GoogleCloudContentwarehouseV1EnumTypeOptions{
                         PossibleValues: []string{
-                            "optio",
-                            "qui",
-                            "earum",
+                            "vel",
                         },
                         ValidationCheckDisabled: true,
                     },
                     FloatTypeOptions: map[string]interface{}{
-                        "ut": "consequatur",
-                        "dolor": "commodi",
+                        "voluptas": "quam",
+                        "reprehenderit": "qui",
                     },
                     IntegerTypeOptions: map[string]interface{}{
-                        "reprehenderit": "consectetur",
+                        "unde": "in",
                     },
-                    IsFilterable: true,
-                    IsMetadata: false,
+                    IsFilterable: false,
+                    IsMetadata: true,
                     IsRepeatable: false,
-                    IsRequired: true,
+                    IsRequired: false,
                     IsSearchable: false,
                     MapTypeOptions: map[string]interface{}{
-                        "aut": "quas",
+                        "ullam": "et",
                     },
-                    Name: "consequuntur",
+                    Name: "accusantium",
+                    PropertyTypeOptions: &shared.GoogleCloudContentwarehouseV1PropertyTypeOptions{
+                        PropertyDefinitions: []shared.GoogleCloudContentwarehouseV1PropertyDefinition{
+                            shared.GoogleCloudContentwarehouseV1PropertyDefinition{
+                            
+                            },
+                            shared.GoogleCloudContentwarehouseV1PropertyDefinition{
+                            
+                            },
+                        },
+                    },
+                    RetrievalImportance: "LOW",
+                    TextTypeOptions: map[string]interface{}{
+                        "velit": "cumque",
+                    },
+                    TimestampTypeOptions: map[string]interface{}{
+                        "sunt": "voluptates",
+                    },
+                },
+                shared.GoogleCloudContentwarehouseV1PropertyDefinition{
+                    DateTimeTypeOptions: map[string]interface{}{
+                        "et": "optio",
+                        "qui": "earum",
+                        "illo": "omnis",
+                    },
+                    DisplayName: "ut",
+                    EnumTypeOptions: &shared.GoogleCloudContentwarehouseV1EnumTypeOptions{
+                        PossibleValues: []string{
+                            "dolor",
+                            "commodi",
+                            "error",
+                        },
+                        ValidationCheckDisabled: false,
+                    },
+                    FloatTypeOptions: map[string]interface{}{
+                        "nostrum": "ut",
+                    },
+                    IntegerTypeOptions: map[string]interface{}{
+                        "sed": "a",
+                        "soluta": "aut",
+                        "quas": "consequuntur",
+                    },
+                    IsFilterable: false,
+                    IsMetadata: true,
+                    IsRepeatable: true,
+                    IsRequired: false,
+                    IsSearchable: false,
+                    MapTypeOptions: map[string]interface{}{
+                        "atque": "ratione",
+                        "quisquam": "explicabo",
+                    },
+                    Name: "ea",
                     PropertyTypeOptions: &shared.GoogleCloudContentwarehouseV1PropertyTypeOptions{
                         PropertyDefinitions: []shared.GoogleCloudContentwarehouseV1PropertyDefinition{
                             shared.GoogleCloudContentwarehouseV1PropertyDefinition{
@@ -184,11 +193,14 @@ func main() {
                             },
                         },
                     },
+                    RetrievalImportance: "HIGH",
                     TextTypeOptions: map[string]interface{}{
-                        "ipsa": "expedita",
+                        "et": "rerum",
+                        "reiciendis": "quis",
                     },
                     TimestampTypeOptions: map[string]interface{}{
-                        "perferendis": "atque",
+                        "minima": "necessitatibus",
+                        "est": "quis",
                     },
                 },
             },
@@ -221,7 +233,7 @@ func main() {
 * `ContentwarehouseProjectsLocationsDocumentsReferenceIDDelete` - Deletes a document. Returns NOT_FOUND if the document does not exist.
 * `ContentwarehouseProjectsLocationsDocumentsReferenceIDGet` - Gets a document. Returns NOT_FOUND if the document does not exist.
 * `ContentwarehouseProjectsLocationsDocumentsSearch` - Searches for documents using provided SearchDocumentsRequest. This call only returns documents that the caller has permission to search against.
-* `ContentwarehouseProjectsLocationsDocumentsSetACL` - Sets the access control policy for a resource. Replaces any existing policy.
+* `ContentwarehouseProjectsLocationsDocumentsSetACL` - Sets the access control policy for a resource. Replaces any existing policy. You can set ACL with condition for projects only. Supported operators are: `=`, `!=`, `<`, `<=`, `>`, and `>=` where the left of the operator is `DocumentSchemaId` or property name and the right of the operator is a number or a quoted string. You must escape backslash (\\) and quote (\") characters. Boolean expressions (AND/OR) are supported up to 3 levels of nesting (for example, "((A AND B AND C) OR D) AND E"), a maximum of 10 comparisons are allowed in the expression. The expression must be < 6000 bytes in length. Sample condition: `"DocumentSchemaId = \"some schema id\" " OR SchemaId.floatPropertyName >= 10`
 * `ContentwarehouseProjectsLocationsInitialize` - Provisions resources for given tenant project. Returns a long running operation.
 * `ContentwarehouseProjectsLocationsRuleSetsCreate` - Creates a ruleset.
 * `ContentwarehouseProjectsLocationsRuleSetsList` - Lists rulesets.

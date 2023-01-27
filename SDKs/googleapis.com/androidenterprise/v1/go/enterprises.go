@@ -105,6 +105,48 @@ func (s *Enterprises) AndroidenterpriseEnterprisesCompleteSignup(ctx context.Con
 	return res, nil
 }
 
+// AndroidenterpriseEnterprisesCreateEnrollmentToken - Returns a token for device enrollment. The DPC can encode this token within the QR/NFC/zero-touch enrollment payload or fetch it before calling the on-device API to authenticate the user. The token can be generated for each device or reused across multiple devices.
+func (s *Enterprises) AndroidenterpriseEnterprisesCreateEnrollmentToken(ctx context.Context, request operations.AndroidenterpriseEnterprisesCreateEnrollmentTokenRequest) (*operations.AndroidenterpriseEnterprisesCreateEnrollmentTokenResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/androidenterprise/v1/enterprises/{enterpriseId}/createEnrollmentToken", request.PathParams)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AndroidenterpriseEnterprisesCreateEnrollmentTokenResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CreateEnrollmentTokenResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CreateEnrollmentTokenResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // AndroidenterpriseEnterprisesCreateWebToken - Returns a unique token to access an embeddable UI. To generate a web UI, pass the generated token into the managed Google Play javascript API. Each token may only be used to start one UI session. See the javascript API documentation for further information.
 func (s *Enterprises) AndroidenterpriseEnterprisesCreateWebToken(ctx context.Context, request operations.AndroidenterpriseEnterprisesCreateWebTokenRequest) (*operations.AndroidenterpriseEnterprisesCreateWebTokenResponse, error) {
 	baseURL := s._serverURL

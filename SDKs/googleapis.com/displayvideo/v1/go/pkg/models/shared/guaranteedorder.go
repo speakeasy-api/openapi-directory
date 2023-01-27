@@ -72,6 +72,10 @@ const (
 	GuaranteedOrderExchangeEnumExchangeTapjoy            GuaranteedOrderExchangeEnum = "EXCHANGE_TAPJOY"
 	GuaranteedOrderExchangeEnumExchangeVistar            GuaranteedOrderExchangeEnum = "EXCHANGE_VISTAR"
 	GuaranteedOrderExchangeEnumExchangeDax               GuaranteedOrderExchangeEnum = "EXCHANGE_DAX"
+	GuaranteedOrderExchangeEnumExchangeJcd               GuaranteedOrderExchangeEnum = "EXCHANGE_JCD"
+	GuaranteedOrderExchangeEnumExchangePlaceExchange     GuaranteedOrderExchangeEnum = "EXCHANGE_PLACE_EXCHANGE"
+	GuaranteedOrderExchangeEnumExchangeApplovin          GuaranteedOrderExchangeEnum = "EXCHANGE_APPLOVIN"
+	GuaranteedOrderExchangeEnumExchangeConnatix          GuaranteedOrderExchangeEnum = "EXCHANGE_CONNATIX"
 )
 
 // GuaranteedOrder

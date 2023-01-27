@@ -1,7 +1,7 @@
 package shared
 
 // GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo
-// ProfileInfo defines the profile information for each schema field type.
+// The profile information for each field type.
 type GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo struct {
 	DistinctRatio  *float64                                                                       `json:"distinctRatio,omitempty"`
 	DoubleProfile  *GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo  `json:"doubleProfile,omitempty"`

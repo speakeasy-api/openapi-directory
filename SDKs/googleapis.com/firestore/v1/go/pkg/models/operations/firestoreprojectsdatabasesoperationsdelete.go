@@ -22,6 +22,7 @@ type FirestoreProjectsDatabasesOperationsDeleteQueryParams struct {
 	QuotaUser                 *string           `queryParam:"style=form,explode=true,name=quotaUser"`
 	UploadType                *string           `queryParam:"style=form,explode=true,name=uploadType"`
 	UploadProtocol            *string           `queryParam:"style=form,explode=true,name=upload_protocol"`
+	ValidateOnly              *bool             `queryParam:"style=form,explode=true,name=validateOnly"`
 }
 
 type FirestoreProjectsDatabasesOperationsDeleteSecurityOption1 struct {

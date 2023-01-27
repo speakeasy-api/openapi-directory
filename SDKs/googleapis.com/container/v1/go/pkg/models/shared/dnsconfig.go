@@ -12,6 +12,7 @@ type DNSConfigClusterDNSScopeEnum string
 
 const (
 	DNSConfigClusterDNSScopeEnumDNSScopeUnspecified DNSConfigClusterDNSScopeEnum = "DNS_SCOPE_UNSPECIFIED"
+	DNSConfigClusterDNSScopeEnumClusterScope        DNSConfigClusterDNSScopeEnum = "CLUSTER_SCOPE"
 	DNSConfigClusterDNSScopeEnumVpcScope            DNSConfigClusterDNSScopeEnum = "VPC_SCOPE"
 )
 

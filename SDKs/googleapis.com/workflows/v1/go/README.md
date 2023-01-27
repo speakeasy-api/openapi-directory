@@ -70,11 +70,11 @@ func main() {
 
 * `WorkflowsProjectsLocationsList` - Lists information about the supported locations for this service.
 * `WorkflowsProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-* `WorkflowsProjectsLocationsWorkflowsCreate` - Creates a new workflow. If a workflow with the specified name already exists in the specified project and location, the long running operation will return ALREADY_EXISTS error.
+* `WorkflowsProjectsLocationsWorkflowsCreate` - Creates a new workflow. If a workflow with the specified name already exists in the specified project and location, the long running operation returns a ALREADY_EXISTS error.
 * `WorkflowsProjectsLocationsWorkflowsDelete` - Deletes a workflow with the specified name. This method also cancels and deletes all running executions of the workflow.
-* `WorkflowsProjectsLocationsWorkflowsGet` - Gets details of a single Workflow.
-* `WorkflowsProjectsLocationsWorkflowsList` - Lists Workflows in a given project and location. The default order is not specified.
-* `WorkflowsProjectsLocationsWorkflowsPatch` - Updates an existing workflow. Running this method has no impact on already running executions of the workflow. A new revision of the workflow may be created as a result of a successful update operation. In that case, such revision will be used in new workflow executions.
+* `WorkflowsProjectsLocationsWorkflowsGet` - Gets details of a single workflow.
+* `WorkflowsProjectsLocationsWorkflowsList` - Lists workflows in a given project and location. The default order is not specified.
+* `WorkflowsProjectsLocationsWorkflowsPatch` - Updates an existing workflow. Running this method has no impact on already running executions of the workflow. A new revision of the workflow might be created as a result of a successful update operation. In that case, the new revision is used in new workflow executions.
 
 <!-- End SDK Available Operations -->
 

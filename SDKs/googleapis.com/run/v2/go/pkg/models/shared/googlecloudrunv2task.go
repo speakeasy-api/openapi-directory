@@ -27,6 +27,7 @@ type GoogleCloudRunV2Task struct {
 	Job                  *string                                       `json:"job,omitempty"`
 	Labels               map[string]string                             `json:"labels,omitempty"`
 	LastAttemptResult    *GoogleCloudRunV2TaskAttemptResult            `json:"lastAttemptResult,omitempty"`
+	LogURI               *string                                       `json:"logUri,omitempty"`
 	MaxRetries           *int32                                        `json:"maxRetries,omitempty"`
 	Name                 *string                                       `json:"name,omitempty"`
 	ObservedGeneration   *string                                       `json:"observedGeneration,omitempty"`

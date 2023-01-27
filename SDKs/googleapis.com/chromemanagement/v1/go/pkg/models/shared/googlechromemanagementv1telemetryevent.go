@@ -14,12 +14,12 @@ const (
 // GoogleChromeManagementV1TelemetryEvent
 // Telemetry data reported by a managed device.
 type GoogleChromeManagementV1TelemetryEvent struct {
-	AudioSevereUnderrunEvent          map[string]interface{}                                              `json:"audioSevereUnderrunEvent,omitempty"`
-	Device                            *GoogleChromeManagementV1TelemetryDeviceInfo                        `json:"device,omitempty"`
-	EventType                         *GoogleChromeManagementV1TelemetryEventEventTypeEnum                `json:"eventType,omitempty"`
-	HTTPSLatencyChangeEvent           *GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEvent           `json:"httpsLatencyChangeEvent,omitempty"`
-	Name                              *string                                                             `json:"name,omitempty"`
-	NetworkConnectionStateChangeEvent *GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent `json:"networkConnectionStateChangeEvent,omitempty"`
-	ReportTime                        *string                                                             `json:"reportTime,omitempty"`
-	User                              *GoogleChromeManagementV1TelemetryUserInfo                          `json:"user,omitempty"`
+	AudioSevereUnderrunEvent map[string]interface{}                                    `json:"audioSevereUnderrunEvent,omitempty"`
+	Device                   *GoogleChromeManagementV1TelemetryDeviceInfo              `json:"device,omitempty"`
+	EventType                *GoogleChromeManagementV1TelemetryEventEventTypeEnum      `json:"eventType,omitempty"`
+	HTTPSLatencyChangeEvent  *GoogleChromeManagementV1TelemetryHTTPSLatencyChangeEvent `json:"httpsLatencyChangeEvent,omitempty"`
+	Name                     *string                                                   `json:"name,omitempty"`
+	ReportTime               *string                                                   `json:"reportTime,omitempty"`
+	UsbPeripheralsEvent      *GoogleChromeManagementV1TelemetryUsbPeripheralsEvent     `json:"usbPeripheralsEvent,omitempty"`
+	User                     *GoogleChromeManagementV1TelemetryUserInfo                `json:"user,omitempty"`
 }

@@ -11,6 +11,7 @@ const (
 // GoogleCloudDatacatalogV1DatabaseTableSpec
 // Specification that applies to a table resource. Valid only for entries with the `TABLE` type.
 type GoogleCloudDatacatalogV1DatabaseTableSpec struct {
-	DataplexTable *GoogleCloudDatacatalogV1DataplexTableSpec         `json:"dataplexTable,omitempty"`
-	Type          *GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum `json:"type,omitempty"`
+	DatabaseViewSpec *GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec `json:"databaseViewSpec,omitempty"`
+	DataplexTable    *GoogleCloudDatacatalogV1DataplexTableSpec                 `json:"dataplexTable,omitempty"`
+	Type             *GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum         `json:"type,omitempty"`
 }

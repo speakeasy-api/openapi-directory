@@ -11,23 +11,27 @@ const (
 // PostgreSQLConnectionProfile
 // Specifies connection parameters required specifically for PostgreSQL databases.
 type PostgreSQLConnectionProfile struct {
-	CloudSQLID          *string                                             `json:"cloudSqlId,omitempty"`
-	Host                *string                                             `json:"host,omitempty"`
-	NetworkArchitecture *PostgreSQLConnectionProfileNetworkArchitectureEnum `json:"networkArchitecture,omitempty"`
-	Password            *string                                             `json:"password,omitempty"`
-	PasswordSet         *bool                                               `json:"passwordSet,omitempty"`
-	Port                *int32                                              `json:"port,omitempty"`
-	Ssl                 *SslConfig                                          `json:"ssl,omitempty"`
-	Username            *string                                             `json:"username,omitempty"`
+	CloudSQLID                        *string                                             `json:"cloudSqlId,omitempty"`
+	Host                              *string                                             `json:"host,omitempty"`
+	NetworkArchitecture               *PostgreSQLConnectionProfileNetworkArchitectureEnum `json:"networkArchitecture,omitempty"`
+	Password                          *string                                             `json:"password,omitempty"`
+	PasswordSet                       *bool                                               `json:"passwordSet,omitempty"`
+	Port                              *int32                                              `json:"port,omitempty"`
+	PrivateServiceConnectConnectivity *PrivateServiceConnectConnectivity                  `json:"privateServiceConnectConnectivity,omitempty"`
+	Ssl                               *SslConfig                                          `json:"ssl,omitempty"`
+	StaticIPConnectivity              map[string]interface{}                              `json:"staticIpConnectivity,omitempty"`
+	Username                          *string                                             `json:"username,omitempty"`
 }
 
 // PostgreSQLConnectionProfileInput
 // Specifies connection parameters required specifically for PostgreSQL databases.
 type PostgreSQLConnectionProfileInput struct {
-	CloudSQLID *string         `json:"cloudSqlId,omitempty"`
-	Host       *string         `json:"host,omitempty"`
-	Password   *string         `json:"password,omitempty"`
-	Port       *int32          `json:"port,omitempty"`
-	Ssl        *SslConfigInput `json:"ssl,omitempty"`
-	Username   *string         `json:"username,omitempty"`
+	CloudSQLID                        *string                            `json:"cloudSqlId,omitempty"`
+	Host                              *string                            `json:"host,omitempty"`
+	Password                          *string                            `json:"password,omitempty"`
+	Port                              *int32                             `json:"port,omitempty"`
+	PrivateServiceConnectConnectivity *PrivateServiceConnectConnectivity `json:"privateServiceConnectConnectivity,omitempty"`
+	Ssl                               *SslConfigInput                    `json:"ssl,omitempty"`
+	StaticIPConnectivity              map[string]interface{}             `json:"staticIpConnectivity,omitempty"`
+	Username                          *string                            `json:"username,omitempty"`
 }

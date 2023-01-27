@@ -16,6 +16,7 @@ type AddSubnetworkRequest struct {
 	Region                              *string                `json:"region,omitempty"`
 	RequestedAddress                    *string                `json:"requestedAddress,omitempty"`
 	RequestedRanges                     []string               `json:"requestedRanges,omitempty"`
+	Role                                *string                `json:"role,omitempty"`
 	SecondaryIPRangeSpecs               []SecondaryIPRangeSpec `json:"secondaryIpRangeSpecs,omitempty"`
 	Subnetwork                          *string                `json:"subnetwork,omitempty"`
 	SubnetworkUsers                     []string               `json:"subnetworkUsers,omitempty"`

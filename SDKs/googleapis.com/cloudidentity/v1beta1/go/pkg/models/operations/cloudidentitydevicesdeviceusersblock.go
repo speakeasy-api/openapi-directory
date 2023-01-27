@@ -30,7 +30,7 @@ type CloudidentityDevicesDeviceUsersBlockSecurity struct {
 type CloudidentityDevicesDeviceUsersBlockRequest struct {
 	PathParams  CloudidentityDevicesDeviceUsersBlockPathParams
 	QueryParams CloudidentityDevicesDeviceUsersBlockQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
+	Request     *shared.BlockDeviceUserRequest `request:"mediaType=application/json"`
 	Security    CloudidentityDevicesDeviceUsersBlockSecurity
 }
 

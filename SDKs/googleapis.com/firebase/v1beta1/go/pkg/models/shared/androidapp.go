@@ -14,6 +14,7 @@ type AndroidApp struct {
 	APIKeyID     *string              `json:"apiKeyId,omitempty"`
 	AppID        *string              `json:"appId,omitempty"`
 	DisplayName  *string              `json:"displayName,omitempty"`
+	Etag         *string              `json:"etag,omitempty"`
 	Name         *string              `json:"name,omitempty"`
 	PackageName  *string              `json:"packageName,omitempty"`
 	ProjectID    *string              `json:"projectId,omitempty"`
@@ -27,6 +28,7 @@ type AndroidApp struct {
 type AndroidAppInput struct {
 	APIKeyID     *string  `json:"apiKeyId,omitempty"`
 	DisplayName  *string  `json:"displayName,omitempty"`
+	Etag         *string  `json:"etag,omitempty"`
 	Name         *string  `json:"name,omitempty"`
 	PackageName  *string  `json:"packageName,omitempty"`
 	Sha1Hashes   []string `json:"sha1Hashes,omitempty"`

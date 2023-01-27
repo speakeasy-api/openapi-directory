@@ -3,5 +3,6 @@ package shared
 // CreateDeviceRequestInput
 // Request message for creating a Company Owned device.
 type CreateDeviceRequestInput struct {
-	Device *DeviceInput `json:"device,omitempty"`
+	Customer *string      `json:"customer,omitempty"`
+	Device   *DeviceInput `json:"device,omitempty"`
 }

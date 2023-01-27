@@ -88,6 +88,10 @@ const (
 	InventorySourceExchangeEnumExchangeTapjoy            InventorySourceExchangeEnum = "EXCHANGE_TAPJOY"
 	InventorySourceExchangeEnumExchangeVistar            InventorySourceExchangeEnum = "EXCHANGE_VISTAR"
 	InventorySourceExchangeEnumExchangeDax               InventorySourceExchangeEnum = "EXCHANGE_DAX"
+	InventorySourceExchangeEnumExchangeJcd               InventorySourceExchangeEnum = "EXCHANGE_JCD"
+	InventorySourceExchangeEnumExchangePlaceExchange     InventorySourceExchangeEnum = "EXCHANGE_PLACE_EXCHANGE"
+	InventorySourceExchangeEnumExchangeApplovin          InventorySourceExchangeEnum = "EXCHANGE_APPLOVIN"
+	InventorySourceExchangeEnumExchangeConnatix          InventorySourceExchangeEnum = "EXCHANGE_CONNATIX"
 )
 
 type InventorySourceInventorySourceProductTypeEnum string

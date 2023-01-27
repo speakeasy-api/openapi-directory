@@ -23,6 +23,14 @@ func main() {
     s := sdk.New()
     
     req := operations.PlaydeveloperreportingAnomaliesListRequest{
+        Security: operations.PlaydeveloperreportingAnomaliesListSecurity{
+            Oauth2: shared.SchemeOauth2{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+            Oauth2c: shared.SchemeOauth2c{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        },
         PathParams: operations.PlaydeveloperreportingAnomaliesListPathParams{
             Parent: "sit",
         },

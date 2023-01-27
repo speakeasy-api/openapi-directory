@@ -100,52 +100,59 @@ func main() {
                     MilliDcuSeconds: "ipsum",
                     ShuffleStorageGbSeconds: "eveniet",
                 },
+                CurrentUsage: &shared.UsageSnapshot{
+                    MilliDcu: "modi",
+                    ShuffleStorageGb: "sint",
+                    SnapshotTime: "inventore",
+                },
             },
             SparkBatch: &shared.SparkBatch{
                 ArchiveUris: []string{
-                    "sint",
-                    "inventore",
-                },
-                Args: []string{
                     "exercitationem",
                     "aut",
                     "reprehenderit",
                 },
-                FileUris: []string{
+                Args: []string{
                     "maiores",
                     "incidunt",
                     "dolor",
                 },
-                JarFileUris: []string{
+                FileUris: []string{
                     "veritatis",
                     "in",
                     "et",
                 },
-                MainClass: "omnis",
-                MainJarFileURI: "ipsum",
+                JarFileUris: []string{
+                    "ipsum",
+                    "ex",
+                },
+                MainClass: "dolores",
+                MainJarFileURI: "placeat",
             },
             SparkRBatch: &shared.SparkRBatch{
                 ArchiveUris: []string{
-                    "dolores",
+                    "rerum",
+                    "mollitia",
                 },
                 Args: []string{
-                    "vel",
+                    "quam",
+                    "reprehenderit",
                 },
                 FileUris: []string{
-                    "mollitia",
-                    "voluptas",
-                    "quam",
+                    "qui",
                 },
-                MainRFileURI: "reprehenderit",
+                MainRFileURI: "unde",
             },
             SparkSQLBatch: &shared.SparkSQLBatch{
                 JarFileUris: []string{
+                    "autem",
                     "qui",
                 },
-                QueryFileURI: "unde",
+                QueryFileURI: "ut",
                 QueryVariables: map[string]string{
-                    "autem": "qui",
-                    "ut": "itaque",
+                    "ab": "neque",
+                    "ullam": "et",
+                    "accusantium": "esse",
                 },
             },
         },

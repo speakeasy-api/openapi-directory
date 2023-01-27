@@ -19,6 +19,7 @@ type CloudidentityGroupsSearchQueryParams struct {
 	Fields         *string                            `queryParam:"style=form,explode=true,name=fields"`
 	Key            *string                            `queryParam:"style=form,explode=true,name=key"`
 	OauthToken     *string                            `queryParam:"style=form,explode=true,name=oauth_token"`
+	OrderBy        *string                            `queryParam:"style=form,explode=true,name=orderBy"`
 	PageSize       *int64                             `queryParam:"style=form,explode=true,name=pageSize"`
 	PageToken      *string                            `queryParam:"style=form,explode=true,name=pageToken"`
 	PrettyPrint    *bool                              `queryParam:"style=form,explode=true,name=prettyPrint"`

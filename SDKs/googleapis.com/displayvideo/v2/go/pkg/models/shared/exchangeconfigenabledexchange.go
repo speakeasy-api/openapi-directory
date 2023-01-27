@@ -72,6 +72,10 @@ const (
 	ExchangeConfigEnabledExchangeExchangeEnumExchangeTapjoy            ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_TAPJOY"
 	ExchangeConfigEnabledExchangeExchangeEnumExchangeVistar            ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_VISTAR"
 	ExchangeConfigEnabledExchangeExchangeEnumExchangeDax               ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_DAX"
+	ExchangeConfigEnabledExchangeExchangeEnumExchangeJcd               ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_JCD"
+	ExchangeConfigEnabledExchangeExchangeEnumExchangePlaceExchange     ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_PLACE_EXCHANGE"
+	ExchangeConfigEnabledExchangeExchangeEnumExchangeApplovin          ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_APPLOVIN"
+	ExchangeConfigEnabledExchangeExchangeEnumExchangeConnatix          ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_CONNATIX"
 )
 
 // ExchangeConfigEnabledExchange

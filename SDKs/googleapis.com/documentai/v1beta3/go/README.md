@@ -68,6 +68,7 @@ func main() {
 * `DocumentaiProjectsLocationsFetchProcessorTypes` - Fetches processor types. Note that we do not use ListProcessorTypes here because it is not paginated.
 * `DocumentaiProjectsLocationsList` - Lists information about the supported locations for this service.
 * `DocumentaiProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* `DocumentaiProjectsLocationsProcessorTypesGet` - Gets a processor type detail.
 * `DocumentaiProjectsLocationsProcessorTypesList` - Lists the processor types that exist.
 * `DocumentaiProjectsLocationsProcessorsCreate` - Creates a processor from the type processor that the user chose. The processor will be at "ENABLED" state by default after its creation.
 * `DocumentaiProjectsLocationsProcessorsDisable` - Disables a processor
@@ -78,7 +79,6 @@ func main() {
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsDelete` - Deletes the processor version, all artifacts under the processor version will be deleted.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsDeploy` - Deploys the processor version.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersion` - Evaluates a ProcessorVersion against annotated documents, producing an Evaluation.
-* `DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsGet` - Retrieves a specific evaluation.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsList` - Retrieves a set of evaluations for a given processor version.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsList` - Lists all versions of a processor.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsProcess` - Processes a single document.

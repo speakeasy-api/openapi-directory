@@ -29,7 +29,7 @@ func NewReplies(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-// DriveRepliesCreate - Creates a new reply to a comment.
+// DriveRepliesCreate - Creates a reply to a comment.
 func (s *Replies) DriveRepliesCreate(ctx context.Context, request operations.DriveRepliesCreateRequest) (*operations.DriveRepliesCreateResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/files/{fileId}/comments/{commentId}/replies", request.PathParams)

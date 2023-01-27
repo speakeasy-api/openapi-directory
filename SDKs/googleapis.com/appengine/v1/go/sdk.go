@@ -16,7 +16,8 @@ type HTTPClient interface {
 
 // SDK Documentation: https://cloud.google.com/appengine/docs/admin-api/
 type SDK struct {
-	Apps *Apps
+	Apps     *Apps
+	Projects *Projects
 
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
@@ -69,6 +70,15 @@ func New(opts ...SDKOption) *SDK {
 	}
 
 	sdk.Apps = NewApps(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Projects = NewProjects(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

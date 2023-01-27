@@ -17,6 +17,7 @@ const (
 // Execution represents the configuration of a single execution. A execution an immutable resource that references a container image which is run to completion.
 type GoogleCloudRunV2Execution struct {
 	Annotations        map[string]string                         `json:"annotations,omitempty"`
+	CancelledCount     *int32                                    `json:"cancelledCount,omitempty"`
 	CompletionTime     *string                                   `json:"completionTime,omitempty"`
 	Conditions         []GoogleCloudRunV2Condition               `json:"conditions,omitempty"`
 	CreateTime         *string                                   `json:"createTime,omitempty"`
@@ -28,10 +29,12 @@ type GoogleCloudRunV2Execution struct {
 	Job                *string                                   `json:"job,omitempty"`
 	Labels             map[string]string                         `json:"labels,omitempty"`
 	LaunchStage        *GoogleCloudRunV2ExecutionLaunchStageEnum `json:"launchStage,omitempty"`
+	LogURI             *string                                   `json:"logUri,omitempty"`
 	Name               *string                                   `json:"name,omitempty"`
 	ObservedGeneration *string                                   `json:"observedGeneration,omitempty"`
 	Parallelism        *int32                                    `json:"parallelism,omitempty"`
 	Reconciling        *bool                                     `json:"reconciling,omitempty"`
+	RetriedCount       *int32                                    `json:"retriedCount,omitempty"`
 	RunningCount       *int32                                    `json:"runningCount,omitempty"`
 	StartTime          *string                                   `json:"startTime,omitempty"`
 	SucceededCount     *int32                                    `json:"succeededCount,omitempty"`

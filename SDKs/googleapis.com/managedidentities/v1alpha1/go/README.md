@@ -91,6 +91,7 @@ func main() {
 * `ManagedidentitiesProjectsLocationsGlobalDomainsCreate` - Creates a Microsoft AD Domain in a given project. Operation
 * `ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrust` - Removes identified trust. Operation
 * `ManagedidentitiesProjectsLocationsGlobalDomainsDisableMigration` - Disable Domain Migration
+* `ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachine` - DomainJoinMachine API joins a Compute Engine VM to the domain
 * `ManagedidentitiesProjectsLocationsGlobalDomainsEnableMigration` - Enable Domain Migration
 * `ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchema` - Extend Schema for Domain
 * `ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettings` - Gets the domain ldaps settings.

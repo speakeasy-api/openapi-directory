@@ -8,6 +8,8 @@ const (
 	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumCloudPubsub                 GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "CLOUD_PUBSUB"
 	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumDataprocMetastore           GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "DATAPROC_METASTORE"
 	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumDataplex                    GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "DATAPLEX"
+	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumCloudSQL                    GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "CLOUD_SQL"
+	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumLooker                      GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "LOOKER"
 )
 
 type GoogleCloudDatacatalogV1SearchCatalogResultSearchResultTypeEnum string

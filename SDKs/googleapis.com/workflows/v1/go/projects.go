@@ -113,7 +113,7 @@ func (s *Projects) WorkflowsProjectsLocationsOperationsList(ctx context.Context,
 	return res, nil
 }
 
-// WorkflowsProjectsLocationsWorkflowsCreate - Creates a new workflow. If a workflow with the specified name already exists in the specified project and location, the long running operation will return ALREADY_EXISTS error.
+// WorkflowsProjectsLocationsWorkflowsCreate - Creates a new workflow. If a workflow with the specified name already exists in the specified project and location, the long running operation returns a ALREADY_EXISTS error.
 func (s *Projects) WorkflowsProjectsLocationsWorkflowsCreate(ctx context.Context, request operations.WorkflowsProjectsLocationsWorkflowsCreateRequest) (*operations.WorkflowsProjectsLocationsWorkflowsCreateResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workflows", request.PathParams)
@@ -204,7 +204,7 @@ func (s *Projects) WorkflowsProjectsLocationsWorkflowsDelete(ctx context.Context
 	return res, nil
 }
 
-// WorkflowsProjectsLocationsWorkflowsGet - Gets details of a single Workflow.
+// WorkflowsProjectsLocationsWorkflowsGet - Gets details of a single workflow.
 func (s *Projects) WorkflowsProjectsLocationsWorkflowsGet(ctx context.Context, request operations.WorkflowsProjectsLocationsWorkflowsGetRequest) (*operations.WorkflowsProjectsLocationsWorkflowsGetResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams)
@@ -246,7 +246,7 @@ func (s *Projects) WorkflowsProjectsLocationsWorkflowsGet(ctx context.Context, r
 	return res, nil
 }
 
-// WorkflowsProjectsLocationsWorkflowsList - Lists Workflows in a given project and location. The default order is not specified.
+// WorkflowsProjectsLocationsWorkflowsList - Lists workflows in a given project and location. The default order is not specified.
 func (s *Projects) WorkflowsProjectsLocationsWorkflowsList(ctx context.Context, request operations.WorkflowsProjectsLocationsWorkflowsListRequest) (*operations.WorkflowsProjectsLocationsWorkflowsListResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/workflows", request.PathParams)
@@ -288,7 +288,7 @@ func (s *Projects) WorkflowsProjectsLocationsWorkflowsList(ctx context.Context, 
 	return res, nil
 }
 
-// WorkflowsProjectsLocationsWorkflowsPatch - Updates an existing workflow. Running this method has no impact on already running executions of the workflow. A new revision of the workflow may be created as a result of a successful update operation. In that case, such revision will be used in new workflow executions.
+// WorkflowsProjectsLocationsWorkflowsPatch - Updates an existing workflow. Running this method has no impact on already running executions of the workflow. A new revision of the workflow might be created as a result of a successful update operation. In that case, the new revision is used in new workflow executions.
 func (s *Projects) WorkflowsProjectsLocationsWorkflowsPatch(ctx context.Context, request operations.WorkflowsProjectsLocationsWorkflowsPatchRequest) (*operations.WorkflowsProjectsLocationsWorkflowsPatchResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams)

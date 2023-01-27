@@ -37,4 +37,5 @@ type RuntimeSoftwareConfig struct {
 	PostStartupScript         *string                                             `json:"postStartupScript,omitempty"`
 	PostStartupScriptBehavior *RuntimeSoftwareConfigPostStartupScriptBehaviorEnum `json:"postStartupScriptBehavior,omitempty"`
 	Upgradeable               *bool                                               `json:"upgradeable,omitempty"`
+	Version                   *string                                             `json:"version,omitempty"`
 }

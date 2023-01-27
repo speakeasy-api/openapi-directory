@@ -72,6 +72,10 @@ const (
 	ExchangeReviewStatusExchangeEnumExchangeTapjoy            ExchangeReviewStatusExchangeEnum = "EXCHANGE_TAPJOY"
 	ExchangeReviewStatusExchangeEnumExchangeVistar            ExchangeReviewStatusExchangeEnum = "EXCHANGE_VISTAR"
 	ExchangeReviewStatusExchangeEnumExchangeDax               ExchangeReviewStatusExchangeEnum = "EXCHANGE_DAX"
+	ExchangeReviewStatusExchangeEnumExchangeJcd               ExchangeReviewStatusExchangeEnum = "EXCHANGE_JCD"
+	ExchangeReviewStatusExchangeEnumExchangePlaceExchange     ExchangeReviewStatusExchangeEnum = "EXCHANGE_PLACE_EXCHANGE"
+	ExchangeReviewStatusExchangeEnumExchangeApplovin          ExchangeReviewStatusExchangeEnum = "EXCHANGE_APPLOVIN"
+	ExchangeReviewStatusExchangeEnumExchangeConnatix          ExchangeReviewStatusExchangeEnum = "EXCHANGE_CONNATIX"
 )
 
 type ExchangeReviewStatusStatusEnum string

@@ -79,7 +79,7 @@ func (s *Files) DriveFilesCopy(ctx context.Context, request operations.DriveFile
 	return res, nil
 }
 
-// DriveFilesCreate - Creates a new file.
+// DriveFilesCreate - Creates a file.
 func (s *Files) DriveFilesCreate(ctx context.Context, request operations.DriveFilesCreateRequest) (*operations.DriveFilesCreateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/files"

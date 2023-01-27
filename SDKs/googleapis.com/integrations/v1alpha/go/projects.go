@@ -897,55 +897,6 @@ func (s *Projects) IntegrationsProjectsLocationsProductsIntegrationsList(ctx con
 	return res, nil
 }
 
-// IntegrationsProjectsLocationsProductsIntegrationsMonitorexecutionstats - Get execution stats
-func (s *Projects) IntegrationsProjectsLocationsProductsIntegrationsMonitorexecutionstats(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsMonitorexecutionstatsRequest) (*operations.IntegrationsProjectsLocationsProductsIntegrationsMonitorexecutionstatsResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1alpha/{parent}:monitorexecutionstats", request.PathParams)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.IntegrationsProjectsLocationsProductsIntegrationsMonitorexecutionstatsResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.GoogleCloudIntegrationsV1alphaMonitorExecutionStatsResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GoogleCloudIntegrationsV1alphaMonitorExecutionStatsResponse = out
-		}
-	}
-
-	return res, nil
-}
-
 // IntegrationsProjectsLocationsProductsIntegrationsSchedule - Schedules an integration for execution by passing the trigger id and the scheduled time in the request body.
 func (s *Projects) IntegrationsProjectsLocationsProductsIntegrationsSchedule(ctx context.Context, request operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleRequest) (*operations.IntegrationsProjectsLocationsProductsIntegrationsScheduleResponse, error) {
 	baseURL := s._serverURL

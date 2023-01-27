@@ -20,8 +20,10 @@ type DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams struct {
 	PrettyPrint         *bool             `queryParam:"style=form,explode=true,name=prettyPrint"`
 	QuotaUser           *string           `queryParam:"style=form,explode=true,name=quotaUser"`
 	RequestID           *string           `queryParam:"style=form,explode=true,name=requestId"`
+	SkipValidation      *bool             `queryParam:"style=form,explode=true,name=skipValidation"`
 	UploadType          *string           `queryParam:"style=form,explode=true,name=uploadType"`
 	UploadProtocol      *string           `queryParam:"style=form,explode=true,name=upload_protocol"`
+	ValidateOnly        *bool             `queryParam:"style=form,explode=true,name=validateOnly"`
 }
 
 type DatamigrationProjectsLocationsConnectionProfilesCreateSecurity struct {

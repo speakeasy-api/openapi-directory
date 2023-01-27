@@ -14,6 +14,7 @@ type DatastreamProjectsLocationsPrivateConnectionsCreateQueryParams struct {
 	Alt                 *shared.AltEnum   `queryParam:"style=form,explode=true,name=alt"`
 	Callback            *string           `queryParam:"style=form,explode=true,name=callback"`
 	Fields              *string           `queryParam:"style=form,explode=true,name=fields"`
+	Force               *bool             `queryParam:"style=form,explode=true,name=force"`
 	Key                 *string           `queryParam:"style=form,explode=true,name=key"`
 	OauthToken          *string           `queryParam:"style=form,explode=true,name=oauth_token"`
 	PrettyPrint         *bool             `queryParam:"style=form,explode=true,name=prettyPrint"`

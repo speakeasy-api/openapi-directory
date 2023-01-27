@@ -3,13 +3,14 @@ package shared
 type ScanRunErrorTraceCodeEnum string
 
 const (
-	ScanRunErrorTraceCodeEnumCodeUnspecified           ScanRunErrorTraceCodeEnum = "CODE_UNSPECIFIED"
-	ScanRunErrorTraceCodeEnumInternalError             ScanRunErrorTraceCodeEnum = "INTERNAL_ERROR"
-	ScanRunErrorTraceCodeEnumScanConfigIssue           ScanRunErrorTraceCodeEnum = "SCAN_CONFIG_ISSUE"
-	ScanRunErrorTraceCodeEnumAuthenticationConfigIssue ScanRunErrorTraceCodeEnum = "AUTHENTICATION_CONFIG_ISSUE"
-	ScanRunErrorTraceCodeEnumTimedOutWhileScanning     ScanRunErrorTraceCodeEnum = "TIMED_OUT_WHILE_SCANNING"
-	ScanRunErrorTraceCodeEnumTooManyRedirects          ScanRunErrorTraceCodeEnum = "TOO_MANY_REDIRECTS"
-	ScanRunErrorTraceCodeEnumTooManyHTTPErrors         ScanRunErrorTraceCodeEnum = "TOO_MANY_HTTP_ERRORS"
+	ScanRunErrorTraceCodeEnumCodeUnspecified             ScanRunErrorTraceCodeEnum = "CODE_UNSPECIFIED"
+	ScanRunErrorTraceCodeEnumInternalError               ScanRunErrorTraceCodeEnum = "INTERNAL_ERROR"
+	ScanRunErrorTraceCodeEnumScanConfigIssue             ScanRunErrorTraceCodeEnum = "SCAN_CONFIG_ISSUE"
+	ScanRunErrorTraceCodeEnumAuthenticationConfigIssue   ScanRunErrorTraceCodeEnum = "AUTHENTICATION_CONFIG_ISSUE"
+	ScanRunErrorTraceCodeEnumTimedOutWhileScanning       ScanRunErrorTraceCodeEnum = "TIMED_OUT_WHILE_SCANNING"
+	ScanRunErrorTraceCodeEnumTooManyRedirects            ScanRunErrorTraceCodeEnum = "TOO_MANY_REDIRECTS"
+	ScanRunErrorTraceCodeEnumTooManyHTTPErrors           ScanRunErrorTraceCodeEnum = "TOO_MANY_HTTP_ERRORS"
+	ScanRunErrorTraceCodeEnumStartingUrlsCrawlHTTPErrors ScanRunErrorTraceCodeEnum = "STARTING_URLS_CRAWL_HTTP_ERRORS"
 )
 
 // ScanRunErrorTrace

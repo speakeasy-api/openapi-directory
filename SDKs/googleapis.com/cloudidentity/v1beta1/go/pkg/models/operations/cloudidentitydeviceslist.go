@@ -17,6 +17,7 @@ type CloudidentityDevicesListQueryParams struct {
 	AccessToken    *string                           `queryParam:"style=form,explode=true,name=access_token"`
 	Alt            *shared.AltEnum                   `queryParam:"style=form,explode=true,name=alt"`
 	Callback       *string                           `queryParam:"style=form,explode=true,name=callback"`
+	Customer       *string                           `queryParam:"style=form,explode=true,name=customer"`
 	Fields         *string                           `queryParam:"style=form,explode=true,name=fields"`
 	Filter         *string                           `queryParam:"style=form,explode=true,name=filter"`
 	Key            *string                           `queryParam:"style=form,explode=true,name=key"`

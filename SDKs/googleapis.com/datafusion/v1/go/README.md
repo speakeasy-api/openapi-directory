@@ -96,24 +96,26 @@ func main() {
             EnableRbac: true,
             EnableStackdriverLogging: false,
             EnableStackdriverMonitoring: false,
+            EnableZoneSeparation: true,
             EventPublishConfig: &shared.EventPublishConfig{
                 Enabled: true,
-                Topic: "consectetur",
+                Topic: "nobis",
             },
             Labels: map[string]string{
-                "odio": "qui",
+                "qui": "recusandae",
             },
             NetworkConfig: &shared.NetworkConfig{
-                IPAllocation: "recusandae",
-                Network: "at",
+                IPAllocation: "at",
+                Network: "ipsum",
             },
             Options: map[string]string{
-                "eveniet": "modi",
+                "modi": "sint",
+                "inventore": "ut",
             },
-            PrivateInstance: true,
-            Type: "BASIC",
-            Version: "ut",
-            Zone: "exercitationem",
+            PrivateInstance: false,
+            Type: "TYPE_UNSPECIFIED",
+            Version: "reprehenderit",
+            Zone: "tempore",
         },
     }
     

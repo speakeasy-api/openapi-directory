@@ -63,7 +63,7 @@ func main() {
             LatestRun: &shared.ScanRun{
                 EndTime: "illum",
                 ErrorTrace: &shared.ScanRunErrorTrace{
-                    Code: "AUTHENTICATION_CONFIG_ISSUE",
+                    Code: "SCAN_CONFIG_ISSUE",
                     MostCommonHTTPErrorCode: 3706853784096366226,
                     ScanConfigError: &shared.ScanConfigError{
                         Code: "CANNOT_USE_GOOGLE_COM_ACCOUNT",

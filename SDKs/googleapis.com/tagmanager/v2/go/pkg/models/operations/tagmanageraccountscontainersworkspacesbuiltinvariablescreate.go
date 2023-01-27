@@ -124,6 +124,7 @@ const (
 	TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateTypeEnumServerPageLocationURL                               TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateTypeEnum = "serverPageLocationUrl"
 	TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateTypeEnumServerPageLocationPath                              TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateTypeEnum = "serverPageLocationPath"
 	TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateTypeEnumServerPageLocationHostname                          TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateTypeEnum = "serverPageLocationHostname"
+	TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateTypeEnumVisitorRegion                                       TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateTypeEnum = "visitorRegion"
 )
 
 type TagmanagerAccountsContainersWorkspacesBuiltInVariablesCreateQueryParams struct {

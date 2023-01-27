@@ -78,6 +78,7 @@ func main() {
 
 * `AndroidenterpriseEnterprisesAcknowledgeNotificationSet` - Acknowledges notifications that were received from Enterprises.PullNotificationSet to prevent subsequent calls from returning the same notifications.
 * `AndroidenterpriseEnterprisesCompleteSignup` - Completes the signup flow, by specifying the Completion token and Enterprise token. This request must not be called multiple times for a given Enterprise Token.
+* `AndroidenterpriseEnterprisesCreateEnrollmentToken` - Returns a token for device enrollment. The DPC can encode this token within the QR/NFC/zero-touch enrollment payload or fetch it before calling the on-device API to authenticate the user. The token can be generated for each device or reused across multiple devices.
 * `AndroidenterpriseEnterprisesCreateWebToken` - Returns a unique token to access an embeddable UI. To generate a web UI, pass the generated token into the managed Google Play javascript API. Each token may only be used to start one UI session. See the javascript API documentation for further information.
 * `AndroidenterpriseEnterprisesEnroll` - Enrolls an enterprise with the calling EMM.
 * `AndroidenterpriseEnterprisesGenerateSignupURL` - Generates a sign-up URL.

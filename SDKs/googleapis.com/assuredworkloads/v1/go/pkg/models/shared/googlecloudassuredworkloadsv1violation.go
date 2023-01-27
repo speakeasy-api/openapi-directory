@@ -10,7 +10,7 @@ const (
 )
 
 // GoogleCloudAssuredworkloadsV1Violation
-// Workload monitoring Violation.
+// Workload monitoring Violation. Next Id: 22
 type GoogleCloudAssuredworkloadsV1Violation struct {
 	Acknowledged          *bool                                              `json:"acknowledged,omitempty"`
 	AcknowledgementTime   *string                                            `json:"acknowledgementTime,omitempty"`

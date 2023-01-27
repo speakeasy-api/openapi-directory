@@ -22,6 +22,7 @@ type DatamigrationProjectsLocationsMigrationJobsPatchQueryParams struct {
 	UpdateMask     *string           `queryParam:"style=form,explode=true,name=updateMask"`
 	UploadType     *string           `queryParam:"style=form,explode=true,name=uploadType"`
 	UploadProtocol *string           `queryParam:"style=form,explode=true,name=upload_protocol"`
+	ValidateOnly   *bool             `queryParam:"style=form,explode=true,name=validateOnly"`
 }
 
 type DatamigrationProjectsLocationsMigrationJobsPatchSecurity struct {

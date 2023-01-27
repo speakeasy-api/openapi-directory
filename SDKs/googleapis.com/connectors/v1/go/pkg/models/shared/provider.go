@@ -7,6 +7,7 @@ const (
 	ProviderLaunchStageEnumPreview                ProviderLaunchStageEnum = "PREVIEW"
 	ProviderLaunchStageEnumGa                     ProviderLaunchStageEnum = "GA"
 	ProviderLaunchStageEnumDeprecated             ProviderLaunchStageEnum = "DEPRECATED"
+	ProviderLaunchStageEnumPrivatePreview         ProviderLaunchStageEnum = "PRIVATE_PREVIEW"
 )
 
 // Provider

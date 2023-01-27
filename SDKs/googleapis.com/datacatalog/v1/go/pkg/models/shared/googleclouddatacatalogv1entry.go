@@ -8,6 +8,8 @@ const (
 	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumCloudPubsub                 GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "CLOUD_PUBSUB"
 	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumDataprocMetastore           GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "DATAPROC_METASTORE"
 	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumDataplex                    GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "DATAPLEX"
+	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumCloudSQL                    GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "CLOUD_SQL"
+	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumLooker                      GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "LOOKER"
 )
 
 type GoogleCloudDatacatalogV1EntryTypeEnum string
@@ -25,6 +27,10 @@ const (
 	GoogleCloudDatacatalogV1EntryTypeEnumLake                 GoogleCloudDatacatalogV1EntryTypeEnum = "LAKE"
 	GoogleCloudDatacatalogV1EntryTypeEnumZone                 GoogleCloudDatacatalogV1EntryTypeEnum = "ZONE"
 	GoogleCloudDatacatalogV1EntryTypeEnumService              GoogleCloudDatacatalogV1EntryTypeEnum = "SERVICE"
+	GoogleCloudDatacatalogV1EntryTypeEnumDatabaseSchema       GoogleCloudDatacatalogV1EntryTypeEnum = "DATABASE_SCHEMA"
+	GoogleCloudDatacatalogV1EntryTypeEnumDashboard            GoogleCloudDatacatalogV1EntryTypeEnum = "DASHBOARD"
+	GoogleCloudDatacatalogV1EntryTypeEnumExplore              GoogleCloudDatacatalogV1EntryTypeEnum = "EXPLORE"
+	GoogleCloudDatacatalogV1EntryTypeEnumLook                 GoogleCloudDatacatalogV1EntryTypeEnum = "LOOK"
 )
 
 // GoogleCloudDatacatalogV1Entry
@@ -44,11 +50,13 @@ type GoogleCloudDatacatalogV1Entry struct {
 	IntegratedSystem         *GoogleCloudDatacatalogV1EntryIntegratedSystemEnum `json:"integratedSystem,omitempty"`
 	Labels                   map[string]string                                  `json:"labels,omitempty"`
 	LinkedResource           *string                                            `json:"linkedResource,omitempty"`
+	LookerSystemSpec         *GoogleCloudDatacatalogV1LookerSystemSpec          `json:"lookerSystemSpec,omitempty"`
 	Name                     *string                                            `json:"name,omitempty"`
 	PersonalDetails          *GoogleCloudDatacatalogV1PersonalDetails           `json:"personalDetails,omitempty"`
 	RoutineSpec              *GoogleCloudDatacatalogV1RoutineSpec               `json:"routineSpec,omitempty"`
 	Schema                   *GoogleCloudDatacatalogV1Schema                    `json:"schema,omitempty"`
 	SourceSystemTimestamps   *GoogleCloudDatacatalogV1SystemTimestamps          `json:"sourceSystemTimestamps,omitempty"`
+	SQLDatabaseSystemSpec    *GoogleCloudDatacatalogV1SQLDatabaseSystemSpec     `json:"sqlDatabaseSystemSpec,omitempty"`
 	Type                     *GoogleCloudDatacatalogV1EntryTypeEnum             `json:"type,omitempty"`
 	UsageSignal              *GoogleCloudDatacatalogV1UsageSignal               `json:"usageSignal,omitempty"`
 	UserSpecifiedSystem      *string                                            `json:"userSpecifiedSystem,omitempty"`
@@ -69,10 +77,12 @@ type GoogleCloudDatacatalogV1EntryInput struct {
 	GcsFilesetSpec           *GoogleCloudDatacatalogV1GcsFilesetSpecInput      `json:"gcsFilesetSpec,omitempty"`
 	Labels                   map[string]string                                 `json:"labels,omitempty"`
 	LinkedResource           *string                                           `json:"linkedResource,omitempty"`
+	LookerSystemSpec         *GoogleCloudDatacatalogV1LookerSystemSpec         `json:"lookerSystemSpec,omitempty"`
 	PersonalDetails          *GoogleCloudDatacatalogV1PersonalDetails          `json:"personalDetails,omitempty"`
 	RoutineSpec              *GoogleCloudDatacatalogV1RoutineSpec              `json:"routineSpec,omitempty"`
 	Schema                   *GoogleCloudDatacatalogV1Schema                   `json:"schema,omitempty"`
 	SourceSystemTimestamps   *GoogleCloudDatacatalogV1SystemTimestampsInput    `json:"sourceSystemTimestamps,omitempty"`
+	SQLDatabaseSystemSpec    *GoogleCloudDatacatalogV1SQLDatabaseSystemSpec    `json:"sqlDatabaseSystemSpec,omitempty"`
 	Type                     *GoogleCloudDatacatalogV1EntryTypeEnum            `json:"type,omitempty"`
 	UsageSignal              *GoogleCloudDatacatalogV1UsageSignalInput         `json:"usageSignal,omitempty"`
 	UserSpecifiedSystem      *string                                           `json:"userSpecifiedSystem,omitempty"`

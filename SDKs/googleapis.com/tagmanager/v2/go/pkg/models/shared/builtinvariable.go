@@ -116,6 +116,7 @@ const (
 	BuiltInVariableTypeEnumServerPageLocationURL                               BuiltInVariableTypeEnum = "serverPageLocationUrl"
 	BuiltInVariableTypeEnumServerPageLocationPath                              BuiltInVariableTypeEnum = "serverPageLocationPath"
 	BuiltInVariableTypeEnumServerPageLocationHostname                          BuiltInVariableTypeEnum = "serverPageLocationHostname"
+	BuiltInVariableTypeEnumVisitorRegion                                       BuiltInVariableTypeEnum = "visitorRegion"
 )
 
 // BuiltInVariable

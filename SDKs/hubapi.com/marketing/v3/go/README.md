@@ -80,7 +80,6 @@ func main() {
 ### Marketing_Events_External
 
 * `DeleteMarketingV3MarketingEventsEventsExternalEventIDArchive`
-* `GetMarketingV3MarketingEventsEventsSearchDoSearch`
 * `GetMarketingV3MarketingEventsEventsExternalEventIDGetByID`
 * `PatchMarketingV3MarketingEventsEventsExternalEventIDUpdate`
 * `PostMarketingV3MarketingEventsEventsDeleteArchiveBatch`
@@ -91,6 +90,10 @@ func main() {
 * `PostMarketingV3MarketingEventsEventsExternalEventIDSubscriberStateUpsertDoUpsertByID`
 * `PostMarketingV3MarketingEventsEventsCreate`
 * `PutMarketingV3MarketingEventsEventsExternalEventIDReplace`
+
+### Search
+
+* `GetMarketingV3MarketingEventsEventsSearchDoSearch` - Search for marketing events
 
 ### Settings_External
 

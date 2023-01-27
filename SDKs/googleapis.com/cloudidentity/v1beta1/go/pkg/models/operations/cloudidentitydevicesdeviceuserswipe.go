@@ -30,7 +30,7 @@ type CloudidentityDevicesDeviceUsersWipeSecurity struct {
 type CloudidentityDevicesDeviceUsersWipeRequest struct {
 	PathParams  CloudidentityDevicesDeviceUsersWipePathParams
 	QueryParams CloudidentityDevicesDeviceUsersWipeQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
+	Request     *shared.WipeDeviceUserRequest `request:"mediaType=application/json"`
 	Security    CloudidentityDevicesDeviceUsersWipeSecurity
 }
 

@@ -72,6 +72,10 @@ const (
 	ExchangeAssignedTargetingOptionDetailsExchangeEnumExchangeTapjoy            ExchangeAssignedTargetingOptionDetailsExchangeEnum = "EXCHANGE_TAPJOY"
 	ExchangeAssignedTargetingOptionDetailsExchangeEnumExchangeVistar            ExchangeAssignedTargetingOptionDetailsExchangeEnum = "EXCHANGE_VISTAR"
 	ExchangeAssignedTargetingOptionDetailsExchangeEnumExchangeDax               ExchangeAssignedTargetingOptionDetailsExchangeEnum = "EXCHANGE_DAX"
+	ExchangeAssignedTargetingOptionDetailsExchangeEnumExchangeJcd               ExchangeAssignedTargetingOptionDetailsExchangeEnum = "EXCHANGE_JCD"
+	ExchangeAssignedTargetingOptionDetailsExchangeEnumExchangePlaceExchange     ExchangeAssignedTargetingOptionDetailsExchangeEnum = "EXCHANGE_PLACE_EXCHANGE"
+	ExchangeAssignedTargetingOptionDetailsExchangeEnumExchangeApplovin          ExchangeAssignedTargetingOptionDetailsExchangeEnum = "EXCHANGE_APPLOVIN"
+	ExchangeAssignedTargetingOptionDetailsExchangeEnumExchangeConnatix          ExchangeAssignedTargetingOptionDetailsExchangeEnum = "EXCHANGE_CONNATIX"
 )
 
 // ExchangeAssignedTargetingOptionDetails

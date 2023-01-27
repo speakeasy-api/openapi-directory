@@ -15,6 +15,7 @@ type BackendRule struct {
 	Deadline          *float64                        `json:"deadline,omitempty"`
 	DisableAuth       *bool                           `json:"disableAuth,omitempty"`
 	JwtAudience       *string                         `json:"jwtAudience,omitempty"`
+	MinDeadline       *float64                        `json:"minDeadline,omitempty"`
 	OperationDeadline *float64                        `json:"operationDeadline,omitempty"`
 	PathTranslation   *BackendRulePathTranslationEnum `json:"pathTranslation,omitempty"`
 	Protocol          *string                         `json:"protocol,omitempty"`

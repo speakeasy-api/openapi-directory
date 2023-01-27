@@ -454,9 +454,8 @@ func main() {
 
 ### projects
 
-* `DataplexProjectsLocationsDataScansCreate` - Creates a dataScan resource.
-* `DataplexProjectsLocationsDataScansList` - Lists dataScans.
-* `DataplexProjectsLocationsDataScansRun` - Run an on demand execution of a DataScan.
+* `DataplexProjectsLocationsDataScansCreate` - Creates a DataScan resource.
+* `DataplexProjectsLocationsDataScansList` - Lists DataScans.
 * `DataplexProjectsLocationsLakesContentCreate` - Create a content.
 * `DataplexProjectsLocationsLakesContentList` - List content.
 * `DataplexProjectsLocationsLakesContentitemsCreate` - Create a content.
@@ -469,6 +468,7 @@ func main() {
 * `DataplexProjectsLocationsLakesTasksCreate` - Creates a task resource within a lake.
 * `DataplexProjectsLocationsLakesTasksJobsList` - Lists Jobs under the given task.
 * `DataplexProjectsLocationsLakesTasksList` - Lists tasks under the given lake.
+* `DataplexProjectsLocationsLakesTasksRun` - Run an on demand execution of a Task.
 * `DataplexProjectsLocationsLakesZonesAssetsActionsList` - Lists action resources in an asset.
 * `DataplexProjectsLocationsLakesZonesAssetsCreate` - Creates an asset resource.
 * `DataplexProjectsLocationsLakesZonesAssetsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.

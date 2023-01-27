@@ -39,7 +39,6 @@ const (
 	TestMatrixInvalidMatrixDetailsEnumInvalidInputApk                         TestMatrixInvalidMatrixDetailsEnum = "INVALID_INPUT_APK"
 	TestMatrixInvalidMatrixDetailsEnumInvalidApkPreviewSdk                    TestMatrixInvalidMatrixDetailsEnum = "INVALID_APK_PREVIEW_SDK"
 	TestMatrixInvalidMatrixDetailsEnumMatrixTooLarge                          TestMatrixInvalidMatrixDetailsEnum = "MATRIX_TOO_LARGE"
-	TestMatrixInvalidMatrixDetailsEnumDeviceQuotaExceeded                     TestMatrixInvalidMatrixDetailsEnum = "DEVICE_QUOTA_EXCEEDED"
 	TestMatrixInvalidMatrixDetailsEnumTestQuotaExceeded                       TestMatrixInvalidMatrixDetailsEnum = "TEST_QUOTA_EXCEEDED"
 	TestMatrixInvalidMatrixDetailsEnumServiceNotActivated                     TestMatrixInvalidMatrixDetailsEnum = "SERVICE_NOT_ACTIVATED"
 	TestMatrixInvalidMatrixDetailsEnumUnknownPermissionError                  TestMatrixInvalidMatrixDetailsEnum = "UNKNOWN_PERMISSION_ERROR"

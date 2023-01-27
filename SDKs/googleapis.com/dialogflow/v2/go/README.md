@@ -124,6 +124,7 @@ func main() {
 * `DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticles` - Gets suggested articles for a participant based on specific historical messages.
 * `DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswers` - Gets suggested faq answers for a participant based on specific historical messages.
 * `DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartReplies` - Gets smart replies for a participant based on specific historical messages.
+* `DialogflowProjectsLocationsConversationsSuggestionsSuggestConversationSummary` - Suggests summary for a conversation based on specific historical messages. The range of the messages to be used for summary can be specified in the request.
 * `DialogflowProjectsLocationsDeleteAgent` - Deletes the specified agent.
 * `DialogflowProjectsLocationsGetAgent` - Retrieves the specified agent.
 * `DialogflowProjectsLocationsKnowledgeBasesCreate` - Creates a knowledge base.

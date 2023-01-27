@@ -22,10 +22,16 @@ type PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryQueryParams str
 	UploadProtocol *string           `queryParam:"style=form,explode=true,name=upload_protocol"`
 }
 
+type PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuerySecurity struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
 type PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryRequest struct {
 	PathParams  PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryPathParams
 	QueryParams PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryQueryParams
 	Request     *shared.GooglePlayDeveloperReportingV1alpha1QueryStuckBackgroundWakelockRateMetricSetRequest `request:"mediaType=application/json"`
+	Security    PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuerySecurity
 }
 
 type PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse struct {

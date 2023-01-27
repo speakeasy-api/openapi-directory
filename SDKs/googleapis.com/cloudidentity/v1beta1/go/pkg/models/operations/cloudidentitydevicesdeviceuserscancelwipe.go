@@ -30,7 +30,7 @@ type CloudidentityDevicesDeviceUsersCancelWipeSecurity struct {
 type CloudidentityDevicesDeviceUsersCancelWipeRequest struct {
 	PathParams  CloudidentityDevicesDeviceUsersCancelWipePathParams
 	QueryParams CloudidentityDevicesDeviceUsersCancelWipeQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
+	Request     *shared.CancelWipeDeviceUserRequest `request:"mediaType=application/json"`
 	Security    CloudidentityDevicesDeviceUsersCancelWipeSecurity
 }
 

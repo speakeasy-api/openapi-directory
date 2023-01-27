@@ -1,7 +1,7 @@
 package shared
 
 // GoogleCloudDataplexV1DataQualityRuleResult
-// DataQualityRuleResult provides a more detailed, per-rule level view of the results.
+// DataQualityRuleResult provides a more detailed, per-rule view of the results.
 type GoogleCloudDataplexV1DataQualityRuleResult struct {
 	EvaluatedCount   *string                               `json:"evaluatedCount,omitempty"`
 	FailingRowsQuery *string                               `json:"failingRowsQuery,omitempty"`

@@ -16,5 +16,6 @@ type YoutubeAndPartnersSettings struct {
 	ContentCategory               *YoutubeAndPartnersSettingsContentCategoryEnum   `json:"contentCategory,omitempty"`
 	InventorySourceSettings       *YoutubeAndPartnersInventorySourceConfig         `json:"inventorySourceSettings,omitempty"`
 	ThirdPartyMeasurementSettings *YoutubeAndPartnersThirdPartyMeasurementSettings `json:"thirdPartyMeasurementSettings,omitempty"`
+	VideoAdSequenceSettings       *VideoAdSequenceSettings                         `json:"videoAdSequenceSettings,omitempty"`
 	ViewFrequencyCap              *FrequencyCap                                    `json:"viewFrequencyCap,omitempty"`
 }

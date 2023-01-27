@@ -85,6 +85,7 @@ type PromotionInput struct {
 	PromotionEffectiveDates      *string                            `json:"promotionEffectiveDates,omitempty"`
 	PromotionEffectiveTimePeriod *TimePeriod                        `json:"promotionEffectiveTimePeriod,omitempty"`
 	PromotionID                  *string                            `json:"promotionId,omitempty"`
+	PromotionStatus              *PromotionPromotionStatus          `json:"promotionStatus,omitempty"`
 	PromotionURL                 *string                            `json:"promotionUrl,omitempty"`
 	RedemptionChannel            []PromotionRedemptionChannelEnum   `json:"redemptionChannel,omitempty"`
 	ShippingServiceNames         []string                           `json:"shippingServiceNames,omitempty"`
@@ -130,6 +131,7 @@ type Promotion struct {
 	PromotionEffectiveDates      *string                            `json:"promotionEffectiveDates,omitempty"`
 	PromotionEffectiveTimePeriod *TimePeriod                        `json:"promotionEffectiveTimePeriod,omitempty"`
 	PromotionID                  *string                            `json:"promotionId,omitempty"`
+	PromotionStatus              *PromotionPromotionStatus          `json:"promotionStatus,omitempty"`
 	PromotionURL                 *string                            `json:"promotionUrl,omitempty"`
 	RedemptionChannel            []PromotionRedemptionChannelEnum   `json:"redemptionChannel,omitempty"`
 	ShippingServiceNames         []string                           `json:"shippingServiceNames,omitempty"`

@@ -18,6 +18,7 @@ type OrgpolicyProjectsPoliciesPatchQueryParams struct {
 	OauthToken     *string           `queryParam:"style=form,explode=true,name=oauth_token"`
 	PrettyPrint    *bool             `queryParam:"style=form,explode=true,name=prettyPrint"`
 	QuotaUser      *string           `queryParam:"style=form,explode=true,name=quotaUser"`
+	UpdateMask     *string           `queryParam:"style=form,explode=true,name=updateMask"`
 	UploadType     *string           `queryParam:"style=form,explode=true,name=uploadType"`
 	UploadProtocol *string           `queryParam:"style=form,explode=true,name=upload_protocol"`
 }

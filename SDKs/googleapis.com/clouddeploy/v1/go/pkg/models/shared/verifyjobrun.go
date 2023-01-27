@@ -8,6 +8,7 @@ const (
 	VerifyJobRunFailureCauseEnumExecutionFailed            VerifyJobRunFailureCauseEnum = "EXECUTION_FAILED"
 	VerifyJobRunFailureCauseEnumDeadlineExceeded           VerifyJobRunFailureCauseEnum = "DEADLINE_EXCEEDED"
 	VerifyJobRunFailureCauseEnumVerificationConfigNotFound VerifyJobRunFailureCauseEnum = "VERIFICATION_CONFIG_NOT_FOUND"
+	VerifyJobRunFailureCauseEnumCloudBuildRequestFailed    VerifyJobRunFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
 )
 
 // VerifyJobRun

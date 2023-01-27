@@ -7,6 +7,7 @@ const (
 	ConnectorLaunchStageEnumPreview                ConnectorLaunchStageEnum = "PREVIEW"
 	ConnectorLaunchStageEnumGa                     ConnectorLaunchStageEnum = "GA"
 	ConnectorLaunchStageEnumDeprecated             ConnectorLaunchStageEnum = "DEPRECATED"
+	ConnectorLaunchStageEnumPrivatePreview         ConnectorLaunchStageEnum = "PRIVATE_PREVIEW"
 )
 
 // Connector

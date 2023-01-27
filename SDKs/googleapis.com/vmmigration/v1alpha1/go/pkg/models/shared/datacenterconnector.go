@@ -11,7 +11,7 @@ const (
 )
 
 // DatacenterConnector
-// DatacenterConnector message describes a connector between the Source and GCP, which is installed on a vmware datacenter (an OVA vm installed by the user) to connect the Datacenter to GCP and support vm migration data transfer.
+// DatacenterConnector message describes a connector between the Source and Google Cloud, which is installed on a vmware datacenter (an OVA vm installed by the user) to connect the Datacenter to Google Cloud and support vm migration data transfer.
 type DatacenterConnector struct {
 	ApplianceInfrastructureVersion *string                       `json:"applianceInfrastructureVersion,omitempty"`
 	ApplianceSoftwareVersion       *string                       `json:"applianceSoftwareVersion,omitempty"`
@@ -30,7 +30,7 @@ type DatacenterConnector struct {
 }
 
 // DatacenterConnectorInput
-// DatacenterConnector message describes a connector between the Source and GCP, which is installed on a vmware datacenter (an OVA vm installed by the user) to connect the Datacenter to GCP and support vm migration data transfer.
+// DatacenterConnector message describes a connector between the Source and Google Cloud, which is installed on a vmware datacenter (an OVA vm installed by the user) to connect the Datacenter to Google Cloud and support vm migration data transfer.
 type DatacenterConnectorInput struct {
 	AvailableVersions *AvailableUpdates `json:"availableVersions,omitempty"`
 	Error             *Status           `json:"error,omitempty"`

@@ -29,7 +29,7 @@ func NewProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// DataplexProjectsLocationsDataScansCreate - Creates a dataScan resource.
+// DataplexProjectsLocationsDataScansCreate - Creates a DataScan resource.
 func (s *Projects) DataplexProjectsLocationsDataScansCreate(ctx context.Context, request operations.DataplexProjectsLocationsDataScansCreateRequest) (*operations.DataplexProjectsLocationsDataScansCreateResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataScans", request.PathParams)
@@ -78,7 +78,7 @@ func (s *Projects) DataplexProjectsLocationsDataScansCreate(ctx context.Context,
 	return res, nil
 }
 
-// DataplexProjectsLocationsDataScansList - Lists dataScans.
+// DataplexProjectsLocationsDataScansList - Lists DataScans.
 func (s *Projects) DataplexProjectsLocationsDataScansList(ctx context.Context, request operations.DataplexProjectsLocationsDataScansListRequest) (*operations.DataplexProjectsLocationsDataScansListResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/dataScans", request.PathParams)
@@ -114,55 +114,6 @@ func (s *Projects) DataplexProjectsLocationsDataScansList(ctx context.Context, r
 			}
 
 			res.GoogleCloudDataplexV1ListDataScansResponse = out
-		}
-	}
-
-	return res, nil
-}
-
-// DataplexProjectsLocationsDataScansRun - Run an on demand execution of a DataScan.
-func (s *Projects) DataplexProjectsLocationsDataScansRun(ctx context.Context, request operations.DataplexProjectsLocationsDataScansRunRequest) (*operations.DataplexProjectsLocationsDataScansRunResponse, error) {
-	baseURL := s._serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:run", request.PathParams)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	utils.PopulateQueryParams(ctx, req, request.QueryParams)
-
-	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DataplexProjectsLocationsDataScansRunResponse{
-		StatusCode:  int64(httpRes.StatusCode),
-		ContentType: contentType,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.GoogleCloudDataplexV1RunDataScanResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GoogleCloudDataplexV1RunDataScanResponse = out
 		}
 	}
 
@@ -702,6 +653,55 @@ func (s *Projects) DataplexProjectsLocationsLakesTasksList(ctx context.Context, 
 			}
 
 			res.GoogleCloudDataplexV1ListTasksResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// DataplexProjectsLocationsLakesTasksRun - Run an on demand execution of a Task.
+func (s *Projects) DataplexProjectsLocationsLakesTasksRun(ctx context.Context, request operations.DataplexProjectsLocationsLakesTasksRunRequest) (*operations.DataplexProjectsLocationsLakesTasksRunResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:run", request.PathParams)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request)
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateQueryParams(ctx, req, request.QueryParams)
+
+	client := utils.ConfigureSecurityClient(s._defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DataplexProjectsLocationsLakesTasksRunResponse{
+		StatusCode:  int64(httpRes.StatusCode),
+		ContentType: contentType,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudDataplexV1RunTaskResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudDataplexV1RunTaskResponse = out
 		}
 	}
 

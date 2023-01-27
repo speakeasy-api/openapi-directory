@@ -30,7 +30,7 @@ func NewDrives(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
-// DriveDrivesCreate - Creates a new shared drive.
+// DriveDrivesCreate - Creates a shared drive.
 func (s *Drives) DriveDrivesCreate(ctx context.Context, request operations.DriveDrivesCreateRequest) (*operations.DriveDrivesCreateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/drives"

@@ -5,6 +5,7 @@ package shared
 type UpdateNodePoolRequest struct {
 	ClusterID              *string                 `json:"clusterId,omitempty"`
 	ConfidentialNodes      *ConfidentialNodes      `json:"confidentialNodes,omitempty"`
+	Etag                   *string                 `json:"etag,omitempty"`
 	FastSocket             *FastSocket             `json:"fastSocket,omitempty"`
 	GcfsConfig             *GcfsConfig             `json:"gcfsConfig,omitempty"`
 	Gvnic                  *VirtualNic             `json:"gvnic,omitempty"`
@@ -23,6 +24,7 @@ type UpdateNodePoolRequest struct {
 	Tags                   *NetworkTags            `json:"tags,omitempty"`
 	Taints                 *NodeTaints             `json:"taints,omitempty"`
 	UpgradeSettings        *UpgradeSettings        `json:"upgradeSettings,omitempty"`
+	WindowsNodeConfig      *WindowsNodeConfig      `json:"windowsNodeConfig,omitempty"`
 	WorkloadMetadataConfig *WorkloadMetadataConfig `json:"workloadMetadataConfig,omitempty"`
 	Zone                   *string                 `json:"zone,omitempty"`
 }

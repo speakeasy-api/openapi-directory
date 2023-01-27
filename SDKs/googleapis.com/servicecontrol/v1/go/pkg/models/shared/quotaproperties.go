@@ -6,7 +6,6 @@ const (
 	QuotaPropertiesQuotaModeEnumAcquire           QuotaPropertiesQuotaModeEnum = "ACQUIRE"
 	QuotaPropertiesQuotaModeEnumAcquireBestEffort QuotaPropertiesQuotaModeEnum = "ACQUIRE_BEST_EFFORT"
 	QuotaPropertiesQuotaModeEnumCheck             QuotaPropertiesQuotaModeEnum = "CHECK"
-	QuotaPropertiesQuotaModeEnumRelease           QuotaPropertiesQuotaModeEnum = "RELEASE"
 )
 
 // QuotaProperties

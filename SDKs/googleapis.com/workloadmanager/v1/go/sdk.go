@@ -14,7 +14,7 @@ type HTTPClient interface {
 	Do(req *http.Request) (*http.Response, error)
 }
 
-// SDK Documentation: https://g3doc.corp.google.com/company/teams/compute-fe/index.md?cl=head
+// SDK Documentation: https://cloud.google.com/workload-manager/docs
 type SDK struct {
 	Projects *Projects
 

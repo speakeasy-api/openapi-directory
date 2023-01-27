@@ -111,52 +111,59 @@ func main() {
                     MilliDcuSeconds: "ipsum",
                     ShuffleStorageGbSeconds: "eveniet",
                 },
+                CurrentUsage: &shared.UsageSnapshot{
+                    MilliDcu: "modi",
+                    ShuffleStorageGb: "sint",
+                    SnapshotTime: "inventore",
+                },
             },
             SparkBatch: &shared.SparkBatch{
                 ArchiveUris: []string{
-                    "sint",
-                    "inventore",
-                },
-                Args: []string{
                     "exercitationem",
                     "aut",
                     "reprehenderit",
                 },
-                FileUris: []string{
+                Args: []string{
                     "maiores",
                     "incidunt",
                     "dolor",
                 },
-                JarFileUris: []string{
+                FileUris: []string{
                     "veritatis",
                     "in",
                     "et",
                 },
-                MainClass: "omnis",
-                MainJarFileURI: "ipsum",
+                JarFileUris: []string{
+                    "ipsum",
+                    "ex",
+                },
+                MainClass: "dolores",
+                MainJarFileURI: "placeat",
             },
             SparkRBatch: &shared.SparkRBatch{
                 ArchiveUris: []string{
-                    "dolores",
+                    "rerum",
+                    "mollitia",
                 },
                 Args: []string{
-                    "vel",
+                    "quam",
+                    "reprehenderit",
                 },
                 FileUris: []string{
-                    "mollitia",
-                    "voluptas",
-                    "quam",
+                    "qui",
                 },
-                MainRFileURI: "reprehenderit",
+                MainRFileURI: "unde",
             },
             SparkSQLBatch: &shared.SparkSQLBatch{
                 JarFileUris: []string{
+                    "autem",
                     "qui",
                 },
-                QueryFileURI: "unde",
+                QueryFileURI: "ut",
                 QueryVariables: map[string]string{
-                    "autem": "qui",
-                    "ut": "itaque",
+                    "ab": "neque",
+                    "ullam": "et",
+                    "accusantium": "esse",
                 },
             },
         },
@@ -188,6 +195,8 @@ func main() {
 * `DataprocProjectsRegionsClustersGet` - Gets the resource representation for a cluster in a project.
 * `DataprocProjectsRegionsClustersInjectCredentials` - Inject encrypted credentials into all of the VMs in a cluster.The target cluster must be a personal auth cluster assigned to the user who is issuing the RPC.
 * `DataprocProjectsRegionsClustersList` - Lists all regions/{region}/clusters in a project alphabetically.
+* `DataprocProjectsRegionsClustersNodeGroupsCreate` - Creates a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
+* `DataprocProjectsRegionsClustersNodeGroupsResize` - Resizes a node group in a cluster. The returned Operation.metadata is NodeGroupOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#nodegroupoperationmetadata).
 * `DataprocProjectsRegionsClustersPatch` - Updates a cluster in a project. The returned Operation.metadata will be ClusterOperationMetadata (https://cloud.google.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#clusteroperationmetadata). The cluster must be in a RUNNING state or an error is returned.
 * `DataprocProjectsRegionsClustersRepair` - Repairs a cluster.
 * `DataprocProjectsRegionsClustersStart` - Starts a cluster in a project.

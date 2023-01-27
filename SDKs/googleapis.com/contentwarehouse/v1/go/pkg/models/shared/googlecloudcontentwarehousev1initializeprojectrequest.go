@@ -17,10 +17,20 @@ const (
 	GoogleCloudContentwarehouseV1InitializeProjectRequestDatabaseTypeEnumDbCloudSQLPostgres GoogleCloudContentwarehouseV1InitializeProjectRequestDatabaseTypeEnum = "DB_CLOUD_SQL_POSTGRES"
 )
 
+type GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnum string
+
+const (
+	GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnumDocumentCreatorDefaultRoleUnspecified GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnum = "DOCUMENT_CREATOR_DEFAULT_ROLE_UNSPECIFIED"
+	GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnumDocumentAdmin                         GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnum = "DOCUMENT_ADMIN"
+	GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnumDocumentEditor                        GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnum = "DOCUMENT_EDITOR"
+	GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnumDocumentViewer                        GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnum = "DOCUMENT_VIEWER"
+)
+
 // GoogleCloudContentwarehouseV1InitializeProjectRequest
 // Request message for projectService.InitializeProject
 type GoogleCloudContentwarehouseV1InitializeProjectRequest struct {
-	AccessControlMode *GoogleCloudContentwarehouseV1InitializeProjectRequestAccessControlModeEnum `json:"accessControlMode,omitempty"`
-	DatabaseType      *GoogleCloudContentwarehouseV1InitializeProjectRequestDatabaseTypeEnum      `json:"databaseType,omitempty"`
-	KmsKey            *string                                                                     `json:"kmsKey,omitempty"`
+	AccessControlMode          *GoogleCloudContentwarehouseV1InitializeProjectRequestAccessControlModeEnum          `json:"accessControlMode,omitempty"`
+	DatabaseType               *GoogleCloudContentwarehouseV1InitializeProjectRequestDatabaseTypeEnum               `json:"databaseType,omitempty"`
+	DocumentCreatorDefaultRole *GoogleCloudContentwarehouseV1InitializeProjectRequestDocumentCreatorDefaultRoleEnum `json:"documentCreatorDefaultRole,omitempty"`
+	KmsKey                     *string                                                                              `json:"kmsKey,omitempty"`
 }

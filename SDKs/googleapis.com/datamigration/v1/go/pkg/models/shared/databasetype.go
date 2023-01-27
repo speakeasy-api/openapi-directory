@@ -6,6 +6,7 @@ const (
 	DatabaseTypeEngineEnumDatabaseEngineUnspecified DatabaseTypeEngineEnum = "DATABASE_ENGINE_UNSPECIFIED"
 	DatabaseTypeEngineEnumMysql                     DatabaseTypeEngineEnum = "MYSQL"
 	DatabaseTypeEngineEnumPostgresql                DatabaseTypeEngineEnum = "POSTGRESQL"
+	DatabaseTypeEngineEnumOracle                    DatabaseTypeEngineEnum = "ORACLE"
 )
 
 type DatabaseTypeProviderEnum string

@@ -45,6 +45,22 @@ type ChromeOsDeviceCPUStatusReports struct {
 	ReportTime                   *time.Time                                         `json:"reportTime,omitempty"`
 }
 
+type ChromeOsDeviceDeprovisionReasonEnum string
+
+const (
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonUnspecified               ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonUnspecified"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonSameModelReplacement      ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonSameModelReplacement"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonUpgrade                   ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonUpgrade"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonDomainMove                ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonDomainMove"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonServiceExpiration         ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonServiceExpiration"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonOther                     ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonOther"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonDifferentModelReplacement ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonDifferentModelReplacement"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonRetiringDevice            ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonRetiringDevice"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonUpgradeTransfer           ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonUpgradeTransfer"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonNotRequired               ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonNotRequired"
+	ChromeOsDeviceDeprovisionReasonEnumDeprovisionReasonRepairCenter              ChromeOsDeviceDeprovisionReasonEnum = "deprovisionReasonRepairCenter"
+)
+
 type ChromeOsDeviceDeviceFiles struct {
 	CreateTime  *time.Time `json:"createTime,omitempty"`
 	DownloadURL *string    `json:"downloadUrl,omitempty"`
@@ -102,45 +118,47 @@ type ChromeOsDeviceTpmVersionInfo struct {
 // ChromeOsDevice
 // Google Chrome devices run on the [Chrome OS](https://support.google.com/chromeos). For more information about common API tasks, see the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-chrome-devices).
 type ChromeOsDevice struct {
-	ActiveTimeRanges     []ChromeOsDeviceActiveTimeRanges     `json:"activeTimeRanges,omitempty"`
-	AnnotatedAssetID     *string                              `json:"annotatedAssetId,omitempty"`
-	AnnotatedLocation    *string                              `json:"annotatedLocation,omitempty"`
-	AnnotatedUser        *string                              `json:"annotatedUser,omitempty"`
-	AutoUpdateExpiration *string                              `json:"autoUpdateExpiration,omitempty"`
-	BootMode             *string                              `json:"bootMode,omitempty"`
-	CPUInfo              []ChromeOsDeviceCPUInfo              `json:"cpuInfo,omitempty"`
-	CPUStatusReports     []ChromeOsDeviceCPUStatusReports     `json:"cpuStatusReports,omitempty"`
-	DeviceFiles          []ChromeOsDeviceDeviceFiles          `json:"deviceFiles,omitempty"`
-	DeviceID             *string                              `json:"deviceId,omitempty"`
-	DiskVolumeReports    []ChromeOsDeviceDiskVolumeReports    `json:"diskVolumeReports,omitempty"`
-	DockMacAddress       *string                              `json:"dockMacAddress,omitempty"`
-	Etag                 *string                              `json:"etag,omitempty"`
-	EthernetMacAddress   *string                              `json:"ethernetMacAddress,omitempty"`
-	EthernetMacAddress0  *string                              `json:"ethernetMacAddress0,omitempty"`
-	FirmwareVersion      *string                              `json:"firmwareVersion,omitempty"`
-	FirstEnrollmentTime  *string                              `json:"firstEnrollmentTime,omitempty"`
-	Kind                 *string                              `json:"kind,omitempty"`
-	LastEnrollmentTime   *time.Time                           `json:"lastEnrollmentTime,omitempty"`
-	LastKnownNetwork     []ChromeOsDeviceLastKnownNetwork     `json:"lastKnownNetwork,omitempty"`
-	LastSync             *time.Time                           `json:"lastSync,omitempty"`
-	MacAddress           *string                              `json:"macAddress,omitempty"`
-	ManufactureDate      *string                              `json:"manufactureDate,omitempty"`
-	Meid                 *string                              `json:"meid,omitempty"`
-	Model                *string                              `json:"model,omitempty"`
-	Notes                *string                              `json:"notes,omitempty"`
-	OrderNumber          *string                              `json:"orderNumber,omitempty"`
-	OrgUnitID            *string                              `json:"orgUnitId,omitempty"`
-	OrgUnitPath          *string                              `json:"orgUnitPath,omitempty"`
-	OsUpdateStatus       *OsUpdateStatus                      `json:"osUpdateStatus,omitempty"`
-	OsVersion            *string                              `json:"osVersion,omitempty"`
-	PlatformVersion      *string                              `json:"platformVersion,omitempty"`
-	RecentUsers          []ChromeOsDeviceRecentUsers          `json:"recentUsers,omitempty"`
-	ScreenshotFiles      []ChromeOsDeviceScreenshotFiles      `json:"screenshotFiles,omitempty"`
-	SerialNumber         *string                              `json:"serialNumber,omitempty"`
-	Status               *string                              `json:"status,omitempty"`
-	SupportEndDate       *time.Time                           `json:"supportEndDate,omitempty"`
-	SystemRAMFreeReports []ChromeOsDeviceSystemRAMFreeReports `json:"systemRamFreeReports,omitempty"`
-	SystemRAMTotal       *string                              `json:"systemRamTotal,omitempty"`
-	TpmVersionInfo       *ChromeOsDeviceTpmVersionInfo        `json:"tpmVersionInfo,omitempty"`
-	WillAutoRenew        *bool                                `json:"willAutoRenew,omitempty"`
+	ActiveTimeRanges         []ChromeOsDeviceActiveTimeRanges     `json:"activeTimeRanges,omitempty"`
+	AnnotatedAssetID         *string                              `json:"annotatedAssetId,omitempty"`
+	AnnotatedLocation        *string                              `json:"annotatedLocation,omitempty"`
+	AnnotatedUser            *string                              `json:"annotatedUser,omitempty"`
+	AutoUpdateExpiration     *string                              `json:"autoUpdateExpiration,omitempty"`
+	BootMode                 *string                              `json:"bootMode,omitempty"`
+	CPUInfo                  []ChromeOsDeviceCPUInfo              `json:"cpuInfo,omitempty"`
+	CPUStatusReports         []ChromeOsDeviceCPUStatusReports     `json:"cpuStatusReports,omitempty"`
+	DeprovisionReason        *ChromeOsDeviceDeprovisionReasonEnum `json:"deprovisionReason,omitempty"`
+	DeviceFiles              []ChromeOsDeviceDeviceFiles          `json:"deviceFiles,omitempty"`
+	DeviceID                 *string                              `json:"deviceId,omitempty"`
+	DiskVolumeReports        []ChromeOsDeviceDiskVolumeReports    `json:"diskVolumeReports,omitempty"`
+	DockMacAddress           *string                              `json:"dockMacAddress,omitempty"`
+	Etag                     *string                              `json:"etag,omitempty"`
+	EthernetMacAddress       *string                              `json:"ethernetMacAddress,omitempty"`
+	EthernetMacAddress0      *string                              `json:"ethernetMacAddress0,omitempty"`
+	FirmwareVersion          *string                              `json:"firmwareVersion,omitempty"`
+	FirstEnrollmentTime      *string                              `json:"firstEnrollmentTime,omitempty"`
+	Kind                     *string                              `json:"kind,omitempty"`
+	LastDeprovisionTimestamp *string                              `json:"lastDeprovisionTimestamp,omitempty"`
+	LastEnrollmentTime       *time.Time                           `json:"lastEnrollmentTime,omitempty"`
+	LastKnownNetwork         []ChromeOsDeviceLastKnownNetwork     `json:"lastKnownNetwork,omitempty"`
+	LastSync                 *time.Time                           `json:"lastSync,omitempty"`
+	MacAddress               *string                              `json:"macAddress,omitempty"`
+	ManufactureDate          *string                              `json:"manufactureDate,omitempty"`
+	Meid                     *string                              `json:"meid,omitempty"`
+	Model                    *string                              `json:"model,omitempty"`
+	Notes                    *string                              `json:"notes,omitempty"`
+	OrderNumber              *string                              `json:"orderNumber,omitempty"`
+	OrgUnitID                *string                              `json:"orgUnitId,omitempty"`
+	OrgUnitPath              *string                              `json:"orgUnitPath,omitempty"`
+	OsUpdateStatus           *OsUpdateStatus                      `json:"osUpdateStatus,omitempty"`
+	OsVersion                *string                              `json:"osVersion,omitempty"`
+	PlatformVersion          *string                              `json:"platformVersion,omitempty"`
+	RecentUsers              []ChromeOsDeviceRecentUsers          `json:"recentUsers,omitempty"`
+	ScreenshotFiles          []ChromeOsDeviceScreenshotFiles      `json:"screenshotFiles,omitempty"`
+	SerialNumber             *string                              `json:"serialNumber,omitempty"`
+	Status                   *string                              `json:"status,omitempty"`
+	SupportEndDate           *time.Time                           `json:"supportEndDate,omitempty"`
+	SystemRAMFreeReports     []ChromeOsDeviceSystemRAMFreeReports `json:"systemRamFreeReports,omitempty"`
+	SystemRAMTotal           *string                              `json:"systemRamTotal,omitempty"`
+	TpmVersionInfo           *ChromeOsDeviceTpmVersionInfo        `json:"tpmVersionInfo,omitempty"`
+	WillAutoRenew            *bool                                `json:"willAutoRenew,omitempty"`
 }

@@ -36,6 +36,7 @@ type GoogleCloudDataplexV1EntityInput struct {
 // GoogleCloudDataplexV1Entity
 // Represents tables and fileset metadata contained within a zone.
 type GoogleCloudDataplexV1Entity struct {
+	Access          *GoogleCloudDataplexV1StorageAccess             `json:"access,omitempty"`
 	Asset           *string                                         `json:"asset,omitempty"`
 	CatalogEntry    *string                                         `json:"catalogEntry,omitempty"`
 	Compatibility   *GoogleCloudDataplexV1EntityCompatibilityStatus `json:"compatibility,omitempty"`
@@ -51,5 +52,6 @@ type GoogleCloudDataplexV1Entity struct {
 	Schema          *GoogleCloudDataplexV1Schema                    `json:"schema,omitempty"`
 	System          *GoogleCloudDataplexV1EntitySystemEnum          `json:"system,omitempty"`
 	Type            *GoogleCloudDataplexV1EntityTypeEnum            `json:"type,omitempty"`
+	UID             *string                                         `json:"uid,omitempty"`
 	UpdateTime      *string                                         `json:"updateTime,omitempty"`
 }

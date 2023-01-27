@@ -8,6 +8,8 @@ const (
 	PackageDataPackageTypeEnumMaven                  PackageDataPackageTypeEnum = "MAVEN"
 	PackageDataPackageTypeEnumGo                     PackageDataPackageTypeEnum = "GO"
 	PackageDataPackageTypeEnumGoStdlib               PackageDataPackageTypeEnum = "GO_STDLIB"
+	PackageDataPackageTypeEnumPypi                   PackageDataPackageTypeEnum = "PYPI"
+	PackageDataPackageTypeEnumNpm                    PackageDataPackageTypeEnum = "NPM"
 )
 
 type PackageData struct {

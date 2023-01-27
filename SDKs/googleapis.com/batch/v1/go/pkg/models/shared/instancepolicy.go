@@ -13,6 +13,7 @@ const (
 // InstancePolicy describes an instance type and resources attached to each VM created by this InstancePolicy.
 type InstancePolicy struct {
 	Accelerators      []Accelerator                        `json:"accelerators,omitempty"`
+	BootDisk          *Disk                                `json:"bootDisk,omitempty"`
 	Disks             []AttachedDisk                       `json:"disks,omitempty"`
 	MachineType       *string                              `json:"machineType,omitempty"`
 	MinCPUPlatform    *string                              `json:"minCpuPlatform,omitempty"`

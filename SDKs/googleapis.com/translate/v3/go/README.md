@@ -48,35 +48,50 @@ func main() {
             UploadProtocol: "rerum",
         },
         Request: &shared.BatchTranslateDocumentRequest{
+            CustomizedAttribution: "dicta",
             FormatConversions: map[string]string{
-                "debitis": "voluptatum",
-                "et": "ut",
-                "dolorem": "et",
+                "voluptatum": "et",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
+                "dolorem": shared.TranslateTextGlossaryConfig{
+                    Glossary: "et",
+                    IgnoreCase: false,
+                },
                 "iste": shared.TranslateTextGlossaryConfig{
                     Glossary: "vitae",
+                    IgnoreCase: true,
+                },
+                "dolores": shared.TranslateTextGlossaryConfig{
+                    Glossary: "illum",
                     IgnoreCase: true,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "illum",
+                        InputURI: "odio",
+                    },
+                },
+                shared.BatchDocumentInputConfig{
+                    GcsSource: &shared.GcsSource{
+                        InputURI: "dolore",
                     },
                 },
             },
             Models: map[string]string{
-                "vel": "odio",
+                "aspernatur": "accusantium",
+                "totam": "commodi",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "dolore",
+                    OutputURIPrefix: "quis",
                 },
             },
-            SourceLanguageCode: "id",
+            SourceLanguageCode: "est",
             TargetLanguageCodes: []string{
-                "accusantium",
+                "odit",
+                "non",
+                "voluptas",
             },
         },
     }
@@ -99,6 +114,11 @@ func main() {
 
 * `TranslateProjectsLocationsBatchTranslateDocument` - Translates a large volume of document in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
 * `TranslateProjectsLocationsBatchTranslateText` - Translates a large volume of text in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
+* `TranslateProjectsLocationsDatasetsCreate` - Creates a Dataset.
+* `TranslateProjectsLocationsDatasetsExamplesList` - Lists sentence pairs in the dataset.
+* `TranslateProjectsLocationsDatasetsExportData` - Exports dataset's data to the provided output location.
+* `TranslateProjectsLocationsDatasetsImportData` - Import sentence pairs into translation Dataset.
+* `TranslateProjectsLocationsDatasetsList` - Lists datasets.
 * `TranslateProjectsLocationsDetectLanguage` - Detects the language of text within a request.
 * `TranslateProjectsLocationsGetSupportedLanguages` - Returns a list of supported languages for translation.
 * `TranslateProjectsLocationsGlossariesCreate` - Creates a glossary and returns the long-running operation. Returns NOT_FOUND, if the project doesn't exist.
@@ -107,6 +127,8 @@ func main() {
 * `TranslateProjectsLocationsGlossariesGlossaryEntriesPatch` - Updates a glossary entry.
 * `TranslateProjectsLocationsGlossariesList` - Lists glossaries in a project. Returns NOT_FOUND, if the project doesn't exist.
 * `TranslateProjectsLocationsList` - Lists information about the supported locations for this service.
+* `TranslateProjectsLocationsModelsCreate` - Creates a Model.
+* `TranslateProjectsLocationsModelsList` - Lists models.
 * `TranslateProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `TranslateProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `TranslateProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
