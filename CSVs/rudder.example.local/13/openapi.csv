@@ -1,0 +1,148 @@
+OpenAPI feature,Count
+RefSchema_Depth_1,48
+"Format_uuid (or ""root"")_Depth_1",18
+Format_markdown_Depth_2,8
+ServerVariable,0
+TagExtension,0
+Enum_Depth_1,556
+query_Parameter,27
+Format_X.Y.Z_Depth_1,1
+Items_Depth_2,204
+CallbackComponent,0
+Server,1
+SchemaExtension_Depth_4,0
+Format_PEM_Depth_2,4
+OperationExtension,113
+Format_condition_Depth_3,6
+Format_integer_Depth_1,1
+Minimum_Depth_2,8
+SecurityScheme_Type_apiKey,1
+Path,85
+Operation,113
+Response,114
+Header,0
+"Format_uuid (or ""root"")_Depth_3",6
+SecuritySchemeExtension,0
+SchemaExample_Depth_2,779
+RequestBody,29
+Format_uuid_Depth_1,62
+MediaTypeExample,2
+Format_cve id_Depth_1,2
+SchemaExtension_Depth_2,0
+Properties_Depth_4,8
+Format_CIDR_Depth_3,1
+GlobalWebhook,0
+Path_Post,45
+Format_markdown_Depth_1,5
+Component,62
+Format_string_Depth_2,1
+ResponseCode_200,113
+Properties_Depth_3,741
+GlobalSecurity,1
+ResponseHeader,0
+Format_hash_Depth_1,1
+RequiredParameter,76
+Enum_Depth_4,50
+Format_The HTTP verb for the endpoint for key and the supported version and API path for value_Depth_3,2
+Format_date_Depth_2,21
+Format_The HTTP verb for the endpoint for key and the supported version and API path for value_Depth_2,2
+ResponsesExtension,0
+Format_comma-separated list_Depth_1,6
+OperationParameter,77
+Format_date_Depth_1,6
+Format_string or JSON_Depth_3,14
+RequestBodyExtension,0
+Format_string_Depth_4,2
+SchemaType_integer,240
+ResponseComponent,1
+ResponseContent_application/json,112
+Format_PEM_Depth_1,3
+ParameterComponent,24
+GlobalExternalDoc,1
+SchemaComponent,36
+Items_Depth_1,160
+Properties_Depth_2,1121
+Format_X.Y_Depth_1,1
+Format_date_Depth_3,18
+Maximum_Depth_1,49
+ResponseLink,0
+ResponseContent_application/octet-stream,1
+Encoding,0
+SchemaType_string,1908
+SchemaExample_Depth_4,40
+Format_condition_Depth_2,1
+Format_float_Depth_1,7
+Format_string_Depth_3,2
+Tag,18
+SchemaExtension_Depth_1,0
+PathServer,0
+ParameterExample,89
+Format_float_Depth_2,33
+Minimum_Depth_1,49
+Path_Get,49
+ParameterExtension,0
+Enum_Depth_3,37
+ResponseCode_500,1
+Format_binary_Depth_1,3
+HeaderComponent,0
+OperationTag,113
+SchemaType_number,94
+Format_uuid_Depth_2,40
+SchemaExample_Depth_3,495
+Format_string or JSON_Depth_1,2
+Format_PEM_Depth_3,6
+Format_CIDR_Depth_4,6
+Properties_Depth_1,1043
+Link,0
+SchemaExtension_Depth_3,0
+SchemaType_boolean,176
+Items_Depth_3,35
+GlobalExtension,0
+ResponseContent,115
+MediaTypeExtension,0
+SchemaType_array,399
+SecuritySchemeComponent,1
+RequiredSchema_Depth_1,619
+Enum_Depth_2,331
+Path_Put,8
+RequiredRequestBody,18
+"Format_uuid (or ""root"")_Depth_2",16
+ComponentExtension,0
+PathParameter,0
+Path_Delete,11
+Responses,113
+SchemaType_object,731
+ResponseExtension,0
+Format_+/-difference_Depth_2,6
+ExternalDocExtension,0
+Format_float (0 to 10)_Depth_2,2
+Format_hash_Depth_2,1
+Format_float (0 to 10)_Depth_1,1
+MediaTypeEncoding,0
+RequiredSchema_Depth_2,202
+Format_CIDR network_Depth_3,1
+RefSchema_Depth_3,6
+ResponseContent_text/plain,2
+Callback,0
+ExampleComponent,0
+RequestBodyComponent,0
+Format_+/-difference_Depth_1,1
+SecurityScheme_In_header,1
+Example,1944
+PathExtension,0
+path_Parameter,74
+RefSchema_Depth_4,8
+RequestBodyContent_multipart/form-data,1
+ParameterContent_application/json,8
+ServerExtension,0
+SchemaExample_Depth_1,539
+RequestBodyContent,29
+Format_cve id_Depth_2,4
+Format_float_Depth_3,6
+Maximum_Depth_2,8
+LinkComponent,0
+RefSchema_Depth_2,75
+RequiredSchema_Depth_3,56
+RequestBodyContent_application/json,28
+Format_string or JSON_Depth_2,13
+RequiredSchema_Depth_4,10
