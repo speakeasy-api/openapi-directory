@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.TranslateRequest{
         Security: operations.TranslateSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,15 +20,18 @@ func main() {
             },
         },
         Request: shared.TranslateRequest{
-            From: "sit",
+            From: "unde",
             Text: []string{
-                "culpa",
+                "porro",
+                "nulla",
+                "id",
             },
-            To: "expedita",
-            TranslationContext: "consequuntur",
+            To: "vero",
+            TranslationContext: "perspiciatis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Language.Translate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +40,6 @@ func main() {
     if res.TranslateResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

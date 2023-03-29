@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CommentanalyzerCommentsAnalyzeRequest{
         Security: operations.CommentanalyzerCommentsAnalyzeSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,58 +23,77 @@ func main() {
             },
         },
         QueryParams: operations.CommentanalyzerCommentsAnalyzeQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.AnalyzeCommentRequest{
-            ClientToken: "rerum",
+            ClientToken: "facilis",
             Comment: &shared.TextEntry{
-                Text: "dicta",
-                Type: "TEXT_TYPE_UNSPECIFIED",
+                Text: "eum",
+                Type: "PLAIN_TEXT",
             },
-            CommunityID: "voluptatum",
+            CommunityID: "ullam",
             Context: &shared.Context{
                 ArticleAndParentComment: &shared.ArticleAndParentComment{
                     Article: &shared.TextEntry{
-                        Text: "et",
-                        Type: "HTML",
+                        Text: "saepe",
+                        Type: "TEXT_TYPE_UNSPECIFIED",
                     },
                     ParentComment: &shared.TextEntry{
-                        Text: "dolorem",
-                        Type: "PLAIN_TEXT",
+                        Text: "sapiente",
+                        Type: "TEXT_TYPE_UNSPECIFIED",
                     },
                 },
                 Entries: []shared.TextEntry{
                     shared.TextEntry{
-                        Text: "iste",
-                        Type: "TEXT_TYPE_UNSPECIFIED",
+                        Text: "voluptatum",
+                        Type: "HTML",
+                    },
+                    shared.TextEntry{
+                        Text: "vel",
+                        Type: "PLAIN_TEXT",
                     },
                 },
             },
-            DoNotStore: true,
+            DoNotStore: false,
+            DropUnsupportedAttributes: false,
             Languages: []string{
-                "illum",
+                "similique",
+                "reprehenderit",
             },
             RequestedAttributes: map[string]shared.AttributeParameters{
-                "vel": shared.AttributeParameters{
-                    ScoreThreshold: 20.200001,
-                    ScoreType: "STD_DEV_SCORE",
+                "quo": shared.AttributeParameters{
+                    ScoreThreshold: 710.36,
+                    ScoreType: "PROBABILITY",
+                },
+                "dicta": shared.AttributeParameters{
+                    ScoreThreshold: 6481.72,
+                    ScoreType: "SCORE_TYPE_UNSPECIFIED",
+                },
+                "consequatur": shared.AttributeParameters{
+                    ScoreThreshold: 8326.2,
+                    ScoreType: "RAW",
+                },
+                "omnis": shared.AttributeParameters{
+                    ScoreThreshold: 1403.5,
+                    ScoreType: "RAW",
                 },
             },
-            SessionID: "aspernatur",
-            SpanAnnotations: true,
+            SessionID: "accusamus",
+            SpanAnnotations: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Comments.CommentanalyzerCommentsAnalyze(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -81,5 +102,6 @@ func main() {
     if res.AnalyzeCommentResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

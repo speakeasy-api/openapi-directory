@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.WebriskHashesSearchRequest{
         Security: operations.WebriskHashesSearchSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,24 +23,27 @@ func main() {
             },
         },
         QueryParams: operations.WebriskHashesSearchQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            HashPrefix: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            HashPrefix: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
             ThreatTypes: []WebriskHashesSearchThreatTypesEnum{
+                "UNWANTED_SOFTWARE",
+                "MALWARE",
                 "SOCIAL_ENGINEERING",
             },
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            UploadType: "ullam",
+            UploadProtocol: "saepe",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Hashes.WebriskHashesSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +52,6 @@ func main() {
     if res.GoogleCloudWebriskV1SearchHashesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

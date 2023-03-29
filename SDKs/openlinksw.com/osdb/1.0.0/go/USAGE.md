@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ActionHelpRequest{
         PathParams: operations.ActionHelpPathParams{
-            ActionID: "sit",
-            ServiceID: "voluptas",
+            ActionID: "unde",
+            ServiceID: "deserunt",
         },
     }
-    
-    res, err := s.OSDB.ActionHelp(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Osdb.ActionHelp(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -26,5 +29,6 @@ func main() {
     if res.ActionHelpResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

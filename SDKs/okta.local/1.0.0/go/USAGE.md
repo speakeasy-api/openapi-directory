@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ClearUserSessionsRequest{
         PathParams: operations.ClearUserSessionsPathParams{
-            UserID: "sit",
+            UserID: "unde",
         },
-        Request: []byte("voluptas"),
+        Request: []byte("deserunt"),
     }
-    
+
+    ctx := context.Background()
     res, err := s.ClearUserSessions(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -26,5 +29,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/vision/v1p2beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.VisionFilesAnnotateRequest{
         Security: operations.VisionFilesAnnotateSecurity{
             Option1: &operations.VisionFilesAnnotateSecurityOption1{
@@ -34,87 +36,89 @@ func main() {
             },
         },
         QueryParams: operations.VisionFilesAnnotateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest{
-            Parent: "rerum",
+            Parent: "facilis",
             Requests: []shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                 shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p2beta1Feature{
                         shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 5617773211005988520,
-                            Model: "et",
+                            MaxResults: 297534,
+                            Model: "saepe",
                             Type: "TYPE_UNSPECIFIED",
+                        },
+                        shared.GoogleCloudVisionV1p2beta1Feature{
+                            MaxResults: 963663,
+                            Model: "enim",
+                            Type: "LABEL_DETECTION",
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p2beta1ImageContext{
                         CropHintsParams: &shared.GoogleCloudVisionV1p2beta1CropHintsParams{
                             AspectRatios: []float32{
-                                50.099998,
-                                15.100000,
-                                66.099998,
+                                7917.25,
+                                8121.69,
                             },
                         },
                         LanguageHints: []string{
-                            "debitis",
-                            "vel",
-                            "odio",
+                            "deleniti",
+                            "similique",
+                            "reprehenderit",
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p2beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 91.099998,
-                                Longitude: 57.099998,
+                                Latitude: 9255.97,
+                                Longitude: 8360.79,
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 45.099998,
-                                Longitude: 78.199997,
+                                Latitude: 710.36,
+                                Longitude: 3373.96,
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p2beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p2beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
                                     shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 10.200000,
-                                        Y: 14.200000,
-                                    },
-                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 44.099998,
-                                        Y: 78.199997,
-                                    },
-                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 87.099998,
-                                        Y: 0.100000,
+                                        X: 6481.72,
+                                        Y: 202.18,
                                     },
                                 },
                                 Vertices: []shared.GoogleCloudVisionV1p2beta1Vertex{
                                     shared.GoogleCloudVisionV1p2beta1Vertex{
-                                        X: 388440063886460141,
-                                        Y: 7561811714888168464,
+                                        X: 832620,
+                                        Y: 957156,
+                                    },
+                                    shared.GoogleCloudVisionV1p2beta1Vertex{
+                                        X: 778157,
+                                        Y: 140350,
                                     },
                                 },
                             },
-                            Filter: "ipsum",
+                            Filter: "accusamus",
                             ProductCategories: []string{
-                                "modi",
-                                "sint",
+                                "reiciendis",
+                                "rem",
+                                "quibusdam",
+                                "et",
                             },
-                            ProductSet: "inventore",
+                            ProductSet: "praesentium",
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p2beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
-                                "exercitationem",
-                                "aut",
-                                "reprehenderit",
+                                "dolor",
+                                "soluta",
+                                "sed",
                             },
                             EnableTextDetectionConfidenceScore: false,
                         },
@@ -123,175 +127,112 @@ func main() {
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p2beta1InputConfig{
-                        Content: "incidunt",
+                        Content: "quisquam",
                         GcsSource: &shared.GoogleCloudVisionV1p2beta1GcsSource{
-                            URI: "dolor",
-                        },
-                        MimeType: "beatae",
-                    },
-                    Pages: []int32{
-                        2671030200101705776,
-                        3508963237347473586,
-                    },
-                },
-                shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
-                    Features: []shared.GoogleCloudVisionV1p2beta1Feature{
-                        shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 4564823113789767141,
-                            Model: "ex",
-                            Type: "SAFE_SEARCH_DETECTION",
-                        },
-                        shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 3983722386484812742,
-                            Model: "vel",
-                            Type: "PRODUCT_SEARCH",
-                        },
-                    },
-                    ImageContext: &shared.GoogleCloudVisionV1p2beta1ImageContext{
-                        CropHintsParams: &shared.GoogleCloudVisionV1p2beta1CropHintsParams{
-                            AspectRatios: []float32{
-                                84.199997,
-                                23.100000,
-                            },
-                        },
-                        LanguageHints: []string{
-                            "unde",
-                        },
-                        LatLongRect: &shared.GoogleCloudVisionV1p2beta1LatLongRect{
-                            MaxLatLng: &shared.LatLng{
-                                Latitude: 31.100000,
-                                Longitude: 13.100000,
-                            },
-                            MinLatLng: &shared.LatLng{
-                                Latitude: 26.100000,
-                                Longitude: 90.099998,
-                            },
-                        },
-                        ProductSearchParams: &shared.GoogleCloudVisionV1p2beta1ProductSearchParams{
-                            BoundingPoly: &shared.GoogleCloudVisionV1p2beta1BoundingPoly{
-                                NormalizedVertices: []shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 40.099998,
-                                        Y: 28.100000,
-                                    },
-                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 29.100000,
-                                        Y: 90.199997,
-                                    },
-                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 31.200001,
-                                        Y: 9.200000,
-                                    },
-                                },
-                                Vertices: []shared.GoogleCloudVisionV1p2beta1Vertex{
-                                    shared.GoogleCloudVisionV1p2beta1Vertex{
-                                        X: 7862762095958642309,
-                                        Y: 4391202566038595699,
-                                    },
-                                },
-                            },
-                            Filter: "omnis",
-                            ProductCategories: []string{
-                                "consequatur",
-                                "dolor",
-                            },
-                            ProductSet: "commodi",
-                        },
-                        TextDetectionParams: &shared.GoogleCloudVisionV1p2beta1TextDetectionParams{
-                            AdvancedOcrOptions: []string{
-                                "reprehenderit",
-                            },
-                            EnableTextDetectionConfidenceScore: false,
-                        },
-                        WebDetectionParams: &shared.GoogleCloudVisionV1p2beta1WebDetectionParams{
-                            IncludeGeoResults: true,
-                        },
-                    },
-                    InputConfig: &shared.GoogleCloudVisionV1p2beta1InputConfig{
-                        Content: "ut",
-                        GcsSource: &shared.GoogleCloudVisionV1p2beta1GcsSource{
-                            URI: "laboriosam",
+                            URI: "https://kristina.com",
                         },
                         MimeType: "sed",
                     },
-                    Pages: []int32{
-                        1836598054518427835,
+                    Pages: []int{
+                        758616,
+                        521848,
+                        105907,
+                        414662,
                     },
                 },
                 shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p2beta1Feature{
                         shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 7638413271565042464,
-                            Model: "consequuntur",
+                            MaxResults: 264555,
+                            Model: "amet",
+                            Type: "WEB_DETECTION",
+                        },
+                        shared.GoogleCloudVisionV1p2beta1Feature{
+                            MaxResults: 736918,
+                            Model: "blanditiis",
                             Type: "LANDMARK_DETECTION",
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p2beta1ImageContext{
                         CropHintsParams: &shared.GoogleCloudVisionV1p2beta1CropHintsParams{
                             AspectRatios: []float32{
-                                35.200001,
+                                1352.18,
+                                187.89,
+                                3241.41,
                             },
                         },
                         LanguageHints: []string{
-                            "perferendis",
+                            "voluptatem",
+                            "laborum",
+                            "modi",
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p2beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 26.200001,
-                                Longitude: 87.099998,
+                                Latitude: 6169.34,
+                                Longitude: 3864.89,
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 42.099998,
-                                Longitude: 15.200000,
+                                Latitude: 9437.49,
+                                Longitude: 9025.99,
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p2beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p2beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
                                     shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
-                                        X: 50.099998,
-                                        Y: 9.200000,
+                                        X: 4499.5,
+                                        Y: 3595.08,
+                                    },
+                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
+                                        X: 6130.64,
+                                        Y: 4370.32,
+                                    },
+                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
+                                        X: 9023.49,
+                                        Y: 6976.31,
                                     },
                                 },
                                 Vertices: []shared.GoogleCloudVisionV1p2beta1Vertex{
                                     shared.GoogleCloudVisionV1p2beta1Vertex{
-                                        X: 2333048574390956331,
-                                        Y: 9205243623417456715,
+                                        X: 60225,
+                                        Y: 969810,
                                     },
                                 },
                             },
-                            Filter: "quis",
+                            Filter: "libero",
                             ProductCategories: []string{
-                                "labore",
+                                "libero",
+                                "ipsum",
+                                "non",
                             },
-                            ProductSet: "et",
+                            ProductSet: "ea",
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p2beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
-                                "ad",
-                                "expedita",
+                                "placeat",
                             },
-                            EnableTextDetectionConfidenceScore: true,
+                            EnableTextDetectionConfidenceScore: false,
                         },
                         WebDetectionParams: &shared.GoogleCloudVisionV1p2beta1WebDetectionParams{
-                            IncludeGeoResults: true,
+                            IncludeGeoResults: false,
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p2beta1InputConfig{
-                        Content: "modi",
+                        Content: "ipsam",
                         GcsSource: &shared.GoogleCloudVisionV1p2beta1GcsSource{
-                            URI: "nihil",
+                            URI: "https://frank.biz",
                         },
-                        MimeType: "tempora",
+                        MimeType: "similique",
                     },
-                    Pages: []int32{
-                        4745905187492708501,
+                    Pages: []int{
+                        438601,
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Files.VisionFilesAnnotate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -300,29 +241,30 @@ func main() {
     if res.GoogleCloudVisionV1p2beta1BatchAnnotateFilesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### files
+
+### Files
 
 * `VisionFilesAnnotate` - Service that performs image detection and annotation for a batch of files. Now only "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation for each image extracted.
 * `VisionFilesAsyncBatchAnnotate` - Run asynchronous image detection and annotation for a list of generic files, such as PDF files, which may contain multiple pages and multiple images per page. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
 
-### images
+### Images
 
 * `VisionImagesAnnotate` - Run image detection and annotation for a batch of images.
 * `VisionImagesAsyncBatchAnnotate` - Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
 
-### projects
+### Projects
 
 * `VisionProjectsLocationsFilesAnnotate` - Service that performs image detection and annotation for a batch of files. Now only "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation for each image extracted.
 * `VisionProjectsLocationsFilesAsyncBatchAnnotate` - Run asynchronous image detection and annotation for a list of generic files, such as PDF files, which may contain multiple pages and multiple images per page. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
 * `VisionProjectsLocationsImagesAnnotate` - Run image detection and annotation for a batch of images.
 * `VisionProjectsLocationsImagesAsyncBatchAnnotate` - Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

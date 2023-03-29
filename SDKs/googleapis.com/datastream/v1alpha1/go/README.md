@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/datastream/v1alpha1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest{
         Security: operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,78 +34,84 @@ func main() {
             },
         },
         PathParams: operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            ConnectionProfileID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            ConnectionProfileID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.ConnectionProfileInput{
-            DisplayName: "voluptatum",
+            DisplayName: "ullam",
             ForwardSSHConnectivity: &shared.ForwardSSHTunnelConnectivity{
-                Hostname: "et",
-                Password: "ut",
-                Port: 161231572858529631,
-                PrivateKey: "et",
-                Username: "voluptate",
+                Hostname: "sim.com",
+                Password: "sapiente",
+                Port: 272656,
+                PrivateKey: "eum",
+                Username: "Jason_Schiller47",
             },
             GcsProfile: &shared.GcsProfile{
-                BucketName: "iste",
-                RootPath: "vitae",
+                BucketName: "similique",
+                RootPath: "reprehenderit",
             },
             Labels: map[string]string{
-                "dolores": "illum",
-                "debitis": "vel",
-                "odio": "dolore",
+                "quo": "quasi",
+                "laboriosam": "dicta",
+                "est": "voluptatem",
+                "consequatur": "fugiat",
             },
             MysqlProfile: &shared.MysqlProfileInput{
-                Hostname: "id",
-                Password: "aspernatur",
-                Port: 2914295034816259174,
+                Hostname: "verner.net",
+                Password: "eos",
+                Port: 870013,
                 SslConfig: &shared.MysqlSslConfigInput{
-                    CaCertificate: "totam",
-                    ClientCertificate: "commodi",
-                    ClientKey: "quis",
+                    CaCertificate: "accusamus",
+                    ClientCertificate: "reiciendis",
+                    ClientKey: "rem",
                 },
-                Username: "est",
+                Username: "Pinkie_Schmidt",
             },
             NoConnectivity: map[string]interface{}{
-                "odit": "non",
-                "voluptas": "omnis",
-                "aut": "illo",
+                "soluta": "sed",
+                "quisquam": "rerum",
+                "culpa": "qui",
+                "sed": "rerum",
             },
             OracleProfile: &shared.OracleProfile{
                 ConnectionAttributes: map[string]string{
-                    "officiis": "autem",
-                    "consectetur": "nobis",
-                    "odio": "qui",
+                    "occaecati": "odit",
+                    "esse": "rem",
+                    "voluptatem": "amet",
+                    "est": "id",
                 },
-                DatabaseService: "recusandae",
-                Hostname: "at",
-                Password: "ipsum",
-                Port: 8902041070398994519,
-                Username: "modi",
+                DatabaseService: "blanditiis",
+                Hostname: "curt.name",
+                Password: "dolores",
+                Port: 18789,
+                Username: "Enrique61",
             },
             PrivateConnectivity: &shared.PrivateConnectivity{
-                PrivateConnectionName: "sint",
+                PrivateConnectionName: "modi",
             },
             StaticServiceIPConnectivity: map[string]interface{}{
-                "ut": "exercitationem",
+                "iure": "earum",
+                "ut": "soluta",
+                "qui": "ea",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DatastreamProjectsLocationsConnectionProfilesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -112,13 +120,15 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `DatastreamProjectsLocationsConnectionProfilesCreate` - Use this method to create a connection profile in a project and location.
 * `DatastreamProjectsLocationsConnectionProfilesDiscover` - Use this method to discover a connection profile. The discover API call exposes the data objects and metadata belonging to the profile. Typically, a request returns children data objects under a parent data object that's optionally supplied in the request.
@@ -140,7 +150,6 @@ func main() {
 * `DatastreamProjectsLocationsStreamsObjectsStartBackfillJob` - Starts backfill job for the specified stream object.
 * `DatastreamProjectsLocationsStreamsObjectsStopBackfillJob` - Stops the backfill job for the specified stream object.
 * `DatastreamProjectsLocationsStreamsPatch` - Use this method to update the configuration of a stream.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

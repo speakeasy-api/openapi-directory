@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AdmobAccountsAdUnitsListRequest{
         Security: operations.AdmobAccountsAdUnitsListSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,25 +23,26 @@ func main() {
             },
         },
         PathParams: operations.AdmobAccountsAdUnitsListPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.AdmobAccountsAdUnitsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PageSize: 8274930044578894929,
-            PageToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PageSize: 423655,
+            PageToken: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.AdmobAccountsAdUnitsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +51,6 @@ func main() {
     if res.ListAdUnitsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

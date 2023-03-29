@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DriveAboutGetRequest{
         Security: operations.DriveAboutGetSecurity{
             Option1: &operations.DriveAboutGetSecurityOption1{
@@ -24,18 +26,19 @@ func main() {
         },
         QueryParams: operations.DriveAboutGetQueryParams{
             Alt: "json",
-            Fields: "voluptas",
-            IncludeSubscribed: true,
-            Key: "expedita",
-            MaxChangeIDCount: "consequuntur",
-            OauthToken: "dolor",
-            PrettyPrint: true,
-            QuotaUser: "voluptas",
-            StartChangeID: "fugit",
-            UserIP: "et",
+            Fields: "deserunt",
+            IncludeSubscribed: false,
+            Key: "porro",
+            MaxChangeIDCount: "nulla",
+            OauthToken: "id",
+            PrettyPrint: false,
+            QuotaUser: "vero",
+            StartChangeID: "perspiciatis",
+            UserIP: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.About.DriveAboutGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -44,5 +47,6 @@ func main() {
     if res.About != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

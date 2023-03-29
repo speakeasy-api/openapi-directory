@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetCountriesRequest{
         QueryParams: operations.GetCountriesQueryParams{
-            MarketID: "sit",
-            Order: "ascending",
-            RegionName: "culpa",
-            RegionTypeID: 501233450539197794,
+            MarketID: "unde",
+            Order: "descending",
+            RegionName: "porro",
+            RegionTypeID: 844266,
             Sort: "label",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.V1.GetCountries(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.ArrayOfCountrySummary != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BloggerBlogUserInfosGetRequest{
         Security: operations.BloggerBlogUserInfosGetSecurity{
             Option1: &operations.BloggerBlogUserInfosGetSecurityOption1{
@@ -23,25 +25,26 @@ func main() {
             },
         },
         PathParams: operations.BloggerBlogUserInfosGetPathParams{
-            BlogID: "sit",
-            UserID: "voluptas",
+            BlogID: "unde",
+            UserID: "deserunt",
         },
         QueryParams: operations.BloggerBlogUserInfosGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            MaxPosts: 8274930044578894929,
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            AccessToken: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            MaxPosts: 423655,
+            OauthToken: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BlogUserInfos.BloggerBlogUserInfosGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +53,6 @@ func main() {
     if res.BlogUserInfo != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

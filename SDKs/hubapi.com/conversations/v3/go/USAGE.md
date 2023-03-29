@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PostVisitorIdentificationV3TokensCreateGenerateTokenRequest{
         Security: operations.PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity{
             Hapikey: &shared.SchemeHapikey{
@@ -18,12 +20,13 @@ func main() {
             },
         },
         Request: shared.IdentificationTokenGenerationRequest{
-            Email: "sit",
-            FirstName: "voluptas",
-            LastName: "culpa",
+            Email: "Larry_Rau85@yahoo.com",
+            FirstName: "Karlee",
+            LastName: "Stamm",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Generate.PostVisitorIdentificationV3TokensCreateGenerateToken(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -32,5 +35,6 @@ func main() {
     if res.IdentificationTokenResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

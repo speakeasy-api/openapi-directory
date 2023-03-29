@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/adyen.com/BalancePlatformService/1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,19 +23,19 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAccountHoldersIDRequest{
         Security: operations.GetAccountHoldersIDSecurity{
-            BasicAuth: &shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
+            APIKeyAuth: &shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
             },
         },
         PathParams: operations.GetAccountHoldersIDPathParams{
-            ID: "sit",
+            ID: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AccountHolders.GetAccountHoldersID(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -42,71 +44,72 @@ func main() {
     if res.AccountHolder != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Account holders
 
-* `GetAccountHoldersID` - Retrieve an account holder.
-* `GetAccountHoldersIDBalanceAccounts` - Retrieve all balance accounts of a specific account holder.
-* `PatchAccountHoldersID` - Update an account holder.
-* `PostAccountHolders` - Create an account holder.
+### AccountHolders
 
-### Balance accounts
+* `GetAccountHoldersID` - Get an account holder
+* `GetAccountHoldersIDBalanceAccounts` - Get all balance accounts of an account holder
+* `PatchAccountHoldersID` - Update an account holder
+* `PostAccountHolders` - Create an account holder
 
-* `GetBalanceAccountsID` - Retrieve a balance account.
-* `GetBalanceAccountsIDPaymentInstruments` - Retrieve all payment instruments for a specific balance account.
-* `PatchBalanceAccountsID` - Update a balance account.
-* `PostBalanceAccounts` - Create a balance account.
+### BalanceAccounts
+
+* `GetBalanceAccountsID` - Get a balance account
+* `GetBalanceAccountsIDPaymentInstruments` - Get all payment instruments for a balance account
+* `PatchBalanceAccountsID` - Update a balance account
+* `PostBalanceAccounts` - Create a balance account
 
 ### Documents
 
-* `DeleteDocumentsID` - Delete a document.
-* `GetDocumentsID` - Retrieve a document.
-* `PatchDocumentsID` - Update a document.
-* `PostDocuments` - Upload a document for verification checks.
+* `DeleteDocumentsID` - Delete a document
+* `GetDocumentsID` - Get a document
+* `PatchDocumentsID` - Update a document
+* `PostDocuments` - Upload a document for verification checks
 
-### General
+### LegalEntities
 
-* `GetBalancePlatformsID` - Retrieve a balance platform.
-* `GetBalancePlatformsIDAccountHolders` - Retrieve all account holders under a specific balance platform.
+* `GetLegalEntitiesID` - Get a legal entity
+* `PatchLegalEntitiesID` - Update a legal entity
+* `PostLegalEntities` - Create a legal entity
 
-### Legal entities
+### PaymentInstrumentGroups
 
-* `GetLegalEntitiesID` - Retrieve a legal entity.
-* `PatchLegalEntitiesID` - Update a legal entity.
-* `PostLegalEntities` - Create a legal entity.
+* `GetPaymentInstrumentGroupsID` - Get a payment instrument group
+* `GetPaymentInstrumentGroupsIDTransactionRules` - Get all transaction rules for a payment instrument group
+* `PostPaymentInstrumentGroups` - Create a payment instrument group
 
-### Payment instrument groups
+### PaymentInstruments
 
-* `GetPaymentInstrumentGroupsID` - Retrieve a payment instrument group.
-* `GetPaymentInstrumentGroupsIDTransactionRules` - Retrieve all transaction rules for a specific payment instruments group.
-* `PostPaymentInstrumentGroups` - Create a payment instrument group.
+* `GetPaymentInstrumentsID` - Get a payment instrument
+* `GetPaymentInstrumentsIDTransactionRules` - Get all transaction rules for a payment instrument
+* `PatchPaymentInstrumentsID` - Update a payment instrument
+* `PostPaymentInstruments` - Create a payment instrument
 
-### Payment instruments
+### Platform
 
-* `GetPaymentInstrumentsID` - Retrieve a payment instrument.
-* `GetPaymentInstrumentsIDTransactionRules` - Retrieve all transaction rules for a specific payment instrument.
-* `PatchPaymentInstrumentsID` - Update a payment instrument.
-* `PostPaymentInstruments` - Create a payment instrument.
+* `GetBalancePlatformsID` - Get a balance platform
+* `GetBalancePlatformsIDAccountHolders` - Get all account holders under a balance platform
 
-### Transaction rules
+### TransactionRules
 
-* `DeleteTransactionRulesTransactionRuleID` - Delete a transaction rule.
-* `GetTransactionRulesTransactionRuleID` - Retrieve a transaction rule.
-* `PatchTransactionRulesTransactionRuleID` - Update a transaction rule.
-* `PostTransactionRules` - Create a transaction rule.
+* `DeleteTransactionRulesTransactionRuleID` - Delete a transaction rule
+* `GetTransactionRulesTransactionRuleID` - Get a transaction rule
+* `PatchTransactionRulesTransactionRuleID` - Update a transaction rule
+* `PostTransactionRules` - Create a transaction rule
 
-### Transfer instruments
+### TransferInstruments
 
 * `DeleteTransferInstrumentsID` - Delete a transfer instrument
-* `GetTransferInstrumentsID` - Retrieve a transfer instrument.
-* `PatchTransferInstrumentsID` - Update a transfer instrument.
-* `PostTransferInstruments` - Create a transfer instrument.
-
+* `GetTransferInstrumentsID` - Get a transfer instrument
+* `PatchTransferInstrumentsID` - Update a transfer instrument
+* `PostTransferInstruments` - Create a transfer instrument
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

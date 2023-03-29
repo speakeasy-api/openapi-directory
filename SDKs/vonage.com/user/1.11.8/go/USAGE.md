@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.UserCtrlGetUserByIDRequest{
         Security: operations.UserCtrlGetUserByIDSecurity{
             BearerAuth: shared.SchemeBearerAuth{
@@ -18,11 +20,12 @@ func main() {
             },
         },
         PathParams: operations.UserCtrlGetUserByIDPathParams{
-            AccountID: "sit",
-            UserID: 14.200000,
+            AccountID: "unde",
+            UserID: 5928.45,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.UserCtrlGetUserByID(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.UserHalResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

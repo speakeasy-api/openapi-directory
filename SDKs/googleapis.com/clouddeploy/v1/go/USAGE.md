@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateRequest{
         Security: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,97 +23,115 @@ func main() {
             },
         },
         PathParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            DeliveryPipelineID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            DeliveryPipelineID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
-            ValidateOnly: true,
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
+            ValidateOnly: false,
         },
         Request: &shared.DeliveryPipelineInput{
             Annotations: map[string]string{
-                "ut": "dolorem",
+                "saepe": "inventore",
+                "sapiente": "enim",
             },
             Condition: &shared.PipelineCondition{
                 PipelineReadyCondition: &shared.PipelineReadyCondition{
                     Status: false,
-                    UpdateTime: "voluptate",
+                    UpdateTime: "eum",
                 },
                 TargetsPresentCondition: &shared.TargetsPresentCondition{
                     MissingTargets: []string{
-                        "vitae",
-                        "totam",
-                        "dolores",
+                        "autem",
+                        "vel",
                     },
                     Status: false,
-                    UpdateTime: "debitis",
+                    UpdateTime: "non",
                 },
                 TargetsTypeCondition: &shared.TargetsTypeCondition{
-                    ErrorDetails: "vel",
+                    ErrorDetails: "deleniti",
                     Status: false,
                 },
             },
-            Description: "dolore",
-            Etag: "id",
+            Description: "similique",
+            Etag: "reprehenderit",
             Labels: map[string]string{
-                "accusantium": "totam",
+                "quo": "quasi",
+                "laboriosam": "dicta",
+                "est": "voluptatem",
+                "consequatur": "fugiat",
             },
-            Name: "commodi",
+            Name: "a",
             SerialPipeline: &shared.SerialPipeline{
                 Stages: []shared.Stage{
                     shared.Stage{
                         Profiles: []string{
-                            "aut",
-                            "odit",
-                        },
-                        Strategy: &shared.Strategy{
-                            Standard: &shared.Standard{
-                                Verify: true,
-                            },
-                        },
-                        TargetID: "voluptas",
-                    },
-                    shared.Stage{
-                        Profiles: []string{
-                            "aut",
-                            "illo",
+                            "accusamus",
                         },
                         Strategy: &shared.Strategy{
                             Standard: &shared.Standard{
                                 Verify: false,
                             },
                         },
-                        TargetID: "officiis",
+                        TargetID: "accusamus",
                     },
                     shared.Stage{
                         Profiles: []string{
-                            "consectetur",
-                            "nobis",
+                            "rem",
+                            "quibusdam",
+                            "et",
+                            "praesentium",
                         },
                         Strategy: &shared.Strategy{
                             Standard: &shared.Standard{
                                 Verify: false,
                             },
                         },
-                        TargetID: "qui",
+                        TargetID: "occaecati",
+                    },
+                    shared.Stage{
+                        Profiles: []string{
+                            "soluta",
+                            "sed",
+                            "quisquam",
+                            "rerum",
+                        },
+                        Strategy: &shared.Strategy{
+                            Standard: &shared.Standard{
+                                Verify: false,
+                            },
+                        },
+                        TargetID: "culpa",
+                    },
+                    shared.Stage{
+                        Profiles: []string{
+                            "sed",
+                        },
+                        Strategy: &shared.Strategy{
+                            Standard: &shared.Standard{
+                                Verify: false,
+                            },
+                        },
+                        TargetID: "rerum",
                     },
                 },
             },
-            Suspended: true,
+            Suspended: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.ClouddeployProjectsLocationsDeliveryPipelinesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -120,5 +140,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

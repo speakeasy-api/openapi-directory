@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BooksBookshelvesGetRequest{
         Security: operations.BooksBookshelvesGetSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,25 +23,26 @@ func main() {
             },
         },
         PathParams: operations.BooksBookshelvesGetPathParams{
-            Shelf: "sit",
-            UserID: "voluptas",
+            Shelf: "unde",
+            UserID: "deserunt",
         },
         QueryParams: operations.BooksBookshelvesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            AccessToken: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            Source: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            Source: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Bookshelves.BooksBookshelvesGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +51,6 @@ func main() {
     if res.Bookshelf != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

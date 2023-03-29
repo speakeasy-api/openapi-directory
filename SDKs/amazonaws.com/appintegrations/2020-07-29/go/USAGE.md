@@ -3,57 +3,58 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.CreateDataIntegrationRequest{
+        Headers: operations.CreateDataIntegrationHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+        },
+        Request: operations.CreateDataIntegrationRequestBody{
+            ClientToken: "nulla",
+            Description: "nihil",
+            KmsKey: "fuga",
+            Name: "facilis",
+            ScheduleConfig: &operations.CreateDataIntegrationRequestBodyScheduleConfig{
+                FirstExecutionFrom: "eum",
+                Object: "iusto",
+                ScheduleExpression: "ullam",
+            },
+            SourceURI: "saepe",
+            Tags: map[string]string{
+                "sapiente": "enim",
+            },
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.CreateEventIntegrationRequest{
-        Headers: operations.CreateEventIntegrationHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-        },
-        Request: operations.CreateEventIntegrationRequestBody{
-            ClientToken: "voluptas",
-            Description: "fugit",
-            EventBridgeBus: "et",
-            EventFilter: operations.CreateEventIntegrationRequestBodyEventFilter{
-                Source: "nihil",
-            },
-            Name: "rerum",
-            Tags: map[string]string{
-                "debitis": "voluptatum",
-                "et": "ut",
-                "dolorem": "et",
-            },
-        },
-    }
-    
-    res, err := s.CreateEventIntegration(ctx, req)
+    ctx := context.Background()
+    res, err := s.CreateDataIntegration(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CreateEventIntegrationResponse != nil {
+    if res.CreateDataIntegrationResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

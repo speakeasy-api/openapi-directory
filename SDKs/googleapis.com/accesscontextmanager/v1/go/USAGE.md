@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest{
         Security: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,91 +23,149 @@ func main() {
             },
         },
         PathParams: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.AccessLevel{
             Basic: &shared.BasicLevel{
-                CombiningFunction: "OR",
+                CombiningFunction: "AND",
                 Conditions: []shared.Condition{
                     shared.Condition{
                         DevicePolicy: &shared.DevicePolicy{
                             AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
-                                "BASIC",
+                                "COMPLETE",
+                                "MANAGEMENT_UNSPECIFIED",
                             },
                             AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
-                                "UNENCRYPTED",
+                                "ENCRYPTION_UNSUPPORTED",
+                                "ENCRYPTION_UNSUPPORTED",
+                                "ENCRYPTION_UNSUPPORTED",
+                                "ENCRYPTED",
+                            },
+                            OsConstraints: []shared.OsConstraint{
+                                shared.OsConstraint{
+                                    MinimumVersion: "non",
+                                    OsType: "DESKTOP_LINUX",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                                shared.OsConstraint{
+                                    MinimumVersion: "similique",
+                                    OsType: "DESKTOP_WINDOWS",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                                shared.OsConstraint{
+                                    MinimumVersion: "molestiae",
+                                    OsType: "ANDROID",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                                shared.OsConstraint{
+                                    MinimumVersion: "quasi",
+                                    OsType: "DESKTOP_WINDOWS",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                            },
+                            RequireAdminApproval: false,
+                            RequireCorpOwned: false,
+                            RequireScreenlock: false,
+                        },
+                        IPSubnetworks: []string{
+                            "est",
+                        },
+                        Members: []string{
+                            "consequatur",
+                        },
+                        Negate: false,
+                        Regions: []string{
+                            "a",
+                            "omnis",
+                            "eos",
+                            "accusamus",
+                        },
+                        RequiredAccessLevels: []string{
+                            "reiciendis",
+                            "rem",
+                            "quibusdam",
+                            "et",
+                        },
+                    },
+                    shared.Condition{
+                        DevicePolicy: &shared.DevicePolicy{
+                            AllowedDeviceManagementLevels: []shared.DevicePolicyAllowedDeviceManagementLevelsEnum{
+                                "BASIC",
+                                "COMPLETE",
+                            },
+                            AllowedEncryptionStatuses: []shared.DevicePolicyAllowedEncryptionStatusesEnum{
+                                "ENCRYPTION_UNSPECIFIED",
                                 "UNENCRYPTED",
                                 "UNENCRYPTED",
                             },
                             OsConstraints: []shared.OsConstraint{
                                 shared.OsConstraint{
-                                    MinimumVersion: "vitae",
-                                    OsType: "DESKTOP_CHROME_OS",
-                                    RequireVerifiedChromeOs: true,
-                                },
-                                shared.OsConstraint{
-                                    MinimumVersion: "illum",
+                                    MinimumVersion: "qui",
                                     OsType: "DESKTOP_LINUX",
                                     RequireVerifiedChromeOs: false,
                                 },
                                 shared.OsConstraint{
-                                    MinimumVersion: "odio",
+                                    MinimumVersion: "rerum",
+                                    OsType: "ANDROID",
+                                    RequireVerifiedChromeOs: false,
+                                },
+                                shared.OsConstraint{
+                                    MinimumVersion: "occaecati",
                                     OsType: "OS_UNSPECIFIED",
                                     RequireVerifiedChromeOs: false,
                                 },
                             },
-                            RequireAdminApproval: true,
-                            RequireCorpOwned: true,
+                            RequireAdminApproval: false,
+                            RequireCorpOwned: false,
                             RequireScreenlock: false,
                         },
                         IPSubnetworks: []string{
-                            "quis",
-                            "est",
+                            "rem",
+                            "voluptatem",
                         },
                         Members: []string{
-                            "odit",
-                            "non",
-                            "voluptas",
+                            "est",
                         },
-                        Negate: true,
+                        Negate: false,
                         Regions: []string{
-                            "illo",
+                            "blanditiis",
+                            "numquam",
+                            "similique",
                         },
                         RequiredAccessLevels: []string{
-                            "officiis",
-                            "autem",
-                            "consectetur",
+                            "sit",
                         },
                     },
                 },
             },
             Custom: &shared.CustomLevel{
                 Expr: &shared.Expr{
-                    Description: "nobis",
-                    Expression: "odio",
-                    Location: "qui",
-                    Title: "recusandae",
+                    Description: "quia",
+                    Expression: "et",
+                    Location: "voluptatem",
+                    Title: "Investor Integration Orchestrator",
                 },
             },
-            Description: "at",
-            Name: "ipsum",
-            Title: "eveniet",
+            Description: "iure",
+            Name: "earum",
+            Title: "Human Quality Architect",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AccessPolicies.AccesscontextmanagerAccessPoliciesAccessLevelsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -114,5 +174,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

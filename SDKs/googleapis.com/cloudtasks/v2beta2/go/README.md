@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudtasks/v2beta2/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudtasksAPIQueueUpdateRequest{
         Security: operations.CloudtasksAPIQueueUpdateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,30 +34,38 @@ func main() {
             },
         },
         QueryParams: operations.CloudtasksAPIQueueUpdateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            AppID: "expedita",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            AppID: "nulla",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.HTTPBody{
-            ContentType: "dicta",
-            Data: "debitis",
+            ContentType: "eum",
+            Data: "iusto",
             Extensions: []map[string]interface{}{
                 map[string]interface{}{
-                    "ut": "dolorem",
+                    "inventore": "sapiente",
+                    "enim": "eum",
+                    "voluptatum": "autem",
+                    "vel": "non",
+                },
+                map[string]interface{}{
+                    "similique": "reprehenderit",
+                    "molestiae": "quo",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.API.CloudtasksAPIQueueUpdate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -64,17 +74,19 @@ func main() {
     if res.Empty != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### api
+
+### API
 
 * `CloudtasksAPIQueueUpdate` - Update queue list by uploading a queue.yaml file. The queue.yaml file is supplied in the request body as a YAML encoded string. This method was added to support gcloud clients versions before 322.0.0. New clients should use CreateQueue instead of this method.
 
-### projects
+### Projects
 
 * `CloudtasksProjectsLocationsList` - Lists information about the supported locations for this service.
 * `CloudtasksProjectsLocationsQueuesCreate` - Creates a queue. Queues created with this method allow tasks to live for a maximum of 31 days. After a task is 31 days old, the task will be deleted regardless of whether it was dispatched or not. WARNING: Using this method may have unintended side effects if you are using an App Engine `queue.yaml` or `queue.xml` file to manage your queues. Read [Overview of Queue Management and queue.yaml](https://cloud.google.com/tasks/docs/queue-yaml) before using this method.
@@ -96,7 +108,6 @@ func main() {
 * `CloudtasksProjectsLocationsQueuesTasksRenewLease` - Renew the current lease of a pull task. The worker can use this method to extend the lease by a new duration, starting from now. The new task lease will be returned in the task's schedule_time.
 * `CloudtasksProjectsLocationsQueuesTasksRun` - Forces a task to run now. When this method is called, Cloud Tasks will dispatch the task, even if the task is already running, the queue has reached its RateLimits or is PAUSED. This command is meant to be used for manual debugging. For example, RunTask can be used to retry a failed task after a fix has been made or to manually force a task to be dispatched now. The dispatched task is returned. That is, the task that is returned contains the status after the task is dispatched but before the task is received by its target. If Cloud Tasks receives a successful response from the task's target, then the task will be deleted; otherwise the task's schedule_time will be reset to the time that RunTask was called plus the retry delay specified in the queue's RetryConfig. RunTask returns NOT_FOUND when it is called on a task that has already succeeded or permanently failed. RunTask cannot be called on a pull task.
 * `CloudtasksProjectsLocationsQueuesTestIamPermissions` - Returns permissions that a caller has on a Queue. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

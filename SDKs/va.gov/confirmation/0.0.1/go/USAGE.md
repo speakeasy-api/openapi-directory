@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetVeteranStatusRequest{
         Security: operations.GetVeteranStatusSecurity{
             Apikey: shared.SchemeApikey{
@@ -18,15 +20,16 @@ func main() {
             },
         },
         Request: shared.VeteranStatusRequest{
-            BirthDate: "sit",
-            FirstName: "voluptas",
-            Gender: "F",
-            LastName: "expedita",
-            MiddleName: "consequuntur",
-            Ssn: "dolor",
+            BirthDate: "1965-01-01",
+            FirstName: "John",
+            Gender: "M",
+            LastName: "Doe",
+            MiddleName: "Theodore",
+            Ssn: "555-55-5555",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.VeteranConfirmationStatus.GetVeteranStatus(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +38,6 @@ func main() {
     if res.VeteranStatusConfirmation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

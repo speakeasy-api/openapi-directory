@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/content/v2/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ContentAccountsAuthinfoRequest{
         Security: operations.ContentAccountsAuthinfoSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,20 +34,21 @@ func main() {
             },
         },
         QueryParams: operations.ContentAccountsAuthinfoQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.ContentAccountsAuthinfo(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,13 +57,15 @@ func main() {
     if res.AccountsAuthInfoResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### accounts
+
+### Accounts
 
 * `ContentAccountsAuthinfo` - Returns information about the authenticated user.
 * `ContentAccountsClaimwebsite` - Claims the website of a Merchant Center sub-account.
@@ -72,20 +77,20 @@ func main() {
 * `ContentAccountsList` - Lists the sub-accounts in your Merchant Center account.
 * `ContentAccountsUpdate` - Updates a Merchant Center account. Any fields that are not provided are deleted from the resource.
 
-### accountstatuses
+### Accountstatuses
 
 * `ContentAccountstatusesCustombatch` - Retrieves multiple Merchant Center account statuses in a single request.
 * `ContentAccountstatusesGet` - Retrieves the status of a Merchant Center account. No itemLevelIssues are returned for multi-client accounts.
 * `ContentAccountstatusesList` - Lists the statuses of the sub-accounts in your Merchant Center account.
 
-### accounttax
+### Accounttax
 
 * `ContentAccounttaxCustombatch` - Retrieves and updates tax settings of multiple accounts in a single request.
 * `ContentAccounttaxGet` - Retrieves the tax settings of the account.
 * `ContentAccounttaxList` - Lists the tax settings of the sub-accounts in your Merchant Center account.
 * `ContentAccounttaxUpdate` - Updates the tax settings of the account. Any fields that are not provided are deleted from the resource.
 
-### datafeeds
+### Datafeeds
 
 * `ContentDatafeedsCustombatch` - Deletes, fetches, gets, inserts and updates multiple datafeeds in a single request.
 * `ContentDatafeedsDelete` - Deletes a datafeed configuration from your Merchant Center account.
@@ -95,13 +100,13 @@ func main() {
 * `ContentDatafeedsList` - Lists the configurations for datafeeds in your Merchant Center account.
 * `ContentDatafeedsUpdate` - Updates a datafeed configuration of your Merchant Center account. Any fields that are not provided are deleted from the resource.
 
-### datafeedstatuses
+### Datafeedstatuses
 
 * `ContentDatafeedstatusesCustombatch` - Gets multiple Merchant Center datafeed statuses in a single request.
 * `ContentDatafeedstatusesGet` - Retrieves the status of a datafeed from your Merchant Center account.
 * `ContentDatafeedstatusesList` - Lists the statuses of the datafeeds in your Merchant Center account.
 
-### liasettings
+### Liasettings
 
 * `ContentLiasettingsCustombatch` - Retrieves and/or updates the LIA settings of multiple accounts in a single request.
 * `ContentLiasettingsGet` - Retrieves the LIA settings of the account.
@@ -114,22 +119,22 @@ func main() {
 * `ContentLiasettingsSetposdataprovider` - Sets the POS data provider for the specified country.
 * `ContentLiasettingsUpdate` - Updates the LIA settings of the account. Any fields that are not provided are deleted from the resource.
 
-### orderinvoices
+### Orderinvoices
 
 * `ContentOrderinvoicesCreatechargeinvoice` - Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice enabled orders.
 * `ContentOrderinvoicesCreaterefundinvoice` - Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice enabled orders. This can only be used for line items that have previously been charged using `createChargeInvoice`. All amounts (except for the summary) are incremental with respect to the previous invoice.
 
-### orderreports
+### Orderreports
 
 * `ContentOrderreportsListdisbursements` - Retrieves a report for disbursements from your Merchant Center account.
 * `ContentOrderreportsListtransactions` - Retrieves a list of transactions for a disbursement from your Merchant Center account.
 
-### orderreturns
+### Orderreturns
 
 * `ContentOrderreturnsGet` - Retrieves an order return from your Merchant Center account.
 * `ContentOrderreturnsList` - Lists order returns in your Merchant Center account.
 
-### orders
+### Orders
 
 * `ContentOrdersAcknowledge` - Marks an order as acknowledged.
 * `ContentOrdersAdvancetestorder` - Sandbox only. Moves a test order from state "`inProgress`" to state "`pendingShipment`".
@@ -154,7 +159,7 @@ func main() {
 * `ContentOrdersUpdatemerchantorderid` - Updates the merchant order ID for a given order.
 * `ContentOrdersUpdateshipment` - Updates a shipment's status, carrier, and/or tracking ID.
 
-### pos
+### Pos
 
 * `ContentPosCustombatch` - Batches multiple POS-related calls in a single request.
 * `ContentPosDelete` - Deletes a store for the given merchant.
@@ -164,7 +169,7 @@ func main() {
 * `ContentPosList` - Lists the stores of the target merchant.
 * `ContentPosSale` - Submit a sale event for the given merchant.
 
-### products
+### Products
 
 * `ContentProductsCustombatch` - Retrieves, inserts, and deletes multiple products in a single request.
 * `ContentProductsDelete` - Deletes a product from your Merchant Center account.
@@ -172,13 +177,13 @@ func main() {
 * `ContentProductsInsert` - Uploads a product to your Merchant Center account. If an item with the same channel, contentLanguage, offerId, and targetCountry already exists, this method updates that entry.
 * `ContentProductsList` - Lists the products in your Merchant Center account. The response might contain fewer items than specified by maxResults. Rely on nextPageToken to determine if there are more items to be requested.
 
-### productstatuses
+### Productstatuses
 
 * `ContentProductstatusesCustombatch` - Gets the statuses of multiple products in a single request.
 * `ContentProductstatusesGet` - Gets the status of a product from your Merchant Center account.
 * `ContentProductstatusesList` - Lists the statuses of the products in your Merchant Center account.
 
-### shippingsettings
+### Shippingsettings
 
 * `ContentShippingsettingsCustombatch` - Retrieves and updates the shipping settings of multiple accounts in a single request.
 * `ContentShippingsettingsGet` - Retrieves the shipping settings of the account.
@@ -187,7 +192,6 @@ func main() {
 * `ContentShippingsettingsGetsupportedpickupservices` - Retrieves supported pickup services for an account.
 * `ContentShippingsettingsList` - Lists the shipping settings of the sub-accounts in your Merchant Center account.
 * `ContentShippingsettingsUpdate` - Updates the shipping settings of the account. Any fields that are not provided are deleted from the resource.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

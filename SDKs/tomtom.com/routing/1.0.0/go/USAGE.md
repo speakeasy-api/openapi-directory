@@ -3,65 +3,64 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest{
         PathParams: operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypePathParams{
-            ContentType: "xml",
-            Origin: "voluptas",
-            VersionNumber: 6050128673802995827,
+            ContentType: "json",
+            Origin: "deserunt",
+            VersionNumber: "1",
         },
         QueryParams: operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams{
-            AccelerationEfficiency: 6.200000,
-            ArriveAt: "dolor",
-            AuxiliaryPowerInLitersPerHour: 67.199997,
-            Avoid: "fugit",
-            Callback: "et",
+            AccelerationEfficiency: 8442.66,
+            ArriveAt: "id",
+            AuxiliaryPowerInLitersPerHour: 8579.46,
+            Avoid: "perspiciatis",
+            Callback: "nulla",
             ConstantSpeedConsumptionInLitersPerHundredkm: "nihil",
-            ConstantSpeedConsumptionInkWhPerHundredkm: "rerum",
-            CurrentFuelInLiters: 59.099998,
-            DecelerationEfficiency: 52.099998,
-            DepartAt: "ut",
-            DownhillEfficiency: 50.099998,
-            EnergyBudgetInkWh: 94.199997,
-            FuelBudgetInLiters: 68.099998,
-            FuelEnergyDensityInMJoulesPerLiter: 80.199997,
+            ConstantSpeedConsumptionInkWhPerHundredkm: "fuga",
+            CurrentFuelInLiters: 6458.94,
+            DecelerationEfficiency: 3843.82,
+            DepartAt: "iusto",
+            DownhillEfficiency: 2975.34,
+            EnergyBudgetInkWh: 8917.73,
+            FuelBudgetInLiters: 567.13,
+            FuelEnergyDensityInMJoulesPerLiter: 9636.63,
             Hilliness: "low",
             Report: "effectiveSettings",
-            RouteType: "fastest",
-            TimeBudgetInSec: 91.099998,
-            Traffic: true,
-            TravelMode: "van",
-            UphillEfficiency: 45.099998,
-            VehicleAxleWeight: 2897681629866238117,
+            RouteType: "shortest",
+            TimeBudgetInSec: 7917.25,
+            Traffic: false,
+            TravelMode: "bicycle",
+            UphillEfficiency: 5288.95,
+            VehicleAxleWeight: 479977,
             VehicleCommercial: false,
-            VehicleEngineType: "combustion",
-            VehicleHeight: 10.200000,
-            VehicleLength: 14.200000,
-            VehicleLoadType: "aut",
-            VehicleMaxSpeed: 6972732843819909978,
-            VehicleWeight: 5558237345453186302,
-            VehicleWidth: 19.200001,
-            Windingness: "low",
+            VehicleEngineType: "electric",
+            VehicleHeight: 3927.85,
+            VehicleLength: 9255.97,
+            VehicleLoadType: "quo",
+            VehicleMaxSpeed: 71036,
+            VehicleWeight: 337396,
+            VehicleWidth: 871.29,
+            Windingness: "normal",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Routing.GetRoutingVersionNumberCalculateReachableRangeOriginContentType(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -70,5 +69,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,42 +3,41 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AssociateDelegateToResourceRequest{
         Headers: operations.AssociateDelegateToResourceHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "WorkMailService.AssociateDelegateToResource",
         },
         Request: shared.AssociateDelegateToResourceRequest{
-            EntityID: "fugit",
-            OrganizationID: "et",
-            ResourceID: "nihil",
+            EntityID: "nihil",
+            OrganizationID: "fuga",
+            ResourceID: "facilis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AssociateDelegateToResource(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +46,6 @@ func main() {
     if res.AssociateDelegateToResourceResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

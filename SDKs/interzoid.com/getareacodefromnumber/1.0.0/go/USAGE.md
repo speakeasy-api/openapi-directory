@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetareacodefromnumberRequest{
         QueryParams: operations.GetareacodefromnumberQueryParams{
-            License: "sit",
-            Number: "voluptas",
+            License: "unde",
+            Number: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AreaCodeInformation.Getareacodefromnumber(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -26,5 +29,6 @@ func main() {
     if res.Getareacodefromnumber200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

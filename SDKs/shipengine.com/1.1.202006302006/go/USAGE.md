@@ -3,46 +3,42 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.ParseAddressRequest{
         Request: shared.ParseAddressRequestBody{
             Address: &shared.PartialAddress{
-                AddressLine1: "sit",
-                AddressLine2: "voluptas",
-                AddressLine3: "culpa",
-                AddressResidentialIndicator: map[string]interface{}{
-                    "consequuntur": "dolor",
-                    "expedita": "voluptas",
-                },
-                CityLocality: "fugit",
-                CompanyName: "et",
-                CountryCode: "nihil",
-                Name: "rerum",
-                Phone: "dicta",
-                PostalCode: "debitis",
-                StateProvince: "voluptatum",
+                AddressLine1: "1999 Bishop Grandin Blvd.",
+                AddressLine2: "Unit 408",
+                AddressLine3: "Building #7",
+                AddressResidentialIndicator: "no",
+                CityLocality: "Winnipeg",
+                CompanyName: "The Home Depot",
+                CountryCode: "CA",
+                Name: "John Doe",
+                Phone: "+1 204-253-9411 ext. 123",
+                PostalCode: "78756-3717",
+                StateProvince: "Manitoba",
             },
-            Text: "et",
+            Text: "Margie McMiller at 3800 North Lamar suite 200 in austin, tx.  The zip code there is 78652.",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Addresses.ParseAddress(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +47,6 @@ func main() {
     if res.ParseAddressResponseBody != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

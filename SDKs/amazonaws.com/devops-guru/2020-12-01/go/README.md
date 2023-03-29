@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/devops-guru/2020-12-01/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,43 +14,54 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddNotificationChannelRequest{
         Headers: operations.AddNotificationChannelHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.AddNotificationChannelRequestBody{
             Config: operations.AddNotificationChannelRequestBodyConfig{
+                Filters: &shared.NotificationFilterConfig{
+                    MessageTypes: []shared.NotificationMessageTypeEnum{
+                        "NEW_ASSOCIATION",
+                        "SEVERITY_UPGRADED",
+                        "SEVERITY_UPGRADED",
+                        "CLOSED_INSIGHT",
+                    },
+                    Severities: []shared.InsightSeverityEnum{
+                        "LOW",
+                        "HIGH",
+                    },
+                },
                 Sns: &shared.SnsChannelConfig{
-                    TopicArn: "voluptas",
+                    TopicArn: "inventore",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddNotificationChannel(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -59,6 +70,7 @@ func main() {
     if res.AddNotificationChannelResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -67,28 +79,37 @@ func main() {
 
 ### SDK SDK
 
-* `AddNotificationChannel` - <p> Adds a notification channel to DevOps Guru. A notification channel is used to notify you about important DevOps Guru events, such as when an insight is generated. </p> <p>If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru permission to it notifications. DevOps Guru adds the required policy on your behalf to send notifications using Amazon SNS in your account. For more information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html">Permissions for cross account Amazon SNS topics</a>.</p> <p>If you use an Amazon SNS topic that is encrypted by an AWS Key Management Service customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for AWS KMS–encrypted Amazon SNS topics</a>.</p>
-* `DescribeAccountHealth` -  Returns the number of open reactive insights, the number of open proactive insights, and the number of metrics analyzed in your AWS account. Use these numbers to gauge the health of operations in your AWS account. 
+* `AddNotificationChannel` - <p> Adds a notification channel to DevOps Guru. A notification channel is used to notify you about important DevOps Guru events, such as when an insight is generated. </p> <p>If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru permission to it notifications. DevOps Guru adds the required policy on your behalf to send notifications using Amazon SNS in your account. DevOps Guru only supports standard SNS topics. For more information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-required-permissions.html">Permissions for cross account Amazon SNS topics</a>.</p> <p>If you use an Amazon SNS topic in another account, you must attach a policy to it that grants DevOps Guru permission to it notifications. DevOps Guru adds the required policy on your behalf to send notifications using Amazon SNS in your account. For more information, see Permissions for cross account Amazon SNS topics.</p> <p>If you use an Amazon SNS topic that is encrypted by an Amazon Web Services Key Management Service customer-managed key (CMK), then you must add permissions to the CMK. For more information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html">Permissions for Amazon Web Services KMS–encrypted Amazon SNS topics</a>.</p>
+* `DeleteInsight` - Deletes the insight along with the associated anomalies, events and recommendations.
+* `DescribeAccountHealth` -  Returns the number of open reactive insights, the number of open proactive insights, and the number of metrics analyzed in your Amazon Web Services account. Use these numbers to gauge the health of operations in your Amazon Web Services account. 
 * `DescribeAccountOverview` -  For the time range passed in, returns the number of open reactive insight that were created, the number of open proactive insights that were created, and the Mean Time to Recover (MTTR) for all closed reactive insights. 
 * `DescribeAnomaly` -  Returns details about an anomaly that you specify using its ID. 
-* `DescribeFeedback` -  Returns the most recent feedback submitted in the current AWS account and Region. 
+* `DescribeEventSourcesConfig` - Returns the integration status of services that are integrated with DevOps Guru as Consumer via EventBridge. The one service that can be integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive recommendations which can be stored and viewed in DevOps Guru.
+* `DescribeFeedback` -  Returns the most recent feedback submitted in the current Amazon Web Services account and Region. 
 * `DescribeInsight` -  Returns details about an insight that you specify using its ID. 
-* `DescribeResourceCollectionHealth` -  Returns the number of open proactive insights, open reactive insights, and the Mean Time to Recover (MTTR) for all closed insights in resource collections in your account. You specify the type of AWS resources collection. The one type of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru can be configured to analyze only the AWS resources that are defined in the stacks. You can specify up to 500 AWS CloudFormation stacks. 
-* `DescribeServiceIntegration` -  Returns the integration status of services that are integrated with DevOps Guru. The one service that can be integrated with DevOps Guru is AWS Systems Manager, which can be used to create an OpsItem for each generated insight. 
-* `GetCostEstimation` - Returns an estimate of the monthly cost for DevOps Guru to analyze your AWS resources. For more information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate your Amazon DevOps Guru costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru pricing</a>.
-* `GetResourceCollection` -  Returns lists AWS resources that are of the specified resource collection type. The one type of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru can be configured to analyze only the AWS resources that are defined in the stacks. You can specify up to 500 AWS CloudFormation stacks. 
+* `DescribeOrganizationHealth` - Returns active insights, predictive insights, and resource hours analyzed in last hour.
+* `DescribeOrganizationOverview` - Returns an overview of your organization's history based on the specified time range. The overview includes the total reactive and proactive insights.
+* `DescribeOrganizationResourceCollectionHealth` - Provides an overview of your system's health. If additional member accounts are part of your organization, you can filter those accounts using the <code>AccountIds</code> field.
+* `DescribeResourceCollectionHealth` -  Returns the number of open proactive insights, open reactive insights, and the Mean Time to Recover (MTTR) for all closed insights in resource collections in your account. You specify the type of Amazon Web Services resources collection. The two types of Amazon Web Services resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks. 
+* `DescribeServiceIntegration` -  Returns the integration status of services that are integrated with DevOps Guru. The one service that can be integrated with DevOps Guru is Amazon Web Services Systems Manager, which can be used to create an OpsItem for each generated insight. 
+* `GetCostEstimation` - Returns an estimate of the monthly cost for DevOps Guru to analyze your Amazon Web Services resources. For more information, see <a href="https://docs.aws.amazon.com/devops-guru/latest/userguide/cost-estimate.html">Estimate your Amazon DevOps Guru costs</a> and <a href="http://aws.amazon.com/devops-guru/pricing/">Amazon DevOps Guru pricing</a>.
+* `GetResourceCollection` -  Returns lists Amazon Web Services resources that are of the specified resource collection type. The two types of Amazon Web Services resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks. 
 * `ListAnomaliesForInsight` -  Returns a list of the anomalies that belong to an insight that you specify using its ID. 
+* `ListAnomalousLogGroups` -  Returns the list of log groups that contain log anomalies. 
 * `ListEvents` -  Returns a list of the events emitted by the resources that are evaluated by DevOps Guru. You can use filters to specify which events are returned. 
-* `ListInsights` -  Returns a list of insights in your AWS account. You can specify which insights are returned by their start time and status (<code>ONGOING</code>, <code>CLOSED</code>, or <code>ANY</code>). 
+* `ListInsights` -  Returns a list of insights in your Amazon Web Services account. You can specify which insights are returned by their start time and status (<code>ONGOING</code>, <code>CLOSED</code>, or <code>ANY</code>). 
+* `ListMonitoredResources` -  Returns the list of all log groups that are being monitored and tagged by DevOps Guru. 
 * `ListNotificationChannels` -  Returns a list of notification channels configured for DevOps Guru. Each notification channel is used to notify you when DevOps Guru generates an insight that contains information about how to improve your operations. The one supported notification channel is Amazon Simple Notification Service (Amazon SNS). 
+* `ListOrganizationInsights` - Returns a list of insights associated with the account or OU Id.
 * `ListRecommendations` -  Returns a list of a specified insight's recommendations. Each recommendation includes a list of related metrics and a list of related events. 
 * `PutFeedback` -  Collects customer feedback about the specified insight. 
 * `RemoveNotificationChannel` -  Removes a notification channel from DevOps Guru. A notification channel is used to notify you when DevOps Guru generates an insight that contains information about how to improve your operations. 
-* `SearchInsights` - <p> Returns a list of insights in your AWS account. You can specify which insights are returned by their start time, one or more statuses (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (<code>REACTIVE</code> or <code>PROACTIVE</code>). </p> <p> Use the <code>Filters</code> parameter to specify status and severity search parameters. Use the <code>Type</code> parameter to specify <code>REACTIVE</code> or <code>PROACTIVE</code> in your search. </p>
-* `StartCostEstimation` - Starts the creation of an estimate of the monthly cost to analyze your AWS resources.
-* `UpdateResourceCollection` -  Updates the collection of resources that DevOps Guru analyzes. The one type of AWS resource collection supported is AWS CloudFormation stacks. DevOps Guru can be configured to analyze only the AWS resources that are defined in the stacks. You can specify up to 500 AWS CloudFormation stacks. This method also creates the IAM role required for you to use DevOps Guru. 
-* `UpdateServiceIntegration` -  Enables or disables integration with a service that can be integrated with DevOps Guru. The one service that can be integrated with DevOps Guru is AWS Systems Manager, which can be used to create an OpsItem for each generated insight. 
-
+* `SearchInsights` - <p> Returns a list of insights in your Amazon Web Services account. You can specify which insights are returned by their start time, one or more statuses (<code>ONGOING</code> or <code>CLOSED</code>), one or more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (<code>REACTIVE</code> or <code>PROACTIVE</code>). </p> <p> Use the <code>Filters</code> parameter to specify status and severity search parameters. Use the <code>Type</code> parameter to specify <code>REACTIVE</code> or <code>PROACTIVE</code> in your search. </p>
+* `SearchOrganizationInsights` - <p> Returns a list of insights in your organization. You can specify which insights are returned by their start time, one or more statuses (<code>ONGOING</code>, <code>CLOSED</code>, and <code>CLOSED</code>), one or more severities (<code>LOW</code>, <code>MEDIUM</code>, and <code>HIGH</code>), and type (<code>REACTIVE</code> or <code>PROACTIVE</code>). </p> <p> Use the <code>Filters</code> parameter to specify status and severity search parameters. Use the <code>Type</code> parameter to specify <code>REACTIVE</code> or <code>PROACTIVE</code> in your search. </p>
+* `StartCostEstimation` - Starts the creation of an estimate of the monthly cost to analyze your Amazon Web Services resources.
+* `UpdateEventSourcesConfig` - Enables or disables integration with a service that can be integrated with DevOps Guru. The one service that can be integrated with DevOps Guru is Amazon CodeGuru Profiler, which can produce proactive recommendations which can be stored and viewed in DevOps Guru.
+* `UpdateResourceCollection` -  Updates the collection of resources that DevOps Guru analyzes. The two types of Amazon Web Services resource collections supported are Amazon Web Services CloudFormation stacks and Amazon Web Services resources that contain the same Amazon Web Services tag. DevOps Guru can be configured to analyze the Amazon Web Services resources that are defined in the stacks or that are tagged using the same tag <i>key</i>. You can specify up to 500 Amazon Web Services CloudFormation stacks. This method also creates the IAM role required for you to use DevOps Guru. 
+* `UpdateServiceIntegration` -  Enables or disables integration with a service that can be integrated with DevOps Guru. The one service that can be integrated with DevOps Guru is Amazon Web Services Systems Manager, which can be used to create an OpsItem for each generated insight. 
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

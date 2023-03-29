@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsRequest{
         Security: operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurity{
             Option1: &operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsSecurityOption1{
@@ -23,28 +25,28 @@ func main() {
             },
         },
         PathParams: operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCredsQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: map[string]interface{}{
-            "debitis": "voluptatum",
-            "et": "ut",
-            "dolorem": "et",
+            "iusto": "ullam",
+            "saepe": "inventore",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.BigquerydatatransferProjectsLocationsDataSourcesCheckValidCreds(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +55,6 @@ func main() {
     if res.CheckValidCredsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

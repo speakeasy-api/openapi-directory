@@ -3,46 +3,46 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetAttachInstancesRequest{
-        QueryParams: operations.GetAttachInstancesQueryParams{
+    req := operations.GETAttachInstancesRequest{
+        QueryParams: operations.GETAttachInstancesQueryParams{
             Action: "AttachInstances",
-            AutoScalingGroupName: "voluptas",
+            AutoScalingGroupName: "deserunt",
             InstanceIds: []string{
-                "expedita",
-                "consequuntur",
+                "nulla",
+                "id",
+                "vero",
             },
             Version: "2011-01-01",
         },
-        Headers: operations.GetAttachInstancesHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "fugit",
-            XAmzDate: "et",
-            XAmzSecurityToken: "nihil",
-            XAmzSignature: "rerum",
-            XAmzSignedHeaders: "dicta",
+        Headers: operations.GETAttachInstancesHeaders{
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "nihil",
+            XAmzCredential: "fuga",
+            XAmzDate: "facilis",
+            XAmzSecurityToken: "eum",
+            XAmzSignature: "iusto",
+            XAmzSignedHeaders: "ullam",
         },
     }
-    
-    res, err := s.GetAttachInstances(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETAttachInstances(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -50,5 +50,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

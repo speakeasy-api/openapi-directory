@@ -3,39 +3,38 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Apikey: shared.SchemeApikey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Apikey: shared.SchemeApikey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetArticlesearchJSONRequest{
         QueryParams: operations.GetArticlesearchJSONQueryParams{
-            BeginDate: "sit",
-            EndDate: "voluptas",
-            FacetField: "culpa",
+            BeginDate: "unde",
+            EndDate: "deserunt",
+            FacetField: "porro",
             FacetFilter: false,
-            Fl: "consequuntur",
-            Fq: "dolor",
-            Hl: true,
-            Page: 6044372234677422456,
-            Q: "fugit",
-            Sort: "newest",
+            Fl: "nulla",
+            Fq: "id",
+            Hl: false,
+            Page: 857946,
+            Q: "perspiciatis",
+            Sort: "oldest",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Stories.GetArticlesearchJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -44,5 +43,6 @@ func main() {
     if res.GetArticlesearchJSON200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

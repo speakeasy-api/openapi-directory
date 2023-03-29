@@ -3,43 +3,42 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetAbortEnvironmentUpdateRequest{
-        QueryParams: operations.GetAbortEnvironmentUpdateQueryParams{
+    req := operations.GETAbortEnvironmentUpdateRequest{
+        QueryParams: operations.GETAbortEnvironmentUpdateQueryParams{
             Action: "AbortEnvironmentUpdate",
-            EnvironmentID: "voluptas",
-            EnvironmentName: "culpa",
+            EnvironmentID: "deserunt",
+            EnvironmentName: "porro",
             Version: "2010-12-01",
         },
-        Headers: operations.GetAbortEnvironmentUpdateHeaders{
-            XAmzAlgorithm: "consequuntur",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "expedita",
-            XAmzDate: "voluptas",
-            XAmzSecurityToken: "fugit",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "nihil",
+        Headers: operations.GETAbortEnvironmentUpdateHeaders{
+            XAmzAlgorithm: "id",
+            XAmzContentSha256: "vero",
+            XAmzCredential: "perspiciatis",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "nihil",
+            XAmzSignature: "fuga",
+            XAmzSignedHeaders: "facilis",
         },
     }
-    
-    res, err := s.GetAbortEnvironmentUpdate(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETAbortEnvironmentUpdate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,5 +46,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -1,8 +1,0 @@
-package shared
-
-type GlobalRequestPageSizeEntityConnectionEnum string
-
-const (
-	GLOBALREQUESTPageSizeEntityConnectionEnumInbound  GlobalRequestPageSizeEntityConnectionEnum = "inbound"
-	GLOBALREQUESTPageSizeEntityConnectionEnumOutbound GlobalRequestPageSizeEntityConnectionEnum = "outbound"
-)

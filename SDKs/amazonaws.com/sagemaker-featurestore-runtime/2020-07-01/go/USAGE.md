@@ -3,73 +3,91 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchGetRecordRequest{
         Headers: operations.BatchGetRecordHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.BatchGetRecordRequestBody{
             Identifiers: []shared.BatchGetRecordIdentifier{
                 shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "fugit",
+                    FeatureGroupName: "nihil",
                     FeatureNames: []string{
-                        "nihil",
+                        "facilis",
+                        "eum",
+                        "iusto",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "dicta",
-                        "debitis",
+                        "saepe",
+                        "inventore",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "sapiente",
+                    FeatureNames: []string{
+                        "eum",
                         "voluptatum",
                     },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "et",
-                    FeatureNames: []string{
-                        "dolorem",
-                        "et",
-                        "voluptate",
-                    },
                     RecordIdentifiersValueAsString: []string{
-                        "vitae",
-                        "totam",
-                        "dolores",
-                    },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "illum",
-                    FeatureNames: []string{
                         "vel",
+                        "non",
+                        "deleniti",
+                        "similique",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "reprehenderit",
+                    FeatureNames: []string{
+                        "quo",
+                        "quasi",
+                        "laboriosam",
+                        "dicta",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "dolore",
+                        "voluptatem",
+                        "consequatur",
+                        "fugiat",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "a",
+                    FeatureNames: []string{
+                        "eos",
+                        "accusamus",
+                        "accusamus",
+                        "reiciendis",
+                    },
+                    RecordIdentifiersValueAsString: []string{
+                        "quibusdam",
+                        "et",
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchGetRecord(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -78,5 +96,6 @@ func main() {
     if res.BatchGetRecordResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

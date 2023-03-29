@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/monarchinitiative.org/1.0.1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,23 +23,24 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAssociationBySubjectAndAssocTypeRequest{
         PathParams: operations.GetAssociationBySubjectAndAssocTypePathParams{
-            AssociationType: "sit",
+            AssociationType: "unde",
         },
         QueryParams: operations.GetAssociationBySubjectAndAssocTypeQueryParams{
-            Evidence: "voluptas",
-            ExcludeAutomaticAssertions: true,
-            Object: "expedita",
-            Rows: 3390393562759376202,
-            Start: 2669985732393126063,
-            Subject: "expedita",
-            UnselectEvidence: true,
-            UseCompactAssociations: true,
+            Evidence: "deserunt",
+            ExcludeAutomaticAssertions: false,
+            Object: "porro",
+            Rows: 844266,
+            Start: 602763,
+            Subject: "vero",
+            UnselectEvidence: false,
+            UseCompactAssociations: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Association.GetAssociationBySubjectAndAssocType(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,13 +49,15 @@ func main() {
     if res.AssociationResults != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### association
+
+### Association
 
 * `GetAssociationBySubjectAndAssocType` - Returns list of matching associations of a given type
 * `GetAssociationBySubjectAndObjectCategorySearch` - Returns list of matching associations between a given subject and object category
@@ -62,7 +67,7 @@ func main() {
 * `GetAssociationsFrom` - Returns list of matching associations starting from a given subject (source)
 * `GetAssociationsTo` - Returns list of matching associations pointing to a given object (target)
 
-### bioentity
+### Bioentity
 
 * `GetAnatomyGeneAssociations` - Returns genes associated with a given anatomy
 * `GetAnatomyGeneByTaxonAssociations` - Returns gene IDs for all genes associated with a given anatomy, filtered by taxon
@@ -148,24 +153,24 @@ func main() {
 * `GetVariantPhenotypeAssociations` - Returns phenotypes associated with a variant
 * `GetVariantPublicationAssociations` - Returns publications associated with a variant
 
-### bioentityset
+### Bioentityset
 
 * `GetEntitySetAssociations` - Returns compact associations for a given input set
 * `GetEntitySetGraphResource` - TODO Graph object spanning all entities
 * `GetEntitySetSummary` - Summary statistics for objects associated
 * `GetOverRepresentation` - Summary statistics for objects associated
 
-### bioentityset/homologs
+### BioentitysetHomologs
 
 * `GetEntitySetHomologs` - Returns homology associations for a given input set of genes
 
-### bioentityset/slimmer
+### BioentitysetSlimmer
 
 * `GetEntitySetAnatomySlimmer` - For a given gene(s), summarize its annotations over a defined set of slim
 * `GetEntitySetFunctionSlimmer` - For a given gene(s), summarize its annotations over a defined set of slim
 * `GetEntitySetPhenotypeSlimmer` - For a given gene(s), summarize its annotations over a defined set of slim
 
-### cam
+### Cam
 
 * `GetActivityCollection` - Returns list of models
 * `GetInstanceObject` - Returns list of matches
@@ -178,36 +183,36 @@ func main() {
 * `GetModelQuery` - Returns list of models matching query
 * `GetPhysicalInteraction` - Returns list of models
 
-### evidence/graph
+### EvidenceGraph
 
 * `GetEvidenceGraphObject` - Returns evidence graph object for a given association
 * `GetEvidenceGraphTable` - Returns evidence as a association_results object given an association
 
-### genome/features
+### GenomeFeatures
 
 * `GetFeaturesWithinResource` - Returns list of matches
 
-### graph
+### Graph
 
 * `GetEdgeResource` - Returns edges emanating from a given node
 * `GetNodeResource` - Returns a graph node
 
-### identifier/mapper
+### IdentifierMapper
 
 * `GetIdentifierMapper` - TODO maps a list of identifiers from a source to a target
 
-### identifier/prefixes
+### IdentifierPrefixes
 
 * `GetPrefixCollection` - Returns list of prefixes
 * `GetPrefixContract` - Returns contracted URI
 * `GetPrefixExpand` - Returns expanded URI
 
-### individual
+### Individual
 
 * `GetIndividual` - Returns list of matches
 * `GetPedigree` - Returns list of matches
 
-### mart
+### Mart
 
 * `GetMartCaseAssociationsResource` - Bulk download of case associations
 * `GetMartDiseaseAssociationsResource` - Bulk download of disease associations
@@ -215,28 +220,28 @@ func main() {
 * `GetMartOrthologAssociationsResource` - Bulk download of orthologs
 * `GetMartParalogAssociationsResource` - Bulk download of paralogs
 
-### metadata
+### Metadata
 
 * `GetMetadataForDatasets` - Get metadata for all datasets from SciGraph
 
-### nlp/annotate
+### NlpAnnotate
 
 * `GetAnnotate` - Annotate a given text using SciGraph annotator
 * `GetAnnotateEntities` - Annotate a given content using SciGraph annotator and get all entities from content
 * `PostAnnotate` - Annotate a given text using SciGraph annotator
 * `PostAnnotateEntities` - Annotate a given content using SciGraph annotator and get all entities from content
 
-### ontol
+### Ontol
 
 * `GetExtractOntologySubgraphResource` - Extract a subgraph from an ontology
 * `GetInformationContentResource` - Returns information content (IC) for a set of relevant ontology classes
 * `PostExtractOntologySubgraphResource` - Extract a subgraph from an ontology
 
-### ontol/labeler
+### OntolLabeler
 
 * `GetOntolLabelerResource` - Fetches a map from CURIEs/IDs to labels
 
-### ontology
+### Ontology
 
 * `GetOntologySubset` - Returns meta data of an ontology subset (slim)
 * `GetOntologyTerm` - Returns meta data of an ontology term
@@ -245,29 +250,29 @@ func main() {
 * `GetOntologyTermSubsets` - Returns subsets (slims) associated to an ontology term
 * `GetOntologyTermsSharedAncestor` - Returns the ancestor ontology terms shared by two ontology terms
 
-### owl/ontology
+### OwlOntology
 
 * `GetDlQuery` - Placeholder - use OWLery for now
 * `GetSparqlQuery` - Placeholder - use direct SPARQL endpoint for now
 
-### pair/sim
+### PairSim
 
 * `GetPairSimJaccardResource` - Get pairwise similarity
 
-### relation/usage
+### RelationUsage
 
 * `GetRelationUsageBetweenResource` - All relations used plus count of associations
 * `GetRelationUsagePivotLabelResource` - Relation usage count for all subj x obj category combinations, showing label
 * `GetRelationUsagePivotResource` - Relation usage count for all subj x obj category combinations
 * `GetRelationUsageResource` - All relations used plus count of associations
 
-### search
+### Search
 
 * `GetAutocomplete` - Returns list of matching concepts or entities using lexical search
 * `GetSearchEntities` - Returns list of matching concepts or entities using lexical search
 * `GetSearchHpoEntities` - Returns list of matching concepts or entities using lexical search
 
-### sim
+### Sim
 
 * `GetAnnotationScore` - Get annotation score
 * `GetSimCompare` - Compare a reference profile vs one profiles
@@ -275,7 +280,7 @@ func main() {
 * `PostAnnotationScore` - Get annotation score
 * `PostSimCompare` - Compare a reference profile vs one or more profiles
 
-### variation/set
+### VariationSet
 
 * `DeleteVariantSetItem` - Deletes variant set
 * `GetVariantAnalyze` - Returns list of matches
@@ -284,7 +289,6 @@ func main() {
 * `GetVariantSetsCollection` - Returns list of variant sets
 * `PostVariantSetsCollection` - Creates a new variant set
 * `PutVariantSetItem` - Updates a variant set
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

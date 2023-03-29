@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.WebmastersSearchanalyticsQueryRequest{
         Security: operations.WebmastersSearchanalyticsQuerySecurity{
             Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
@@ -23,50 +25,75 @@ func main() {
             },
         },
         PathParams: operations.WebmastersSearchanalyticsQueryPathParams{
-            SiteURL: "sit",
+            SiteURL: "unde",
         },
         QueryParams: operations.WebmastersSearchanalyticsQueryQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.SearchAnalyticsQueryRequest{
-            AggregationType: "BY_PAGE",
-            DataState: "DATA_STATE_UNSPECIFIED",
+            AggregationType: "BY_PROPERTY",
+            DataState: "FINAL",
             DimensionFilterGroups: []shared.APIDimensionFilterGroup{
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
+                            Dimension: "QUERY",
+                            Expression: "sapiente",
+                            Operator: "NOT_EQUALS",
+                        },
+                        shared.APIDimensionFilter{
                             Dimension: "PAGE",
-                            Expression: "dolorem",
+                            Expression: "voluptatum",
                             Operator: "INCLUDING_REGEX",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "SEARCH_APPEARANCE",
+                            Expression: "non",
+                            Operator: "CONTAINS",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "COUNTRY",
+                            Expression: "reprehenderit",
+                            Operator: "EXCLUDING_REGEX",
+                        },
+                    },
+                    GroupType: "AND",
+                },
+                shared.APIDimensionFilterGroup{
+                    Filters: []shared.APIDimensionFilter{
+                        shared.APIDimensionFilter{
+                            Dimension: "PAGE",
+                            Expression: "dicta",
+                            Operator: "NOT_CONTAINS",
                         },
                     },
                     GroupType: "AND",
                 },
             },
             Dimensions: []shared.SearchAnalyticsQueryRequestDimensionsEnum{
-                "DATE",
-                "PAGE",
-                "DATE",
+                "DEVICE",
+                "SEARCH_APPEARANCE",
             },
-            EndDate: "illum",
-            RowLimit: 6392442863481646880,
-            SearchType: "DISCOVER",
-            StartDate: "odio",
-            StartRow: 6303220950515014660,
-            Type: "DISCOVER",
+            EndDate: "omnis",
+            RowLimit: 140350,
+            SearchType: "GOOGLE_NEWS",
+            StartDate: "accusamus",
+            StartRow: 978619,
+            Type: "VIDEO",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -75,5 +102,6 @@ func main() {
     if res.SearchAnalyticsQueryResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

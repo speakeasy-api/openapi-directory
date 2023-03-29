@@ -3,39 +3,38 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                BasicScheme: shared.SchemeBasicScheme{
-                    Password: "YOUR_PASSWORD_HERE",
-                    Username: "YOUR_USERNAME_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            BasicScheme: shared.SchemeBasicScheme{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.OptCapProgramInPriceRequest{
         Headers: operations.OptCapProgramInPriceHeaders{
-            Authorization: "sit",
-            WMCONSUMERCHANNELTYPE: "voluptas",
-            WMQOSCORRELATIONID: "culpa",
-            WMSECACCESSTOKEN: "expedita",
-            WMSVCNAME: "consequuntur",
+            Authorization: "unde",
+            WmConsumerChannelType: "deserunt",
+            WmQosCorrelationID: "porro",
+            WmSecAccessToken: "nulla",
+            WmSvcName: "id",
         },
         Request: operations.OptCapProgramInPriceRequestBody{
             SubsidyEnrolled: false,
-            SubsidyPreference: true,
+            SubsidyPreference: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Prices.OptCapProgramInPrice(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -44,5 +43,6 @@ func main() {
     if res.OptCapProgramInPrice200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

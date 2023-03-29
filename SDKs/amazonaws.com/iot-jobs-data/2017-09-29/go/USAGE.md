@@ -3,44 +3,43 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DescribeJobExecutionRequest{
         PathParams: operations.DescribeJobExecutionPathParams{
-            JobID: "sit",
-            ThingName: "voluptas",
+            JobID: "unde",
+            ThingName: "deserunt",
         },
         QueryParams: operations.DescribeJobExecutionQueryParams{
-            ExecutionNumber: 6050128673802995827,
+            ExecutionNumber: 715190,
             IncludeJobDocument: false,
         },
         Headers: operations.DescribeJobExecutionHeaders{
-            XAmzAlgorithm: "consequuntur",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "expedita",
-            XAmzDate: "voluptas",
-            XAmzSecurityToken: "fugit",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "nihil",
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DescribeJobExecution(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +48,6 @@ func main() {
     if res.DescribeJobExecutionResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

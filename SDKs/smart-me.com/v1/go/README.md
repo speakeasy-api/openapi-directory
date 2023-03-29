@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/smart-me.com/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,43 +23,36 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.AccessTokenPutRequest{
-        Request: operations.AccessTokenPutRequests{
-            AccessTokenToPut: &shared.AccessTokenToPut{
-                CardID: 8717895732742165505,
-                UserID: 2259404117704393152,
-            },
-            AccessTokenToPut1: &shared.AccessTokenToPut{
-                CardID: 6050128673802995827,
-                UserID: 501233450539197794,
-            },
-            AccessTokenToPut2: &shared.AccessTokenToPut{
-                CardID: 3390393562759376202,
-                UserID: 2669985732393126063,
-            },
-            ApplicationXML: []byte("expedita"),
-            TextXML: []byte("voluptas"),
+
+    req := operations.AccessTokenPutFormRequest{
+        Request: shared.AccessTokenToPut{
+            CardID: 548814,
+            UserID: 592845,
         },
     }
-    
-    res, err := s.AccessToken.AccessTokenPut(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AccessToken.AccessTokenPutForm(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AccessTokenPut200ApplicationJSONString != nil {
+    if res.AccessTokenPutForm200ApplicationJSONString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### AccessToken
 
-* `AccessTokenPut` - Creates a Access Token to write on a Card (e.g. NFC)
+* `AccessTokenPutForm` - Creates a Access Token to write on a Card (e.g. NFC)
+* `AccessTokenPutJSON` - Creates a Access Token to write on a Card (e.g. NFC)
+* `AccessTokenPutRaw` - Creates a Access Token to write on a Card (e.g. NFC)
 
 ### Account
 
@@ -67,6 +62,9 @@ func main() {
 ### Actions
 
 * `ActionsGet` - Gets all available Actions of a Device
+* `ActionsPostForm` - Set an action for the specified device.
+* `ActionsPostJSON` - Set an action for the specified device.
+* `ActionsPostRaw` - Set an action for the specified device.
 
 ### AdditionalDeviceInformation
 
@@ -75,6 +73,9 @@ func main() {
 ### CustomDevice
 
 * `CustomDeviceGet` - Gets all Custom Devices
+* `CustomDevicePostForm` - Creates or updates a Custom Device or updates it's values.
+* `CustomDevicePostJSON` - Creates or updates a Custom Device or updates it's values.
+* `CustomDevicePostRaw` - Creates or updates a Custom Device or updates it's values.
 * `GetAPICustomDeviceID` - Gets a Custom Device by it's ID
 
 ### DeviceBySerial
@@ -84,7 +85,9 @@ func main() {
 ### Devices
 
 * `DevicesGet` - Gets all Devices
-* `DevicesPost` - Creates or updates a Device or updates it's values.
+* `DevicesPostForm` - Creates or updates a Device or updates it's values.
+* `DevicesPostJSON` - Creates or updates a Device or updates it's values.
+* `DevicesPostRaw` - Creates or updates a Device or updates it's values.
 * `DevicesPut` - Updates the On/Off Switch on a device. 
             For new implementations please use the "actions" command
 * `GetAPIDevicesID` - Gets a Device by it's ID
@@ -113,12 +116,17 @@ func main() {
 ### FolderMenu
 
 * `FolderMenuGet` - Gets the folder menu items (each item might contain child items)
+* `FolderMenuPostForm` - Creates and updates the folder menu items
+* `FolderMenuPostJSON` - Creates and updates the folder menu items
+* `FolderMenuPostRaw` - Creates and updates the folder menu items
 
 ### FolderSettings
 
 * `FolderSettingsDelete` - Deletes a folder
 * `FolderSettingsGet` - Gets the settings of a folder or meter
-* `FolderSettingsPost` - Add or edit a folder or a meter. To add a new folder use and empty ID
+* `FolderSettingsPostForm` - Add or edit a folder or a meter. To add a new folder use and empty ID
+* `FolderSettingsPostJSON` - Add or edit a folder or a meter. To add a new folder use and empty ID
+* `FolderSettingsPostRaw` - Add or edit a folder or a meter. To add a new folder use and empty ID
 
 ### Health
 
@@ -127,13 +135,19 @@ func main() {
 
 ### MBus
 
-* `MBusPost` - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
+* `MBusPostForm` - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
+            Just send us the M-BUS Telegram (RSP_UD) and we will do the Rest.
+* `MBusPostJSON` - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
+            Just send us the M-BUS Telegram (RSP_UD) and we will do the Rest.
+* `MBusPostRaw` - M-BUS API: Adds data of a M-BUS Meter to the smart-me Cloud.
             Just send us the M-BUS Telegram (RSP_UD) and we will do the Rest.
 
 ### MeterFolderInformation
 
 * `MeterFolderInformationGet` - Beta: Gets the General Information for a Meter or a Folder
-* `MeterFolderInformationPost` - Sets the Name of a Meter or a Folder
+* `MeterFolderInformationPostForm` - Sets the Name of a Meter or a Folder
+* `MeterFolderInformationPostJSON` - Sets the Name of a Meter or a Folder
+* `MeterFolderInformationPostRaw` - Sets the Name of a Meter or a Folder
 
 ### MeterValues
 
@@ -172,22 +186,33 @@ func main() {
             
             Returns the settings of a pico charging station.
 
-### RegisterForRealtimeApi
+### RegisterForRealtimeAPI
 
 * `RegisterForRealtimeAPIDelete` - Deletes a realtime API registration.
 * `RegisterForRealtimeAPIGet` - Gets all registrations for the Realtime API.
-* `RegisterForRealtimeAPIPost` - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
+* `RegisterForRealtimeAPIPostForm` - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
+             More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
+* `RegisterForRealtimeAPIPostJSON` - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
+             More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
+* `RegisterForRealtimeAPIPostRaw` - Creates a new registration for the realtime API. The Realtime API sends you the data of the registred devices as soon as we have them on the cloud.
              More Information about the realtime API: https://www.smart-me.com/Description/api/realtimeapi.aspx
 
 ### SmartMeDeviceConfiguration
 
 * `SmartMeDeviceConfigurationGet` - Gets the configuration of a smart-me device.
+* `SmartMeDeviceConfigurationPostForm` - Sets the configuration of a smart-me device. The device needs to be online.
+* `SmartMeDeviceConfigurationPostJSON` - Sets the configuration of a smart-me device. The device needs to be online.
+* `SmartMeDeviceConfigurationPostRaw` - Sets the configuration of a smart-me device. The device needs to be online.
 
 ### SubUser
 
 * `SubUserDelete` - Delete a subuser
 * `SubUserGet` - Get a sub user. The user must be assigend to the user that makes this call.
-* `SubUserPost` - Creates or updates a subuser.
+* `SubUserPostForm` - Creates or updates a subuser.
+            To create a new user set no ID (empty)
+* `SubUserPostJSON` - Creates or updates a subuser.
+            To create a new user set no ID (empty)
+* `SubUserPostRaw` - Creates or updates a subuser.
             To create a new user set no ID (empty)
 
 ### User
@@ -215,11 +240,15 @@ func main() {
 ### VirtualBillingMeterActive
 
 * `VirtualBillingMeterActiveGet` - Beta: Gets all active virtual meters
-* `VirtualBillingMeterActivePost` - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
+* `VirtualBillingMeterActivePostForm` - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
+* `VirtualBillingMeterActivePostJSON` - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
+* `VirtualBillingMeterActivePostRaw` - Beta: Virtual Meter API: Activates a Meter and add the Consumption to a Virtual Meter assosiated with the User.
 
 ### VirtualBillingMeterDeactivate
 
-* `VirtualBillingMeterDeactivatePost` - Beta: Virtual Meter API: Deactivates a Virtual Meter.
+* `VirtualBillingMeterDeactivatePostForm` - Beta: Virtual Meter API: Deactivates a Virtual Meter.
+* `VirtualBillingMeterDeactivatePostJSON` - Beta: Virtual Meter API: Deactivates a Virtual Meter.
+* `VirtualBillingMeterDeactivatePostRaw` - Beta: Virtual Meter API: Deactivates a Virtual Meter.
 
 ### VirtualBillingMeters
 
@@ -242,7 +271,6 @@ func main() {
 ### VirtualTariffsForProperty
 
 * `VirtualTariffsForPropertyGet` - Gets all Virtual Tariffs for a property (folder)
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,18 +12,19 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetEventsRequest{
         QueryParams: operations.GetEventsQueryParams{
-            Company: "sit",
-            Deal: "voluptas",
-            Nexttoken: "culpa",
-            Queryexecutionid: "expedita",
-            Site: "consequuntur",
-            Type: "clicks",
+            Company: "Medhurst - Rau",
+            Deal: "nulla",
+            Nexttoken: "id",
+            Queryexecutionid: "vero",
+            Site: "perspiciatis",
+            Type: "contacts",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Developers.GetEvents(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +33,6 @@ func main() {
     if res.EventRecords != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

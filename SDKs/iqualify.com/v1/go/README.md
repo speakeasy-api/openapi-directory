@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/iqualify.com/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,24 +14,23 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Authorization: shared.SchemeAuthorization{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Authorization: shared.SchemeAuthorization{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
+    ctx := context.Background()
     res, err := s.APIInfo.Get(ctx)
     if err != nil {
         log.Fatal(err)
@@ -40,17 +39,19 @@ func main() {
     if res.Get200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### API info
+
+### APIInfo
 
 * `Get` - List supported endpoints URLs
 
-### Assessment data
+### AssessmentData
 
 * `GetOfferingsOfferingIDAnalyticsActivitiesResponses` - Find open response activity attempts
 * `GetOfferingsOfferingIDAnalyticsMarksAssignments` - Find assessment marks
@@ -59,7 +60,7 @@ func main() {
 * `GetOfferingsOfferingIDAnalyticsSubmissionsOpenResponseAssessmentID` - Find submissions to a specified open response assessment, including marks if any
 * `GetOfferingsOfferingIDAnalyticsSubmissionsUserEmailAssignmentsAssessmentID` - Find a learner's submission to a specified assessment, including marks if any
 
-### Assessment groups
+### AssessmentGroups
 
 * `DeleteOfferingsOfferingIDGroupsGroupIDLearnersUserEmail` - Remove a learner from an assessment group
 * `GetOfferingsOfferingIDGroups` - Find assessment groups
@@ -67,7 +68,7 @@ func main() {
 * `PostOfferingsOfferingIDGroups` - Add an assessment group
 * `PostOfferingsOfferingIDGroupsGroupIDLearners` - Add a learner to an assessment group
 
-### Assessment management
+### AssessmentManagement
 
 * `DeleteOfferingsOfferingIDAssessmentsAssessmentIDDocumentsDocumentID` - Remove assessment document
 * `DeleteOfferingsOfferingIDUsersUserEmailAssessmentsAssessmentID` - Reset user's assessment to draft state
@@ -96,7 +97,7 @@ func main() {
 * `PostOfferingsOfferingIDChannels` - Add channel
 * `PostOfferingsOfferingIDChannelsChannelIDLearners` - Add learners to a group channel
 
-### Course mappings
+### CourseMappings
 
 * `DeleteCourseMappingsOfferingIDExternalCourseID` - Remove course mapping
 * `GetCourseMappings` - Find course mappings
@@ -104,7 +105,7 @@ func main() {
 * `GetCourseMappingsOfferingID` - Find course mappings by offeringId
 * `PutCourseMappingsOfferingIDExternalCourseID` - Add course mapping
 
-### Course metadata
+### CourseMetadata
 
 * `PutCoursesContentIDMetadataCategory` - Update course category
 * `PutCoursesContentIDMetadataLevel` - Update course level
@@ -119,7 +120,7 @@ func main() {
 * `GetCoursesContentIDPermissions` - Find users who have access to the contentId provided
 * `PostCoursesRootContentIDPermissionsUserEmail` - Update course access
 
-### Learner activity
+### LearnerActivity
 
 * `GetOfferingsOfferingIDAnalyticsLearnersProgress` - Find learner progress in a specified offering
 * `GetOfferingsOfferingIDAnalyticsSocialNotes` - Find shared social notes in an offering
@@ -127,7 +128,7 @@ func main() {
 * `GetUsersUserEmailOfferingsOfferingIDProgress` - Find learner's progress in a specified offering
 * `GetUsersUserEmailProgress` - Find learner's progress in offerings
 
-### Offering learners
+### OfferingLearners
 
 * `DeleteOfferingsOfferingIDUsersMarkerEmailMarks` - Remove learners from coach's marking list
 * `DeleteOfferingsOfferingIDUsersUserEmail` - Removes user from the offering
@@ -137,7 +138,7 @@ func main() {
 * `PostOfferingsOfferingIDUsers` - Adds user to the offering
 * `PostOfferingsOfferingIDUsersMarkerEmailMarks` - Add learners to be marked by a coach
 
-### Offering metadata
+### OfferingMetadata
 
 * `PutOfferingsOfferingIDMetadataCategory` - Update offering category metadata
 * `PutOfferingsOfferingIDMetadataLevel` - Update offering level metadata
@@ -164,7 +165,7 @@ func main() {
 * `GetOfferingsOfferingIDAnalyticsPulses` - Find all pulse IDs in the specified offering
 * `GetOfferingsOfferingIDAnalyticsPulsesPulseIDResponses` - Find pulses by offeringId and pulseId
 
-### Users in iQualify
+### UsersInIQualify
 
 * `GetUsersUserEmail` - Find user by email
 * `GetUsersUserEmailOfferings` - Find user's offerings
@@ -174,7 +175,6 @@ func main() {
 * `PostUsersUserEmailOfferings` - Adds the user to the specified offerings as a learner
 * `PostUsersUserEmailPermissionsPermissionName` - Add permission to user
 * `PutUsersUserEmailSuspend` - Suspend user
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

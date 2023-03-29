@@ -3,65 +3,65 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AssociateRepositoryRequest{
         Headers: operations.AssociateRepositoryHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.AssociateRepositoryRequestBody{
-            ClientRequestToken: "voluptas",
-            KMSKeyDetails: &operations.AssociateRepositoryRequestBodyKmsKeyDetails{
+            ClientRequestToken: "nulla",
+            KMSKeyDetails: &operations.AssociateRepositoryRequestBodyKMSKeyDetails{
                 EncryptionOption: "AWS_OWNED_CMK",
-                KMSKeyID: "et",
+                KMSKeyID: "fuga",
             },
             Repository: operations.AssociateRepositoryRequestBodyRepository{
                 Bitbucket: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "nihil",
-                    Name: "rerum",
-                    Owner: "dicta",
+                    ConnectionArn: "facilis",
+                    Name: "eum",
+                    Owner: "iusto",
                 },
                 CodeCommit: &shared.CodeCommitRepository{
-                    Name: "debitis",
+                    Name: "ullam",
                 },
                 GitHubEnterpriseServer: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "voluptatum",
-                    Name: "et",
-                    Owner: "ut",
+                    ConnectionArn: "saepe",
+                    Name: "inventore",
+                    Owner: "sapiente",
                 },
                 S3Bucket: &shared.S3Repository{
-                    BucketName: "dolorem",
-                    Name: "et",
+                    BucketName: "enim",
+                    Name: "eum",
                 },
             },
             Tags: map[string]string{
-                "iste": "vitae",
+                "autem": "vel",
+                "non": "deleniti",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AssociateRepository(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -70,5 +70,6 @@ func main() {
     if res.AssociateRepositoryResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

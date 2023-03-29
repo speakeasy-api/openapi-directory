@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudassetProjectsBatchGetAssetsHistoryRequest{
         Security: operations.CloudassetProjectsBatchGetAssetsHistorySecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,31 +23,32 @@ func main() {
             },
         },
         PathParams: operations.CloudassetProjectsBatchGetAssetsHistoryPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudassetProjectsBatchGetAssetsHistoryQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
             AssetNames: []string{
-                "dolor",
-                "expedita",
-                "voluptas",
+                "vero",
+                "perspiciatis",
+                "nulla",
             },
-            Callback: "fugit",
-            ContentType: "CONTENT_TYPE_UNSPECIFIED",
-            Fields: "nihil",
-            Key: "rerum",
-            OauthToken: "dicta",
-            PrettyPrint: true,
-            QuotaUser: "voluptatum",
-            ReadTimeWindowEndTime: "et",
-            ReadTimeWindowStartTime: "ut",
-            UploadType: "dolorem",
-            UploadProtocol: "et",
+            Callback: "nihil",
+            ContentType: "RESOURCE",
+            Fields: "facilis",
+            Key: "eum",
+            OauthToken: "iusto",
+            PrettyPrint: false,
+            QuotaUser: "ullam",
+            ReadTimeWindowEndTime: "saepe",
+            ReadTimeWindowStartTime: "inventore",
+            UploadType: "sapiente",
+            UploadProtocol: "enim",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.CloudassetProjectsBatchGetAssetsHistory(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +57,6 @@ func main() {
     if res.BatchGetAssetsHistoryResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/storage/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.StorageBucketAccessControlsDeleteRequest{
         Security: operations.StorageBucketAccessControlsDeleteSecurity{
             Option1: &operations.StorageBucketAccessControlsDeleteSecurityOption1{
@@ -34,22 +36,23 @@ func main() {
             },
         },
         PathParams: operations.StorageBucketAccessControlsDeletePathParams{
-            Bucket: "sit",
-            Entity: "voluptas",
+            Bucket: "unde",
+            Entity: "deserunt",
         },
         QueryParams: operations.StorageBucketAccessControlsDeleteQueryParams{
             Alt: "json",
-            Fields: "expedita",
-            Key: "consequuntur",
-            OauthToken: "dolor",
-            PrettyPrint: true,
-            QuotaUser: "voluptas",
-            UploadType: "fugit",
-            UserIP: "et",
-            UserProject: "nihil",
+            Fields: "nulla",
+            Key: "id",
+            OauthToken: "vero",
+            PrettyPrint: false,
+            QuotaUser: "perspiciatis",
+            UploadType: "nulla",
+            UserIP: "nihil",
+            UserProject: "fuga",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BucketAccessControls.StorageBucketAccessControlsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -58,13 +61,15 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### bucketAccessControls
+
+### BucketAccessControls
 
 * `StorageBucketAccessControlsDelete` - Permanently deletes the ACL entry for the specified entity on the specified bucket.
 * `StorageBucketAccessControlsGet` - Returns the ACL entry for the specified entity on the specified bucket.
@@ -73,7 +78,7 @@ func main() {
 * `StorageBucketAccessControlsPatch` - Patches an ACL entry on the specified bucket.
 * `StorageBucketAccessControlsUpdate` - Updates an ACL entry on the specified bucket.
 
-### buckets
+### Buckets
 
 * `StorageBucketsDelete` - Permanently deletes an empty bucket.
 * `StorageBucketsGet` - Returns metadata for the specified bucket.
@@ -86,11 +91,11 @@ func main() {
 * `StorageBucketsTestIamPermissions` - Tests a set of permissions on the given bucket to see which, if any, are held by the caller.
 * `StorageBucketsUpdate` - Updates a bucket. Changes to the bucket will be readable immediately after writing, but configuration changes may take time to propagate.
 
-### channels
+### Channels
 
 * `StorageChannelsStop` - Stop watching resources through this channel
 
-### defaultObjectAccessControls
+### DefaultObjectAccessControls
 
 * `StorageDefaultObjectAccessControlsDelete` - Permanently deletes the default object ACL entry for the specified entity on the specified bucket.
 * `StorageDefaultObjectAccessControlsGet` - Returns the default object ACL entry for the specified entity on the specified bucket.
@@ -99,14 +104,14 @@ func main() {
 * `StorageDefaultObjectAccessControlsPatch` - Patches a default object ACL entry on the specified bucket.
 * `StorageDefaultObjectAccessControlsUpdate` - Updates a default object ACL entry on the specified bucket.
 
-### notifications
+### Notifications
 
 * `StorageNotificationsDelete` - Permanently deletes a notification subscription.
 * `StorageNotificationsGet` - View a notification configuration.
 * `StorageNotificationsInsert` - Creates a notification subscription for a given bucket.
 * `StorageNotificationsList` - Retrieves a list of notification subscriptions for a given bucket.
 
-### objectAccessControls
+### ObjectAccessControls
 
 * `StorageObjectAccessControlsDelete` - Permanently deletes the ACL entry for the specified entity on the specified object.
 * `StorageObjectAccessControlsGet` - Returns the ACL entry for the specified entity on the specified object.
@@ -115,7 +120,7 @@ func main() {
 * `StorageObjectAccessControlsPatch` - Patches an ACL entry on the specified object.
 * `StorageObjectAccessControlsUpdate` - Updates an ACL entry on the specified object.
 
-### objects
+### Objects
 
 * `StorageObjectsCompose` - Concatenates a list of existing objects into a new object in the same bucket.
 * `StorageObjectsCopy` - Copies a source object to a destination object. Optionally overrides metadata.
@@ -131,7 +136,7 @@ func main() {
 * `StorageObjectsUpdate` - Updates an object's metadata.
 * `StorageObjectsWatchAll` - Watch for changes on all objects in a bucket.
 
-### projects
+### Projects
 
 * `StorageProjectsHmacKeysCreate` - Creates a new HMAC key for the specified service account.
 * `StorageProjectsHmacKeysDelete` - Deletes an HMAC key.
@@ -139,7 +144,6 @@ func main() {
 * `StorageProjectsHmacKeysList` - Retrieves a list of HMAC keys matching the criteria.
 * `StorageProjectsHmacKeysUpdate` - Updates the state of an HMAC key. See the HMAC Key resource descriptor for valid states.
 * `StorageProjectsServiceAccountGet` - Get the email address of this project's Google Cloud Storage service account.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

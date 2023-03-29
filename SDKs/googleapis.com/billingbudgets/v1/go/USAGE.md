@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BillingbudgetsBillingAccountsBudgetsCreateRequest{
         Security: operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
             Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
@@ -23,104 +25,104 @@ func main() {
             },
         },
         PathParams: operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudBillingBudgetsV1BudgetInput{
             Amount: &shared.GoogleCloudBillingBudgetsV1BudgetAmount{
                 LastPeriodAmount: map[string]interface{}{
-                    "debitis": "voluptatum",
-                    "et": "ut",
-                    "dolorem": "et",
+                    "iusto": "ullam",
+                    "saepe": "inventore",
                 },
                 SpecifiedAmount: &shared.GoogleTypeMoney{
-                    CurrencyCode: "voluptate",
-                    Nanos: 3287288577352441706,
-                    Units: "vitae",
+                    CurrencyCode: "sapiente",
+                    Nanos: 272656,
+                    Units: "eum",
                 },
             },
             BudgetFilter: &shared.GoogleCloudBillingBudgetsV1Filter{
-                CalendarPeriod: "QUARTER",
+                CalendarPeriod: "MONTH",
                 CreditTypes: []string{
-                    "illum",
+                    "vel",
+                    "non",
+                    "deleniti",
+                    "similique",
                 },
-                CreditTypesTreatment: "EXCLUDE_ALL_CREDITS",
+                CreditTypesTreatment: "INCLUDE_ALL_CREDITS",
                 CustomPeriod: &shared.GoogleCloudBillingBudgetsV1CustomPeriod{
                     EndDate: &shared.GoogleTypeDate{
-                        Day: 3706853784096366226,
-                        Month: 2627038740284806767,
-                        Year: 6303220950515014660,
+                        Day: 925597,
+                        Month: 836079,
+                        Year: 71036,
                     },
                     StartDate: &shared.GoogleTypeDate{
-                        Day: 4035568504096476779,
-                        Month: 959367522974354090,
-                        Year: 2914295034816259174,
+                        Day: 337396,
+                        Month: 87129,
+                        Year: 648172,
                     },
                 },
                 Labels: map[string][]interface{}{
-                    "commodi": []interface{}{
-                        "est",
-                        "aut",
-                        "odit",
-                    },
-                    "non": []interface{}{
+                    "consequatur": []interface{}{
+                        "a",
                         "omnis",
-                    },
-                    "aut": []interface{}{
-                        "sed",
+                        "eos",
+                        "accusamus",
                     },
                 },
                 Projects: []string{
-                    "autem",
-                    "consectetur",
+                    "reiciendis",
+                    "rem",
+                    "quibusdam",
+                    "et",
                 },
                 Services: []string{
-                    "odio",
+                    "occaecati",
+                    "dolor",
                 },
                 Subaccounts: []string{
-                    "recusandae",
+                    "sed",
+                    "quisquam",
+                    "rerum",
                 },
             },
-            DisplayName: "at",
-            Etag: "ipsum",
+            DisplayName: "culpa",
+            Etag: "qui",
             NotificationsRule: &shared.GoogleCloudBillingBudgetsV1NotificationsRule{
-                DisableDefaultIamRecipients: true,
+                DisableDefaultIamRecipients: false,
                 MonitoringNotificationChannels: []string{
-                    "sint",
-                    "inventore",
+                    "rerum",
+                    "possimus",
+                    "occaecati",
                 },
-                PubsubTopic: "ut",
-                SchemaVersion: "exercitationem",
+                PubsubTopic: "odit",
+                SchemaVersion: "esse",
             },
             ThresholdRules: []shared.GoogleCloudBillingBudgetsV1ThresholdRule{
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
                     SpendBasis: "BASIS_UNSPECIFIED",
-                    ThresholdPercent: 7.200000,
+                    ThresholdPercent: 1863.32,
                 },
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
                     SpendBasis: "FORECASTED_SPEND",
-                    ThresholdPercent: 94.199997,
-                },
-                shared.GoogleCloudBillingBudgetsV1ThresholdRule{
-                    SpendBasis: "CURRENT_SPEND",
-                    ThresholdPercent: 80.199997,
+                    ThresholdPercent: 7369.18,
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -129,5 +131,6 @@ func main() {
     if res.GoogleCloudBillingBudgetsV1Budget != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

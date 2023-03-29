@@ -3,53 +3,49 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.AssociateAPIRequest{
+        PathParams: operations.AssociateAPIPathParams{
+            DomainName: "unde",
+        },
+        Headers: operations.AssociateAPIHeaders{
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "nulla",
+            XAmzDate: "id",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "perspiciatis",
+            XAmzSignedHeaders: "nulla",
+        },
+        Request: operations.AssociateAPIRequestBody{
+            APIID: "nihil",
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.CreateAPICacheRequest{
-        PathParams: operations.CreateAPICachePathParams{
-            APIID: "sit",
-        },
-        Headers: operations.CreateAPICacheHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "expedita",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "voluptas",
-        },
-        Request: operations.CreateAPICacheRequestBody{
-            APICachingBehavior: "FULL_REQUEST_CACHING",
-            AtRestEncryptionEnabled: false,
-            TransitEncryptionEnabled: true,
-            TTL: 8325060299420976708,
-            Type: "LARGE_12X",
-        },
-    }
-    
-    res, err := s.CreateAPICache(ctx, req)
+    ctx := context.Background()
+    res, err := s.AssociateAPI(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CreateAPICacheResponse != nil {
+    if res.AssociateAPIResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

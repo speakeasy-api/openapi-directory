@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudtraceProjectsTraceSinksCreateRequest{
         Security: operations.CloudtraceProjectsTraceSinksCreateSecurity{
             Option1: &operations.CloudtraceProjectsTraceSinksCreateSecurityOption1{
@@ -23,29 +25,30 @@ func main() {
             },
         },
         PathParams: operations.CloudtraceProjectsTraceSinksCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudtraceProjectsTraceSinksCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.TraceSinkInput{
-            Name: "dicta",
+            Name: "eum",
             OutputConfig: &shared.OutputConfig{
-                Destination: "debitis",
+                Destination: "iusto",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.CloudtraceProjectsTraceSinksCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +57,6 @@ func main() {
     if res.TraceSink != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

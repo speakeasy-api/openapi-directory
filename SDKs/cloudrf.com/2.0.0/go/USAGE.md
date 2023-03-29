@@ -3,24 +3,16 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKeyAuth: shared.SchemeAPIKeyAuth{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New()
 
-    s := sdk.New(opts...)
-    
     req := operations.InterferenceRequest{
         Security: operations.InterferenceSecurity{
             APIKeyAuth: shared.SchemeAPIKeyAuth{
@@ -28,11 +20,12 @@ func main() {
             },
         },
         QueryParams: operations.InterferenceQueryParams{
-            Name: "sit",
-            Network: "voluptas",
+            Name: "unde",
+            Network: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Analyse.Interference(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -41,5 +34,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

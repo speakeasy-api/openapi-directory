@@ -3,32 +3,31 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                BasicAuth: &shared.SchemeBasicAuth{
-                    Password: "YOUR_PASSWORD_HERE",
-                    Username: "YOUR_USERNAME_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            BasicAuth: &shared.SchemeBasicAuth{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DeleteCustomersAccountAnnouncementsAnnouncementIDRequest{
         PathParams: operations.DeleteCustomersAccountAnnouncementsAnnouncementIDPathParams{
-            Account: 8717895732742165505,
-            AnnouncementID: "voluptas",
+            Account: 548814,
+            AnnouncementID: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Announcements.DeleteCustomersAccountAnnouncementsAnnouncementID(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -37,5 +36,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,30 +3,29 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                GithubAccessCode: &shared.SchemeGithubAccessCode{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            GithubAccessCode: &shared.SchemeGithubAccessCode{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetActionOrganizationActivityListRequest{
         QueryParams: operations.GetActionOrganizationActivityListQueryParams{
-            ID: "sit",
+            ID: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Action.GetActionOrganizationActivityList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +34,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

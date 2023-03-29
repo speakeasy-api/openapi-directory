@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetVehicleDetailsByRegistrationNumberRequest{
         Headers: operations.GetVehicleDetailsByRegistrationNumberHeaders{
-            XCorrelationID: "sit",
-            XAPIKey: "voluptas",
+            XCorrelationID: "unde",
+            XAPIKey: "deserunt",
         },
         Request: shared.VehicleRequest{
-            RegistrationNumber: "culpa",
+            RegistrationNumber: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Vehicle.GetVehicleDetailsByRegistrationNumber(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.Vehicle != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

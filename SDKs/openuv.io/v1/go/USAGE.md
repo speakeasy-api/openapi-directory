@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,20 +12,21 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetForecastRequest{
         QueryParams: operations.GetForecastQueryParams{
-            Alt: 74.099998,
-            Dt: "1978-05-13T03:50:47Z",
-            Lat: 6.200000,
-            Lng: 96.199997,
-            Ozone: 77.099998,
+            Alt: 1050,
+            Dt: "2018-02-04T04:39:06.467Z",
+            Lat: 78.67,
+            Lng: 115.67,
+            Ozone: 304.5,
         },
         Headers: operations.GetForecastHeaders{
-            XAccessToken: "et",
+            XAccessToken: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetForecast(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -32,5 +35,6 @@ func main() {
     if res.ForecastResults != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

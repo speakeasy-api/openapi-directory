@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest{
         Security: operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,42 +23,41 @@ func main() {
             },
         },
         PathParams: operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.AttachTrustRequest{
             Trust: &shared.Trust{
-                CreateTime: "dicta",
-                LastKnownTrustConnectedHeartbeatTime: "debitis",
-                SelectiveAuthentication: true,
-                State: "STATE_UNSPECIFIED",
-                StateDescription: "ut",
+                CreateTime: "eum",
+                LastKnownTrustConnectedHeartbeatTime: "iusto",
+                SelectiveAuthentication: false,
+                State: "CREATING",
+                StateDescription: "saepe",
                 TargetDNSIPAddresses: []string{
-                    "et",
-                    "voluptate",
-                    "iste",
+                    "sapiente",
                 },
-                TargetDomainName: "vitae",
-                TrustDirection: "OUTBOUND",
-                TrustHandshakeSecret: "dolores",
+                TargetDomainName: "enim",
+                TrustDirection: "INBOUND",
+                TrustHandshakeSecret: "voluptatum",
                 TrustType: "EXTERNAL",
-                UpdateTime: "debitis",
+                UpdateTime: "vel",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrust(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -65,5 +66,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

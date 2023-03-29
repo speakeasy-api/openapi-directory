@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DoctorsListRequest{
         Security: operations.DoctorsListSecurity{
             DrchronoOauth2: shared.SchemeDrchronoOauth2{
@@ -18,12 +20,13 @@ func main() {
             },
         },
         QueryParams: operations.DoctorsListQueryParams{
-            Cursor: "sit",
-            Doctor: 2259404117704393152,
-            PageSize: 6050128673802995827,
+            Cursor: "unde",
+            Doctor: 592845,
+            PageSize: 715190,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Administrative.DoctorsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -32,5 +35,6 @@ func main() {
     if res.DoctorsList200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

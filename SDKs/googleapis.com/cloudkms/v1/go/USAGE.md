@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudkmsProjectsLocationsEkmConnectionsCreateRequest{
         Security: operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurity{
             Option1: &operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption1{
@@ -23,45 +25,59 @@ func main() {
             },
         },
         PathParams: operations.CloudkmsProjectsLocationsEkmConnectionsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudkmsProjectsLocationsEkmConnectionsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            EkmConnectionID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            EkmConnectionID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.EkmConnectionInput{
-            Etag: "debitis",
+            Etag: "iusto",
             ServiceResolvers: []shared.ServiceResolverInput{
                 shared.ServiceResolverInput{
-                    EndpointFilter: "et",
-                    Hostname: "ut",
+                    EndpointFilter: "saepe",
+                    Hostname: "anahi.org",
                     ServerCertificates: []shared.CertificateInput{
                         shared.CertificateInput{
-                            RawDer: "et",
+                            RawDer: "eum",
                         },
                         shared.CertificateInput{
-                            RawDer: "voluptate",
-                        },
-                        shared.CertificateInput{
-                            RawDer: "iste",
+                            RawDer: "voluptatum",
                         },
                     },
-                    ServiceDirectoryService: "vitae",
+                    ServiceDirectoryService: "autem",
+                },
+                shared.ServiceResolverInput{
+                    EndpointFilter: "vel",
+                    Hostname: "june.info",
+                    ServerCertificates: []shared.CertificateInput{
+                        shared.CertificateInput{
+                            RawDer: "reprehenderit",
+                        },
+                        shared.CertificateInput{
+                            RawDer: "molestiae",
+                        },
+                        shared.CertificateInput{
+                            RawDer: "quo",
+                        },
+                    },
+                    ServiceDirectoryService: "quasi",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.CloudkmsProjectsLocationsEkmConnectionsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -70,5 +86,6 @@ func main() {
     if res.EkmConnection != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

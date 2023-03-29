@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/serviceconsumermanagement/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesRequest{
         Security: operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,45 +34,81 @@ func main() {
             },
         },
         PathParams: operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverridesQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.V1Beta1ImportProducerOverridesRequest{
             Force: false,
             ForceOnly: []shared.V1Beta1ImportProducerOverridesRequestForceOnlyEnum{
+                "LIMIT_DECREASE_BELOW_USAGE",
                 "QUOTA_SAFETY_CHECK_UNSPECIFIED",
             },
             InlineSource: &shared.V1Beta1OverrideInlineSource{
                 Overrides: []shared.V1Beta1QuotaOverride{
                     shared.V1Beta1QuotaOverride{
-                        AdminOverrideAncestor: "ut",
+                        AdminOverrideAncestor: "inventore",
                         Dimensions: map[string]string{
-                            "et": "voluptate",
-                            "iste": "vitae",
-                            "totam": "dolores",
+                            "enim": "eum",
+                            "voluptatum": "autem",
+                            "vel": "non",
+                            "deleniti": "similique",
                         },
-                        Metric: "illum",
-                        Name: "debitis",
-                        OverrideValue: "vel",
-                        Unit: "odio",
+                        Metric: "reprehenderit",
+                        Name: "molestiae",
+                        OverrideValue: "quo",
+                        Unit: "quasi",
+                    },
+                    shared.V1Beta1QuotaOverride{
+                        AdminOverrideAncestor: "laboriosam",
+                        Dimensions: map[string]string{
+                            "est": "voluptatem",
+                        },
+                        Metric: "consequatur",
+                        Name: "fugiat",
+                        OverrideValue: "a",
+                        Unit: "omnis",
+                    },
+                    shared.V1Beta1QuotaOverride{
+                        AdminOverrideAncestor: "eos",
+                        Dimensions: map[string]string{
+                            "accusamus": "reiciendis",
+                            "rem": "quibusdam",
+                            "et": "praesentium",
+                            "occaecati": "dolor",
+                        },
+                        Metric: "soluta",
+                        Name: "sed",
+                        OverrideValue: "quisquam",
+                        Unit: "rerum",
+                    },
+                    shared.V1Beta1QuotaOverride{
+                        AdminOverrideAncestor: "culpa",
+                        Dimensions: map[string]string{
+                            "sed": "rerum",
+                        },
+                        Metric: "possimus",
+                        Name: "occaecati",
+                        OverrideValue: "odit",
+                        Unit: "esse",
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Services.ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -79,13 +117,15 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### services
+
+### Services
 
 * `ServiceconsumermanagementServicesConsumerQuotaMetricsImportProducerOverrides` - Create or update multiple producer overrides atomically, all on the same consumer, but on many different metrics or limits. The name field in the quota override message should not be set.
 * `ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsGet` - Retrieves a summary of quota information for a specific quota limit.
@@ -94,7 +134,6 @@ func main() {
 * `ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesList` - Lists all producer overrides on this limit.
 * `ServiceconsumermanagementServicesConsumerQuotaMetricsLimitsProducerOverridesPatch` - Updates a producer override.
 * `ServiceconsumermanagementServicesConsumerQuotaMetricsList` - Retrieves a summary of all quota information about this consumer that is visible to the service producer, for each quota metric defined by the service. Each metric includes information about all of its defined limits. Each limit includes the limit configuration (quota unit, preciseness, default value), the current effective limit value, and all of the overrides applied to the limit.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudchannel/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest{
         Security: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,46 +34,47 @@ func main() {
             },
         },
         PathParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput{
             RepricingConfig: &shared.GoogleCloudChannelV1RepricingConfig{
                 Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                     PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                         Percentage: &shared.GoogleTypeDecimal{
-                            Value: "dicta",
+                            Value: "eum",
                         },
                     },
                 },
                 ChannelPartnerGranularity: map[string]interface{}{
-                    "voluptatum": "et",
+                    "ullam": "saepe",
+                    "inventore": "sapiente",
                 },
                 ConditionalOverrides: []shared.GoogleCloudChannelV1ConditionalOverride{
                     shared.GoogleCloudChannelV1ConditionalOverride{
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "dolorem",
+                                    Value: "eum",
                                 },
                             },
                         },
                         RebillingBasis: "COST_AT_LIST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "voluptate",
+                                SkuGroup: "autem",
                             },
                         },
                     },
@@ -79,46 +82,32 @@ func main() {
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "iste",
+                                    Value: "vel",
                                 },
                             },
                         },
-                        RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
+                        RebillingBasis: "COST_AT_LIST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "totam",
-                            },
-                        },
-                    },
-                    shared.GoogleCloudChannelV1ConditionalOverride{
-                        Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
-                            PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
-                                Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "dolores",
-                                },
-                            },
-                        },
-                        RebillingBasis: "DIRECT_CUSTOMER_COST",
-                        RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
-                            SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "debitis",
+                                SkuGroup: "deleniti",
                             },
                         },
                     },
                 },
                 EffectiveInvoiceMonth: &shared.GoogleTypeDate{
-                    Day: 3706853784096366226,
-                    Month: 2627038740284806767,
-                    Year: 6303220950515014660,
+                    Day: 568045,
+                    Month: 392785,
+                    Year: 925597,
                 },
                 EntitlementGranularity: &shared.GoogleCloudChannelV1RepricingConfigEntitlementGranularity{
-                    Entitlement: "id",
+                    Entitlement: "quo",
                 },
                 RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -127,13 +116,15 @@ func main() {
     if res.GoogleCloudChannelV1ChannelPartnerRepricingConfig != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### accounts
+
+### Accounts
 
 * `CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate` - Creates a ChannelPartnerRepricingConfig. Call this method to set modifications for a specific ChannelPartner's bill. You can only create configs if the RepricingConfig.effective_invoice_month is a future month. If needed, you can create a config for the current month, with some restrictions. When creating a config for a future month, make sure there are no existing configs for that RepricingConfig.effective_invoice_month. The following restrictions are for creating configs in the current month. * This functionality is reserved for recovering from an erroneous config, and should not be used for regular business cases. * The new config will not modify exports used with other configs. Changes to the config may be immediate, but may take up to 24 hours. * There is a limit of ten configs for any ChannelPartner or RepricingConfig.effective_invoice_month. * The contained ChannelPartnerRepricingConfig.repricing_config vaule must be different from the value used in the current config for a ChannelPartner. Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account being queried are different. * INVALID_ARGUMENT: Missing or invalid required parameters in the request. Also displays if the updated config is for the current month or past months. * NOT_FOUND: The ChannelPartnerRepricingConfig specified does not exist or is not associated with the given account. * INTERNAL: Any non-user error related to technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If successful, the updated ChannelPartnerRepricingConfig resource, otherwise returns an error.
 * `CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsList` - Lists information about how a Reseller modifies their bill before sending it to a ChannelPartner. Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account being queried are different. * NOT_FOUND: The ChannelPartnerRepricingConfig specified does not exist or is not associated with the given account. * INTERNAL: Any non-user error related to technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If successful, the ChannelPartnerRepricingConfig resources. The data for each resource is displayed in the ascending order of: * channel partner ID * RepricingConfig.effective_invoice_month * ChannelPartnerRepricingConfig.update_time If unsuccessful, returns an error.
@@ -170,17 +161,16 @@ func main() {
 * `CloudchannelAccountsReportsRun` - Begins generation of data for a given report. The report identifier is a UID (for example, `613bf59q`). Possible error codes: * PERMISSION_DENIED: The user doesn't have access to this report. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The report identifier was not found. * INTERNAL: Any non-user error related to a technical issue in the backend. Contact Cloud Channel support. * UNKNOWN: Any non-user error related to a technical issue in the backend. Contact Cloud Channel support. Return value: The ID of a long-running operation. To get the results of the operation, call the GetOperation method of CloudChannelOperationsService. The Operation metadata contains an instance of OperationMetadata. To get the results of report generation, call CloudChannelReportsService.FetchReportResults with the RunReportJobResponse.report_job.
 * `CloudchannelAccountsUnregister` - Unregisters a service account with subscriber privileges on the Cloud Pub/Sub topic created for this Channel Services account. If there are no service accounts left with subscriber privileges, this deletes the topic. You can call ListSubscribers to check for these accounts. Possible error codes: * PERMISSION_DENIED: The reseller account making the request and the provided reseller account are different, or the impersonated user is not a super admin. * INVALID_ARGUMENT: Required request parameters are missing or invalid. * NOT_FOUND: The topic resource doesn't exist. * INTERNAL: Any non-user error related to a technical issue in the backend. Contact Cloud Channel support. * UNKNOWN: Any non-user error related to a technical issue in the backend. Contact Cloud Channel support. Return value: The topic name that unregistered the service email address. Returns a success response if the service email address wasn't registered with the topic.
 
-### operations
+### Operations
 
 * `CloudchannelOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `CloudchannelOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `CloudchannelOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 
-### products
+### Products
 
 * `CloudchannelProductsList` - Lists the Products the reseller is authorized to sell. Possible error codes: * INVALID_ARGUMENT: Required request parameters are missing or invalid.
 * `CloudchannelProductsSkusList` - Lists the SKUs for a product the reseller is authorized to sell. Possible error codes: * INVALID_ARGUMENT: Required request parameters are missing or invalid.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

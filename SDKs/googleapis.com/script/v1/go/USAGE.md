@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ScriptProcessesListRequest{
         Security: operations.ScriptProcessesListSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,37 +23,45 @@ func main() {
             },
         },
         QueryParams: operations.ScriptProcessesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PageSize: 6044372234677422456,
-            PageToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PageSize: 847252,
+            PageToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
-            UserProcessFilterDeploymentID: "debitis",
-            UserProcessFilterEndTime: "voluptatum",
-            UserProcessFilterFunctionName: "et",
-            UserProcessFilterProjectName: "ut",
-            UserProcessFilterScriptID: "dolorem",
-            UserProcessFilterStartTime: "et",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
+            UserProcessFilterDeploymentID: "iusto",
+            UserProcessFilterEndTime: "ullam",
+            UserProcessFilterFunctionName: "saepe",
+            UserProcessFilterProjectName: "inventore",
+            UserProcessFilterScriptID: "sapiente",
+            UserProcessFilterStartTime: "enim",
             UserProcessFilterStatuses: []ScriptProcessesListUserProcessFilterStatusesEnum{
-                "FAILED",
+                "CANCELED",
+                "UNKNOWN",
             },
             UserProcessFilterTypes: []ScriptProcessesListUserProcessFilterTypesEnum{
-                "EDITOR",
+                "WEBAPP",
+                "TRIGGER",
+                "WEBAPP",
+                "TIME_DRIVEN",
             },
             UserProcessFilterUserAccessLevels: []ScriptProcessesListUserProcessFilterUserAccessLevelsEnum{
+                "OWNER",
+                "USER_ACCESS_LEVEL_UNSPECIFIED",
                 "NONE",
+                "USER_ACCESS_LEVEL_UNSPECIFIED",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Processes.ScriptProcessesList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -60,5 +70,6 @@ func main() {
     if res.ListUserProcessesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

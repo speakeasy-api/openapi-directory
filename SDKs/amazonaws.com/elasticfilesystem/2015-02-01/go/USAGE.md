@@ -3,69 +3,66 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateAccessPointRequest{
         Headers: operations.CreateAccessPointHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateAccessPointRequestBody{
-            ClientToken: "voluptas",
-            FileSystemID: "fugit",
+            ClientToken: "nulla",
+            FileSystemID: "nihil",
             PosixUser: &operations.CreateAccessPointRequestBodyPosixUser{
-                Gid: 1543572285742637646,
+                Gid: 623564,
                 SecondaryGids: []int64{
-                    8325060299420976708,
+                    384382,
+                    437587,
+                    297534,
                 },
-                UID: 7837839688282259259,
+                UID: 891773,
             },
             RootDirectory: &operations.CreateAccessPointRequestBodyRootDirectory{
                 CreationInfo: &shared.CreationInfo{
-                    OwnerGid: 2518412263346885298,
-                    OwnerUID: 5617773211005988520,
-                    Permissions: "et",
+                    OwnerGid: 56713,
+                    OwnerUID: 963663,
+                    Permissions: "enim",
                 },
-                Path: "ut",
+                Path: "eum",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "et",
-                    Value: "voluptate",
+                    Key: "autem",
+                    Value: "vel",
                 },
                 shared.Tag{
-                    Key: "iste",
-                    Value: "vitae",
-                },
-                shared.Tag{
-                    Key: "totam",
-                    Value: "dolores",
+                    Key: "non",
+                    Value: "deleniti",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateAccessPoint(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -74,5 +71,6 @@ func main() {
     if res.AccessPointDescription != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

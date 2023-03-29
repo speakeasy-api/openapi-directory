@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DoubleclicksearchConversionGetRequest{
         Security: operations.DoubleclicksearchConversionGetSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,34 +23,35 @@ func main() {
             },
         },
         PathParams: operations.DoubleclicksearchConversionGetPathParams{
-            AdvertiserID: "sit",
-            AgencyID: "voluptas",
-            EngineAccountID: "culpa",
+            AdvertiserID: "unde",
+            AgencyID: "deserunt",
+            EngineAccountID: "porro",
         },
         QueryParams: operations.DoubleclicksearchConversionGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "consequuntur",
-            AdGroupID: "dolor",
-            AdID: "expedita",
+            DollarXgafv: "2",
+            AccessToken: "id",
+            AdGroupID: "vero",
+            AdID: "perspiciatis",
             Alt: "proto",
-            Callback: "fugit",
-            CampaignID: "et",
-            CriterionID: "nihil",
-            CustomerID: "rerum",
-            EndDate: 7837839688282259259,
-            Fields: "debitis",
-            Key: "voluptatum",
-            OauthToken: "et",
+            Callback: "nihil",
+            CampaignID: "fuga",
+            CriterionID: "facilis",
+            CustomerID: "eum",
+            EndDate: 437587,
+            Fields: "ullam",
+            Key: "saepe",
+            OauthToken: "inventore",
             PrettyPrint: false,
-            QuotaUser: "dolorem",
-            RowCount: 7259475919510918339,
-            StartDate: 7373105480197164748,
-            StartRow: 3287288577352441706,
-            UploadType: "vitae",
-            UploadProtocol: "totam",
+            QuotaUser: "sapiente",
+            RowCount: 272656,
+            StartDate: 383441,
+            StartRow: 477665,
+            UploadType: "autem",
+            UploadProtocol: "vel",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Conversion.DoubleclicksearchConversionGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -57,5 +60,6 @@ func main() {
     if res.ConversionList != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

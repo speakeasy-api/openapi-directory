@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/gkebackup/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GkebackupProjectsLocationsBackupPlansBackupsCreateRequest{
         Security: operations.GkebackupProjectsLocationsBackupPlansBackupsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,57 +34,64 @@ func main() {
             },
         },
         PathParams: operations.GkebackupProjectsLocationsBackupPlansBackupsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.GkebackupProjectsLocationsBackupPlansBackupsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            BackupID: "consequuntur",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            BackupID: "id",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.BackupInput{
             ClusterMetadata: &shared.ClusterMetadata{
-                AnthosVersion: "debitis",
+                AnthosVersion: "iusto",
                 BackupCrdVersions: map[string]string{
-                    "et": "ut",
+                    "saepe": "inventore",
+                    "sapiente": "enim",
                 },
-                Cluster: "dolorem",
-                GkeVersion: "et",
-                K8sVersion: "voluptate",
+                Cluster: "eum",
+                GkeVersion: "voluptatum",
+                K8sVersion: "autem",
             },
-            DeleteLockDays: 3287288577352441706,
-            Description: "vitae",
+            DeleteLockDays: 812169,
+            Description: "non",
             EncryptionKey: &shared.EncryptionKey{
-                GcpKmsEncryptionKey: "totam",
+                GcpKmsEncryptionKey: "deleniti",
             },
             Labels: map[string]string{
-                "illum": "debitis",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
+                "laboriosam": "dicta",
             },
-            RetainDays: 3706853784096366226,
+            RetainDays: 648172,
             SelectedApplications: &shared.NamespacedNames{
                 NamespacedNames: []shared.NamespacedName{
                     shared.NamespacedName{
-                        Name: "dolore",
-                        Namespace: "id",
+                        Name: "consequatur",
+                        Namespace: "fugiat",
                     },
                 },
             },
             SelectedNamespaces: &shared.Namespaces{
                 Namespaces: []string{
-                    "accusantium",
+                    "omnis",
+                    "eos",
+                    "accusamus",
+                    "accusamus",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.GkebackupProjectsLocationsBackupPlansBackupsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -91,13 +100,15 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `GkebackupProjectsLocationsBackupPlansBackupsCreate` - Creates a Backup for the given BackupPlan.
 * `GkebackupProjectsLocationsBackupPlansBackupsList` - Lists the Backups for a given BackupPlan.
@@ -119,7 +130,6 @@ func main() {
 * `GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresList` - Lists the VolumeRestores for a given Restore.
 * `GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 * `GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

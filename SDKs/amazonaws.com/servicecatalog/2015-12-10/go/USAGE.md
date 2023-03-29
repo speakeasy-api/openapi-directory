@@ -3,42 +3,41 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AcceptPortfolioShareRequest{
         Headers: operations.AcceptPortfolioShareHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWS242ServiceCatalogService.AcceptPortfolioShare",
         },
         Request: shared.AcceptPortfolioShareInput{
-            AcceptLanguage: "fugit",
-            PortfolioID: "et",
-            PortfolioShareType: "IMPORTED",
+            AcceptLanguage: "nihil",
+            PortfolioID: "fuga",
+            PortfolioShareType: "AWS_SERVICECATALOG",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AcceptPortfolioShare(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +46,6 @@ func main() {
     if res.AcceptPortfolioShareOutput != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

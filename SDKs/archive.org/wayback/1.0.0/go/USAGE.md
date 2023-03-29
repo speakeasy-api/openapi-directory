@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,19 +12,20 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetWaybackV1AvailableRequest{
         QueryParams: operations.GetWaybackV1AvailableQueryParams{
-            Callback: "sit",
-            Closest: "either",
-            StatusCode: 6050128673802995827,
-            Tag: "expedita",
-            Timeout: 15.100000,
-            Timestamp: "expedita",
-            URL: "voluptas",
+            Callback: "unde",
+            Closest: "before",
+            StatusCode: "421",
+            Tag: "nulla",
+            Timeout: 6027.63,
+            Timestamp: "vero",
+            URL: "perspiciatis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetWaybackV1Available(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

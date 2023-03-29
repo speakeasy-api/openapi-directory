@@ -3,31 +3,30 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Apikey: shared.SchemeApikey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Apikey: shared.SchemeApikey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetYearMonthJSONRequest{
         PathParams: operations.GetYearMonthJSONPathParams{
-            Month: 8717895732742165505,
-            Year: 2259404117704393152,
+            Month: 548814,
+            Year: 592845,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Archive.GetYearMonthJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -36,5 +35,6 @@ func main() {
     if res.GetYearMonthJSON200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

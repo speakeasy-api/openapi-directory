@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/quotes.rest/3.1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeleteQuoteRequest{
         Security: operations.DeleteQuoteSecurity{
             XTheySaidSoAPISecret: shared.SchemeXTheySaidSoAPISecret{
@@ -29,10 +31,11 @@ func main() {
             },
         },
         QueryParams: operations.DeleteQuoteQueryParams{
-            ID: "sit",
+            ID: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.PrivateQuotes.DeleteQuote(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -41,13 +44,15 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Private Quotes
+
+### PrivateQuotes
 
 * `DeleteQuote` - Delete a quote. The user needs to be the owner of the quote to be able to delete it.
 
@@ -92,7 +97,7 @@ func main() {
 * `PutQuoteDislike` - Dislike the given Quote as a user of the API Key. Some clients don't cleanly support `PUT`, in such scenarios use the `POST` version of this.
 * `PutQuoteLike` - Like the given Quote as a user of the API Key. Some clients don't cleanly support `PUT`, in such scenarios use the `POST` version of this.
 
-### Quote Images
+### QuoteImages
 
 * `DeleteQuoteImage` - Delete a quote image. The user needs to be the owner of the quote image to be able to delete it.
 
@@ -121,14 +126,13 @@ func main() {
 * `PutQuoteImage` - Create a new quote image for a given quote. Choose background colors/images , choose different font styles and generate a beautiful quote image. Did you just had a feeling of being a god or what?!
 
 
-### Quote of the day
+### QuoteOfTheDay
 
 * `GetQod` - Gets `Quote of the Day`. Optional `category` param determines the category of returned quote of the day
 
 * `GetQodCategories` - Gets a list of `Quote of the Day` Categories.
 
 * `GetQodLanguages` - Gets a list of supported languages for `Quote of the Day`. 
-
 
 <!-- End SDK Available Operations -->
 

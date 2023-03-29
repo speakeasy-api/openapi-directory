@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/models.lex.v2/2020-08-07/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,49 +14,68 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.BatchCreateCustomVocabularyItemRequest{
+        PathParams: operations.BatchCreateCustomVocabularyItemPathParams{
+            BotID: "unde",
+            BotVersion: "deserunt",
+            LocaleID: "porro",
+        },
+        Headers: operations.BatchCreateCustomVocabularyItemHeaders{
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
+        },
+        Request: operations.BatchCreateCustomVocabularyItemRequestBody{
+            CustomVocabularyItemList: []shared.NewCustomVocabularyItem{
+                shared.NewCustomVocabularyItem{
+                    DisplayAs: "eum",
+                    Phrase: "iusto",
+                    Weight: 297534,
                 },
-            }
-        ),
+                shared.NewCustomVocabularyItem{
+                    DisplayAs: "saepe",
+                    Phrase: "inventore",
+                    Weight: 963663,
+                },
+                shared.NewCustomVocabularyItem{
+                    DisplayAs: "enim",
+                    Phrase: "eum",
+                    Weight: 477665,
+                },
+            },
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.BuildBotLocaleRequest{
-        PathParams: operations.BuildBotLocalePathParams{
-            BotID: "sit",
-            BotVersion: "voluptas",
-            LocaleID: "culpa",
-        },
-        Headers: operations.BuildBotLocaleHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "consequuntur",
-            XAmzCredential: "dolor",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "et",
-        },
-    }
-    
-    res, err := s.BuildBotLocale(ctx, req)
+    ctx := context.Background()
+    res, err := s.BatchCreateCustomVocabularyItem(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.BuildBotLocaleResponse != nil {
+    if res.BatchCreateCustomVocabularyItemResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -65,6 +84,9 @@ func main() {
 
 ### SDK SDK
 
+* `BatchCreateCustomVocabularyItem` - Create a batch of custom vocabulary items for a given bot locale's custom vocabulary.
+* `BatchDeleteCustomVocabularyItem` - Delete a batch of custom vocabulary items for a given bot locale's custom vocabulary.
+* `BatchUpdateCustomVocabularyItem` - Update a batch of custom vocabulary items for a given bot locale's custom vocabulary.
 * `BuildBotLocale` - Builds a bot, its intents, and its slot types into a specific locale. A bot can be built into multiple locales. At runtime the locale is used to choose a specific build of the bot.
 * `CreateBot` - Creates an Amazon Lex conversational bot. 
 * `CreateBotAlias` - <p>Creates an alias for the specified version of a bot. Use an alias to enable you to change the version of a bot without updating applications that use the bot.</p> <p>For example, you can create an alias called "PROD" that your applications use to call the Amazon Lex bot. </p>
@@ -80,7 +102,8 @@ func main() {
 * `DeleteBot` - <p>Deletes all versions of a bot, including the <code>Draft</code> version. To delete a specific version, use the <code>DeleteBotVersion</code> operation.</p> <p>When you delete a bot, all of the resources contained in the bot are also deleted. Deleting a bot removes all locales, intents, slot, and slot types defined for the bot.</p> <p>If a bot has an alias, the <code>DeleteBot</code> operation returns a <code>ResourceInUseException</code> exception. If you want to delete the bot and the alias, set the <code>skipResourceInUseCheck</code> parameter to <code>true</code>.</p>
 * `DeleteBotAlias` - Deletes the specified bot alias.
 * `DeleteBotLocale` - <p>Removes a locale from a bot.</p> <p>When you delete a locale, all intents, slots, and slot types defined for the locale are also deleted.</p>
-* `DeleteBotVersion` - Deletes a specific version of a bot. To delete all version of a bot, use the <a>DeleteBot</a> operation.
+* `DeleteBotVersion` - Deletes a specific version of a bot. To delete all versions of a bot, use the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DeleteBot.html">DeleteBot</a> operation.
+* `DeleteCustomVocabulary` - Removes a custom vocabulary from the specified locale in the specified bot.
 * `DeleteExport` - Removes a previous export and the associated files stored in an S3 bucket.
 * `DeleteImport` - Removes a previous import and the associated file stored in an S3 bucket.
 * `DeleteIntent` - <p>Removes the specified intent.</p> <p>Deleting an intent also deletes the slots associated with the intent.</p>
@@ -88,40 +111,50 @@ func main() {
 * `DeleteResourcePolicyStatement` - Deletes a policy statement from a resource policy. If you delete the last statement from a policy, the policy is deleted. If you specify a statement ID that doesn't exist in the policy, or if the bot or bot alias doesn't have a policy attached, Amazon Lex returns an exception.
 * `DeleteSlot` - Deletes the specified slot from an intent.
 * `DeleteSlotType` - <p>Deletes a slot type from a bot locale.</p> <p>If a slot is using the slot type, Amazon Lex throws a <code>ResourceInUseException</code> exception. To avoid the exception, set the <code>skipResourceInUseCheck</code> parameter to <code>true</code>.</p>
+* `DeleteUtterances` - <p>Deletes stored utterances.</p> <p>Amazon Lex stores the utterances that users send to your bot. Utterances are stored for 15 days for use with the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_ListAggregatedUtterances.html">ListAggregatedUtterances</a> operation, and then stored indefinitely for use in improving the ability of your bot to respond to user input..</p> <p>Use the <code>DeleteUtterances</code> operation to manually delete utterances for a specific session. When you use the <code>DeleteUtterances</code> operation, utterances stored for improving your bot's ability to respond to user input are deleted immediately. Utterances stored for use with the <code>ListAggregatedUtterances</code> operation are deleted after 15 days.</p>
 * `DescribeBot` - Provides metadata information about a bot. 
 * `DescribeBotAlias` - Get information about a specific bot alias.
 * `DescribeBotLocale` - Describes the settings that a bot has for a specific locale. 
+* `DescribeBotRecommendation` - Provides metadata information about a bot recommendation. This information will enable you to get a description on the request inputs, to download associated transcripts after processing is complete, and to download intents and slot-types generated by the bot recommendation.
 * `DescribeBotVersion` - Provides metadata about a version of a bot.
+* `DescribeCustomVocabularyMetadata` - Provides metadata information about a custom vocabulary.
 * `DescribeExport` - Gets information about a specific export.
 * `DescribeImport` - Gets information about a specific import.
 * `DescribeIntent` - Returns metadata about an intent.
 * `DescribeResourcePolicy` - Gets the resource policy and policy revision for a bot or bot alias.
 * `DescribeSlot` - Gets metadata information about a slot.
 * `DescribeSlotType` - Gets metadata information about a slot type.
+* `ListAggregatedUtterances` - <p>Provides a list of utterances that users have sent to the bot.</p> <p>Utterances are aggregated by the text of the utterance. For example, all instances where customers used the phrase "I want to order pizza" are aggregated into the same line in the response.</p> <p>You can see both detected utterances and missed utterances. A detected utterance is where the bot properly recognized the utterance and activated the associated intent. A missed utterance was not recognized by the bot and didn't activate an intent.</p> <p>Utterances can be aggregated for a bot alias or for a bot version, but not both at the same time.</p> <p>Utterances statistics are not generated under the following conditions:</p> <ul> <li> <p>The <code>childDirected</code> field was set to true when the bot was created.</p> </li> <li> <p>You are using slot obfuscation with one or more slots.</p> </li> <li> <p>You opted out of participating in improving Amazon Lex.</p> </li> </ul>
 * `ListBotAliases` - Gets a list of aliases for the specified bot.
 * `ListBotLocales` - Gets a list of locales for the specified bot.
+* `ListBotRecommendations` - Get a list of bot recommendations that meet the specified criteria.
 * `ListBotVersions` - <p>Gets information about all of the versions of a bot.</p> <p>The <code>ListBotVersions</code> operation returns a summary of each version of a bot. For example, if a bot has three numbered versions, the <code>ListBotVersions</code> operation returns for summaries, one for each numbered version and one for the <code>DRAFT</code> version.</p> <p>The <code>ListBotVersions</code> operation always returns at least one version, the <code>DRAFT</code> version.</p>
 * `ListBots` - Gets a list of available bots.
-* `ListBuiltInIntents` - <p>Gets a list of built-in intents provided by Amazon Lex that you can use in your bot. </p> <p>To use a built-in intent as a the base for your own intent, include the built-in intent signature in the <code>parentIntentSignature</code> parameter when you call the <code>CreateIntent</code> operation. For more information, see <a>CreateIntent</a>.</p>
+* `ListBuiltInIntents` - <p>Gets a list of built-in intents provided by Amazon Lex that you can use in your bot. </p> <p>To use a built-in intent as a the base for your own intent, include the built-in intent signature in the <code>parentIntentSignature</code> parameter when you call the <code>CreateIntent</code> operation. For more information, see <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_CreateIntent.html">CreateIntent</a>.</p>
 * `ListBuiltInSlotTypes` - Gets a list of built-in slot types that meet the specified criteria.
-* `ListExports` - Lists the exports for a bot or bot locale. Exports are kept in the list for 7 days.
-* `ListImports` - Lists the imports for a bot or bot locale. Imports are kept in the list for 7 days.
+* `ListCustomVocabularyItems` - Paginated list of custom vocabulary items for a given bot locale's custom vocabulary.
+* `ListExports` - Lists the exports for a bot, bot locale, or custom vocabulary. Exports are kept in the list for 7 days.
+* `ListImports` - Lists the imports for a bot, bot locale, or custom vocabulary. Imports are kept in the list for 7 days.
 * `ListIntents` - Get a list of intents that meet the specified criteria.
+* `ListRecommendedIntents` - Gets a list of recommended intents provided by the bot recommendation that you can use in your bot. Intents in the response are ordered by relevance.
 * `ListSlotTypes` - Gets a list of slot types that match the specified criteria.
 * `ListSlots` - Gets a list of slots that match the specified criteria.
 * `ListTagsForResource` - Gets a list of tags associated with a resource. Only bots, bot aliases, and bot channels can have tags associated with them.
-* `StartImport` - Starts importing a bot or bot locale from a zip archive that you uploaded to an S3 bucket.
+* `SearchAssociatedTranscripts` - Search for associated transcripts that meet the specified criteria.
+* `StartBotRecommendation` - Use this to provide your transcript data, and to start the bot recommendation process.
+* `StartImport` - Starts importing a bot, bot locale, or custom vocabulary from a zip archive that you uploaded to an S3 bucket.
+* `StopBotRecommendation` - Stop an already running Bot Recommendation request.
 * `TagResource` - Adds the specified tags to the specified resource. If a tag key already exists, the existing value is replaced with the new value.
 * `UntagResource` - Removes tags from a bot, bot alias, or bot channel.
 * `UpdateBot` - Updates the configuration of an existing bot. 
 * `UpdateBotAlias` - Updates the configuration of an existing bot alias.
 * `UpdateBotLocale` - Updates the settings that a bot has for a specific locale.
-* `UpdateExport` - <p>Updates the password used to protect an export zip archive.</p> <p>The password is not required. If you don't supply a password, Amazon Lex generates a zip file that is not protected by a password. This is the archive that is available at the pre-signed S3 URL provided by the operation.</p>
+* `UpdateBotRecommendation` - Updates an existing bot recommendation request.
+* `UpdateExport` - <p>Updates the password used to protect an export zip archive.</p> <p>The password is not required. If you don't supply a password, Amazon Lex generates a zip file that is not protected by a password. This is the archive that is available at the pre-signed S3 URL provided by the <a href="https://docs.aws.amazon.com/lexv2/latest/APIReference/API_DescribeExport.html">DescribeExport</a> operation.</p>
 * `UpdateIntent` - Updates the settings for an intent.
 * `UpdateResourcePolicy` - Replaces the existing resource policy for a bot or bot alias with a new one. If the policy doesn't exist, Amazon Lex returns an exception.
 * `UpdateSlot` - Updates the settings for a slot.
 * `UpdateSlotType` - Updates the configuration of an existing slot type.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

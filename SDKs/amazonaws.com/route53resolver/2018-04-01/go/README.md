@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/route53resolver/2018-04-01/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,51 +14,54 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AssociateFirewallRuleGroupRequest{
         Headers: operations.AssociateFirewallRuleGroupHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "Route53Resolver.AssociateFirewallRuleGroup",
         },
         Request: shared.AssociateFirewallRuleGroupRequest{
-            CreatorRequestID: "fugit",
-            FirewallRuleGroupID: "et",
-            MutationProtection: "ENABLED",
-            Name: "rerum",
-            Priority: 7837839688282259259,
+            CreatorRequestID: "nihil",
+            FirewallRuleGroupID: "fuga",
+            MutationProtection: "DISABLED",
+            Name: "eum",
+            Priority: 437587,
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "voluptatum",
-                    Value: "et",
+                    Key: "saepe",
+                    Value: "inventore",
+                },
+                shared.Tag{
+                    Key: "sapiente",
+                    Value: "enim",
                 },
             },
-            VpcID: "ut",
+            VpcID: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AssociateFirewallRuleGroup(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -67,6 +70,7 @@ func main() {
     if res.AssociateFirewallRuleGroupResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -100,6 +104,7 @@ func main() {
 * `GetFirewallRuleGroup` - Retrieves the specified firewall rule group. 
 * `GetFirewallRuleGroupAssociation` - Retrieves a firewall rule group association, which enables DNS filtering for a VPC with one rule group. A VPC can have more than one firewall rule group association, and a rule group can be associated with more than one VPC.
 * `GetFirewallRuleGroupPolicy` - Returns the Identity and Access Management (Amazon Web Services IAM) policy for sharing the specified rule group. You can use the policy to share the rule group using Resource Access Manager (RAM). 
+* `GetResolverConfig` - Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private Cloud.
 * `GetResolverDnssecConfig` - Gets DNSSEC validation information for a specified resource.
 * `GetResolverEndpoint` - Gets information about a specified Resolver endpoint, such as whether it's an inbound or an outbound Resolver endpoint, and the current status of the endpoint.
 * `GetResolverQueryLogConfig` - Gets information about a specified Resolver query logging configuration, such as the number of VPCs that the configuration is logging queries for and the location that logs are sent to. 
@@ -115,6 +120,7 @@ func main() {
 * `ListFirewallRuleGroupAssociations` - <p>Retrieves the firewall rule group associations that you have defined. Each association enables DNS filtering for a VPC with one rule group. </p> <p>A single call might return only a partial list of the associations. For information, see <code>MaxResults</code>. </p>
 * `ListFirewallRuleGroups` - <p>Retrieves the minimal high-level information for the rule groups that you have defined. </p> <p>A single call might return only a partial list of the rule groups. For information, see <code>MaxResults</code>. </p>
 * `ListFirewallRules` - <p>Retrieves the firewall rules that you have defined for the specified firewall rule group. DNS Firewall uses the rules in a rule group to filter DNS network traffic for a VPC. </p> <p>A single call might return only a partial list of the rules. For information, see <code>MaxResults</code>. </p>
+* `ListResolverConfigs` - Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage DNS resolution behavior for your VPCs.
 * `ListResolverDnssecConfigs` - Lists the configurations for DNSSEC validation that are associated with the current Amazon Web Services account.
 * `ListResolverEndpointIPAddresses` - Gets the IP addresses for a specified Resolver endpoint.
 * `ListResolverEndpoints` - Lists all the Resolver endpoints that were created using the current Amazon Web Services account.
@@ -132,10 +138,10 @@ func main() {
 * `UpdateFirewallDomains` - Updates the firewall domain list from an array of domain specifications. 
 * `UpdateFirewallRule` - Updates the specified firewall rule. 
 * `UpdateFirewallRuleGroupAssociation` - Changes the association of a <a>FirewallRuleGroup</a> with a VPC. The association enables DNS filtering for the VPC. 
+* `UpdateResolverConfig` - Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private Cloud.
 * `UpdateResolverDnssecConfig` - Updates an existing DNSSEC validation configuration. If there is no existing DNSSEC validation configuration, one is created.
 * `UpdateResolverEndpoint` - Updates the name of an inbound or an outbound Resolver endpoint. 
 * `UpdateResolverRule` - Updates settings for a specified Resolver rule. <code>ResolverRuleId</code> is required, and all other parameters are optional. If you don't specify a parameter, it retains its current value.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

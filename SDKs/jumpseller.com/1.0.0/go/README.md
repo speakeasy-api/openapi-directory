@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/jumpseller.com/1.0.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,17 +23,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeleteJsappsCodeJSONRequest{
         PathParams: operations.DeleteJsappsCodeJSONPathParams{
-            Code: "sit",
+            Code: "unde",
         },
         QueryParams: operations.DeleteJsappsCodeJSONQueryParams{
-            Authtoken: "voluptas",
-            Login: "culpa",
+            Authtoken: "deserunt",
+            Login: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Apps.DeleteJsappsCodeJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -40,11 +43,13 @@ func main() {
     if res.DeleteJsappsCodeJSON200ApplicationJSONString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### Apps
 
@@ -62,7 +67,7 @@ func main() {
 * `PostCategoriesJSON` - Create a new Category.
 * `PutCategoriesIDJSON` - Modify an existing Category.
 
-### Checkout Custom Fields
+### CheckoutCustomFields
 
 * `DeleteCheckoutCustomFieldsIDJSON` - Delete an existing CheckoutCustomField.
 * `GetCheckoutCustomFieldsJSON` - Retrieve all Checkout Custom Fields.
@@ -77,14 +82,14 @@ func main() {
 * `GetCountriesCountryCodeRegionsJSON` - Retrieve all Regions from a single Country.
 * `GetCountriesCountryCodeRegionsRegionCodeJSON` - Retrieve a single Region information object.
 
-### Custom Field Select Options
+### CustomFieldSelectOptions
 
 * `GetCustomFieldsIDSelectOptionsJSON` - Retrieve all Store's Custom Fields.
 * `GetCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON` - Retrieve a single SelectOption from a CustomField.
 * `PostCustomFieldsIDSelectOptionsJSON` - Create a new Custom Field Select Option.
 * `PutCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON` - Update a SelectOption from a CustomField.
 
-### Custom Fields
+### CustomFields
 
 * `DeleteCustomFieldsIDJSON` - Delete an existing CustomField.
 * `DeleteCustomFieldsIDSelectOptionsCustomFieldSelectOptionIDJSON` - Delete an existing CustomFieldSelectOption.
@@ -93,7 +98,7 @@ func main() {
 * `PostCustomFieldsJSON` - Create a new Custom Field.
 * `PutCustomFieldsIDJSON` - Update a CustomField.
 
-### Customer Additional Fields
+### CustomerAdditionalFields
 
 * `DeleteCustomersIDFieldsFieldID` - Delete a Customer Additional Field.
 * `GetCustomersIDFields` - Retrieves the Customer Additional Field of a Customer.
@@ -101,7 +106,7 @@ func main() {
 * `PostCustomersIDFields` - Adds Customer Additional Fields to a Customer.
 * `PutCustomersIDFieldsFieldID` - Update a Customer Additional Field.
 
-### Customer Categories
+### CustomerCategories
 
 * `DeleteCustomerCategoriesIDJSON` - Delete an existing CustomerCategory.
 * `DeleteCustomerCategoriesIDCustomersJSON` - Delete Customers from an existing CustomerCategory.
@@ -164,12 +169,12 @@ func main() {
 * `GetStoreCheckStatusJSON` - Retrive store creation status.
 * `PostStoreCreateJSON` - Create a Partnered Store
 
-### Payment Methods
+### PaymentMethods
 
 * `GetPaymentMethodsJSON` - Retrieve all Store's Payment Methods.
 * `GetPaymentMethodsIDJSON` - Retrieve a single Payment Method.
 
-### Product Attachments
+### ProductAttachments
 
 * `DeleteProductsIDAttachmentsAttachmentIDJSON` - Delete a Product Attachment.
 * `GetProductsIDAttachmentsJSON` - Retrieve all Product Attachments.
@@ -177,7 +182,7 @@ func main() {
 * `GetProductsIDAttachmentsAttachmentIDJSON` - Retrieve a single Product Attachment.
 * `PostProductsIDAttachmentsJSON` - Create a new Product Attachment.
 
-### Product Custom Fields
+### ProductCustomFields
 
 * `DeleteProductsProductIDFieldsFieldIDJSON` - Delete value of Product Custom Field
 * `GetProductsIDFieldsJSON` - Retrieve all Product Custom Fields
@@ -185,7 +190,7 @@ func main() {
 * `PostProductsIDFieldsJSON` - Add an existing Custom Field to a Product.
 * `PutProductsProductIDFieldsFieldIDJSON` - Update value of Product Custom Field
 
-### Product DigitalProducts
+### ProductDigitalProducts
 
 * `DeleteProductsIDDigitalProductsDigitalProductIDJSON` - Delete a Product DigitalProduct.
 * `GetProductsIDDigitalProductsJSON` - Retrieve all Product DigitalProducts.
@@ -193,7 +198,7 @@ func main() {
 * `GetProductsIDDigitalProductsDigitalProductIDJSON` - Retrieve a single Product DigitalProduct.
 * `PostProductsIDDigitalProductsJSON` - Create a new Product DigitalProduct.
 
-### Product Images
+### ProductImages
 
 * `DeleteProductsIDImagesImageIDJSON` - Delete a Product Image.
 * `GetProductsIDImagesJSON` - Retrieve all Product Images.
@@ -201,7 +206,7 @@ func main() {
 * `GetProductsIDImagesImageIDJSON` - Retrieve a single Product Image.
 * `PostProductsIDImagesJSON` - Create a new Product Image.
 
-### Product Option Values
+### ProductOptionValues
 
 * `DeleteProductsIDOptionsOptionIDValuesValueIDJSON` - Delete a Product Option Value.
 * `GetProductsIDOptionsOptionIDValuesJSON` - Retrieve all Product Option Values.
@@ -210,7 +215,7 @@ func main() {
 * `PostProductsIDOptionsOptionIDValuesJSON` - Create a new Product Option Value.
 * `PutProductsIDOptionsOptionIDValuesValueIDJSON` - Modify an existing Product Option Value.
 
-### Product Options
+### ProductOptions
 
 * `DeleteProductsIDOptionsOptionIDJSON` - Delete a Product Option.
 * `GetProductsIDOptionsJSON` - Retrieve all Product Options.
@@ -219,7 +224,7 @@ func main() {
 * `PostProductsIDOptionsJSON` - Create a new Product Option.
 * `PutProductsIDOptionsOptionIDJSON` - Modify an existing Product Option.
 
-### Product Variants
+### ProductVariants
 
 * `GetProductsIDVariantsJSON` - Retrieve all Product Variants.
 * `GetProductsIDVariantsCountJSON` - Count all Product Variants.
@@ -255,7 +260,7 @@ func main() {
 * `GetCountriesCountryCodeRegionsJSON` - Retrieve all Regions from a single Country.
 * `GetCountriesCountryCodeRegionsRegionCodeJSON` - Retrieve a single Region information object.
 
-### Shipping Methods
+### ShippingMethods
 
 * `DeleteShippingMethodsIDJSON` - Delete an existing Shipping Method.
 * `GetShippingMethodsJSON` - Retrieve all Store's Shipping Methods.
@@ -273,7 +278,6 @@ func main() {
 * `GetTaxesJSON` - Retrieve all Taxes.
 * `GetTaxesIDJSON` - Retrieve a single Tax information.
 * `PostTaxesJSON` - Create a new Tax.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

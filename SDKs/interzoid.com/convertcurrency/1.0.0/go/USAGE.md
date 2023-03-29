@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,16 +12,17 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ConvertcurrencyRequest{
         QueryParams: operations.ConvertcurrencyQueryParams{
-            Amount: "sit",
-            From: "voluptas",
-            License: "culpa",
-            To: "expedita",
+            Amount: "unde",
+            From: "deserunt",
+            License: "porro",
+            To: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.LiveCurrencyRateConversion.Convertcurrency(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -28,5 +31,6 @@ func main() {
     if res.Convertcurrency200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

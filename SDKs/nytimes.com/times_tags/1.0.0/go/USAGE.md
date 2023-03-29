@@ -3,32 +3,31 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Apikey: shared.SchemeApikey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Apikey: shared.SchemeApikey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetTimestagsRequest{
         QueryParams: operations.GetTimestagsQueryParams{
             Filter: "Org",
-            Max: 2259404117704393152,
-            Query: "culpa",
+            Max: 592845,
+            Query: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetTimestags(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -37,5 +36,6 @@ func main() {
     if res.GetTimestags200ApplicationJSONArrays != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

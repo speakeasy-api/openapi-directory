@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AllAPIKeysRequest{
         Security: operations.AllAPIKeysSecurity{
             OtoroshiAuth: shared.SchemeOtoroshiAuth{
@@ -19,7 +21,8 @@ func main() {
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Apikeys.AllAPIKeys(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -28,5 +31,6 @@ func main() {
     if res.APIKeys != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

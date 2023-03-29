@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,22 +12,23 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CashinRequest{
         PathParams: operations.CashinPathParams{
-            BetID: "sit",
+            BetID: "unde",
         },
         QueryParams: operations.CashinQueryParams{
-            CashInValue: 14.200000,
-            CashinBetDelayID: "expedita",
+            CashInValue: 5928.45,
+            CashinBetDelayID: "porro",
         },
         Headers: operations.CashinHeaders{
-            APIKey: "consequuntur",
-            APISecret: "dolor",
-            APITicket: "expedita",
+            APIKey: "nulla",
+            APISecret: "id",
+            APITicket: "vero",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Bets.Cashin(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -34,5 +37,6 @@ func main() {
     if res.CashInResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

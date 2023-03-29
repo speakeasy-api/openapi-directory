@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,9 +12,9 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.MetastoreOperationsCancelRequest{
-        Security: operations.MetastoreOperationsCancelSecurity{
+
+    req := operations.MetastoreProjectsLocationsFederationsCreateRequest{
+        Security: operations.MetastoreProjectsLocationsFederationsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -20,36 +22,55 @@ func main() {
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        PathParams: operations.MetastoreOperationsCancelPathParams{
-            Name: "sit",
+        PathParams: operations.MetastoreProjectsLocationsFederationsCreatePathParams{
+            Parent: "unde",
         },
-        QueryParams: operations.MetastoreOperationsCancelQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+        QueryParams: operations.MetastoreProjectsLocationsFederationsCreateQueryParams{
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            FederationID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            PrettyPrint: false,
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
-        Request: map[string]interface{}{
-            "debitis": "voluptatum",
-            "et": "ut",
-            "dolorem": "et",
+        Request: &shared.FederationInput{
+            BackendMetastores: map[string]shared.BackendMetastore{
+                "saepe": shared.BackendMetastore{
+                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
+                    Name: "sapiente",
+                },
+                "enim": shared.BackendMetastore{
+                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
+                    Name: "voluptatum",
+                },
+            },
+            Labels: map[string]string{
+                "vel": "non",
+                "deleniti": "similique",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
+            },
+            Name: "laboriosam",
+            Version: "dicta",
         },
     }
-    
-    res, err := s.Operations.MetastoreOperationsCancel(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Projects.MetastoreProjectsLocationsFederationsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Empty != nil {
+    if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

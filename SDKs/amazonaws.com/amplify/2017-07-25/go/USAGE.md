@@ -3,86 +3,90 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateAppRequest{
         Headers: operations.CreateAppHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateAppRequestBody{
-            AccessToken: "voluptas",
+            AccessToken: "nulla",
             AutoBranchCreationConfig: &operations.CreateAppRequestBodyAutoBranchCreationConfig{
-                BasicAuthCredentials: "fugit",
-                BuildSpec: "et",
-                EnableAutoBuild: true,
-                EnableBasicAuth: true,
+                BasicAuthCredentials: "nihil",
+                BuildSpec: "fuga",
+                EnableAutoBuild: false,
+                EnableBasicAuth: false,
                 EnablePerformanceMode: false,
-                EnablePullRequestPreview: true,
+                EnablePullRequestPreview: false,
                 EnvironmentVariables: map[string]string{
-                    "et": "ut",
+                    "eum": "iusto",
+                    "ullam": "saepe",
+                    "inventore": "sapiente",
                 },
-                Framework: "dolorem",
-                PullRequestEnvironmentName: "et",
-                Stage: "PULL_REQUEST",
+                Framework: "enim",
+                PullRequestEnvironmentName: "eum",
+                Stage: "DEVELOPMENT",
             },
             AutoBranchCreationPatterns: []string{
-                "vitae",
-                "totam",
-                "dolores",
+                "vel",
+                "non",
+                "deleniti",
+                "similique",
             },
-            BasicAuthCredentials: "illum",
-            BuildSpec: "debitis",
-            CustomHeaders: "vel",
+            BasicAuthCredentials: "reprehenderit",
+            BuildSpec: "molestiae",
+            CustomHeaders: "quo",
             CustomRules: []shared.CustomRule{
                 shared.CustomRule{
-                    Condition: "dolore",
-                    Source: "id",
-                    Status: "aspernatur",
-                    Target: "accusantium",
+                    Condition: "laboriosam",
+                    Source: "dicta",
+                    Status: "est",
+                    Target: "voluptatem",
                 },
             },
-            Description: "totam",
+            Description: "consequatur",
             EnableAutoBranchCreation: false,
-            EnableBasicAuth: true,
+            EnableBasicAuth: false,
             EnableBranchAutoBuild: false,
-            EnableBranchAutoDeletion: true,
+            EnableBranchAutoDeletion: false,
             EnvironmentVariables: map[string]string{
-                "non": "voluptas",
-                "omnis": "aut",
+                "a": "omnis",
+                "eos": "accusamus",
+                "accusamus": "reiciendis",
+                "rem": "quibusdam",
             },
-            IamServiceRoleArn: "illo",
-            Name: "sed",
-            OauthToken: "officiis",
-            Platform: "WEB",
-            Repository: "consectetur",
+            IamServiceRoleArn: "et",
+            Name: "praesentium",
+            OauthToken: "occaecati",
+            Platform: "WEB_COMPUTE",
+            Repository: "soluta",
             Tags: map[string]string{
-                "odio": "qui",
+                "quisquam": "rerum",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateApp(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -91,5 +95,6 @@ func main() {
     if res.CreateAppResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

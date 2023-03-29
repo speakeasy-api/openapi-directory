@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.IndexingURLNotificationsGetMetadataRequest{
         Security: operations.IndexingURLNotificationsGetMetadataSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,21 +23,22 @@ func main() {
             },
         },
         QueryParams: operations.IndexingURLNotificationsGetMetadataQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
-            URL: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
+            URL: "facilis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.URLNotifications.IndexingURLNotificationsGetMetadata(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -44,5 +47,6 @@ func main() {
     if res.URLNotificationMetadata != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AndroidenterpriseDevicesForceReportUploadRequest{
         Security: operations.AndroidenterpriseDevicesForceReportUploadSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,25 +23,26 @@ func main() {
             },
         },
         PathParams: operations.AndroidenterpriseDevicesForceReportUploadPathParams{
-            DeviceID: "sit",
-            EnterpriseID: "voluptas",
-            UserID: "culpa",
+            DeviceID: "unde",
+            EnterpriseID: "deserunt",
+            UserID: "porro",
         },
         QueryParams: operations.AndroidenterpriseDevicesForceReportUploadQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "consequuntur",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "voluptas",
-            Key: "fugit",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "id",
+            Alt: "proto",
+            Callback: "perspiciatis",
+            Fields: "nulla",
+            Key: "nihil",
+            OauthToken: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Devices.AndroidenterpriseDevicesForceReportUpload(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +51,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

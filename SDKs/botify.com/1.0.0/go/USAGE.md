@@ -3,60 +3,56 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                DjangoRestToken: shared.SchemeDjangoRestToken{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            DjangoRestToken: shared.SchemeDjangoRestToken{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateUrlsExportRequest{
         PathParams: operations.CreateUrlsExportPathParams{
-            AnalysisSlug: "sit",
-            ProjectSlug: "voluptas",
-            Username: "culpa",
+            AnalysisSlug: "unde",
+            ProjectSlug: "deserunt",
+            Username: "Michale_Sporer",
         },
         QueryParams: operations.CreateUrlsExportQueryParams{
             Area: "new",
         },
         Request: &shared.UrlsQuery{
             Fields: []string{
-                "dolor",
-                "expedita",
-                "voluptas",
+                "nihil",
+                "fuga",
+                "facilis",
+                "eum",
             },
             Filters: map[string]interface{}{
-                "et": "nihil",
+                "ullam": "saepe",
+                "inventore": "sapiente",
             },
             Sort: []map[string]interface{}{
                 map[string]interface{}{
-                    "debitis": "voluptatum",
-                    "et": "ut",
-                    "dolorem": "et",
+                    "voluptatum": "autem",
+                    "vel": "non",
                 },
                 map[string]interface{}{
-                    "iste": "vitae",
-                },
-                map[string]interface{}{
-                    "dolores": "illum",
-                    "debitis": "vel",
-                    "odio": "dolore",
+                    "similique": "reprehenderit",
+                    "molestiae": "quo",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Analysis.CreateUrlsExport(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -65,5 +61,6 @@ func main() {
     if res.CsvExportStatus != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,45 +3,48 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchPutMessageRequest{
         Headers: operations.BatchPutMessageHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.BatchPutMessageRequestBody{
-            ChannelName: "voluptas",
+            ChannelName: "nulla",
             Messages: []shared.Message{
                 shared.Message{
-                    MessageID: "et",
-                    Payload: "nihil",
+                    MessageID: "fuga",
+                    Payload: "facilis",
+                },
+                shared.Message{
+                    MessageID: "eum",
+                    Payload: "iusto",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchPutMessage(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +53,6 @@ func main() {
     if res.BatchPutMessageResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

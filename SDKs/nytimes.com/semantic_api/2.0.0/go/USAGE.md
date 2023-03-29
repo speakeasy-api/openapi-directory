@@ -3,35 +3,34 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Apikey: shared.SchemeApikey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Apikey: shared.SchemeApikey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetNameConceptTypeSpecificConceptJSONRequest{
         PathParams: operations.GetNameConceptTypeSpecificConceptJSONPathParams{
             ConceptType: "nytd_org",
-            SpecificConcept: "voluptas",
+            SpecificConcept: "deserunt",
         },
         QueryParams: operations.GetNameConceptTypeSpecificConceptJSONQueryParams{
-            Fields: "links",
-            Query: "expedita",
+            Fields: "article_list",
+            Query: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetNameConceptTypeSpecificConceptJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -40,5 +39,6 @@ func main() {
     if res.GetNameConceptTypeSpecificConceptJSON200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.IapProjectsBrandsCreateRequest{
         Security: operations.IapProjectsBrandsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,27 +23,28 @@ func main() {
             },
         },
         PathParams: operations.IapProjectsBrandsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.IapProjectsBrandsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.BrandInput{
-            ApplicationTitle: "dicta",
-            SupportEmail: "debitis",
+            ApplicationTitle: "eum",
+            SupportEmail: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.IapProjectsBrandsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +53,6 @@ func main() {
     if res.Brand != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

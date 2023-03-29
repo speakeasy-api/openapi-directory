@@ -3,30 +3,29 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Apikey: shared.SchemeApikey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Apikey: shared.SchemeApikey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetContentJSONRequest{
         QueryParams: operations.GetContentJSONQueryParams{
-            URL: "sit",
+            URL: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetContentJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +34,6 @@ func main() {
     if res.GetContentJSON200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

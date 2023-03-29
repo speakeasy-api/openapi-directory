@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BigqueryDatasetsDeleteRequest{
         Security: operations.BigqueryDatasetsDeleteSecurity{
             Option1: &operations.BigqueryDatasetsDeleteSecurityOption1{
@@ -23,21 +25,22 @@ func main() {
             },
         },
         PathParams: operations.BigqueryDatasetsDeletePathParams{
-            DatasetID: "sit",
-            ProjectID: "voluptas",
+            DatasetID: "unde",
+            ProjectID: "deserunt",
         },
         QueryParams: operations.BigqueryDatasetsDeleteQueryParams{
             Alt: "json",
             DeleteContents: false,
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UserIP: "et",
+            Fields: "nulla",
+            Key: "id",
+            OauthToken: "vero",
+            PrettyPrint: false,
+            QuotaUser: "perspiciatis",
+            UserIP: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Datasets.BigqueryDatasetsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,5 +49,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

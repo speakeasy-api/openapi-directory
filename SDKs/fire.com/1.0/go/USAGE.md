@@ -3,39 +3,39 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                BearerAuth: shared.SchemeBearerAuth{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            BearerAuth: shared.SchemeBearerAuth{
+                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateAPIApplicationRequest{
         Request: operations.CreateAPIApplicationNewAPIApplication{
-            ApplicationName: "sit",
-            Enabled: false,
-            Expiry: "1978-05-13T03:50:47Z",
-            Ican: 501233450539197794,
-            NumberOfPayeeApprovalsRequired: 3390393562759376202,
-            NumberOfPaymentApprovalsRequired: 2669985732393126063,
+            ApplicationName: "Batch Processing API",
+            Enabled: true,
+            Expiry: "2019-08-22T07:48:56.460Z",
+            Ican: 548814,
+            NumberOfPayeeApprovalsRequired: 1,
+            NumberOfPaymentApprovalsRequired: 1,
             Permissions: []string{
-                "voluptas",
-                "fugit",
+                "porro",
+                "nulla",
+                "id",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.API.CreateAPIApplication(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -44,5 +44,6 @@ func main() {
     if res.APIApplication != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

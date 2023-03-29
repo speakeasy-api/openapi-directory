@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.AppAPIWmmEndpointsWmmMagneticFieldRequest{
-        QueryParams: operations.AppAPIWmmEndpointsWmmMagneticFieldQueryParams{
-            Altitude: 74.099998,
-            Latitude: 53.099998,
-            Longitude: 15.100000,
-            Year: 67.199997,
+
+    req := operations.AppAPIWMMEndpointsWMMMagneticFieldRequest{
+        QueryParams: operations.AppAPIWMMEndpointsWMMMagneticFieldQueryParams{
+            Altitude: 10,
+            Latitude: 80,
+            Longitude: 100,
+            Year: 2020.5,
         },
     }
-    
-    res, err := s.AppAPIWmmEndpointsWmmMagneticField(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AppAPIWMMEndpointsWMMMagneticField(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -28,5 +31,6 @@ func main() {
     if res.AppAPIWMMEndpointsWMMMagneticField200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,18 +12,35 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.AddExpiryListingsRequest{
-        Request: operations.AddExpiryListingsRequests{
-            AftermarketListingExpiryCreates: []interface{}{
-                "voluptas",
+
+    req := operations.AddExpiryListingsJSONRequest{
+        Request: []shared.AftermarketListingExpiryCreate{
+            shared.AftermarketListingExpiryCreate{
+                Domain: "deserunt",
+                ExpiresAt: "porro",
+                LosingRegistrarID: 844266,
+                PageViewsMonthly: 602763,
+                RevenueMonthly: 857946,
             },
-            ApplicationXML: []byte("culpa"),
-            TextXML: []byte("expedita"),
+            shared.AftermarketListingExpiryCreate{
+                Domain: "perspiciatis",
+                ExpiresAt: "nulla",
+                LosingRegistrarID: 423655,
+                PageViewsMonthly: 623564,
+                RevenueMonthly: 645894,
+            },
+            shared.AftermarketListingExpiryCreate{
+                Domain: "eum",
+                ExpiresAt: "iusto",
+                LosingRegistrarID: 297534,
+                PageViewsMonthly: 891773,
+                RevenueMonthly: 56713,
+            },
         },
     }
-    
-    res, err := s.V1.AddExpiryListings(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.V1.AddExpiryListingsJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -29,5 +48,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

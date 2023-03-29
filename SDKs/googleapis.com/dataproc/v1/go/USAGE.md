@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DataprocProjectsLocationsBatchesCreateRequest{
         Security: operations.DataprocProjectsLocationsBatchesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,143 +23,154 @@ func main() {
             },
         },
         PathParams: operations.DataprocProjectsLocationsBatchesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.DataprocProjectsLocationsBatchesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            BatchID: "consequuntur",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            BatchID: "id",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.BatchInput{
             EnvironmentConfig: &shared.EnvironmentConfig{
                 ExecutionConfig: &shared.ExecutionConfig{
-                    IdleTTL: "voluptatum",
-                    KmsKey: "et",
+                    IdleTTL: "ullam",
+                    KmsKey: "saepe",
                     NetworkTags: []string{
-                        "dolorem",
-                        "et",
-                        "voluptate",
+                        "sapiente",
                     },
-                    NetworkURI: "iste",
-                    ServiceAccount: "vitae",
-                    SubnetworkURI: "totam",
+                    NetworkURI: "enim",
+                    ServiceAccount: "eum",
+                    StagingBucket: "voluptatum",
+                    SubnetworkURI: "autem",
+                    TTL: "vel",
                 },
                 PeripheralsConfig: &shared.PeripheralsConfig{
-                    MetastoreService: "dolores",
+                    MetastoreService: "non",
                     SparkHistoryServerConfig: &shared.SparkHistoryServerConfig{
-                        DataprocCluster: "illum",
+                        DataprocCluster: "deleniti",
                     },
                 },
             },
             Labels: map[string]string{
-                "vel": "odio",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
+                "laboriosam": "dicta",
             },
             PysparkBatch: &shared.PySparkBatch{
                 ArchiveUris: []string{
-                    "id",
-                    "aspernatur",
+                    "voluptatem",
+                    "consequatur",
+                    "fugiat",
                 },
                 Args: []string{
-                    "totam",
-                    "commodi",
-                    "quis",
+                    "omnis",
+                    "eos",
+                    "accusamus",
+                    "accusamus",
                 },
                 FileUris: []string{
-                    "aut",
-                    "odit",
+                    "rem",
+                    "quibusdam",
+                    "et",
+                    "praesentium",
                 },
                 JarFileUris: []string{
-                    "voluptas",
-                    "omnis",
-                    "aut",
+                    "dolor",
+                    "soluta",
+                    "sed",
                 },
-                MainPythonFileURI: "illo",
+                MainPythonFileURI: "quisquam",
                 PythonFileUris: []string{
-                    "officiis",
-                    "autem",
-                    "consectetur",
+                    "culpa",
+                    "qui",
+                    "sed",
                 },
             },
             RuntimeConfig: &shared.RuntimeConfig{
-                ContainerImage: "nobis",
+                ContainerImage: "rerum",
                 Properties: map[string]string{
-                    "qui": "recusandae",
+                    "occaecati": "odit",
+                    "esse": "rem",
+                    "voluptatem": "amet",
+                    "est": "id",
                 },
-                Version: "at",
+                Version: "blanditiis",
             },
             RuntimeInfo: &shared.RuntimeInfoInput{
                 ApproximateUsage: &shared.UsageMetrics{
-                    MilliDcuSeconds: "ipsum",
-                    ShuffleStorageGbSeconds: "eveniet",
+                    MilliDcuSeconds: "numquam",
+                    ShuffleStorageGbSeconds: "similique",
                 },
                 CurrentUsage: &shared.UsageSnapshot{
-                    MilliDcu: "modi",
-                    ShuffleStorageGb: "sint",
-                    SnapshotTime: "inventore",
+                    MilliDcu: "dolores",
+                    ShuffleStorageGb: "sit",
+                    SnapshotTime: "quia",
                 },
             },
             SparkBatch: &shared.SparkBatch{
                 ArchiveUris: []string{
-                    "exercitationem",
-                    "aut",
-                    "reprehenderit",
+                    "voluptatem",
+                    "laborum",
+                    "modi",
                 },
                 Args: []string{
-                    "maiores",
-                    "incidunt",
-                    "dolor",
+                    "iure",
+                    "earum",
+                    "ut",
                 },
                 FileUris: []string{
-                    "veritatis",
-                    "in",
-                    "et",
+                    "qui",
+                    "ea",
+                    "laborum",
                 },
                 JarFileUris: []string{
-                    "ipsum",
-                    "ex",
+                    "ut",
+                    "optio",
                 },
-                MainClass: "dolores",
-                MainJarFileURI: "placeat",
+                MainClass: "aspernatur",
+                MainJarFileURI: "inventore",
             },
             SparkRBatch: &shared.SparkRBatch{
                 ArchiveUris: []string{
-                    "rerum",
-                    "mollitia",
+                    "libero",
+                    "et",
+                    "libero",
+                    "ipsum",
                 },
                 Args: []string{
-                    "quam",
-                    "reprehenderit",
+                    "ea",
                 },
                 FileUris: []string{
-                    "qui",
+                    "placeat",
                 },
-                MainRFileURI: "unde",
+                MainRFileURI: "ipsam",
             },
             SparkSQLBatch: &shared.SparkSQLBatch{
                 JarFileUris: []string{
-                    "autem",
-                    "qui",
+                    "commodi",
+                    "quia",
+                    "similique",
                 },
-                QueryFileURI: "ut",
+                QueryFileURI: "eaque",
                 QueryVariables: map[string]string{
-                    "ab": "neque",
-                    "ullam": "et",
-                    "accusantium": "esse",
+                    "harum": "doloribus",
+                    "a": "aut",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DataprocProjectsLocationsBatchesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -166,5 +179,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

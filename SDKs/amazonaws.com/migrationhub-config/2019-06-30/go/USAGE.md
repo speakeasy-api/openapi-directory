@@ -3,45 +3,44 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateHomeRegionControlRequest{
         Headers: operations.CreateHomeRegionControlHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWSMigrationHubMultiAccountService.CreateHomeRegionControl",
         },
         Request: shared.CreateHomeRegionControlRequest{
-            DryRun: true,
-            HomeRegion: "et",
+            DryRun: false,
+            HomeRegion: "nihil",
             Target: shared.Target{
-                ID: "nihil",
+                ID: "fuga",
                 Type: "ACCOUNT",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateHomeRegionControl(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +49,6 @@ func main() {
     if res.CreateHomeRegionControlResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

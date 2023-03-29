@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AdsenseAccountsAdclientsAdunitsCreateRequest{
         Security: operations.AdsenseAccountsAdclientsAdunitsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,31 +23,32 @@ func main() {
             },
         },
         PathParams: operations.AdsenseAccountsAdclientsAdunitsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.AdsenseAccountsAdclientsAdunitsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.AdUnitInput{
             ContentAdsSettings: &shared.ContentAdsSettings{
-                Size: "dicta",
-                Type: "TYPE_UNSPECIFIED",
+                Size: "eum",
+                Type: "FEED",
             },
-            DisplayName: "voluptatum",
-            State: "STATE_UNSPECIFIED",
+            DisplayName: "ullam",
+            State: "ARCHIVED",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.AdsenseAccountsAdclientsAdunitsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +57,6 @@ func main() {
     if res.AdUnit != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

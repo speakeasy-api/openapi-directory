@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ServiceusageOperationsListRequest{
         Security: operations.ServiceusageOperationsListSecurity{
             Option1: &operations.ServiceusageOperationsListSecurityOption1{
@@ -23,24 +25,25 @@ func main() {
             },
         },
         QueryParams: operations.ServiceusageOperationsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Filter: "dolor",
-            Key: "expedita",
-            Name: "voluptas",
-            OauthToken: "fugit",
-            PageSize: 1543572285742637646,
-            PageToken: "nihil",
-            PrettyPrint: true,
-            QuotaUser: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Filter: "vero",
+            Key: "perspiciatis",
+            Name: "nulla",
+            OauthToken: "nihil",
+            PageSize: 623564,
+            PageToken: "facilis",
+            PrettyPrint: false,
+            QuotaUser: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Operations.ServiceusageOperationsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +52,6 @@ func main() {
     if res.ListOperationsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

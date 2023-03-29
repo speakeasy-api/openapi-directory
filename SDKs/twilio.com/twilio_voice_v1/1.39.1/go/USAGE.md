@@ -1,0 +1,48 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "context"
+    "log"
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+
+    req := operations.CreateByocTrunkRequest{
+        Security: operations.CreateByocTrunkSecurity{
+            AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
+            },
+        },
+        Request: &operations.CreateByocTrunkCreateByocTrunkRequest{
+            CnamLookupEnabled: false,
+            ConnectionPolicySid: "unde",
+            FriendlyName: "deserunt",
+            FromDomainSid: "porro",
+            StatusCallbackMethod: "DELETE",
+            StatusCallbackURL: "https://ruthie.name",
+            VoiceFallbackMethod: "DELETE",
+            VoiceFallbackURL: "http://linda.name",
+            VoiceMethod: "POST",
+            VoiceURL: "http://eli.org",
+        },
+    }
+
+    ctx := context.Background()
+    res, err := s.CreateByocTrunk(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.VoiceV1ByocTrunk != nil {
+        // handle response
+    }
+}
+```
+<!-- End SDK Example Usage -->

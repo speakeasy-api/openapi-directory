@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/osconfig/v1alpha/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,9 +23,9 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListRequest{
-        Security: operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListSecurity{
+
+    req := operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest{
+        Security: operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -31,28 +33,29 @@ func main() {
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        PathParams: operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListPathParams{
-            Parent: "sit",
+        PathParams: operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListPathParams{
+            Parent: "unde",
         },
-        QueryParams: operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Filter: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
-            PageSize: 1543572285742637646,
-            PageToken: "nihil",
-            PrettyPrint: true,
-            QuotaUser: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+        QueryParams: operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListQueryParams{
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Filter: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            PageSize: 623564,
+            PageToken: "facilis",
+            PrettyPrint: false,
+            QuotaUser: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
         },
     }
-    
-    res, err := s.Projects.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesList(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Projects.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -60,15 +63,17 @@ func main() {
     if res.ListInstanceOSPoliciesCompliancesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
 
-* `OsconfigProjectsLocationsInstanceOsPoliciesCompliancesList` - List OS policies compliance data for all Compute Engine VM instances in the specified zone.
+### Projects
+
+* `OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList` - List OS policies compliance data for all Compute Engine VM instances in the specified zone.
 * `OsconfigProjectsLocationsInstancesInventoriesList` - List inventory data for all VM instances in the specified zone.
 * `OsconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList` - List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
 * `OsconfigProjectsLocationsInstancesVulnerabilityReportsList` - List vulnerability reports for all VM instances in the specified zone.
@@ -79,7 +84,6 @@ func main() {
 * `OsconfigProjectsLocationsOsPolicyAssignmentsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `OsconfigProjectsLocationsOsPolicyAssignmentsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `OsconfigProjectsLocationsOsPolicyAssignmentsPatch` - Update an existing OS policy assignment. This method creates a new revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1alpha/projects.locations.osPolicyAssignments.operations/cancel).
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

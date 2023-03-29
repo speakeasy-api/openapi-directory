@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/healthlake/2017-07-01/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,58 +14,69 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.CreateFhirDatastoreRequest{
-        Headers: operations.CreateFhirDatastoreHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+    req := operations.CreateFHIRDatastoreRequest{
+        Headers: operations.CreateFHIRDatastoreHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "HealthLake.CreateFHIRDatastore",
         },
-        Request: shared.CreateFhirDatastoreRequest{
-            ClientToken: "fugit",
-            DatastoreName: "et",
+        Request: shared.CreateFHIRDatastoreRequest{
+            ClientToken: "nihil",
+            DatastoreName: "fuga",
             DatastoreTypeVersion: "R4",
             PreloadDataConfig: &shared.PreloadDataConfig{
                 PreloadDataType: "SYNTHEA",
             },
             SseConfiguration: &shared.SseConfiguration{
                 KmsEncryptionConfig: shared.KmsEncryptionConfig{
-                    CmkType: "AWS_OWNED_KMS_KEY",
-                    KmsKeyID: "debitis",
+                    CmkType: "CUSTOMER_MANAGED_KMS_KEY",
+                    KmsKeyID: "ullam",
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "et",
-                    Value: "ut",
+                    Key: "inventore",
+                    Value: "sapiente",
+                },
+                shared.Tag{
+                    Key: "enim",
+                    Value: "eum",
+                },
+                shared.Tag{
+                    Key: "voluptatum",
+                    Value: "autem",
+                },
+                shared.Tag{
+                    Key: "vel",
+                    Value: "non",
                 },
             },
         },
     }
-    
-    res, err := s.CreateFhirDatastore(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.CreateFHIRDatastore(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -73,6 +84,7 @@ func main() {
     if res.CreateFHIRDatastoreResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -81,20 +93,19 @@ func main() {
 
 ### SDK SDK
 
-* `CreateFhirDatastore` - Creates a Data Store that can ingest and export FHIR formatted data.
-* `DeleteFhirDatastore` - Deletes a Data Store. 
-* `DescribeFhirDatastore` - Gets the properties associated with the FHIR Data Store, including the Data Store ID, Data Store ARN, Data Store name, Data Store status, created at, Data Store type version, and Data Store endpoint.
-* `DescribeFhirExportJob` - Displays the properties of a FHIR export job, including the ID, ARN, name, and the status of the job.
-* `DescribeFhirImportJob` - Displays the properties of a FHIR import job, including the ID, ARN, name, and the status of the job. 
-* `ListFhirDatastores` - Lists all FHIR Data Stores that are in the user’s account, regardless of Data Store status.
-* `ListFhirExportJobs` -  Lists all FHIR export jobs associated with an account and their statuses. 
-* `ListFhirImportJobs` -  Lists all FHIR import jobs associated with an account and their statuses. 
+* `CreateFHIRDatastore` - Creates a Data Store that can ingest and export FHIR formatted data.
+* `DeleteFHIRDatastore` - Deletes a Data Store. 
+* `DescribeFHIRDatastore` - Gets the properties associated with the FHIR Data Store, including the Data Store ID, Data Store ARN, Data Store name, Data Store status, created at, Data Store type version, and Data Store endpoint.
+* `DescribeFHIRExportJob` - Displays the properties of a FHIR export job, including the ID, ARN, name, and the status of the job.
+* `DescribeFHIRImportJob` - Displays the properties of a FHIR import job, including the ID, ARN, name, and the status of the job. 
+* `ListFHIRDatastores` - Lists all FHIR Data Stores that are in the user’s account, regardless of Data Store status.
+* `ListFHIRExportJobs` -  Lists all FHIR export jobs associated with an account and their statuses. 
+* `ListFHIRImportJobs` -  Lists all FHIR import jobs associated with an account and their statuses. 
 * `ListTagsForResource` -  Returns a list of all existing tags associated with a Data Store. 
-* `StartFhirExportJob` - Begins a FHIR export job.
-* `StartFhirImportJob` - Begins a FHIR Import job.
+* `StartFHIRExportJob` - Begins a FHIR export job.
+* `StartFHIRImportJob` - Begins a FHIR Import job.
 * `TagResource` -  Adds a user specifed key and value tag to a Data Store. 
 * `UntagResource` -  Removes tags from a Data Store. 
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

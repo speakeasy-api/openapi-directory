@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/datamigration/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest{
         Security: operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,105 +34,127 @@ func main() {
             },
         },
         PathParams: operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            ConnectionProfileID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            ConnectionProfileID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.ConnectionProfileInput{
             Cloudsql: &shared.CloudSQLConnectionProfileInput{
                 Settings: &shared.CloudSQLSettingsInput{
                     ActivationPolicy: "SQL_ACTIVATION_POLICY_UNSPECIFIED",
                     AutoStorageIncrease: false,
-                    DataDiskSizeGb: "ut",
-                    DataDiskType: "PD_HDD",
+                    DataDiskSizeGb: "saepe",
+                    DataDiskType: "SQL_DATA_DISK_TYPE_UNSPECIFIED",
                     DatabaseFlags: map[string]string{
-                        "voluptate": "iste",
-                        "vitae": "totam",
+                        "enim": "eum",
+                        "voluptatum": "autem",
+                        "vel": "non",
+                        "deleniti": "similique",
                     },
-                    DatabaseVersion: "SQL_DATABASE_VERSION_UNSPECIFIED",
+                    DatabaseVersion: "MYSQL_5_6",
                     IPConfig: &shared.SQLIPConfig{
                         AuthorizedNetworks: []shared.SQLACLEntry{
                             shared.SQLACLEntry{
-                                ExpireTime: "debitis",
-                                Label: "vel",
-                                TTL: "odio",
-                                Value: "dolore",
+                                ExpireTime: "quo",
+                                Label: "quasi",
+                                TTL: "laboriosam",
+                                Value: "dicta",
                             },
                             shared.SQLACLEntry{
-                                ExpireTime: "id",
-                                Label: "aspernatur",
-                                TTL: "accusantium",
-                                Value: "totam",
+                                ExpireTime: "est",
+                                Label: "voluptatem",
+                                TTL: "consequatur",
+                                Value: "fugiat",
                             },
                             shared.SQLACLEntry{
-                                ExpireTime: "commodi",
-                                Label: "quis",
-                                TTL: "est",
-                                Value: "aut",
+                                ExpireTime: "a",
+                                Label: "omnis",
+                                TTL: "eos",
+                                Value: "accusamus",
+                            },
+                            shared.SQLACLEntry{
+                                ExpireTime: "accusamus",
+                                Label: "reiciendis",
+                                TTL: "rem",
+                                Value: "quibusdam",
                             },
                         },
-                        EnableIpv4: true,
-                        PrivateNetwork: "non",
+                        EnableIpv4: false,
+                        PrivateNetwork: "et",
                         RequireSsl: false,
                     },
-                    RootPassword: "omnis",
-                    SourceID: "aut",
-                    StorageAutoResizeLimit: "illo",
-                    Tier: "sed",
+                    RootPassword: "praesentium",
+                    SourceID: "occaecati",
+                    StorageAutoResizeLimit: "dolor",
+                    Tier: "soluta",
                     UserLabels: map[string]string{
-                        "autem": "consectetur",
-                        "nobis": "odio",
+                        "quisquam": "rerum",
                     },
-                    Zone: "qui",
+                    Zone: "culpa",
                 },
             },
-            DisplayName: "recusandae",
+            DisplayName: "qui",
             Error: &shared.Status{
-                Code: 7561811714888168464,
+                Code: 537373,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "modi": "sint",
-                        "inventore": "ut",
+                        "occaecati": "odit",
+                        "esse": "rem",
+                        "voluptatem": "amet",
+                        "est": "id",
+                    },
+                    map[string]interface{}{
+                        "numquam": "similique",
+                        "dolores": "sit",
+                    },
+                    map[string]interface{}{
+                        "et": "voluptatem",
+                        "laborum": "modi",
+                    },
+                    map[string]interface{}{
+                        "iure": "earum",
+                        "ut": "soluta",
+                        "qui": "ea",
                     },
                 },
-                Message: "exercitationem",
+                Message: "laborum",
             },
             Labels: map[string]string{
-                "reprehenderit": "tempore",
-                "maiores": "incidunt",
-                "dolor": "beatae",
+                "ut": "optio",
+                "aspernatur": "inventore",
             },
             Mysql: &shared.MySQLConnectionProfileInput{
-                CloudSQLID: "veritatis",
-                Host: "in",
+                CloudSQLID: "ut",
+                Host: "libero",
                 Password: "et",
-                Port: 8565714761387219319,
+                Port: 670638,
                 Ssl: &shared.SslConfigInput{
                     CaCertificate: "ipsum",
-                    ClientCertificate: "ex",
-                    ClientKey: "dolores",
+                    ClientCertificate: "non",
+                    ClientKey: "ea",
                 },
-                Username: "placeat",
+                Username: "Braulio60",
             },
-            Name: "vel",
-            Provider: "RDS",
-            State: "DRAFT",
+            Name: "commodi",
+            Provider: "DATABASE_PROVIDER_UNSPECIFIED",
+            State: "UPDATING",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DatamigrationProjectsLocationsConnectionProfilesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -139,13 +163,15 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `DatamigrationProjectsLocationsConnectionProfilesCreate` - Creates a new connection profile in a given project and location.
 * `DatamigrationProjectsLocationsConnectionProfilesList` - Retrieve a list of all connection profiles in a given project and location.
@@ -167,7 +193,6 @@ func main() {
 * `DatamigrationProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `DatamigrationProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `DatamigrationProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

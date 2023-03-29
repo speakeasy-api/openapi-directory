@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetProductRequest{
         Security: operations.GetProductSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,10 +20,11 @@ func main() {
             },
         },
         PathParams: operations.GetProductPathParams{
-            Epid: "sit",
+            Epid: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Product.GetProduct(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +33,6 @@ func main() {
     if res.Product != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

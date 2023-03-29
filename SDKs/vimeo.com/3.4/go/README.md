@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/vimeo.com/3.4/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,30 +14,29 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Oauth2: shared.SchemeOauth2{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetEndpointsRequest{
         QueryParams: operations.GetEndpointsQueryParams{
-            Openapi: false,
+            Openapi: true,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.APIInformation.GetEndpoints(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,17 +45,19 @@ func main() {
     if res.Endpoint != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### API Information
+
+### APIInformation
 
 * `GetEndpoints` - Get an API specification
 
-### Albums\Album videos
+### AlbumsAlbumVideos
 
 * `AddVideoToAlbum` - Add a specific video to an album
 * `AddVideoToAlbumAlt1` - Add a specific video to an album
@@ -71,7 +72,7 @@ func main() {
 * `SetVideoAsAlbumThumbnail` - Set a video as the album thumbnail
 * `SetVideoAsAlbumThumbnailAlt1` - Set a video as the album thumbnail
 
-### Albums\Custom album logos
+### AlbumsCustomAlbumLogos
 
 * `CreateAlbumLogo` - Add a custom album logo
 * `DeleteAlbumLogo` - Remove a custom album logo
@@ -79,7 +80,7 @@ func main() {
 * `GetAlbumLogos` - Get all the custom logos of an album
 * `ReplaceAlbumLogo` - Replace a custom album logo
 
-### Albums\Custom album thumbnails
+### AlbumsCustomAlbumThumbnails
 
 * `CreateAlbumCustomThumb` - Add a custom uploaded thumbnail
 * `DeleteAlbumCustomThumbnail` - Remove a custom uploaded album thumbnail
@@ -87,7 +88,7 @@ func main() {
 * `GetAlbumCustomThumbs` - Get all the custom upload thumbnails of an album
 * `ReplaceAlbumCustomThumb` - Replace a custom uploaded album thumbnail
 
-### Albums\Essentials
+### AlbumsEssentials
 
 * `CreateAlbum` - Create an album
 * `CreateAlbumAlt1` - Create an album
@@ -100,7 +101,7 @@ func main() {
 * `GetAlbums` - Get all the albums that belong to a user
 * `GetAlbumsAlt1` - Get all the albums that belong to a user
 
-### Authentication Extras\Essentials
+### AuthenticationExtrasEssentials
 
 * `ClientAuth` - Authorize a client with OAuth
 * `ConvertAccessToken` - Convert OAuth 1 access tokens to OAuth 2 access tokens
@@ -108,20 +109,20 @@ func main() {
 * `ExchangeAuthCode` - Exchange an authorization code for an access token
 * `VerifyToken` - Verify an OAuth 2 token
 
-### Categories\Channels
+### CategoriesChannels
 
 * `GetCategoryChannels` - Get all the channels in a category
 
-### Categories\Essentials
+### CategoriesEssentials
 
 * `GetCategories` - Get all categories
 * `GetCategory` - Get a specific category
 
-### Categories\Groups
+### CategoriesGroups
 
 * `GetCategoryGroups` - Get all the groups in a category
 
-### Categories\Subscriptions
+### CategoriesSubscriptions
 
 * `CheckIfUserSubscribedToCategory` - Check if a user follows a category
 * `CheckIfUserSubscribedToCategoryAlt1` - Check if a user follows a category
@@ -132,21 +133,21 @@ func main() {
 * `UnsubscribeFromCategory` - Unsubscribe a user from a category
 * `UnsubscribeFromCategoryAlt1` - Unsubscribe a user from a category
 
-### Categories\Videos
+### CategoriesVideos
 
 * `CheckCategoryForVideo` - Check for a video in a category
 * `GetCategoryVideos` - Get all the videos in a category
 * `GetVideoCategories` - Get all the categories to which a video belongs
 * `SuggestVideoCategory` - Suggest categories for a video
 
-### Channels\Categories
+### ChannelsCategories
 
 * `AddChannelCategories` - Add a list of categories to a channel
 * `CategorizeChannel` - Categorize a channel
 * `DeleteChannelCategory` - Remove a category from a channel
 * `GetChannelCategories` - Get all the categories in a channel
 
-### Channels\Essentials
+### ChannelsEssentials
 
 * `CreateChannel` - Create a channel
 * `DeleteChannel` - Delete a channel
@@ -156,7 +157,7 @@ func main() {
 * `GetChannelSubscriptionsAlt1` - Get all the channels to which a user subscribes
 * `GetChannels` - Get all channels
 
-### Channels\Moderators
+### ChannelsModerators
 
 * `AddChannelModerator` - Add a specific channel moderator
 * `AddChannelModerators` - Add a list of channel moderators
@@ -166,14 +167,14 @@ func main() {
 * `RemoveChannelModerators` - Remove a list of channel moderators
 * `ReplaceChannelModerators` - Replace the moderators of a channel
 
-### Channels\Private channel members
+### ChannelsPrivateChannelMembers
 
 * `DeleteChannelPrivacyUser` - Restrict a user from viewing a private channel
 * `GetChannelPrivacyUsers` - Get all the users who can view a private channel
 * `SetChannelPrivacyUser` - Permit a specific user to view a private channel
 * `SetChannelPrivacyUsers` - Permit a list of users to view a private channel
 
-### Channels\Subscriptions and subscribers
+### ChannelsSubscriptionsAndSubscribers
 
 * `CheckIfUserSubscribedToChannel` - Check if a user follows a channel
 * `CheckIfUserSubscribedToChannelAlt1` - Check if a user follows a channel
@@ -183,7 +184,7 @@ func main() {
 * `UnsubscribeFromChannel` - Unsubscribe a user from a specific channel
 * `UnsubscribeFromChannelAlt1` - Unsubscribe a user from a specific channel
 
-### Channels\Tags
+### ChannelsTags
 
 * `AddChannelTag` - Add a specific tag to a channel
 * `AddTagsToChannel` - Add a list of tags to a channel
@@ -191,7 +192,7 @@ func main() {
 * `DeleteTagFromChannel` - Remove a tag from a channel
 * `GetChannelTags` - Get all the tags that have been added to a channel
 
-### Channels\Videos
+### ChannelsVideos
 
 * `AddVideoToChannel` - Add a specific video to a channel
 * `AddVideosToChannel` - Add a list of videos to a channel
@@ -201,7 +202,7 @@ func main() {
 * `GetChannelVideos` - Get all the videos in a channel
 * `RemoveVideosFromChannel` - Remove a list of videos from a channel
 
-### Embed Presets\Custom Logos
+### EmbedPresetsCustomLogos
 
 * `CreateCustomLogo` - Add a custom logo
 * `CreateCustomLogoAlt1` - Add a custom logo
@@ -210,7 +211,7 @@ func main() {
 * `GetCustomLogos` - Get all the custom logos that belong to a user
 * `GetCustomLogosAlt1` - Get all the custom logos that belong to a user
 
-### Embed Presets\Essentials
+### EmbedPresetsEssentials
 
 * `EditEmbedPreset` - Edit an embed preset
 * `EditEmbedPresetAlt1` - Edit an embed preset
@@ -219,7 +220,7 @@ func main() {
 * `GetEmbedPresets` - Get all the embed presets that a user has created
 * `GetEmbedPresetsAlt1` - Get all the embed presets that a user has created
 
-### Embed Presets\Videos
+### EmbedPresetsVideos
 
 * `AddVideoEmbedPreset` - Add an embed preset to a video
 * `CreateVideoCustomLogo` - Add a new custom logo to a video
@@ -229,21 +230,21 @@ func main() {
 * `GetVideoCustomLogo` - Get a custom video logo
 * `GetVideoEmbedPreset` - Check if an embed preset has been added to a video
 
-### Groups\Essentials
+### GroupsEssentials
 
 * `CreateGroup` - Create a group
 * `DeleteGroup` - Delete a group
 * `GetGroup` - Get a specific group
 * `GetGroups` - Get all groups
 
-### Groups\Subscription
+### GroupsSubscription
 
 * `JoinGroup` - Add a user to a group
 * `JoinGroupAlt1` - Add a user to a group
 * `LeaveGroup` - Remove a user from a group
 * `LeaveGroupAlt1` - Remove a user from a group
 
-### Groups\Users
+### GroupsUsers
 
 * `CheckIfUserJoinedGroup` - Check if a user has joined a group
 * `CheckIfUserJoinedGroupAlt1` - Check if a user has joined a group
@@ -251,14 +252,14 @@ func main() {
 * `GetUserGroups` - Get all the groups that a user has joined
 * `GetUserGroupsAlt1` - Get all the groups that a user has joined
 
-### Groups\Videos
+### GroupsVideos
 
 * `AddVideoToGroup` - Add a video to a group
 * `DeleteVideoFromGroup` - Remove a video from a group
 * `GetGroupVideo` - Get a specific video in a group
 * `GetGroupVideos` - Get all the videos in a group
 
-### Likes\Essentials
+### LikesEssentials
 
 * `CheckIfUserLikedVideo` - Check if a user has liked a video
 * `CheckIfUserLikedVideoAlt1` - Check if a user has liked a video
@@ -272,7 +273,7 @@ func main() {
 * `UnlikeVideo` - Cause a user to unlike a video
 * `UnlikeVideoAlt1` - Cause a user to unlike a video
 
-### On Demand\Backgrounds
+### OnDemandBackgrounds
 
 * `CreateVodBackground` - Add a background to an On Demand page
 * `DeleteVodBackground` - Remove a background from an On Demand page
@@ -280,7 +281,7 @@ func main() {
 * `GetVodBackground` - Get a specific background of an On Demand page
 * `GetVodBackgrounds` - Get all the backgrounds of an On Demand page
 
-### On Demand\Essentials
+### OnDemandEssentials
 
 * `CreateVod` - Create an On Demand page
 * `CreateVodAlt1` - Create an On Demand page
@@ -290,7 +291,7 @@ func main() {
 * `GetUserVodsAlt1` - Get all the On Demand pages of a user
 * `GetVod` - Get a specific On Demand page
 
-### On Demand\Genres
+### OnDemandGenres
 
 * `AddVodGenre` - Add a genre to an On Demand page
 * `DeleteVodGenre` - Remove a genre from an On Demand page
@@ -301,14 +302,14 @@ func main() {
 * `GetVodGenres` - Get all On Demand genres
 * `GetVodGenresByOndemandID` - Get all the genres of an On Demand page
 
-### On Demand\Posters
+### OnDemandPosters
 
 * `AddVodPoster` - Add a poster to an On Demand page
 * `EditVodPoster` - Edit a poster of an On Demand page
 * `GetVodPoster` - Get a specific poster of an On Demand page
 * `GetVodPosters` - Get all the posters of an On Demand page
 
-### On Demand\Promotions
+### OnDemandPromotions
 
 * `CreateVodPromotion` - Add a promotion to an On Demand page
 * `DeleteVodPromotion` - Remove a promotion from an On Demand page
@@ -316,13 +317,13 @@ func main() {
 * `GetVodPromotionCodes` - Get all the codes of a promotion on an On Demand page
 * `GetVodPromotions` - Get all the promotions on an On Demand page
 
-### On Demand\Purchases and Rentals
+### OnDemandPurchasesAndRentals
 
 * `CheckIfVodWasPurchased` - Check if a user has made a purchase or rental from an On Demand page
 * `CheckIfVodWasPurchasedAlt1` - Check if a user has made a purchase or rental from an On Demand page
 * `GetVodPurchases` - Get all the On Demand purchases and rentals that a user has made
 
-### On Demand\Regions
+### OnDemandRegions
 
 * `AddVodRegion` - Add a specific region to an On Demand page
 * `DeleteVodRegion` - Remove a specific region from an On Demand page
@@ -333,27 +334,27 @@ func main() {
 * `GetVodRegions` - Get all the regions of an On Demand page
 * `SetVodRegions` - Add a list of regions to an On Demand page
 
-### On Demand\Seasons
+### OnDemandSeasons
 
 * `GetVodSeason` - Get a specific season on an On Demand page
 * `GetVodSeasonVideos` - Get all the videos in a season on an On Demand page
 * `GetVodSeasons` - Get all the seasons on an On Demand page
 
-### On Demand\Videos
+### OnDemandVideos
 
 * `AddVideoToVod` - Add a video to an On Demand page
 * `DeleteVideoFromVod` - Remove a video from an On Demand page
 * `GetVodVideo` - Get a specific video on an On Demand page
 * `GetVodVideos` - Get all the videos on an On Demand page
 
-### Portfolios\Essentials
+### PortfoliosEssentials
 
 * `GetPortfolio` - Get a specific portfolio
 * `GetPortfolioAlt1` - Get a specific portfolio
 * `GetPortfolios` - Get all the portfolios that belong to a user
 * `GetPortfoliosAlt1` - Get all the portfolios that belong to a user
 
-### Portfolios\Videos
+### PortfoliosVideos
 
 * `AddVideoToPortfolio` - Add a video to a portfolio
 * `AddVideoToPortfolioAlt1` - Add a video to a portfolio
@@ -364,7 +365,7 @@ func main() {
 * `GetPortfolioVideos` - Get all the videos in a portfolio
 * `GetPortfolioVideosAlt1` - Get all the videos in a portfolio
 
-### Projects\Essentials
+### ProjectsEssentials
 
 * `CreateProject` - Create a project
 * `CreateProjectAlt1` - Create a project
@@ -377,7 +378,7 @@ func main() {
 * `GetProjects` - Get all the projects that belong to a user
 * `GetProjectsAlt1` - Get all the projects that belong to a user
 
-### Projects\Videos
+### ProjectsVideos
 
 * `AddVideoToProject` - Add a specific video to a project
 * `AddVideoToProjectAlt1` - Add a specific video to a project
@@ -390,23 +391,23 @@ func main() {
 * `RemoveVideosFromProject` - Remove a list of videos from a project
 * `RemoveVideosFromProjectAlt1` - Remove a list of videos from a project
 
-### Tags\Essentials
+### TagsEssentials
 
 * `GetTag` - Get a specific tag
 
-### Users\Essentials
+### UsersEssentials
 
 * `EditUser` - Edit a user
 * `EditUserAlt1` - Edit a user
 * `GetUser` - Get a user
 * `GetUserAlt1` - Get a user
 
-### Users\Feed
+### UsersFeed
 
 * `GetFeed` - Get all videos in a user's feed
 * `GetFeedAlt1` - Get all videos in a user's feed
 
-### Users\Follows
+### UsersFollows
 
 * `CheckIfUserIsFollowing` - Check if a user is following another user
 * `CheckIfUserIsFollowingAlt1` - Check if a user is following another user
@@ -421,11 +422,11 @@ func main() {
 * `UnfollowUser` - Unfollow a user
 * `UnfollowUserAlt1` - Unfollow a user
 
-### Users\Internal
+### UsersInternal
 
 * `SearchUsers` - Search for users
 
-### Users\Pictures
+### UsersPictures
 
 * `CreatePicture` - Add a user picture
 * `CreatePictureAlt1` - Add a user picture
@@ -438,13 +439,13 @@ func main() {
 * `GetPictures` - Get all the pictures that belong to a user
 * `GetPicturesAlt1` - Get all the pictures that belong to a user
 
-### Users\Watch History
+### UsersWatchHistory
 
 * `DeleteFromWatchHistory` - Delete a specific video from a user's watch history
 * `DeleteWatchHistory` - Delete a user's watch history
 * `GetWatchHistory` - Get all the videos that a user has watched
 
-### Videos\Comments
+### VideosComments
 
 * `CreateComment` - Add a comment to a video
 * `CreateCommentAlt1` - Add a comment to a video
@@ -456,15 +457,15 @@ func main() {
 * `GetComments` - Get all the comments on a video
 * `GetCommentsAlt1` - Get all the comments on a video
 
-### Videos\Content Ratings
+### VideosContentRatings
 
 * `GetContentRatings` - Get all content ratings
 
-### Videos\Creative Commons
+### VideosCreativeCommons
 
 * `GetCcLicenses` - Get all Creative Commons licenses
 
-### Videos\Credits
+### VideosCredits
 
 * `AddVideoCredit` - Credit a user in a video
 * `AddVideoCreditAlt1` - Credit a user in a video
@@ -474,13 +475,13 @@ func main() {
 * `GetVideoCredits` - Get all the credited users in a video
 * `GetVideoCreditsAlt1` - Get all the credited users in a video
 
-### Videos\Embed Privacy
+### VideosEmbedPrivacy
 
 * `AddVideoPrivacyDomain` - Permit a video to be embedded on a domain
 * `DeleteVideoPrivacyDomain` - Restrict a video from being embedded on a domain
 * `GetVideoPrivacyDomains` - Get all the domains on which a video can be embedded
 
-### Videos\Essentials
+### VideosEssentials
 
 * `CheckIfUserOwnsVideo` - Check if a user owns a video
 * `CheckIfUserOwnsVideoAlt1` - Check if a user owns a video
@@ -493,15 +494,15 @@ func main() {
 * `GetVideosAlt1` - Get all the videos that a user has uploaded
 * `SearchVideos` - Search for videos
 
-### Videos\Languages
+### VideosLanguages
 
 * `GetLanguages` - Get all languages
 
-### Videos\Recommendations
+### VideosRecommendations
 
 * `GetRelatedVideos` - Get all the related videos of a video
 
-### Videos\Tags
+### VideosTags
 
 * `AddVideoTag` - Add a specific tag to a video
 * `AddVideoTags` - Add a list of tags to a video
@@ -510,7 +511,7 @@ func main() {
 * `GetVideoTags` - Get all the tags of a video
 * `GetVideosWithTag` - Get all the videos with a specific tag
 
-### Videos\Text Tracks
+### VideosTextTracks
 
 * `CreateTextTrack` - Add a text track to a video
 * `CreateTextTrackAlt1` - Add a text track to a video
@@ -520,7 +521,7 @@ func main() {
 * `GetTextTracks` - Get all the text tracks of a video
 * `GetTextTracksAlt1` - Get all the text tracks of a video
 
-### Videos\Thumbnails
+### VideosThumbnails
 
 * `CreateVideoThumbnail` - Add a video thumbnail
 * `CreateVideoThumbnailAlt1` - Add a video thumbnail
@@ -530,18 +531,18 @@ func main() {
 * `GetVideoThumbnails` - Get all the thumbnails of a video
 * `GetVideoThumbnailsAlt1` - Get all the thumbnails of a video
 
-### Videos\Upload
+### VideosUpload
 
 * `CompleteStreamingUpload` - Complete a user's streaming upload
 * `GetUploadAttempt` - Get a user's upload attempt
 * `UploadVideo` - Upload a video
 * `UploadVideoAlt1` - Upload a video
 
-### Videos\Versions
+### VideosVersions
 
 * `CreateVideoVersion` - Add a version to a video
 
-### Videos\Viewing Privacy
+### VideosViewingPrivacy
 
 * `AddVideoPrivacyUser` - Permit a specific user to view a private video
 * `AddVideoPrivacyUsers` - Permit a list of users to view a private video
@@ -550,7 +551,7 @@ func main() {
 * `GetVideoPrivacyUsers` - Get all the users who can view a user's private videos by default
 * `GetVideoPrivacyUsersAlt1` - Get all the users who can view a user's private videos by default
 
-### Watch Later Queue\Essentials
+### WatchLaterQueueEssentials
 
 * `AddVideoToWatchLater` - Add a video to a user's Watch Later queue
 * `AddVideoToWatchLaterAlt1` - Add a video to a user's Watch Later queue
@@ -560,7 +561,6 @@ func main() {
 * `DeleteVideoFromWatchLaterAlt1` - Remove a video from a user's Watch Later queue
 * `GetWatchLaterQueue` - Get all the videos in a user's Watch Later queue
 * `GetWatchLaterQueueAlt1` - Get all the videos in a user's Watch Later queue
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

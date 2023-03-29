@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,41 +12,39 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest{
         PathParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleSearchIdeahubV1betaIdeaActivity{
             Ideas: []string{
-                "debitis",
-                "voluptatum",
-                "et",
+                "iusto",
+                "ullam",
             },
-            Name: "ut",
+            Name: "saepe",
             Topics: []string{
-                "et",
-                "voluptate",
-                "iste",
+                "sapiente",
             },
-            Type: "POST_DELETED",
-            URI: "totam",
+            Type: "POST_DRAFTED",
+            URI: "http://jason.net",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Platforms.IdeahubPlatformsPropertiesIdeaActivitiesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +53,6 @@ func main() {
     if res.GoogleSearchIdeahubV1betaIdeaActivity != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

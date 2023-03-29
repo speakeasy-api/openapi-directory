@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,13 +12,14 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CleanScanPageRequest{
         PathParams: operations.CleanScanPagePathParams{
-            ScanID: 8717895732742165505,
+            ScanID: 548814,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.PatrowlEngine.CleanScanPage(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -25,5 +28,6 @@ func main() {
     if res.APIResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

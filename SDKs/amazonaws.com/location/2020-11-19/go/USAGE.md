@@ -3,42 +3,41 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AssociateTrackerConsumerRequest{
         PathParams: operations.AssociateTrackerConsumerPathParams{
-            TrackerName: "sit",
+            TrackerName: "unde",
         },
         Headers: operations.AssociateTrackerConsumerHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "expedita",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "nulla",
+            XAmzDate: "id",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "perspiciatis",
+            XAmzSignedHeaders: "nulla",
         },
         Request: operations.AssociateTrackerConsumerRequestBody{
-            ConsumerArn: "fugit",
+            ConsumerArn: "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AssociateTrackerConsumer(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +46,6 @@ func main() {
     if res.AssociateTrackerConsumerResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

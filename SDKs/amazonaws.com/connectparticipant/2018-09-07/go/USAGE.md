@@ -3,43 +3,43 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CompleteAttachmentUploadRequest{
         Headers: operations.CompleteAttachmentUploadHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzBearer: "voluptas",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "expedita",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "unde",
+            XAmzBearer: "deserunt",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "nulla",
+            XAmzDate: "id",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "perspiciatis",
+            XAmzSignedHeaders: "nulla",
         },
         Request: operations.CompleteAttachmentUploadRequestBody{
             AttachmentIds: []string{
-                "et",
+                "fuga",
+                "facilis",
             },
-            ClientToken: "nihil",
+            ClientToken: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CompleteAttachmentUpload(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +48,6 @@ func main() {
     if res.CompleteAttachmentUploadResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

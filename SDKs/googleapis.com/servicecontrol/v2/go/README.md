@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/servicecontrol/v2/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ServicecontrolServicesCheckRequest{
         Security: operations.ServicecontrolServicesCheckSecurity{
             Option1: &operations.ServicecontrolServicesCheckSecurityOption1{
@@ -34,153 +36,163 @@ func main() {
             },
         },
         PathParams: operations.ServicecontrolServicesCheckPathParams{
-            ServiceName: "sit",
+            ServiceName: "unde",
         },
         QueryParams: operations.ServicecontrolServicesCheckQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.CheckRequest{
             Attributes: &shared.AttributeContext{
                 API: &shared.API{
-                    Operation: "dicta",
-                    Protocol: "debitis",
-                    Service: "voluptatum",
-                    Version: "et",
+                    Operation: "eum",
+                    Protocol: "iusto",
+                    Service: "ullam",
+                    Version: "saepe",
                 },
                 Destination: &shared.Peer{
-                    IP: "ut",
+                    IP: "inventore",
                     Labels: map[string]string{
-                        "et": "voluptate",
-                        "iste": "vitae",
-                        "totam": "dolores",
+                        "enim": "eum",
+                        "voluptatum": "autem",
+                        "vel": "non",
+                        "deleniti": "similique",
                     },
-                    Port: "illum",
-                    Principal: "debitis",
-                    RegionCode: "vel",
+                    Port: "reprehenderit",
+                    Principal: "molestiae",
+                    RegionCode: "quo",
                 },
                 Extensions: []map[string]interface{}{
                     map[string]interface{}{
-                        "id": "aspernatur",
-                        "accusantium": "totam",
+                        "dicta": "est",
+                        "voluptatem": "consequatur",
                     },
                 },
                 Origin: &shared.Peer{
-                    IP: "commodi",
+                    IP: "fugiat",
                     Labels: map[string]string{
-                        "est": "aut",
-                        "odit": "non",
-                        "voluptas": "omnis",
+                        "omnis": "eos",
+                        "accusamus": "accusamus",
+                        "reiciendis": "rem",
+                        "quibusdam": "et",
                     },
-                    Port: "aut",
-                    Principal: "illo",
-                    RegionCode: "sed",
+                    Port: "praesentium",
+                    Principal: "occaecati",
+                    RegionCode: "dolor",
                 },
                 Request: &shared.Request{
                     Auth: &shared.Auth{
                         AccessLevels: []string{
-                            "autem",
-                            "consectetur",
+                            "sed",
+                            "quisquam",
+                            "rerum",
                         },
                         Audiences: []string{
-                            "odio",
+                            "qui",
+                            "sed",
+                            "rerum",
                         },
                         Claims: map[string]interface{}{
-                            "recusandae": "at",
+                            "occaecati": "odit",
+                            "esse": "rem",
+                            "voluptatem": "amet",
+                            "est": "id",
                         },
-                        Presenter: "ipsum",
-                        Principal: "eveniet",
+                        Presenter: "blanditiis",
+                        Principal: "numquam",
                     },
                     Headers: map[string]string{
-                        "sint": "inventore",
-                        "ut": "exercitationem",
+                        "dolores": "sit",
+                        "quia": "et",
+                        "voluptatem": "laborum",
                     },
-                    Host: "aut",
-                    ID: "reprehenderit",
-                    Method: "tempore",
-                    Path: "maiores",
-                    Protocol: "incidunt",
-                    Query: "dolor",
-                    Reason: "beatae",
-                    Scheme: "veritatis",
-                    Size: "in",
-                    Time: "et",
+                    Host: "modi",
+                    ID: "et",
+                    Method: "iure",
+                    Path: "earum",
+                    Protocol: "ut",
+                    Query: "soluta",
+                    Reason: "qui",
+                    Scheme: "ea",
+                    Size: "laborum",
+                    Time: "iusto",
                 },
                 Resource: &shared.Resource{
                     Annotations: map[string]string{
-                        "ipsum": "ex",
-                        "dolores": "placeat",
+                        "optio": "aspernatur",
+                        "inventore": "ut",
+                        "libero": "et",
+                        "libero": "ipsum",
                     },
-                    CreateTime: "vel",
-                    DeleteTime: "rerum",
-                    DisplayName: "mollitia",
-                    Etag: "voluptas",
+                    CreateTime: "non",
+                    DeleteTime: "ea",
+                    DisplayName: "magni",
+                    Etag: "placeat",
                     Labels: map[string]string{
-                        "reprehenderit": "qui",
+                        "est": "commodi",
+                        "quia": "similique",
                     },
-                    Location: "qui",
-                    Name: "unde",
-                    Service: "in",
-                    Type: "autem",
-                    UID: "qui",
-                    UpdateTime: "ut",
+                    Location: "eaque",
+                    Name: "odio",
+                    Service: "harum",
+                    Type: "doloribus",
+                    UID: "a",
+                    UpdateTime: "aut",
                 },
                 Response: &shared.Response{
-                    BackendLatency: "itaque",
-                    Code: "ab",
+                    BackendLatency: "et",
+                    Code: "non",
                     Headers: map[string]string{
-                        "ullam": "et",
+                        "neque": "asperiores",
+                        "et": "culpa",
+                        "aliquam": "esse",
                     },
-                    Size: "accusantium",
-                    Time: "esse",
+                    Size: "totam",
+                    Time: "voluptatum",
                 },
                 Source: &shared.Peer{
-                    IP: "architecto",
+                    IP: "et",
                     Labels: map[string]string{
-                        "velit": "cumque",
+                        "nesciunt": "laboriosam",
+                        "aut": "cum",
+                        "expedita": "ipsam",
                     },
-                    Port: "soluta",
-                    Principal: "sunt",
-                    RegionCode: "voluptates",
+                    Port: "eos",
+                    Principal: "omnis",
+                    RegionCode: "adipisci",
                 },
             },
-            Flags: "magni",
+            Flags: "hic",
             Resources: []shared.ResourceInfo{
                 shared.ResourceInfo{
-                    Container: "optio",
+                    Container: "distinctio",
                     Location: "qui",
-                    Name: "earum",
-                    Permission: "illo",
-                    Type: "omnis",
+                    Name: "perferendis",
+                    Permission: "aspernatur",
+                    Type: "fuga",
                 },
                 shared.ResourceInfo{
-                    Container: "ut",
-                    Location: "consequatur",
-                    Name: "dolor",
-                    Permission: "commodi",
-                    Type: "error",
-                },
-                shared.ResourceInfo{
-                    Container: "reprehenderit",
-                    Location: "consectetur",
-                    Name: "nostrum",
-                    Permission: "ut",
-                    Type: "laboriosam",
+                    Container: "quo",
+                    Location: "tempore",
+                    Name: "explicabo",
+                    Permission: "aut",
+                    Type: "reiciendis",
                 },
             },
-            ServiceConfigID: "sed",
+            ServiceConfigID: "debitis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Services.ServicecontrolServicesCheck(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -189,17 +201,18 @@ func main() {
     if res.CheckResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### services
+
+### Services
 
 * `ServicecontrolServicesCheck` - Private Preview. This feature is only available for approved services. This method provides admission control for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It checks whether an operation should be allowed based on the service configuration and relevant policies. It must be called before the operation is executed. For more information, see [Admission Control](https://cloud.google.com/service-infrastructure/docs/admission-control). NOTE: The admission control has an expected policy propagation delay of 60s. The caller **must** not depend on the most recent policy changes. NOTE: The admission control has a hard limit of 1 referenced resources per call. If an operation refers to more than 1 resources, the caller must call the Check method multiple times. This method requires the `servicemanagement.services.check` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
 * `ServicecontrolServicesReport` - Private Preview. This feature is only available for approved services. This method provides telemetry reporting for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It reports a list of operations that have occurred on a service. It must be called after the operations have been executed. For more information, see [Telemetry Reporting](https://cloud.google.com/service-infrastructure/docs/telemetry-reporting). NOTE: The telemetry reporting has a hard limit of 1000 operations and 1MB per Report call. It is recommended to have no more than 100 operations per call. This method requires the `servicemanagement.services.report` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

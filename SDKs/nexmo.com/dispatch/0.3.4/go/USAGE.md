@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,21 +12,25 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateWorkflowRequest{
         Security: operations.CreateWorkflowSecurity{
-            BearerAuth: &shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
+            BasicAuth: &shared.SchemeBasicAuth{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
             },
         },
         Request: shared.CreateWorkflow{
             Template: "failover",
-            Workflow: []interface{}{
-                "culpa",
+            Workflow: []shared.CreateWorkflowWorkflow{
+                shared.CreateWorkflowWorkflow{},
+                shared.CreateWorkflowWorkflow{},
+                shared.CreateWorkflowWorkflow{},
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateWorkflow(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -33,5 +39,6 @@ func main() {
     if res.Response != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

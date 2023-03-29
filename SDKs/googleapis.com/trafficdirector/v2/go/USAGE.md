@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.TrafficdirectorDiscoveryClientStatusRequest{
         Security: operations.TrafficdirectorDiscoveryClientStatusSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,79 +23,114 @@ func main() {
             },
         },
         QueryParams: operations.TrafficdirectorDiscoveryClientStatusQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.ClientStatusRequest{
             NodeMatchers: []shared.NodeMatcher{
                 shared.NodeMatcher{
                     NodeID: &shared.StringMatcher{
-                        Exact: "dicta",
-                        IgnoreCase: true,
-                        Prefix: "voluptatum",
-                        Regex: "et",
+                        Exact: "eum",
+                        IgnoreCase: false,
+                        Prefix: "iusto",
+                        Regex: "ullam",
                         SafeRegex: &shared.RegexMatcher{
                             GoogleRe2: &shared.GoogleRe2{
-                                MaxProgramSize: 7144924247938981575,
+                                MaxProgramSize: 891773,
                             },
-                            Regex: "dolorem",
+                            Regex: "inventore",
                         },
-                        Suffix: "et",
+                        Suffix: "sapiente",
                     },
                     NodeMetadatas: []shared.StructMatcher{
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "vitae",
+                                    Key: "voluptatum",
                                 },
                                 shared.PathSegment{
-                                    Key: "totam",
-                                },
-                                shared.PathSegment{
-                                    Key: "dolores",
+                                    Key: "autem",
                                 },
                             },
                             Value: &shared.ValueMatcher{
                                 BoolMatch: false,
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 86.099998,
+                                    Exact: 8121.69,
                                     Range: &shared.DoubleRange{
-                                        End: 20.200001,
-                                        Start: 12.200000,
+                                        End: 5288.95,
+                                        Start: 4799.77,
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
-                                    OneOf: &shared.ValueMatcher{
-                                    
-                                    },
+                                    OneOf: &shared.ValueMatcher{},
                                 },
                                 NullMatch: map[string]interface{}{
-                                    "totam": "commodi",
-                                    "quis": "est",
-                                    "aut": "odit",
+                                    "reprehenderit": "molestiae",
+                                    "quo": "quasi",
+                                    "laboriosam": "dicta",
                                 },
-                                PresentMatch: true,
+                                PresentMatch: false,
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "voluptas",
-                                    IgnoreCase: true,
-                                    Prefix: "aut",
-                                    Regex: "illo",
+                                    Exact: "est",
+                                    IgnoreCase: false,
+                                    Prefix: "voluptatem",
+                                    Regex: "consequatur",
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 5558237345453186302,
+                                            MaxProgramSize: 832620,
                                         },
-                                        Regex: "officiis",
+                                        Regex: "a",
                                     },
-                                    Suffix: "autem",
+                                    Suffix: "omnis",
+                                },
+                            },
+                        },
+                        shared.StructMatcher{
+                            Path: []shared.PathSegment{
+                                shared.PathSegment{
+                                    Key: "accusamus",
+                                },
+                            },
+                            Value: &shared.ValueMatcher{
+                                BoolMatch: false,
+                                DoubleMatch: &shared.DoubleMatcher{
+                                    Exact: 8700.88,
+                                    Range: &shared.DoubleRange{
+                                        End: 9786.19,
+                                        Start: 4736.08,
+                                    },
+                                },
+                                ListMatch: &shared.ListMatcher{
+                                    OneOf: &shared.ValueMatcher{},
+                                },
+                                NullMatch: map[string]interface{}{
+                                    "et": "praesentium",
+                                    "occaecati": "dolor",
+                                    "soluta": "sed",
+                                    "quisquam": "rerum",
+                                },
+                                PresentMatch: false,
+                                StringMatch: &shared.StringMatcher{
+                                    Exact: "culpa",
+                                    IgnoreCase: false,
+                                    Prefix: "qui",
+                                    Regex: "sed",
+                                    SafeRegex: &shared.RegexMatcher{
+                                        GoogleRe2: &shared.GoogleRe2{
+                                            MaxProgramSize: 944669,
+                                        },
+                                        Regex: "possimus",
+                                    },
+                                    Suffix: "occaecati",
                                 },
                             },
                         },
@@ -101,103 +138,149 @@ func main() {
                 },
                 shared.NodeMatcher{
                     NodeID: &shared.StringMatcher{
-                        Exact: "consectetur",
+                        Exact: "odit",
                         IgnoreCase: false,
-                        Prefix: "odio",
-                        Regex: "qui",
+                        Prefix: "esse",
+                        Regex: "rem",
                         SafeRegex: &shared.RegexMatcher{
                             GoogleRe2: &shared.GoogleRe2{
-                                MaxProgramSize: 388440063886460141,
+                                MaxProgramSize: 264555,
                             },
-                            Regex: "at",
+                            Regex: "amet",
                         },
-                        Suffix: "ipsum",
+                        Suffix: "est",
                     },
                     NodeMetadatas: []shared.StructMatcher{
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "sint",
+                                    Key: "numquam",
+                                },
+                                shared.PathSegment{
+                                    Key: "similique",
+                                },
+                            },
+                            Value: &shared.ValueMatcher{
+                                BoolMatch: false,
+                                DoubleMatch: &shared.DoubleMatcher{
+                                    Exact: 1352.18,
+                                    Range: &shared.DoubleRange{
+                                        End: 187.89,
+                                        Start: 3241.41,
+                                    },
+                                },
+                                ListMatch: &shared.ListMatcher{
+                                    OneOf: &shared.ValueMatcher{},
+                                },
+                                NullMatch: map[string]interface{}{
+                                    "voluptatem": "laborum",
+                                    "modi": "et",
+                                    "iure": "earum",
+                                },
+                                PresentMatch: false,
+                                StringMatch: &shared.StringMatcher{
+                                    Exact: "ut",
+                                    IgnoreCase: false,
+                                    Prefix: "soluta",
+                                    Regex: "qui",
+                                    SafeRegex: &shared.RegexMatcher{
+                                        GoogleRe2: &shared.GoogleRe2{
+                                            MaxProgramSize: 359508,
+                                        },
+                                        Regex: "laborum",
+                                    },
+                                    Suffix: "iusto",
+                                },
+                            },
+                        },
+                        shared.StructMatcher{
+                            Path: []shared.PathSegment{
+                                shared.PathSegment{
+                                    Key: "optio",
+                                },
+                                shared.PathSegment{
+                                    Key: "aspernatur",
                                 },
                                 shared.PathSegment{
                                     Key: "inventore",
                                 },
+                                shared.PathSegment{
+                                    Key: "ut",
+                                },
                             },
                             Value: &shared.ValueMatcher{
-                                BoolMatch: true,
+                                BoolMatch: false,
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 56.099998,
+                                    Exact: 6667.67,
                                     Range: &shared.DoubleRange{
-                                        End: 30.200001,
-                                        Start: 97.099998,
+                                        End: 6531.4,
+                                        Start: 6706.38,
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
-                                    OneOf: &shared.ValueMatcher{
-                                    
-                                    },
+                                    OneOf: &shared.ValueMatcher{},
                                 },
                                 NullMatch: map[string]interface{}{
-                                    "beatae": "veritatis",
-                                    "in": "et",
+                                    "non": "ea",
                                 },
                                 PresentMatch: false,
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "ipsum",
-                                    IgnoreCase: true,
-                                    Prefix: "dolores",
-                                    Regex: "placeat",
+                                    Exact: "magni",
+                                    IgnoreCase: false,
+                                    Prefix: "placeat",
+                                    Regex: "ipsam",
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 2118716725206170867,
+                                            MaxProgramSize: 607831,
                                         },
-                                        Regex: "rerum",
+                                        Regex: "commodi",
                                     },
-                                    Suffix: "mollitia",
+                                    Suffix: "quia",
                                 },
                             },
                         },
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "quam",
+                                    Key: "eaque",
                                 },
                                 shared.PathSegment{
-                                    Key: "reprehenderit",
+                                    Key: "odio",
+                                },
+                                shared.PathSegment{
+                                    Key: "harum",
                                 },
                             },
                             Value: &shared.ValueMatcher{
-                                BoolMatch: true,
+                                BoolMatch: false,
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 78.099998,
+                                    Exact: 9883.74,
                                     Range: &shared.DoubleRange{
-                                        End: 31.100000,
-                                        Start: 13.100000,
+                                        End: 9589.5,
+                                        Start: 1020.44,
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
-                                    OneOf: &shared.ValueMatcher{
-                                    
-                                    },
+                                    OneOf: &shared.ValueMatcher{},
                                 },
                                 NullMatch: map[string]interface{}{
-                                    "ab": "neque",
-                                    "ullam": "et",
-                                    "accusantium": "esse",
+                                    "non": "quidem",
+                                    "neque": "asperiores",
+                                    "et": "culpa",
                                 },
-                                PresentMatch: true,
+                                PresentMatch: false,
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "quam",
+                                    Exact: "aliquam",
                                     IgnoreCase: false,
-                                    Prefix: "cumque",
-                                    Regex: "soluta",
+                                    Prefix: "esse",
+                                    Regex: "totam",
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 759605945513541974,
+                                            MaxProgramSize: 474697,
                                         },
-                                        Regex: "voluptates",
+                                        Regex: "et",
                                     },
-                                    Suffix: "magni",
+                                    Suffix: "fuga",
                                 },
                             },
                         },
@@ -205,142 +288,64 @@ func main() {
                 },
                 shared.NodeMatcher{
                     NodeID: &shared.StringMatcher{
-                        Exact: "et",
-                        IgnoreCase: true,
-                        Prefix: "qui",
-                        Regex: "earum",
+                        Exact: "nesciunt",
+                        IgnoreCase: false,
+                        Prefix: "laboriosam",
+                        Regex: "aut",
                         SafeRegex: &shared.RegexMatcher{
                             GoogleRe2: &shared.GoogleRe2{
-                                MaxProgramSize: 4391202566038595699,
+                                MaxProgramSize: 674752,
                             },
-                            Regex: "omnis",
+                            Regex: "expedita",
                         },
-                        Suffix: "ut",
+                        Suffix: "ipsam",
                     },
                     NodeMetadatas: []shared.StructMatcher{
                         shared.StructMatcher{
                             Path: []shared.PathSegment{
                                 shared.PathSegment{
-                                    Key: "commodi",
+                                    Key: "adipisci",
                                 },
                                 shared.PathSegment{
-                                    Key: "error",
+                                    Key: "hic",
+                                },
+                                shared.PathSegment{
+                                    Key: "consequatur",
+                                },
+                                shared.PathSegment{
+                                    Key: "distinctio",
                                 },
                             },
                             Value: &shared.ValueMatcher{
                                 BoolMatch: false,
                                 DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 3.200000,
+                                    Exact: 8209.94,
                                     Range: &shared.DoubleRange{
-                                        End: 19.100000,
-                                        Start: 80.199997,
+                                        End: 135.71,
+                                        Start: 971.01,
                                     },
                                 },
                                 ListMatch: &shared.ListMatcher{
-                                    OneOf: &shared.ValueMatcher{
-                                    
-                                    },
+                                    OneOf: &shared.ValueMatcher{},
                                 },
                                 NullMatch: map[string]interface{}{
-                                    "aut": "quas",
-                                },
-                                PresentMatch: true,
-                                StringMatch: &shared.StringMatcher{
-                                    Exact: "laudantium",
-                                    IgnoreCase: true,
-                                    Prefix: "ipsa",
-                                    Regex: "expedita",
-                                    SafeRegex: &shared.RegexMatcher{
-                                        GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 8204648627352676445,
-                                        },
-                                        Regex: "perferendis",
-                                    },
-                                    Suffix: "atque",
-                                },
-                            },
-                        },
-                        shared.StructMatcher{
-                            Path: []shared.PathSegment{
-                                shared.PathSegment{
-                                    Key: "quisquam",
-                                },
-                            },
-                            Value: &shared.ValueMatcher{
-                                BoolMatch: false,
-                                DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 42.099998,
-                                    Range: &shared.DoubleRange{
-                                        End: 15.200000,
-                                        Start: 66.099998,
-                                    },
-                                },
-                                ListMatch: &shared.ListMatcher{
-                                    OneOf: &shared.ValueMatcher{
-                                    
-                                    },
-                                },
-                                NullMatch: map[string]interface{}{
-                                    "quis": "cumque",
-                                    "minima": "necessitatibus",
-                                    "est": "quis",
-                                },
-                                PresentMatch: true,
-                                StringMatch: &shared.StringMatcher{
-                                    Exact: "labore",
-                                    IgnoreCase: false,
-                                    Prefix: "impedit",
-                                    Regex: "ad",
-                                    SafeRegex: &shared.RegexMatcher{
-                                        GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 8953538234431013647,
-                                        },
-                                        Regex: "vel",
-                                    },
-                                    Suffix: "qui",
-                                },
-                            },
-                        },
-                        shared.StructMatcher{
-                            Path: []shared.PathSegment{
-                                shared.PathSegment{
-                                    Key: "nihil",
-                                },
-                                shared.PathSegment{
-                                    Key: "tempora",
-                                },
-                            },
-                            Value: &shared.ValueMatcher{
-                                BoolMatch: true,
-                                DoubleMatch: &shared.DoubleMatcher{
-                                    Exact: 59.099998,
-                                    Range: &shared.DoubleRange{
-                                        End: 68.099998,
-                                        Start: 66.099998,
-                                    },
-                                },
-                                ListMatch: &shared.ListMatcher{
-                                    OneOf: &shared.ValueMatcher{
-                                    
-                                    },
-                                },
-                                NullMatch: map[string]interface{}{
-                                    "placeat": "qui",
-                                    "nisi": "quis",
+                                    "quo": "tempore",
+                                    "explicabo": "aut",
+                                    "reiciendis": "debitis",
                                 },
                                 PresentMatch: false,
                                 StringMatch: &shared.StringMatcher{
-                                    Exact: "porro",
-                                    IgnoreCase: true,
-                                    Prefix: "et",
-                                    Regex: "accusamus",
+                                    Exact: "totam",
+                                    IgnoreCase: false,
+                                    Prefix: "molestias",
+                                    Regex: "reiciendis",
                                     SafeRegex: &shared.RegexMatcher{
                                         GoogleRe2: &shared.GoogleRe2{
-                                            MaxProgramSize: 7953274849279451463,
+                                            MaxProgramSize: 55714,
                                         },
-                                        Regex: "laborum",
+                                        Regex: "id",
                                     },
-                                    Suffix: "rerum",
+                                    Suffix: "qui",
                                 },
                             },
                         },
@@ -349,7 +354,8 @@ func main() {
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Discovery.TrafficdirectorDiscoveryClientStatus(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -358,5 +364,6 @@ func main() {
     if res.ClientStatusResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

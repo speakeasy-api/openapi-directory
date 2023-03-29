@@ -3,45 +3,45 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                ClientID: shared.SchemeClientID{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                PlaidVersion: shared.SchemePlaidVersion{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                Secret: shared.SchemeSecret{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            ClientID: shared.SchemeClientID{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+            PlaidVersion: shared.SchemePlaidVersion{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+            Secret: shared.SchemeSecret{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AccountsBalanceGetRequest{
         Request: shared.AccountsBalanceGetRequest{
-            AccessToken: "sit",
-            ClientID: "voluptas",
+            AccessToken: "unde",
+            ClientID: "deserunt",
             Options: &shared.AccountsBalanceGetRequestOptions{
                 AccountIds: []string{
-                    "expedita",
-                    "consequuntur",
+                    "nulla",
+                    "id",
+                    "vero",
                 },
-                MinLastUpdatedDatetime: "2003-04-20T23:11:44Z",
+                MinLastUpdatedDatetime: "2022-09-11T15:35:07.852Z",
             },
-            Secret: "expedita",
+            Secret: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Plaid.AccountsBalanceGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +50,6 @@ func main() {
     if res.AccountsGetResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

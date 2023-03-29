@@ -3,44 +3,47 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                ApimKey: shared.SchemeApimKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            ApimKey: shared.SchemeApimKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AnalyzeImageRequest{
         QueryParams: operations.AnalyzeImageQueryParams{
             DescriptionExclude: []shared.DescriptionExcludeEnum{
-                "Celebrities",
-            },
-            Details: []shared.VisualFeaturesEnum1{
-                "Celebrities",
+                "Landmarks",
+                "Landmarks",
                 "Landmarks",
             },
-            Language: "es",
+            Details: []AnalyzeImageDetailsEnum{
+                "Landmarks",
+                "Landmarks",
+                "Landmarks",
+            },
+            Language: "ja",
             VisualFeatures: []shared.VisualFeaturesEnum{
-                "Brands",
-                "ImageType",
+                "Tags",
+                "Categories",
+                "Categories",
             },
         },
         Request: shared.ImageURL{
-            URL: "et",
+            URL: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AnalyzeImage(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +52,6 @@ func main() {
     if res.ImageAnalysis != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.VideointelligenceVideosAnnotateRequest{
         Security: operations.VideointelligenceVideosAnnotateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,106 +23,123 @@ func main() {
             },
         },
         QueryParams: operations.VideointelligenceVideosAnnotateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.GoogleCloudVideointelligenceV1beta2AnnotateVideoRequest{
             Features: []shared.GoogleCloudVideointelligenceV1beta2AnnotateVideoRequestFeaturesEnum{
-                "PERSON_DETECTION",
-                "LOGO_RECOGNITION",
+                "EXPLICIT_CONTENT_DETECTION",
+                "FACE_DETECTION",
                 "SHOT_CHANGE_DETECTION",
             },
-            InputContent: "et",
-            InputURI: "ut",
-            LocationID: "dolorem",
-            OutputURI: "et",
+            InputContent: "saepe",
+            InputURI: "inventore",
+            LocationID: "sapiente",
+            OutputURI: "enim",
             VideoContext: &shared.GoogleCloudVideointelligenceV1beta2VideoContext{
                 ExplicitContentDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2ExplicitContentDetectionConfig{
-                    Model: "voluptate",
+                    Model: "eum",
                 },
                 FaceDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2FaceDetectionConfig{
-                    IncludeAttributes: true,
-                    IncludeBoundingBoxes: true,
-                    Model: "totam",
+                    IncludeAttributes: false,
+                    IncludeBoundingBoxes: false,
+                    Model: "voluptatum",
                 },
                 LabelDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2LabelDetectionConfig{
-                    FrameConfidenceThreshold: 80.199997,
-                    LabelDetectionMode: "FRAME_MODE",
-                    Model: "vel",
+                    FrameConfidenceThreshold: 7917.25,
+                    LabelDetectionMode: "SHOT_AND_FRAME_MODE",
+                    Model: "non",
                     StationaryCamera: false,
-                    VideoConfidenceThreshold: 91.099998,
+                    VideoConfidenceThreshold: 4799.77,
                 },
                 ObjectTrackingConfig: &shared.GoogleCloudVideointelligenceV1beta2ObjectTrackingConfig{
-                    Model: "aspernatur",
+                    Model: "similique",
                 },
                 PersonDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2PersonDetectionConfig{
-                    IncludeAttributes: true,
+                    IncludeAttributes: false,
                     IncludeBoundingBoxes: false,
                     IncludePoseLandmarks: false,
                 },
                 Segments: []shared.GoogleCloudVideointelligenceV1beta2VideoSegment{
                     shared.GoogleCloudVideointelligenceV1beta2VideoSegment{
-                        EndTimeOffset: "est",
-                        StartTimeOffset: "aut",
+                        EndTimeOffset: "molestiae",
+                        StartTimeOffset: "quo",
                     },
                     shared.GoogleCloudVideointelligenceV1beta2VideoSegment{
-                        EndTimeOffset: "odit",
-                        StartTimeOffset: "non",
-                    },
-                    shared.GoogleCloudVideointelligenceV1beta2VideoSegment{
-                        EndTimeOffset: "voluptas",
-                        StartTimeOffset: "omnis",
+                        EndTimeOffset: "quasi",
+                        StartTimeOffset: "laboriosam",
                     },
                 },
                 ShotChangeDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig{
-                    Model: "aut",
+                    Model: "dicta",
                 },
                 SpeechTranscriptionConfig: &shared.GoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig{
-                    AudioTracks: []int32{
-                        5558237345453186302,
+                    AudioTracks: []int{
+                        20218,
+                        368241,
+                        832620,
                     },
-                    DiarizationSpeakerCount: 7845762441295307478,
-                    EnableAutomaticPunctuation: true,
-                    EnableSpeakerDiarization: true,
+                    DiarizationSpeakerCount: 957156,
+                    EnableAutomaticPunctuation: false,
+                    EnableSpeakerDiarization: false,
                     EnableWordConfidence: false,
                     FilterProfanity: false,
-                    LanguageCode: "qui",
-                    MaxAlternatives: 388440063886460141,
+                    LanguageCode: "omnis",
+                    MaxAlternatives: 140350,
                     SpeechContexts: []shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
                         shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
                             Phrases: []string{
-                                "eveniet",
+                                "reiciendis",
+                                "rem",
+                                "quibusdam",
+                                "et",
                             },
                         },
                         shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
                             Phrases: []string{
-                                "sint",
-                                "inventore",
+                                "occaecati",
+                                "dolor",
+                            },
+                        },
+                        shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
+                            Phrases: []string{
+                                "sed",
+                                "quisquam",
+                                "rerum",
+                            },
+                        },
+                        shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
+                            Phrases: []string{
+                                "qui",
+                                "sed",
+                                "rerum",
                             },
                         },
                     },
                 },
                 TextDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2TextDetectionConfig{
                     LanguageHints: []string{
-                        "exercitationem",
-                        "aut",
-                        "reprehenderit",
+                        "occaecati",
+                        "odit",
+                        "esse",
+                        "rem",
                     },
-                    Model: "tempore",
+                    Model: "voluptatem",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Videos.VideointelligenceVideosAnnotate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -129,5 +148,6 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,22 +12,24 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetUsersRequest{
         QueryParams: operations.GetUsersQueryParams{
-            Cursor: "sit",
-            Order: "asc",
-            PageSize: 6050128673802995827,
+            Cursor: "unde",
+            Order: "desc",
+            PageSize: 715190,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetUsers(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.GetUsers200ApplicationJSONAny != nil {
+    if res.GetUsers200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

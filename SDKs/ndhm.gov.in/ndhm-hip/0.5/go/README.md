@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/ndhm.gov.in/ndhm-hip/0.5/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,8 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
+    ctx := context.Background()
     res, err := s.Gateway.GetV05WellKnownOpenidConfiguration(ctx)
     if err != nil {
         log.Fatal(err)
@@ -30,72 +33,100 @@ func main() {
     if res.OpenIDConfiguration != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### Gateway
 
 * `GetV05WellKnownOpenidConfiguration` - Get openid configuration
 * `GetV05Certs` - Get certs for JWT verification
-* `PostV05CareContextsOnDiscover` - Response to patient's account discovery request
-* `PostV05ConsentsHipOnNotify` - Consent notification
-* `PostV05HealthInformationHipOnRequest` - Health information data request
-* `PostV05HealthInformationNotify` - Notifications corresponding to events during data flow
-* `PostV05LinksLinkAddContexts` - API for HIP initiated care-context linking for patient
-* `PostV05LinksLinkOnConfirm` - Token authenticated by HIP, indicating completion of linkage of care-contexts
-* `PostV05LinksLinkOnInit` - Response to patient's care context link request
-* `PostV05PatientsProfileOnShare` - Response to patient's share profile request
-* `PostV05PatientsSmsNotify` - API for HIP to send SMS notifications to patients
-* `PostV05Sessions` - Get access token
-* `PostV05UsersAuthConfirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-* `PostV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
-* `PostV05UsersAuthInit` - Initialize authentication from HIP
-* `PostV05UsersAuthOnNotify` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `PostV05CareContextsOnDiscoverJSON` - Response to patient's account discovery request
+* `PostV05CareContextsOnDiscoverRaw` - Response to patient's account discovery request
+* `PostV05ConsentsHipOnNotifyJSON` - Consent notification
+* `PostV05ConsentsHipOnNotifyRaw` - Consent notification
+* `PostV05HealthInformationHipOnRequestJSON` - Health information data request
+* `PostV05HealthInformationHipOnRequestRaw` - Health information data request
+* `PostV05HealthInformationNotifyJSON` - Notifications corresponding to events during data flow
+* `PostV05HealthInformationNotifyRaw` - Notifications corresponding to events during data flow
+* `PostV05LinksLinkAddContextsJSON` - API for HIP initiated care-context linking for patient
+* `PostV05LinksLinkAddContextsRaw` - API for HIP initiated care-context linking for patient
+* `PostV05LinksLinkOnConfirmJSON` - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* `PostV05LinksLinkOnConfirmRaw` - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* `PostV05LinksLinkOnInitJSON` - Response to patient's care context link request
+* `PostV05LinksLinkOnInitRaw` - Response to patient's care context link request
+* `PostV05PatientsProfileOnShareJSON` - Response to patient's share profile request
+* `PostV05PatientsProfileOnShareRaw` - Response to patient's share profile request
+* `PostV05PatientsSmsNotifyJSON` - API for HIP to send SMS notifications to patients
+* `PostV05PatientsSmsNotifyRaw` - API for HIP to send SMS notifications to patients
+* `PostV05SessionsJSON` - Get access token
+* `PostV05SessionsRaw` - Get access token
+* `PostV05UsersAuthConfirmJSON` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `PostV05UsersAuthConfirmRaw` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `PostV05UsersAuthFetchModesJSON` - Get a patient's authentication modes relevant to specified purpose
+* `PostV05UsersAuthFetchModesRaw` - Get a patient's authentication modes relevant to specified purpose
+* `PostV05UsersAuthInitJSON` - Initialize authentication from HIP
+* `PostV05UsersAuthInitRaw` - Initialize authentication from HIP
+* `PostV05UsersAuthOnNotifyJSON` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `PostV05UsersAuthOnNotifyRaw` - callback API by HIU/HIPs as acknowledgement of auth notification
 
-### consent flow
+### ConsentFlow
 
-* `PostV05ConsentsHipNotify` - Consent notification
+* `PostV05ConsentsHipNotifyJSON` - Consent notification
+* `PostV05ConsentsHipNotifyRaw` - Consent notification
 
-### data flow
+### DataFlow
 
-* `PostV05HealthInformationHipRequest` - Health information data request
+* `PostV05HealthInformationHipRequestJSON` - Health information data request
+* `PostV05HealthInformationHipRequestRaw` - Health information data request
 
-### data transfer
+### DataTransfer
 
-* `PostV05HealthInformationTransfer` - health information transfer API
+* `PostV05HealthInformationTransferJSON` - health information transfer API
+* `PostV05HealthInformationTransferRaw` - health information transfer API
 
-### discovery
+### Discovery
 
-* `PostV05CareContextsDiscover` - Discover patient's accounts
+* `PostV05CareContextsDiscoverJSON` - Discover patient's accounts
+* `PostV05CareContextsDiscoverRaw` - Discover patient's accounts
 
-### link
+### Link
 
-* `PostV05LinksLinkConfirm` - Token submission by Consent Manager for link confirmation
-* `PostV05LinksLinkInit` - Link patient's care contexts
-* `PostV05LinksLinkOnAddContexts` - callback API for HIP initiated patient linking /link/add-context
+* `PostV05LinksLinkConfirmJSON` - Token submission by Consent Manager for link confirmation
+* `PostV05LinksLinkConfirmRaw` - Token submission by Consent Manager for link confirmation
+* `PostV05LinksLinkInitJSON` - Link patient's care contexts
+* `PostV05LinksLinkInitRaw` - Link patient's care contexts
+* `PostV05LinksLinkOnAddContextsJSON` - callback API for HIP initiated patient linking /link/add-context
+* `PostV05LinksLinkOnAddContextsRaw` - callback API for HIP initiated patient linking /link/add-context
 
-### monitoring
+### Monitoring
 
 * `GetV05Heartbeat` - Get consent request status
 
-### patient notification
+### PatientNotification
 
-* `PostV05PatientsSmsOnNotify` - Acknowledgment response for SMS notification sent to patient by HIP
+* `PostV05PatientsSmsOnNotifyJSON` - Acknowledgment response for SMS notification sent to patient by HIP
+* `PostV05PatientsSmsOnNotifyRaw` - Acknowledgment response for SMS notification sent to patient by HIP
 
-### profile
+### Profile
 
-* `PostV05PatientsProfileShare` - Share patient profile details
+* `PostV05PatientsProfileShareJSON` - Share patient profile details
+* `PostV05PatientsProfileShareRaw` - Share patient profile details
 
-### user auth
+### UserAuth
 
-* `PostV05UsersAuthNotify` - notification API in case of DIRECT mode of authentication by the CM
-* `PostV05UsersAuthOnConfirm` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
-* `PostV05UsersAuthOnFetchModes` - Identification result for a consent-manager user-id
-* `PostV05UsersAuthOnInit` - Response to user authentication initialization from HIP
-
+* `PostV05UsersAuthNotifyJSON` - notification API in case of DIRECT mode of authentication by the CM
+* `PostV05UsersAuthNotifyRaw` - notification API in case of DIRECT mode of authentication by the CM
+* `PostV05UsersAuthOnConfirmJSON` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `PostV05UsersAuthOnConfirmRaw` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `PostV05UsersAuthOnFetchModesJSON` - Identification result for a consent-manager user-id
+* `PostV05UsersAuthOnFetchModesRaw` - Identification result for a consent-manager user-id
+* `PostV05UsersAuthOnInitJSON` - Response to user authentication initialization from HIP
+* `PostV05UsersAuthOnInitRaw` - Response to user authentication initialization from HIP
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

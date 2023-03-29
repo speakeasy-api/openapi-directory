@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/dracoon.team/4.29.1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,32 +14,31 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Oauth2: shared.SchemeOauth2{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Oauth2: shared.SchemeOauth2{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CompleteOpenIDLoginRequest{
         QueryParams: operations.CompleteOpenIDLoginQueryParams{
-            Code: "sit",
-            IDToken: "voluptas",
-            State: "culpa",
+            Code: "unde",
+            IDToken: "deserunt",
+            State: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Auth.CompleteOpenIDLogin(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,13 +47,15 @@ func main() {
     if res.LoginResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### auth
+
+### Auth
 
 * `CompleteOpenIDLogin` - Complete OpenID Connect authentication
 * `InitiateOpenIDLogin` - Initiate OpenID Connect authentication
@@ -66,7 +67,7 @@ func main() {
 * `ResetPassword` - Reset password
 * `ValidateResetPasswordToken` - Validate information for password reset
 
-### config
+### Config
 
 * `RequestAlgorithms` - Request algorithms
 * `RequestGeneralSettingsInfo` - Request general settings
@@ -78,20 +79,20 @@ func main() {
 * `RequestSystemSettings` - Request system settings
 * `UpdateSystemSettings` - Update system settings
 
-### downloads
+### Downloads
 
 * `DownloadAvatar` - Download avatar
 * `DownloadFileViaToken` - Download file
 * `DownloadFileViaToken1` - Download file
 * `DownloadZipArchiveViaToken` - Download ZIP archive
 
-### eventlog
+### Eventlog
 
 * `RequestAuditNodeUserData` - Request node assigned users with permissions
 * `RequestLogEventsAsJSON` - Request system events
 * `RequestLogOperations` - Request allowed Log Operations
 
-### groups
+### Groups
 
 * `AddGroupMembers` - Add group members
 * `CreateGroup` - Create new user group
@@ -105,7 +106,7 @@ func main() {
 * `RequestLastAdminRoomsGroups` - Request rooms where the group is defined as last admin group
 * `UpdateGroup` - Update user group's metadata
 
-### nodes
+### Nodes
 
 * `AddFavorite` - Mark a node (room, folder or file) as favorite
 * `CancelFileUpload` - Cancel file upload
@@ -173,7 +174,7 @@ func main() {
 * `UpdateRoomUsers` - Add or change room granted user(s)
 * `UploadFileAsMultipart` - Upload file
 
-### provisioning
+### Provisioning
 
 * `CreateCustomer` - Create customer
 * `CreateTenantWebhook` - Create tenant webhook
@@ -193,7 +194,7 @@ func main() {
 * `UpdateCustomerAttributes` - Add or edit customer attributes
 * `UpdateTenantWebhook` - Update tenant webhook
 
-### public
+### Public
 
 * `CancelFileUploadViaShare` - Cancel file upload
 * `CompleteFileUploadViaShare` - Complete file upload
@@ -214,12 +215,12 @@ func main() {
 * `RequestUploadStatusPublic` - Request status of S3 file upload
 * `UploadFileAsMultipartPublic1` - Upload file
 
-### resources
+### Resources
 
 * `RequestSubscriptionScopes` - Request list of subscription scopes
 * `RequestUserAvatar` - Request user avatar
 
-### roles
+### Roles
 
 * `AddRoleGroups` - Assign group(s) to the role
 * `AddRoleUsers` - Assign user(s) to the role
@@ -229,7 +230,7 @@ func main() {
 * `RevokeRoleGroups` - Revoke granted role from group(s)
 * `RevokeRoleUsers` - Revoke granted role from user(s)
 
-### settings
+### Settings
 
 * `CreateAndPreserveKeyPair` - Create system rescue key pair and preserve copy of old private key
 * `CreateWebhook` - Create webhook
@@ -248,7 +249,7 @@ func main() {
 * `ToggleNotificationChannels` - Toggle notification channels
 * `UpdateWebhook` - Update webhook
 
-### shares
+### Shares
 
 * `CreateDownloadShare` - Create new Download Share
 * `CreateUploadShare` - Create new Upload Share
@@ -269,13 +270,13 @@ func main() {
 * `UpdateUploadShare` - Update Upload Share
 * `UpdateUploadShares` - Update List of Upload Shares
 
-### syslog
+### Syslog
 
 * `RequestAuditNodeUserDataSyslog` - Request nodes assigned users with permissions
 * `RequestLogOperationsSyslog` - Request allowed log operations
 * `RequestSyslogEvents` - Request system events
 
-### system-auth-config
+### SystemAuthConfig
 
 * `CreateAdConfig` - Create Active Directory configuration
 * `CreateOAuthClient` - Create OAuth client
@@ -299,14 +300,14 @@ func main() {
 * `UpdateOpenIDIdpConfig` - Update OpenID Connect IDP configuration
 * `UpdateRadiusConfig` - Update RADIUS configuration
 
-### system-policies-config
+### SystemPoliciesConfig
 
 * `ChangePasswordPoliciesConfig` - Change password policies
 * `EnforceLoginPasswordChange` - Enforce login password change for all users
 * `RequestPasswordPoliciesConfig` - Request password policies
 * `RequestPasswordPoliciesForPasswordType` - Request password policies for a certain password type
 
-### system-settings-config
+### SystemSettingsConfig
 
 * `RequestAuthConfig` - Request authentication settings
 * `RequestEventlogConfig` - Request eventlog settings
@@ -320,7 +321,7 @@ func main() {
 * `UpdateSyslogConfig` - Update syslog settings
 * `UpdateSystemDefaults` - Update system defaults
 
-### system-storage-config
+### SystemStorageConfig
 
 * `CreateS3Config` - Create S3 storage configuration
 * `CreateS3Tag` - Create S3 tag
@@ -330,13 +331,13 @@ func main() {
 * `RequestS3TagList` - Request list of configured S3 tags
 * `UpdateS3Config` - Update S3 storage configuration
 
-### uploads
+### Uploads
 
 * `CancelFileUploadByToken` - Cancel file upload
 * `CompleteFileUploadByToken` - Complete file upload
 * `UploadFileByTokenAsBinary1` - Upload file
 
-### user
+### User
 
 * `ChangeUserPassword` - Change user's password
 * `CreateAndPreserveUserKeyPair` - Create key pair and preserve copy of old private key
@@ -378,7 +379,7 @@ func main() {
 * `UpdateUserAccount` - Update user account
 * `UploadAvatarAsMultipart` - Change avatar
 
-### users
+### Users
 
 * `CreateUser` - Create new user
 * `RemoveUser` - Remove user
@@ -393,7 +394,6 @@ func main() {
 * `SetUserAttributes` - Set custom user attributes
 * `UpdateUser` - Update user's metadata
 * `UpdateUserAttributes` - Add or edit custom user attributes
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

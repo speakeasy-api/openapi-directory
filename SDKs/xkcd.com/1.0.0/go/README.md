@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/xkcd.com/1.0.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,8 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
+    ctx := context.Background()
     res, err := s.GetInfo0JSON(ctx)
     if err != nil {
         log.Fatal(err)
@@ -30,6 +33,7 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -41,7 +45,6 @@ func main() {
 * `GetInfo0JSON` - Fetch current comic and metadata.
 
 * `GetComicIDInfo0JSON` - Fetch comics and metadata  by comic id.
-
 
 <!-- End SDK Available Operations -->
 

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/groundstation/2019-05-23/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,39 +14,38 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CancelContactRequest{
         PathParams: operations.CancelContactPathParams{
-            ContactID: "sit",
+            ContactID: "unde",
         },
         Headers: operations.CancelContactHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "expedita",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "nulla",
+            XAmzDate: "id",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "perspiciatis",
+            XAmzSignedHeaders: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CancelContact(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -55,6 +54,7 @@ func main() {
     if res.ContactIDResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -66,11 +66,15 @@ func main() {
 * `CancelContact` - Cancels a contact with a specified contact ID.
 * `CreateConfig` - <p>Creates a <code>Config</code> with the specified <code>configData</code> parameters.</p> <p>Only one type of <code>configData</code> can be specified.</p>
 * `CreateDataflowEndpointGroup` - <p>Creates a <code>DataflowEndpoint</code> group containing the specified list of <code>DataflowEndpoint</code> objects.</p> <p>The <code>name</code> field in each endpoint is used in your mission profile <code>DataflowEndpointConfig</code> to specify which endpoints to use during a contact.</p> <p>When a contact uses multiple <code>DataflowEndpointConfig</code> objects, each <code>Config</code> must match a <code>DataflowEndpoint</code> in the same group.</p>
+* `CreateEphemeris` - Creates an Ephemeris with the specified <code>EphemerisData</code>.
 * `CreateMissionProfile` - <p>Creates a mission profile.</p> <p> <code>dataflowEdges</code> is a list of lists of strings. Each lower level list of strings has two elements: a <i>from</i> ARN and a <i>to</i> ARN.</p>
 * `DeleteConfig` - Deletes a <code>Config</code>.
 * `DeleteDataflowEndpointGroup` - Deletes a dataflow endpoint group.
+* `DeleteEphemeris` - Deletes an ephemeris
 * `DeleteMissionProfile` - Deletes a mission profile.
 * `DescribeContact` - Describes an existing contact.
+* `DescribeEphemeris` - Describes an existing ephemeris.
+* `GetAgentConfiguration` - Gets the latest configuration information for a registered agent.
 * `GetConfig` - <p>Returns <code>Config</code> information.</p> <p>Only one <code>Config</code> response can be returned.</p>
 * `GetDataflowEndpointGroup` - Returns the dataflow endpoint group.
 * `GetMinuteUsage` - Returns the number of minutes used by account.
@@ -79,16 +83,19 @@ func main() {
 * `ListConfigs` - Returns a list of <code>Config</code> objects.
 * `ListContacts` - <p>Returns a list of contacts.</p> <p>If <code>statusList</code> contains AVAILABLE, the request must include <code>groundStation</code>, <code>missionprofileArn</code>, and <code>satelliteArn</code>. </p>
 * `ListDataflowEndpointGroups` - Returns a list of <code>DataflowEndpoint</code> groups.
+* `ListEphemerides` - List existing ephemerides.
 * `ListGroundStations` - Returns a list of ground stations. 
 * `ListMissionProfiles` - Returns a list of mission profiles.
 * `ListSatellites` - Returns a list of satellites.
 * `ListTagsForResource` - Returns a list of tags for a specified resource.
+* `RegisterAgent` - Registers a new agent with AWS Groundstation.
 * `ReserveContact` - Reserves a contact using specified parameters.
 * `TagResource` - Assigns a tag to a resource.
 * `UntagResource` - Deassigns a resource tag.
+* `UpdateAgentStatus` - Update the status of the agent.
 * `UpdateConfig` - <p>Updates the <code>Config</code> used when scheduling contacts.</p> <p>Updating a <code>Config</code> will not update the execution parameters for existing future contacts scheduled with this <code>Config</code>.</p>
+* `UpdateEphemeris` - Updates an existing ephemeris
 * `UpdateMissionProfile` - <p>Updates a mission profile.</p> <p>Updating a mission profile will not update the execution parameters for existing future contacts.</p>
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

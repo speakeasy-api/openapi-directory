@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DevicesRequest{
         Security: operations.DevicesSecurity{
             BasicAuth: shared.SchemeBasicAuth{
@@ -19,10 +21,11 @@ func main() {
             },
         },
         QueryParams: operations.DevicesQueryParams{
-            Os: "sit",
+            Os: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetDevices.Devices(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.OsDevices != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

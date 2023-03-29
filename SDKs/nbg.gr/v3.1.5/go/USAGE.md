@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeleteAccountAccessConsentsConsentIDRequest{
         Security: operations.DeleteAccountAccessConsentsConsentIDSecurity{
             ClientCredentialsToken: shared.SchemeClientCredentialsToken{
@@ -21,17 +23,18 @@ func main() {
             },
         },
         PathParams: operations.DeleteAccountAccessConsentsConsentIDPathParams{
-            ConsentID: "sit",
+            ConsentID: "unde",
         },
         Headers: operations.DeleteAccountAccessConsentsConsentIDHeaders{
-            SandboxID: "voluptas",
-            XCustomerUserAgent: "culpa",
-            XFapiAuthDate: "expedita",
-            XFapiCustomerIPAddress: "consequuntur",
-            XFapiInteractionID: "dolor",
+            SandboxID: "deserunt",
+            XCustomerUserAgent: "porro",
+            XFapiAuthDate: "nulla",
+            XFapiCustomerIPAddress: "id",
+            XFapiInteractionID: "vero",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AccountAccess.DeleteAccountAccessConsentsConsentID(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -40,5 +43,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

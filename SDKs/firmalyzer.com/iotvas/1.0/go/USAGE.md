@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DetectDeviceDetectPostRequest{
         Security: operations.DetectDeviceDetectPostSecurity{
             APIKeyHeader: shared.SchemeAPIKeyHeader{
@@ -18,18 +20,19 @@ func main() {
             },
         },
         Request: shared.DeviceFeatures{
-            FtpBanner: "sit",
-            Hostname: "voluptas",
-            HTTPResponse: "culpa",
-            HTTPSResponse: "expedita",
-            NicMac: "consequuntur",
-            SnmpSysdescr: "dolor",
-            SnmpSysoid: "expedita",
-            TelnetBanner: "voluptas",
-            UpnpResponse: "fugit",
+            FtpBanner: "unde",
+            Hostname: "larry.net",
+            HTTPResponse: "nulla",
+            HTTPSResponse: "id",
+            NicMac: "vero",
+            SnmpSysdescr: "perspiciatis",
+            SnmpSysoid: "nulla",
+            TelnetBanner: "nihil",
+            UpnpResponse: "fuga",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Device.DetectDeviceDetectPost(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -38,5 +41,6 @@ func main() {
     if res.DeviceInfo != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

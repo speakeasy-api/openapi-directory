@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,19 +12,20 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateAMapRequest{
         QueryParams: operations.CreateAMapQueryParams{
-            AppToken: "sit",
-            Constraint: "voluptas",
-            EntityID: "culpa",
-            Variable: "expedita",
+            AppToken: "unde",
+            Constraint: "deserunt",
+            EntityID: "porro",
+            Variable: "nulla",
         },
         Headers: operations.CreateAMapHeaders{
-            XAppToken: "consequuntur",
+            XAppToken: "id",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateAMap(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

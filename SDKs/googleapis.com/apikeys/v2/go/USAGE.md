@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ApikeysKeysLookupKeyRequest{
         Security: operations.ApikeysKeysLookupKeySecurity{
             Option1: &operations.ApikeysKeysLookupKeySecurityOption1{
@@ -23,21 +25,22 @@ func main() {
             },
         },
         QueryParams: operations.ApikeysKeysLookupKeyQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            KeyString: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            KeyString: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Keys.ApikeysKeysLookupKey(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,5 +49,6 @@ func main() {
     if res.V2LookupKeyResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

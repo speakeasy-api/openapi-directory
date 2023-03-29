@@ -3,54 +3,58 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.AssociateEntitiesToExperienceRequest{
+        Headers: operations.AssociateEntitiesToExperienceHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+            XAmzTarget: "AWSKendraFrontendService.AssociateEntitiesToExperience",
+        },
+        Request: shared.AssociateEntitiesToExperienceRequest{
+            EntityList: []shared.EntityConfiguration{
+                shared.EntityConfiguration{
+                    EntityID: "fuga",
+                    EntityType: "GROUP",
                 },
-            }
-        ),
+                shared.EntityConfiguration{
+                    EntityID: "eum",
+                    EntityType: "USER",
+                },
+            },
+            ID: "ullam",
+            IndexID: "saepe",
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.BatchDeleteDocumentRequest{
-        Headers: operations.BatchDeleteDocumentHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-            XAmzTarget: "AWSKendraFrontendService.BatchDeleteDocument",
-        },
-        Request: shared.BatchDeleteDocumentRequest{
-            DataSourceSyncJobMetricTarget: &shared.DataSourceSyncJobMetricTarget{
-                DataSourceID: "fugit",
-                DataSourceSyncJobID: "et",
-            },
-            DocumentIDList: []string{
-                "rerum",
-            },
-            IndexID: "dicta",
-        },
-    }
-    
-    res, err := s.BatchDeleteDocument(ctx, req)
+    ctx := context.Background()
+    res, err := s.AssociateEntitiesToExperience(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.BatchDeleteDocumentResponse != nil {
+    if res.AssociateEntitiesToExperienceResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

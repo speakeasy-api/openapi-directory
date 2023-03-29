@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetfullnameparsedmatchRequest{
         QueryParams: operations.GetfullnameparsedmatchQueryParams{
-            Firstname: "sit",
-            Lastname: "voluptas",
-            License: "culpa",
+            Firstname: "Katelynn",
+            Lastname: "Medhurst",
+            License: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.FullNameParsedSimilarityKey.Getfullnameparsedmatch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.Getfullnameparsedmatch200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

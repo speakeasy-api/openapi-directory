@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,20 +12,21 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateAPIRequest{
         QueryParams: operations.CreateAPIQueryParams{
-            Workspace: "sit",
+            Workspace: "{{workspaceId}}",
         },
         Request: &operations.CreateAPIRequestBody{
             API: &operations.CreateAPIRequestBodyAPI{
-                Description: "voluptas",
-                Name: "culpa",
-                Summary: "expedita",
+                Description: "This is description.",
+                Name: "Sync Service API",
+                Summary: "This is supposed to be a short summary.",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.API.CreateAPI(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -32,5 +35,6 @@ func main() {
     if res.CreateAPI200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

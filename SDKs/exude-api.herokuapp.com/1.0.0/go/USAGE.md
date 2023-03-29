@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,19 +12,20 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FilterFileDataStoppingsRequest{
         PathParams: operations.FilterFileDataStoppingsPathParams{
-            Type: "sit",
+            Type: "unde",
         },
         Request: operations.FilterFileDataStoppingsRequestBody{
             File: &operations.FilterFileDataStoppingsRequestBodyFile{
-                Content: []byte("voluptas"),
-                File: "culpa",
+                Content: []byte("deserunt"),
+                File: "porro",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Exude.FilterFileDataStoppings(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.ExudeResponseBean != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

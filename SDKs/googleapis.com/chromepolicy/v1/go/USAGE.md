@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest{
         Security: operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,56 +23,50 @@ func main() {
             },
         },
         PathParams: operations.ChromepolicyCustomersPoliciesGroupsBatchDeletePathParams{
-            Customer: "sit",
+            Customer: "unde",
         },
         QueryParams: operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest{
             Requests: []shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
                 shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "debitis",
+                    PolicySchema: "iusto",
                     PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
                         AdditionalTargetKeys: map[string]string{
-                            "et": "ut",
+                            "saepe": "inventore",
+                            "sapiente": "enim",
                         },
-                        TargetResource: "dolorem",
+                        TargetResource: "eum",
                     },
                 },
                 shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "et",
+                    PolicySchema: "voluptatum",
                     PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
                         AdditionalTargetKeys: map[string]string{
-                            "iste": "vitae",
+                            "vel": "non",
+                            "deleniti": "similique",
+                            "reprehenderit": "molestiae",
+                            "quo": "quasi",
                         },
-                        TargetResource: "totam",
-                    },
-                },
-                shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "dolores",
-                    PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
-                        AdditionalTargetKeys: map[string]string{
-                            "debitis": "vel",
-                            "odio": "dolore",
-                            "id": "aspernatur",
-                        },
-                        TargetResource: "accusantium",
+                        TargetResource: "laboriosam",
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Customers.ChromepolicyCustomersPoliciesGroupsBatchDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -79,5 +75,6 @@ func main() {
     if res.GoogleProtobufEmpty != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

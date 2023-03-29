@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/chromepolicy/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest{
         Security: operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,56 +34,50 @@ func main() {
             },
         },
         PathParams: operations.ChromepolicyCustomersPoliciesGroupsBatchDeletePathParams{
-            Customer: "sit",
+            Customer: "unde",
         },
         QueryParams: operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest{
             Requests: []shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
                 shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "debitis",
+                    PolicySchema: "iusto",
                     PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
                         AdditionalTargetKeys: map[string]string{
-                            "et": "ut",
+                            "saepe": "inventore",
+                            "sapiente": "enim",
                         },
-                        TargetResource: "dolorem",
+                        TargetResource: "eum",
                     },
                 },
                 shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "et",
+                    PolicySchema: "voluptatum",
                     PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
                         AdditionalTargetKeys: map[string]string{
-                            "iste": "vitae",
+                            "vel": "non",
+                            "deleniti": "similique",
+                            "reprehenderit": "molestiae",
+                            "quo": "quasi",
                         },
-                        TargetResource: "totam",
-                    },
-                },
-                shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest{
-                    PolicySchema: "dolores",
-                    PolicyTargetKey: &shared.GoogleChromePolicyVersionsV1PolicyTargetKey{
-                        AdditionalTargetKeys: map[string]string{
-                            "debitis": "vel",
-                            "odio": "dolore",
-                            "id": "aspernatur",
-                        },
-                        TargetResource: "accusantium",
+                        TargetResource: "laboriosam",
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Customers.ChromepolicyCustomersPoliciesGroupsBatchDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -90,13 +86,15 @@ func main() {
     if res.GoogleProtobufEmpty != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### customers
+
+### Customers
 
 * `ChromepolicyCustomersPoliciesGroupsBatchDelete` - Delete multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
 * `ChromepolicyCustomersPoliciesGroupsBatchModify` - Modify multiple policy values that are applied to a specific group. All targets must have the same target format. That is to say that they must point to the same target resource and must have the same keys specified in `additionalTargetKeyNames`, though the values for those keys may be different. On failure the request will return the error details as part of the google.rpc.Status.
@@ -112,10 +110,9 @@ func main() {
 * `ChromepolicyCustomersPolicySchemasGet` - Get a specific policy schema for a customer by its resource name.
 * `ChromepolicyCustomersPolicySchemasList` - Gets a list of policy schemas that match a specified filter value for a given customer.
 
-### media
+### Media
 
 * `ChromepolicyMediaUpload` - Creates an enterprise file from the content provided by user. Returns a public download url for end user.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

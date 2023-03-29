@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ControlChargerChargingRequest{
         Security: operations.ControlChargerChargingSecurity{
             UserAccessToken: &shared.SchemeUserAccessToken{
@@ -18,13 +20,14 @@ func main() {
             },
         },
         PathParams: operations.ControlChargerChargingPathParams{
-            ChargerID: "sit",
+            ChargerID: "unde",
         },
         Request: &operations.ControlChargerChargingRequestBody{
             Action: "START",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Chargers.ControlChargerCharging(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -33,5 +36,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

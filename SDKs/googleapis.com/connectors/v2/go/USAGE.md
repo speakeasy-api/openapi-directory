@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest{
         Security: operations.ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,30 +23,30 @@ func main() {
             },
         },
         PathParams: operations.ConnectorsProjectsLocationsConnectionsActionsExecutePathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.ExecuteActionRequest{
             Parameters: map[string]interface{}{
-                "debitis": "voluptatum",
-                "et": "ut",
-                "dolorem": "et",
+                "iusto": "ullam",
+                "saepe": "inventore",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.ConnectorsProjectsLocationsConnectionsActionsExecute(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +55,6 @@ func main() {
     if res.ExecuteActionResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetweatherRequest{
         QueryParams: operations.GetweatherQueryParams{
-            City: "sit",
-            License: "voluptas",
-            State: "culpa",
+            City: "Larrychester",
+            License: "nulla",
+            State: "id",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.WeatherByCityAndState.Getweather(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.Getweather200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

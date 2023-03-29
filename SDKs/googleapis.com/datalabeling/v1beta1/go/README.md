@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/datalabeling/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest{
         Security: operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,52 +34,47 @@ func main() {
             },
         },
         PathParams: operations.DatalabelingProjectsAnnotationSpecSetsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.DatalabelingProjectsAnnotationSpecSetsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest{
             AnnotationSpecSet: &shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet{
                 AnnotationSpecs: []shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
                     shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
-                        Description: "debitis",
-                        DisplayName: "voluptatum",
-                        Index: 2339563716805116249,
+                        Description: "iusto",
+                        DisplayName: "ullam",
+                        Index: 891773,
                     },
                     shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
-                        Description: "ut",
-                        DisplayName: "dolorem",
-                        Index: 7259475919510918339,
-                    },
-                    shared.GoogleCloudDatalabelingV1beta1AnnotationSpec{
-                        Description: "voluptate",
-                        DisplayName: "iste",
-                        Index: 3930927879439176946,
+                        Description: "inventore",
+                        DisplayName: "sapiente",
+                        Index: 272656,
                     },
                 },
                 BlockingResources: []string{
-                    "dolores",
-                    "illum",
-                    "debitis",
+                    "voluptatum",
+                    "autem",
                 },
                 Description: "vel",
-                DisplayName: "odio",
-                Name: "dolore",
+                DisplayName: "non",
+                Name: "deleniti",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DatalabelingProjectsAnnotationSpecSetsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -86,13 +83,15 @@ func main() {
     if res.GoogleCloudDatalabelingV1beta1AnnotationSpecSet != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `DatalabelingProjectsAnnotationSpecSetsCreate` - Creates an annotation spec set by providing a set of labels.
 * `DatalabelingProjectsAnnotationSpecSetsList` - Lists annotation spec sets for a project. Pagination is supported.
@@ -122,7 +121,6 @@ func main() {
 * `DatalabelingProjectsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `DatalabelingProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `DatalabelingProjectsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

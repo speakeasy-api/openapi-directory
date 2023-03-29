@@ -3,66 +3,79 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateClusterRequest{
         Headers: operations.CreateClusterHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AmazonDAXV3.CreateCluster",
         },
         Request: shared.CreateClusterRequest{
             AvailabilityZones: []string{
-                "et",
+                "fuga",
+                "facilis",
             },
             ClusterEndpointEncryptionType: "NONE",
-            ClusterName: "rerum",
-            Description: "dicta",
-            IamRoleArn: "debitis",
-            NodeType: "voluptatum",
-            NotificationTopicArn: "et",
-            ParameterGroupName: "ut",
-            PreferredMaintenanceWindow: "dolorem",
-            ReplicationFactor: 7259475919510918339,
-            SSESpecification: &shared.SseSpecification{
+            ClusterName: "iusto",
+            Description: "ullam",
+            IamRoleArn: "saepe",
+            NodeType: "inventore",
+            NotificationTopicArn: "sapiente",
+            ParameterGroupName: "enim",
+            PreferredMaintenanceWindow: "eum",
+            ReplicationFactor: 477665,
+            SSESpecification: &shared.SSESpecification{
                 Enabled: false,
             },
             SecurityGroupIds: []string{
-                "vitae",
-                "totam",
-                "dolores",
+                "vel",
+                "non",
+                "deleniti",
+                "similique",
             },
-            SubnetGroupName: "illum",
+            SubnetGroupName: "reprehenderit",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "vel",
-                    Value: "odio",
+                    Key: "quo",
+                    Value: "quasi",
+                },
+                shared.Tag{
+                    Key: "laboriosam",
+                    Value: "dicta",
+                },
+                shared.Tag{
+                    Key: "est",
+                    Value: "voluptatem",
+                },
+                shared.Tag{
+                    Key: "consequatur",
+                    Value: "fugiat",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateCluster(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -71,5 +84,6 @@ func main() {
     if res.CreateClusterResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

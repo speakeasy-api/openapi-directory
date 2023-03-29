@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyRequest{
         Security: operations.ApigatewayProjectsLocationsGatewaysGetIamPolicySecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,24 +23,25 @@ func main() {
             },
         },
         PathParams: operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyPathParams{
-            Resource: "sit",
+            Resource: "unde",
         },
         QueryParams: operations.ApigatewayProjectsLocationsGatewaysGetIamPolicyQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            OptionsRequestedPolicyVersion: 8274930044578894929,
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            OptionsRequestedPolicyVersion: 423655,
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.ApigatewayProjectsLocationsGatewaysGetIamPolicy(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +50,6 @@ func main() {
     if res.ApigatewayPolicy != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

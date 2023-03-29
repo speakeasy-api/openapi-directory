@@ -3,40 +3,39 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AcceptHandshakeRequest{
         Headers: operations.AcceptHandshakeHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWSOrganizationsV20161128.AcceptHandshake",
         },
         Request: shared.AcceptHandshakeRequest{
-            HandshakeID: "fugit",
+            HandshakeID: "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AcceptHandshake(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -45,5 +44,6 @@ func main() {
     if res.AcceptHandshakeResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

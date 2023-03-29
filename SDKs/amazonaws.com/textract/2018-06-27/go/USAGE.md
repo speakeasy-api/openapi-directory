@@ -3,63 +3,80 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AnalyzeDocumentRequest{
         Headers: operations.AnalyzeDocumentHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "Textract.AnalyzeDocument",
         },
         Request: shared.AnalyzeDocumentRequest{
             Document: shared.Document{
-                Bytes: "fugit",
+                Bytes: "nihil",
                 S3Object: &shared.S3Object{
-                    Bucket: "et",
-                    Name: "nihil",
-                    Version: "rerum",
+                    Bucket: "fuga",
+                    Name: "facilis",
+                    Version: "eum",
                 },
             },
             FeatureTypes: []shared.FeatureTypeEnum{
-                "TABLES",
-                "TABLES",
-                "TABLES",
+                "FORMS",
+                "SIGNATURES",
             },
             HumanLoopConfig: &shared.HumanLoopConfig{
                 DataAttributes: &shared.HumanLoopDataAttributes{
                     ContentClassifiers: []shared.ContentClassifierEnum{
-                        "FreeOfPersonallyIdentifiableInformation",
-                        "FreeOfPersonallyIdentifiableInformation",
-                        "FreeOfPersonallyIdentifiableInformation",
+                        "FreeOfAdultContent",
                     },
                 },
-                FlowDefinitionArn: "iste",
-                HumanLoopName: "vitae",
+                FlowDefinitionArn: "enim",
+                HumanLoopName: "eum",
+            },
+            QueriesConfig: &shared.QueriesConfig{
+                Queries: []shared.Query{
+                    shared.Query{
+                        Alias: "autem",
+                        Pages: []string{
+                            "non",
+                            "deleniti",
+                            "similique",
+                            "reprehenderit",
+                        },
+                        Text: "molestiae",
+                    },
+                    shared.Query{
+                        Alias: "quo",
+                        Pages: []string{
+                            "laboriosam",
+                        },
+                        Text: "dicta",
+                    },
+                },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AnalyzeDocument(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -68,5 +85,6 @@ func main() {
     if res.AnalyzeDocumentResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

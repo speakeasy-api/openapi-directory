@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateArtifactRuleRequest{
         PathParams: operations.CreateArtifactRulePathParams{
-            ArtifactID: "sit",
+            ArtifactID: "unde",
         },
         Request: shared.Rule{
-            Config: "voluptas",
-            Type: "COMPATIBILITY",
+            Config: "deserunt",
+            Type: "VALIDITY",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ArtifactRules.CreateArtifactRule(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

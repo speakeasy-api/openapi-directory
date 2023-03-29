@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/shutterstock.com/1.1.5/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AddTrackCollectionItemsRequest{
         Security: operations.AddTrackCollectionItemsSecurity{
             CustomerAccessCode: shared.SchemeCustomerAccessCode{
@@ -29,19 +31,30 @@ func main() {
             },
         },
         PathParams: operations.AddTrackCollectionItemsPathParams{
-            ID: "sit",
+            ID: "unde",
         },
         Request: shared.CollectionItemRequest{
             Items: []shared.CollectionItem{
                 shared.CollectionItem{
-                    AddedTime: "1978-05-13T03:50:47Z",
-                    ID: "expedita",
-                    MediaType: "consequuntur",
+                    AddedTime: "2022-07-11T11:42:28.940Z",
+                    ID: "nulla",
+                    MediaType: "id",
+                },
+                shared.CollectionItem{
+                    AddedTime: "2022-05-20T09:09:47.829Z",
+                    ID: "perspiciatis",
+                    MediaType: "nulla",
+                },
+                shared.CollectionItem{
+                    AddedTime: "2022-10-25T21:33:02.791Z",
+                    ID: "fuga",
+                    MediaType: "facilis",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Audio.AddTrackCollectionItems(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,13 +63,15 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### audio
+
+### Audio
 
 * `AddTrackCollectionItems` - Add audio tracks to collections
 * `CreateTrackCollection` - Create audio collections
@@ -76,7 +91,7 @@ func main() {
 * `RenameTrackCollection` - Rename audio collections
 * `SearchTracks` - Search for tracks
 
-### computer_vision
+### ComputerVision
 
 * `GetKeywords` - List suggested keywords
 * `GetV2CvSimilarImages` - List similar images
@@ -84,7 +99,7 @@ func main() {
 * `UploadEphemeralImage` - Upload ephemeral images
 * `UploadImage` - Upload images
 
-### contributors
+### Contributors
 
 * `GetContributor` - Get details about a single contributor
 * `GetContributorCollectionItems` - Get the items in contributors' collections
@@ -92,14 +107,14 @@ func main() {
 * `GetContributorCollectionsList` - List contributors' collections
 * `GetContributorList` - Get details about multiple contributors
 
-### custom_music
+### CustomMusic
 
 * `CreateAudioRenders` - Create rendered audio
 * `FetchRenders` - Get details about audio renders
 * `ListCustomDescriptors` - List computer audio descriptors
 * `ListCustomInstruments` - List computer audio instruments
 
-### editorial_images
+### EditorialImages
 
 * `GetEditorialCategories` - (Deprecated) List editorial categories
 * `GetEditorialImage` - Get editorial content details
@@ -119,7 +134,7 @@ func main() {
 * `SearchEditorial` - (Deprecated) Search editorial content
 * `SearchEditorialImages` - Search editorial images
 
-### editorial_video
+### EditorialVideo
 
 * `GetEditorialVideo` - Get editorial video content details
 * `GetEditorialVideoLicenseList` - List editorial video licenses
@@ -127,7 +142,7 @@ func main() {
 * `ListEditorialVideoCategories` - List editorial video categories
 * `SearchEditorialVideos` - Search editorial video content
 
-### images
+### Images
 
 * `AddImageCollectionItems` - Add images to collections
 * `CreateImageCollection` - Create image collections
@@ -153,29 +168,30 @@ func main() {
 * `RenameImageCollection` - Rename image collections
 * `SearchImages` - Search for images
 
-### oauth
+### Oauth
 
 * `Authorize` - Authorize applications
-* `CreateAccessToken` - Get access tokens
+* `CreateAccessTokenForm` - Get access tokens
+* `CreateAccessTokenJSON` - Get access tokens
 
-### test
+### Test
 
 * `Echo` - Echo text
 * `Validate` - Validate input
 
-### users
+### Users
 
 * `GetAccessToken` - Get access token details
 * `GetUser` - Get user details
 * `GetUserSubscriptionList` - List user subscriptions
 
-### video_editor
+### VideoEditor
 
 * `AuthVideoEditor` - Get video editor access tokens
 * `RegisterEditorInstance` - Register instances of the video editor
 * `UpdateEditorInstance` - Update instances of the video editor
 
-### videos
+### Videos
 
 * `AddVideoCollectionItems` - Add videos to collections
 * `CreateVideoCollection` - Create video collections
@@ -198,7 +214,6 @@ func main() {
 * `ListVideoCategories` - List video categories
 * `RenameVideoCollection` - Rename video collections
 * `SearchVideos` - Search for videos
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

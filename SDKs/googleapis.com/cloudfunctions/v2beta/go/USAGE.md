@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest{
         Security: operations.CloudfunctionsProjectsLocationsFunctionsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,156 +23,158 @@ func main() {
             },
         },
         PathParams: operations.CloudfunctionsProjectsLocationsFunctionsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudfunctionsProjectsLocationsFunctionsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            FunctionID: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            FunctionID: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.FunctionInput{
             BuildConfig: &shared.BuildConfigInput{
-                BuildpackStack: "debitis",
+                BuildpackStack: "iusto",
                 DockerRegistry: "DOCKER_REGISTRY_UNSPECIFIED",
-                DockerRepository: "et",
-                EntryPoint: "ut",
+                DockerRepository: "saepe",
+                EntryPoint: "inventore",
                 EnvironmentVariables: map[string]string{
-                    "et": "voluptate",
-                    "iste": "vitae",
-                    "totam": "dolores",
+                    "enim": "eum",
+                    "voluptatum": "autem",
+                    "vel": "non",
+                    "deleniti": "similique",
                 },
-                Runtime: "illum",
+                Runtime: "reprehenderit",
                 Source: &shared.Source{
                     RepoSource: &shared.RepoSource{
-                        BranchName: "debitis",
-                        CommitSha: "vel",
-                        Dir: "odio",
-                        InvertRegex: true,
-                        ProjectID: "id",
-                        RepoName: "aspernatur",
-                        TagName: "accusantium",
+                        BranchName: "molestiae",
+                        CommitSha: "quo",
+                        Dir: "quasi",
+                        InvertRegex: false,
+                        ProjectID: "laboriosam",
+                        RepoName: "dicta",
+                        TagName: "est",
                     },
                     StorageSource: &shared.StorageSource{
-                        Bucket: "totam",
-                        Generation: "commodi",
-                        Object: "quis",
+                        Bucket: "voluptatem",
+                        Generation: "consequatur",
+                        Object: "fugiat",
                     },
                 },
                 SourceProvenance: &shared.SourceProvenance{
                     ResolvedRepoSource: &shared.RepoSource{
-                        BranchName: "est",
-                        CommitSha: "aut",
-                        Dir: "odit",
-                        InvertRegex: true,
-                        ProjectID: "voluptas",
-                        RepoName: "omnis",
-                        TagName: "aut",
+                        BranchName: "a",
+                        CommitSha: "omnis",
+                        Dir: "eos",
+                        InvertRegex: false,
+                        ProjectID: "accusamus",
+                        RepoName: "accusamus",
+                        TagName: "reiciendis",
                     },
                     ResolvedStorageSource: &shared.StorageSource{
-                        Bucket: "illo",
-                        Generation: "sed",
-                        Object: "officiis",
+                        Bucket: "rem",
+                        Generation: "quibusdam",
+                        Object: "et",
                     },
                 },
-                WorkerPool: "autem",
+                WorkerPool: "praesentium",
             },
-            Description: "consectetur",
-            Environment: "ENVIRONMENT_UNSPECIFIED",
+            Description: "occaecati",
+            Environment: "GEN_2",
             EventTrigger: &shared.EventTriggerInput{
-                Channel: "odio",
+                Channel: "soluta",
                 EventFilters: []shared.EventFilter{
                     shared.EventFilter{
-                        Attribute: "recusandae",
-                        Operator: "at",
-                        Value: "ipsum",
+                        Attribute: "quisquam",
+                        Operator: "rerum",
+                        Value: "culpa",
                     },
                 },
-                EventType: "eveniet",
-                PubsubTopic: "modi",
-                RetryPolicy: "RETRY_POLICY_UNSPECIFIED",
-                ServiceAccountEmail: "inventore",
-                TriggerRegion: "ut",
+                EventType: "qui",
+                PubsubTopic: "sed",
+                RetryPolicy: "RETRY_POLICY_RETRY",
+                ServiceAccountEmail: "possimus",
+                TriggerRegion: "occaecati",
             },
+            KmsKeyName: "odit",
             Labels: map[string]string{
-                "aut": "reprehenderit",
-                "tempore": "maiores",
-                "incidunt": "dolor",
+                "rem": "voluptatem",
+                "amet": "est",
             },
-            Name: "beatae",
+            Name: "id",
             ServiceConfig: &shared.ServiceConfigInput{
-                AllTrafficOnLatestRevision: true,
-                AvailableCPU: "in",
-                AvailableMemory: "et",
+                AllTrafficOnLatestRevision: false,
+                AvailableCPU: "blanditiis",
+                AvailableMemory: "numquam",
                 EnvironmentVariables: map[string]string{
-                    "ipsum": "ex",
-                    "dolores": "placeat",
+                    "dolores": "sit",
+                    "quia": "et",
+                    "voluptatem": "laborum",
                 },
-                IngressSettings: "ALLOW_INTERNAL_ONLY",
-                MaxInstanceCount: 2587000937929698613,
-                MaxInstanceRequestConcurrency: 8489437897698681073,
-                MinInstanceCount: 1938800996802160635,
+                IngressSettings: "INGRESS_SETTINGS_UNSPECIFIED",
+                MaxInstanceCount: 616934,
+                MaxInstanceRequestConcurrency: 386489,
+                MinInstanceCount: 943749,
                 SecretEnvironmentVariables: []shared.SecretEnvVar{
                     shared.SecretEnvVar{
-                        Key: "reprehenderit",
+                        Key: "soluta",
                         ProjectID: "qui",
-                        Secret: "qui",
-                        Version: "unde",
+                        Secret: "ea",
+                        Version: "laborum",
+                    },
+                    shared.SecretEnvVar{
+                        Key: "iusto",
+                        ProjectID: "ut",
+                        Secret: "optio",
+                        Version: "aspernatur",
+                    },
+                    shared.SecretEnvVar{
+                        Key: "inventore",
+                        ProjectID: "ut",
+                        Secret: "libero",
+                        Version: "et",
+                    },
+                    shared.SecretEnvVar{
+                        Key: "libero",
+                        ProjectID: "ipsum",
+                        Secret: "non",
+                        Version: "ea",
                     },
                 },
                 SecretVolumes: []shared.SecretVolume{
                     shared.SecretVolume{
-                        MountPath: "autem",
-                        ProjectID: "qui",
-                        Secret: "ut",
+                        MountPath: "placeat",
+                        ProjectID: "ipsam",
+                        Secret: "est",
                         Versions: []shared.SecretVersion{
                             shared.SecretVersion{
-                                Path: "ab",
-                                Version: "neque",
+                                Path: "quia",
+                                Version: "similique",
                             },
                             shared.SecretVersion{
-                                Path: "ullam",
-                                Version: "et",
-                            },
-                            shared.SecretVersion{
-                                Path: "accusantium",
-                                Version: "esse",
-                            },
-                        },
-                    },
-                    shared.SecretVolume{
-                        MountPath: "architecto",
-                        ProjectID: "quam",
-                        Secret: "velit",
-                        Versions: []shared.SecretVersion{
-                            shared.SecretVersion{
-                                Path: "soluta",
-                                Version: "sunt",
-                            },
-                            shared.SecretVersion{
-                                Path: "voluptates",
-                                Version: "magni",
+                                Path: "eaque",
+                                Version: "odio",
                             },
                         },
                     },
                 },
-                SecurityLevel: "SECURE_OPTIONAL",
-                ServiceAccountEmail: "optio",
-                TimeoutSeconds: 8482125374365136680,
-                VpcConnector: "earum",
-                VpcConnectorEgressSettings: "VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED",
+                SecurityLevel: "SECURE_ALWAYS",
+                ServiceAccountEmail: "doloribus",
+                TimeoutSeconds: 958950,
+                VpcConnector: "aut",
+                VpcConnectorEgressSettings: "PRIVATE_RANGES_ONLY",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.CloudfunctionsProjectsLocationsFunctionsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -179,5 +183,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

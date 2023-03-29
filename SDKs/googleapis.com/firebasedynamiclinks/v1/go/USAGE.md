@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FirebasedynamiclinksManagedShortLinksCreateRequest{
         Security: operations.FirebasedynamiclinksManagedShortLinksCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,76 +23,77 @@ func main() {
             },
         },
         QueryParams: operations.FirebasedynamiclinksManagedShortLinksCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.CreateManagedShortLinkRequest{
             DynamicLinkInfo: &shared.DynamicLinkInfo{
                 AnalyticsInfo: &shared.AnalyticsInfo{
                     GooglePlayAnalytics: &shared.GooglePlayAnalytics{
-                        Gclid: "rerum",
-                        UtmCampaign: "dicta",
-                        UtmContent: "debitis",
-                        UtmMedium: "voluptatum",
-                        UtmSource: "et",
-                        UtmTerm: "ut",
+                        Gclid: "facilis",
+                        UtmCampaign: "eum",
+                        UtmContent: "iusto",
+                        UtmMedium: "ullam",
+                        UtmSource: "saepe",
+                        UtmTerm: "inventore",
                     },
                     ItunesConnectAnalytics: &shared.ITunesConnectAnalytics{
-                        At: "dolorem",
-                        Ct: "et",
-                        Mt: "voluptate",
-                        Pt: "iste",
+                        At: "sapiente",
+                        Ct: "enim",
+                        Mt: "eum",
+                        Pt: "voluptatum",
                     },
                 },
                 AndroidInfo: &shared.AndroidInfo{
-                    AndroidFallbackLink: "vitae",
-                    AndroidLink: "totam",
-                    AndroidMinPackageVersionCode: "dolores",
-                    AndroidPackageName: "illum",
+                    AndroidFallbackLink: "autem",
+                    AndroidLink: "vel",
+                    AndroidMinPackageVersionCode: "non",
+                    AndroidPackageName: "deleniti",
                 },
                 DesktopInfo: &shared.DesktopInfo{
-                    DesktopFallbackLink: "debitis",
+                    DesktopFallbackLink: "similique",
                 },
-                DomainURIPrefix: "vel",
-                DynamicLinkDomain: "odio",
+                DomainURIPrefix: "reprehenderit",
+                DynamicLinkDomain: "molestiae",
                 IosInfo: &shared.IosInfo{
-                    IosAppStoreID: "dolore",
-                    IosBundleID: "id",
-                    IosCustomScheme: "aspernatur",
-                    IosFallbackLink: "accusantium",
-                    IosIpadBundleID: "totam",
-                    IosIpadFallbackLink: "commodi",
-                    IosMinimumVersion: "quis",
+                    IosAppStoreID: "quo",
+                    IosBundleID: "quasi",
+                    IosCustomScheme: "laboriosam",
+                    IosFallbackLink: "dicta",
+                    IosIpadBundleID: "est",
+                    IosIpadFallbackLink: "voluptatem",
+                    IosMinimumVersion: "consequatur",
                 },
-                Link: "est",
+                Link: "fugiat",
                 NavigationInfo: &shared.NavigationInfo{
-                    EnableForcedRedirect: true,
+                    EnableForcedRedirect: false,
                 },
                 SocialMetaTagInfo: &shared.SocialMetaTagInfo{
-                    SocialDescription: "odit",
-                    SocialImageLink: "non",
-                    SocialTitle: "voluptas",
+                    SocialDescription: "a",
+                    SocialImageLink: "omnis",
+                    SocialTitle: "eos",
                 },
             },
-            LongDynamicLink: "omnis",
-            Name: "aut",
-            SdkVersion: "illo",
+            LongDynamicLink: "accusamus",
+            Name: "accusamus",
+            SDKVersion: "reiciendis",
             Suffix: &shared.Suffix{
-                CustomSuffix: "sed",
+                CustomSuffix: "rem",
                 Option: "CUSTOM",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ManagedShortLinks.FirebasedynamiclinksManagedShortLinksCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -99,5 +102,6 @@ func main() {
     if res.CreateManagedShortLinkResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

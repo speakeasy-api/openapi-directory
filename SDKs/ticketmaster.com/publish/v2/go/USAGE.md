@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,42 +12,55 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PatchAttractionRequest{
         PathParams: operations.PatchAttractionPathParams{
-            ID: "sit",
+            ID: "unde",
         },
         Headers: operations.PatchAttractionHeaders{
-            TMPSCorrelationID: "voluptas",
+            TMPSCorrelationID: "deserunt",
         },
         Request: shared.AugmentationData{
             Changes: []shared.Change{
                 shared.Change{
-                    From: "expedita",
-                    Op: "test",
-                    Path: "dolor",
+                    From: "nulla",
+                    Op: "move",
+                    Path: "vero",
                     Value: map[string]interface{}{
-                        "voluptas": "fugit",
-                        "et": "nihil",
+                        "nulla": "nihil",
+                        "fuga": "facilis",
+                        "eum": "iusto",
                     },
                 },
                 shared.Change{
-                    From: "rerum",
+                    From: "ullam",
                     Op: "test",
-                    Path: "debitis",
+                    Path: "inventore",
                     Value: map[string]interface{}{
-                        "et": "ut",
+                        "enim": "eum",
+                        "voluptatum": "autem",
+                        "vel": "non",
+                        "deleniti": "similique",
+                    },
+                },
+                shared.Change{
+                    From: "reprehenderit",
+                    Op: "test",
+                    Path: "quo",
+                    Value: map[string]interface{}{
+                        "laboriosam": "dicta",
                     },
                 },
             },
-            RelatedEntityID: "dolorem",
-            RelatedEntityType: "attraction",
-            Score: 94.199997,
-            Source: "vitae",
-            VersionNumber: 4706154865122290029,
+            RelatedEntityID: "est",
+            RelatedEntityType: "event",
+            Score: 3682.41,
+            Source: "fugiat",
+            VersionNumber: 957156,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.PatchAttraction(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +69,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

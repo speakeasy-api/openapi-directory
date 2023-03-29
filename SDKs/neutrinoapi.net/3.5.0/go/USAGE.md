@@ -3,36 +3,35 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                UserID: shared.SchemeUserID{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+            UserID: shared.SchemeUserID{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BadWordFilterRequest{
         Request: &operations.BadWordFilterRequestBody{
-            Catalog: "sit",
-            CensorCharacter: "voluptas",
-            Content: "culpa",
+            Catalog: "unde",
+            CensorCharacter: "deserunt",
+            Content: "porro",
             OutputCase: "camel",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DataTools.BadWordFilter(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -41,5 +40,6 @@ func main() {
     if res.BadWordFilterResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

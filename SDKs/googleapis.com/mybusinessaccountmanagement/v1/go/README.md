@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/mybusinessaccountmanagement/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,50 +23,51 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.MybusinessaccountmanagementAccountsCreateRequest{
         QueryParams: operations.MybusinessaccountmanagementAccountsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.AccountInput{
-            AccountName: "rerum",
-            Name: "dicta",
+            AccountName: "facilis",
+            Name: "eum",
             OrganizationInfo: &shared.OrganizationInfoInput{
                 Address: &shared.PostalAddress{
                     AddressLines: []string{
-                        "voluptatum",
+                        "ullam",
+                        "saepe",
                     },
-                    AdministrativeArea: "et",
-                    LanguageCode: "ut",
-                    Locality: "dolorem",
-                    Organization: "et",
-                    PostalCode: "voluptate",
+                    AdministrativeArea: "inventore",
+                    LanguageCode: "sapiente",
+                    Locality: "enim",
+                    Organization: "eum",
+                    PostalCode: "78545",
                     Recipients: []string{
-                        "vitae",
-                        "totam",
-                        "dolores",
+                        "molestiae",
+                        "quo",
                     },
-                    RegionCode: "illum",
-                    Revision: 6392442863481646880,
-                    SortingCode: "vel",
-                    Sublocality: "odio",
+                    RegionCode: "quasi",
+                    Revision: 337396,
+                    SortingCode: "dicta",
+                    Sublocality: "est",
                 },
             },
-            PrimaryOwner: "dolore",
-            Type: "LOCATION_GROUP",
+            PrimaryOwner: "voluptatem",
+            Type: "PERSONAL",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.MybusinessaccountmanagementAccountsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -73,13 +76,15 @@ func main() {
     if res.Account != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### accounts
+
+### Accounts
 
 * `MybusinessaccountmanagementAccountsCreate` - Creates an account with the specified name and type under the given parent. - Personal accounts and Organizations cannot be created. - User Groups cannot be created with a Personal account as primary owner. - Location Groups cannot be created with a primary owner of a Personal account if the Personal account is in an Organization. - Location Groups cannot own Location Groups.
 * `MybusinessaccountmanagementAccountsGet` - Gets the specified account. Returns `NOT_FOUND` if the account does not exist or if the caller does not have access rights to it.
@@ -88,14 +93,13 @@ func main() {
 * `MybusinessaccountmanagementAccountsInvitationsList` - Lists pending invitations for the specified account.
 * `MybusinessaccountmanagementAccountsList` - Lists all of the accounts for the authenticated user. This includes all accounts that the user owns, as well as any accounts for which the user has management rights.
 
-### locations
+### Locations
 
 * `MybusinessaccountmanagementLocationsAdminsCreate` - Invites the specified user to become an administrator for the specified location. The invitee must accept the invitation in order to be granted access to the location. See AcceptInvitation to programmatically accept an invitation.
 * `MybusinessaccountmanagementLocationsAdminsDelete` - Removes the specified admin as a manager of the specified location.
 * `MybusinessaccountmanagementLocationsAdminsList` - Lists all of the admins for the specified location.
 * `MybusinessaccountmanagementLocationsAdminsPatch` - Updates the Admin for the specified location. Only the AdminRole of the Admin can be updated.
 * `MybusinessaccountmanagementLocationsTransfer` - Moves a location from an account that the user owns to another account that the same user administers. The user must be an owner of the account the location is currently associated with and must also be at least a manager of the destination account.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

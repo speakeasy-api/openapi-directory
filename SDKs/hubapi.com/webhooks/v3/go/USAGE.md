@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeleteWebhooksV3AppIDSettingsClearRequest{
         Security: operations.DeleteWebhooksV3AppIDSettingsClearSecurity{
             DeveloperHapikey: shared.SchemeDeveloperHapikey{
@@ -18,10 +20,11 @@ func main() {
             },
         },
         PathParams: operations.DeleteWebhooksV3AppIDSettingsClearPathParams{
-            AppID: 8717895732742165505,
+            AppID: 548814,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Settings.DeleteWebhooksV3AppIDSettingsClear(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +33,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

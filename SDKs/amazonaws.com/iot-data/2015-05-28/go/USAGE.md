@@ -3,42 +3,41 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DeleteThingShadowRequest{
         PathParams: operations.DeleteThingShadowPathParams{
-            ThingName: "sit",
+            ThingName: "unde",
         },
         QueryParams: operations.DeleteThingShadowQueryParams{
-            Name: "voluptas",
+            Name: "deserunt",
         },
         Headers: operations.DeleteThingShadowHeaders{
-            XAmzAlgorithm: "culpa",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "consequuntur",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "expedita",
-            XAmzSignature: "voluptas",
-            XAmzSignedHeaders: "fugit",
+            XAmzAlgorithm: "porro",
+            XAmzContentSha256: "nulla",
+            XAmzCredential: "id",
+            XAmzDate: "vero",
+            XAmzSecurityToken: "perspiciatis",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DeleteThingShadow(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +46,6 @@ func main() {
     if res.DeleteThingShadowResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

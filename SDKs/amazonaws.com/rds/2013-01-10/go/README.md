@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/rds/2013-01-10/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,43 +14,42 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetAddSourceIdentifierToSubscriptionRequest{
-        QueryParams: operations.GetAddSourceIdentifierToSubscriptionQueryParams{
+    req := operations.GETAddSourceIdentifierToSubscriptionRequest{
+        QueryParams: operations.GETAddSourceIdentifierToSubscriptionQueryParams{
             Action: "AddSourceIdentifierToSubscription",
-            SourceIdentifier: "voluptas",
-            SubscriptionName: "culpa",
+            SourceIdentifier: "deserunt",
+            SubscriptionName: "porro",
             Version: "2013-01-10",
         },
-        Headers: operations.GetAddSourceIdentifierToSubscriptionHeaders{
-            XAmzAlgorithm: "consequuntur",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "expedita",
-            XAmzDate: "voluptas",
-            XAmzSecurityToken: "fugit",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "nihil",
+        Headers: operations.GETAddSourceIdentifierToSubscriptionHeaders{
+            XAmzAlgorithm: "id",
+            XAmzContentSha256: "vero",
+            XAmzCredential: "perspiciatis",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "nihil",
+            XAmzSignature: "fuga",
+            XAmzSignedHeaders: "facilis",
         },
     }
-    
-    res, err := s.GetAddSourceIdentifierToSubscription(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETAddSourceIdentifierToSubscription(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -58,6 +57,7 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -66,96 +66,102 @@ func main() {
 
 ### SDK SDK
 
-* `GetAddSourceIdentifierToSubscription`
-* `GetAuthorizeDbSecurityGroupIngress`
-* `GetCopyDbSnapshot`
-* `GetCreateDbInstanceReadReplica`
-* `GetCreateDbParameterGroup`
-* `GetCreateDbSecurityGroup`
-* `GetCreateDbSnapshot`
-* `GetCreateOptionGroup`
-* `GetDeleteDbInstance`
-* `GetDeleteDbParameterGroup`
-* `GetDeleteDbSecurityGroup`
-* `GetDeleteDbSnapshot`
-* `GetDeleteDbSubnetGroup`
-* `GetDeleteEventSubscription`
-* `GetDeleteOptionGroup`
-* `GetDescribeDbEngineVersions`
-* `GetDescribeDbInstances`
-* `GetDescribeDbParameterGroups`
-* `GetDescribeDbParameters`
-* `GetDescribeDbSecurityGroups`
-* `GetDescribeDbSnapshots`
-* `GetDescribeDbSubnetGroups`
-* `GetDescribeEngineDefaultParameters`
-* `GetDescribeEventCategories`
-* `GetDescribeEventSubscriptions`
-* `GetDescribeOptionGroupOptions`
-* `GetDescribeOptionGroups`
-* `GetDescribeOrderableDbInstanceOptions`
-* `GetDescribeReservedDbInstances`
-* `GetDescribeReservedDbInstancesOfferings`
-* `GetListTagsForResource`
-* `GetPromoteReadReplica`
-* `GetPurchaseReservedDbInstancesOffering`
-* `GetRebootDbInstance`
-* `GetRemoveSourceIdentifierFromSubscription`
-* `GetRemoveTagsFromResource`
-* `GetRestoreDbInstanceFromDbSnapshot`
-* `GetRestoreDbInstanceToPointInTime`
-* `GetRevokeDbSecurityGroupIngress`
-* `PostAddSourceIdentifierToSubscription`
-* `PostAddTagsToResource`
-* `PostAuthorizeDbSecurityGroupIngress`
-* `PostCopyDbSnapshot`
-* `PostCreateDbInstance`
-* `PostCreateDbInstanceReadReplica`
-* `PostCreateDbParameterGroup`
-* `PostCreateDbSecurityGroup`
-* `PostCreateDbSnapshot`
-* `PostCreateDbSubnetGroup`
-* `PostCreateEventSubscription`
-* `PostCreateOptionGroup`
-* `PostDeleteDbInstance`
-* `PostDeleteDbParameterGroup`
-* `PostDeleteDbSecurityGroup`
-* `PostDeleteDbSnapshot`
-* `PostDeleteDbSubnetGroup`
-* `PostDeleteEventSubscription`
-* `PostDeleteOptionGroup`
-* `PostDescribeDbEngineVersions`
-* `PostDescribeDbInstances`
-* `PostDescribeDbParameterGroups`
-* `PostDescribeDbParameters`
-* `PostDescribeDbSecurityGroups`
-* `PostDescribeDbSnapshots`
-* `PostDescribeDbSubnetGroups`
-* `PostDescribeEngineDefaultParameters`
-* `PostDescribeEventCategories`
-* `PostDescribeEventSubscriptions`
-* `PostDescribeEvents`
-* `PostDescribeOptionGroupOptions`
-* `PostDescribeOptionGroups`
-* `PostDescribeOrderableDbInstanceOptions`
-* `PostDescribeReservedDbInstances`
-* `PostDescribeReservedDbInstancesOfferings`
-* `PostListTagsForResource`
-* `PostModifyDbInstance`
-* `PostModifyDbParameterGroup`
-* `PostModifyDbSubnetGroup`
-* `PostModifyEventSubscription`
-* `PostModifyOptionGroup`
-* `PostPromoteReadReplica`
-* `PostPurchaseReservedDbInstancesOffering`
-* `PostRebootDbInstance`
-* `PostRemoveSourceIdentifierFromSubscription`
-* `PostRemoveTagsFromResource`
-* `PostResetDbParameterGroup`
-* `PostRestoreDbInstanceFromDbSnapshot`
-* `PostRestoreDbInstanceToPointInTime`
-* `PostRevokeDbSecurityGroupIngress`
-
+* `GETAddSourceIdentifierToSubscription`
+* `GETAuthorizeDBSecurityGroupIngress`
+* `GETCopyDBSnapshot`
+* `GETCreateDBInstance`
+* `GETCreateDBInstanceReadReplica`
+* `GETCreateDBParameterGroup`
+* `GETCreateDBSecurityGroup`
+* `GETCreateDBSnapshot`
+* `GETCreateDBSubnetGroup`
+* `GETCreateEventSubscription`
+* `GETCreateOptionGroup`
+* `GETDeleteDBInstance`
+* `GETDeleteDBParameterGroup`
+* `GETDeleteDBSecurityGroup`
+* `GETDeleteDBSnapshot`
+* `GETDeleteDBSubnetGroup`
+* `GETDeleteEventSubscription`
+* `GETDeleteOptionGroup`
+* `GETDescribeDBEngineVersions`
+* `GETDescribeDBInstances`
+* `GETDescribeDBParameterGroups`
+* `GETDescribeDBParameters`
+* `GETDescribeDBSecurityGroups`
+* `GETDescribeDBSnapshots`
+* `GETDescribeDBSubnetGroups`
+* `GETDescribeEngineDefaultParameters`
+* `GETDescribeEventCategories`
+* `GETDescribeEventSubscriptions`
+* `GETDescribeEvents`
+* `GETDescribeOptionGroupOptions`
+* `GETDescribeOptionGroups`
+* `GETDescribeOrderableDBInstanceOptions`
+* `GETDescribeReservedDBInstances`
+* `GETDescribeReservedDBInstancesOfferings`
+* `GETListTagsForResource`
+* `GETModifyDBInstance`
+* `GETModifyDBSubnetGroup`
+* `GETModifyEventSubscription`
+* `GETPromoteReadReplica`
+* `GETPurchaseReservedDBInstancesOffering`
+* `GETRebootDBInstance`
+* `GETRemoveSourceIdentifierFromSubscription`
+* `GETRemoveTagsFromResource`
+* `GETRestoreDBInstanceFromDBSnapshot`
+* `GETRestoreDBInstanceToPointInTime`
+* `GETRevokeDBSecurityGroupIngress`
+* `POSTAddSourceIdentifierToSubscription`
+* `POSTAddTagsToResource`
+* `POSTAuthorizeDBSecurityGroupIngress`
+* `POSTCopyDBSnapshot`
+* `POSTCreateDBInstance`
+* `POSTCreateDBInstanceReadReplica`
+* `POSTCreateDBParameterGroup`
+* `POSTCreateDBSecurityGroup`
+* `POSTCreateDBSnapshot`
+* `POSTCreateDBSubnetGroup`
+* `POSTCreateEventSubscription`
+* `POSTCreateOptionGroup`
+* `POSTDeleteDBInstance`
+* `POSTDeleteDBParameterGroup`
+* `POSTDeleteDBSecurityGroup`
+* `POSTDeleteDBSnapshot`
+* `POSTDeleteDBSubnetGroup`
+* `POSTDeleteEventSubscription`
+* `POSTDeleteOptionGroup`
+* `POSTDescribeDBEngineVersions`
+* `POSTDescribeDBInstances`
+* `POSTDescribeDBParameterGroups`
+* `POSTDescribeDBParameters`
+* `POSTDescribeDBSecurityGroups`
+* `POSTDescribeDBSnapshots`
+* `POSTDescribeDBSubnetGroups`
+* `POSTDescribeEngineDefaultParameters`
+* `POSTDescribeEventCategories`
+* `POSTDescribeEventSubscriptions`
+* `POSTDescribeEvents`
+* `POSTDescribeOptionGroupOptions`
+* `POSTDescribeOptionGroups`
+* `POSTDescribeOrderableDBInstanceOptions`
+* `POSTDescribeReservedDBInstances`
+* `POSTDescribeReservedDBInstancesOfferings`
+* `POSTListTagsForResource`
+* `POSTModifyDBInstance`
+* `POSTModifyDBParameterGroup`
+* `POSTModifyDBSubnetGroup`
+* `POSTModifyEventSubscription`
+* `POSTModifyOptionGroup`
+* `POSTPromoteReadReplica`
+* `POSTPurchaseReservedDBInstancesOffering`
+* `POSTRebootDBInstance`
+* `POSTRemoveSourceIdentifierFromSubscription`
+* `POSTRemoveTagsFromResource`
+* `POSTResetDBParameterGroup`
+* `POSTRestoreDBInstanceFromDBSnapshot`
+* `POSTRestoreDBInstanceToPointInTime`
+* `POSTRevokeDBSecurityGroupIngress`
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

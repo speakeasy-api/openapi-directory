@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAPIV1DonationsCarbonCalculateRequest{
         Security: operations.GetAPIV1DonationsCarbonCalculateSecurity{
             BasicAuth: shared.SchemeBasicAuth{
@@ -19,14 +21,15 @@ func main() {
             },
         },
         QueryParams: operations.GetAPIV1DonationsCarbonCalculateQueryParams{
-            DestinationAddress: 74.099998,
-            DistanceMi: 53.099998,
-            OriginAddress: 15.100000,
+            DestinationAddress: 5488.14,
+            DistanceMi: 5928.45,
+            OriginAddress: 7151.9,
             TransportationMethod: "sea",
-            WeightLb: 77.099998,
+            WeightLb: 6027.63,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetAPIV1DonationsCarbonCalculate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +38,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

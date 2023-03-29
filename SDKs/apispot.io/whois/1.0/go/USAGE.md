@@ -3,30 +3,29 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKeyAuth: shared.SchemeAPIKeyAuth{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKeyAuth: shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CheckDomainRequest{
         PathParams: operations.CheckDomainPathParams{
-            Domain: "sit",
+            Domain: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CheckDomain(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +34,6 @@ func main() {
     if res.CheckDomain200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.YoutubeAbuseReportsInsertRequest{
         Security: operations.YoutubeAbuseReportsInsertSecurity{
             Option1: &operations.YoutubeAbuseReportsInsertSecurityOption1{
@@ -23,54 +25,56 @@ func main() {
             },
         },
         QueryParams: operations.YoutubeAbuseReportsInsertQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
             Part: []string{
-                "fugit",
-                "et",
                 "nihil",
+                "fuga",
+                "facilis",
+                "eum",
             },
-            PrettyPrint: true,
-            QuotaUser: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            PrettyPrint: false,
+            QuotaUser: "iusto",
+            UploadType: "ullam",
+            UploadProtocol: "saepe",
         },
         Request: &shared.AbuseReport{
             AbuseTypes: []shared.AbuseType{
                 shared.AbuseType{
-                    ID: "ut",
+                    ID: "sapiente",
                 },
             },
-            Description: "dolorem",
+            Description: "enim",
             RelatedEntities: []shared.RelatedEntity{
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "voluptate",
-                        TypeID: "iste",
-                        URL: "vitae",
+                        ID: "voluptatum",
+                        TypeID: "autem",
+                        URL: "vel",
                     },
                 },
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "totam",
-                        TypeID: "dolores",
-                        URL: "illum",
+                        ID: "non",
+                        TypeID: "deleniti",
+                        URL: "similique",
                     },
                 },
             },
             Subject: &shared.Entity{
-                ID: "debitis",
-                TypeID: "vel",
-                URL: "odio",
+                ID: "reprehenderit",
+                TypeID: "molestiae",
+                URL: "quo",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AbuseReports.YoutubeAbuseReportsInsert(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -79,5 +83,6 @@ func main() {
     if res.AbuseReport != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

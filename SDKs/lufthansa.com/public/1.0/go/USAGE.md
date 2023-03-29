@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest{
         Security: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity{
             Auth: shared.SchemeAuth{
@@ -18,16 +20,17 @@ func main() {
             },
         },
         PathParams: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams{
-            Destination: "sit",
-            FromDate: "voluptas",
-            Origin: "culpa",
-            ProductCode: "FUN",
+            Destination: "unde",
+            FromDate: "deserunt",
+            Origin: "porro",
+            ProductCode: "ZXB",
         },
         Headers: operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders{
-            Accept: "consequuntur",
+            Accept: "id",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Cargo.CargoGetRouteFromDateProductCodeByOriginAndDestinationGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -36,5 +39,6 @@ func main() {
     if res.CargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

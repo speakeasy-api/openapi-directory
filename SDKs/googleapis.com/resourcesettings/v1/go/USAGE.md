@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ResourcesettingsProjectsSettingsGetRequest{
         Security: operations.ResourcesettingsProjectsSettingsGetSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,24 +23,25 @@ func main() {
             },
         },
         PathParams: operations.ResourcesettingsProjectsSettingsGetPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.ResourcesettingsProjectsSettingsGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
-            View: "SETTING_VIEW_LOCAL_VALUE",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
+            View: "SETTING_VIEW_BASIC",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.ResourcesettingsProjectsSettingsGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +50,6 @@ func main() {
     if res.GoogleCloudResourcesettingsV1Setting != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

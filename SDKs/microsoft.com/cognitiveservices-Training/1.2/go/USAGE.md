@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,13 +12,14 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAccountInfoRequest{
         Headers: operations.GetAccountInfoHeaders{
-            TrainingKey: "sit",
+            TrainingKey: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AccountAPI.GetAccountInfo(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -25,5 +28,6 @@ func main() {
     if res.Account != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

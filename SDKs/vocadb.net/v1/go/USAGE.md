@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,23 +12,24 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ActivityEntryAPIGetListRequest{
         QueryParams: operations.ActivityEntryAPIGetListQueryParams{
-            Before: "2006-05-01T09:38:06Z",
-            EditEvent: "Updated",
-            EntryFields: "Description",
-            EntryType: "Venue",
+            Before: "2022-09-10T05:11:41.969Z",
+            EditEvent: "Deleted",
+            EntryFields: "PVs",
+            EntryType: "User",
             Fields: "ArchivedVersion",
-            GetTotalCount: true,
-            Lang: "Japanese",
-            MaxResults: 8274930044578894929,
-            Since: "2011-08-12T10:11:12Z",
+            GetTotalCount: false,
+            Lang: "English",
+            MaxResults: 544883,
+            Since: "2022-05-24T06:52:34.091Z",
             SortRule: "CreateDateDescending",
-            UserID: 8325060299420976708,
+            UserID: 623564,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ActivityEntryAPI.ActivityEntryAPIGetList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +38,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

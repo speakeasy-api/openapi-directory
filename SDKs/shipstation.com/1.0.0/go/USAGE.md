@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,16 +12,19 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateANewQuestionRequest{
         Request: &operations.CreateANewQuestionRequestBody{
             Choices: []string{
-                "voluptas",
+                "deserunt",
+                "porro",
+                "nulla",
             },
-            Question: "culpa",
+            Question: "id",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateANewQuestion(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -28,5 +33,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

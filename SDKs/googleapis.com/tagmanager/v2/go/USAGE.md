@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.TagmanagerAccountsContainersCombineRequest{
         Security: operations.TagmanagerAccountsContainersCombineSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,26 +23,27 @@ func main() {
             },
         },
         PathParams: operations.TagmanagerAccountsContainersCombinePathParams{
-            Path: "sit",
+            Path: "unde",
         },
         QueryParams: operations.TagmanagerAccountsContainersCombineQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
+            DollarXgafv: "2",
+            AccessToken: "porro",
             AllowUserPermissionFeatureUpdate: false,
             Alt: "proto",
-            Callback: "dolor",
-            ContainerID: "expedita",
-            Fields: "voluptas",
-            Key: "fugit",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            SettingSource: "other",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            Callback: "id",
+            ContainerID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            PrettyPrint: false,
+            QuotaUser: "fuga",
+            SettingSource: "current",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.TagmanagerAccountsContainersCombine(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +52,6 @@ func main() {
     if res.Container != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

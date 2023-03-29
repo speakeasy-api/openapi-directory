@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/fitness/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FitnessUsersDataSourcesCreateRequest{
         Security: operations.FitnessUsersDataSourcesCreateSecurity{
             Option1: &operations.FitnessUsersDataSourcesCreateSecurityOption1{
@@ -34,67 +36,61 @@ func main() {
             },
         },
         PathParams: operations.FitnessUsersDataSourcesCreatePathParams{
-            UserID: "sit",
+            UserID: "unde",
         },
         QueryParams: operations.FitnessUsersDataSourcesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.DataSource{
             Application: &shared.Application{
-                DetailsURL: "dicta",
-                Name: "debitis",
-                PackageName: "voluptatum",
-                Version: "et",
+                DetailsURL: "eum",
+                Name: "iusto",
+                PackageName: "ullam",
+                Version: "saepe",
             },
             DataQualityStandard: []shared.DataSourceDataQualityStandardEnum{
-                "dataQualityUnknown",
-                "dataQualityUnknown",
-                "dataQualityBloodPressureBhsAA",
+                "dataQualityBloodGlucoseIso151972013",
             },
-            DataStreamID: "iste",
-            DataStreamName: "vitae",
+            DataStreamID: "enim",
+            DataStreamName: "eum",
             DataType: &shared.DataType{
                 Field: []shared.DataTypeField{
                     shared.DataTypeField{
+                        Format: "floatList",
+                        Name: "vel",
+                        Optional: false,
+                    },
+                    shared.DataTypeField{
                         Format: "map",
-                        Name: "illum",
-                        Optional: true,
-                    },
-                    shared.DataTypeField{
-                        Format: "floatPoint",
-                        Name: "odio",
-                        Optional: true,
-                    },
-                    shared.DataTypeField{
-                        Format: "integerList",
-                        Name: "aspernatur",
-                        Optional: true,
+                        Name: "deleniti",
+                        Optional: false,
                     },
                 },
-                Name: "totam",
+                Name: "similique",
             },
             Device: &shared.Device{
-                Manufacturer: "commodi",
-                Model: "quis",
-                Type: "phone",
-                UID: "aut",
-                Version: "odit",
+                Manufacturer: "reprehenderit",
+                Model: "molestiae",
+                Type: "headMounted",
+                UID: "quasi",
+                Version: "laboriosam",
             },
-            Name: "non",
-            Type: "raw",
+            Name: "dicta",
+            Type: "derived",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Users.FitnessUsersDataSourcesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -103,13 +99,15 @@ func main() {
     if res.DataSource != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### users
+
+### Users
 
 * `FitnessUsersDataSourcesCreate` - Creates a new data source that is unique across all data sources belonging to this user. A data source is a unique source of sensor data. Data sources can expose raw data coming from hardware sensors on local or companion devices. They can also expose derived data, created by transforming or merging other data sources. Multiple data sources can exist for the same data type. Every data point in every dataset inserted into or read from the Fitness API has an associated data source. Each data source produces a unique stream of dataset updates, with a unique data source identifier. Not all changes to data source affect the data stream ID, so that data collected by updated versions of the same application/device can still be considered to belong to the same data source. Data sources are identified using a string generated by the server, based on the contents of the source being created. The dataStreamId field should not be set when invoking this method. It will be automatically generated by the server with the correct format. If a dataStreamId is set, it must match the format that the server would generate. This format is a combination of some fields from the data source, and has a specific order. If it doesn't match, the request will fail with an error. Specifying a DataType which is not a known type (beginning with "com.google.") will create a DataSource with a *custom data type*. Custom data types are only readable by the application that created them. Custom data types are *deprecated*; use standard data types instead. In addition to the data source fields included in the data source ID, the developer project number that is authenticated when creating the data source is included. This developer project number is obfuscated when read by any other developer reading public data types.
 * `FitnessUsersDataSourcesDataPointChangesList` - Queries for user's data point changes for a particular data source.
@@ -124,7 +122,6 @@ func main() {
 * `FitnessUsersSessionsDelete` - Deletes a session specified by the given session ID.
 * `FitnessUsersSessionsList` - Lists sessions previously created.
 * `FitnessUsersSessionsUpdate` - Updates or insert a given session.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

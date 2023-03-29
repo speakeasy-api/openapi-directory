@@ -3,61 +3,60 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CountClosedWorkflowExecutionsRequest{
         Headers: operations.CountClosedWorkflowExecutionsHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
         },
         Request: shared.CountClosedWorkflowExecutionsInput{
             CloseStatusFilter: &shared.CloseStatusFilter{
-                Status: "COMPLETED",
+                Status: "CANCELED",
             },
             CloseTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2011-08-12T10:11:12Z",
-                OldestDate: "2003-05-13T04:57:12Z",
+                LatestDate: "2022-08-13T22:08:13.583Z",
+                OldestDate: "2022-08-05T18:31:21.521Z",
             },
-            Domain: "rerum",
+            Domain: "eum",
             ExecutionFilter: &shared.WorkflowExecutionFilter{
-                WorkflowID: "dicta",
+                WorkflowID: "iusto",
             },
             StartTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2004-06-02T10:14:12Z",
-                OldestDate: "1981-07-21T06:30:48Z",
+                LatestDate: "2022-12-10T22:09:06.676Z",
+                OldestDate: "2022-05-08T00:37:25.198Z",
             },
             TagFilter: &shared.TagFilter{
-                Tag: "et",
+                Tag: "inventore",
             },
             TypeFilter: &shared.WorkflowTypeFilter{
-                Name: "ut",
-                Version: "dolorem",
+                Name: "sapiente",
+                Version: "enim",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CountClosedWorkflowExecutions(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -66,5 +65,6 @@ func main() {
     if res.WorkflowExecutionCount != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

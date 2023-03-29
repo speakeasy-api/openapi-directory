@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/asana.com/1.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,48 +14,49 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                PersonalAccessToken: &shared.SchemePersonalAccessToken{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Oauth2: &shared.SchemeOauth2{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateAttachmentForTaskRequest{
         PathParams: operations.CreateAttachmentForTaskPathParams{
-            TaskGid: "sit",
+            TaskGid: "unde",
         },
         QueryParams: operations.CreateAttachmentForTaskQueryParams{
-            Limit: 2259404117704393152,
-            Offset: "culpa",
+            Limit: 592845,
+            Offset: "porro",
             OptFields: []string{
-                "consequuntur",
-                "dolor",
+                "id",
+                "vero",
+                "perspiciatis",
+                "nulla",
             },
-            OptPretty: true,
+            OptPretty: false,
         },
         Request: shared.AttachmentRequest{
             File: &shared.AttachmentRequestFile{
-                Content: []byte("voluptas"),
-                File: "fugit",
+                Content: []byte("nihil"),
+                File: "fuga",
             },
-            Name: "et",
+            Name: "facilis",
             ResourceSubtype: "asana_file_attachments",
-            URL: "rerum",
+            URL: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Attachments.CreateAttachmentForTask(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -64,11 +65,13 @@ func main() {
     if res.CreateAttachmentForTask200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### Attachments
 
@@ -77,16 +80,16 @@ func main() {
 * `GetAttachment` - Get an attachment
 * `GetAttachmentsForTask` - Get attachments for a task
 
-### Batch API
+### BatchAPI
 
 * `CreateBatchRequest` - Submit parallel requests
 
-### Custom Field Settings
+### CustomFieldSettings
 
 * `GetCustomFieldSettingsForPortfolio` - Get a portfolio's custom fields
 * `GetCustomFieldSettingsForProject` - Get a project's custom fields
 
-### Custom Fields
+### CustomFields
 
 * `CreateCustomField` - Create a custom field
 * `CreateEnumOptionForCustomField` - Create an enum option
@@ -124,12 +127,12 @@ func main() {
 
 * `GetJob` - Get a job by id
 
-### Organization Exports
+### OrganizationExports
 
 * `CreateOrganizationExport` - Create an organization export request
 * `GetOrganizationExport` - Get details on an org export request
 
-### Portfolio Memberships
+### PortfolioMemberships
 
 * `GetPortfolioMembership` - Get a portfolio membership
 * `GetPortfolioMemberships` - Get multiple portfolio memberships
@@ -150,12 +153,12 @@ func main() {
 * `RemoveMembersForPortfolio` - Remove users from a portfolio
 * `UpdatePortfolio` - Update a portfolio
 
-### Project Memberships
+### ProjectMemberships
 
 * `GetProjectMembership` - Get a project membership
 * `GetProjectMembershipsForProject` - Get memberships from a project
 
-### Project Statuses
+### ProjectStatuses
 
 * `CreateProjectStatusForProject` - Create a project status
 * `DeleteProjectStatus` - Delete a project status
@@ -241,7 +244,7 @@ func main() {
 * `SetParentForTask` - Set the parent of a task
 * `UpdateTask` - Update a task
 
-### Team Memberships
+### TeamMemberships
 
 * `GetTeamMembership` - Get a team membership
 * `GetTeamMemberships` - Get team memberships
@@ -257,7 +260,7 @@ func main() {
 * `GetTeamsForUser` - Get teams for a user
 * `RemoveUserForTeam` - Remove a user from a team
 
-### Time Periods
+### TimePeriods
 
 * `GetTimePeriod` - Get a time period
 * `GetTimePeriods` - Get time periods
@@ -266,7 +269,7 @@ func main() {
 
 * `TypeaheadForWorkspace` - Get objects via typeahead
 
-### User Task Lists
+### UserTaskLists
 
 * `GetUserTaskList` - Get a user task list
 * `GetUserTaskListForUser` - Get a user's task list
@@ -286,7 +289,7 @@ func main() {
 * `GetWebhook` - Get a webhook
 * `GetWebhooks` - Get multiple webhooks
 
-### Workspace Memberships
+### WorkspaceMemberships
 
 * `GetWorkspaceMembership` - Get a workspace membership
 * `GetWorkspaceMembershipsForUser` - Get workspace memberships for a user
@@ -299,7 +302,6 @@ func main() {
 * `GetWorkspaces` - Get multiple workspaces
 * `RemoveUserForWorkspace` - Remove a user from a workspace or organization
 * `UpdateWorkspace` - Update a workspace
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

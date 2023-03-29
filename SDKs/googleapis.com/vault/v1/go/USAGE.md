@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.VaultMattersAddPermissionsRequest{
         Security: operations.VaultMattersAddPermissionsSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,31 +23,32 @@ func main() {
             },
         },
         PathParams: operations.VaultMattersAddPermissionsPathParams{
-            MatterID: "sit",
+            MatterID: "unde",
         },
         QueryParams: operations.VaultMattersAddPermissionsQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.AddMatterPermissionsRequest{
             CcMe: false,
             MatterPermission: &shared.MatterPermission{
-                AccountID: "debitis",
-                Role: "ROLE_UNSPECIFIED",
+                AccountID: "eum",
+                Role: "COLLABORATOR",
             },
             SendEmails: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Matters.VaultMattersAddPermissions(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +57,6 @@ func main() {
     if res.MatterPermission != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BulkCreateAdsByInventoryReferenceRequest{
         Security: operations.BulkCreateAdsByInventoryReferenceSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,19 +20,30 @@ func main() {
             },
         },
         PathParams: operations.BulkCreateAdsByInventoryReferencePathParams{
-            CampaignID: "sit",
+            CampaignID: "unde",
         },
         Request: shared.BulkCreateAdsByInventoryReferenceRequest{
             Requests: []shared.CreateAdsByInventoryReferenceRequest{
                 shared.CreateAdsByInventoryReferenceRequest{
-                    BidPercentage: "culpa",
-                    InventoryReferenceID: "expedita",
-                    InventoryReferenceType: "consequuntur",
+                    BidPercentage: "porro",
+                    InventoryReferenceID: "nulla",
+                    InventoryReferenceType: "id",
+                },
+                shared.CreateAdsByInventoryReferenceRequest{
+                    BidPercentage: "vero",
+                    InventoryReferenceID: "perspiciatis",
+                    InventoryReferenceType: "nulla",
+                },
+                shared.CreateAdsByInventoryReferenceRequest{
+                    BidPercentage: "nihil",
+                    InventoryReferenceID: "fuga",
+                    InventoryReferenceType: "facilis",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Ad.BulkCreateAdsByInventoryReference(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -39,5 +52,6 @@ func main() {
     if res.BulkCreateAdsByInventoryReferenceResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

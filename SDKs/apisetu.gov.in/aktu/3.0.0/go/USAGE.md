@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DgcerRequest{
         Security: operations.DgcerSecurity{
             APIKey: shared.SchemeAPIKey{
@@ -22,18 +24,57 @@ func main() {
         },
         Request: &operations.DgcerRequestBody{
             CertificateParameters: &operations.DgcerRequestBodyCertificateParameters{
-                DOB: "sit",
-                EnrollmentNo: "voluptas",
-                FullName: "culpa",
-                RollNo: "expedita",
-                UID: "consequuntur",
+                Dob: "31-12-1980",
+                EnrollmentNo: "123456789012",
+                FullName: "Sunil Kumar",
+                RollNo: "1234567890",
+                UID: "123412341234",
             },
-            ConsentArtifact: "dolor",
+            ConsentArtifact: &shared.ConsentArtifactSchema{
+                Consent: shared.ConsentArtifactSchemaConsent{
+                    ConsentID: "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba",
+                    Data: shared.ConsentArtifactSchemaConsentData{
+                        ID: "unde",
+                    },
+                    DataConsumer: shared.ConsentArtifactSchemaConsentDataConsumer{
+                        ID: "deserunt",
+                    },
+                    DataProvider: shared.ConsentArtifactSchemaConsentDataProvider{
+                        ID: "porro",
+                    },
+                    Permission: shared.ConsentArtifactSchemaConsentPermission{
+                        Access: "nulla",
+                        DateRange: shared.ConsentArtifactSchemaConsentPermissionDateRange{
+                            From: "2022-08-21T12:21:20.419Z",
+                            To: "2022-05-20T08:57:33.255Z",
+                        },
+                        Frequency: shared.ConsentArtifactSchemaConsentPermissionFrequency{
+                            Repeats: 5448.83,
+                            Unit: "nulla",
+                            Value: 4236.55,
+                        },
+                    },
+                    Purpose: shared.ConsentArtifactSchemaConsentPurpose{
+                        Description: "fuga",
+                    },
+                    Timestamp: "2022-08-05T18:31:49.298Z",
+                    User: shared.ConsentArtifactSchemaConsentUser{
+                        Email: "Humberto.Gulgowski96@yahoo.com",
+                        IDNumber: "enim",
+                        IDType: "eum",
+                        Mobile: "(885) 553-9803 x060",
+                    },
+                },
+                Signature: shared.ConsentArtifactSchemaSignature{
+                    Signature: "consequatur",
+                },
+            },
             Format: "pdf",
-            TxnID: "voluptas",
+            TxnID: "f7f1469c-29b0-4325-9dfc-c567200a70f7",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.APIs.Dgcer(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -42,5 +83,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,32 +12,33 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAssociationFilterRequest{
         QueryParams: operations.GetAssociationFilterQueryParams{
-            Datasource: "sit",
-            Datastructure: "voluptas",
-            Datatype: "culpa",
+            Datasource: "unde",
+            Datastructure: "deserunt",
+            Datatype: "porro",
             Direct: false,
-            Disease: "consequuntur",
+            Disease: "nulla",
             Facets: false,
-            Fields: "expedita",
-            Format: "voluptas",
-            From: 88.099998,
-            Pathway: "nihil",
-            ScorevalueMax: 47.200001,
-            ScorevalueMin: 48.099998,
-            ScorevalueTypes: "et",
-            Search: "ut",
-            Size: 50.099998,
-            Sort: "voluptate",
-            Target: "iste",
-            TargetClass: "vitae",
-            TherapeuticArea: "totam",
-            Uniprotkw: "dolores",
+            Fields: "id",
+            Format: "vero",
+            From: 5448.83,
+            Pathway: "nulla",
+            ScorevalueMax: 4236.55,
+            ScorevalueMin: 6235.64,
+            ScorevalueTypes: "facilis",
+            Search: "eum",
+            Size: 4375.87,
+            Sort: "ullam",
+            Target: "saepe",
+            TargetClass: "inventore",
+            TherapeuticArea: "sapiente",
+            Uniprotkw: "enim",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Filter.GetAssociationFilter(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -44,5 +47,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

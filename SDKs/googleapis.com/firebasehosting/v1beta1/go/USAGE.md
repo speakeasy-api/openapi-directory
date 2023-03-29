@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FirebasehostingProjectsSitesCreateRequest{
         Security: operations.FirebasehostingProjectsSitesCreateSecurity{
             Option1: &operations.FirebasehostingProjectsSitesCreateSecurityOption1{
@@ -23,30 +25,32 @@ func main() {
             },
         },
         PathParams: operations.FirebasehostingProjectsSitesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.FirebasehostingProjectsSitesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            SiteID: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            SiteID: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.SiteInput{
-            AppID: "debitis",
+            AppID: "iusto",
             Labels: map[string]string{
-                "et": "ut",
+                "saepe": "inventore",
+                "sapiente": "enim",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.FirebasehostingProjectsSitesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -55,5 +59,6 @@ func main() {
     if res.Site != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

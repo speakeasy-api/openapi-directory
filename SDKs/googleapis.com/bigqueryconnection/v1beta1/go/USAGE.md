@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest{
         Security: operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity{
             Option1: &operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1{
@@ -23,38 +25,39 @@ func main() {
             },
         },
         PathParams: operations.BigqueryconnectionProjectsLocationsConnectionsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            ConnectionID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            ConnectionID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.ConnectionInput{
             CloudSQL: &shared.CloudSQLPropertiesInput{
                 Credential: &shared.CloudSQLCredential{
-                    Password: "debitis",
-                    Username: "voluptatum",
+                    Password: "iusto",
+                    Username: "Eli96",
                 },
-                Database: "et",
-                InstanceID: "ut",
-                Type: "MYSQL",
+                Database: "enim",
+                InstanceID: "eum",
+                Type: "POSTGRES",
             },
-            Description: "et",
-            FriendlyName: "voluptate",
-            Name: "iste",
+            Description: "autem",
+            FriendlyName: "vel",
+            Name: "non",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.BigqueryconnectionProjectsLocationsConnectionsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -63,5 +66,6 @@ func main() {
     if res.Connection != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

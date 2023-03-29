@@ -3,48 +3,46 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateSavingsPlanRequest{
         Headers: operations.CreateSavingsPlanHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateSavingsPlanRequestBody{
-            ClientToken: "voluptas",
-            Commitment: "fugit",
-            PurchaseTime: "2011-08-12T10:11:12Z",
-            SavingsPlanOfferingID: "nihil",
+            ClientToken: "nulla",
+            Commitment: "nihil",
+            PurchaseTime: "2022-08-13T22:07:49.253Z",
+            SavingsPlanOfferingID: "facilis",
             Tags: map[string]string{
-                "dicta": "debitis",
-                "voluptatum": "et",
-                "ut": "dolorem",
+                "iusto": "ullam",
+                "saepe": "inventore",
             },
-            UpfrontPaymentAmount: "et",
+            UpfrontPaymentAmount: "sapiente",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateSavingsPlan(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +51,6 @@ func main() {
     if res.CreateSavingsPlanResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

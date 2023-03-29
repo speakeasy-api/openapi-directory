@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/ndhm.gov.in/ndhm-cm/0.5/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,73 +23,75 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.PostV05ConsentRequestsInitRequest{
-        Headers: operations.PostV05ConsentRequestsInitHeaders{
-            Authorization: "sit",
+
+    req := operations.PostV05ConsentRequestsInitJSONRequest{
+        Headers: operations.PostV05ConsentRequestsInitJSONHeaders{
+            Authorization: "unde",
         },
-        Request: operations.PostV05ConsentRequestsInitRequests{
-            ApplicationXML: []byte("voluptas"),
-            ConsentRequest: &shared.ConsentRequest{
-                Consent: shared.ConsentRequestConsent{
-                    CareContexts: []shared.CareContextDefinition{
-                        shared.CareContextDefinition{
-                            CareContextReference: "expedita",
-                            PatientReference: "consequuntur",
-                        },
-                        shared.CareContextDefinition{
-                            CareContextReference: "dolor",
-                            PatientReference: "expedita",
-                        },
+        Request: shared.ConsentRequest{
+            Consent: shared.ConsentRequestConsent{
+                CareContexts: []shared.CareContextDefinition{
+                    shared.CareContextDefinition{
+                        CareContextReference: "Episode1",
+                        PatientReference: "batman@tmh",
                     },
-                    HiTypes: []shared.HiTypeEnumEnum{
-                        "OPConsultation",
-                        "OPConsultation",
-                        "OPConsultation",
+                    shared.CareContextDefinition{
+                        CareContextReference: "Episode1",
+                        PatientReference: "batman@tmh",
                     },
-                    Hip: &shared.ConsentRequestConsentHip{
-                        ID: "rerum",
-                    },
-                    Hiu: shared.ConsentRequestConsentHiu{
-                        ID: "dicta",
-                    },
-                    Patient: shared.ConsentRequestConsentPatient{
-                        ID: "debitis",
-                    },
-                    Permission: shared.Permission{
-                        AccessMode: "VIEW",
-                        DataEraseAt: "2005-09-27T09:17:54Z",
-                        DateRange: shared.PermissionDateRange{
-                            From: "1970-04-14T21:44:49Z",
-                            To: "2021-10-23T13:19:10Z",
-                        },
-                        Frequency: shared.PermissionFrequency{
-                            Repeats: 7259475919510918339,
-                            Unit: "YEAR",
-                            Value: 3287288577352441706,
-                        },
-                    },
-                    Purpose: shared.UsePurpose{
-                        Code: "vitae",
-                        RefURI: "totam",
-                        Text: "dolores",
-                    },
-                    Requester: shared.Requester{
-                        Identifier: &shared.RequesterIdentifier{
-                            System: "illum",
-                            Type: "debitis",
-                            Value: "vel",
-                        },
-                        Name: "odio",
+                    shared.CareContextDefinition{
+                        CareContextReference: "Episode1",
+                        PatientReference: "batman@tmh",
                     },
                 },
-                RequestID: "dolore",
-                Timestamp: "1993-03-23T22:53:08Z",
+                HiTypes: []shared.HITypeEnumEnum{
+                    "DiagnosticReport",
+                    "DischargeSummary",
+                    "DiagnosticReport",
+                },
+                Hip: &shared.ConsentRequestConsentHip{
+                    ID: "perspiciatis",
+                },
+                Hiu: shared.ConsentRequestConsentHiu{
+                    ID: "nulla",
+                },
+                Patient: shared.ConsentRequestConsentPatient{
+                    ID: "hinapatel79@ndhm",
+                },
+                Permission: shared.Permission{
+                    AccessMode: "STORE",
+                    DataEraseAt: "2022-08-13T22:19:51.328Z",
+                    DateRange: shared.PermissionDateRange{
+                        From: "2022-08-05T18:42:59.266Z",
+                        To: "2022-11-09T05:33:54.269Z",
+                    },
+                    Frequency: shared.PermissionFrequency{
+                        Repeats: 437587,
+                        Unit: "WEEK",
+                        Value: 891773,
+                    },
+                },
+                Purpose: shared.UsePurpose{
+                    Code: "inventore",
+                    RefURI: "https://donny.info",
+                    Text: "voluptatum",
+                },
+                Requester: shared.Requester{
+                    Identifier: &shared.RequesterIdentifier{
+                        System: "https://www.mciindia.org",
+                        Type: "REGNO",
+                        Value: "MH1001",
+                    },
+                    Name: "Dr. Manju",
+                },
             },
+            RequestID: "499a5a4a-7dda-4f20-9b67-e24589627061",
+            Timestamp: "2022-06-13T13:14:15.573Z",
         },
     }
-    
-    res, err := s.Consent.PostV05ConsentRequestsInit(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Consent.PostV05ConsentRequestsInitJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -95,71 +99,92 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### consent
 
-* `PostV05ConsentRequestsInit` - Create consent request
-* `PostV05ConsentRequestsStatus` - Get consent request status
+### Consent
+
+* `PostV05ConsentRequestsInitJSON` - Create consent request
+* `PostV05ConsentRequestsInitRaw` - Create consent request
+* `PostV05ConsentRequestsStatusJSON` - Get consent request status
+* `PostV05ConsentRequestsStatusRaw` - Get consent request status
 * `PostV05ConsentsFetch` - Get consent artefact
-* `PostV05ConsentsHipOnNotify` - Consent notification
+* `PostV05ConsentsHipOnNotifyJSON` - Consent notification
+* `PostV05ConsentsHipOnNotifyRaw` - Consent notification
 * `PostV05ConsentsHiuOnNotify` - Consent notification
 
-### data flow
+### DataFlow
 
-* `PostV05HealthInformationNotify` - Notifications corresponding to events during data flow
-* `PostV05HealthInformationOnRequest` - Health information data request acknowledgement from HIP
-* `PostV05HealthInformationRequest` - Health information data request from HIU
+* `PostV05HealthInformationNotifyJSON` - Notifications corresponding to events during data flow
+* `PostV05HealthInformationNotifyRaw` - Notifications corresponding to events during data flow
+* `PostV05HealthInformationOnRequestJSON` - Health information data request acknowledgement from HIP
+* `PostV05HealthInformationOnRequestRaw` - Health information data request acknowledgement from HIP
+* `PostV05HealthInformationRequestJSON` - Health information data request from HIU
+* `PostV05HealthInformationRequestRaw` - Health information data request from HIU
 
-### discovery
+### Discovery
 
-* `PostV05CareContextsOnDiscover` - Response to patient's account discovery request
+* `PostV05CareContextsOnDiscoverJSON` - Response to patient's account discovery request
+* `PostV05CareContextsOnDiscoverRaw` - Response to patient's account discovery request
 
-### hip facing
+### HipFacing
 
-* `PostV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
-* `PostV05UsersAuthOnNotify` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `PostV05UsersAuthFetchModesJSON` - Get a patient's authentication modes relevant to specified purpose
+* `PostV05UsersAuthFetchModesRaw` - Get a patient's authentication modes relevant to specified purpose
+* `PostV05UsersAuthOnNotifyJSON` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `PostV05UsersAuthOnNotifyRaw` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
 
-### hiu facing
+### HiuFacing
 
 * `PostV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
-* `PostV05UsersAuthOnNotify` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `PostV05UsersAuthOnNotifyJSON` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `PostV05UsersAuthOnNotifyRaw` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
 
-### identification
+### Identification
 
-* `PostV05PatientsFind` - Identify a patient by her consent-manager user-id
+* `PostV05PatientsFindJSON` - Identify a patient by her consent-manager user-id
+* `PostV05PatientsFindRaw` - Identify a patient by her consent-manager user-id
 
-### link
+### Link
 
-* `PostV05LinksLinkAddContexts` - API for HIP initiated care-context linking for patient
-* `PostV05LinksLinkOnConfirm` - Token authenticated by HIP, indicating completion of linkage of care-contexts
-* `PostV05LinksLinkOnInit` - Response to patient's care context link request
+* `PostV05LinksLinkAddContextsJSON` - API for HIP initiated care-context linking for patient
+* `PostV05LinksLinkAddContextsRaw` - API for HIP initiated care-context linking for patient
+* `PostV05LinksLinkOnConfirmJSON` - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* `PostV05LinksLinkOnConfirmRaw` - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* `PostV05LinksLinkOnInitJSON` - Response to patient's care context link request
+* `PostV05LinksLinkOnInitRaw` - Response to patient's care context link request
 
-### monitoring
+### Monitoring
 
 * `GetV05Heartbeat` - Get consent request status
 
-### profile
+### Profile
 
-* `PostV05PatientsProfileOnShare` - Response to patient's share profile request
+* `PostV05PatientsProfileOnShareJSON` - Response to patient's share profile request
+* `PostV05PatientsProfileOnShareRaw` - Response to patient's share profile request
 
-### subscriptions
+### Subscriptions
 
-* `PostV05SubscriptionRequestsCmInit` - Request for subscription
+* `PostV05SubscriptionRequestsCmInitJSON` - Request for subscription
+* `PostV05SubscriptionRequestsCmInitRaw` - Request for subscription
 * `PostV05SubscriptionRequestsHiuOnNotify` - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
 * `PostV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
 
-### user auth
+### UserAuth
 
-* `PostV05UsersAuthConfirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-* `PostV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
-* `PostV05UsersAuthInit` - Initialize authentication from HIP
-* `PostV05UsersAuthOnNotify` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
-
+* `PostV05UsersAuthConfirmJSON` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `PostV05UsersAuthConfirmRaw` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `PostV05UsersAuthFetchModesJSON` - Get a patient's authentication modes relevant to specified purpose
+* `PostV05UsersAuthFetchModesRaw` - Get a patient's authentication modes relevant to specified purpose
+* `PostV05UsersAuthInitJSON` - Initialize authentication from HIP
+* `PostV05UsersAuthInitRaw` - Initialize authentication from HIP
+* `PostV05UsersAuthOnNotifyJSON` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `PostV05UsersAuthOnNotifyRaw` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

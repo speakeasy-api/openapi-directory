@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeleteFaxRequest{
         Security: operations.DeleteFaxSecurity{
             AccountSidAuthToken: shared.SchemeAccountSidAuthToken{
@@ -19,10 +21,11 @@ func main() {
             },
         },
         PathParams: operations.DeleteFaxPathParams{
-            Sid: "sit",
+            Sid: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DeleteFax(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

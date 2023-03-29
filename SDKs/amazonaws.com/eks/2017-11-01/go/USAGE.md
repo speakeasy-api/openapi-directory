@@ -3,54 +3,69 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AssociateEncryptionConfigRequest{
         PathParams: operations.AssociateEncryptionConfigPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         Headers: operations.AssociateEncryptionConfigHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "expedita",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "nulla",
+            XAmzDate: "id",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "perspiciatis",
+            XAmzSignedHeaders: "nulla",
         },
         Request: operations.AssociateEncryptionConfigRequestBody{
-            ClientRequestToken: "fugit",
+            ClientRequestToken: "nihil",
             EncryptionConfig: []shared.EncryptionConfig{
                 shared.EncryptionConfig{
                     Provider: &shared.Provider{
-                        KeyArn: "nihil",
+                        KeyArn: "facilis",
                     },
                     Resources: []string{
-                        "dicta",
-                        "debitis",
+                        "iusto",
+                        "ullam",
+                    },
+                },
+                shared.EncryptionConfig{
+                    Provider: &shared.Provider{
+                        KeyArn: "saepe",
+                    },
+                    Resources: []string{
+                        "sapiente",
+                    },
+                },
+                shared.EncryptionConfig{
+                    Provider: &shared.Provider{
+                        KeyArn: "enim",
+                    },
+                    Resources: []string{
                         "voluptatum",
+                        "autem",
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AssociateEncryptionConfig(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -59,5 +74,6 @@ func main() {
     if res.AssociateEncryptionConfigResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

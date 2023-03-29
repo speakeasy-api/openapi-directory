@@ -3,44 +3,50 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateReplicationSetRequest{
         Headers: operations.CreateReplicationSetHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateReplicationSetRequestBody{
-            ClientToken: "voluptas",
+            ClientToken: "nulla",
             Regions: map[string]shared.RegionMapInputValue{
-                "et": shared.RegionMapInputValue{
-                    SseKmsKeyID: "nihil",
+                "fuga": shared.RegionMapInputValue{
+                    SseKmsKeyID: "facilis",
                 },
+                "eum": shared.RegionMapInputValue{
+                    SseKmsKeyID: "iusto",
+                },
+            },
+            Tags: map[string]string{
+                "saepe": "inventore",
+                "sapiente": "enim",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateReplicationSet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +55,6 @@ func main() {
     if res.CreateReplicationSetOutput != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

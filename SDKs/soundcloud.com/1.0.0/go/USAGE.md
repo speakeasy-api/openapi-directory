@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeleteLikesPlaylistsPlaylistIDRequest{
         Security: operations.DeleteLikesPlaylistsPlaylistIDSecurity{
             AuthHeader: shared.SchemeAuthHeader{
@@ -18,10 +20,11 @@ func main() {
             },
         },
         PathParams: operations.DeleteLikesPlaylistsPlaylistIDPathParams{
-            PlaylistID: 8717895732742165505,
+            PlaylistID: 548814,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Likes.DeleteLikesPlaylistsPlaylistID(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +33,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

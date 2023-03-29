@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,16 +12,17 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetActionNotificationExportResultsRequest{
         QueryParams: operations.GetActionNotificationExportResultsQueryParams{
-            ActionNotificationExportID: 8717895732742165505,
-            Cursor: "voluptas",
-            PerPage: 6050128673802995827,
-            UserID: 501233450539197794,
+            ActionNotificationExportID: 548814,
+            Cursor: "deserunt",
+            PerPage: 715190,
+            UserID: 844266,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ActionNotificationExportResults.GetActionNotificationExportResults(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -28,5 +31,6 @@ func main() {
     if res.ActionNotificationExportResultEntities != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

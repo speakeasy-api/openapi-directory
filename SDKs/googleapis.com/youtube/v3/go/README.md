@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/youtube/v3/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.YoutubeAbuseReportsInsertRequest{
         Security: operations.YoutubeAbuseReportsInsertSecurity{
             Option1: &operations.YoutubeAbuseReportsInsertSecurityOption1{
@@ -34,54 +36,56 @@ func main() {
             },
         },
         QueryParams: operations.YoutubeAbuseReportsInsertQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
             Part: []string{
-                "fugit",
-                "et",
                 "nihil",
+                "fuga",
+                "facilis",
+                "eum",
             },
-            PrettyPrint: true,
-            QuotaUser: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            PrettyPrint: false,
+            QuotaUser: "iusto",
+            UploadType: "ullam",
+            UploadProtocol: "saepe",
         },
         Request: &shared.AbuseReport{
             AbuseTypes: []shared.AbuseType{
                 shared.AbuseType{
-                    ID: "ut",
+                    ID: "sapiente",
                 },
             },
-            Description: "dolorem",
+            Description: "enim",
             RelatedEntities: []shared.RelatedEntity{
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "voluptate",
-                        TypeID: "iste",
-                        URL: "vitae",
+                        ID: "voluptatum",
+                        TypeID: "autem",
+                        URL: "vel",
                     },
                 },
                 shared.RelatedEntity{
                     Entity: &shared.Entity{
-                        ID: "totam",
-                        TypeID: "dolores",
-                        URL: "illum",
+                        ID: "non",
+                        TypeID: "deleniti",
+                        URL: "similique",
                     },
                 },
             },
             Subject: &shared.Entity{
-                ID: "debitis",
-                TypeID: "vel",
-                URL: "odio",
+                ID: "reprehenderit",
+                TypeID: "molestiae",
+                URL: "quo",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AbuseReports.YoutubeAbuseReportsInsert(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -90,21 +94,23 @@ func main() {
     if res.AbuseReport != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### abuseReports
+
+### AbuseReports
 
 * `YoutubeAbuseReportsInsert` - Inserts a new resource into this collection.
 
-### activities
+### Activities
 
 * `YoutubeActivitiesList` - Retrieves a list of resources, possibly filtered.
 
-### captions
+### Captions
 
 * `YoutubeCaptionsDelete` - Deletes a resource.
 * `YoutubeCaptionsDownload` - Downloads a caption track.
@@ -112,28 +118,28 @@ func main() {
 * `YoutubeCaptionsList` - Retrieves a list of resources, possibly filtered.
 * `YoutubeCaptionsUpdate` - Updates an existing resource.
 
-### channelBanners
+### ChannelBanners
 
 * `YoutubeChannelBannersInsert` - Inserts a new resource into this collection.
 
-### channelSections
+### ChannelSections
 
 * `YoutubeChannelSectionsDelete` - Deletes a resource.
 * `YoutubeChannelSectionsInsert` - Inserts a new resource into this collection.
 * `YoutubeChannelSectionsList` - Retrieves a list of resources, possibly filtered.
 * `YoutubeChannelSectionsUpdate` - Updates an existing resource.
 
-### channels
+### Channels
 
 * `YoutubeChannelsList` - Retrieves a list of resources, possibly filtered.
 * `YoutubeChannelsUpdate` - Updates an existing resource.
 
-### commentThreads
+### CommentThreads
 
 * `YoutubeCommentThreadsInsert` - Inserts a new resource into this collection.
 * `YoutubeCommentThreadsList` - Retrieves a list of resources, possibly filtered.
 
-### comments
+### Comments
 
 * `YoutubeCommentsDelete` - Deletes a resource.
 * `YoutubeCommentsInsert` - Inserts a new resource into this collection.
@@ -142,15 +148,15 @@ func main() {
 * `YoutubeCommentsSetModerationStatus` - Sets the moderation status of one or more comments.
 * `YoutubeCommentsUpdate` - Updates an existing resource.
 
-### i18nLanguages
+### I18nLanguages
 
 * `YoutubeI18nLanguagesList` - Retrieves a list of resources, possibly filtered.
 
-### i18nRegions
+### I18nRegions
 
 * `YoutubeI18nRegionsList` - Retrieves a list of resources, possibly filtered.
 
-### liveBroadcasts
+### LiveBroadcasts
 
 * `YoutubeLiveBroadcastsBind` - Bind a broadcast to a stream.
 * `YoutubeLiveBroadcastsDelete` - Delete a given broadcast.
@@ -160,90 +166,90 @@ func main() {
 * `YoutubeLiveBroadcastsTransition` - Transition a broadcast to a given status.
 * `YoutubeLiveBroadcastsUpdate` - Updates an existing broadcast for the authenticated user.
 
-### liveChatBans
+### LiveChatBans
 
 * `YoutubeLiveChatBansDelete` - Deletes a chat ban.
 * `YoutubeLiveChatBansInsert` - Inserts a new resource into this collection.
 
-### liveChatMessages
+### LiveChatMessages
 
 * `YoutubeLiveChatMessagesDelete` - Deletes a chat message.
 * `YoutubeLiveChatMessagesInsert` - Inserts a new resource into this collection.
 * `YoutubeLiveChatMessagesList` - Retrieves a list of resources, possibly filtered.
 
-### liveChatModerators
+### LiveChatModerators
 
 * `YoutubeLiveChatModeratorsDelete` - Deletes a chat moderator.
 * `YoutubeLiveChatModeratorsInsert` - Inserts a new resource into this collection.
 * `YoutubeLiveChatModeratorsList` - Retrieves a list of resources, possibly filtered.
 
-### liveStreams
+### LiveStreams
 
 * `YoutubeLiveStreamsDelete` - Deletes an existing stream for the authenticated user.
 * `YoutubeLiveStreamsInsert` - Inserts a new stream for the authenticated user.
 * `YoutubeLiveStreamsList` - Retrieve the list of streams associated with the given channel. --
 * `YoutubeLiveStreamsUpdate` - Updates an existing stream for the authenticated user.
 
-### members
+### Members
 
 * `YoutubeMembersList` - Retrieves a list of members that match the request criteria for a channel.
 
-### membershipsLevels
+### MembershipsLevels
 
 * `YoutubeMembershipsLevelsList` - Retrieves a list of all pricing levels offered by a creator to the fans.
 
-### playlistItems
+### PlaylistItems
 
 * `YoutubePlaylistItemsDelete` - Deletes a resource.
 * `YoutubePlaylistItemsInsert` - Inserts a new resource into this collection.
 * `YoutubePlaylistItemsList` - Retrieves a list of resources, possibly filtered.
 * `YoutubePlaylistItemsUpdate` - Updates an existing resource.
 
-### playlists
+### Playlists
 
 * `YoutubePlaylistsDelete` - Deletes a resource.
 * `YoutubePlaylistsInsert` - Inserts a new resource into this collection.
 * `YoutubePlaylistsList` - Retrieves a list of resources, possibly filtered.
 * `YoutubePlaylistsUpdate` - Updates an existing resource.
 
-### search
+### Search
 
 * `YoutubeSearchList` - Retrieves a list of search resources
 
-### subscriptions
+### Subscriptions
 
 * `YoutubeSubscriptionsDelete` - Deletes a resource.
 * `YoutubeSubscriptionsInsert` - Inserts a new resource into this collection.
 * `YoutubeSubscriptionsList` - Retrieves a list of resources, possibly filtered.
 
-### superChatEvents
+### SuperChatEvents
 
 * `YoutubeSuperChatEventsList` - Retrieves a list of resources, possibly filtered.
 
-### tests
+### Tests
 
 * `YoutubeTestsInsert` - POST method.
 
-### thirdPartyLinks
+### ThirdPartyLinks
 
 * `YoutubeThirdPartyLinksDelete` - Deletes a resource.
 * `YoutubeThirdPartyLinksInsert` - Inserts a new resource into this collection.
 * `YoutubeThirdPartyLinksList` - Retrieves a list of resources, possibly filtered.
 * `YoutubeThirdPartyLinksUpdate` - Updates an existing resource.
 
-### thumbnails
+### Thumbnails
 
 * `YoutubeThumbnailsSet` - As this is not an insert in a strict sense (it supports uploading/setting of a thumbnail for multiple videos, which doesn't result in creation of a single resource), I use a custom verb here.
 
-### videoAbuseReportReasons
+### VideoAbuseReportReasons
 
 * `YoutubeVideoAbuseReportReasonsList` - Retrieves a list of resources, possibly filtered.
 
-### videoCategories
+### VideoCategories
 
 * `YoutubeVideoCategoriesList` - Retrieves a list of resources, possibly filtered.
 
-### videos
+### Videos
 
 * `YoutubeVideosDelete` - Deletes a resource.
 * `YoutubeVideosGetRating` - Retrieves the ratings that the authorized user gave to a list of specified videos.
@@ -253,15 +259,14 @@ func main() {
 * `YoutubeVideosReportAbuse` - Report abuse for a video.
 * `YoutubeVideosUpdate` - Updates an existing resource.
 
-### watermarks
+### Watermarks
 
 * `YoutubeWatermarksSet` - Allows upload of watermark image and setting it for a channel.
 * `YoutubeWatermarksUnset` - Allows removal of channel watermark.
 
-### youtube
+### Youtube
 
 * `YoutubeYoutubeV3UpdateCommentThreads` - Updates an existing resource.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

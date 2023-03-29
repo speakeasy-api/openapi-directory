@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,18 +12,19 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.DeleteAccountingCodeRequest{
-        PathParams: operations.DeleteAccountingCodePathParams{
-            AcID: "sit",
+
+    req := operations.DELETEAccountingCodeRequest{
+        PathParams: operations.DELETEAccountingCodePathParams{
+            AcID: "unde",
         },
-        Headers: operations.DeleteAccountingCodeHeaders{
-            ZuoraEntityIds: "voluptas",
-            ZuoraTrackID: "culpa",
+        Headers: operations.DELETEAccountingCodeHeaders{
+            ZuoraEntityIds: "deserunt",
+            ZuoraTrackID: "porro",
         },
     }
-    
-    res, err := s.AccountingCodes.DeleteAccountingCode(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AccountingCodes.DELETEAccountingCode(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -29,5 +32,6 @@ func main() {
     if res.CommonResponseType != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

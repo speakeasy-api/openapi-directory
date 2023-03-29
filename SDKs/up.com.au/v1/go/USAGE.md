@@ -3,30 +3,29 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                BearerAuth: shared.SchemeBearerAuth{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            BearerAuth: shared.SchemeBearerAuth{
+                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetAccountsRequest{
         QueryParams: operations.GetAccountsQueryParams{
-            PageSize: 8717895732742165505,
+            PageSize: 548814,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.GetAccounts(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +34,6 @@ func main() {
     if res.ListAccountsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

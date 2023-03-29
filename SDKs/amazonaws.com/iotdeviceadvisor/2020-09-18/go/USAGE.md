@@ -3,53 +3,61 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateSuiteDefinitionRequest{
         Headers: operations.CreateSuiteDefinitionHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateSuiteDefinitionRequestBody{
-            SuiteDefinitionConfiguration: &operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration{
-                DevicePermissionRoleArn: "voluptas",
+            SuiteDefinitionConfiguration: operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration{
+                DevicePermissionRoleArn: "nulla",
                 Devices: []shared.DeviceUnderTest{
                     shared.DeviceUnderTest{
-                        CertificateArn: "et",
-                        ThingArn: "nihil",
+                        CertificateArn: "fuga",
+                        ThingArn: "facilis",
+                    },
+                    shared.DeviceUnderTest{
+                        CertificateArn: "eum",
+                        ThingArn: "iusto",
                     },
                 },
-                IntendedForQualification: true,
-                RootGroup: "dicta",
-                SuiteDefinitionName: "debitis",
+                IntendedForQualification: false,
+                IsLongDurationTest: false,
+                Protocol: "MqttV3_1_1",
+                RootGroup: "saepe",
+                SuiteDefinitionName: "inventore",
             },
             Tags: map[string]string{
-                "et": "ut",
+                "enim": "eum",
+                "voluptatum": "autem",
+                "vel": "non",
+                "deleniti": "similique",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateSuiteDefinition(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -58,5 +66,6 @@ func main() {
     if res.CreateSuiteDefinitionResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

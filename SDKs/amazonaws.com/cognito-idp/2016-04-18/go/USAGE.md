@@ -3,57 +3,71 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddCustomAttributesRequest{
         Headers: operations.AddCustomAttributesHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWSCognitoIdentityProviderService.AddCustomAttributes",
         },
         Request: shared.AddCustomAttributesRequest{
             CustomAttributes: []shared.SchemaAttributeType{
                 shared.SchemaAttributeType{
-                    AttributeDataType: "String",
-                    DeveloperOnlyAttribute: true,
-                    Mutable: true,
-                    Name: "dicta",
+                    AttributeDataType: "DateTime",
+                    DeveloperOnlyAttribute: false,
+                    Mutable: false,
+                    Name: "facilis",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "debitis",
-                        MinValue: "voluptatum",
+                        MaxValue: "eum",
+                        MinValue: "iusto",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "ut",
-                        MinLength: "dolorem",
+                        MaxLength: "ullam",
+                        MinLength: "saepe",
+                    },
+                },
+                shared.SchemaAttributeType{
+                    AttributeDataType: "String",
+                    DeveloperOnlyAttribute: false,
+                    Mutable: false,
+                    Name: "sapiente",
+                    NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
+                        MaxValue: "enim",
+                        MinValue: "eum",
+                    },
+                    Required: false,
+                    StringAttributeConstraints: &shared.StringAttributeConstraintsType{
+                        MaxLength: "voluptatum",
+                        MinLength: "autem",
                     },
                 },
             },
-            UserPoolID: "et",
+            UserPoolID: "vel",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddCustomAttributes(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -62,5 +76,6 @@ func main() {
     if res.AddCustomAttributesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

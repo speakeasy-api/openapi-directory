@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatacatalogCatalogSearchRequest{
         Security: operations.DatacatalogCatalogSearchSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,44 +23,47 @@ func main() {
             },
         },
         QueryParams: operations.DatacatalogCatalogSearchQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.GoogleCloudDatacatalogV1SearchCatalogRequest{
-            OrderBy: "rerum",
-            PageSize: 7837839688282259259,
-            PageToken: "debitis",
-            Query: "voluptatum",
+            OrderBy: "facilis",
+            PageSize: 384382,
+            PageToken: "iusto",
+            Query: "ullam",
             Scope: &shared.GoogleCloudDatacatalogV1SearchCatalogRequestScope{
                 IncludeGcpPublicDatasets: false,
                 IncludeOrgIds: []string{
-                    "dolorem",
-                    "et",
-                    "voluptate",
+                    "inventore",
+                    "sapiente",
+                    "enim",
+                    "eum",
                 },
                 IncludeProjectIds: []string{
-                    "vitae",
-                    "totam",
-                    "dolores",
+                    "autem",
+                    "vel",
                 },
                 IncludePublicTagTemplates: false,
                 RestrictedLocations: []string{
-                    "vel",
+                    "deleniti",
+                    "similique",
+                    "reprehenderit",
                 },
                 StarredOnly: false,
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Catalog.DatacatalogCatalogSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -67,5 +72,6 @@ func main() {
     if res.GoogleCloudDatacatalogV1SearchCatalogResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

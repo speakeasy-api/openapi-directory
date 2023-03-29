@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FirebasedatabaseProjectsLocationsInstancesCreateRequest{
         Security: operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurity{
             Option1: &operations.FirebasedatabaseProjectsLocationsInstancesCreateSecurityOption1{
@@ -23,29 +25,30 @@ func main() {
             },
         },
         PathParams: operations.FirebasedatabaseProjectsLocationsInstancesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.FirebasedatabaseProjectsLocationsInstancesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            DatabaseID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            DatabaseID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
-            ValidateOnly: true,
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
+            ValidateOnly: false,
         },
         Request: &shared.DatabaseInstanceInput{
-            Name: "voluptatum",
+            Name: "iusto",
             Type: "DATABASE_INSTANCE_TYPE_UNSPECIFIED",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.FirebasedatabaseProjectsLocationsInstancesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +57,6 @@ func main() {
     if res.DatabaseInstance != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,39 +3,42 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                HTTPBearer: &shared.SchemeHTTPBearer{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            AccessToken: &shared.SchemeAccessToken{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetPersonasRequest{
         QueryParams: operations.GetPersonasQueryParams{
-            Count: 8717895732742165505,
+            Count: 548814,
             Expand: []string{
-                "culpa",
+                "porro",
+                "nulla",
+                "id",
             },
             Fields: []string{
-                "consequuntur",
-                "dolor",
+                "perspiciatis",
+                "nulla",
+                "nihil",
+                "fuga",
             },
-            Name: "expedita",
-            Page: 6044372234677422456,
+            Name: "facilis",
+            Page: 384382,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Persona.GetPersonas(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -44,5 +47,6 @@ func main() {
     if res.GetPersonas200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

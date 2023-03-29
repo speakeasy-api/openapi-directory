@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,9 +12,9 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivateRequest{
-        Security: operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivateSecurity{
+
+    req := operations.PrivatecaProjectsLocationsListRequest{
+        Security: operations.PrivatecaProjectsLocationsListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -20,43 +22,36 @@ func main() {
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        PathParams: operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivatePathParams{
-            Name: "sit",
+        PathParams: operations.PrivatecaProjectsLocationsListPathParams{
+            Name: "unde",
         },
-        QueryParams: operations.PrivatecaProjectsLocationsCertificateAuthoritiesActivateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
-        },
-        Request: &shared.ActivateCertificateAuthorityRequest{
-            PemCaCertificate: "dicta",
-            RequestID: "debitis",
-            SubordinateConfig: &shared.SubordinateConfig{
-                CertificateAuthority: "voluptatum",
-                PemIssuerChain: &shared.SubordinateConfigChain{
-                    PemCertificates: []string{
-                        "ut",
-                    },
-                },
-            },
+        QueryParams: operations.PrivatecaProjectsLocationsListQueryParams{
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Filter: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            PageSize: 623564,
+            PageToken: "facilis",
+            PrettyPrint: false,
+            QuotaUser: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
         },
     }
-    
-    res, err := s.Projects.PrivatecaProjectsLocationsCertificateAuthoritiesActivate(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Projects.PrivatecaProjectsLocationsList(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Operation != nil {
+    if res.ListLocationsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

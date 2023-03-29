@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/namsor.com/2.0.15/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,31 +14,30 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AnonymizeRequest{
         PathParams: operations.AnonymizePathParams{
             Anonymized: false,
-            Source: "voluptas",
+            Source: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Admin.Anonymize(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,13 +46,15 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### admin
+
+### Admin
 
 * `Anonymize` - Activate/deactivate anonymization for a source.
 * `APIStatus` - Prints the current status of the classifiers. A classifier name in apiStatus corresponds to a service name in apiServices.
@@ -66,7 +67,7 @@ func main() {
 * `SoftwareVersion` - Get the current software version
 * `TaxonomyClasses` - Print the taxonomy classes valid for the given classifier.
 
-### chinese
+### Chinese
 
 * `ChineseNameCandidates` - Identify Chinese name candidates, based on the romanized name ex. Wang Xiaoming
 * `ChineseNameCandidatesBatch` - Identify Chinese name candidates, based on the romanized name (firstName = chineseGivenName; lastName=chineseSurname), ex. Wang Xiaoming
@@ -83,14 +84,14 @@ func main() {
 * `PinyinChineseName` - Romanize the Chinese name to Pinyin, ex. 王晓明 -> Wang (surname) Xiaoming (given name)
 * `PinyinChineseNameBatch` - Romanize a list of Chinese name to Pinyin, ex. 王晓明 -> Wang (surname) Xiaoming (given name).
 
-### general
+### General
 
 * `NameType` - Infer the likely type of a proper noun (personal name, brand name, place name etc.)
 * `NameTypeBatch` - Infer the likely common type of up to 100 proper nouns (personal name, brand name, place name etc.)
 * `NameTypeGeo` - Infer the likely type of a proper noun (personal name, brand name, place name etc.)
 * `NameTypeGeoBatch` - Infer the likely common type of up to 100 proper nouns (personal name, brand name, place name etc.)
 
-### japanese
+### Japanese
 
 * `GenderJapaneseNameFull` - Infer the likely gender of a Japanese full name ex. 王晓明
 * `GenderJapaneseNameFullBatch` - Infer the likely gender of up to 100 full names
@@ -108,7 +109,7 @@ func main() {
 * `ParseJapaneseName` - Infer the likely first/last name structure of a name, ex. 山本 早苗 or Yamamoto Sanae
 * `ParseJapaneseNameBatch` - Infer the likely first/last name structure of a name, ex. 山本 早苗 or Yamamoto Sanae 
 
-### personal
+### Personal
 
 * `Corridor` - [USES 20 UNITS PER NAME COUPLE] Infer several classifications for a cross border interaction between names (ex. remit, travel, intl com)
 * `CorridorBatch` - [USES 20 UNITS PER NAME PAIR] Infer several classifications for up to 100 cross border interaction between names (ex. remit, travel, intl com)
@@ -135,14 +136,13 @@ func main() {
 * `UsRaceEthnicityZip5` - [USES 10 UNITS PER NAME] Infer a US resident's likely race/ethnicity according to US Census taxonomy, using (optional) ZIP5 code info. Output is W_NL (white, non latino), HL (hispano latino),  A (asian, non latino), B_NL (black, non latino). Optionally add header X-OPTION-USRACEETHNICITY-TAXONOMY: USRACEETHNICITY-6CLASSES for two additional classes, AI_AN (American Indian or Alaskan Native) and PI (Pacific Islander).
 * `UsZipRaceEthnicityBatch` - [USES 10 UNITS PER NAME] Infer up-to 100 US resident's likely race/ethnicity according to US Census taxonomy, with (optional) ZIP code. Output is W_NL (white, non latino), HL (hispano latino),  A (asian, non latino), B_NL (black, non latino). Optionally add header X-OPTION-USRACEETHNICITY-TAXONOMY: USRACEETHNICITY-6CLASSES for two additional classes, AI_AN (American Indian or Alaskan Native) and PI (Pacific Islander).
 
-### social
+### Social
 
 * `PhoneCode` - [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, given a personal name and formatted / unformatted phone number.
 * `PhoneCodeBatch` - [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, of up to 100 personal names, detecting automatically the local context given a name and formatted / unformatted phone number.
 * `PhoneCodeGeo` - [USES 11 UNITS PER NAME] Infer the likely phone prefix, given a personal name and formatted / unformatted phone number, with a local context (ISO2 country of residence).
 * `PhoneCodeGeoBatch` - [USES 11 UNITS PER NAME] Infer the likely country and phone prefix, of up to 100 personal names, with a local context (ISO2 country of residence).
 * `PhoneCodeGeoFeedbackLoop` - [CREDITS 1 UNIT] Feedback loop to better infer the likely phone prefix, given a personal name and formatted / unformatted phone number, with a local context (ISO2 country of residence).
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

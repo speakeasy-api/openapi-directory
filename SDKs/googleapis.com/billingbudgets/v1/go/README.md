@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/billingbudgets/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BillingbudgetsBillingAccountsBudgetsCreateRequest{
         Security: operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
             Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
@@ -34,104 +36,104 @@ func main() {
             },
         },
         PathParams: operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudBillingBudgetsV1BudgetInput{
             Amount: &shared.GoogleCloudBillingBudgetsV1BudgetAmount{
                 LastPeriodAmount: map[string]interface{}{
-                    "debitis": "voluptatum",
-                    "et": "ut",
-                    "dolorem": "et",
+                    "iusto": "ullam",
+                    "saepe": "inventore",
                 },
                 SpecifiedAmount: &shared.GoogleTypeMoney{
-                    CurrencyCode: "voluptate",
-                    Nanos: 3287288577352441706,
-                    Units: "vitae",
+                    CurrencyCode: "sapiente",
+                    Nanos: 272656,
+                    Units: "eum",
                 },
             },
             BudgetFilter: &shared.GoogleCloudBillingBudgetsV1Filter{
-                CalendarPeriod: "QUARTER",
+                CalendarPeriod: "MONTH",
                 CreditTypes: []string{
-                    "illum",
+                    "vel",
+                    "non",
+                    "deleniti",
+                    "similique",
                 },
-                CreditTypesTreatment: "EXCLUDE_ALL_CREDITS",
+                CreditTypesTreatment: "INCLUDE_ALL_CREDITS",
                 CustomPeriod: &shared.GoogleCloudBillingBudgetsV1CustomPeriod{
                     EndDate: &shared.GoogleTypeDate{
-                        Day: 3706853784096366226,
-                        Month: 2627038740284806767,
-                        Year: 6303220950515014660,
+                        Day: 925597,
+                        Month: 836079,
+                        Year: 71036,
                     },
                     StartDate: &shared.GoogleTypeDate{
-                        Day: 4035568504096476779,
-                        Month: 959367522974354090,
-                        Year: 2914295034816259174,
+                        Day: 337396,
+                        Month: 87129,
+                        Year: 648172,
                     },
                 },
                 Labels: map[string][]interface{}{
-                    "commodi": []interface{}{
-                        "est",
-                        "aut",
-                        "odit",
-                    },
-                    "non": []interface{}{
+                    "consequatur": []interface{}{
+                        "a",
                         "omnis",
-                    },
-                    "aut": []interface{}{
-                        "sed",
+                        "eos",
+                        "accusamus",
                     },
                 },
                 Projects: []string{
-                    "autem",
-                    "consectetur",
+                    "reiciendis",
+                    "rem",
+                    "quibusdam",
+                    "et",
                 },
                 Services: []string{
-                    "odio",
+                    "occaecati",
+                    "dolor",
                 },
                 Subaccounts: []string{
-                    "recusandae",
+                    "sed",
+                    "quisquam",
+                    "rerum",
                 },
             },
-            DisplayName: "at",
-            Etag: "ipsum",
+            DisplayName: "culpa",
+            Etag: "qui",
             NotificationsRule: &shared.GoogleCloudBillingBudgetsV1NotificationsRule{
-                DisableDefaultIamRecipients: true,
+                DisableDefaultIamRecipients: false,
                 MonitoringNotificationChannels: []string{
-                    "sint",
-                    "inventore",
+                    "rerum",
+                    "possimus",
+                    "occaecati",
                 },
-                PubsubTopic: "ut",
-                SchemaVersion: "exercitationem",
+                PubsubTopic: "odit",
+                SchemaVersion: "esse",
             },
             ThresholdRules: []shared.GoogleCloudBillingBudgetsV1ThresholdRule{
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
                     SpendBasis: "BASIS_UNSPECIFIED",
-                    ThresholdPercent: 7.200000,
+                    ThresholdPercent: 1863.32,
                 },
                 shared.GoogleCloudBillingBudgetsV1ThresholdRule{
                     SpendBasis: "FORECASTED_SPEND",
-                    ThresholdPercent: 94.199997,
-                },
-                shared.GoogleCloudBillingBudgetsV1ThresholdRule{
-                    SpendBasis: "CURRENT_SPEND",
-                    ThresholdPercent: 80.199997,
+                    ThresholdPercent: 7369.18,
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -140,20 +142,21 @@ func main() {
     if res.GoogleCloudBillingBudgetsV1Budget != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### billingAccounts
+
+### BillingAccounts
 
 * `BillingbudgetsBillingAccountsBudgetsCreate` - Creates a new budget. See [Quotas and limits](https://cloud.google.com/billing/quotas) for more information on the limits of the number of budgets you can create.
 * `BillingbudgetsBillingAccountsBudgetsDelete` - Deletes a budget. Returns successfully if already deleted.
 * `BillingbudgetsBillingAccountsBudgetsGet` - Returns a budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
 * `BillingbudgetsBillingAccountsBudgetsList` - Returns a list of budgets for a billing account. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. When reading from the API, you will not see these fields in the return value, though they may have been set in the Cloud Console.
 * `BillingbudgetsBillingAccountsBudgetsPatch` - Updates a budget and returns the updated budget. WARNING: There are some fields exposed on the Google Cloud Console that aren't available on this API. Budget fields that are not exposed in this API will not be changed by this method.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

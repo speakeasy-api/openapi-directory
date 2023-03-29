@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
         Security: operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,61 +23,66 @@ func main() {
             },
         },
         PathParams: operations.WebsecurityscannerProjectsScanConfigsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "dicta",
-                    Password: "debitis",
-                    Username: "voluptatum",
+                    LoginURL: "eum",
+                    Password: "iusto",
+                    Username: "Eli96",
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "et",
-                    Username: "ut",
+                    Password: "enim",
+                    Username: "Gerald_Kreiger52",
                 },
                 IapCredential: &shared.IapCredential{
                     IapTestServiceAccountInfo: &shared.IapTestServiceAccountInfo{
-                        TargetAudienceClientID: "dolorem",
+                        TargetAudienceClientID: "deleniti",
                     },
                 },
             },
             BlacklistPatterns: []string{
-                "voluptate",
-                "iste",
+                "reprehenderit",
+                "molestiae",
+                "quo",
             },
-            DisplayName: "vitae",
-            ExportToSecurityCommandCenter: "DISABLED",
-            IgnoreHTTPStatusErrors: true,
+            DisplayName: "quasi",
+            ExportToSecurityCommandCenter: "ENABLED",
+            IgnoreHTTPStatusErrors: false,
             ManagedScan: false,
-            MaxQPS: 6392442863481646880,
-            Name: "vel",
+            MaxQPS: 87129,
+            Name: "est",
             RiskLevel: "RISK_LEVEL_UNSPECIFIED",
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 6303220950515014660,
-                ScheduleTime: "id",
+                IntervalDurationDays: 368241,
+                ScheduleTime: "fugiat",
             },
             StartingUrls: []string{
-                "accusantium",
+                "omnis",
+                "eos",
+                "accusamus",
+                "accusamus",
             },
             StaticIPScan: false,
-            UserAgent: "USER_AGENT_UNSPECIFIED",
+            UserAgent: "SAFARI_IPHONE",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -84,5 +91,6 @@ func main() {
     if res.ScanConfig != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

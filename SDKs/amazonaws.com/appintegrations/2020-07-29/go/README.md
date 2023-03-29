@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/appintegrations/2020-07-29/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,58 +14,59 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.CreateDataIntegrationRequest{
+        Headers: operations.CreateDataIntegrationHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+        },
+        Request: operations.CreateDataIntegrationRequestBody{
+            ClientToken: "nulla",
+            Description: "nihil",
+            KmsKey: "fuga",
+            Name: "facilis",
+            ScheduleConfig: &operations.CreateDataIntegrationRequestBodyScheduleConfig{
+                FirstExecutionFrom: "eum",
+                Object: "iusto",
+                ScheduleExpression: "ullam",
+            },
+            SourceURI: "saepe",
+            Tags: map[string]string{
+                "sapiente": "enim",
+            },
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.CreateEventIntegrationRequest{
-        Headers: operations.CreateEventIntegrationHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-        },
-        Request: operations.CreateEventIntegrationRequestBody{
-            ClientToken: "voluptas",
-            Description: "fugit",
-            EventBridgeBus: "et",
-            EventFilter: operations.CreateEventIntegrationRequestBodyEventFilter{
-                Source: "nihil",
-            },
-            Name: "rerum",
-            Tags: map[string]string{
-                "debitis": "voluptatum",
-                "et": "ut",
-                "dolorem": "et",
-            },
-        },
-    }
-    
-    res, err := s.CreateEventIntegration(ctx, req)
+    ctx := context.Background()
+    res, err := s.CreateDataIntegration(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CreateEventIntegrationResponse != nil {
+    if res.CreateDataIntegrationResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -74,16 +75,21 @@ func main() {
 
 ### SDK SDK
 
+* `CreateDataIntegration` - <p>Creates and persists a DataIntegration resource.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <code>CreateDataIntegration</code> API.</p> </note>
 * `CreateEventIntegration` - Creates an EventIntegration, given a specified name, description, and a reference to an Amazon EventBridge bus in your account and a partner event source that pushes events to that bus. No objects are created in the your account, only metadata that is persisted on the EventIntegration control plane.
+* `DeleteDataIntegration` - <p>Deletes the DataIntegration. Only DataIntegrations that don't have any DataIntegrationAssociations can be deleted. Deleting a DataIntegration also deletes the underlying Amazon AppFlow flow and service linked role. </p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 * `DeleteEventIntegration` - Deletes the specified existing event integration. If the event integration is associated with clients, the request is rejected.
-* `GetEventIntegration` - Return information about the event integration.
+* `GetDataIntegration` - <p>Returns information about the DataIntegration.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
+* `GetEventIntegration` - Returns information about the event integration.
+* `ListDataIntegrationAssociations` - <p>Returns a paginated list of DataIntegration associations in the account.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
+* `ListDataIntegrations` - <p>Returns a paginated list of DataIntegrations in the account.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 * `ListEventIntegrationAssociations` - Returns a paginated list of event integration associations in the account. 
 * `ListEventIntegrations` - Returns a paginated list of event integrations in the account.
 * `ListTagsForResource` - Lists the tags for the specified resource.
 * `TagResource` - Adds the specified tags to the specified resource.
 * `UntagResource` - Removes the specified tags from the specified resource.
+* `UpdateDataIntegration` - <p>Updates the description of a DataIntegration.</p> <note> <p>You cannot create a DataIntegration association for a DataIntegration that has been previously associated. Use a different DataIntegration, or recreate the DataIntegration using the <a href="https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_CreateDataIntegration.html">CreateDataIntegration</a> API.</p> </note>
 * `UpdateEventIntegration` - Updates the description of an event integration.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

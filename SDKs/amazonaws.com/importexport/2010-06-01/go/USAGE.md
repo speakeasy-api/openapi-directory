@@ -3,40 +3,39 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetCancelJobRequest{
-        QueryParams: operations.GetCancelJobQueryParams{
-            APIVersion: "sit",
-            AWSAccessKeyID: "voluptas",
+    req := operations.GETCancelJobRequest{
+        QueryParams: operations.GETCancelJobQueryParams{
+            APIVersion: "unde",
+            AWSAccessKeyID: "deserunt",
             Action: "CancelJob",
-            JobID: "expedita",
+            JobID: "nulla",
             Operation: "CancelJob",
-            Signature: "dolor",
-            SignatureMethod: "expedita",
-            SignatureVersion: "voluptas",
-            Timestamp: "fugit",
+            Signature: "vero",
+            SignatureMethod: "perspiciatis",
+            SignatureVersion: "nulla",
+            Timestamp: "nihil",
             Version: "2010-06-01",
         },
     }
-    
-    res, err := s.GetCancelJob(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETCancelJob(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -44,5 +43,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

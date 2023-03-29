@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/files.com/0.0.1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,16 +23,17 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetActionNotificationExportResultsRequest{
         QueryParams: operations.GetActionNotificationExportResultsQueryParams{
-            ActionNotificationExportID: 8717895732742165505,
-            Cursor: "voluptas",
-            PerPage: 6050128673802995827,
-            UserID: 501233450539197794,
+            ActionNotificationExportID: 548814,
+            Cursor: "deserunt",
+            PerPage: 715190,
+            UserID: 844266,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ActionNotificationExportResults.GetActionNotificationExportResults(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -39,32 +42,34 @@ func main() {
     if res.ActionNotificationExportResultEntities != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### action_notification_export_results
+
+### ActionNotificationExportResults
 
 * `GetActionNotificationExportResults` - List Action Notification Export Results
 
-### action_notification_exports
+### ActionNotificationExports
 
 * `GetActionNotificationExportsID` - Show Action Notification Export
 * `PostActionNotificationExports` - Create Action Notification Export
 
-### action_webhook_failures
+### ActionWebhookFailures
 
 * `PostActionWebhookFailuresIDRetry` - retry Action Webhook Failure
 
-### api_key
+### APIKey
 
 * `APIKeyDeleteCurrent` - Delete current API key.  (Requires current API connection to be using an API key.)
 * `APIKeyFindCurrent` - Show information about current API key.  (Requires current API connection to be using an API key.)
 * `APIKeyUpdateCurrent` - Update current API key.  (Requires current API connection to be using an API key.)
 
-### api_keys
+### APIKeys
 
 * `DeleteAPIKeysID` - Delete Api Key
 * `GetAPIKeys` - List Api Keys
@@ -72,11 +77,11 @@ func main() {
 * `PatchAPIKeysID` - Update Api Key
 * `PostAPIKeys` - Create Api Key
 
-### apps
+### Apps
 
 * `GetApps` - List Apps
 
-### as2_keys
+### As2Keys
 
 * `DeleteAs2KeysID` - Delete As2 Key
 * `GetAs2Keys` - List As2 Keys
@@ -84,7 +89,7 @@ func main() {
 * `PatchAs2KeysID` - Update As2 Key
 * `PostAs2Keys` - Create As2 Key
 
-### automations
+### Automations
 
 * `DeleteAutomationsID` - Delete Automation
 * `GetAutomations` - List Automations
@@ -92,11 +97,11 @@ func main() {
 * `PatchAutomationsID` - Update Automation
 * `PostAutomations` - Create Automation
 
-### bandwidth_snapshots
+### BandwidthSnapshots
 
 * `GetBandwidthSnapshots` - List Bandwidth Snapshots
 
-### behaviors
+### Behaviors
 
 * `BehaviorListForPath` - List Behaviors by path
 * `DeleteBehaviorsID` - Delete Behavior
@@ -106,20 +111,20 @@ func main() {
 * `PostBehaviors` - Create Behavior
 * `PostBehaviorsWebhookTest` - Test webhook.
 
-### bundle_downloads
+### BundleDownloads
 
 * `GetBundleDownloads` - List Bundle Downloads
 
-### bundle_recipients
+### BundleRecipients
 
 * `GetBundleRecipients` - List Bundle Recipients
 * `PostBundleRecipients` - Create Bundle Recipient
 
-### bundle_registrations
+### BundleRegistrations
 
 * `GetBundleRegistrations` - List Bundle Registrations
 
-### bundles
+### Bundles
 
 * `DeleteBundlesID` - Delete Bundle
 * `GetBundles` - List Bundles
@@ -128,7 +133,7 @@ func main() {
 * `PostBundles` - Create Bundle
 * `PostBundlesIDShare` - Send email(s) with a link to bundle
 
-### clickwraps
+### Clickwraps
 
 * `DeleteClickwrapsID` - Delete Clickwrap
 * `GetClickwraps` - List Clickwraps
@@ -136,65 +141,67 @@ func main() {
 * `PatchClickwrapsID` - Update Clickwrap
 * `PostClickwraps` - Create Clickwrap
 
-### dns_records
+### DNSRecords
 
 * `GetDNSRecords` - Show site DNS configuration.
 
-### external_events
+### ExternalEvents
 
 * `GetExternalEvents` - List External Events
 * `GetExternalEventsID` - Show External Event
 * `PostExternalEvents` - Create External Event
 
-### file_actions
+### FileActions
 
 * `FileActionBeginUpload` - Begin file upload
 * `FileActionCopy` - Copy file/folder
 * `FileActionMetadata` - Return metadata for file/folder
 * `FileActionMove` - Move file/folder
 
-### file_comment_reactions
+### FileCommentReactions
 
 * `DeleteFileCommentReactionsID` - Delete File Comment Reaction
 * `PostFileCommentReactions` - Create File Comment Reaction
 
-### file_comments
+### FileComments
 
 * `DeleteFileCommentsID` - Delete File Comment
 * `FileCommentListForPath` - List File Comments by path
 * `PatchFileCommentsID` - Update File Comment
 * `PostFileComments` - Create File Comment
 
-### file_migrations
+### FileMigrations
 
 * `GetFileMigrationsID` - Show File Migration
 
-### files
+### Files
 
 * `DeleteFilesPath` - Delete file/folder
 * `FileDownload` - Download file
 * `PatchFilesPath` - Update file/folder metadata
 * `PostFilesPath` - Upload file
 
-### folders
+### Folders
 
 * `FolderListForPath` - List Folders by path
 * `PostFoldersPath` - Create folder
 
-### form_field_sets
+### FormFieldSets
 
 * `DeleteFormFieldSetsID` - Delete Form Field Set
 * `GetFormFieldSets` - List Form Field Sets
 * `GetFormFieldSetsID` - Show Form Field Set
+* `PatchFormFieldSetsID` - Update Form Field Set
+* `PostFormFieldSets` - Create Form Field Set
 
-### group_users
+### GroupUsers
 
 * `DeleteGroupUsersID` - Delete Group User
 * `GetGroupUsers` - List Group Users
 * `PatchGroupUsersID` - Update Group User
 * `PostGroupUsers` - Create Group User
 
-### groups
+### Groups
 
 * `DeleteGroupsGroupIDMembershipsUserID` - Delete Group User
 * `DeleteGroupsID` - Delete Group
@@ -207,7 +214,7 @@ func main() {
 * `PostGroups` - Create Group
 * `PostGroupsGroupIDUsers` - Create User
 
-### history
+### History
 
 * `HistoryList` - List site full action history.
 * `HistoryListForFile` - List history for specific file.
@@ -215,52 +222,52 @@ func main() {
 * `HistoryListForUser` - List history for specific user.
 * `HistoryListLogins` - List site login history.
 
-### history_export_results
+### HistoryExportResults
 
 * `GetHistoryExportResults` - List History Export Results
 
-### history_exports
+### HistoryExports
 
 * `GetHistoryExportsID` - Show History Export
 * `PostHistoryExports` - Create History Export
 
-### inbox_recipients
+### InboxRecipients
 
 * `GetInboxRecipients` - List Inbox Recipients
 * `PostInboxRecipients` - Create Inbox Recipient
 
-### inbox_registrations
+### InboxRegistrations
 
 * `GetInboxRegistrations` - List Inbox Registrations
 
-### inbox_uploads
+### InboxUploads
 
 * `GetInboxUploads` - List Inbox Uploads
 
-### invoices
+### Invoices
 
 * `GetInvoices` - List Invoices
 * `GetInvoicesID` - Show Invoice
 
-### ip_addresses
+### IPAddresses
 
 * `GetIPAddresses` - List IP Addresses associated with the current site
 * `GetIPAddressesReserved` - List all possible public IP addresses
 
-### locks
+### Locks
 
 * `DeleteLocksPath` - Delete Lock
 * `LockListForPath` - List Locks by path
 * `PostLocksPath` - Create Lock
 
-### message_comment_reactions
+### MessageCommentReactions
 
 * `DeleteMessageCommentReactionsID` - Delete Message Comment Reaction
 * `GetMessageCommentReactions` - List Message Comment Reactions
 * `GetMessageCommentReactionsID` - Show Message Comment Reaction
 * `PostMessageCommentReactions` - Create Message Comment Reaction
 
-### message_comments
+### MessageComments
 
 * `DeleteMessageCommentsID` - Delete Message Comment
 * `GetMessageComments` - List Message Comments
@@ -268,14 +275,14 @@ func main() {
 * `PatchMessageCommentsID` - Update Message Comment
 * `PostMessageComments` - Create Message Comment
 
-### message_reactions
+### MessageReactions
 
 * `DeleteMessageReactionsID` - Delete Message Reaction
 * `GetMessageReactions` - List Message Reactions
 * `GetMessageReactionsID` - Show Message Reaction
 * `PostMessageReactions` - Create Message Reaction
 
-### messages
+### Messages
 
 * `DeleteMessagesID` - Delete Message
 * `GetMessages` - List Messages
@@ -283,7 +290,7 @@ func main() {
 * `PatchMessagesID` - Update Message
 * `PostMessages` - Create Message
 
-### notifications
+### Notifications
 
 * `DeleteNotificationsID` - Delete Notification
 * `GetNotifications` - List Notifications
@@ -291,18 +298,18 @@ func main() {
 * `PatchNotificationsID` - Update Notification
 * `PostNotifications` - Create Notification
 
-### payments
+### Payments
 
 * `GetPayments` - List Payments
 * `GetPaymentsID` - Show Payment
 
-### permissions
+### Permissions
 
 * `DeletePermissionsID` - Delete Permission
 * `GetPermissions` - List Permissions
 * `PostPermissions` - Create Permission
 
-### projects
+### Projects
 
 * `DeleteProjectsID` - Delete Project
 * `GetProjects` - List Projects
@@ -310,7 +317,7 @@ func main() {
 * `PatchProjectsID` - Update Project
 * `PostProjects` - Create Project
 
-### public_keys
+### PublicKeys
 
 * `DeletePublicKeysID` - Delete Public Key
 * `GetPublicKeys` - List Public Keys
@@ -318,7 +325,7 @@ func main() {
 * `PatchPublicKeysID` - Update Public Key
 * `PostPublicKeys` - Create Public Key
 
-### remote_servers
+### RemoteServers
 
 * `DeleteRemoteServersID` - Delete Remote Server
 * `GetRemoteServers` - List Remote Servers
@@ -326,23 +333,23 @@ func main() {
 * `PatchRemoteServersID` - Update Remote Server
 * `PostRemoteServers` - Create Remote Server
 
-### requests
+### Requests
 
 * `DeleteRequestsID` - Delete Request
 * `GetRequests` - List Requests
 * `GetRequestsFoldersPath` - List Requests
 * `PostRequests` - Create Request
 
-### sessions
+### Sessions
 
 * `DeleteSessions` - Delete user session (log out)
 * `PostSessions` - Create user session (log in)
 
-### settings_changes
+### SettingsChanges
 
 * `GetSettingsChanges` - List Settings Changes
 
-### site
+### Site
 
 * `GetSite` - Show site settings
 * `GetSiteAPIKeys` - List Api Keys
@@ -353,30 +360,30 @@ func main() {
 * `PostSiteAPIKeys` - Create Api Key
 * `PostSiteTestWebhook` - Test webhook.
 
-### sso_strategies
+### SsoStrategies
 
 * `GetSsoStrategies` - List Sso Strategies
 * `GetSsoStrategiesID` - Show Sso Strategy
 
-### styles
+### Styles
 
 * `DeleteStylesPath` - Delete Style
 * `GetStylesPath` - Show Style
 * `PatchStylesPath` - Update Style
 
-### sync_jobs
+### SyncJobs
 
 * `GetSyncJobs` - List Sync Jobs
 
-### usage_daily_snapshots
+### UsageDailySnapshots
 
 * `GetUsageDailySnapshots` - List Usage Daily Snapshots
 
-### usage_snapshots
+### UsageSnapshots
 
 * `GetUsageSnapshots` - List Usage Snapshots
 
-### user
+### User
 
 * `GetUserAPIKeys` - List Api Keys
 * `GetUserAs2Keys` - List As2 Keys
@@ -387,18 +394,18 @@ func main() {
 * `PostUserAs2Keys` - Create As2 Key
 * `PostUserPublicKeys` - Create Public Key
 
-### user_cipher_uses
+### UserCipherUses
 
 * `GetUserCipherUses` - List User Cipher Uses
 
-### user_requests
+### UserRequests
 
 * `DeleteUserRequestsID` - Delete User Request
 * `GetUserRequests` - List User Requests
 * `GetUserRequestsID` - Show User Request
 * `PostUserRequests` - Create User Request
 
-### users
+### Users
 
 * `DeleteUsersID` - Delete User
 * `GetUsers` - List Users
@@ -418,10 +425,9 @@ func main() {
 * `PostUsersUserIDAs2Keys` - Create As2 Key
 * `PostUsersUserIDPublicKeys` - Create Public Key
 
-### webhook_tests
+### WebhookTests
 
 * `PostWebhookTests` - Create Webhook Test
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

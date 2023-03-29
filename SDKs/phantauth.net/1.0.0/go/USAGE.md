@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,13 +12,14 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetClientClientIDRequest{
         PathParams: operations.GetClientClientIDPathParams{
-            ClientID: "sit",
+            ClientID: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Client.GetClientClientID(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -25,5 +28,6 @@ func main() {
     if res.GetClientClientID200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

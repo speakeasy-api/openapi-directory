@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FirestoreProjectsDatabasesDocumentsBatchGetRequest{
         Security: operations.FirestoreProjectsDatabasesDocumentsBatchGetSecurity{
             Option1: &operations.FirestoreProjectsDatabasesDocumentsBatchGetSecurityOption1{
@@ -23,47 +25,48 @@ func main() {
             },
         },
         PathParams: operations.FirestoreProjectsDatabasesDocumentsBatchGetPathParams{
-            Database: "sit",
+            Database: "unde",
         },
         QueryParams: operations.FirestoreProjectsDatabasesDocumentsBatchGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.BatchGetDocumentsRequest{
             Documents: []string{
-                "debitis",
-                "voluptatum",
-                "et",
+                "iusto",
+                "ullam",
             },
             Mask: &shared.DocumentMask{
                 FieldPaths: []string{
-                    "dolorem",
-                    "et",
-                    "voluptate",
+                    "inventore",
+                    "sapiente",
+                    "enim",
+                    "eum",
                 },
             },
             NewTransaction: &shared.TransactionOptions{
                 ReadOnly: &shared.ReadOnly{
-                    ReadTime: "iste",
+                    ReadTime: "voluptatum",
                 },
                 ReadWrite: &shared.ReadWrite{
-                    RetryTransaction: "vitae",
+                    RetryTransaction: "autem",
                 },
             },
-            ReadTime: "totam",
-            Transaction: "dolores",
+            ReadTime: "vel",
+            Transaction: "non",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.FirestoreProjectsDatabasesDocumentsBatchGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -72,5 +75,6 @@ func main() {
     if res.BatchGetDocumentsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

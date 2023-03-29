@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/androidpublisher/v3/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest{
         Security: operations.AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,21 +34,21 @@ func main() {
             },
         },
         PathParams: operations.AndroidpublisherApplicationsDeviceTierConfigsCreatePathParams{
-            PackageName: "sit",
+            PackageName: "unde",
         },
         QueryParams: operations.AndroidpublisherApplicationsDeviceTierConfigsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
+            DollarXgafv: "2",
+            AccessToken: "porro",
             AllowUnknownDevices: false,
             Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
             PrettyPrint: false,
             QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.DeviceTierConfigInput{
             DeviceGroups: []shared.DeviceGroup{
@@ -54,80 +56,287 @@ func main() {
                     DeviceSelectors: []shared.DeviceSelector{
                         shared.DeviceSelector{
                             DeviceRAM: &shared.DeviceRAM{
-                                MaxBytes: "et",
-                                MinBytes: "ut",
+                                MaxBytes: "ullam",
+                                MinBytes: "saepe",
                             },
                             ExcludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "et",
-                                    BuildDevice: "voluptate",
-                                },
-                                shared.DeviceID{
-                                    BuildBrand: "iste",
-                                    BuildDevice: "vitae",
-                                },
-                                shared.DeviceID{
-                                    BuildBrand: "totam",
-                                    BuildDevice: "dolores",
+                                    BuildBrand: "sapiente",
+                                    BuildDevice: "enim",
                                 },
                             },
                             ForbiddenSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "debitis",
+                                    Name: "voluptatum",
                                 },
                                 shared.SystemFeature{
-                                    Name: "vel",
-                                },
-                                shared.SystemFeature{
-                                    Name: "odio",
+                                    Name: "autem",
                                 },
                             },
                             IncludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "id",
-                                    BuildDevice: "aspernatur",
+                                    BuildBrand: "non",
+                                    BuildDevice: "deleniti",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "accusantium",
-                                    BuildDevice: "totam",
+                                    BuildBrand: "similique",
+                                    BuildDevice: "reprehenderit",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "molestiae",
+                                    BuildDevice: "quo",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "quasi",
+                                    BuildDevice: "laboriosam",
                                 },
                             },
                             RequiredSystemFeatures: []shared.SystemFeature{
-                                shared.SystemFeature{
-                                    Name: "quis",
-                                },
                                 shared.SystemFeature{
                                     Name: "est",
                                 },
                             },
                         },
+                        shared.DeviceSelector{
+                            DeviceRAM: &shared.DeviceRAM{
+                                MaxBytes: "voluptatem",
+                                MinBytes: "consequatur",
+                            },
+                            ExcludedDeviceIds: []shared.DeviceID{
+                                shared.DeviceID{
+                                    BuildBrand: "a",
+                                    BuildDevice: "omnis",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "eos",
+                                    BuildDevice: "accusamus",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "accusamus",
+                                    BuildDevice: "reiciendis",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "rem",
+                                    BuildDevice: "quibusdam",
+                                },
+                            },
+                            ForbiddenSystemFeatures: []shared.SystemFeature{
+                                shared.SystemFeature{
+                                    Name: "praesentium",
+                                },
+                                shared.SystemFeature{
+                                    Name: "occaecati",
+                                },
+                                shared.SystemFeature{
+                                    Name: "dolor",
+                                },
+                                shared.SystemFeature{
+                                    Name: "soluta",
+                                },
+                            },
+                            IncludedDeviceIds: []shared.DeviceID{
+                                shared.DeviceID{
+                                    BuildBrand: "quisquam",
+                                    BuildDevice: "rerum",
+                                },
+                            },
+                            RequiredSystemFeatures: []shared.SystemFeature{
+                                shared.SystemFeature{
+                                    Name: "qui",
+                                },
+                                shared.SystemFeature{
+                                    Name: "sed",
+                                },
+                                shared.SystemFeature{
+                                    Name: "rerum",
+                                },
+                            },
+                        },
                     },
-                    Name: "aut",
+                    Name: "possimus",
+                },
+                shared.DeviceGroup{
+                    DeviceSelectors: []shared.DeviceSelector{
+                        shared.DeviceSelector{
+                            DeviceRAM: &shared.DeviceRAM{
+                                MaxBytes: "odit",
+                                MinBytes: "esse",
+                            },
+                            ExcludedDeviceIds: []shared.DeviceID{
+                                shared.DeviceID{
+                                    BuildBrand: "voluptatem",
+                                    BuildDevice: "amet",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "est",
+                                    BuildDevice: "id",
+                                },
+                            },
+                            ForbiddenSystemFeatures: []shared.SystemFeature{
+                                shared.SystemFeature{
+                                    Name: "numquam",
+                                },
+                                shared.SystemFeature{
+                                    Name: "similique",
+                                },
+                            },
+                            IncludedDeviceIds: []shared.DeviceID{
+                                shared.DeviceID{
+                                    BuildBrand: "sit",
+                                    BuildDevice: "quia",
+                                },
+                            },
+                            RequiredSystemFeatures: []shared.SystemFeature{
+                                shared.SystemFeature{
+                                    Name: "voluptatem",
+                                },
+                                shared.SystemFeature{
+                                    Name: "laborum",
+                                },
+                                shared.SystemFeature{
+                                    Name: "modi",
+                                },
+                            },
+                        },
+                        shared.DeviceSelector{
+                            DeviceRAM: &shared.DeviceRAM{
+                                MaxBytes: "et",
+                                MinBytes: "iure",
+                            },
+                            ExcludedDeviceIds: []shared.DeviceID{
+                                shared.DeviceID{
+                                    BuildBrand: "ut",
+                                    BuildDevice: "soluta",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "qui",
+                                    BuildDevice: "ea",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "laborum",
+                                    BuildDevice: "iusto",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "ut",
+                                    BuildDevice: "optio",
+                                },
+                            },
+                            ForbiddenSystemFeatures: []shared.SystemFeature{
+                                shared.SystemFeature{
+                                    Name: "inventore",
+                                },
+                            },
+                            IncludedDeviceIds: []shared.DeviceID{
+                                shared.DeviceID{
+                                    BuildBrand: "libero",
+                                    BuildDevice: "et",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "libero",
+                                    BuildDevice: "ipsum",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "non",
+                                    BuildDevice: "ea",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "magni",
+                                    BuildDevice: "placeat",
+                                },
+                            },
+                            RequiredSystemFeatures: []shared.SystemFeature{
+                                shared.SystemFeature{
+                                    Name: "est",
+                                },
+                                shared.SystemFeature{
+                                    Name: "commodi",
+                                },
+                            },
+                        },
+                        shared.DeviceSelector{
+                            DeviceRAM: &shared.DeviceRAM{
+                                MaxBytes: "quia",
+                                MinBytes: "similique",
+                            },
+                            ExcludedDeviceIds: []shared.DeviceID{
+                                shared.DeviceID{
+                                    BuildBrand: "odio",
+                                    BuildDevice: "harum",
+                                },
+                            },
+                            ForbiddenSystemFeatures: []shared.SystemFeature{
+                                shared.SystemFeature{
+                                    Name: "a",
+                                },
+                                shared.SystemFeature{
+                                    Name: "aut",
+                                },
+                                shared.SystemFeature{
+                                    Name: "et",
+                                },
+                                shared.SystemFeature{
+                                    Name: "non",
+                                },
+                            },
+                            IncludedDeviceIds: []shared.DeviceID{
+                                shared.DeviceID{
+                                    BuildBrand: "neque",
+                                    BuildDevice: "asperiores",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "et",
+                                    BuildDevice: "culpa",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "aliquam",
+                                    BuildDevice: "esse",
+                                },
+                            },
+                            RequiredSystemFeatures: []shared.SystemFeature{
+                                shared.SystemFeature{
+                                    Name: "voluptatum",
+                                },
+                                shared.SystemFeature{
+                                    Name: "et",
+                                },
+                            },
+                        },
+                    },
+                    Name: "fuga",
                 },
             },
             DeviceTierSet: &shared.DeviceTierSet{
                 DeviceTiers: []shared.DeviceTier{
                     shared.DeviceTier{
                         DeviceGroupNames: []string{
-                            "voluptas",
-                            "omnis",
                             "aut",
+                            "cum",
                         },
-                        Level: 6972732843819909978,
+                        Level: 656330,
                     },
-                    shared.DeviceTier{
-                        DeviceGroupNames: []string{
-                            "officiis",
-                            "autem",
-                            "consectetur",
-                        },
-                        Level: 8683452355129068124,
+                },
+            },
+            UserCountrySets: []shared.UserCountrySet{
+                shared.UserCountrySet{
+                    CountryCodes: []string{
+                        "omnis",
                     },
+                    Name: "adipisci",
+                },
+                shared.UserCountrySet{
+                    CountryCodes: []string{
+                        "consequatur",
+                        "distinctio",
+                        "qui",
+                        "perferendis",
+                    },
+                    Name: "aspernatur",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Applications.AndroidpublisherApplicationsDeviceTierConfigsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -136,19 +345,21 @@ func main() {
     if res.DeviceTierConfig != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### applications
+
+### Applications
 
 * `AndroidpublisherApplicationsDeviceTierConfigsCreate` - Creates a new device tier config for an app.
 * `AndroidpublisherApplicationsDeviceTierConfigsGet` - Returns a particular device tier config.
 * `AndroidpublisherApplicationsDeviceTierConfigsList` - Returns created device tier configs, ordered by descending creation time.
 
-### edits
+### Edits
 
 * `AndroidpublisherEditsApksAddexternallyhosted` - Creates a new APK without uploading the APK itself to Google Play, instead hosting the APK at a specified URL. This function is only available to organizations using Managed Play whose application is configured to restrict distribution to the organizations.
 * `AndroidpublisherEditsApksList` - Lists all current APKs of the app and edit.
@@ -187,16 +398,16 @@ func main() {
 * `AndroidpublisherEditsTracksUpdate` - Updates a track.
 * `AndroidpublisherEditsValidate` - Validates an app edit.
 
-### generatedapks
+### Generatedapks
 
 * `AndroidpublisherGeneratedapksDownload` - Downloads a single signed APK generated from an app bundle.
 * `AndroidpublisherGeneratedapksList` - Returns download metadata for all APKs that were generated from a given app bundle.
 
-### grants
+### Grants
 
 * `AndroidpublisherGrantsCreate` - Grant access for a user to the given package.
 
-### inappproducts
+### Inappproducts
 
 * `AndroidpublisherInappproductsDelete` - Deletes an in-app product (i.e. a managed product or a subscriptions).
 * `AndroidpublisherInappproductsGet` - Gets an in-app product, which can be a managed product or a subscription.
@@ -205,12 +416,12 @@ func main() {
 * `AndroidpublisherInappproductsPatch` - Patches an in-app product (i.e. a managed product or a subscriptions).
 * `AndroidpublisherInappproductsUpdate` - Updates an in-app product (i.e. a managed product or a subscriptions).
 
-### internalappsharingartifacts
+### Internalappsharingartifacts
 
 * `AndroidpublisherInternalappsharingartifactsUploadapk` - Uploads an APK to internal app sharing. If you are using the Google API client libraries, please increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors) for an example in java.
 * `AndroidpublisherInternalappsharingartifactsUploadbundle` - Uploads an app bundle to internal app sharing. If you are using the Google API client libraries, please increase the timeout of the http request before calling this endpoint (a timeout of 2 minutes is recommended). See [Timeouts and Errors](https://developers.google.com/api-client-library/java/google-api-java-client/errors) for an example in java.
 
-### monetization
+### Monetization
 
 * `AndroidpublisherMonetizationConvertRegionPrices` - Calculates the region prices, using today's exchange rate and country-specific pricing patterns, based on the price in the request for a set of regions.
 * `AndroidpublisherMonetizationSubscriptionsArchive` - Archives a subscription. Can only be done if at least one base plan was active in the past, and no base plan is available for new or existing subscribers currently. This action is irreversible, and the subscription ID will remain reserved.
@@ -231,11 +442,11 @@ func main() {
 * `AndroidpublisherMonetizationSubscriptionsList` - Lists all subscriptions under a given app.
 * `AndroidpublisherMonetizationSubscriptionsPatch` - Updates an existing subscription.
 
-### orders
+### Orders
 
 * `AndroidpublisherOrdersRefund` - Refunds a user's subscription or in-app purchase order. Orders older than 1 year cannot be refunded.
 
-### purchases
+### Purchases
 
 * `AndroidpublisherPurchasesProductsAcknowledge` - Acknowledges a purchase of an inapp item.
 * `AndroidpublisherPurchasesProductsGet` - Checks the purchase and consumption status of an inapp item.
@@ -248,26 +459,25 @@ func main() {
 * `AndroidpublisherPurchasesSubscriptionsv2Get` - Get metadata about a subscription
 * `AndroidpublisherPurchasesVoidedpurchasesList` - Lists the purchases that were canceled, refunded or charged-back.
 
-### reviews
+### Reviews
 
 * `AndroidpublisherReviewsGet` - Gets a single review.
 * `AndroidpublisherReviewsList` - Lists all reviews.
 * `AndroidpublisherReviewsReply` - Replies to a single review, or updates an existing reply.
 
-### systemapks
+### Systemapks
 
 * `AndroidpublisherSystemapksVariantsCreate` - Creates an APK which is suitable for inclusion in a system image from an already uploaded Android App Bundle.
 * `AndroidpublisherSystemapksVariantsDownload` - Downloads a previously created system APK which is suitable for inclusion in a system image.
 * `AndroidpublisherSystemapksVariantsGet` - Returns a previously created system APK variant.
 * `AndroidpublisherSystemapksVariantsList` - Returns the list of previously created system APK variants.
 
-### users
+### Users
 
 * `AndroidpublisherUsersCreate` - Grant access for a user to the given developer account.
 * `AndroidpublisherUsersDelete` - Removes all access for the user to the given developer account.
 * `AndroidpublisherUsersList` - Lists all users with access to a developer account.
 * `AndroidpublisherUsersPatch` - Updates access for the user to the developer account.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PeopleContactGroupsBatchGetRequest{
         Security: operations.PeopleContactGroupsBatchGetSecurity{
             Option1: &operations.PeopleContactGroupsBatchGetSecurityOption1{
@@ -23,27 +25,28 @@ func main() {
             },
         },
         QueryParams: operations.PeopleContactGroupsBatchGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            GroupFields: "dolor",
-            Key: "expedita",
-            MaxMembers: 6044372234677422456,
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            GroupFields: "vero",
+            Key: "perspiciatis",
+            MaxMembers: 847252,
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
+            QuotaUser: "fuga",
             ResourceNames: []string{
-                "dicta",
-                "debitis",
-                "voluptatum",
+                "eum",
+                "iusto",
+                "ullam",
             },
-            UploadType: "et",
-            UploadProtocol: "ut",
+            UploadType: "saepe",
+            UploadProtocol: "inventore",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ContactGroups.PeopleContactGroupsBatchGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -52,5 +55,6 @@ func main() {
     if res.BatchGetContactGroupsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

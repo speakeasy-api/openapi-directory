@@ -3,42 +3,41 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetBuildSuggestersRequest{
-        QueryParams: operations.GetBuildSuggestersQueryParams{
+    req := operations.GETBuildSuggestersRequest{
+        QueryParams: operations.GETBuildSuggestersQueryParams{
             Action: "BuildSuggesters",
-            DomainName: "voluptas",
+            DomainName: "deserunt",
             Version: "2013-01-01",
         },
-        Headers: operations.GetBuildSuggestersHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "consequuntur",
-            XAmzCredential: "dolor",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "et",
+        Headers: operations.GETBuildSuggestersHeaders{
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
         },
     }
-    
-    res, err := s.GetBuildSuggesters(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETBuildSuggesters(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,5 +45,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

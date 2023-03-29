@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,25 +12,26 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.GetListsBestSellersHistoryJSONRequest{
-        Security: operations.GetListsBestSellersHistoryJSONSecurity{
+
+    req := operations.GETListsBestSellersHistoryJSONRequest{
+        Security: operations.GETListsBestSellersHistoryJSONSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        QueryParams: operations.GetListsBestSellersHistoryJSONQueryParams{
-            AgeGroup: "sit",
-            Author: "voluptas",
-            Contributor: "culpa",
-            Isbn: "expedita",
-            Price: "consequuntur",
-            Publisher: "dolor",
-            Title: "expedita",
+        QueryParams: operations.GETListsBestSellersHistoryJSONQueryParams{
+            AgeGroup: "unde",
+            Author: "deserunt",
+            Contributor: "porro",
+            Isbn: "nulla",
+            Price: "id",
+            Publisher: "vero",
+            Title: "Global Configuration Administrator",
         },
     }
-    
-    res, err := s.GetListsBestSellersHistoryJSON(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETListsBestSellersHistoryJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -36,5 +39,6 @@ func main() {
     if res.GETListsBestSellersHistoryJSON200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

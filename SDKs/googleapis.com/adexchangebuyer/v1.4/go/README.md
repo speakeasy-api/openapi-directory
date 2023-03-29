@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/adexchangebuyer/v1.4/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AdexchangebuyerAccountsGetRequest{
         Security: operations.AdexchangebuyerAccountsGetSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,19 +34,20 @@ func main() {
             },
         },
         PathParams: operations.AdexchangebuyerAccountsGetPathParams{
-            ID: 8717895732742165505,
+            ID: 548814,
         },
         QueryParams: operations.AdexchangebuyerAccountsGetQueryParams{
             Alt: "json",
-            Fields: "culpa",
-            Key: "expedita",
-            OauthToken: "consequuntur",
+            Fields: "porro",
+            Key: "nulla",
+            OauthToken: "id",
             PrettyPrint: false,
-            QuotaUser: "expedita",
-            UserIP: "voluptas",
+            QuotaUser: "vero",
+            UserIP: "perspiciatis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.AdexchangebuyerAccountsGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,31 +56,33 @@ func main() {
     if res.Account != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### accounts
+
+### Accounts
 
 * `AdexchangebuyerAccountsGet` - Gets one account by ID.
 * `AdexchangebuyerAccountsList` - Retrieves the authenticated user's list of accounts.
 * `AdexchangebuyerAccountsPatch` - Updates an existing account. This method supports patch semantics.
 * `AdexchangebuyerAccountsUpdate` - Updates an existing account.
 
-### billingInfo
+### BillingInfo
 
 * `AdexchangebuyerBillingInfoGet` - Returns the billing information for one account specified by account ID.
 * `AdexchangebuyerBillingInfoList` - Retrieves a list of billing information for all accounts of the authenticated user.
 
-### budget
+### Budget
 
 * `AdexchangebuyerBudgetGet` - Returns the budget information for the adgroup specified by the accountId and billingId.
 * `AdexchangebuyerBudgetPatch` - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request. This method supports patch semantics.
 * `AdexchangebuyerBudgetUpdate` - Updates the budget amount for the budget of the adgroup specified by the accountId and billingId, with the budget amount in the request.
 
-### creatives
+### Creatives
 
 * `AdexchangebuyerCreativesAddDeal` - Add a deal id association for the creative.
 * `AdexchangebuyerCreativesGet` - Gets the status for a single creative. A creative will be available 30-40 minutes after submission.
@@ -86,27 +91,27 @@ func main() {
 * `AdexchangebuyerCreativesListDeals` - Lists the external deal ids associated with the creative.
 * `AdexchangebuyerCreativesRemoveDeal` - Remove a deal id associated with the creative.
 
-### marketplacedeals
+### Marketplacedeals
 
 * `AdexchangebuyerMarketplacedealsDelete` - Delete the specified deals from the proposal
 * `AdexchangebuyerMarketplacedealsInsert` - Add new deals for the specified proposal
 * `AdexchangebuyerMarketplacedealsList` - List all the deals for a given proposal
 * `AdexchangebuyerMarketplacedealsUpdate` - Replaces all the deals in the proposal with the passed in deals
 
-### marketplacenotes
+### Marketplacenotes
 
 * `AdexchangebuyerMarketplacenotesInsert` - Add notes to the proposal
 * `AdexchangebuyerMarketplacenotesList` - Get all the notes associated with a proposal
 
-### marketplaceprivateauction
+### Marketplaceprivateauction
 
 * `AdexchangebuyerMarketplaceprivateauctionUpdateproposal` - Update a given private auction proposal
 
-### performanceReport
+### PerformanceReport
 
 * `AdexchangebuyerPerformanceReportList` - Retrieves the authenticated user's list of performance metrics.
 
-### pretargetingConfig
+### PretargetingConfig
 
 * `AdexchangebuyerPretargetingConfigDelete` - Deletes an existing pretargeting config.
 * `AdexchangebuyerPretargetingConfigGet` - Gets a specific pretargeting configuration
@@ -115,12 +120,12 @@ func main() {
 * `AdexchangebuyerPretargetingConfigPatch` - Updates an existing pretargeting config. This method supports patch semantics.
 * `AdexchangebuyerPretargetingConfigUpdate` - Updates an existing pretargeting config.
 
-### products
+### Products
 
 * `AdexchangebuyerProductsGet` - Gets the requested product by id.
 * `AdexchangebuyerProductsSearch` - Gets the requested product.
 
-### proposals
+### Proposals
 
 * `AdexchangebuyerProposalsGet` - Get a proposal given its id
 * `AdexchangebuyerProposalsInsert` - Create the given list of proposals
@@ -129,10 +134,9 @@ func main() {
 * `AdexchangebuyerProposalsSetupcomplete` - Update the given proposal to indicate that setup has been completed.
 * `AdexchangebuyerProposalsUpdate` - Update the given proposal
 
-### pubprofiles
+### Pubprofiles
 
 * `AdexchangebuyerPubprofilesList` - Gets the requested publisher profile(s) by publisher accountId.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

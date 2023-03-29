@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GlobalpageloadRequest{
         QueryParams: operations.GlobalpageloadQueryParams{
-            License: "sit",
-            Origin: "voluptas",
-            URL: "culpa",
+            License: "unde",
+            Origin: "deserunt",
+            URL: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.PageLoadPerformanceTime.Globalpageload(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.Globalpageload200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

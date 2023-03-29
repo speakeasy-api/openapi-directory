@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudbilling/v1beta/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudbillingBillingAccountsEstimateCostScenarioRequest{
         Security: operations.CloudbillingBillingAccountsEstimateCostScenarioSecurity{
             Option1: &operations.CloudbillingBillingAccountsEstimateCostScenarioSecurityOption1{
@@ -34,140 +36,120 @@ func main() {
             },
         },
         PathParams: operations.CloudbillingBillingAccountsEstimateCostScenarioPathParams{
-            BillingAccount: "sit",
+            BillingAccount: "unde",
         },
         QueryParams: operations.CloudbillingBillingAccountsEstimateCostScenarioQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.EstimateCostScenarioForBillingAccountRequest{
             CostScenario: &shared.CostScenario{
                 Commitments: []shared.Commitment{
                     shared.Commitment{
-                        Name: "debitis",
+                        Name: "iusto",
                         VMResourceBasedCud: &shared.VMResourceBasedCud{
                             GuestAccelerator: &shared.GuestAccelerator{
-                                AcceleratorCount: "voluptatum",
-                                AcceleratorType: "et",
+                                AcceleratorCount: "ullam",
+                                AcceleratorType: "saepe",
                             },
-                            MachineSeries: "ut",
-                            MemorySizeGb: 50.099998,
+                            MachineSeries: "inventore",
+                            MemorySizeGb: 9636.63,
                             Plan: "COMMITMENT_PLAN_UNSPECIFIED",
-                            Region: "iste",
-                            VirtualCPUCount: "vitae",
+                            Region: "eum",
+                            VirtualCPUCount: "voluptatum",
                         },
                     },
                     shared.Commitment{
-                        Name: "totam",
+                        Name: "autem",
                         VMResourceBasedCud: &shared.VMResourceBasedCud{
                             GuestAccelerator: &shared.GuestAccelerator{
-                                AcceleratorCount: "dolores",
-                                AcceleratorType: "illum",
+                                AcceleratorCount: "vel",
+                                AcceleratorType: "non",
                             },
-                            MachineSeries: "debitis",
-                            MemorySizeGb: 52.099998,
+                            MachineSeries: "deleniti",
+                            MemorySizeGb: 5680.45,
                             Plan: "TWELVE_MONTH",
-                            Region: "id",
-                            VirtualCPUCount: "aspernatur",
-                        },
-                    },
-                    shared.Commitment{
-                        Name: "accusantium",
-                        VMResourceBasedCud: &shared.VMResourceBasedCud{
-                            GuestAccelerator: &shared.GuestAccelerator{
-                                AcceleratorCount: "totam",
-                                AcceleratorType: "commodi",
-                            },
-                            MachineSeries: "quis",
-                            MemorySizeGb: 93.099998,
-                            Plan: "TWELVE_MONTH",
-                            Region: "non",
-                            VirtualCPUCount: "voluptas",
+                            Region: "molestiae",
+                            VirtualCPUCount: "quo",
                         },
                     },
                 },
                 ScenarioConfig: &shared.ScenarioConfig{
-                    EstimateDuration: "omnis",
+                    EstimateDuration: "quasi",
                 },
                 Workloads: []shared.Workload{
                     shared.Workload{
                         CloudCdnEgressWorkload: &shared.CloudCdnEgressWorkload{
-                            CacheEgressDestination: "CACHE_EGRESS_DESTINATION_NORTH_AMERICA",
+                            CacheEgressDestination: "CACHE_EGRESS_DESTINATION_UNSPECIFIED",
                             CacheEgressRate: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "sed",
+                                    Unit: "est",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "autem",
+                                                EstimationTimeFrameOffset: "consequatur",
                                             },
-                                            UsageRate: 68.099998,
-                                        },
-                                        shared.UsageRateTimelineEntry{
-                                            EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "odio",
-                                            },
-                                            UsageRate: 77.099998,
+                                            UsageRate: 8326.2,
                                         },
                                     },
                                 },
                             },
                         },
                         CloudCdnWorkload: &shared.CloudCdnWorkload{
-                            CacheFillOriginService: "CACHE_FILL_ORIGIN_SERVICE_GOOGLE_CLOUD_STORAGE_BUCKET",
+                            CacheFillOriginService: "CACHE_FILL_ORIGIN_SERVICE_BACKEND_SERVICE",
                             CacheFillRate: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "ipsum",
+                                    Unit: "omnis",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "modi",
+                                                EstimationTimeFrameOffset: "accusamus",
                                             },
-                                            UsageRate: 0.200000,
-                                        },
-                                        shared.UsageRateTimelineEntry{
-                                            EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "ut",
-                                            },
-                                            UsageRate: 56.099998,
+                                            UsageRate: 8700.88,
                                         },
                                     },
                                 },
                             },
                             CacheFillRegions: &shared.CacheFillRegions{
-                                DestinationRegion: "CACHE_FILL_DESTINATION_REGION_CHINA",
-                                SourceRegion: "CACHE_FILL_SOURCE_REGION_SOUTH_AMERICA",
+                                DestinationRegion: "CACHE_FILL_DESTINATION_REGION_OTHERS",
+                                SourceRegion: "CACHE_FILL_SOURCE_REGION_EUROPE",
                             },
                             CacheLookUpRate: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "maiores",
+                                    Unit: "quibusdam",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "praesentium",
+                                            },
+                                            UsageRate: 5204.78,
+                                        },
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
                                                 EstimationTimeFrameOffset: "dolor",
                                             },
-                                            UsageRate: 23.200001,
+                                            UsageRate: 6788.8,
                                         },
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "in",
+                                                EstimationTimeFrameOffset: "sed",
                                             },
-                                            UsageRate: 69.199997,
+                                            UsageRate: 7206.33,
                                         },
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "ipsum",
+                                                EstimationTimeFrameOffset: "rerum",
                                             },
-                                            UsageRate: 66.099998,
+                                            UsageRate: 5820.2,
                                         },
                                     },
                                 },
@@ -176,24 +158,30 @@ func main() {
                         CloudInterconnectEgressWorkload: &shared.CloudInterconnectEgressWorkload{
                             EgressRate: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "placeat",
+                                    Unit: "qui",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
                                                 EstimationTimeFrameOffset: "rerum",
                                             },
-                                            UsageRate: 89.099998,
+                                            UsageRate: 7586.16,
                                         },
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "quam",
+                                                EstimationTimeFrameOffset: "occaecati",
                                             },
-                                            UsageRate: 23.100000,
+                                            UsageRate: 1059.07,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "esse",
+                                            },
+                                            UsageRate: 4736,
                                         },
                                     },
                                 },
                             },
-                            InterconnectConnectionLocation: "INTERCONNECT_CONNECTION_LOCATION_UNSPECIFIED",
+                            InterconnectConnectionLocation: "INTERCONNECT_CONNECTION_LOCATION_ASIA",
                         },
                         CloudInterconnectWorkload: &shared.CloudInterconnectWorkload{
                             InterconnectAttachments: []shared.VlanAttachment{
@@ -201,69 +189,19 @@ func main() {
                                     Bandwidth: "BANDWIDTH_BPS_10G",
                                     VlanCount: &shared.Usage{
                                         UsageRateTimeline: &shared.UsageRateTimeline{
-                                            Unit: "autem",
+                                            Unit: "id",
                                             UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                                 shared.UsageRateTimelineEntry{
                                                     EffectiveTime: &shared.EstimationTimePoint{
-                                                        EstimationTimeFrameOffset: "ut",
+                                                        EstimationTimeFrameOffset: "numquam",
                                                     },
-                                                    UsageRate: 26.100000,
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                                shared.VlanAttachment{
-                                    Bandwidth: "BANDWIDTH_BPS_1G",
-                                    VlanCount: &shared.Usage{
-                                        UsageRateTimeline: &shared.UsageRateTimeline{
-                                            Unit: "ullam",
-                                            UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
-                                                shared.UsageRateTimelineEntry{
-                                                    EffectiveTime: &shared.EstimationTimePoint{
-                                                        EstimationTimeFrameOffset: "accusantium",
-                                                    },
-                                                    UsageRate: 68.099998,
+                                                    UsageRate: 5684.34,
                                                 },
                                                 shared.UsageRateTimelineEntry{
                                                     EffectiveTime: &shared.EstimationTimePoint{
-                                                        EstimationTimeFrameOffset: "quam",
+                                                        EstimationTimeFrameOffset: "dolores",
                                                     },
-                                                    UsageRate: 29.100000,
-                                                },
-                                                shared.UsageRateTimelineEntry{
-                                                    EffectiveTime: &shared.EstimationTimePoint{
-                                                        EstimationTimeFrameOffset: "soluta",
-                                                    },
-                                                    UsageRate: 41.200001,
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                                shared.VlanAttachment{
-                                    Bandwidth: "BANDWIDTH_BPS_1G",
-                                    VlanCount: &shared.Usage{
-                                        UsageRateTimeline: &shared.UsageRateTimeline{
-                                            Unit: "et",
-                                            UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
-                                                shared.UsageRateTimelineEntry{
-                                                    EffectiveTime: &shared.EstimationTimePoint{
-                                                        EstimationTimeFrameOffset: "qui",
-                                                    },
-                                                    UsageRate: 59.200001,
-                                                },
-                                                shared.UsageRateTimelineEntry{
-                                                    EffectiveTime: &shared.EstimationTimePoint{
-                                                        EstimationTimeFrameOffset: "omnis",
-                                                    },
-                                                    UsageRate: 74.099998,
-                                                },
-                                                shared.UsageRateTimelineEntry{
-                                                    EffectiveTime: &shared.EstimationTimePoint{
-                                                        EstimationTimeFrameOffset: "dolor",
-                                                    },
-                                                    UsageRate: 26.100000,
+                                                    UsageRate: 187.89,
                                                 },
                                             },
                                         },
@@ -271,197 +209,220 @@ func main() {
                                 },
                             },
                             InterconnectType: "INTERCONNECT_TYPE_UNSPECIFIED",
-                            LinkType: "LINK_TYPE_UNSPECIFIED",
+                            LinkType: "LINK_TYPE_ETHERNET_10G_LR",
                             ProvisionedLinkCount: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "nostrum",
+                                    Unit: "voluptatem",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "laboriosam",
+                                                EstimationTimeFrameOffset: "modi",
                                             },
-                                            UsageRate: 80.199997,
+                                            UsageRate: 6169.34,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "iure",
+                                            },
+                                            UsageRate: 9437.49,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "ut",
+                                            },
+                                            UsageRate: 6818.2,
                                         },
                                     },
                                 },
                             },
                         },
                         CloudStorageEgressWorkload: &shared.CloudStorageEgressWorkload{
-                            DestinationContinent: "DESTINATION_CONTINENT_EUROPE",
+                            DestinationContinent: "DESTINATION_CONTINENT_AUTRALIA",
                             EgressRate: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "aut",
+                                    Unit: "ea",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "consequuntur",
+                                                EstimationTimeFrameOffset: "iusto",
                                             },
-                                            UsageRate: 47.200001,
+                                            UsageRate: 9023.49,
                                         },
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "ipsa",
+                                                EstimationTimeFrameOffset: "optio",
                                             },
-                                            UsageRate: 37.099998,
+                                            UsageRate: 992.8,
                                         },
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "perferendis",
+                                                EstimationTimeFrameOffset: "inventore",
                                             },
-                                            UsageRate: 26.200001,
+                                            UsageRate: 9698.1,
                                         },
                                     },
                                 },
                             },
-                            SourceContinent: "SOURCE_CONTINENT_SOUTH_AMERICA",
+                            SourceContinent: "SOURCE_CONTINENT_NORTH_AMERICA",
                         },
                         CloudStorageWorkload: &shared.CloudStorageWorkload{
                             DataRetrieval: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "explicabo",
+                                    Unit: "et",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "maxime",
+                                                EstimationTimeFrameOffset: "ipsum",
                                             },
-                                            UsageRate: 15.200000,
+                                            UsageRate: 2103.82,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "ea",
+                                            },
+                                            UsageRate: 1289.26,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "placeat",
+                                            },
+                                            UsageRate: 3154.28,
                                         },
                                     },
                                 },
                             },
                             DataStored: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "et",
+                                    Unit: "est",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "reiciendis",
+                                                EstimationTimeFrameOffset: "quia",
                                             },
-                                            UsageRate: 9.200000,
+                                            UsageRate: 5701.97,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "eaque",
+                                            },
+                                            UsageRate: 4386.01,
                                         },
                                     },
                                 },
                             },
                             DualRegion: &shared.DualRegional{
-                                Name: "minima",
+                                Name: "harum",
                             },
                             MultiRegion: &shared.MultiRegional{
-                                Name: "necessitatibus",
+                                Name: "doloribus",
                             },
                             OperationA: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "est",
+                                    Unit: "a",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "eum",
+                                                EstimationTimeFrameOffset: "et",
                                             },
-                                            UsageRate: 94.199997,
-                                        },
-                                        shared.UsageRateTimelineEntry{
-                                            EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "impedit",
-                                            },
-                                            UsageRate: 84.099998,
-                                        },
-                                        shared.UsageRateTimelineEntry{
-                                            EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "vel",
-                                            },
-                                            UsageRate: 87.099998,
+                                            UsageRate: 2088.76,
                                         },
                                     },
                                 },
                             },
                             OperationB: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "nihil",
+                                    Unit: "quidem",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "deserunt",
+                                                EstimationTimeFrameOffset: "asperiores",
                                             },
-                                            UsageRate: 59.099998,
-                                        },
-                                        shared.UsageRateTimelineEntry{
-                                            EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "sit",
-                                            },
-                                            UsageRate: 34.099998,
-                                        },
-                                        shared.UsageRateTimelineEntry{
-                                            EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "vel",
-                                            },
-                                            UsageRate: 91.099998,
+                                            UsageRate: 6531.08,
                                         },
                                     },
                                 },
                             },
                             Region: &shared.Regional{
-                                Name: "qui",
+                                Name: "culpa",
                             },
-                            StorageClass: "nisi",
+                            StorageClass: "aliquam",
                         },
                         ComputeVMWorkload: &shared.ComputeVMWorkload{
-                            EnableConfidentialCompute: true,
+                            EnableConfidentialCompute: false,
                             GuestAccelerator: &shared.GuestAccelerator{
-                                AcceleratorCount: "adipisci",
-                                AcceleratorType: "porro",
+                                AcceleratorCount: "esse",
+                                AcceleratorType: "totam",
                             },
                             InstancesRunning: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "rerum",
+                                    Unit: "voluptatum",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "accusamus",
+                                                EstimationTimeFrameOffset: "fuga",
                                             },
-                                            UsageRate: 2.100000,
+                                            UsageRate: 1589.69,
                                         },
                                     },
                                 },
                             },
                             Licenses: []string{
-                                "ut",
-                                "laborum",
-                                "fugit",
+                                "aut",
+                                "cum",
                             },
                             MachineType: &shared.MachineType{
                                 CustomMachineType: &shared.CustomMachineType{
-                                    MachineSeries: "quis",
-                                    MemorySizeGb: 49.200001,
-                                    VirtualCPUCount: "aperiam",
+                                    MachineSeries: "expedita",
+                                    MemorySizeGb: 3172.02,
+                                    VirtualCPUCount: "eos",
                                 },
                                 PredefinedMachineType: &shared.PredefinedMachineType{
-                                    MachineType: "consequuntur",
+                                    MachineType: "omnis",
                                 },
                             },
                             PersistentDisks: []shared.PersistentDisk{
                                 shared.PersistentDisk{
                                     DiskSize: &shared.Usage{
                                         UsageRateTimeline: &shared.UsageRateTimeline{
-                                            Unit: "mollitia",
+                                            Unit: "hic",
                                             UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                                 shared.UsageRateTimelineEntry{
                                                     EffectiveTime: &shared.EstimationTimePoint{
-                                                        EstimationTimeFrameOffset: "delectus",
+                                                        EstimationTimeFrameOffset: "distinctio",
                                                     },
-                                                    UsageRate: 51.099998,
+                                                    UsageRate: 8209.94,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "perferendis",
+                                                    },
+                                                    UsageRate: 971.01,
                                                 },
                                             },
                                         },
                                     },
-                                    DiskType: "animi",
+                                    DiskType: "fuga",
                                     ProvisionedIops: &shared.Usage{
                                         UsageRateTimeline: &shared.UsageRateTimeline{
-                                            Unit: "ut",
+                                            Unit: "quo",
                                             UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                                 shared.UsageRateTimelineEntry{
                                                     EffectiveTime: &shared.EstimationTimePoint{
-                                                        EstimationTimeFrameOffset: "fuga",
+                                                        EstimationTimeFrameOffset: "explicabo",
                                                     },
-                                                    UsageRate: 92.199997,
+                                                    UsageRate: 9719.45,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "reiciendis",
+                                                    },
+                                                    UsageRate: 8781.94,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "totam",
+                                                    },
+                                                    UsageRate: 5096.24,
                                                 },
                                             },
                                         },
@@ -469,61 +430,633 @@ func main() {
                                     Scope: "SCOPE_REGIONAL",
                                 },
                             },
-                            Preemptible: true,
-                            Region: "non",
+                            Preemptible: false,
+                            Region: "illo",
                         },
-                        Name: "cupiditate",
+                        Name: "id",
                         PremiumTierEgressWorkload: &shared.PremiumTierEgressWorkload{
-                            DestinationContinent: "DESTINATION_CONTINENT_MIDDLE_EAST",
+                            DestinationContinent: "DESTINATION_CONTINENT_CENTRAL_AMERICA",
                             EgressRate: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
-                                    Unit: "molestiae",
+                                    Unit: "quod",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "quasi",
+                                                EstimationTimeFrameOffset: "eaque",
                                             },
-                                            UsageRate: 68.099998,
-                                        },
-                                        shared.UsageRateTimelineEntry{
-                                            EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "qui",
-                                            },
-                                            UsageRate: 2.100000,
-                                        },
-                                        shared.UsageRateTimelineEntry{
-                                            EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "modi",
-                                            },
-                                            UsageRate: 18.200001,
+                                            UsageRate: 4417.11,
                                         },
                                     },
                                 },
                             },
-                            SourceRegion: "quia",
+                            SourceRegion: "veniam",
                         },
                         StandardTierEgressWorkload: &shared.StandardTierEgressWorkload{
                             EgressRate: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "reiciendis",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "ea",
+                                            },
+                                            UsageRate: 2961.4,
+                                        },
+                                    },
+                                },
+                            },
+                            SourceRegion: "deleniti",
+                        },
+                        VMToVMEgressWorkload: &shared.VMToVMEgressWorkload{
+                            InterRegionEgress: &shared.InterRegionEgress{
+                                DestinationRegion: "sed",
+                                EgressRate: &shared.Usage{
+                                    UsageRateTimeline: &shared.UsageRateTimeline{
+                                        Unit: "est",
+                                        UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                            shared.UsageRateTimelineEntry{
+                                                EffectiveTime: &shared.EstimationTimePoint{
+                                                    EstimationTimeFrameOffset: "aut",
+                                                },
+                                                UsageRate: 4142.63,
+                                            },
+                                            shared.UsageRateTimelineEntry{
+                                                EffectiveTime: &shared.EstimationTimePoint{
+                                                    EstimationTimeFrameOffset: "sint",
+                                                },
+                                                UsageRate: 641.47,
+                                            },
+                                        },
+                                    },
+                                },
+                                SourceRegion: "numquam",
+                            },
+                            IntraRegionEgress: &shared.IntraRegionEgress{
+                                EgressRate: &shared.Usage{
+                                    UsageRateTimeline: &shared.UsageRateTimeline{
+                                        Unit: "eligendi",
+                                        UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                            shared.UsageRateTimelineEntry{
+                                                EffectiveTime: &shared.EstimationTimePoint{
+                                                    EstimationTimeFrameOffset: "similique",
+                                                },
+                                                UsageRate: 8651.03,
+                                            },
+                                            shared.UsageRateTimelineEntry{
+                                                EffectiveTime: &shared.EstimationTimePoint{
+                                                    EstimationTimeFrameOffset: "ut",
+                                                },
+                                                UsageRate: 5089.69,
+                                            },
+                                            shared.UsageRateTimelineEntry{
+                                                EffectiveTime: &shared.EstimationTimePoint{
+                                                    EstimationTimeFrameOffset: "cupiditate",
+                                                },
+                                                UsageRate: 9167.23,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    shared.Workload{
+                        CloudCdnEgressWorkload: &shared.CloudCdnEgressWorkload{
+                            CacheEgressDestination: "CACHE_EGRESS_DESTINATION_UNSPECIFIED",
+                            CacheEgressRate: &shared.Usage{
                                 UsageRateTimeline: &shared.UsageRateTimeline{
                                     Unit: "et",
                                     UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
                                         shared.UsageRateTimelineEntry{
                                             EffectiveTime: &shared.EstimationTimePoint{
-                                                EstimationTimeFrameOffset: "occaecati",
+                                                EstimationTimeFrameOffset: "vitae",
                                             },
-                                            UsageRate: 93.099998,
+                                            UsageRate: 9292.97,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "minima",
+                                            },
+                                            UsageRate: 3185.69,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "aut",
+                                            },
+                                            UsageRate: 6674.11,
                                         },
                                     },
                                 },
                             },
-                            SourceRegion: "quia",
+                        },
+                        CloudCdnWorkload: &shared.CloudCdnWorkload{
+                            CacheFillOriginService: "CACHE_FILL_ORIGIN_SERVICE_BACKEND_SERVICE",
+                            CacheFillRate: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "magni",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "porro",
+                                            },
+                                            UsageRate: 8413.86,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "nostrum",
+                                            },
+                                            UsageRate: 2647.3,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "sit",
+                                            },
+                                            UsageRate: 3978.21,
+                                        },
+                                    },
+                                },
+                            },
+                            CacheFillRegions: &shared.CacheFillRegions{
+                                DestinationRegion: "CACHE_FILL_DESTINATION_REGION_OCEANIA",
+                                SourceRegion: "CACHE_FILL_SOURCE_REGION_NORTH_AMERICA",
+                            },
+                            CacheLookUpRate: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "voluptatem",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "eum",
+                                            },
+                                            UsageRate: 3698.08,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        CloudInterconnectEgressWorkload: &shared.CloudInterconnectEgressWorkload{
+                            EgressRate: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "consequatur",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "cum",
+                                            },
+                                            UsageRate: 5696.18,
+                                        },
+                                    },
+                                },
+                            },
+                            InterconnectConnectionLocation: "INTERCONNECT_CONNECTION_LOCATION_ASIA",
+                        },
+                        CloudInterconnectWorkload: &shared.CloudInterconnectWorkload{
+                            InterconnectAttachments: []shared.VlanAttachment{
+                                shared.VlanAttachment{
+                                    Bandwidth: "BANDWIDTH_BPS_5G",
+                                    VlanCount: &shared.Usage{
+                                        UsageRateTimeline: &shared.UsageRateTimeline{
+                                            Unit: "quis",
+                                            UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "et",
+                                                    },
+                                                    UsageRate: 2487.53,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "possimus",
+                                                    },
+                                                    UsageRate: 5761.57,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "qui",
+                                                    },
+                                                    UsageRate: 5920.42,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "eveniet",
+                                                    },
+                                                    UsageRate: 5722.52,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.VlanAttachment{
+                                    Bandwidth: "BANDWIDTH_BPS_2G",
+                                    VlanCount: &shared.Usage{
+                                        UsageRateTimeline: &shared.UsageRateTimeline{
+                                            Unit: "modi",
+                                            UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "tenetur",
+                                                    },
+                                                    UsageRate: 6800.56,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "ducimus",
+                                                    },
+                                                    UsageRate: 4491.98,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "nulla",
+                                                    },
+                                                    UsageRate: 9785.71,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "cumque",
+                                                    },
+                                                    UsageRate: 1162.02,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                                shared.VlanAttachment{
+                                    Bandwidth: "BANDWIDTH_BPS_200M",
+                                    VlanCount: &shared.Usage{
+                                        UsageRateTimeline: &shared.UsageRateTimeline{
+                                            Unit: "voluptas",
+                                            UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "velit",
+                                                    },
+                                                    UsageRate: 3965.06,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "cum",
+                                                    },
+                                                    UsageRate: 8811.04,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "magnam",
+                                                    },
+                                                    UsageRate: 5812.73,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "enim",
+                                                    },
+                                                    UsageRate: 8817.36,
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            InterconnectType: "INTERCONNECT_TYPE_PARTNER",
+                            LinkType: "LINK_TYPE_ETHERNET_100G_LR",
+                            ProvisionedLinkCount: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "officia",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "distinctio",
+                                            },
+                                            UsageRate: 5013.24,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "provident",
+                                            },
+                                            UsageRate: 9560.84,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "incidunt",
+                                            },
+                                            UsageRate: 6439.9,
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        CloudStorageEgressWorkload: &shared.CloudStorageEgressWorkload{
+                            DestinationContinent: "DESTINATION_CONTINENT_AUTRALIA",
+                            EgressRate: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "nihil",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "id",
+                                            },
+                                            UsageRate: 4748.67,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "sit",
+                                            },
+                                            UsageRate: 4701.32,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "corporis",
+                                            },
+                                            UsageRate: 7160.75,
+                                        },
+                                    },
+                                },
+                            },
+                            SourceContinent: "SOURCE_CONTINENT_EUROPE",
+                        },
+                        CloudStorageWorkload: &shared.CloudStorageWorkload{
+                            DataRetrieval: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "quis",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "eum",
+                                            },
+                                            UsageRate: 6180.16,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "placeat",
+                                            },
+                                            UsageRate: 4287.69,
+                                        },
+                                    },
+                                },
+                            },
+                            DataStored: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "debitis",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "aut",
+                                            },
+                                            UsageRate: 2982.82,
+                                        },
+                                    },
+                                },
+                            },
+                            DualRegion: &shared.DualRegional{
+                                Name: "explicabo",
+                            },
+                            MultiRegion: &shared.MultiRegional{
+                                Name: "similique",
+                            },
+                            OperationA: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "ex",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "omnis",
+                                            },
+                                            UsageRate: 5743.25,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "aperiam",
+                                            },
+                                            UsageRate: 6532.01,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "ut",
+                                            },
+                                            UsageRate: 6521.03,
+                                        },
+                                    },
+                                },
+                            },
+                            OperationB: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "voluptatem",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "modi",
+                                            },
+                                            UsageRate: 8965.47,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "qui",
+                                            },
+                                            UsageRate: 3675.62,
+                                        },
+                                    },
+                                },
+                            },
+                            Region: &shared.Regional{
+                                Name: "aspernatur",
+                            },
+                            StorageClass: "iusto",
+                        },
+                        ComputeVMWorkload: &shared.ComputeVMWorkload{
+                            EnableConfidentialCompute: false,
+                            GuestAccelerator: &shared.GuestAccelerator{
+                                AcceleratorCount: "maiores",
+                                AcceleratorType: "saepe",
+                            },
+                            InstancesRunning: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "quaerat",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "sed",
+                                            },
+                                            UsageRate: 7038.89,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "ducimus",
+                                            },
+                                            UsageRate: 1002.26,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "aspernatur",
+                                            },
+                                            UsageRate: 9194.83,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "aliquid",
+                                            },
+                                            UsageRate: 7142.42,
+                                        },
+                                    },
+                                },
+                            },
+                            Licenses: []string{
+                                "repellat",
+                                "voluptas",
+                            },
+                            MachineType: &shared.MachineType{
+                                CustomMachineType: &shared.CustomMachineType{
+                                    MachineSeries: "voluptatem",
+                                    MemorySizeGb: 9046.48,
+                                    VirtualCPUCount: "accusamus",
+                                },
+                                PredefinedMachineType: &shared.PredefinedMachineType{
+                                    MachineType: "eaque",
+                                },
+                            },
+                            PersistentDisks: []shared.PersistentDisk{
+                                shared.PersistentDisk{
+                                    DiskSize: &shared.Usage{
+                                        UsageRateTimeline: &shared.UsageRateTimeline{
+                                            Unit: "molestias",
+                                            UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "dolorem",
+                                                    },
+                                                    UsageRate: 1238.2,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "omnis",
+                                                    },
+                                                    UsageRate: 8480.09,
+                                                },
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "et",
+                                                    },
+                                                    UsageRate: 8073.19,
+                                                },
+                                            },
+                                        },
+                                    },
+                                    DiskType: "velit",
+                                    ProvisionedIops: &shared.Usage{
+                                        UsageRateTimeline: &shared.UsageRateTimeline{
+                                            Unit: "similique",
+                                            UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                                shared.UsageRateTimelineEntry{
+                                                    EffectiveTime: &shared.EstimationTimePoint{
+                                                        EstimationTimeFrameOffset: "voluptate",
+                                                    },
+                                                    UsageRate: 332.22,
+                                                },
+                                            },
+                                        },
+                                    },
+                                    Scope: "SCOPE_UNSPECIFIED",
+                                },
+                            },
+                            Preemptible: false,
+                            Region: "voluptatibus",
+                        },
+                        Name: "optio",
+                        PremiumTierEgressWorkload: &shared.PremiumTierEgressWorkload{
+                            DestinationContinent: "DESTINATION_CONTINENT_AUTRALIA",
+                            EgressRate: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "qui",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "quisquam",
+                                            },
+                                            UsageRate: 505.88,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "et",
+                                            },
+                                            UsageRate: 3654.96,
+                                        },
+                                    },
+                                },
+                            },
+                            SourceRegion: "aut",
+                        },
+                        StandardTierEgressWorkload: &shared.StandardTierEgressWorkload{
+                            EgressRate: &shared.Usage{
+                                UsageRateTimeline: &shared.UsageRateTimeline{
+                                    Unit: "sit",
+                                    UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "incidunt",
+                                            },
+                                            UsageRate: 117.14,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "voluptas",
+                                            },
+                                            UsageRate: 3599.78,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "rerum",
+                                            },
+                                            UsageRate: 7299.91,
+                                        },
+                                        shared.UsageRateTimelineEntry{
+                                            EffectiveTime: &shared.EstimationTimePoint{
+                                                EstimationTimeFrameOffset: "placeat",
+                                            },
+                                            UsageRate: 1716.29,
+                                        },
+                                    },
+                                },
+                            },
+                            SourceRegion: "laboriosam",
+                        },
+                        VMToVMEgressWorkload: &shared.VMToVMEgressWorkload{
+                            InterRegionEgress: &shared.InterRegionEgress{
+                                DestinationRegion: "occaecati",
+                                EgressRate: &shared.Usage{
+                                    UsageRateTimeline: &shared.UsageRateTimeline{
+                                        Unit: "corrupti",
+                                        UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                            shared.UsageRateTimelineEntry{
+                                                EffectiveTime: &shared.EstimationTimePoint{
+                                                    EstimationTimeFrameOffset: "laboriosam",
+                                                },
+                                                UsageRate: 1999.96,
+                                            },
+                                        },
+                                    },
+                                },
+                                SourceRegion: "dolor",
+                            },
+                            IntraRegionEgress: &shared.IntraRegionEgress{
+                                EgressRate: &shared.Usage{
+                                    UsageRateTimeline: &shared.UsageRateTimeline{
+                                        Unit: "sit",
+                                        UsageRateTimelineEntries: []shared.UsageRateTimelineEntry{
+                                            shared.UsageRateTimelineEntry{
+                                                EffectiveTime: &shared.EstimationTimePoint{
+                                                    EstimationTimeFrameOffset: "autem",
+                                                },
+                                                UsageRate: 4634.51,
+                                            },
+                                        },
+                                    },
+                                },
+                            },
                         },
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BillingAccounts.CloudbillingBillingAccountsEstimateCostScenario(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -532,20 +1065,21 @@ func main() {
     if res.EstimateCostScenarioForBillingAccountResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### billingAccounts
+
+### BillingAccounts
 
 * `CloudbillingBillingAccountsEstimateCostScenario` - Use custom pricing in the estimate, using a `CostScenario` with a defined `billingAccount`.
 
-### v1beta
+### V1beta
 
 * `CloudbillingEstimateCostScenario` - Estimate list prices using a `CostScenario` without a defined `billingAccount`.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

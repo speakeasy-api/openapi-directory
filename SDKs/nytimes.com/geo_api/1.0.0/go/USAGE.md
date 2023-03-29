@@ -3,41 +3,40 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Apikey: shared.SchemeApikey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Apikey: shared.SchemeApikey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetQueryJSONRequest{
         QueryParams: operations.GetQueryJSONQueryParams{
-            DateRange: "sit",
-            Elevation: 2259404117704393152,
-            Facets: 6050128673802995827,
-            Filter: "expedita",
-            Latitude: "consequuntur",
-            Limit: 2669985732393126063,
-            Longitude: "expedita",
-            Name: "voluptas",
-            Offset: 8274930044578894929,
-            Query: "et",
-            Sort: "nihil",
-            Sw: "rerum",
+            DateRange: "unde",
+            Elevation: 592845,
+            Facets: "1",
+            Filter: "nulla",
+            Latitude: "id",
+            Limit: 857946,
+            Longitude: "perspiciatis",
+            Name: "nulla",
+            Offset: 423655,
+            Query: "fuga",
+            Sort: "facilis",
+            Sw: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Events.GetQueryJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,5 +45,6 @@ func main() {
     if res.GetQueryJSON200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

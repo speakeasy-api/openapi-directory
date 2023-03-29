@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.LocalservicesAccountReportsSearchRequest{
         Security: operations.LocalservicesAccountReportsSearchSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,29 +23,30 @@ func main() {
             },
         },
         QueryParams: operations.LocalservicesAccountReportsSearchQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            EndDateDay: 3390393562759376202,
-            EndDateMonth: 2669985732393126063,
-            EndDateYear: 1774932891286980153,
-            Fields: "voluptas",
-            Key: "fugit",
-            OauthToken: "et",
-            PageSize: 2661732831099943416,
-            PageToken: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            EndDateDay: 602763,
+            EndDateMonth: 857946,
+            EndDateYear: 544883,
+            Fields: "nulla",
+            Key: "nihil",
+            OauthToken: "fuga",
+            PageSize: 645894,
+            PageToken: "eum",
             PrettyPrint: false,
-            Query: "debitis",
-            QuotaUser: "voluptatum",
-            StartDateDay: 2339563716805116249,
-            StartDateMonth: 7144924247938981575,
-            StartDateYear: 161231572858529631,
-            UploadType: "et",
-            UploadProtocol: "voluptate",
+            Query: "iusto",
+            QuotaUser: "ullam",
+            StartDateDay: 891773,
+            StartDateMonth: 56713,
+            StartDateYear: 963663,
+            UploadType: "enim",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AccountReports.LocalservicesAccountReportsSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -52,5 +55,6 @@ func main() {
     if res.GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

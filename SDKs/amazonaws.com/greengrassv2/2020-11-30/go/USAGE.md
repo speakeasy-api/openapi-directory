@@ -3,53 +3,46 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.AssociateServiceRoleToAccountRequest{
+        Headers: operations.AssociateServiceRoleToAccountHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+        },
+        Request: operations.AssociateServiceRoleToAccountRequestBody{
+            RoleArn: "nulla",
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.BatchAssociateClientDeviceWithCoreDeviceRequest{
-        PathParams: operations.BatchAssociateClientDeviceWithCoreDevicePathParams{
-            CoreDeviceThingName: "sit",
-        },
-        Headers: operations.BatchAssociateClientDeviceWithCoreDeviceHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "expedita",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "voluptas",
-        },
-        Request: operations.BatchAssociateClientDeviceWithCoreDeviceRequestBody{
-            Entries: []shared.AssociateClientDeviceWithCoreDeviceEntry{
-                shared.AssociateClientDeviceWithCoreDeviceEntry{
-                    ThingName: "et",
-                },
-            },
-        },
-    }
-    
-    res, err := s.BatchAssociateClientDeviceWithCoreDevice(ctx, req)
+    ctx := context.Background()
+    res, err := s.AssociateServiceRoleToAccount(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.BatchAssociateClientDeviceWithCoreDeviceResponse != nil {
+    if res.AssociateServiceRoleToAccountResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,64 +3,73 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateIdentityPoolRequest{
         Headers: operations.CreateIdentityPoolHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWSCognitoIdentityService.CreateIdentityPool",
         },
         Request: shared.CreateIdentityPoolInput{
-            AllowClassicFlow: true,
+            AllowClassicFlow: false,
             AllowUnauthenticatedIdentities: false,
             CognitoIdentityProviders: []shared.CognitoIdentityProvider{
                 shared.CognitoIdentityProvider{
-                    ClientID: "rerum",
-                    ProviderName: "dicta",
-                    ServerSideTokenCheck: true,
+                    ClientID: "fuga",
+                    ProviderName: "facilis",
+                    ServerSideTokenCheck: false,
+                },
+                shared.CognitoIdentityProvider{
+                    ClientID: "eum",
+                    ProviderName: "iusto",
+                    ServerSideTokenCheck: false,
                 },
             },
-            DeveloperProviderName: "voluptatum",
-            IdentityPoolName: "et",
+            DeveloperProviderName: "ullam",
+            IdentityPoolName: "saepe",
             IdentityPoolTags: map[string]string{
-                "dolorem": "et",
-                "voluptate": "iste",
-                "vitae": "totam",
+                "sapiente": "enim",
             },
             OpenIDConnectProviderARNs: []string{
-                "illum",
+                "voluptatum",
+                "autem",
             },
             SamlProviderARNs: []string{
-                "vel",
+                "non",
+                "deleniti",
+                "similique",
+                "reprehenderit",
             },
             SupportedLoginProviders: map[string]string{
-                "dolore": "id",
+                "quo": "quasi",
+                "laboriosam": "dicta",
+                "est": "voluptatem",
+                "consequatur": "fugiat",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateIdentityPool(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -69,5 +78,6 @@ func main() {
     if res.IdentityPool != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

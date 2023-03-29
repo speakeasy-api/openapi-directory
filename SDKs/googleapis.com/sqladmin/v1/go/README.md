@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/sqladmin/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.SQLBackupRunsDeleteRequest{
         Security: operations.SQLBackupRunsDeleteSecurity{
             Option1: &operations.SQLBackupRunsDeleteSecurityOption1{
@@ -34,25 +36,26 @@ func main() {
             },
         },
         PathParams: operations.SQLBackupRunsDeletePathParams{
-            ID: "sit",
-            Instance: "voluptas",
-            Project: "culpa",
+            ID: "unde",
+            Instance: "deserunt",
+            Project: "porro",
         },
         QueryParams: operations.SQLBackupRunsDeleteQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "consequuntur",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "voluptas",
-            Key: "fugit",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "id",
+            Alt: "proto",
+            Callback: "perspiciatis",
+            Fields: "nulla",
+            Key: "nihil",
+            OauthToken: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BackupRuns.SQLBackupRunsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -61,25 +64,27 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### backupRuns
+
+### BackupRuns
 
 * `SQLBackupRunsDelete` - Deletes the backup taken by a backup run.
 * `SQLBackupRunsGet` - Retrieves a resource containing information about a backup run.
 * `SQLBackupRunsInsert` - Creates a new backup run on demand.
 * `SQLBackupRunsList` - Lists all backup runs associated with the project or a given instance and configuration in the reverse chronological order of the backup initiation time.
 
-### connect
+### Connect
 
 * `SQLConnectGenerateEphemeral` - Generates a short-lived X509 certificate containing the provided public key and signed by a private key specific to the target instance. Users may use the certificate to authenticate as themselves when connecting to the database.
 * `SQLConnectGet` - Retrieves connect settings about a Cloud SQL instance.
 
-### databases
+### Databases
 
 * `SQLDatabasesDelete` - Deletes a database from a Cloud SQL instance.
 * `SQLDatabasesGet` - Retrieves a resource containing information about a database inside a Cloud SQL instance.
@@ -88,11 +93,11 @@ func main() {
 * `SQLDatabasesPatch` - Partially updates a resource containing information about a database inside a Cloud SQL instance. This method supports patch semantics.
 * `SQLDatabasesUpdate` - Updates a resource containing information about a database inside a Cloud SQL instance.
 
-### flags
+### Flags
 
 * `SQLFlagsList` - Lists all available database flags for Cloud SQL instances.
 
-### instances
+### Instances
 
 * `SQLInstancesAddServerCa` - Adds a new trusted Certificate Authority (CA) version for the specified instance. Required to prepare for a certificate rotation. If a CA version was previously added but never used in a certificate rotation, this operation replaces that version. There cannot be more than one CA version waiting to be rotated in.
 * `SQLInstancesClone` - Creates a Cloud SQL instance as a clone of the source instance. Using this operation might cause your instance to restart.
@@ -116,18 +121,18 @@ func main() {
 * `SQLInstancesTruncateLog` - Truncate MySQL general and slow query log tables MySQL only.
 * `SQLInstancesUpdate` - Updates settings of a Cloud SQL instance. Using this operation might cause your instance to restart.
 
-### operations
+### Operations
 
 * `SQLOperationsGet` - Retrieves an instance operation that has been performed on an instance.
 * `SQLOperationsList` - Lists all instance operations that have been performed on the given Cloud SQL instance in the reverse chronological order of the start time.
 
-### projects
+### Projects
 
 * `SQLProjectsInstancesRescheduleMaintenance` - Reschedules the maintenance on the given instance.
 * `SQLProjectsInstancesStartExternalSync` - Start External primary instance migration.
 * `SQLProjectsInstancesVerifyExternalSyncSettings` - Verify External primary instance external sync settings.
 
-### sslCerts
+### SslCerts
 
 * `SQLSslCertsCreateEphemeral` - Generates a short-lived X509 certificate containing the provided public key and signed by a private key specific to the target instance. Users may use the certificate to authenticate as themselves when connecting to the database.
 * `SQLSslCertsDelete` - Deletes the SSL certificate. For First Generation instances, the certificate remains valid until the instance is restarted.
@@ -135,18 +140,17 @@ func main() {
 * `SQLSslCertsInsert` - Creates an SSL certificate and returns it along with the private key and server certificate authority. The new certificate will not be usable until the instance is restarted.
 * `SQLSslCertsList` - Lists all of the current SSL certificates for the instance.
 
-### tiers
+### Tiers
 
 * `SQLTiersList` - Lists all available machine types (tiers) for Cloud SQL, for example, `db-custom-1-3840`. For more information, see https://cloud.google.com/sql/pricing.
 
-### users
+### Users
 
 * `SQLUsersDelete` - Deletes a user from a Cloud SQL instance.
 * `SQLUsersGet` - Retrieves a resource containing information about a user.
 * `SQLUsersInsert` - Creates a new user in a Cloud SQL instance.
 * `SQLUsersList` - Lists users in the specified Cloud SQL instance.
 * `SQLUsersUpdate` - Updates an existing user in a Cloud SQL instance.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

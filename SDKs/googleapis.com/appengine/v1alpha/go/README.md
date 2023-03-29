@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/appengine/v1alpha/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AppengineAppsAuthorizedCertificatesCreateRequest{
         Security: operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,46 +34,47 @@ func main() {
             },
         },
         PathParams: operations.AppengineAppsAuthorizedCertificatesCreatePathParams{
-            AppsID: "sit",
+            AppsID: "unde",
         },
         QueryParams: operations.AppengineAppsAuthorizedCertificatesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.AuthorizedCertificate{
             CertificateRawData: &shared.CertificateRawData{
-                PrivateKey: "dicta",
-                PublicCertificate: "debitis",
+                PrivateKey: "eum",
+                PublicCertificate: "iusto",
             },
-            DisplayName: "voluptatum",
-            DomainMappingsCount: 2339563716805116249,
+            DisplayName: "ullam",
+            DomainMappingsCount: 891773,
             DomainNames: []string{
-                "dolorem",
-                "et",
-                "voluptate",
+                "sapiente",
             },
-            ExpireTime: "iste",
-            ID: "vitae",
+            ExpireTime: "enim",
+            ID: "eum",
             ManagedCertificate: &shared.ManagedCertificate{
-                LastRenewalTime: "totam",
-                Status: "FAILED_RETRYING_NOT_VISIBLE",
+                LastRenewalTime: "voluptatum",
+                Status: "FAILED_RETRYING_CAA_FORBIDDEN",
             },
-            Name: "illum",
+            Name: "vel",
             VisibleDomainMappings: []string{
-                "vel",
+                "deleniti",
+                "similique",
+                "reprehenderit",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Apps.AppengineAppsAuthorizedCertificatesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -80,13 +83,15 @@ func main() {
     if res.AuthorizedCertificate != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### apps
+
+### Apps
 
 * `AppengineAppsAuthorizedCertificatesCreate` - Uploads the specified SSL certificate.
 * `AppengineAppsAuthorizedCertificatesDelete` - Deletes the specified SSL certificate.
@@ -104,13 +109,12 @@ func main() {
 * `AppengineAppsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `AppengineAppsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 
-### projects
+### Projects
 
 * `AppengineProjectsLocationsGet` - Gets information about a location.
 * `AppengineProjectsLocationsList` - Lists information about the supported locations for this service.
 * `AppengineProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `AppengineProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

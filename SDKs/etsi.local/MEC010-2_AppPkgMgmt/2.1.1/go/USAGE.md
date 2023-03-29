@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,21 +12,22 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.AppDgetRequest{
-        PathParams: operations.AppDgetPathParams{
-            AppDID: "sit",
+
+    req := operations.AppDGETRequest{
+        PathParams: operations.AppDGETPathParams{
+            AppDID: "unde",
         },
-        QueryParams: operations.AppDgetQueryParams{
-            AllFields: "voluptas",
-            ExcludeDefault: "culpa",
-            ExcludeFields: "expedita",
-            Fields: "consequuntur",
-            Filter: "dolor",
+        QueryParams: operations.AppDGETQueryParams{
+            AllFields: "deserunt",
+            ExcludeDefault: "porro",
+            ExcludeFields: "nulla",
+            Fields: "id",
+            Filter: "vero",
         },
     }
-    
-    res, err := s.AppPkgm.AppDget(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AppPkgm.AppDGET(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -32,5 +35,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

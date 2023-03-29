@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateFulfillmentPolicyRequest{
         Security: operations.CreateFulfillmentPolicySecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -21,181 +23,171 @@ func main() {
             CategoryTypes: []shared.CategoryType{
                 shared.CategoryType{
                     Default: false,
-                    Name: "culpa",
+                    Name: "deserunt",
+                },
+                shared.CategoryType{
+                    Default: false,
+                    Name: "porro",
+                },
+                shared.CategoryType{
+                    Default: false,
+                    Name: "nulla",
                 },
             },
-            Description: "expedita",
-            FreightShipping: true,
+            Description: "id",
+            FreightShipping: false,
             GlobalShipping: false,
             HandlingTime: &shared.TimeDuration{
-                Unit: "expedita",
-                Value: 6044372234677422456,
+                Unit: "vero",
+                Value: 544883,
             },
-            LocalPickup: true,
-            MarketplaceID: "et",
+            LocalPickup: false,
+            MarketplaceID: "nulla",
             Name: "nihil",
-            PickupDropOff: true,
+            PickupDropOff: false,
             ShipToLocations: &shared.RegionSet{
                 RegionExcluded: []shared.Region{
                     shared.Region{
-                        RegionName: "debitis",
-                        RegionType: "voluptatum",
+                        RegionName: "facilis",
+                        RegionType: "eum",
                     },
                     shared.Region{
-                        RegionName: "et",
-                        RegionType: "ut",
+                        RegionName: "iusto",
+                        RegionType: "ullam",
                     },
                     shared.Region{
-                        RegionName: "dolorem",
-                        RegionType: "et",
+                        RegionName: "saepe",
+                        RegionType: "inventore",
                     },
                 },
                 RegionIncluded: []shared.Region{
                     shared.Region{
-                        RegionName: "iste",
-                        RegionType: "vitae",
+                        RegionName: "enim",
+                        RegionType: "eum",
+                    },
+                    shared.Region{
+                        RegionName: "voluptatum",
+                        RegionType: "autem",
+                    },
+                    shared.Region{
+                        RegionName: "vel",
+                        RegionType: "non",
+                    },
+                    shared.Region{
+                        RegionName: "deleniti",
+                        RegionType: "similique",
                     },
                 },
             },
             ShippingOptions: []shared.ShippingOption{
                 shared.ShippingOption{
-                    CostType: "dolores",
+                    CostType: "molestiae",
                     InsuranceFee: &shared.Amount{
-                        Currency: "illum",
-                        Value: "debitis",
+                        Currency: "quo",
+                        Value: "quasi",
                     },
                     InsuranceOffered: false,
-                    OptionType: "odio",
+                    OptionType: "laboriosam",
                     PackageHandlingCost: &shared.Amount{
-                        Currency: "dolore",
-                        Value: "id",
+                        Currency: "dicta",
+                        Value: "est",
                     },
-                    RateTableID: "aspernatur",
+                    RateTableID: "voluptatem",
                     ShippingServices: []shared.ShippingService{
                         shared.ShippingService{
                             AdditionalShippingCost: &shared.Amount{
-                                Currency: "totam",
-                                Value: "commodi",
+                                Currency: "fugiat",
+                                Value: "a",
                             },
-                            BuyerResponsibleForPickup: true,
+                            BuyerResponsibleForPickup: false,
                             BuyerResponsibleForShipping: false,
                             CashOnDeliveryFee: &shared.Amount{
-                                Currency: "aut",
-                                Value: "odit",
+                                Currency: "omnis",
+                                Value: "eos",
                             },
-                            FreeShipping: true,
+                            FreeShipping: false,
                             ShipToLocations: &shared.RegionSet{
                                 RegionExcluded: []shared.Region{
                                     shared.Region{
-                                        RegionName: "omnis",
-                                        RegionType: "aut",
+                                        RegionName: "accusamus",
+                                        RegionType: "reiciendis",
+                                    },
+                                    shared.Region{
+                                        RegionName: "rem",
+                                        RegionType: "quibusdam",
+                                    },
+                                    shared.Region{
+                                        RegionName: "et",
+                                        RegionType: "praesentium",
+                                    },
+                                    shared.Region{
+                                        RegionName: "occaecati",
+                                        RegionType: "dolor",
                                     },
                                 },
                                 RegionIncluded: []shared.Region{
                                     shared.Region{
                                         RegionName: "sed",
-                                        RegionType: "officiis",
+                                        RegionType: "quisquam",
+                                    },
+                                    shared.Region{
+                                        RegionName: "rerum",
+                                        RegionType: "culpa",
+                                    },
+                                    shared.Region{
+                                        RegionName: "qui",
+                                        RegionType: "sed",
                                     },
                                 },
                             },
-                            ShippingCarrierCode: "autem",
+                            ShippingCarrierCode: "rerum",
                             ShippingCost: &shared.Amount{
-                                Currency: "consectetur",
-                                Value: "nobis",
+                                Currency: "possimus",
+                                Value: "occaecati",
                             },
-                            ShippingServiceCode: "odio",
-                            SortOrder: 7699391924090763411,
+                            ShippingServiceCode: "odit",
+                            SortOrder: 414662,
                             Surcharge: &shared.Amount{
-                                Currency: "recusandae",
-                                Value: "at",
+                                Currency: "rem",
+                                Value: "voluptatem",
                             },
                         },
                         shared.ShippingService{
                             AdditionalShippingCost: &shared.Amount{
-                                Currency: "ipsum",
-                                Value: "eveniet",
+                                Currency: "amet",
+                                Value: "est",
                             },
                             BuyerResponsibleForPickup: false,
-                            BuyerResponsibleForShipping: true,
-                            CashOnDeliveryFee: &shared.Amount{
-                                Currency: "inventore",
-                                Value: "ut",
-                            },
-                            FreeShipping: false,
-                            ShipToLocations: &shared.RegionSet{
-                                RegionExcluded: []shared.Region{
-                                    shared.Region{
-                                        RegionName: "reprehenderit",
-                                        RegionType: "tempore",
-                                    },
-                                    shared.Region{
-                                        RegionName: "maiores",
-                                        RegionType: "incidunt",
-                                    },
-                                    shared.Region{
-                                        RegionName: "dolor",
-                                        RegionType: "beatae",
-                                    },
-                                },
-                                RegionIncluded: []shared.Region{
-                                    shared.Region{
-                                        RegionName: "in",
-                                        RegionType: "et",
-                                    },
-                                    shared.Region{
-                                        RegionName: "omnis",
-                                        RegionType: "ipsum",
-                                    },
-                                },
-                            },
-                            ShippingCarrierCode: "ex",
-                            ShippingCost: &shared.Amount{
-                                Currency: "dolores",
-                                Value: "placeat",
-                            },
-                            ShippingServiceCode: "vel",
-                            SortOrder: 2587000937929698613,
-                            Surcharge: &shared.Amount{
-                                Currency: "mollitia",
-                                Value: "voluptas",
-                            },
-                        },
-                        shared.ShippingService{
-                            AdditionalShippingCost: &shared.Amount{
-                                Currency: "quam",
-                                Value: "reprehenderit",
-                            },
-                            BuyerResponsibleForPickup: true,
                             BuyerResponsibleForShipping: false,
                             CashOnDeliveryFee: &shared.Amount{
-                                Currency: "unde",
-                                Value: "in",
+                                Currency: "id",
+                                Value: "blanditiis",
                             },
                             FreeShipping: false,
                             ShipToLocations: &shared.RegionSet{
                                 RegionExcluded: []shared.Region{
                                     shared.Region{
-                                        RegionName: "ut",
-                                        RegionType: "itaque",
+                                        RegionName: "similique",
+                                        RegionType: "dolores",
                                     },
                                 },
                                 RegionIncluded: []shared.Region{
                                     shared.Region{
-                                        RegionName: "neque",
-                                        RegionType: "ullam",
+                                        RegionName: "quia",
+                                        RegionType: "et",
                                     },
                                 },
                             },
-                            ShippingCarrierCode: "et",
+                            ShippingCarrierCode: "voluptatem",
                             ShippingCost: &shared.Amount{
-                                Currency: "accusantium",
-                                Value: "esse",
+                                Currency: "laborum",
+                                Value: "modi",
                             },
-                            ShippingServiceCode: "architecto",
-                            SortOrder: 9021104375654741729,
+                            ShippingServiceCode: "et",
+                            SortOrder: 386489,
                             Surcharge: &shared.Amount{
-                                Currency: "velit",
-                                Value: "cumque",
+                                Currency: "earum",
+                                Value: "ut",
                             },
                         },
                     },
@@ -203,119 +195,69 @@ func main() {
                 shared.ShippingOption{
                     CostType: "soluta",
                     InsuranceFee: &shared.Amount{
-                        Currency: "sunt",
-                        Value: "voluptates",
+                        Currency: "qui",
+                        Value: "ea",
                     },
                     InsuranceOffered: false,
-                    OptionType: "et",
+                    OptionType: "laborum",
                     PackageHandlingCost: &shared.Amount{
-                        Currency: "optio",
-                        Value: "qui",
+                        Currency: "iusto",
+                        Value: "ut",
                     },
-                    RateTableID: "earum",
+                    RateTableID: "optio",
                     ShippingServices: []shared.ShippingService{
                         shared.ShippingService{
                             AdditionalShippingCost: &shared.Amount{
-                                Currency: "omnis",
+                                Currency: "inventore",
                                 Value: "ut",
                             },
                             BuyerResponsibleForPickup: false,
-                            BuyerResponsibleForShipping: true,
+                            BuyerResponsibleForShipping: false,
                             CashOnDeliveryFee: &shared.Amount{
-                                Currency: "commodi",
-                                Value: "error",
+                                Currency: "libero",
+                                Value: "et",
                             },
                             FreeShipping: false,
                             ShipToLocations: &shared.RegionSet{
                                 RegionExcluded: []shared.Region{
                                     shared.Region{
-                                        RegionName: "nostrum",
-                                        RegionType: "ut",
+                                        RegionName: "ipsum",
+                                        RegionType: "non",
+                                    },
+                                    shared.Region{
+                                        RegionName: "ea",
+                                        RegionType: "magni",
+                                    },
+                                    shared.Region{
+                                        RegionName: "placeat",
+                                        RegionType: "ipsam",
                                     },
                                 },
                                 RegionIncluded: []shared.Region{
                                     shared.Region{
-                                        RegionName: "sed",
-                                        RegionType: "a",
+                                        RegionName: "commodi",
+                                        RegionType: "quia",
                                     },
                                     shared.Region{
-                                        RegionName: "soluta",
-                                        RegionType: "aut",
+                                        RegionName: "similique",
+                                        RegionType: "eaque",
                                     },
                                     shared.Region{
-                                        RegionName: "quas",
-                                        RegionType: "consequuntur",
+                                        RegionName: "odio",
+                                        RegionType: "harum",
                                     },
                                 },
                             },
-                            ShippingCarrierCode: "laudantium",
+                            ShippingCarrierCode: "doloribus",
                             ShippingCost: &shared.Amount{
-                                Currency: "autem",
-                                Value: "ipsa",
+                                Currency: "a",
+                                Value: "aut",
                             },
-                            ShippingServiceCode: "expedita",
-                            SortOrder: 8204648627352676445,
+                            ShippingServiceCode: "et",
+                            SortOrder: 208876,
                             Surcharge: &shared.Amount{
-                                Currency: "perferendis",
-                                Value: "atque",
-                            },
-                        },
-                    },
-                },
-                shared.ShippingOption{
-                    CostType: "ratione",
-                    InsuranceFee: &shared.Amount{
-                        Currency: "quisquam",
-                        Value: "explicabo",
-                    },
-                    InsuranceOffered: true,
-                    OptionType: "maxime",
-                    PackageHandlingCost: &shared.Amount{
-                        Currency: "eum",
-                        Value: "perferendis",
-                    },
-                    RateTableID: "et",
-                    ShippingServices: []shared.ShippingService{
-                        shared.ShippingService{
-                            AdditionalShippingCost: &shared.Amount{
-                                Currency: "reiciendis",
-                                Value: "quis",
-                            },
-                            BuyerResponsibleForPickup: true,
-                            BuyerResponsibleForShipping: true,
-                            CashOnDeliveryFee: &shared.Amount{
-                                Currency: "necessitatibus",
-                                Value: "est",
-                            },
-                            FreeShipping: true,
-                            ShipToLocations: &shared.RegionSet{
-                                RegionExcluded: []shared.Region{
-                                    shared.Region{
-                                        RegionName: "labore",
-                                        RegionType: "et",
-                                    },
-                                },
-                                RegionIncluded: []shared.Region{
-                                    shared.Region{
-                                        RegionName: "ad",
-                                        RegionType: "expedita",
-                                    },
-                                    shared.Region{
-                                        RegionName: "vel",
-                                        RegionType: "qui",
-                                    },
-                                },
-                            },
-                            ShippingCarrierCode: "modi",
-                            ShippingCost: &shared.Amount{
-                                Currency: "nihil",
-                                Value: "tempora",
-                            },
-                            ShippingServiceCode: "deserunt",
-                            SortOrder: 4745905187492708501,
-                            Surcharge: &shared.Amount{
-                                Currency: "sunt",
-                                Value: "sit",
+                                Currency: "quidem",
+                                Value: "neque",
                             },
                         },
                     },
@@ -323,7 +265,8 @@ func main() {
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.FulfillmentPolicy.CreateFulfillmentPolicy(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -332,5 +275,6 @@ func main() {
     if res.SetFulfillmentPolicyResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

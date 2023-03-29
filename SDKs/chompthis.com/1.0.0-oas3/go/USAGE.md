@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetFoodBrandedBarcodePhpRequest{
         Security: operations.GetFoodBrandedBarcodePhpSecurity{
             APIKeyAuth: shared.SchemeAPIKeyAuth{
@@ -18,10 +20,11 @@ func main() {
             },
         },
         QueryParams: operations.GetFoodBrandedBarcodePhpQueryParams{
-            Code: "sit",
+            Code: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetFoodBrandedBarcodePhp(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +33,6 @@ func main() {
     if res.BrandedFoodObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

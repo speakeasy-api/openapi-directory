@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/github.com/ghes-3.1/1.1.4/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,15 +23,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
         PathParams: operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams{
-            Org: "sit",
-            RepositoryID: 2259404117704393152,
-            RunnerGroupID: 6050128673802995827,
+            Org: "unde",
+            RepositoryID: 592845,
+            RunnerGroupID: 715190,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Actions.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -38,13 +41,15 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### actions
+
+### Actions
 
 * `ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg` - Add repository access to a self-hosted runner group in an organization
 * `ActionsAddSelectedRepoToOrgSecret` - Add selected repository to an organization secret
@@ -119,7 +124,7 @@ func main() {
 * `ActionsSetSelfHostedRunnersInGroupForOrg` - Set self-hosted runners in a group for an organization
 * `ActionsUpdateSelfHostedRunnerGroupForOrg` - Update a self-hosted runner group for an organization
 
-### activity
+### Activity
 
 * `ActivityCheckRepoIsStarredByAuthenticatedUser` - Check if a repository is starred by the authenticated user
 * `ActivityDeleteRepoSubscription` - Delete a repository subscription
@@ -153,9 +158,9 @@ func main() {
 * `ActivityStarRepoForAuthenticatedUser` - Star a repository for the authenticated user
 * `ActivityUnstarRepoForAuthenticatedUser` - Unstar a repository for the authenticated user
 
-### apps
+### Apps
 
-* `AppsAddRepoToInstallation` - Add a repository to an app installation
+* `AppsAddRepoToInstallationForAuthenticatedUser` - Add a repository to an app installation
 * `AppsCheckAuthorization` - Check an authorization
 * `AppsCheckToken` - Check a token
 * `AppsCreateContentAttachment` - Create a content attachment
@@ -175,7 +180,7 @@ func main() {
 * `AppsListInstallations` - List installations for the authenticated app
 * `AppsListInstallationsForAuthenticatedUser` - List app installations accessible to the user access token
 * `AppsListReposAccessibleToInstallation` - List repositories accessible to the app installation
-* `AppsRemoveRepoFromInstallation` - Remove a repository from an app installation
+* `AppsRemoveRepoFromInstallationForAuthenticatedUser` - Remove a repository from an app installation
 * `AppsResetAuthorization` - Reset an authorization
 * `AppsResetToken` - Reset a token
 * `AppsRevokeAuthorizationForApplication` - Revoke an authorization for an application
@@ -186,7 +191,7 @@ func main() {
 * `AppsUnsuspendInstallation` - Unsuspend an app installation
 * `AppsUpdateWebhookConfigForApp` - Update a webhook configuration for an app
 
-### checks
+### Checks
 
 * `ChecksCreate` - Create a check run
 * `ChecksCreateSuite` - Create a check suite
@@ -200,7 +205,7 @@ func main() {
 * `ChecksSetSuitesPreferences` - Update repository preferences for check suites
 * `ChecksUpdate` - Update a check run
 
-### code-scanning
+### CodeScanning
 
 * `CodeScanningDeleteAnalysis` - Delete a code scanning analysis from a repository
 * `CodeScanningGetAlert` - Get a code scanning alert
@@ -212,16 +217,16 @@ func main() {
 * `CodeScanningUpdateAlert` - Update a code scanning alert
 * `CodeScanningUploadSarif` - Upload an analysis as SARIF data
 
-### codes-of-conduct
+### CodesOfConduct
 
 * `CodesOfConductGetAllCodesOfConduct` - Get all codes of conduct
 * `CodesOfConductGetConductCode` - Get a code of conduct
 
-### emojis
+### Emojis
 
 * `EmojisGet` - Get emojis
 
-### enterprise-admin
+### EnterpriseAdmin
 
 * `EnterpriseAdminAddAuthorizedSSHKey` - Add an authorized SSH key
 * `EnterpriseAdminAddOrgAccessToSelfHostedRunnerGroupInEnterprise` - Add organization access to a self-hosted runner group in an enterprise
@@ -250,22 +255,32 @@ func main() {
 * `EnterpriseAdminEnableOrDisableMaintenanceMode` - Enable or disable maintenance mode
 * `EnterpriseAdminEnableSelectedOrganizationGithubActionsEnterprise` - Enable a selected organization for GitHub Actions in an enterprise
 * `EnterpriseAdminGetAllAuthorizedSSHKeys` - Get all authorized SSH keys
+* `EnterpriseAdminGetAllStats` - Get all statistics
 * `EnterpriseAdminGetAllowedActionsEnterprise` - Get allowed actions for an enterprise
 * `EnterpriseAdminGetAnnouncement` - Get the global announcement banner
+* `EnterpriseAdminGetCommentStats` - Get comment statistics
 * `EnterpriseAdminGetConfigurationStatus` - Get the configuration status
 * `EnterpriseAdminGetDownloadStatusForPreReceiveEnvironment` - Get the download status for a pre-receive environment
+* `EnterpriseAdminGetGistStats` - Get gist statistics
 * `EnterpriseAdminGetGithubActionsPermissionsEnterprise` - Get GitHub Actions permissions for an enterprise
 * `EnterpriseAdminGetGlobalWebhook` - Get a global webhook
+* `EnterpriseAdminGetHooksStats` - Get hooks statistics
+* `EnterpriseAdminGetIssueStats` - Get issue statistics
 * `EnterpriseAdminGetLicenseInformation` - Get license information
 * `EnterpriseAdminGetMaintenanceStatus` - Get the maintenance status
+* `EnterpriseAdminGetMilestoneStats` - Get milestone statistics
+* `EnterpriseAdminGetOrgStats` - Get organization statistics
+* `EnterpriseAdminGetPagesStats` - Get pages statistics
 * `EnterpriseAdminGetPreReceiveEnvironment` - Get a pre-receive environment
 * `EnterpriseAdminGetPreReceiveHook` - Get a pre-receive hook
 * `EnterpriseAdminGetPreReceiveHookForOrg` - Get a pre-receive hook for an organization
 * `EnterpriseAdminGetPreReceiveHookForRepo` - Get a pre-receive hook for a repository
+* `EnterpriseAdminGetPullRequestStats` - Get pull request statistics
+* `EnterpriseAdminGetRepoStats` - Get repository statistics
 * `EnterpriseAdminGetSelfHostedRunnerForEnterprise` - Get a self-hosted runner for an enterprise
 * `EnterpriseAdminGetSelfHostedRunnerGroupForEnterprise` - Get a self-hosted runner group for an enterprise
 * `EnterpriseAdminGetSettings` - Get settings
-* `EnterpriseAdminGetTypeStats` - Get statistics
+* `EnterpriseAdminGetUserStats` - Get users statistics
 * `EnterpriseAdminListGlobalWebhooks` - List global webhooks
 * `EnterpriseAdminListOrgAccessToSelfHostedRunnerGroupInEnterprise` - List organization access to a self-hosted runner group in an enterprise
 * `EnterpriseAdminListPersonalAccessTokens` - List personal access tokens
@@ -312,7 +327,7 @@ func main() {
 * `EnterpriseAdminUpdateUsernameForUser` - Update the username for a user
 * `EnterpriseAdminUpgradeLicense` - Upgrade a license
 
-### gists
+### Gists
 
 * `GistsCheckIsStarred` - Check if a gist is starred
 * `GistsCreate` - Create a gist
@@ -335,7 +350,7 @@ func main() {
 * `GistsUpdate` - Update a gist
 * `GistsUpdateComment` - Update a gist comment
 
-### git
+### Git
 
 * `GitCreateBlob` - Create a blob
 * `GitCreateCommit` - Create a commit
@@ -351,12 +366,12 @@ func main() {
 * `GitListMatchingRefs` - List matching references
 * `GitUpdateRef` - Update a reference
 
-### gitignore
+### Gitignore
 
 * `GitignoreGetAllTemplates` - Get all gitignore templates
 * `GitignoreGetTemplate` - Get a gitignore template
 
-### issues
+### Issues
 
 * `IssuesAddAssignees` - Add assignees to an issue
 * `IssuesAddLabels` - Add labels to an issue
@@ -398,25 +413,25 @@ func main() {
 * `IssuesUpdateLabel` - Update a label
 * `IssuesUpdateMilestone` - Update a milestone
 
-### licenses
+### Licenses
 
 * `LicensesGet` - Get a license
 * `LicensesGetAllCommonlyUsed` - Get all commonly used licenses
 * `LicensesGetForRepo` - Get the license for a repository
 
-### markdown
+### Markdown
 
 * `MarkdownRender` - Render a Markdown document
 * `MarkdownRenderRaw` - Render a Markdown document in raw mode
 
-### meta
+### Meta
 
 * `MetaGet` - Get GitHub Enterprise Server meta information
 * `MetaGetOctocat` - Get Octocat
 * `MetaGetZen` - Get the Zen of GitHub
 * `MetaRoot` - GitHub API Root
 
-### oauth-authorizations
+### OauthAuthorizations
 
 * `OauthAuthorizationsCreateAuthorization` - Create a new authorization
 * `OauthAuthorizationsDeleteAuthorization` - Delete an authorization
@@ -429,7 +444,7 @@ func main() {
 * `OauthAuthorizationsListGrants` - List your grants
 * `OauthAuthorizationsUpdateAuthorization` - Update an existing authorization
 
-### orgs
+### Orgs
 
 * `OrgsCheckMembershipForUser` - Check organization membership for a user
 * `OrgsCheckPublicMembershipForUser` - Check public organization membership for a user
@@ -437,7 +452,6 @@ func main() {
 * `OrgsCreateWebhook` - Create an organization webhook
 * `OrgsDeleteWebhook` - Delete an organization webhook
 * `OrgsGet` - Get an organization
-* `OrgsGetAuditLog` - Get the audit log for an organization
 * `OrgsGetMembershipForAuthenticatedUser` - Get an organization membership for the authenticated user
 * `OrgsGetMembershipForUser` - Get organization membership for a user
 * `OrgsGetWebhook` - Get an organization webhook
@@ -463,7 +477,7 @@ func main() {
 * `OrgsUpdateWebhook` - Update an organization webhook
 * `OrgsUpdateWebhookConfigForOrg` - Update a webhook configuration for an organization
 
-### projects
+### Projects
 
 * `ProjectsAddCollaborator` - Add project collaborator
 * `ProjectsCreateCard` - Create a project card
@@ -491,7 +505,7 @@ func main() {
 * `ProjectsUpdateCard` - Update an existing project card
 * `ProjectsUpdateColumn` - Update an existing project column
 
-### pulls
+### Pulls
 
 * `PullsCheckIfMerged` - Check if a pull request has been merged
 * `PullsCreate` - Create a pull request
@@ -521,11 +535,11 @@ func main() {
 * `PullsUpdateReview` - Update a review for a pull request
 * `PullsUpdateReviewComment` - Update a review comment for a pull request
 
-### rate-limit
+### RateLimit
 
 * `RateLimitGet` - Get rate limit status for the authenticated user
 
-### reactions
+### Reactions
 
 * `ReactionsCreateForCommitComment` - Create reaction for a commit comment
 * `ReactionsCreateForIssue` - Create reaction for an issue
@@ -551,9 +565,9 @@ func main() {
 * `ReactionsListForTeamDiscussionInOrg` - List reactions for a team discussion
 * `ReactionsListForTeamDiscussionLegacy` - List reactions for a team discussion (Legacy)
 
-### repos
+### Repos
 
-* `ReposAcceptInvitation` - Accept a repository invitation
+* `ReposAcceptInvitationForAuthenticatedUser` - Accept a repository invitation
 * `ReposAddAppAccessRestrictions` - Add app access restrictions
 * `ReposAddCollaborator` - Add a repository collaborator
 * `ReposAddStatusCheckContexts` - Add status check contexts
@@ -576,7 +590,7 @@ func main() {
 * `ReposCreateRelease` - Create a release
 * `ReposCreateUsingTemplate` - Create a repository using a template
 * `ReposCreateWebhook` - Create a repository webhook
-* `ReposDeclineInvitation` - Decline a repository invitation
+* `ReposDeclineInvitationForAuthenticatedUser` - Decline a repository invitation
 * `ReposDelete` - Delete a repository
 * `ReposDeleteAccessRestrictions` - Delete access restrictions
 * `ReposDeleteAdminBranchProtection` - Delete admin branch protection
@@ -688,7 +702,7 @@ func main() {
 * `ReposUpdateWebhookConfigForRepo` - Update a webhook configuration for a repository
 * `ReposUploadReleaseAsset` - Upload a release asset
 
-### search
+### Search
 
 * `SearchCode` - Search code
 * `SearchCommits` - Search commits
@@ -698,12 +712,13 @@ func main() {
 * `SearchTopics` - Search topics
 * `SearchUsers` - Search users
 
-### secret-scanning
+### SecretScanning
 
 * `SecretScanningGetAlert` - Get a secret scanning alert
 * `SecretScanningListAlertsForRepo` - List secret scanning alerts for a repository
+* `SecretScanningUpdateAlert` - Update a secret scanning alert
 
-### teams
+### Teams
 
 * `TeamsAddMemberLegacy` - Add team member (Legacy)
 * `TeamsAddOrUpdateMembershipForUserInOrg` - Add or update team membership for a user
@@ -764,36 +779,35 @@ func main() {
 * `TeamsUpdateInOrg` - Update a team
 * `TeamsUpdateLegacy` - Update a team (Legacy)
 
-### users
+### Users
 
-* `UsersAddEmailForAuthenticated` - Add an email address for the authenticated user
+* `UsersAddEmailForAuthenticatedUser` - Add an email address for the authenticated user
 * `UsersCheckFollowingForUser` - Check if a user follows another user
 * `UsersCheckPersonIsFollowedByAuthenticated` - Check if a person is followed by the authenticated user
-* `UsersCreateGpgKeyForAuthenticated` - Create a GPG key for the authenticated user
-* `UsersCreatePublicSSHKeyForAuthenticated` - Create a public SSH key for the authenticated user
-* `UsersDeleteEmailForAuthenticated` - Delete an email address for the authenticated user
-* `UsersDeleteGpgKeyForAuthenticated` - Delete a GPG key for the authenticated user
-* `UsersDeletePublicSSHKeyForAuthenticated` - Delete a public SSH key for the authenticated user
+* `UsersCreateGpgKeyForAuthenticatedUser` - Create a GPG key for the authenticated user
+* `UsersCreatePublicSSHKeyForAuthenticatedUser` - Create a public SSH key for the authenticated user
+* `UsersDeleteEmailForAuthenticatedUser` - Delete an email address for the authenticated user
+* `UsersDeleteGpgKeyForAuthenticatedUser` - Delete a GPG key for the authenticated user
+* `UsersDeletePublicSSHKeyForAuthenticatedUser` - Delete a public SSH key for the authenticated user
 * `UsersFollow` - Follow a user
 * `UsersGetAuthenticated` - Get the authenticated user
 * `UsersGetByUsername` - Get a user
 * `UsersGetContextForUser` - Get contextual information for a user
-* `UsersGetGpgKeyForAuthenticated` - Get a GPG key for the authenticated user
-* `UsersGetPublicSSHKeyForAuthenticated` - Get a public SSH key for the authenticated user
+* `UsersGetGpgKeyForAuthenticatedUser` - Get a GPG key for the authenticated user
+* `UsersGetPublicSSHKeyForAuthenticatedUser` - Get a public SSH key for the authenticated user
 * `UsersList` - List users
-* `UsersListEmailsForAuthenticated` - List email addresses for the authenticated user
-* `UsersListFollowedByAuthenticated` - List the people the authenticated user follows
+* `UsersListEmailsForAuthenticatedUser` - List email addresses for the authenticated user
+* `UsersListFollowedByAuthenticatedUser` - List the people the authenticated user follows
 * `UsersListFollowersForAuthenticatedUser` - List followers of the authenticated user
 * `UsersListFollowersForUser` - List followers of a user
 * `UsersListFollowingForUser` - List the people a user follows
-* `UsersListGpgKeysForAuthenticated` - List GPG keys for the authenticated user
+* `UsersListGpgKeysForAuthenticatedUser` - List GPG keys for the authenticated user
 * `UsersListGpgKeysForUser` - List GPG keys for a user
-* `UsersListPublicEmailsForAuthenticated` - List public email addresses for the authenticated user
+* `UsersListPublicEmailsForAuthenticatedUser` - List public email addresses for the authenticated user
 * `UsersListPublicKeysForUser` - List public keys for a user
-* `UsersListPublicSSHKeysForAuthenticated` - List public SSH keys for the authenticated user
+* `UsersListPublicSSHKeysForAuthenticatedUser` - List public SSH keys for the authenticated user
 * `UsersUnfollow` - Unfollow a user
 * `UsersUpdateAuthenticated` - Update the authenticated user
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

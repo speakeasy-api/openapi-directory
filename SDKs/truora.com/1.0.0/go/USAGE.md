@@ -3,24 +3,16 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New()
 
-    s := sdk.New(opts...)
-    
     req := operations.ReportBehaviorRequest{
         Security: operations.ReportBehaviorSecurity{
             APIKey: shared.SchemeAPIKey{
@@ -28,19 +20,20 @@ func main() {
             },
         },
         Request: shared.CreateBehaviorInput{
-            BirthDate: "2006-05-01T09:38:06Z",
-            Country: "culpa",
-            DocumentID: "expedita",
-            DocumentType: "consequuntur",
-            Email: "dolor",
-            FeedbackDate: "2009-11-26T21:53:53Z",
-            FirstName: "voluptas",
-            LastName: "fugit",
-            PhoneNumber: "et",
-            Reason: "nihil",
+            BirthDate: "2022-09-10T05:10:14.392Z",
+            Country: "gt",
+            DocumentID: "porro",
+            DocumentType: "general-registration",
+            Email: "Ruthie.Little62@yahoo.com",
+            FeedbackDate: "2022-08-05T18:44:40.292Z",
+            FirstName: "Gerard",
+            LastName: "Kertzmann",
+            PhoneNumber: "ullam",
+            Reason: "confidentiality-breach",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Behavior.ReportBehavior(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +42,6 @@ func main() {
     if res.BehaviourOutput != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

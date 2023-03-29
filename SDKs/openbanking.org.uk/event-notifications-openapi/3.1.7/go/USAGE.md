@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateEventNotificationRequest{
         Headers: operations.CreateEventNotificationHeaders{
-            XFapiFinancialID: "sit",
-            XFapiInteractionID: "voluptas",
+            XFapiFinancialID: "unde",
+            XFapiInteractionID: "deserunt",
         },
-        Request: "culpa",
+        Request: "porro",
     }
-    
+
+    ctx := context.Background()
     res, err := s.EventNotification.CreateEventNotification(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

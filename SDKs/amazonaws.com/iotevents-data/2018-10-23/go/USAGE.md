@@ -3,58 +3,63 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchAcknowledgeAlarmRequest{
         Headers: operations.BatchAcknowledgeAlarmHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.BatchAcknowledgeAlarmRequestBody{
             AcknowledgeActionRequests: []shared.AcknowledgeAlarmActionRequest{
                 shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "fugit",
-                    KeyValue: "et",
-                    Note: "nihil",
-                    RequestID: "rerum",
+                    AlarmModelName: "nihil",
+                    KeyValue: "fuga",
+                    Note: "facilis",
+                    RequestID: "eum",
                 },
                 shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "dicta",
-                    KeyValue: "debitis",
-                    Note: "voluptatum",
-                    RequestID: "et",
+                    AlarmModelName: "iusto",
+                    KeyValue: "ullam",
+                    Note: "saepe",
+                    RequestID: "inventore",
                 },
                 shared.AcknowledgeAlarmActionRequest{
-                    AlarmModelName: "ut",
-                    KeyValue: "dolorem",
-                    Note: "et",
-                    RequestID: "voluptate",
+                    AlarmModelName: "sapiente",
+                    KeyValue: "enim",
+                    Note: "eum",
+                    RequestID: "voluptatum",
+                },
+                shared.AcknowledgeAlarmActionRequest{
+                    AlarmModelName: "autem",
+                    KeyValue: "vel",
+                    Note: "non",
+                    RequestID: "deleniti",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchAcknowledgeAlarm(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -63,5 +68,6 @@ func main() {
     if res.BatchAcknowledgeAlarmResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

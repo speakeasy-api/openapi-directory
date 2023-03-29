@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PagespeedonlinePagespeedapiRunpagespeedRequest{
         Security: operations.PagespeedonlinePagespeedapiRunpagespeedSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,30 +23,33 @@ func main() {
             },
         },
         QueryParams: operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            CaptchaToken: "consequuntur",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            CaptchaToken: "id",
             Category: []PagespeedonlinePagespeedapiRunpagespeedCategoryEnum{
-                "ACCESSIBILITY",
+                "PERFORMANCE",
                 "SEO",
+                "BEST_PRACTICES",
+                "PERFORMANCE",
             },
-            Fields: "fugit",
-            Key: "et",
-            Locale: "nihil",
-            OauthToken: "rerum",
+            Fields: "facilis",
+            Key: "eum",
+            Locale: "iusto",
+            OauthToken: "ullam",
             PrettyPrint: false,
-            QuotaUser: "debitis",
+            QuotaUser: "saepe",
             Strategy: "STRATEGY_UNSPECIFIED",
-            UploadType: "et",
-            UploadProtocol: "ut",
-            URL: "dolorem",
-            UtmCampaign: "et",
-            UtmSource: "voluptate",
+            UploadType: "sapiente",
+            UploadProtocol: "enim",
+            URL: "eum",
+            UtmCampaign: "voluptatum",
+            UtmSource: "autem",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Pagespeedapi.PagespeedonlinePagespeedapiRunpagespeed(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +58,6 @@ func main() {
     if res.PagespeedAPIPagespeedResponseV5 != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

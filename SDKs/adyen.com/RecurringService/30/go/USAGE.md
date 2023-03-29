@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,22 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PostDisableRequest{
         Security: operations.PostDisableSecurity{
-            BasicAuth: &shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
+            APIKeyAuth: &shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        Request: "sit",
+        Request: &shared.DisableRequest{
+            Contract: "unde",
+            MerchantAccount: "deserunt",
+            RecurringDetailReference: "porro",
+            ShopperReference: "nulla",
+        },
     }
-    
+
+    ctx := context.Background()
     res, err := s.General.PostDisable(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +36,6 @@ func main() {
     if res.DisableResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

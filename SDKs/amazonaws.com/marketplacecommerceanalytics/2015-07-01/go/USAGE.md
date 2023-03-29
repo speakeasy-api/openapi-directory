@@ -3,48 +3,48 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GenerateDataSetRequest{
         Headers: operations.GenerateDataSetHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "MarketplaceCommerceAnalytics20150701.GenerateDataSet",
         },
         Request: shared.GenerateDataSetRequest{
             CustomerDefinedValues: map[string]string{
-                "et": "nihil",
+                "fuga": "facilis",
+                "eum": "iusto",
             },
-            DataSetPublicationDate: "2004-06-02T10:14:12Z",
-            DataSetType: "daily_business_usage_by_instance_type",
-            DestinationS3BucketName: "et",
-            DestinationS3Prefix: "ut",
-            RoleNameArn: "dolorem",
-            SnsTopicArn: "et",
+            DataSetPublicationDate: "2022-12-10T22:07:53.414Z",
+            DataSetType: "customer_profile_by_geography",
+            DestinationS3BucketName: "inventore",
+            DestinationS3Prefix: "sapiente",
+            RoleNameArn: "enim",
+            SnsTopicArn: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GenerateDataSet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +53,6 @@ func main() {
     if res.GenerateDataSetResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

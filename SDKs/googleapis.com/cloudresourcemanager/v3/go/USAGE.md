@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudresourcemanagerEffectiveTagsListRequest{
         Security: operations.CloudresourcemanagerEffectiveTagsListSecurity{
             Option1: &operations.CloudresourcemanagerEffectiveTagsListSecurityOption1{
@@ -23,23 +25,24 @@ func main() {
             },
         },
         QueryParams: operations.CloudresourcemanagerEffectiveTagsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PageSize: 6044372234677422456,
-            PageToken: "fugit",
-            Parent: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PageSize: 847252,
+            PageToken: "nihil",
+            Parent: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.EffectiveTags.CloudresourcemanagerEffectiveTagsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +51,6 @@ func main() {
     if res.ListEffectiveTagsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

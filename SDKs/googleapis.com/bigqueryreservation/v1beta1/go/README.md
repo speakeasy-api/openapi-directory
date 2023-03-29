@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/bigqueryreservation/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest{
         Security: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
             Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
@@ -34,42 +36,48 @@ func main() {
             },
         },
         PathParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            CapacityCommitmentID: "dolor",
-            EnforceSingleAdminProjectPerOrg: true,
-            Fields: "voluptas",
-            Key: "fugit",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            CapacityCommitmentID: "vero",
+            EnforceSingleAdminProjectPerOrg: false,
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            PrettyPrint: false,
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.CapacityCommitmentInput{
             FailureStatus: &shared.Status{
-                Code: 5617773211005988520,
+                Code: 437587,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "dolorem": "et",
-                        "voluptate": "iste",
-                        "vitae": "totam",
+                        "inventore": "sapiente",
+                        "enim": "eum",
+                        "voluptatum": "autem",
+                        "vel": "non",
+                    },
+                    map[string]interface{}{
+                        "similique": "reprehenderit",
+                        "molestiae": "quo",
                     },
                 },
-                Message: "dolores",
+                Message: "quasi",
             },
             MultiRegionAuxiliary: false,
             Plan: "FLEX",
-            RenewalPlan: "TRIAL",
-            SlotCount: "odio",
+            RenewalPlan: "COMMITMENT_PLAN_UNSPECIFIED",
+            SlotCount: "est",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -78,13 +86,15 @@ func main() {
     if res.CapacityCommitment != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `BigqueryreservationProjectsLocationsCapacityCommitmentsCreate` - Creates a new capacity commitment resource.
 * `BigqueryreservationProjectsLocationsCapacityCommitmentsList` - Lists all the capacity commitments for the admin project.
@@ -99,7 +109,6 @@ func main() {
 * `BigqueryreservationProjectsLocationsReservationsGet` - Returns information about the reservation.
 * `BigqueryreservationProjectsLocationsReservationsList` - Lists all the reservations for the project in the specified location.
 * `BigqueryreservationProjectsLocationsSearchAssignments` - Looks up assignments for a specified resource for a particular region. If the request is about a project: 1. Assignments created on the project will be returned if they exist. 2. Otherwise assignments created on the closest ancestor will be returned. 3. Assignments for different JobTypes will all be returned. The same logic applies if the request is about a folder. If the request is about an organization, then assignments created on the organization will be returned (organization doesn't have ancestors). Comparing to ListAssignments, there are some behavior differences: 1. permission on the assignee will be verified in this API. 2. Hierarchy lookup (project->folder->organization) happens in this API. 3. Parent here is `projects/*/locations/*`, instead of `projects/*/locations/*reservations/*`. **Note** "-" cannot be used for projects nor locations.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

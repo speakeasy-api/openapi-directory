@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetFactFodRequest{
         Security: operations.GetFactFodSecurity{
             XFungeneratorsAPISecret: shared.SchemeXFungeneratorsAPISecret{
@@ -18,10 +20,11 @@ func main() {
             },
         },
         QueryParams: operations.GetFactFodQueryParams{
-            Category: "sit",
+            Category: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.FactOfTheDay.GetFactFod(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +33,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

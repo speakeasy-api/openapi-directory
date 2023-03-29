@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,19 +12,20 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.GetUserContentByDateJSONRequest{
-        Security: operations.GetUserContentByDateJSONSecurity{
+
+    req := operations.GETUserContentByDateJSONRequest{
+        Security: operations.GETUserContentByDateJSONSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        QueryParams: operations.GetUserContentByDateJSONQueryParams{
-            Date: "sit",
+        QueryParams: operations.GETUserContentByDateJSONQueryParams{
+            Date: "unde",
         },
     }
-    
-    res, err := s.GetUserContentByDateJSON(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETUserContentByDateJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -30,5 +33,6 @@ func main() {
     if res.GETUserContentByDateJSON200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

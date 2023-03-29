@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/collegefootballdata.com/4.1.6/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,37 +14,36 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKeyAuth: shared.SchemeAPIKeyAuth{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKeyAuth: shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetLinesRequest{
         QueryParams: operations.GetLinesQueryParams{
-            Away: "sit",
-            Conference: "voluptas",
-            GameID: 6050128673802995827,
-            Home: "expedita",
-            SeasonType: "consequuntur",
-            Team: "dolor",
-            Week: 1774932891286980153,
-            Year: 6044372234677422456,
+            Away: "unde",
+            Conference: "deserunt",
+            GameID: 715190,
+            Home: "nulla",
+            SeasonType: "id",
+            Team: "vero",
+            Week: 544883,
+            Year: 847252,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Betting.GetLines(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,35 +52,37 @@ func main() {
     if res.GameLines != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### betting
+
+### Betting
 
 * `GetLines` - Betting lines
 
-### coaches
+### Coaches
 
 * `GetCoaches` - Coaching records and history
 
-### conferences
+### Conferences
 
 * `GetConferences` - Conferences
 
-### draft
+### Draft
 
 * `GetDraftPicks` - List of NFL Draft picks
-* `GetNflPositions` - List of NFL positions
-* `GetNflTeams` - List of NFL teams
+* `GetNFLPositions` - List of NFL positions
+* `GetNFLTeams` - List of NFL teams
 
-### drives
+### Drives
 
 * `GetDrives` - Drive data and results
 
-### games
+### Games
 
 * `GetAdvancedBoxScore` - Advanced box scores
 * `GetCalendar` - Season calendar
@@ -92,54 +93,54 @@ func main() {
 * `GetTeamGameStats` - Team game stats
 * `GetTeamRecords` - Team records
 
-### metrics
+### Metrics
 
-* `GetGamePpa` - Team Predicated Points Added (PPA/EPA) by game
-* `GetPlayerGamePpa` - Player Predicated Points Added (PPA/EPA) broken down by game
-* `GetPlayerSeasonPpa` - Player Predicated Points Added (PPA/EPA) broken down by season
+* `GetGamePPA` - Team Predicated Points Added (PPA/EPA) by game
+* `GetPlayerGamePPA` - Player Predicated Points Added (PPA/EPA) broken down by game
+* `GetPlayerSeasonPPA` - Player Predicated Points Added (PPA/EPA) broken down by season
 * `GetPredictedPoints` - Predicted Points (i.e. Expected Points or EP)
 * `GetPregameWinProbabilities` - Pregame win probability data
-* `GetTeamPpa` - Predicted Points Added (PPA/EPA) data by team
+* `GetTeamPPA` - Predicted Points Added (PPA/EPA) data by team
 * `GetWinProbabilityData` - Win probability chart data
 
-### players
+### Players
 
 * `GetPlayerSeasonStats` - Player stats by season
 * `GetPlayerUsage` - Player usage metrics broken down by season
 * `GetReturningProduction` - Team returning production metrics
 * `PlayerSearch` - Search for player information
 
-### plays
+### Plays
 
 * `GetPlayStatTypes` - Types of player play stats
 * `GetPlayStats` - Play stats by play
 * `GetPlayTypes` - Play types
 * `GetPlays` - Play by play data
 
-### rankings
+### Rankings
 
 * `GetRankings` - Historical polls and rankings
 
-### ratings
+### Ratings
 
-* `GetConferenceSpRatings` - Historical SP+ ratings by conference
-* `GetSpRatings` - Historical SP+ ratings
-* `GetSrsRatings` - Historical SRS ratings
+* `GetConferenceSPRatings` - Historical SP+ ratings by conference
+* `GetSPRatings` - Historical SP+ ratings
+* `GetSRSRatings` - Historical SRS ratings
 
-### recruiting
+### Recruiting
 
 * `GetRecruitingGroups` - Recruit position group ratings
 * `GetRecruitingPlayers` - Player recruiting ratings and rankings
 * `GetRecruitingTeams` - Team recruiting rankings and ratings
 
-### stats
+### Stats
 
 * `GetAdvancedTeamGameStats` - Advanced team metrics by game
 * `GetAdvancedTeamSeasonStats` - Advanced team metrics by season
 * `GetStatCategories` - Team stat categories
 * `GetTeamSeasonStats` - Team statistics by season
 
-### teams
+### Teams
 
 * `GetFbsTeams` - FBS team list
 * `GetRoster` - Team rosters
@@ -147,10 +148,9 @@ func main() {
 * `GetTeamMatchup` - Team matchup history
 * `GetTeams` - Team information
 
-### venues
+### Venues
 
 * `GetVenues` - Arena and venue information
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

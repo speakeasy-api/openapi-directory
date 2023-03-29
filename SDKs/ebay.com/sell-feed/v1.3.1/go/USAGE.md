@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateCustomerServiceMetricTaskRequest{
         Security: operations.CreateCustomerServiceMetricTaskSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,26 +20,28 @@ func main() {
             },
         },
         Headers: operations.CreateCustomerServiceMetricTaskHeaders{
-            AcceptLanguage: "sit",
+            AcceptLanguage: "unde",
         },
         Request: shared.CreateServiceMetricsTaskRequest{
-            FeedType: "voluptas",
+            FeedType: "deserunt",
             FilterCriteria: &shared.CustomerServiceMetricsFilterCriteria{
-                CustomerServiceMetricType: "culpa",
-                EvaluationMarketplaceID: "expedita",
+                CustomerServiceMetricType: "porro",
+                EvaluationMarketplaceID: "nulla",
                 ListingCategories: []string{
-                    "dolor",
-                    "expedita",
-                    "voluptas",
+                    "vero",
+                    "perspiciatis",
+                    "nulla",
                 },
                 ShippingRegions: []string{
-                    "et",
+                    "fuga",
+                    "facilis",
                 },
             },
-            SchemaVersion: "nihil",
+            SchemaVersion: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CustomerServiceMetricTask.CreateCustomerServiceMetricTask(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,5 +50,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

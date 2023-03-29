@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetStatusRequest{
         Security: operations.GetStatusSecurity{
             APIKey: shared.SchemeAPIKey{
@@ -18,11 +20,12 @@ func main() {
             },
         },
         Headers: operations.GetStatusHeaders{
-            IfModifiedSince: "sit",
+            IfModifiedSince: "unde",
         },
     }
-    
-    res, err := s.TBA.GetStatus(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Tba.GetStatus(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -30,5 +33,6 @@ func main() {
     if res.APIStatus != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetV1CategoryListOutputFormatRequest{
         PathParams: operations.GetV1CategoryListOutputFormatPathParams{
-            OutputFormat: "json",
+            OutputFormat: "xml",
         },
         QueryParams: operations.GetV1CategoryListOutputFormatQueryParams{
-            APIKey: "voluptas",
-            Type: "user",
+            APIKey: "deserunt",
+            Type: "regulation",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetV1CategoryListOutputFormat(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

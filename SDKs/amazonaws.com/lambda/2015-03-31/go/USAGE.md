@@ -3,49 +3,48 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddLayerVersionPermissionRequest{
         PathParams: operations.AddLayerVersionPermissionPathParams{
-            LayerName: "sit",
-            VersionNumber: 2259404117704393152,
+            LayerName: "unde",
+            VersionNumber: 592845,
         },
         QueryParams: operations.AddLayerVersionPermissionQueryParams{
-            RevisionID: "culpa",
+            RevisionID: "porro",
         },
         Headers: operations.AddLayerVersionPermissionHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "consequuntur",
-            XAmzCredential: "dolor",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
         },
         Request: operations.AddLayerVersionPermissionRequestBody{
-            Action: "nihil",
-            OrganizationID: "rerum",
-            Principal: "dicta",
-            StatementID: "debitis",
+            Action: "facilis",
+            OrganizationID: "eum",
+            Principal: "iusto",
+            StatementID: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddLayerVersionPermission(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +53,6 @@ func main() {
     if res.AddLayerVersionPermissionResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

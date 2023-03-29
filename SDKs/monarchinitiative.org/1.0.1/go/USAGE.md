@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,23 +12,24 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAssociationBySubjectAndAssocTypeRequest{
         PathParams: operations.GetAssociationBySubjectAndAssocTypePathParams{
-            AssociationType: "sit",
+            AssociationType: "unde",
         },
         QueryParams: operations.GetAssociationBySubjectAndAssocTypeQueryParams{
-            Evidence: "voluptas",
-            ExcludeAutomaticAssertions: true,
-            Object: "expedita",
-            Rows: 3390393562759376202,
-            Start: 2669985732393126063,
-            Subject: "expedita",
-            UnselectEvidence: true,
-            UseCompactAssociations: true,
+            Evidence: "deserunt",
+            ExcludeAutomaticAssertions: false,
+            Object: "porro",
+            Rows: 844266,
+            Start: 602763,
+            Subject: "vero",
+            UnselectEvidence: false,
+            UseCompactAssociations: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Association.GetAssociationBySubjectAndAssocType(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +38,6 @@ func main() {
     if res.AssociationResults != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

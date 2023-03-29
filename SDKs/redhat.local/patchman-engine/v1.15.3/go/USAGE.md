@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.LatestPackageRequest{
         Security: operations.LatestPackageSecurity{
             RhIdentity: shared.SchemeRhIdentity{
@@ -18,10 +20,11 @@ func main() {
             },
         },
         PathParams: operations.LatestPackagePathParams{
-            PackageName: "sit",
+            PackageName: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.LatestPackage(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +33,6 @@ func main() {
     if res.ControllersPackageDetailResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

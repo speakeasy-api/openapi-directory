@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/drive/v3/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DriveAboutGetRequest{
         Security: operations.DriveAboutGetSecurity{
             Option1: &operations.DriveAboutGetSecurityOption1{
@@ -35,15 +37,16 @@ func main() {
         },
         QueryParams: operations.DriveAboutGetQueryParams{
             Alt: "json",
-            Fields: "voluptas",
-            Key: "culpa",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "dolor",
-            UserIP: "expedita",
+            Fields: "deserunt",
+            Key: "porro",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "id",
+            UserIP: "vero",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.About.DriveAboutGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -52,27 +55,29 @@ func main() {
     if res.About != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### about
+
+### About
 
 * `DriveAboutGet` - Gets information about the user, the user's Drive, and system capabilities.
 
-### changes
+### Changes
 
 * `DriveChangesGetStartPageToken` - Gets the starting pageToken for listing future changes.
 * `DriveChangesList` - Lists the changes for a user or shared drive.
-* `DriveChangesWatch` - Subscribes to changes for a user.
+* `DriveChangesWatch` - Subscribes to changes for a user. To use this method, you must include the pageToken query parameter.
 
-### channels
+### Channels
 
 * `DriveChannelsStop` - Stop watching resources through this channel
 
-### comments
+### Comments
 
 * `DriveCommentsCreate` - Creates a comment on a file.
 * `DriveCommentsDelete` - Deletes a comment.
@@ -80,7 +85,7 @@ func main() {
 * `DriveCommentsList` - Lists a file's comments.
 * `DriveCommentsUpdate` - Updates a comment with patch semantics.
 
-### drives
+### Drives
 
 * `DriveDrivesCreate` - Creates a shared drive.
 * `DriveDrivesDelete` - Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
@@ -90,7 +95,7 @@ func main() {
 * `DriveDrivesUnhide` - Restores a shared drive to the default view.
 * `DriveDrivesUpdate` - Updates the metadate for a shared drive.
 
-### files
+### Files
 
 * `DriveFilesCopy` - Creates a copy of a file and applies any requested updates with patch semantics. Folders cannot be copied.
 * `DriveFilesCreate` - Creates a file.
@@ -105,15 +110,15 @@ func main() {
 * `DriveFilesUpdate` - Updates a file's metadata and/or content. When calling this method, only populate fields in the request that you want to modify. When updating fields, some fields might change automatically, such as modifiedDate. This method supports patch semantics.
 * `DriveFilesWatch` - Subscribes to changes to a file. While you can establish a channel for changes to a file on a shared drive, a change to a shared drive file won't create a notification.
 
-### permissions
+### Permissions
 
-* `DrivePermissionsCreate` - Creates a permission for a file or shared drive.
+* `DrivePermissionsCreate` - Creates a permission for a file or shared drive. For more information on creating permissions, see Share files, folders & drives.
 * `DrivePermissionsDelete` - Deletes a permission.
 * `DrivePermissionsGet` - Gets a permission by ID.
 * `DrivePermissionsList` - Lists a file's or shared drive's permissions.
 * `DrivePermissionsUpdate` - Updates a permission with patch semantics.
 
-### replies
+### Replies
 
 * `DriveRepliesCreate` - Creates a reply to a comment.
 * `DriveRepliesDelete` - Deletes a reply.
@@ -121,21 +126,20 @@ func main() {
 * `DriveRepliesList` - Lists a comment's replies.
 * `DriveRepliesUpdate` - Updates a reply with patch semantics.
 
-### revisions
+### Revisions
 
 * `DriveRevisionsDelete` - Permanently deletes a file version. You can only delete revisions for files with binary content in Google Drive, like images or videos. Revisions for other files, like Google Docs or Sheets, and the last remaining file version can't be deleted.
 * `DriveRevisionsGet` - Gets a revision's metadata or content by ID.
 * `DriveRevisionsList` - Lists a file's revisions.
 * `DriveRevisionsUpdate` - Updates a revision with patch semantics.
 
-### teamdrives
+### Teamdrives
 
 * `DriveTeamdrivesCreate` - Deprecated use drives.create instead.
 * `DriveTeamdrivesDelete` - Deprecated use drives.delete instead.
 * `DriveTeamdrivesGet` - Deprecated use drives.get instead.
 * `DriveTeamdrivesList` - Deprecated use drives.list instead.
 * `DriveTeamdrivesUpdate` - Deprecated use drives.update instead
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ConvertRequest{
         Request: &operations.ConvertRequestBody{
-            HundredsForm: "sit",
-            TheNumber: "voluptas",
-            Unit: "culpa",
+            HundredsForm: "مائة",
+            TheNumber: "2519.50",
+            Unit: " ريال سعودي",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Convert(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,79 +3,75 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.SendCommandRequest{
         Headers: operations.SendCommandHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "QLDBSession.SendCommand",
         },
         Request: shared.SendCommandRequest{
             AbortTransaction: map[string]interface{}{
-                "et": "nihil",
+                "fuga": "facilis",
+                "eum": "iusto",
             },
             CommitTransaction: &shared.CommitTransactionRequest{
-                CommitDigest: "rerum",
-                TransactionID: "dicta",
+                CommitDigest: "ullam",
+                TransactionID: "saepe",
             },
             EndSession: map[string]interface{}{
-                "voluptatum": "et",
+                "sapiente": "enim",
             },
             ExecuteStatement: &shared.ExecuteStatementRequest{
                 Parameters: []shared.ValueHolder{
                     shared.ValueHolder{
-                        IonBinary: "dolorem",
-                        IonText: "et",
+                        IonBinary: "voluptatum",
+                        IonText: "autem",
                     },
                     shared.ValueHolder{
-                        IonBinary: "voluptate",
-                        IonText: "iste",
-                    },
-                    shared.ValueHolder{
-                        IonBinary: "vitae",
-                        IonText: "totam",
+                        IonBinary: "vel",
+                        IonText: "non",
                     },
                 },
-                Statement: "dolores",
-                TransactionID: "illum",
+                Statement: "deleniti",
+                TransactionID: "similique",
             },
             FetchPage: &shared.FetchPageRequest{
-                NextPageToken: "debitis",
-                TransactionID: "vel",
+                NextPageToken: "reprehenderit",
+                TransactionID: "molestiae",
             },
-            SessionToken: "odio",
+            SessionToken: "quo",
             StartSession: &shared.StartSessionRequest{
-                LedgerName: "dolore",
+                LedgerName: "quasi",
             },
             StartTransaction: map[string]interface{}{
-                "aspernatur": "accusantium",
-                "totam": "commodi",
+                "dicta": "est",
+                "voluptatem": "consequatur",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.SendCommand(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -84,5 +80,6 @@ func main() {
     if res.SendCommandResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatatransferApplicationsGetRequest{
         Security: operations.DatatransferApplicationsGetSecurity{
             Option1: &operations.DatatransferApplicationsGetSecurityOption1{
@@ -23,23 +25,24 @@ func main() {
             },
         },
         PathParams: operations.DatatransferApplicationsGetPathParams{
-            ApplicationID: "sit",
+            ApplicationID: "unde",
         },
         QueryParams: operations.DatatransferApplicationsGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Applications.DatatransferApplicationsGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +51,6 @@ func main() {
     if res.Application != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

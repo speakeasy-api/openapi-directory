@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/vocadb.net/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,23 +23,24 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ActivityEntryAPIGetListRequest{
         QueryParams: operations.ActivityEntryAPIGetListQueryParams{
-            Before: "2006-05-01T09:38:06Z",
-            EditEvent: "Updated",
-            EntryFields: "Description",
-            EntryType: "Venue",
+            Before: "2022-09-10T05:11:41.969Z",
+            EditEvent: "Deleted",
+            EntryFields: "PVs",
+            EntryType: "User",
             Fields: "ArchivedVersion",
-            GetTotalCount: true,
-            Lang: "Japanese",
-            MaxResults: 8274930044578894929,
-            Since: "2011-08-12T10:11:12Z",
+            GetTotalCount: false,
+            Lang: "English",
+            MaxResults: 544883,
+            Since: "2022-05-24T06:52:34.091Z",
             SortRule: "CreateDateDescending",
-            UserID: 8325060299420976708,
+            UserID: 623564,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ActivityEntryAPI.ActivityEntryAPIGetList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,17 +49,19 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### ActivityEntryApi
+
+### ActivityEntryAPI
 
 * `ActivityEntryAPIGetList` - Gets a list of recent activity entries.
 
-### AlbumApi
+### AlbumAPI
 
 * `AlbumAPIDelete` - Deletes an album.
 * `AlbumAPIDeleteComment` - Deletes a comment.
@@ -71,8 +76,17 @@ func main() {
 * `AlbumAPIGetTracks` - Gets tracks for an album.
 * `AlbumAPIGetTracksFields`
 * `AlbumAPIGetUserCollections`
+* `AlbumAPIPostEditCommentForm` - Updates a comment.
+* `AlbumAPIPostEditCommentJSON` - Updates a comment.
+* `AlbumAPIPostEditCommentRaw` - Updates a comment.
+* `AlbumAPIPostNewCommentForm` - Posts a new comment.
+* `AlbumAPIPostNewCommentJSON` - Posts a new comment.
+* `AlbumAPIPostNewCommentRaw` - Posts a new comment.
+* `AlbumAPIPostReviewForm`
+* `AlbumAPIPostReviewJSON`
+* `AlbumAPIPostReviewRaw`
 
-### ArtistApi
+### ArtistAPI
 
 * `ArtistAPIDelete` - Deletes an artist.
 * `ArtistAPIDeleteComment` - Deletes a comment.
@@ -80,13 +94,25 @@ func main() {
 * `ArtistAPIGetList` - Find artists.
 * `ArtistAPIGetNames` - Gets a list of artist names. Ideal for autocomplete boxes.
 * `ArtistAPIGetOne` - Gets an artist by Id.
+* `ArtistAPIPostEditCommentForm` - Updates a comment.
+* `ArtistAPIPostEditCommentJSON` - Updates a comment.
+* `ArtistAPIPostEditCommentRaw` - Updates a comment.
+* `ArtistAPIPostNewCommentForm` - Posts a new comment.
+* `ArtistAPIPostNewCommentJSON` - Posts a new comment.
+* `ArtistAPIPostNewCommentRaw` - Posts a new comment.
 
-### CommentApi
+### CommentAPI
 
 * `CommentAPIDeleteComment` - Deletes a comment.
 * `CommentAPIGetComments` - Gets a list of comments for an entry.
+* `CommentAPIPostEditCommentForm` - Updates a comment.
+* `CommentAPIPostEditCommentJSON` - Updates a comment.
+* `CommentAPIPostEditCommentRaw` - Updates a comment.
+* `CommentAPIPostNewCommentForm` - Posts a new comment.
+* `CommentAPIPostNewCommentJSON` - Posts a new comment.
+* `CommentAPIPostNewCommentRaw` - Posts a new comment.
 
-### DiscussionApi
+### DiscussionAPI
 
 * `DiscussionAPIDeleteComment`
 * `DiscussionAPIDeleteTopic`
@@ -94,21 +120,36 @@ func main() {
 * `DiscussionAPIGetTopic`
 * `DiscussionAPIGetTopics`
 * `DiscussionAPIGetTopicsForFolder`
+* `DiscussionAPIPostEditCommentForm`
+* `DiscussionAPIPostEditCommentJSON`
+* `DiscussionAPIPostEditCommentRaw`
+* `DiscussionAPIPostEditTopicForm`
+* `DiscussionAPIPostEditTopicJSON`
+* `DiscussionAPIPostEditTopicRaw`
+* `DiscussionAPIPostNewCommentForm`
+* `DiscussionAPIPostNewCommentJSON`
+* `DiscussionAPIPostNewCommentRaw`
+* `DiscussionAPIPostNewFolderForm`
+* `DiscussionAPIPostNewFolderJSON`
+* `DiscussionAPIPostNewFolderRaw`
+* `DiscussionAPIPostNewTopicForm`
+* `DiscussionAPIPostNewTopicJSON`
+* `DiscussionAPIPostNewTopicRaw`
 
-### EntryApi
+### EntryAPI
 
 * `EntryAPIGetList` - Find entries.
 * `EntryAPIGetNames` - Gets a list of entry names. Ideal for autocomplete boxes.
 
-### EntryTypesApi
+### EntryTypesAPI
 
 * `EntryTypesAPIGetMappedTag`
 
-### PVApi
+### PVAPI
 
-* `PvAPIGetList` - Gets a list of PVs for songs.
+* `PVAPIGetList` - Gets a list of PVs for songs.
 
-### ReleaseEventApi
+### ReleaseEventAPI
 
 * `ReleaseEventAPIDelete` - Deletes an event.
 * `ReleaseEventAPIGetAlbums` - Gets a list of albums for a specific event.
@@ -120,22 +161,22 @@ func main() {
 * `ReleaseEventAPIGetPublishedSongs` - Gets a list of songs for a specific event.
 * `ReleaseEventAPIPostReport` - Creates a new report.
 
-### ReleaseEventSeriesApi
+### ReleaseEventSeriesAPI
 
 * `ReleaseEventSeriesAPIDelete` - Deletes an event series.
 * `ReleaseEventSeriesAPIGetList` - Gets a page of event series.
 * `ReleaseEventSeriesAPIGetOne` - Gets single event series by ID.
 
-### ResourcesApi
+### ResourcesAPI
 
 * `ResourcesAPIGetList` - Gets a number of resource sets for a specific culture.
 
-### SongApi
+### SongAPI
 
 * `SongAPIDelete` - Deletes a song.
 * `SongAPIDeleteComment` - Deletes a comment.
 * `SongAPIGetByID` - Gets a song by Id.
-* `SongAPIGetByPv` - Gets a song by PV.
+* `SongAPIGetByPV` - Gets a song by PV.
 * `SongAPIGetComments` - Gets a list of comments for a song.
 * `SongAPIGetDerived` - Gets derived (alternate versions) of a song.
 * `SongAPIGetHighlightedSongs` - Gets list of highlighted songs, same as front page.
@@ -145,9 +186,17 @@ func main() {
 * `SongAPIGetRatings` - Get ratings for a song.
 * `SongAPIGetRelated` - Gets related songs.
 * `SongAPIGetTopSongs` - Gets top rated songs.
-* `SongAPIPostRating` - Add or update rating for a specific song, for the currently logged in user.
+* `SongAPIPostEditCommentForm` - Updates a comment.
+* `SongAPIPostEditCommentJSON` - Updates a comment.
+* `SongAPIPostEditCommentRaw` - Updates a comment.
+* `SongAPIPostNewCommentForm` - Posts a new comment.
+* `SongAPIPostNewCommentJSON` - Posts a new comment.
+* `SongAPIPostNewCommentRaw` - Posts a new comment.
+* `SongAPIPostRatingForm` - Add or update rating for a specific song, for the currently logged in user.
+* `SongAPIPostRatingJSON` - Add or update rating for a specific song, for the currently logged in user.
+* `SongAPIPostRatingRaw` - Add or update rating for a specific song, for the currently logged in user.
 
-### SongListApi
+### SongListAPI
 
 * `SongListAPIDelete` - Deletes a song list.
 * `SongListAPIDeleteComment` - Deletes a comment.
@@ -155,8 +204,17 @@ func main() {
 * `SongListAPIGetFeaturedListNames` - Gets a list of featuedd list names. Ideal for autocomplete boxes.
 * `SongListAPIGetFeaturedLists` - Gets a list of featured song lists.
 * `SongListAPIGetSongs` - Gets a list of songs in a song list.
+* `SongListAPIPostEditCommentForm` - Updates a comment.
+* `SongListAPIPostEditCommentJSON` - Updates a comment.
+* `SongListAPIPostEditCommentRaw` - Updates a comment.
+* `SongListAPIPostNewCommentForm` - Posts a new comment.
+* `SongListAPIPostNewCommentJSON` - Posts a new comment.
+* `SongListAPIPostNewCommentRaw` - Posts a new comment.
+* `SongListAPIPostForm` - Creates a song list.
+* `SongListAPIPostJSON` - Creates a song list.
+* `SongListAPIPostRaw` - Creates a song list.
 
-### TagApi
+### TagAPI
 
 * `TagAPIDelete` - Deletes a tag.
 * `TagAPIDeleteComment` - Deletes a comment.
@@ -174,10 +232,22 @@ func main() {
             
             Matching is done anywhere from the name.
 * `TagAPIGetTopTags` - Gets the most common tags in a category.
+* `TagAPIPostEditCommentForm` - Updates a comment.
+            Normal users can edit their own comments, moderators can edit all comments.
+            Requires login.
+* `TagAPIPostEditCommentJSON` - Updates a comment.
+            Normal users can edit their own comments, moderators can edit all comments.
+            Requires login.
+* `TagAPIPostEditCommentRaw` - Updates a comment.
+            Normal users can edit their own comments, moderators can edit all comments.
+            Requires login.
+* `TagAPIPostNewCommentForm` - Posts a new comment.
+* `TagAPIPostNewCommentJSON` - Posts a new comment.
+* `TagAPIPostNewCommentRaw` - Posts a new comment.
 * `TagAPIPostNewTag` - Creates a new tag.
 * `TagAPIPostReport` - Creates a new report.
 
-### UserApi
+### UserAPI
 
 * `UserAPIDeleteFollowedTag`
 * `UserAPIDeleteMessages` - Deletes a list of user messages.
@@ -199,19 +269,29 @@ func main() {
 * `UserAPIGetSongRating` - Gets a specific user's rating for a song.
 * `UserAPIGetSongRatingForCurrent` - Gets currently logged in user's rating for a song.
 * `UserAPIPostAlbumStatus` - Add or update collection status, media type and rating for a specific album, for the currently logged in user.
+* `UserAPIPostEditCommentForm` - Updates a comment.
+* `UserAPIPostEditCommentJSON` - Updates a comment.
+* `UserAPIPostEditCommentRaw` - Updates a comment.
 * `UserAPIPostFollowedTag`
+* `UserAPIPostNewCommentForm` - Posts a new comment.
+* `UserAPIPostNewCommentJSON` - Posts a new comment.
+* `UserAPIPostNewCommentRaw` - Posts a new comment.
+* `UserAPIPostNewMessageForm` - Creates a new message.
+* `UserAPIPostNewMessageJSON` - Creates a new message.
+* `UserAPIPostNewMessageRaw` - Creates a new message.
 * `UserAPIPostRefreshEntryEdit` - Refresh entry edit status, indicating that the current user is still editing that entry.
-* `UserAPIPostReport`
+* `UserAPIPostReportForm`
+* `UserAPIPostReportJSON`
+* `UserAPIPostReportRaw`
 * `UserAPIPostSetting` - Updates user setting.
 * `GetAPIUsersCurrentAlbumCollectionStatusesAlbumID`
 * `GetAPIUsersCurrentFollowedArtistsArtistID`
 
-### VenueApi
+### VenueAPI
 
 * `VenueAPIDelete` - Deletes a venue.
 * `VenueAPIGetList` - Gets a page of event venue.
 * `VenueAPIPostReport` - Creates a new report.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,50 +12,62 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.MirrorAccountsInsertRequest{
         PathParams: operations.MirrorAccountsInsertPathParams{
-            AccountName: "sit",
-            AccountType: "voluptas",
-            UserToken: "culpa",
+            AccountName: "unde",
+            AccountType: "deserunt",
+            UserToken: "porro",
         },
         QueryParams: operations.MirrorAccountsInsertQueryParams{
             Alt: "json",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UserIP: "et",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UserIP: "nihil",
         },
         Request: &shared.Account{
             AuthTokens: []shared.AuthToken{
                 shared.AuthToken{
-                    AuthToken: "rerum",
-                    Type: "dicta",
+                    AuthToken: "facilis",
+                    Type: "eum",
+                },
+                shared.AuthToken{
+                    AuthToken: "iusto",
+                    Type: "ullam",
+                },
+                shared.AuthToken{
+                    AuthToken: "saepe",
+                    Type: "inventore",
                 },
             },
             Features: []string{
+                "enim",
+                "eum",
                 "voluptatum",
+                "autem",
             },
-            Password: "et",
+            Password: "vel",
             UserData: []shared.UserData{
                 shared.UserData{
-                    Key: "dolorem",
-                    Value: "et",
+                    Key: "deleniti",
+                    Value: "similique",
                 },
                 shared.UserData{
-                    Key: "voluptate",
-                    Value: "iste",
+                    Key: "reprehenderit",
+                    Value: "molestiae",
                 },
                 shared.UserData{
-                    Key: "vitae",
-                    Value: "totam",
+                    Key: "quo",
+                    Value: "quasi",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.MirrorAccountsInsert(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -62,5 +76,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

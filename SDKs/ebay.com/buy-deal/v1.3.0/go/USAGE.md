@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetDealItemsRequest{
         Security: operations.GetDealItemsSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,17 +20,18 @@ func main() {
             },
         },
         QueryParams: operations.GetDealItemsQueryParams{
-            CategoryIds: "sit",
-            Commissionable: "voluptas",
-            DeliveryCountry: "culpa",
-            Limit: "expedita",
-            Offset: "consequuntur",
+            CategoryIds: "unde",
+            Commissionable: "deserunt",
+            DeliveryCountry: "porro",
+            Limit: "nulla",
+            Offset: "id",
         },
         Headers: operations.GetDealItemsHeaders{
-            XEBAYCMARKETPLACEID: "dolor",
+            XEbayCMarketplaceID: "vero",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DealItem.GetDealItems(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -37,5 +40,6 @@ func main() {
     if res.DealItemSearchResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

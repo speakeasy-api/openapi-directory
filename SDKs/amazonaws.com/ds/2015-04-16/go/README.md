@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/ds/2015-04-16/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,40 +14,39 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AcceptSharedDirectoryRequest{
         Headers: operations.AcceptSharedDirectoryHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "DirectoryService_20150416.AcceptSharedDirectory",
         },
         Request: shared.AcceptSharedDirectoryRequest{
-            SharedDirectoryID: "fugit",
+            SharedDirectoryID: "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AcceptSharedDirectory(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -56,6 +55,7 @@ func main() {
     if res.AcceptSharedDirectoryResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -75,7 +75,7 @@ func main() {
 * `CreateConditionalForwarder` - Creates a conditional forwarder associated with your Amazon Web Services directory. Conditional forwarders are required in order to set up a trust relationship with another domain. The conditional forwarder points to the trusted domain.
 * `CreateDirectory` - <p>Creates a Simple AD directory. For more information, see <a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_simple_ad.html">Simple Active Directory</a> in the <i>Directory Service Admin Guide</i>.</p> <p>Before you call <code>CreateDirectory</code>, ensure that all of the required permissions have been explicitly granted through a policy. For details about what permissions are required to run the <code>CreateDirectory</code> operation, see <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.</p>
 * `CreateLogSubscription` - Creates a subscription to forward real-time Directory Service domain controller security logs to the specified Amazon CloudWatch log group in your Amazon Web Services account.
-* `CreateMicrosoftAd` - <p>Creates a Microsoft AD directory in the Amazon Web Services Cloud. For more information, see <a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">Managed Microsoft AD</a> in the <i>Directory Service Admin Guide</i>.</p> <p>Before you call <i>CreateMicrosoftAD</i>, ensure that all of the required permissions have been explicitly granted through a policy. For details about what permissions are required to run the <i>CreateMicrosoftAD</i> operation, see <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.</p>
+* `CreateMicrosoftAD` - <p>Creates a Microsoft AD directory in the Amazon Web Services Cloud. For more information, see <a href="https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html">Managed Microsoft AD</a> in the <i>Directory Service Admin Guide</i>.</p> <p>Before you call <i>CreateMicrosoftAD</i>, ensure that all of the required permissions have been explicitly granted through a policy. For details about what permissions are required to run the <i>CreateMicrosoftAD</i> operation, see <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/UsingWithDS_IAM_ResourcePermissions.html">Directory Service API Permissions: Actions, Resources, and Conditions Reference</a>.</p>
 * `CreateSnapshot` - <p>Creates a snapshot of a Simple AD or Microsoft AD directory in the Amazon Web Services cloud.</p> <note> <p>You cannot take snapshots of AD Connector directories.</p> </note>
 * `CreateTrust` - <p>Directory Service for Microsoft Active Directory allows you to configure trust relationships. For example, you can establish a trust between your Managed Microsoft AD directory, and your existing self-managed Microsoft Active Directory. This would allow you to provide users and groups access to resources in either domain, with a single set of credentials.</p> <p>This action initiates the creation of the Amazon Web Services side of a trust relationship between an Managed Microsoft AD directory and an external domain. You can create either a forest trust or an external trust.</p>
 * `DeleteConditionalForwarder` - Deletes a conditional forwarder that has been set up for your Amazon Web Services directory.
@@ -91,17 +91,19 @@ func main() {
 * `DescribeDirectories` - <p>Obtains information about the directories that belong to this account.</p> <p>You can retrieve information about specific directories by passing the directory identifiers in the <code>DirectoryIds</code> parameter. Otherwise, all directories that belong to the current account are returned.</p> <p>This operation supports pagination with the use of the <code>NextToken</code> request and response parameters. If more results are available, the <code>DescribeDirectoriesResult.NextToken</code> member contains a token that you pass in the next call to <a>DescribeDirectories</a> to retrieve the next set of items.</p> <p>You can also specify a maximum number of return results with the <code>Limit</code> parameter.</p>
 * `DescribeDomainControllers` - Provides information about any domain controllers in your directory.
 * `DescribeEventTopics` - <p>Obtains information about which Amazon SNS topics receive status messages from the specified directory.</p> <p>If no input parameters are provided, such as DirectoryId or TopicName, this request describes all of the associations in the account.</p>
-* `DescribeLdapsSettings` - Describes the status of LDAP security for the specified directory.
+* `DescribeLDAPSSettings` - Describes the status of LDAP security for the specified directory.
 * `DescribeRegions` - Provides information about the Regions that are configured for multi-Region replication.
+* `DescribeSettings` - Retrieves information about the configurable settings for the specified directory.
 * `DescribeSharedDirectories` - Returns the shared directories in your account. 
 * `DescribeSnapshots` - <p>Obtains information about the directory snapshots that belong to this account.</p> <p>This operation supports pagination with the use of the <i>NextToken</i> request and response parameters. If more results are available, the <i>DescribeSnapshots.NextToken</i> member contains a token that you pass in the next call to <a>DescribeSnapshots</a> to retrieve the next set of items.</p> <p>You can also specify a maximum number of return results with the <i>Limit</i> parameter.</p>
 * `DescribeTrusts` - <p>Obtains information about the trust relationships for this account.</p> <p>If no input parameters are provided, such as DirectoryId or TrustIds, this request describes all the trust relationships belonging to the account.</p>
+* `DescribeUpdateDirectory` -  Describes the updates of a directory for a particular update type. 
 * `DisableClientAuthentication` - Disables alternative client authentication methods for the specified directory. 
-* `DisableLdaps` - Deactivates LDAP secure calls for the specified directory.
+* `DisableLDAPS` - Deactivates LDAP secure calls for the specified directory.
 * `DisableRadius` - Disables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD Connector or Microsoft AD directory.
 * `DisableSso` - Disables single-sign on for a directory.
 * `EnableClientAuthentication` - Enables alternative client authentication methods for the specified directory.
-* `EnableLdaps` - Activates the switch for the specific directory to always use LDAP secure calls.
+* `EnableLDAPS` - Activates the switch for the specific directory to always use LDAP secure calls.
 * `EnableRadius` - Enables multi-factor authentication (MFA) with the Remote Authentication Dial In User Service (RADIUS) server for an AD Connector or Microsoft AD directory.
 * `EnableSso` - Enables single sign-on for a directory. Single sign-on allows users in your directory to access certain Amazon Web Services services from a computer joined to the directory without having to enter their credentials separately.
 * `GetDirectoryLimits` - Obtains directory limit information for the current Region.
@@ -123,11 +125,12 @@ func main() {
 * `StartSchemaExtension` - Applies a schema extension to a Microsoft AD directory.
 * `UnshareDirectory` - Stops the directory sharing between the directory owner and consumer accounts. 
 * `UpdateConditionalForwarder` - Updates a conditional forwarder that has been set up for your Amazon Web Services directory.
+* `UpdateDirectorySetup` -  Updates the directory for a particular update type. 
 * `UpdateNumberOfDomainControllers` - Adds or removes domain controllers to or from the directory. Based on the difference between current value and new value (provided through this API call), domain controllers will be added or removed. It may take up to 45 minutes for any new domain controllers to become fully active once the requested number of domain controllers is updated. During this time, you cannot make another update request.
 * `UpdateRadius` - Updates the Remote Authentication Dial In User Service (RADIUS) server information for an AD Connector or Microsoft AD directory.
+* `UpdateSettings` - Updates the configurable settings for the specified directory.
 * `UpdateTrust` - Updates the trust that has been set up between your Managed Microsoft AD directory and an self-managed Active Directory.
 * `VerifyTrust` - <p>Directory Service for Microsoft Active Directory allows you to configure and verify trust relationships.</p> <p>This action verifies a trust relationship between your Managed Microsoft AD directory and an external domain.</p>
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

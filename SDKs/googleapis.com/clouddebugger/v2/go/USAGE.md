@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ClouddebuggerControllerDebuggeesBreakpointsListRequest{
         Security: operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurity{
             Option1: &operations.ClouddebuggerControllerDebuggeesBreakpointsListSecurityOption1{
@@ -23,26 +25,27 @@ func main() {
             },
         },
         PathParams: operations.ClouddebuggerControllerDebuggeesBreakpointsListPathParams{
-            DebuggeeID: "sit",
+            DebuggeeID: "unde",
         },
         QueryParams: operations.ClouddebuggerControllerDebuggeesBreakpointsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            AgentID: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            AgentID: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            SuccessOnTimeout: true,
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
-            WaitToken: "voluptatum",
+            QuotaUser: "fuga",
+            SuccessOnTimeout: false,
+            UploadType: "facilis",
+            UploadProtocol: "eum",
+            WaitToken: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Controller.ClouddebuggerControllerDebuggeesBreakpointsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +54,6 @@ func main() {
     if res.ListActiveBreakpointsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

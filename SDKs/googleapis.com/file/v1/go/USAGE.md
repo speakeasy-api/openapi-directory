@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FileProjectsLocationsBackupsCreateRequest{
         Security: operations.FileProjectsLocationsBackupsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,32 +23,37 @@ func main() {
             },
         },
         PathParams: operations.FileProjectsLocationsBackupsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.FileProjectsLocationsBackupsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            BackupID: "consequuntur",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            BackupID: "id",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.BackupInput{
-            Description: "debitis",
+            Description: "iusto",
+            KmsKey: "ullam",
             Labels: map[string]string{
-                "et": "ut",
+                "inventore": "sapiente",
+                "enim": "eum",
+                "voluptatum": "autem",
+                "vel": "non",
             },
-            SourceFileShare: "dolorem",
-            SourceInstance: "et",
+            SourceFileShare: "deleniti",
+            SourceInstance: "similique",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.FileProjectsLocationsBackupsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -55,5 +62,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudtraceProjectsPatchTracesRequest{
         Security: operations.CloudtraceProjectsPatchTracesSecurity{
             Option1: &operations.CloudtraceProjectsPatchTracesSecurityOption1{
@@ -23,92 +25,92 @@ func main() {
             },
         },
         PathParams: operations.CloudtraceProjectsPatchTracesPathParams{
-            ProjectID: "sit",
+            ProjectID: "unde",
         },
         QueryParams: operations.CloudtraceProjectsPatchTracesQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Traces{
             Traces: []shared.Trace{
                 shared.Trace{
-                    ProjectID: "debitis",
+                    ProjectID: "iusto",
                     Spans: []shared.TraceSpan{
                         shared.TraceSpan{
-                            EndTime: "et",
-                            Kind: "RPC_CLIENT",
-                            Labels: map[string]string{
-                                "et": "voluptate",
-                                "iste": "vitae",
-                                "totam": "dolores",
-                            },
-                            Name: "illum",
-                            ParentSpanID: "debitis",
-                            SpanID: "vel",
-                            StartTime: "odio",
-                        },
-                    },
-                    TraceID: "dolore",
-                },
-                shared.Trace{
-                    ProjectID: "id",
-                    Spans: []shared.TraceSpan{
-                        shared.TraceSpan{
-                            EndTime: "accusantium",
-                            Kind: "RPC_CLIENT",
-                            Labels: map[string]string{
-                                "quis": "est",
-                                "aut": "odit",
-                            },
-                            Name: "non",
-                            ParentSpanID: "voluptas",
-                            SpanID: "omnis",
-                            StartTime: "aut",
-                        },
-                    },
-                    TraceID: "illo",
-                },
-                shared.Trace{
-                    ProjectID: "sed",
-                    Spans: []shared.TraceSpan{
-                        shared.TraceSpan{
-                            EndTime: "autem",
+                            EndTime: "saepe",
                             Kind: "SPAN_KIND_UNSPECIFIED",
                             Labels: map[string]string{
-                                "odio": "qui",
+                                "enim": "eum",
+                                "voluptatum": "autem",
+                                "vel": "non",
+                                "deleniti": "similique",
                             },
-                            Name: "recusandae",
-                            ParentSpanID: "at",
-                            SpanID: "ipsum",
-                            StartTime: "eveniet",
+                            Name: "reprehenderit",
+                            ParentSpanID: "molestiae",
+                            SpanID: "quo",
+                            StartTime: "quasi",
                         },
                         shared.TraceSpan{
-                            EndTime: "modi",
+                            EndTime: "laboriosam",
                             Kind: "SPAN_KIND_UNSPECIFIED",
                             Labels: map[string]string{
-                                "ut": "exercitationem",
+                                "voluptatem": "consequatur",
+                                "fugiat": "a",
+                                "omnis": "eos",
                             },
-                            Name: "aut",
-                            ParentSpanID: "reprehenderit",
-                            SpanID: "tempore",
-                            StartTime: "maiores",
+                            Name: "accusamus",
+                            ParentSpanID: "accusamus",
+                            SpanID: "reiciendis",
+                            StartTime: "rem",
                         },
                     },
-                    TraceID: "incidunt",
+                    TraceID: "quibusdam",
+                },
+                shared.Trace{
+                    ProjectID: "et",
+                    Spans: []shared.TraceSpan{
+                        shared.TraceSpan{
+                            EndTime: "occaecati",
+                            Kind: "RPC_CLIENT",
+                            Labels: map[string]string{
+                                "sed": "quisquam",
+                                "rerum": "culpa",
+                                "qui": "sed",
+                            },
+                            Name: "rerum",
+                            ParentSpanID: "possimus",
+                            SpanID: "occaecati",
+                            StartTime: "odit",
+                        },
+                        shared.TraceSpan{
+                            EndTime: "esse",
+                            Kind: "RPC_SERVER",
+                            Labels: map[string]string{
+                                "amet": "est",
+                                "id": "blanditiis",
+                            },
+                            Name: "numquam",
+                            ParentSpanID: "similique",
+                            SpanID: "dolores",
+                            StartTime: "sit",
+                        },
+                    },
+                    TraceID: "quia",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.CloudtraceProjectsPatchTraces(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -117,5 +119,6 @@ func main() {
     if res.Empty != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

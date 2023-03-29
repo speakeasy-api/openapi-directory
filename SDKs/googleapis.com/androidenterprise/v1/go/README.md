@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/androidenterprise/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AndroidenterpriseDevicesForceReportUploadRequest{
         Security: operations.AndroidenterpriseDevicesForceReportUploadSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,25 +34,26 @@ func main() {
             },
         },
         PathParams: operations.AndroidenterpriseDevicesForceReportUploadPathParams{
-            DeviceID: "sit",
-            EnterpriseID: "voluptas",
-            UserID: "culpa",
+            DeviceID: "unde",
+            EnterpriseID: "deserunt",
+            UserID: "porro",
         },
         QueryParams: operations.AndroidenterpriseDevicesForceReportUploadQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "consequuntur",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "voluptas",
-            Key: "fugit",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "id",
+            Alt: "proto",
+            Callback: "perspiciatis",
+            Fields: "nulla",
+            Key: "nihil",
+            OauthToken: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Devices.AndroidenterpriseDevicesForceReportUpload(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -59,13 +62,15 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### devices
+
+### Devices
 
 * `AndroidenterpriseDevicesForceReportUpload` - Uploads a report containing any changes in app states on the device since the last report was generated. You can call this method up to 3 times every 24 hours for a given device. If you exceed the quota, then the Google Play EMM API returns HTTP 429 Too Many Requests.
 * `AndroidenterpriseDevicesGet` - Retrieves the details of a device.
@@ -74,7 +79,7 @@ func main() {
 * `AndroidenterpriseDevicesSetState` - Sets whether a device's access to Google services is enabled or disabled. The device state takes effect only if enforcing EMM policies on Android devices is enabled in the Google Admin Console. Otherwise, the device state is ignored and all devices are allowed access to Google services. This is only supported for Google-managed users.
 * `AndroidenterpriseDevicesUpdate` - Updates the device policy. To ensure the policy is properly enforced, you need to prevent unmanaged accounts from accessing Google Play by setting the allowed_accounts in the managed configuration for the Google Play package. See restrict accounts in Google Play. When provisioning a new device, you should set the device policy using this method before adding the managed Google Play Account to the device, otherwise the policy will not be applied for a short period of time after adding the account to the device.
 
-### enterprises
+### Enterprises
 
 * `AndroidenterpriseEnterprisesAcknowledgeNotificationSet` - Acknowledges notifications that were received from Enterprises.PullNotificationSet to prevent subsequent calls from returning the same notifications.
 * `AndroidenterpriseEnterprisesCompleteSignup` - Completes the signup flow, by specifying the Completion token and Enterprise token. This request must not be called multiple times for a given Enterprise Token.
@@ -92,52 +97,52 @@ func main() {
 * `AndroidenterpriseEnterprisesSetStoreLayout` - Sets the store layout for the enterprise. By default, storeLayoutType is set to "basic" and the basic store layout is enabled. The basic layout only contains apps approved by the admin, and that have been added to the available product set for a user (using the setAvailableProductSet call). Apps on the page are sorted in order of their product ID value. If you create a custom store layout (by setting storeLayoutType = "custom" and setting a homepage), the basic store layout is disabled.
 * `AndroidenterpriseEnterprisesUnenroll` - Unenrolls an enterprise from the calling EMM.
 
-### entitlements
+### Entitlements
 
 * `AndroidenterpriseEntitlementsDelete` - Removes an entitlement to an app for a user. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 * `AndroidenterpriseEntitlementsGet` - Retrieves details of an entitlement. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 * `AndroidenterpriseEntitlementsList` - Lists all entitlements for the specified user. Only the ID is set. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 * `AndroidenterpriseEntitlementsUpdate` - Adds or updates an entitlement to an app for a user. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 
-### grouplicenses
+### Grouplicenses
 
 * `AndroidenterpriseGrouplicensesGet` - Retrieves details of an enterprise's group license for a product. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 * `AndroidenterpriseGrouplicensesList` - Retrieves IDs of all products for which the enterprise has a group license. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 
-### grouplicenseusers
+### Grouplicenseusers
 
 * `AndroidenterpriseGrouplicenseusersList` - Retrieves the IDs of the users who have been granted entitlements under the license. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 
-### installs
+### Installs
 
 * `AndroidenterpriseInstallsDelete` - Requests to remove an app from a device. A call to get or list will still show the app as installed on the device until it is actually removed.
 * `AndroidenterpriseInstallsGet` - Retrieves details of an installation of an app on a device.
 * `AndroidenterpriseInstallsList` - Retrieves the details of all apps installed on the specified device.
 * `AndroidenterpriseInstallsUpdate` - Requests to install the latest version of an app to a device. If the app is already installed, then it is updated to the latest version if necessary.
 
-### managedconfigurationsfordevice
+### Managedconfigurationsfordevice
 
 * `AndroidenterpriseManagedconfigurationsfordeviceDelete` - Removes a per-device managed configuration for an app for the specified device.
 * `AndroidenterpriseManagedconfigurationsfordeviceGet` - Retrieves details of a per-device managed configuration.
 * `AndroidenterpriseManagedconfigurationsfordeviceList` - Lists all the per-device managed configurations for the specified device. Only the ID is set.
 * `AndroidenterpriseManagedconfigurationsfordeviceUpdate` - Adds or updates a per-device managed configuration for an app for the specified device.
 
-### managedconfigurationsforuser
+### Managedconfigurationsforuser
 
 * `AndroidenterpriseManagedconfigurationsforuserDelete` - Removes a per-user managed configuration for an app for the specified user.
 * `AndroidenterpriseManagedconfigurationsforuserGet` - Retrieves details of a per-user managed configuration for an app for the specified user.
 * `AndroidenterpriseManagedconfigurationsforuserList` - Lists all the per-user managed configurations for the specified user. Only the ID is set.
 * `AndroidenterpriseManagedconfigurationsforuserUpdate` - Adds or updates the managed configuration settings for an app for the specified user. If you support the Managed configurations iframe, you can apply managed configurations to a user by specifying an mcmId and its associated configuration variables (if any) in the request. Alternatively, all EMMs can apply managed configurations by passing a list of managed properties.
 
-### managedconfigurationssettings
+### Managedconfigurationssettings
 
 * `AndroidenterpriseManagedconfigurationssettingsList` - Lists all the managed configurations settings for the specified app.
 
-### permissions
+### Permissions
 
 * `AndroidenterprisePermissionsGet` - Retrieves details of an Android app permission for display to an enterprise admin.
 
-### products
+### Products
 
 * `AndroidenterpriseProductsApprove` -  Approves the specified product and the relevant app permissions, if any. The maximum number of products that you can approve per enterprise customer is 1,000. To learn how to use managed Google Play to design and create a store layout to display approved products to your users, see Store Layout Design. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations. 
 * `AndroidenterpriseProductsGenerateApprovalURL` - Generates a URL that can be rendered in an iframe to display the permissions (if any) of a product. An enterprise admin must view these permissions and accept them on behalf of their organization in order to approve that product. Admins should accept the displayed permissions by interacting with a separate UI element in the EMM console, which in turn should trigger the use of this URL as the approvalUrlInfo.approvalUrl property in a Products.approve call to approve the product. This URL can only be used to display permissions for up to 1 day. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations. 
@@ -147,13 +152,13 @@ func main() {
 * `AndroidenterpriseProductsList` - Finds approved products that match a query, or all approved products if there is no query. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations. 
 * `AndroidenterpriseProductsUnapprove` - Unapproves the specified product (and the relevant app permissions, if any) **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 
-### serviceaccountkeys
+### Serviceaccountkeys
 
 * `AndroidenterpriseServiceaccountkeysDelete` - Removes and invalidates the specified credentials for the service account associated with this enterprise. The calling service account must have been retrieved by calling Enterprises.GetServiceAccount and must have been set as the enterprise service account by calling Enterprises.SetAccount.
 * `AndroidenterpriseServiceaccountkeysInsert` - Generates new credentials for the service account associated with this enterprise. The calling service account must have been retrieved by calling Enterprises.GetServiceAccount and must have been set as the enterprise service account by calling Enterprises.SetAccount. Only the type of the key should be populated in the resource to be inserted.
 * `AndroidenterpriseServiceaccountkeysList` - Lists all active credentials for the service account associated with this enterprise. Only the ID and key type are returned. The calling service account must have been retrieved by calling Enterprises.GetServiceAccount and must have been set as the enterprise service account by calling Enterprises.SetAccount.
 
-### storelayoutclusters
+### Storelayoutclusters
 
 * `AndroidenterpriseStorelayoutclustersDelete` - Deletes a cluster.
 * `AndroidenterpriseStorelayoutclustersGet` - Retrieves details of a cluster.
@@ -161,7 +166,7 @@ func main() {
 * `AndroidenterpriseStorelayoutclustersList` - Retrieves the details of all clusters on the specified page.
 * `AndroidenterpriseStorelayoutclustersUpdate` - Updates a cluster.
 
-### storelayoutpages
+### Storelayoutpages
 
 * `AndroidenterpriseStorelayoutpagesDelete` - Deletes a store page.
 * `AndroidenterpriseStorelayoutpagesGet` - Retrieves details of a store page.
@@ -169,7 +174,7 @@ func main() {
 * `AndroidenterpriseStorelayoutpagesList` - Retrieves the details of all pages in the store.
 * `AndroidenterpriseStorelayoutpagesUpdate` - Updates the content of a store page.
 
-### users
+### Users
 
 * `AndroidenterpriseUsersDelete` - Deleted an EMM-managed user.
 * `AndroidenterpriseUsersGenerateAuthenticationToken` - Generates an authentication token which the device policy client can use to provision the given EMM-managed user account on a device. The generated token is single-use and expires after a few minutes. You can provision a maximum of 10 devices per user. This call only works with EMM-managed accounts.
@@ -181,14 +186,13 @@ func main() {
 * `AndroidenterpriseUsersSetAvailableProductSet` - Modifies the set of products that a user is entitled to access (referred to as *whitelisted* products). Only products that are approved or products that were previously approved (products with revoked approval) can be whitelisted. **Note:** This item has been deprecated. New integrations cannot use this method and can refer to our new recommendations.
 * `AndroidenterpriseUsersUpdate` - Updates the details of an EMM-managed user. Can be used with EMM-managed users only (not Google managed users). Pass the new details in the Users resource in the request body. Only the displayName field can be changed. Other fields must either be unset or have the currently active value.
 
-### webapps
+### Webapps
 
 * `AndroidenterpriseWebappsDelete` - Deletes an existing web app.
 * `AndroidenterpriseWebappsGet` - Gets an existing web app.
 * `AndroidenterpriseWebappsInsert` - Creates a new web app for the enterprise.
 * `AndroidenterpriseWebappsList` - Retrieves the details of all web apps for a given enterprise.
 * `AndroidenterpriseWebappsUpdate` - Updates an existing web app.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

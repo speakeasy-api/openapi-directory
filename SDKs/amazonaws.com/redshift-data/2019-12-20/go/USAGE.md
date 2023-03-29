@@ -3,50 +3,50 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchExecuteStatementRequest{
         Headers: operations.BatchExecuteStatementHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "RedshiftData.BatchExecuteStatement",
         },
         Request: shared.BatchExecuteStatementInput{
-            ClusterIdentifier: "fugit",
-            Database: "et",
-            DbUser: "nihil",
-            SecretArn: "rerum",
+            ClientToken: "nihil",
+            ClusterIdentifier: "fuga",
+            Database: "facilis",
+            DbUser: "eum",
+            SecretArn: "iusto",
             Sqls: []string{
-                "debitis",
-                "voluptatum",
-                "et",
+                "saepe",
+                "inventore",
             },
-            StatementName: "ut",
-            WithEvent: true,
+            StatementName: "sapiente",
+            WithEvent: false,
+            WorkgroupName: "enim",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchExecuteStatement(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -55,5 +55,6 @@ func main() {
     if res.BatchExecuteStatementOutput != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

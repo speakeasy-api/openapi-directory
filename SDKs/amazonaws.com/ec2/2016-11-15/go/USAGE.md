@@ -3,43 +3,48 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetAcceptTransitGatewayPeeringAttachmentRequest{
-        QueryParams: operations.GetAcceptTransitGatewayPeeringAttachmentQueryParams{
-            Action: "AcceptTransitGatewayPeeringAttachment",
+    req := operations.GETAcceptTransitGatewayMulticastDomainAssociationsRequest{
+        QueryParams: operations.GETAcceptTransitGatewayMulticastDomainAssociationsQueryParams{
+            Action: "AcceptTransitGatewayMulticastDomainAssociations",
             DryRun: false,
-            TransitGatewayAttachmentID: "culpa",
+            SubnetIds: []string{
+                "porro",
+                "nulla",
+                "id",
+            },
+            TransitGatewayAttachmentID: "vero",
+            TransitGatewayMulticastDomainID: "perspiciatis",
             Version: "2016-11-15",
         },
-        Headers: operations.GetAcceptTransitGatewayPeeringAttachmentHeaders{
-            XAmzAlgorithm: "consequuntur",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "expedita",
-            XAmzDate: "voluptas",
-            XAmzSecurityToken: "fugit",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "nihil",
+        Headers: operations.GETAcceptTransitGatewayMulticastDomainAssociationsHeaders{
+            XAmzAlgorithm: "nihil",
+            XAmzContentSha256: "fuga",
+            XAmzCredential: "facilis",
+            XAmzDate: "eum",
+            XAmzSecurityToken: "iusto",
+            XAmzSignature: "ullam",
+            XAmzSignedHeaders: "saepe",
         },
     }
-    
-    res, err := s.GetAcceptTransitGatewayPeeringAttachment(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETAcceptTransitGatewayMulticastDomainAssociations(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,5 +52,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

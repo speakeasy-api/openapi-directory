@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,23 +12,24 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DiscoveryApisGetRestRequest{
         PathParams: operations.DiscoveryApisGetRestPathParams{
-            API: "sit",
-            Version: "voluptas",
+            API: "unde",
+            Version: "deserunt",
         },
         QueryParams: operations.DiscoveryApisGetRestQueryParams{
             Alt: "json",
-            Fields: "expedita",
-            Key: "consequuntur",
-            OauthToken: "dolor",
-            PrettyPrint: true,
-            QuotaUser: "voluptas",
-            UserIP: "fugit",
+            Fields: "nulla",
+            Key: "id",
+            OauthToken: "vero",
+            PrettyPrint: false,
+            QuotaUser: "perspiciatis",
+            UserIP: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Apis.DiscoveryApisGetRest(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +38,6 @@ func main() {
     if res.RestDescription != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

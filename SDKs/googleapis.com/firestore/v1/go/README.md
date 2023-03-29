@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/firestore/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListRequest{
         Security: operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListSecurity{
             Option1: &operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListSecurityOption1{
@@ -34,26 +36,27 @@ func main() {
             },
         },
         PathParams: operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.FirestoreProjectsDatabasesCollectionGroupsFieldsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Filter: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
-            PageSize: 1543572285742637646,
-            PageToken: "nihil",
-            PrettyPrint: true,
-            QuotaUser: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Filter: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            PageSize: 623564,
+            PageToken: "facilis",
+            PrettyPrint: false,
+            QuotaUser: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.FirestoreProjectsDatabasesCollectionGroupsFieldsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -62,13 +65,15 @@ func main() {
     if res.GoogleFirestoreAdminV1ListFieldsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `FirestoreProjectsDatabasesCollectionGroupsFieldsList` - Lists the field configuration and metadata for this database. Currently, FirestoreAdmin.ListFields only supports listing fields that have been explicitly overridden. To issue this query, call FirestoreAdmin.ListFields with the filter set to `indexConfig.usesAncestorConfig:false` .
 * `FirestoreProjectsDatabasesCollectionGroupsIndexesCreate` - Creates a composite index. This returns a google.longrunning.Operation which may be used to track the status of the creation. The metadata for the operation will be the type IndexOperationMetadata.
@@ -81,13 +86,13 @@ func main() {
 * `FirestoreProjectsDatabasesDocumentsCreateDocument` - Creates a new document.
 * `FirestoreProjectsDatabasesDocumentsListCollectionIds` - Lists all the collection IDs underneath a document.
 * `FirestoreProjectsDatabasesDocumentsListDocuments` - Lists documents.
-* `FirestoreProjectsDatabasesDocumentsListen` - Listens to changes.
+* `FirestoreProjectsDatabasesDocumentsListen` - Listens to changes. This method is only available via the gRPC API (not REST).
 * `FirestoreProjectsDatabasesDocumentsPartitionQuery` - Partitions a query by returning partition cursors that can be used to run the query in parallel. The returned partition cursors are split points that can be used by RunQuery as starting/end points for the query results.
 * `FirestoreProjectsDatabasesDocumentsPatch` - Updates or inserts a document.
 * `FirestoreProjectsDatabasesDocumentsRollback` - Rolls back a transaction.
 * `FirestoreProjectsDatabasesDocumentsRunAggregationQuery` - Runs an aggregation query. Rather than producing Document results like Firestore.RunQuery, this API allows running an aggregation to produce a series of AggregationResult server-side. High-Level Example: ``` -- Return the number of documents in table given a filter. SELECT COUNT(*) FROM ( SELECT * FROM k where a = true ); ```
 * `FirestoreProjectsDatabasesDocumentsRunQuery` - Runs a query.
-* `FirestoreProjectsDatabasesDocumentsWrite` - Streams batches of document updates and deletes, in order.
+* `FirestoreProjectsDatabasesDocumentsWrite` - Streams batches of document updates and deletes, in order. This method is only available via the gRPC API (not REST).
 * `FirestoreProjectsDatabasesExportDocuments` - Exports a copy of all or a subset of documents from Google Cloud Firestore to another storage system, such as Google Cloud Storage. Recent updates to documents may not be reflected in the export. The export occurs in the background and its progress can be monitored and managed via the Operation resource that is created. The output of an export may only be used once the associated operation is done. If an export operation is cancelled before completion it may leave partial data behind in Google Cloud Storage. For more details on export behavior and output format, refer to: https://cloud.google.com/firestore/docs/manage-data/export-import
 * `FirestoreProjectsDatabasesImportDocuments` - Imports documents into Google Cloud Firestore. Existing documents with the same name are overwritten. The import occurs in the background and its progress can be monitored and managed via the Operation resource that is created. If an ImportDocuments operation is cancelled, it is possible that a subset of the data has already been imported to Cloud Firestore.
 * `FirestoreProjectsDatabasesList` - List all the databases in the project.
@@ -96,7 +101,6 @@ func main() {
 * `FirestoreProjectsDatabasesOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 * `FirestoreProjectsLocationsGet` - Gets information about a location.
 * `FirestoreProjectsLocationsList` - Lists information about the supported locations for this service.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

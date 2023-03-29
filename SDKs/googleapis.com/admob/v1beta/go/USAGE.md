@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,28 +12,29 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AdmobAccountsAdSourcesListRequest{
         PathParams: operations.AdmobAccountsAdSourcesListPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.AdmobAccountsAdSourcesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PageSize: 8274930044578894929,
-            PageToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PageSize: 423655,
+            PageToken: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.AdmobAccountsAdSourcesList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -40,5 +43,6 @@ func main() {
     if res.ListAdSourcesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

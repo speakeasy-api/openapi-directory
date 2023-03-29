@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.IntegrationsCallbackGenerateTokenRequest{
         Security: operations.IntegrationsCallbackGenerateTokenSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,25 +23,26 @@ func main() {
             },
         },
         QueryParams: operations.IntegrationsCallbackGenerateTokenQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Code: "consequuntur",
-            Fields: "dolor",
-            GcpProjectID: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Code: "id",
+            Fields: "vero",
+            GcpProjectID: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            Product: "UNSPECIFIED_PRODUCT",
-            QuotaUser: "rerum",
-            RedirectURI: "dicta",
-            State: "debitis",
-            UploadType: "voluptatum",
-            UploadProtocol: "et",
+            Product: "APIGEE",
+            QuotaUser: "facilis",
+            RedirectURI: "eum",
+            State: "iusto",
+            UploadType: "ullam",
+            UploadProtocol: "saepe",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Callback.IntegrationsCallbackGenerateToken(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +51,6 @@ func main() {
     if res.GoogleCloudIntegrationsV1alphaGenerateTokenResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

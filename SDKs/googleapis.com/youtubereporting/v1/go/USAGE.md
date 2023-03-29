@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.YoutubereportingJobsCreateRequest{
         Security: operations.YoutubereportingJobsCreateSecurity{
             Option1: &operations.YoutubereportingJobsCreateSecurityOption1{
@@ -23,29 +25,30 @@ func main() {
             },
         },
         QueryParams: operations.YoutubereportingJobsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            OnBehalfOfContentOwner: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            OnBehalfOfContentOwner: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Job{
-            CreateTime: "dicta",
-            ExpireTime: "debitis",
-            ID: "voluptatum",
-            Name: "et",
-            ReportTypeID: "ut",
-            SystemManaged: true,
+            CreateTime: "eum",
+            ExpireTime: "iusto",
+            ID: "ullam",
+            Name: "saepe",
+            ReportTypeID: "inventore",
+            SystemManaged: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Jobs.YoutubereportingJobsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +57,6 @@ func main() {
     if res.Job != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

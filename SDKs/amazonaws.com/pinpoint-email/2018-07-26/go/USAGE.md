@@ -3,59 +3,62 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateConfigurationSetRequest{
         Headers: operations.CreateConfigurationSetHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateConfigurationSetRequestBody{
-            ConfigurationSetName: "voluptas",
+            ConfigurationSetName: "nulla",
             DeliveryOptions: &operations.CreateConfigurationSetRequestBodyDeliveryOptions{
-                SendingPoolName: "fugit",
-                TLSPolicy: "REQUIRE",
+                SendingPoolName: "nihil",
+                TLSPolicy: "OPTIONAL",
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "2003-05-13T04:57:12Z",
-                ReputationMetricsEnabled: true,
+                LastFreshStart: "2022-08-05T18:30:30.875Z",
+                ReputationMetricsEnabled: false,
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{
                 SendingEnabled: false,
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "voluptatum",
-                    Value: "et",
+                    Key: "iusto",
+                    Value: "ullam",
+                },
+                shared.Tag{
+                    Key: "saepe",
+                    Value: "inventore",
                 },
             },
             TrackingOptions: &operations.CreateConfigurationSetRequestBodyTrackingOptions{
-                CustomRedirectDomain: "ut",
+                CustomRedirectDomain: "sapiente",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateConfigurationSet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -64,5 +67,6 @@ func main() {
     if res.CreateConfigurationSetResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

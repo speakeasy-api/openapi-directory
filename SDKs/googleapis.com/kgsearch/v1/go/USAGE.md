@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,38 +12,42 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.KgsearchEntitiesSearchRequest{
         QueryParams: operations.KgsearchEntitiesSearchQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
             Ids: []string{
-                "expedita",
-                "voluptas",
+                "perspiciatis",
+                "nulla",
+                "nihil",
+                "fuga",
             },
-            Indent: true,
-            Key: "et",
+            Indent: false,
+            Key: "facilis",
             Languages: []string{
-                "rerum",
+                "iusto",
+                "ullam",
             },
-            Limit: 7837839688282259259,
-            OauthToken: "debitis",
-            Prefix: true,
+            Limit: 891773,
+            OauthToken: "inventore",
+            Prefix: false,
             PrettyPrint: false,
-            Query: "ut",
-            QuotaUser: "dolorem",
+            Query: "sapiente",
+            QuotaUser: "enim",
             Types: []string{
-                "voluptate",
-                "iste",
+                "voluptatum",
+                "autem",
             },
-            UploadType: "vitae",
-            UploadProtocol: "totam",
+            UploadType: "vel",
+            UploadProtocol: "non",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Entities.KgsearchEntitiesSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +56,6 @@ func main() {
     if res.SearchResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

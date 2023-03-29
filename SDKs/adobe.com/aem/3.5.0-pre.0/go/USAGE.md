@@ -3,25 +3,24 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                AemAuth: shared.SchemeAemAuth{
-                    Password: "YOUR_PASSWORD_HERE",
-                    Username: "YOUR_USERNAME_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            AemAuth: shared.SchemeAemAuth{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
+    ctx := context.Background()
     res, err := s.Console.GetAemProductInfo(ctx)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +29,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

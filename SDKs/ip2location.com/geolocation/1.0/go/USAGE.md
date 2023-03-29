@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,20 +12,23 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
             Addon: []GetAddonEnum{
-                "region",
+                "geotargeting",
+                "country_groupings",
+                "country_groupings",
             },
             Format: "xml",
-            IP: "expedita",
-            Key: "consequuntur",
-            Lang: "ko",
-            Package: "WS18",
+            IP: "8.8.8.8",
+            Key: "demo",
+            Lang: "tr",
+            Package: "WS14",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Get(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -32,5 +37,6 @@ func main() {
     if res.Get200ApplicationJSONString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

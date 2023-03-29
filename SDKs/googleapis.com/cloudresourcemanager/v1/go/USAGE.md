@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudresourcemanagerLiensCreateRequest{
         Security: operations.CloudresourcemanagerLiensCreateSecurity{
             Option1: &operations.CloudresourcemanagerLiensCreateSecurityOption1{
@@ -23,32 +25,31 @@ func main() {
             },
         },
         QueryParams: operations.CloudresourcemanagerLiensCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.Lien{
-            CreateTime: "rerum",
-            Name: "dicta",
-            Origin: "debitis",
-            Parent: "voluptatum",
-            Reason: "et",
+            CreateTime: "facilis",
+            Name: "eum",
+            Origin: "iusto",
+            Parent: "ullam",
+            Reason: "saepe",
             Restrictions: []string{
-                "dolorem",
-                "et",
-                "voluptate",
+                "sapiente",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Liens.CloudresourcemanagerLiensCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -57,5 +58,6 @@ func main() {
     if res.Lien != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

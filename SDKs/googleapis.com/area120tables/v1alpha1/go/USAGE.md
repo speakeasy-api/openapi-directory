@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.Area120tablesTablesListRequest{
         Security: operations.Area120tablesTablesListSecurity{
             Option1: &operations.Area120tablesTablesListSecurityOption1{
@@ -23,23 +25,24 @@ func main() {
             },
         },
         QueryParams: operations.Area120tablesTablesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            OrderBy: "voluptas",
-            PageSize: 8274930044578894929,
-            PageToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            OrderBy: "nulla",
+            PageSize: 423655,
+            PageToken: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Tables.Area120tablesTablesList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +51,6 @@ func main() {
     if res.ListTablesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.WorkloadmanagerProjectsLocationsEvaluationsCreateRequest{
         Security: operations.WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,64 +23,74 @@ func main() {
             },
         },
         PathParams: operations.WorkloadmanagerProjectsLocationsEvaluationsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.WorkloadmanagerProjectsLocationsEvaluationsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            EvaluationID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            EvaluationID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.EvaluationInput{
-            Description: "voluptatum",
+            Description: "ullam",
             Labels: map[string]string{
-                "ut": "dolorem",
+                "inventore": "sapiente",
+                "enim": "eum",
+                "voluptatum": "autem",
+                "vel": "non",
             },
-            Name: "et",
+            Name: "deleniti",
             ResourceFilter: &shared.ResourceFilter{
                 GceInstanceFilter: &shared.GceInstanceFilter{
                     ServiceAccounts: []string{
-                        "iste",
+                        "reprehenderit",
+                        "molestiae",
+                        "quo",
                     },
                 },
                 InclusionLabels: map[string]string{
-                    "totam": "dolores",
+                    "laboriosam": "dicta",
                 },
                 ResourceIDPatterns: []string{
-                    "debitis",
-                    "vel",
-                    "odio",
+                    "voluptatem",
+                    "consequatur",
+                    "fugiat",
                 },
                 Scopes: []string{
-                    "id",
-                    "aspernatur",
+                    "omnis",
+                    "eos",
+                    "accusamus",
+                    "accusamus",
                 },
             },
             ResourceStatus: &shared.ResourceStatus{
                 RulesNewerVersions: []string{
-                    "totam",
-                    "commodi",
-                    "quis",
+                    "rem",
+                    "quibusdam",
+                    "et",
+                    "praesentium",
                 },
-                State: "CREATING",
+                State: "ACTIVE",
             },
             RuleNames: []string{
-                "odit",
-                "non",
-                "voluptas",
+                "soluta",
+                "sed",
+                "quisquam",
+                "rerum",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.WorkloadmanagerProjectsLocationsEvaluationsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -87,5 +99,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,9 +12,9 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.ManufacturersAccountsProductsDeleteRequest{
-        Security: operations.ManufacturersAccountsProductsDeleteSecurity{
+
+    req := operations.ManufacturersAccountsLanguagesProductCertificationsDeleteRequest{
+        Security: operations.ManufacturersAccountsLanguagesProductCertificationsDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -20,26 +22,26 @@ func main() {
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        PathParams: operations.ManufacturersAccountsProductsDeletePathParams{
-            Name: "sit",
-            Parent: "voluptas",
+        PathParams: operations.ManufacturersAccountsLanguagesProductCertificationsDeletePathParams{
+            Name: "unde",
         },
-        QueryParams: operations.ManufacturersAccountsProductsDeleteQueryParams{
+        QueryParams: operations.ManufacturersAccountsLanguagesProductCertificationsDeleteQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
+            AccessToken: "porro",
             Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
             PrettyPrint: false,
             QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
     }
-    
-    res, err := s.Accounts.ManufacturersAccountsProductsDelete(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Accounts.ManufacturersAccountsLanguagesProductCertificationsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,5 +49,6 @@ func main() {
     if res.Empty != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

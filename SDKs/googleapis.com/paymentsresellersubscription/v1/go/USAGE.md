@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,29 +12,30 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PaymentsresellersubscriptionPartnersProductsListRequest{
         PathParams: operations.PaymentsresellersubscriptionPartnersProductsListPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.PaymentsresellersubscriptionPartnersProductsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Filter: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
-            PageSize: 1543572285742637646,
-            PageToken: "nihil",
-            PrettyPrint: true,
-            QuotaUser: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Filter: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            PageSize: 623564,
+            PageToken: "facilis",
+            PrettyPrint: false,
+            QuotaUser: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Partners.PaymentsresellersubscriptionPartnersProductsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -41,5 +44,6 @@ func main() {
     if res.GoogleCloudPaymentsResellerSubscriptionV1ListProductsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

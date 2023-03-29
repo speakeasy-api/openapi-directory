@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreatorRolesListRequest{
         QueryParams: operations.CreatorRolesListQueryParams{
-            Page: 8717895732742165505,
-            PageSize: 2259404117704393152,
+            Page: 548814,
+            PageSize: 592845,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreatorRoles.CreatorRolesList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -26,5 +29,6 @@ func main() {
     if res.CreatorRolesList200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,51 +3,54 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AssociateFirewallRuleGroupRequest{
         Headers: operations.AssociateFirewallRuleGroupHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "Route53Resolver.AssociateFirewallRuleGroup",
         },
         Request: shared.AssociateFirewallRuleGroupRequest{
-            CreatorRequestID: "fugit",
-            FirewallRuleGroupID: "et",
-            MutationProtection: "ENABLED",
-            Name: "rerum",
-            Priority: 7837839688282259259,
+            CreatorRequestID: "nihil",
+            FirewallRuleGroupID: "fuga",
+            MutationProtection: "DISABLED",
+            Name: "eum",
+            Priority: 437587,
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "voluptatum",
-                    Value: "et",
+                    Key: "saepe",
+                    Value: "inventore",
+                },
+                shared.Tag{
+                    Key: "sapiente",
+                    Value: "enim",
                 },
             },
-            VpcID: "ut",
+            VpcID: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AssociateFirewallRuleGroup(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -56,5 +59,6 @@ func main() {
     if res.AssociateFirewallRuleGroupResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

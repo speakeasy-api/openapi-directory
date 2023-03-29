@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/honeycode/2020-03-01/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,59 +14,97 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchCreateTableRowsRequest{
         PathParams: operations.BatchCreateTableRowsPathParams{
-            TableID: "sit",
-            WorkbookID: "voluptas",
+            TableID: "unde",
+            WorkbookID: "deserunt",
         },
         Headers: operations.BatchCreateTableRowsHeaders{
-            XAmzAlgorithm: "culpa",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "consequuntur",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "expedita",
-            XAmzSignature: "voluptas",
-            XAmzSignedHeaders: "fugit",
+            XAmzAlgorithm: "porro",
+            XAmzContentSha256: "nulla",
+            XAmzCredential: "id",
+            XAmzDate: "vero",
+            XAmzSecurityToken: "perspiciatis",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "nihil",
         },
         Request: operations.BatchCreateTableRowsRequestBody{
-            ClientRequestToken: "et",
+            ClientRequestToken: "fuga",
             RowsToCreate: []shared.CreateRowData{
                 shared.CreateRowData{
-                    BatchItemID: "rerum",
+                    BatchItemID: "eum",
                     CellsToCreate: map[string]shared.CellInput{
-                        "debitis": shared.CellInput{
-                            Fact: "voluptatum",
+                        "ullam": shared.CellInput{
+                            Fact: "saepe",
+                            Facts: []string{
+                                "sapiente",
+                            },
                         },
-                        "et": shared.CellInput{
-                            Fact: "ut",
+                        "enim": shared.CellInput{
+                            Fact: "eum",
+                            Facts: []string{
+                                "autem",
+                                "vel",
+                            },
                         },
-                        "dolorem": shared.CellInput{
-                            Fact: "et",
+                    },
+                },
+                shared.CreateRowData{
+                    BatchItemID: "non",
+                    CellsToCreate: map[string]shared.CellInput{
+                        "similique": shared.CellInput{
+                            Fact: "reprehenderit",
+                            Facts: []string{
+                                "quo",
+                                "quasi",
+                                "laboriosam",
+                                "dicta",
+                            },
+                        },
+                        "est": shared.CellInput{
+                            Fact: "voluptatem",
+                            Facts: []string{
+                                "fugiat",
+                                "a",
+                            },
+                        },
+                    },
+                },
+                shared.CreateRowData{
+                    BatchItemID: "omnis",
+                    CellsToCreate: map[string]shared.CellInput{
+                        "accusamus": shared.CellInput{
+                            Fact: "accusamus",
+                            Facts: []string{
+                                "rem",
+                                "quibusdam",
+                                "et",
+                                "praesentium",
+                            },
                         },
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchCreateTableRows(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -75,6 +113,7 @@ func main() {
     if res.BatchCreateTableRowsResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -93,9 +132,11 @@ func main() {
 * `ListTableColumns` -  The ListTableColumns API allows you to retrieve a list of all the columns in a table in a workbook. 
 * `ListTableRows` -  The ListTableRows API allows you to retrieve a list of all the rows in a table in a workbook. 
 * `ListTables` -  The ListTables API allows you to retrieve a list of all the tables in a workbook. 
+* `ListTagsForResource` -  The ListTagsForResource API allows you to return a resource's tags. 
 * `QueryTableRows` -  The QueryTableRows API allows you to use a filter formula to query for specific rows in a table. 
 * `StartTableDataImportJob` -  The StartTableDataImportJob API allows you to start an import job on a table. This API will only return the id of the job that was started. To find out the status of the import request, you need to call the DescribeTableDataImportJob API. 
-
+* `TagResource` -  The TagResource API allows you to add tags to an ARN-able resource. Resource includes workbook, table, screen and screen-automation. 
+* `UntagResource` -  The UntagResource API allows you to removes tags from an ARN-able resource. Resource includes workbook, table, screen and screen-automation. 
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

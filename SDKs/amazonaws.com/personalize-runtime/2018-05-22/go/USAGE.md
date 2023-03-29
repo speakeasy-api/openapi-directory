@@ -3,52 +3,54 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetPersonalizedRankingRequest{
         Headers: operations.GetPersonalizedRankingHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.GetPersonalizedRankingRequestBody{
-            CampaignArn: "voluptas",
+            CampaignArn: "nulla",
             Context: map[string]string{
-                "et": "nihil",
+                "fuga": "facilis",
+                "eum": "iusto",
             },
-            FilterArn: "rerum",
+            FilterArn: "ullam",
             FilterValues: map[string]string{
-                "debitis": "voluptatum",
-                "et": "ut",
-                "dolorem": "et",
+                "inventore": "sapiente",
+                "enim": "eum",
+                "voluptatum": "autem",
+                "vel": "non",
             },
             InputList: []string{
-                "iste",
+                "similique",
+                "reprehenderit",
             },
-            UserID: "vitae",
+            UserID: "molestiae",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetPersonalizedRanking(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -57,5 +59,6 @@ func main() {
     if res.GetPersonalizedRankingResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

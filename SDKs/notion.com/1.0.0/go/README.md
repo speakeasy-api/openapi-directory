@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/notion.com/1.0.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,10 +23,10 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AppendBlockChildrenRequest{
         PathParams: operations.AppendBlockChildrenPathParams{
-            ID: "sit",
+            ID: "{{PAGE_ID}}",
         },
         Request: &operations.AppendBlockChildrenRequestBody{
             Children: []AppendBlockChildrenRequestBodyChildren{
@@ -33,25 +35,90 @@ func main() {
                         Text: []AppendBlockChildrenRequestBodyChildrenHeading2Text{
                             operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
                                 Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
-                                    Content: "expedita",
+                                    Content: "Lacinato kale",
                                 },
-                                Type: "consequuntur",
+                                Type: "text",
                             },
                             operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
                                 Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
-                                    Content: "dolor",
+                                    Content: "Lacinato kale",
                                 },
-                                Type: "expedita",
+                                Type: "text",
+                            },
+                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
+                                    Content: "Lacinato kale",
+                                },
+                                Type: "text",
                             },
                         },
                     },
-                    Object: "voluptas",
-                    Type: "fugit",
+                    Object: "block",
+                    Type: "heading_2",
+                },
+                operations.AppendBlockChildrenRequestBodyChildren{
+                    Heading2: &operations.AppendBlockChildrenRequestBodyChildrenHeading2{
+                        Text: []AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
+                                    Content: "Lacinato kale",
+                                },
+                                Type: "text",
+                            },
+                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
+                                    Content: "Lacinato kale",
+                                },
+                                Type: "text",
+                            },
+                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
+                                    Content: "Lacinato kale",
+                                },
+                                Type: "text",
+                            },
+                        },
+                    },
+                    Object: "block",
+                    Type: "heading_2",
+                },
+                operations.AppendBlockChildrenRequestBodyChildren{
+                    Heading2: &operations.AppendBlockChildrenRequestBodyChildrenHeading2{
+                        Text: []AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
+                                    Content: "Lacinato kale",
+                                },
+                                Type: "text",
+                            },
+                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
+                                    Content: "Lacinato kale",
+                                },
+                                Type: "text",
+                            },
+                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
+                                    Content: "Lacinato kale",
+                                },
+                                Type: "text",
+                            },
+                            operations.AppendBlockChildrenRequestBodyChildrenHeading2Text{
+                                Text: &operations.AppendBlockChildrenRequestBodyChildrenHeading2TextText{
+                                    Content: "Lacinato kale",
+                                },
+                                Type: "text",
+                            },
+                        },
+                    },
+                    Object: "block",
+                    Type: "heading_2",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Blocks.AppendBlockChildren(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -60,11 +127,13 @@ func main() {
     if res.AppendBlockChildren200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### Blocks
 
@@ -87,7 +156,6 @@ func main() {
 ### Users
 
 * `RetrieveAUser` - Retrieve a user
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

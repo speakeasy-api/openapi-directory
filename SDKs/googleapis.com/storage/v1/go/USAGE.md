@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.StorageBucketAccessControlsDeleteRequest{
         Security: operations.StorageBucketAccessControlsDeleteSecurity{
             Option1: &operations.StorageBucketAccessControlsDeleteSecurityOption1{
@@ -23,22 +25,23 @@ func main() {
             },
         },
         PathParams: operations.StorageBucketAccessControlsDeletePathParams{
-            Bucket: "sit",
-            Entity: "voluptas",
+            Bucket: "unde",
+            Entity: "deserunt",
         },
         QueryParams: operations.StorageBucketAccessControlsDeleteQueryParams{
             Alt: "json",
-            Fields: "expedita",
-            Key: "consequuntur",
-            OauthToken: "dolor",
-            PrettyPrint: true,
-            QuotaUser: "voluptas",
-            UploadType: "fugit",
-            UserIP: "et",
-            UserProject: "nihil",
+            Fields: "nulla",
+            Key: "id",
+            OauthToken: "vero",
+            PrettyPrint: false,
+            QuotaUser: "perspiciatis",
+            UploadType: "nulla",
+            UserIP: "nihil",
+            UserProject: "fuga",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BucketAccessControls.StorageBucketAccessControlsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +50,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/archive.org/search/1.0.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,13 +23,14 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetSearchV1FieldsRequest{
         QueryParams: operations.GetSearchV1FieldsQueryParams{
-            Callback: "sit",
+            Callback: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetSearchV1Fields(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -36,6 +39,7 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,7 +52,6 @@ func main() {
 * `GetSearchV1Organic` - Return relevance-based results from search queries
 
 * `GetSearchV1Scrape` - Scrape search results from Internet Archive, allowing a scrolling cursor
-
 
 <!-- End SDK Available Operations -->
 

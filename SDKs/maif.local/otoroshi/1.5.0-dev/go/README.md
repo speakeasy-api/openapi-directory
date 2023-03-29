@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/maif.local/otoroshi/1.5.0-dev/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AllAPIKeysRequest{
         Security: operations.AllAPIKeysSecurity{
             OtoroshiAuth: shared.SchemeOtoroshiAuth{
@@ -30,7 +32,8 @@ func main() {
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Apikeys.AllAPIKeys(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -39,13 +42,15 @@ func main() {
     if res.APIKeys != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### apikeys
+
+### Apikeys
 
 * `AllAPIKeys` - Get all api keys
 * `APIKey` - Get an api key
@@ -66,7 +71,7 @@ func main() {
 * `UpdateAPIKey` - Update an api key
 * `UpdateAPIKeyFromGroup` - Update an api key
 
-### auth-config
+### AuthConfig
 
 * `CreateGlobalAuthModule` - Create one global auth. module config
 * `DeleteGlobalAuthModule` - Delete one global auth. module config
@@ -75,7 +80,7 @@ func main() {
 * `PatchGlobalAuthModule` - Update one global auth. module config
 * `UpdateGlobalAuthModule` - Update one global auth. module config
 
-### certificates
+### Certificates
 
 * `AllCerts` - Get all certificates
 * `CreateCert` - Create one certificate
@@ -84,13 +89,13 @@ func main() {
 * `PatchCert` - Update one certificate by id
 * `PutCert` - Update one certificate by id
 
-### configuration
+### Configuration
 
 * `GlobalConfig` - Get the full configuration of Otoroshi
 * `PatchGlobalConfig` - Update the global configuration with a diff
 * `PutGlobalConfig` - Update the global configuration
 
-### data-exporter-configs
+### DataExporterConfigs
 
 * `DataExporterTemplate` - Get all data exporter configs
 * `CreateBulkDataExporterConfigs` - Create a new data exporter configs
@@ -104,12 +109,12 @@ func main() {
 * `UpdateBulkDataExporterConfig` - Update a data exporter configs
 * `UpdateDataExporterConfig` - Update a data exporter config
 
-### environments
+### Environments
 
 * `AllLines` - Get all environments
 * `ServicesForALine` - Get all services for an environment
 
-### groups
+### Groups
 
 * `AllServiceGroups` - Get all service groups
 * `CreateGroup` - Create a new service group
@@ -118,17 +123,17 @@ func main() {
 * `ServiceGroup` - Get a service group
 * `UpdateGroup` - Update a service group
 
-### health
+### Health
 
 * `Health` - Return current Otoroshi health
 
-### import
+### Import
 
 * `FullExport` - Export the full state of Otoroshi
 * `FullImport` - Import the full state of Otoroshi
 * `FullImportFromFile` - Import the full state of Otoroshi as a file
 
-### jwt-verifiers
+### JwtVerifiers
 
 * `CreateGlobalJwtVerifier` - Create one global JWT verifiers
 * `DeleteGlobalJwtVerifier` - Delete one global JWT verifiers
@@ -137,7 +142,7 @@ func main() {
 * `PatchGlobalJwtVerifier` - Update one global JWT verifiers
 * `UpdateGlobalJwtVerifier` - Update one global JWT verifiers
 
-### scripts
+### Scripts
 
 * `CompileScript` - Compile a script
 * `CreateScript` - Create a new script
@@ -147,7 +152,7 @@ func main() {
 * `PatchScript` - Update a script with a diff
 * `UpdateScript` - Update a script
 
-### services
+### Services
 
 * `AllServices` - Get all services
 * `CreateService` - Create a new service descriptor
@@ -165,7 +170,7 @@ func main() {
 * `UpdateServiceTargets` - Update a service descriptor targets
 * `UpdateServiceTemplate` - Update an error template to a service descriptor
 
-### snowmonkey
+### Snowmonkey
 
 * `GetSnowMonkeyConfig` - Get current Snow Monkey config
 * `GetSnowMonkeyOutages` - Get all current Snow Monkey ourages
@@ -175,18 +180,18 @@ func main() {
 * `StopSnowMonkey` - Stop the Snow Monkey
 * `UpdateSnowMonkey` - Update current Snow Monkey config
 
-### stats
+### Stats
 
 * `GlobalLiveStats` - Get global otoroshi stats
 * `ServiceLiveStats` - Get live feed of otoroshi stats
 
-### templates
+### Templates
 
 * `InitiateAPIKey` - Get a template of an Otoroshi Api Key
 * `InitiateService` - Get a template of an Otoroshi service descriptor
 * `InitiateServiceGroup` - Get a template of an Otoroshi service group
 
-### validation-authorities
+### ValidationAuthorities
 
 * `CreateClientValidator` - Create one validation authorities
 * `DeleteClientValidator` - Delete one validation authorities by id
@@ -194,7 +199,6 @@ func main() {
 * `FindClientValidatorByID` - Get one validation authorities by id
 * `PatchClientValidator` - Update one validation authorities by id
 * `UpdateClientValidator` - Update one validation authorities by id
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

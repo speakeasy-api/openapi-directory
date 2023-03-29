@@ -3,31 +3,30 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Bearer: shared.SchemeBearer{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Bearer: shared.SchemeBearer{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AquiferCodesDemandListRequest{
         QueryParams: operations.AquiferCodesDemandListQueryParams{
-            Limit: 8717895732742165505,
-            Offset: 2259404117704393152,
+            Limit: 548814,
+            Offset: 592845,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AquiferCodes.AquiferCodesDemandList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -36,5 +35,6 @@ func main() {
     if res.AquiferCodesDemandList200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

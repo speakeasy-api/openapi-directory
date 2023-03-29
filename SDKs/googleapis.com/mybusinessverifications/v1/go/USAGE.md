@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,50 +12,52 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest{
         PathParams: operations.MybusinessverificationsLocationsFetchVerificationOptionsPathParams{
-            Location: "sit",
+            Location: "unde",
         },
         QueryParams: operations.MybusinessverificationsLocationsFetchVerificationOptionsQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.FetchVerificationOptionsRequest{
             Context: &shared.ServiceBusinessContext{
                 Address: &shared.PostalAddress{
                     AddressLines: []string{
-                        "debitis",
-                        "voluptatum",
-                        "et",
+                        "iusto",
+                        "ullam",
                     },
-                    AdministrativeArea: "ut",
-                    LanguageCode: "dolorem",
-                    Locality: "et",
-                    Organization: "voluptate",
-                    PostalCode: "iste",
+                    AdministrativeArea: "saepe",
+                    LanguageCode: "inventore",
+                    Locality: "sapiente",
+                    Organization: "enim",
+                    PostalCode: "47854",
                     Recipients: []string{
-                        "totam",
+                        "reprehenderit",
+                        "molestiae",
+                        "quo",
                     },
-                    RegionCode: "dolores",
-                    Revision: 1929546706668609706,
-                    SortingCode: "debitis",
-                    Sublocality: "vel",
+                    RegionCode: "quasi",
+                    Revision: 337396,
+                    SortingCode: "dicta",
+                    Sublocality: "est",
                 },
             },
-            LanguageCode: "odio",
+            LanguageCode: "voluptatem",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Locations.MybusinessverificationsLocationsFetchVerificationOptions(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -62,5 +66,6 @@ func main() {
     if res.FetchVerificationOptionsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

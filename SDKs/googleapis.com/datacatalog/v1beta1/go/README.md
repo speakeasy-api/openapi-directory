@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/datacatalog/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatacatalogCatalogSearchRequest{
         Security: operations.DatacatalogCatalogSearchSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,44 +34,45 @@ func main() {
             },
         },
         QueryParams: operations.DatacatalogCatalogSearchQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.GoogleCloudDatacatalogV1beta1SearchCatalogRequest{
-            OrderBy: "rerum",
-            PageSize: 7837839688282259259,
-            PageToken: "debitis",
-            Query: "voluptatum",
+            OrderBy: "facilis",
+            PageSize: 384382,
+            PageToken: "iusto",
+            Query: "ullam",
             Scope: &shared.GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope{
                 IncludeGcpPublicDatasets: false,
                 IncludeOrgIds: []string{
-                    "dolorem",
-                    "et",
-                    "voluptate",
+                    "inventore",
+                    "sapiente",
+                    "enim",
+                    "eum",
                 },
                 IncludeProjectIds: []string{
-                    "vitae",
-                    "totam",
-                    "dolores",
+                    "autem",
+                    "vel",
                 },
                 RestrictedLocations: []string{
-                    "debitis",
-                    "vel",
-                    "odio",
+                    "deleniti",
+                    "similique",
+                    "reprehenderit",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Catalog.DatacatalogCatalogSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -78,21 +81,23 @@ func main() {
     if res.GoogleCloudDatacatalogV1beta1SearchCatalogResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### catalog
+
+### Catalog
 
 * `DatacatalogCatalogSearch` - Searches Data Catalog for multiple resources like entries, tags that match a query. This is a custom method (https://cloud.google.com/apis/design/custom_methods) and does not return the complete resource, only the resource identifier and high level fields. Clients can subsequently call `Get` methods. Note that Data Catalog search queries do not guarantee full recall. Query results that match your query may not be returned, even in subsequent result pages. Also note that results returned (and not returned) can vary across repeated search queries. See [Data Catalog Search Syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference) for more information.
 
-### entries
+### Entries
 
 * `DatacatalogEntriesLookup` - Get an entry by target resource name. This method allows clients to use the resource name from the source Google Cloud Platform service to get the Data Catalog Entry.
 
-### projects
+### Projects
 
 * `DatacatalogProjectsLocationsEntryGroupsCreate` - A maximum of 10,000 entry groups may be created per organization across all locations. Users should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information).
 * `DatacatalogProjectsLocationsEntryGroupsEntriesCreate` - Creates an entry. Only entries of 'FILESET' type or user-specified type can be created. Users should enable the Data Catalog API in the project identified by the `parent` parameter (see [Data Catalog Resource Project] (https://cloud.google.com/data-catalog/docs/concepts/resource-project) for more information). A maximum of 100,000 entries may be created per entry group.
@@ -115,7 +120,6 @@ func main() {
 * `DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatch` - Updates a policy tag.
 * `DatacatalogProjectsLocationsTaxonomiesPolicyTagsSetIamPolicy` - Sets the IAM policy for a taxonomy or a policy tag.
 * `DatacatalogProjectsLocationsTaxonomiesPolicyTagsTestIamPermissions` - Returns the permissions that a caller has on the specified taxonomy or policy tag.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

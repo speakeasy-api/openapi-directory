@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateRequest{
         Security: operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,20 +23,20 @@ func main() {
             },
         },
         PathParams: operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudContactcenterinsightsV1AnalysisInput{
             AnalysisResult: &shared.GoogleCloudContactcenterinsightsV1AnalysisResult{
@@ -42,271 +44,201 @@ func main() {
                     Annotations: []shared.GoogleCloudContactcenterinsightsV1CallAnnotation{
                         shared.GoogleCloudContactcenterinsightsV1CallAnnotation{
                             AnnotationEndBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 2518412263346885298,
-                                WordIndex: 5617773211005988520,
+                                TranscriptIndex: 437587,
+                                WordIndex: 297534,
                             },
                             AnnotationStartBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 2339563716805116249,
-                                WordIndex: 7144924247938981575,
+                                TranscriptIndex: 891773,
+                                WordIndex: 56713,
                             },
-                            ChannelTag: 161231572858529631,
+                            ChannelTag: 963663,
                             EntityMentionData: &shared.GoogleCloudContactcenterinsightsV1EntityMentionData{
-                                EntityUniqueID: "et",
+                                EntityUniqueID: "enim",
                                 Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                    Magnitude: 94.199997,
-                                    Score: 68.099998,
+                                    Magnitude: 3834.41,
+                                    Score: 4776.65,
                                 },
-                                Type: "MENTION_TYPE_UNSPECIFIED",
+                                Type: "COMMON",
                             },
                             HoldData: map[string]interface{}{
-                                "debitis": "vel",
-                                "odio": "dolore",
-                                "id": "aspernatur",
+                                "non": "deleniti",
+                                "similique": "reprehenderit",
+                                "molestiae": "quo",
+                                "quasi": "laboriosam",
                             },
                             IntentMatchData: &shared.GoogleCloudContactcenterinsightsV1IntentMatchData{
-                                IntentUniqueID: "accusantium",
+                                IntentUniqueID: "dicta",
                             },
                             InterruptionData: map[string]interface{}{
-                                "commodi": "quis",
-                                "est": "aut",
-                                "odit": "non",
+                                "voluptatem": "consequatur",
+                                "fugiat": "a",
+                                "omnis": "eos",
                             },
                             IssueMatchData: &shared.GoogleCloudContactcenterinsightsV1IssueMatchData{
                                 IssueAssignment: &shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
-                                    DisplayName: "voluptas",
-                                    Issue: "omnis",
-                                    Score: 44.099998,
+                                    DisplayName: "accusamus",
+                                    Issue: "accusamus",
+                                    Score: 9786.19,
                                 },
                             },
                             PhraseMatchData: &shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                                DisplayName: "sed",
-                                PhraseMatcher: "officiis",
+                                DisplayName: "rem",
+                                PhraseMatcher: "quibusdam",
                             },
                             SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 87.099998,
-                                Score: 0.100000,
+                                Magnitude: 8009.11,
+                                Score: 4614.79,
                             },
                             SilenceData: map[string]interface{}{
-                                "recusandae": "at",
+                                "dolor": "soluta",
+                                "sed": "quisquam",
+                                "rerum": "culpa",
                             },
                         },
                         shared.GoogleCloudContactcenterinsightsV1CallAnnotation{
                             AnnotationEndBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 3959279844101328186,
-                                WordIndex: 8902041070398994519,
+                                TranscriptIndex: 143353,
+                                WordIndex: 537373,
                             },
                             AnnotationStartBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 303089054982227392,
-                                WordIndex: 7338728586234333996,
+                                TranscriptIndex: 944669,
+                                WordIndex: 758616,
                             },
-                            ChannelTag: 5392504858645185670,
+                            ChannelTag: 521848,
                             EntityMentionData: &shared.GoogleCloudContactcenterinsightsV1EntityMentionData{
-                                EntityUniqueID: "ut",
+                                EntityUniqueID: "odit",
                                 Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                    Magnitude: 56.099998,
-                                    Score: 30.200001,
+                                    Magnitude: 4146.62,
+                                    Score: 4736,
                                 },
                                 Type: "MENTION_TYPE_UNSPECIFIED",
                             },
                             HoldData: map[string]interface{}{
-                                "dolor": "beatae",
-                                "veritatis": "in",
-                                "et": "omnis",
+                                "est": "id",
                             },
                             IntentMatchData: &shared.GoogleCloudContactcenterinsightsV1IntentMatchData{
-                                IntentUniqueID: "ipsum",
+                                IntentUniqueID: "blanditiis",
                             },
                             InterruptionData: map[string]interface{}{
-                                "dolores": "placeat",
+                                "similique": "dolores",
                             },
                             IssueMatchData: &shared.GoogleCloudContactcenterinsightsV1IssueMatchData{
                                 IssueAssignment: &shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
-                                    DisplayName: "vel",
-                                    Issue: "rerum",
-                                    Score: 89.099998,
+                                    DisplayName: "sit",
+                                    Issue: "quia",
+                                    Score: 6176.36,
                                 },
                             },
                             PhraseMatchData: &shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                                DisplayName: "quam",
-                                PhraseMatcher: "reprehenderit",
+                                DisplayName: "voluptatem",
+                                PhraseMatcher: "laborum",
                             },
                             SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 94.099998,
-                                Score: 72.199997,
+                                Magnitude: 2223.21,
+                                Score: 6169.34,
                             },
                             SilenceData: map[string]interface{}{
-                                "qui": "ut",
-                                "itaque": "ab",
-                            },
-                        },
-                        shared.GoogleCloudContactcenterinsightsV1CallAnnotation{
-                            AnnotationEndBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 8218430188258725598,
-                                WordIndex: 4255970180603226314,
-                            },
-                            AnnotationStartBoundary: &shared.GoogleCloudContactcenterinsightsV1AnnotationBoundary{
-                                TranscriptIndex: 2682844416202521633,
-                                WordIndex: 4304520335772049496,
-                            },
-                            ChannelTag: 3462733497206508461,
-                            EntityMentionData: &shared.GoogleCloudContactcenterinsightsV1EntityMentionData{
-                                EntityUniqueID: "architecto",
-                                Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                    Magnitude: 38.200001,
-                                    Score: 20.100000,
-                                },
-                                Type: "PROPER",
-                            },
-                            HoldData: map[string]interface{}{
-                                "magni": "et",
-                                "optio": "qui",
-                            },
-                            IntentMatchData: &shared.GoogleCloudContactcenterinsightsV1IntentMatchData{
-                                IntentUniqueID: "earum",
-                            },
-                            InterruptionData: map[string]interface{}{
-                                "omnis": "ut",
-                            },
-                            IssueMatchData: &shared.GoogleCloudContactcenterinsightsV1IssueMatchData{
-                                IssueAssignment: &shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
-                                    DisplayName: "consequatur",
-                                    Issue: "dolor",
-                                    Score: 26.100000,
-                                },
-                            },
-                            PhraseMatchData: &shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                                DisplayName: "reprehenderit",
-                                PhraseMatcher: "consectetur",
-                            },
-                            SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 59.200001,
-                                Score: 64.099998,
-                            },
-                            SilenceData: map[string]interface{}{
-                                "soluta": "aut",
+                                "earum": "ut",
+                                "soluta": "qui",
                             },
                         },
                     },
                     Entities: map[string]shared.GoogleCloudContactcenterinsightsV1Entity{
-                        "consequuntur": shared.GoogleCloudContactcenterinsightsV1Entity{
-                            DisplayName: "laudantium",
+                        "laborum": shared.GoogleCloudContactcenterinsightsV1Entity{
+                            DisplayName: "iusto",
                             Metadata: map[string]string{
-                                "ipsa": "expedita",
+                                "optio": "aspernatur",
+                                "inventore": "ut",
+                                "libero": "et",
+                                "libero": "ipsum",
                             },
-                            Salience: 20.200001,
+                            Salience: 2103.82,
                             Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 26.200001,
-                                Score: 87.099998,
+                                Magnitude: 3581.52,
+                                Score: 1289.26,
                             },
-                            Type: "DATE",
+                            Type: "ADDRESS",
                         },
-                        "maxime": shared.GoogleCloudContactcenterinsightsV1Entity{
-                            DisplayName: "eum",
+                        "ipsam": shared.GoogleCloudContactcenterinsightsV1Entity{
+                            DisplayName: "est",
                             Metadata: map[string]string{
-                                "et": "rerum",
-                                "reiciendis": "quis",
+                                "quia": "similique",
+                                "eaque": "odio",
                             },
-                            Salience: 97.199997,
+                            Salience: 6342.74,
                             Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 1.200000,
-                                Score: 40.200001,
+                                Magnitude: 9883.74,
+                                Score: 9589.5,
                             },
-                            Type: "PHONE_NUMBER",
-                        },
-                        "et": shared.GoogleCloudContactcenterinsightsV1Entity{
-                            DisplayName: "impedit",
-                            Metadata: map[string]string{
-                                "expedita": "vel",
-                                "qui": "modi",
-                                "nihil": "tempora",
-                            },
-                            Salience: 42.200001,
-                            Sentiment: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 60.099998,
-                                Score: 34.099998,
-                            },
-                            Type: "LOCATION",
+                            Type: "PERSON",
                         },
                     },
                     Intents: map[string]shared.GoogleCloudContactcenterinsightsV1Intent{
-                        "placeat": shared.GoogleCloudContactcenterinsightsV1Intent{
-                            DisplayName: "qui",
-                            ID: "nisi",
+                        "non": shared.GoogleCloudContactcenterinsightsV1Intent{
+                            DisplayName: "quidem",
+                            ID: "neque",
                         },
-                        "quis": shared.GoogleCloudContactcenterinsightsV1Intent{
-                            DisplayName: "adipisci",
-                            ID: "porro",
+                        "asperiores": shared.GoogleCloudContactcenterinsightsV1Intent{
+                            DisplayName: "et",
+                            ID: "culpa",
+                        },
+                        "aliquam": shared.GoogleCloudContactcenterinsightsV1Intent{
+                            DisplayName: "esse",
+                            ID: "totam",
                         },
                     },
                     IssueModelResult: &shared.GoogleCloudContactcenterinsightsV1IssueModelResult{
-                        IssueModel: "rerum",
+                        IssueModel: "voluptatum",
                         Issues: []shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
                             shared.GoogleCloudContactcenterinsightsV1IssueAssignment{
-                                DisplayName: "accusamus",
-                                Issue: "numquam",
-                                Score: 58.200001,
+                                DisplayName: "fuga",
+                                Issue: "nesciunt",
+                                Score: 3380.07,
                             },
                         },
                     },
                     PhraseMatchers: map[string]shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                        "laborum": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                            DisplayName: "fugit",
-                            PhraseMatcher: "quis",
-                        },
-                        "minus": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
-                            DisplayName: "soluta",
-                            PhraseMatcher: "aperiam",
+                        "cum": shared.GoogleCloudContactcenterinsightsV1PhraseMatchData{
+                            DisplayName: "expedita",
+                            PhraseMatcher: "ipsam",
                         },
                     },
                     Sentiments: []shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment{
                         shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment{
-                            ChannelTag: 4970157864765978097,
+                            ChannelTag: 778346,
                             SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 52.099998,
-                                Score: 29.200001,
-                            },
-                        },
-                        shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment{
-                            ChannelTag: 8997481548049309375,
-                            SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 86.099998,
-                                Score: 68.199997,
-                            },
-                        },
-                        shared.GoogleCloudContactcenterinsightsV1ConversationLevelSentiment{
-                            ChannelTag: 7899896093082851758,
-                            SentimentData: &shared.GoogleCloudContactcenterinsightsV1SentimentData{
-                                Magnitude: 83.099998,
-                                Score: 30.100000,
+                                Magnitude: 1965.82,
+                                Score: 9495.72,
                             },
                         },
                     },
                 },
-                EndTime: "cupiditate",
+                EndTime: "consequatur",
             },
             AnnotatorSelector: &shared.GoogleCloudContactcenterinsightsV1AnnotatorSelector{
                 IssueModels: []string{
-                    "molestiae",
-                    "pariatur",
-                    "quasi",
+                    "qui",
+                    "perferendis",
+                    "aspernatur",
                 },
                 PhraseMatchers: []string{
-                    "enim",
-                    "qui",
-                    "sit",
+                    "quo",
+                    "tempore",
+                    "explicabo",
                 },
                 RunEntityAnnotator: false,
-                RunIntentAnnotator: true,
-                RunInterruptionAnnotator: true,
+                RunIntentAnnotator: false,
+                RunInterruptionAnnotator: false,
                 RunIssueModelAnnotator: false,
-                RunPhraseMatcherAnnotator: true,
-                RunSentimentAnnotator: true,
-                RunSilenceAnnotator: true,
+                RunPhraseMatcherAnnotator: false,
+                RunSentimentAnnotator: false,
+                RunSilenceAnnotator: false,
             },
-            Name: "occaecati",
+            Name: "aut",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.ContactcenterinsightsProjectsLocationsConversationsAnalysesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -315,5 +247,6 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,60 +3,54 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateDevicePoolRequest{
         Headers: operations.CreateDevicePoolHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "DeviceFarm_20150623.CreateDevicePool",
         },
         Request: shared.CreateDevicePoolRequest{
-            Description: "fugit",
-            MaxDevices: 1543572285742637646,
-            Name: "nihil",
-            ProjectArn: "rerum",
+            Description: "nihil",
+            MaxDevices: 623564,
+            Name: "facilis",
+            ProjectArn: "eum",
             Rules: []shared.Rule{
                 shared.Rule{
-                    Attribute: "REMOTE_ACCESS_ENABLED",
-                    Operator: "EQUALS",
-                    Value: "et",
+                    Attribute: "MANUFACTURER",
+                    Operator: "CONTAINS",
+                    Value: "inventore",
                 },
                 shared.Rule{
-                    Attribute: "ARN",
+                    Attribute: "AVAILABILITY",
                     Operator: "LESS_THAN_OR_EQUALS",
-                    Value: "et",
-                },
-                shared.Rule{
-                    Attribute: "FORM_FACTOR",
-                    Operator: "GREATER_THAN",
-                    Value: "vitae",
+                    Value: "eum",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateDevicePool(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -65,5 +59,6 @@ func main() {
     if res.CreateDevicePoolResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

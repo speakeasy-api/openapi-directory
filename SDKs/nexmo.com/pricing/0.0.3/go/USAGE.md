@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,18 +12,19 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.RetrievePrefixPricingRequest{
         PathParams: operations.RetrievePrefixPricingPathParams{
-            Type: "sit",
+            Type: "unde",
         },
         QueryParams: operations.RetrievePrefixPricingQueryParams{
-            APIKey: "voluptas",
-            APISecret: "culpa",
-            Prefix: "expedita",
+            APIKey: "deserunt",
+            APISecret: "porro",
+            Prefix: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Pricing.RetrievePrefixPricing(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +33,6 @@ func main() {
     if res.PricingCountriesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

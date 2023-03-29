@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,22 +12,30 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
-        PathParams: operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams{
-            Org: "sit",
-            RepositoryID: 2259404117704393152,
-            RunnerGroupID: 6050128673802995827,
+
+    req := operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest{
+        PathParams: operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgPathParams{
+            Org: "unde",
+            RunnerID: 592845,
+        },
+        Request: operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody{
+            Labels: []string{
+                "nulla",
+                "id",
+                "vero",
+            },
         },
     }
-    
-    res, err := s.Actions.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrg(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Actions.ActionsAddCustomLabelsToSelfHostedRunnerForOrg(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.StatusCode == http.StatusOK {
+    if res.ActionsAddCustomLabelsToSelfHostedRunnerForOrg200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

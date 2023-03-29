@@ -3,41 +3,40 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.AssociateDrtLogBucketRequest{
-        Headers: operations.AssociateDrtLogBucketHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+    req := operations.AssociateDRTLogBucketRequest{
+        Headers: operations.AssociateDRTLogBucketHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWSShield_20160616.AssociateDRTLogBucket",
         },
-        Request: shared.AssociateDrtLogBucketRequest{
-            LogBucket: "fugit",
+        Request: shared.AssociateDRTLogBucketRequest{
+            LogBucket: "nihil",
         },
     }
-    
-    res, err := s.AssociateDrtLogBucket(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AssociateDRTLogBucket(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -45,5 +44,6 @@ func main() {
     if res.AssociateDRTLogBucketResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

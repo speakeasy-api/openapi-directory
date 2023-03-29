@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateAccountCredentialRequest{
         Security: operations.CreateAccountCredentialSecurity{
             BearerAuth: shared.SchemeBearerAuth{
@@ -19,19 +21,22 @@ func main() {
         },
         Request: shared.CredentialOptions{
             ACL: map[string]interface{}{
-                "voluptas": "culpa",
+                "deserunt": "porro",
+                "nulla": "id",
+                "vero": "perspiciatis",
             },
-            Cidrs: "expedita",
-            Global: true,
-            Name: "dolor",
+            Cidrs: "10.0.0.17/32, 192.168.1.0/24",
+            Global: false,
+            Name: "credentials_name",
             Secret: map[string]interface{}{
-                "voluptas": "fugit",
-                "et": "nihil",
+                "fuga": "facilis",
+                "eum": "iusto",
             },
-            Type: "aws_access_secret",
+            Type: "miradore_api_key_v1",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Account.CreateAccountCredential(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -40,5 +45,6 @@ func main() {
     if res.Credential != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

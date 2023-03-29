@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetV1ValidationSingleRequest{
         QueryParams: operations.GetV1ValidationSingleQueryParams{
-            Email: "sit",
-            Format: "json",
-            Key: "culpa",
+            Email: "Larry_Rau85@yahoo.com",
+            Format: "xml",
+            Key: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetV1ValidationSingle(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.GetV1ValidationSingle200ApplicationJSONString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

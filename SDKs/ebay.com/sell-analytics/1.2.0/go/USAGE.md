@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetCustomerServiceMetricRequest{
         Security: operations.GetCustomerServiceMetricSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,14 +20,15 @@ func main() {
             },
         },
         PathParams: operations.GetCustomerServiceMetricPathParams{
-            CustomerServiceMetricType: "sit",
-            EvaluationType: "voluptas",
+            CustomerServiceMetricType: "unde",
+            EvaluationType: "deserunt",
         },
         QueryParams: operations.GetCustomerServiceMetricQueryParams{
-            EvaluationMarketplaceID: "culpa",
+            EvaluationMarketplaceID: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CustomerServiceMetric.GetCustomerServiceMetric(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -34,5 +37,6 @@ func main() {
     if res.GetCustomerServiceMetricResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

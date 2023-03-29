@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/networksecurity/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,9 +23,9 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateRequest{
-        Security: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateSecurity{
+
+    req := operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsRequest{
+        Security: operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -31,125 +33,33 @@ func main() {
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        PathParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreatePathParams{
-            Parent: "sit",
+        PathParams: operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsPathParams{
+            AddressGroup: "unde",
         },
-        QueryParams: operations.NetworksecurityProjectsLocationsAuthorizationPoliciesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            AuthorizationPolicyID: "consequuntur",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+        QueryParams: operations.NetworksecurityProjectsLocationsAddressGroupsAddItemsQueryParams{
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
             PrettyPrint: false,
             QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
-        Request: &shared.AuthorizationPolicyInput{
-            Action: "ACTION_UNSPECIFIED",
-            Description: "voluptatum",
-            Labels: map[string]string{
-                "ut": "dolorem",
+        Request: &shared.AddAddressGroupItemsRequest{
+            Items: []string{
+                "iusto",
+                "ullam",
             },
-            Name: "et",
-            Rules: []shared.Rule{
-                shared.Rule{
-                    Destinations: []shared.Destination{
-                        shared.Destination{
-                            Hosts: []string{
-                                "totam",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "dolores",
-                                RegexMatch: "illum",
-                            },
-                            Methods: []string{
-                                "vel",
-                            },
-                            Ports: []int64{
-                                6303220950515014660,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "aspernatur",
-                                "accusantium",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "totam",
-                                RegexMatch: "commodi",
-                            },
-                            Methods: []string{
-                                "est",
-                                "aut",
-                                "odit",
-                            },
-                            Ports: []int64{
-                                167566062957544642,
-                                4778690082005258714,
-                                1059542851699319360,
-                            },
-                        },
-                        shared.Destination{
-                            Hosts: []string{
-                                "sed",
-                            },
-                            HTTPHeaderMatch: &shared.HTTPHeaderMatch{
-                                HeaderName: "officiis",
-                                RegexMatch: "autem",
-                            },
-                            Methods: []string{
-                                "nobis",
-                            },
-                            Ports: []int64{
-                                7699391924090763411,
-                            },
-                        },
-                    },
-                    Sources: []shared.Source{
-                        shared.Source{
-                            IPBlocks: []string{
-                                "ipsum",
-                                "eveniet",
-                            },
-                            Principals: []string{
-                                "sint",
-                                "inventore",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
-                                "exercitationem",
-                                "aut",
-                                "reprehenderit",
-                            },
-                            Principals: []string{
-                                "maiores",
-                                "incidunt",
-                                "dolor",
-                            },
-                        },
-                        shared.Source{
-                            IPBlocks: []string{
-                                "veritatis",
-                                "in",
-                                "et",
-                            },
-                            Principals: []string{
-                                "ipsum",
-                                "ex",
-                            },
-                        },
-                    },
-                },
-            },
+            RequestID: "saepe",
         },
     }
-    
-    res, err := s.Projects.NetworksecurityProjectsLocationsAuthorizationPoliciesCreate(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Projects.NetworksecurityProjectsLocationsAddressGroupsAddItems(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -157,14 +67,22 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
 
+### Projects
+
+* `NetworksecurityProjectsLocationsAddressGroupsAddItems` - Adds items to an address group.
+* `NetworksecurityProjectsLocationsAddressGroupsCloneItems` - Clones items from one address group to another.
+* `NetworksecurityProjectsLocationsAddressGroupsCreate` - Creates a new address group in a given project and location.
+* `NetworksecurityProjectsLocationsAddressGroupsList` - Lists address groups in a given project and location.
+* `NetworksecurityProjectsLocationsAddressGroupsListReferences` - Lists references of an address group.
+* `NetworksecurityProjectsLocationsAddressGroupsRemoveItems` - Removes items from an address group.
 * `NetworksecurityProjectsLocationsAuthorizationPoliciesCreate` - Creates a new AuthorizationPolicy in a given project and location.
 * `NetworksecurityProjectsLocationsAuthorizationPoliciesList` - Lists AuthorizationPolicies in a given project and location.
 * `NetworksecurityProjectsLocationsClientTLSPoliciesCreate` - Creates a new ClientTlsPolicy in a given project and location.
@@ -180,7 +98,6 @@ func main() {
 * `NetworksecurityProjectsLocationsServerTLSPoliciesPatch` - Updates the parameters of a single ServerTlsPolicy.
 * `NetworksecurityProjectsLocationsServerTLSPoliciesSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 * `NetworksecurityProjectsLocationsServerTLSPoliciesTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

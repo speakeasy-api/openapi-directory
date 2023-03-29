@@ -3,56 +3,51 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateConnectionRequest{
         Headers: operations.CreateConnectionHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection",
         },
         Request: shared.CreateConnectionInput{
-            ConnectionName: "fugit",
-            HostArn: "et",
-            ProviderType: "Bitbucket",
+            ConnectionName: "nihil",
+            HostArn: "fuga",
+            ProviderType: "GitHub",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "dicta",
-                    Value: "debitis",
+                    Key: "iusto",
+                    Value: "ullam",
                 },
                 shared.Tag{
-                    Key: "voluptatum",
-                    Value: "et",
-                },
-                shared.Tag{
-                    Key: "ut",
-                    Value: "dolorem",
+                    Key: "saepe",
+                    Value: "inventore",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateConnection(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -61,5 +56,6 @@ func main() {
     if res.CreateConnectionOutput != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

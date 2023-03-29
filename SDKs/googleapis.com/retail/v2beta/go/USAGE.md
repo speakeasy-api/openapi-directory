@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeRequest{
         Security: operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,34 +23,35 @@ func main() {
             },
         },
         PathParams: operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributePathParams{
-            AttributesConfig: "sit",
+            AttributesConfig: "unde",
         },
         QueryParams: operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudRetailV2betaAddCatalogAttributeRequestInput{
             CatalogAttribute: &shared.GoogleCloudRetailV2betaCatalogAttributeInput{
-                DynamicFacetableOption: "DYNAMIC_FACETABLE_DISABLED",
-                ExactSearchableOption: "EXACT_SEARCHABLE_OPTION_UNSPECIFIED",
+                DynamicFacetableOption: "DYNAMIC_FACETABLE_ENABLED",
+                ExactSearchableOption: "EXACT_SEARCHABLE_ENABLED",
                 IndexableOption: "INDEXABLE_OPTION_UNSPECIFIED",
-                Key: "et",
-                RecommendationsFilteringOption: "RECOMMENDATIONS_FILTERING_ENABLED",
+                Key: "saepe",
+                RecommendationsFilteringOption: "RECOMMENDATIONS_FILTERING_OPTION_UNSPECIFIED",
                 RetrievableOption: "RETRIEVABLE_DISABLED",
-                SearchableOption: "SEARCHABLE_ENABLED",
+                SearchableOption: "SEARCHABLE_OPTION_UNSPECIFIED",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttribute(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -57,5 +60,6 @@ func main() {
     if res.GoogleCloudRetailV2betaAttributesConfig != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

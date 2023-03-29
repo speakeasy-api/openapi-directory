@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,28 +12,29 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.IdeahubIdeasListRequest{
         QueryParams: operations.IdeahubIdeasListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Filter: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            OrderBy: "fugit",
-            PageSize: 1543572285742637646,
-            PageToken: "nihil",
-            Parent: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Filter: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            OrderBy: "nihil",
+            PageSize: 623564,
+            PageToken: "facilis",
+            Parent: "eum",
             PrettyPrint: false,
-            QuotaUser: "debitis",
-            UploadType: "voluptatum",
-            UploadProtocol: "et",
+            QuotaUser: "iusto",
+            UploadType: "ullam",
+            UploadProtocol: "saepe",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Ideas.IdeahubIdeasList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -40,5 +43,6 @@ func main() {
     if res.GoogleSearchIdeahubV1alphaListIdeasResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/keycloak.local/1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,30 +14,29 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                AccessToken: shared.SchemeAccessToken{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            AccessToken: shared.SchemeAccessToken{
+                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DeleteRealmAttackDetectionBruteForceUsersRequest{
         PathParams: operations.DeleteRealmAttackDetectionBruteForceUsersPathParams{
-            Realm: "sit",
+            Realm: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AttackDetection.DeleteRealmAttackDetectionBruteForceUsers(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,19 +45,21 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Attack Detection
+
+### AttackDetection
 
 * `DeleteRealmAttackDetectionBruteForceUsers` - Clear any user login failures for all users   This can release temporary disabled users
 * `DeleteRealmAttackDetectionBruteForceUsersUserID` - Clear any user login failures for the user   This can release temporary disabled user
 * `GetRealmAttackDetectionBruteForceUsersUserID` - Get status of a username in brute force detection
 
-### Authentication Management
+### AuthenticationManagement
 
 * `DeleteRealmAuthenticationConfigID` - Delete authenticator configuration
 * `DeleteRealmAuthenticationExecutionsExecutionID` - Delete execution
@@ -94,7 +95,7 @@ func main() {
 * `PutRealmAuthenticationFlowsID` - Update an authentication flow
 * `PutRealmAuthenticationRequiredActionsAlias` - Update required action
 
-### Client Attribute Certificate
+### ClientAttributeCertificate
 
 * `GetRealmClientsIDCertificatesAttr` - Get key info
 * `PostRealmClientsIDCertificatesAttrDownload` - Get a keystore file for the client, containing private key and public certificate
@@ -103,17 +104,17 @@ func main() {
 * `PostRealmClientsIDCertificatesAttrUpload` - Upload certificate and eventually private key
 * `PostRealmClientsIDCertificatesAttrUploadCertificate` - Upload only certificate, not private key
 
-### Client Initial Access
+### ClientInitialAccess
 
 * `DeleteRealmClientsInitialAccessID`
 * `GetRealmClientsInitialAccess`
 * `PostRealmClientsInitialAccess` - Create a new initial access token.
 
-### Client Registration Policy
+### ClientRegistrationPolicy
 
 * `GetRealmClientRegistrationPolicyProviders` - Base path for retrieve providers with the configProperties properly filled
 
-### Client Role Mappings
+### ClientRoleMappings
 
 * `DeleteRealmGroupsIDRoleMappingsClientsClient` - Delete client-level roles from user role mapping
 * `DeleteRealmUsersIDRoleMappingsClientsClient` - Delete client-level roles from user role mapping
@@ -126,7 +127,7 @@ func main() {
 * `PostRealmGroupsIDRoleMappingsClientsClient` - Add client-level roles to the user role mapping
 * `PostRealmUsersIDRoleMappingsClientsClient` - Add client-level roles to the user role mapping
 
-### Client Scopes
+### ClientScopes
 
 * `DeleteRealmClientScopesID` - Delete the client scope
 * `GetRealmClientScopes` - Get client scopes belonging to the realm   Returns a list of client scopes belonging to the realm
@@ -189,7 +190,7 @@ func main() {
 * `PutRealmGroupsID` - Update group, ignores subgroups.
 * `PutRealmGroupsIDManagementPermissions` - Return object stating whether client Authorization permissions have been initialized or not and a reference
 
-### Identity Providers
+### IdentityProviders
 
 * `DeleteRealmIdentityProviderInstancesAlias` - Delete the identity provider
 * `DeleteRealmIdentityProviderInstancesAliasMappersID` - Delete a mapper for the identity provider
@@ -212,7 +213,7 @@ func main() {
 
 * `GetRealmKeys`
 
-### Protocol Mappers
+### ProtocolMappers
 
 * `DeleteRealmClientScopesId1ProtocolMappersModelsId2` - Delete the mapper
 * `DeleteRealmClientsId1ProtocolMappersModelsId2` - Delete the mapper
@@ -229,7 +230,7 @@ func main() {
 * `PutRealmClientScopesId1ProtocolMappersModelsId2` - Update the mapper
 * `PutRealmClientsId1ProtocolMappersModelsId2` - Update the mapper
 
-### Realms Admin
+### RealmsAdmin
 
 * `DeleteRealm` - Delete the realm
 * `DeleteRealmAdminEvents` - Delete all admin events
@@ -258,7 +259,7 @@ func main() {
 * `PostRealmPartialExport` - Partial export of existing realm into a JSON file.
 * `PostRealmPartialImport` - Partial import from a JSON file to an existing realm.
 * `PostRealmPushRevocation` - Push the realm’s revocation policy to any client that has an admin url associated with it.
-* `PostRealmTestLdapConnection` - Test LDAP connection
+* `PostRealmTestLDAPConnection` - Test LDAP connection
 * `PostRealmTestSMTPConnection`
 * `PutRealm` - Update the top-level information of the realm   Any user, roles or client information in the representation  will be ignored.
 * `PutRealmDefaultDefaultClientScopesClientScopeID`
@@ -267,7 +268,7 @@ func main() {
 * `PutRealmEventsConfig` - Update the events provider   Change the events provider and/or its configuration
 * `PutRealmUsersManagementPermissions`
 
-### Role Mapper
+### RoleMapper
 
 * `DeleteRealmGroupsIDRoleMappingsRealm` - Delete realm-level role mappings
 * `DeleteRealmUsersIDRoleMappingsRealm` - Delete realm-level role mappings
@@ -313,7 +314,7 @@ func main() {
 * `PutRealmRolesRoleName` - Update a role by name
 * `PutRealmRolesRoleNameManagementPermissions` - Return object stating whether role Authoirzation permissions have been initialized or not and a reference
 
-### Roles (by ID)
+### RolesByID
 
 * `DeleteRealmRolesByIDRoleID` - Delete the role
 * `DeleteRealmRolesByIDRoleIDComposites` - Remove a set of roles from the role’s composite
@@ -330,7 +331,7 @@ func main() {
 
 * `Get` - Get themes, social providers, auth providers, and event listeners available on this server
 
-### Scope Mappings
+### ScopeMappings
 
 * `DeleteRealmClientScopesIDScopeMappingsClientsClient` - Remove client-level roles from the client’s scope.
 * `DeleteRealmClientScopesIDScopeMappingsRealm` - Remove a set of realm-level roles from the client’s scope
@@ -355,7 +356,7 @@ func main() {
 * `PostRealmClientsIDScopeMappingsClientsClient` - Add client-level roles to the client’s scope
 * `PostRealmClientsIDScopeMappingsRealm` - Add a set of realm-level roles to the client’s scope
 
-### User Storage Provider
+### UserStorageProvider
 
 * `GetIDName` - Need this for admin console to display simple name of provider when displaying client detail   KEYCLOAK-4328
 * `GetRealmUserStorageIDName` - Need this for admin console to display simple name of provider when displaying user detail   KEYCLOAK-4328
@@ -395,7 +396,6 @@ func main() {
 * `PutRealmUsersIDGroupsGroupID`
 * `PutRealmUsersIDResetPassword` - Set up a new password for the user.
 * `PutRealmUsersIDSendVerifyEmail` - Send an email-verification email to the user   An email contains a link the user can click to verify their email address.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

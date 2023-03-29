@@ -3,49 +3,49 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.InvokeEndpointRequest{
         PathParams: operations.InvokeEndpointPathParams{
-            EndpointName: "sit",
+            EndpointName: "unde",
         },
         Headers: operations.InvokeEndpointHeaders{
-            Accept: "voluptas",
-            ContentType: "culpa",
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "consequuntur",
-            XAmzCredential: "dolor",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "et",
-            XAmznSageMakerCustomAttributes: "nihil",
-            XAmznSageMakerInferenceID: "rerum",
-            XAmznSageMakerTargetContainerHostname: "dicta",
-            XAmznSageMakerTargetModel: "debitis",
-            XAmznSageMakerTargetVariant: "voluptatum",
+            Accept: "deserunt",
+            ContentType: "porro",
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
+            XAmznSageMakerCustomAttributes: "facilis",
+            XAmznSageMakerEnableExplanations: "eum",
+            XAmznSageMakerInferenceID: "iusto",
+            XAmznSageMakerTargetContainerHostname: "ullam",
+            XAmznSageMakerTargetModel: "saepe",
+            XAmznSageMakerTargetVariant: "inventore",
         },
         Request: operations.InvokeEndpointRequestBody{
-            Body: "et",
+            Body: "sapiente",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.InvokeEndpoint(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +54,6 @@ func main() {
     if res.InvokeEndpointOutput != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

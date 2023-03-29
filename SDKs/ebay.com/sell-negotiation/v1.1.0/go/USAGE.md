@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FindEligibleItemsRequest{
         Security: operations.FindEligibleItemsSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,14 +20,15 @@ func main() {
             },
         },
         QueryParams: operations.FindEligibleItemsQueryParams{
-            Limit: "sit",
-            Offset: "voluptas",
+            Limit: "unde",
+            Offset: "deserunt",
         },
         Headers: operations.FindEligibleItemsHeaders{
-            XEBAYCMARKETPLACEID: "culpa",
+            XEbayCMarketplaceID: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Offer.FindEligibleItems(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -34,5 +37,6 @@ func main() {
     if res.PagedEligibleItemCollection != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

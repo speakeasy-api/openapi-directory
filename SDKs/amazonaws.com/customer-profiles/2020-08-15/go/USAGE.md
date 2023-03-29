@@ -3,46 +3,47 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddProfileKeyRequest{
         PathParams: operations.AddProfileKeyPathParams{
-            DomainName: "sit",
+            DomainName: "unde",
         },
         Headers: operations.AddProfileKeyHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "expedita",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "nulla",
+            XAmzDate: "id",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "perspiciatis",
+            XAmzSignedHeaders: "nulla",
         },
         Request: operations.AddProfileKeyRequestBody{
-            KeyName: "fugit",
-            ProfileID: "et",
+            KeyName: "nihil",
+            ProfileID: "fuga",
             Values: []string{
-                "rerum",
+                "eum",
+                "iusto",
+                "ullam",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddProfileKey(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +52,6 @@ func main() {
     if res.AddProfileKeyResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

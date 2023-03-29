@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,16 +12,17 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
-            Format: "json",
-            IP: "voluptas",
-            Key: "culpa",
-            Package: "expedita",
+            Format: "xml",
+            IP: "deserunt",
+            Key: "porro",
+            Package: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Get(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -28,5 +31,6 @@ func main() {
     if res.Get200TextHTMLString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

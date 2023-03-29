@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CancelReportRequest{
         Security: operations.CancelReportSecurity{
             BasicAuth: shared.SchemeBasicAuth{
@@ -19,10 +21,11 @@ func main() {
             },
         },
         PathParams: operations.CancelReportPathParams{
-            ReportID: "sit",
+            ReportID: "aaaaaaaa-bbbb-cccc-dddd-0123456789ab",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CancelReport(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.CancelReport200ApplicationJSONOneOf != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

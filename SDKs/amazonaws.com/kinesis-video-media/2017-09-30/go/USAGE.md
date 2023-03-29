@@ -3,46 +3,45 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetMediaRequest{
         Headers: operations.GetMediaHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.GetMediaRequestBody{
             StartSelector: operations.GetMediaRequestBodyStartSelector{
-                AfterFragmentNumber: "voluptas",
-                ContinuationToken: "fugit",
-                StartSelectorType: "FRAGMENT_NUMBER",
-                StartTimestamp: "2003-05-13T04:57:12Z",
+                AfterFragmentNumber: "nulla",
+                ContinuationToken: "nihil",
+                StartSelectorType: "NOW",
+                StartTimestamp: "2022-08-05T18:29:55.818Z",
             },
-            StreamARN: "rerum",
-            StreamName: "dicta",
+            StreamARN: "eum",
+            StreamName: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetMedia(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +50,6 @@ func main() {
     if res.GetMediaOutput != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

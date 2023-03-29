@@ -3,144 +3,403 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateAlarmModelRequest{
         Headers: operations.CreateAlarmModelHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateAlarmModelRequestBody{
             AlarmCapabilities: &operations.CreateAlarmModelRequestBodyAlarmCapabilities{
                 AcknowledgeFlow: &shared.AcknowledgeFlow{
-                    Enabled: true,
+                    Enabled: false,
                 },
                 InitializationConfiguration: &shared.InitializationConfiguration{
-                    DisabledOnInitialization: true,
+                    DisabledOnInitialization: false,
                 },
             },
             AlarmEventActions: &operations.CreateAlarmModelRequestBodyAlarmEventActions{
                 AlarmActions: []shared.AlarmAction{
                     shared.AlarmAction{
-                        DynamoDB: &shared.DynamoDbAction{
+                        DynamoDB: &shared.DynamoDBAction{
                             HashKeyField: "nihil",
-                            HashKeyType: "rerum",
-                            HashKeyValue: "dicta",
-                            Operation: "debitis",
+                            HashKeyType: "fuga",
+                            HashKeyValue: "facilis",
+                            Operation: "eum",
                             Payload: &shared.Payload{
-                                ContentExpression: "voluptatum",
+                                ContentExpression: "iusto",
                                 Type: "STRING",
                             },
-                            PayloadField: "ut",
-                            RangeKeyField: "dolorem",
-                            RangeKeyType: "et",
-                            RangeKeyValue: "voluptate",
-                            TableName: "iste",
+                            PayloadField: "saepe",
+                            RangeKeyField: "inventore",
+                            RangeKeyType: "sapiente",
+                            RangeKeyValue: "enim",
+                            TableName: "eum",
                         },
                         DynamoDBv2: &shared.DynamoDBv2Action{
                             Payload: &shared.Payload{
-                                ContentExpression: "vitae",
-                                Type: "STRING",
+                                ContentExpression: "voluptatum",
+                                Type: "JSON",
                             },
-                            TableName: "dolores",
+                            TableName: "vel",
                         },
                         Firehose: &shared.FirehoseAction{
-                            DeliveryStreamName: "illum",
+                            DeliveryStreamName: "non",
                             Payload: &shared.Payload{
-                                ContentExpression: "debitis",
-                                Type: "STRING",
+                                ContentExpression: "deleniti",
+                                Type: "JSON",
                             },
-                            Separator: "odio",
+                            Separator: "reprehenderit",
                         },
                         IotEvents: &shared.IotEventsAction{
-                            InputName: "dolore",
+                            InputName: "molestiae",
                             Payload: &shared.Payload{
-                                ContentExpression: "id",
-                                Type: "JSON",
+                                ContentExpression: "quo",
+                                Type: "STRING",
                             },
                         },
                         IotSiteWise: &shared.IotSiteWiseAction{
-                            AssetID: "accusantium",
-                            EntryID: "totam",
-                            PropertyAlias: "commodi",
-                            PropertyID: "quis",
+                            AssetID: "laboriosam",
+                            EntryID: "dicta",
+                            PropertyAlias: "est",
+                            PropertyID: "voluptatem",
                             PropertyValue: &shared.AssetPropertyValue{
-                                Quality: "est",
+                                Quality: "consequatur",
                                 Timestamp: &shared.AssetPropertyTimestamp{
-                                    OffsetInNanos: "aut",
-                                    TimeInSeconds: "odit",
+                                    OffsetInNanos: "fugiat",
+                                    TimeInSeconds: "a",
                                 },
                                 Value: &shared.AssetPropertyVariant{
-                                    BooleanValue: "non",
-                                    DoubleValue: "voluptas",
-                                    IntegerValue: "omnis",
-                                    StringValue: "aut",
+                                    BooleanValue: "omnis",
+                                    DoubleValue: "eos",
+                                    IntegerValue: "accusamus",
+                                    StringValue: "accusamus",
                                 },
                             },
                         },
                         IotTopicPublish: &shared.IotTopicPublishAction{
-                            MqttTopic: "illo",
+                            MqttTopic: "reiciendis",
                             Payload: &shared.Payload{
-                                ContentExpression: "sed",
+                                ContentExpression: "rem",
                                 Type: "JSON",
                             },
                         },
                         Lambda: &shared.LambdaAction{
-                            FunctionArn: "autem",
+                            FunctionArn: "et",
                             Payload: &shared.Payload{
-                                ContentExpression: "consectetur",
-                                Type: "STRING",
-                            },
-                        },
-                        Sns: &shared.SnsTopicPublishAction{
-                            Payload: &shared.Payload{
-                                ContentExpression: "odio",
+                                ContentExpression: "praesentium",
                                 Type: "JSON",
                             },
-                            TargetArn: "recusandae",
+                        },
+                        Sns: &shared.SNSTopicPublishAction{
+                            Payload: &shared.Payload{
+                                ContentExpression: "dolor",
+                                Type: "JSON",
+                            },
+                            TargetArn: "sed",
                         },
                         Sqs: &shared.SqsAction{
                             Payload: &shared.Payload{
-                                ContentExpression: "at",
+                                ContentExpression: "quisquam",
+                                Type: "JSON",
+                            },
+                            QueueURL: "culpa",
+                            UseBase64: false,
+                        },
+                    },
+                    shared.AlarmAction{
+                        DynamoDB: &shared.DynamoDBAction{
+                            HashKeyField: "qui",
+                            HashKeyType: "sed",
+                            HashKeyValue: "rerum",
+                            Operation: "possimus",
+                            Payload: &shared.Payload{
+                                ContentExpression: "occaecati",
                                 Type: "STRING",
                             },
-                            QueueURL: "eveniet",
+                            PayloadField: "esse",
+                            RangeKeyField: "rem",
+                            RangeKeyType: "voluptatem",
+                            RangeKeyValue: "amet",
+                            TableName: "est",
+                        },
+                        DynamoDBv2: &shared.DynamoDBv2Action{
+                            Payload: &shared.Payload{
+                                ContentExpression: "id",
+                                Type: "STRING",
+                            },
+                            TableName: "numquam",
+                        },
+                        Firehose: &shared.FirehoseAction{
+                            DeliveryStreamName: "similique",
+                            Payload: &shared.Payload{
+                                ContentExpression: "dolores",
+                                Type: "STRING",
+                            },
+                            Separator: "quia",
+                        },
+                        IotEvents: &shared.IotEventsAction{
+                            InputName: "et",
+                            Payload: &shared.Payload{
+                                ContentExpression: "voluptatem",
+                                Type: "JSON",
+                            },
+                        },
+                        IotSiteWise: &shared.IotSiteWiseAction{
+                            AssetID: "modi",
+                            EntryID: "et",
+                            PropertyAlias: "iure",
+                            PropertyID: "earum",
+                            PropertyValue: &shared.AssetPropertyValue{
+                                Quality: "ut",
+                                Timestamp: &shared.AssetPropertyTimestamp{
+                                    OffsetInNanos: "soluta",
+                                    TimeInSeconds: "qui",
+                                },
+                                Value: &shared.AssetPropertyVariant{
+                                    BooleanValue: "ea",
+                                    DoubleValue: "laborum",
+                                    IntegerValue: "iusto",
+                                    StringValue: "ut",
+                                },
+                            },
+                        },
+                        IotTopicPublish: &shared.IotTopicPublishAction{
+                            MqttTopic: "optio",
+                            Payload: &shared.Payload{
+                                ContentExpression: "aspernatur",
+                                Type: "STRING",
+                            },
+                        },
+                        Lambda: &shared.LambdaAction{
+                            FunctionArn: "ut",
+                            Payload: &shared.Payload{
+                                ContentExpression: "libero",
+                                Type: "JSON",
+                            },
+                        },
+                        Sns: &shared.SNSTopicPublishAction{
+                            Payload: &shared.Payload{
+                                ContentExpression: "libero",
+                                Type: "STRING",
+                            },
+                            TargetArn: "non",
+                        },
+                        Sqs: &shared.SqsAction{
+                            Payload: &shared.Payload{
+                                ContentExpression: "ea",
+                                Type: "STRING",
+                            },
+                            QueueURL: "placeat",
+                            UseBase64: false,
+                        },
+                    },
+                    shared.AlarmAction{
+                        DynamoDB: &shared.DynamoDBAction{
+                            HashKeyField: "ipsam",
+                            HashKeyType: "est",
+                            HashKeyValue: "commodi",
+                            Operation: "quia",
+                            Payload: &shared.Payload{
+                                ContentExpression: "similique",
+                                Type: "STRING",
+                            },
+                            PayloadField: "odio",
+                            RangeKeyField: "harum",
+                            RangeKeyType: "doloribus",
+                            RangeKeyValue: "a",
+                            TableName: "aut",
+                        },
+                        DynamoDBv2: &shared.DynamoDBv2Action{
+                            Payload: &shared.Payload{
+                                ContentExpression: "et",
+                                Type: "STRING",
+                            },
+                            TableName: "quidem",
+                        },
+                        Firehose: &shared.FirehoseAction{
+                            DeliveryStreamName: "neque",
+                            Payload: &shared.Payload{
+                                ContentExpression: "asperiores",
+                                Type: "JSON",
+                            },
+                            Separator: "culpa",
+                        },
+                        IotEvents: &shared.IotEventsAction{
+                            InputName: "aliquam",
+                            Payload: &shared.Payload{
+                                ContentExpression: "esse",
+                                Type: "STRING",
+                            },
+                        },
+                        IotSiteWise: &shared.IotSiteWiseAction{
+                            AssetID: "voluptatum",
+                            EntryID: "et",
+                            PropertyAlias: "fuga",
+                            PropertyID: "nesciunt",
+                            PropertyValue: &shared.AssetPropertyValue{
+                                Quality: "laboriosam",
+                                Timestamp: &shared.AssetPropertyTimestamp{
+                                    OffsetInNanos: "aut",
+                                    TimeInSeconds: "cum",
+                                },
+                                Value: &shared.AssetPropertyVariant{
+                                    BooleanValue: "expedita",
+                                    DoubleValue: "ipsam",
+                                    IntegerValue: "eos",
+                                    StringValue: "omnis",
+                                },
+                            },
+                        },
+                        IotTopicPublish: &shared.IotTopicPublishAction{
+                            MqttTopic: "adipisci",
+                            Payload: &shared.Payload{
+                                ContentExpression: "hic",
+                                Type: "STRING",
+                            },
+                        },
+                        Lambda: &shared.LambdaAction{
+                            FunctionArn: "distinctio",
+                            Payload: &shared.Payload{
+                                ContentExpression: "qui",
+                                Type: "STRING",
+                            },
+                        },
+                        Sns: &shared.SNSTopicPublishAction{
+                            Payload: &shared.Payload{
+                                ContentExpression: "aspernatur",
+                                Type: "JSON",
+                            },
+                            TargetArn: "quo",
+                        },
+                        Sqs: &shared.SqsAction{
+                            Payload: &shared.Payload{
+                                ContentExpression: "tempore",
+                                Type: "STRING",
+                            },
+                            QueueURL: "aut",
+                            UseBase64: false,
+                        },
+                    },
+                    shared.AlarmAction{
+                        DynamoDB: &shared.DynamoDBAction{
+                            HashKeyField: "reiciendis",
+                            HashKeyType: "debitis",
+                            HashKeyValue: "totam",
+                            Operation: "molestias",
+                            Payload: &shared.Payload{
+                                ContentExpression: "reiciendis",
+                                Type: "STRING",
+                            },
+                            PayloadField: "id",
+                            RangeKeyField: "qui",
+                            RangeKeyType: "quod",
+                            RangeKeyValue: "sit",
+                            TableName: "eaque",
+                        },
+                        DynamoDBv2: &shared.DynamoDBv2Action{
+                            Payload: &shared.Payload{
+                                ContentExpression: "odio",
+                                Type: "STRING",
+                            },
+                            TableName: "reiciendis",
+                        },
+                        Firehose: &shared.FirehoseAction{
+                            DeliveryStreamName: "sed",
+                            Payload: &shared.Payload{
+                                ContentExpression: "ea",
+                                Type: "STRING",
+                            },
+                            Separator: "deleniti",
+                        },
+                        IotEvents: &shared.IotEventsAction{
+                            InputName: "sed",
+                            Payload: &shared.Payload{
+                                ContentExpression: "est",
+                                Type: "STRING",
+                            },
+                        },
+                        IotSiteWise: &shared.IotSiteWiseAction{
+                            AssetID: "aut",
+                            EntryID: "esse",
+                            PropertyAlias: "sint",
+                            PropertyID: "veritatis",
+                            PropertyValue: &shared.AssetPropertyValue{
+                                Quality: "numquam",
+                                Timestamp: &shared.AssetPropertyTimestamp{
+                                    OffsetInNanos: "eligendi",
+                                    TimeInSeconds: "error",
+                                },
+                                Value: &shared.AssetPropertyVariant{
+                                    BooleanValue: "similique",
+                                    DoubleValue: "et",
+                                    IntegerValue: "ut",
+                                    StringValue: "molestias",
+                                },
+                            },
+                        },
+                        IotTopicPublish: &shared.IotTopicPublishAction{
+                            MqttTopic: "cupiditate",
+                            Payload: &shared.Payload{
+                                ContentExpression: "sint",
+                                Type: "STRING",
+                            },
+                        },
+                        Lambda: &shared.LambdaAction{
+                            FunctionArn: "et",
+                            Payload: &shared.Payload{
+                                ContentExpression: "in",
+                                Type: "STRING",
+                            },
+                        },
+                        Sns: &shared.SNSTopicPublishAction{
+                            Payload: &shared.Payload{
+                                ContentExpression: "non",
+                                Type: "STRING",
+                            },
+                            TargetArn: "voluptatem",
+                        },
+                        Sqs: &shared.SqsAction{
+                            Payload: &shared.Payload{
+                                ContentExpression: "aut",
+                                Type: "JSON",
+                            },
+                            QueueURL: "voluptas",
                             UseBase64: false,
                         },
                     },
                 },
             },
-            AlarmModelDescription: "sint",
-            AlarmModelName: "inventore",
+            AlarmModelDescription: "magni",
+            AlarmModelName: "est",
             AlarmNotification: &operations.CreateAlarmModelRequestBodyAlarmNotification{
                 NotificationActions: []shared.NotificationAction{
                     shared.NotificationAction{
                         Action: shared.NotificationTargetActions{
                             LambdaAction: &shared.LambdaAction{
-                                FunctionArn: "exercitationem",
+                                FunctionArn: "voluptas",
                                 Payload: &shared.Payload{
-                                    ContentExpression: "aut",
+                                    ContentExpression: "nostrum",
                                     Type: "STRING",
                                 },
                             },
@@ -148,28 +407,96 @@ func main() {
                         EmailConfigurations: []shared.EmailConfiguration{
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "maiores",
-                                    Subject: "incidunt",
+                                    AdditionalMessage: "in",
+                                    Subject: "officia",
                                 },
-                                From: "dolor",
+                                From: "omnis",
                                 Recipients: shared.EmailRecipients{
                                     To: []shared.RecipientDetail{
                                         shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "veritatis",
-                                                UserID: "in",
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "dolorem",
+                                                UserID: "eum",
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        SmsConfigurations: []shared.SMSConfiguration{
+                            shared.SMSConfiguration{
+                                AdditionalMessage: "consequatur",
+                                Recipients: []shared.RecipientDetail{
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "cum",
+                                            UserID: "similique",
+                                        },
+                                    },
+                                },
+                                SenderID: "enim",
+                            },
+                            shared.SMSConfiguration{
+                                AdditionalMessage: "nihil",
+                                Recipients: []shared.RecipientDetail{
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "quis",
+                                            UserID: "sapiente",
+                                        },
+                                    },
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "et",
+                                            UserID: "dolore",
+                                        },
+                                    },
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "possimus",
+                                            UserID: "in",
+                                        },
+                                    },
+                                },
+                                SenderID: "qui",
+                            },
+                        },
+                    },
+                    shared.NotificationAction{
+                        Action: shared.NotificationTargetActions{
+                            LambdaAction: &shared.LambdaAction{
+                                FunctionArn: "deserunt",
+                                Payload: &shared.Payload{
+                                    ContentExpression: "eveniet",
+                                    Type: "JSON",
+                                },
+                            },
+                        },
+                        EmailConfigurations: []shared.EmailConfiguration{
+                            shared.EmailConfiguration{
+                                Content: &shared.EmailContent{
+                                    AdditionalMessage: "modi",
+                                    Subject: "necessitatibus",
+                                },
+                                From: "tenetur",
+                                Recipients: shared.EmailRecipients{
+                                    To: []shared.RecipientDetail{
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "ducimus",
+                                                UserID: "ducimus",
                                             },
                                         },
                                         shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "et",
-                                                UserID: "omnis",
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "nulla",
+                                                UserID: "reiciendis",
                                             },
                                         },
                                         shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "ipsum",
-                                                UserID: "ex",
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "cumque",
+                                                UserID: "fugit",
                                             },
                                         },
                                     },
@@ -177,28 +504,22 @@ func main() {
                             },
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "dolores",
-                                    Subject: "placeat",
+                                    AdditionalMessage: "ullam",
+                                    Subject: "voluptas",
                                 },
                                 From: "vel",
                                 Recipients: shared.EmailRecipients{
                                     To: []shared.RecipientDetail{
                                         shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "mollitia",
-                                                UserID: "voluptas",
-                                            },
-                                        },
-                                        shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "quam",
-                                                UserID: "reprehenderit",
-                                            },
-                                        },
-                                        shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
+                                            SsoIdentity: &shared.SSOIdentity{
                                                 IdentityStoreID: "qui",
-                                                UserID: "qui",
+                                                UserID: "cum",
+                                            },
+                                        },
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "aut",
+                                                UserID: "magnam",
                                             },
                                         },
                                     },
@@ -206,234 +527,220 @@ func main() {
                             },
                             shared.EmailConfiguration{
                                 Content: &shared.EmailContent{
-                                    AdditionalMessage: "unde",
-                                    Subject: "in",
+                                    AdditionalMessage: "culpa",
+                                    Subject: "enim",
                                 },
-                                From: "autem",
+                                From: "aut",
                                 Recipients: shared.EmailRecipients{
                                     To: []shared.RecipientDetail{
                                         shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "ut",
-                                                UserID: "itaque",
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                        SmsConfigurations: []shared.SmsConfiguration{
-                            shared.SmsConfiguration{
-                                AdditionalMessage: "neque",
-                                Recipients: []shared.RecipientDetail{
-                                    shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "et",
-                                            UserID: "accusantium",
-                                        },
-                                    },
-                                    shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "esse",
-                                            UserID: "architecto",
-                                        },
-                                    },
-                                    shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "quam",
-                                            UserID: "velit",
-                                        },
-                                    },
-                                },
-                                SenderID: "cumque",
-                            },
-                        },
-                    },
-                    shared.NotificationAction{
-                        Action: shared.NotificationTargetActions{
-                            LambdaAction: &shared.LambdaAction{
-                                FunctionArn: "soluta",
-                                Payload: &shared.Payload{
-                                    ContentExpression: "sunt",
-                                    Type: "JSON",
-                                },
-                            },
-                        },
-                        EmailConfigurations: []shared.EmailConfiguration{
-                            shared.EmailConfiguration{
-                                Content: &shared.EmailContent{
-                                    AdditionalMessage: "et",
-                                    Subject: "optio",
-                                },
-                                From: "qui",
-                                Recipients: shared.EmailRecipients{
-                                    To: []shared.RecipientDetail{
-                                        shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "illo",
-                                                UserID: "omnis",
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                            shared.EmailConfiguration{
-                                Content: &shared.EmailContent{
-                                    AdditionalMessage: "ut",
-                                    Subject: "consequatur",
-                                },
-                                From: "dolor",
-                                Recipients: shared.EmailRecipients{
-                                    To: []shared.RecipientDetail{
-                                        shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "error",
-                                                UserID: "reprehenderit",
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "eligendi",
+                                                UserID: "officia",
                                             },
                                         },
                                         shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "consectetur",
-                                                UserID: "nostrum",
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "est",
+                                                UserID: "distinctio",
                                             },
                                         },
-                                    },
-                                },
-                            },
-                            shared.EmailConfiguration{
-                                Content: &shared.EmailContent{
-                                    AdditionalMessage: "ut",
-                                    Subject: "laboriosam",
-                                },
-                                From: "sed",
-                                Recipients: shared.EmailRecipients{
-                                    To: []shared.RecipientDetail{
                                         shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "soluta",
-                                                UserID: "aut",
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "et",
+                                                UserID: "provident",
                                             },
                                         },
-                                    },
-                                },
-                            },
-                        },
-                        SmsConfigurations: []shared.SmsConfiguration{
-                            shared.SmsConfiguration{
-                                AdditionalMessage: "consequuntur",
-                                Recipients: []shared.RecipientDetail{
-                                    shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "autem",
-                                            UserID: "ipsa",
-                                        },
-                                    },
-                                },
-                                SenderID: "expedita",
-                            },
-                            shared.SmsConfiguration{
-                                AdditionalMessage: "doloremque",
-                                Recipients: []shared.RecipientDetail{
-                                    shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "atque",
-                                            UserID: "ratione",
-                                        },
-                                    },
-                                    shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "quisquam",
-                                            UserID: "explicabo",
-                                        },
-                                    },
-                                },
-                                SenderID: "ea",
-                            },
-                            shared.SmsConfiguration{
-                                AdditionalMessage: "maxime",
-                                Recipients: []shared.RecipientDetail{
-                                    shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "perferendis",
-                                            UserID: "et",
-                                        },
-                                    },
-                                },
-                                SenderID: "rerum",
-                            },
-                        },
-                    },
-                    shared.NotificationAction{
-                        Action: shared.NotificationTargetActions{
-                            LambdaAction: &shared.LambdaAction{
-                                FunctionArn: "reiciendis",
-                                Payload: &shared.Payload{
-                                    ContentExpression: "quis",
-                                    Type: "JSON",
-                                },
-                            },
-                        },
-                        EmailConfigurations: []shared.EmailConfiguration{
-                            shared.EmailConfiguration{
-                                Content: &shared.EmailContent{
-                                    AdditionalMessage: "necessitatibus",
-                                    Subject: "est",
-                                },
-                                From: "quis",
-                                Recipients: shared.EmailRecipients{
-                                    To: []shared.RecipientDetail{
                                         shared.RecipientDetail{
-                                            SsoIdentity: &shared.SsoIdentity{
-                                                IdentityStoreID: "labore",
-                                                UserID: "et",
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "a",
+                                                UserID: "incidunt",
                                             },
                                         },
                                     },
                                 },
                             },
                         },
-                        SmsConfigurations: []shared.SmsConfiguration{
-                            shared.SmsConfiguration{
-                                AdditionalMessage: "ad",
+                        SmsConfigurations: []shared.SMSConfiguration{
+                            shared.SMSConfiguration{
+                                AdditionalMessage: "qui",
                                 Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "vel",
-                                            UserID: "qui",
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "dolorum",
+                                            UserID: "id",
                                         },
                                     },
                                     shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "modi",
-                                            UserID: "nihil",
-                                        },
-                                    },
-                                },
-                                SenderID: "tempora",
-                            },
-                            shared.SmsConfiguration{
-                                AdditionalMessage: "deserunt",
-                                Recipients: []shared.RecipientDetail{
-                                    shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "sunt",
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "voluptatum",
                                             UserID: "sit",
                                         },
                                     },
+                                },
+                                SenderID: "rem",
+                            },
+                            shared.SMSConfiguration{
+                                AdditionalMessage: "corporis",
+                                Recipients: []shared.RecipientDetail{
                                     shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "autem",
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "distinctio",
                                             UserID: "quis",
                                         },
                                     },
                                     shared.RecipientDetail{
-                                        SsoIdentity: &shared.SsoIdentity{
-                                            IdentityStoreID: "vel",
-                                            UserID: "vel",
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "nostrum",
+                                            UserID: "eum",
+                                        },
+                                    },
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "et",
+                                            UserID: "placeat",
                                         },
                                     },
                                 },
-                                SenderID: "placeat",
+                                SenderID: "molestiae",
+                            },
+                            shared.SMSConfiguration{
+                                AdditionalMessage: "debitis",
+                                Recipients: []shared.RecipientDetail{
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "aut",
+                                            UserID: "ullam",
+                                        },
+                                    },
+                                },
+                                SenderID: "explicabo",
+                            },
+                        },
+                    },
+                    shared.NotificationAction{
+                        Action: shared.NotificationTargetActions{
+                            LambdaAction: &shared.LambdaAction{
+                                FunctionArn: "similique",
+                                Payload: &shared.Payload{
+                                    ContentExpression: "ex",
+                                    Type: "JSON",
+                                },
+                            },
+                        },
+                        EmailConfigurations: []shared.EmailConfiguration{
+                            shared.EmailConfiguration{
+                                Content: &shared.EmailContent{
+                                    AdditionalMessage: "in",
+                                    Subject: "aperiam",
+                                },
+                                From: "et",
+                                Recipients: shared.EmailRecipients{
+                                    To: []shared.RecipientDetail{
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "et",
+                                                UserID: "voluptatem",
+                                            },
+                                        },
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "et",
+                                                UserID: "modi",
+                                            },
+                                        },
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "eveniet",
+                                                UserID: "qui",
+                                            },
+                                        },
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "consequatur",
+                                                UserID: "aspernatur",
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            shared.EmailConfiguration{
+                                Content: &shared.EmailContent{
+                                    AdditionalMessage: "iusto",
+                                    Subject: "maiores",
+                                },
+                                From: "saepe",
+                                Recipients: shared.EmailRecipients{
+                                    To: []shared.RecipientDetail{
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "aut",
+                                                UserID: "sed",
+                                            },
+                                        },
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "nihil",
+                                                UserID: "ducimus",
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                            shared.EmailConfiguration{
+                                Content: &shared.EmailContent{
+                                    AdditionalMessage: "aspernatur",
+                                    Subject: "aspernatur",
+                                },
+                                From: "sint",
+                                Recipients: shared.EmailRecipients{
+                                    To: []shared.RecipientDetail{
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "quo",
+                                                UserID: "totam",
+                                            },
+                                        },
+                                        shared.RecipientDetail{
+                                            SsoIdentity: &shared.SSOIdentity{
+                                                IdentityStoreID: "repellat",
+                                                UserID: "voluptas",
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        SmsConfigurations: []shared.SMSConfiguration{
+                            shared.SMSConfiguration{
+                                AdditionalMessage: "et",
+                                Recipients: []shared.RecipientDetail{
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "eaque",
+                                            UserID: "neque",
+                                        },
+                                    },
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "molestias",
+                                            UserID: "et",
+                                        },
+                                    },
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "dolorem",
+                                            UserID: "quia",
+                                        },
+                                    },
+                                    shared.RecipientDetail{
+                                        SsoIdentity: &shared.SSOIdentity{
+                                            IdentityStoreID: "omnis",
+                                            UserID: "pariatur",
+                                        },
+                                    },
+                                },
+                                SenderID: "et",
                             },
                         },
                     },
@@ -441,23 +748,24 @@ func main() {
             },
             AlarmRule: operations.CreateAlarmModelRequestBodyAlarmRule{
                 SimpleRule: &shared.SimpleRule{
-                    ComparisonOperator: "LESS_OR_EQUAL",
-                    InputProperty: "nisi",
-                    Threshold: "quis",
+                    ComparisonOperator: "EQUAL",
+                    InputProperty: "velit",
+                    Threshold: "similique",
                 },
             },
-            Key: "adipisci",
-            RoleArn: "porro",
-            Severity: 4230816687517220040,
+            Key: "eos",
+            RoleArn: "voluptate",
+            Severity: 33222,
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "accusamus",
-                    Value: "numquam",
+                    Key: "voluptatibus",
+                    Value: "optio",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateAlarmModel(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -466,5 +774,6 @@ func main() {
     if res.CreateAlarmModelResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

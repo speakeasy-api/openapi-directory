@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CalendarACLDeleteRequest{
         Security: operations.CalendarACLDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,20 +23,21 @@ func main() {
             },
         },
         PathParams: operations.CalendarACLDeletePathParams{
-            CalendarID: "sit",
-            RuleID: "voluptas",
+            CalendarID: "unde",
+            RuleID: "deserunt",
         },
         QueryParams: operations.CalendarACLDeleteQueryParams{
             Alt: "json",
-            Fields: "expedita",
-            Key: "consequuntur",
-            OauthToken: "dolor",
-            PrettyPrint: true,
-            QuotaUser: "voluptas",
-            UserIP: "fugit",
+            Fields: "nulla",
+            Key: "id",
+            OauthToken: "vero",
+            PrettyPrint: false,
+            QuotaUser: "perspiciatis",
+            UserIP: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ACL.CalendarACLDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -43,5 +46,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

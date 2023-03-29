@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.RetrieveNeoFeedTodayRequest{
-        QueryParams: operations.RetrieveNeoFeedTodayQueryParams{
+
+    req := operations.RetrieveNEOFeedTodayRequest{
+        QueryParams: operations.RetrieveNEOFeedTodayQueryParams{
             Detailed: false,
         },
     }
-    
-    res, err := s.Feed.RetrieveNeoFeedToday(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Feed.RetrieveNEOFeedToday(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -25,5 +28,6 @@ func main() {
     if res.NearEarthObjectList != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

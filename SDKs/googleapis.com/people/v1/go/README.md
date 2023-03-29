@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/people/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PeopleContactGroupsBatchGetRequest{
         Security: operations.PeopleContactGroupsBatchGetSecurity{
             Option1: &operations.PeopleContactGroupsBatchGetSecurityOption1{
@@ -34,27 +36,28 @@ func main() {
             },
         },
         QueryParams: operations.PeopleContactGroupsBatchGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            GroupFields: "dolor",
-            Key: "expedita",
-            MaxMembers: 6044372234677422456,
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            GroupFields: "vero",
+            Key: "perspiciatis",
+            MaxMembers: 847252,
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
+            QuotaUser: "fuga",
             ResourceNames: []string{
-                "dicta",
-                "debitis",
-                "voluptatum",
+                "eum",
+                "iusto",
+                "ullam",
             },
-            UploadType: "et",
-            UploadProtocol: "ut",
+            UploadType: "saepe",
+            UploadProtocol: "inventore",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ContactGroups.PeopleContactGroupsBatchGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -63,13 +66,15 @@ func main() {
     if res.BatchGetContactGroupsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### contactGroups
+
+### ContactGroups
 
 * `PeopleContactGroupsBatchGet` - Get a list of contact groups owned by the authenticated user by specifying a list of contact group resource names.
 * `PeopleContactGroupsCreate` - Create a new contact group owned by the authenticated user. Created contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
@@ -78,13 +83,13 @@ func main() {
 * `PeopleContactGroupsMembersModify` - Modify the members of a contact group owned by the authenticated user. The only system contact groups that can have members added are `contactGroups/myContacts` and `contactGroups/starred`. Other system contact groups are deprecated and can only have contacts removed.
 * `PeopleContactGroupsUpdate` - Update the name of an existing contact group owned by the authenticated user. Updated contact group names must be unique to the users contact groups. Attempting to create a group with a duplicate name will return a HTTP 409 error. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 
-### otherContacts
+### OtherContacts
 
 * `PeopleOtherContactsCopyOtherContactToMyContactsGroup` - Copies an "Other contact" to a new contact in the user's "myContacts" group Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 * `PeopleOtherContactsList` - List all "Other contacts", that is contacts that are not in a contact group. "Other contacts" are typically auto created contacts from interactions. Sync tokens expire 7 days after the full sync. A request with an expired sync token will get an error with an [google.rpc.ErrorInfo](https://cloud.google.com/apis/design/errors#error_info) with reason "EXPIRED_SYNC_TOKEN". In the case of such an error clients should make a full sync request without a `sync_token`. The first page of a full sync request has an additional quota. If the quota is exceeded, a 429 error will be returned. This quota is fixed and can not be increased. When the `sync_token` is specified, resources deleted since the last sync will be returned as a person with `PersonMetadata.deleted` set to true. When the `page_token` or `sync_token` is specified, all other request parameters must match the first call. Writes may have a propagation delay of several minutes for sync requests. Incremental syncs are not intended for read-after-write use cases. See example usage at [List the user's other contacts that have changed](/people/v1/other-contacts#list_the_users_other_contacts_that_have_changed).
 * `PeopleOtherContactsSearch` - Provides a list of contacts in the authenticated user's other contacts that matches the search query. The query matches on a contact's `names`, `emailAddresses`, and `phoneNumbers` fields that are from the OTHER_CONTACT source. **IMPORTANT**: Before searching, clients should send a warmup request with an empty query to update the cache. See https://developers.google.com/people/v1/other-contacts#search_the_users_other_contacts
 
-### people
+### People
 
 * `PeoplePeopleBatchCreateContacts` - Create a batch of new contacts and return the PersonResponses for the newly Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 * `PeoplePeopleBatchDeleteContacts` - Delete a batch of contacts. Any non-contact data will not be deleted. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
@@ -100,7 +105,6 @@ func main() {
 * `PeoplePeopleSearchDirectoryPeople` - Provides a list of domain profiles and domain contacts in the authenticated user's domain directory that match the search query.
 * `PeoplePeopleUpdateContact` - Update contact data for an existing contact person. Any non-contact data will not be modified. Any non-contact data in the person to update will be ignored. All fields specified in the `update_mask` will be replaced. The server returns a 400 error if `person.metadata.sources` is not specified for the contact to be updated or if there is no contact source. The server returns a 400 error with reason `"failedPrecondition"` if `person.metadata.sources.etag` is different than the contact's etag, which indicates the contact has changed since its data was read. Clients should get the latest person and merge their updates into the latest person. The server returns a 400 error if `memberships` are being updated and there are no contact group memberships specified on the person. The server returns a 400 error if more than one field is specified on a field that is a singleton for contact sources: * biographies * birthdays * genders * names Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 * `PeoplePeopleUpdateContactPhoto` - Update a contact's photo. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

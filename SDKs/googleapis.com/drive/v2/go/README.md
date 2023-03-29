@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/drive/v2/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DriveAboutGetRequest{
         Security: operations.DriveAboutGetSecurity{
             Option1: &operations.DriveAboutGetSecurityOption1{
@@ -35,18 +37,19 @@ func main() {
         },
         QueryParams: operations.DriveAboutGetQueryParams{
             Alt: "json",
-            Fields: "voluptas",
-            IncludeSubscribed: true,
-            Key: "expedita",
-            MaxChangeIDCount: "consequuntur",
-            OauthToken: "dolor",
-            PrettyPrint: true,
-            QuotaUser: "voluptas",
-            StartChangeID: "fugit",
-            UserIP: "et",
+            Fields: "deserunt",
+            IncludeSubscribed: false,
+            Key: "porro",
+            MaxChangeIDCount: "nulla",
+            OauthToken: "id",
+            PrettyPrint: false,
+            QuotaUser: "vero",
+            StartChangeID: "perspiciatis",
+            UserIP: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.About.DriveAboutGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -55,40 +58,42 @@ func main() {
     if res.About != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### about
+
+### About
 
 * `DriveAboutGet` - Gets the information about the current user along with Drive API settings
 
-### apps
+### Apps
 
 * `DriveAppsGet` - Gets a specific app.
 * `DriveAppsList` - Lists a user's installed apps.
 
-### changes
+### Changes
 
 * `DriveChangesGet` - Deprecated - Use changes.getStartPageToken and changes.list to retrieve recent changes.
 * `DriveChangesGetStartPageToken` - Gets the starting pageToken for listing future changes.
 * `DriveChangesList` - Lists the changes for a user or shared drive.
 * `DriveChangesWatch` - Subscribe to changes for a user.
 
-### channels
+### Channels
 
 * `DriveChannelsStop` - Stop watching resources through this channel
 
-### children
+### Children
 
 * `DriveChildrenDelete` - Removes a child from a folder.
 * `DriveChildrenGet` - Gets a specific child reference.
 * `DriveChildrenInsert` - Inserts a file into a folder.
 * `DriveChildrenList` - Lists a folder's children.
 
-### comments
+### Comments
 
 * `DriveCommentsDelete` - Deletes a comment.
 * `DriveCommentsGet` - Gets a comment by ID.
@@ -97,7 +102,7 @@ func main() {
 * `DriveCommentsPatch` - Updates an existing comment.
 * `DriveCommentsUpdate` - Updates an existing comment.
 
-### drives
+### Drives
 
 * `DriveDrivesDelete` - Permanently deletes a shared drive for which the user is an organizer. The shared drive cannot contain any untrashed items.
 * `DriveDrivesGet` - Gets a shared drive's metadata by ID.
@@ -107,7 +112,7 @@ func main() {
 * `DriveDrivesUnhide` - Restores a shared drive to the default view.
 * `DriveDrivesUpdate` - Updates the metadata for a shared drive.
 
-### files
+### Files
 
 * `DriveFilesCopy` - Creates a copy of the specified file. Folders cannot be copied.
 * `DriveFilesDelete` - Permanently deletes a file by ID. Skips the trash. The currently authenticated user must own the file or be an organizer on the parent for shared drive files.
@@ -126,14 +131,14 @@ func main() {
 * `DriveFilesUpdate` - Updates a file's metadata and/or content. When calling this method, only populate fields in the request that you want to modify. When updating fields, some fields might be changed automatically, such as modifiedDate. This method supports patch semantics.
 * `DriveFilesWatch` - Subscribes to changes to a file. While you can establish a channel for changes to a file on a shared drive, a change to a shared drive file won't create a notification.
 
-### parents
+### Parents
 
 * `DriveParentsDelete` - Removes a parent from a file.
 * `DriveParentsGet` - Gets a specific parent reference.
 * `DriveParentsInsert` - Adds a parent folder for a file.
 * `DriveParentsList` - Lists a file's parents.
 
-### permissions
+### Permissions
 
 * `DrivePermissionsDelete` - Deletes a permission from a file or shared drive.
 * `DrivePermissionsGet` - Gets a permission by ID.
@@ -143,7 +148,7 @@ func main() {
 * `DrivePermissionsPatch` - Updates a permission using patch semantics.
 * `DrivePermissionsUpdate` - Updates a permission.
 
-### properties
+### Properties
 
 * `DrivePropertiesDelete` - Deletes a property.
 * `DrivePropertiesGet` - Gets a property by its key.
@@ -152,7 +157,7 @@ func main() {
 * `DrivePropertiesPatch` - Updates a property.
 * `DrivePropertiesUpdate` - Updates a property.
 
-### replies
+### Replies
 
 * `DriveRepliesDelete` - Deletes a reply.
 * `DriveRepliesGet` - Gets a reply.
@@ -161,7 +166,7 @@ func main() {
 * `DriveRepliesPatch` - Updates an existing reply.
 * `DriveRepliesUpdate` - Updates an existing reply.
 
-### revisions
+### Revisions
 
 * `DriveRevisionsDelete` - Permanently deletes a file version. You can only delete revisions for files with binary content, like images or videos. Revisions for other files, like Google Docs or Sheets, and the last remaining file version can't be deleted.
 * `DriveRevisionsGet` - Gets a specific revision.
@@ -169,14 +174,13 @@ func main() {
 * `DriveRevisionsPatch` - Updates a revision.
 * `DriveRevisionsUpdate` - Updates a revision.
 
-### teamdrives
+### Teamdrives
 
 * `DriveTeamdrivesDelete` - Deprecated use drives.delete instead.
 * `DriveTeamdrivesGet` - Deprecated use drives.get instead.
 * `DriveTeamdrivesInsert` - Deprecated use drives.insert instead.
 * `DriveTeamdrivesList` - Deprecated use drives.list instead.
 * `DriveTeamdrivesUpdate` - Deprecated use drives.update instead.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

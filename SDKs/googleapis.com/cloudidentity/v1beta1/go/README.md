@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudidentity/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,31 +23,31 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudidentityCustomersUserinvitationsCancelRequest{
         PathParams: operations.CloudidentityCustomersUserinvitationsCancelPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.CloudidentityCustomersUserinvitationsCancelQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: map[string]interface{}{
-            "debitis": "voluptatum",
-            "et": "ut",
-            "dolorem": "et",
+            "iusto": "ullam",
+            "saepe": "inventore",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Customers.CloudidentityCustomersUserinvitationsCancel(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,20 +56,22 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### customers
+
+### Customers
 
 * `CloudidentityCustomersUserinvitationsCancel` - Cancels a UserInvitation that was already sent.
 * `CloudidentityCustomersUserinvitationsIsInvitableUser` - Verifies whether a user account is eligible to receive a UserInvitation (is an unmanaged account). Eligibility is based on the following criteria: * the email address is a consumer account and it's the primary email address of the account, and * the domain of the email address matches an existing verified Google Workspace or Cloud Identity domain If both conditions are met, the user is eligible. **Note:** This method is not supported for Workspace Essentials customers.
 * `CloudidentityCustomersUserinvitationsList` - Retrieves a list of UserInvitation resources. **Note:** New consumer accounts with the customer's verified domain created within the previous 48 hours will not appear in the result. This delay also applies to newly-verified domains.
 * `CloudidentityCustomersUserinvitationsSend` - Sends a UserInvitation to email. If the `UserInvitation` does not exist for this request and it is a valid request, the request creates a `UserInvitation`. **Note:** The `get` and `list` methods have a 48-hour delay where newly-created consumer accounts will not appear in the results. You can still send a `UserInvitation` to those accounts if you know the unmanaged email address and IsInvitableUser==True.
 
-### devices
+### Devices
 
 * `CloudidentityDevicesCreate` - Creates a device. Only company-owned device may be created. **Note**: This method is available only to customers who have one of the following SKUs: Enterprise Standard, Enterprise Plus, Enterprise for Education, and Cloud Identity Premium
 * `CloudidentityDevicesDeviceUsersApprove` - Approves device to access user data.
@@ -78,7 +82,7 @@ func main() {
 * `CloudidentityDevicesDeviceUsersWipe` - Wipes the user's account on a device.
 * `CloudidentityDevicesList` - Lists/Searches devices.
 
-### groups
+### Groups
 
 * `CloudidentityGroupsCreate` - Creates a `Group`.
 * `CloudidentityGroupsList` - Lists the `Group` resources under a customer or namespace.
@@ -92,14 +96,14 @@ func main() {
 * `CloudidentityGroupsMembershipsSearchTransitiveMemberships` - Search transitive memberships of a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. A transitive membership is any direct or indirect membership of a group. Actor must have view permissions to all transitive memberships.
 * `CloudidentityGroupsSearch` - Searches for `Group` resources matching a specified query.
 
-### inboundSamlSsoProfiles
+### InboundSamlSsoProfiles
 
 * `CloudidentityInboundSamlSsoProfilesCreate` - Creates an InboundSamlSsoProfile for a customer.
 * `CloudidentityInboundSamlSsoProfilesIdpCredentialsAdd` - Adds an IdpCredential. Up to 2 credentials are allowed.
 * `CloudidentityInboundSamlSsoProfilesIdpCredentialsList` - Returns a list of IdpCredentials in an InboundSamlSsoProfile.
 * `CloudidentityInboundSamlSsoProfilesList` - Lists InboundSamlSsoProfiles for a customer.
 
-### inboundSsoAssignments
+### InboundSsoAssignments
 
 * `CloudidentityInboundSsoAssignmentsCreate` - Creates an InboundSsoAssignment for users and devices in a `Customer` under a given `Group` or `OrgUnit`.
 * `CloudidentityInboundSsoAssignmentsDelete` - Deletes an InboundSsoAssignment. To disable SSO, Create (or Update) an assignment that has `sso_mode` == `SSO_OFF`.
@@ -107,11 +111,10 @@ func main() {
 * `CloudidentityInboundSsoAssignmentsList` - Lists the InboundSsoAssignments for a `Customer`.
 * `CloudidentityInboundSsoAssignmentsPatch` - Updates an InboundSsoAssignment. The body of this request is the `inbound_sso_assignment` field and the `update_mask` is relative to that. For example: a PATCH to `/v1beta1/inboundSsoAssignments/0abcdefg1234567&update_mask=rank` with a body of `{ "rank": 1 }` moves that (presumably group-targeted) SSO assignment to the highest priority and shifts any other group-targeted assignments down in priority.
 
-### orgUnits
+### OrgUnits
 
 * `CloudidentityOrgUnitsMembershipsList` - List OrgMembership resources in an OrgUnit treated as 'parent'. Parent format: orgUnits/{$orgUnitId} where `$orgUnitId` is the `orgUnitId` from the [Admin SDK `OrgUnit` resource](https://developers.google.com/admin-sdk/directory/reference/rest/v1/orgunits)
 * `CloudidentityOrgUnitsMembershipsMove` - Move an OrgMembership to a new OrgUnit. NOTE: This is an atomic copy-and-delete. The resource will have a new copy under the destination OrgUnit and be deleted from the source OrgUnit. The resource can only be searched under the destination OrgUnit afterwards.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

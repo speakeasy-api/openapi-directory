@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/zuora.com/2021-08-20/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,18 +23,19 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.DeleteAccountingCodeRequest{
-        PathParams: operations.DeleteAccountingCodePathParams{
-            AcID: "sit",
+
+    req := operations.DELETEAccountingCodeRequest{
+        PathParams: operations.DELETEAccountingCodePathParams{
+            AcID: "unde",
         },
-        Headers: operations.DeleteAccountingCodeHeaders{
-            ZuoraEntityIds: "voluptas",
-            ZuoraTrackID: "culpa",
+        Headers: operations.DELETEAccountingCodeHeaders{
+            ZuoraEntityIds: "deserunt",
+            ZuoraTrackID: "porro",
         },
     }
-    
-    res, err := s.AccountingCodes.DeleteAccountingCode(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AccountingCodes.DELETEAccountingCode(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -40,357 +43,359 @@ func main() {
     if res.CommonResponseType != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Accounting Codes
 
-* `DeleteAccountingCode` - Delete an accounting code
-* `GetAccountingCode` - Retrieve an accounting code
-* `GetAllAccountingCodes` - List all accounting codes
-* `PostAccountingCode` - Create an accounting code
-* `PutAccountingCode` - Update an accounting code
-* `PutActivateAccountingCode` - Activate an accounting code
-* `PutDeactivateAccountingCode` - Deactivate an accounting code
+### AccountingCodes
 
-### Accounting Periods
+* `DELETEAccountingCode` - Delete an accounting code
+* `GETAccountingCode` - Retrieve an accounting code
+* `GETAllAccountingCodes` - List all accounting codes
+* `POSTAccountingCode` - Create an accounting code
+* `PUTAccountingCode` - Update an accounting code
+* `PUTActivateAccountingCode` - Activate an accounting code
+* `PUTDeactivateAccountingCode` - Deactivate an accounting code
 
-* `DeleteAccountingPeriod` - Delete an accounting period
-* `GetAccountingPeriod` - Retrieve an accounting period
-* `GetAllAccountingPeriods` - List all accounting periods
-* `PostAccountingPeriod` - Create an accounting period
-* `PutCloseAccountingPeriod` - Close an accounting period
-* `PutPendingCloseAccountingPeriod` - Set an accounting period to pending close
-* `PutReopenAccountingPeriod` - Reopen an accounting period
-* `PutRunTrialBalance` - Run trial balance
-* `PutUpdateAccountingPeriod` - Update an accounting period
+### AccountingPeriods
+
+* `DELETEAccountingPeriod` - Delete an accounting period
+* `GETAccountingPeriod` - Retrieve an accounting period
+* `GETAllAccountingPeriods` - List all accounting periods
+* `POSTAccountingPeriod` - Create an accounting period
+* `PUTCloseAccountingPeriod` - Close an accounting period
+* `PUTPendingCloseAccountingPeriod` - Set an accounting period to pending close
+* `PUTReopenAccountingPeriod` - Reopen an accounting period
+* `PUTRunTrialBalance` - Run trial balance
+* `PUTUpdateAccountingPeriod` - Update an accounting period
 
 ### Accounts
 
-* `GetAccount` - Retrieve an account
-* `GetAccountSummary` - Retrieve an account summary
-* `ObjectDeleteAccount` - CRUD: Delete an account
-* `ObjectGetAccount` - CRUD: Retrieve an account
-* `ObjectPostAccount` - CRUD: Create an account
-* `ObjectPutAccount` - CRUD: Update an account
-* `PostAccount` - Create an account
-* `PutAccount` - Update an account
+* `GETAccount` - Retrieve an account
+* `GETAccountSummary` - Retrieve an account summary
+* `ObjectDELETEAccount` - CRUD: Delete an account
+* `ObjectGETAccount` - CRUD: Retrieve an account
+* `ObjectPOSTAccount` - CRUD: Create an account
+* `ObjectPUTAccount` - CRUD: Update an account
+* `POSTAccount` - Create an account
+* `PUTAccount` - Update an account
 
 ### Actions
 
-* `ActionPosTamend` - Amend
-* `ActionPosTcreate` - Create
-* `ActionPosTdelete` - Delete
-* `ActionPosTexecute` - Execute
-* `ActionPosTgenerate` - Generate
-* `ActionPosTquery` - Query
-* `ActionPosTqueryMore` - QueryMore
-* `ActionPosTsubscribe` - Subscribe
-* `ActionPosTupdate` - Update
+* `ActionPOSTamend` - Amend
+* `ActionPOSTcreate` - Create
+* `ActionPOSTdelete` - Delete
+* `ActionPOSTexecute` - Execute
+* `ActionPOSTgenerate` - Generate
+* `ActionPOSTquery` - Query
+* `ActionPOSTqueryMore` - QueryMore
+* `ActionPOSTsubscribe` - Subscribe
+* `ActionPOSTupdate` - Update
 
 ### Amendments
 
-* `GetAmendmentsByKey` - Retrieve an amendment
-* `GetAmendmentsBySubscriptionID` - List all amendments of a subscription
-* `ObjectDeleteAmendment` - CRUD: Delete an amendment
-* `ObjectGetAmendment` - CRUD: Retrieve an amendment
-* `ObjectPutAmendment` - CRUD: Update an amendment
+* `GETAmendmentsByKey` - Retrieve an amendment
+* `GETAmendmentsBySubscriptionID` - List all amendments of a subscription
+* `ObjectDELETEAmendment` - CRUD: Delete an amendment
+* `ObjectGETAmendment` - CRUD: Retrieve an amendment
+* `ObjectPUTAmendment` - CRUD: Update an amendment
 
 ### Attachments
 
-* `DeleteAttachments` - Delete an attachment
-* `GetAttachments` - Retrieve an attachment
-* `GetAttachmentsList` - List attachments by object type and key
-* `PostAttachments` - Create an attachment
-* `PutAttachments` - Update an attachment
+* `DELETEAttachments` - Delete an attachment
+* `GETAttachments` - Retrieve an attachment
+* `GETAttachmentsList` - List attachments by object type and key
+* `POSTAttachments` - Create an attachment
+* `PUTAttachments` - Update an attachment
 
-### Bill Run
+### BillRun
 
-* `ObjectDeleteBillRun` - CRUD: Delete a bill run
-* `ObjectGetBillRun` - CRUD: Retrieve a bill run
-* `ObjectPostBillRun` - CRUD: Create a bill run
-* `ObjectPutBillRun` - CRUD: Post or cancel a bill run
-* `PostEmailBillingDocumentsfromBillRun` - Email billing documents generated from a bill run
+* `ObjectDELETEBillRun` - CRUD: Delete a bill run
+* `ObjectGETBillRun` - CRUD: Retrieve a bill run
+* `ObjectPOSTBillRun` - CRUD: Create a bill run
+* `ObjectPUTBillRun` - CRUD: Post or cancel a bill run
+* `POSTEmailBillingDocumentsfromBillRun` - Email billing documents generated from a bill run
 
-### Billing Documents
+### BillingDocuments
 
-* `GetBillingDocumentFilesDeletionJob` - Retrieve a job of hard deleting billing document files
-* `GetBillingDocuments` - List billing documents for an account
-* `PostBillingDocumentFilesDeletionJob` - Create a job to hard delete billing document files
-* `PostGenerateBillingDocuments` - Generate billing documents by account ID
+* `GETBillingDocumentFilesDeletionJob` - Retrieve a job of hard deleting billing document files
+* `GETBillingDocuments` - List billing documents for an account
+* `POSTBillingDocumentFilesDeletionJob` - Create a job to hard delete billing document files
+* `POSTGenerateBillingDocuments` - Generate billing documents by account ID
 
-### Billing Preview Run
+### BillingPreviewRun
 
-* `GetBillingPreviewRun` - Retrieve a billing preview run
-* `PostBillingPreviewRun` - Create a billing preview run
+* `GETBillingPreviewRun` - Retrieve a billing preview run
+* `POSTBillingPreviewRun` - Create a billing preview run
 
 ### Catalog
 
-* `GetCatalog` - List all products
-* `GetProduct` - Retrieve a product
-* `PostCatalog` - Multi-entity: Share a product with an entity
+* `GETCatalog` - List all products
+* `GETProduct` - Retrieve a product
+* `POSTCatalog` - Multi-entity: Share a product with an entity
 
-### Charge Metrics
+### ChargeMetrics
 
-* `GetChargeMetrics` - List charge metrics by time range
-* `GetChargeMetricsDiscountAllocationDetails` - List discount allocation details by time range
+* `GETChargeMetrics` - List charge metrics by time range
+* `GETChargeMetricsDiscountAllocationDetails` - List discount allocation details by time range
 
-### Charge Revenue Summaries
+### ChargeRevenueSummaries
 
-* `GetCrsByCrsNumber` - List all details of a charge revenue summary
-* `GetCrsByChargeID` - Retrieve a charge revenue summary by charge ID
+* `GETCRSByCRSNumber` - List all details of a charge revenue summary
+* `GETCRSByChargeID` - Retrieve a charge revenue summary by charge ID
 
-### Communication Profiles
+### CommunicationProfiles
 
-* `ObjectGetCommunicationProfile` - CRUD: Retrieve a communication profile
+* `ObjectGETCommunicationProfile` - CRUD: Retrieve a communication profile
 
 ### Connections
 
-* `PostConnections` - Establish a connection to Zuora REST API
+* `POSTConnections` - Establish a connection to Zuora REST API
 
 ### Contacts
 
-* `ObjectDeleteContact` - CRUD: Delete a contact
-* `ObjectGetContact` - CRUD: Retrieve a contact
-* `ObjectPostContact` - CRUD: Create a contact
-* `ObjectPutContact` - CRUD: Update a contact
-* `PutScrubContact` - Scrub a contact
+* `ObjectDELETEContact` - CRUD: Delete a contact
+* `ObjectGETContact` - CRUD: Retrieve a contact
+* `ObjectPOSTContact` - CRUD: Create a contact
+* `ObjectPUTContact` - CRUD: Update a contact
+* `PUTScrubContact` - Scrub a contact
 
-### Credit Balance Adjustments
+### CreditBalanceAdjustments
 
-* `ObjectGetCreditBalanceAdjustment` - CRUD: Retrieve a credit balance adjustment
-* `ObjectPostCreditBalanceAdjustment` - CRUD: Create a credit balance adjustment
-* `ObjectPutCreditBalanceAdjustment` - CRUD: Update a credit balance adjustment
+* `ObjectGETCreditBalanceAdjustment` - CRUD: Retrieve a credit balance adjustment
+* `ObjectPOSTCreditBalanceAdjustment` - CRUD: Create a credit balance adjustment
+* `ObjectPUTCreditBalanceAdjustment` - CRUD: Update a credit balance adjustment
 
-### Credit Memos
+### CreditMemos
 
-* `DeleteCreditMemo` - Delete a credit memo
-* `GetCreditMemo` - Retrieve a credit memo
-* `GetCreditMemoItem` - Retrieve a credit memo item
-* `GetCreditMemoItemPart` - Retrieve a credit memo part item
-* `GetCreditMemoItemParts` - List all credit memo part items
-* `GetCreditMemoItems` - List credit memo items
-* `GetCreditMemoPart` - Retrieve a credit memo part
-* `GetCreditMemoParts` - List all parts of a credit memo
-* `GetCreditMemos` - List credit memos
-* `GetTaxationItemsOfCreditMemoItem` - List all taxation items of a credit memo item
-* `PostCmTaxationItems` - Create taxation items for a credit memo
-* `PostCreditMemoFromPrpc` - Create a credit memo from a charge
-* `PostCreditMemoPdf` - Generate a credit memo PDF file
-* `PostEmailCreditMemo` - Email a credit memo
-* `PostRefundCreditMemo` - Refund a credit memo
-* `PostUploadFileForCreditMemo` - Upload a file for a credit memo
-* `PutApplyCreditMemo` - Apply a credit memo
-* `PutCancelCreditMemo` - Cancel a credit memo
-* `PutPostCreditMemo` - Post a credit memo
-* `PutUnapplyCreditMemo` - Unapply a credit memo
-* `PutUnpostCreditMemo` - Unpost a credit memo
-* `PutUpdateCreditMemo` - Update a credit memo
+* `DELETECreditMemo` - Delete a credit memo
+* `GETCreditMemo` - Retrieve a credit memo
+* `GETCreditMemoItem` - Retrieve a credit memo item
+* `GETCreditMemoItemPart` - Retrieve a credit memo part item
+* `GETCreditMemoItemParts` - List all credit memo part items
+* `GETCreditMemoItems` - List credit memo items
+* `GETCreditMemoPart` - Retrieve a credit memo part
+* `GETCreditMemoParts` - List all parts of a credit memo
+* `GETCreditMemos` - List credit memos
+* `GETTaxationItemsOfCreditMemoItem` - List all taxation items of a credit memo item
+* `POSTCMTaxationItems` - Create taxation items for a credit memo
+* `POSTCreditMemoFromPrpc` - Create a credit memo from a charge
+* `POSTCreditMemoPDF` - Generate a credit memo PDF file
+* `POSTEmailCreditMemo` - Email a credit memo
+* `POSTRefundCreditMemo` - Refund a credit memo
+* `POSTUploadFileForCreditMemo` - Upload a file for a credit memo
+* `PUTApplyCreditMemo` - Apply a credit memo
+* `PUTCancelCreditMemo` - Cancel a credit memo
+* `PUTPostCreditMemo` - Post a credit memo
+* `PUTUnapplyCreditMemo` - Unapply a credit memo
+* `PUTUnpostCreditMemo` - Unpost a credit memo
+* `PUTUpdateCreditMemo` - Update a credit memo
 
-### Custom Exchange Rates
+### CustomExchangeRates
 
-* `GetCustomExchangeRates` - List custom exchange rates by currency
+* `GETCustomExchangeRates` - List custom exchange rates by currency
 
-### Custom Object Definitions
+### CustomObjectDefinitions
 
 * `DeleteCustomObjectDefinitionByType` - Delete a custom object definition
-* `GetAllCustomObjectDefinitionsInNamespace` - List custom object definitions
-* `GetCustomObjectDefinitionByType` - Retrieve a custom object definition
-* `PostCustomObjectDefinitions` - Create custom object definitions
-* `PostUpdateCustomObjectDefinition` - Update a custom object definition
+* `GETAllCustomObjectDefinitionsInNamespace` - List custom object definitions
+* `GETCustomObjectDefinitionByType` - Retrieve a custom object definition
+* `POSTCustomObjectDefinitions` - Create custom object definitions
+* `POSTUpdateCustomObjectDefinition` - Update a custom object definition
 
-### Custom Object Jobs
+### CustomObjectJobs
 
-* `GetAllCustomObjectBulkJobs` - List all custom object bulk jobs
-* `GetCustomObjectBulkJob` - Retrieve a custom object bulk job
-* `GetCustomObjectBulkJobErrors` - List all errors for a custom object bulk job
-* `PostCustomObjectBulkJob` - Submit a custom object bulk job
-* `PostUploadFileForCustomObjectBulkJob` - Upload a file for a custom object bulk job
+* `GETAllCustomObjectBulkJobs` - List all custom object bulk jobs
+* `GETCustomObjectBulkJob` - Retrieve a custom object bulk job
+* `GETCustomObjectBulkJobErrors` - List all errors for a custom object bulk job
+* `POSTCustomObjectBulkJob` - Submit a custom object bulk job
+* `POSTUploadFileForCustomObjectBulkJob` - Upload a file for a custom object bulk job
 
-### Custom Object Records
+### CustomObjectRecords
 
 * `DeleteCustomObjectRecordByID` - Delete a custom object record
-* `GetAllRecordsForCustomObjectType` - List records for a custom object
-* `GetCustomObjectRecordByID` - Retrieve a custom object record
-* `PostCustomObjectRecords` - Create custom object records
-* `PostCustomObjectRecordsBatchUpdateOrDelete` - Update or delete custom object records
-* `PutCustomObjectRecord` - Update a custom object record
+* `GETAllRecordsForCustomObjectType` - List records for a custom object
+* `GETCustomObjectRecordByID` - Retrieve a custom object record
+* `POSTCustomObjectRecords` - Create custom object records
+* `POSTCustomObjectRecordsBatchUpdateOrDelete` - Update or delete custom object records
+* `PUTCustomObjectRecord` - Update a custom object record
 * `PatchPartialUpdateCustomObjectRecord` - Partially update a custom object record
 
-### Data Queries
+### DataQueries
 
-* `DeleteDataQueryJob` - Cancel a data query job
-* `GetDataQueryJob` - Retrieve a data query job
-* `GetDataQueryJobs` - List data query jobs
-* `PostDataQueryJob` - Submit a data query
+* `DELETEDataQueryJob` - Cancel a data query job
+* `GETDataQueryJob` - Retrieve a data query job
+* `GETDataQueryJobs` - List data query jobs
+* `POSTDataQueryJob` - Submit a data query
 
-### Debit Memos
+### DebitMemos
 
-* `DeleteDebitMemo` - Delete a debit memo
-* `GetDebitMemo` - Retrieve a debit memo
-* `GetDebitMemoApplicationParts` - List all application parts of a debit memo
-* `GetDebitMemoItem` - Retrieve a debit memo item
-* `GetDebitMemoItems` - List debit memo items
-* `GetDebitMemos` - List debit memos
-* `GetTaxationItemsOfDebitMemoItem` - List all taxation items of a debit memo item
-* `PostDmTaxationItems` - Create taxation items for a debit memo
-* `PostDebitMemoCollect` - Collect a posted debit memo
-* `PostDebitMemoFromPrpc` - Create a debit memo from a charge
-* `PostDebitMemoPdf` - Generate a debit memo PDF file
-* `PostEmailDebitMemo` - Email a debit memo
-* `PostUploadFileForDebitMemo` - Upload a file for a debit memo
-* `PutBatchUpdateDebitMemos` - Update debit memos
-* `PutCancelDebitMemo` - Cancel a debit memo
-* `PutDebitMemo` - Update a debit memo
-* `PutPostDebitMemo` - Post a debit memo
-* `PutUnpostDebitMemo` - Unpost a debit memo
+* `DELETEDebitMemo` - Delete a debit memo
+* `GETDebitMemo` - Retrieve a debit memo
+* `GETDebitMemoApplicationParts` - List all application parts of a debit memo
+* `GETDebitMemoItem` - Retrieve a debit memo item
+* `GETDebitMemoItems` - List debit memo items
+* `GETDebitMemos` - List debit memos
+* `GETTaxationItemsOfDebitMemoItem` - List all taxation items of a debit memo item
+* `POSTDMTaxationItems` - Create taxation items for a debit memo
+* `POSTDebitMemoCollect` - Collect a posted debit memo
+* `POSTDebitMemoFromPrpc` - Create a debit memo from a charge
+* `POSTDebitMemoPDF` - Generate a debit memo PDF file
+* `POSTEmailDebitMemo` - Email a debit memo
+* `POSTUploadFileForDebitMemo` - Upload a file for a debit memo
+* `PUTBatchUpdateDebitMemos` - Update debit memos
+* `PUTCancelDebitMemo` - Cancel a debit memo
+* `PUTDebitMemo` - Update a debit memo
+* `PUTPostDebitMemo` - Post a debit memo
+* `PUTUnpostDebitMemo` - Unpost a debit memo
 
 ### Describe
 
-* `GetDescribe` - Describe an object
+* `GETDescribe` - Describe an object
 
-### Document Properties
+### DocumentProperties
 
-* `DeleteDocumentProperties` - Delete document properties
-* `GetDocumentProperies` - List all properties of a billing document
-* `PostDocumentProperties` - Create document properties
-* `PutDocumentProperties` - Update document properties
+* `DELETEDocumentProperties` - Delete document properties
+* `GETDocumentProperies` - List all properties of a billing document
+* `POSTDocumentProperties` - Create document properties
+* `PUTDocumentProperties` - Update document properties
 
 ### Entities
 
-* `DeleteEntities` - Multi-entity: Delete an entity
-* `GetEntities` - Multi-entity: List entities
-* `GetEntityByID` - Multi-entity: Retrieve an entity
-* `PostEntities` - Multi-entity: Create an entity
-* `PutEntities` - Multi-entity: Update an entity
-* `PutProvisionEntity` - Multi-entity: Provision an entity
+* `DELETEEntities` - Multi-entity: Delete an entity
+* `GETEntities` - Multi-entity: List entities
+* `GETEntityByID` - Multi-entity: Retrieve an entity
+* `POSTEntities` - Multi-entity: Create an entity
+* `PUTEntities` - Multi-entity: Update an entity
+* `PUTProvisionEntity` - Multi-entity: Provision an entity
 
-### Entity Connections
+### EntityConnections
 
-* `GetEntityConnections` - Multi-entity: List connections
-* `PostEntityConnections` - Multi-entity: Initiate a connection request
-* `PutEntityConnectionsAccept` - Multi-entity: Accept a connection request
-* `PutEntityConnectionsDeny` - Multi-entity: Deny a connection request
-* `PutEntityConnectionsDisconnect` - Multi-entity: Disconnect a connection
+* `GETEntityConnections` - Multi-entity: List connections
+* `POSTEntityConnections` - Multi-entity: Initiate a connection request
+* `PUTEntityConnectionsAccept` - Multi-entity: Accept a connection request
+* `PUTEntityConnectionsDeny` - Multi-entity: Deny a connection request
+* `PUTEntityConnectionsDisconnect` - Multi-entity: Disconnect a connection
 
-### Event Triggers
+### EventTriggers
 
-* `DeleteEventTrigger` - Delete an event trigger
-* `GetEventTrigger` - Retrieve an event trigger
-* `GetEventTriggers` - List event triggers
-* `PostEventTrigger` - Create an event trigger
-* `PutEventTrigger` - Update an event trigger
+* `DELETEEventTrigger` - Delete an event trigger
+* `GETEventTrigger` - Retrieve an event trigger
+* `GETEventTriggers` - List event triggers
+* `POSTEventTrigger` - Create an event trigger
+* `PUTEventTrigger` - Update an event trigger
 
 ### Exports
 
-* `ObjectGetExport` - CRUD: Retrieve an export
-* `ObjectPostExport` - CRUD: Create an export
+* `ObjectGETExport` - CRUD: Retrieve an export
+* `ObjectPOSTExport` - CRUD: Create an export
 
 ### Features
 
-* `ObjectDeleteFeature` - CRUD: Delete a feature
-* `ObjectGetFeature` - CRUD: Retrieve a feature
-* `ObjectPostFeature` - CRUD: Create a feature
-* `ObjectPutFeature` - CRUD: Update a feature
+* `ObjectDELETEFeature` - CRUD: Delete a feature
+* `ObjectGETFeature` - CRUD: Retrieve a feature
+* `ObjectPOSTFeature` - CRUD: Create a feature
+* `ObjectPUTFeature` - CRUD: Update a feature
 
 ### Files
 
-* `GetFiles` - Retrieve a file
+* `GETFiles` - Retrieve a file
 
-### HMAC Signatures
+### HMACSignatures
 
-* `PostHmacSignatures` - Generate an HMAC signature
+* `POSTHMACSignatures` - Generate an HMAC signature
 
-### Hosted Pages
+### HostedPages
 
 * `GetHostedPages` - List hosted pages
 
 ### Imports
 
-* `ObjectGetImport` - CRUD: Retrieve an import
-* `ObjectPostImport` - CRUD: Create an import
+* `ObjectGETImport` - CRUD: Retrieve an import
+* `ObjectPOSTImport` - CRUD: Create an import
 
-### Invoice Adjustments
+### InvoiceAdjustments
 
-* `ObjectDeleteInvoiceAdjustment` - CRUD: Delete an invoice adjustment
-* `ObjectGetInvoiceAdjustment` - CRUD: Retrieve an invoice adjustment
-* `ObjectPostInvoiceAdjustment` - CRUD: Create an invoice adjustment
-* `ObjectPutInvoiceAdjustment` - CRUD: Update an invoice adjustment
+* `ObjectDELETEInvoiceAdjustment` - CRUD: Delete an invoice adjustment
+* `ObjectGETInvoiceAdjustment` - CRUD: Retrieve an invoice adjustment
+* `ObjectPOSTInvoiceAdjustment` - CRUD: Create an invoice adjustment
+* `ObjectPUTInvoiceAdjustment` - CRUD: Update an invoice adjustment
 
-### Invoice Item Adjustments
+### InvoiceItemAdjustments
 
-* `ObjectDeleteInvoiceItemAdjustment` - CRUD: Delete an invoice item adjustment
-* `ObjectGetInvoiceItemAdjustment` - CRUD: Retrieve an invoice item adjustment
+* `ObjectDELETEInvoiceItemAdjustment` - CRUD: Delete an invoice item adjustment
+* `ObjectGETInvoiceItemAdjustment` - CRUD: Retrieve an invoice item adjustment
 
-### Invoice Items
+### InvoiceItems
 
-* `ObjectGetInvoiceItem` - CRUD: Retrieve an invoice item
+* `ObjectGETInvoiceItem` - CRUD: Retrieve an invoice item
 
-### Invoice Payments
+### InvoicePayments
 
-* `ObjectGetInvoicePayment` - CRUD: Retrieve an invoice payment
-* `ObjectPostInvoicePayment` - CRUD: Create an invoice payment
-* `ObjectPutInvoicePayment` - CRUD: Update an invoice payment
+* `ObjectGETInvoicePayment` - CRUD: Retrieve an invoice payment
+* `ObjectPOSTInvoicePayment` - CRUD: Create an invoice payment
+* `ObjectPUTInvoicePayment` - CRUD: Update an invoice payment
 
-### Invoice Split Items
+### InvoiceSplitItems
 
-* `ObjectGetInvoiceSplitItem` - CRUD: Retrieve an invoice split item
+* `ObjectGETInvoiceSplitItem` - CRUD: Retrieve an invoice split item
 
-### Invoice Splits
+### InvoiceSplits
 
-* `ObjectGetInvoiceSplit` - CRUD: Retrieve an invoice split
+* `ObjectGETInvoiceSplit` - CRUD: Retrieve an invoice split
 
 ### Invoices
 
-* `GetInvoiceApplicationParts` - List all application parts of an invoice
-* `GetInvoiceFiles` - List all files of an invoice
-* `GetInvoiceItems` - List all items of an invoice
-* `GetTaxationItemsOfInvoiceItem` - List all taxation items of an invoice item
-* `ObjectDeleteInvoice` - CRUD: Delete an invoice
-* `ObjectGetInvoice` - CRUD: Retrieve an invoice
-* `ObjectPutInvoice` - CRUD: Update an invoice
-* `PostCreditMemoFromInvoice` - Create a credit memo from an invoice
-* `PostDebitMemoFromInvoice` - Create a debit memo from an invoice
-* `PostEmailInvoice` - Email an invoice
-* `PostStandaloneInvoice` - Create a standalone invoice
-* `PostUploadFileForInvoice` - Upload a file for an invoice
-* `PutBatchUpdateInvoices` - Update invoices
-* `PutReverseInvoice` - Reverse an invoice
-* `PutUpdateInvoice` - Update an invoice
-* `PutWriteOffInvoice` - Write off an invoice
+* `GETInvoiceApplicationParts` - List all application parts of an invoice
+* `GETInvoiceFiles` - List all files of an invoice
+* `GETInvoiceItems` - List all items of an invoice
+* `GETTaxationItemsOfInvoiceItem` - List all taxation items of an invoice item
+* `ObjectDELETEInvoice` - CRUD: Delete an invoice
+* `ObjectGETInvoice` - CRUD: Retrieve an invoice
+* `ObjectPUTInvoice` - CRUD: Update an invoice
+* `POSTCreditMemoFromInvoice` - Create a credit memo from an invoice
+* `POSTDebitMemoFromInvoice` - Create a debit memo from an invoice
+* `POSTEmailInvoice` - Email an invoice
+* `POSTStandaloneInvoice` - Create a standalone invoice
+* `POSTUploadFileForInvoice` - Upload a file for an invoice
+* `PUTBatchUpdateInvoices` - Update invoices
+* `PUTReverseInvoice` - Reverse an invoice
+* `PUTUpdateInvoice` - Update an invoice
+* `PUTWriteOffInvoice` - Write off an invoice
 
-### Journal Runs
+### JournalRuns
 
-* `DeleteJournalRun` - Delete a journal run
-* `GetJournalRun` - Retrieve a journal run
-* `PostJournalRun` - Create a journal run
-* `PutJournalRun` - Cancel a journal run
+* `DELETEJournalRun` - Delete a journal run
+* `GETJournalRun` - Retrieve a journal run
+* `POSTJournalRun` - Create a journal run
+* `PUTJournalRun` - Cancel a journal run
 
-### Mass Updater
+### MassUpdater
 
-* `GetMassUpdater` - List all results of a mass action
-* `PostMassUpdater` - Perform a mass action
-* `PutMassUpdater` - Stop a mass action
+* `GETMassUpdater` - List all results of a mass action
+* `POSTMassUpdater` - Perform a mass action
+* `PUTMassUpdater` - Stop a mass action
 
 ### Notifications
 
-* `DeleteDeleteEmailTemplate` - Delete an email template
-* `DeleteDeleteNotificationDefinition` - Delete a notification definition
-* `DeleteDeleteNotificationHistoryForAccount` - Delete notification histories for an account
-* `GetCalloutHistory` - List callout notification histories
-* `GetEmailHistory` - List email notification histories
-* `GetGetEmailTemplate` - Retrieve an email template
-* `GetGetNotificationDefinition` - Retrieve a notification definition
-* `GetGetNotificationHistoryDeletionTask` - Retrieve a notification history deletion task
-* `GetQueryEmailTemplates` - List email templates
-* `GetQueryNotificationDefinitions` - List notification definitions
-* `PostCreateEmailTemplate` - Create an email template
-* `PostCreateNotificationDefinition` - Create a notification definition
-* `PutUpdateEmailTemplate` - Update an email template
-* `PutUpdateNotificationDefinition` - Update a notification definition
+* `DELETEDELETEEmailTemplate` - Delete an email template
+* `DELETEDELETENotificationDefinition` - Delete a notification definition
+* `DELETEDELETENotificationHistoryForAccount` - Delete notification histories for an account
+* `GETCalloutHistory` - List callout notification histories
+* `GETEmailHistory` - List email notification histories
+* `GETGETEmailTemplate` - Retrieve an email template
+* `GETGETNotificationDefinition` - Retrieve a notification definition
+* `GETGETNotificationHistoryDeletionTask` - Retrieve a notification history deletion task
+* `GETQueryEmailTemplates` - List email templates
+* `GETQueryNotificationDefinitions` - List notification definitions
+* `POSTCreateEmailTemplate` - Create an email template
+* `POSTCreateNotificationDefinition` - Create a notification definition
+* `PUTUpdateEmailTemplate` - Update an email template
+* `PUTUpdateNotificationDefinition` - Update a notification definition
 
 ### OAuth
 
@@ -398,348 +403,347 @@ func main() {
 
 ### Operations
 
-* `PostBillingPreview` - Generate a billing preview
-* `PostTransactionInvoicePayment` - Invoice and collect
+* `POSTBillingPreview` - Generate a billing preview
+* `POSTTransactionInvoicePayment` - Invoice and collect
 
-### Order Line Items
+### OrderLineItems
 
-* `GetOrderLineItem` - Retrieve an order line item
-* `PutOrderLineItem` - Update an order line item
+* `GETOrderLineItem` - Retrieve an order line item
+* `PUTOrderLineItem` - Update an order line item
 * `PostOrderLineItems` - Update order line items
 
 ### Orders
 
-* `DeleteOrder` - Delete an order
-* `GetAllOrders` - List orders
-* `GetJobStatusAndResponse` - Retrieve the status and response of a job
-* `GetOrder` - Retrieve an order
-* `GetOrderMetricsforEvergreenSubscription` - List order metrics for an evergreen subscription
-* `GetOrdersByInvoiceOwner` - List orders of an invoice owner
-* `GetOrdersBySubscriptionNumber` - List orders by subscription number
-* `GetOrdersBySubscriptionOwner` - List orders of a subscription owner
-* `GetSubscriptionTermInfo` - List subscription terms
-* `PostCreateOrderAsynchronously` - Create an order asynchronously
-* `PostOrder` - Create an order
-* `PostPreviewOrder` - Preview an order
-* `PostPreviewOrderAsynchronously` - Preview an order asynchronously
-* `PutOrderTriggerDates` - Update order action trigger dates
-* `PutUpdateOrderCustomFields` - Update order custom fields
-* `PutUpdateSubscriptionCustomFields` - Update subscription custom fields
+* `DELETEOrder` - Delete an order
+* `GETAllOrders` - List orders
+* `GETJobStatusAndResponse` - Retrieve the status and response of a job
+* `GETOrder` - Retrieve an order
+* `GETOrderMetricsforEvergreenSubscription` - List order metrics for an evergreen subscription
+* `GETOrdersByInvoiceOwner` - List orders of an invoice owner
+* `GETOrdersBySubscriptionNumber` - List orders by subscription number
+* `GETOrdersBySubscriptionOwner` - List orders of a subscription owner
+* `GETSubscriptionTermInfo` - List subscription terms
+* `POSTCreateOrderAsynchronously` - Create an order asynchronously
+* `POSTOrder` - Create an order
+* `POSTPreviewOrder` - Preview an order
+* `POSTPreviewOrderAsynchronously` - Preview an order asynchronously
+* `PUTOrderTriggerDates` - Update order action trigger dates
+* `PUTUpdateOrderCustomFields` - Update order custom fields
+* `PUTUpdateSubscriptionCustomFields` - Update subscription custom fields
 
-### Payment Gateway Reconciliation
+### PaymentGatewayReconciliation
 
-* `PostReconcileRefund` - Reconcile a refund
-* `PostRejectPayment` - Reject a payment
-* `PostReversePayment` - Reverse a payment
-* `PostSettlePayment` - Settle a payment
+* `POSTReconcileRefund` - Reconcile a refund
+* `POSTRejectPayment` - Reject a payment
+* `POSTReversePayment` - Reverse a payment
+* `POSTSettlePayment` - Settle a payment
 
-### Payment Gateways
+### PaymentGateways
 
-* `GetPaymentgateways` - List all payment gateways
+* `GETPaymentgateways` - List all payment gateways
 
-### Payment Method Snapshots
+### PaymentMethodSnapshots
 
-* `ObjectGetPaymentMethodSnapshot` - CRUD: Retrieve a payment method snapshot
+* `ObjectGETPaymentMethodSnapshot` - CRUD: Retrieve a payment method snapshot
 
-### Payment Method Transaction Logs
+### PaymentMethodTransactionLogs
 
-* `ObjectGetPaymentMethodTransactionLog` - CRUD: Retrieve a payment method transaction log
+* `ObjectGETPaymentMethodTransactionLog` - CRUD: Retrieve a payment method transaction log
 
-### Payment Methods
+### PaymentMethods
 
-* `DeletePaymentMethods` - Delete a payment method
-* `GetPaymentMethod` - Retrieve a payment method
-* `GetPaymentMethodsCreditCard` - List all credit card payment methods of an account
-* `GetStoredCredentialProfiles` - List stored credential profiles of a payment method
-* `ObjectDeletePaymentMethod` - CRUD: Delete a payment method
-* `ObjectGetPaymentMethod` - CRUD: Retrieve a payment method
-* `ObjectPostPaymentMethod` - CRUD: Create a payment method
-* `ObjectPutPaymentMethod` - CRUD: Update a payment method
-* `PostCancelAuthorization` - Cancel authorization
-* `PostCancelStoredCredentialProfile` - Cancel a stored credential profile
-* `PostCreateAuthorization` - Create authorization
-* `PostCreateStoredCredentialProfile` - Create a stored credential profile
-* `PostExpireStoredCredentialProfile` - Expire a stored credential profile
-* `PostPaymentMethods` - Create a payment method
-* `PostPaymentMethodsCreditCard` - Create a credit card payment method
-* `PostPaymentMethodsDecryption` - Create an Apple Pay payment method
-* `PutPaymentMethod` - Update a payment method
-* `PutPaymentMethodsCreditCard` - Update a credit card payment method
-* `PutScrubPaymentMethods` - Scrub a payment method
-* `PutVerifyPaymentMethods` - Verify a payment method
+* `DELETEPaymentMethods` - Delete a payment method
+* `GETPaymentMethod` - Retrieve a payment method
+* `GETPaymentMethodsCreditCard` - List all credit card payment methods of an account
+* `GETStoredCredentialProfiles` - List stored credential profiles of a payment method
+* `ObjectDELETEPaymentMethod` - CRUD: Delete a payment method
+* `ObjectGETPaymentMethod` - CRUD: Retrieve a payment method
+* `ObjectPOSTPaymentMethod` - CRUD: Create a payment method
+* `ObjectPUTPaymentMethod` - CRUD: Update a payment method
+* `POSTCancelAuthorization` - Cancel authorization
+* `POSTCancelStoredCredentialProfile` - Cancel a stored credential profile
+* `POSTCreateAuthorization` - Create authorization
+* `POSTCreateStoredCredentialProfile` - Create a stored credential profile
+* `POSTExpireStoredCredentialProfile` - Expire a stored credential profile
+* `POSTPaymentMethods` - Create a payment method
+* `POSTPaymentMethodsCreditCard` - Create a credit card payment method
+* `POSTPaymentMethodsDecryption` - Create an Apple Pay payment method
+* `PUTPaymentMethod` - Update a payment method
+* `PUTPaymentMethodsCreditCard` - Update a credit card payment method
+* `PUTScrubPaymentMethods` - Scrub a payment method
+* `PUTVerifyPaymentMethods` - Verify a payment method
 
-### Payment Runs
+### PaymentRuns
 
-* `DeletePaymentRun` - Delete a payment run
-* `GetPaymentRun` - Retrieve a payment run
-* `GetPaymentRunData` - Retrieve payment run data
-* `GetPaymentRunSummary` - Retrieve a payment run summary
-* `GetPaymentRuns` - List payment runs
-* `PostPaymentRun` - Create a payment run
-* `PutPaymentRun` - Update a payment run
+* `DELETEPaymentRun` - Delete a payment run
+* `GETPaymentRun` - Retrieve a payment run
+* `GETPaymentRunData` - Retrieve payment run data
+* `GETPaymentRunSummary` - Retrieve a payment run summary
+* `GETPaymentRuns` - List payment runs
+* `POSTPaymentRun` - Create a payment run
+* `PUTPaymentRun` - Update a payment run
 
-### Payment Transaction Logs
+### PaymentTransactionLogs
 
-* `ObjectGetPaymentTransactionLog` - CRUD: Retrieve a payment transaction log
+* `ObjectGETPaymentTransactionLog` - CRUD: Retrieve a payment transaction log
 
 ### Payments
 
-* `DeletePayment` - Delete a payment
-* `GetPayment` - Retrieve a payment
-* `GetPaymentItemPart` - Retrieve a payment part item
-* `GetPaymentItemParts` - List all payment part items
-* `GetPaymentPart` - Retrieve a payment part
-* `GetPaymentParts` - List all parts of a payment
-* `GetRetrieveAllPayments` - List payments
-* `ObjectDeletePayment` - CRUD: Delete a payment
-* `ObjectGetPayment` - CRUD: Retrieve a payment
-* `ObjectPostPayment` - CRUD: Create a payment
-* `ObjectPutPayment` - CRUD: Update a payment
-* `PostCreatePayment` - Create a payment
-* `PostRefundPayment` - Refund a payment
-* `PutApplyPayment` - Apply a payment
-* `PutCancelPayment` - Cancel a payment
-* `PutTransferPayment` - Transfer a payment
-* `PutUnapplyPayment` - Unapply a payment
-* `PutUpdatePayment` - Update a payment
+* `DELETEPayment` - Delete a payment
+* `GETPayment` - Retrieve a payment
+* `GETPaymentItemPart` - Retrieve a payment part item
+* `GETPaymentItemParts` - List all payment part items
+* `GETPaymentPart` - Retrieve a payment part
+* `GETPaymentParts` - List all parts of a payment
+* `GETRetrieveAllPayments` - List payments
+* `ObjectDELETEPayment` - CRUD: Delete a payment
+* `ObjectGETPayment` - CRUD: Retrieve a payment
+* `ObjectPOSTPayment` - CRUD: Create a payment
+* `ObjectPUTPayment` - CRUD: Update a payment
+* `POSTCreatePayment` - Create a payment
+* `POSTRefundPayment` - Refund a payment
+* `PUTApplyPayment` - Apply a payment
+* `PUTCancelPayment` - Cancel a payment
+* `PUTTransferPayment` - Transfer a payment
+* `PUTUnapplyPayment` - Unapply a payment
+* `PUTUpdatePayment` - Update a payment
 
-### Product Features
+### ProductFeatures
 
-* `ObjectDeleteProductFeature` - CRUD: Delete a product feature
-* `ObjectGetProductFeature` - CRUD: Retrieve a product feature
+* `ObjectDELETEProductFeature` - CRUD: Delete a product feature
+* `ObjectGETProductFeature` - CRUD: Retrieve a product feature
 
-### Product Rate Plan Charge Tiers
+### ProductRatePlanChargeTiers
 
-* `ObjectGetProductRatePlanChargeTier` - CRUD: Retrieve a product rate plan charge tier
-* `ObjectPutProductRatePlanChargeTier` - CRUD: Update a product rate plan charge tier
+* `ObjectGETProductRatePlanChargeTier` - CRUD: Retrieve a product rate plan charge tier
+* `ObjectPUTProductRatePlanChargeTier` - CRUD: Update a product rate plan charge tier
 
-### Product Rate Plan Charges
+### ProductRatePlanCharges
 
-* `ObjectDeleteProductRatePlanCharge` - CRUD: Delete a product rate plan charge
-* `ObjectGetProductRatePlanCharge` - CRUD: Retrieve a product rate plan charge
-* `ObjectPostProductRatePlanCharge` - CRUD: Create a product rate plan charge
-* `ObjectPutProductRatePlanCharge` - CRUD: Update a product rate plan charge
+* `ObjectDELETEProductRatePlanCharge` - CRUD: Delete a product rate plan charge
+* `ObjectGETProductRatePlanCharge` - CRUD: Retrieve a product rate plan charge
+* `ObjectPOSTProductRatePlanCharge` - CRUD: Create a product rate plan charge
+* `ObjectPUTProductRatePlanCharge` - CRUD: Update a product rate plan charge
 
-### Product Rate Plans
+### ProductRatePlans
 
-* `GetProductRatePlans` - List all product rate plans of a product
-* `ObjectDeleteProductRatePlan` - CRUD: Delete a product rate plan
-* `ObjectGetProductRatePlan` - CRUD: Retrieve a product rate plan
-* `ObjectPostProductRatePlan` - CRUD: Create a product rate plan
-* `ObjectPutProductRatePlan` - CRUD: Update a product rate plan
+* `GETProductRatePlans` - List all product rate plans of a product
+* `ObjectDELETEProductRatePlan` - CRUD: Delete a product rate plan
+* `ObjectGETProductRatePlan` - CRUD: Retrieve a product rate plan
+* `ObjectPOSTProductRatePlan` - CRUD: Create a product rate plan
+* `ObjectPUTProductRatePlan` - CRUD: Update a product rate plan
 
 ### Products
 
-* `ObjectDeleteProduct` - CRUD: Delete a product
-* `ObjectGetProduct` - CRUD: Retrieve a product
-* `ObjectPostProduct` - CRUD: Create a product
-* `ObjectPutProduct` - CRUD: Update a product
+* `ObjectDELETEProduct` - CRUD: Delete a product
+* `ObjectGETProduct` - CRUD: Retrieve a product
+* `ObjectPOSTProduct` - CRUD: Create a product
+* `ObjectPUTProduct` - CRUD: Update a product
 
-### Quotes Document
+### QuotesDocument
 
-* `PostQuotesDocument` - Generate a quote document
+* `POSTQuotesDocument` - Generate a quote document
 
-### RSA Signatures
+### RSASignatures
 
-* `PostDecryptRsaSignatures` - Decrypt an RSA signature
-* `PostRsaSignatures` - Generate an RSA signature
+* `POSTDecryptRSASignatures` - Decrypt an RSA signature
+* `POSTRSASignatures` - Generate an RSA signature
 
 ### Ramps
 
-* `GetRampByRampNumber` - Retrieve a ramp
-* `GetRampMetricsByOrderNumber` - List ramp metrics by order number
-* `GetRampMetricsByRampNumber` - List all ramp metrics of a ramp
-* `GetRampMetricsBySubscriptionKey` - List ramp metrics by subscription key
-* `GetRampsBySubscriptionKey` - Retrieve a ramp by subscription key
+* `GETRampByRampNumber` - Retrieve a ramp
+* `GETRampMetricsByOrderNumber` - List ramp metrics by order number
+* `GETRampMetricsByRampNumber` - List all ramp metrics of a ramp
+* `GETRampMetricsBySubscriptionKey` - List ramp metrics by subscription key
+* `GETRampsBySubscriptionKey` - Retrieve a ramp by subscription key
 
-### Rate Plan Charge Tiers
+### RatePlanChargeTiers
 
-* `ObjectGetRatePlanChargeTier` - CRUD: Retrieve a rate plan charge tier
+* `ObjectGETRatePlanChargeTier` - CRUD: Retrieve a rate plan charge tier
 
-### Rate Plan Charges
+### RatePlanCharges
 
-* `ObjectGetRatePlanCharge` - CRUD: Retrieve a rate plan charge
-* `ObjectPutRatePlanCharge` - CRUD: Update a rate plan charge
+* `ObjectGETRatePlanCharge` - CRUD: Retrieve a rate plan charge
+* `ObjectPUTRatePlanCharge` - CRUD: Update a rate plan charge
 
-### Rate Plans
+### RatePlans
 
-* `ObjectGetRatePlan` - CRUD: Retrieve a rate plan
+* `ObjectGETRatePlan` - CRUD: Retrieve a rate plan
 
-### Refund Invoice Payments
+### RefundInvoicePayments
 
-* `ObjectGetRefundInvoicePayment` - CRUD: Retrieve a refund invoice payment
+* `ObjectGETRefundInvoicePayment` - CRUD: Retrieve a refund invoice payment
 
-### Refund Transaction Logs
+### RefundTransactionLogs
 
-* `ObjectGetRefundTransactionLog` - CRUD: Retrieve a refund transaction log
+* `ObjectGETRefundTransactionLog` - CRUD: Retrieve a refund transaction log
 
 ### Refunds
 
-* `DeleteRefund` - Delete a refund
-* `GetRefund` - Retrieve a refund
-* `GetRefundItemPart` - Retrieve a refund part item
-* `GetRefundItemParts` - List all refund part items
-* `GetRefundPart` - Retrieve a refund part
-* `GetRefundParts` - List all parts of a refund
-* `GetRefunds` - List refunds
-* `ObjectDeleteRefund` - CRUD: Delete a refund
-* `ObjectGetRefund` - CRUD: Retrieve a refund
-* `ObjectPostRefund` - CRUD: Create a refund
-* `ObjectPutRefund` - CRUD: Update a refund
-* `PutCancelRefund` - Cancel a refund
-* `PutUpdateRefund` - Update a refund
+* `DELETERefund` - Delete a refund
+* `GETRefund` - Retrieve a refund
+* `GETRefundItemPart` - Retrieve a refund part item
+* `GETRefundItemParts` - List all refund part items
+* `GETRefundPart` - Retrieve a refund part
+* `GETRefundParts` - List all parts of a refund
+* `GETRefunds` - List refunds
+* `ObjectDELETERefund` - CRUD: Delete a refund
+* `ObjectGETRefund` - CRUD: Retrieve a refund
+* `ObjectPOSTRefund` - CRUD: Create a refund
+* `ObjectPUTRefund` - CRUD: Update a refund
+* `PUTCancelRefund` - Cancel a refund
+* `PUTUpdateRefund` - Update a refund
 
-### Revenue Events
+### RevenueEvents
 
-* `GetRevenueEventDetails` - Retrieve a revenue event
-* `GetRevenueEventForRevenueSchedule` - List all revenue events of a revenue schedule
+* `GETRevenueEventDetails` - Retrieve a revenue event
+* `GETRevenueEventForRevenueSchedule` - List all revenue events of a revenue schedule
 
-### Revenue Items
+### RevenueItems
 
-* `GetRevenueItemsByChargeRevenueEventNumber` - List revenue items by revenue event number
-* `GetRevenueItemsByChargeRevenueSummaryNumber` - List revenue items by charge revenue summary number
-* `GetRevenueItemsByRevenueSchedule` - List all revenue items of a revenue schedule
-* `PutCustomFieldsonRevenueItemsByRevenueEvent` - Update custom fields on revenue items by revenue event number
-* `PutCustomFieldsonRevenueItemsByRevenueSchedule` - Update custom fields on revenue items by revenue schedule number
+* `GETRevenueItemsByChargeRevenueEventNumber` - List revenue items by revenue event number
+* `GETRevenueItemsByChargeRevenueSummaryNumber` - List revenue items by charge revenue summary number
+* `GETRevenueItemsByRevenueSchedule` - List all revenue items of a revenue schedule
+* `PUTCustomFieldsonRevenueItemsByRevenueEvent` - Update custom fields on revenue items by revenue event number
+* `PUTCustomFieldsonRevenueItemsByRevenueSchedule` - Update custom fields on revenue items by revenue schedule number
 
-### Revenue Rules
+### RevenueRules
 
-* `GetRevenueAutomationStartDate` - Retrieve a revenue automation start date
-* `GetRevenueRecRulebyProductRatePlanCharge` - Retrieve a revenue recognition rule by product rate plan charge ID
-* `GetRevenueRecRules` - Retrieve a revenue recognition rule by subscription charge ID
+* `GETRevenueAutomationStartDate` - Retrieve a revenue automation start date
+* `GETRevenueRecRulebyProductRatePlanCharge` - Retrieve a revenue recognition rule by product rate plan charge ID
+* `GETRevenueRecRules` - Retrieve a revenue recognition rule by subscription charge ID
 
-### Revenue Schedules
+### RevenueSchedules
 
 * `DeleteRs` - Delete a revenue schedule
 * `GetRs` - List all details of a revenue schedule
-* `GetRSbyCreditMemoItem` - Retrieve a revenue schedule by credit memo item ID
+* `GETRSbyCreditMemoItem` - Retrieve a revenue schedule by credit memo item ID
 
-* `GetRSbyDebitMemoItem` - Retrieve a revenue schedule by debit memo item ID
+* `GETRSbyDebitMemoItem` - Retrieve a revenue schedule by debit memo item ID
 
-* `GetRSbyInvoiceItem` - Retrieve a revenue schedule by invoice item ID
-* `GetRSbyInvoiceItemAdjustment` - Retrieve a revenue schedule by invoice item adjustment key
-* `GetRSbyProductChargeAndBillingAccount` - List revenue schedules of a product charge by charge ID and account key
+* `GETRSbyInvoiceItem` - Retrieve a revenue schedule by invoice item ID
+* `GETRSbyInvoiceItemAdjustment` - Retrieve a revenue schedule by invoice item adjustment key
+* `GETRSbyProductChargeAndBillingAccount` - List revenue schedules of a product charge by charge ID and account key
 
-* `GetRSforSubscCharge` - List revenue schedules by subscription charge key
-* `PostRSforCreditMemoItemDistributeByDateRange` - Create a revenue schedule for a credit memo item (distribute by date range)
+* `GETRSforSubscCharge` - List revenue schedules by subscription charge key
+* `POSTRSforCreditMemoItemDistributeByDateRange` - Create a revenue schedule for a credit memo item (distribute by date range)
 
-* `PostRSforCreditMemoItemManualDistribution` - Create a revenue schedule for a credit memo item (manual distribution)
+* `POSTRSforCreditMemoItemManualDistribution` - Create a revenue schedule for a credit memo item (manual distribution)
 
-* `PostRSforDebitMemoItemDistributeByDateRange` - Create a revenue schedule for a debit memo item (distribute by date range)
+* `POSTRSforDebitMemoItemDistributeByDateRange` - Create a revenue schedule for a debit memo item (distribute by date range)
 
-* `PostRSforDebitMemoItemManualDistribution` - Create a revenue schedule for a debit memo item (distribute by date range)
+* `POSTRSforDebitMemoItemManualDistribution` - Create a revenue schedule for a debit memo item (distribute by date range)
 
-* `PostRSforInvoiceItemAdjustmentDistributeByDateRange` - Create a revenue schedule for an invoice item adjustment (distribute by date range)
-* `PostRSforInvoiceItemAdjustmentManualDistribution` - Create a revenue schedule for an invoice item adjustment (manual distribution)
-* `PostRSforInvoiceItemDistributeByDateRange` - Create a revenue schedule for an invoice item (distribute by date range)
-* `PostRSforInvoiceItemManualDistribution` - Create a revenue schedule for an invoice item (manual distribution)
-* `PostRSforSubscCharge` - Create a revenue schedule by subscription charge key
-* `PutRsBasicInfo` - Update a revenue schedule
-* `PutRevenueAcrossAp` - Distribute revenue across accounting periods
-* `PutRevenueByRecognitionStartandEndDates` - Distribute revenue in a recognition period
-* `PutRevenueSpecificDate` - Distribute revenue on a specific date
+* `POSTRSforInvoiceItemAdjustmentDistributeByDateRange` - Create a revenue schedule for an invoice item adjustment (distribute by date range)
+* `POSTRSforInvoiceItemAdjustmentManualDistribution` - Create a revenue schedule for an invoice item adjustment (manual distribution)
+* `POSTRSforInvoiceItemDistributeByDateRange` - Create a revenue schedule for an invoice item (distribute by date range)
+* `POSTRSforInvoiceItemManualDistribution` - Create a revenue schedule for an invoice item (manual distribution)
+* `POSTRSforSubscCharge` - Create a revenue schedule by subscription charge key
+* `PUTRSBasicInfo` - Update a revenue schedule
+* `PUTRevenueAcrossAP` - Distribute revenue across accounting periods
+* `PUTRevenueByRecognitionStartandEndDates` - Distribute revenue in a recognition period
+* `PUTRevenueSpecificDate` - Distribute revenue on a specific date
 
-### Sequence Sets
+### SequenceSets
 
-* `DeleteSequenceSet` - Delete a sequence set
-* `GetSequenceSet` - Retrieve a sequence set
-* `GetSequenceSets` - List sequence sets
-* `PostSequenceSets` - Create sequence sets
-* `PutSequenceSet` - Update a sequence set
+* `DELETESequenceSet` - Delete a sequence set
+* `GETSequenceSet` - Retrieve a sequence set
+* `GETSequenceSets` - List sequence sets
+* `POSTSequenceSets` - Create sequence sets
+* `PUTSequenceSet` - Update a sequence set
 
 ### Settings
 
-* `GetListAllSettings` - List all settings
-* `PostProcessSettingsBatchRequest` - Submit settings requests
+* `GETListAllSettings` - List all settings
+* `POSTProcessSettingsBatchRequest` - Submit settings requests
 
-### Subscription Product Features
+### SubscriptionProductFeatures
 
-* `ObjectGetSubscriptionProductFeature` - CRUD: Retrieve a subscription product feature
+* `ObjectGETSubscriptionProductFeature` - CRUD: Retrieve a subscription product feature
 
 ### Subscriptions
 
-* `GetSubscriptionsByAccount` - List subscriptions by account key
-* `GetSubscriptionsByKey` - Retrieve a subscription by key
-* `GetSubscriptionsByKeyAndVersion` - Retrieve a subscription by key and version
-* `ObjectDeleteSubscription` - CRUD: Delete a subscription
-* `ObjectGetSubscription` - CRUD: Retrieve a subscription
-* `ObjectPutSubscription` - CRUD: Update a subscription
-* `PostPreviewSubscription` - Preview a subscription
-* `PostSubscription` - Create a subscription
-* `PutCancelSubscription` - Cancel a subscription
-* `PutRenewSubscription` - Renew a subscription
-* `PutResumeSubscription` - Resume a subscription
-* `PutSubscription` - Update a subscription
-* `PutSuspendSubscription` - Suspend a subscription
-* `PutUpdateSubscriptionCustomFieldsOfASpecifiedVersion` - Update subscription custom fields of a subscription version
+* `GETSubscriptionsByAccount` - List subscriptions by account key
+* `GETSubscriptionsByKey` - Retrieve a subscription by key
+* `GETSubscriptionsByKeyAndVersion` - Retrieve a subscription by key and version
+* `ObjectDELETESubscription` - CRUD: Delete a subscription
+* `ObjectGETSubscription` - CRUD: Retrieve a subscription
+* `ObjectPUTSubscription` - CRUD: Update a subscription
+* `POSTPreviewSubscription` - Preview a subscription
+* `POSTSubscription` - Create a subscription
+* `PUTCancelSubscription` - Cancel a subscription
+* `PUTRenewSubscription` - Renew a subscription
+* `PUTResumeSubscription` - Resume a subscription
+* `PUTSubscription` - Update a subscription
+* `PUTSuspendSubscription` - Suspend a subscription
+* `PUTUpdateSubscriptionCustomFieldsOfASpecifiedVersion` - Update subscription custom fields of a subscription version
 
-### Summary Journal Entries
+### SummaryJournalEntries
 
-* `DeleteSummaryJournalEntry` - Delete a summary journal entry
-* `GetAllSummaryJournalEntries` - List all summary journal entries in a journal run
-* `GetSummaryJournalEntry` - Retrieve a summary journal entry
-* `PostSummaryJournalEntry` - Create a summary journal entry
-* `PutBasicSummaryJournalEntry` - Update a summary journal entry
-* `PutSummaryJournalEntry` - Cancel a summary journal entry
+* `DELETESummaryJournalEntry` - Delete a summary journal entry
+* `GETAllSummaryJournalEntries` - List all summary journal entries in a journal run
+* `GETSummaryJournalEntry` - Retrieve a summary journal entry
+* `POSTSummaryJournalEntry` - Create a summary journal entry
+* `PUTBasicSummaryJournalEntry` - Update a summary journal entry
+* `PUTSummaryJournalEntry` - Cancel a summary journal entry
 
-### Taxation Items
+### TaxationItems
 
-* `DeleteTaxationItem` - Delete a taxation item
-* `GetTaxationItem` - Retrieve a taxation item
+* `DELETETaxationItem` - Delete a taxation item
+* `GETTaxationItem` - Retrieve a taxation item
 
-* `ObjectDeleteTaxationItem` - CRUD: Delete a taxation item
-* `ObjectGetTaxationItem` - CRUD: Retrieve a taxation item
-* `ObjectPostTaxationItem` - CRUD: Create a taxation item
-* `ObjectPutTaxationItem` - CRUD: Update a taxation item
-* `PutTaxationItem` - Update a taxation item
+* `ObjectDELETETaxationItem` - CRUD: Delete a taxation item
+* `ObjectGETTaxationItem` - CRUD: Retrieve a taxation item
+* `ObjectPOSTTaxationItem` - CRUD: Create a taxation item
+* `ObjectPUTTaxationItem` - CRUD: Update a taxation item
+* `PUTTaxationItem` - Update a taxation item
 
 ### Transactions
 
-* `GetTransactionInvoice` - List all invoices for an account
-* `GetTransactionPayment` - List all payments for an account
+* `GETTransactionInvoice` - List all invoices for an account
+* `GETTransactionPayment` - List all payments for an account
 
-### Unit Of Measure
+### UnitOfMeasure
 
-* `ObjectDeleteUnitOfMeasure` - CRUD: Delete a unit of measure
-* `ObjectGetUnitOfMeasure` - CRUD: Retrieve a unit of measure
-* `ObjectPostUnitOfMeasure` - CRUD: Create a unit of measure
-* `ObjectPutUnitOfMeasure` - CRUD: Update a unit of measure
+* `ObjectDELETEUnitOfMeasure` - CRUD: Delete a unit of measure
+* `ObjectGETUnitOfMeasure` - CRUD: Retrieve a unit of measure
+* `ObjectPOSTUnitOfMeasure` - CRUD: Create a unit of measure
+* `ObjectPUTUnitOfMeasure` - CRUD: Update a unit of measure
 
 ### Usage
 
-* `GetUsage` - Retrieve a usage record
-* `ObjectDeleteUsage` - CRUD: Delete a usage record
-* `ObjectGetUsage` - CRUD: Retrieve a usage record
-* `ObjectPostUsage` - CRUD: Create a usage record
-* `ObjectPutUsage` - CRUD: Update a usage record
-* `PostUsage` - Upload a usage file
+* `GETUsage` - Retrieve a usage record
+* `ObjectDELETEUsage` - CRUD: Delete a usage record
+* `ObjectGETUsage` - CRUD: Retrieve a usage record
+* `ObjectPOSTUsage` - CRUD: Create a usage record
+* `ObjectPUTUsage` - CRUD: Update a usage record
+* `POSTUsage` - Upload a usage file
 
 ### Users
 
-* `GetEntitiesUserAccessible` - Multi-entity: List all entities that a user can access
-* `PutAcceptUserAccess` - Multi-entity: Accept user access
-* `PutDenyUserAccess` - Multi-entity: Deny user access
-* `PutSendUserAccessRequests` - Multi-entity: Send user access requests
+* `GETEntitiesUserAccessible` - Multi-entity: List all entities that a user can access
+* `PUTAcceptUserAccess` - Multi-entity: Accept user access
+* `PUTDenyUserAccess` - Multi-entity: Deny user access
+* `PUTSendUserAccessRequests` - Multi-entity: Send user access requests
 
 ### Workflows
 
-* `DeleteWorkflow` - Delete a workflow
-* `GetWorkflow` - Retrieve a workflow
-* `GetWorkflowExport` - Export a workflow
-* `GetWorkflows` - List workflows
-* `GetWorkflowsTask` - Retrieve a workflow task
-* `GetWorkflowsTasks` - List workflow tasks
-* `GetWorkflowsUsages` - Retrieve workflow task usage
-* `PatchUpdateWorkflow` - Update a workflow definition
-* `PostRunWorkflow` - Run a workflow
-* `PostWorkflowImport` - Import a workflow
-* `PostWorkflowsTaskRerun` - Rerun a workflow task
-* `PutWorkflowsTasksUpdate` - Update workflow tasks
+* `DELETEWorkflow` - Delete a workflow
+* `GETWorkflow` - Retrieve a workflow
+* `GETWorkflowExport` - Export a workflow
+* `GETWorkflows` - List workflows
+* `GETWorkflowsTask` - Retrieve a workflow task
+* `GETWorkflowsTasks` - List workflow tasks
+* `GETWorkflowsUsages` - Retrieve workflow task usage
+* `PATCHUpdateWorkflow` - Update a workflow definition
+* `POSTRunWorkflow` - Run a workflow
+* `POSTWorkflowImport` - Import a workflow
+* `POSTWorkflowsTaskRerun` - Rerun a workflow task
+* `PUTWorkflowsTasksUpdate` - Update workflow tasks
 
-### Zuora Revenue Integration
+### ZuoraRevenueIntegration
 
-* `PutRevProAccountingCodes` - Update a Zuora Revenue accounting code
-
+* `PUTRevProAccountingCodes` - Update a Zuora Revenue accounting code
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

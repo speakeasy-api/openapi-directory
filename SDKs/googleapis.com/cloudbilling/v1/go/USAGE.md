@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudbillingBillingAccountsCreateRequest{
         Security: operations.CloudbillingBillingAccountsCreateSecurity{
             Option1: &operations.CloudbillingBillingAccountsCreateSecurityOption1{
@@ -23,24 +25,25 @@ func main() {
             },
         },
         QueryParams: operations.CloudbillingBillingAccountsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.BillingAccountInput{
-            DisplayName: "rerum",
-            MasterBillingAccount: "dicta",
+            DisplayName: "facilis",
+            MasterBillingAccount: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BillingAccounts.CloudbillingBillingAccountsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +52,6 @@ func main() {
     if res.BillingAccount != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

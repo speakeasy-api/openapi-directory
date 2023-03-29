@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateSubAccountRequest{
         Security: operations.CreateSubAccountSecurity{
             BasicAuth: shared.SchemeBasicAuth{
@@ -19,15 +21,16 @@ func main() {
             },
         },
         PathParams: operations.CreateSubAccountPathParams{
-            APIKey: "sit",
+            APIKey: "unde",
         },
         Request: shared.NewSubaccountRequest{
-            Name: "voluptas",
-            Secret: "culpa",
+            Name: "Subaccount department A",
+            Secret: "Password123",
             UsePrimaryAccountBalance: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.SubaccountManagement.CreateSubAccount(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -36,5 +39,6 @@ func main() {
     if res.SubaccountCreateResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

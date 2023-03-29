@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/metastore/v1beta/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.MetastoreProjectsLocationsFederationsCreateRequest{
         Security: operations.MetastoreProjectsLocationsFederationsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,39 +34,46 @@ func main() {
             },
         },
         PathParams: operations.MetastoreProjectsLocationsFederationsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.MetastoreProjectsLocationsFederationsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            FederationID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            FederationID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.FederationInput{
             BackendMetastores: map[string]shared.BackendMetastore{
-                "et": shared.BackendMetastore{
-                    MetastoreType: "DATAPROC_METASTORE",
-                    Name: "dolorem",
+                "saepe": shared.BackendMetastore{
+                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
+                    Name: "sapiente",
+                },
+                "enim": shared.BackendMetastore{
+                    MetastoreType: "BIGQUERY",
+                    Name: "voluptatum",
                 },
             },
             Labels: map[string]string{
-                "voluptate": "iste",
-                "vitae": "totam",
+                "vel": "non",
+                "deleniti": "similique",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
             },
-            Name: "dolores",
-            Version: "illum",
+            Name: "laboriosam",
+            Version: "dicta",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.MetastoreProjectsLocationsFederationsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -73,17 +82,20 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `MetastoreProjectsLocationsFederationsCreate` - Creates a metastore federation in a project and location.
 * `MetastoreProjectsLocationsFederationsList` - Lists federations in a project and location.
 * `MetastoreProjectsLocationsList` - Lists information about the supported locations for this service.
+* `MetastoreProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
 * `MetastoreProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 * `MetastoreProjectsLocationsServicesAlterLocation` - Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
 * `MetastoreProjectsLocationsServicesBackupsCreate` - Creates a new backup in a given project and location.
@@ -103,7 +115,6 @@ func main() {
 * `MetastoreProjectsLocationsServicesQueryMetadata` - Query DPMS metadata.
 * `MetastoreProjectsLocationsServicesRemoveIamPolicy` - Removes the attached IAM policies for a resource
 * `MetastoreProjectsLocationsServicesRestore` - Restores a service from a backup.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

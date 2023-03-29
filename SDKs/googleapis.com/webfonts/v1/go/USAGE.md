@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,24 +12,25 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.WebfontsWebfontsListRequest{
         QueryParams: operations.WebfontsWebfontsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            Sort: "SORT_UNDEFINED",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            Sort: "DATE",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Webfonts.WebfontsWebfontsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -36,5 +39,6 @@ func main() {
     if res.WebfontList != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

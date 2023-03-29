@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,20 +12,21 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.GetMostemailedSectionTimePeriodJSONRequest{
-        Security: operations.GetMostemailedSectionTimePeriodJSONSecurity{
+
+    req := operations.GETMostemailedSectionTimePeriodJSONRequest{
+        Security: operations.GETMostemailedSectionTimePeriodJSONSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        PathParams: operations.GetMostemailedSectionTimePeriodJSONPathParams{
-            Section: "Opinion",
-            TimePeriod: "1",
+        PathParams: operations.GETMostemailedSectionTimePeriodJSONPathParams{
+            Section: "Public Editor",
+            TimePeriod: "7",
         },
     }
-    
-    res, err := s.GetMostemailedSectionTimePeriodJSON(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETMostemailedSectionTimePeriodJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -31,5 +34,6 @@ func main() {
     if res.GETMostemailedSectionTimePeriodJSON200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

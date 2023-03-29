@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetApodRequest{
         Security: operations.GetApodSecurity{
             APIKey: shared.SchemeAPIKey{
@@ -18,11 +20,12 @@ func main() {
             },
         },
         QueryParams: operations.GetApodQueryParams{
-            Date: "sit",
+            Date: "unde",
             Hd: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.RequestTag.GetApod(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.GetApod200ApplicationJSONAnies != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

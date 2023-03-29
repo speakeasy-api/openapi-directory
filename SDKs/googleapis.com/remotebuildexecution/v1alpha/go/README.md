@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/remotebuildexecution/v1alpha/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.RemotebuildexecutionProjectsInstancesCreateRequest{
         Security: operations.RemotebuildexecutionProjectsInstancesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,103 +34,112 @@ func main() {
             },
         },
         PathParams: operations.RemotebuildexecutionProjectsInstancesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.RemotebuildexecutionProjectsInstancesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
-        Request: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequest{
-            Instance: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstance{
+        Request: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput{
+            Instance: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput{
                 FeaturePolicy: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy{
-                    ActionHermeticity: "ACTION_HERMETICITY_BEST_EFFORT",
-                    ActionIsolation: "ACTION_ISOLATION_UNSPECIFIED",
+                    ActionHermeticity: "ACTION_HERMETICITY_OFF",
+                    ActionIsolation: "ACTION_ISOLATION_OFF",
                     ContainerImageSources: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "et",
+                            "saepe",
+                            "inventore",
                         },
                         Policy: "RESTRICTED",
                     },
                     DockerAddCapabilities: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "et",
-                            "voluptate",
-                            "iste",
+                            "eum",
+                            "voluptatum",
                         },
-                        Policy: "POLICY_UNSPECIFIED",
+                        Policy: "RESTRICTED",
                     },
                     DockerChrootPath: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "dolores",
-                            "illum",
-                            "debitis",
+                            "non",
+                            "deleniti",
+                            "similique",
+                            "reprehenderit",
                         },
-                        Policy: "POLICY_UNSPECIFIED",
+                        Policy: "RESTRICTED",
                     },
                     DockerNetwork: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "dolore",
+                            "quasi",
+                            "laboriosam",
+                            "dicta",
+                            "est",
                         },
                         Policy: "POLICY_UNSPECIFIED",
                     },
                     DockerPrivileged: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "accusantium",
-                        },
-                        Policy: "ALLOWED",
-                    },
-                    DockerRunAsContainerProvidedUser: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
-                        AllowedValues: []string{
-                            "quis",
-                            "est",
-                        },
-                        Policy: "POLICY_UNSPECIFIED",
-                    },
-                    DockerRunAsRoot: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
-                        AllowedValues: []string{
-                            "non",
-                            "voluptas",
+                            "fugiat",
+                            "a",
                         },
                         Policy: "RESTRICTED",
                     },
+                    DockerRunAsContainerProvidedUser: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
+                        AllowedValues: []string{
+                            "accusamus",
+                        },
+                        Policy: "RESTRICTED",
+                    },
+                    DockerRunAsRoot: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
+                        AllowedValues: []string{
+                            "rem",
+                            "quibusdam",
+                            "et",
+                            "praesentium",
+                        },
+                        Policy: "FORBIDDEN",
+                    },
                     DockerRuntime: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "illo",
+                            "soluta",
+                            "sed",
+                            "quisquam",
+                            "rerum",
                         },
                         Policy: "FORBIDDEN",
                     },
                     DockerSiblingContainers: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature{
                         AllowedValues: []string{
-                            "autem",
-                            "consectetur",
+                            "sed",
                         },
-                        Policy: "POLICY_UNSPECIFIED",
+                        Policy: "RESTRICTED",
                     },
-                    LinuxExecution: "LINUX_EXECUTION_UNRESTRICTED",
-                    LinuxIsolation: "LINUX_ISOLATION_UNSPECIFIED",
+                    LinuxExecution: "LINUX_EXECUTION_HARDENED_GVISOR",
+                    LinuxIsolation: "GVISOR",
                     MacExecution: "MAC_EXECUTION_UNSPECIFIED",
                     VMVerification: "VM_VERIFICATION_GCP_TOKEN",
-                    WindowsExecution: "WINDOWS_EXECUTION_UNRESTRICTED",
+                    WindowsExecution: "WINDOWS_EXECUTION_FORBIDDEN",
                 },
-                Location: "eveniet",
-                LoggingEnabled: false,
-                Name: "sint",
-                State: "CREATING",
+                Location: "voluptatem",
+                SchedulerNotificationConfig: &shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig{
+                    Topic: "amet",
+                },
             },
-            InstanceID: "ut",
-            Parent: "exercitationem",
+            InstanceID: "est",
+            Parent: "id",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.RemotebuildexecutionProjectsInstancesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -137,13 +148,15 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `RemotebuildexecutionProjectsInstancesCreate` - Creates a new instance in the specified region. Returns a long running operation which contains an instance on completion. While the long running operation is in progress, any call to `GetInstance` returns an instance in state `CREATING`.
 * `RemotebuildexecutionProjectsInstancesList` - Lists instances in a project.
@@ -153,7 +166,6 @@ func main() {
 * `RemotebuildexecutionProjectsInstancesWorkerpoolsList` - Lists worker pools in an instance.
 * `RemotebuildexecutionProjectsInstancesWorkerpoolsPatch` - Updates an existing worker pool with a specified size and/or configuration. Returns a long running operation, which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `UPDATING`.
 * `RemotebuildexecutionProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

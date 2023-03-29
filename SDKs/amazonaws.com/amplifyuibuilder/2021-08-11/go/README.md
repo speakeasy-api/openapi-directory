@@ -1,0 +1,4399 @@
+# openapi
+
+<!-- Start SDK Installation -->
+## SDK Installation
+
+```bash
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/amplifyuibuilder/2021-08-11/go
+```
+<!-- End SDK Installation -->
+
+## SDK Example Usage
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "context"
+    "log"
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.CreateComponentRequest{
+        PathParams: operations.CreateComponentPathParams{
+            AppID: "unde",
+            EnvironmentName: "deserunt",
+        },
+        QueryParams: operations.CreateComponentQueryParams{
+            ClientToken: "porro",
+        },
+        Headers: operations.CreateComponentHeaders{
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
+        },
+        Request: operations.CreateComponentRequestBody{
+            ComponentToCreate: operations.CreateComponentRequestBodyComponentToCreate{
+                BindingProperties: map[string]shared.ComponentBindingPropertiesValue{
+                    "eum": shared.ComponentBindingPropertiesValue{
+                        BindingProperties: &shared.ComponentBindingPropertiesValueProperties{
+                            Bucket: "iusto",
+                            DefaultValue: "ullam",
+                            Field: "saepe",
+                            Key: "inventore",
+                            Model: "sapiente",
+                            Predicates: []shared.Predicate{
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "voluptatum",
+                                    Operand: "autem",
+                                    Operator: "vel",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                },
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "similique",
+                                    Operand: "reprehenderit",
+                                    Operator: "molestiae",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                },
+                            },
+                            SlotName: "quasi",
+                            UserAttribute: "laboriosam",
+                        },
+                        DefaultValue: "dicta",
+                        Type: "est",
+                    },
+                    "voluptatem": shared.ComponentBindingPropertiesValue{
+                        BindingProperties: &shared.ComponentBindingPropertiesValueProperties{
+                            Bucket: "consequatur",
+                            DefaultValue: "fugiat",
+                            Field: "a",
+                            Key: "omnis",
+                            Model: "eos",
+                            Predicates: []shared.Predicate{
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "reiciendis",
+                                    Operand: "rem",
+                                    Operator: "quibusdam",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                },
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "occaecati",
+                                    Operand: "dolor",
+                                    Operator: "soluta",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                    },
+                                },
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "rerum",
+                                    Operand: "culpa",
+                                    Operator: "qui",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                },
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "possimus",
+                                    Operand: "occaecati",
+                                    Operator: "odit",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                },
+                            },
+                            SlotName: "rem",
+                            UserAttribute: "voluptatem",
+                        },
+                        DefaultValue: "amet",
+                        Type: "est",
+                    },
+                    "id": shared.ComponentBindingPropertiesValue{
+                        BindingProperties: &shared.ComponentBindingPropertiesValueProperties{
+                            Bucket: "blanditiis",
+                            DefaultValue: "numquam",
+                            Field: "similique",
+                            Key: "dolores",
+                            Model: "sit",
+                            Predicates: []shared.Predicate{
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "voluptatem",
+                                    Operand: "laborum",
+                                    Operator: "modi",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                },
+                                shared.Predicate{
+                                    And: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                    Field: "earum",
+                                    Operand: "ut",
+                                    Operator: "soluta",
+                                    Or: []shared.Predicate{
+                                        shared.Predicate{},
+                                        shared.Predicate{},
+                                    },
+                                },
+                            },
+                            SlotName: "ea",
+                            UserAttribute: "laborum",
+                        },
+                        DefaultValue: "iusto",
+                        Type: "ut",
+                    },
+                },
+                Children: []shared.ComponentChild{
+                    shared.ComponentChild{
+                        Children: []shared.ComponentChild{
+                            shared.ComponentChild{},
+                        },
+                        ComponentType: "inventore",
+                        Events: map[string]shared.ComponentEvent{
+                            "libero": shared.ComponentEvent{
+                                Action: "et",
+                                BindingEvent: "libero",
+                                Parameters: &shared.ActionParameters{
+                                    Anchor: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "ipsum",
+                                            Property: "non",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "magni": shared.FormBindingElement{
+                                                Element: "placeat",
+                                                Property: "ipsam",
+                                            },
+                                            "est": shared.FormBindingElement{
+                                                Element: "commodi",
+                                                Property: "quia",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "similique",
+                                            Property: "eaque",
+                                        },
+                                        ComponentName: "odio",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "doloribus",
+                                            Operand: "a",
+                                            OperandType: "aut",
+                                            Operator: "et",
+                                            Property: "non",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "quidem",
+                                        Event: "neque",
+                                        ImportedValue: "asperiores",
+                                        Model: "et",
+                                        Property: "culpa",
+                                        Type: "aliquam",
+                                        UserAttribute: "esse",
+                                        Value: "totam",
+                                    },
+                                    Fields: map[string]shared.ComponentProperty{
+                                        "et": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "fuga",
+                                                Property: "nesciunt",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "aut": shared.FormBindingElement{
+                                                    Element: "cum",
+                                                    Property: "expedita",
+                                                },
+                                                "ipsam": shared.FormBindingElement{
+                                                    Element: "eos",
+                                                    Property: "omnis",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "adipisci",
+                                                Property: "hic",
+                                            },
+                                            ComponentName: "consequatur",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "qui",
+                                                Operand: "perferendis",
+                                                OperandType: "aspernatur",
+                                                Operator: "fuga",
+                                                Property: "quo",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "tempore",
+                                            Event: "explicabo",
+                                            ImportedValue: "aut",
+                                            Model: "reiciendis",
+                                            Property: "debitis",
+                                            Type: "totam",
+                                            UserAttribute: "molestias",
+                                            Value: "reiciendis",
+                                        },
+                                        "illo": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "id",
+                                                Property: "qui",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "sit": shared.FormBindingElement{
+                                                    Element: "eaque",
+                                                    Property: "odio",
+                                                },
+                                                "veniam": shared.FormBindingElement{
+                                                    Element: "reiciendis",
+                                                    Property: "sed",
+                                                },
+                                                "ea": shared.FormBindingElement{
+                                                    Element: "exercitationem",
+                                                    Property: "deleniti",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "sed",
+                                                Property: "est",
+                                            },
+                                            ComponentName: "voluptatem",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "esse",
+                                                Operand: "sint",
+                                                OperandType: "veritatis",
+                                                Operator: "numquam",
+                                                Property: "eligendi",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "error",
+                                            Event: "similique",
+                                            ImportedValue: "et",
+                                            Model: "ut",
+                                            Property: "molestias",
+                                            Type: "cupiditate",
+                                            UserAttribute: "sint",
+                                            Value: "explicabo",
+                                        },
+                                    },
+                                    Global: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "et",
+                                            Property: "in",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "non": shared.FormBindingElement{
+                                                Element: "minima",
+                                                Property: "voluptatem",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "aut",
+                                            Property: "libero",
+                                        },
+                                        ComponentName: "voluptas",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "est",
+                                            Operand: "porro",
+                                            OperandType: "voluptas",
+                                            Operator: "nostrum",
+                                            Property: "voluptatem",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "sit",
+                                        Event: "in",
+                                        ImportedValue: "officia",
+                                        Model: "omnis",
+                                        Property: "voluptatem",
+                                        Type: "dolorem",
+                                        UserAttribute: "eum",
+                                        Value: "quis",
+                                    },
+                                    ID: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "consequatur",
+                                            Property: "ratione",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "similique": shared.FormBindingElement{
+                                                Element: "enim",
+                                                Property: "nihil",
+                                            },
+                                            "id": shared.FormBindingElement{
+                                                Element: "quis",
+                                                Property: "sapiente",
+                                            },
+                                            "et": shared.FormBindingElement{
+                                                Element: "dolore",
+                                                Property: "possimus",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "in",
+                                            Property: "qui",
+                                        },
+                                        ComponentName: "deserunt",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "sunt",
+                                            Operand: "rerum",
+                                            OperandType: "modi",
+                                            Operator: "necessitatibus",
+                                            Property: "tenetur",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "soluta",
+                                        Event: "ducimus",
+                                        ImportedValue: "ducimus",
+                                        Model: "nulla",
+                                        Property: "reiciendis",
+                                        Type: "cumque",
+                                        UserAttribute: "fugit",
+                                        Value: "ullam",
+                                    },
+                                    Model: "voluptas",
+                                    State: &shared.MutationActionSetStateParameter{
+                                        ComponentName: "vel",
+                                        Property: "velit",
+                                        Set: shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "qui",
+                                                Property: "cum",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "magnam": shared.FormBindingElement{
+                                                    Element: "culpa",
+                                                    Property: "enim",
+                                                },
+                                                "aut": shared.FormBindingElement{
+                                                    Element: "delectus",
+                                                    Property: "eligendi",
+                                                },
+                                                "officia": shared.FormBindingElement{
+                                                    Element: "est",
+                                                    Property: "distinctio",
+                                                },
+                                                "et": shared.FormBindingElement{
+                                                    Element: "provident",
+                                                    Property: "a",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "incidunt",
+                                                Property: "facilis",
+                                            },
+                                            ComponentName: "qui",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "dolorum",
+                                                Operand: "id",
+                                                OperandType: "voluptatum",
+                                                Operator: "sit",
+                                                Property: "rem",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "corporis",
+                                            Event: "porro",
+                                            ImportedValue: "distinctio",
+                                            Model: "quis",
+                                            Property: "nostrum",
+                                            Type: "eum",
+                                            UserAttribute: "et",
+                                            Value: "placeat",
+                                        },
+                                    },
+                                    Target: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "molestiae",
+                                            Property: "debitis",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "aut": shared.FormBindingElement{
+                                                Element: "ullam",
+                                                Property: "explicabo",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "similique",
+                                            Property: "ex",
+                                        },
+                                        ComponentName: "deserunt",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "in",
+                                            Operand: "aperiam",
+                                            OperandType: "et",
+                                            Operator: "ut",
+                                            Property: "et",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "voluptatem",
+                                        Event: "et",
+                                        ImportedValue: "modi",
+                                        Model: "eveniet",
+                                        Property: "qui",
+                                        Type: "consequatur",
+                                        UserAttribute: "aspernatur",
+                                        Value: "iusto",
+                                    },
+                                    Type: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "maiores",
+                                            Property: "saepe",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "aut": shared.FormBindingElement{
+                                                Element: "sed",
+                                                Property: "nihil",
+                                            },
+                                            "ducimus": shared.FormBindingElement{
+                                                Element: "aspernatur",
+                                                Property: "aspernatur",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "sint",
+                                            Property: "aliquid",
+                                        },
+                                        ComponentName: "quo",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "repellat",
+                                            Operand: "voluptas",
+                                            OperandType: "voluptatem",
+                                            Operator: "et",
+                                            Property: "accusamus",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "eaque",
+                                        Event: "neque",
+                                        ImportedValue: "molestias",
+                                        Model: "et",
+                                        Property: "dolorem",
+                                        Type: "quia",
+                                        UserAttribute: "omnis",
+                                        Value: "pariatur",
+                                    },
+                                    URL: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "et",
+                                            Property: "consequatur",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "similique": shared.FormBindingElement{
+                                                Element: "eos",
+                                                Property: "voluptate",
+                                            },
+                                            "aperiam": shared.FormBindingElement{
+                                                Element: "quasi",
+                                                Property: "voluptatibus",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "optio",
+                                            Property: "quis",
+                                        },
+                                        ComponentName: "qui",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "quisquam",
+                                            Operand: "ab",
+                                            OperandType: "et",
+                                            Operator: "consequatur",
+                                            Property: "aut",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "sit",
+                                        Event: "vero",
+                                        ImportedValue: "incidunt",
+                                        Model: "aut",
+                                        Property: "voluptas",
+                                        Type: "ea",
+                                        UserAttribute: "rerum",
+                                        Value: "qui",
+                                    },
+                                },
+                            },
+                            "placeat": shared.ComponentEvent{
+                                Action: "ipsum",
+                                BindingEvent: "laboriosam",
+                                Parameters: &shared.ActionParameters{
+                                    Anchor: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "occaecati",
+                                            Property: "corrupti",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "laboriosam": shared.FormBindingElement{
+                                                Element: "velit",
+                                                Property: "dolor",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "sit",
+                                            Property: "ipsum",
+                                        },
+                                        ComponentName: "autem",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "modi",
+                                            Operand: "officiis",
+                                            OperandType: "nisi",
+                                            Operator: "rerum",
+                                            Property: "non",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "est",
+                                        Event: "nihil",
+                                        ImportedValue: "mollitia",
+                                        Model: "doloremque",
+                                        Property: "repellendus",
+                                        Type: "dolorem",
+                                        UserAttribute: "et",
+                                        Value: "dolorum",
+                                    },
+                                    Fields: map[string]shared.ComponentProperty{
+                                        "in": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "cumque",
+                                                Property: "labore",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "recusandae": shared.FormBindingElement{
+                                                    Element: "ut",
+                                                    Property: "laborum",
+                                                },
+                                                "soluta": shared.FormBindingElement{
+                                                    Element: "sed",
+                                                    Property: "et",
+                                                },
+                                                "officia": shared.FormBindingElement{
+                                                    Element: "placeat",
+                                                    Property: "qui",
+                                                },
+                                                "delectus": shared.FormBindingElement{
+                                                    Element: "enim",
+                                                    Property: "iste",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "in",
+                                                Property: "non",
+                                            },
+                                            ComponentName: "non",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "amet",
+                                                Operand: "eius",
+                                                OperandType: "rerum",
+                                                Operator: "similique",
+                                                Property: "quod",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "qui",
+                                            Event: "quos",
+                                            ImportedValue: "ut",
+                                            Model: "tempora",
+                                            Property: "soluta",
+                                            Type: "aliquam",
+                                            UserAttribute: "dicta",
+                                            Value: "inventore",
+                                        },
+                                    },
+                                    Global: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "inventore",
+                                            Property: "iusto",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "enim": shared.FormBindingElement{
+                                                Element: "aut",
+                                                Property: "optio",
+                                            },
+                                            "reiciendis": shared.FormBindingElement{
+                                                Element: "vel",
+                                                Property: "et",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "dolor",
+                                            Property: "perspiciatis",
+                                        },
+                                        ComponentName: "accusantium",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "et",
+                                            Operand: "maxime",
+                                            OperandType: "soluta",
+                                            Operator: "deleniti",
+                                            Property: "qui",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "cum",
+                                        Event: "sed",
+                                        ImportedValue: "est",
+                                        Model: "eveniet",
+                                        Property: "quo",
+                                        Type: "doloribus",
+                                        UserAttribute: "totam",
+                                        Value: "eius",
+                                    },
+                                    ID: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "blanditiis",
+                                            Property: "nam",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "voluptatem": shared.FormBindingElement{
+                                                Element: "eos",
+                                                Property: "voluptatem",
+                                            },
+                                            "incidunt": shared.FormBindingElement{
+                                                Element: "possimus",
+                                                Property: "aut",
+                                            },
+                                            "voluptatem": shared.FormBindingElement{
+                                                Element: "et",
+                                                Property: "eum",
+                                            },
+                                            "facilis": shared.FormBindingElement{
+                                                Element: "officia",
+                                                Property: "quia",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "eum",
+                                            Property: "occaecati",
+                                        },
+                                        ComponentName: "et",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "officiis",
+                                            Operand: "enim",
+                                            OperandType: "ad",
+                                            Operator: "nihil",
+                                            Property: "quibusdam",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "rerum",
+                                        Event: "amet",
+                                        ImportedValue: "soluta",
+                                        Model: "tenetur",
+                                        Property: "blanditiis",
+                                        Type: "est",
+                                        UserAttribute: "atque",
+                                        Value: "numquam",
+                                    },
+                                    Model: "temporibus",
+                                    State: &shared.MutationActionSetStateParameter{
+                                        ComponentName: "rerum",
+                                        Property: "incidunt",
+                                        Set: shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "qui",
+                                                Property: "aut",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "ipsam": shared.FormBindingElement{
+                                                    Element: "numquam",
+                                                    Property: "a",
+                                                },
+                                                "occaecati": shared.FormBindingElement{
+                                                    Element: "rem",
+                                                    Property: "accusantium",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "quo",
+                                                Property: "quia",
+                                            },
+                                            ComponentName: "sequi",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "qui",
+                                                Operand: "autem",
+                                                OperandType: "facilis",
+                                                Operator: "laudantium",
+                                                Property: "numquam",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "minima",
+                                            Event: "amet",
+                                            ImportedValue: "officia",
+                                            Model: "consequatur",
+                                            Property: "et",
+                                            Type: "placeat",
+                                            UserAttribute: "sed",
+                                            Value: "cum",
+                                        },
+                                    },
+                                    Target: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "sint",
+                                            Property: "ad",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "quia": shared.FormBindingElement{
+                                                Element: "porro",
+                                                Property: "nihil",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "qui",
+                                            Property: "laudantium",
+                                        },
+                                        ComponentName: "error",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "sit",
+                                            Operand: "quia",
+                                            OperandType: "ratione",
+                                            Operator: "dolorem",
+                                            Property: "corrupti",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "consequuntur",
+                                        Event: "ex",
+                                        ImportedValue: "quisquam",
+                                        Model: "earum",
+                                        Property: "doloremque",
+                                        Type: "voluptas",
+                                        UserAttribute: "placeat",
+                                        Value: "placeat",
+                                    },
+                                    Type: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "explicabo",
+                                            Property: "et",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "vitae": shared.FormBindingElement{
+                                                Element: "placeat",
+                                                Property: "omnis",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "minus",
+                                            Property: "qui",
+                                        },
+                                        ComponentName: "quae",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "non",
+                                            Operand: "nostrum",
+                                            OperandType: "quis",
+                                            Operator: "labore",
+                                            Property: "cum",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "aspernatur",
+                                        Event: "veritatis",
+                                        ImportedValue: "sit",
+                                        Model: "iste",
+                                        Property: "non",
+                                        Type: "aut",
+                                        UserAttribute: "libero",
+                                        Value: "fugiat",
+                                    },
+                                    URL: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "repellendus",
+                                            Property: "maiores",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "nihil": shared.FormBindingElement{
+                                                Element: "officia",
+                                                Property: "sit",
+                                            },
+                                            "veritatis": shared.FormBindingElement{
+                                                Element: "excepturi",
+                                                Property: "atque",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "culpa",
+                                            Property: "reiciendis",
+                                        },
+                                        ComponentName: "temporibus",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "est",
+                                            Operand: "laboriosam",
+                                            OperandType: "eius",
+                                            Operator: "sapiente",
+                                            Property: "blanditiis",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "incidunt",
+                                        Event: "debitis",
+                                        ImportedValue: "hic",
+                                        Model: "quos",
+                                        Property: "earum",
+                                        Type: "porro",
+                                        UserAttribute: "et",
+                                        Value: "corrupti",
+                                    },
+                                },
+                            },
+                            "et": shared.ComponentEvent{
+                                Action: "impedit",
+                                BindingEvent: "officiis",
+                                Parameters: &shared.ActionParameters{
+                                    Anchor: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "et",
+                                            Property: "nostrum",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "pariatur": shared.FormBindingElement{
+                                                Element: "adipisci",
+                                                Property: "et",
+                                            },
+                                            "est": shared.FormBindingElement{
+                                                Element: "perferendis",
+                                                Property: "aut",
+                                            },
+                                            "ut": shared.FormBindingElement{
+                                                Element: "eos",
+                                                Property: "ratione",
+                                            },
+                                            "dolor": shared.FormBindingElement{
+                                                Element: "voluptatibus",
+                                                Property: "maiores",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "deleniti",
+                                            Property: "facere",
+                                        },
+                                        ComponentName: "dolores",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "rerum",
+                                            Operand: "enim",
+                                            OperandType: "consequatur",
+                                            Operator: "velit",
+                                            Property: "eos",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "molestiae",
+                                        Event: "qui",
+                                        ImportedValue: "ullam",
+                                        Model: "consectetur",
+                                        Property: "in",
+                                        Type: "excepturi",
+                                        UserAttribute: "quia",
+                                        Value: "modi",
+                                    },
+                                    Fields: map[string]shared.ComponentProperty{
+                                        "aspernatur": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "voluptate",
+                                                Property: "eos",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "aut": shared.FormBindingElement{
+                                                    Element: "nisi",
+                                                    Property: "sapiente",
+                                                },
+                                                "temporibus": shared.FormBindingElement{
+                                                    Element: "et",
+                                                    Property: "velit",
+                                                },
+                                                "est": shared.FormBindingElement{
+                                                    Element: "ea",
+                                                    Property: "sit",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "in",
+                                                Property: "vitae",
+                                            },
+                                            ComponentName: "corporis",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "omnis",
+                                                Operand: "incidunt",
+                                                OperandType: "molestiae",
+                                                Operator: "magni",
+                                                Property: "voluptas",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "illo",
+                                            Event: "tenetur",
+                                            ImportedValue: "est",
+                                            Model: "perferendis",
+                                            Property: "aut",
+                                            Type: "provident",
+                                            UserAttribute: "assumenda",
+                                            Value: "corporis",
+                                        },
+                                        "ratione": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "aut",
+                                                Property: "beatae",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "sunt": shared.FormBindingElement{
+                                                    Element: "cum",
+                                                    Property: "tempore",
+                                                },
+                                                "consequatur": shared.FormBindingElement{
+                                                    Element: "dolore",
+                                                    Property: "et",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "quam",
+                                                Property: "facere",
+                                            },
+                                            ComponentName: "iste",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "eos",
+                                                Operand: "vel",
+                                                OperandType: "qui",
+                                                Operator: "aspernatur",
+                                                Property: "enim",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "aliquam",
+                                            Event: "magni",
+                                            ImportedValue: "deserunt",
+                                            Model: "illo",
+                                            Property: "voluptatum",
+                                            Type: "corporis",
+                                            UserAttribute: "corrupti",
+                                            Value: "voluptatem",
+                                        },
+                                        "praesentium": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "blanditiis",
+                                                Property: "cupiditate",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "dignissimos": shared.FormBindingElement{
+                                                    Element: "optio",
+                                                    Property: "at",
+                                                },
+                                                "veniam": shared.FormBindingElement{
+                                                    Element: "et",
+                                                    Property: "vel",
+                                                },
+                                                "dolorem": shared.FormBindingElement{
+                                                    Element: "sit",
+                                                    Property: "molestias",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "temporibus",
+                                                Property: "dicta",
+                                            },
+                                            ComponentName: "inventore",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "optio",
+                                                Operand: "quia",
+                                                OperandType: "omnis",
+                                                Operator: "nulla",
+                                                Property: "omnis",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "soluta",
+                                            Event: "quaerat",
+                                            ImportedValue: "dolor",
+                                            Model: "autem",
+                                            Property: "quasi",
+                                            Type: "officia",
+                                            UserAttribute: "aut",
+                                            Value: "enim",
+                                        },
+                                        "saepe": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "quis",
+                                                Property: "dolores",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "dolor": shared.FormBindingElement{
+                                                    Element: "praesentium",
+                                                    Property: "molestiae",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "quae",
+                                                Property: "porro",
+                                            },
+                                            ComponentName: "et",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "beatae",
+                                                Operand: "totam",
+                                                OperandType: "occaecati",
+                                                Operator: "aut",
+                                                Property: "nemo",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "corrupti",
+                                            Event: "in",
+                                            ImportedValue: "esse",
+                                            Model: "a",
+                                            Property: "quia",
+                                            Type: "facilis",
+                                            UserAttribute: "voluptatum",
+                                            Value: "aperiam",
+                                        },
+                                    },
+                                    Global: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "repellendus",
+                                            Property: "et",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "molestias": shared.FormBindingElement{
+                                                Element: "nesciunt",
+                                                Property: "sed",
+                                            },
+                                            "qui": shared.FormBindingElement{
+                                                Element: "soluta",
+                                                Property: "est",
+                                            },
+                                            "minima": shared.FormBindingElement{
+                                                Element: "ut",
+                                                Property: "magni",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "voluptas",
+                                            Property: "reprehenderit",
+                                        },
+                                        ComponentName: "ratione",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "nesciunt",
+                                            Operand: "amet",
+                                            OperandType: "magni",
+                                            Operator: "et",
+                                            Property: "culpa",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "perspiciatis",
+                                        Event: "sunt",
+                                        ImportedValue: "blanditiis",
+                                        Model: "voluptates",
+                                        Property: "aut",
+                                        Type: "vitae",
+                                        UserAttribute: "praesentium",
+                                        Value: "et",
+                                    },
+                                    ID: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "est",
+                                            Property: "debitis",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "explicabo": shared.FormBindingElement{
+                                                Element: "et",
+                                                Property: "molestiae",
+                                            },
+                                            "est": shared.FormBindingElement{
+                                                Element: "rem",
+                                                Property: "cumque",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "culpa",
+                                            Property: "voluptas",
+                                        },
+                                        ComponentName: "porro",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "accusantium",
+                                            Operand: "quidem",
+                                            OperandType: "minus",
+                                            Operator: "labore",
+                                            Property: "voluptas",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "nesciunt",
+                                        Event: "aut",
+                                        ImportedValue: "quibusdam",
+                                        Model: "nemo",
+                                        Property: "a",
+                                        Type: "incidunt",
+                                        UserAttribute: "praesentium",
+                                        Value: "quas",
+                                    },
+                                    Model: "deserunt",
+                                    State: &shared.MutationActionSetStateParameter{
+                                        ComponentName: "tenetur",
+                                        Property: "vero",
+                                        Set: shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "iste",
+                                                Property: "blanditiis",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "tenetur": shared.FormBindingElement{
+                                                    Element: "dolorum",
+                                                    Property: "in",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "eos",
+                                                Property: "qui",
+                                            },
+                                            ComponentName: "nesciunt",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "asperiores",
+                                                Operand: "illum",
+                                                OperandType: "dicta",
+                                                Operator: "nesciunt",
+                                                Property: "explicabo",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "et",
+                                            Event: "harum",
+                                            ImportedValue: "in",
+                                            Model: "hic",
+                                            Property: "veritatis",
+                                            Type: "itaque",
+                                            UserAttribute: "nihil",
+                                            Value: "ducimus",
+                                        },
+                                    },
+                                    Target: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "quaerat",
+                                            Property: "qui",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "quod": shared.FormBindingElement{
+                                                Element: "aperiam",
+                                                Property: "nemo",
+                                            },
+                                            "a": shared.FormBindingElement{
+                                                Element: "sed",
+                                                Property: "ex",
+                                            },
+                                            "dignissimos": shared.FormBindingElement{
+                                                Element: "ex",
+                                                Property: "reprehenderit",
+                                            },
+                                            "sit": shared.FormBindingElement{
+                                                Element: "provident",
+                                                Property: "amet",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "nulla",
+                                            Property: "in",
+                                        },
+                                        ComponentName: "sed",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "soluta",
+                                            Operand: "aspernatur",
+                                            OperandType: "est",
+                                            Operator: "rerum",
+                                            Property: "aspernatur",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "accusamus",
+                                        Event: "sunt",
+                                        ImportedValue: "blanditiis",
+                                        Model: "illo",
+                                        Property: "voluptas",
+                                        Type: "dicta",
+                                        UserAttribute: "incidunt",
+                                        Value: "labore",
+                                    },
+                                    Type: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "et",
+                                            Property: "voluptas",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "cupiditate": shared.FormBindingElement{
+                                                Element: "perferendis",
+                                                Property: "excepturi",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "molestiae",
+                                            Property: "est",
+                                        },
+                                        ComponentName: "et",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "magnam",
+                                            Operand: "aperiam",
+                                            OperandType: "modi",
+                                            Operator: "culpa",
+                                            Property: "aliquam",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "est",
+                                        Event: "magni",
+                                        ImportedValue: "autem",
+                                        Model: "aut",
+                                        Property: "quos",
+                                        Type: "fugit",
+                                        UserAttribute: "voluptatibus",
+                                        Value: "dolorum",
+                                    },
+                                    URL: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "et",
+                                            Property: "aut",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "doloribus": shared.FormBindingElement{
+                                                Element: "quae",
+                                                Property: "voluptate",
+                                            },
+                                            "enim": shared.FormBindingElement{
+                                                Element: "neque",
+                                                Property: "fugiat",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "rerum",
+                                            Property: "aut",
+                                        },
+                                        ComponentName: "quos",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "doloribus",
+                                            Operand: "consequatur",
+                                            OperandType: "et",
+                                            Operator: "enim",
+                                            Property: "repellendus",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "et",
+                                        Event: "quis",
+                                        ImportedValue: "quasi",
+                                        Model: "et",
+                                        Property: "nobis",
+                                        Type: "distinctio",
+                                        UserAttribute: "vel",
+                                        Value: "dolore",
+                                    },
+                                },
+                            },
+                            "harum": shared.ComponentEvent{
+                                Action: "nam",
+                                BindingEvent: "molestiae",
+                                Parameters: &shared.ActionParameters{
+                                    Anchor: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "sint",
+                                            Property: "at",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "dolores": shared.FormBindingElement{
+                                                Element: "iste",
+                                                Property: "molestiae",
+                                            },
+                                            "quis": shared.FormBindingElement{
+                                                Element: "qui",
+                                                Property: "nihil",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "id",
+                                            Property: "esse",
+                                        },
+                                        ComponentName: "ducimus",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "ut",
+                                            Operand: "eum",
+                                            OperandType: "commodi",
+                                            Operator: "molestiae",
+                                            Property: "qui",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "quae",
+                                        Event: "id",
+                                        ImportedValue: "incidunt",
+                                        Model: "ducimus",
+                                        Property: "ut",
+                                        Type: "itaque",
+                                        UserAttribute: "vel",
+                                        Value: "quaerat",
+                                    },
+                                    Fields: map[string]shared.ComponentProperty{
+                                        "eum": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "ut",
+                                                Property: "optio",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "eveniet": shared.FormBindingElement{
+                                                    Element: "exercitationem",
+                                                    Property: "quia",
+                                                },
+                                                "asperiores": shared.FormBindingElement{
+                                                    Element: "et",
+                                                    Property: "magnam",
+                                                },
+                                                "tempora": shared.FormBindingElement{
+                                                    Element: "odit",
+                                                    Property: "corrupti",
+                                                },
+                                                "hic": shared.FormBindingElement{
+                                                    Element: "necessitatibus",
+                                                    Property: "ut",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "ea",
+                                                Property: "est",
+                                            },
+                                            ComponentName: "eum",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "sint",
+                                                Operand: "qui",
+                                                OperandType: "fugit",
+                                                Operator: "aut",
+                                                Property: "harum",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "enim",
+                                            Event: "dolores",
+                                            ImportedValue: "vel",
+                                            Model: "autem",
+                                            Property: "autem",
+                                            Type: "quia",
+                                            UserAttribute: "placeat",
+                                            Value: "soluta",
+                                        },
+                                        "labore": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "quibusdam",
+                                                Property: "ipsum",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "ducimus": shared.FormBindingElement{
+                                                    Element: "exercitationem",
+                                                    Property: "corporis",
+                                                },
+                                                "rerum": shared.FormBindingElement{
+                                                    Element: "quo",
+                                                    Property: "aliquid",
+                                                },
+                                                "labore": shared.FormBindingElement{
+                                                    Element: "id",
+                                                    Property: "quas",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "iste",
+                                                Property: "earum",
+                                            },
+                                            ComponentName: "sed",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "unde",
+                                                Operand: "et",
+                                                OperandType: "occaecati",
+                                                Operator: "earum",
+                                                Property: "ut",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "placeat",
+                                            Event: "accusantium",
+                                            ImportedValue: "cumque",
+                                            Model: "voluptatem",
+                                            Property: "ut",
+                                            Type: "magni",
+                                            UserAttribute: "asperiores",
+                                            Value: "impedit",
+                                        },
+                                        "qui": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "impedit",
+                                                Property: "quasi",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "nostrum": shared.FormBindingElement{
+                                                    Element: "tempore",
+                                                    Property: "voluptatem",
+                                                },
+                                                "ducimus": shared.FormBindingElement{
+                                                    Element: "esse",
+                                                    Property: "optio",
+                                                },
+                                                "magni": shared.FormBindingElement{
+                                                    Element: "vel",
+                                                    Property: "id",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "aspernatur",
+                                                Property: "eum",
+                                            },
+                                            ComponentName: "sapiente",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "architecto",
+                                                Operand: "delectus",
+                                                OperandType: "sit",
+                                                Operator: "unde",
+                                                Property: "reiciendis",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "ad",
+                                            Event: "ratione",
+                                            ImportedValue: "deserunt",
+                                            Model: "quaerat",
+                                            Property: "eveniet",
+                                            Type: "numquam",
+                                            UserAttribute: "voluptate",
+                                            Value: "culpa",
+                                        },
+                                        "omnis": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "aut",
+                                                Property: "enim",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "blanditiis": shared.FormBindingElement{
+                                                    Element: "ut",
+                                                    Property: "ea",
+                                                },
+                                                "accusantium": shared.FormBindingElement{
+                                                    Element: "dolore",
+                                                    Property: "necessitatibus",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "quas",
+                                                Property: "impedit",
+                                            },
+                                            ComponentName: "enim",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "quis",
+                                                Operand: "saepe",
+                                                OperandType: "cupiditate",
+                                                Operator: "accusantium",
+                                                Property: "placeat",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "fuga",
+                                            Event: "suscipit",
+                                            ImportedValue: "sit",
+                                            Model: "molestiae",
+                                            Property: "delectus",
+                                            Type: "eos",
+                                            UserAttribute: "dolorem",
+                                            Value: "ab",
+                                        },
+                                    },
+                                    Global: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "ut",
+                                            Property: "aliquam",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "ducimus": shared.FormBindingElement{
+                                                Element: "necessitatibus",
+                                                Property: "odit",
+                                            },
+                                            "excepturi": shared.FormBindingElement{
+                                                Element: "ut",
+                                                Property: "excepturi",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "quod",
+                                            Property: "iure",
+                                        },
+                                        ComponentName: "soluta",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "dolorum",
+                                            Operand: "rerum",
+                                            OperandType: "impedit",
+                                            Operator: "saepe",
+                                            Property: "quia",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "cum",
+                                        Event: "nisi",
+                                        ImportedValue: "rerum",
+                                        Model: "cum",
+                                        Property: "unde",
+                                        Type: "debitis",
+                                        UserAttribute: "enim",
+                                        Value: "perspiciatis",
+                                    },
+                                    ID: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "ratione",
+                                            Property: "veniam",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "doloremque": shared.FormBindingElement{
+                                                Element: "quidem",
+                                                Property: "impedit",
+                                            },
+                                            "ullam": shared.FormBindingElement{
+                                                Element: "consequatur",
+                                                Property: "praesentium",
+                                            },
+                                            "quis": shared.FormBindingElement{
+                                                Element: "accusantium",
+                                                Property: "provident",
+                                            },
+                                            "iste": shared.FormBindingElement{
+                                                Element: "et",
+                                                Property: "ea",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "sunt",
+                                            Property: "quas",
+                                        },
+                                        ComponentName: "voluptate",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "accusantium",
+                                            Operand: "nihil",
+                                            OperandType: "nisi",
+                                            Operator: "et",
+                                            Property: "dolorum",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "aut",
+                                        Event: "minima",
+                                        ImportedValue: "ut",
+                                        Model: "non",
+                                        Property: "eligendi",
+                                        Type: "fugit",
+                                        UserAttribute: "aspernatur",
+                                        Value: "in",
+                                    },
+                                    Model: "nostrum",
+                                    State: &shared.MutationActionSetStateParameter{
+                                        ComponentName: "optio",
+                                        Property: "ut",
+                                        Set: shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "tempore",
+                                                Property: "est",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "iure": shared.FormBindingElement{
+                                                    Element: "alias",
+                                                    Property: "tempora",
+                                                },
+                                                "est": shared.FormBindingElement{
+                                                    Element: "blanditiis",
+                                                    Property: "animi",
+                                                },
+                                                "aut": shared.FormBindingElement{
+                                                    Element: "officia",
+                                                    Property: "fugiat",
+                                                },
+                                                "sapiente": shared.FormBindingElement{
+                                                    Element: "repudiandae",
+                                                    Property: "sit",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "libero",
+                                                Property: "optio",
+                                            },
+                                            ComponentName: "odio",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "nobis",
+                                                Operand: "molestias",
+                                                OperandType: "est",
+                                                Operator: "suscipit",
+                                                Property: "doloremque",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "temporibus",
+                                            Event: "sint",
+                                            ImportedValue: "aspernatur",
+                                            Model: "perspiciatis",
+                                            Property: "dignissimos",
+                                            Type: "doloribus",
+                                            UserAttribute: "occaecati",
+                                            Value: "eum",
+                                        },
+                                    },
+                                    Target: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "eligendi",
+                                            Property: "aut",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "praesentium": shared.FormBindingElement{
+                                                Element: "tempora",
+                                                Property: "dolorem",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "velit",
+                                            Property: "ut",
+                                        },
+                                        ComponentName: "fuga",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "rerum",
+                                            Operand: "aut",
+                                            OperandType: "dolorum",
+                                            Operator: "voluptas",
+                                            Property: "dolores",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "ea",
+                                        Event: "voluptatibus",
+                                        ImportedValue: "perspiciatis",
+                                        Model: "officiis",
+                                        Property: "dolorum",
+                                        Type: "quas",
+                                        UserAttribute: "vel",
+                                        Value: "et",
+                                    },
+                                    Type: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "ut",
+                                            Property: "ut",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "et": shared.FormBindingElement{
+                                                Element: "soluta",
+                                                Property: "eum",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "quis",
+                                            Property: "ut",
+                                        },
+                                        ComponentName: "ipsa",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "fugit",
+                                            Operand: "aperiam",
+                                            OperandType: "odit",
+                                            Operator: "quia",
+                                            Property: "ipsam",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "iure",
+                                        Event: "dolore",
+                                        ImportedValue: "tenetur",
+                                        Model: "error",
+                                        Property: "ullam",
+                                        Type: "et",
+                                        UserAttribute: "nesciunt",
+                                        Value: "culpa",
+                                    },
+                                    URL: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "rerum",
+                                            Property: "mollitia",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "labore": shared.FormBindingElement{
+                                                Element: "voluptates",
+                                                Property: "culpa",
+                                            },
+                                            "nesciunt": shared.FormBindingElement{
+                                                Element: "ratione",
+                                                Property: "distinctio",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "suscipit",
+                                            Property: "odio",
+                                        },
+                                        ComponentName: "fuga",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "ea",
+                                            Operand: "optio",
+                                            OperandType: "voluptates",
+                                            Operator: "dolore",
+                                            Property: "debitis",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "eaque",
+                                        Event: "iusto",
+                                        ImportedValue: "inventore",
+                                        Model: "sint",
+                                        Property: "veritatis",
+                                        Type: "voluptatum",
+                                        UserAttribute: "voluptates",
+                                        Value: "sit",
+                                    },
+                                },
+                            },
+                        },
+                        Name: "quod",
+                        Properties: "iusto",
+                        SourceID: "eveniet",
+                    },
+                    shared.ComponentChild{
+                        Children: []shared.ComponentChild{
+                            shared.ComponentChild{},
+                        },
+                        ComponentType: "tempore",
+                        Events: map[string]shared.ComponentEvent{
+                            "non": shared.ComponentEvent{
+                                Action: "cupiditate",
+                                BindingEvent: "corporis",
+                                Parameters: &shared.ActionParameters{
+                                    Anchor: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "voluptatem",
+                                            Property: "repellat",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "commodi": shared.FormBindingElement{
+                                                Element: "mollitia",
+                                                Property: "rem",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "est",
+                                            Property: "vel",
+                                        },
+                                        ComponentName: "consequatur",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "ut",
+                                            Operand: "quia",
+                                            OperandType: "nam",
+                                            Operator: "voluptas",
+                                            Property: "nostrum",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "soluta",
+                                        Event: "velit",
+                                        ImportedValue: "veritatis",
+                                        Model: "molestiae",
+                                        Property: "est",
+                                        Type: "enim",
+                                        UserAttribute: "voluptatum",
+                                        Value: "ea",
+                                    },
+                                    Fields: map[string]shared.ComponentProperty{
+                                        "harum": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "labore",
+                                                Property: "necessitatibus",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "et": shared.FormBindingElement{
+                                                    Element: "consequatur",
+                                                    Property: "non",
+                                                },
+                                                "blanditiis": shared.FormBindingElement{
+                                                    Element: "deserunt",
+                                                    Property: "laboriosam",
+                                                },
+                                                "et": shared.FormBindingElement{
+                                                    Element: "ut",
+                                                    Property: "deserunt",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "dolores",
+                                                Property: "ex",
+                                            },
+                                            ComponentName: "aspernatur",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "nisi",
+                                                Operand: "et",
+                                                OperandType: "deserunt",
+                                                Operator: "qui",
+                                                Property: "distinctio",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "ea",
+                                            Event: "qui",
+                                            ImportedValue: "eaque",
+                                            Model: "repellat",
+                                            Property: "maiores",
+                                            Type: "aliquid",
+                                            UserAttribute: "ducimus",
+                                            Value: "quisquam",
+                                        },
+                                        "itaque": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "quidem",
+                                                Property: "tempore",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "ut": shared.FormBindingElement{
+                                                    Element: "reiciendis",
+                                                    Property: "error",
+                                                },
+                                                "necessitatibus": shared.FormBindingElement{
+                                                    Element: "a",
+                                                    Property: "voluptas",
+                                                },
+                                                "fugit": shared.FormBindingElement{
+                                                    Element: "optio",
+                                                    Property: "enim",
+                                                },
+                                                "suscipit": shared.FormBindingElement{
+                                                    Element: "vitae",
+                                                    Property: "ratione",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "voluptas",
+                                                Property: "veritatis",
+                                            },
+                                            ComponentName: "voluptatem",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "eos",
+                                                Operand: "et",
+                                                OperandType: "quaerat",
+                                                Operator: "occaecati",
+                                                Property: "accusamus",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "est",
+                                            Event: "dolor",
+                                            ImportedValue: "a",
+                                            Model: "et",
+                                            Property: "sed",
+                                            Type: "quia",
+                                            UserAttribute: "odit",
+                                            Value: "qui",
+                                        },
+                                    },
+                                    Global: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "officia",
+                                            Property: "itaque",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "earum": shared.FormBindingElement{
+                                                Element: "pariatur",
+                                                Property: "illo",
+                                            },
+                                            "itaque": shared.FormBindingElement{
+                                                Element: "mollitia",
+                                                Property: "voluptatibus",
+                                            },
+                                            "saepe": shared.FormBindingElement{
+                                                Element: "in",
+                                                Property: "dolor",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "vel",
+                                            Property: "non",
+                                        },
+                                        ComponentName: "ratione",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "nobis",
+                                            Operand: "consectetur",
+                                            OperandType: "expedita",
+                                            Operator: "eveniet",
+                                            Property: "eos",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "aut",
+                                        Event: "aspernatur",
+                                        ImportedValue: "sunt",
+                                        Model: "dolores",
+                                        Property: "dolorum",
+                                        Type: "culpa",
+                                        UserAttribute: "eum",
+                                        Value: "et",
+                                    },
+                                    ID: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "aspernatur",
+                                            Property: "ipsum",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "eos": shared.FormBindingElement{
+                                                Element: "eveniet",
+                                                Property: "inventore",
+                                            },
+                                            "enim": shared.FormBindingElement{
+                                                Element: "rem",
+                                                Property: "rem",
+                                            },
+                                            "fugit": shared.FormBindingElement{
+                                                Element: "deleniti",
+                                                Property: "blanditiis",
+                                            },
+                                            "molestias": shared.FormBindingElement{
+                                                Element: "voluptatibus",
+                                                Property: "delectus",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "nihil",
+                                            Property: "aspernatur",
+                                        },
+                                        ComponentName: "vero",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "sed",
+                                            Operand: "atque",
+                                            OperandType: "enim",
+                                            Operator: "praesentium",
+                                            Property: "ea",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "ut",
+                                        Event: "in",
+                                        ImportedValue: "inventore",
+                                        Model: "tempore",
+                                        Property: "quia",
+                                        Type: "nisi",
+                                        UserAttribute: "vero",
+                                        Value: "quo",
+                                    },
+                                    Model: "in",
+                                    State: &shared.MutationActionSetStateParameter{
+                                        ComponentName: "rerum",
+                                        Property: "vel",
+                                        Set: shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "in",
+                                                Property: "voluptatem",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "autem": shared.FormBindingElement{
+                                                    Element: "et",
+                                                    Property: "distinctio",
+                                                },
+                                                "quasi": shared.FormBindingElement{
+                                                    Element: "fuga",
+                                                    Property: "qui",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "repudiandae",
+                                                Property: "et",
+                                            },
+                                            ComponentName: "tempore",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "quia",
+                                                Operand: "sed",
+                                                OperandType: "ipsam",
+                                                Operator: "aut",
+                                                Property: "fugiat",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "ea",
+                                            Event: "omnis",
+                                            ImportedValue: "ea",
+                                            Model: "veniam",
+                                            Property: "voluptatem",
+                                            Type: "quo",
+                                            UserAttribute: "doloremque",
+                                            Value: "natus",
+                                        },
+                                    },
+                                    Target: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "id",
+                                            Property: "in",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "provident": shared.FormBindingElement{
+                                                Element: "id",
+                                                Property: "dicta",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "nihil",
+                                            Property: "nam",
+                                        },
+                                        ComponentName: "quidem",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "a",
+                                            Operand: "necessitatibus",
+                                            OperandType: "aut",
+                                            Operator: "soluta",
+                                            Property: "et",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "necessitatibus",
+                                        Event: "doloremque",
+                                        ImportedValue: "alias",
+                                        Model: "sed",
+                                        Property: "itaque",
+                                        Type: "ea",
+                                        UserAttribute: "a",
+                                        Value: "cupiditate",
+                                    },
+                                    Type: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "quibusdam",
+                                            Property: "commodi",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "consectetur": shared.FormBindingElement{
+                                                Element: "ex",
+                                                Property: "sit",
+                                            },
+                                            "pariatur": shared.FormBindingElement{
+                                                Element: "occaecati",
+                                                Property: "assumenda",
+                                            },
+                                            "voluptas": shared.FormBindingElement{
+                                                Element: "quisquam",
+                                                Property: "quis",
+                                            },
+                                            "harum": shared.FormBindingElement{
+                                                Element: "modi",
+                                                Property: "nemo",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "vitae",
+                                            Property: "sed",
+                                        },
+                                        ComponentName: "dicta",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "modi",
+                                            Operand: "aut",
+                                            OperandType: "aspernatur",
+                                            Operator: "accusantium",
+                                            Property: "voluptatem",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "qui",
+                                        Event: "et",
+                                        ImportedValue: "excepturi",
+                                        Model: "et",
+                                        Property: "modi",
+                                        Type: "vero",
+                                        UserAttribute: "quis",
+                                        Value: "neque",
+                                    },
+                                    URL: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "illo",
+                                            Property: "natus",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "est": shared.FormBindingElement{
+                                                Element: "rerum",
+                                                Property: "blanditiis",
+                                            },
+                                            "eveniet": shared.FormBindingElement{
+                                                Element: "sequi",
+                                                Property: "sit",
+                                            },
+                                            "velit": shared.FormBindingElement{
+                                                Element: "quo",
+                                                Property: "et",
+                                            },
+                                            "molestiae": shared.FormBindingElement{
+                                                Element: "non",
+                                                Property: "corporis",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "aliquid",
+                                            Property: "quasi",
+                                        },
+                                        ComponentName: "dolor",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "facere",
+                                            Operand: "iure",
+                                            OperandType: "molestiae",
+                                            Operator: "nesciunt",
+                                            Property: "doloremque",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "aliquid",
+                                        Event: "eveniet",
+                                        ImportedValue: "explicabo",
+                                        Model: "reprehenderit",
+                                        Property: "accusamus",
+                                        Type: "debitis",
+                                        UserAttribute: "libero",
+                                        Value: "eligendi",
+                                    },
+                                },
+                            },
+                            "consectetur": shared.ComponentEvent{
+                                Action: "maiores",
+                                BindingEvent: "sint",
+                                Parameters: &shared.ActionParameters{
+                                    Anchor: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "omnis",
+                                            Property: "culpa",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "blanditiis": shared.FormBindingElement{
+                                                Element: "et",
+                                                Property: "rerum",
+                                            },
+                                            "autem": shared.FormBindingElement{
+                                                Element: "aliquam",
+                                                Property: "commodi",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "omnis",
+                                            Property: "quaerat",
+                                        },
+                                        ComponentName: "magni",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "velit",
+                                            Operand: "soluta",
+                                            OperandType: "excepturi",
+                                            Operator: "minima",
+                                            Property: "aspernatur",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "cupiditate",
+                                        Event: "at",
+                                        ImportedValue: "sed",
+                                        Model: "qui",
+                                        Property: "nesciunt",
+                                        Type: "ut",
+                                        UserAttribute: "quae",
+                                        Value: "qui",
+                                    },
+                                    Fields: map[string]shared.ComponentProperty{
+                                        "maxime": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "alias",
+                                                Property: "est",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "culpa": shared.FormBindingElement{
+                                                    Element: "laborum",
+                                                    Property: "ipsum",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "vitae",
+                                                Property: "nobis",
+                                            },
+                                            ComponentName: "aut",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "quisquam",
+                                                Operand: "est",
+                                                OperandType: "delectus",
+                                                Operator: "voluptas",
+                                                Property: "molestias",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "et",
+                                            Event: "ullam",
+                                            ImportedValue: "quo",
+                                            Model: "unde",
+                                            Property: "esse",
+                                            Type: "non",
+                                            UserAttribute: "esse",
+                                            Value: "occaecati",
+                                        },
+                                        "itaque": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "ut",
+                                                Property: "quisquam",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "aperiam": shared.FormBindingElement{
+                                                    Element: "quis",
+                                                    Property: "molestiae",
+                                                },
+                                                "alias": shared.FormBindingElement{
+                                                    Element: "explicabo",
+                                                    Property: "dolore",
+                                                },
+                                                "reiciendis": shared.FormBindingElement{
+                                                    Element: "voluptatem",
+                                                    Property: "in",
+                                                },
+                                                "vero": shared.FormBindingElement{
+                                                    Element: "facilis",
+                                                    Property: "praesentium",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "commodi",
+                                                Property: "dignissimos",
+                                            },
+                                            ComponentName: "libero",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "sunt",
+                                                Operand: "aut",
+                                                OperandType: "est",
+                                                Operator: "rerum",
+                                                Property: "ut",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "doloribus",
+                                            Event: "ea",
+                                            ImportedValue: "autem",
+                                            Model: "saepe",
+                                            Property: "delectus",
+                                            Type: "et",
+                                            UserAttribute: "autem",
+                                            Value: "nobis",
+                                        },
+                                        "cum": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "incidunt",
+                                                Property: "et",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "numquam": shared.FormBindingElement{
+                                                    Element: "est",
+                                                    Property: "dolorem",
+                                                },
+                                                "maxime": shared.FormBindingElement{
+                                                    Element: "et",
+                                                    Property: "quisquam",
+                                                },
+                                                "exercitationem": shared.FormBindingElement{
+                                                    Element: "atque",
+                                                    Property: "qui",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "adipisci",
+                                                Property: "quos",
+                                            },
+                                            ComponentName: "quia",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "sed",
+                                                Operand: "nulla",
+                                                OperandType: "odio",
+                                                Operator: "eos",
+                                                Property: "aut",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "molestiae",
+                                            Event: "ullam",
+                                            ImportedValue: "voluptas",
+                                            Model: "beatae",
+                                            Property: "illum",
+                                            Type: "est",
+                                            UserAttribute: "aut",
+                                            Value: "aut",
+                                        },
+                                        "sequi": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "dolor",
+                                                Property: "corporis",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "architecto": shared.FormBindingElement{
+                                                    Element: "eaque",
+                                                    Property: "nihil",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "voluptate",
+                                                Property: "odit",
+                                            },
+                                            ComponentName: "debitis",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "et",
+                                                Operand: "dolore",
+                                                OperandType: "veniam",
+                                                Operator: "mollitia",
+                                                Property: "recusandae",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "sed",
+                                            Event: "est",
+                                            ImportedValue: "aut",
+                                            Model: "laborum",
+                                            Property: "recusandae",
+                                            Type: "alias",
+                                            UserAttribute: "reprehenderit",
+                                            Value: "non",
+                                        },
+                                    },
+                                    Global: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "et",
+                                            Property: "tempore",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "modi": shared.FormBindingElement{
+                                                Element: "atque",
+                                                Property: "accusantium",
+                                            },
+                                            "eaque": shared.FormBindingElement{
+                                                Element: "consequatur",
+                                                Property: "rerum",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "molestiae",
+                                            Property: "voluptate",
+                                        },
+                                        ComponentName: "eligendi",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "nihil",
+                                            Operand: "consequatur",
+                                            OperandType: "mollitia",
+                                            Operator: "impedit",
+                                            Property: "sed",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "tenetur",
+                                        Event: "blanditiis",
+                                        ImportedValue: "aliquid",
+                                        Model: "animi",
+                                        Property: "eveniet",
+                                        Type: "et",
+                                        UserAttribute: "assumenda",
+                                        Value: "quis",
+                                    },
+                                    ID: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "ex",
+                                            Property: "libero",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "blanditiis": shared.FormBindingElement{
+                                                Element: "quis",
+                                                Property: "dicta",
+                                            },
+                                            "officiis": shared.FormBindingElement{
+                                                Element: "ut",
+                                                Property: "aut",
+                                            },
+                                            "vitae": shared.FormBindingElement{
+                                                Element: "non",
+                                                Property: "quia",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "sit",
+                                            Property: "laborum",
+                                        },
+                                        ComponentName: "ea",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "maxime",
+                                            Operand: "est",
+                                            OperandType: "non",
+                                            Operator: "cum",
+                                            Property: "corrupti",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "ratione",
+                                        Event: "alias",
+                                        ImportedValue: "dolorem",
+                                        Model: "nihil",
+                                        Property: "et",
+                                        Type: "veritatis",
+                                        UserAttribute: "voluptatem",
+                                        Value: "quia",
+                                    },
+                                    Model: "ut",
+                                    State: &shared.MutationActionSetStateParameter{
+                                        ComponentName: "recusandae",
+                                        Property: "dicta",
+                                        Set: shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "numquam",
+                                                Property: "animi",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "quo": shared.FormBindingElement{
+                                                    Element: "et",
+                                                    Property: "nesciunt",
+                                                },
+                                                "nesciunt": shared.FormBindingElement{
+                                                    Element: "nisi",
+                                                    Property: "id",
+                                                },
+                                                "qui": shared.FormBindingElement{
+                                                    Element: "fugit",
+                                                    Property: "nam",
+                                                },
+                                                "qui": shared.FormBindingElement{
+                                                    Element: "at",
+                                                    Property: "quidem",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "iste",
+                                                Property: "vel",
+                                            },
+                                            ComponentName: "accusantium",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "inventore",
+                                                Operand: "repudiandae",
+                                                OperandType: "beatae",
+                                                Operator: "ab",
+                                                Property: "sint",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "nostrum",
+                                            Event: "possimus",
+                                            ImportedValue: "porro",
+                                            Model: "aperiam",
+                                            Property: "quam",
+                                            Type: "blanditiis",
+                                            UserAttribute: "quia",
+                                            Value: "dolorem",
+                                        },
+                                    },
+                                    Target: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "odit",
+                                            Property: "libero",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "perspiciatis": shared.FormBindingElement{
+                                                Element: "rem",
+                                                Property: "officia",
+                                            },
+                                            "aut": shared.FormBindingElement{
+                                                Element: "eveniet",
+                                                Property: "minus",
+                                            },
+                                            "in": shared.FormBindingElement{
+                                                Element: "velit",
+                                                Property: "nihil",
+                                            },
+                                            "autem": shared.FormBindingElement{
+                                                Element: "nihil",
+                                                Property: "sint",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "ex",
+                                            Property: "necessitatibus",
+                                        },
+                                        ComponentName: "aut",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "officiis",
+                                            Operand: "consequatur",
+                                            OperandType: "nesciunt",
+                                            Operator: "eligendi",
+                                            Property: "nobis",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "sint",
+                                        Event: "aperiam",
+                                        ImportedValue: "impedit",
+                                        Model: "rerum",
+                                        Property: "dolor",
+                                        Type: "nulla",
+                                        UserAttribute: "atque",
+                                        Value: "excepturi",
+                                    },
+                                    Type: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "eos",
+                                            Property: "consequuntur",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "dolorum": shared.FormBindingElement{
+                                                Element: "itaque",
+                                                Property: "labore",
+                                            },
+                                            "et": shared.FormBindingElement{
+                                                Element: "harum",
+                                                Property: "veniam",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "eligendi",
+                                            Property: "laboriosam",
+                                        },
+                                        ComponentName: "odit",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "voluptatum",
+                                            Operand: "sapiente",
+                                            OperandType: "qui",
+                                            Operator: "ratione",
+                                            Property: "aliquam",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "aliquam",
+                                        Event: "sed",
+                                        ImportedValue: "officiis",
+                                        Model: "quidem",
+                                        Property: "quos",
+                                        Type: "omnis",
+                                        UserAttribute: "eveniet",
+                                        Value: "ea",
+                                    },
+                                    URL: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "amet",
+                                            Property: "impedit",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "officia": shared.FormBindingElement{
+                                                Element: "voluptas",
+                                                Property: "consequatur",
+                                            },
+                                            "ipsam": shared.FormBindingElement{
+                                                Element: "sed",
+                                                Property: "ducimus",
+                                            },
+                                            "quibusdam": shared.FormBindingElement{
+                                                Element: "et",
+                                                Property: "ut",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "ex",
+                                            Property: "ullam",
+                                        },
+                                        ComponentName: "repudiandae",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "minus",
+                                            Operand: "quae",
+                                            OperandType: "qui",
+                                            Operator: "consectetur",
+                                            Property: "nostrum",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "occaecati",
+                                        Event: "in",
+                                        ImportedValue: "autem",
+                                        Model: "dolor",
+                                        Property: "et",
+                                        Type: "quibusdam",
+                                        UserAttribute: "nobis",
+                                        Value: "nisi",
+                                    },
+                                },
+                            },
+                            "libero": shared.ComponentEvent{
+                                Action: "assumenda",
+                                BindingEvent: "sapiente",
+                                Parameters: &shared.ActionParameters{
+                                    Anchor: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "id",
+                                            Property: "debitis",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "repellat": shared.FormBindingElement{
+                                                Element: "et",
+                                                Property: "commodi",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "odio",
+                                            Property: "quae",
+                                        },
+                                        ComponentName: "corrupti",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "ducimus",
+                                            Operand: "dolores",
+                                            OperandType: "similique",
+                                            Operator: "ipsum",
+                                            Property: "dolorum",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "dicta",
+                                        Event: "et",
+                                        ImportedValue: "qui",
+                                        Model: "et",
+                                        Property: "recusandae",
+                                        Type: "et",
+                                        UserAttribute: "voluptas",
+                                        Value: "in",
+                                    },
+                                    Fields: map[string]shared.ComponentProperty{
+                                        "esse": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "necessitatibus",
+                                                Property: "consequatur",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "ut": shared.FormBindingElement{
+                                                    Element: "laudantium",
+                                                    Property: "non",
+                                                },
+                                                "voluptatem": shared.FormBindingElement{
+                                                    Element: "inventore",
+                                                    Property: "in",
+                                                },
+                                                "debitis": shared.FormBindingElement{
+                                                    Element: "adipisci",
+                                                    Property: "sint",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "quod",
+                                                Property: "sed",
+                                            },
+                                            ComponentName: "itaque",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "distinctio",
+                                                Operand: "quia",
+                                                OperandType: "est",
+                                                Operator: "fugit",
+                                                Property: "neque",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "ut",
+                                            Event: "placeat",
+                                            ImportedValue: "inventore",
+                                            Model: "dolores",
+                                            Property: "voluptatibus",
+                                            Type: "dicta",
+                                            UserAttribute: "aspernatur",
+                                            Value: "iure",
+                                        },
+                                        "et": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "qui",
+                                                Property: "similique",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "consequatur": shared.FormBindingElement{
+                                                    Element: "nemo",
+                                                    Property: "nisi",
+                                                },
+                                                "doloribus": shared.FormBindingElement{
+                                                    Element: "possimus",
+                                                    Property: "sunt",
+                                                },
+                                                "ipsam": shared.FormBindingElement{
+                                                    Element: "rerum",
+                                                    Property: "expedita",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "natus",
+                                                Property: "sint",
+                                            },
+                                            ComponentName: "error",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "ab",
+                                                Operand: "ut",
+                                                OperandType: "aut",
+                                                Operator: "iste",
+                                                Property: "laborum",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "dolorem",
+                                            Event: "minus",
+                                            ImportedValue: "est",
+                                            Model: "et",
+                                            Property: "eaque",
+                                            Type: "delectus",
+                                            UserAttribute: "est",
+                                            Value: "quod",
+                                        },
+                                    },
+                                    Global: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "eius",
+                                            Property: "labore",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "facilis": shared.FormBindingElement{
+                                                Element: "ipsa",
+                                                Property: "laboriosam",
+                                            },
+                                            "sit": shared.FormBindingElement{
+                                                Element: "qui",
+                                                Property: "aspernatur",
+                                            },
+                                            "qui": shared.FormBindingElement{
+                                                Element: "voluptatum",
+                                                Property: "possimus",
+                                            },
+                                            "qui": shared.FormBindingElement{
+                                                Element: "magnam",
+                                                Property: "ullam",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "recusandae",
+                                            Property: "voluptatem",
+                                        },
+                                        ComponentName: "asperiores",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "neque",
+                                            Operand: "vel",
+                                            OperandType: "excepturi",
+                                            Operator: "eos",
+                                            Property: "et",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "tempora",
+                                        Event: "ut",
+                                        ImportedValue: "quasi",
+                                        Model: "et",
+                                        Property: "nihil",
+                                        Type: "minus",
+                                        UserAttribute: "qui",
+                                        Value: "reiciendis",
+                                    },
+                                    ID: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "enim",
+                                            Property: "quas",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "reprehenderit": shared.FormBindingElement{
+                                                Element: "suscipit",
+                                                Property: "reprehenderit",
+                                            },
+                                            "qui": shared.FormBindingElement{
+                                                Element: "autem",
+                                                Property: "vel",
+                                            },
+                                            "nihil": shared.FormBindingElement{
+                                                Element: "eius",
+                                                Property: "voluptatem",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "aut",
+                                            Property: "aut",
+                                        },
+                                        ComponentName: "neque",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "nostrum",
+                                            Operand: "cumque",
+                                            OperandType: "dolor",
+                                            Operator: "odio",
+                                            Property: "ut",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "quia",
+                                        Event: "deleniti",
+                                        ImportedValue: "nam",
+                                        Model: "cupiditate",
+                                        Property: "facere",
+                                        Type: "at",
+                                        UserAttribute: "id",
+                                        Value: "necessitatibus",
+                                    },
+                                    Model: "dolores",
+                                    State: &shared.MutationActionSetStateParameter{
+                                        ComponentName: "eius",
+                                        Property: "sed",
+                                        Set: shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "fuga",
+                                                Property: "repellendus",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "quos": shared.FormBindingElement{
+                                                    Element: "praesentium",
+                                                    Property: "at",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "quia",
+                                                Property: "dolores",
+                                            },
+                                            ComponentName: "ipsam",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "atque",
+                                                Operand: "quos",
+                                                OperandType: "qui",
+                                                Operator: "architecto",
+                                                Property: "quasi",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "minima",
+                                            Event: "debitis",
+                                            ImportedValue: "ut",
+                                            Model: "minus",
+                                            Property: "suscipit",
+                                            Type: "quia",
+                                            UserAttribute: "ut",
+                                            Value: "itaque",
+                                        },
+                                    },
+                                    Target: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "dignissimos",
+                                            Property: "molestias",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "repellat": shared.FormBindingElement{
+                                                Element: "temporibus",
+                                                Property: "velit",
+                                            },
+                                            "totam": shared.FormBindingElement{
+                                                Element: "sed",
+                                                Property: "architecto",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "nostrum",
+                                            Property: "eum",
+                                        },
+                                        ComponentName: "corporis",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "deserunt",
+                                            Operand: "sint",
+                                            OperandType: "et",
+                                            Operator: "aut",
+                                            Property: "aut",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "dolores",
+                                        Event: "est",
+                                        ImportedValue: "quo",
+                                        Model: "natus",
+                                        Property: "deserunt",
+                                        Type: "et",
+                                        UserAttribute: "cumque",
+                                        Value: "quos",
+                                    },
+                                    Type: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "ea",
+                                            Property: "officiis",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "fugiat": shared.FormBindingElement{
+                                                Element: "iusto",
+                                                Property: "numquam",
+                                            },
+                                            "esse": shared.FormBindingElement{
+                                                Element: "est",
+                                                Property: "esse",
+                                            },
+                                            "perferendis": shared.FormBindingElement{
+                                                Element: "doloremque",
+                                                Property: "quia",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "veritatis",
+                                            Property: "incidunt",
+                                        },
+                                        ComponentName: "pariatur",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "optio",
+                                            Operand: "id",
+                                            OperandType: "incidunt",
+                                            Operator: "aspernatur",
+                                            Property: "sed",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "sint",
+                                        Event: "ipsa",
+                                        ImportedValue: "itaque",
+                                        Model: "deleniti",
+                                        Property: "tempora",
+                                        Type: "officia",
+                                        UserAttribute: "cum",
+                                        Value: "eveniet",
+                                    },
+                                    URL: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "deserunt",
+                                            Property: "et",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "consequatur": shared.FormBindingElement{
+                                                Element: "voluptatum",
+                                                Property: "non",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "impedit",
+                                            Property: "perspiciatis",
+                                        },
+                                        ComponentName: "ipsa",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "aut",
+                                            Operand: "dolor",
+                                            OperandType: "occaecati",
+                                            Operator: "fugit",
+                                            Property: "doloremque",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "et",
+                                        Event: "modi",
+                                        ImportedValue: "quia",
+                                        Model: "tenetur",
+                                        Property: "modi",
+                                        Type: "culpa",
+                                        UserAttribute: "ut",
+                                        Value: "odit",
+                                    },
+                                },
+                            },
+                        },
+                        Name: "accusamus",
+                        Properties: "quis",
+                        SourceID: "autem",
+                    },
+                    shared.ComponentChild{
+                        Children: []shared.ComponentChild{
+                            shared.ComponentChild{},
+                            shared.ComponentChild{},
+                        },
+                        ComponentType: "aperiam",
+                        Events: map[string]shared.ComponentEvent{
+                            "optio": shared.ComponentEvent{
+                                Action: "velit",
+                                BindingEvent: "quae",
+                                Parameters: &shared.ActionParameters{
+                                    Anchor: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "corrupti",
+                                            Property: "repellat",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "repellendus": shared.FormBindingElement{
+                                                Element: "officia",
+                                                Property: "incidunt",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "facere",
+                                            Property: "quos",
+                                        },
+                                        ComponentName: "ut",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "dolorum",
+                                            Operand: "voluptas",
+                                            OperandType: "rerum",
+                                            Operator: "tempora",
+                                            Property: "hic",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "dolores",
+                                        Event: "omnis",
+                                        ImportedValue: "non",
+                                        Model: "pariatur",
+                                        Property: "tempore",
+                                        Type: "quos",
+                                        UserAttribute: "debitis",
+                                        Value: "amet",
+                                    },
+                                    Fields: map[string]shared.ComponentProperty{
+                                        "asperiores": shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "magni",
+                                                Property: "magni",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "rem": shared.FormBindingElement{
+                                                    Element: "magnam",
+                                                    Property: "et",
+                                                },
+                                                "architecto": shared.FormBindingElement{
+                                                    Element: "rerum",
+                                                    Property: "facilis",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "delectus",
+                                                Property: "magnam",
+                                            },
+                                            ComponentName: "quisquam",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "aliquid",
+                                                Operand: "quis",
+                                                OperandType: "aliquam",
+                                                Operator: "et",
+                                                Property: "ut",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "qui",
+                                            Event: "consequuntur",
+                                            ImportedValue: "aut",
+                                            Model: "cupiditate",
+                                            Property: "ipsa",
+                                            Type: "qui",
+                                            UserAttribute: "sed",
+                                            Value: "ipsam",
+                                        },
+                                    },
+                                    Global: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "qui",
+                                            Property: "et",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "qui": shared.FormBindingElement{
+                                                Element: "ullam",
+                                                Property: "accusantium",
+                                            },
+                                            "ut": shared.FormBindingElement{
+                                                Element: "et",
+                                                Property: "velit",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "et",
+                                            Property: "quos",
+                                        },
+                                        ComponentName: "at",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "voluptatum",
+                                            Operand: "sit",
+                                            OperandType: "ut",
+                                            Operator: "et",
+                                            Property: "ut",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "perferendis",
+                                        Event: "perferendis",
+                                        ImportedValue: "repudiandae",
+                                        Model: "atque",
+                                        Property: "esse",
+                                        Type: "aliquam",
+                                        UserAttribute: "cum",
+                                        Value: "dolorem",
+                                    },
+                                    ID: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "qui",
+                                            Property: "incidunt",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "enim": shared.FormBindingElement{
+                                                Element: "non",
+                                                Property: "autem",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "quia",
+                                            Property: "porro",
+                                        },
+                                        ComponentName: "deleniti",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "sunt",
+                                            Operand: "nihil",
+                                            OperandType: "incidunt",
+                                            Operator: "quam",
+                                            Property: "nobis",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "consequatur",
+                                        Event: "non",
+                                        ImportedValue: "aut",
+                                        Model: "unde",
+                                        Property: "excepturi",
+                                        Type: "fugiat",
+                                        UserAttribute: "vitae",
+                                        Value: "veritatis",
+                                    },
+                                    Model: "ab",
+                                    State: &shared.MutationActionSetStateParameter{
+                                        ComponentName: "et",
+                                        Property: "delectus",
+                                        Set: shared.ComponentProperty{
+                                            BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "et",
+                                                Property: "vero",
+                                            },
+                                            Bindings: map[string]shared.FormBindingElement{
+                                                "voluptatem": shared.FormBindingElement{
+                                                    Element: "doloremque",
+                                                    Property: "alias",
+                                                },
+                                                "voluptates": shared.FormBindingElement{
+                                                    Element: "earum",
+                                                    Property: "accusantium",
+                                                },
+                                                "minima": shared.FormBindingElement{
+                                                    Element: "amet",
+                                                    Property: "amet",
+                                                },
+                                            },
+                                            CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                                Field: "eveniet",
+                                                Property: "eligendi",
+                                            },
+                                            ComponentName: "consequuntur",
+                                            Concat: []shared.ComponentProperty{
+                                                shared.ComponentProperty{},
+                                            },
+                                            Condition: &shared.ComponentConditionProperty{
+                                                Else: &shared.ComponentProperty{},
+                                                Field: "in",
+                                                Operand: "voluptatem",
+                                                OperandType: "omnis",
+                                                Operator: "aut",
+                                                Property: "error",
+                                                Then: &shared.ComponentProperty{},
+                                            },
+                                            Configured: false,
+                                            DefaultValue: "rerum",
+                                            Event: "qui",
+                                            ImportedValue: "occaecati",
+                                            Model: "adipisci",
+                                            Property: "in",
+                                            Type: "velit",
+                                            UserAttribute: "est",
+                                            Value: "et",
+                                        },
+                                    },
+                                    Target: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "qui",
+                                            Property: "et",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "repellat": shared.FormBindingElement{
+                                                Element: "eos",
+                                                Property: "tempore",
+                                            },
+                                            "et": shared.FormBindingElement{
+                                                Element: "rerum",
+                                                Property: "ipsa",
+                                            },
+                                            "reprehenderit": shared.FormBindingElement{
+                                                Element: "cumque",
+                                                Property: "molestiae",
+                                            },
+                                            "repudiandae": shared.FormBindingElement{
+                                                Element: "magnam",
+                                                Property: "cupiditate",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "nesciunt",
+                                            Property: "ex",
+                                        },
+                                        ComponentName: "repellendus",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "aut",
+                                            Operand: "facere",
+                                            OperandType: "veritatis",
+                                            Operator: "rerum",
+                                            Property: "aspernatur",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "aspernatur",
+                                        Event: "voluptatem",
+                                        ImportedValue: "possimus",
+                                        Model: "cupiditate",
+                                        Property: "sit",
+                                        Type: "nihil",
+                                        UserAttribute: "delectus",
+                                        Value: "tenetur",
+                                    },
+                                    Type: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "et",
+                                            Property: "sed",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "ex": shared.FormBindingElement{
+                                                Element: "exercitationem",
+                                                Property: "ut",
+                                            },
+                                            "non": shared.FormBindingElement{
+                                                Element: "consequatur",
+                                                Property: "ut",
+                                            },
+                                            "neque": shared.FormBindingElement{
+                                                Element: "eum",
+                                                Property: "debitis",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "maiores",
+                                            Property: "est",
+                                        },
+                                        ComponentName: "repellendus",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "occaecati",
+                                            Operand: "ut",
+                                            OperandType: "et",
+                                            Operator: "sunt",
+                                            Property: "rem",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "praesentium",
+                                        Event: "odio",
+                                        ImportedValue: "atque",
+                                        Model: "sed",
+                                        Property: "saepe",
+                                        Type: "nihil",
+                                        UserAttribute: "quia",
+                                        Value: "ea",
+                                    },
+                                    URL: &shared.ComponentProperty{
+                                        BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "autem",
+                                            Property: "neque",
+                                        },
+                                        Bindings: map[string]shared.FormBindingElement{
+                                            "odio": shared.FormBindingElement{
+                                                Element: "porro",
+                                                Property: "voluptatem",
+                                            },
+                                            "inventore": shared.FormBindingElement{
+                                                Element: "occaecati",
+                                                Property: "reiciendis",
+                                            },
+                                            "aperiam": shared.FormBindingElement{
+                                                Element: "sit",
+                                                Property: "et",
+                                            },
+                                        },
+                                        CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                            Field: "quia",
+                                            Property: "illum",
+                                        },
+                                        ComponentName: "nemo",
+                                        Concat: []shared.ComponentProperty{
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                            shared.ComponentProperty{},
+                                        },
+                                        Condition: &shared.ComponentConditionProperty{
+                                            Else: &shared.ComponentProperty{},
+                                            Field: "maiores",
+                                            Operand: "at",
+                                            OperandType: "libero",
+                                            Operator: "sapiente",
+                                            Property: "dolore",
+                                            Then: &shared.ComponentProperty{},
+                                        },
+                                        Configured: false,
+                                        DefaultValue: "aut",
+                                        Event: "sed",
+                                        ImportedValue: "harum",
+                                        Model: "architecto",
+                                        Property: "repellat",
+                                        Type: "commodi",
+                                        UserAttribute: "maiores",
+                                        Value: "dolorem",
+                                    },
+                                },
+                            },
+                        },
+                        Name: "id",
+                        Properties: "ad",
+                        SourceID: "consequuntur",
+                    },
+                },
+                CollectionProperties: map[string]shared.ComponentDataConfiguration{
+                    "qui": shared.ComponentDataConfiguration{
+                        Identifiers: []string{
+                            "alias",
+                            "optio",
+                            "velit",
+                            "velit",
+                        },
+                        Model: "a",
+                        Predicate: &shared.Predicate{
+                            And: []shared.Predicate{
+                                shared.Predicate{},
+                            },
+                            Field: "sit",
+                            Operand: "saepe",
+                            Operator: "quidem",
+                            Or: []shared.Predicate{
+                                shared.Predicate{},
+                                shared.Predicate{},
+                                shared.Predicate{},
+                            },
+                        },
+                        Sort: []shared.SortProperty{
+                            shared.SortProperty{
+                                Direction: "ASC",
+                                Field: "hic",
+                            },
+                            shared.SortProperty{
+                                Direction: "ASC",
+                                Field: "qui",
+                            },
+                        },
+                    },
+                    "ducimus": shared.ComponentDataConfiguration{
+                        Identifiers: []string{
+                            "ea",
+                            "autem",
+                        },
+                        Model: "quasi",
+                        Predicate: &shared.Predicate{
+                            And: []shared.Predicate{
+                                shared.Predicate{},
+                            },
+                            Field: "earum",
+                            Operand: "reprehenderit",
+                            Operator: "repellendus",
+                            Or: []shared.Predicate{
+                                shared.Predicate{},
+                            },
+                        },
+                        Sort: []shared.SortProperty{
+                            shared.SortProperty{
+                                Direction: "DESC",
+                                Field: "voluptas",
+                            },
+                            shared.SortProperty{
+                                Direction: "ASC",
+                                Field: "sit",
+                            },
+                        },
+                    },
+                },
+                ComponentType: "qui",
+                Events: map[string]shared.ComponentEvent{
+                    "ad": shared.ComponentEvent{
+                        Action: "labore",
+                        BindingEvent: "molestias",
+                        Parameters: &shared.ActionParameters{
+                            Anchor: &shared.ComponentProperty{
+                                BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "eius",
+                                    Property: "aliquid",
+                                },
+                                Bindings: map[string]shared.FormBindingElement{
+                                    "nihil": shared.FormBindingElement{
+                                        Element: "assumenda",
+                                        Property: "accusantium",
+                                    },
+                                    "commodi": shared.FormBindingElement{
+                                        Element: "harum",
+                                        Property: "nesciunt",
+                                    },
+                                    "incidunt": shared.FormBindingElement{
+                                        Element: "facilis",
+                                        Property: "ut",
+                                    },
+                                },
+                                CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "sit",
+                                    Property: "et",
+                                },
+                                ComponentName: "recusandae",
+                                Concat: []shared.ComponentProperty{
+                                    shared.ComponentProperty{},
+                                    shared.ComponentProperty{},
+                                    shared.ComponentProperty{},
+                                    shared.ComponentProperty{},
+                                },
+                                Condition: &shared.ComponentConditionProperty{
+                                    Else: &shared.ComponentProperty{},
+                                    Field: "temporibus",
+                                    Operand: "ipsam",
+                                    OperandType: "maiores",
+                                    Operator: "dolorem",
+                                    Property: "rerum",
+                                    Then: &shared.ComponentProperty{},
+                                },
+                                Configured: false,
+                                DefaultValue: "aut",
+                                Event: "consequatur",
+                                ImportedValue: "harum",
+                                Model: "veritatis",
+                                Property: "facere",
+                                Type: "eveniet",
+                                UserAttribute: "sequi",
+                                Value: "sed",
+                            },
+                            Fields: map[string]shared.ComponentProperty{
+                                "mollitia": shared.ComponentProperty{
+                                    BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                        Field: "saepe",
+                                        Property: "ex",
+                                    },
+                                    Bindings: map[string]shared.FormBindingElement{
+                                        "aperiam": shared.FormBindingElement{
+                                            Element: "sit",
+                                            Property: "vitae",
+                                        },
+                                    },
+                                    CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                        Field: "deserunt",
+                                        Property: "voluptas",
+                                    },
+                                    ComponentName: "iusto",
+                                    Concat: []shared.ComponentProperty{
+                                        shared.ComponentProperty{},
+                                        shared.ComponentProperty{},
+                                        shared.ComponentProperty{},
+                                        shared.ComponentProperty{},
+                                    },
+                                    Condition: &shared.ComponentConditionProperty{
+                                        Else: &shared.ComponentProperty{},
+                                        Field: "quibusdam",
+                                        Operand: "commodi",
+                                        OperandType: "et",
+                                        Operator: "dolore",
+                                        Property: "ullam",
+                                        Then: &shared.ComponentProperty{},
+                                    },
+                                    Configured: false,
+                                    DefaultValue: "quos",
+                                    Event: "iure",
+                                    ImportedValue: "voluptatem",
+                                    Model: "corrupti",
+                                    Property: "et",
+                                    Type: "officia",
+                                    UserAttribute: "quod",
+                                    Value: "voluptatibus",
+                                },
+                                "nihil": shared.ComponentProperty{
+                                    BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                        Field: "optio",
+                                        Property: "recusandae",
+                                    },
+                                    Bindings: map[string]shared.FormBindingElement{
+                                        "animi": shared.FormBindingElement{
+                                            Element: "voluptatem",
+                                            Property: "mollitia",
+                                        },
+                                        "rerum": shared.FormBindingElement{
+                                            Element: "id",
+                                            Property: "dolores",
+                                        },
+                                    },
+                                    CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                        Field: "est",
+                                        Property: "quisquam",
+                                    },
+                                    ComponentName: "minima",
+                                    Concat: []shared.ComponentProperty{
+                                        shared.ComponentProperty{},
+                                        shared.ComponentProperty{},
+                                        shared.ComponentProperty{},
+                                        shared.ComponentProperty{},
+                                    },
+                                    Condition: &shared.ComponentConditionProperty{
+                                        Else: &shared.ComponentProperty{},
+                                        Field: "quibusdam",
+                                        Operand: "nam",
+                                        OperandType: "et",
+                                        Operator: "nihil",
+                                        Property: "dolor",
+                                        Then: &shared.ComponentProperty{},
+                                    },
+                                    Configured: false,
+                                    DefaultValue: "velit",
+                                    Event: "pariatur",
+                                    ImportedValue: "consequatur",
+                                    Model: "pariatur",
+                                    Property: "impedit",
+                                    Type: "dolore",
+                                    UserAttribute: "est",
+                                    Value: "dolorem",
+                                },
+                            },
+                            Global: &shared.ComponentProperty{
+                                BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "non",
+                                    Property: "quisquam",
+                                },
+                                Bindings: map[string]shared.FormBindingElement{
+                                    "quia": shared.FormBindingElement{
+                                        Element: "illum",
+                                        Property: "tempore",
+                                    },
+                                    "voluptates": shared.FormBindingElement{
+                                        Element: "tempore",
+                                        Property: "ad",
+                                    },
+                                    "et": shared.FormBindingElement{
+                                        Element: "quis",
+                                        Property: "alias",
+                                    },
+                                    "vel": shared.FormBindingElement{
+                                        Element: "est",
+                                        Property: "natus",
+                                    },
+                                },
+                                CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "tempore",
+                                    Property: "libero",
+                                },
+                                ComponentName: "in",
+                                Concat: []shared.ComponentProperty{
+                                    shared.ComponentProperty{},
+                                    shared.ComponentProperty{},
+                                },
+                                Condition: &shared.ComponentConditionProperty{
+                                    Else: &shared.ComponentProperty{},
+                                    Field: "omnis",
+                                    Operand: "sit",
+                                    OperandType: "qui",
+                                    Operator: "in",
+                                    Property: "corporis",
+                                    Then: &shared.ComponentProperty{},
+                                },
+                                Configured: false,
+                                DefaultValue: "nemo",
+                                Event: "possimus",
+                                ImportedValue: "earum",
+                                Model: "nisi",
+                                Property: "necessitatibus",
+                                Type: "id",
+                                UserAttribute: "eos",
+                                Value: "dolorum",
+                            },
+                            ID: &shared.ComponentProperty{
+                                BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "et",
+                                    Property: "ullam",
+                                },
+                                Bindings: map[string]shared.FormBindingElement{
+                                    "praesentium": shared.FormBindingElement{
+                                        Element: "unde",
+                                        Property: "nobis",
+                                    },
+                                    "vel": shared.FormBindingElement{
+                                        Element: "est",
+                                        Property: "aspernatur",
+                                    },
+                                },
+                                CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "est",
+                                    Property: "et",
+                                },
+                                ComponentName: "iure",
+                                Concat: []shared.ComponentProperty{
+                                    shared.ComponentProperty{},
+                                },
+                                Condition: &shared.ComponentConditionProperty{
+                                    Else: &shared.ComponentProperty{},
+                                    Field: "doloremque",
+                                    Operand: "illum",
+                                    OperandType: "ut",
+                                    Operator: "consequatur",
+                                    Property: "aut",
+                                    Then: &shared.ComponentProperty{},
+                                },
+                                Configured: false,
+                                DefaultValue: "ab",
+                                Event: "aut",
+                                ImportedValue: "et",
+                                Model: "repellendus",
+                                Property: "quas",
+                                Type: "veritatis",
+                                UserAttribute: "ipsum",
+                                Value: "rerum",
+                            },
+                            Model: "ratione",
+                            State: &shared.MutationActionSetStateParameter{
+                                ComponentName: "eveniet",
+                                Property: "est",
+                                Set: shared.ComponentProperty{
+                                    BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                        Field: "illo",
+                                        Property: "similique",
+                                    },
+                                    Bindings: map[string]shared.FormBindingElement{
+                                        "voluptatibus": shared.FormBindingElement{
+                                            Element: "sint",
+                                            Property: "voluptatibus",
+                                        },
+                                        "alias": shared.FormBindingElement{
+                                            Element: "asperiores",
+                                            Property: "cupiditate",
+                                        },
+                                        "sed": shared.FormBindingElement{
+                                            Element: "vel",
+                                            Property: "itaque",
+                                        },
+                                        "maiores": shared.FormBindingElement{
+                                            Element: "et",
+                                            Property: "quaerat",
+                                        },
+                                    },
+                                    CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                        Field: "praesentium",
+                                        Property: "ducimus",
+                                    },
+                                    ComponentName: "possimus",
+                                    Concat: []shared.ComponentProperty{
+                                        shared.ComponentProperty{},
+                                    },
+                                    Condition: &shared.ComponentConditionProperty{
+                                        Else: &shared.ComponentProperty{},
+                                        Field: "sed",
+                                        Operand: "debitis",
+                                        OperandType: "similique",
+                                        Operator: "eaque",
+                                        Property: "amet",
+                                        Then: &shared.ComponentProperty{},
+                                    },
+                                    Configured: false,
+                                    DefaultValue: "est",
+                                    Event: "odit",
+                                    ImportedValue: "minima",
+                                    Model: "sed",
+                                    Property: "eos",
+                                    Type: "ea",
+                                    UserAttribute: "cumque",
+                                    Value: "consequatur",
+                                },
+                            },
+                            Target: &shared.ComponentProperty{
+                                BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "fuga",
+                                    Property: "nihil",
+                                },
+                                Bindings: map[string]shared.FormBindingElement{
+                                    "nam": shared.FormBindingElement{
+                                        Element: "iure",
+                                        Property: "ea",
+                                    },
+                                },
+                                CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "iste",
+                                    Property: "dicta",
+                                },
+                                ComponentName: "ex",
+                                Concat: []shared.ComponentProperty{
+                                    shared.ComponentProperty{},
+                                },
+                                Condition: &shared.ComponentConditionProperty{
+                                    Else: &shared.ComponentProperty{},
+                                    Field: "harum",
+                                    Operand: "minima",
+                                    OperandType: "laudantium",
+                                    Operator: "ipsum",
+                                    Property: "facilis",
+                                    Then: &shared.ComponentProperty{},
+                                },
+                                Configured: false,
+                                DefaultValue: "delectus",
+                                Event: "est",
+                                ImportedValue: "voluptatem",
+                                Model: "sed",
+                                Property: "aut",
+                                Type: "laboriosam",
+                                UserAttribute: "qui",
+                                Value: "corporis",
+                            },
+                            Type: &shared.ComponentProperty{
+                                BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "similique",
+                                    Property: "voluptatibus",
+                                },
+                                Bindings: map[string]shared.FormBindingElement{
+                                    "et": shared.FormBindingElement{
+                                        Element: "ut",
+                                        Property: "incidunt",
+                                    },
+                                    "commodi": shared.FormBindingElement{
+                                        Element: "inventore",
+                                        Property: "temporibus",
+                                    },
+                                    "hic": shared.FormBindingElement{
+                                        Element: "iste",
+                                        Property: "voluptatum",
+                                    },
+                                },
+                                CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "qui",
+                                    Property: "doloribus",
+                                },
+                                ComponentName: "tenetur",
+                                Concat: []shared.ComponentProperty{
+                                    shared.ComponentProperty{},
+                                    shared.ComponentProperty{},
+                                    shared.ComponentProperty{},
+                                },
+                                Condition: &shared.ComponentConditionProperty{
+                                    Else: &shared.ComponentProperty{},
+                                    Field: "mollitia",
+                                    Operand: "aperiam",
+                                    OperandType: "sed",
+                                    Operator: "quibusdam",
+                                    Property: "esse",
+                                    Then: &shared.ComponentProperty{},
+                                },
+                                Configured: false,
+                                DefaultValue: "voluptates",
+                                Event: "dolor",
+                                ImportedValue: "id",
+                                Model: "eligendi",
+                                Property: "ut",
+                                Type: "sint",
+                                UserAttribute: "ratione",
+                                Value: "quaerat",
+                            },
+                            URL: &shared.ComponentProperty{
+                                BindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "adipisci",
+                                    Property: "possimus",
+                                },
+                                Bindings: map[string]shared.FormBindingElement{
+                                    "praesentium": shared.FormBindingElement{
+                                        Element: "et",
+                                        Property: "sunt",
+                                    },
+                                    "repellat": shared.FormBindingElement{
+                                        Element: "tenetur",
+                                        Property: "expedita",
+                                    },
+                                    "reiciendis": shared.FormBindingElement{
+                                        Element: "non",
+                                        Property: "eos",
+                                    },
+                                    "facilis": shared.FormBindingElement{
+                                        Element: "ea",
+                                        Property: "dolore",
+                                    },
+                                },
+                                CollectionBindingProperties: &shared.ComponentPropertyBindingProperties{
+                                    Field: "necessitatibus",
+                                    Property: "ipsam",
+                                },
+                                ComponentName: "rerum",
+                                Concat: []shared.ComponentProperty{
+                                    shared.ComponentProperty{},
+                                    shared.ComponentProperty{},
+                                    shared.ComponentProperty{},
+                                    shared.ComponentProperty{},
+                                },
+                                Condition: &shared.ComponentConditionProperty{
+                                    Else: &shared.ComponentProperty{},
+                                    Field: "et",
+                                    Operand: "et",
+                                    OperandType: "aperiam",
+                                    Operator: "quidem",
+                                    Property: "assumenda",
+                                    Then: &shared.ComponentProperty{},
+                                },
+                                Configured: false,
+                                DefaultValue: "aspernatur",
+                                Event: "quas",
+                                ImportedValue: "quaerat",
+                                Model: "repellendus",
+                                Property: "dolor",
+                                Type: "placeat",
+                                UserAttribute: "dolorum",
+                                Value: "autem",
+                            },
+                        },
+                    },
+                },
+                Name: "sequi",
+                Overrides: map[string]map[string]string{
+                    "odio": map[string]string{
+                        "omnis": "unde",
+                        "tempora": "rem",
+                        "tempora": "cum",
+                        "ut": "voluptatem",
+                    },
+                    "eveniet": map[string]string{
+                        "error": "nostrum",
+                    },
+                },
+                Properties: "consequuntur",
+                SchemaVersion: "voluptatibus",
+                SourceID: "quia",
+                Tags: map[string]string{
+                    "itaque": "sit",
+                },
+                Variants: []shared.ComponentVariant{
+                    shared.ComponentVariant{
+                        Overrides: map[string]map[string]string{
+                            "aliquid": map[string]string{
+                                "rem": "voluptatem",
+                                "qui": "rerum",
+                            },
+                        },
+                        VariantValues: map[string]string{
+                            "nulla": "consequatur",
+                            "eum": "et",
+                        },
+                    },
+                    shared.ComponentVariant{
+                        Overrides: map[string]map[string]string{
+                            "eligendi": map[string]string{
+                                "sit": "distinctio",
+                                "a": "voluptatem",
+                                "dolorem": "repellat",
+                                "et": "aspernatur",
+                            },
+                        },
+                        VariantValues: map[string]string{
+                            "et": "est",
+                        },
+                    },
+                },
+            },
+        },
+    }
+
+    ctx := context.Background()
+    res, err := s.CreateComponent(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.CreateComponentResponse != nil {
+        // handle response
+    }
+}
+```
+<!-- End SDK Example Usage -->
+
+<!-- Start SDK Available Operations -->
+## SDK Available Operations
+
+### SDK SDK
+
+* `CreateComponent` - Creates a new component for an Amplify app.
+* `CreateForm` - Creates a new form for an Amplify app.
+* `CreateTheme` - Creates a theme to apply to the components in an Amplify app.
+* `DeleteComponent` - Deletes a component from an Amplify app.
+* `DeleteForm` - Deletes a form from an Amplify app.
+* `DeleteTheme` - Deletes a theme from an Amplify app.
+* `ExchangeCodeForToken` - Exchanges an access code for a token.
+* `ExportComponents` - Exports component configurations to code that is ready to integrate into an Amplify app.
+* `ExportForms` - Exports form configurations to code that is ready to integrate into an Amplify app.
+* `ExportThemes` - Exports theme configurations to code that is ready to integrate into an Amplify app.
+* `GetComponent` - Returns an existing component for an Amplify app.
+* `GetForm` - Returns an existing form for an Amplify app.
+* `GetMetadata` - Returns existing metadata for an Amplify app.
+* `GetTheme` - Returns an existing theme for an Amplify app.
+* `ListComponents` - Retrieves a list of components for a specified Amplify app and backend environment.
+* `ListForms` - Retrieves a list of forms for a specified Amplify app and backend environment.
+* `ListThemes` - Retrieves a list of themes for a specified Amplify app and backend environment.
+* `PutMetadataFlag` - Stores the metadata information about a feature on a form or view.
+* `RefreshToken` - Refreshes a previously issued access token that might have expired.
+* `UpdateComponent` - Updates an existing component.
+* `UpdateForm` - Updates an existing form.
+* `UpdateTheme` - Updates an existing theme.
+<!-- End SDK Available Operations -->
+
+### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

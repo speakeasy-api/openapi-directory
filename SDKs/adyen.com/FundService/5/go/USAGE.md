@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,19 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PostAccountHolderBalanceRequest{
         Security: operations.PostAccountHolderBalanceSecurity{
-            BasicAuth: &shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
+            APIKeyAuth: &shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        Request: "sit",
+        Request: &shared.AccountHolderBalanceRequest{
+            AccountHolderCode: "unde",
+        },
     }
-    
+
+    ctx := context.Background()
     res, err := s.General.PostAccountHolderBalance(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +33,6 @@ func main() {
     if res.AccountHolderBalanceResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

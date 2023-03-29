@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,28 +12,29 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.SearchRequest{
         Headers: operations.SearchHeaders{
-            GalaxyApName: "sit",
-            GalaxyApPassword: "voluptas",
-            GalaxySearchType: "culpa",
+            GalaxyApName: "unde",
+            GalaxyApPassword: "deserunt",
+            GalaxySearchType: "porro",
         },
         Request: &operations.SearchRequestBody{
             Address: &operations.SearchRequestBodyAddress{
-                AddressLine1: "expedita",
-                AddressLine2: "consequuntur",
+                AddressLine1: "nulla",
+                AddressLine2: "id",
             },
-            Age: 96.199997,
-            Dob: "voluptas",
-            Email: "fugit",
-            FirstName: "et",
-            LastName: "nihil",
-            MiddleName: "rerum",
-            PhoneNumber: "dicta",
+            Age: 8579.46,
+            Dob: "perspiciatis",
+            Email: "Henri.Mueller@hotmail.com",
+            FirstName: "Humberto",
+            LastName: "Gulgowski",
+            MiddleName: "saepe",
+            PhoneNumber: "inventore",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Search(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -40,5 +43,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

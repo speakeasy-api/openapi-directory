@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest{
         Security: operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurity{
             Option1: &operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurityOption1{
@@ -23,28 +25,30 @@ func main() {
             },
         },
         PathParams: operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
             Names: []string{
-                "fugit",
-                "et",
                 "nihil",
+                "fuga",
+                "facilis",
+                "eum",
             },
-            OauthToken: "rerum",
+            OauthToken: "iusto",
             PrettyPrint: false,
-            QuotaUser: "debitis",
-            UploadType: "voluptatum",
-            UploadProtocol: "et",
+            QuotaUser: "ullam",
+            UploadType: "saepe",
+            UploadProtocol: "inventore",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.FirebaseappcheckProjectsAppsAppAttestConfigBatchGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +57,6 @@ func main() {
     if res.GoogleFirebaseAppcheckV1BatchGetAppAttestConfigsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

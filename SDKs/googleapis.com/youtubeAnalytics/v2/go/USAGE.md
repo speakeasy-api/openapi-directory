@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.YoutubeAnalyticsGroupItemsDeleteRequest{
         Security: operations.YoutubeAnalyticsGroupItemsDeleteSecurity{
             Option1: &operations.YoutubeAnalyticsGroupItemsDeleteSecurityOption1{
@@ -23,22 +25,23 @@ func main() {
             },
         },
         QueryParams: operations.YoutubeAnalyticsGroupItemsDeleteQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            ID: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            OnBehalfOfContentOwner: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            ID: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            OnBehalfOfContentOwner: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GroupItems.YoutubeAnalyticsGroupItemsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +50,6 @@ func main() {
     if res.EmptyResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

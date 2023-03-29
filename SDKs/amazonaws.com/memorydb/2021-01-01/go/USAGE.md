@@ -3,45 +3,45 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchUpdateClusterRequest{
         Headers: operations.BatchUpdateClusterHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AmazonMemoryDB.BatchUpdateCluster",
         },
         Request: shared.BatchUpdateClusterRequest{
             ClusterNames: []string{
-                "et",
+                "fuga",
+                "facilis",
             },
             ServiceUpdate: &shared.ServiceUpdateRequest{
-                ServiceUpdateNameToApply: "nihil",
+                ServiceUpdateNameToApply: "eum",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchUpdateCluster(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +50,6 @@ func main() {
     if res.BatchUpdateClusterResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateUsageChargeRequest{
         Security: operations.CreateUsageChargeSecurity{
             OAuth2: shared.SchemeOAuth2{
@@ -18,19 +20,20 @@ func main() {
             },
         },
         PathParams: operations.CreateUsageChargePathParams{
-            RecurringApplicationChargeID: "sit",
+            RecurringApplicationChargeID: "unde",
         },
         Headers: operations.CreateUsageChargeHeaders{
-            XAppstoreUsageChargeToken: "voluptas",
+            XAppstoreUsageChargeToken: "deserunt",
         },
         Request: operations.CreateUsageChargeRequestBody{
             UsageCharge: &operations.CreateUsageChargeRequestBodyUsageCharge{
-                Description: "culpa",
-                Point: 501233450539197794,
+                Description: "2019/4 メール送信分",
+                Point: 100,
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ApplicationCharge.CreateUsageCharge(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -39,5 +42,6 @@ func main() {
     if res.CreateUsageCharge201ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

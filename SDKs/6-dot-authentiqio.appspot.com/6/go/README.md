@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/6-dot-authentiqio.appspot.com/6/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,16 +23,17 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.KeyRevokeRequest{
         PathParams: operations.KeyRevokePathParams{
-            PK: "sit",
+            Pk: "unde",
         },
         QueryParams: operations.KeyRevokeQueryParams{
-            Secret: "voluptas",
+            Secret: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Delete.KeyRevoke(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -39,13 +42,15 @@ func main() {
     if res.KeyRevoke200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### delete
+
+### Delete
 
 * `KeyRevoke` - Revoke an Identity (Key) with a revocation secret
 * `KeyRevokeNosecret` - Revoke an Authentiq ID using email & phone.
@@ -56,21 +61,21 @@ complete the revocation.
 
 * `SignDelete` - delete a verification job
 
-### get
+### Get
 
 * `KeyRetrieve` - Get public details of an Authentiq ID.
 
 * `SignRetrieve` - get the status / current content of a verification job
 
-### head
+### Head
 
-* `HeadKeyPk` - HEAD info on Authentiq ID
+* `HeadKeyPK` - HEAD info on Authentiq ID
 
 * `SignRetrieveHead` - HEAD to get the status of a verification job
 
-### key
+### Key
 
-* `HeadKeyPk` - HEAD info on Authentiq ID
+* `HeadKeyPK` - HEAD info on Authentiq ID
 
 * `KeyBind` - Update Authentiq ID by replacing the object.
 
@@ -105,13 +110,13 @@ a self-signed JWT
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
 
-### login
+### Login
 
 * `PushLoginRequest` - push sign-in request
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
 
-### post
+### Post
 
 * `KeyRegister` - Register a new ID `JWT(sub, devtoken)`
 
@@ -135,7 +140,7 @@ See: https://github.com/skion/authentiq/wiki/JWT-Examples
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
 
-### put
+### Put
 
 * `KeyBind` - Update Authentiq ID by replacing the object.
 
@@ -150,7 +155,7 @@ See: https://github.com/skion/authentiq/wiki/JWT-Examples
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
 
-### scope
+### Scope
 
 * `SignConfirm` - this is a scope confirmation
 * `SignDelete` - delete a verification job
@@ -161,7 +166,6 @@ See: https://github.com/skion/authentiq/wiki/JWT-Examples
 * `SignRetrieveHead` - HEAD to get the status of a verification job
 * `SignUpdate` - authority updates a JWT with its signature
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
-
 
 <!-- End SDK Available Operations -->
 

@@ -3,30 +3,29 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKeyHeader: &shared.SchemeAPIKeyHeader{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKeyHeader: &shared.SchemeAPIKeyHeader{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AreasCountriesRequest{
         PathParams: operations.AreasCountriesPathParams{
-            Format: "xml",
+            Format: "json",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AreasCountries(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +34,6 @@ func main() {
     if res.Areas != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PlusActivitiesGetRequest{
         Security: operations.PlusActivitiesGetSecurity{
             Option1: &operations.PlusActivitiesGetSecurityOption1{
@@ -23,19 +25,20 @@ func main() {
             },
         },
         PathParams: operations.PlusActivitiesGetPathParams{
-            ActivityID: "sit",
+            ActivityID: "unde",
         },
         QueryParams: operations.PlusActivitiesGetQueryParams{
             Alt: "json",
-            Fields: "culpa",
-            Key: "expedita",
-            OauthToken: "consequuntur",
+            Fields: "porro",
+            Key: "nulla",
+            OauthToken: "id",
             PrettyPrint: false,
-            QuotaUser: "expedita",
-            UserIP: "voluptas",
+            QuotaUser: "vero",
+            UserIP: "perspiciatis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Activities.PlusActivitiesGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -44,5 +47,6 @@ func main() {
     if res.Activity != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

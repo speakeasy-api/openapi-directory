@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest{
         Security: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,36 +23,35 @@ func main() {
             },
         },
         PathParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            HubID: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            HubID: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.HubInput{
-            CreateTime: "voluptatum",
-            Description: "et",
+            CreateTime: "ullam",
+            Description: "saepe",
             Labels: map[string]string{
-                "dolorem": "et",
-                "voluptate": "iste",
-                "vitae": "totam",
+                "sapiente": "enim",
             },
-            Name: "dolores",
-            UpdateTime: "illum",
+            Name: "eum",
+            UpdateTime: "voluptatum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -59,5 +60,6 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

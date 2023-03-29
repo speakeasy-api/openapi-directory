@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateRequest{
         Security: operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,41 +23,40 @@ func main() {
             },
         },
         PathParams: operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            CertificateIssuanceConfigID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            CertificateIssuanceConfigID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.CertificateIssuanceConfigInput{
             CertificateAuthorityConfig: &shared.CertificateAuthorityConfig{
                 CertificateAuthorityServiceConfig: &shared.CertificateAuthorityServiceConfig{
-                    CaPool: "debitis",
+                    CaPool: "iusto",
                 },
             },
-            Description: "voluptatum",
-            KeyAlgorithm: "KEY_ALGORITHM_UNSPECIFIED",
+            Description: "ullam",
+            KeyAlgorithm: "ECDSA_P256",
             Labels: map[string]string{
-                "dolorem": "et",
-                "voluptate": "iste",
-                "vitae": "totam",
+                "sapiente": "enim",
             },
-            Lifetime: "dolores",
-            Name: "illum",
-            RotationWindowPercentage: 6392442863481646880,
+            Lifetime: "eum",
+            Name: "voluptatum",
+            RotationWindowPercentage: 791725,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.CertificatemanagerProjectsLocationsCertificateIssuanceConfigsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -64,5 +65,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

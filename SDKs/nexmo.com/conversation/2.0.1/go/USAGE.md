@@ -3,35 +3,34 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                BearerAuth: shared.SchemeBearerAuth{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            BearerAuth: shared.SchemeBearerAuth{
+                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateConversationRequest{
         Request: &operations.CreateConversationRequestBody{
-            DisplayName: "sit",
-            ImageURL: "voluptas",
-            Name: "culpa",
+            DisplayName: "Customer Chat",
+            ImageURL: "https://example.com/image.png",
+            Name: "customer_chat",
             Properties: &shared.ConversationProperties{
-                TTL: 6.200000,
+                TTL: 60,
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Conversation.CreateConversation(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -40,5 +39,6 @@ func main() {
     if res.CreateConversation200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

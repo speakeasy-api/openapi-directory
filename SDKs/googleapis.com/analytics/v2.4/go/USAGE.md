@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AnalyticsDataGetRequest{
         Security: operations.AnalyticsDataGetSecurity{
             Option1: &operations.AnalyticsDataGetSecurityOption1{
@@ -24,25 +26,26 @@ func main() {
         },
         QueryParams: operations.AnalyticsDataGetQueryParams{
             Alt: "atom",
-            Dimensions: "voluptas",
-            EndDate: "culpa",
-            Fields: "expedita",
-            Filters: "consequuntur",
-            Ids: "dolor",
-            Key: "expedita",
-            MaxResults: 6044372234677422456,
-            Metrics: "fugit",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            Segment: "dicta",
-            Sort: "debitis",
-            StartDate: "voluptatum",
-            StartIndex: 2339563716805116249,
-            UserIP: "ut",
+            Dimensions: "deserunt",
+            EndDate: "porro",
+            Fields: "nulla",
+            Filters: "id",
+            Ids: "vero",
+            Key: "perspiciatis",
+            MaxResults: 847252,
+            Metrics: "nihil",
+            OauthToken: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            Segment: "eum",
+            Sort: "iusto",
+            StartDate: "ullam",
+            StartIndex: 891773,
+            UserIP: "inventore",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Data.AnalyticsDataGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +54,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

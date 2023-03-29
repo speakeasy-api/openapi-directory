@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,33 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PostGet3dsAvailabilityRequest{
         Security: operations.PostGet3dsAvailabilitySecurity{
-            BasicAuth: &shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
+            APIKeyAuth: &shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        Request: "sit",
+        Request: &shared.ThreeDSAvailabilityRequest{
+            AdditionalData: map[string]string{
+                "deserunt": "porro",
+                "nulla": "id",
+                "vero": "perspiciatis",
+            },
+            Brands: []string{
+                "nihil",
+                "fuga",
+                "facilis",
+                "eum",
+            },
+            CardNumber: "iusto",
+            MerchantAccount: "ullam",
+            RecurringDetailReference: "saepe",
+            ShopperReference: "inventore",
+        },
     }
-    
+
+    ctx := context.Background()
     res, err := s.General.PostGet3dsAvailability(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +47,6 @@ func main() {
     if res.ThreeDSAvailabilityResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

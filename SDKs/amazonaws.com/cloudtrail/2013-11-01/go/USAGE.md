@@ -3,46 +3,53 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddTagsRequest{
         Headers: operations.AddTagsHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "com.amazonaws.cloudtrail.v20131101.CloudTrail_20131101.AddTags",
         },
         Request: shared.AddTagsRequest{
-            ResourceID: "fugit",
+            ResourceID: "nihil",
             TagsList: []shared.Tag{
                 shared.Tag{
-                    Key: "nihil",
-                    Value: "rerum",
+                    Key: "facilis",
+                    Value: "eum",
+                },
+                shared.Tag{
+                    Key: "iusto",
+                    Value: "ullam",
+                },
+                shared.Tag{
+                    Key: "saepe",
+                    Value: "inventore",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddTags(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +58,6 @@ func main() {
     if res.AddTagsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

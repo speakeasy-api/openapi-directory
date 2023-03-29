@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,33 +12,37 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeparturesGetForStopRequest{
         PathParams: operations.DeparturesGetForStopPathParams{
-            RouteType: 8717895732742165505,
-            StopID: 2259404117704393152,
+            RouteType: "2",
+            StopID: 592845,
         },
         QueryParams: operations.DeparturesGetForStopQueryParams{
-            DateUtc: "1978-05-13T03:50:47Z",
-            Devid: "expedita",
-            DirectionID: 3390393562759376202,
+            DateUtc: "2022-07-11T11:42:15.738Z",
+            Devid: "nulla",
+            DirectionID: 602763,
             Expand: []DeparturesGetForStopExpandEnum{
+                "Direction",
                 "VehiclePosition",
-                "None",
+                "Run",
+                "Disruption",
             },
-            Gtfs: true,
+            Gtfs: false,
             IncludeCancelled: false,
-            IncludeGeopath: true,
-            LookBackwards: true,
-            MaxResults: 7837839688282259259,
-            PlatformNumbers: []int32{
-                5617773211005988520,
+            IncludeGeopath: false,
+            LookBackwards: false,
+            MaxResults: 645894,
+            PlatformNumbers: []int{
+                437587,
+                297534,
             },
-            Signature: "et",
-            Token: "ut",
+            Signature: "saepe",
+            Token: "inventore",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Departures.DeparturesGetForStop(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -45,5 +51,6 @@ func main() {
     if res.V3DeparturesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

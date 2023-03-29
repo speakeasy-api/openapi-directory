@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/codedeploy/2014-10-06/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,48 +14,52 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddTagsToOnPremisesInstancesRequest{
         Headers: operations.AddTagsToOnPremisesInstancesHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "CodeDeploy_20141006.AddTagsToOnPremisesInstances",
         },
         Request: shared.AddTagsToOnPremisesInstancesInput{
             InstanceNames: []string{
-                "et",
+                "fuga",
+                "facilis",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "rerum",
-                    Value: "dicta",
+                    Key: "iusto",
+                    Value: "ullam",
+                },
+                shared.Tag{
+                    Key: "saepe",
+                    Value: "inventore",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddTagsToOnPremisesInstances(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -64,6 +68,7 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -76,8 +81,8 @@ func main() {
 * `BatchGetApplicationRevisions` - Gets information about one or more application revisions. The maximum number of application revisions that can be returned is 25.
 * `BatchGetApplications` - Gets information about one or more applications. The maximum number of applications that can be returned is 100.
 * `BatchGetDeploymentGroups` - Gets information about one or more deployment groups.
-* `BatchGetDeploymentInstances` - <note> <p> This method works, but is deprecated. Use <code>BatchGetDeploymentTargets</code> instead. </p> </note> <p> Returns an array of one or more instances associated with a deployment. This method works with EC2/On-premises and AWS Lambda compute platforms. The newer <code>BatchGetDeploymentTargets</code> works with all compute platforms. The maximum number of instances that can be returned is 25.</p>
-* `BatchGetDeploymentTargets` - <p> Returns an array of one or more targets associated with a deployment. This method works with all compute types and should be used instead of the deprecated <code>BatchGetDeploymentInstances</code>. The maximum number of targets that can be returned is 25.</p> <p> The type of targets returned depends on the deployment's compute platform or deployment method: </p> <ul> <li> <p> <b>EC2/On-premises</b>: Information about EC2 instance targets. </p> </li> <li> <p> <b>AWS Lambda</b>: Information about Lambda functions targets. </p> </li> <li> <p> <b>Amazon ECS</b>: Information about Amazon ECS service targets. </p> </li> <li> <p> <b>CloudFormation</b>: Information about targets of blue/green deployments initiated by a CloudFormation stack update.</p> </li> </ul>
+* `BatchGetDeploymentInstances` - <note> <p> This method works, but is deprecated. Use <code>BatchGetDeploymentTargets</code> instead. </p> </note> <p> Returns an array of one or more instances associated with a deployment. This method works with EC2/On-premises and Lambda compute platforms. The newer <code>BatchGetDeploymentTargets</code> works with all compute platforms. The maximum number of instances that can be returned is 25.</p>
+* `BatchGetDeploymentTargets` - <p> Returns an array of one or more targets associated with a deployment. This method works with all compute types and should be used instead of the deprecated <code>BatchGetDeploymentInstances</code>. The maximum number of targets that can be returned is 25.</p> <p> The type of targets returned depends on the deployment's compute platform or deployment method: </p> <ul> <li> <p> <b>EC2/On-premises</b>: Information about Amazon EC2 instance targets. </p> </li> <li> <p> <b>Lambda</b>: Information about Lambda functions targets. </p> </li> <li> <p> <b>Amazon ECS</b>: Information about Amazon ECS service targets. </p> </li> <li> <p> <b>CloudFormation</b>: Information about targets of blue/green deployments initiated by a CloudFormation stack update.</p> </li> </ul>
 * `BatchGetDeployments` - Gets information about one or more deployments. The maximum number of deployments that can be returned is 25.
 * `BatchGetOnPremisesInstances` - Gets information about one or more on-premises instances. The maximum number of on-premises instances that can be returned is 25.
 * `ContinueDeployment` - For a blue/green deployment, starts the process of rerouting traffic from instances in the original environment to instances in the replacement environment without waiting for a specified wait time to elapse. (Traffic rerouting, which is achieved by registering instances in the replacement environment with the load balancer, can start as soon as all instances have a status of Ready.) 
@@ -100,17 +105,17 @@ func main() {
 * `GetDeploymentTarget` -  Returns information about a deployment target. 
 * `GetOnPremisesInstance` -  Gets information about an on-premises instance. 
 * `ListApplicationRevisions` - Lists information about revisions for an application.
-* `ListApplications` - Lists the applications registered with the IAM user or AWS account.
-* `ListDeploymentConfigs` - Lists the deployment configurations with the IAM user or AWS account.
-* `ListDeploymentGroups` - Lists the deployment groups for an application registered with the IAM user or AWS account.
-* `ListDeploymentInstances` - <note> <p> The newer <code>BatchGetDeploymentTargets</code> should be used instead because it works with all compute types. <code>ListDeploymentInstances</code> throws an exception if it is used with a compute platform other than EC2/On-premises or AWS Lambda. </p> </note> <p> Lists the instance for a deployment associated with the IAM user or AWS account. </p>
+* `ListApplications` - Lists the applications registered with the IAM user or Amazon Web Services account.
+* `ListDeploymentConfigs` - Lists the deployment configurations with the IAM user or Amazon Web Services account.
+* `ListDeploymentGroups` - Lists the deployment groups for an application registered with the IAM user or Amazon Web Services account.
+* `ListDeploymentInstances` - <note> <p> The newer <code>BatchGetDeploymentTargets</code> should be used instead because it works with all compute types. <code>ListDeploymentInstances</code> throws an exception if it is used with a compute platform other than EC2/On-premises or Lambda. </p> </note> <p> Lists the instance for a deployment associated with the IAM user or Amazon Web Services account. </p>
 * `ListDeploymentTargets` -  Returns an array of target IDs that are associated a deployment. 
-* `ListDeployments` - Lists the deployments in a deployment group for an application registered with the IAM user or AWS account.
+* `ListDeployments` - Lists the deployments in a deployment group for an application registered with the IAM user or Amazon Web Services account.
 * `ListGitHubAccountTokenNames` - Lists the names of stored connections to GitHub accounts.
 * `ListOnPremisesInstances` - <p>Gets a list of names for one or more on-premises instances.</p> <p>Unless otherwise specified, both registered and deregistered on-premises instance names are listed. To list only registered or deregistered on-premises instance names, use the registration status parameter.</p>
 * `ListTagsForResource` -  Returns a list of tags for the resource identified by a specified Amazon Resource Name (ARN). Tags are used to organize and categorize your CodeDeploy resources. 
-* `PutLifecycleEventHookExecutionStatus` -  Sets the result of a Lambda validation function. The function validates lifecycle hooks during a deployment that uses the AWS Lambda or Amazon ECS compute platform. For AWS Lambda deployments, the available lifecycle hooks are <code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>. For Amazon ECS deployments, the available lifecycle hooks are <code>BeforeInstall</code>, <code>AfterInstall</code>, <code>AfterAllowTestTraffic</code>, <code>BeforeAllowTraffic</code>, and <code>AfterAllowTraffic</code>. Lambda validation functions return <code>Succeeded</code> or <code>Failed</code>. For more information, see <a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-lambda">AppSpec 'hooks' Section for an AWS Lambda Deployment </a> and <a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-ecs">AppSpec 'hooks' Section for an Amazon ECS Deployment</a>.
-* `RegisterApplicationRevision` - Registers with AWS CodeDeploy a revision for the specified application.
+* `PutLifecycleEventHookExecutionStatus` -  Sets the result of a Lambda validation function. The function validates lifecycle hooks during a deployment that uses the Lambda or Amazon ECS compute platform. For Lambda deployments, the available lifecycle hooks are <code>BeforeAllowTraffic</code> and <code>AfterAllowTraffic</code>. For Amazon ECS deployments, the available lifecycle hooks are <code>BeforeInstall</code>, <code>AfterInstall</code>, <code>AfterAllowTestTraffic</code>, <code>BeforeAllowTraffic</code>, and <code>AfterAllowTraffic</code>. Lambda validation functions return <code>Succeeded</code> or <code>Failed</code>. For more information, see <a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-lambda">AppSpec 'hooks' Section for an Lambda Deployment </a> and <a href="https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-ecs">AppSpec 'hooks' Section for an Amazon ECS Deployment</a>.
+* `RegisterApplicationRevision` - Registers with CodeDeploy a revision for the specified application.
 * `RegisterOnPremisesInstance` - <p>Registers an on-premises instance.</p> <note> <p>Only one IAM ARN (an IAM session ARN or IAM user ARN) is supported in the request. You cannot use both.</p> </note>
 * `RemoveTagsFromOnPremisesInstances` - Removes one or more tags from one or more on-premises instances.
 * `SkipWaitTimeForInstanceTermination` - In a blue/green deployment, overrides any specified wait time and starts terminating instances immediately after the traffic routing is complete.
@@ -119,7 +124,6 @@ func main() {
 * `UntagResource` -  Disassociates a resource from a list of tags. The resource is identified by the <code>ResourceArn</code> input parameter. The tags are identified by the list of keys in the <code>TagKeys</code> input parameter. 
 * `UpdateApplication` - Changes the name of an application.
 * `UpdateDeploymentGroup` - Changes information about a deployment group.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

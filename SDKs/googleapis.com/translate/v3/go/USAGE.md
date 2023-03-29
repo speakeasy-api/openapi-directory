@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.TranslateProjectsLocationsBatchTranslateDocumentRequest{
         Security: operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,70 +23,73 @@ func main() {
             },
         },
         PathParams: operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.BatchTranslateDocumentRequest{
-            CustomizedAttribution: "dicta",
+            CustomizedAttribution: "eum",
             FormatConversions: map[string]string{
-                "voluptatum": "et",
+                "ullam": "saepe",
+                "inventore": "sapiente",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
-                "dolorem": shared.TranslateTextGlossaryConfig{
-                    Glossary: "et",
+                "eum": shared.TranslateTextGlossaryConfig{
+                    Glossary: "voluptatum",
                     IgnoreCase: false,
                 },
-                "iste": shared.TranslateTextGlossaryConfig{
-                    Glossary: "vitae",
-                    IgnoreCase: true,
-                },
-                "dolores": shared.TranslateTextGlossaryConfig{
-                    Glossary: "illum",
-                    IgnoreCase: true,
+                "autem": shared.TranslateTextGlossaryConfig{
+                    Glossary: "vel",
+                    IgnoreCase: false,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "odio",
+                        InputURI: "deleniti",
                     },
                 },
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "dolore",
+                        InputURI: "similique",
+                    },
+                },
+                shared.BatchDocumentInputConfig{
+                    GcsSource: &shared.GcsSource{
+                        InputURI: "reprehenderit",
                     },
                 },
             },
             Models: map[string]string{
-                "aspernatur": "accusantium",
-                "totam": "commodi",
+                "quo": "quasi",
+                "laboriosam": "dicta",
+                "est": "voluptatem",
+                "consequatur": "fugiat",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "quis",
+                    OutputURIPrefix: "a",
                 },
             },
-            SourceLanguageCode: "est",
+            SourceLanguageCode: "omnis",
             TargetLanguageCodes: []string{
-                "odit",
-                "non",
-                "voluptas",
+                "accusamus",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.TranslateProjectsLocationsBatchTranslateDocument(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -93,5 +98,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

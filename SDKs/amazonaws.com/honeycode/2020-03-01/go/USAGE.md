@@ -3,59 +3,97 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchCreateTableRowsRequest{
         PathParams: operations.BatchCreateTableRowsPathParams{
-            TableID: "sit",
-            WorkbookID: "voluptas",
+            TableID: "unde",
+            WorkbookID: "deserunt",
         },
         Headers: operations.BatchCreateTableRowsHeaders{
-            XAmzAlgorithm: "culpa",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "consequuntur",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "expedita",
-            XAmzSignature: "voluptas",
-            XAmzSignedHeaders: "fugit",
+            XAmzAlgorithm: "porro",
+            XAmzContentSha256: "nulla",
+            XAmzCredential: "id",
+            XAmzDate: "vero",
+            XAmzSecurityToken: "perspiciatis",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "nihil",
         },
         Request: operations.BatchCreateTableRowsRequestBody{
-            ClientRequestToken: "et",
+            ClientRequestToken: "fuga",
             RowsToCreate: []shared.CreateRowData{
                 shared.CreateRowData{
-                    BatchItemID: "rerum",
+                    BatchItemID: "eum",
                     CellsToCreate: map[string]shared.CellInput{
-                        "debitis": shared.CellInput{
-                            Fact: "voluptatum",
+                        "ullam": shared.CellInput{
+                            Fact: "saepe",
+                            Facts: []string{
+                                "sapiente",
+                            },
                         },
-                        "et": shared.CellInput{
-                            Fact: "ut",
+                        "enim": shared.CellInput{
+                            Fact: "eum",
+                            Facts: []string{
+                                "autem",
+                                "vel",
+                            },
                         },
-                        "dolorem": shared.CellInput{
-                            Fact: "et",
+                    },
+                },
+                shared.CreateRowData{
+                    BatchItemID: "non",
+                    CellsToCreate: map[string]shared.CellInput{
+                        "similique": shared.CellInput{
+                            Fact: "reprehenderit",
+                            Facts: []string{
+                                "quo",
+                                "quasi",
+                                "laboriosam",
+                                "dicta",
+                            },
+                        },
+                        "est": shared.CellInput{
+                            Fact: "voluptatem",
+                            Facts: []string{
+                                "fugiat",
+                                "a",
+                            },
+                        },
+                    },
+                },
+                shared.CreateRowData{
+                    BatchItemID: "omnis",
+                    CellsToCreate: map[string]shared.CellInput{
+                        "accusamus": shared.CellInput{
+                            Fact: "accusamus",
+                            Facts: []string{
+                                "rem",
+                                "quibusdam",
+                                "et",
+                                "praesentium",
+                            },
                         },
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchCreateTableRows(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -64,5 +102,6 @@ func main() {
     if res.BatchCreateTableRowsResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

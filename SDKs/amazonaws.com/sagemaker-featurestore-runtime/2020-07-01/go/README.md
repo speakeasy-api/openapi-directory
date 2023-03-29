@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/sagemaker-featurestore-runtime/2020-07-01/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,73 +14,91 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchGetRecordRequest{
         Headers: operations.BatchGetRecordHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.BatchGetRecordRequestBody{
             Identifiers: []shared.BatchGetRecordIdentifier{
                 shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "fugit",
+                    FeatureGroupName: "nihil",
                     FeatureNames: []string{
-                        "nihil",
+                        "facilis",
+                        "eum",
+                        "iusto",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "dicta",
-                        "debitis",
+                        "saepe",
+                        "inventore",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "sapiente",
+                    FeatureNames: []string{
+                        "eum",
                         "voluptatum",
                     },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "et",
-                    FeatureNames: []string{
-                        "dolorem",
-                        "et",
-                        "voluptate",
-                    },
                     RecordIdentifiersValueAsString: []string{
-                        "vitae",
-                        "totam",
-                        "dolores",
-                    },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "illum",
-                    FeatureNames: []string{
                         "vel",
+                        "non",
+                        "deleniti",
+                        "similique",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "reprehenderit",
+                    FeatureNames: []string{
+                        "quo",
+                        "quasi",
+                        "laboriosam",
+                        "dicta",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "dolore",
+                        "voluptatem",
+                        "consequatur",
+                        "fugiat",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "a",
+                    FeatureNames: []string{
+                        "eos",
+                        "accusamus",
+                        "accusamus",
+                        "reiciendis",
+                    },
+                    RecordIdentifiersValueAsString: []string{
+                        "quibusdam",
+                        "et",
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchGetRecord(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -89,6 +107,7 @@ func main() {
     if res.BatchGetRecordResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -98,10 +117,9 @@ func main() {
 ### SDK SDK
 
 * `BatchGetRecord` - Retrieves a batch of <code>Records</code> from a <code>FeatureGroup</code>.
-* `DeleteRecord` - Deletes a <code>Record</code> from a <code>FeatureGroup</code>. A new record will show up in the <code>OfflineStore</code> when the <code>DeleteRecord</code> API is called. This record will have a value of <code>True</code> in the <code>is_deleted</code> column.
+* `DeleteRecord` - Deletes a <code>Record</code> from a <code>FeatureGroup</code>. When the <code>DeleteRecord</code> API is called a new record will be added to the <code>OfflineStore</code> and the <code>Record</code> will be removed from the <code>OnlineStore</code>. This record will have a value of <code>True</code> in the <code>is_deleted</code> column.
 * `GetRecord` - Use for <code>OnlineStore</code> serving from a <code>FeatureStore</code>. Only the latest records stored in the <code>OnlineStore</code> can be retrieved. If no Record with <code>RecordIdentifierValue</code> is found, then an empty result is returned. 
 * `PutRecord` - Used for data ingestion into the <code>FeatureStore</code>. The <code>PutRecord</code> API writes to both the <code>OnlineStore</code> and <code>OfflineStore</code>. If the record is the latest record for the <code>recordIdentifier</code>, the record is written to both the <code>OnlineStore</code> and <code>OfflineStore</code>. If the record is a historic record, it is written only to the <code>OfflineStore</code>.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

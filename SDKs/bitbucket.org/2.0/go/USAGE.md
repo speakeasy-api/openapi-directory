@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUUIDStepsStepUUIDLogsLogUUIDRequest{
         PathParams: operations.GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUUIDStepsStepUUIDLogsLogUUIDPathParams{
-            LogUUID: "sit",
-            PipelineUUID: "voluptas",
-            RepoSlug: "culpa",
-            StepUUID: "expedita",
-            Workspace: "consequuntur",
+            LogUUID: "unde",
+            PipelineUUID: "deserunt",
+            RepoSlug: "porro",
+            StepUUID: "nulla",
+            Workspace: "id",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUUIDStepsStepUUIDLogsLogUUID(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

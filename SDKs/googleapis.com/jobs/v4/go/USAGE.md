@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.JobsProjectsTenantsClientEventsCreateRequest{
         Security: operations.JobsProjectsTenantsClientEventsCreateSecurity{
             Option1: &operations.JobsProjectsTenantsClientEventsCreateSecurityOption1{
@@ -23,35 +25,39 @@ func main() {
             },
         },
         PathParams: operations.JobsProjectsTenantsClientEventsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.JobsProjectsTenantsClientEventsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.ClientEvent{
-            CreateTime: "dicta",
-            EventID: "debitis",
-            EventNotes: "voluptatum",
+            CreateTime: "eum",
+            EventID: "iusto",
+            EventNotes: "ullam",
             JobEvent: &shared.JobEvent{
                 Jobs: []string{
-                    "ut",
+                    "inventore",
+                    "sapiente",
+                    "enim",
+                    "eum",
                 },
-                Type: "VIEW",
+                Type: "APPLICATION_REDIRECT",
             },
-            RequestID: "et",
+            RequestID: "autem",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.JobsProjectsTenantsClientEventsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -60,5 +66,6 @@ func main() {
     if res.ClientEvent != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,34 +3,43 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Bearer: shared.SchemeBearer{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Bearer: shared.SchemeBearer{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.ArticleAddMeasureUnitRequest{
-        Request: []shared.MeasureUnitDto{
-            shared.MeasureUnitDto{
-                ID: 2259404117704393152,
-                Name: "culpa",
-                Type: "expedita",
+        Request: []shared.MeasureUnitDTO{
+            shared.MeasureUnitDTO{
+                ID: 592845,
+                Name: "porro",
+                Type: "nulla",
+            },
+            shared.MeasureUnitDTO{
+                ID: 602763,
+                Name: "vero",
+                Type: "perspiciatis",
+            },
+            shared.MeasureUnitDTO{
+                ID: 847252,
+                Name: "nihil",
+                Type: "fuga",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Article.ArticleAddMeasureUnit(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -39,5 +48,6 @@ func main() {
     if res.DefaultResponseDTOOfStatusDTO != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

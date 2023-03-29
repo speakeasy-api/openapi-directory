@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/websecurityscanner/v1beta/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
         Security: operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,91 +34,102 @@ func main() {
             },
         },
         PathParams: operations.WebsecurityscannerProjectsScanConfigsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "dicta",
-                    Password: "debitis",
-                    Username: "voluptatum",
+                    LoginURL: "eum",
+                    Password: "iusto",
+                    Username: "Eli96",
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "et",
-                    Username: "ut",
+                    Password: "enim",
+                    Username: "Gerald_Kreiger52",
                 },
                 IapCredential: &shared.IapCredential{
                     IapTestServiceAccountInfo: &shared.IapTestServiceAccountInfo{
-                        TargetAudienceClientID: "dolorem",
+                        TargetAudienceClientID: "deleniti",
                     },
                 },
             },
             BlacklistPatterns: []string{
-                "voluptate",
-                "iste",
+                "reprehenderit",
+                "molestiae",
+                "quo",
             },
-            DisplayName: "vitae",
-            ExportToSecurityCommandCenter: "DISABLED",
-            IgnoreHTTPStatusErrors: true,
+            DisplayName: "quasi",
+            ExportToSecurityCommandCenter: "ENABLED",
+            IgnoreHTTPStatusErrors: false,
             LatestRun: &shared.ScanRun{
-                EndTime: "illum",
+                EndTime: "dicta",
                 ErrorTrace: &shared.ScanRunErrorTrace{
-                    Code: "SCAN_CONFIG_ISSUE",
-                    MostCommonHTTPErrorCode: 3706853784096366226,
+                    Code: "TOO_MANY_REDIRECTS",
+                    MostCommonHTTPErrorCode: 20218,
                     ScanConfigError: &shared.ScanConfigError{
-                        Code: "CANNOT_USE_GOOGLE_COM_ACCOUNT",
-                        FieldName: "dolore",
+                        Code: "CUSTOM_LOGIN_URL_HAS_UNRESERVED_IP_ADDRESS",
+                        FieldName: "fugiat",
                     },
                 },
-                ExecutionState: "EXECUTION_STATE_UNSPECIFIED",
-                HasVulnerabilities: true,
-                Name: "accusantium",
-                ProgressPercent: 1395437218309923052,
-                ResultState: "RESULT_STATE_UNSPECIFIED",
-                StartTime: "quis",
-                UrlsCrawledCount: "est",
-                UrlsTestedCount: "aut",
+                ExecutionState: "FINISHED",
+                HasVulnerabilities: false,
+                Name: "omnis",
+                ProgressPercent: 140350,
+                ResultState: "KILLED",
+                StartTime: "accusamus",
+                UrlsCrawledCount: "reiciendis",
+                UrlsTestedCount: "rem",
                 WarningTraces: []shared.ScanRunWarningTrace{
                     shared.ScanRunWarningTrace{
-                        Code: "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN",
+                        Code: "BLOCKED_BY_IAP",
                     },
                     shared.ScanRunWarningTrace{
-                        Code: "CODE_UNSPECIFIED",
+                        Code: "TOO_MANY_CRAWL_RESULTS",
+                    },
+                    shared.ScanRunWarningTrace{
+                        Code: "TOO_MANY_FUZZ_TASKS",
+                    },
+                    shared.ScanRunWarningTrace{
+                        Code: "BLOCKED_BY_IAP",
                     },
                 },
             },
-            ManagedScan: true,
-            MaxQPS: 1059542851699319360,
-            Name: "illo",
+            ManagedScan: false,
+            MaxQPS: 678880,
+            Name: "sed",
             RiskLevel: "LOW",
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 7845762441295307478,
-                ScheduleTime: "autem",
+                IntervalDurationDays: 639921,
+                ScheduleTime: "culpa",
             },
             StartingUrls: []string{
-                "nobis",
+                "sed",
             },
             StaticIPScan: false,
             TargetPlatforms: []shared.ScanConfigTargetPlatformsEnum{
+                "CLOUD_RUN",
+                "COMPUTE",
                 "TARGET_PLATFORM_UNSPECIFIED",
+                "COMPUTE",
             },
-            UserAgent: "USER_AGENT_UNSPECIFIED",
+            UserAgent: "CHROME_LINUX",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -125,13 +138,15 @@ func main() {
     if res.ScanConfig != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `WebsecurityscannerProjectsScanConfigsCreate` - Creates a new ScanConfig.
 * `WebsecurityscannerProjectsScanConfigsDelete` - Deletes an existing ScanConfig and its child resources.
@@ -144,7 +159,6 @@ func main() {
 * `WebsecurityscannerProjectsScanConfigsScanRunsList` - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
 * `WebsecurityscannerProjectsScanConfigsScanRunsStop` - Stops a ScanRun. The stopped ScanRun is returned.
 * `WebsecurityscannerProjectsScanConfigsStart` - Start a ScanRun according to the given ScanConfig.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

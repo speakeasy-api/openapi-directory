@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeleteJsappsCodeJSONRequest{
         PathParams: operations.DeleteJsappsCodeJSONPathParams{
-            Code: "sit",
+            Code: "unde",
         },
         QueryParams: operations.DeleteJsappsCodeJSONQueryParams{
-            Authtoken: "voluptas",
-            Login: "culpa",
+            Authtoken: "deserunt",
+            Login: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Apps.DeleteJsappsCodeJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.DeleteJsappsCodeJSON200ApplicationJSONString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

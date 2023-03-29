@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,58 +12,59 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.MybusinessAccountsCreateRequest{
         QueryParams: operations.MybusinessAccountsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            PrimaryOwner: "fugit",
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            PrimaryOwner: "nulla",
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Account{
-            AccountName: "dicta",
-            AccountNumber: "debitis",
-            Name: "voluptatum",
+            AccountName: "eum",
+            AccountNumber: "iusto",
+            Name: "ullam",
             OrganizationInfo: &shared.OrganizationInfo{
-                PhoneNumber: "et",
+                PhoneNumber: "saepe",
                 PostalAddress: &shared.PostalAddress{
                     AddressLines: []string{
-                        "dolorem",
-                        "et",
-                        "voluptate",
+                        "sapiente",
                     },
-                    AdministrativeArea: "iste",
-                    LanguageCode: "vitae",
-                    Locality: "totam",
-                    Organization: "dolores",
-                    PostalCode: "illum",
+                    AdministrativeArea: "enim",
+                    LanguageCode: "eum",
+                    Locality: "voluptatum",
+                    Organization: "autem",
+                    PostalCode: "54539-8030",
                     Recipients: []string{
-                        "vel",
+                        "voluptatem",
+                        "consequatur",
+                        "fugiat",
                     },
-                    RegionCode: "odio",
-                    Revision: 6303220950515014660,
-                    SortingCode: "id",
-                    Sublocality: "aspernatur",
+                    RegionCode: "a",
+                    Revision: 778157,
+                    SortingCode: "eos",
+                    Sublocality: "accusamus",
                 },
-                RegisteredDomain: "accusantium",
+                RegisteredDomain: "accusamus",
             },
             PermissionLevel: "MEMBER_LEVEL",
-            Role: "COMMUNITY_MANAGER",
+            Role: "CO_OWNER",
             State: &shared.AccountState{
-                Status: "UNVERIFIED",
+                Status: "VERIFICATION_REQUESTED",
             },
-            Type: "USER_GROUP",
+            Type: "ORGANIZATION",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.MybusinessAccountsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -70,5 +73,6 @@ func main() {
     if res.Account != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

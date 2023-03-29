@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/gambitcomm.local/mimic/21.00/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,33 +14,32 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                BasicAuth: shared.SchemeBasicAuth{
-                    Password: "YOUR_PASSWORD_HERE",
-                    Username: "YOUR_USERNAME_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            BasicAuth: shared.SchemeBasicAuth{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AccessAddRequest{
         PathParams: operations.AccessAddPathParams{
-            Agents: "sit",
-            Mask: "voluptas",
-            User: "culpa",
+            Agents: "unde",
+            Mask: "deserunt",
+            User: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Access.AccessAdd(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,11 +48,13 @@ func main() {
     if res.AccessAdd200ApplicationJSONString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### Access
 
@@ -150,7 +151,7 @@ func main() {
 * `TrapConfigList` - List the set of trap destinations for this agent instance.
 * `TrapList` - List the outstanding asynchronous traps for this agent instance.
 
-### COAP
+### Coap
 
 * `ProtocolCoapGetArgs` - Show the agent's COAP argument structure
 * `ProtocolCoapGetConfig` - Show the agent's COAP configuration
@@ -160,7 +161,7 @@ func main() {
 * `ProtocolCoapSetConfig` - Set the agent's COAP configuration
 * `ProtocolCoapSetTrace` - Set the agent's COAP traffic tracing
 
-### DHCP
+### Dhcp
 
 * `ProtocolDhcpGetArgs` - Show the agent's DHCP argument structure
 * `ProtocolDhcpGetConfig` - Show the agent's DHCP configuration
@@ -213,7 +214,7 @@ func main() {
 * `StoreUnset` - Deletes a variable which is currently defined.
 * `Terminate` - Terminate the MIMIC daemon.
 
-### IPMI
+### Ipmi
 
 * `ProtocolIpmiGetArgs` - Show the agent's IPMI argument structure
 * `ProtocolIpmiGetAttr` - Show the outgoing message's attributes
@@ -225,7 +226,7 @@ func main() {
 * `ProtocolIpmiSetConfig` - Set the agent's IPMI configuration
 * `ProtocolIpmiSetTrace` - Set the agent's IPMI traffic tracing
 
-### MQTT
+### Mqtt
 
 * `ProtocolMqttClientGetProtstate` - Show the agent's MQTT TCP connection state
 * `ProtocolMqttClientGetState` - Show the agent's MQTT state
@@ -260,7 +261,7 @@ func main() {
 * `ProtocolMqttSetConfig` - Set the agent's MQTT configuration
 * `ProtocolMqttSetTrace` - Set the agent's MQTT traffic tracing
 
-### NETFLOW
+### Netflow
 
 * `ProtocolNetflowChangeAttr` - Change NETFLOW export attributes
 * `ProtocolNetflowChangeDfs` - Change NETFLOW data export interval
@@ -279,7 +280,7 @@ func main() {
 * `ProtocolNetflowSetFileName` - Swap NETFLOW configuration file
 * `ProtocolNetflowSetTrace` - Set the agent's NETFLOW traffic tracing
 
-### PROXY
+### Proxy
 
 * `ProtocolProxyGetArgs` - Show the agent's PROXY argument structure
 * `ProtocolProxyGetConfig` - Show the agent's PROXY configuration
@@ -295,7 +296,7 @@ func main() {
 * `ProtocolProxySetConfig` - Set the agent's PROXY configuration
 * `ProtocolProxySetTrace` - Set the agent's PROXY traffic tracing
 
-### SFLOW
+### Sflow
 
 * `ProtocolSflowGetArgs` - Show the agent's SFLOW argument structure
 * `ProtocolSflowGetConfig` - Show the agent's SFLOW configuration
@@ -308,7 +309,7 @@ func main() {
 * `ProtocolSflowSetConfig` - Set the agent's SFLOW configuration
 * `ProtocolSflowSetTrace` - Set the agent's SFLOW traffic tracing
 
-### SNMPTCP
+### Snmptcp
 
 * `ProtocolSnmptcpGetArgs` - Show the agent's SNMPTCP argument structure
 * `ProtocolSnmptcpGetConfig` - Show the agent's SNMPTCP configuration
@@ -365,7 +366,7 @@ func main() {
 * `ProtocolSSHSetConfig` - Set the agent's SSH configuration
 * `ProtocolSSHSetTrace` - Set the agent's SSH traffic tracing
 
-### SYSLOG
+### Syslog
 
 * `ProtocolSyslogGetArgs` - Show the agent's SYSLOG argument structure
 * `ProtocolSyslogGetAttr` - Show the outgoing message's attributes
@@ -378,7 +379,7 @@ func main() {
 * `ProtocolSyslogSetConfig` - Set the agent's SYSLOG configuration
 * `ProtocolSyslogSetTrace` - Set the agent's SYSLOG traffic tracing
 
-### TELNET
+### Telnet
 
 * `ProtocolTelnetConnectionLogon` - Changes the connection's current logon.
 * `ProtocolTelnetConnectionRequest` - Executes the command asynchronously .
@@ -401,7 +402,7 @@ func main() {
 * `ProtocolTelnetSetConfig` - Set the agent's TELNET configuration
 * `ProtocolTelnetSetTrace` - Set the agent's TELNET traffic tracing
 
-### TFTP
+### Tftp
 
 * `ProtocolTftpGetArgs` - Show the agent's TFTP argument structure
 * `ProtocolTftpGetConfig` - Show the agent's TFTP configuration
@@ -418,7 +419,7 @@ func main() {
 * `ProtocolTftpSetConfig` - Set the agent's TFTP configuration
 * `ProtocolTftpSetTrace` - Set the agent's TFTP traffic tracing
 
-### TOD
+### Tod
 
 * `ProtocolTodGetArgs` - Show the agent's TOD argument structure
 * `ProtocolTodGetConfig` - Show the agent's TOD configuration
@@ -450,7 +451,7 @@ func main() {
 * `SplitOid` - Split the numerical OID into the object OID and instance OID.
 * `UnsetValue` - Unset a variable in the Value Space in order to free its memory.
 
-### WEB
+### Web
 
 * `ProtocolWebGetArgs` - Show the agent's WEB argument structure
 * `ProtocolWebGetConfig` - Show the agent's WEB configuration
@@ -465,7 +466,6 @@ func main() {
 * `ProtocolWebPortStop` - Stop the agent's WEB port
 * `ProtocolWebSetConfig` - Set the agent's WEB configuration
 * `ProtocolWebSetTrace` - Set the agent's WEB traffic tracing
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

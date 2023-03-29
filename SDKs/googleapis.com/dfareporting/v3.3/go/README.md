@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/dfareporting/v3.3/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DfareportingAccountActiveAdSummariesGetRequest{
         Security: operations.DfareportingAccountActiveAdSummariesGetSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,24 +34,25 @@ func main() {
             },
         },
         PathParams: operations.DfareportingAccountActiveAdSummariesGetPathParams{
-            ProfileID: "sit",
-            SummaryAccountID: "voluptas",
+            ProfileID: "unde",
+            SummaryAccountID: "deserunt",
         },
         QueryParams: operations.DfareportingAccountActiveAdSummariesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            AccessToken: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AccountActiveAdSummaries.DfareportingAccountActiveAdSummariesGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -58,27 +61,29 @@ func main() {
     if res.AccountActiveAdSummary != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### accountActiveAdSummaries
+
+### AccountActiveAdSummaries
 
 * `DfareportingAccountActiveAdSummariesGet` - Gets the account's active ad summary by account ID.
 
-### accountPermissionGroups
+### AccountPermissionGroups
 
 * `DfareportingAccountPermissionGroupsGet` - Gets one account permission group by ID.
 * `DfareportingAccountPermissionGroupsList` - Retrieves the list of account permission groups.
 
-### accountPermissions
+### AccountPermissions
 
 * `DfareportingAccountPermissionsGet` - Gets one account permission by ID.
 * `DfareportingAccountPermissionsList` - Retrieves the list of account permissions.
 
-### accountUserProfiles
+### AccountUserProfiles
 
 * `DfareportingAccountUserProfilesGet` - Gets one account user profile by ID.
 * `DfareportingAccountUserProfilesInsert` - Inserts a new account user profile.
@@ -86,14 +91,14 @@ func main() {
 * `DfareportingAccountUserProfilesPatch` - Updates an existing account user profile. This method supports patch semantics.
 * `DfareportingAccountUserProfilesUpdate` - Updates an existing account user profile.
 
-### accounts
+### Accounts
 
 * `DfareportingAccountsGet` - Gets one account by ID.
 * `DfareportingAccountsList` - Retrieves the list of accounts, possibly filtered. This method supports paging.
 * `DfareportingAccountsPatch` - Updates an existing account. This method supports patch semantics.
 * `DfareportingAccountsUpdate` - Updates an existing account.
 
-### ads
+### Ads
 
 * `DfareportingAdsGet` - Gets one ad by ID.
 * `DfareportingAdsInsert` - Inserts a new ad.
@@ -101,7 +106,7 @@ func main() {
 * `DfareportingAdsPatch` - Updates an existing ad. This method supports patch semantics.
 * `DfareportingAdsUpdate` - Updates an existing ad.
 
-### advertiserGroups
+### AdvertiserGroups
 
 * `DfareportingAdvertiserGroupsDelete` - Deletes an existing advertiser group.
 * `DfareportingAdvertiserGroupsGet` - Gets one advertiser group by ID.
@@ -110,7 +115,7 @@ func main() {
 * `DfareportingAdvertiserGroupsPatch` - Updates an existing advertiser group. This method supports patch semantics.
 * `DfareportingAdvertiserGroupsUpdate` - Updates an existing advertiser group.
 
-### advertiserLandingPages
+### AdvertiserLandingPages
 
 * `DfareportingAdvertiserLandingPagesGet` - Gets one landing page by ID.
 * `DfareportingAdvertiserLandingPagesInsert` - Inserts a new landing page.
@@ -118,7 +123,7 @@ func main() {
 * `DfareportingAdvertiserLandingPagesPatch` - Updates an existing advertiser landing page. This method supports patch semantics.
 * `DfareportingAdvertiserLandingPagesUpdate` - Updates an existing landing page.
 
-### advertisers
+### Advertisers
 
 * `DfareportingAdvertisersGet` - Gets one advertiser by ID.
 * `DfareportingAdvertisersInsert` - Inserts a new advertiser.
@@ -126,16 +131,16 @@ func main() {
 * `DfareportingAdvertisersPatch` - Updates an existing advertiser. This method supports patch semantics.
 * `DfareportingAdvertisersUpdate` - Updates an existing advertiser.
 
-### browsers
+### Browsers
 
 * `DfareportingBrowsersList` - Retrieves a list of browsers.
 
-### campaignCreativeAssociations
+### CampaignCreativeAssociations
 
 * `DfareportingCampaignCreativeAssociationsInsert` - Associates a creative with the specified campaign. This method creates a default ad with dimensions matching the creative in the campaign if such a default ad does not exist already.
 * `DfareportingCampaignCreativeAssociationsList` - Retrieves the list of creative IDs associated with the specified campaign. This method supports paging.
 
-### campaigns
+### Campaigns
 
 * `DfareportingCampaignsGet` - Gets one campaign by ID.
 * `DfareportingCampaignsInsert` - Inserts a new campaign.
@@ -143,21 +148,21 @@ func main() {
 * `DfareportingCampaignsPatch` - Updates an existing campaign. This method supports patch semantics.
 * `DfareportingCampaignsUpdate` - Updates an existing campaign.
 
-### changeLogs
+### ChangeLogs
 
 * `DfareportingChangeLogsGet` - Gets one change log by ID.
 * `DfareportingChangeLogsList` - Retrieves a list of change logs. This method supports paging.
 
-### cities
+### Cities
 
 * `DfareportingCitiesList` - Retrieves a list of cities, possibly filtered.
 
-### connectionTypes
+### ConnectionTypes
 
 * `DfareportingConnectionTypesGet` - Gets one connection type by ID.
 * `DfareportingConnectionTypesList` - Retrieves a list of connection types.
 
-### contentCategories
+### ContentCategories
 
 * `DfareportingContentCategoriesDelete` - Deletes an existing content category.
 * `DfareportingContentCategoriesGet` - Gets one content category by ID.
@@ -166,21 +171,21 @@ func main() {
 * `DfareportingContentCategoriesPatch` - Updates an existing content category. This method supports patch semantics.
 * `DfareportingContentCategoriesUpdate` - Updates an existing content category.
 
-### conversions
+### Conversions
 
 * `DfareportingConversionsBatchinsert` - Inserts conversions.
 * `DfareportingConversionsBatchupdate` - Updates existing conversions.
 
-### countries
+### Countries
 
 * `DfareportingCountriesGet` - Gets one country by ID.
 * `DfareportingCountriesList` - Retrieves a list of countries.
 
-### creativeAssets
+### CreativeAssets
 
 * `DfareportingCreativeAssetsInsert` - Inserts a new creative asset.
 
-### creativeFieldValues
+### CreativeFieldValues
 
 * `DfareportingCreativeFieldValuesDelete` - Deletes an existing creative field value.
 * `DfareportingCreativeFieldValuesGet` - Gets one creative field value by ID.
@@ -189,7 +194,7 @@ func main() {
 * `DfareportingCreativeFieldValuesPatch` - Updates an existing creative field value. This method supports patch semantics.
 * `DfareportingCreativeFieldValuesUpdate` - Updates an existing creative field value.
 
-### creativeFields
+### CreativeFields
 
 * `DfareportingCreativeFieldsDelete` - Deletes an existing creative field.
 * `DfareportingCreativeFieldsGet` - Gets one creative field by ID.
@@ -198,7 +203,7 @@ func main() {
 * `DfareportingCreativeFieldsPatch` - Updates an existing creative field. This method supports patch semantics.
 * `DfareportingCreativeFieldsUpdate` - Updates an existing creative field.
 
-### creativeGroups
+### CreativeGroups
 
 * `DfareportingCreativeGroupsGet` - Gets one creative group by ID.
 * `DfareportingCreativeGroupsInsert` - Inserts a new creative group.
@@ -206,7 +211,7 @@ func main() {
 * `DfareportingCreativeGroupsPatch` - Updates an existing creative group. This method supports patch semantics.
 * `DfareportingCreativeGroupsUpdate` - Updates an existing creative group.
 
-### creatives
+### Creatives
 
 * `DfareportingCreativesGet` - Gets one creative by ID.
 * `DfareportingCreativesInsert` - Inserts a new creative.
@@ -214,23 +219,23 @@ func main() {
 * `DfareportingCreativesPatch` - Updates an existing creative. This method supports patch semantics.
 * `DfareportingCreativesUpdate` - Updates an existing creative.
 
-### dimensionValues
+### DimensionValues
 
 * `DfareportingDimensionValuesQuery` - Retrieves list of report dimension values for a list of filters.
 
-### directorySites
+### DirectorySites
 
 * `DfareportingDirectorySitesGet` - Gets one directory site by ID.
 * `DfareportingDirectorySitesInsert` - Inserts a new directory site.
 * `DfareportingDirectorySitesList` - Retrieves a list of directory sites, possibly filtered. This method supports paging.
 
-### dynamicTargetingKeys
+### DynamicTargetingKeys
 
 * `DfareportingDynamicTargetingKeysDelete` - Deletes an existing dynamic targeting key.
 * `DfareportingDynamicTargetingKeysInsert` - Inserts a new dynamic targeting key. Keys must be created at the advertiser level before being assigned to the advertiser's ads, creatives, or placements. There is a maximum of 1000 keys per advertiser, out of which a maximum of 20 keys can be assigned per ad, creative, or placement.
 * `DfareportingDynamicTargetingKeysList` - Retrieves a list of dynamic targeting keys.
 
-### eventTags
+### EventTags
 
 * `DfareportingEventTagsDelete` - Deletes an existing event tag.
 * `DfareportingEventTagsGet` - Gets one event tag by ID.
@@ -239,12 +244,12 @@ func main() {
 * `DfareportingEventTagsPatch` - Updates an existing event tag. This method supports patch semantics.
 * `DfareportingEventTagsUpdate` - Updates an existing event tag.
 
-### files
+### Files
 
 * `DfareportingFilesGet` - Retrieves a report file by its report ID and file ID. This method supports media download.
 * `DfareportingFilesList` - Lists files for a user profile.
 
-### floodlightActivities
+### FloodlightActivities
 
 * `DfareportingFloodlightActivitiesDelete` - Deletes an existing floodlight activity.
 * `DfareportingFloodlightActivitiesGeneratetag` - Generates a tag for a floodlight activity.
@@ -254,7 +259,7 @@ func main() {
 * `DfareportingFloodlightActivitiesPatch` - Updates an existing floodlight activity. This method supports patch semantics.
 * `DfareportingFloodlightActivitiesUpdate` - Updates an existing floodlight activity.
 
-### floodlightActivityGroups
+### FloodlightActivityGroups
 
 * `DfareportingFloodlightActivityGroupsGet` - Gets one floodlight activity group by ID.
 * `DfareportingFloodlightActivityGroupsInsert` - Inserts a new floodlight activity group.
@@ -262,57 +267,57 @@ func main() {
 * `DfareportingFloodlightActivityGroupsPatch` - Updates an existing floodlight activity group. This method supports patch semantics.
 * `DfareportingFloodlightActivityGroupsUpdate` - Updates an existing floodlight activity group.
 
-### floodlightConfigurations
+### FloodlightConfigurations
 
 * `DfareportingFloodlightConfigurationsGet` - Gets one floodlight configuration by ID.
 * `DfareportingFloodlightConfigurationsList` - Retrieves a list of floodlight configurations, possibly filtered.
 * `DfareportingFloodlightConfigurationsPatch` - Updates an existing floodlight configuration. This method supports patch semantics.
 * `DfareportingFloodlightConfigurationsUpdate` - Updates an existing floodlight configuration.
 
-### inventoryItems
+### InventoryItems
 
 * `DfareportingInventoryItemsGet` - Gets one inventory item by ID.
 * `DfareportingInventoryItemsList` - Retrieves a list of inventory items, possibly filtered. This method supports paging.
 
-### languages
+### Languages
 
 * `DfareportingLanguagesList` - Retrieves a list of languages.
 
-### metros
+### Metros
 
 * `DfareportingMetrosList` - Retrieves a list of metros.
 
-### mobileApps
+### MobileApps
 
 * `DfareportingMobileAppsGet` - Gets one mobile app by ID.
 * `DfareportingMobileAppsList` - Retrieves list of available mobile apps.
 
-### mobileCarriers
+### MobileCarriers
 
 * `DfareportingMobileCarriersGet` - Gets one mobile carrier by ID.
 * `DfareportingMobileCarriersList` - Retrieves a list of mobile carriers.
 
-### operatingSystemVersions
+### OperatingSystemVersions
 
 * `DfareportingOperatingSystemVersionsGet` - Gets one operating system version by ID.
 * `DfareportingOperatingSystemVersionsList` - Retrieves a list of operating system versions.
 
-### operatingSystems
+### OperatingSystems
 
 * `DfareportingOperatingSystemsGet` - Gets one operating system by DART ID.
 * `DfareportingOperatingSystemsList` - Retrieves a list of operating systems.
 
-### orderDocuments
+### OrderDocuments
 
 * `DfareportingOrderDocumentsGet` - Gets one order document by ID.
 * `DfareportingOrderDocumentsList` - Retrieves a list of order documents, possibly filtered. This method supports paging.
 
-### orders
+### Orders
 
 * `DfareportingOrdersGet` - Gets one order by ID.
 * `DfareportingOrdersList` - Retrieves a list of orders, possibly filtered. This method supports paging.
 
-### placementGroups
+### PlacementGroups
 
 * `DfareportingPlacementGroupsGet` - Gets one placement group by ID.
 * `DfareportingPlacementGroupsInsert` - Inserts a new placement group.
@@ -320,7 +325,7 @@ func main() {
 * `DfareportingPlacementGroupsPatch` - Updates an existing placement group. This method supports patch semantics.
 * `DfareportingPlacementGroupsUpdate` - Updates an existing placement group.
 
-### placementStrategies
+### PlacementStrategies
 
 * `DfareportingPlacementStrategiesDelete` - Deletes an existing placement strategy.
 * `DfareportingPlacementStrategiesGet` - Gets one placement strategy by ID.
@@ -329,7 +334,7 @@ func main() {
 * `DfareportingPlacementStrategiesPatch` - Updates an existing placement strategy. This method supports patch semantics.
 * `DfareportingPlacementStrategiesUpdate` - Updates an existing placement strategy.
 
-### placements
+### Placements
 
 * `DfareportingPlacementsGeneratetags` - Generates tags for a placement.
 * `DfareportingPlacementsGet` - Gets one placement by ID.
@@ -338,32 +343,32 @@ func main() {
 * `DfareportingPlacementsPatch` - Updates an existing placement. This method supports patch semantics.
 * `DfareportingPlacementsUpdate` - Updates an existing placement.
 
-### platformTypes
+### PlatformTypes
 
 * `DfareportingPlatformTypesGet` - Gets one platform type by ID.
 * `DfareportingPlatformTypesList` - Retrieves a list of platform types.
 
-### postalCodes
+### PostalCodes
 
 * `DfareportingPostalCodesGet` - Gets one postal code by ID.
 * `DfareportingPostalCodesList` - Retrieves a list of postal codes.
 
-### projects
+### Projects
 
 * `DfareportingProjectsGet` - Gets one project by ID.
 * `DfareportingProjectsList` - Retrieves a list of projects, possibly filtered. This method supports paging .
 
-### regions
+### Regions
 
 * `DfareportingRegionsList` - Retrieves a list of regions.
 
-### remarketingListShares
+### RemarketingListShares
 
 * `DfareportingRemarketingListSharesGet` - Gets one remarketing list share by remarketing list ID.
 * `DfareportingRemarketingListSharesPatch` - Updates an existing remarketing list share. This method supports patch semantics.
 * `DfareportingRemarketingListSharesUpdate` - Updates an existing remarketing list share.
 
-### remarketingLists
+### RemarketingLists
 
 * `DfareportingRemarketingListsGet` - Gets one remarketing list by ID.
 * `DfareportingRemarketingListsInsert` - Inserts a new remarketing list.
@@ -371,7 +376,7 @@ func main() {
 * `DfareportingRemarketingListsPatch` - Updates an existing remarketing list. This method supports patch semantics.
 * `DfareportingRemarketingListsUpdate` - Updates an existing remarketing list.
 
-### reports
+### Reports
 
 * `DfareportingReportsCompatibleFieldsQuery` - Returns the fields that are compatible to be selected in the respective sections of a report criteria, given the fields already selected in the input report and user permissions.
 * `DfareportingReportsDelete` - Deletes a report by its ID.
@@ -384,7 +389,7 @@ func main() {
 * `DfareportingReportsRun` - Runs a report.
 * `DfareportingReportsUpdate` - Updates a report.
 
-### sites
+### Sites
 
 * `DfareportingSitesGet` - Gets one site by ID.
 * `DfareportingSitesInsert` - Inserts a new site.
@@ -392,13 +397,13 @@ func main() {
 * `DfareportingSitesPatch` - Updates an existing site. This method supports patch semantics.
 * `DfareportingSitesUpdate` - Updates an existing site.
 
-### sizes
+### Sizes
 
 * `DfareportingSizesGet` - Gets one size by ID.
 * `DfareportingSizesInsert` - Inserts a new size.
 * `DfareportingSizesList` - Retrieves a list of sizes, possibly filtered. Retrieved sizes are globally unique and may include values not currently in use by your account. Due to this, the list of sizes returned by this method may differ from the list seen in the Trafficking UI.
 
-### subaccounts
+### Subaccounts
 
 * `DfareportingSubaccountsGet` - Gets one subaccount by ID.
 * `DfareportingSubaccountsInsert` - Inserts a new subaccount.
@@ -406,12 +411,12 @@ func main() {
 * `DfareportingSubaccountsPatch` - Updates an existing subaccount. This method supports patch semantics.
 * `DfareportingSubaccountsUpdate` - Updates an existing subaccount.
 
-### targetableRemarketingLists
+### TargetableRemarketingLists
 
 * `DfareportingTargetableRemarketingListsGet` - Gets one remarketing list by ID.
 * `DfareportingTargetableRemarketingListsList` - Retrieves a list of targetable remarketing lists, possibly filtered. This method supports paging.
 
-### targetingTemplates
+### TargetingTemplates
 
 * `DfareportingTargetingTemplatesGet` - Gets one targeting template by ID.
 * `DfareportingTargetingTemplatesInsert` - Inserts a new targeting template.
@@ -419,22 +424,22 @@ func main() {
 * `DfareportingTargetingTemplatesPatch` - Updates an existing targeting template. This method supports patch semantics.
 * `DfareportingTargetingTemplatesUpdate` - Updates an existing targeting template.
 
-### userProfiles
+### UserProfiles
 
 * `DfareportingUserProfilesGet` - Gets one user profile by ID.
 * `DfareportingUserProfilesList` - Retrieves list of user profiles for a user.
 
-### userRolePermissionGroups
+### UserRolePermissionGroups
 
 * `DfareportingUserRolePermissionGroupsGet` - Gets one user role permission group by ID.
 * `DfareportingUserRolePermissionGroupsList` - Gets a list of all supported user role permission groups.
 
-### userRolePermissions
+### UserRolePermissions
 
 * `DfareportingUserRolePermissionsGet` - Gets one user role permission by ID.
 * `DfareportingUserRolePermissionsList` - Gets a list of user role permissions, possibly filtered.
 
-### userRoles
+### UserRoles
 
 * `DfareportingUserRolesDelete` - Deletes an existing user role.
 * `DfareportingUserRolesGet` - Gets one user role by ID.
@@ -443,11 +448,10 @@ func main() {
 * `DfareportingUserRolesPatch` - Updates an existing user role. This method supports patch semantics.
 * `DfareportingUserRolesUpdate` - Updates an existing user role.
 
-### videoFormats
+### VideoFormats
 
 * `DfareportingVideoFormatsGet` - Gets one video format by ID.
 * `DfareportingVideoFormatsList` - Lists available video formats.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateAliasRequest{
         Security: operations.CreateAliasSecurity{
             APIKeyAuth: shared.SchemeAPIKeyAuth{
@@ -18,54 +20,57 @@ func main() {
             },
         },
         QueryParams: operations.CreateAliasQueryParams{
-            AliasName: "sit",
-            DomainName: "voluptas",
+            AliasName: "unde",
+            DomainName: "deserunt",
         },
         Request: shared.CreateAliasModel{
             Destinations: []shared.DestinationModel{
                 shared.DestinationModel{
-                    Country: "expedita",
-                    Os: "consequuntur",
-                    URL: "dolor",
+                    Country: "Suriname",
+                    Os: "id",
+                    URL: "vero",
                 },
                 shared.DestinationModel{
-                    Country: "expedita",
-                    Os: "voluptas",
-                    URL: "fugit",
+                    Country: "Mali",
+                    Os: "nulla",
+                    URL: "nihil",
+                },
+                shared.DestinationModel{
+                    Country: "Netherlands Antilles",
+                    Os: "facilis",
+                    URL: "eum",
                 },
             },
             Metatags: []shared.MetaTagModel{
                 shared.MetaTagModel{
-                    Content: "nihil",
-                    Name: "rerum",
+                    Content: "ullam",
+                    Name: "saepe",
+                },
+                shared.MetaTagModel{
+                    Content: "inventore",
+                    Name: "sapiente",
                 },
             },
             Snippets: []shared.SnippetModel{
                 shared.SnippetModel{
-                    ID: "debitis",
+                    ID: "eum",
                     Parameters: map[string]string{
-                        "et": "ut",
+                        "autem": "vel",
+                        "non": "deleniti",
                     },
                 },
                 shared.SnippetModel{
-                    ID: "dolorem",
+                    ID: "similique",
                     Parameters: map[string]string{
-                        "voluptate": "iste",
-                        "vitae": "totam",
-                    },
-                },
-                shared.SnippetModel{
-                    ID: "dolores",
-                    Parameters: map[string]string{
-                        "debitis": "vel",
-                        "odio": "dolore",
-                        "id": "aspernatur",
+                        "molestiae": "quo",
+                        "quasi": "laboriosam",
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Alias.CreateAlias(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -74,5 +79,6 @@ func main() {
     if res.CreateAliasResponseModel != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

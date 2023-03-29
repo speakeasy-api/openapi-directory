@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AutomlProjectsLocationsDatasetsCreateRequest{
         Security: operations.AutomlProjectsLocationsDatasetsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,72 +23,84 @@ func main() {
             },
         },
         PathParams: operations.AutomlProjectsLocationsDatasetsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.AutomlProjectsLocationsDatasetsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Dataset{
-            CreateTime: "dicta",
-            Description: "debitis",
-            DisplayName: "voluptatum",
-            Etag: "et",
-            ExampleCount: 7144924247938981575,
+            CreateTime: "eum",
+            Description: "iusto",
+            DisplayName: "ullam",
+            Etag: "saepe",
+            ExampleCount: 56713,
             ImageClassificationDatasetMetadata: &shared.ImageClassificationDatasetMetadata{
                 ClassificationType: "MULTILABEL",
             },
             ImageObjectDetectionDatasetMetadata: map[string]interface{}{
-                "voluptate": "iste",
-                "vitae": "totam",
+                "eum": "voluptatum",
+                "autem": "vel",
             },
-            Name: "dolores",
+            Name: "non",
             TablesDatasetMetadata: &shared.TablesDatasetMetadata{
-                MlUseColumnSpecID: "illum",
-                PrimaryTableSpecID: "debitis",
-                StatsUpdateTime: "vel",
+                MlUseColumnSpecID: "deleniti",
+                PrimaryTableSpecID: "similique",
+                StatsUpdateTime: "reprehenderit",
                 TargetColumnCorrelations: map[string]shared.CorrelationStats{
-                    "dolore": shared.CorrelationStats{
-                        CramersV: 12.200000,
+                    "quo": shared.CorrelationStats{
+                        CramersV: 710.36,
+                    },
+                    "laboriosam": shared.CorrelationStats{
+                        CramersV: 871.29,
+                    },
+                    "est": shared.CorrelationStats{
+                        CramersV: 202.18,
+                    },
+                    "consequatur": shared.CorrelationStats{
+                        CramersV: 8326.2,
                     },
                 },
-                TargetColumnSpecID: "accusantium",
-                WeightColumnSpecID: "totam",
+                TargetColumnSpecID: "a",
+                WeightColumnSpecID: "omnis",
             },
             TextClassificationDatasetMetadata: &shared.TextClassificationDatasetMetadata{
-                ClassificationType: "MULTICLASS",
+                ClassificationType: "CLASSIFICATION_TYPE_UNSPECIFIED",
             },
             TextExtractionDatasetMetadata: map[string]interface{}{
-                "est": "aut",
-                "odit": "non",
-                "voluptas": "omnis",
+                "accusamus": "reiciendis",
+                "rem": "quibusdam",
+                "et": "praesentium",
+                "occaecati": "dolor",
             },
             TextSentimentDatasetMetadata: &shared.TextSentimentDatasetMetadata{
-                SentimentMax: 1059542851699319360,
+                SentimentMax: 678880,
             },
             TranslationDatasetMetadata: &shared.TranslationDatasetMetadata{
-                SourceLanguageCode: "illo",
-                TargetLanguageCode: "sed",
+                SourceLanguageCode: "sed",
+                TargetLanguageCode: "quisquam",
             },
             VideoClassificationDatasetMetadata: map[string]interface{}{
-                "autem": "consectetur",
-                "nobis": "odio",
+                "culpa": "qui",
+                "sed": "rerum",
+                "possimus": "occaecati",
             },
             VideoObjectTrackingDatasetMetadata: map[string]interface{}{
-                "recusandae": "at",
+                "esse": "rem",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.AutomlProjectsLocationsDatasetsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -95,5 +109,6 @@ func main() {
     if res.Dataset != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

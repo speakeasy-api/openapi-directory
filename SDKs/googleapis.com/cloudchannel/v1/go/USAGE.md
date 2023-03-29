@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest{
         Security: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,46 +23,47 @@ func main() {
             },
         },
         PathParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput{
             RepricingConfig: &shared.GoogleCloudChannelV1RepricingConfig{
                 Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                     PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                         Percentage: &shared.GoogleTypeDecimal{
-                            Value: "dicta",
+                            Value: "eum",
                         },
                     },
                 },
                 ChannelPartnerGranularity: map[string]interface{}{
-                    "voluptatum": "et",
+                    "ullam": "saepe",
+                    "inventore": "sapiente",
                 },
                 ConditionalOverrides: []shared.GoogleCloudChannelV1ConditionalOverride{
                     shared.GoogleCloudChannelV1ConditionalOverride{
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "dolorem",
+                                    Value: "eum",
                                 },
                             },
                         },
                         RebillingBasis: "COST_AT_LIST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "voluptate",
+                                SkuGroup: "autem",
                             },
                         },
                     },
@@ -68,46 +71,32 @@ func main() {
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "iste",
+                                    Value: "vel",
                                 },
                             },
                         },
-                        RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
+                        RebillingBasis: "COST_AT_LIST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "totam",
-                            },
-                        },
-                    },
-                    shared.GoogleCloudChannelV1ConditionalOverride{
-                        Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
-                            PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
-                                Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "dolores",
-                                },
-                            },
-                        },
-                        RebillingBasis: "DIRECT_CUSTOMER_COST",
-                        RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
-                            SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "debitis",
+                                SkuGroup: "deleniti",
                             },
                         },
                     },
                 },
                 EffectiveInvoiceMonth: &shared.GoogleTypeDate{
-                    Day: 3706853784096366226,
-                    Month: 2627038740284806767,
-                    Year: 6303220950515014660,
+                    Day: 568045,
+                    Month: 392785,
+                    Year: 925597,
                 },
                 EntitlementGranularity: &shared.GoogleCloudChannelV1RepricingConfigEntitlementGranularity{
-                    Entitlement: "id",
+                    Entitlement: "quo",
                 },
                 RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -116,5 +105,6 @@ func main() {
     if res.GoogleCloudChannelV1ChannelPartnerRepricingConfig != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

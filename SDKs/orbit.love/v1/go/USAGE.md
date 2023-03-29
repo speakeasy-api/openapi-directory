@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDRequest{
         Security: operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDSecurity{
             Bearer: shared.SchemeBearer{
@@ -18,12 +20,13 @@ func main() {
             },
         },
         PathParams: operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDPathParams{
-            ID: "sit",
-            MemberID: "voluptas",
-            WorkspaceID: "culpa",
+            ID: "unde",
+            MemberID: "deserunt",
+            WorkspaceID: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Activities.DeleteWorkspaceIDMembersMemberIDActivitiesID(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -32,5 +35,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

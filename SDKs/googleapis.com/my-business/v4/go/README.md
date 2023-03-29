@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/my-business/v4/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,58 +23,59 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.MybusinessAccountsCreateRequest{
         QueryParams: operations.MybusinessAccountsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            PrimaryOwner: "fugit",
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            PrimaryOwner: "nulla",
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Account{
-            AccountName: "dicta",
-            AccountNumber: "debitis",
-            Name: "voluptatum",
+            AccountName: "eum",
+            AccountNumber: "iusto",
+            Name: "ullam",
             OrganizationInfo: &shared.OrganizationInfo{
-                PhoneNumber: "et",
+                PhoneNumber: "saepe",
                 PostalAddress: &shared.PostalAddress{
                     AddressLines: []string{
-                        "dolorem",
-                        "et",
-                        "voluptate",
+                        "sapiente",
                     },
-                    AdministrativeArea: "iste",
-                    LanguageCode: "vitae",
-                    Locality: "totam",
-                    Organization: "dolores",
-                    PostalCode: "illum",
+                    AdministrativeArea: "enim",
+                    LanguageCode: "eum",
+                    Locality: "voluptatum",
+                    Organization: "autem",
+                    PostalCode: "54539-8030",
                     Recipients: []string{
-                        "vel",
+                        "voluptatem",
+                        "consequatur",
+                        "fugiat",
                     },
-                    RegionCode: "odio",
-                    Revision: 6303220950515014660,
-                    SortingCode: "id",
-                    Sublocality: "aspernatur",
+                    RegionCode: "a",
+                    Revision: 778157,
+                    SortingCode: "eos",
+                    Sublocality: "accusamus",
                 },
-                RegisteredDomain: "accusantium",
+                RegisteredDomain: "accusamus",
             },
             PermissionLevel: "MEMBER_LEVEL",
-            Role: "COMMUNITY_MANAGER",
+            Role: "CO_OWNER",
             State: &shared.AccountState{
-                Status: "UNVERIFIED",
+                Status: "VERIFICATION_REQUESTED",
             },
-            Type: "USER_GROUP",
+            Type: "ORGANIZATION",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.MybusinessAccountsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -81,13 +84,15 @@ func main() {
     if res.Account != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### accounts
+
+### Accounts
 
 * `MybusinessAccountsCreate` - Creates an account with the specified name and type under the given parent. - Personal accounts and Organizations cannot be created. - User Groups cannot be created with a Personal account as primary owner. - Location Groups cannot be created with a primary owner of a Personal account if the Personal account is in an Organization. - Location Groups cannot own Location Groups. 
 * `MybusinessAccountsGenerateAccountNumber` - Generates an account number for this account. The account number is not provisioned when an account is created. Use this request to create an account number when it is required.
@@ -133,25 +138,24 @@ func main() {
 * `MybusinessAccountsLocationsVerify` - Starts the verification process for a location.
 * `MybusinessAccountsUpdateNotifications` - Sets the pubsub notification settings for the account informing Business Profile which topic to send pubsub notifications for: - New reviews for locations administered by the account. - Updated reviews for locations administered by the account. - New `GoogleUpdates` for locations administered by the account. An account will only have one notification settings resource, and only one pubsub topic can be set.
 
-### attributes
+### Attributes
 
 * `MybusinessAttributesList` - Returns the list of available attributes that would be available for a location with the given primary category and country.
 
-### categories
+### Categories
 
 * `MybusinessCategoriesBatchGet` - Returns a list of business categories for the provided language and GConcept ids.
 * `MybusinessCategoriesList` - Returns a list of business categories. Search will match the category name but not the category ID. *Note:* Search only matches the front of a category name (that is, 'food' may return 'Food Court' but not 'Fast Food Restaurant').
 
-### chains
+### Chains
 
 * `MybusinessChainsGet` - Gets the specified chain. Returns `NOT_FOUND` if the chain does not exist.
 * `MybusinessChainsSearch` - Searches the chain based on chain name.
 
-### googleLocations
+### GoogleLocations
 
 * `MybusinessGoogleLocationsReport` - Report a GoogleLocation.
 * `MybusinessGoogleLocationsSearch` - Search all of the possible locations that are a match to the specified request.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

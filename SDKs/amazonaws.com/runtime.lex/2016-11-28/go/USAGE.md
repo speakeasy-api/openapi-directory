@@ -3,41 +3,40 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DeleteSessionRequest{
         PathParams: operations.DeleteSessionPathParams{
-            BotAlias: "sit",
-            BotName: "voluptas",
-            UserID: "culpa",
+            BotAlias: "unde",
+            BotName: "deserunt",
+            UserID: "porro",
         },
         Headers: operations.DeleteSessionHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "consequuntur",
-            XAmzCredential: "dolor",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DeleteSession(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,5 +45,6 @@ func main() {
     if res.DeleteSessionResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

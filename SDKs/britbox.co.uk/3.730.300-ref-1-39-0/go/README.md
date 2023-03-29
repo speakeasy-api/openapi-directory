@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/britbox.co.uk/3.730.300-ref-1-39-0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AddPaymentMethodRequest{
         Security: operations.AddPaymentMethodSecurity{
             AccountAuth: shared.SchemeAccountAuth{
@@ -30,17 +32,20 @@ func main() {
         },
         QueryParams: operations.AddPaymentMethodQueryParams{
             Ff: []shared.FeatureFlagsEnum{
-                "ldp",
+                "rpt",
+                "cas",
+                "lrl",
             },
-            Lang: "culpa",
+            Lang: "id",
         },
         Request: shared.AddPaymentMethodRequest{
             MakeDefault: false,
-            Token: "consequuntur",
+            Token: "vero",
             Type: "Card",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Account.AddPaymentMethod(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,13 +54,15 @@ func main() {
     if res.PaymentMethod != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### account
+
+### Account
 
 * `AddPaymentMethod` - Add a new payment method to an account.
 * `AuthorizeDevice` - Authorize a device from a generated device authorization code.
@@ -202,7 +209,7 @@ To switch plans provide the id of the current active subscription membership
 of the account, and in the query specify the id of the plan to switch to.
 
 
-### app
+### App
 
 * `GetAppConfig` - Get the global configuration for an application. Should be called during app statup.
 
@@ -227,7 +234,7 @@ using the `q` key. For example if your browser path looks like `/search?q=the`
 then what you pass to this endpoint would look like `/page?path=/search%3Fq%3Dthe`.
 
 
-### authorization
+### Authorization
 
 * `GenerateDeviceAuthorizationCode` - Get a generated device authorization code.
 
@@ -282,7 +289,7 @@ basic cookies we assigned them during token authorization.
 
 * `SingleSignOn` - Exchange a third party single-sign-on token for our own authorization tokens.
 
-### bt
+### Bt
 
 * `AssignToken` - Assigns an UserToken to a profile on the ITV side. Currently throws an exception.
 * `CheckEeBtEligibility` - Check whether or not a user is eligible for switching to Bt or EE offers.
@@ -291,7 +298,7 @@ basic cookies we assigned them during token authorization.
 * `GetPlanByToken` - Returns all the plans available for BT flow including additional description data.
 * `GetPlans` - Returns all the plans available for BT flow including additional description data.
 
-### content
+### Content
 
 * `GetAnonNextPlaybackItem` - Identical to GET /account/profile/items/{itemId}/next route but for users
 that are not logged in i.e. this endpoint does not require authorisation
@@ -357,7 +364,7 @@ which would be unfriendly for clients presenting these channel schedules.
 * `GetPlansID` - Returns the details of a Plan with the specified id.
 * `Search` - Search the catalog of items and people.
 
-### ee
+### Ee
 
 * `AssignMsisdn` - Assigns a msisdn to a profile on ITV side.
 * `CheckEeBtEligibility` - Check whether or not a user is eligible for switching to Bt or EE offers.
@@ -374,7 +381,7 @@ This call should be followed by POST /ee/msisdn.
 * `GetEePlans` - Returns all the plans available for EE flow including additional description data.
 * `ValidatePinRequest` - Validate PIN request created by calling POST /ee/pin This call is to validate MSISDN entered by a user not comming through EE network. This call should be called after PUT /ee/pin. This call should be followed by POST /ee/offers.
 
-### itv
+### Itv
 
 * `ActivateSaveOffer` - Activates the discount for a user. Only Stripe platform is currently supported.
 * `ChangeCardDetails` - Change payment card details.
@@ -440,7 +447,7 @@ The expected token scope is Settings.
 
 * `UpgradePlan` - Upgrades the plan for the current user.
 
-### profile
+### Profile
 
 * `BookmarkItem` - Bookmark an item under the active profile.
 
@@ -497,7 +504,7 @@ Can be used later to resume a video from where it was last watched.
 Creates one if it doesn't exist, overwrites one if it does.
 
 
-### registration
+### Registration
 
 * `Register` - Register a new user, creating them an account.
 
@@ -513,7 +520,7 @@ An email will also be sent with a link they need to click to confirm their
 email address. This confirmation is done via the /verify-email endpoint.
 
 
-### support
+### Support
 
 * `ForgotPassword` - Request the password of an account's primary profile be reset.
 
@@ -546,7 +553,6 @@ bearer token to this endpoint to complete email verification.
 The token has en expiry, so if the link is not clicked before it expires, the account holder
 may need to request a new verification email be sent. This can be done via the endpoint
 /account/request-email-verification.
-
 
 <!-- End SDK Available Operations -->
 

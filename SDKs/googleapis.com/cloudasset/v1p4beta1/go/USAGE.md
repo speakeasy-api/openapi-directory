@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudassetAnalyzeIamPolicyRequest{
         Security: operations.CloudassetAnalyzeIamPolicySecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,40 +23,42 @@ func main() {
             },
         },
         PathParams: operations.CloudassetAnalyzeIamPolicyPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudassetAnalyzeIamPolicyQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
             AnalysisQueryAccessSelectorPermissions: []string{
-                "dolor",
-                "expedita",
-                "voluptas",
+                "vero",
+                "perspiciatis",
+                "nulla",
             },
             AnalysisQueryAccessSelectorRoles: []string{
-                "et",
+                "fuga",
+                "facilis",
             },
-            AnalysisQueryIdentitySelectorIdentity: "nihil",
-            AnalysisQueryResourceSelectorFullResourceName: "rerum",
-            Callback: "dicta",
-            Fields: "debitis",
-            Key: "voluptatum",
-            OauthToken: "et",
+            AnalysisQueryIdentitySelectorIdentity: "eum",
+            AnalysisQueryResourceSelectorFullResourceName: "iusto",
+            Callback: "ullam",
+            Fields: "saepe",
+            Key: "inventore",
+            OauthToken: "sapiente",
             OptionsAnalyzeServiceAccountImpersonation: false,
-            OptionsExecutionTimeout: "dolorem",
+            OptionsExecutionTimeout: "enim",
             OptionsExpandGroups: false,
             OptionsExpandResources: false,
-            OptionsExpandRoles: true,
-            OptionsOutputGroupEdges: true,
-            OptionsOutputResourceEdges: true,
-            PrettyPrint: true,
-            QuotaUser: "illum",
-            UploadType: "debitis",
-            UploadProtocol: "vel",
+            OptionsExpandRoles: false,
+            OptionsOutputGroupEdges: false,
+            OptionsOutputResourceEdges: false,
+            PrettyPrint: false,
+            QuotaUser: "eum",
+            UploadType: "voluptatum",
+            UploadProtocol: "autem",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.V1p4beta1.CloudassetAnalyzeIamPolicy(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -63,5 +67,6 @@ func main() {
     if res.AnalyzeIamPolicyResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

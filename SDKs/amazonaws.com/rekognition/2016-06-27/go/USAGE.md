@@ -3,57 +3,56 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CompareFacesRequest{
         Headers: operations.CompareFacesHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "RekognitionService.CompareFaces",
         },
         Request: shared.CompareFacesRequest{
-            QualityFilter: "MEDIUM",
-            SimilarityThreshold: 28.100000,
+            QualityFilter: "LOW",
+            SimilarityThreshold: 6235.64,
             SourceImage: shared.Image{
-                Bytes: "rerum",
+                Bytes: "facilis",
                 S3Object: &shared.S3Object{
-                    Bucket: "dicta",
-                    Name: "debitis",
-                    Version: "voluptatum",
+                    Bucket: "eum",
+                    Name: "iusto",
+                    Version: "ullam",
                 },
             },
             TargetImage: shared.Image{
-                Bytes: "et",
+                Bytes: "saepe",
                 S3Object: &shared.S3Object{
-                    Bucket: "ut",
-                    Name: "dolorem",
-                    Version: "et",
+                    Bucket: "inventore",
+                    Name: "sapiente",
+                    Version: "enim",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CompareFaces(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -62,5 +61,6 @@ func main() {
     if res.CompareFacesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

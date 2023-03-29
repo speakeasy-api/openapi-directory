@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,16 +12,17 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CollectNowRequest{
         PathParams: operations.CollectNowPathParams{
-            DeviceID: 8717895732742165505,
+            DeviceID: 548814,
         },
         QueryParams: operations.CollectNowQueryParams{
-            MonitorClass: "voluptas",
+            MonitorClass: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Actions.CollectNow(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -28,5 +31,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

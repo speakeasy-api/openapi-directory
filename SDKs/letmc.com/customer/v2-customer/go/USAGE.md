@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BranchControllerGetBranchesRequest{
         PathParams: operations.BranchControllerGetBranchesPathParams{
-            ShortName: "sit",
+            ShortName: "unde",
         },
         QueryParams: operations.BranchControllerGetBranchesQueryParams{
-            Count: 2259404117704393152,
-            Offset: 6050128673802995827,
+            Count: 592845,
+            Offset: 715190,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BranchController.BranchControllerGetBranches(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.BranchModelResults != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.OrgpolicyOrganizationsCustomConstraintsCreateRequest{
         Security: operations.OrgpolicyOrganizationsCustomConstraintsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,38 +23,38 @@ func main() {
             },
         },
         PathParams: operations.OrgpolicyOrganizationsCustomConstraintsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.OrgpolicyOrganizationsCustomConstraintsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudOrgpolicyV2CustomConstraintInput{
-            ActionType: "DENY",
-            Condition: "debitis",
-            Description: "voluptatum",
-            DisplayName: "et",
+            ActionType: "ALLOW",
+            Condition: "iusto",
+            Description: "ullam",
+            DisplayName: "saepe",
             MethodTypes: []shared.GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum{
-                "UPDATE",
-                "UPDATE",
-                "UPDATE",
+                "DELETE",
             },
-            Name: "iste",
+            Name: "enim",
             ResourceTypes: []string{
-                "totam",
+                "voluptatum",
+                "autem",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Organizations.OrgpolicyOrganizationsCustomConstraintsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -61,5 +63,6 @@ func main() {
     if res.GoogleCloudOrgpolicyV2CustomConstraint != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

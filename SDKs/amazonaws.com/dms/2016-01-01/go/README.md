@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/dms/2016-01-01/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,47 +14,56 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddTagsToResourceRequest{
         Headers: operations.AddTagsToResourceHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AmazonDMSv20160101.AddTagsToResource",
         },
         Request: shared.AddTagsToResourceMessage{
-            ResourceArn: "fugit",
+            ResourceArn: "nihil",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "nihil",
-                    ResourceArn: "rerum",
-                    Value: "dicta",
+                    Key: "facilis",
+                    ResourceArn: "eum",
+                    Value: "iusto",
+                },
+                shared.Tag{
+                    Key: "ullam",
+                    ResourceArn: "saepe",
+                    Value: "inventore",
+                },
+                shared.Tag{
+                    Key: "sapiente",
+                    ResourceArn: "enim",
+                    Value: "eum",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddTagsToResource(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -63,6 +72,7 @@ func main() {
     if res.AddTagsToResourceResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -76,6 +86,7 @@ func main() {
 * `CancelReplicationTaskAssessmentRun` - <p>Cancels a single premigration assessment run.</p> <p>This operation prevents any individual assessments from running if they haven't started running. It also attempts to cancel any individual assessments that are currently running.</p>
 * `CreateEndpoint` - <p>Creates an endpoint using the provided settings.</p> <note> <p>For a MySQL source or target endpoint, don't explicitly specify the database using the <code>DatabaseName</code> request parameter on the <code>CreateEndpoint</code> API call. Specifying <code>DatabaseName</code> when you create a MySQL endpoint replicates all the task tables to this single database. For MySQL endpoints, you specify the database only when you specify the schema in the table-mapping rules of the DMS task.</p> </note>
 * `CreateEventSubscription` - <p> Creates an DMS event notification subscription. </p> <p>You can specify the type of source (<code>SourceType</code>) you want to be notified of, provide a list of DMS source IDs (<code>SourceIds</code>) that triggers the events, and provide a list of event categories (<code>EventCategories</code>) for events you want to be notified of. If you specify both the <code>SourceType</code> and <code>SourceIds</code>, such as <code>SourceType = replication-instance</code> and <code>SourceIdentifier = my-replinstance</code>, you will be notified of all the replication instance events for the specified source. If you specify a <code>SourceType</code> but don't specify a <code>SourceIdentifier</code>, you receive notice of the events for that source type for all your DMS sources. If you don't specify either <code>SourceType</code> nor <code>SourceIdentifier</code>, you will be notified of events generated from all DMS sources belonging to your customer account.</p> <p>For more information about DMS events, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with Events and Notifications</a> in the <i>Database Migration Service User Guide.</i> </p>
+* `CreateFleetAdvisorCollector` - Creates a Fleet Advisor collector using the specified parameters.
 * `CreateReplicationInstance` - <p>Creates the replication instance using the specified parameters.</p> <p>DMS requires that your account have certain roles with appropriate permissions before you can create a replication instance. For information on the required roles, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.APIRole">Creating the IAM Roles to Use With the CLI and DMS API</a>. For information on the required permissions, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Security.html#CHAP_Security.IAMPermissions">IAM Permissions Needed to Use DMS</a>.</p>
 * `CreateReplicationSubnetGroup` - <p>Creates a replication subnet group given a list of the subnet IDs in a VPC.</p> <p>The VPC needs to have at least one subnet in at least two availability zones in the Amazon Web Services Region, otherwise the service will throw a <code>ReplicationSubnetGroupDoesNotCoverEnoughAZs</code> exception.</p>
 * `CreateReplicationTask` - Creates a replication task using the specified parameters.
@@ -83,6 +94,8 @@ func main() {
 * `DeleteConnection` - Deletes the connection between a replication instance and an endpoint.
 * `DeleteEndpoint` - <p>Deletes the specified endpoint.</p> <note> <p>All tasks associated with the endpoint must be deleted before you can delete the endpoint.</p> </note> <p/>
 * `DeleteEventSubscription` -  Deletes an DMS event subscription. 
+* `DeleteFleetAdvisorCollector` - Deletes the specified Fleet Advisor collector.
+* `DeleteFleetAdvisorDatabases` - Deletes the specified Fleet Advisor collector databases.
 * `DeleteReplicationInstance` - <p>Deletes the specified replication instance.</p> <note> <p>You must delete any migration tasks that are associated with the replication instance before you can delete it.</p> </note> <p/>
 * `DeleteReplicationSubnetGroup` - Deletes a subnet group.
 * `DeleteReplicationTask` - Deletes the specified replication task.
@@ -97,13 +110,18 @@ func main() {
 * `DescribeEventCategories` - Lists categories for all event source types, or, if specified, for a specified source type. You can see a list of the event categories and source types in <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with Events and Notifications</a> in the <i>Database Migration Service User Guide.</i> 
 * `DescribeEventSubscriptions` - <p>Lists all the event subscriptions for a customer account. The description of a subscription includes <code>SubscriptionName</code>, <code>SNSTopicARN</code>, <code>CustomerID</code>, <code>SourceType</code>, <code>SourceID</code>, <code>CreationTime</code>, and <code>Status</code>. </p> <p>If you specify <code>SubscriptionName</code>, this action lists the description for that subscription.</p>
 * `DescribeEvents` -  Lists events for a given source identifier and source type. You can also specify a start and end time. For more information on DMS events, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html">Working with Events and Notifications</a> in the <i>Database Migration Service User Guide.</i> 
+* `DescribeFleetAdvisorCollectors` - Returns a list of the Fleet Advisor collectors in your account.
+* `DescribeFleetAdvisorDatabases` - Returns a list of Fleet Advisor databases in your account.
+* `DescribeFleetAdvisorLsaAnalysis` - Provides descriptions of large-scale assessment (LSA) analyses produced by your Fleet Advisor collectors. 
+* `DescribeFleetAdvisorSchemaObjectSummary` - Provides descriptions of the schemas discovered by your Fleet Advisor collectors.
+* `DescribeFleetAdvisorSchemas` - Returns a list of schemas detected by Fleet Advisor Collectors in your account.
 * `DescribeOrderableReplicationInstances` - Returns information about the replication instance types that can be created in the specified region.
 * `DescribePendingMaintenanceActions` - For internal use only
 * `DescribeRefreshSchemasStatus` - Returns the status of the RefreshSchemas operation.
 * `DescribeReplicationInstanceTaskLogs` - Returns information about the task logs for the specified task.
 * `DescribeReplicationInstances` - Returns information about replication instances for your account in the current region.
 * `DescribeReplicationSubnetGroups` - Returns information about the replication subnet groups.
-* `DescribeReplicationTaskAssessmentResults` - <p>Returns the task assessment results from the Amazon S3 bucket that DMS creates in your Amazon Web Services account. This action always returns the latest results.</p> <p>For more information about DMS task assessments, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating a task assessment report</a> in the <a href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/dms/latest/userguide/Welcome.html"> Database Migration Service User Guide</a>.</p>
+* `DescribeReplicationTaskAssessmentResults` - <p>Returns the task assessment results from the Amazon S3 bucket that DMS creates in your Amazon Web Services account. This action always returns the latest results.</p> <p>For more information about DMS task assessments, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating a task assessment report</a> in the <i>Database Migration Service User Guide</i>.</p>
 * `DescribeReplicationTaskAssessmentRuns` - <p>Returns a paginated list of premigration assessment runs based on filter settings.</p> <p>These filter settings can specify a combination of premigration assessment runs, migration tasks, replication instances, and assessment run status values.</p> <note> <p>This operation doesn't return information about individual assessments. For this information, see the <code>DescribeReplicationTaskIndividualAssessments</code> operation. </p> </note>
 * `DescribeReplicationTaskIndividualAssessments` - <p>Returns a paginated list of individual assessments based on filter settings.</p> <p>These filter settings can specify a combination of premigration assessment runs, migration tasks, and assessment status values.</p>
 * `DescribeReplicationTasks` - Returns information about replication tasks for your account in the current region.
@@ -121,12 +139,13 @@ func main() {
 * `RefreshSchemas` - Populates the schema for the specified endpoint. This is an asynchronous operation and can take several minutes. You can check the status of this operation by calling the DescribeRefreshSchemasStatus operation.
 * `ReloadTables` - <p>Reloads the target database table with the source data. </p> <p>You can only use this operation with a task in the <code>RUNNING</code> state, otherwise the service will throw an <code>InvalidResourceStateFault</code> exception.</p>
 * `RemoveTagsFromResource` - Removes metadata tags from an DMS resource, including replication instance, endpoint, security group, and migration task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type description.
+* `RunFleetAdvisorLsaAnalysis` - Runs large-scale assessment (LSA) analysis on every Fleet Advisor collector in your account.
 * `StartReplicationTask` - <p>Starts the replication task.</p> <p>For more information about DMS tasks, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.html">Working with Migration Tasks </a> in the <i>Database Migration Service User Guide.</i> </p>
-* `StartReplicationTaskAssessment` -  Starts the replication task assessment for unsupported data types in the source database. 
+* `StartReplicationTaskAssessment` - <p> Starts the replication task assessment for unsupported data types in the source database. </p> <p>You can only use this operation for a task if the following conditions are true:</p> <ul> <li> <p>The task must be in the <code>stopped</code> state.</p> </li> <li> <p>The task must have successful connections to the source and target.</p> </li> </ul> <p>If either of these conditions are not met, an <code>InvalidResourceStateFault</code> error will result. </p> <p>For information about DMS task assessments, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.AssessmentReport.html">Creating a task assessment report</a> in the <i>Database Migration Service User Guide</i>.</p>
 * `StartReplicationTaskAssessmentRun` - <p>Starts a new premigration assessment run for one or more individual assessments of a migration task.</p> <p>The assessments that you can specify depend on the source and target database engine and the migration type defined for the given task. To run this operation, your migration task must already be created. After you run this operation, you can review the status of each individual assessment. You can also run the migration task manually after the assessment run and its individual assessments complete.</p>
 * `StopReplicationTask` - Stops the replication task.
 * `TestConnection` - Tests the connection between the replication instance and the endpoint.
-
+* `UpdateSubscriptionsToEventBridge` - <p>Migrates 10 active and enabled Amazon SNS subscriptions at a time and converts them to corresponding Amazon EventBridge rules. By default, this operation migrates subscriptions only when all your replication instance versions are 3.4.6 or higher. If any replication instances are from versions earlier than 3.4.6, the operation raises an error and tells you to upgrade these instances to version 3.4.6 or higher. To enable migration regardless of version, set the <code>Force</code> option to true. However, if you don't upgrade instances earlier than version 3.4.6, some types of events might not be available when you use Amazon EventBridge.</p> <p>To call this operation, make sure that you have certain permissions added to your user account. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html#CHAP_Events-migrate-to-eventbridge">Migrating event subscriptions to Amazon EventBridge</a> in the <i>Amazon Web Services Database Migration Service User Guide</i>.</p>
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

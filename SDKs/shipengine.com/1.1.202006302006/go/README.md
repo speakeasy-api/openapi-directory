@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/shipengine.com/1.1.202006302006/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,46 +14,42 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.ParseAddressRequest{
         Request: shared.ParseAddressRequestBody{
             Address: &shared.PartialAddress{
-                AddressLine1: "sit",
-                AddressLine2: "voluptas",
-                AddressLine3: "culpa",
-                AddressResidentialIndicator: map[string]interface{}{
-                    "consequuntur": "dolor",
-                    "expedita": "voluptas",
-                },
-                CityLocality: "fugit",
-                CompanyName: "et",
-                CountryCode: "nihil",
-                Name: "rerum",
-                Phone: "dicta",
-                PostalCode: "debitis",
-                StateProvince: "voluptatum",
+                AddressLine1: "1999 Bishop Grandin Blvd.",
+                AddressLine2: "Unit 408",
+                AddressLine3: "Building #7",
+                AddressResidentialIndicator: "no",
+                CityLocality: "Winnipeg",
+                CompanyName: "The Home Depot",
+                CountryCode: "CA",
+                Name: "John Doe",
+                Phone: "+1 204-253-9411 ext. 123",
+                PostalCode: "78756-3717",
+                StateProvince: "Manitoba",
             },
-            Text: "et",
+            Text: "Margie McMiller at 3800 North Lamar suite 200 in austin, tx.  The zip code there is 78652.",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Addresses.ParseAddress(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -62,18 +58,20 @@ func main() {
     if res.ParseAddressResponseBody != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### addresses
+
+### Addresses
 
 * `ParseAddress` - Parse an address
 * `ValidateAddress` - Validate An Address
 
-### batches
+### Batches
 
 * `AddToBatch` - Add to a Batch
 * `CreateBatch` - Create A Batch
@@ -86,14 +84,14 @@ func main() {
 * `RemoveFromBatch` - Remove From Batch
 * `UpdateBatch` - Update Batch By Id
 
-### carrier_accounts
+### CarrierAccounts
 
 * `ConnectCarrier` - Connect a carrier account
 * `DisconnectCarrier` - Disconnect a carrier
 * `GetCarrierSettings` - Get carrier settings
 * `UpdateCarrierSettings` - Update carrier settings
 
-### carriers
+### Carriers
 
 * `AddFundsToCarrier` - Add Funds To Carrier
 * `GetCarrierByID` - Get Carrier By ID
@@ -102,18 +100,18 @@ func main() {
 * `ListCarrierServices` - List Carrier Services
 * `ListCarriers` - List Carriers
 
-### downloads
+### Downloads
 
 * `DownloadFile` - Download File
 
-### insurance
+### Insurance
 
 * `AddFundsToInsurance` - Add Funds To Insurance
 * `ConnectInsurer` - Connect a Shipsurance Account
 * `DisconnectInsurer` - Disconnect a Shipsurance Account
 * `GetInsuranceBalance` - Get Insurance Funds Balance
 
-### labels
+### Labels
 
 * `CreateLabel` - Purchase Label
 * `CreateLabelFromRate` - Purchase Label with Rate ID
@@ -125,13 +123,13 @@ func main() {
 * `ListLabels` - List labels
 * `VoidLabel` - Void a Label By ID
 
-### manifests
+### Manifests
 
 * `CreateManifest` - Create Manifest
 * `GetManifestByID` - Get Manifest By Id
 * `ListManifests` - List Manifests
 
-### package_types
+### PackageTypes
 
 * `CreatePackageType` - Create Custom Package Type
 * `DeletePackageType` - Delete A Custom Package By ID
@@ -139,14 +137,14 @@ func main() {
 * `ListPackageTypes` - List Custom Package Types
 * `UpdatePackageType` - Update Custom Package Type By ID
 
-### rates
+### Rates
 
 * `CalculateRates` - Get Shipping Rates
 * `CompareBulkRates` - Get Bulk Rates
 * `EstimateRates` - Estimate Rates
 * `GetRateByID` - Get Rate By ID
 
-### shipments
+### Shipments
 
 * `CancelShipments` - Cancel a Shipment
 * `CreateShipments` - Create Shipments
@@ -160,20 +158,20 @@ func main() {
 * `UntagShipment` - Remove Tag from Shipment
 * `UpdateShipment` - Update Shipment By ID
 
-### tags
+### Tags
 
 * `CreateTag` - Create a New Tag
 * `DeleteTag` - Delete Tag
 * `ListTags` - Get Tags
 * `RenameTag` - Update Tag Name
 
-### tracking
+### Tracking
 
 * `GetTrackingLog` - Get Tracking Information
 * `StartTracking` - Start Tracking a Package
 * `StopTracking` - Stop Tracking a Package
 
-### warehouses
+### Warehouses
 
 * `CreateWarehouse` - Create Warehouse
 * `DeleteWarehouse` - Delete Warehouse By ID
@@ -181,14 +179,13 @@ func main() {
 * `ListWarehouses` - List Warehouses
 * `UpdateWarehouse` - Update WareHouse By Id
 
-### webhooks
+### Webhooks
 
 * `CreateWebhook` - Create a Webhook
 * `DeleteWebhook` - Delete Webhook By ID
 * `GetWebhookByID` - Get Webhook By ID
 * `ListWebhooks` - List Webhooks
 * `UpdateWebhook` - Update a Webhook
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

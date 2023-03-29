@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PostEventsV3SendRequest{
         Security: operations.PostEventsV3SendSecurity{
             Hapikey: &shared.SchemeHapikey{
@@ -18,19 +20,20 @@ func main() {
             },
         },
         Request: shared.BehavioralEventHTTPCompletionRequest{
-            Email: "sit",
-            EventName: "voluptas",
-            ObjectID: "culpa",
-            OccurredAt: "2019-04-21T07:38:14Z",
+            Email: "Larry_Rau85@yahoo.com",
+            EventName: "perspiciatis",
+            ObjectID: "nulla",
+            OccurredAt: "2022-10-25T21:31:15.800Z",
             Properties: map[string]string{
-                "dolor": "expedita",
-                "voluptas": "fugit",
-                "et": "nihil",
+                "facilis": "eum",
+                "iusto": "ullam",
+                "saepe": "inventore",
             },
-            Utk: "rerum",
+            Utk: "sapiente",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BehavioralEventsTracking.PostEventsV3Send(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -39,5 +42,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

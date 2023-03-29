@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/fec.gov/1.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,80 +14,86 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKeyHeaderAuth: shared.SchemeAPIKeyHeaderAuth{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                APIKeyQueryAuth: shared.SchemeAPIKeyQueryAuth{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKeyHeaderAuth: shared.SchemeAPIKeyHeaderAuth{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+            APIKeyQueryAuth: shared.SchemeAPIKeyQueryAuth{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetAuditCaseRequest{
         QueryParams: operations.GetAuditCaseQueryParams{
-            APIKey: "sit",
+            APIKey: "unde",
             AuditCaseID: []string{
-                "culpa",
+                "porro",
+                "nulla",
+                "id",
             },
-            AuditID: []int32{
-                3390393562759376202,
-                2669985732393126063,
+            AuditID: []int{
+                544883,
+                847252,
+                423655,
+                623564,
             },
             CandidateID: []string{
-                "voluptas",
-                "fugit",
+                "eum",
+                "iusto",
+                "ullam",
             },
-            CommitteeDesignation: "et",
+            CommitteeDesignation: "saepe",
             CommitteeID: []string{
-                "rerum",
+                "sapiente",
             },
             CommitteeType: []string{
-                "debitis",
+                "eum",
                 "voluptatum",
-                "et",
             },
-            Cycle: []int32{
-                161231572858529631,
-                7259475919510918339,
-                7373105480197164748,
+            Cycle: []int{
+                812169,
+                528895,
+                479977,
+                568045,
             },
-            MaxElectionCycle: 3287288577352441706,
-            MinElectionCycle: 3930927879439176946,
-            Page: 4706154865122290029,
-            PerPage: 2217592893536642650,
-            PrimaryCategoryID: "illum",
+            MaxElectionCycle: 392785,
+            MinElectionCycle: 925597,
+            Page: 836079,
+            PerPage: 71036,
+            PrimaryCategoryID: "laboriosam",
             Q: []string{
-                "vel",
+                "est",
             },
             Qq: []string{
-                "dolore",
+                "consequatur",
             },
             Sort: []string{
-                "aspernatur",
-                "accusantium",
+                "a",
+                "omnis",
+                "eos",
+                "accusamus",
             },
             SortHideNull: false,
             SortNullOnly: false,
-            SortNullsLast: true,
-            SubCategoryID: "est",
+            SortNullsLast: false,
+            SubCategoryID: "accusamus",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Audit.GetAuditCase(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -96,13 +102,15 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### audit
+
+### Audit
 
 * `GetAuditCase` - 
 This endpoint contains Final Audit Reports approved by the Commission since inception.
@@ -126,7 +134,7 @@ particular person or group, using a name to find the `candidate_id` or `committe
 this endpoint can be a helpful first step.
 
 
-### candidate
+### Candidate
 
 * `GetCandidateCandidateID` - 
 This endpoint is useful for finding detailed information about a particular candidate. Use the
@@ -208,7 +216,7 @@ This information is organized by `candidate_id`, so it won't help you find a can
 who ran for different offices over time; candidates get a new ID for each office.
 
 
-### committee
+### Committee
 
 * `GetCandidateCandidateIDCommittees` - 
 This endpoint is useful for finding detailed information about a particular committee or
@@ -240,7 +248,7 @@ particular characteristics.
 
 
 
-### communication cost
+### CommunicationCost
 
 * `GetCommunicationCosts` - 
 52 U.S.C. 30118 allows "communications by a corporation to its stockholders and executive or administrative personnel and their families or by a labor organization to its members and their families on any subject," including the express advocacy of the election or defeat of any Federal candidate.  The costs of such communications must be reported to the Federal Election Commission under certain circumstances.
@@ -251,7 +259,7 @@ particular characteristics.
 Total communications costs aggregated across committees on supported or opposed candidates by cycle or candidate election year.
 
 
-### dates
+### Dates
 
 * `GetCalendarDates` - 
 Combines the election and reporting dates with Commission meetings, conferences, outreach, Advisory Opinions, rules, litigation dates and other
@@ -282,7 +290,7 @@ FEC election dates since 1995.
 FEC election dates since 1995.
 
 
-### debts
+### Debts
 
 * `GetSchedulesScheduleD` - 
 Schedule D, it shows debts and obligations owed to or by the committee that are
@@ -297,7 +305,7 @@ required to be disclosed.
 
 
 
-### disbursements
+### Disbursements
 
 * `GetSchedulesScheduleB` - 
 Schedule B filings describe itemized disbursements. This data
@@ -393,7 +401,7 @@ Note: because the Schedule B data includes many records, counts for
 large result sets are approximate; you will want to page through the records until no records are returned.
 
 
-### efiling
+### Efiling
 
 * `GetEfileFilings` - Basic information about electronic files coming into the FEC, posted as they are received.
 * `GetEfileReportsHouseSenate` - 
@@ -436,7 +444,7 @@ DISCLAIMER: The field labels contained within this resource are subject to chang
 label these fields while conveying clear meaning to ensure accessibility for all users.
 
 
-### electioneering
+### Electioneering
 
 * `GetElectioneering` - 
 An electioneering communication is any broadcast, cable or satellite communication that fulfills each of the following conditions:
@@ -454,7 +462,7 @@ Total electioneering communications spent on candidates by cycle
 or candidate election year
 
 
-### filer resources
+### FilerResources
 
 * `GetRadAnalyst` - 
 Use this endpoint to look up the RAD Analyst for a committee.
@@ -472,7 +480,7 @@ how candidates appear on election ballots.
 Contact the appropriate state election office for more information.
 
 
-### filings
+### Filings
 
 * `GetCandidateCandidateIDFilings` - 
 All official records and reports filed by or delivered to the FEC.
@@ -498,7 +506,7 @@ used as status check to determine when all of the data processes, from initial e
 review are complete.
 
 
-### financial
+### Financial
 
 * `GetCommitteeCommitteeIDReports` - 
 Each report represents the summary information from Form 3, Form 3X and Form 3P.
@@ -583,7 +591,7 @@ For presidential and Senate candidates, multiple two-year cycles exist between e
 
 
 
-### independent expenditures
+### IndependentExpenditures
 
 * `GetSchedulesScheduleE` - 
 Schedule E covers the line item expenditures for independent expenditures. For example, if a super PAC
@@ -639,13 +647,13 @@ Efiling endpoints provide real-time campaign finance data received from electron
 Total independent expenditure on supported or opposed candidates by cycle or candidate election year.
 
 
-### legal
+### Legal
 
 * `GetLegalSearch` - 
 Search legal documents by document type, or across all document types using keywords, parameter values and ranges.
 
 
-### loans
+### Loans
 
 * `GetSchedulesScheduleC` - 
 Schedule C shows all loans, endorsements and loan guarantees a committee
@@ -660,7 +668,7 @@ receives or makes.
 The committee continues to report the loan until it is repaid.
 
 
-### party-coordinated expenditures
+### PartyCoordinatedExpenditures
 
 * `GetSchedulesScheduleF` - 
 Schedule F, it shows all special expenditures a national or state party committee
@@ -677,7 +685,7 @@ These coordinated party expenditures do not count against the contribution limit
 these limits are detailed in Chapter 7 of the FEC Campaign Guide for Political Party Committees.
 
 
-### presidential
+### Presidential
 
 * `GetPresidentialContributionsByCandidate` - 
 Net receipts per candidate.
@@ -705,7 +713,7 @@ Financial summary per candidate.
 Filter by candidate_id and/or election_year
 
 
-### receipts
+### Receipts
 
 * `GetSchedulesScheduleA` - 
 This description is for both ​`/schedules​/schedule_a​/` and ​ `/schedules​/schedule_a​/{sub_id}​/`.
@@ -835,7 +843,7 @@ To avoid throwing the "out of range" exception on the last page, one recommandat
 
 
 
-### search
+### Search
 
 * `GetNamesCandidates` - 
 Search for candidates or committees by name. If you're looking for information on a
@@ -846,7 +854,6 @@ this endpoint can be a helpful first step.
 Search for candidates or committees by name. If you're looking for information on a
 particular person or group, using a name to find the `candidate_id` or `committee_id` on
 this endpoint can be a helpful first step.
-
 
 <!-- End SDK Available Operations -->
 

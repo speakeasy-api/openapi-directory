@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/fis/2020-12-01/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,172 +14,241 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateExperimentTemplateRequest{
         Headers: operations.CreateExperimentTemplateHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateExperimentTemplateRequestBody{
             Actions: map[string]shared.CreateExperimentTemplateActionInput{
-                "fugit": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "et",
-                    Description: "nihil",
+                "nihil": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "fuga",
+                    Description: "facilis",
                     Parameters: map[string]string{
-                        "dicta": "debitis",
-                        "voluptatum": "et",
-                        "ut": "dolorem",
+                        "iusto": "ullam",
+                        "saepe": "inventore",
                     },
                     StartAfter: []string{
-                        "voluptate",
-                        "iste",
+                        "enim",
+                        "eum",
+                        "voluptatum",
+                        "autem",
                     },
                     Targets: map[string]string{
-                        "totam": "dolores",
+                        "non": "deleniti",
+                        "similique": "reprehenderit",
+                        "molestiae": "quo",
+                        "quasi": "laboriosam",
                     },
                 },
-                "illum": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "debitis",
-                    Description: "vel",
+                "dicta": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "est",
+                    Description: "voluptatem",
                     Parameters: map[string]string{
-                        "dolore": "id",
+                        "fugiat": "a",
+                        "omnis": "eos",
                     },
                     StartAfter: []string{
-                        "accusantium",
+                        "accusamus",
+                        "reiciendis",
+                        "rem",
+                        "quibusdam",
                     },
                     Targets: map[string]string{
-                        "commodi": "quis",
-                        "est": "aut",
-                        "odit": "non",
+                        "praesentium": "occaecati",
+                        "dolor": "soluta",
+                        "sed": "quisquam",
+                        "rerum": "culpa",
                     },
                 },
-                "voluptas": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "omnis",
-                    Description: "aut",
+                "qui": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "sed",
+                    Description: "rerum",
                     Parameters: map[string]string{
-                        "sed": "officiis",
+                        "occaecati": "odit",
+                        "esse": "rem",
+                        "voluptatem": "amet",
+                        "est": "id",
                     },
                     StartAfter: []string{
-                        "consectetur",
-                        "nobis",
+                        "numquam",
+                        "similique",
                     },
                     Targets: map[string]string{
-                        "qui": "recusandae",
+                        "sit": "quia",
+                    },
+                },
+                "et": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "voluptatem",
+                    Description: "laborum",
+                    Parameters: map[string]string{
+                        "et": "iure",
+                    },
+                    StartAfter: []string{
+                        "ut",
+                        "soluta",
+                        "qui",
+                        "ea",
+                    },
+                    Targets: map[string]string{
+                        "iusto": "ut",
+                        "optio": "aspernatur",
+                        "inventore": "ut",
                     },
                 },
             },
-            ClientToken: "at",
-            Description: "ipsum",
-            RoleArn: "eveniet",
+            ClientToken: "libero",
+            Description: "et",
+            LogConfiguration: &operations.CreateExperimentTemplateRequestBodyLogConfiguration{
+                CloudWatchLogsConfiguration: &shared.ExperimentTemplateCloudWatchLogsLogConfigurationInput{
+                    LogGroupArn: "libero",
+                },
+                LogSchemaVersion: 170909,
+                S3Configuration: &shared.ExperimentTemplateS3LogConfigurationInput{
+                    BucketName: "non",
+                    Prefix: "ea",
+                },
+            },
+            RoleArn: "magni",
             StopConditions: []shared.CreateExperimentTemplateStopConditionInput{
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "sint",
-                    Value: "inventore",
+                    Source: "ipsam",
+                    Value: "est",
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "ut",
-                    Value: "exercitationem",
+                    Source: "commodi",
+                    Value: "quia",
+                },
+                shared.CreateExperimentTemplateStopConditionInput{
+                    Source: "similique",
+                    Value: "eaque",
+                },
+                shared.CreateExperimentTemplateStopConditionInput{
+                    Source: "odio",
+                    Value: "harum",
                 },
             },
             Tags: map[string]string{
-                "reprehenderit": "tempore",
-                "maiores": "incidunt",
-                "dolor": "beatae",
+                "a": "aut",
+                "et": "non",
+                "quidem": "neque",
+                "asperiores": "et",
             },
             Targets: map[string]shared.CreateExperimentTemplateTargetInput{
-                "in": shared.CreateExperimentTemplateTargetInput{
+                "aliquam": shared.CreateExperimentTemplateTargetInput{
                     Filters: []shared.ExperimentTemplateTargetInputFilter{
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "omnis",
+                            Path: "totam",
                             Values: []string{
-                                "ex",
+                                "et",
+                                "fuga",
                             },
                         },
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "dolores",
+                            Path: "nesciunt",
                             Values: []string{
-                                "vel",
+                                "aut",
+                                "cum",
                             },
                         },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "rerum",
-                            Values: []string{
-                                "voluptas",
-                                "quam",
-                            },
-                        },
+                    },
+                    Parameters: map[string]string{
+                        "ipsam": "eos",
+                        "omnis": "adipisci",
+                        "hic": "consequatur",
                     },
                     ResourceArns: []string{
                         "qui",
+                        "perferendis",
+                        "aspernatur",
                     },
                     ResourceTags: map[string]string{
-                        "unde": "in",
+                        "quo": "tempore",
+                        "explicabo": "aut",
+                        "reiciendis": "debitis",
                     },
-                    ResourceType: "autem",
-                    SelectionMode: "qui",
+                    ResourceType: "totam",
+                    SelectionMode: "molestias",
                 },
-                "ut": shared.CreateExperimentTemplateTargetInput{
+                "reiciendis": shared.CreateExperimentTemplateTargetInput{
                     Filters: []shared.ExperimentTemplateTargetInputFilter{
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "ab",
+                            Path: "id",
                             Values: []string{
-                                "ullam",
+                                "quod",
+                                "sit",
                             },
                         },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "et",
-                            Values: []string{
-                                "esse",
-                                "architecto",
-                                "quam",
-                            },
-                        },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "velit",
-                            Values: []string{
-                                "soluta",
-                                "sunt",
-                            },
-                        },
+                    },
+                    Parameters: map[string]string{
+                        "odio": "veniam",
                     },
                     ResourceArns: []string{
-                        "magni",
-                        "et",
+                        "sed",
+                        "ea",
+                        "exercitationem",
+                        "deleniti",
                     },
                     ResourceTags: map[string]string{
-                        "qui": "earum",
-                        "illo": "omnis",
-                        "ut": "consequatur",
+                        "est": "voluptatem",
                     },
-                    ResourceType: "dolor",
-                    SelectionMode: "commodi",
+                    ResourceType: "aut",
+                    SelectionMode: "esse",
+                },
+                "sint": shared.CreateExperimentTemplateTargetInput{
+                    Filters: []shared.ExperimentTemplateTargetInputFilter{
+                        shared.ExperimentTemplateTargetInputFilter{
+                            Path: "numquam",
+                            Values: []string{
+                                "error",
+                                "similique",
+                                "et",
+                            },
+                        },
+                    },
+                    Parameters: map[string]string{
+                        "molestias": "cupiditate",
+                        "sint": "explicabo",
+                    },
+                    ResourceArns: []string{
+                        "in",
+                        "vitae",
+                        "non",
+                        "minima",
+                    },
+                    ResourceTags: map[string]string{
+                        "aut": "libero",
+                        "voluptas": "magni",
+                    },
+                    ResourceType: "est",
+                    SelectionMode: "porro",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateExperimentTemplate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -188,6 +257,7 @@ func main() {
     if res.CreateExperimentTemplateResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -196,21 +266,22 @@ func main() {
 
 ### SDK SDK
 
-* `CreateExperimentTemplate` - <p>Creates an experiment template. </p> <p>To create a template, specify the following information: </p> <ul> <li> <p> <b>Targets</b>: A target can be a specific resource in your AWS environment, or one or more resources that match criteria that you specify, for example, resources that have specific tags.</p> </li> <li> <p> <b>Actions</b>: The actions to carry out on the target. You can specify multiple actions, the duration of each action, and when to start each action during an experiment.</p> </li> <li> <p> <b>Stop conditions</b>: If a stop condition is triggered while an experiment is running, the experiment is automatically stopped. You can define a stop condition as a CloudWatch alarm.</p> </li> </ul> <p>For more information, see the <a href="https://docs.aws.amazon.com/fis/latest/userguide/">AWS Fault Injection Simulator User Guide</a>.</p>
+* `CreateExperimentTemplate` - <p>Creates an experiment template. </p> <p>An experiment template includes the following components:</p> <ul> <li> <p> <b>Targets</b>: A target can be a specific resource in your Amazon Web Services environment, or one or more resources that match criteria that you specify, for example, resources that have specific tags.</p> </li> <li> <p> <b>Actions</b>: The actions to carry out on the target. You can specify multiple actions, the duration of each action, and when to start each action during an experiment.</p> </li> <li> <p> <b>Stop conditions</b>: If a stop condition is triggered while an experiment is running, the experiment is automatically stopped. You can define a stop condition as a CloudWatch alarm.</p> </li> </ul> <p>For more information, see <a href="https://docs.aws.amazon.com/fis/latest/userguide/experiment-templates.html">Experiment templates</a> in the <i>Fault Injection Simulator User Guide</i>.</p>
 * `DeleteExperimentTemplate` - Deletes the specified experiment template.
-* `GetAction` - Gets information about the specified AWS FIS action.
+* `GetAction` - Gets information about the specified FIS action.
 * `GetExperiment` - Gets information about the specified experiment.
 * `GetExperimentTemplate` - Gets information about the specified experiment template.
-* `ListActions` - Lists the available AWS FIS actions.
+* `GetTargetResourceType` - Gets information about the specified resource type.
+* `ListActions` - Lists the available FIS actions.
 * `ListExperimentTemplates` - Lists your experiment templates.
 * `ListExperiments` - Lists your experiments.
 * `ListTagsForResource` - Lists the tags for the specified resource.
+* `ListTargetResourceTypes` - Lists the target resource types.
 * `StartExperiment` - Starts running an experiment from the specified experiment template.
 * `StopExperiment` - Stops the specified experiment.
 * `TagResource` - Applies the specified tags to the specified resource.
 * `UntagResource` - Removes the specified tags from the specified resource.
 * `UpdateExperimentTemplate` - Updates the specified experiment template.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

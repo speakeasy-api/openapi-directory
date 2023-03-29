@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/ndhm.gov.in/ndhm-hiu/0.5/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,8 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
+    ctx := context.Background()
     res, err := s.Gateway.GetV05WellKnownOpenidConfiguration(ctx)
     if err != nil {
         log.Fatal(err)
@@ -30,65 +33,89 @@ func main() {
     if res.OpenIDConfiguration != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### Gateway
 
 * `GetV05WellKnownOpenidConfiguration` - Get openid configuration
 * `GetV05Certs` - Get certs for JWT verification
-* `PostV05ConsentRequestsInit` - Create consent request
-* `PostV05ConsentRequestsStatus` - Get consent request status
+* `PostV05ConsentRequestsInitJSON` - Create consent request
+* `PostV05ConsentRequestsInitRaw` - Create consent request
+* `PostV05ConsentRequestsStatusJSON` - Get consent request status
+* `PostV05ConsentRequestsStatusRaw` - Get consent request status
 * `PostV05ConsentsFetch` - Get consent artefact
 * `PostV05ConsentsHiuOnNotify` - Consent notification
-* `PostV05HealthInformationCmRequest` - Health information data request
-* `PostV05HealthInformationNotify` - Notifications corresponding to events during data flow
-* `PostV05PatientsFind` - Identify a patient by her consent-manager user-id
-* `PostV05Sessions` - Get access token
-* `PostV05SubscriptionRequestsCmInit` - Request for subscription
+* `PostV05HealthInformationCmRequestJSON` - Health information data request
+* `PostV05HealthInformationCmRequestRaw` - Health information data request
+* `PostV05HealthInformationNotifyJSON` - Notifications corresponding to events during data flow
+* `PostV05HealthInformationNotifyRaw` - Notifications corresponding to events during data flow
+* `PostV05PatientsFindJSON` - Identify a patient by her consent-manager user-id
+* `PostV05PatientsFindRaw` - Identify a patient by her consent-manager user-id
+* `PostV05SessionsJSON` - Get access token
+* `PostV05SessionsRaw` - Get access token
+* `PostV05SubscriptionRequestsCmInitJSON` - Request for subscription
+* `PostV05SubscriptionRequestsCmInitRaw` - Request for subscription
 * `PostV05SubscriptionRequestsHiuOnNotify` - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
 * `PostV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
-* `PostV05UsersAuthConfirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-* `PostV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
-* `PostV05UsersAuthInit` - Initialize authentication from HIP
-* `PostV05UsersAuthOnNotify` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `PostV05UsersAuthConfirmJSON` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `PostV05UsersAuthConfirmRaw` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `PostV05UsersAuthFetchModesJSON` - Get a patient's authentication modes relevant to specified purpose
+* `PostV05UsersAuthFetchModesRaw` - Get a patient's authentication modes relevant to specified purpose
+* `PostV05UsersAuthInitJSON` - Initialize authentication from HIP
+* `PostV05UsersAuthInitRaw` - Initialize authentication from HIP
+* `PostV05UsersAuthOnNotifyJSON` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `PostV05UsersAuthOnNotifyRaw` - callback API by HIU/HIPs as acknowledgement of auth notification
 
-### consent flow
+### ConsentFlow
 
-* `PostV05ConsentRequestsOnInit` - Response to consent request
-* `PostV05ConsentRequestsOnStatus` - Result of consent request status
+* `PostV05ConsentRequestsOnInitJSON` - Response to consent request
+* `PostV05ConsentRequestsOnInitRaw` - Response to consent request
+* `PostV05ConsentRequestsOnStatusJSON` - Result of consent request status
+* `PostV05ConsentRequestsOnStatusRaw` - Result of consent request status
 * `PostV05ConsentsHiuNotify` - Consent notification
-* `PostV05ConsentsOnFetch` - Result of fetch request for a consent artefact
+* `PostV05ConsentsOnFetchJSON` - Result of fetch request for a consent artefact
+* `PostV05ConsentsOnFetchRaw` - Result of fetch request for a consent artefact
 
-### data flow
+### DataFlow
 
-* `PostV05HealthInformationHiuOnRequest` - Health information data request
-* `PostV05HealthInformationTransfer` - health information transfer API
+* `PostV05HealthInformationHiuOnRequestJSON` - Health information data request
+* `PostV05HealthInformationHiuOnRequestRaw` - Health information data request
+* `PostV05HealthInformationTransferJSON` - health information transfer API
+* `PostV05HealthInformationTransferRaw` - health information transfer API
 
-### identification
+### Identification
 
-* `PostV05PatientsOnFind` - Identification result for a consent-manager user-id
+* `PostV05PatientsOnFindJSON` - Identification result for a consent-manager user-id
+* `PostV05PatientsOnFindRaw` - Identification result for a consent-manager user-id
 
-### monitoring
+### Monitoring
 
 * `GetV05Heartbeat` - Get consent request status
 
-### subscriptions
+### Subscriptions
 
-* `PostV05SubscriptionRequestsHiuNotify` - Notification for subscription grant/deny/revoke
+* `PostV05SubscriptionRequestsHiuNotifyJSON` - Notification for subscription grant/deny/revoke
+* `PostV05SubscriptionRequestsHiuNotifyRaw` - Notification for subscription grant/deny/revoke
 * `PostV05SubscriptionRequestsHiuOnInit` - callback API for the /subscription-requests/cm/init to notify a HIU on acceptance/acknowledgement of the request for subscription.
-* `PostV05SubscriptionsHiuNotify` - Notification to HIU on basis of a granted subscription
+* `PostV05SubscriptionsHiuNotifyJSON` - Notification to HIU on basis of a granted subscription
+* `PostV05SubscriptionsHiuNotifyRaw` - Notification to HIU on basis of a granted subscription
 
-### user auth
+### UserAuth
 
-* `PostV05UsersAuthNotify` - notification API in case of DIRECT mode of authentication by the CM
-* `PostV05UsersAuthOnConfirm` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
-* `PostV05UsersAuthOnFetchModes` - Identification result for a consent-manager user-id
-* `PostV05UsersAuthOnInit` - Response to user authentication initialization from HIP
-
+* `PostV05UsersAuthNotifyJSON` - notification API in case of DIRECT mode of authentication by the CM
+* `PostV05UsersAuthNotifyRaw` - notification API in case of DIRECT mode of authentication by the CM
+* `PostV05UsersAuthOnConfirmJSON` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `PostV05UsersAuthOnConfirmRaw` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `PostV05UsersAuthOnFetchModesJSON` - Identification result for a consent-manager user-id
+* `PostV05UsersAuthOnFetchModesRaw` - Identification result for a consent-manager user-id
+* `PostV05UsersAuthOnInitJSON` - Response to user authentication initialization from HIP
+* `PostV05UsersAuthOnInitRaw` - Response to user authentication initialization from HIP
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

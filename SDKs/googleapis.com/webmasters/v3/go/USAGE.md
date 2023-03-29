@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.WebmastersSearchanalyticsQueryRequest{
         Security: operations.WebmastersSearchanalyticsQuerySecurity{
             Option1: &operations.WebmastersSearchanalyticsQuerySecurityOption1{
@@ -23,55 +25,106 @@ func main() {
             },
         },
         PathParams: operations.WebmastersSearchanalyticsQueryPathParams{
-            SiteURL: "sit",
+            SiteURL: "unde",
         },
         QueryParams: operations.WebmastersSearchanalyticsQueryQueryParams{
             Alt: "json",
-            Fields: "culpa",
-            Key: "expedita",
-            OauthToken: "consequuntur",
+            Fields: "porro",
+            Key: "nulla",
+            OauthToken: "id",
             PrettyPrint: false,
-            QuotaUser: "expedita",
-            UserIP: "voluptas",
+            QuotaUser: "vero",
+            UserIP: "perspiciatis",
         },
         Request: &shared.SearchAnalyticsQueryRequest{
-            AggregationType: "fugit",
-            DataState: "et",
+            AggregationType: "nulla",
+            DataState: "nihil",
             DimensionFilterGroups: []shared.APIDimensionFilterGroup{
                 shared.APIDimensionFilterGroup{
                     Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "dicta",
-                            Expression: "debitis",
+                            Dimension: "eum",
+                            Expression: "iusto",
+                            Operator: "ullam",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "saepe",
+                            Expression: "inventore",
+                            Operator: "sapiente",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "enim",
+                            Expression: "eum",
                             Operator: "voluptatum",
                         },
+                    },
+                    GroupType: "autem",
+                },
+                shared.APIDimensionFilterGroup{
+                    Filters: []shared.APIDimensionFilter{
                         shared.APIDimensionFilter{
-                            Dimension: "et",
-                            Expression: "ut",
-                            Operator: "dolorem",
+                            Dimension: "non",
+                            Expression: "deleniti",
+                            Operator: "similique",
                         },
                         shared.APIDimensionFilter{
-                            Dimension: "et",
-                            Expression: "voluptate",
-                            Operator: "iste",
+                            Dimension: "reprehenderit",
+                            Expression: "molestiae",
+                            Operator: "quo",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "quasi",
+                            Expression: "laboriosam",
+                            Operator: "dicta",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "est",
+                            Expression: "voluptatem",
+                            Operator: "consequatur",
                         },
                     },
-                    GroupType: "vitae",
+                    GroupType: "fugiat",
+                },
+                shared.APIDimensionFilterGroup{
+                    Filters: []shared.APIDimensionFilter{
+                        shared.APIDimensionFilter{
+                            Dimension: "omnis",
+                            Expression: "eos",
+                            Operator: "accusamus",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "accusamus",
+                            Expression: "reiciendis",
+                            Operator: "rem",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "quibusdam",
+                            Expression: "et",
+                            Operator: "praesentium",
+                        },
+                        shared.APIDimensionFilter{
+                            Dimension: "occaecati",
+                            Expression: "dolor",
+                            Operator: "soluta",
+                        },
+                    },
+                    GroupType: "sed",
                 },
             },
             Dimensions: []string{
-                "dolores",
-                "illum",
-                "debitis",
+                "rerum",
+                "culpa",
+                "qui",
             },
-            EndDate: "vel",
-            RowLimit: 2627038740284806767,
-            SearchType: "dolore",
-            StartDate: "id",
-            StartRow: 959367522974354090,
+            EndDate: "sed",
+            RowLimit: 944669,
+            SearchType: "possimus",
+            StartDate: "occaecati",
+            StartRow: 105907,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Searchanalytics.WebmastersSearchanalyticsQuery(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -80,5 +133,6 @@ func main() {
     if res.SearchAnalyticsQueryResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

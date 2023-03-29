@@ -3,45 +3,44 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddApplicationCloudWatchLoggingOptionRequest{
         Headers: operations.AddApplicationCloudWatchLoggingOptionHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "KinesisAnalytics_20180523.AddApplicationCloudWatchLoggingOption",
         },
         Request: shared.AddApplicationCloudWatchLoggingOptionRequest{
-            ApplicationName: "fugit",
+            ApplicationName: "nihil",
             CloudWatchLoggingOption: shared.CloudWatchLoggingOption{
-                LogStreamARN: "et",
+                LogStreamARN: "fuga",
             },
-            ConditionalToken: "nihil",
-            CurrentApplicationVersionID: 8325060299420976708,
+            ConditionalToken: "facilis",
+            CurrentApplicationVersionID: 384382,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddApplicationCloudWatchLoggingOption(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +49,6 @@ func main() {
     if res.AddApplicationCloudWatchLoggingOptionResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

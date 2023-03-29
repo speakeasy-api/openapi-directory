@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/beyondcorp/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BeyondcorpProjectsLocationsAppConnectionsCreateRequest{
         Security: operations.BeyondcorpProjectsLocationsAppConnectionsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,49 +34,49 @@ func main() {
             },
         },
         PathParams: operations.BeyondcorpProjectsLocationsAppConnectionsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BeyondcorpProjectsLocationsAppConnectionsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            AppConnectionID: "consequuntur",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            AppConnectionID: "id",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
-            ValidateOnly: true,
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
+            ValidateOnly: false,
         },
         Request: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput{
             ApplicationEndpoint: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint{
-                Host: "et",
-                Port: 7144924247938981575,
+                Host: "ullam",
+                Port: 891773,
             },
             Connectors: []string{
-                "et",
-                "voluptate",
-                "iste",
+                "sapiente",
             },
-            DisplayName: "vitae",
+            DisplayName: "enim",
             Gateway: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput{
-                AppGateway: "totam",
+                AppGateway: "eum",
                 Type: "TYPE_UNSPECIFIED",
             },
             Labels: map[string]string{
-                "debitis": "vel",
-                "odio": "dolore",
-                "id": "aspernatur",
+                "vel": "non",
+                "deleniti": "similique",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
             },
-            Name: "accusantium",
-            Type: "TCP_PROXY",
+            Name: "laboriosam",
+            Type: "TYPE_UNSPECIFIED",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.BeyondcorpProjectsLocationsAppConnectionsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -83,13 +85,15 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `BeyondcorpProjectsLocationsAppConnectionsCreate` - Creates a new AppConnection in a given project and location.
 * `BeyondcorpProjectsLocationsAppConnectionsList` - Lists AppConnections in a given project and location.
@@ -113,7 +117,6 @@ func main() {
 * `BeyondcorpProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `BeyondcorpProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `BeyondcorpProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/noosh.com/1.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,13 +23,14 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetBillingRecipientsRequest{
         PathParams: operations.GetBillingRecipientsPathParams{
-            WorkgroupID: "sit",
+            WorkgroupID: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Contact.GetBillingRecipients(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -36,11 +39,13 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### Contact
 
@@ -52,7 +57,7 @@ func main() {
 
 * `GetCountryList` - List all countries
 
-### Deactivation Reason
+### DeactivationReason
 
 * `GetDeactivationReasonList` - List all deactivation reasons
 
@@ -60,12 +65,14 @@ func main() {
 
 * `GetEstimate` - Get a specific estimate of project
 * `GetEstimateList` - List the Estimates
-* `PostEstimate` - Create a Estimate
+* `PostEstimateJSON` - Create a Estimate
+* `PostEstimateRaw` - Create a Estimate
 
-### Exchange Rate
+### ExchangeRate
 
 * `GetExchangeRateList` - Get Exchange Rate List
-* `PostExchangeRate` - Create Exchange Rates
+* `PostExchangeRateJSON` - Create Exchange Rates
+* `PostExchangeRateRaw` - Create Exchange Rates
 
 ### File
 
@@ -80,7 +87,7 @@ func main() {
 * `GetInvoiceFiles` - List files of invoice Level
 * `GetInvoices` - List invoices by a specific order
 
-### My Info
+### MyInfo
 
 * `GetAutomaticInvitationList` - List current user's automatic invitations info 
 * `GetTeamTemplateDetail` - Get current user's team template detal info 
@@ -98,26 +105,33 @@ func main() {
 * `GetSellOrderList` - List the sell orders
 * `GetSellOrderListOfWorkgroup` - List the sell orders of workgrop
 * `GetSellOrderOfWorkgroup` - Get a specific sell order
-* `PostBuyOrder` - Create a quick buy order
-* `PutBuyOrder` - Update a specific buy order
-* `PutSellOrder` - Update / Accept or Reject a specific sell order
+* `PostBuyOrderJSON` - Create a quick buy order
+* `PostBuyOrderRaw` - Create a quick buy order
+* `PutBuyOrderJSON` - Update a specific buy order
+* `PutBuyOrderRaw` - Update a specific buy order
+* `PutSellOrderJSON` - Update / Accept or Reject a specific sell order
+* `PutSellOrderRaw` - Update / Accept or Reject a specific sell order
 
 ### Project
 
-* `AttachProject` - Attach children projects to specific Project
+* `AttachProjectJSON` - Attach children projects to specific Project
+* `AttachProjectRaw` - Attach children projects to specific Project
 * `DeleteProject` - Archieve a specific Project
 * `GetProject` - Get a specific Project
 * `GetProjectList` - List the projects
-* `PatchProject` - Patch a specific Project
-* `PostProject` - Create a Project
-* `PutProject` - Update a specific Project
+* `PatchProjectJSON` - Patch a specific Project
+* `PatchProjectRaw` - Patch a specific Project
+* `PostProjectJSON` - Create a Project
+* `PostProjectRaw` - Create a Project
+* `PutProjectJSON` - Update a specific Project
+* `PutProjectRaw` - Update a specific Project
 
-### Project Category
+### ProjectCategory
 
 * `GetProjectCategoryList` - List the project categories
 * `GetProjectCategoryListOfClient` - List the project categories of client side
 
-### Project Status
+### ProjectStatus
 
 * `GetProjectStatus` - List the project status
 * `GetProjectStatusOfClient` - List the project status of client
@@ -128,13 +142,15 @@ func main() {
 * `GetQuoteList` - List the quotes
 * `GetQuoteStateList` - List the quote states
 * `GetV1WorkgroupsWorkgroupIDQuotes` - List the quotes of workgroup level
-* `PutQuote` - Accept / Reject a Quote
+* `PutQuoteJSON` - Accept / Reject a Quote
+* `PutQuoteRaw` - Accept / Reject a Quote
 
-### RFE
+### Rfe
 
 * `GetRfe` - Get a specific Rfe
 * `GetRfeList` - List the RFES
-* `PostRfe` - Create a RFE
+* `PostRfeJSON` - Create a RFE
+* `PostRfeRaw` - Create a RFE
 
 ### Rfq
 
@@ -145,8 +161,10 @@ func main() {
 
 * `GetShipment` - Get a specific shipment.
 * `GetShipmentList` - List shipments of project
-* `PostShipment` - Create a shipment
-* `PutShipmentLocation` - Update a specific shipment location
+* `PostShipmentJSON` - Create a shipment
+* `PostShipmentRaw` - Create a shipment
+* `PutShipmentLocationJSON` - Update a specific shipment location
+* `PutShipmentLocationRaw` - Update a specific shipment location
 
 ### Spec
 
@@ -157,12 +175,16 @@ func main() {
 * `GetSpecTypeFields` - Get Spec Type Fields
 * `GetV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecID` - List a specific spec of project Level
 * `GetV1WorkgroupsWorkgroupIDSpecTypesSpecTypeIDSpecTypeFields` - Get Spec Type Fields
-* `PostSpec` - Create a Spec
-* `PostSpecProductTypeListOfWorkgroup` - Register product types for spec types
-* `PutSpec` - Update a specific Spec
-* `PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecID` - Update a specific Spec
+* `PostSpecProductTypeListOfWorkgroupJSON` - Register product types for spec types
+* `PostSpecProductTypeListOfWorkgroupRaw` - Register product types for spec types
+* `PostSpecJSON` - Create a Spec
+* `PostSpecRaw` - Create a Spec
+* `PutSpecJSON` - Update a specific Spec
+* `PutSpecRaw` - Update a specific Spec
+* `PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDJSON` - Update a specific Spec
+* `PutV1WorkgroupsWorkgroupIDProjectsProjectIDSpecsSpecIDRaw` - Update a specific Spec
 
-### Spec Template
+### SpecTemplate
 
 * `GetSpecTemplate` - Get a specific Spec Template
 * `GetSpecTemplateList` - List Spec Templates of Workgroup Level 
@@ -178,28 +200,31 @@ func main() {
 * `GetTaskOfWorkgroup` - Get a sepcific task of workgroup level
 * `GetTaskTypesOfWorkgroup` - Get task types of workgroup level
 * `GetWgTaskStatusListOfWorkgroup` - Get custom task status of workgroup level
-* `PostTaskForProject` - Create a new task
+* `PostTaskForProjectJSON` - Create a new task
+* `PostTaskForProjectRaw` - Create a new task
 
-### Team Member
+### TeamMember
 
 * `DeleteTeamMemberOfProject` - Delete a team member for the specific project.
 * `GetTeamMemberListOfClientProject` - List team member of client project side.
 * `GetTeamMemberListOfProject` - List team member of project.
-* `PostTeamMemberOfProject` - Invite a team member or all the members of team template for the specific project.
-* `PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembers` - Deprecated, please use 1.1 Version
+* `PostTeamMemberOfProjectJSON` - Invite a team member or all the members of team template for the specific project.
+* `PostTeamMemberOfProjectRaw` - Invite a team member or all the members of team template for the specific project.
+* `PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersJSON` - Deprecated, please use 1.1 Version
+* `PostV1WorkgroupsWorkgroupIDProjectsProjectIDTeammembersRaw` - Deprecated, please use 1.1 Version
 
-### Team Member Role
+### TeamMemberRole
 
 * `GetMemberRoles` - List all the role options for the user
 
-### Time Card
+### TimeCard
 
 * `GetMyTimeCard` - Get a specific my time cards
 * `GetMyTimeCardList` - List my time cards
 * `GetReceivedTimeCard` - List a specific received time cards
 * `GetReceivedTimeCardList` - List received time cards
 
-### User Fields
+### UserFields
 
 * `GetProjectHomeUserFieldListOfClient` - List projec home user fields of client workgroup
 * `GetProjectHomeUserFieldsList` - List projec home user fields
@@ -212,13 +237,13 @@ func main() {
 * `GetSupplierWorkgroupList` - List supplier workgroups
 * `GetWorkgroupDetail` - Detail workgroup info
 * `GetWorkgroupList` - List the workgroups
-* `PutWorkgroup` - Update a specific Workgroup
+* `PutWorkgroupJSON` - Update a specific Workgroup
+* `PutWorkgroupRaw` - Update a specific Workgroup
 
-### Workgroup Members
+### WorkgroupMembers
 
 * `GetWorkgroupMemberInfo` - Workgroup Member Info
 * `GetWorkgroupMemberList` - List the workgroup members
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

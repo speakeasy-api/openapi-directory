@@ -3,61 +3,55 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.DeleteRecommendationPreferencesRequest{
+        Headers: operations.DeleteRecommendationPreferencesHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+            XAmzTarget: "ComputeOptimizerService.DeleteRecommendationPreferences",
+        },
+        Request: shared.DeleteRecommendationPreferencesRequest{
+            RecommendationPreferenceNames: []shared.RecommendationPreferenceNameEnum{
+                "InferredWorkloadTypes",
+                "InferredWorkloadTypes",
+            },
+            ResourceType: "EbsVolume",
+            Scope: &shared.Scope{
+                Name: "AccountId",
+                Value: "ullam",
+            },
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.DescribeRecommendationExportJobsRequest{
-        Headers: operations.DescribeRecommendationExportJobsHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-            XAmzTarget: "ComputeOptimizerService.DescribeRecommendationExportJobs",
-        },
-        Request: shared.DescribeRecommendationExportJobsRequest{
-            Filters: []shared.JobFilter{
-                shared.JobFilter{
-                    Name: "ResourceType",
-                    Values: []string{
-                        "rerum",
-                    },
-                },
-            },
-            JobIds: []string{
-                "debitis",
-                "voluptatum",
-                "et",
-            },
-            MaxResults: 7144924247938981575,
-            NextToken: "dolorem",
-        },
-    }
-    
-    res, err := s.DescribeRecommendationExportJobs(ctx, req)
+    ctx := context.Background()
+    res, err := s.DeleteRecommendationPreferences(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.DescribeRecommendationExportJobsResponse != nil {
+    if res.DeleteRecommendationPreferencesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,17 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ChangePasswordRequest{
         PathParams: operations.ChangePasswordPathParams{
-            ShopperID: "sit",
+            ShopperID: "unde",
         },
-        Request: "voluptas",
+        Request: shared.Secret{
+            Secret: "P@55w0rd+",
+        },
     }
-    
+
+    ctx := context.Background()
     res, err := s.V1.ChangePassword(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -26,5 +31,6 @@ func main() {
     if res.ShopperID != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest{
         Security: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,37 +23,47 @@ func main() {
             },
         },
         PathParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            HubID: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            HubID: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.HubInput{
-            Description: "voluptatum",
+            Description: "ullam",
             Labels: map[string]string{
-                "ut": "dolorem",
+                "inventore": "sapiente",
+                "enim": "eum",
+                "voluptatum": "autem",
+                "vel": "non",
             },
-            Name: "et",
-            RoutingVpcs: []shared.RoutingVpcInput{
-                shared.RoutingVpcInput{
-                    URI: "iste",
+            Name: "deleniti",
+            RoutingVpcs: []shared.RoutingVPCInput{
+                shared.RoutingVPCInput{
+                    URI: "http://tianna.org",
+                },
+                shared.RoutingVPCInput{
+                    URI: "http://eudora.com",
+                },
+                shared.RoutingVPCInput{
+                    URI: "https://aiyana.info",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.NetworkconnectivityProjectsLocationsGlobalHubsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -60,5 +72,6 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

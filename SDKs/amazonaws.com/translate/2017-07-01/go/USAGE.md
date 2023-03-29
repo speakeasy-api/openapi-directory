@@ -3,50 +3,55 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateParallelDataRequest{
         Headers: operations.CreateParallelDataHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWSShineFrontendService_20170701.CreateParallelData",
         },
         Request: shared.CreateParallelDataRequest{
-            ClientToken: "fugit",
-            Description: "et",
+            ClientToken: "nihil",
+            Description: "fuga",
             EncryptionKey: &shared.EncryptionKey{
-                ID: "nihil",
+                ID: "facilis",
                 Type: "KMS",
             },
-            Name: "dicta",
+            Name: "iusto",
             ParallelDataConfig: shared.ParallelDataConfig{
                 Format: "TSV",
-                S3URI: "voluptatum",
+                S3URI: "saepe",
+            },
+            Tags: []shared.Tag{
+                shared.Tag{
+                    Key: "sapiente",
+                    Value: "enim",
+                },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateParallelData(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -55,5 +60,6 @@ func main() {
     if res.CreateParallelDataResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

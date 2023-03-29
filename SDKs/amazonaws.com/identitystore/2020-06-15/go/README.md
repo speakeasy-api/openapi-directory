@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/identitystore/2020-06-15/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,49 +14,50 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.CreateGroupRequest{
+        Headers: operations.CreateGroupHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+            XAmzTarget: "AWSIdentityStore.CreateGroup",
+        },
+        Request: shared.CreateGroupRequest{
+            Description: "nihil",
+            DisplayName: "fuga",
+            IdentityStoreID: "facilis",
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.DescribeGroupRequest{
-        Headers: operations.DescribeGroupHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-            XAmzTarget: "AWSIdentityStore.DescribeGroup",
-        },
-        Request: shared.DescribeGroupRequest{
-            GroupID: "fugit",
-            IdentityStoreID: "et",
-        },
-    }
-    
-    res, err := s.DescribeGroup(ctx, req)
+    ctx := context.Background()
+    res, err := s.CreateGroup(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.DescribeGroupResponse != nil {
+    if res.CreateGroupResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -65,11 +66,25 @@ func main() {
 
 ### SDK SDK
 
+* `CreateGroup` - Creates a group within the specified identity store.
+* `CreateGroupMembership` - Creates a relationship between a member and a group. The following identifiers must be specified: <code>GroupId</code>, <code>IdentityStoreId</code>, and <code>MemberId</code>.
+* `CreateUser` - Creates a new user within the specified identity store.
+* `DeleteGroup` - Delete a group within an identity store given <code>GroupId</code>.
+* `DeleteGroupMembership` - Delete a membership within a group given <code>MembershipId</code>.
+* `DeleteUser` - Deletes a user within an identity store given <code>UserId</code>.
 * `DescribeGroup` - Retrieves the group metadata and attributes from <code>GroupId</code> in an identity store.
-* `DescribeUser` - Retrieves the user metadata and attributes from <code>UserId</code> in an identity store.
-* `ListGroups` - Lists the attribute name and value of the group that you specified in the search. We only support <code>DisplayName</code> as a valid filter attribute path currently, and filter is required. This API returns minimum attributes, including <code>GroupId</code> and group <code>DisplayName</code> in the response.
-* `ListUsers` - Lists the attribute name and value of the user that you specified in the search. We only support <code>UserName</code> as a valid filter attribute path currently, and filter is required. This API returns minimum attributes, including <code>UserId</code> and <code>UserName</code> in the response.
-
+* `DescribeGroupMembership` - Retrieves membership metadata and attributes from <code>MembershipId</code> in an identity store.
+* `DescribeUser` - Retrieves the user metadata and attributes from the <code>UserId</code> in an identity store.
+* `GetGroupID` - Retrieves <code>GroupId</code> in an identity store.
+* `GetGroupMembershipID` - Retrieves the <code>MembershipId</code> in an identity store.
+* `GetUserID` - Retrieves the <code>UserId</code> in an identity store.
+* `IsMemberInGroups` - Checks the user's membership in all requested groups and returns if the member exists in all queried groups.
+* `ListGroupMemberships` - For the specified group in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
+* `ListGroupMembershipsForMember` - For the specified member in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
+* `ListGroups` - Lists all groups in the identity store. Returns a paginated list of complete <code>Group</code> objects. Filtering for a <code>Group</code> by the <code>DisplayName</code> attribute is deprecated. Instead, use the <code>GetGroupId</code> API action.
+* `ListUsers` - Lists all users in the identity store. Returns a paginated list of complete <code>User</code> objects. Filtering for a <code>User</code> by the <code>UserName</code> attribute is deprecated. Instead, use the <code>GetUserId</code> API action.
+* `UpdateGroup` - For the specified group in the specified identity store, updates the group metadata and attributes.
+* `UpdateUser` - For the specified user in the specified identity store, updates the user metadata and attributes.
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

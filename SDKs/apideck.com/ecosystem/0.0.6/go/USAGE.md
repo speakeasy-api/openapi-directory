@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CategoriesAllRequest{
         PathParams: operations.CategoriesAllPathParams{
-            EcosystemID: "sit",
+            EcosystemID: "unde",
         },
         QueryParams: operations.CategoriesAllQueryParams{
-            Cursor: "voluptas",
-            Limit: 6050128673802995827,
+            Cursor: "deserunt",
+            Limit: 715190,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Category.CategoriesAll(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.GetCategoriesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

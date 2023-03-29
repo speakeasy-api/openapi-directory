@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/appengine/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AppengineAppsAuthorizedCertificatesCreateRequest{
         Security: operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,46 +34,47 @@ func main() {
             },
         },
         PathParams: operations.AppengineAppsAuthorizedCertificatesCreatePathParams{
-            AppsID: "sit",
+            AppsID: "unde",
         },
         QueryParams: operations.AppengineAppsAuthorizedCertificatesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.AuthorizedCertificate{
             CertificateRawData: &shared.CertificateRawData{
-                PrivateKey: "dicta",
-                PublicCertificate: "debitis",
+                PrivateKey: "eum",
+                PublicCertificate: "iusto",
             },
-            DisplayName: "voluptatum",
-            DomainMappingsCount: 2339563716805116249,
+            DisplayName: "ullam",
+            DomainMappingsCount: 891773,
             DomainNames: []string{
-                "dolorem",
-                "et",
-                "voluptate",
+                "sapiente",
             },
-            ExpireTime: "iste",
-            ID: "vitae",
+            ExpireTime: "enim",
+            ID: "eum",
             ManagedCertificate: &shared.ManagedCertificate{
-                LastRenewalTime: "totam",
-                Status: "FAILED_RETRYING_NOT_VISIBLE",
+                LastRenewalTime: "voluptatum",
+                Status: "FAILED_RETRYING_CAA_FORBIDDEN",
             },
-            Name: "illum",
+            Name: "vel",
             VisibleDomainMappings: []string{
-                "vel",
+                "deleniti",
+                "similique",
+                "reprehenderit",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Apps.AppengineAppsAuthorizedCertificatesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -80,13 +83,15 @@ func main() {
     if res.AuthorizedCertificate != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### apps
+
+### Apps
 
 * `AppengineAppsAuthorizedCertificatesCreate` - Uploads the specified SSL certificate.
 * `AppengineAppsAuthorizedCertificatesDelete` - Deletes the specified SSL certificate.
@@ -127,10 +132,9 @@ func main() {
 * `AppengineAppsServicesVersionsList` - Lists the versions of a service.
 * `AppengineAppsServicesVersionsPatch` - Updates the specified Version resource. You can specify the following fields depending on the App Engine environment and type of scaling that the version resource uses:Standard environment instance_class (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.instance_class)automatic scaling in the standard environment: automatic_scaling.min_idle_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.max_idle_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automaticScaling.standard_scheduler_settings.max_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings) automaticScaling.standard_scheduler_settings.min_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings) automaticScaling.standard_scheduler_settings.target_cpu_utilization (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings) automaticScaling.standard_scheduler_settings.target_throughput_utilization (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)basic scaling or manual scaling in the standard environment: serving_status (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status) manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#manualscaling)Flexible environment serving_status (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)automatic scaling in the flexible environment: automatic_scaling.min_total_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.max_total_instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling) automatic_scaling.cpu_utilization.target_utilization (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)manual scaling in the flexible environment: manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions#manualscaling)
 
-### projects
+### Projects
 
 * `AppengineProjectsLocationsApplicationsGet` - Gets information about an application.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

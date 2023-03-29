@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/importexport/2010-06-01/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,40 +14,39 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetCancelJobRequest{
-        QueryParams: operations.GetCancelJobQueryParams{
-            APIVersion: "sit",
-            AWSAccessKeyID: "voluptas",
+    req := operations.GETCancelJobRequest{
+        QueryParams: operations.GETCancelJobQueryParams{
+            APIVersion: "unde",
+            AWSAccessKeyID: "deserunt",
             Action: "CancelJob",
-            JobID: "expedita",
+            JobID: "nulla",
             Operation: "CancelJob",
-            Signature: "dolor",
-            SignatureMethod: "expedita",
-            SignatureVersion: "voluptas",
-            Timestamp: "fugit",
+            Signature: "vero",
+            SignatureMethod: "perspiciatis",
+            SignatureVersion: "nulla",
+            Timestamp: "nihil",
             Version: "2010-06-01",
         },
     }
-    
-    res, err := s.GetCancelJob(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETCancelJob(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -55,6 +54,7 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -63,19 +63,18 @@ func main() {
 
 ### SDK SDK
 
-* `GetCancelJob` - This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already started or is complete.
-* `GetCreateJob` - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
-* `GetGetShippingLabel` - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
-* `GetGetStatus` - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
-* `GetListJobs` - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
-* `GetUpdateJob` - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
-* `PostCancelJob` - This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already started or is complete.
-* `PostCreateJob` - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
-* `PostGetShippingLabel` - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
-* `PostGetStatus` - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
-* `PostListJobs` - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
-* `PostUpdateJob` - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
-
+* `GETCancelJob` - This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already started or is complete.
+* `GETCreateJob` - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
+* `GETGETShippingLabel` - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
+* `GETGETStatus` - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
+* `GETListJobs` - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
+* `GETUpdateJob` - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
+* `POSTCancelJob` - This operation cancels a specified job. Only the job owner can cancel it. The operation fails if the job has already started or is complete.
+* `POSTCreateJob` - This operation initiates the process of scheduling an upload or download of your data. You include in the request a manifest that describes the data transfer specifics. The response to the request includes a job ID, which you can use in other operations, a signature that you use to identify your storage device, and the address where you should ship your storage device.
+* `POSTGetShippingLabel` - This operation generates a pre-paid UPS shipping label that you will use to ship your device to AWS for processing.
+* `POSTGetStatus` - This operation returns information about a job, including where the job is in the processing pipeline, the status of the results, and the signature value associated with the job. You can only return information about jobs you own.
+* `POSTListJobs` - This operation returns the jobs associated with the requester. AWS Import/Export lists the jobs in reverse chronological order based on the date of creation. For example if Job Test1 was created 2009Dec30 and Test2 was created 2010Feb05, the ListJobs operation would return Test2 followed by Test1.
+* `POSTUpdateJob` - You use this operation to change the parameters specified in the original manifest file by supplying a new manifest file. The manifest file attached to this request replaces the original manifest file. You can only use the operation after a CreateJob request but before the data transfer starts and you can only use it on jobs you own.
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

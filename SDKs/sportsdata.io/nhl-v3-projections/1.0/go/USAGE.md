@@ -3,31 +3,30 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKeyHeader: &shared.SchemeAPIKeyHeader{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKeyHeader: &shared.SchemeAPIKeyHeader{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DfsSlatesByDateRequest{
         PathParams: operations.DfsSlatesByDatePathParams{
-            Date: "sit",
-            Format: "XML",
+            Date: "unde",
+            Format: "JSON",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DfsSlatesByDate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -36,5 +35,6 @@ func main() {
     if res.DfsSlates != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

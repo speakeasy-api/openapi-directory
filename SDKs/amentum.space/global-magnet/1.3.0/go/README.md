@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amentum.space/global-magnet/1.3.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,17 +23,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.AppAPIWmmEndpointsWmmMagneticFieldRequest{
-        QueryParams: operations.AppAPIWmmEndpointsWmmMagneticFieldQueryParams{
-            Altitude: 74.099998,
-            Latitude: 53.099998,
-            Longitude: 15.100000,
-            Year: 67.199997,
+
+    req := operations.AppAPIWMMEndpointsWMMMagneticFieldRequest{
+        QueryParams: operations.AppAPIWMMEndpointsWMMMagneticFieldQueryParams{
+            Altitude: 10,
+            Latitude: 80,
+            Longitude: 100,
+            Year: 2020.5,
         },
     }
-    
-    res, err := s.AppAPIWmmEndpointsWmmMagneticField(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AppAPIWMMEndpointsWMMMagneticField(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -39,6 +42,7 @@ func main() {
     if res.AppAPIWMMEndpointsWMMMagneticField200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,8 +51,7 @@ func main() {
 
 ### SDK SDK
 
-* `AppAPIWmmEndpointsWmmMagneticField` - Calculate magnetic declination, inclination, total field intensity, and grid variation
-
+* `AppAPIWMMEndpointsWMMMagneticField` - Calculate magnetic declination, inclination, total field intensity, and grid variation
 
 <!-- End SDK Available Operations -->
 

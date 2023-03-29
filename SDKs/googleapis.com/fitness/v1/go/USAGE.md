@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FitnessUsersDataSourcesCreateRequest{
         Security: operations.FitnessUsersDataSourcesCreateSecurity{
             Option1: &operations.FitnessUsersDataSourcesCreateSecurityOption1{
@@ -23,67 +25,61 @@ func main() {
             },
         },
         PathParams: operations.FitnessUsersDataSourcesCreatePathParams{
-            UserID: "sit",
+            UserID: "unde",
         },
         QueryParams: operations.FitnessUsersDataSourcesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.DataSource{
             Application: &shared.Application{
-                DetailsURL: "dicta",
-                Name: "debitis",
-                PackageName: "voluptatum",
-                Version: "et",
+                DetailsURL: "eum",
+                Name: "iusto",
+                PackageName: "ullam",
+                Version: "saepe",
             },
             DataQualityStandard: []shared.DataSourceDataQualityStandardEnum{
-                "dataQualityUnknown",
-                "dataQualityUnknown",
-                "dataQualityBloodPressureBhsAA",
+                "dataQualityBloodGlucoseIso151972013",
             },
-            DataStreamID: "iste",
-            DataStreamName: "vitae",
+            DataStreamID: "enim",
+            DataStreamName: "eum",
             DataType: &shared.DataType{
                 Field: []shared.DataTypeField{
                     shared.DataTypeField{
+                        Format: "floatList",
+                        Name: "vel",
+                        Optional: false,
+                    },
+                    shared.DataTypeField{
                         Format: "map",
-                        Name: "illum",
-                        Optional: true,
-                    },
-                    shared.DataTypeField{
-                        Format: "floatPoint",
-                        Name: "odio",
-                        Optional: true,
-                    },
-                    shared.DataTypeField{
-                        Format: "integerList",
-                        Name: "aspernatur",
-                        Optional: true,
+                        Name: "deleniti",
+                        Optional: false,
                     },
                 },
-                Name: "totam",
+                Name: "similique",
             },
             Device: &shared.Device{
-                Manufacturer: "commodi",
-                Model: "quis",
-                Type: "phone",
-                UID: "aut",
-                Version: "odit",
+                Manufacturer: "reprehenderit",
+                Model: "molestiae",
+                Type: "headMounted",
+                UID: "quasi",
+                Version: "laboriosam",
             },
-            Name: "non",
-            Type: "raw",
+            Name: "dicta",
+            Type: "derived",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Users.FitnessUsersDataSourcesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -92,5 +88,6 @@ func main() {
     if res.DataSource != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

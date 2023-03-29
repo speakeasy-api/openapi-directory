@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeploymentmanagerCompositeTypesDeleteRequest{
         Security: operations.DeploymentmanagerCompositeTypesDeleteSecurity{
             Option1: &operations.DeploymentmanagerCompositeTypesDeleteSecurityOption1{
@@ -23,24 +25,25 @@ func main() {
             },
         },
         PathParams: operations.DeploymentmanagerCompositeTypesDeletePathParams{
-            CompositeType: "sit",
-            Project: "voluptas",
+            CompositeType: "unde",
+            Project: "deserunt",
         },
         QueryParams: operations.DeploymentmanagerCompositeTypesDeleteQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            AccessToken: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CompositeTypes.DeploymentmanagerCompositeTypesDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +52,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

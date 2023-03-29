@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetRequest{
         PathParams: operations.GetPathParams{
-            Address: "sit",
-            Baudrate: 2259404117704393152,
-            Device: "culpa",
+            Address: "48",
+            Baudrate: "2400",
+            Device: "ttyAMA0",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Get(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.MbusData != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

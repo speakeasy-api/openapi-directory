@@ -3,38 +3,37 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetCreateDomainRequest{
-        QueryParams: operations.GetCreateDomainQueryParams{
-            AWSAccessKeyID: "sit",
+    req := operations.GETCreateDomainRequest{
+        QueryParams: operations.GETCreateDomainQueryParams{
+            AWSAccessKeyID: "unde",
             Action: "CreateDomain",
-            DomainName: "culpa",
-            Signature: "expedita",
-            SignatureMethod: "consequuntur",
-            SignatureVersion: "dolor",
-            Timestamp: "expedita",
+            DomainName: "porro",
+            Signature: "nulla",
+            SignatureMethod: "id",
+            SignatureVersion: "vero",
+            Timestamp: "perspiciatis",
             Version: "2009-04-15",
         },
     }
-    
-    res, err := s.GetCreateDomain(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETCreateDomain(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -42,5 +41,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

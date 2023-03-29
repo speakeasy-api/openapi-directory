@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetListingViolationsRequest{
         Security: operations.GetListingViolationsSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,17 +20,18 @@ func main() {
             },
         },
         QueryParams: operations.GetListingViolationsQueryParams{
-            ComplianceType: "sit",
-            Filter: "voluptas",
-            Limit: "culpa",
-            ListingID: "expedita",
-            Offset: "consequuntur",
+            ComplianceType: "unde",
+            Filter: "deserunt",
+            Limit: "porro",
+            ListingID: "nulla",
+            Offset: "id",
         },
         Headers: operations.GetListingViolationsHeaders{
-            XEBAYCMARKETPLACEID: "dolor",
+            XEbayCMarketplaceID: "vero",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ListingViolation.GetListingViolations(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -37,5 +40,6 @@ func main() {
     if res.PagedComplianceViolationCollection != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

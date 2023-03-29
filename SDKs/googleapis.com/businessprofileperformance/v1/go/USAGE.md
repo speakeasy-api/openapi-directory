@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,38 +12,39 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest{
         PathParams: operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            DailyMetric: "BUSINESS_IMPRESSIONS_DESKTOP_MAPS",
-            DailyRangeEndDateDay: 1774932891286980153,
-            DailyRangeEndDateMonth: 6044372234677422456,
-            DailyRangeEndDateYear: 8274930044578894929,
-            DailyRangeStartDateDay: 1543572285742637646,
-            DailyRangeStartDateMonth: 2661732831099943416,
-            DailyRangeStartDateYear: 8325060299420976708,
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            DailyMetric: "BUSINESS_FOOD_ORDERS",
+            DailyRangeEndDateDay: 544883,
+            DailyRangeEndDateMonth: 847252,
+            DailyRangeEndDateYear: 423655,
+            DailyRangeStartDateDay: 623564,
+            DailyRangeStartDateMonth: 645894,
+            DailyRangeStartDateYear: 384382,
             DailySubEntityTypeDayOfWeek: "WEDNESDAY",
-            DailySubEntityTypeTimeOfDayHours: 2518412263346885298,
-            DailySubEntityTypeTimeOfDayMinutes: 5617773211005988520,
-            DailySubEntityTypeTimeOfDayNanos: 2339563716805116249,
-            DailySubEntityTypeTimeOfDaySeconds: 7144924247938981575,
-            Fields: "dolorem",
-            Key: "et",
-            OauthToken: "voluptate",
-            PrettyPrint: true,
-            QuotaUser: "vitae",
-            UploadType: "totam",
-            UploadProtocol: "dolores",
+            DailySubEntityTypeTimeOfDayHours: 297534,
+            DailySubEntityTypeTimeOfDayMinutes: 891773,
+            DailySubEntityTypeTimeOfDayNanos: 56713,
+            DailySubEntityTypeTimeOfDaySeconds: 963663,
+            Fields: "enim",
+            Key: "eum",
+            OauthToken: "voluptatum",
+            PrettyPrint: false,
+            QuotaUser: "autem",
+            UploadType: "vel",
+            UploadProtocol: "non",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Locations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeries(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +53,6 @@ func main() {
     if res.GetDailyMetricsTimeSeriesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

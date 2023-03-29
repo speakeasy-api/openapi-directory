@@ -1,0 +1,9 @@
+configVersion: 1.0.0
+generation:
+  telemetryEnabled: false
+  sdkClassName: SDK
+  sdkFlattening: false
+  singleTagPerOp: false
+go:
+  version: 0.0.1
+  packageName: openapi

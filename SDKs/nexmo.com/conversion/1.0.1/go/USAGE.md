@@ -3,37 +3,36 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Option1: &shared.SecurityOption1{
-                    APIKey: shared.SchemeAPIKey{
-                        APIKey: "YOUR_API_KEY_HERE",
-                    },
-                    APISecret: shared.SchemeAPISecret{
-                        APIKey: "YOUR_API_KEY_HERE",
-                    },
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Option1: &shared.SecurityOption1{
+                APIKey: shared.SchemeAPIKey{
+                    APIKey: "YOUR_API_KEY_HERE",
                 },
-            }
-        ),
-    }
+                APISecret: shared.SchemeAPISecret{
+                    APIKey: "YOUR_API_KEY_HERE",
+                },
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.SmsConversionRequest{
         QueryParams: operations.SmsConversionQueryParams{
-            Delivered: "sit",
-            MessageID: "voluptas",
-            Timestamp: "culpa",
+            Delivered: "0",
+            MessageID: "deserunt",
+            Timestamp: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.SMSConversion.SmsConversion(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -42,5 +41,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

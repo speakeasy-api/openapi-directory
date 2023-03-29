@@ -3,43 +3,54 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddNotificationChannelRequest{
         Headers: operations.AddNotificationChannelHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.AddNotificationChannelRequestBody{
             Config: operations.AddNotificationChannelRequestBodyConfig{
+                Filters: &shared.NotificationFilterConfig{
+                    MessageTypes: []shared.NotificationMessageTypeEnum{
+                        "NEW_ASSOCIATION",
+                        "SEVERITY_UPGRADED",
+                        "SEVERITY_UPGRADED",
+                        "CLOSED_INSIGHT",
+                    },
+                    Severities: []shared.InsightSeverityEnum{
+                        "LOW",
+                        "HIGH",
+                    },
+                },
                 Sns: &shared.SnsChannelConfig{
-                    TopicArn: "voluptas",
+                    TopicArn: "inventore",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddNotificationChannel(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +59,6 @@ func main() {
     if res.AddNotificationChannelResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

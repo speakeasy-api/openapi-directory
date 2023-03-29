@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/openbankingproject.ch/1.3.8_2020-12-14 - Swiss edition 1.3.8.1-CH/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,24 +14,16 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                BearerAuthOAuth: &shared.SchemeBearerAuthOAuth{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New()
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateConsentRequest{
         Security: operations.CreateConsentSecurity{
             BearerAuthOAuth: &shared.SchemeBearerAuthOAuth{
@@ -39,102 +31,141 @@ func main() {
             },
         },
         Headers: operations.CreateConsentHeaders{
-            Digest: "sit",
-            PSUAccept: "voluptas",
-            PSUAcceptCharset: "culpa",
-            PSUAcceptEncoding: "expedita",
-            PSUAcceptLanguage: "consequuntur",
-            PSUCorporateID: "dolor",
-            PSUCorporateIDType: "expedita",
-            PSUDeviceID: "voluptas",
-            PSUGeoLocation: "fugit",
+            Digest: "unde",
+            PSUAccept: "deserunt",
+            PSUAcceptCharset: "porro",
+            PSUAcceptEncoding: "nulla",
+            PSUAcceptLanguage: "id",
+            PSUCorporateID: "vero",
+            PSUCorporateIDType: "perspiciatis",
+            PSUDeviceID: "nulla",
+            PSUGeoLocation: "nihil",
             PSUHTTPMethod: "PATCH",
-            PSUID: "nihil",
-            PSUIDType: "rerum",
-            PSUIPAddress: "dicta",
-            PSUIPPort: "debitis",
-            PSUUserAgent: "voluptatum",
-            Signature: "et",
-            TPPBrandLoggingInformation: "ut",
-            TPPExplicitAuthorisationPreferred: true,
-            TPPNokRedirectURI: "et",
-            TPPNotificationContentPreferred: "voluptate",
-            TPPNotificationURI: "iste",
-            TPPRedirectPreferred: true,
-            TPPRedirectURI: "totam",
-            TPPSignatureCertificate: "dolores",
-            XRequestID: "illum",
+            PsuID: "facilis",
+            PSUIDType: "eum",
+            PSUIPAddress: "112.76.228.14",
+            PSUIPPort: "sapiente",
+            PSUUserAgent: "enim",
+            Signature: "eum",
+            TPPBrandLoggingInformation: "voluptatum",
+            TPPExplicitAuthorisationPreferred: false,
+            TPPNokRedirectURI: "https://randy.name",
+            TPPNotificationContentPreferred: "deleniti",
+            TPPNotificationURI: "similique",
+            TPPRedirectPreferred: false,
+            TPPRedirectURI: "http://tianna.org",
+            TPPSignatureCertificate: "quasi",
+            XRequestID: "laboriosam",
         },
         Request: &shared.Consents{
             Access: shared.AccountAccess{
-                Accounts: []shared.AccountReference16Ch{
-                    shared.AccountReference16Ch{
-                        CashAccountType: "vel",
-                        Currency: "odio",
-                        Iban: "dolore",
-                        OtherAccountIdentification: "id",
+                Accounts: []shared.AccountReference16CH{
+                    shared.AccountReference16CH{
+                        CashAccountType: "est",
+                        Currency: "EUR",
+                        Iban: "FR7612345987650123456789014",
+                        OtherAccountIdentification: "90-100100-0",
                     },
                 },
                 AdditionalInformation: &shared.AdditionalInformationAccess{
-                    OwnerName: []shared.AccountReference16Ch{
-                        shared.AccountReference16Ch{
-                            CashAccountType: "accusantium",
-                            Currency: "totam",
-                            Iban: "commodi",
-                            OtherAccountIdentification: "quis",
+                    OwnerName: []shared.AccountReference16CH{
+                        shared.AccountReference16CH{
+                            CashAccountType: "consequatur",
+                            Currency: "EUR",
+                            Iban: "FR7612345987650123456789014",
+                            OtherAccountIdentification: "90-100100-0",
                         },
                     },
-                    TrustedBeneficiaries: []shared.AccountReference16Ch{
-                        shared.AccountReference16Ch{
-                            CashAccountType: "aut",
-                            Currency: "odit",
-                            Iban: "non",
-                            OtherAccountIdentification: "voluptas",
+                    TrustedBeneficiaries: []shared.AccountReference16CH{
+                        shared.AccountReference16CH{
+                            CashAccountType: "a",
+                            Currency: "EUR",
+                            Iban: "FR7612345987650123456789014",
+                            OtherAccountIdentification: "90-100100-0",
                         },
-                        shared.AccountReference16Ch{
+                        shared.AccountReference16CH{
                             CashAccountType: "omnis",
-                            Currency: "aut",
-                            Iban: "illo",
-                            OtherAccountIdentification: "sed",
+                            Currency: "EUR",
+                            Iban: "FR7612345987650123456789014",
+                            OtherAccountIdentification: "90-100100-0",
+                        },
+                        shared.AccountReference16CH{
+                            CashAccountType: "eos",
+                            Currency: "EUR",
+                            Iban: "FR7612345987650123456789014",
+                            OtherAccountIdentification: "90-100100-0",
+                        },
+                        shared.AccountReference16CH{
+                            CashAccountType: "accusamus",
+                            Currency: "EUR",
+                            Iban: "FR7612345987650123456789014",
+                            OtherAccountIdentification: "90-100100-0",
                         },
                     },
                 },
                 AllPsd2: "allAccountsWithOwnerName",
                 AvailableAccounts: "allAccountsWithOwnerName",
                 AvailableAccountsWithBalance: "allAccounts",
-                Balances: []shared.AccountReference16Ch{
-                    shared.AccountReference16Ch{
-                        CashAccountType: "odio",
-                        Currency: "qui",
-                        Iban: "recusandae",
-                        OtherAccountIdentification: "at",
+                Balances: []shared.AccountReference16CH{
+                    shared.AccountReference16CH{
+                        CashAccountType: "et",
+                        Currency: "EUR",
+                        Iban: "FR7612345987650123456789014",
+                        OtherAccountIdentification: "90-100100-0",
+                    },
+                    shared.AccountReference16CH{
+                        CashAccountType: "praesentium",
+                        Currency: "EUR",
+                        Iban: "FR7612345987650123456789014",
+                        OtherAccountIdentification: "90-100100-0",
+                    },
+                    shared.AccountReference16CH{
+                        CashAccountType: "occaecati",
+                        Currency: "EUR",
+                        Iban: "FR7612345987650123456789014",
+                        OtherAccountIdentification: "90-100100-0",
+                    },
+                    shared.AccountReference16CH{
+                        CashAccountType: "dolor",
+                        Currency: "EUR",
+                        Iban: "FR7612345987650123456789014",
+                        OtherAccountIdentification: "90-100100-0",
                     },
                 },
                 RestrictedTo: []string{
-                    "eveniet",
+                    "sed",
+                    "quisquam",
+                    "rerum",
                 },
-                Transactions: []shared.AccountReference16Ch{
-                    shared.AccountReference16Ch{
-                        CashAccountType: "sint",
-                        Currency: "inventore",
-                        Iban: "ut",
-                        OtherAccountIdentification: "exercitationem",
+                Transactions: []shared.AccountReference16CH{
+                    shared.AccountReference16CH{
+                        CashAccountType: "qui",
+                        Currency: "EUR",
+                        Iban: "FR7612345987650123456789014",
+                        OtherAccountIdentification: "90-100100-0",
                     },
-                    shared.AccountReference16Ch{
-                        CashAccountType: "aut",
-                        Currency: "reprehenderit",
-                        Iban: "tempore",
-                        OtherAccountIdentification: "maiores",
+                    shared.AccountReference16CH{
+                        CashAccountType: "sed",
+                        Currency: "EUR",
+                        Iban: "FR7612345987650123456789014",
+                        OtherAccountIdentification: "90-100100-0",
+                    },
+                    shared.AccountReference16CH{
+                        CashAccountType: "rerum",
+                        Currency: "EUR",
+                        Iban: "FR7612345987650123456789014",
+                        OtherAccountIdentification: "90-100100-0",
                     },
                 },
             },
             CombinedServiceIndicator: false,
-            FrequencyPerDay: 7242748068272024738,
+            FrequencyPerDay: 4,
             RecurringIndicator: false,
-            ValidUntil: "1992-08-27",
+            ValidUntil: "2020-12-31",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AccountInformationServiceAIS.CreateConsent(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -143,13 +174,15 @@ func main() {
     if res.ConsentsResponse201 != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Account Information Service (AIS)
+
+### AccountInformationServiceAIS
 
 * `CreateConsent` - Create consent
 * `DeleteConsent` - Delete Consent
@@ -165,7 +198,7 @@ func main() {
 * `StartConsentAuthorisation` - Start the authorisation process for a consent
 * `UpdateConsentsPsuData` - Update PSU Data for consents
 
-### Common Services
+### CommonServices
 
 * `DeleteSigningBasket` - Delete the signing basket
 * `GetConsentScaStatus` - Read the SCA status of the consent authorisation
@@ -184,11 +217,11 @@ func main() {
 * `UpdatePaymentPsuData` - Update PSU data for payment initiation
 * `UpdateSigningBasketPsuData` - Update PSU data for signing basket
 
-### Confirmation of Funds Service (PIIS)
+### ConfirmationOfFundsServicePIIS
 
 * `CheckAvailabilityOfFunds` - Confirmation of funds request
 
-### Payment Initiation Service (PIS)
+### PaymentInitiationServicePIS
 
 * `CancelPayment` - Payment cancellation request
 * `GetPaymentCancellationScaStatus` - Read the SCA status of the payment cancellation's authorisation
@@ -197,13 +230,15 @@ func main() {
 * `GetPaymentInitiationCancellationAuthorisationInformation` - Will deliver an array of resource identifications to all generated cancellation authorisation sub-resources
 * `GetPaymentInitiationScaStatus` - Read the SCA status of the payment authorisation
 * `GetPaymentInitiationStatus` - Payment initiation status request
-* `InitiatePayment` - Payment initiation request
+* `InitiatePaymentJSON` - Payment initiation request
+* `InitiatePaymentMultipart` - Payment initiation request
+* `InitiatePaymentRaw` - Payment initiation request
 * `StartPaymentAuthorisation` - Start the authorisation process for a payment initiation
 * `StartPaymentInitiationCancellationAuthorisation` - Start the authorisation process for the cancellation of the addressed payment
 * `UpdatePaymentCancellationPsuData` - Update PSU data for payment initiation cancellation
 * `UpdatePaymentPsuData` - Update PSU data for payment initiation
 
-### Signing Baskets Service (SBS)
+### SigningBasketsServiceSBS
 
 * `CreateSigningBasket` - Create a signing basket resource
 * `DeleteSigningBasket` - Delete the signing basket
@@ -213,7 +248,6 @@ func main() {
 * `GetSigningBasketStatus` - Read the status of the signing basket
 * `StartSigningBasketAuthorisation` - Start the authorisation process for a signing basket
 * `UpdateSigningBasketPsuData` - Update PSU data for signing basket
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

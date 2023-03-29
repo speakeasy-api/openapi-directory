@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.SearchRequest{
         Security: operations.SearchSecurity{
             APIKey: shared.SchemeAPIKey{
@@ -18,11 +20,12 @@ func main() {
             },
         },
         QueryParams: operations.SearchQueryParams{
-            MatchMode: "literal",
-            Query: "voluptas",
+            MatchMode: "regexp",
+            Query: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Search.Search(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.SearchResults != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

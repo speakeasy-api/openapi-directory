@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,23 +12,24 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.GetArrivalsAndDeparturesByCrsRequest{
-        PathParams: operations.GetArrivalsAndDeparturesByCrsPathParams{
-            CRS: "sit",
+
+    req := operations.GetArrivalsAndDeparturesByCRSRequest{
+        PathParams: operations.GetArrivalsAndDeparturesByCRSPathParams{
+            Crs: "unde",
         },
-        QueryParams: operations.GetArrivalsAndDeparturesByCrsQueryParams{
-            APIKey: "voluptas",
-            FilterStation: "culpa",
-            FilterType: "expedita",
-            NumServices: 3390393562759376202,
+        QueryParams: operations.GetArrivalsAndDeparturesByCRSQueryParams{
+            APIKey: "deserunt",
+            FilterStation: "porro",
+            FilterType: "nulla",
+            NumServices: 602763,
             ServiceDetails: false,
-            TimeOffset: 1774932891286980153,
-            TimeWindow: 6044372234677422456,
+            TimeOffset: 857946,
+            TimeWindow: 544883,
         },
     }
-    
-    res, err := s.DeparturesAndArrivals.GetArrivalsAndDeparturesByCrs(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.DeparturesAndArrivals.GetArrivalsAndDeparturesByCRS(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -34,5 +37,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

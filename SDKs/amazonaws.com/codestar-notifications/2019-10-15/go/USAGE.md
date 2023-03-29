@@ -3,63 +3,63 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateNotificationRuleRequest{
         Headers: operations.CreateNotificationRuleHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateNotificationRuleRequestBody{
-            ClientRequestToken: "voluptas",
+            ClientRequestToken: "nulla",
             DetailType: "BASIC",
             EventTypeIds: []string{
-                "nihil",
+                "facilis",
+                "eum",
+                "iusto",
             },
-            Name: "rerum",
-            Resource: "dicta",
+            Name: "ullam",
+            Resource: "saepe",
             Status: "ENABLED",
             Tags: map[string]string{
-                "et": "ut",
+                "enim": "eum",
+                "voluptatum": "autem",
+                "vel": "non",
+                "deleniti": "similique",
             },
             Targets: []shared.Target{
                 shared.Target{
-                    TargetAddress: "et",
-                    TargetType: "voluptate",
+                    TargetAddress: "molestiae",
+                    TargetType: "quo",
                 },
                 shared.Target{
-                    TargetAddress: "iste",
-                    TargetType: "vitae",
-                },
-                shared.Target{
-                    TargetAddress: "totam",
-                    TargetType: "dolores",
+                    TargetAddress: "quasi",
+                    TargetType: "laboriosam",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateNotificationRule(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -68,5 +68,6 @@ func main() {
     if res.CreateNotificationRuleResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

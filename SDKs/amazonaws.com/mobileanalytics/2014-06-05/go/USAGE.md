@@ -3,59 +3,102 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.PutEventsRequest{
         Headers: operations.PutEventsHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-            XAmzClientContext: "voluptas",
-            XAmzClientContextEncoding: "fugit",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+            XAmzClientContext: "nulla",
+            XAmzClientContextEncoding: "nihil",
         },
         Request: operations.PutEventsRequestBody{
             Events: []shared.Event{
                 shared.Event{
                     Attributes: map[string]string{
-                        "rerum": "dicta",
+                        "eum": "iusto",
+                        "ullam": "saepe",
+                        "inventore": "sapiente",
                     },
-                    EventType: "debitis",
+                    EventType: "enim",
                     Metrics: map[string]float64{
-                        "et": 11.100000,
+                        "voluptatum": 7917.25,
+                        "vel": 5288.95,
                     },
                     Session: &shared.Session{
-                        Duration: 7259475919510918339,
-                        ID: "voluptate",
-                        StartTimestamp: "iste",
-                        StopTimestamp: "vitae",
+                        Duration: 479977,
+                        ID: "similique",
+                        StartTimestamp: "reprehenderit",
+                        StopTimestamp: "molestiae",
                     },
-                    Timestamp: "totam",
-                    Version: "dolores",
+                    Timestamp: "quo",
+                    Version: "quasi",
+                },
+                shared.Event{
+                    Attributes: map[string]string{
+                        "dicta": "est",
+                        "voluptatem": "consequatur",
+                    },
+                    EventType: "fugiat",
+                    Metrics: map[string]float64{
+                        "omnis": 1403.5,
+                        "accusamus": 8700.88,
+                        "reiciendis": 4736.08,
+                        "quibusdam": 8009.11,
+                    },
+                    Session: &shared.Session{
+                        Duration: 461479,
+                        ID: "occaecati",
+                        StartTimestamp: "dolor",
+                        StopTimestamp: "soluta",
+                    },
+                    Timestamp: "sed",
+                    Version: "quisquam",
+                },
+                shared.Event{
+                    Attributes: map[string]string{
+                        "culpa": "qui",
+                        "sed": "rerum",
+                        "possimus": "occaecati",
+                    },
+                    EventType: "odit",
+                    Metrics: map[string]float64{
+                        "rem": 2645.55,
+                        "amet": 7742.34,
+                    },
+                    Session: &shared.Session{
+                        Duration: 736918,
+                        ID: "blanditiis",
+                        StartTimestamp: "numquam",
+                        StopTimestamp: "similique",
+                    },
+                    Timestamp: "dolores",
+                    Version: "sit",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.PutEvents(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -64,5 +107,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

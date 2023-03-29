@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest{
         Security: operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,26 +23,27 @@ func main() {
             },
         },
         PathParams: operations.CloudprivatecatalogOrganizationsCatalogsSearchPathParams{
-            Resource: "sit",
+            Resource: "unde",
         },
         QueryParams: operations.CloudprivatecatalogOrganizationsCatalogsSearchQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PageSize: 8274930044578894929,
-            PageToken: "et",
-            PrettyPrint: true,
-            Query: "rerum",
-            QuotaUser: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PageSize: 423655,
+            PageToken: "fuga",
+            PrettyPrint: false,
+            Query: "facilis",
+            QuotaUser: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Organizations.CloudprivatecatalogOrganizationsCatalogsSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +52,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,48 +3,50 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateTokenRequest{
         Headers: operations.CreateTokenHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateTokenRequestBody{
-            ClientID: "voluptas",
-            ClientSecret: "fugit",
-            Code: "et",
-            DeviceCode: "nihil",
-            GrantType: "rerum",
-            RedirectURI: "dicta",
-            RefreshToken: "debitis",
+            ClientID: "nulla",
+            ClientSecret: "nihil",
+            Code: "fuga",
+            DeviceCode: "facilis",
+            GrantType: "eum",
+            RedirectURI: "iusto",
+            RefreshToken: "ullam",
             Scope: []string{
-                "et",
+                "inventore",
+                "sapiente",
+                "enim",
+                "eum",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateToken(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +55,6 @@ func main() {
     if res.CreateTokenResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

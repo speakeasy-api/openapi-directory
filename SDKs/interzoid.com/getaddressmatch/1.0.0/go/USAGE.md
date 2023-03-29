@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetaddressmatchRequest{
         QueryParams: operations.GetaddressmatchQueryParams{
-            Address: "sit",
-            License: "voluptas",
+            Address: "5786 Roselyn Throughway",
+            License: "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.StreetAddressSimilarityKey.Getaddressmatch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -26,5 +29,6 @@ func main() {
     if res.Getaddressmatch200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

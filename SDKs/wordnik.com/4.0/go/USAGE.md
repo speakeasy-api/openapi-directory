@@ -3,33 +3,26 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: &shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New()
 
-    s := sdk.New(opts...)
-    
     req := operations.AuthenticateRequest{
         PathParams: operations.AuthenticatePathParams{
-            Username: "sit",
+            Username: "Katelynn_Medhurst60",
         },
         QueryParams: operations.AuthenticateQueryParams{
-            Password: "voluptas",
+            Password: "vero",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Account.Authenticate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -38,5 +31,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

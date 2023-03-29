@@ -3,60 +3,68 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateAccessRequest{
         Headers: operations.CreateAccessHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "TransferService.CreateAccess",
         },
         Request: shared.CreateAccessRequest{
-            ExternalID: "fugit",
-            HomeDirectory: "et",
+            ExternalID: "nihil",
+            HomeDirectory: "fuga",
             HomeDirectoryMappings: []shared.HomeDirectoryMapEntry{
                 shared.HomeDirectoryMapEntry{
-                    Entry: "rerum",
-                    Target: "dicta",
+                    Entry: "eum",
+                    Target: "iusto",
+                },
+                shared.HomeDirectoryMapEntry{
+                    Entry: "ullam",
+                    Target: "saepe",
+                },
+                shared.HomeDirectoryMapEntry{
+                    Entry: "inventore",
+                    Target: "sapiente",
                 },
             },
             HomeDirectoryType: "PATH",
-            Policy: "voluptatum",
+            Policy: "eum",
             PosixProfile: &shared.PosixProfile{
-                Gid: 2339563716805116249,
+                Gid: 477665,
                 SecondaryGids: []int64{
-                    161231572858529631,
-                    7259475919510918339,
-                    7373105480197164748,
+                    812169,
+                    528895,
+                    479977,
+                    568045,
                 },
-                UID: 3287288577352441706,
+                UID: 392785,
             },
-            Role: "vitae",
-            ServerID: "totam",
+            Role: "molestiae",
+            ServerID: "quo",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateAccess(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -65,5 +73,6 @@ func main() {
     if res.CreateAccessResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

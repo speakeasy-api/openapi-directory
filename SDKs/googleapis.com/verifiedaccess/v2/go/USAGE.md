@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.VerifiedaccessChallengeGenerateRequest{
         Security: operations.VerifiedaccessChallengeGenerateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,25 +23,26 @@ func main() {
             },
         },
         QueryParams: operations.VerifiedaccessChallengeGenerateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: map[string]interface{}{
-            "dicta": "debitis",
-            "voluptatum": "et",
-            "ut": "dolorem",
+            "eum": "iusto",
+            "ullam": "saepe",
+            "inventore": "sapiente",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Challenge.VerifiedaccessChallengeGenerate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +51,6 @@ func main() {
     if res.Challenge != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

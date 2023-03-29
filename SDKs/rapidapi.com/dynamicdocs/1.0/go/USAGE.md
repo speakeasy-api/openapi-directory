@@ -3,45 +3,44 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                AdvSecurityToken: &shared.SchemeAdvSecurityToken{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            AdvSecurityToken: &shared.SchemeAdvSecurityToken{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CompileRequest{
         PathParams: operations.CompilePathParams{
-            TemplateToken: "sit",
+            TemplateToken: "7a582350acb835ed",
         },
         QueryParams: operations.CompileQueryParams{
-            DocFileName: "voluptas",
-            DocURLExpiresIn: 6050128673802995827,
-            LatexCompiler: "pdflatex",
-            LatexRuns: 3390393562759376202,
-            MainFileName: "dolor",
+            DocFileName: "brilliantDocument",
+            DocURLExpiresIn: 3600,
+            LatexCompiler: "lualatex",
+            LatexRuns: 592845,
+            MainFileName: "inputFile.tex",
         },
         Headers: operations.CompileHeaders{
-            ContentType: "expedita",
+            ContentType: "application/json",
         },
         Request: map[string]interface{}{
-            "fugit": "et",
-            "nihil": "rerum",
-            "dicta": "debitis",
+            "nulla": "id",
+            "vero": "perspiciatis",
+            "nulla": "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.PDFGeneration.Compile(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +49,6 @@ func main() {
     if res.Compile200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

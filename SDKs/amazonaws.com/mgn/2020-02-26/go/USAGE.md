@@ -3,49 +3,46 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.ArchiveApplicationRequest{
+        Headers: operations.ArchiveApplicationHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+        },
+        Request: operations.ArchiveApplicationRequestBody{
+            ApplicationID: "nulla",
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.ChangeServerLifeCycleStateRequest{
-        Headers: operations.ChangeServerLifeCycleStateHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-        },
-        Request: operations.ChangeServerLifeCycleStateRequestBody{
-            LifeCycle: operations.ChangeServerLifeCycleStateRequestBodyLifeCycle{
-                State: "CUTOVER",
-            },
-            SourceServerID: "fugit",
-        },
-    }
-    
-    res, err := s.ChangeServerLifeCycleState(ctx, req)
+    ctx := context.Background()
+    res, err := s.ArchiveApplication(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.SourceServer != nil {
+    if res.Application != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

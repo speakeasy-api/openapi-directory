@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,16 +12,17 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.KeyRevokeRequest{
         PathParams: operations.KeyRevokePathParams{
-            PK: "sit",
+            Pk: "unde",
         },
         QueryParams: operations.KeyRevokeQueryParams{
-            Secret: "voluptas",
+            Secret: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Delete.KeyRevoke(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -28,5 +31,6 @@ func main() {
     if res.KeyRevoke200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

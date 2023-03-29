@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetOrdersRequest{
         QueryParams: operations.GetOrdersQueryParams{
-            Limit: "sit",
-            Offset: "voluptas",
-            OrderStatus: "Cancelled",
+            Limit: "unde",
+            Offset: "deserunt",
+            OrderStatus: "Completed",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetOrders(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.ListOfOrders != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

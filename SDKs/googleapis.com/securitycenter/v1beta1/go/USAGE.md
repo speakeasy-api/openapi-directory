@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.SecuritycenterOrganizationsAssetsGroupRequest{
         Security: operations.SecuritycenterOrganizationsAssetsGroupSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,31 +23,32 @@ func main() {
             },
         },
         PathParams: operations.SecuritycenterOrganizationsAssetsGroupPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.SecuritycenterOrganizationsAssetsGroupQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GroupAssetsRequest{
-            CompareDuration: "dicta",
-            Filter: "debitis",
-            GroupBy: "voluptatum",
-            PageSize: 2339563716805116249,
-            PageToken: "ut",
-            ReadTime: "dolorem",
+            CompareDuration: "eum",
+            Filter: "iusto",
+            GroupBy: "ullam",
+            PageSize: 891773,
+            PageToken: "inventore",
+            ReadTime: "sapiente",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Organizations.SecuritycenterOrganizationsAssetsGroup(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +57,6 @@ func main() {
     if res.GroupAssetsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AdsenseAccountsAdclientsGetAdCodeRequest{
         Security: operations.AdsenseAccountsAdclientsGetAdCodeSecurity{
             Option1: &operations.AdsenseAccountsAdclientsGetAdCodeSecurityOption1{
@@ -23,21 +25,22 @@ func main() {
             },
         },
         PathParams: operations.AdsenseAccountsAdclientsGetAdCodePathParams{
-            AccountID: "sit",
-            AdClientID: "voluptas",
+            AccountID: "unde",
+            AdClientID: "deserunt",
         },
         QueryParams: operations.AdsenseAccountsAdclientsGetAdCodeQueryParams{
             Alt: "json",
-            Fields: "expedita",
-            Key: "consequuntur",
-            OauthToken: "dolor",
-            PrettyPrint: true,
-            QuotaUser: "voluptas",
-            TagPartner: "fugit",
-            UserIP: "et",
+            Fields: "nulla",
+            Key: "id",
+            OauthToken: "vero",
+            PrettyPrint: false,
+            QuotaUser: "perspiciatis",
+            TagPartner: "nulla",
+            UserIP: "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.AdsenseAccountsAdclientsGetAdCode(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,5 +49,6 @@ func main() {
     if res.AdCode != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

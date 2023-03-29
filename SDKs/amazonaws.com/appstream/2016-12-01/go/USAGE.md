@@ -3,48 +3,48 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.AssociateApplicationFleetRequest{
+        Headers: operations.AssociateApplicationFleetHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+            XAmzTarget: "PhotonAdminProxyService.AssociateApplicationFleet",
+        },
+        Request: shared.AssociateApplicationFleetRequest{
+            ApplicationArn: "nihil",
+            FleetName: "fuga",
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.AssociateFleetRequest{
-        Headers: operations.AssociateFleetHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-            XAmzTarget: "PhotonAdminProxyService.AssociateFleet",
-        },
-        Request: shared.AssociateFleetRequest{
-            FleetName: "fugit",
-            StackName: "et",
-        },
-    }
-    
-    res, err := s.AssociateFleet(ctx, req)
+    ctx := context.Background()
+    res, err := s.AssociateApplicationFleet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.AssociateFleetResult != nil {
+    if res.AssociateApplicationFleetResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

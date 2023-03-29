@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/automl/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AutomlProjectsLocationsDatasetsCreateRequest{
         Security: operations.AutomlProjectsLocationsDatasetsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,72 +34,84 @@ func main() {
             },
         },
         PathParams: operations.AutomlProjectsLocationsDatasetsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.AutomlProjectsLocationsDatasetsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Dataset{
-            CreateTime: "dicta",
-            Description: "debitis",
-            DisplayName: "voluptatum",
-            Etag: "et",
-            ExampleCount: 7144924247938981575,
+            CreateTime: "eum",
+            Description: "iusto",
+            DisplayName: "ullam",
+            Etag: "saepe",
+            ExampleCount: 56713,
             ImageClassificationDatasetMetadata: &shared.ImageClassificationDatasetMetadata{
                 ClassificationType: "MULTILABEL",
             },
             ImageObjectDetectionDatasetMetadata: map[string]interface{}{
-                "voluptate": "iste",
-                "vitae": "totam",
+                "eum": "voluptatum",
+                "autem": "vel",
             },
-            Name: "dolores",
+            Name: "non",
             TablesDatasetMetadata: &shared.TablesDatasetMetadata{
-                MlUseColumnSpecID: "illum",
-                PrimaryTableSpecID: "debitis",
-                StatsUpdateTime: "vel",
+                MlUseColumnSpecID: "deleniti",
+                PrimaryTableSpecID: "similique",
+                StatsUpdateTime: "reprehenderit",
                 TargetColumnCorrelations: map[string]shared.CorrelationStats{
-                    "dolore": shared.CorrelationStats{
-                        CramersV: 12.200000,
+                    "quo": shared.CorrelationStats{
+                        CramersV: 710.36,
+                    },
+                    "laboriosam": shared.CorrelationStats{
+                        CramersV: 871.29,
+                    },
+                    "est": shared.CorrelationStats{
+                        CramersV: 202.18,
+                    },
+                    "consequatur": shared.CorrelationStats{
+                        CramersV: 8326.2,
                     },
                 },
-                TargetColumnSpecID: "accusantium",
-                WeightColumnSpecID: "totam",
+                TargetColumnSpecID: "a",
+                WeightColumnSpecID: "omnis",
             },
             TextClassificationDatasetMetadata: &shared.TextClassificationDatasetMetadata{
-                ClassificationType: "MULTICLASS",
+                ClassificationType: "CLASSIFICATION_TYPE_UNSPECIFIED",
             },
             TextExtractionDatasetMetadata: map[string]interface{}{
-                "est": "aut",
-                "odit": "non",
-                "voluptas": "omnis",
+                "accusamus": "reiciendis",
+                "rem": "quibusdam",
+                "et": "praesentium",
+                "occaecati": "dolor",
             },
             TextSentimentDatasetMetadata: &shared.TextSentimentDatasetMetadata{
-                SentimentMax: 1059542851699319360,
+                SentimentMax: 678880,
             },
             TranslationDatasetMetadata: &shared.TranslationDatasetMetadata{
-                SourceLanguageCode: "illo",
-                TargetLanguageCode: "sed",
+                SourceLanguageCode: "sed",
+                TargetLanguageCode: "quisquam",
             },
             VideoClassificationDatasetMetadata: map[string]interface{}{
-                "autem": "consectetur",
-                "nobis": "odio",
+                "culpa": "qui",
+                "sed": "rerum",
+                "possimus": "occaecati",
             },
             VideoObjectTrackingDatasetMetadata: map[string]interface{}{
-                "recusandae": "at",
+                "esse": "rem",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.AutomlProjectsLocationsDatasetsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -106,13 +120,15 @@ func main() {
     if res.Dataset != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `AutomlProjectsLocationsDatasetsCreate` - Creates a dataset.
 * `AutomlProjectsLocationsDatasetsExportData` - Exports dataset's data to the provided output location. Returns an empty response in the response field when it completes.
@@ -139,7 +155,6 @@ func main() {
 * `AutomlProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 * `AutomlProjectsLocationsOperationsWait` - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
 * `AutomlProjectsLocationsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

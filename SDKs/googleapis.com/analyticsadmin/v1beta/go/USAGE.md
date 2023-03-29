@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AnalyticsadminAccountSummariesListRequest{
         Security: operations.AnalyticsadminAccountSummariesListSecurity{
             Option1: &operations.AnalyticsadminAccountSummariesListSecurityOption1{
@@ -23,22 +25,23 @@ func main() {
             },
         },
         QueryParams: operations.AnalyticsadminAccountSummariesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PageSize: 6044372234677422456,
-            PageToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PageSize: 847252,
+            PageToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AccountSummaries.AnalyticsadminAccountSummariesList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +50,6 @@ func main() {
     if res.GoogleAnalyticsAdminV1betaListAccountSummariesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

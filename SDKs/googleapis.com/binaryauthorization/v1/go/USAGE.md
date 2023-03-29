@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BinaryauthorizationProjectsAttestorsCreateRequest{
         Security: operations.BinaryauthorizationProjectsAttestorsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,61 +23,71 @@ func main() {
             },
         },
         PathParams: operations.BinaryauthorizationProjectsAttestorsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BinaryauthorizationProjectsAttestorsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            AttestorID: "consequuntur",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            AttestorID: "id",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.AttestorInput{
-            Description: "debitis",
-            Etag: "voluptatum",
-            Name: "et",
+            Description: "iusto",
+            Etag: "ullam",
+            Name: "saepe",
             UserOwnedGrafeasNote: &shared.UserOwnedGrafeasNoteInput{
-                NoteReference: "ut",
+                NoteReference: "inventore",
                 PublicKeys: []shared.AttestorPublicKey{
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "et",
-                        Comment: "voluptate",
-                        ID: "iste",
+                        ASCIIArmoredPgpPublicKey: "enim",
+                        Comment: "eum",
+                        ID: "voluptatum",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "vitae",
+                            PublicKeyPem: "autem",
+                            SignatureAlgorithm: "ECDSA_P384_SHA384",
+                        },
+                    },
+                    shared.AttestorPublicKey{
+                        ASCIIArmoredPgpPublicKey: "non",
+                        Comment: "deleniti",
+                        ID: "similique",
+                        PkixPublicKey: &shared.PkixPublicKey{
+                            PublicKeyPem: "reprehenderit",
                             SignatureAlgorithm: "ECDSA_P521_SHA512",
                         },
                     },
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "dolores",
-                        Comment: "illum",
-                        ID: "debitis",
+                        ASCIIArmoredPgpPublicKey: "quo",
+                        Comment: "quasi",
+                        ID: "laboriosam",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "vel",
-                            SignatureAlgorithm: "EC_SIGN_P256_SHA256",
+                            PublicKeyPem: "dicta",
+                            SignatureAlgorithm: "RSA_SIGN_PKCS1_4096_SHA512",
                         },
                     },
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "dolore",
-                        Comment: "id",
-                        ID: "aspernatur",
+                        ASCIIArmoredPgpPublicKey: "voluptatem",
+                        Comment: "consequatur",
+                        ID: "fugiat",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "accusantium",
-                            SignatureAlgorithm: "ECDSA_P256_SHA256",
+                            PublicKeyPem: "a",
+                            SignatureAlgorithm: "EC_SIGN_P256_SHA256",
                         },
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.BinaryauthorizationProjectsAttestorsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -84,5 +96,6 @@ func main() {
     if res.Attestor != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

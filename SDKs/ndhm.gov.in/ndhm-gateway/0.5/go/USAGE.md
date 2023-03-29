@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,53 +12,55 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.PostV05CareContextsDiscoverRequest{
-        Headers: operations.PostV05CareContextsDiscoverHeaders{
-            Authorization: "sit",
-            XHIPID: "voluptas",
+
+    req := operations.PostV05CareContextsDiscoverJSONRequest{
+        Headers: operations.PostV05CareContextsDiscoverJSONHeaders{
+            Authorization: "unde",
+            XHipID: "deserunt",
         },
-        Request: operations.PostV05CareContextsDiscoverRequests{
-            ApplicationXML: []byte("culpa"),
-            PatientDiscoveryRequest: &shared.PatientDiscoveryRequest{
-                Patient: shared.PatientDiscoveryRequestPatient{
-                    Gender: "O",
-                    ID: "consequuntur",
-                    Name: "dolor",
-                    UnverifiedIdentifiers: []shared.Identifier{
-                        shared.Identifier{
-                            Type: "MR",
-                            Value: "fugit",
-                        },
-                        shared.Identifier{
-                            Type: "MOBILE",
-                            Value: "nihil",
-                        },
+        Request: shared.PatientDiscoveryRequest{
+            Patient: shared.PatientDiscoveryRequestPatient{
+                Gender: "O",
+                ID: "<patient-id>@<consent-manager-id>",
+                Name: "chandler bing",
+                UnverifiedIdentifiers: []shared.Identifier{
+                    shared.Identifier{
+                        Type: "NDHM_HEALTH_NUMBER",
+                        Value: "+919800083232",
                     },
-                    VerifiedIdentifiers: []shared.Identifier{
-                        shared.Identifier{
-                            Type: "HEALTH_ID",
-                            Value: "debitis",
-                        },
-                        shared.Identifier{
-                            Type: "MOBILE",
-                            Value: "et",
-                        },
-                        shared.Identifier{
-                            Type: "HEALTH_ID",
-                            Value: "dolorem",
-                        },
+                    shared.Identifier{
+                        Type: "HEALTH_ID",
+                        Value: "+919800083232",
                     },
-                    YearOfBirth: 7259475919510918339,
+                    shared.Identifier{
+                        Type: "NDHM_HEALTH_NUMBER",
+                        Value: "+919800083232",
+                    },
+                    shared.Identifier{
+                        Type: "HEALTH_ID",
+                        Value: "+919800083232",
+                    },
                 },
-                RequestID: "voluptate",
-                Timestamp: "1998-09-30T11:01:25Z",
-                TransactionID: "vitae",
+                VerifiedIdentifiers: []shared.Identifier{
+                    shared.Identifier{
+                        Type: "NDHM_HEALTH_NUMBER",
+                        Value: "+919800083232",
+                    },
+                    shared.Identifier{
+                        Type: "NDHM_HEALTH_NUMBER",
+                        Value: "+919800083232",
+                    },
+                },
+                YearOfBirth: 2000,
             },
+            RequestID: "499a5a4a-7dda-4f20-9b67-e24589627061",
+            Timestamp: "2022-11-09T05:33:56.370Z",
+            TransactionID: "74e0f467-cc87-496e-9151-a05dfc2ddf7c",
         },
     }
-    
-    res, err := s.CmFacing.PostV05CareContextsDiscover(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.CmFacing.PostV05CareContextsDiscoverJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -64,5 +68,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

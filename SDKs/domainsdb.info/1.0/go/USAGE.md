@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetDomainsTldZoneIDDownloadRequest{
         PathParams: operations.GetDomainsTldZoneIDDownloadPathParams{
-            ZoneID: "sit",
+            ZoneID: "unde",
         },
         QueryParams: operations.GetDomainsTldZoneIDDownloadQueryParams{
-            APIKey: "voluptas",
-            Date: "culpa",
+            APIKey: "deserunt",
+            Date: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Domains.GetDomainsTldZoneIDDownload(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAtmsRequest{
         Headers: operations.GetAtmsHeaders{
-            IfModifiedSince: "sit",
-            IfNoneMatch: "voluptas",
+            IfModifiedSince: "unde",
+            IfNoneMatch: "deserunt",
         },
     }
-    
-    res, err := s.ATM.GetAtms(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Atm.GetAtms(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -26,5 +29,6 @@ func main() {
     if res.GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

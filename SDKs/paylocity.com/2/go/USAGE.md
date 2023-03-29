@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AddOrUpdateAdditionalRatesRequest{
         Security: operations.AddOrUpdateAdditionalRatesSecurity{
             PaylocityAuth: shared.SchemePaylocityAuth{
@@ -18,25 +20,26 @@ func main() {
             },
         },
         PathParams: operations.AddOrUpdateAdditionalRatesPathParams{
-            CompanyID: "sit",
-            EmployeeID: "voluptas",
+            CompanyID: "unde",
+            EmployeeID: "deserunt",
         },
         Request: shared.AdditionalRate{
-            ChangeReason: "culpa",
-            CostCenter1: "expedita",
-            CostCenter2: "consequuntur",
-            CostCenter3: "dolor",
-            EffectiveDate: "expedita",
-            EndCheckDate: "voluptas",
-            Job: "fugit",
-            Rate: 28.100000,
-            RateCode: "rerum",
-            RateNotes: "dicta",
-            RatePer: "debitis",
-            Shift: "voluptatum",
+            ChangeReason: "porro",
+            CostCenter1: "nulla",
+            CostCenter2: "id",
+            CostCenter3: "vero",
+            EffectiveDate: "perspiciatis",
+            EndCheckDate: "nulla",
+            Job: "nihil",
+            Rate: 6235.64,
+            RateCode: "facilis",
+            RateNotes: "eum",
+            RatePer: "iusto",
+            Shift: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AdditionalRates.AddOrUpdateAdditionalRates(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -45,5 +48,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

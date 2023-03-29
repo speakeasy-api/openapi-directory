@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatapipelinesProjectsLocationsPipelinesCreateRequest{
         Security: operations.DatapipelinesProjectsLocationsPipelinesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,129 +23,132 @@ func main() {
             },
         },
         PathParams: operations.DatapipelinesProjectsLocationsPipelinesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.DatapipelinesProjectsLocationsPipelinesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudDatapipelinesV1PipelineInput{
-            DisplayName: "dicta",
-            Name: "debitis",
+            DisplayName: "eum",
+            Name: "iusto",
             PipelineSources: map[string]string{
-                "et": "ut",
+                "saepe": "inventore",
+                "sapiente": "enim",
             },
             ScheduleInfo: &shared.GoogleCloudDatapipelinesV1ScheduleSpecInput{
-                Schedule: "dolorem",
-                TimeZone: "et",
+                Schedule: "eum",
+                TimeZone: "voluptatum",
             },
-            SchedulerServiceAccountEmail: "voluptate",
-            State: "STATE_PAUSED",
-            Type: "PIPELINE_TYPE_UNSPECIFIED",
+            SchedulerServiceAccountEmail: "autem",
+            State: "STATE_ARCHIVED",
+            Type: "PIPELINE_TYPE_BATCH",
             Workload: &shared.GoogleCloudDatapipelinesV1Workload{
                 DataflowFlexTemplateRequest: &shared.GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest{
                     LaunchParameter: &shared.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter{
-                        ContainerSpecGcsPath: "totam",
+                        ContainerSpecGcsPath: "deleniti",
                         Environment: &shared.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment{
                             AdditionalExperiments: []string{
-                                "illum",
+                                "reprehenderit",
+                                "molestiae",
+                                "quo",
                             },
                             AdditionalUserLabels: map[string]string{
-                                "vel": "odio",
+                                "laboriosam": "dicta",
                             },
-                            EnableStreamingEngine: true,
+                            EnableStreamingEngine: false,
                             FlexrsGoal: "FLEXRS_SPEED_OPTIMIZED",
                             IPConfiguration: "WORKER_IP_UNSPECIFIED",
-                            KmsKeyName: "accusantium",
-                            MachineType: "totam",
-                            MaxWorkers: 6745438398739480977,
-                            Network: "quis",
-                            NumWorkers: 3398579248012586914,
-                            ServiceAccountEmail: "aut",
-                            Subnetwork: "odit",
-                            TempLocation: "non",
-                            WorkerRegion: "voluptas",
-                            WorkerZone: "omnis",
-                            Zone: "aut",
+                            KmsKeyName: "consequatur",
+                            MachineType: "fugiat",
+                            MaxWorkers: 957156,
+                            Network: "omnis",
+                            NumWorkers: 140350,
+                            ServiceAccountEmail: "accusamus",
+                            Subnetwork: "accusamus",
+                            TempLocation: "reiciendis",
+                            WorkerRegion: "rem",
+                            WorkerZone: "quibusdam",
+                            Zone: "et",
                         },
-                        JobName: "illo",
+                        JobName: "praesentium",
                         LaunchOptions: map[string]string{
-                            "officiis": "autem",
-                            "consectetur": "nobis",
-                            "odio": "qui",
+                            "dolor": "soluta",
+                            "sed": "quisquam",
+                            "rerum": "culpa",
                         },
                         Parameters: map[string]string{
-                            "at": "ipsum",
-                            "eveniet": "modi",
-                            "sint": "inventore",
+                            "sed": "rerum",
                         },
                         TransformNameMappings: map[string]string{
-                            "exercitationem": "aut",
-                            "reprehenderit": "tempore",
-                            "maiores": "incidunt",
+                            "occaecati": "odit",
+                            "esse": "rem",
+                            "voluptatem": "amet",
+                            "est": "id",
                         },
                         Update: false,
                     },
-                    Location: "beatae",
-                    ProjectID: "veritatis",
-                    ValidateOnly: true,
+                    Location: "blanditiis",
+                    ProjectID: "numquam",
+                    ValidateOnly: false,
                 },
                 DataflowLaunchTemplateRequest: &shared.GoogleCloudDatapipelinesV1LaunchTemplateRequest{
-                    GcsPath: "et",
+                    GcsPath: "similique",
                     LaunchParameters: &shared.GoogleCloudDatapipelinesV1LaunchTemplateParameters{
                         Environment: &shared.GoogleCloudDatapipelinesV1RuntimeEnvironment{
                             AdditionalExperiments: []string{
-                                "ipsum",
-                                "ex",
+                                "sit",
                             },
                             AdditionalUserLabels: map[string]string{
-                                "placeat": "vel",
-                                "rerum": "mollitia",
-                                "voluptas": "quam",
+                                "et": "voluptatem",
+                                "laborum": "modi",
                             },
                             BypassTempDirValidation: false,
-                            EnableStreamingEngine: true,
-                            IPConfiguration: "WORKER_IP_UNSPECIFIED",
-                            KmsKeyName: "unde",
-                            MachineType: "in",
-                            MaxWorkers: 7132033595893905170,
-                            Network: "qui",
-                            NumWorkers: 35604086129376003,
-                            ServiceAccountEmail: "itaque",
-                            Subnetwork: "ab",
-                            TempLocation: "neque",
-                            WorkerRegion: "ullam",
-                            WorkerZone: "et",
-                            Zone: "accusantium",
+                            EnableStreamingEngine: false,
+                            IPConfiguration: "WORKER_IP_PUBLIC",
+                            KmsKeyName: "iure",
+                            MachineType: "earum",
+                            MaxWorkers: 902599,
+                            Network: "soluta",
+                            NumWorkers: 449950,
+                            ServiceAccountEmail: "ea",
+                            Subnetwork: "laborum",
+                            TempLocation: "iusto",
+                            WorkerRegion: "ut",
+                            WorkerZone: "optio",
+                            Zone: "aspernatur",
                         },
-                        JobName: "esse",
+                        JobName: "inventore",
                         Parameters: map[string]string{
-                            "quam": "velit",
-                            "cumque": "soluta",
+                            "libero": "et",
+                            "libero": "ipsum",
+                            "non": "ea",
+                            "magni": "placeat",
                         },
                         TransformNameMapping: map[string]string{
-                            "voluptates": "magni",
-                            "et": "optio",
+                            "est": "commodi",
+                            "quia": "similique",
                         },
-                        Update: true,
+                        Update: false,
                     },
-                    Location: "earum",
-                    ProjectID: "illo",
-                    ValidateOnly: true,
+                    Location: "eaque",
+                    ProjectID: "odio",
+                    ValidateOnly: false,
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DatapipelinesProjectsLocationsPipelinesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -152,5 +157,6 @@ func main() {
     if res.GoogleCloudDatapipelinesV1Pipeline != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

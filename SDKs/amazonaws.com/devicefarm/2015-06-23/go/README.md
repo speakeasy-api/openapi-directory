@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/devicefarm/2015-06-23/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,60 +14,54 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateDevicePoolRequest{
         Headers: operations.CreateDevicePoolHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "DeviceFarm_20150623.CreateDevicePool",
         },
         Request: shared.CreateDevicePoolRequest{
-            Description: "fugit",
-            MaxDevices: 1543572285742637646,
-            Name: "nihil",
-            ProjectArn: "rerum",
+            Description: "nihil",
+            MaxDevices: 623564,
+            Name: "facilis",
+            ProjectArn: "eum",
             Rules: []shared.Rule{
                 shared.Rule{
-                    Attribute: "REMOTE_ACCESS_ENABLED",
-                    Operator: "EQUALS",
-                    Value: "et",
+                    Attribute: "MANUFACTURER",
+                    Operator: "CONTAINS",
+                    Value: "inventore",
                 },
                 shared.Rule{
-                    Attribute: "ARN",
+                    Attribute: "AVAILABILITY",
                     Operator: "LESS_THAN_OR_EQUALS",
-                    Value: "et",
-                },
-                shared.Rule{
-                    Attribute: "FORM_FACTOR",
-                    Operator: "GREATER_THAN",
-                    Value: "vitae",
+                    Value: "eum",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateDevicePool(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -76,6 +70,7 @@ func main() {
     if res.CreateDevicePoolResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -92,7 +87,7 @@ func main() {
 * `CreateTestGridProject` - Creates a Selenium testing project. Projects are used to track <a>TestGridSession</a> instances.
 * `CreateTestGridURL` - Creates a signed, short-term URL that can be passed to a Selenium <code>RemoteWebDriver</code> constructor.
 * `CreateUpload` - Uploads an app or test scripts.
-* `CreateVpceConfiguration` - Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC) endpoint.
+* `CreateVPCEConfiguration` - Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC) endpoint.
 * `DeleteDevicePool` - Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the system.
 * `DeleteInstanceProfile` - Deletes a profile that can be applied to one or more private device instances.
 * `DeleteNetworkProfile` - Deletes a network profile.
@@ -101,7 +96,7 @@ func main() {
 * `DeleteRun` - <p>Deletes the run, given the run ARN.</p> <p> Deleting this resource does not stop an in-progress run.</p>
 * `DeleteTestGridProject` - <p> Deletes a Selenium testing project and all content generated under it. </p> <important> <p>You cannot undo this operation.</p> </important> <note> <p>You cannot delete a project if it has active sessions.</p> </note>
 * `DeleteUpload` - Deletes an upload given the upload ARN.
-* `DeleteVpceConfiguration` - Deletes a configuration for your Amazon Virtual Private Cloud (VPC) endpoint.
+* `DeleteVPCEConfiguration` - Deletes a configuration for your Amazon Virtual Private Cloud (VPC) endpoint.
 * `GetAccountSettings` - Returns the number of unmetered iOS or unmetered Android devices that have been purchased by the account.
 * `GetDevice` - Gets information about a unique device type.
 * `GetDeviceInstance` - Returns information about a device instance that belongs to a private device fleet.
@@ -119,7 +114,7 @@ func main() {
 * `GetTestGridProject` - Retrieves information about a Selenium testing project.
 * `GetTestGridSession` - <p>A session is an instance of a browser created through a <code>RemoteWebDriver</code> with the URL from <a>CreateTestGridUrlResult$url</a>. You can use the following to look up sessions:</p> <ul> <li> <p>The session ARN (<a>GetTestGridSessionRequest$sessionArn</a>).</p> </li> <li> <p>The project ARN and a session ID (<a>GetTestGridSessionRequest$projectArn</a> and <a>GetTestGridSessionRequest$sessionId</a>).</p> </li> </ul> <p/>
 * `GetUpload` - Gets information about an upload.
-* `GetVpceConfiguration` - Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC) endpoint.
+* `GetVPCEConfiguration` - Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC) endpoint.
 * `InstallToRemoteAccessSession` - Installs an application to the device in a remote access session. For Android applications, the file must be in .apk format. For iOS applications, the file must be in .ipa format.
 * `ListArtifacts` - Gets information about artifacts.
 * `ListDeviceInstances` - Returns information about the private device instances associated with one or more AWS accounts.
@@ -144,7 +139,7 @@ func main() {
 * `ListTests` - Gets information about tests in a given test suite.
 * `ListUniqueProblems` - <p>Gets information about unique problems, such as exceptions or crashes.</p> <p>Unique problems are defined as a single instance of an error across a run, job, or suite. For example, if a call in your application consistently raises an exception (<code>OutOfBoundsException in MyActivity.java:386</code>), <code>ListUniqueProblems</code> returns a single entry instead of many individual entries for that exception.</p>
 * `ListUploads` - Gets information about uploads, given an AWS Device Farm project ARN.
-* `ListVpceConfigurations` - Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS account.
+* `ListVPCEConfigurations` - Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS account.
 * `PurchaseOffering` - Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. If you must be able to invoke this operation, contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a>.
 * `RenewOffering` - Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. If you must be able to invoke this operation, contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a>.
 * `ScheduleRun` - Schedules a run.
@@ -160,8 +155,7 @@ func main() {
 * `UpdateProject` - Modifies the specified project name, given the project ARN and a new name.
 * `UpdateTestGridProject` - Change details of a project.
 * `UpdateUpload` - Updates an uploaded test spec.
-* `UpdateVpceConfiguration` - Updates information about an Amazon Virtual Private Cloud (VPC) endpoint configuration.
-
+* `UpdateVPCEConfiguration` - Updates information about an Amazon Virtual Private Cloud (VPC) endpoint configuration.
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

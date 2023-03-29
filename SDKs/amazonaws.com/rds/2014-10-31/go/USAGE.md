@@ -3,44 +3,43 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetAddRoleToDbClusterRequest{
-        QueryParams: operations.GetAddRoleToDbClusterQueryParams{
+    req := operations.GETAddRoleToDBClusterRequest{
+        QueryParams: operations.GETAddRoleToDBClusterQueryParams{
             Action: "AddRoleToDBCluster",
-            DBClusterIdentifier: "voluptas",
-            FeatureName: "culpa",
-            RoleArn: "expedita",
+            DBClusterIdentifier: "deserunt",
+            FeatureName: "porro",
+            RoleArn: "nulla",
             Version: "2014-10-31",
         },
-        Headers: operations.GetAddRoleToDbClusterHeaders{
-            XAmzAlgorithm: "dolor",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "voluptas",
-            XAmzDate: "fugit",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "nihil",
-            XAmzSignedHeaders: "rerum",
+        Headers: operations.GETAddRoleToDBClusterHeaders{
+            XAmzAlgorithm: "vero",
+            XAmzContentSha256: "perspiciatis",
+            XAmzCredential: "nulla",
+            XAmzDate: "nihil",
+            XAmzSecurityToken: "fuga",
+            XAmzSignature: "facilis",
+            XAmzSignedHeaders: "eum",
         },
     }
-    
-    res, err := s.GetAddRoleToDbCluster(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETAddRoleToDBCluster(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,5 +47,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

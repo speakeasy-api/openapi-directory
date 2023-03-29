@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.LanguageDocumentsAnalyzeEntitiesRequest{
         Security: operations.LanguageDocumentsAnalyzeEntitiesSecurity{
             Option1: &operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1{
@@ -23,29 +25,30 @@ func main() {
             },
         },
         QueryParams: operations.LanguageDocumentsAnalyzeEntitiesQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.AnalyzeEntitiesRequest{
             Document: &shared.Document{
-                Content: "rerum",
-                GcsContentURI: "dicta",
-                Language: "debitis",
+                Content: "facilis",
+                GcsContentURI: "eum",
+                Language: "iusto",
                 Type: "TYPE_UNSPECIFIED",
             },
-            EncodingType: "UTF16",
+            EncodingType: "UTF32",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Documents.LanguageDocumentsAnalyzeEntities(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +57,6 @@ func main() {
     if res.AnalyzeEntitiesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

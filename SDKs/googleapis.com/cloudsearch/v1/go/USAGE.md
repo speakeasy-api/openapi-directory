@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest{
         Security: operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurity{
             Option1: &operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption1{
@@ -23,33 +25,34 @@ func main() {
             },
         },
         PathParams: operations.CloudsearchDebugDatasourcesItemsCheckAccessPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.CloudsearchDebugDatasourcesItemsCheckAccessQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
             DebugOptionsEnableDebugging: false,
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
             PrettyPrint: false,
             QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Principal{
-            GroupResourceName: "debitis",
+            GroupResourceName: "eum",
             GsuitePrincipal: &shared.GSuitePrincipal{
-                GsuiteDomain: true,
-                GsuiteGroupEmail: "et",
-                GsuiteUserEmail: "ut",
+                GsuiteDomain: false,
+                GsuiteGroupEmail: "iusto",
+                GsuiteUserEmail: "ullam",
             },
-            UserResourceName: "dolorem",
+            UserResourceName: "saepe",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Debug.CloudsearchDebugDatasourcesItemsCheckAccess(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -58,5 +61,6 @@ func main() {
     if res.CheckAccessResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

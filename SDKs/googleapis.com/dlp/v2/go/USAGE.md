@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DlpInfoTypesListRequest{
         Security: operations.DlpInfoTypesListSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,24 +23,25 @@ func main() {
             },
         },
         QueryParams: operations.DlpInfoTypesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Filter: "dolor",
-            Key: "expedita",
-            LanguageCode: "voluptas",
-            LocationID: "fugit",
-            OauthToken: "et",
-            Parent: "nihil",
-            PrettyPrint: true,
-            QuotaUser: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Filter: "vero",
+            Key: "perspiciatis",
+            LanguageCode: "nulla",
+            LocationID: "nihil",
+            OauthToken: "fuga",
+            Parent: "facilis",
+            PrettyPrint: false,
+            QuotaUser: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.InfoTypes.DlpInfoTypesList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +50,6 @@ func main() {
     if res.GooglePrivacyDlpV2ListInfoTypesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

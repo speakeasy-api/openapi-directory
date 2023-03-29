@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateItemDraftRequest{
         Security: operations.CreateItemDraftSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,53 +20,61 @@ func main() {
             },
         },
         Headers: operations.CreateItemDraftHeaders{
-            ContentLanguage: "sit",
-            XEBAYCMARKETPLACEID: "voluptas",
+            ContentLanguage: "unde",
+            XEbayCMarketplaceID: "deserunt",
         },
         Request: &shared.ItemDraft{
-            CategoryID: "culpa",
+            CategoryID: "porro",
             Charity: &shared.Charity{
-                CharityID: "expedita",
-                DonationPercentage: "consequuntur",
+                CharityID: "nulla",
+                DonationPercentage: "id",
             },
-            Condition: "dolor",
-            Format: "expedita",
+            Condition: "vero",
+            Format: "perspiciatis",
             PricingSummary: &shared.PricingSummary{
                 AuctionReservePrice: &shared.Amount{
-                    Currency: "voluptas",
-                    Value: "fugit",
-                },
-                AuctionStartPrice: &shared.Amount{
-                    Currency: "et",
+                    Currency: "nulla",
                     Value: "nihil",
                 },
+                AuctionStartPrice: &shared.Amount{
+                    Currency: "fuga",
+                    Value: "facilis",
+                },
                 Price: &shared.Amount{
-                    Currency: "rerum",
-                    Value: "dicta",
+                    Currency: "eum",
+                    Value: "iusto",
                 },
             },
             Product: &shared.Product{
                 Aspects: []shared.Aspect{
                     shared.Aspect{
-                        Name: "voluptatum",
+                        Name: "saepe",
                         Values: []string{
-                            "ut",
+                            "sapiente",
+                        },
+                    },
+                    shared.Aspect{
+                        Name: "enim",
+                        Values: []string{
+                            "voluptatum",
+                            "autem",
                         },
                     },
                 },
-                Brand: "dolorem",
-                Description: "et",
-                Epid: "voluptate",
+                Brand: "vel",
+                Description: "non",
+                Epid: "deleniti",
                 ImageUrls: []string{
-                    "vitae",
-                    "totam",
-                    "dolores",
+                    "reprehenderit",
+                    "molestiae",
+                    "quo",
                 },
-                Title: "illum",
+                Title: "Senior Tactics Executive",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ItemDraft.CreateItemDraft(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -73,5 +83,6 @@ func main() {
     if res.ItemDraftResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

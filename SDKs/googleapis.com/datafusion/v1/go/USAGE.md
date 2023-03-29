@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatafusionProjectsLocationsInstancesCreateRequest{
         Security: operations.DatafusionProjectsLocationsInstancesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,93 +23,89 @@ func main() {
             },
         },
         PathParams: operations.DatafusionProjectsLocationsInstancesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.DatafusionProjectsLocationsInstancesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            InstanceID: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            InstanceID: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.InstanceInput{
             Accelerators: []shared.Accelerator{
                 shared.Accelerator{
+                    AcceleratorType: "CDC",
+                    State: "UNKNOWN",
+                },
+                shared.Accelerator{
                     AcceleratorType: "ACCELERATOR_TYPE_UNSPECIFIED",
-                    State: "DISABLED",
+                    State: "UNKNOWN",
                 },
             },
             AvailableVersion: []shared.Version{
                 shared.Version{
                     AvailableFeatures: []string{
-                        "et",
-                        "voluptate",
-                        "iste",
-                    },
-                    DefaultVersion: true,
-                    Type: "TYPE_GENERAL_AVAILABILITY",
-                    VersionNumber: "dolores",
-                },
-                shared.Version{
-                    AvailableFeatures: []string{
-                        "debitis",
-                        "vel",
-                        "odio",
-                    },
-                    DefaultVersion: true,
-                    Type: "TYPE_PREVIEW",
-                    VersionNumber: "aspernatur",
-                },
-                shared.Version{
-                    AvailableFeatures: []string{
-                        "totam",
-                        "commodi",
-                        "quis",
+                        "voluptatum",
+                        "autem",
                     },
                     DefaultVersion: false,
                     Type: "TYPE_GENERAL_AVAILABILITY",
-                    VersionNumber: "odit",
+                    VersionNumber: "non",
+                },
+                shared.Version{
+                    AvailableFeatures: []string{
+                        "similique",
+                        "reprehenderit",
+                    },
+                    DefaultVersion: false,
+                    Type: "TYPE_GENERAL_AVAILABILITY",
+                    VersionNumber: "quo",
                 },
             },
             CryptoKeyConfig: &shared.CryptoKeyConfig{
-                KeyReference: "non",
+                KeyReference: "quasi",
             },
-            DataprocServiceAccount: "voluptas",
-            Description: "omnis",
-            DisplayName: "aut",
-            EnableRbac: true,
+            DataprocServiceAccount: "laboriosam",
+            Description: "dicta",
+            DisplayName: "est",
+            EnableRbac: false,
             EnableStackdriverLogging: false,
             EnableStackdriverMonitoring: false,
-            EnableZoneSeparation: true,
+            EnableZoneSeparation: false,
             EventPublishConfig: &shared.EventPublishConfig{
-                Enabled: true,
-                Topic: "nobis",
+                Enabled: false,
+                Topic: "voluptatem",
             },
             Labels: map[string]string{
-                "qui": "recusandae",
+                "fugiat": "a",
+                "omnis": "eos",
             },
             NetworkConfig: &shared.NetworkConfig{
-                IPAllocation: "at",
-                Network: "ipsum",
+                IPAllocation: "accusamus",
+                Network: "accusamus",
             },
             Options: map[string]string{
-                "modi": "sint",
-                "inventore": "ut",
+                "rem": "quibusdam",
+                "et": "praesentium",
+                "occaecati": "dolor",
+                "soluta": "sed",
             },
             PrivateInstance: false,
-            Type: "TYPE_UNSPECIFIED",
-            Version: "reprehenderit",
-            Zone: "tempore",
+            Type: "ENTERPRISE",
+            Version: "rerum",
+            Zone: "culpa",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DatafusionProjectsLocationsInstancesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -116,5 +114,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

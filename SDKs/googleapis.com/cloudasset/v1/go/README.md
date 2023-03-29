@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudasset/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudassetAssetsListRequest{
         Security: operations.CloudassetAssetsListSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,36 +34,37 @@ func main() {
             },
         },
         PathParams: operations.CloudassetAssetsListPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudassetAssetsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
             AssetTypes: []string{
-                "dolor",
-                "expedita",
-                "voluptas",
+                "vero",
+                "perspiciatis",
+                "nulla",
             },
-            Callback: "fugit",
-            ContentType: "RESOURCE",
-            Fields: "nihil",
-            Key: "rerum",
-            OauthToken: "dicta",
-            PageSize: 2518412263346885298,
-            PageToken: "voluptatum",
+            Callback: "nihil",
+            ContentType: "ACCESS_POLICY",
+            Fields: "facilis",
+            Key: "eum",
+            OauthToken: "iusto",
+            PageSize: 297534,
+            PageToken: "saepe",
             PrettyPrint: false,
-            QuotaUser: "ut",
-            ReadTime: "dolorem",
+            QuotaUser: "inventore",
+            ReadTime: "sapiente",
             RelationshipTypes: []string{
-                "voluptate",
-                "iste",
+                "eum",
+                "voluptatum",
             },
-            UploadType: "vitae",
-            UploadProtocol: "totam",
+            UploadType: "autem",
+            UploadProtocol: "vel",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Assets.CloudassetAssetsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -70,26 +73,28 @@ func main() {
     if res.ListAssetsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### assets
+
+### Assets
 
 * `CloudassetAssetsList` - Lists assets with time and resource types and returns paged results in response.
 
-### effectiveIamPolicies
+### EffectiveIamPolicies
 
 * `CloudassetEffectiveIamPoliciesBatchGet` - Gets effective IAM policies for a batch of resources.
 
-### feeds
+### Feeds
 
 * `CloudassetFeedsCreate` - Creates a feed in a parent project/folder/organization to listen to its asset updates.
 * `CloudassetFeedsList` - Lists all asset feeds in a parent project/folder/organization.
 
-### savedQueries
+### SavedQueries
 
 * `CloudassetSavedQueriesCreate` - Creates a saved query in a parent project/folder/organization.
 * `CloudassetSavedQueriesDelete` - Deletes a saved query.
@@ -97,7 +102,7 @@ func main() {
 * `CloudassetSavedQueriesList` - Lists all saved queries in a parent project/folder/organization.
 * `CloudassetSavedQueriesPatch` - Updates a saved query.
 
-### v1
+### V1
 
 * `CloudassetAnalyzeIamPolicy` - Analyzes IAM policies to answer which identities have what accesses on which resources.
 * `CloudassetAnalyzeIamPolicyLongrunning` - Analyzes IAM policies asynchronously to answer which identities have what accesses on which resources, and writes the analysis results to a Google Cloud Storage or a BigQuery destination. For Cloud Storage destination, the output format is the JSON format that represents a AnalyzeIamPolicyResponse. This method implements the google.longrunning.Operation, which allows you to track the operation status. We recommend intervals of at least 2 seconds with exponential backoff retry to poll the operation result. The metadata contains the metadata for the long-running operation.
@@ -110,7 +115,6 @@ func main() {
 * `CloudassetQueryAssets` - Issue a job that queries assets using a SQL statement compatible with [BigQuery Standard SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql). If the query execution finishes within timeout and there's no pagination, the full query results will be returned in the `QueryAssetsResponse`. Otherwise, full query results can be obtained by issuing extra requests with the `job_reference` from the a previous `QueryAssets` call. Note, the query result has approximately 10 GB limitation enforced by BigQuery https://cloud.google.com/bigquery/docs/best-practices-performance-output, queries return larger results will result in errors.
 * `CloudassetSearchAllIamPolicies` - Searches all IAM policies within the specified scope, such as a project, folder, or organization. The caller must be granted the `cloudasset.assets.searchAllIamPolicies` permission on the desired scope, otherwise the request will be rejected.
 * `CloudassetSearchAllResources` - Searches all Google Cloud resources within the specified scope, such as a project, folder, or organization. The caller must be granted the `cloudasset.assets.searchAllResources` permission on the desired scope, otherwise the request will be rejected.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

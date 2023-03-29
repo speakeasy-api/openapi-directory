@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.HomegraphAgentUsersDeleteRequest{
         Security: operations.HomegraphAgentUsersDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,24 +23,25 @@ func main() {
             },
         },
         PathParams: operations.HomegraphAgentUsersDeletePathParams{
-            AgentUserID: "sit",
+            AgentUserID: "unde",
         },
         QueryParams: operations.HomegraphAgentUsersDeleteQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            RequestID: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            RequestID: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AgentUsers.HomegraphAgentUsersDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +50,6 @@ func main() {
     if res.Empty != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

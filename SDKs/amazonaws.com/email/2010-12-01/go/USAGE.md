@@ -3,43 +3,42 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetCloneReceiptRuleSetRequest{
-        QueryParams: operations.GetCloneReceiptRuleSetQueryParams{
+    req := operations.GETCloneReceiptRuleSetRequest{
+        QueryParams: operations.GETCloneReceiptRuleSetQueryParams{
             Action: "CloneReceiptRuleSet",
-            OriginalRuleSetName: "voluptas",
-            RuleSetName: "culpa",
+            OriginalRuleSetName: "deserunt",
+            RuleSetName: "porro",
             Version: "2010-12-01",
         },
-        Headers: operations.GetCloneReceiptRuleSetHeaders{
-            XAmzAlgorithm: "consequuntur",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "expedita",
-            XAmzDate: "voluptas",
-            XAmzSecurityToken: "fugit",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "nihil",
+        Headers: operations.GETCloneReceiptRuleSetHeaders{
+            XAmzAlgorithm: "id",
+            XAmzContentSha256: "vero",
+            XAmzCredential: "perspiciatis",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "nihil",
+            XAmzSignature: "fuga",
+            XAmzSignedHeaders: "facilis",
         },
     }
-    
-    res, err := s.GetCloneReceiptRuleSet(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETCloneReceiptRuleSet(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,5 +46,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

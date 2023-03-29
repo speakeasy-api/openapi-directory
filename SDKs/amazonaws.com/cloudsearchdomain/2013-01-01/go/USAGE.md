@@ -3,54 +3,53 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.SearchRequest{
         QueryParams: operations.SearchQueryParams{
-            Cursor: "sit",
-            Expr: "voluptas",
-            Facet: "culpa",
+            Cursor: "unde",
+            Expr: "deserunt",
+            Facet: "porro",
             Format: "sdk",
-            Fq: "consequuntur",
-            Highlight: "dolor",
-            Partial: true,
+            Fq: "id",
+            Highlight: "vero",
+            Partial: false,
             Pretty: "true",
-            Q: "fugit",
-            QOptions: "et",
-            QParser: "simple",
-            Return: "rerum",
-            Size: 7837839688282259259,
-            Sort: "debitis",
-            Start: 5617773211005988520,
-            Stats: "et",
+            Q: "nulla",
+            QOptions: "nihil",
+            QParser: "lucene",
+            Return: "facilis",
+            Size: 384382,
+            Sort: "iusto",
+            Start: 297534,
+            Stats: "saepe",
         },
         Headers: operations.SearchHeaders{
-            XAmzAlgorithm: "ut",
-            XAmzContentSha256: "dolorem",
-            XAmzCredential: "et",
-            XAmzDate: "voluptate",
-            XAmzSecurityToken: "iste",
-            XAmzSignature: "vitae",
-            XAmzSignedHeaders: "totam",
+            XAmzAlgorithm: "inventore",
+            XAmzContentSha256: "sapiente",
+            XAmzCredential: "enim",
+            XAmzDate: "eum",
+            XAmzSecurityToken: "voluptatum",
+            XAmzSignature: "autem",
+            XAmzSignedHeaders: "vel",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Search(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -59,5 +58,6 @@ func main() {
     if res.SearchResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AppengineAppsAuthorizedCertificatesCreateRequest{
         Security: operations.AppengineAppsAuthorizedCertificatesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,46 +23,47 @@ func main() {
             },
         },
         PathParams: operations.AppengineAppsAuthorizedCertificatesCreatePathParams{
-            AppsID: "sit",
+            AppsID: "unde",
         },
         QueryParams: operations.AppengineAppsAuthorizedCertificatesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.AuthorizedCertificate{
             CertificateRawData: &shared.CertificateRawData{
-                PrivateKey: "dicta",
-                PublicCertificate: "debitis",
+                PrivateKey: "eum",
+                PublicCertificate: "iusto",
             },
-            DisplayName: "voluptatum",
-            DomainMappingsCount: 2339563716805116249,
+            DisplayName: "ullam",
+            DomainMappingsCount: 891773,
             DomainNames: []string{
-                "dolorem",
-                "et",
-                "voluptate",
+                "sapiente",
             },
-            ExpireTime: "iste",
-            ID: "vitae",
+            ExpireTime: "enim",
+            ID: "eum",
             ManagedCertificate: &shared.ManagedCertificate{
-                LastRenewalTime: "totam",
-                Status: "FAILED_RETRYING_NOT_VISIBLE",
+                LastRenewalTime: "voluptatum",
+                Status: "FAILED_RETRYING_CAA_FORBIDDEN",
             },
-            Name: "illum",
+            Name: "vel",
             VisibleDomainMappings: []string{
-                "vel",
+                "deleniti",
+                "similique",
+                "reprehenderit",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Apps.AppengineAppsAuthorizedCertificatesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -69,5 +72,6 @@ func main() {
     if res.AuthorizedCertificate != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

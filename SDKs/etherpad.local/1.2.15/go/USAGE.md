@@ -3,32 +3,31 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.AppendTextUsingGetRequest{
-        QueryParams: operations.AppendTextUsingGetQueryParams{
-            PadID: "sit",
-            Text: "voluptas",
+    req := operations.AppendTextUsingGETRequest{
+        QueryParams: operations.AppendTextUsingGETQueryParams{
+            PadID: "unde",
+            Text: "deserunt",
         },
     }
-    
-    res, err := s.AppendTextUsingGet(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AppendTextUsingGET(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -36,5 +35,6 @@ func main() {
     if res.AppendTextUsingGET200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

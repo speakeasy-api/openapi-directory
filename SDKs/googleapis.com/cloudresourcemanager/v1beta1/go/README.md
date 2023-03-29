@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudresourcemanager/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudresourcemanagerOrganizationsGetRequest{
         Security: operations.CloudresourcemanagerOrganizationsGetSecurity{
             Option1: &operations.CloudresourcemanagerOrganizationsGetSecurityOption1{
@@ -34,24 +36,25 @@ func main() {
             },
         },
         PathParams: operations.CloudresourcemanagerOrganizationsGetPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.CloudresourcemanagerOrganizationsGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            OrganizationID: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            OrganizationID: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Organizations.CloudresourcemanagerOrganizationsGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -60,13 +63,15 @@ func main() {
     if res.Organization != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### organizations
+
+### Organizations
 
 * `CloudresourcemanagerOrganizationsGet` - Fetches an Organization resource identified by the specified resource name.
 * `CloudresourcemanagerOrganizationsGetIamPolicy` - Gets the access control policy for an Organization resource. May be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, e.g. "organizations/123".
@@ -75,7 +80,7 @@ func main() {
 * `CloudresourcemanagerOrganizationsTestIamPermissions` - Returns permissions that a caller has on the specified Organization. The `resource` field should be the organization's resource name, e.g. "organizations/123".
 * `CloudresourcemanagerOrganizationsUpdate` - Updates an Organization resource identified by the specified resource name.
 
-### projects
+### Projects
 
 * `CloudresourcemanagerProjectsCreate` - Creates a Project resource. Initially, the Project resource is owned by its creator exclusively. The creator can later grant permission to others to read or update the Project. Several APIs are activated automatically for the Project, including Google Cloud Storage. The parent is identified by a specified ResourceId, which must include both an ID and a type, such as project, folder, or organization. This method does not associate the new project with a billing account. You can set or update the billing account associated with a project using the [`projects.updateBillingInfo`] (/billing/reference/rest/v1/projects/updateBillingInfo) method.
 * `CloudresourcemanagerProjectsDelete` - Marks the Project identified by the specified `project_id` (for example, `my-project-123`) for deletion. This method will only affect the Project if it has a lifecycle state of ACTIVE. This method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion starts at an unspecified time, at which point the project is no longer accessible. Until the deletion completes, you can check the lifecycle state checked by retrieving the Project with GetProject, and the Project remains visible to ListProjects. However, you cannot update the project. After the deletion completes, the Project is not retrievable by the GetProject and ListProjects methods. The caller must have delete permissions for this Project.
@@ -87,7 +92,6 @@ func main() {
 * `CloudresourcemanagerProjectsTestIamPermissions` - Returns permissions that a caller has on the specified Project.
 * `CloudresourcemanagerProjectsUndelete` - Restores the Project identified by the specified `project_id` (for example, `my-project-123`). You can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED. After deletion starts, the Project cannot be restored. The caller must have undelete permissions for this Project.
 * `CloudresourcemanagerProjectsUpdate` - Updates the attributes of the Project identified by the specified `project_id` (for example, `my-project-123`). The caller must have modify permissions for this Project.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

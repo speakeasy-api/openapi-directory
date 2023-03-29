@@ -3,63 +3,62 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Apikey: shared.SchemeApikey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Apikey: shared.SchemeApikey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetAddressesOutputFormatRequest{
         PathParams: operations.GetAddressesOutputFormatPathParams{
-            OutputFormat: "csv",
+            OutputFormat: "kml",
         },
         QueryParams: operations.GetAddressesOutputFormatQueryParams{
-            AddressString: "voluptas",
-            AutoComplete: true,
-            Bbox: "expedita",
-            Brief: true,
-            Centre: "dolor",
-            CivicNumber: "expedita",
-            CivicNumberSuffix: "voluptas",
-            Echo: true,
+            AddressString: "deserunt",
+            AutoComplete: false,
+            Bbox: "porro",
+            Brief: false,
+            Centre: "nulla",
+            CivicNumber: "id",
+            CivicNumberSuffix: "vero",
+            Echo: false,
             Extrapolate: false,
-            Interpolation: "adaptive",
-            Localities: "rerum",
-            LocalityName: "dicta",
-            LocationDescriptor: "any",
-            MatchPrecision: "voluptatum",
-            MatchPrecisionNot: "et",
-            MaxDistance: 11.100000,
-            MaxResults: 7259475919510918339,
-            MinScore: 7373105480197164748,
-            NotLocalities: "iste",
-            OutputSRS: 3930927879439176946,
-            ParcelPoint: "totam",
-            ProvinceCode: "dolores",
-            SetBack: 1929546706668609706,
-            SiteName: "debitis",
-            StreetDirection: "N",
-            StreetName: "odio",
-            StreetQualifier: "dolore",
-            StreetType: "id",
-            UnitDesignator: "TH",
-            UnitNumber: "accusantium",
-            UnitNumberSuffix: "totam",
+            Interpolation: "linear",
+            Localities: "nulla",
+            LocalityName: "nihil",
+            LocationDescriptor: "parcelPoint",
+            MatchPrecision: "facilis",
+            MatchPrecisionNot: "eum",
+            MaxDistance: 4375.87,
+            MaxResults: 297534,
+            MinScore: 891773,
+            NotLocalities: "inventore",
+            OutputSRS: "26911",
+            ParcelPoint: "enim",
+            ProvinceCode: "eum",
+            SetBack: 477665,
+            SiteName: "autem",
+            StreetDirection: "SE",
+            StreetName: "non",
+            StreetQualifier: "deleniti",
+            StreetType: "similique",
+            UnitDesignator: "PAD",
+            UnitNumber: "molestiae",
+            UnitNumberSuffix: "quo",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Intersections.GetAddressesOutputFormat(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -68,5 +67,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

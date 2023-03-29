@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/ssm-incidents/2018-05-10/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,44 +14,50 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateReplicationSetRequest{
         Headers: operations.CreateReplicationSetHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateReplicationSetRequestBody{
-            ClientToken: "voluptas",
+            ClientToken: "nulla",
             Regions: map[string]shared.RegionMapInputValue{
-                "et": shared.RegionMapInputValue{
-                    SseKmsKeyID: "nihil",
+                "fuga": shared.RegionMapInputValue{
+                    SseKmsKeyID: "facilis",
                 },
+                "eum": shared.RegionMapInputValue{
+                    SseKmsKeyID: "iusto",
+                },
+            },
+            Tags: map[string]string{
+                "saepe": "inventore",
+                "sapiente": "enim",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateReplicationSet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -60,6 +66,7 @@ func main() {
     if res.CreateReplicationSetOutput != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -73,10 +80,10 @@ func main() {
 * `CreateTimelineEvent` - Creates a custom timeline event on the incident details page of an incident record. Timeline events are automatically created by Incident Manager, marking key moment during an incident. You can create custom timeline events to mark important events that are automatically detected by Incident Manager.
 * `DeleteIncidentRecord` - Delete an incident record from Incident Manager. 
 * `DeleteReplicationSet` - Deletes all Regions in your replication set. Deleting the replication set deletes all Incident Manager data.
-* `DeleteResourcePolicy` - Deletes the resource policy that AWS Resource Access Manager uses to share your Incident Manager resource.
+* `DeleteResourcePolicy` - Deletes the resource policy that Resource Access Manager uses to share your Incident Manager resource.
 * `DeleteResponsePlan` - Deletes the specified response plan. Deleting a response plan stops all linked CloudWatch alarms and EventBridge events from creating an incident with this response plan.
 * `DeleteTimelineEvent` - Deletes a timeline event from an incident.
-* `GetIncidentRecord` - Returns the details of the specified incident record.
+* `GetIncidentRecord` - Returns the details for the specified incident record.
 * `GetReplicationSet` - Retrieve your Incident Manager replication set.
 * `GetResourcePolicies` - Retrieves the resource policies attached to the specified response plan.
 * `GetResponsePlan` - Retrieves the details of the specified response plan.
@@ -86,18 +93,17 @@ func main() {
 * `ListReplicationSets` - Lists details about the replication set configured in your account. 
 * `ListResponsePlans` - Lists all response plans in your account.
 * `ListTagsForResource` - Lists the tags that are attached to the specified response plan.
-* `ListTimelineEvents` - Lists timeline events of the specified incident record.
-* `PutResourcePolicy` - Adds a resource policy to the specified response plan.
+* `ListTimelineEvents` - Lists timeline events for the specified incident record.
+* `PutResourcePolicy` - Adds a resource policy to the specified response plan. The resource policy is used to share the response plan using Resource Access Manager (RAM). For more information about cross-account sharing, see <a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/incident-manager-cross-account-cross-region.html">Cross-Region and cross-account incident management</a>.
 * `StartIncident` - Used to start an incident from CloudWatch alarms, EventBridge events, or manually. 
 * `TagResource` - Adds a tag to a response plan.
 * `UntagResource` - Removes a tag from a resource.
 * `UpdateDeletionProtection` - Update deletion protection to either allow or deny deletion of the final Region in a replication set.
-* `UpdateIncidentRecord` - Update the details of an incident record. You can use this action to update an incident record from the defined chat channel. For more information about using actions in chat channels, see <a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/chat.html#chat-interact">Interacting through chat</a>.
+* `UpdateIncidentRecord` - Update the details of an incident record. You can use this operation to update an incident record from the defined chat channel. For more information about using actions in chat channels, see <a href="https://docs.aws.amazon.com/incident-manager/latest/userguide/chat.html#chat-interact">Interacting through chat</a>.
 * `UpdateRelatedItems` - Add or remove related items from the related items tab of an incident record.
 * `UpdateReplicationSet` - Add or delete Regions from your replication set.
 * `UpdateResponsePlan` - Updates the specified response plan.
 * `UpdateTimelineEvent` - Updates a timeline event. You can update events of type <code>Custom Event</code>.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.IdsProjectsLocationsEndpointsCreateRequest{
         Security: operations.IdsProjectsLocationsEndpointsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,39 +23,42 @@ func main() {
             },
         },
         PathParams: operations.IdsProjectsLocationsEndpointsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.IdsProjectsLocationsEndpointsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            EndpointID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            EndpointID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.EndpointInput{
-            Description: "voluptatum",
+            Description: "ullam",
             Labels: map[string]string{
-                "ut": "dolorem",
+                "inventore": "sapiente",
+                "enim": "eum",
+                "voluptatum": "autem",
+                "vel": "non",
             },
-            Network: "et",
-            Severity: "SEVERITY_UNSPECIFIED",
+            Network: "deleniti",
+            Severity: "MEDIUM",
             ThreatExceptions: []string{
-                "vitae",
-                "totam",
-                "dolores",
+                "molestiae",
+                "quo",
             },
             TrafficLogs: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.IdsProjectsLocationsEndpointsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -62,5 +67,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

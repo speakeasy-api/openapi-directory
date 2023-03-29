@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CompanyAlternativeSearchRequest{
         Security: operations.CompanyAlternativeSearchSecurity{
             UserKey: shared.SchemeUserKey{
@@ -18,25 +20,27 @@ func main() {
             },
         },
         PathParams: operations.CompanyAlternativeSearchPathParams{
-            Country: "sit",
+            Country: "unde",
         },
         Request: &operations.CompanyAlternativeSearchRequestBody{
-            Address: "voluptas",
-            Name: "culpa",
-            Number: "expedita",
-            Phone: "consequuntur",
-            URL: "dolor",
-            Vat: "expedita",
+            Address: "7868 Henri Neck",
+            Name: "fuga",
+            Number: "facilis",
+            Phone: "528.292.3478",
+            URL: "non",
+            Vat: "deleniti",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.V1Company.CompanyAlternativeSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CompanyAlternativeSearch200ApplicationJSONAnies != nil {
+    if res.CompanyAlternativeSearch200ApplicationJSONObjects != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

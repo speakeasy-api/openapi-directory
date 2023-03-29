@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/personalize-events/2018-03-22/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,82 +14,110 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.PutEventsRequest{
         Headers: operations.PutEventsHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.PutEventsRequestBody{
             EventList: []shared.Event{
                 shared.Event{
-                    EventID: "fugit",
-                    EventType: "et",
-                    EventValue: 68.199997,
+                    EventID: "nihil",
+                    EventType: "fuga",
+                    EventValue: 6458.94,
                     Impression: []string{
-                        "debitis",
-                        "voluptatum",
-                        "et",
+                        "iusto",
+                        "ullam",
                     },
-                    ItemID: "ut",
-                    Properties: "dolorem",
-                    RecommendationID: "et",
-                    SentAt: "1998-09-30T11:01:25Z",
+                    ItemID: "saepe",
+                    MetricAttribution: &shared.MetricAttribution{
+                        EventAttributionSource: "inventore",
+                    },
+                    Properties: "sapiente",
+                    RecommendationID: "enim",
+                    SentAt: "2022-11-09T13:35:32.249Z",
                 },
                 shared.Event{
-                    EventID: "vitae",
-                    EventType: "totam",
-                    EventValue: 80.199997,
+                    EventID: "voluptatum",
+                    EventType: "autem",
+                    EventValue: 8121.69,
                     Impression: []string{
-                        "vel",
+                        "deleniti",
+                        "similique",
+                        "reprehenderit",
                     },
-                    ItemID: "odio",
-                    Properties: "dolore",
-                    RecommendationID: "id",
-                    SentAt: "2015-12-03T16:44:03Z",
+                    ItemID: "molestiae",
+                    MetricAttribution: &shared.MetricAttribution{
+                        EventAttributionSource: "quo",
+                    },
+                    Properties: "quasi",
+                    RecommendationID: "laboriosam",
+                    SentAt: "2023-02-25T17:17:14.260Z",
                 },
                 shared.Event{
-                    EventID: "accusantium",
-                    EventType: "totam",
-                    EventValue: 64.099998,
+                    EventID: "est",
+                    EventType: "voluptatem",
+                    EventValue: 3682.41,
                     Impression: []string{
-                        "aut",
-                        "odit",
+                        "a",
+                        "omnis",
+                        "eos",
+                        "accusamus",
                     },
-                    ItemID: "non",
-                    Properties: "voluptas",
-                    RecommendationID: "omnis",
-                    SentAt: "2015-03-08T17:52:36Z",
+                    ItemID: "accusamus",
+                    MetricAttribution: &shared.MetricAttribution{
+                        EventAttributionSource: "reiciendis",
+                    },
+                    Properties: "rem",
+                    RecommendationID: "quibusdam",
+                    SentAt: "2022-06-10T04:33:42.993Z",
+                },
+                shared.Event{
+                    EventID: "praesentium",
+                    EventType: "occaecati",
+                    EventValue: 7805.29,
+                    Impression: []string{
+                        "sed",
+                        "quisquam",
+                        "rerum",
+                    },
+                    ItemID: "culpa",
+                    MetricAttribution: &shared.MetricAttribution{
+                        EventAttributionSource: "qui",
+                    },
+                    Properties: "sed",
+                    RecommendationID: "rerum",
+                    SentAt: "2022-06-25T15:04:02.236Z",
                 },
             },
-            SessionID: "illo",
-            TrackingID: "sed",
-            UserID: "officiis",
+            SessionID: "occaecati",
+            TrackingID: "odit",
+            UserID: "esse",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.PutEvents(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -98,6 +126,7 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -109,7 +138,6 @@ func main() {
 * `PutEvents` - Records user interaction event data. For more information see <a href="https://docs.aws.amazon.com/personalize/latest/dg/recording-events.html">Recording Events</a>.
 * `PutItems` - Adds one or more items to an Items dataset. For more information see <a href="https://docs.aws.amazon.com/personalize/latest/dg/importing-items.html">Importing Items Incrementally</a>. 
 * `PutUsers` - Adds one or more users to a Users dataset. For more information see <a href="https://docs.aws.amazon.com/personalize/latest/dg/importing-users.html">Importing Users Incrementally</a>.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

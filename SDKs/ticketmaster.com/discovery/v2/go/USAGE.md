@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,29 +12,33 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FindRequest{
         QueryParams: operations.FindQueryParams{
             ClassificationID: []interface{}{
-                "voluptas",
+                "deserunt",
+                "porro",
+                "nulla",
             },
             ClassificationName: []interface{}{
-                "expedita",
-                "consequuntur",
+                "vero",
+                "perspiciatis",
+                "nulla",
             },
-            ID: "dolor",
+            ID: "nihil",
             IncludeLicensedContent: " no",
             IncludeSpellcheck: " no",
-            IncludeTest: "yes",
-            Keyword: "et",
-            Locale: "nihil",
-            Page: "rerum",
-            Size: "dicta",
-            Sort: "debitis",
-            Source: "ticketmaster",
+            IncludeTest: " no",
+            Keyword: "iusto",
+            Locale: "ullam",
+            Page: "saepe",
+            Size: "inventore",
+            Sort: "sapiente",
+            Source: " universe",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Find(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -41,5 +47,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

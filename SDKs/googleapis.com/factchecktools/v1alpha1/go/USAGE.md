@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,30 +12,31 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FactchecktoolsClaimsSearchRequest{
         QueryParams: operations.FactchecktoolsClaimsSearchQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            LanguageCode: "expedita",
-            MaxAgeDays: 6044372234677422456,
-            OauthToken: "fugit",
-            Offset: 1543572285742637646,
-            PageSize: 2661732831099943416,
-            PageToken: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            LanguageCode: "perspiciatis",
+            MaxAgeDays: 847252,
+            OauthToken: "nihil",
+            Offset: 623564,
+            PageSize: 645894,
+            PageToken: "eum",
             PrettyPrint: false,
-            Query: "debitis",
-            QuotaUser: "voluptatum",
-            ReviewPublisherSiteFilter: "et",
-            UploadType: "ut",
-            UploadProtocol: "dolorem",
+            Query: "iusto",
+            QuotaUser: "ullam",
+            ReviewPublisherSiteFilter: "saepe",
+            UploadType: "inventore",
+            UploadProtocol: "sapiente",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Claims.FactchecktoolsClaimsSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -42,5 +45,6 @@ func main() {
     if res.GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

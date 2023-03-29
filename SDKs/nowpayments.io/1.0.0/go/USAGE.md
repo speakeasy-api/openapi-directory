@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ThreeGetEstimatedPriceRequest{
         QueryParams: operations.ThreeGetEstimatedPriceQueryParams{
-            Amount: "sit",
-            CurrencyFrom: "voluptas",
-            CurrencyTo: "culpa",
+            Amount: "3999.5000",
+            CurrencyFrom: "usd",
+            CurrencyTo: "btc",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ThreeGetEstimatedPrice(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.ThreeGetEstimatedPrice200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

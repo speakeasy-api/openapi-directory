@@ -3,78 +3,74 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateAPIRequest{
         Headers: operations.CreateAPIHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateAPIRequestBody{
-            APIKeySelectionExpression: "voluptas",
+            APIKeySelectionExpression: "nulla",
             CorsConfiguration: &operations.CreateAPIRequestBodyCorsConfiguration{
-                AllowCredentials: map[string]interface{}{
-                    "et": "nihil",
+                AllowCredentials: false,
+                AllowHeaders: []string{
+                    "fuga",
+                    "facilis",
                 },
-                AllowHeaders: map[string]interface{}{
-                    "dicta": "debitis",
-                    "voluptatum": "et",
-                    "ut": "dolorem",
+                AllowMethods: []string{
+                    "iusto",
+                    "ullam",
                 },
-                AllowMethods: map[string]interface{}{
-                    "voluptate": "iste",
-                    "vitae": "totam",
+                AllowOrigins: []string{
+                    "inventore",
+                    "sapiente",
+                    "enim",
+                    "eum",
                 },
-                AllowOrigins: map[string]interface{}{
-                    "illum": "debitis",
+                ExposeHeaders: []string{
+                    "autem",
+                    "vel",
                 },
-                ExposeHeaders: map[string]interface{}{
-                    "odio": "dolore",
-                    "id": "aspernatur",
-                },
-                MaxAge: map[string]interface{}{
-                    "totam": "commodi",
-                    "quis": "est",
-                    "aut": "odit",
-                },
+                MaxAge: 528895,
             },
-            CredentialsArn: "non",
-            Description: "voluptas",
-            DisableExecuteAPIEndpoint: true,
+            CredentialsArn: "deleniti",
+            Description: "similique",
+            DisableExecuteAPIEndpoint: false,
             DisableSchemaValidation: false,
-            Name: "illo",
-            ProtocolType: "WEBSOCKET",
-            RouteKey: "officiis",
-            RouteSelectionExpression: "autem",
+            Name: "reprehenderit",
+            ProtocolType: "HTTP",
+            RouteKey: "quo",
+            RouteSelectionExpression: "quasi",
             Tags: map[string]string{
-                "nobis": "odio",
+                "dicta": "est",
+                "voluptatem": "consequatur",
             },
-            Target: "qui",
-            Version: "recusandae",
+            Target: "fugiat",
+            Version: "a",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateAPI(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -83,5 +79,6 @@ func main() {
     if res.CreateAPIResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatastoreProjectsAllocateIdsRequest{
         Security: operations.DatastoreProjectsAllocateIdsSecurity{
             Option1: &operations.DatastoreProjectsAllocateIdsSecurityOption1{
@@ -23,66 +25,74 @@ func main() {
             },
         },
         PathParams: operations.DatastoreProjectsAllocateIdsPathParams{
-            ProjectID: "sit",
+            ProjectID: "unde",
         },
         QueryParams: operations.DatastoreProjectsAllocateIdsQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.AllocateIdsRequest{
             Keys: []shared.Key{
                 shared.Key{
                     PartitionID: &shared.PartitionID{
-                        NamespaceID: "debitis",
-                        ProjectID: "voluptatum",
+                        NamespaceID: "iusto",
+                        ProjectID: "ullam",
                     },
                     Path: []shared.PathElement{
                         shared.PathElement{
-                            ID: "ut",
-                            Kind: "dolorem",
-                            Name: "et",
+                            ID: "inventore",
+                            Kind: "sapiente",
+                            Name: "enim",
+                        },
+                        shared.PathElement{
+                            ID: "eum",
+                            Kind: "voluptatum",
+                            Name: "autem",
+                        },
+                        shared.PathElement{
+                            ID: "vel",
+                            Kind: "non",
+                            Name: "deleniti",
+                        },
+                        shared.PathElement{
+                            ID: "similique",
+                            Kind: "reprehenderit",
+                            Name: "molestiae",
                         },
                     },
                 },
                 shared.Key{
                     PartitionID: &shared.PartitionID{
-                        NamespaceID: "voluptate",
-                        ProjectID: "iste",
+                        NamespaceID: "quo",
+                        ProjectID: "quasi",
                     },
                     Path: []shared.PathElement{
                         shared.PathElement{
-                            ID: "totam",
-                            Kind: "dolores",
-                            Name: "illum",
+                            ID: "dicta",
+                            Kind: "est",
+                            Name: "voluptatem",
                         },
-                    },
-                },
-                shared.Key{
-                    PartitionID: &shared.PartitionID{
-                        NamespaceID: "debitis",
-                        ProjectID: "vel",
-                    },
-                    Path: []shared.PathElement{
                         shared.PathElement{
-                            ID: "dolore",
-                            Kind: "id",
-                            Name: "aspernatur",
+                            ID: "consequatur",
+                            Kind: "fugiat",
+                            Name: "a",
                         },
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DatastoreProjectsAllocateIds(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -91,5 +101,6 @@ func main() {
     if res.AllocateIdsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

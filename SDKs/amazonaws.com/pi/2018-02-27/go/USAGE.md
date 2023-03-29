@@ -3,64 +3,76 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DescribeDimensionKeysRequest{
+        QueryParams: operations.DescribeDimensionKeysQueryParams{
+            MaxResults: "unde",
+            NextToken: "deserunt",
+        },
         Headers: operations.DescribeDimensionKeysHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "porro",
+            XAmzContentSha256: "nulla",
+            XAmzCredential: "id",
+            XAmzDate: "vero",
+            XAmzSecurityToken: "perspiciatis",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "nihil",
             XAmzTarget: "PerformanceInsightsv20180227.DescribeDimensionKeys",
         },
         Request: shared.DescribeDimensionKeysRequest{
-            EndTime: "2011-08-12T10:11:12Z",
+            AdditionalMetrics: []string{
+                "eum",
+                "iusto",
+                "ullam",
+            },
+            EndTime: "2022-05-08T00:36:32.534Z",
             Filter: map[string]string{
-                "rerum": "dicta",
+                "sapiente": "enim",
             },
             GroupBy: shared.DimensionGroup{
                 Dimensions: []string{
                     "voluptatum",
+                    "autem",
                 },
-                Group: "et",
-                Limit: 7144924247938981575,
+                Group: "vel",
+                Limit: 528895,
             },
-            Identifier: "dolorem",
-            MaxResults: 7259475919510918339,
-            Metric: "voluptate",
-            NextToken: "iste",
+            Identifier: "deleniti",
+            MaxResults: 568045,
+            Metric: "reprehenderit",
+            NextToken: "molestiae",
             PartitionBy: &shared.DimensionGroup{
                 Dimensions: []string{
-                    "totam",
+                    "quasi",
+                    "laboriosam",
+                    "dicta",
+                    "est",
                 },
-                Group: "dolores",
-                Limit: 1929546706668609706,
+                Group: "voluptatem",
+                Limit: 368241,
             },
-            PeriodInSeconds: 6392442863481646880,
-            ServiceType: "RDS",
-            StartTime: "2003-08-14T16:48:00Z",
+            PeriodInSeconds: 832620,
+            ServiceType: "DOCDB",
+            StartTime: "2022-06-18T11:53:14.321Z",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DescribeDimensionKeys(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -69,5 +81,6 @@ func main() {
     if res.DescribeDimensionKeysResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

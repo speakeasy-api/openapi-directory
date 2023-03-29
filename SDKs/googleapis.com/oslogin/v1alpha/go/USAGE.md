@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.OsloginUsersGetLoginProfileRequest{
         Security: operations.OsloginUsersGetLoginProfileSecurity{
             Option1: &operations.OsloginUsersGetLoginProfileSecurityOption1{
@@ -23,27 +25,28 @@ func main() {
             },
         },
         PathParams: operations.OsloginUsersGetLoginProfilePathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.OsloginUsersGetLoginProfileQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            OperatingSystemType: "OPERATING_SYSTEM_TYPE_UNSPECIFIED",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            OperatingSystemType: "LINUX",
             PrettyPrint: false,
-            ProjectID: "nihil",
-            QuotaUser: "rerum",
-            SystemID: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
-            View: "LOGIN_PROFILE_VIEW_UNSPECIFIED",
+            ProjectID: "fuga",
+            QuotaUser: "facilis",
+            SystemID: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
+            View: "SECURITY_KEY",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Users.OsloginUsersGetLoginProfile(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -52,5 +55,6 @@ func main() {
     if res.LoginProfile != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

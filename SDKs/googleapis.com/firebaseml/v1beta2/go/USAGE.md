@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FirebasemlProjectsModelsCreateRequest{
         Security: operations.FirebasemlProjectsModelsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,58 +23,58 @@ func main() {
             },
         },
         PathParams: operations.FirebasemlProjectsModelsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.FirebasemlProjectsModelsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.ModelInput{
-            DisplayName: "dicta",
-            Name: "debitis",
+            DisplayName: "eum",
+            Name: "iusto",
             State: &shared.ModelState{
-                Published: true,
+                Published: false,
                 ValidationError: &shared.Status{
-                    Code: 2339563716805116249,
+                    Code: 297534,
                     Details: []map[string]interface{}{
                         map[string]interface{}{
-                            "et": "voluptate",
-                            "iste": "vitae",
-                            "totam": "dolores",
+                            "sapiente": "enim",
                         },
                         map[string]interface{}{
-                            "debitis": "vel",
-                            "odio": "dolore",
-                            "id": "aspernatur",
+                            "voluptatum": "autem",
+                            "vel": "non",
                         },
                         map[string]interface{}{
-                            "totam": "commodi",
-                            "quis": "est",
-                            "aut": "odit",
+                            "similique": "reprehenderit",
+                            "molestiae": "quo",
+                        },
+                        map[string]interface{}{
+                            "laboriosam": "dicta",
                         },
                     },
-                    Message: "non",
+                    Message: "est",
                 },
             },
             Tags: []string{
-                "omnis",
+                "consequatur",
             },
             TfliteModel: &shared.TfLiteModelInput{
-                AutomlModel: "aut",
-                GcsTfliteURI: "illo",
+                AutomlModel: "fugiat",
+                GcsTfliteURI: "a",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.FirebasemlProjectsModelsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -81,5 +83,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

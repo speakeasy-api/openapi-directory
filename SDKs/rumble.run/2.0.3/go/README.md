@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/rumble.run/2.0.3/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateAccountCredentialRequest{
         Security: operations.CreateAccountCredentialSecurity{
             BearerAuth: shared.SchemeBearerAuth{
@@ -30,19 +32,22 @@ func main() {
         },
         Request: shared.CredentialOptions{
             ACL: map[string]interface{}{
-                "voluptas": "culpa",
+                "deserunt": "porro",
+                "nulla": "id",
+                "vero": "perspiciatis",
             },
-            Cidrs: "expedita",
-            Global: true,
-            Name: "dolor",
+            Cidrs: "10.0.0.17/32, 192.168.1.0/24",
+            Global: false,
+            Name: "credentials_name",
             Secret: map[string]interface{}{
-                "voluptas": "fugit",
-                "et": "nihil",
+                "fuga": "facilis",
+                "eum": "iusto",
             },
-            Type: "aws_access_secret",
+            Type: "miradore_api_key_v1",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Account.CreateAccountCredential(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,11 +56,13 @@ func main() {
     if res.Credential != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### Account
 
@@ -66,7 +73,7 @@ func main() {
 * `CreateAccountUserInvite` - Create a new user account and send an email invite
 * `DeleteAccountOrganizationExportToken` - Removes the export token from the specified organization
 * `ExportEventsJSON` - System event log as JSON
-* `ExportEventsJsonl` - System event log as JSON line-delimited
+* `ExportEventsJSONL` - System event log as JSON line-delimited
 * `GetAccountAgents` - Get all agents across all organizations
 * `GetAccountCredential` - Get credential details
 * `GetAccountCredentials` - Get all account credentials
@@ -84,32 +91,32 @@ func main() {
 * `RemoveAccountOrganization` - Remove this organization
 * `RemoveAccountUser` - Remove this user
 * `ResetAccountUserLockout` - Resets the user's lockout status
-* `ResetAccountUserMfa` - Resets the user's MFA tokens
+* `ResetAccountUserMFA` - Resets the user's MFA tokens
 * `ResetAccountUserPassword` - Sends the user a password reset email
 * `RotateAccountKey` - Rotates the key secret
 * `RotateAccountOrganizationExportToken` - Rotates the organization export token and returns the updated organization
 * `UpdateAccountOrganization` - Update organization details
 * `UpdateAccountUser` - Update a user's details
 
-### Cisco SNTC
+### CiscoSNTC
 
-* `ExportAssetsCiscoCsv` - Cisco serial number and model name export for Cisco Smart Net Total Care Service.
+* `ExportAssetsCiscoCSV` - Cisco serial number and model name export for Cisco Smart Net Total Care Service.
 
 ### Export
 
-* `ExportAssetsCsv` - Asset inventory as CSV
+* `ExportAssetsCSV` - Asset inventory as CSV
 * `ExportAssetsJSON` - Exports the asset inventory
-* `ExportAssetsJsonl` - Asset inventory as JSON line-delimited
+* `ExportAssetsJSONL` - Asset inventory as JSON line-delimited
 * `ExportAssetsNmapXML` - Asset inventory as Nmap-style XML
-* `ExportServicesCsv` - Service inventory as CSV
+* `ExportServicesCSV` - Service inventory as CSV
 * `ExportServicesJSON` - Service inventory as JSON
-* `ExportServicesJsonl` - Service inventory as JSON line-delimited
-* `ExportSitesCsv` - Site list as CSV
+* `ExportServicesJSONL` - Service inventory as JSON line-delimited
+* `ExportSitesCSV` - Site list as CSV
 * `ExportSitesJSON` - Export all sites
-* `ExportSitesJsonl` - Site list as JSON line-delimited
-* `ExportWirelessCsv` - Wireless inventory as CSV
+* `ExportSitesJSONL` - Site list as JSON line-delimited
+* `ExportWirelessCSV` - Wireless inventory as CSV
 * `ExportWirelessJSON` - Wireless inventory as JSON
-* `ExportWirelessJsonl` - Wireless inventory as JSON line-delimited
+* `ExportWirelessJSONL` - Wireless inventory as JSON line-delimited
 
 ### Organization
 
@@ -129,8 +136,8 @@ func main() {
 * `GetTaskChangeReport` - Returns a temporary task change report data url
 * `GetTaskScanData` - Returns a temporary task scan data url
 * `GetTasks` - Get all tasks (last 1000)
-* `GetWirelessLan` - Get wireless LAN details
-* `GetWirelessLaNs` - Get all wireless LANs
+* `GetWirelessLAN` - Get wireless LAN details
+* `GetWirelessLANs` - Get all wireless LANs
 * `HideTask` - Signal that a completed task should be hidden
 * `ImportScanData` - Import a scan data file into a site
 * `RemoveAgent` - Remove and uninstall an agent
@@ -138,7 +145,7 @@ func main() {
 * `RemoveKey` - Remove the current API key
 * `RemoveService` - Remove a service
 * `RemoveSite` - Remove a site and associated assets
-* `RemoveWirelessLan` - Remove a wireless LAN
+* `RemoveWirelessLAN` - Remove a wireless LAN
 * `RotateKey` - Rotate the API key secret and return the updated key
 * `StopTask` - Signal that a task should be stopped or canceledThis will also remove recurring and scheduled tasks
 * `UpdateAgentSite` - Update the site associated with agent
@@ -157,15 +164,14 @@ func main() {
 
 ### ServiceNow
 
-* `SnowExportAssetsCsv` - Export an asset inventory as CSV for ServiceNow integration
+* `SnowExportAssetsCSV` - Export an asset inventory as CSV for ServiceNow integration
 * `SnowExportAssetsJSON` - Exports the asset inventory as JSON
-* `SnowExportServicesCsv` - Export a service inventory as CSV for ServiceNow integration
+* `SnowExportServicesCSV` - Export a service inventory as CSV for ServiceNow integration
 
 ### Splunk
 
 * `SplunkAssetSyncCreatedJSON` - Exports the asset inventory in a sync-friendly manner using created_at as a checkpoint. Requires the Splunk entitlement.
 * `SplunkAssetSyncUpdatedJSON` - Exports the asset inventory in a sync-friendly manner using updated_at as a checkpoint. Requires the Splunk entitlement.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

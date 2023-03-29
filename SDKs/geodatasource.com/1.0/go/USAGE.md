@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,16 +12,17 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetCityRequest{
         QueryParams: operations.GetCityQueryParams{
-            Format: "json",
-            Key: "voluptas",
-            Lat: 53.099998,
-            Lng: 15.100000,
+            Format: "xml",
+            Key: "deserunt",
+            Lat: 7151.9,
+            Lng: 8442.66,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetCity(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -28,5 +31,6 @@ func main() {
     if res.GetCity200ApplicationJSONString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

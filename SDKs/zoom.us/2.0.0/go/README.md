@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/zoom.us/2.0.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,30 +14,29 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                OAuth: shared.SchemeOAuth{
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            OAuth: shared.SchemeOAuth{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AccountRequest{
         PathParams: operations.AccountPathParams{
-            AccountID: "sit",
+            AccountID: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.Account(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,11 +45,13 @@ func main() {
     if res.Account200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### Accounts
 
@@ -63,11 +64,11 @@ func main() {
 * `AccountSettingsUpdate` - Update settings
 * `AccountTrustedDomain` - Get trusted domains
 * `Accounts` - List sub accounts
-* `DelVb` - Delete virtual background files
+* `DelVB` - Delete virtual background files
 * `GetAccountLockSettings` - Get locked settings
 * `UpdateAccountLockSettings` - Update locked settings
 * `UpdateAccountOwner` - Update the account owner
-* `UploadVb` - Upload virtual background files
+* `UploadVB` - Upload virtual background files
 
 ### Billing
 
@@ -81,11 +82,11 @@ func main() {
 * `AccountPlanBaseUpdate` - Update a base plan
 * `AccountPlanCreate` - Subscribe plans
 * `AccountPlans` - Get plan Information
-* `DownloadInvoicePdf` - Download an invoice file
+* `DownloadInvoicePDF` - Download an invoice file
 * `GetAccountBillingInvoice` - Get invoice details
 * `GetPlanUsage` - Get plan usage
 
-### Chat Channels
+### ChatChannels
 
 * `CreateChannel` - Create a channel
 * `DeleteUserLevelChannel` - Delete a channel
@@ -96,7 +97,7 @@ func main() {
 * `RemoveAUserLevelChannelMember` - Remove a member
 * `UpdateUserLevelChannel` - Update a channel
 
-### Chat Channels (Account-level)
+### ChatChannelsAccountLevel
 
 * `DeleteChannel` - Delete a channel
 * `GetChannel` - Get a channel
@@ -105,20 +106,20 @@ func main() {
 * `RemoveAChannelMember` - Remove a member
 * `UpdateChannel` - Update a channel
 
-### Chat Messages
+### ChatMessages
 
 * `DeleteChatMessage` - Delete a message
 * `EditMessage` - Update a message
 * `GetChatMessages` - List user's chat messages
 * `SendaChatMessage` - Send a chat message
 
-### Chatbot Messages
+### ChatbotMessages
 
 * `DeleteAChatbotMessage` - Delete a chatbot message
 * `EditChatbotMessage` - Edit a chatbot message
 * `Sendchatbot` - Send chatbot messages
 
-### Cloud Recording
+### CloudRecording
 
 * `GetAccountCloudRecording` - List recordings of an account
 * `ListArchivedFiles` - List archived files
@@ -136,7 +137,7 @@ func main() {
 * `RecordingStatusUpdateOne` - Recover a single recording
 * `RecordingsList` - List all recordings
 
-### Common Area Phones
+### CommonAreaPhones
 
 * `AddCommonAreaPhone` - Add a common area phone
 * `DeleteCommonAreaPhone` - Delete a common area phone
@@ -152,23 +153,23 @@ func main() {
 
 ### Dashboards
 
-* `DashboardCrc` - Get CRC port usage
+* `DashboardCRC` - Get CRC port usage
 * `DashboardClientFeedback` - List Zoom meetings client feedback
 * `DashboardClientFeedbackDetail` - Get zoom meetings client feedback
-* `DashboardIm` - Get IM metrics
+* `DashboardIM` - Get IM metrics
 * `DashboardIssueDetailZoomRoom` - Get issues of Zoom Rooms
 * `DashboardIssueZoomRoom` - Get top 25 Zoom Rooms with issues
 * `DashboardMeetingDetail` - Get meeting details
-* `DashboardMeetingParticipantQos` - Get meeting participant QoS
+* `DashboardMeetingParticipantQOS` - Get meeting participant QoS
 * `DashboardMeetingParticipantShare` - Get sharing/recording details
 * `DashboardMeetingParticipants` - List meeting participants
-* `DashboardMeetingParticipantsQos` - List meeting participants QoS
+* `DashboardMeetingParticipantsQOS` - List meeting participants QoS
 * `DashboardMeetings` - List meetings
 * `DashboardWebinarDetail` - Get webinar details
-* `DashboardWebinarParticipantQos` - Get webinar participant QoS
+* `DashboardWebinarParticipantQOS` - Get webinar participant QoS
 * `DashboardWebinarParticipantShare` - Get sharing/recording details
 * `DashboardWebinarParticipants` - Get webinar participants
-* `DashboardWebinarParticipantsQos` - List webinar participant QoS
+* `DashboardWebinarParticipantsQOS` - List webinar participant QoS
 * `DashboardWebinars` - List webinars
 * `DashboardZoomRoom` - Get Zoom Rooms details
 * `DashboardZoomRoomIssue` - Get top 25 issues of Zoom Rooms
@@ -180,7 +181,7 @@ func main() {
 * `ParticipantFeedback` - Get post meeting feedback
 * `ParticipantWebinarFeedback` - Get post webinar feedback
 
-### Deprecated API Endpoints
+### DeprecatedAPIEndpoints
 
 * `ListPastMeetingFiles` - List past meeting's files
 * `ListPastWebinarFiles` - List past webinar files
@@ -194,7 +195,7 @@ func main() {
 
 ### Groups
 
-* `DelGroupVb` - Delete virtual background files
+* `DelGroupVB` - Delete virtual background files
 * `GetGroupLockSettings` - Get locked settings
 * `GetGroupSettings` - Get a group's settings
 * `Group` - Get a group
@@ -208,16 +209,16 @@ func main() {
 * `Groups` - List groups
 * `UpdateAGroupMember` - Update a group member
 * `UpdateGroupSettings` - Update a group's settings
-* `UploadGroupVb` - Upload virtual background files
+* `UploadGroupVB` - Upload virtual background files
 
-### IM Chat
+### IMChat
 
 * `ImChatMessages` - Get IM chat messages
 * `ImChatSessions` - Get IM chat sessions
 * `Listimmessages` - Get user’s IM messages
 * `Sendimmessages` - Send IM messages
 
-### IM Groups
+### IMGroups
 
 * `ImGroup` - Retrieve an IM directory group
 * `ImGroupCreate` - Create an IM directory group
@@ -252,22 +253,23 @@ func main() {
 * `MeetingRegistrants` - List meeting registrants
 * `MeetingRegistrantsQuestionsGet` - List registration questions 
 * `MeetingStatus` - Update meeting status
-* `MeetingUpdate` - Update a meeting
+* `MeetingUpdateJSON` - Update a meeting
+* `MeetingUpdateMultipart` - Update a meeting
 * `Meetingregistrantdelete` - Delete a meeting registrant
 * `Meetings` - List meetings
 * `PastMeetingDetails` - Get past meeting details
 * `PastMeetingParticipants` - Get past meeting participants
 * `PastMeetings` - List ended meeting instances
 
-### PAC
+### Pac
 
-* `UserPaCs` - List a user's PAC accounts
+* `UserPACs` - List a user's PAC accounts
 
 ### Phone
 
 * `UnassignPhoneNumber` - Unassign phone number
 * `AccountCallLogs` - Get account's call logs
-* `AddByocNumber` - Add BYOC phone numbers
+* `AddBYOCNumber` - Add BYOC phone numbers
 * `AddSettingTemplate` - Add a setting template
 * `AddUserSetting` - Set up shared access
 * `AssignCallingPlan` - Assign calling plan to a user
@@ -280,7 +282,7 @@ func main() {
 * `GetPhoneRecordings` - Get call recordings
 * `GetSettingTemplate` - Get setting template details
 * `ListAccountPhoneNumbers` - List phone numbers
-* `ListByocsipTrunk` - List BYOC SIP trunks
+* `ListBYOCSIPTrunk` - List BYOC SIP trunks
 * `ListCallingPlans` - List calling plans
 * `ListPhoneUsers` - List phone users
 * `ListSettingTemplates` - List setting templates
@@ -289,17 +291,17 @@ func main() {
 * `PhoneUserRecordings` - Get user's recordings
 * `PhoneUserSettings` - Get user's settings
 * `PhoneUserVoiceMails` - Get user's voicemails
-* `PostPhoneSipTrunk` - Assign SIP trunks
+* `PostPhoneSIPTrunk` - Assign SIP trunks
 * `SetUpAccount` - Set up a Zoom Phone account
 * `UnassignCallingPlan` - Unassign user's calling plan
 * `UpdatePhoneNumberDetails` - Update phone number details
-* `UpdatePhoneSipTrunk` - Update SIP trunk details
+* `UpdatePhoneSIPTrunk` - Update SIP trunk details
 * `UpdatePhoneSettings` - Update BYOC settings
 * `UpdateSettingTemplate` - Update a setting template
 * `UpdateUserProfile` - Update user's profile
 * `UpdateUserSetting` - Update shared access
 
-### Phone Auto Receptionists
+### PhoneAutoReceptionists
 
 * `AddAutoReceptionist` - Add an auto receptionist
 * `AssignPhoneNumbersAutoReceptionist` - Assign phone numbers
@@ -307,7 +309,7 @@ func main() {
 * `UnassignAllPhoneNumsAutoReceptionist` - Unassign all phone numbers
 * `UpdateAutoReceptionist` - Update auto receptionist details
 
-### Phone Blocked List
+### PhoneBlockedList
 
 * `AddAnumberToBlockedList` - Create a blocked list
 * `DeleteABlockedList` - Delete a blocked list
@@ -315,7 +317,7 @@ func main() {
 * `ListBlockedList` - List blocked lists
 * `UpdateBlockedList` - Update a blocked list
 
-### Phone Call Queues
+### PhoneCallQueues
 
 * `AddMembersToCallQueue` - Add members to a call queue
 * `AssignPhoneToCallQueue` - Assign numbers to a call queue
@@ -331,7 +333,7 @@ func main() {
 * `UnassignMemberFromCallQueue` - Unassign a member
 * `UpdateCallQueue` - Update call queue details
 
-### Phone Devices
+### PhoneDevices
 
 * `AddPhoneDevice` - Add a device
 * `DeleteADevice` - Delete a device
@@ -339,24 +341,24 @@ func main() {
 * `ListPhoneDevices` - List devices
 * `UpdateADevice` - Update a device
 
-### Phone Reports
+### PhoneReports
 
-* `GetPsOperationLogs` - Get operation logs report
+* `GetPSOperationLogs` - Get operation logs report
 
-### Phone Shared Line Groups
+### PhoneSharedLineGroups
 
 * `AddMembersToSharedLineGroup` - Add members to a shared line group
-* `AssignPhoneNumbersSlg` - Assign phone numbers
+* `AssignPhoneNumbersSLG` - Assign phone numbers
 * `CreateASharedLineGroup` - Create a shared line group
-* `DeleteAMemberSlg` - Unassign a member from a shared line group
-* `DeleteAPhoneNumberSlg` - Unassign a phone number
+* `DeleteAMemberSLG` - Unassign a member from a shared line group
+* `DeleteAPhoneNumberSLG` - Unassign a phone number
 * `DeleteASharedLineGroup` - Delete a shared line group
-* `DeleteMembersOfSlg` - Unassign members of a shared line group
+* `DeleteMembersOfSLG` - Unassign members of a shared line group
 * `GetASharedLineGroup` - Get a shared line group
 * `ListSharedLineGroups` - List shared line groups
 * `UpdateASharedLineGroup` - Update a shared line group
 
-### Phone Site
+### PhoneSite
 
 * `CreatePhoneSite` - Create a phone site
 * `DeletePhoneSite` - Delete a phone site
@@ -379,7 +381,7 @@ func main() {
 * `ReportWebinarDetails` - Get webinar detail reports
 * `ReportWebinarParticipants` - Get webinar participant reports
 * `ReportWebinarPolls` - Get webinar poll reports
-* `ReportWebinarQa` - Get webinar Q&A report
+* `ReportWebinarQA` - Get webinar Q&A report
 
 ### Roles
 
@@ -395,74 +397,74 @@ func main() {
 ### Rooms
 
 * `AddARoom` - Add a Zoom Room
-* `ChangeZrLocation` - Change a Zoom Room's location
+* `ChangeZRLocation` - Change a Zoom Room's location
 * `CheckInRooms` - Check-in or check-out of a Zoom Room
 * `DeleteAZoomRoom` - Delete a Zoom Room
-* `GetZrProfile` - Get Zoom Room profile
-* `GetZrSettings` - Get Zoom Room settings
+* `GetZRProfile` - Get Zoom Room profile
+* `GetZRSettings` - Get Zoom Room settings
 * `ListDigitalSignageContent` - List digital signage contents
-* `ListZrDevices` - List Zoom Room devices
+* `ListZRDevices` - List Zoom Room devices
 * `ListZoomRooms` - List Zoom Rooms
 * `ManageE911signage` - Update E911 digital signage
 * `UpdateRoomProfile` - Update a Zoom Room profile
-* `UpdateZrSettings` - Update Zoom Room settings
+* `UpdateZRSettings` - Update Zoom Room settings
 
-### Rooms Account
+### RoomsAccount
 
-* `GetZrAccountProfile` - Get Zoom Room account profile
-* `GetZrAccountSettings` - Get Zoom Room account settings
-* `UpdateZrAccProfile` - Update Zoom Room account profile
+* `GetZRAccountProfile` - Get Zoom Room account profile
+* `GetZRAccountSettings` - Get Zoom Room account settings
+* `UpdateZRAccProfile` - Update Zoom Room account profile
 * `UpdateZoomRoomAccSettings` - Update Zoom Room account settings
 
-### Rooms Devices
+### RoomsDevices
 
 * `ChangeZoomRoomsAppVersion` - Change Zoom Rooms' app version
 
-### Rooms Location
+### RoomsLocation
 
-* `AddAzrLocation` - Add a location
+* `AddAZRLocation` - Add a location
 * `ChangeParentLocation` - Change the assigned parent location
-* `GetZrLocationProfile` - Get Zoom Room location profile
-* `GetZrLocationSettings` - Get location settings
-* `GetZrLocationStructure` - Get Zoom Room location structure
-* `ListZrLocations` - List Zoom Room locations
-* `UpdateZrLocationProfile` - Update Zoom Room location profile
-* `UpdateZrLocationSettings` - Update location settings
+* `GetZRLocationProfile` - Get Zoom Room location profile
+* `GetZRLocationSettings` - Get location settings
+* `GetZRLocationStructure` - Get Zoom Room location structure
+* `ListZRLocations` - List Zoom Room locations
+* `UpdateZRLocationProfile` - Update Zoom Room location profile
+* `UpdateZRLocationSettings` - Update location settings
 * `UpdateZoomRoomsLocationStructure` - Update Zoom Rooms location structure
 
-### SIP Connected Audio
+### SIPConnectedAudio
 
 * `AddCalloutCountries` - Add internal call-out countries
 * `AddInternalNumbers` - Add internal numbers
-* `AssignSipConfig` - Assign SIP trunk configuration
-* `AssignSipTrunks` - Assign SIP trunks
+* `AssignSIPConfig` - Assign SIP trunk configuration
+* `AssignSIPTrunks` - Assign SIP trunks
 * `AssignSipTrunkNumbers` - Assign numbers
 * `DeleteAllSipNumbers` - Delete all numbers
 * `DeleteInternalCallOutCountry` - Delete internal call-out country
 * `DeleteInternalNumber` - Delete an internal number
-* `DeleteSipTrunk` - Delete a SIP trunk
+* `DeleteSIPTrunk` - Delete a SIP trunk
 * `ListInternalCalloutCountries` - List internal call-out countries
 * `ListInternalNumbers` - List internal numbers
-* `ListSipTrunks` - List SIP trunks
+* `ListSIPTrunks` - List SIP trunks
 * `ListSipTrunkNumbers` - List SIP trunk numbers
 
-### SIP Phone
+### SIPPhone
 
-* `CreateSipPhone` - Enable SIP phone
-* `DeleteSipPhone` - Delete SIP phone
+* `CreateSIPPhone` - Enable SIP phone
+* `DeleteSIPPhone` - Delete SIP phone
 * `ListSipPhones` - List SIP phones
-* `UpdateSipPhone` - Update SIP phone
+* `UpdateSIPPhone` - Update SIP phone
 
-### TSP
+### Tsp
 
 * `Tsp` - Get account's TSP information
 * `TspUpdate` - Update account's TSP information
 * `TspURLUpdate` - Set global dial-in URL for a TSP user
-* `UserTsp` - Get a user's TSP account
-* `UserTspCreate` - Add a user's TSP account
-* `UserTspDelete` - Delete a user's TSP account
-* `UserTspUpdate` - Update a TSP account
-* `UserTsPs` - List user's TSP accounts
+* `UserTSP` - Get a user's TSP account
+* `UserTSPCreate` - Add a user's TSP account
+* `UserTSPDelete` - Delete a user's TSP account
+* `UserTSPUpdate` - Update a TSP account
+* `UserTSPs` - List user's TSP accounts
 
 ### TrackingField
 
@@ -474,7 +476,7 @@ func main() {
 
 ### Users
 
-* `DelUserVb` - Delete virtual background files
+* `DelUserVB` - Delete virtual background files
 * `SwitchUserAccount` - Switch a user's account
 * `UpdatePresenceStatus` - Update a user's presence status
 * `UploadVBuser` - Upload virtual background files
@@ -490,7 +492,7 @@ func main() {
 * `UserPassword` - Update a user's password
 * `UserPermission` - Get user permissions
 * `UserPicture` - Upload a user's profile picture
-* `UserSsoTokenDelete` - Revoke a user's SSO token
+* `UserSSOTokenDelete` - Revoke a user's SSO token
 * `UserSchedulerDelete` - Delete a scheduler
 * `UserSchedulers` - List user schedulers
 * `UserSchedulersDelete` - Delete user schedulers
@@ -509,7 +511,7 @@ func main() {
 * `DeleteWebinarRegistrant` - Delete a webinar registrant
 * `GetTrackingSources` - Get webinar tracking sources
 * `ListPastWebinarPollResults` - List past webinar poll results
-* `ListPastWebinarQa` - List Q&A of past webinar
+* `ListPastWebinarQA` - List Q&A of past webinar
 * `ListWebinarParticipants` - List webinar participants
 * `ListWebinarTemplates` - List webinar templates
 * `PastWebinars` - List past webinar instances
@@ -533,9 +535,9 @@ func main() {
 * `WebinarRegistrants` - List webinar registrants
 * `WebinarRegistrantsQuestionsGet` - List registration questions
 * `WebinarStatus` - Update webinar status
-* `WebinarUpdate` - Update a webinar
+* `WebinarUpdateJSON` - Update a webinar
+* `WebinarUpdateMultipart` - Update a webinar
 * `Webinars` - List webinars
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

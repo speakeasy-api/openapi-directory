@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FcmProjectsMessagesSendRequest{
         Security: operations.FcmProjectsMessagesSendSecurity{
             Option1: &operations.FcmProjectsMessagesSendSecurityOption1{
@@ -23,133 +25,138 @@ func main() {
             },
         },
         PathParams: operations.FcmProjectsMessagesSendPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.FcmProjectsMessagesSendQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.SendMessageRequest{
             Message: &shared.Message{
                 Android: &shared.AndroidConfig{
-                    CollapseKey: "dicta",
+                    CollapseKey: "eum",
                     Data: map[string]string{
-                        "voluptatum": "et",
+                        "ullam": "saepe",
+                        "inventore": "sapiente",
                     },
                     DirectBootOk: false,
                     FcmOptions: &shared.AndroidFcmOptions{
-                        AnalyticsLabel: "dolorem",
+                        AnalyticsLabel: "enim",
                     },
                     Notification: &shared.AndroidNotification{
-                        Body: "et",
+                        Body: "eum",
                         BodyLocArgs: []string{
-                            "iste",
+                            "autem",
+                            "vel",
                         },
-                        BodyLocKey: "vitae",
-                        BypassProxyNotification: true,
-                        ChannelID: "dolores",
-                        ClickAction: "illum",
-                        Color: "debitis",
+                        BodyLocKey: "non",
+                        BypassProxyNotification: false,
+                        ChannelID: "deleniti",
+                        ClickAction: "similique",
+                        Color: "reprehenderit",
                         DefaultLightSettings: false,
                         DefaultSound: false,
-                        DefaultVibrateTimings: true,
-                        EventTime: "id",
-                        Icon: "aspernatur",
-                        Image: "accusantium",
+                        DefaultVibrateTimings: false,
+                        EventTime: "molestiae",
+                        Icon: "quo",
+                        Image: "quasi",
                         LightSettings: &shared.LightSettings{
                             Color: &shared.Color{
-                                Alpha: 45.099998,
-                                Blue: 78.199997,
-                                Green: 0.100000,
-                                Red: 49.099998,
+                                Alpha: 3373.96,
+                                Blue: 871.29,
+                                Green: 6481.72,
+                                Red: 202.18,
                             },
-                            LightOffDuration: "omnis",
-                            LightOnDuration: "aut",
+                            LightOffDuration: "consequatur",
+                            LightOnDuration: "fugiat",
                         },
-                        LocalOnly: true,
-                        NotificationCount: 5558237345453186302,
-                        NotificationPriority: "PRIORITY_MIN",
-                        Sound: "autem",
-                        Sticky: true,
-                        Tag: "nobis",
-                        Ticker: "odio",
-                        Title: "qui",
+                        LocalOnly: false,
+                        NotificationCount: 957156,
+                        NotificationPriority: "PRIORITY_HIGH",
+                        Sound: "eos",
+                        Sticky: false,
+                        Tag: "accusamus",
+                        Ticker: "accusamus",
+                        Title: "Principal Applications Consultant",
                         TitleLocArgs: []string{
-                            "at",
-                            "ipsum",
-                            "eveniet",
+                            "praesentium",
+                            "occaecati",
+                            "dolor",
+                            "soluta",
                         },
-                        TitleLocKey: "modi",
+                        TitleLocKey: "sed",
                         VibrateTimings: []string{
-                            "inventore",
+                            "rerum",
+                            "culpa",
+                            "qui",
                         },
                         Visibility: "PUBLIC",
                     },
-                    Priority: "NORMAL",
-                    RestrictedPackageName: "aut",
-                    TTL: "reprehenderit",
+                    Priority: "HIGH",
+                    RestrictedPackageName: "possimus",
+                    TTL: "occaecati",
                 },
                 Apns: &shared.ApnsConfig{
                     FcmOptions: &shared.ApnsFcmOptions{
-                        AnalyticsLabel: "tempore",
-                        Image: "maiores",
+                        AnalyticsLabel: "odit",
+                        Image: "esse",
                     },
                     Headers: map[string]string{
-                        "dolor": "beatae",
-                        "veritatis": "in",
-                        "et": "omnis",
+                        "voluptatem": "amet",
+                        "est": "id",
                     },
                     Payload: map[string]interface{}{
-                        "ex": "dolores",
+                        "numquam": "similique",
+                        "dolores": "sit",
                     },
                 },
-                Condition: "placeat",
+                Condition: "quia",
                 Data: map[string]string{
-                    "rerum": "mollitia",
-                    "voluptas": "quam",
+                    "voluptatem": "laborum",
+                    "modi": "et",
+                    "iure": "earum",
                 },
                 FcmOptions: &shared.FcmOptions{
-                    AnalyticsLabel: "reprehenderit",
+                    AnalyticsLabel: "ut",
                 },
-                Name: "qui",
+                Name: "soluta",
                 Notification: &shared.Notification{
                     Body: "qui",
-                    Image: "unde",
-                    Title: "in",
+                    Image: "ea",
+                    Title: "Investor Division Agent",
                 },
-                Token: "autem",
-                Topic: "qui",
+                Token: "optio",
+                Topic: "aspernatur",
                 Webpush: &shared.WebpushConfig{
                     Data: map[string]string{
-                        "itaque": "ab",
-                        "neque": "ullam",
-                        "et": "accusantium",
+                        "ut": "libero",
                     },
                     FcmOptions: &shared.WebpushFcmOptions{
-                        AnalyticsLabel: "esse",
-                        Link: "architecto",
+                        AnalyticsLabel: "et",
+                        Link: "libero",
                     },
                     Headers: map[string]string{
-                        "velit": "cumque",
+                        "non": "ea",
                     },
                     Notification: map[string]interface{}{
-                        "sunt": "voluptates",
+                        "placeat": "ipsam",
                     },
                 },
             },
             ValidateOnly: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.FcmProjectsMessagesSend(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -158,5 +165,6 @@ func main() {
     if res.Message != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

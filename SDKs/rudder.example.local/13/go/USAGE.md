@@ -3,24 +3,23 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APITokens: shared.SchemeAPITokens{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APITokens: shared.SchemeAPITokens{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
+    ctx := context.Background()
     res, err := s.APIInfo.APIGeneralInformations(ctx)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +28,6 @@ func main() {
     if res.APIGeneralInformations200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

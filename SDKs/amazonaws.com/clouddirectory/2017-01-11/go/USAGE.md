@@ -3,62 +3,75 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddFacetToObjectRequest{
         Headers: operations.AddFacetToObjectHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-            XAmzDataPartition: "voluptas",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+            XAmzDataPartition: "nulla",
         },
         Request: operations.AddFacetToObjectRequestBody{
             ObjectAttributeList: []shared.AttributeKeyAndValue{
                 shared.AttributeKeyAndValue{
                     Key: shared.AttributeKey{
-                        FacetName: "et",
-                        Name: "nihil",
-                        SchemaArn: "rerum",
+                        FacetName: "fuga",
+                        Name: "facilis",
+                        SchemaArn: "eum",
                     },
                     Value: shared.TypedAttributeValue{
-                        BinaryValue: "dicta",
-                        BooleanValue: true,
-                        DatetimeValue: "1981-07-21T06:30:48Z",
-                        NumberValue: "et",
-                        StringValue: "ut",
+                        BinaryValue: "iusto",
+                        BooleanValue: false,
+                        DatetimeValue: "2022-12-10T22:06:23.168Z",
+                        NumberValue: "saepe",
+                        StringValue: "inventore",
+                    },
+                },
+                shared.AttributeKeyAndValue{
+                    Key: shared.AttributeKey{
+                        FacetName: "sapiente",
+                        Name: "enim",
+                        SchemaArn: "eum",
+                    },
+                    Value: shared.TypedAttributeValue{
+                        BinaryValue: "voluptatum",
+                        BooleanValue: false,
+                        DatetimeValue: "2022-06-13T12:59:54.320Z",
+                        NumberValue: "vel",
+                        StringValue: "non",
                     },
                 },
             },
             ObjectReference: operations.AddFacetToObjectRequestBodyObjectReference{
-                Selector: "dolorem",
+                Selector: "deleniti",
             },
             SchemaFacet: operations.AddFacetToObjectRequestBodySchemaFacet{
-                FacetName: "et",
-                SchemaArn: "voluptate",
+                FacetName: "similique",
+                SchemaArn: "reprehenderit",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddFacetToObject(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -67,5 +80,6 @@ func main() {
     if res.AddFacetToObjectResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

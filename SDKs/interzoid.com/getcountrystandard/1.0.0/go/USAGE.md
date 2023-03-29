@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetcountrystandardRequest{
         QueryParams: operations.GetcountrystandardQueryParams{
-            Country: "sit",
-            License: "voluptas",
+            Country: "Malta",
+            License: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CountryNameStandardization.Getcountrystandard(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -26,5 +29,6 @@ func main() {
     if res.Getcountrystandard200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

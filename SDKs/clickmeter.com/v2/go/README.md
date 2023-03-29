@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/clickmeter.com/v2/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,30 +14,29 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AccountDeleteDomainWhitelistRequest{
         PathParams: operations.AccountDeleteDomainWhitelistPathParams{
-            WhitelistID: "sit",
+            WhitelistID: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Account.AccountDeleteDomainWhitelist(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,11 +45,13 @@ func main() {
     if res.APICoreDtoAccountingDomainWhitelistEntry != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### Account
 
@@ -66,13 +67,27 @@ func main() {
 * `AccountGetPermissions` - Retrieve permissions for a guest
 * `AccountGetPermissionsCount` - Retrieve count of the permissions for a guest
 * `AccountGetPlan` - Retrieve current account plan
-* `AccountPatchPermissions` - Change the permission on a shared object
-* `AccountPost` - Update current account data
-* `AccountPostGuest` - Update a guest
-* `AccountPutDomainWhitelist` - Create an domain entry
-* `AccountPutGuest` - Create a guest
-* `AccountPutIPBlacklist` - Create an ip blacklist entry
-* `PostAccountGuestsGuestIDTypePermissionsPatch` - Change the permission on a shared object
+* `AccountPatchPermissionsForm` - Change the permission on a shared object
+* `AccountPatchPermissionsJSON` - Change the permission on a shared object
+* `AccountPatchPermissionsRaw` - Change the permission on a shared object
+* `AccountPostGuestForm` - Update a guest
+* `AccountPostGuestJSON` - Update a guest
+* `AccountPostGuestRaw` - Update a guest
+* `AccountPostForm` - Update current account data
+* `AccountPostJSON` - Update current account data
+* `AccountPostRaw` - Update current account data
+* `AccountPutDomainWhitelistForm` - Create an domain entry
+* `AccountPutDomainWhitelistJSON` - Create an domain entry
+* `AccountPutDomainWhitelistRaw` - Create an domain entry
+* `AccountPutGuestForm` - Create a guest
+* `AccountPutGuestJSON` - Create a guest
+* `AccountPutGuestRaw` - Create a guest
+* `AccountPutIPBlacklistForm` - Create an ip blacklist entry
+* `AccountPutIPBlacklistJSON` - Create an ip blacklist entry
+* `AccountPutIPBlacklistRaw` - Create an ip blacklist entry
+* `PostAccountGuestsGuestIDTypePermissionsPatchForm` - Change the permission on a shared object
+* `PostAccountGuestsGuestIDTypePermissionsPatchJSON` - Change the permission on a shared object
+* `PostAccountGuestsGuestIDTypePermissionsPatchRaw` - Change the permission on a shared object
 
 ### Aggregated
 
@@ -98,14 +113,26 @@ func main() {
 * `ConversionsGetStatisticsList` - Retrieve statistics about this conversion for a timeframe grouped by some temporal entity (day/week/month)
 * `ConversionsGetStatisticsSingle` - Retrieve statistics about this conversion for a timeframe
 * `ConversionsGetTops` - Retrieve a top report connected to this conversion
-* `ConversionsPatch` - Modify the association between a conversion and a datapoint
-* `ConversionsPatchNotes` - Fast patch the "notes" field of a conversion
-* `ConversionsPost` - Update conversion specified by id
-* `ConversionsPut` - Create a conversion
+* `ConversionsPatchNotesForm` - Fast patch the "notes" field of a conversion
+* `ConversionsPatchNotesJSON` - Fast patch the "notes" field of a conversion
+* `ConversionsPatchNotesRaw` - Fast patch the "notes" field of a conversion
+* `ConversionsPatchForm` - Modify the association between a conversion and a datapoint
+* `ConversionsPatchJSON` - Modify the association between a conversion and a datapoint
+* `ConversionsPatchRaw` - Modify the association between a conversion and a datapoint
+* `ConversionsPostForm` - Update conversion specified by id
+* `ConversionsPostJSON` - Update conversion specified by id
+* `ConversionsPostRaw` - Update conversion specified by id
+* `ConversionsPutForm` - Create a conversion
+* `ConversionsPutJSON` - Create a conversion
+* `ConversionsPutRaw` - Create a conversion
 * `GetConversionsConversionID` - Retrieve conversion specified by id
+* `PutConversionsConversionIDDatapointsBatchPatch` - Modify the association between a conversion and multiple datapoints
 
 ### DataPoints
 
+* `DataPointsBatchDelete` - Delete multiple datapoints
+* `DataPointsBatchPost` - Update multiple datapoints
+* `DataPointsBatchPut` - Create multiple datapoints
 * `DataPointsCount` - Count the datapoints associated to the user
 * `DataPointsDelete` - Delete a datapoint
 * `DataPointsGet` - List of all the datapoints associated to the user
@@ -116,7 +143,11 @@ func main() {
 * `DataPointsGetStatisticsSingle` - Retrieve statistics about this datapoint for a timeframe
 * `DataPointsGetTops` - Retrieve a top report connected to this datapoint
 * `DataPointsPatchFavourite` - Fast switch the "favourite" field of a datapoint
-* `DataPointsPatchNotes` - Fast patch the "notes" field of a datapoint
+* `DataPointsPatchNotesForm` - Fast patch the "notes" field of a datapoint
+* `DataPointsPatchNotesJSON` - Fast patch the "notes" field of a datapoint
+* `DataPointsPatchNotesRaw` - Fast patch the "notes" field of a datapoint
+* `DataPointsPost` - Update a datapoint
+* `DataPointsPut` - Create a datapoint
 * `GetDatapointsID` - Get a datapoint
 
 ### Domains
@@ -124,8 +155,12 @@ func main() {
 * `DomainsCount` - Retrieve count of domains
 * `DomainsDelete` - Delete a domain
 * `DomainsGet` - Retrieve a list of domains
-* `DomainsPut` - Create a domain
-* `DomainsUpdate` - Update a domain
+* `DomainsPutForm` - Create a domain
+* `DomainsPutJSON` - Create a domain
+* `DomainsPutRaw` - Create a domain
+* `DomainsUpdateForm` - Update a domain
+* `DomainsUpdateJSON` - Update a domain
+* `DomainsUpdateRaw` - Update a domain
 * `GetDomainsID` - Get a domain
 
 ### Groups
@@ -143,7 +178,12 @@ func main() {
 * `GroupsGetStatisticsSingle` - Retrieve statistics about this group for a timeframe
 * `GroupsGetTops` - Retrieve a top report connected to this group
 * `GroupsPatchFavourite` - Fast switch the "favourite" field of a group
-* `GroupsPatchNotes` - Fast patch the "notes" field of a group
+* `GroupsPatchNotesForm` - Fast patch the "notes" field of a group
+* `GroupsPatchNotesJSON` - Fast patch the "notes" field of a group
+* `GroupsPatchNotesRaw` - Fast patch the "notes" field of a group
+* `GroupsPost` - Update a group
+* `GroupsPut` - Create a group
+* `GroupsPutDatapoint` - Create a datapoint in this group
 * `GetGroupsID` - Get a group
 
 ### Hits
@@ -166,8 +206,12 @@ func main() {
 * `RetargetingGet` - List of all the retargeting scripts associated to the user
 * `RetargetingGetDatapoints` - List of all the datapoints associated to the retargeting script.
 * `RetargetingGetDatapointsCount` - Count the datapoints associated to the retargeting script.
-* `RetargetingPost` - Updates a retargeting script
-* `RetargetingPut` - Creates a retargeting script
+* `RetargetingPostForm` - Updates a retargeting script
+* `RetargetingPostJSON` - Updates a retargeting script
+* `RetargetingPostRaw` - Updates a retargeting script
+* `RetargetingPutForm` - Creates a retargeting script
+* `RetargetingPutJSON` - Creates a retargeting script
+* `RetargetingPutRaw` - Creates a retargeting script
 * `GetRetargetingID` - Get a retargeting script object
 
 ### Tags
@@ -181,12 +225,17 @@ func main() {
 * `TagsGetDatapointsCount` - Count the datapoints associated to the user filtered by this tag
 * `TagsGetGroups` - List of all the groups associated to the user filtered by this tag.
 * `TagsGetGroupsCount` - Count the groups associated to the user filtered by this tag
-* `TagsPatchDataPoint` - Associate/Deassociate a tag with a datapoint
-* `TagsPatchGroup` - Associate/Deassociate a tag with a group
-* `TagsPatchTagName` - Fast patch a tag name
+* `TagsPatchDataPointForm` - Associate/Deassociate a tag with a datapoint
+* `TagsPatchDataPointJSON` - Associate/Deassociate a tag with a datapoint
+* `TagsPatchDataPointRaw` - Associate/Deassociate a tag with a datapoint
+* `TagsPatchGroupForm` - Associate/Deassociate a tag with a group
+* `TagsPatchGroupJSON` - Associate/Deassociate a tag with a group
+* `TagsPatchGroupRaw` - Associate/Deassociate a tag with a group
+* `TagsPatchTagNameForm` - Fast patch a tag name
+* `TagsPatchTagNameJSON` - Fast patch a tag name
+* `TagsPatchTagNameRaw` - Fast patch a tag name
 * `TagsPut` - Create a tag
 * `GetTagsTagID` - Retrieve a tag
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DataflowProjectsDeleteSnapshotsRequest{
         Security: operations.DataflowProjectsDeleteSnapshotsSecurity{
             Option1: &operations.DataflowProjectsDeleteSnapshotsSecurityOption1{
@@ -23,25 +25,26 @@ func main() {
             },
         },
         PathParams: operations.DataflowProjectsDeleteSnapshotsPathParams{
-            ProjectID: "sit",
+            ProjectID: "unde",
         },
         QueryParams: operations.DataflowProjectsDeleteSnapshotsQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            Location: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            Location: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            SnapshotID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            SnapshotID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DataflowProjectsDeleteSnapshots(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +53,6 @@ func main() {
     if res.DeleteSnapshotResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

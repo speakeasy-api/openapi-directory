@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest{
         Security: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,62 +23,65 @@ func main() {
             },
         },
         PathParams: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            EndpointPolicyID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            EndpointPolicyID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.EndpointPolicyInput{
-            AuthorizationPolicy: "debitis",
-            ClientTLSPolicy: "voluptatum",
-            Description: "et",
+            AuthorizationPolicy: "iusto",
+            ClientTLSPolicy: "ullam",
+            Description: "saepe",
             EndpointMatcher: &shared.EndpointMatcher{
                 MetadataLabelMatcher: &shared.EndpointMatcherMetadataLabelMatcher{
-                    MetadataLabelMatchCriteria: "MATCH_ALL",
+                    MetadataLabelMatchCriteria: "METADATA_LABEL_MATCH_CRITERIA_UNSPECIFIED",
                     MetadataLabels: []shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "et",
-                            LabelValue: "voluptate",
+                            LabelName: "enim",
+                            LabelValue: "eum",
                         },
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "iste",
-                            LabelValue: "vitae",
+                            LabelName: "voluptatum",
+                            LabelValue: "autem",
                         },
                         shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
-                            LabelName: "totam",
-                            LabelValue: "dolores",
+                            LabelName: "vel",
+                            LabelValue: "non",
+                        },
+                        shared.EndpointMatcherMetadataLabelMatcherMetadataLabels{
+                            LabelName: "deleniti",
+                            LabelValue: "similique",
                         },
                     },
                 },
             },
             Labels: map[string]string{
-                "debitis": "vel",
-                "odio": "dolore",
-                "id": "aspernatur",
+                "molestiae": "quo",
+                "quasi": "laboriosam",
             },
-            Name: "accusantium",
-            ServerTLSPolicy: "totam",
+            Name: "dicta",
+            ServerTLSPolicy: "est",
             TrafficPortSelector: &shared.TrafficPortSelector{
                 Ports: []string{
-                    "quis",
-                    "est",
+                    "consequatur",
                 },
             },
             Type: "GRPC_SERVER",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.NetworkservicesProjectsLocationsEndpointPoliciesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -85,5 +90,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

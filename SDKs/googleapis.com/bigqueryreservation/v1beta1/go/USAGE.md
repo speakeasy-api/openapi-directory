@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest{
         Security: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity{
             Option1: &operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1{
@@ -23,42 +25,48 @@ func main() {
             },
         },
         PathParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            CapacityCommitmentID: "dolor",
-            EnforceSingleAdminProjectPerOrg: true,
-            Fields: "voluptas",
-            Key: "fugit",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            CapacityCommitmentID: "vero",
+            EnforceSingleAdminProjectPerOrg: false,
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            PrettyPrint: false,
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.CapacityCommitmentInput{
             FailureStatus: &shared.Status{
-                Code: 5617773211005988520,
+                Code: 437587,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "dolorem": "et",
-                        "voluptate": "iste",
-                        "vitae": "totam",
+                        "inventore": "sapiente",
+                        "enim": "eum",
+                        "voluptatum": "autem",
+                        "vel": "non",
+                    },
+                    map[string]interface{}{
+                        "similique": "reprehenderit",
+                        "molestiae": "quo",
                     },
                 },
-                Message: "dolores",
+                Message: "quasi",
             },
             MultiRegionAuxiliary: false,
             Plan: "FLEX",
-            RenewalPlan: "TRIAL",
-            SlotCount: "odio",
+            RenewalPlan: "COMMITMENT_PLAN_UNSPECIFIED",
+            SlotCount: "est",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.BigqueryreservationProjectsLocationsCapacityCommitmentsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -67,5 +75,6 @@ func main() {
     if res.CapacityCommitment != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,20 +12,21 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetVaccineStatusRequest{
         Headers: operations.GetVaccineStatusHeaders{
-            Accept: "sit",
-            Authorization: "voluptas",
-            ContentType: "culpa",
+            Accept: "unde",
+            Authorization: "deserunt",
+            ContentType: "porro",
         },
         Request: shared.VaccineStatusRequest{
-            DepartmentID: "expedita",
-            PatientID: "consequuntur",
-            Token: "dolor",
+            DepartmentID: "nulla",
+            PatientID: "id",
+            Token: "vero",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AthenaAPI.GetVaccineStatus(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -32,5 +35,6 @@ func main() {
     if res.VaccineResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

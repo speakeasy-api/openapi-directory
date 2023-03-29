@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/pi/2018-02-27/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,64 +14,76 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DescribeDimensionKeysRequest{
+        QueryParams: operations.DescribeDimensionKeysQueryParams{
+            MaxResults: "unde",
+            NextToken: "deserunt",
+        },
         Headers: operations.DescribeDimensionKeysHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "porro",
+            XAmzContentSha256: "nulla",
+            XAmzCredential: "id",
+            XAmzDate: "vero",
+            XAmzSecurityToken: "perspiciatis",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "nihil",
             XAmzTarget: "PerformanceInsightsv20180227.DescribeDimensionKeys",
         },
         Request: shared.DescribeDimensionKeysRequest{
-            EndTime: "2011-08-12T10:11:12Z",
+            AdditionalMetrics: []string{
+                "eum",
+                "iusto",
+                "ullam",
+            },
+            EndTime: "2022-05-08T00:36:32.534Z",
             Filter: map[string]string{
-                "rerum": "dicta",
+                "sapiente": "enim",
             },
             GroupBy: shared.DimensionGroup{
                 Dimensions: []string{
                     "voluptatum",
+                    "autem",
                 },
-                Group: "et",
-                Limit: 7144924247938981575,
+                Group: "vel",
+                Limit: 528895,
             },
-            Identifier: "dolorem",
-            MaxResults: 7259475919510918339,
-            Metric: "voluptate",
-            NextToken: "iste",
+            Identifier: "deleniti",
+            MaxResults: 568045,
+            Metric: "reprehenderit",
+            NextToken: "molestiae",
             PartitionBy: &shared.DimensionGroup{
                 Dimensions: []string{
-                    "totam",
+                    "quasi",
+                    "laboriosam",
+                    "dicta",
+                    "est",
                 },
-                Group: "dolores",
-                Limit: 1929546706668609706,
+                Group: "voluptatem",
+                Limit: 368241,
             },
-            PeriodInSeconds: 6392442863481646880,
-            ServiceType: "RDS",
-            StartTime: "2003-08-14T16:48:00Z",
+            PeriodInSeconds: 832620,
+            ServiceType: "DOCDB",
+            StartTime: "2022-06-18T11:53:14.321Z",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DescribeDimensionKeys(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -80,6 +92,7 @@ func main() {
     if res.DescribeDimensionKeysResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -88,10 +101,12 @@ func main() {
 
 ### SDK SDK
 
-* `DescribeDimensionKeys` - <p>For a specific time period, retrieve the top <code>N</code> dimension keys for a metric.</p> <note> <p>Each response element returns a maximum of 500 bytes. For larger elements, such as SQL statements, only the first 500 bytes are returned.</p> </note>
+* `DescribeDimensionKeys` - <p>For a specific time period, retrieve the top <code>N</code> dimension keys for a metric. </p> <note> <p>Each response element returns a maximum of 500 bytes. For larger elements, such as SQL statements, only the first 500 bytes are returned.</p> </note>
 * `GetDimensionKeyDetails` - Get the attributes of the specified dimension group for a DB instance or data source. For example, if you specify a SQL ID, <code>GetDimensionKeyDetails</code> retrieves the full text of the dimension <code>db.sql.statement</code> associated with this ID. This operation is useful because <code>GetResourceMetrics</code> and <code>DescribeDimensionKeys</code> don't support retrieval of large SQL statement text.
-* `GetResourceMetrics` - <p>Retrieve Performance Insights metrics for a set of data sources, over a time period. You can provide specific dimension groups and dimensions, and provide aggregation and filtering criteria for each group.</p> <note> <p>Each response element returns a maximum of 500 bytes. For larger elements, such as SQL statements, only the first 500 bytes are returned.</p> </note>
-
+* `GetResourceMetadata` - Retrieve the metadata for different features. For example, the metadata might indicate that a feature is turned on or off on a specific DB instance. 
+* `GetResourceMetrics` - <p>Retrieve Performance Insights metrics for a set of data sources over a time period. You can provide specific dimension groups and dimensions, and provide aggregation and filtering criteria for each group.</p> <note> <p>Each response element returns a maximum of 500 bytes. For larger elements, such as SQL statements, only the first 500 bytes are returned.</p> </note>
+* `ListAvailableResourceDimensions` - Retrieve the dimensions that can be queried for each specified metric type on a specified DB instance.
+* `ListAvailableResourceMetrics` - Retrieve metrics of the specified types that can be queried for a specified DB instance. 
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

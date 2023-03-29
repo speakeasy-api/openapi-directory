@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/bigquery/v2/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BigqueryDatasetsDeleteRequest{
         Security: operations.BigqueryDatasetsDeleteSecurity{
             Option1: &operations.BigqueryDatasetsDeleteSecurityOption1{
@@ -34,21 +36,22 @@ func main() {
             },
         },
         PathParams: operations.BigqueryDatasetsDeletePathParams{
-            DatasetID: "sit",
-            ProjectID: "voluptas",
+            DatasetID: "unde",
+            ProjectID: "deserunt",
         },
         QueryParams: operations.BigqueryDatasetsDeleteQueryParams{
             Alt: "json",
             DeleteContents: false,
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UserIP: "et",
+            Fields: "nulla",
+            Key: "id",
+            OauthToken: "vero",
+            PrettyPrint: false,
+            QuotaUser: "perspiciatis",
+            UserIP: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Datasets.BigqueryDatasetsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -57,13 +60,15 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### datasets
+
+### Datasets
 
 * `BigqueryDatasetsDelete` - Deletes the dataset specified by the datasetId value. Before you can delete a dataset, you must delete all its tables, either manually or by specifying deleteContents. Immediately after deletion, you can create another dataset with the same name.
 * `BigqueryDatasetsGet` - Returns the dataset specified by datasetID.
@@ -72,7 +77,7 @@ func main() {
 * `BigqueryDatasetsPatch` - Updates information in an existing dataset. The update method replaces the entire dataset resource, whereas the patch method only replaces fields that are provided in the submitted dataset resource. This method supports patch semantics.
 * `BigqueryDatasetsUpdate` - Updates information in an existing dataset. The update method replaces the entire dataset resource, whereas the patch method only replaces fields that are provided in the submitted dataset resource.
 
-### jobs
+### Jobs
 
 * `BigqueryJobsCancel` - Requests that a job be cancelled. This call will return immediately, and the client will need to poll for the job status to see if the cancel completed successfully. Cancelled jobs may still incur costs.
 * `BigqueryJobsDelete` - Requests the deletion of the metadata of a job. This call returns when the job's metadata is deleted.
@@ -82,19 +87,19 @@ func main() {
 * `BigqueryJobsList` - Lists all jobs that you started in the specified project. Job information is available for a six month period after creation. The job list is sorted in reverse chronological order, by job creation time. Requires the Can View project role, or the Is Owner project role if you set the allUsers property.
 * `BigqueryJobsQuery` - Runs a BigQuery SQL query synchronously and returns query results if the query completes within a specified timeout.
 
-### models
+### Models
 
 * `BigqueryModelsDelete` - Deletes the model specified by modelId from the dataset.
 * `BigqueryModelsGet` - Gets the specified model resource by model ID.
 * `BigqueryModelsList` - Lists all models in the specified dataset. Requires the READER dataset role. After retrieving the list of models, you can get information about a particular model by calling the models.get method.
 * `BigqueryModelsPatch` - Patch specific fields in the specified model.
 
-### projects
+### Projects
 
 * `BigqueryProjectsGetServiceAccount` - Returns the email address of the service account for your project used for interactions with Google Cloud KMS.
 * `BigqueryProjectsList` - Lists all projects to which you have been granted any project role.
 
-### routines
+### Routines
 
 * `BigqueryRoutinesDelete` - Deletes the routine specified by routineId from the dataset.
 * `BigqueryRoutinesGet` - Gets the specified routine resource by routine ID.
@@ -102,16 +107,16 @@ func main() {
 * `BigqueryRoutinesList` - Lists all routines in the specified dataset. Requires the READER dataset role.
 * `BigqueryRoutinesUpdate` - Updates information in an existing routine. The update method replaces the entire Routine resource.
 
-### rowAccessPolicies
+### RowAccessPolicies
 
 * `BigqueryRowAccessPoliciesList` - Lists all row access policies on the specified table.
 
-### tabledata
+### Tabledata
 
 * `BigqueryTabledataInsertAll` - Streams data into BigQuery one record at a time without needing to run a load job. Requires the WRITER dataset role.
 * `BigqueryTabledataList` - Retrieves table data from a specified set of rows. Requires the READER dataset role.
 
-### tables
+### Tables
 
 * `BigqueryTablesDelete` - Deletes the table specified by tableId from the dataset. If the table contains data, all the data will be deleted.
 * `BigqueryTablesGet` - Gets the specified table resource by table ID. This method does not return the data in the table, it only returns the table resource, which describes the structure of this table.
@@ -122,7 +127,6 @@ func main() {
 * `BigqueryTablesSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 * `BigqueryTablesTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 * `BigqueryTablesUpdate` - Updates information in an existing table. The update method replaces the entire table resource, whereas the patch method only replaces fields that are provided in the submitted table resource.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

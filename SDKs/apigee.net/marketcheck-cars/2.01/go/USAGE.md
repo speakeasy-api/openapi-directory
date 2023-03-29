@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CrmCheckRequest{
         PathParams: operations.CrmCheckPathParams{
-            Vin: "sit",
+            Vin: "unde",
         },
         QueryParams: operations.CrmCheckQueryParams{
-            APIKey: "voluptas",
-            SaleDate: "culpa",
+            APIKey: "deserunt",
+            SaleDate: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CRMCleanseAPI.CrmCheck(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +32,6 @@ func main() {
     if res.CRMResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

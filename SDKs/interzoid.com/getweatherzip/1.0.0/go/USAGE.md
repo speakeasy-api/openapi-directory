@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetweatherzipcodeRequest{
         QueryParams: operations.GetweatherzipcodeQueryParams{
-            License: "sit",
-            Zip: "voluptas",
+            License: "unde",
+            Zip: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.WeatherByZipCode.Getweatherzipcode(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -26,5 +29,6 @@ func main() {
     if res.Getweatherzipcode200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

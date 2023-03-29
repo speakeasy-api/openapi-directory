@@ -3,44 +3,43 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetAuthorizeCacheSecurityGroupIngressRequest{
-        QueryParams: operations.GetAuthorizeCacheSecurityGroupIngressQueryParams{
+    req := operations.GETAuthorizeCacheSecurityGroupIngressRequest{
+        QueryParams: operations.GETAuthorizeCacheSecurityGroupIngressQueryParams{
             Action: "AuthorizeCacheSecurityGroupIngress",
-            CacheSecurityGroupName: "voluptas",
-            Ec2SecurityGroupName: "culpa",
-            Ec2SecurityGroupOwnerID: "expedita",
+            CacheSecurityGroupName: "deserunt",
+            Ec2SecurityGroupName: "porro",
+            Ec2SecurityGroupOwnerID: "nulla",
             Version: "2015-02-02",
         },
-        Headers: operations.GetAuthorizeCacheSecurityGroupIngressHeaders{
-            XAmzAlgorithm: "dolor",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "voluptas",
-            XAmzDate: "fugit",
-            XAmzSecurityToken: "et",
-            XAmzSignature: "nihil",
-            XAmzSignedHeaders: "rerum",
+        Headers: operations.GETAuthorizeCacheSecurityGroupIngressHeaders{
+            XAmzAlgorithm: "vero",
+            XAmzContentSha256: "perspiciatis",
+            XAmzCredential: "nulla",
+            XAmzDate: "nihil",
+            XAmzSecurityToken: "fuga",
+            XAmzSignature: "facilis",
+            XAmzSignedHeaders: "eum",
         },
     }
-    
-    res, err := s.GetAuthorizeCacheSecurityGroupIngress(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETAuthorizeCacheSecurityGroupIngress(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,5 +47,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/airbyte.local/config/1.0.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,166 +14,171 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                BearerAuth: &shared.SchemeBearerAuth{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New()
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateConnectionRequest{
         Request: shared.ConnectionCreate{
-            DestinationID: "sit",
-            Name: "voluptas",
-            NamespaceDefinition: "destination",
-            NamespaceFormat: "expedita",
+            DestinationID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
+            Name: "est",
+            NamespaceDefinition: "source",
+            NamespaceFormat: "${SOURCE_NAMESPACE}",
             OperationIds: []string{
-                "dolor",
-                "expedita",
-                "voluptas",
+                "dfc2ddf7-cc78-4ca1-ba92-8fc816742cb7",
+                "39205929-396f-4ea7-996e-b10faaa2352c",
             },
-            Prefix: "fugit",
+            Prefix: "ipsam",
             ResourceRequirements: &shared.ResourceRequirements{
-                CPULimit: "et",
-                CPURequest: "nihil",
-                MemoryLimit: "rerum",
-                MemoryRequest: "dicta",
+                CPULimit: "est",
+                CPURequest: "commodi",
+                MemoryLimit: "quia",
+                MemoryRequest: "similique",
             },
             Schedule: &shared.ConnectionSchedule{
-                TimeUnit: "weeks",
-                Units: 5617773211005988520,
+                TimeUnit: "minutes",
+                Units: 438601,
             },
-            SourceID: "et",
-            Status: "deprecated",
+            SourceID: "aff1a3a2-fa94-4677-b925-1aa52c3f5ad0",
+            Status: "active",
             SyncCatalog: &shared.AirbyteCatalog{
                 Streams: []shared.AirbyteStreamAndConfiguration{
                     shared.AirbyteStreamAndConfiguration{
                         Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "et",
+                            AliasName: "quo",
                             CursorField: []string{
-                                "iste",
-                            },
-                            DestinationSyncMode: "append",
-                            PrimaryKey: [][]string{
-                                []string{
-                                    "illum",
-                                },
-                                []string{
-                                    "vel",
-                                },
-                                []string{
-                                    "dolore",
-                                },
-                            },
-                            Selected: false,
-                            SyncMode: "incremental",
-                        },
-                        Stream: &shared.AirbyteStream{
-                            DefaultCursorField: []string{
-                                "totam",
-                                "commodi",
-                                "quis",
-                            },
-                            JSONSchema: map[string]interface{}{
-                                "aut": "odit",
-                                "non": "voluptas",
-                            },
-                            Name: "omnis",
-                            Namespace: "aut",
-                            SourceDefinedCursor: true,
-                            SourceDefinedPrimaryKey: [][]string{
-                                []string{
-                                    "autem",
-                                    "consectetur",
-                                },
-                                []string{
-                                    "odio",
-                                },
-                                []string{
-                                    "recusandae",
-                                },
-                            },
-                            SupportedSyncModes: []shared.SyncModeEnum{
-                                "full_refresh",
-                                "full_refresh",
-                            },
-                        },
-                    },
-                    shared.AirbyteStreamAndConfiguration{
-                        Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "modi",
-                            CursorField: []string{
-                                "inventore",
+                                "explicabo",
+                                "aut",
+                                "reiciendis",
                             },
                             DestinationSyncMode: "append_dedup",
                             PrimaryKey: [][]string{
                                 []string{
-                                    "reprehenderit",
-                                    "tempore",
-                                    "maiores",
+                                    "reiciendis",
+                                    "illo",
+                                    "id",
                                 },
                                 []string{
-                                    "dolor",
-                                    "beatae",
-                                    "veritatis",
-                                },
-                                []string{
-                                    "et",
-                                    "omnis",
-                                    "ipsum",
+                                    "quod",
+                                    "sit",
                                 },
                             },
-                            Selected: true,
+                            Selected: false,
                             SyncMode: "full_refresh",
                         },
                         Stream: &shared.AirbyteStream{
                             DefaultCursorField: []string{
-                                "vel",
+                                "veniam",
+                                "reiciendis",
                             },
                             JSONSchema: map[string]interface{}{
-                                "mollitia": "voluptas",
-                                "quam": "reprehenderit",
-                                "qui": "qui",
+                                "ea": "exercitationem",
                             },
-                            Name: "unde",
-                            Namespace: "in",
+                            Name: "deleniti",
+                            Namespace: "sed",
                             SourceDefinedCursor: false,
                             SourceDefinedPrimaryKey: [][]string{
                                 []string{
-                                    "itaque",
-                                    "ab",
-                                    "neque",
+                                    "aut",
+                                    "esse",
+                                },
+                                []string{
+                                    "veritatis",
+                                    "numquam",
+                                    "eligendi",
+                                    "error",
+                                },
+                                []string{
+                                    "et",
+                                    "ut",
+                                    "molestias",
                                 },
                             },
                             SupportedSyncModes: []shared.SyncModeEnum{
+                                "incremental",
                                 "full_refresh",
-                                "full_refresh",
-                                "full_refresh",
+                                "incremental",
                             },
                         },
                     },
                     shared.AirbyteStreamAndConfiguration{
                         Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "architecto",
+                            AliasName: "in",
                             CursorField: []string{
-                                "velit",
+                                "non",
                             },
-                            DestinationSyncMode: "overwrite",
+                            DestinationSyncMode: "append",
                             PrimaryKey: [][]string{
                                 []string{
-                                    "voluptates",
+                                    "libero",
+                                },
+                                []string{
                                     "magni",
+                                    "est",
+                                    "porro",
+                                    "voluptas",
+                                },
+                            },
+                            Selected: false,
+                            SyncMode: "full_refresh",
+                        },
+                        Stream: &shared.AirbyteStream{
+                            DefaultCursorField: []string{
+                                "sit",
+                                "in",
+                            },
+                            JSONSchema: map[string]interface{}{
+                                "omnis": "voluptatem",
+                                "dolorem": "eum",
+                                "quis": "consequatur",
+                            },
+                            Name: "ratione",
+                            Namespace: "cum",
+                            SourceDefinedCursor: false,
+                            SourceDefinedPrimaryKey: [][]string{
+                                []string{
+                                    "nihil",
+                                    "id",
+                                },
+                                []string{
+                                    "sapiente",
+                                    "et",
+                                },
+                                []string{
+                                    "possimus",
+                                },
+                            },
+                            SupportedSyncModes: []shared.SyncModeEnum{
+                                "full_refresh",
+                                "incremental",
+                                "incremental",
+                            },
+                        },
+                    },
+                    shared.AirbyteStreamAndConfiguration{
+                        Config: &shared.AirbyteStreamConfiguration{
+                            AliasName: "sunt",
+                            CursorField: []string{
+                                "modi",
+                                "necessitatibus",
+                                "tenetur",
+                            },
+                            DestinationSyncMode: "append_dedup",
+                            PrimaryKey: [][]string{
+                                []string{
+                                    "nulla",
+                                    "reiciendis",
+                                },
+                                []string{
+                                    "fugit",
+                                    "ullam",
+                                    "voluptas",
                                 },
                             },
                             Selected: false,
@@ -181,21 +186,39 @@ func main() {
                         },
                         Stream: &shared.AirbyteStream{
                             DefaultCursorField: []string{
-                                "earum",
+                                "qui",
+                                "cum",
                             },
                             JSONSchema: map[string]interface{}{
-                                "omnis": "ut",
+                                "magnam": "culpa",
+                                "enim": "aut",
+                                "delectus": "eligendi",
+                                "officia": "est",
                             },
-                            Name: "consequatur",
-                            Namespace: "dolor",
-                            SourceDefinedCursor: true,
+                            Name: "distinctio",
+                            Namespace: "et",
+                            SourceDefinedCursor: false,
                             SourceDefinedPrimaryKey: [][]string{
                                 []string{
-                                    "consectetur",
+                                    "incidunt",
+                                    "facilis",
+                                    "qui",
+                                    "nihil",
+                                },
+                                []string{
+                                    "id",
+                                    "voluptatum",
+                                    "sit",
+                                },
+                                []string{
+                                    "corporis",
+                                    "porro",
                                 },
                             },
                             SupportedSyncModes: []shared.SyncModeEnum{
-                                "incremental",
+                                "full_refresh",
+                                "full_refresh",
+                                "full_refresh",
                             },
                         },
                     },
@@ -203,7 +226,8 @@ func main() {
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Connection.CreateConnection(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -212,13 +236,15 @@ func main() {
     if res.ConnectionRead != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### connection
+
+### Connection
 
 * `CreateConnection` - Create a connection between a source and a destination
 * `DeleteConnection` - Delete a connection
@@ -229,12 +255,12 @@ func main() {
 * `SyncConnection` - Trigger a manual sync of the connection
 * `UpdateConnection` - Update a connection
 
-### deployment
+### Deployment
 
 * `ExportArchive` - Export Airbyte Configuration and Data Archive
 * `ImportArchive` - Import Airbyte Configuration and Data Archive
 
-### destination
+### Destination
 
 * `CheckConnectionToDestination` - Check connection to the destination
 * `CheckConnectionToDestinationForUpdate` - Check connection for a proposed update to a destination
@@ -244,7 +270,7 @@ func main() {
 * `ListDestinationsForWorkspace` - List configured destinations for a workspace
 * `UpdateDestination` - Update a destination
 
-### destination_definition
+### DestinationDefinition
 
 * `CreateDestinationDefinition` - Creates a destinationsDefinition
 * `GetDestinationDefinition` - Get destinationDefinition
@@ -252,33 +278,33 @@ func main() {
 * `ListLatestDestinationDefinitions` - List the latest destinationDefinitions Airbyte supports
 * `UpdateDestinationDefinition` - Update destinationDefinition
 
-### destination_definition_specification
+### DestinationDefinitionSpecification
 
 * `GetDestinationDefinitionSpecification` - Get specification for a destinationDefinition
 
-### health
+### Health
 
 * `GetHealthCheck` - Health Check
 
-### jobs
+### Jobs
 
 * `CancelJob` - Cancels a job
 * `GetJobInfo` - Get information about a job
 * `ListJobsFor` - Returns recent jobs for a connection. Jobs are returned in descending order by createdAt.
 
-### logs
+### Logs
 
 * `GetLogs` - Get logs
 
-### notifications
+### Notifications
 
 * `TryNotificationConfig` - Try sending a notifications
 
-### openapi
+### Openapi
 
 * `GetOpenAPISpec` - Returns the openapi specification
 
-### operation
+### Operation
 
 * `CheckOperation` - Check if an operation to be created is valid
 * `CreateOperation` - Create an operation to be applied as part of a connection pipeline
@@ -287,13 +313,13 @@ func main() {
 * `ListOperationsForConnection` - Returns all operations for a connection.
 * `UpdateOperation` - Update an operation
 
-### scheduler
+### Scheduler
 
 * `ExecuteDestinationCheckConnection` - Run check connection for a given destination configuration
 * `ExecuteSourceCheckConnection` - Run check connection for a given source configuration
 * `ExecuteSourceDiscoverSchema` - Run discover schema for a given source a source configuration
 
-### source
+### Source
 
 * `CheckConnectionToSource` - Check connection to the source
 * `CheckConnectionToSourceForUpdate` - Check connection for a proposed update to a source
@@ -304,7 +330,7 @@ func main() {
 * `ListSourcesForWorkspace` - List sources for workspace
 * `UpdateSource` - Update a source
 
-### source_definition
+### SourceDefinition
 
 * `CreateSourceDefinition` - Creates a sourceDefinition
 * `GetSourceDefinition` - Get source
@@ -312,11 +338,11 @@ func main() {
 * `ListSourceDefinitions` - List all the sourceDefinitions the current Airbyte deployment is configured to use
 * `UpdateSourceDefinition` - Update a sourceDefinition
 
-### source_definition_specification
+### SourceDefinitionSpecification
 
 * `GetSourceDefinitionSpecification` - Get specification for a SourceDefinition.
 
-### web_backend
+### WebBackend
 
 * `WebBackendCreateConnection` - Create a connection
 * `WebBackendGetConnection` - Get a connection
@@ -325,7 +351,7 @@ func main() {
 * `WebBackendRecreateSource` - Recreate a source
 * `WebBackendUpdateConnection` - Update a connection
 
-### workspace
+### Workspace
 
 * `CreateWorkspace` - Creates a workspace
 * `DeleteWorkspace` - Deletes a workspace
@@ -333,7 +359,6 @@ func main() {
 * `GetWorkspaceBySlug` - Find workspace by slug
 * `ListWorkspaces` - List all workspaces registered in the current Airbyte deployment
 * `UpdateWorkspace` - Update workspace state
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

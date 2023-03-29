@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/github.com/ghes-2.20/1.1.4/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,14 +23,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest{
         PathParams: operations.ActivityCheckRepoIsStarredByAuthenticatedUserPathParams{
-            Owner: "sit",
-            Repo: "voluptas",
+            Owner: "unde",
+            Repo: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Activity.ActivityCheckRepoIsStarredByAuthenticatedUser(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -37,13 +40,15 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### activity
+
+### Activity
 
 * `ActivityCheckRepoIsStarredByAuthenticatedUser` - Check if a repository is starred by the authenticated user
 * `ActivityDeleteRepoSubscription` - Delete a repository subscription
@@ -77,7 +82,7 @@ func main() {
 * `ActivityStarRepoForAuthenticatedUser` - Star a repository for the authenticated user
 * `ActivityUnstarRepoForAuthenticatedUser` - Unstar a repository for the authenticated user
 
-### apps
+### Apps
 
 * `AppsAddRepoToInstallation` - Add a repository to an app installation
 * `AppsCheckAuthorization` - Check an authorization
@@ -105,7 +110,7 @@ func main() {
 * `AppsRevokeGrantForApplication` - Revoke a grant for an application
 * `AppsRevokeInstallationAccessToken` - Revoke an installation access token
 
-### checks
+### Checks
 
 * `ChecksCreate` - Create a check run
 * `ChecksCreateSuite` - Create a check suite
@@ -119,16 +124,16 @@ func main() {
 * `ChecksSetSuitesPreferences` - Update repository preferences for check suites
 * `ChecksUpdate` - Update a check run
 
-### codes-of-conduct
+### CodesOfConduct
 
 * `CodesOfConductGetAllCodesOfConduct` - Get all codes of conduct
 * `CodesOfConductGetConductCode` - Get a code of conduct
 
-### emojis
+### Emojis
 
 * `EmojisGet` - Get emojis
 
-### enterprise-admin
+### EnterpriseAdmin
 
 * `EnterpriseAdminAddAuthorizedSSHKey` - Add an authorized SSH key
 * `EnterpriseAdminCreateEnterpriseServerLicense` - Create a GitHub license
@@ -148,17 +153,26 @@ func main() {
 * `EnterpriseAdminDemoteSiteAdministrator` - Demote a site administrator
 * `EnterpriseAdminEnableOrDisableMaintenanceMode` - Enable or disable maintenance mode
 * `EnterpriseAdminGetAllAuthorizedSSHKeys` - Get all authorized SSH keys
+* `EnterpriseAdminGetAllStats` - Get all statistics
+* `EnterpriseAdminGetCommentStats` - Get comment statistics
 * `EnterpriseAdminGetConfigurationStatus` - Get the configuration status
 * `EnterpriseAdminGetDownloadStatusForPreReceiveEnvironment` - Get the download status for a pre-receive environment
 * `EnterpriseAdminGetGlobalWebhook` - Get a global webhook
+* `EnterpriseAdminGetHooksStats` - Get hooks statistics
+* `EnterpriseAdminGetIssueStats` - Get issue statistics
 * `EnterpriseAdminGetLicenseInformation` - Get license information
 * `EnterpriseAdminGetMaintenanceStatus` - Get the maintenance status
+* `EnterpriseAdminGetMilestoneStats` - Get milestone statistics
+* `EnterpriseAdminGetOrgStats` - Get organization statistics
+* `EnterpriseAdminGetPagesStats` - Get pages statistics
 * `EnterpriseAdminGetPreReceiveEnvironment` - Get a pre-receive environment
 * `EnterpriseAdminGetPreReceiveHook` - Get a pre-receive hook
 * `EnterpriseAdminGetPreReceiveHookForOrg` - Get a pre-receive hook for an organization
 * `EnterpriseAdminGetPreReceiveHookForRepo` - Get a pre-receive hook for a repository
+* `EnterpriseAdminGetPullRequestStats` - Get pull request statistics
+* `EnterpriseAdminGetRepoStats` - Get repository statistics
 * `EnterpriseAdminGetSettings` - Get settings
-* `EnterpriseAdminGetTypeStats` - Get statistics
+* `EnterpriseAdminGetUserStats` - Get users statistics
 * `EnterpriseAdminListGlobalWebhooks` - List global webhooks
 * `EnterpriseAdminListPersonalAccessTokens` - List personal access tokens
 * `EnterpriseAdminListPreReceiveEnvironments` - List pre-receive environments
@@ -188,8 +202,9 @@ func main() {
 * `EnterpriseAdminUpdatePreReceiveHookEnforcementForRepo` - Update pre-receive hook enforcement for a repository
 * `EnterpriseAdminUpdateUsernameForUser` - Update the username for a user
 * `EnterpriseAdminUpgradeLicense` - Upgrade a license
+* `GetEnterpriseStatsGists` - Get gist statistics
 
-### gists
+### Gists
 
 * `GistsCheckIsStarred` - Check if a gist is starred
 * `GistsCreate` - Create a gist
@@ -212,7 +227,7 @@ func main() {
 * `GistsUpdate` - Update a gist
 * `GistsUpdateComment` - Update a gist comment
 
-### git
+### Git
 
 * `GitCreateBlob` - Create a blob
 * `GitCreateCommit` - Create a commit
@@ -228,12 +243,12 @@ func main() {
 * `GitListMatchingRefs` - List matching references
 * `GitUpdateRef` - Update a reference
 
-### gitignore
+### Gitignore
 
 * `GitignoreGetAllTemplates` - Get all gitignore templates
 * `GitignoreGetTemplate` - Get a gitignore template
 
-### issues
+### Issues
 
 * `IssuesAddAssignees` - Add assignees to an issue
 * `IssuesAddLabels` - Add labels to an issue
@@ -275,25 +290,25 @@ func main() {
 * `IssuesUpdateLabel` - Update a label
 * `IssuesUpdateMilestone` - Update a milestone
 
-### licenses
+### Licenses
 
 * `LicensesGet` - Get a license
 * `LicensesGetAllCommonlyUsed` - Get all commonly used licenses
 * `LicensesGetForRepo` - Get the license for a repository
 
-### markdown
+### Markdown
 
 * `MarkdownRender` - Render a Markdown document
 * `MarkdownRenderRaw` - Render a Markdown document in raw mode
 
-### meta
+### Meta
 
 * `MetaGet` - Get GitHub Enterprise Server meta information
 * `MetaGetOctocat` - Get Octocat
 * `MetaGetZen` - Get the Zen of GitHub
 * `MetaRoot` - GitHub API Root
 
-### oauth-authorizations
+### OauthAuthorizations
 
 * `OauthAuthorizationsCreateAuthorization` - Create a new authorization
 * `OauthAuthorizationsDeleteAuthorization` - Delete an authorization
@@ -306,7 +321,7 @@ func main() {
 * `OauthAuthorizationsListGrants` - List your grants
 * `OauthAuthorizationsUpdateAuthorization` - Update an existing authorization
 
-### orgs
+### Orgs
 
 * `OrgsCheckMembershipForUser` - Check organization membership for a user
 * `OrgsCheckPublicMembershipForUser` - Check public organization membership for a user
@@ -337,7 +352,7 @@ func main() {
 * `OrgsUpdateMembershipForAuthenticatedUser` - Update an organization membership for the authenticated user
 * `OrgsUpdateWebhook` - Update an organization webhook
 
-### projects
+### Projects
 
 * `ProjectsAddCollaborator` - Add project collaborator
 * `ProjectsCreateCard` - Create a project card
@@ -365,7 +380,7 @@ func main() {
 * `ProjectsUpdateCard` - Update an existing project card
 * `ProjectsUpdateColumn` - Update an existing project column
 
-### pulls
+### Pulls
 
 * `PullsCheckIfMerged` - Check if a pull request has been merged
 * `PullsCreate` - Create a pull request
@@ -395,11 +410,11 @@ func main() {
 * `PullsUpdateReview` - Update a review for a pull request
 * `PullsUpdateReviewComment` - Update a review comment for a pull request
 
-### rate-limit
+### RateLimit
 
 * `RateLimitGet` - Get rate limit status for the authenticated user
 
-### reactions
+### Reactions
 
 * `ReactionsCreateForCommitComment` - Create reaction for a commit comment
 * `ReactionsCreateForIssue` - Create reaction for an issue
@@ -415,7 +430,7 @@ func main() {
 * `ReactionsListForTeamDiscussion` - List reactions for a team discussion
 * `ReactionsListForTeamDiscussionComment` - List reactions for a team discussion comment
 
-### repos
+### Repos
 
 * `ReposAcceptInvitation` - Accept a repository invitation
 * `ReposAddAppAccessRestrictions` - Add app access restrictions
@@ -547,7 +562,7 @@ func main() {
 * `ReposUpdateWebhook` - Update a repository webhook
 * `ReposUploadReleaseAsset` - Upload a release asset
 
-### search
+### Search
 
 * `SearchCode` - Search code
 * `SearchCommits` - Search commits
@@ -557,7 +572,7 @@ func main() {
 * `SearchTopics` - Search topics
 * `SearchUsers` - Search users
 
-### teams
+### Teams
 
 * `TeamsAddMemberLegacy` - Add team member (Legacy)
 * `TeamsAddOrUpdateMembershipForUser` - Add or update team membership for a user
@@ -593,7 +608,7 @@ func main() {
 * `TeamsUpdateDiscussion` - Update a discussion
 * `TeamsUpdateDiscussionComment` - Update a discussion comment
 
-### users
+### Users
 
 * `UsersAddEmailForAuthenticated` - Add an email address for the authenticated user
 * `UsersCheckFollowingForUser` - Check if a user follows another user
@@ -622,7 +637,6 @@ func main() {
 * `UsersListPublicSSHKeysForAuthenticated` - List public SSH keys for the authenticated user
 * `UsersUnfollow` - Unfollow a user
 * `UsersUpdateAuthenticated` - Update the authenticated user
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

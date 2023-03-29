@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.EventarcProjectsLocationsChannelConnectionsCreateRequest{
         Security: operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,29 +23,30 @@ func main() {
             },
         },
         PathParams: operations.EventarcProjectsLocationsChannelConnectionsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.EventarcProjectsLocationsChannelConnectionsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            ChannelConnectionID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            ChannelConnectionID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.ChannelConnectionInput{
-            ActivationToken: "debitis",
-            Channel: "voluptatum",
-            Name: "et",
+            ActivationToken: "iusto",
+            Channel: "ullam",
+            Name: "saepe",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.EventarcProjectsLocationsChannelConnectionsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -52,5 +55,6 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

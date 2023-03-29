@@ -3,42 +3,49 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: &shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: &shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BookingAvailabilityRequest{
         Headers: operations.BookingAvailabilityHeaders{
-            AcceptLanguage: "sit",
+            AcceptLanguage: "en-US",
         },
         Request: &operations.BookingAvailabilityRequestBody{
             AgeBands: []BookingAvailabilityRequestBodyAgeBands{
                 operations.BookingAvailabilityRequestBodyAgeBands{
-                    BandID: 6050128673802995827,
-                    Count: 501233450539197794,
+                    BandID: 592845,
+                    Count: 715190,
+                },
+                operations.BookingAvailabilityRequestBodyAgeBands{
+                    BandID: 844266,
+                    Count: 602763,
+                },
+                operations.BookingAvailabilityRequestBodyAgeBands{
+                    BandID: 857946,
+                    Count: 544883,
                 },
             },
-            CurrencyCode: "consequuntur",
-            Month: "dolor",
-            ProductCode: "expedita",
-            Year: "voluptas",
+            CurrencyCode: "nulla",
+            Month: "nihil",
+            ProductCode: "fuga",
+            Year: "facilis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BookingServices.BookingAvailability(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +54,6 @@ func main() {
     if res.BookingAvailability200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

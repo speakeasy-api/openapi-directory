@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/circleci.com/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,31 +14,30 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Apikey: shared.SchemeApikey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Apikey: shared.SchemeApikey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DeleteProjectUsernameProjectBuildCacheRequest{
         PathParams: operations.DeleteProjectUsernameProjectBuildCachePathParams{
-            Project: "sit",
-            Username: "voluptas",
+            Project: "unde",
+            Username: "Larry_Rau85",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DeleteProjectUsernameProjectBuildCache(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,6 +46,7 @@ func main() {
     if res.DeleteProjectUsernameProjectBuildCache200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -104,7 +104,6 @@ Note: For more about build parameters, read about [using parameterized builds](h
 * `PostProjectUsernameProjectBuildNumRetry` - Retries the build, returns a summary of the new build.
 
 * `PostUserHerokuKey` - Adds your Heroku API key to CircleCI, takes apikey as form param name.
-
 
 <!-- End SDK Available Operations -->
 

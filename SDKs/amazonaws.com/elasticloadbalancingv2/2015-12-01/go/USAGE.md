@@ -3,42 +3,41 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetDeleteListenerRequest{
-        QueryParams: operations.GetDeleteListenerQueryParams{
+    req := operations.GETDeleteListenerRequest{
+        QueryParams: operations.GETDeleteListenerQueryParams{
             Action: "DeleteListener",
-            ListenerArn: "voluptas",
+            ListenerArn: "deserunt",
             Version: "2015-12-01",
         },
-        Headers: operations.GetDeleteListenerHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "consequuntur",
-            XAmzCredential: "dolor",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "et",
+        Headers: operations.GETDeleteListenerHeaders{
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
         },
     }
-    
-    res, err := s.GetDeleteListener(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETDeleteListener(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,5 +45,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

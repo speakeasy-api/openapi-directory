@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.TagmanagerAccountsContainersCreateRequest{
         Security: operations.TagmanagerAccountsContainersCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,45 +23,50 @@ func main() {
             },
         },
         PathParams: operations.TagmanagerAccountsContainersCreatePathParams{
-            AccountID: "sit",
+            AccountID: "unde",
         },
         QueryParams: operations.TagmanagerAccountsContainersCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Container{
-            AccountID: "dicta",
-            ContainerID: "debitis",
+            AccountID: "eum",
+            ContainerID: "iusto",
             DomainName: []string{
-                "et",
+                "saepe",
+                "inventore",
             },
             EnabledBuiltInVariable: []shared.ContainerEnabledBuiltInVariableEnum{
+                "historySource",
+                "sdkVersion",
                 "ampReferrer",
-                "firebaseEventParameterPreviousOsVersion",
-                "scrollDepthUnits",
+                "firebaseEventParameterNotificationTopic",
             },
-            Fingerprint: "iste",
-            Name: "vitae",
-            Notes: "totam",
-            PublicID: "dolores",
-            TimeZoneCountryID: "illum",
-            TimeZoneID: "debitis",
+            Fingerprint: "vel",
+            Name: "non",
+            Notes: "deleniti",
+            PublicID: "similique",
+            TimeZoneCountryID: "reprehenderit",
+            TimeZoneID: "molestiae",
             UsageContext: []shared.ContainerUsageContextEnum{
                 "web",
-                "android",
+                "ios",
+                "web",
+                "androidSdk5",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.TagmanagerAccountsContainersCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -68,5 +75,6 @@ func main() {
     if res.Container != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

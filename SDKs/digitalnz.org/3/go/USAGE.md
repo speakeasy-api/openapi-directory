@@ -3,66 +3,68 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKeyAuth: shared.SchemeAPIKeyAuth{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKeyAuth: shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetRecordsFormatRequest{
         PathParams: operations.GetRecordsFormatPathParams{
-            Format: "json",
+            Format: "xml",
         },
         QueryParams: operations.GetRecordsFormatQueryParams{
-            AndCategory: "Manuscripts",
-            AndCentury: "culpa",
-            AndCollection: "expedita",
-            AndContentPartner: "consequuntur",
-            AndCreator: "dolor",
-            AndDate: "expedita",
-            AndDcType: "voluptas",
-            AndDecade: "fugit",
-            AndFormat: "et",
+            AndCategory: "Research papers",
+            AndCentury: "porro",
+            AndCollection: "nulla",
+            AndContentPartner: "id",
+            AndCreator: "vero",
+            AndDate: "perspiciatis",
+            AndDcType: "nulla",
+            AndDecade: "nihil",
+            AndFormat: "fuga",
             AndHasLargeThumbnailURL: "Y",
-            AndHasLatLng: true,
+            AndHasLatLng: "true",
             AndIsCommercialUse: false,
-            AndOrFilterField: "debitis",
-            AndPlacename: "voluptatum",
-            AndPrimaryCollection: "et",
-            AndSubject: "ut",
-            AndTitle: "dolorem",
-            AndUsage: "Share",
-            AndYear: "voluptate",
-            APIKey: "iste",
-            Direction: "asc",
-            ExcludeFiltersFromFacets: true,
-            Facets: []shared.FieldsEnum2{
-                "usage",
+            AndOrFilterField: "iusto",
+            AndPlacename: "ullam",
+            AndPrimaryCollection: "saepe",
+            AndSubject: "inventore",
+            AndTitle: "sapiente",
+            AndUsage: "Modify",
+            AndYear: "eum",
+            APIKey: "voluptatum",
+            Direction: "desc",
+            ExcludeFiltersFromFacets: false,
+            Facets: []GetRecordsFormatFacetsEnum{
+                "decade",
+                "decade",
+                "century",
+                "date",
             },
-            FacetsPage: 6392442863481646880,
-            FacetsPerPage: 3706853784096366226,
-            Fields: "odio",
-            GeoBbox: "dolore",
-            Page: 4035568504096476779,
-            PerPage: 959367522974354090,
+            FacetsPage: 925597,
+            FacetsPerPage: 836079,
+            Fields: "quasi",
+            GeoBbox: "laboriosam",
+            Page: 87129,
+            PerPage: 648172,
             Sort: "syndication_date",
-            Text: "totam",
-            WithoutFilterField: "commodi",
+            Text: "consequatur",
+            WithoutFilterField: "fugiat",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.APICalls.GetRecordsFormat(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -71,5 +73,6 @@ func main() {
     if res.GetRecordsFormat200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

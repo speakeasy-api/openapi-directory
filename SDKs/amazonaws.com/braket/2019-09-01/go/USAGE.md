@@ -3,49 +3,46 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.CancelJobRequest{
+        PathParams: operations.CancelJobPathParams{
+            JobArn: "unde",
+        },
+        Headers: operations.CancelJobHeaders{
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "nulla",
+            XAmzDate: "id",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "perspiciatis",
+            XAmzSignedHeaders: "nulla",
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.CancelQuantumTaskRequest{
-        PathParams: operations.CancelQuantumTaskPathParams{
-            QuantumTaskArn: "sit",
-        },
-        Headers: operations.CancelQuantumTaskHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "expedita",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "voluptas",
-        },
-        Request: operations.CancelQuantumTaskRequestBody{
-            ClientToken: "fugit",
-        },
-    }
-    
-    res, err := s.CancelQuantumTask(ctx, req)
+    ctx := context.Background()
+    res, err := s.CancelJob(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CancelQuantumTaskResponse != nil {
+    if res.CancelJobResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

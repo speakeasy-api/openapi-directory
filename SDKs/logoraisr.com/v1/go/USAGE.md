@@ -3,30 +3,29 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Token: shared.SchemeToken{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Token: shared.SchemeToken{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.PreviewsReadRequest{
         PathParams: operations.PreviewsReadPathParams{
-            FileID: "sit",
+            FileID: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Previews.PreviewsRead(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -35,5 +34,6 @@ func main() {
     if res.PreviewResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

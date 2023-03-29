@@ -3,42 +3,41 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AcceptCertificateTransferRequest{
         PathParams: operations.AcceptCertificateTransferPathParams{
-            CertificateID: "sit",
+            CertificateID: "unde",
         },
         QueryParams: operations.AcceptCertificateTransferQueryParams{
             SetAsActive: false,
         },
         Headers: operations.AcceptCertificateTransferHeaders{
-            XAmzAlgorithm: "culpa",
-            XAmzContentSha256: "expedita",
-            XAmzCredential: "consequuntur",
-            XAmzDate: "dolor",
-            XAmzSecurityToken: "expedita",
-            XAmzSignature: "voluptas",
-            XAmzSignedHeaders: "fugit",
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "nulla",
+            XAmzDate: "id",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "perspiciatis",
+            XAmzSignedHeaders: "nulla",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AcceptCertificateTransfer(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +46,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

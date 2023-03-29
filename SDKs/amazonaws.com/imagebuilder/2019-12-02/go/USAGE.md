@@ -3,40 +3,39 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CancelImageCreationRequest{
         Headers: operations.CancelImageCreationHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CancelImageCreationRequestBody{
-            ClientToken: "voluptas",
-            ImageBuildVersionArn: "fugit",
+            ClientToken: "nulla",
+            ImageBuildVersionArn: "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CancelImageCreation(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -45,5 +44,6 @@ func main() {
     if res.CancelImageCreationResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

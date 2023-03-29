@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ReplicapoolPoolsDeleteRequest{
         Security: operations.ReplicapoolPoolsDeleteSecurity{
             Option1: &operations.ReplicapoolPoolsDeleteSecurityOption1{
@@ -23,26 +25,29 @@ func main() {
             },
         },
         PathParams: operations.ReplicapoolPoolsDeletePathParams{
-            PoolName: "sit",
-            ProjectName: "voluptas",
-            Zone: "culpa",
+            PoolName: "unde",
+            ProjectName: "deserunt",
+            Zone: "porro",
         },
         QueryParams: operations.ReplicapoolPoolsDeleteQueryParams{
             Alt: "json",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UserIP: "et",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UserIP: "nihil",
         },
         Request: &shared.PoolsDeleteRequest{
             AbandonInstances: []string{
-                "rerum",
+                "facilis",
+                "eum",
+                "iusto",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Pools.ReplicapoolPoolsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +56,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

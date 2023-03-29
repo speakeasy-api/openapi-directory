@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ReportsActivitiesListRequest{
         Security: operations.ReportsActivitiesListSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,34 +23,35 @@ func main() {
             },
         },
         PathParams: operations.ReportsActivitiesListPathParams{
-            ApplicationName: "mobile",
-            UserKey: "voluptas",
+            ApplicationName: "meet",
+            UserKey: "deserunt",
         },
         QueryParams: operations.ReportsActivitiesListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            ActorIPAddress: "consequuntur",
-            Alt: "media",
-            Callback: "expedita",
-            CustomerID: "voluptas",
-            EndTime: "fugit",
-            EventName: "et",
-            Fields: "nihil",
-            Filters: "rerum",
-            GroupIDFilter: "dicta",
-            Key: "debitis",
-            MaxResults: 5617773211005988520,
-            OauthToken: "et",
-            OrgUnitID: "ut",
-            PageToken: "dolorem",
+            AccessToken: "nulla",
+            ActorIPAddress: "id",
+            Alt: "proto",
+            Callback: "perspiciatis",
+            CustomerID: "nulla",
+            EndTime: "nihil",
+            EventName: "fuga",
+            Fields: "facilis",
+            Filters: "eum",
+            GroupIDFilter: "iusto",
+            Key: "ullam",
+            MaxResults: 891773,
+            OauthToken: "inventore",
+            OrgUnitID: "sapiente",
+            PageToken: "enim",
             PrettyPrint: false,
-            QuotaUser: "voluptate",
-            StartTime: "iste",
-            UploadType: "vitae",
-            UploadProtocol: "totam",
+            QuotaUser: "eum",
+            StartTime: "voluptatum",
+            UploadType: "autem",
+            UploadProtocol: "vel",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Activities.ReportsActivitiesList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -57,5 +60,6 @@ func main() {
     if res.Activities != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,177 +12,103 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.CreateDomesticPaymentConsentsRequest{
-        Security: operations.CreateDomesticPaymentConsentsSecurity{
+
+    req := operations.CreateDomesticPaymentConsentsJSONRequest{
+        Security: operations.CreateDomesticPaymentConsentsJSONSecurity{
             TPPOAuth2Security: shared.SchemeTppoAuth2Security{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        Headers: operations.CreateDomesticPaymentConsentsHeaders{
-            Authorization: "sit",
-            XCustomerUserAgent: "voluptas",
-            XFapiAuthDate: "culpa",
-            XFapiCustomerIPAddress: "expedita",
-            XFapiInteractionID: "consequuntur",
-            XIdempotencyKey: "dolor",
-            XJwsSignature: "expedita",
+        Headers: operations.CreateDomesticPaymentConsentsJSONHeaders{
+            Authorization: "unde",
+            XCustomerUserAgent: "deserunt",
+            XFapiAuthDate: "porro",
+            XFapiCustomerIPAddress: "nulla",
+            XFapiInteractionID: "id",
+            XIdempotencyKey: "vero",
+            XJwsSignature: "perspiciatis",
         },
-        Request: operations.CreateDomesticPaymentConsentsRequests{
-            ApplicationJosePlusJwe: []byte("voluptas"),
-            OBWriteDomesticConsent4: &shared.ObWriteDomesticConsent4{
-                Data: shared.ObWriteDomesticConsent4Data{
-                    Authorisation: &shared.ObWriteDomesticConsent4DataAuthorisation{
-                        AuthorisationType: "Any",
-                        CompletionDateTime: "2011-08-12T10:11:12Z",
+        Request: shared.OBWriteDomesticConsent4{
+            Data: shared.OBWriteDomesticConsent4Data{
+                Authorisation: &shared.OBWriteDomesticConsent4DataAuthorisation{
+                    AuthorisationType: "Single",
+                    CompletionDateTime: "2022-10-25T21:32:34.304Z",
+                },
+                Initiation: shared.OBWriteDomesticConsent4DataInitiation{
+                    CreditorAccount: shared.OBWriteDomesticConsent4DataInitiationCreditorAccount{
+                        Identification: "fuga",
+                        Name: "facilis",
+                        SchemeName: "eum",
+                        SecondaryIdentification: "iusto",
                     },
-                    Initiation: shared.ObWriteDomesticConsent4DataInitiation{
-                        CreditorAccount: shared.ObWriteDomesticConsent4DataInitiationCreditorAccount{
-                            Identification: "nihil",
-                            Name: "rerum",
-                            SchemeName: "dicta",
-                            SecondaryIdentification: "debitis",
+                    CreditorPostalAddress: &shared.OBPostalAddress6{
+                        AddressLine: []string{
+                            "saepe",
+                            "inventore",
                         },
-                        CreditorPostalAddress: &shared.ObPostalAddress6{
-                            AddressLine: []string{
-                                "et",
-                            },
-                            AddressType: "Statement",
-                            BuildingNumber: "dolorem",
-                            Country: "et",
-                            CountrySubDivision: "voluptate",
-                            Department: "iste",
-                            PostCode: "vitae",
-                            StreetName: "totam",
-                            SubDepartment: "dolores",
-                            TownName: "illum",
-                        },
-                        DebtorAccount: &shared.ObWriteDomesticConsent4DataInitiationDebtorAccount{
-                            Identification: "debitis",
-                            Name: "vel",
-                            SchemeName: "odio",
-                            SecondaryIdentification: "dolore",
-                        },
-                        EndToEndIdentification: "id",
-                        InstructedAmount: shared.ObWriteDomesticConsent4DataInitiationInstructedAmount{
-                            Amount: "aspernatur",
-                            Currency: "accusantium",
-                        },
-                        InstructionIdentification: "totam",
-                        LocalInstrument: "commodi",
-                        RemittanceInformation: &shared.ObWriteDomesticConsent4DataInitiationRemittanceInformation{
-                            Reference: "quis",
-                            Unstructured: "est",
-                        },
-                        SupplementaryData: map[string]interface{}{
-                            "odit": "non",
-                            "voluptas": "omnis",
-                            "aut": "illo",
-                        },
+                        AddressType: "Statement",
+                        BuildingNumber: "enim",
+                        Country: "Holy See (Vatican City State)",
+                        CountrySubDivision: "voluptatum",
+                        Department: "autem",
+                        PostCode: "54539-8030",
+                        StreetName: "est",
+                        SubDepartment: "voluptatem",
+                        TownName: "consequatur",
                     },
-                    ReadRefundAccount: "No",
-                    SCASupportData: &shared.ObscaSupportData1{
-                        AppliedAuthenticationApproach: "SCA",
-                        ReferencePaymentOrderID: "autem",
-                        RequestedSCAExemptionType: "PartyToParty",
+                    DebtorAccount: &shared.OBWriteDomesticConsent4DataInitiationDebtorAccount{
+                        Identification: "fugiat",
+                        Name: "a",
+                        SchemeName: "omnis",
+                        SecondaryIdentification: "eos",
+                    },
+                    EndToEndIdentification: "accusamus",
+                    InstructedAmount: shared.OBWriteDomesticConsent4DataInitiationInstructedAmount{
+                        Amount: "accusamus",
+                        Currency: "reiciendis",
+                    },
+                    InstructionIdentification: "rem",
+                    LocalInstrument: "quibusdam",
+                    RemittanceInformation: &shared.OBWriteDomesticConsent4DataInitiationRemittanceInformation{
+                        Reference: "et",
+                        Unstructured: "praesentium",
+                    },
+                    SupplementaryData: map[string]interface{}{
+                        "dolor": "soluta",
+                        "sed": "quisquam",
+                        "rerum": "culpa",
                     },
                 },
-                Risk: shared.ObRisk1{
-                    DeliveryAddress: &shared.ObRisk1DeliveryAddress{
-                        AddressLine: []string{
-                            "odio",
-                        },
-                        BuildingNumber: "qui",
-                        Country: "recusandae",
-                        CountrySubDivision: "at",
-                        PostCode: "ipsum",
-                        StreetName: "eveniet",
-                        TownName: "modi",
-                    },
-                    MerchantCategoryCode: "sint",
-                    MerchantCustomerIdentification: "inventore",
-                    PaymentContextCode: "PartyToParty",
+                ReadRefundAccount: "No",
+                SCASupportData: &shared.OBSCASupportData1{
+                    AppliedAuthenticationApproach: "SCA",
+                    ReferencePaymentOrderID: "rerum",
+                    RequestedSCAExemptionType: "Parking",
                 },
             },
-            OBWriteDomesticConsent5: &shared.ObWriteDomesticConsent4{
-                Data: shared.ObWriteDomesticConsent4Data{
-                    Authorisation: &shared.ObWriteDomesticConsent4DataAuthorisation{
-                        AuthorisationType: "Any",
-                        CompletionDateTime: "1987-11-29T05:58:16Z",
+            Risk: shared.OBRisk1{
+                DeliveryAddress: &shared.OBRisk1DeliveryAddress{
+                    AddressLine: []string{
+                        "odit",
+                        "esse",
+                        "rem",
                     },
-                    Initiation: shared.ObWriteDomesticConsent4DataInitiation{
-                        CreditorAccount: shared.ObWriteDomesticConsent4DataInitiationCreditorAccount{
-                            Identification: "reprehenderit",
-                            Name: "tempore",
-                            SchemeName: "maiores",
-                            SecondaryIdentification: "incidunt",
-                        },
-                        CreditorPostalAddress: &shared.ObPostalAddress6{
-                            AddressLine: []string{
-                                "beatae",
-                                "veritatis",
-                            },
-                            AddressType: "Business",
-                            BuildingNumber: "et",
-                            Country: "omnis",
-                            CountrySubDivision: "ipsum",
-                            Department: "ex",
-                            PostCode: "dolores",
-                            StreetName: "placeat",
-                            SubDepartment: "vel",
-                            TownName: "rerum",
-                        },
-                        DebtorAccount: &shared.ObWriteDomesticConsent4DataInitiationDebtorAccount{
-                            Identification: "mollitia",
-                            Name: "voluptas",
-                            SchemeName: "quam",
-                            SecondaryIdentification: "reprehenderit",
-                        },
-                        EndToEndIdentification: "qui",
-                        InstructedAmount: shared.ObWriteDomesticConsent4DataInitiationInstructedAmount{
-                            Amount: "qui",
-                            Currency: "unde",
-                        },
-                        InstructionIdentification: "in",
-                        LocalInstrument: "autem",
-                        RemittanceInformation: &shared.ObWriteDomesticConsent4DataInitiationRemittanceInformation{
-                            Reference: "qui",
-                            Unstructured: "ut",
-                        },
-                        SupplementaryData: map[string]interface{}{
-                            "ab": "neque",
-                            "ullam": "et",
-                            "accusantium": "esse",
-                        },
-                    },
-                    ReadRefundAccount: "No",
-                    SCASupportData: &shared.ObscaSupportData1{
-                        AppliedAuthenticationApproach: "CA",
-                        ReferencePaymentOrderID: "velit",
-                        RequestedSCAExemptionType: "PartyToParty",
-                    },
+                    BuildingNumber: "voluptatem",
+                    Country: "Cocos (Keeling) Islands",
+                    CountrySubDivision: "est",
+                    PostCode: "42510-3616",
+                    StreetName: "modi",
+                    TownName: "et",
                 },
-                Risk: shared.ObRisk1{
-                    DeliveryAddress: &shared.ObRisk1DeliveryAddress{
-                        AddressLine: []string{
-                            "sunt",
-                        },
-                        BuildingNumber: "voluptates",
-                        Country: "magni",
-                        CountrySubDivision: "et",
-                        PostCode: "optio",
-                        StreetName: "qui",
-                        TownName: "earum",
-                    },
-                    MerchantCategoryCode: "illo",
-                    MerchantCustomerIdentification: "omnis",
-                    PaymentContextCode: "PartyToParty",
-                },
+                MerchantCategoryCode: "iure",
+                MerchantCustomerIdentification: "earum",
+                PaymentContextCode: "PartyToParty",
             },
         },
     }
-    
-    res, err := s.DomesticPayments.CreateDomesticPaymentConsents(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.DomesticPayments.CreateDomesticPaymentConsentsJSON(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -188,5 +116,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

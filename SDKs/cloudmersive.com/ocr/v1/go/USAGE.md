@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ImageOcrImageLinesWithLocationRequest{
         Security: operations.ImageOcrImageLinesWithLocationSecurity{
             Apikey: shared.SchemeApikey{
@@ -18,17 +20,18 @@ func main() {
             },
         },
         Headers: operations.ImageOcrImageLinesWithLocationHeaders{
-            Language: "sit",
-            Preprocessing: "voluptas",
+            Language: "unde",
+            Preprocessing: "deserunt",
         },
         Request: operations.ImageOcrImageLinesWithLocationRequestBody{
             ImageFile: operations.ImageOcrImageLinesWithLocationRequestBodyImageFile{
-                Content: []byte("culpa"),
-                ImageFile: "expedita",
+                Content: []byte("porro"),
+                ImageFile: "nulla",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ImageOcr.ImageOcrImageLinesWithLocation(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -37,5 +40,6 @@ func main() {
     if res.ImageToLinesWithLocationResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

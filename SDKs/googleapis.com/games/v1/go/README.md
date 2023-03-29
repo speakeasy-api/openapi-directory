@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/games/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GamesAchievementDefinitionsListRequest{
         Security: operations.GamesAchievementDefinitionsListSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,23 +34,24 @@ func main() {
             },
         },
         QueryParams: operations.GamesAchievementDefinitionsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            Language: "expedita",
-            MaxResults: 6044372234677422456,
-            OauthToken: "fugit",
-            PageToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            Language: "perspiciatis",
+            MaxResults: 847252,
+            OauthToken: "nihil",
+            PageToken: "fuga",
+            PrettyPrint: false,
+            QuotaUser: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AchievementDefinitions.GamesAchievementDefinitionsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -57,17 +60,19 @@ func main() {
     if res.AchievementDefinitionsListResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### achievementDefinitions
+
+### AchievementDefinitions
 
 * `GamesAchievementDefinitionsList` - Lists all the achievement definitions for your application.
 
-### achievements
+### Achievements
 
 * `GamesAchievementsIncrement` - Increments the steps of the achievement with the given ID for the currently authenticated player.
 * `GamesAchievementsList` - Lists the progress for all your application's achievements for the currently authenticated player.
@@ -76,40 +81,40 @@ func main() {
 * `GamesAchievementsUnlock` - Unlocks this achievement for the currently authenticated player.
 * `GamesAchievementsUpdateMultiple` - Updates multiple achievements for the currently authenticated player.
 
-### applications
+### Applications
 
 * `GamesApplicationsGet` - Retrieves the metadata of the application with the given ID. If the requested application is not available for the specified `platformType`, the returned response will not include any instance data.
 * `GamesApplicationsGetEndPoint` - Returns a URL for the requested end point type.
 * `GamesApplicationsPlayed` - Indicate that the currently authenticated user is playing your application.
 * `GamesApplicationsVerify` - Verifies the auth token provided with this request is for the application with the specified ID, and returns the ID of the player it was granted for.
 
-### events
+### Events
 
 * `GamesEventsListByPlayer` - Returns a list showing the current progress on events in this application for the currently authenticated user.
 * `GamesEventsListDefinitions` - Returns a list of the event definitions in this application.
 * `GamesEventsRecord` - Records a batch of changes to the number of times events have occurred for the currently authenticated user of this application.
 
-### leaderboards
+### Leaderboards
 
 * `GamesLeaderboardsGet` - Retrieves the metadata of the leaderboard with the given ID.
 * `GamesLeaderboardsList` - Lists all the leaderboard metadata for your application.
 
-### metagame
+### Metagame
 
 * `GamesMetagameGetMetagameConfig` - Return the metagame configuration data for the calling application.
 * `GamesMetagameListCategoriesByPlayer` - List play data aggregated per category for the player corresponding to `playerId`.
 
-### players
+### Players
 
 * `GamesPlayersGet` - Retrieves the Player resource with the given ID. To retrieve the player for the currently authenticated user, set `playerId` to `me`.
 * `GamesPlayersGetScopedPlayerIds` - Retrieves scoped player identifiers for currently authenticated user.
 * `GamesPlayersList` - Get the collection of players for the currently authenticated user.
 
-### revisions
+### Revisions
 
 * `GamesRevisionsCheck` - Checks whether the games client is out of date.
 
-### scores
+### Scores
 
 * `GamesScoresGet` - Get high scores, and optionally ranks, in leaderboards for the currently authenticated player. For a specific time span, `leaderboardId` can be set to `ALL` to retrieve data for all leaderboards in a given time span. `NOTE: You cannot ask for 'ALL' leaderboards and 'ALL' timeSpans in the same request; only one parameter may be set to 'ALL'.
 * `GamesScoresList` - Lists the scores in a leaderboard, starting from the top.
@@ -117,15 +122,14 @@ func main() {
 * `GamesScoresSubmit` - Submits a score to the specified leaderboard.
 * `GamesScoresSubmitMultiple` - Submits multiple scores to leaderboards.
 
-### snapshots
+### Snapshots
 
 * `GamesSnapshotsGet` - Retrieves the metadata for a given snapshot ID.
 * `GamesSnapshotsList` - Retrieves a list of snapshots created by your application for the player corresponding to the player ID.
 
-### stats
+### Stats
 
 * `GamesStatsGet` - Returns engagement and spend statistics in this application for the currently authenticated user.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

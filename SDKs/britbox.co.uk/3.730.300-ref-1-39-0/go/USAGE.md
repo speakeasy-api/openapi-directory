@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AddPaymentMethodRequest{
         Security: operations.AddPaymentMethodSecurity{
             AccountAuth: shared.SchemeAccountAuth{
@@ -19,17 +21,20 @@ func main() {
         },
         QueryParams: operations.AddPaymentMethodQueryParams{
             Ff: []shared.FeatureFlagsEnum{
-                "ldp",
+                "rpt",
+                "cas",
+                "lrl",
             },
-            Lang: "culpa",
+            Lang: "id",
         },
         Request: shared.AddPaymentMethodRequest{
             MakeDefault: false,
-            Token: "consequuntur",
+            Token: "vero",
             Type: "Card",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Account.AddPaymentMethod(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -38,5 +43,6 @@ func main() {
     if res.PaymentMethod != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

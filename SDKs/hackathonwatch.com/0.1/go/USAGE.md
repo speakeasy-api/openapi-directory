@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.GetHackathonsIDFormatRequest{
-        PathParams: operations.GetHackathonsIDFormatPathParams{
-            ID: 8717895732742165505,
+
+    req := operations.GETHackathonsIDFormatRequest{
+        PathParams: operations.GETHackathonsIDFormatPathParams{
+            ID: 548814,
         },
     }
-    
-    res, err := s.Hackathons.GetHackathonsIDFormat(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Hackathons.GETHackathonsIDFormat(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -25,5 +28,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

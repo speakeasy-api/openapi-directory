@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AndroidpublisherInapppurchasesGetRequest{
         Security: operations.AndroidpublisherInapppurchasesGetSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,21 +23,22 @@ func main() {
             },
         },
         PathParams: operations.AndroidpublisherInapppurchasesGetPathParams{
-            PackageName: "sit",
-            ProductID: "voluptas",
-            Token: "culpa",
+            PackageName: "unde",
+            ProductID: "deserunt",
+            Token: "porro",
         },
         QueryParams: operations.AndroidpublisherInapppurchasesGetQueryParams{
             Alt: "json",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UserIP: "et",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UserIP: "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Inapppurchases.AndroidpublisherInapppurchasesGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -44,5 +47,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

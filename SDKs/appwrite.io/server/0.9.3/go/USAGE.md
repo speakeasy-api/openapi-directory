@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,10 +12,10 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AccountCreateRecoveryRequest{
         Security: operations.AccountCreateRecoverySecurity{
-            JWT: shared.SchemeJwt{
+            Jwt: shared.SchemeJwt{
                 APIKey: "YOUR_API_KEY_HERE",
             },
             Project: shared.SchemeProject{
@@ -21,11 +23,12 @@ func main() {
             },
         },
         Request: &operations.AccountCreateRecoveryRequestBody{
-            Email: "sit",
-            URL: "voluptas",
+            Email: "Larry_Rau85@yahoo.com",
+            URL: "perspiciatis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Account.AccountCreateRecovery(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -34,5 +37,6 @@ func main() {
     if res.Token != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

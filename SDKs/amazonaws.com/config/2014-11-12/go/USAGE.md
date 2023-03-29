@@ -3,49 +3,62 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchGetAggregateResourceConfigRequest{
         Headers: operations.BatchGetAggregateResourceConfigHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "StarlingDoveService.BatchGetAggregateResourceConfig",
         },
         Request: shared.BatchGetAggregateResourceConfigRequest{
-            ConfigurationAggregatorName: "fugit",
+            ConfigurationAggregatorName: "nihil",
             ResourceIdentifiers: []shared.AggregateResourceIdentifier{
                 shared.AggregateResourceIdentifier{
-                    ResourceID: "nihil",
-                    ResourceName: "rerum",
-                    ResourceType: "AWS::ApiGateway::Stage",
-                    SourceAccountID: "debitis",
+                    ResourceID: "facilis",
+                    ResourceName: "eum",
+                    ResourceType: "AWS::WAFv2::WebACL",
+                    SourceAccountID: "ullam",
+                    SourceRegion: "saepe",
+                },
+                shared.AggregateResourceIdentifier{
+                    ResourceID: "inventore",
+                    ResourceName: "sapiente",
+                    ResourceType: "AWS::SSM::ManagedInstanceInventory",
+                    SourceAccountID: "eum",
                     SourceRegion: "voluptatum",
+                },
+                shared.AggregateResourceIdentifier{
+                    ResourceID: "autem",
+                    ResourceName: "vel",
+                    ResourceType: "AWS::ApiGatewayV2::Api",
+                    SourceAccountID: "deleniti",
+                    SourceRegion: "similique",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchGetAggregateResourceConfig(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +67,6 @@ func main() {
     if res.BatchGetAggregateResourceConfigResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

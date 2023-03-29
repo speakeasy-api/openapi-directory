@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest{
         Security: operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,30 +23,38 @@ func main() {
             },
         },
         PathParams: operations.RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest{
-            Annotation: "PASSWORD_INCORRECT",
-            HashedAccountID: "debitis",
+            Annotation: "LEGITIMATE",
+            HashedAccountID: "iusto",
             Reasons: []shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum{
-                "TRANSACTION_ACCEPTED",
+                "INCORRECT_PASSWORD",
+                "REASON_UNSPECIFIED",
+            },
+            TransactionEvent: &shared.GoogleCloudRecaptchaenterpriseV1TransactionEvent{
+                EventTime: "sapiente",
+                EventType: "AUTHORIZATION_DECLINE",
+                Reason: "eum",
+                Value: 4776.65,
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.RecaptchaenterpriseProjectsAssessmentsAnnotate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +63,6 @@ func main() {
     if res.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

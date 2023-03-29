@@ -3,48 +3,49 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.CreateGroupRequest{
+        Headers: operations.CreateGroupHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
+            XAmzTarget: "AWSIdentityStore.CreateGroup",
+        },
+        Request: shared.CreateGroupRequest{
+            Description: "nihil",
+            DisplayName: "fuga",
+            IdentityStoreID: "facilis",
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.DescribeGroupRequest{
-        Headers: operations.DescribeGroupHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-            XAmzTarget: "AWSIdentityStore.DescribeGroup",
-        },
-        Request: shared.DescribeGroupRequest{
-            GroupID: "fugit",
-            IdentityStoreID: "et",
-        },
-    }
-    
-    res, err := s.DescribeGroup(ctx, req)
+    ctx := context.Background()
+    res, err := s.CreateGroup(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.DescribeGroupResponse != nil {
+    if res.CreateGroupResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

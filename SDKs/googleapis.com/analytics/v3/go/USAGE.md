@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AnalyticsDataGaGetRequest{
         Security: operations.AnalyticsDataGaGetSecurity{
             Option1: &operations.AnalyticsDataGaGetSecurityOption1{
@@ -24,28 +26,29 @@ func main() {
         },
         QueryParams: operations.AnalyticsDataGaGetQueryParams{
             Alt: "json",
-            Dimensions: "voluptas",
-            EndDate: "culpa",
-            Fields: "expedita",
-            Filters: "consequuntur",
-            Ids: "dolor",
-            IncludeEmptyRows: true,
-            Key: "voluptas",
-            MaxResults: 8274930044578894929,
-            Metrics: "et",
-            OauthToken: "nihil",
+            Dimensions: "deserunt",
+            EndDate: "porro",
+            Fields: "nulla",
+            Filters: "id",
+            Ids: "vero",
+            IncludeEmptyRows: false,
+            Key: "perspiciatis",
+            MaxResults: 847252,
+            Metrics: "nihil",
+            OauthToken: "fuga",
             Output: "json",
             PrettyPrint: false,
-            QuotaUser: "debitis",
-            SamplingLevel: "DEFAULT",
-            Segment: "et",
-            Sort: "ut",
-            StartDate: "dolorem",
-            StartIndex: 7259475919510918339,
-            UserIP: "voluptate",
+            QuotaUser: "eum",
+            SamplingLevel: "FASTER",
+            Segment: "ullam",
+            Sort: "saepe",
+            StartDate: "inventore",
+            StartIndex: 963663,
+            UserIP: "enim",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Data.AnalyticsDataGaGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -54,5 +57,6 @@ func main() {
     if res.GaData != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

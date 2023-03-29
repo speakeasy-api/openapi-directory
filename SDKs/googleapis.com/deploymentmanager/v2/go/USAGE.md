@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DeploymentmanagerDeploymentsCancelPreviewRequest{
         Security: operations.DeploymentmanagerDeploymentsCancelPreviewSecurity{
             Option1: &operations.DeploymentmanagerDeploymentsCancelPreviewSecurityOption1{
@@ -23,27 +25,28 @@ func main() {
             },
         },
         PathParams: operations.DeploymentmanagerDeploymentsCancelPreviewPathParams{
-            Deployment: "sit",
-            Project: "voluptas",
+            Deployment: "unde",
+            Project: "deserunt",
         },
         QueryParams: operations.DeploymentmanagerDeploymentsCancelPreviewQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            AccessToken: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.DeploymentsCancelPreviewRequest{
-            Fingerprint: "debitis",
+            Fingerprint: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Deployments.DeploymentmanagerDeploymentsCancelPreview(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -52,5 +55,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

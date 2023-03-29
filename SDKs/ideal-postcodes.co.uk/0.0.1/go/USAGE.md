@@ -3,27 +3,16 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                UserToken: shared.SchemeUserToken{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New()
 
-    s := sdk.New(opts...)
-    
     req := operations.AddressSearchRequest{
         Security: operations.AddressSearchSecurity{
             APIKey: shared.SchemeAPIKey{
@@ -34,15 +23,16 @@ func main() {
             },
         },
         QueryParams: operations.AddressSearchQueryParams{
-            Filter: "sit",
-            Licensee: "voluptas",
-            Limit: 6050128673802995827,
-            Page: 501233450539197794,
-            PostcodeOutward: "consequuntur",
-            Query: "dolor",
+            Filter: "unde",
+            Licensee: "deserunt",
+            Limit: 10,
+            Page: 715190,
+            PostcodeOutward: "nulla",
+            Query: "id",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Addresses.AddressSearch(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +41,6 @@ func main() {
     if res.AddressSearchResponseSchema != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

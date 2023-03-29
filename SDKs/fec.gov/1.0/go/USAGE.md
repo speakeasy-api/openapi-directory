@@ -3,80 +3,86 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKeyHeaderAuth: shared.SchemeAPIKeyHeaderAuth{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                APIKeyQueryAuth: shared.SchemeAPIKeyQueryAuth{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKeyHeaderAuth: shared.SchemeAPIKeyHeaderAuth{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+            APIKeyQueryAuth: shared.SchemeAPIKeyQueryAuth{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetAuditCaseRequest{
         QueryParams: operations.GetAuditCaseQueryParams{
-            APIKey: "sit",
+            APIKey: "unde",
             AuditCaseID: []string{
-                "culpa",
+                "porro",
+                "nulla",
+                "id",
             },
-            AuditID: []int32{
-                3390393562759376202,
-                2669985732393126063,
+            AuditID: []int{
+                544883,
+                847252,
+                423655,
+                623564,
             },
             CandidateID: []string{
-                "voluptas",
-                "fugit",
+                "eum",
+                "iusto",
+                "ullam",
             },
-            CommitteeDesignation: "et",
+            CommitteeDesignation: "saepe",
             CommitteeID: []string{
-                "rerum",
+                "sapiente",
             },
             CommitteeType: []string{
-                "debitis",
+                "eum",
                 "voluptatum",
-                "et",
             },
-            Cycle: []int32{
-                161231572858529631,
-                7259475919510918339,
-                7373105480197164748,
+            Cycle: []int{
+                812169,
+                528895,
+                479977,
+                568045,
             },
-            MaxElectionCycle: 3287288577352441706,
-            MinElectionCycle: 3930927879439176946,
-            Page: 4706154865122290029,
-            PerPage: 2217592893536642650,
-            PrimaryCategoryID: "illum",
+            MaxElectionCycle: 392785,
+            MinElectionCycle: 925597,
+            Page: 836079,
+            PerPage: 71036,
+            PrimaryCategoryID: "laboriosam",
             Q: []string{
-                "vel",
+                "est",
             },
             Qq: []string{
-                "dolore",
+                "consequatur",
             },
             Sort: []string{
-                "aspernatur",
-                "accusantium",
+                "a",
+                "omnis",
+                "eos",
+                "accusamus",
             },
             SortHideNull: false,
             SortNullOnly: false,
-            SortNullsLast: true,
-            SubCategoryID: "est",
+            SortNullsLast: false,
+            SubCategoryID: "accusamus",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Audit.GetAuditCase(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -85,5 +91,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

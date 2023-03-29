@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAssetRequest{
         Security: operations.GetAssetSecurity{
             Apikey: shared.SchemeApikey{
@@ -18,13 +20,14 @@ func main() {
             },
         },
         PathParams: operations.GetAssetPathParams{
-            AssetID: "sit",
+            AssetID: "unde",
         },
         QueryParams: operations.GetAssetQueryParams{
             Aliases: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Asset.GetAsset(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -33,5 +36,6 @@ func main() {
     if res.GetAsset200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PostMakePdfRequest{
         Request: operations.PostMakePdfRequestBody{
-            HTML: "sit",
-            Key: "voluptas",
-            URL: "culpa",
+            HTML: "unde",
+            Key: "deserunt",
+            URL: "porro",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.PostMakePdf(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.PostMakePdf200ApplicationPdfBinaryString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

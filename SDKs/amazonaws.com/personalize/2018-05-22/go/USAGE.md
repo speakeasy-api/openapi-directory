@@ -3,61 +3,75 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateBatchInferenceJobRequest{
         Headers: operations.CreateBatchInferenceJobHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AmazonPersonalize.CreateBatchInferenceJob",
         },
         Request: shared.CreateBatchInferenceJobRequest{
             BatchInferenceJobConfig: &shared.BatchInferenceJobConfig{
                 ItemExplorationConfig: map[string]string{
-                    "et": "nihil",
+                    "fuga": "facilis",
+                    "eum": "iusto",
                 },
             },
-            FilterArn: "rerum",
+            FilterArn: "ullam",
             JobInput: shared.BatchInferenceJobInput{
                 S3DataSource: shared.S3DataConfig{
-                    KmsKeyArn: "dicta",
-                    Path: "debitis",
+                    KmsKeyArn: "saepe",
+                    Path: "inventore",
                 },
             },
-            JobName: "voluptatum",
+            JobName: "sapiente",
             JobOutput: shared.BatchInferenceJobOutput{
                 S3DataDestination: shared.S3DataConfig{
-                    KmsKeyArn: "et",
-                    Path: "ut",
+                    KmsKeyArn: "enim",
+                    Path: "eum",
                 },
             },
-            NumResults: 161231572858529631,
-            RoleArn: "et",
-            SolutionVersionArn: "voluptate",
+            NumResults: 477665,
+            RoleArn: "autem",
+            SolutionVersionArn: "vel",
+            Tags: []shared.Tag{
+                shared.Tag{
+                    TagKey: "deleniti",
+                    TagValue: "similique",
+                },
+                shared.Tag{
+                    TagKey: "reprehenderit",
+                    TagValue: "molestiae",
+                },
+                shared.Tag{
+                    TagKey: "quo",
+                    TagValue: "quasi",
+                },
+            },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateBatchInferenceJob(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -66,5 +80,6 @@ func main() {
     if res.CreateBatchInferenceJobResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,9 +12,9 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListRequest{
-        Security: operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListSecurity{
+
+    req := operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest{
+        Security: operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListSecurity{
             Oauth2: shared.SchemeOauth2{
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
@@ -20,28 +22,29 @@ func main() {
                 Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
-        PathParams: operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListPathParams{
-            Parent: "sit",
+        PathParams: operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListPathParams{
+            Parent: "unde",
         },
-        QueryParams: operations.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Filter: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
-            PageSize: 1543572285742637646,
-            PageToken: "nihil",
-            PrettyPrint: true,
-            QuotaUser: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+        QueryParams: operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListQueryParams{
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Filter: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            PageSize: 623564,
+            PageToken: "facilis",
+            PrettyPrint: false,
+            QuotaUser: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
         },
     }
-    
-    res, err := s.Projects.OsconfigProjectsLocationsInstanceOsPoliciesCompliancesList(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Projects.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesList(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -49,5 +52,6 @@ func main() {
     if res.ListInstanceOSPoliciesCompliancesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

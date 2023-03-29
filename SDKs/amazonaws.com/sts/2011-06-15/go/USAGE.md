@@ -3,42 +3,41 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetDecodeAuthorizationMessageRequest{
-        QueryParams: operations.GetDecodeAuthorizationMessageQueryParams{
+    req := operations.GETDecodeAuthorizationMessageRequest{
+        QueryParams: operations.GETDecodeAuthorizationMessageQueryParams{
             Action: "DecodeAuthorizationMessage",
-            EncodedMessage: "voluptas",
+            EncodedMessage: "deserunt",
             Version: "2011-06-15",
         },
-        Headers: operations.GetDecodeAuthorizationMessageHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "consequuntur",
-            XAmzCredential: "dolor",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "et",
+        Headers: operations.GETDecodeAuthorizationMessageHeaders{
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
         },
     }
-    
-    res, err := s.GetDecodeAuthorizationMessage(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETDecodeAuthorizationMessage(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -46,5 +45,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

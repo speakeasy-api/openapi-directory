@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,30 +12,33 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetCmsV3DomainsGetPageRequest{
         Security: operations.GetCmsV3DomainsGetPageSecurity{
-            PrivateAppsLegacy: &shared.SchemePrivateAppsLegacy{
+            Hapikey: &shared.SchemeHapikey{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
         QueryParams: operations.GetCmsV3DomainsGetPageQueryParams{
-            After: "sit",
+            After: "unde",
             Archived: false,
-            CreatedAfter: "1978-05-13T03:50:47Z",
-            CreatedAt: "2019-04-21T07:38:14Z",
-            CreatedBefore: "1997-12-26T13:41:25Z",
-            Limit: 2669985732393126063,
+            CreatedAfter: "2022-08-25T03:25:07.102Z",
+            CreatedAt: "2022-07-11T11:40:43.233Z",
+            CreatedBefore: "2022-05-25T08:58:10.670Z",
+            Limit: 602763,
             Sort: []string{
-                "voluptas",
-                "fugit",
+                "perspiciatis",
+                "nulla",
+                "nihil",
+                "fuga",
             },
-            UpdatedAfter: "2011-08-12T10:11:12Z",
-            UpdatedAt: "2003-05-13T04:57:12Z",
-            UpdatedBefore: "2004-06-02T10:14:12Z",
+            UpdatedAfter: "2022-08-05T18:42:18.164Z",
+            UpdatedAt: "2022-11-09T05:33:13.166Z",
+            UpdatedBefore: "2022-10-20T19:28:24.516Z",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Domains.GetCmsV3DomainsGetPage(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -42,5 +47,6 @@ func main() {
     if res.CollectionResponseWithTotalDomainForwardPaging != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

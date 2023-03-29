@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/etherpad.local/1.2.15/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,32 +14,31 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.AppendTextUsingGetRequest{
-        QueryParams: operations.AppendTextUsingGetQueryParams{
-            PadID: "sit",
-            Text: "voluptas",
+    req := operations.AppendTextUsingGETRequest{
+        QueryParams: operations.AppendTextUsingGETQueryParams{
+            PadID: "unde",
+            Text: "deserunt",
         },
     }
-    
-    res, err := s.AppendTextUsingGet(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AppendTextUsingGET(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,6 +46,7 @@ func main() {
     if res.AppendTextUsingGET200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -55,115 +55,114 @@ func main() {
 
 ### SDK SDK
 
-* `AppendTextUsingGet`
-* `AppendTextUsingPost`
-* `CopyPadUsingGet`
-* `CopyPadUsingPost`
-* `CopyPadWithoutHistoryUsingGet`
-* `CopyPadWithoutHistoryUsingPost`
-* `GetAttributePoolUsingGet`
-* `GetAttributePoolUsingPost`
-* `GetPadIDUsingGet`
-* `GetPadIDUsingPost`
-* `GetRevisionChangesetUsingGet`
-* `GetRevisionChangesetUsingPost`
-* `GetSavedRevisionsCountUsingGet`
-* `GetSavedRevisionsCountUsingPost`
-* `GetStatsUsingGet`
-* `GetStatsUsingPost`
-* `ListSavedRevisionsUsingGet`
-* `ListSavedRevisionsUsingPost`
-* `MovePadUsingGet`
-* `MovePadUsingPost`
-* `RestoreRevisionUsingGet`
-* `RestoreRevisionUsingPost`
-* `SaveRevisionUsingGet`
-* `SaveRevisionUsingPost`
+* `AppendTextUsingGET`
+* `AppendTextUsingPOST`
+* `CopyPadUsingGET`
+* `CopyPadUsingPOST`
+* `CopyPadWithoutHistoryUsingGET`
+* `CopyPadWithoutHistoryUsingPOST`
+* `GETAttributePoolUsingGET`
+* `GetAttributePoolUsingPOST`
+* `GETPadIDUsingGET`
+* `GetPadIDUsingPOST`
+* `GETRevisionChangesetUsingGET`
+* `GetRevisionChangesetUsingPOST`
+* `GETSavedRevisionsCountUsingGET`
+* `GetSavedRevisionsCountUsingPOST`
+* `GETStatsUsingGET`
+* `GetStatsUsingPOST`
+* `ListSavedRevisionsUsingGET`
+* `ListSavedRevisionsUsingPOST`
+* `MovePadUsingGET`
+* `MovePadUsingPOST`
+* `RestoreRevisionUsingGET`
+* `RestoreRevisionUsingPOST`
+* `SaveRevisionUsingGET`
+* `SaveRevisionUsingPOST`
 
-### author
+### Author
 
-* `CreateAuthorIfNotExistsForUsingGet` - this functions helps you to map your application author ids to Etherpad author ids
-* `CreateAuthorIfNotExistsForUsingPost` - this functions helps you to map your application author ids to Etherpad author ids
-* `CreateAuthorUsingGet` - creates a new author
-* `CreateAuthorUsingPost` - creates a new author
-* `GetAuthorNameUsingGet` - Returns the Author Name of the author
-* `GetAuthorNameUsingPost` - Returns the Author Name of the author
-* `ListPadsOfAuthorUsingGet` - returns an array of all pads this author contributed to
-* `ListPadsOfAuthorUsingPost` - returns an array of all pads this author contributed to
-* `ListSessionsOfAuthorUsingGet` - returns all sessions of an author
-* `ListSessionsOfAuthorUsingPost` - returns all sessions of an author
+* `CreateAuthorIfNotExistsForUsingGET` - this functions helps you to map your application author ids to Etherpad author ids
+* `CreateAuthorIfNotExistsForUsingPOST` - this functions helps you to map your application author ids to Etherpad author ids
+* `CreateAuthorUsingGET` - creates a new author
+* `CreateAuthorUsingPOST` - creates a new author
+* `GETAuthorNameUsingGET` - Returns the Author Name of the author
+* `GetAuthorNameUsingPOST` - Returns the Author Name of the author
+* `ListPadsOfAuthorUsingGET` - returns an array of all pads this author contributed to
+* `ListPadsOfAuthorUsingPOST` - returns an array of all pads this author contributed to
+* `ListSessionsOfAuthorUsingGET` - returns all sessions of an author
+* `ListSessionsOfAuthorUsingPOST` - returns all sessions of an author
 
-### group
+### Group
 
-* `CreateGroupIfNotExistsForUsingGet` - this functions helps you to map your application group ids to Etherpad group ids
-* `CreateGroupIfNotExistsForUsingPost` - this functions helps you to map your application group ids to Etherpad group ids
-* `CreateGroupPadUsingGet` - creates a new pad in this group
-* `CreateGroupPadUsingPost` - creates a new pad in this group
-* `CreateGroupUsingGet` - creates a new group
-* `CreateGroupUsingPost` - creates a new group
-* `DeleteGroupUsingGet` - deletes a group
-* `DeleteGroupUsingPost` - deletes a group
-* `ListAllGroupsUsingGet`
-* `ListAllGroupsUsingPost`
-* `ListPadsUsingGet` - returns all pads of this group
-* `ListPadsUsingPost` - returns all pads of this group
-* `ListSessionsOfGroupUsingGet`
-* `ListSessionsOfGroupUsingPost`
+* `CreateGroupIfNotExistsForUsingGET` - this functions helps you to map your application group ids to Etherpad group ids
+* `CreateGroupIfNotExistsForUsingPOST` - this functions helps you to map your application group ids to Etherpad group ids
+* `CreateGroupPadUsingGET` - creates a new pad in this group
+* `CreateGroupPadUsingPOST` - creates a new pad in this group
+* `CreateGroupUsingGET` - creates a new group
+* `CreateGroupUsingPOST` - creates a new group
+* `DeleteGroupUsingGET` - deletes a group
+* `DeleteGroupUsingPOST` - deletes a group
+* `ListAllGroupsUsingGET`
+* `ListAllGroupsUsingPOST`
+* `ListPadsUsingGET` - returns all pads of this group
+* `ListPadsUsingPOST` - returns all pads of this group
+* `ListSessionsOfGroupUsingGET`
+* `ListSessionsOfGroupUsingPOST`
 
-### pad
+### Pad
 
-* `AppendChatMessageUsingGet` - appends a chat message
-* `AppendChatMessageUsingPost` - appends a chat message
-* `CheckTokenUsingGet` - returns ok when the current api token is valid
-* `CheckTokenUsingPost` - returns ok when the current api token is valid
-* `CreateDiffHTMLUsingGet`
-* `CreateDiffHTMLUsingPost`
-* `CreatePadUsingGet` - creates a new (non-group) pad. Note that if you need to create a group Pad, you should call createGroupPad
-* `CreatePadUsingPost` - creates a new (non-group) pad. Note that if you need to create a group Pad, you should call createGroupPad
-* `DeletePadUsingGet` - deletes a pad
-* `DeletePadUsingPost` - deletes a pad
-* `GetChatHeadUsingGet` - returns the chatHead (chat-message) of the pad
-* `GetChatHeadUsingPost` - returns the chatHead (chat-message) of the pad
-* `GetChatHistoryUsingGet` - returns the chat history
-* `GetChatHistoryUsingPost` - returns the chat history
-* `GetHTMLUsingGet` - returns the text of a pad formatted as HTML
-* `GetHTMLUsingPost` - returns the text of a pad formatted as HTML
-* `GetLastEditedUsingGet` - returns the timestamp of the last revision of the pad
-* `GetLastEditedUsingPost` - returns the timestamp of the last revision of the pad
-* `GetPublicStatusUsingGet` - return true of false
-* `GetPublicStatusUsingPost` - return true of false
-* `GetReadOnlyIDUsingGet` - returns the read only link of a pad
-* `GetReadOnlyIDUsingPost` - returns the read only link of a pad
-* `GetRevisionsCountUsingGet` - returns the number of revisions of this pad
-* `GetRevisionsCountUsingPost` - returns the number of revisions of this pad
-* `GetTextUsingGet` - returns the text of a pad
-* `GetTextUsingPost` - returns the text of a pad
-* `ListAllPadsUsingGet` - list all the pads
-* `ListAllPadsUsingPost` - list all the pads
-* `ListAuthorsOfPadUsingGet` - returns an array of authors who contributed to this pad
-* `ListAuthorsOfPadUsingPost` - returns an array of authors who contributed to this pad
-* `PadUsersCountUsingGet` - returns the number of user that are currently editing this pad
-* `PadUsersCountUsingPost` - returns the number of user that are currently editing this pad
-* `PadUsersUsingGet` - returns the list of users that are currently editing this pad
-* `PadUsersUsingPost` - returns the list of users that are currently editing this pad
-* `SendClientsMessageUsingGet` - sends a custom message of type msg to the pad
-* `SendClientsMessageUsingPost` - sends a custom message of type msg to the pad
-* `SetHTMLUsingGet` - sets the text of a pad with HTML
-* `SetHTMLUsingPost` - sets the text of a pad with HTML
-* `SetPublicStatusUsingGet` - sets a boolean for the public status of a pad
-* `SetPublicStatusUsingPost` - sets a boolean for the public status of a pad
-* `SetTextUsingGet` - sets the text of a pad
-* `SetTextUsingPost` - sets the text of a pad
+* `AppendChatMessageUsingGET` - appends a chat message
+* `AppendChatMessageUsingPOST` - appends a chat message
+* `CheckTokenUsingGET` - returns ok when the current api token is valid
+* `CheckTokenUsingPOST` - returns ok when the current api token is valid
+* `CreateDiffHTMLUsingGET`
+* `CreateDiffHTMLUsingPOST`
+* `CreatePadUsingGET` - creates a new (non-group) pad. Note that if you need to create a group Pad, you should call createGroupPad
+* `CreatePadUsingPOST` - creates a new (non-group) pad. Note that if you need to create a group Pad, you should call createGroupPad
+* `DeletePadUsingGET` - deletes a pad
+* `DeletePadUsingPOST` - deletes a pad
+* `GETChatHeadUsingGET` - returns the chatHead (chat-message) of the pad
+* `GetChatHeadUsingPOST` - returns the chatHead (chat-message) of the pad
+* `GETChatHistoryUsingGET` - returns the chat history
+* `GetChatHistoryUsingPOST` - returns the chat history
+* `GETHTMLUsingGET` - returns the text of a pad formatted as HTML
+* `GetHTMLUsingPOST` - returns the text of a pad formatted as HTML
+* `GETLastEditedUsingGET` - returns the timestamp of the last revision of the pad
+* `GetLastEditedUsingPOST` - returns the timestamp of the last revision of the pad
+* `GETPublicStatusUsingGET` - return true of false
+* `GetPublicStatusUsingPOST` - return true of false
+* `GETReadOnlyIDUsingGET` - returns the read only link of a pad
+* `GetReadOnlyIDUsingPOST` - returns the read only link of a pad
+* `GETRevisionsCountUsingGET` - returns the number of revisions of this pad
+* `GetRevisionsCountUsingPOST` - returns the number of revisions of this pad
+* `GETTextUsingGET` - returns the text of a pad
+* `GetTextUsingPOST` - returns the text of a pad
+* `ListAllPadsUsingGET` - list all the pads
+* `ListAllPadsUsingPOST` - list all the pads
+* `ListAuthorsOfPadUsingGET` - returns an array of authors who contributed to this pad
+* `ListAuthorsOfPadUsingPOST` - returns an array of authors who contributed to this pad
+* `PadUsersCountUsingGET` - returns the number of user that are currently editing this pad
+* `PadUsersCountUsingPOST` - returns the number of user that are currently editing this pad
+* `PadUsersUsingGET` - returns the list of users that are currently editing this pad
+* `PadUsersUsingPOST` - returns the list of users that are currently editing this pad
+* `SendClientsMessageUsingGET` - sends a custom message of type msg to the pad
+* `SendClientsMessageUsingPOST` - sends a custom message of type msg to the pad
+* `SetHTMLUsingGET` - sets the text of a pad with HTML
+* `SetHTMLUsingPOST` - sets the text of a pad with HTML
+* `SetPublicStatusUsingGET` - sets a boolean for the public status of a pad
+* `SetPublicStatusUsingPOST` - sets a boolean for the public status of a pad
+* `SetTextUsingGET` - sets the text of a pad
+* `SetTextUsingPOST` - sets the text of a pad
 
-### session
+### Session
 
-* `CreateSessionUsingGet` - creates a new session. validUntil is an unix timestamp in seconds
-* `CreateSessionUsingPost` - creates a new session. validUntil is an unix timestamp in seconds
-* `DeleteSessionUsingGet` - deletes a session
-* `DeleteSessionUsingPost` - deletes a session
-* `GetSessionInfoUsingGet` - returns informations about a session
-* `GetSessionInfoUsingPost` - returns informations about a session
-
+* `CreateSessionUsingGET` - creates a new session. validUntil is an unix timestamp in seconds
+* `CreateSessionUsingPOST` - creates a new session. validUntil is an unix timestamp in seconds
+* `DeleteSessionUsingGET` - deletes a session
+* `DeleteSessionUsingPOST` - deletes a session
+* `GETSessionInfoUsingGET` - returns informations about a session
+* `GetSessionInfoUsingPOST` - returns informations about a session
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/translate/v3/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.TranslateProjectsLocationsBatchTranslateDocumentRequest{
         Security: operations.TranslateProjectsLocationsBatchTranslateDocumentSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,70 +34,73 @@ func main() {
             },
         },
         PathParams: operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.BatchTranslateDocumentRequest{
-            CustomizedAttribution: "dicta",
+            CustomizedAttribution: "eum",
             FormatConversions: map[string]string{
-                "voluptatum": "et",
+                "ullam": "saepe",
+                "inventore": "sapiente",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
-                "dolorem": shared.TranslateTextGlossaryConfig{
-                    Glossary: "et",
+                "eum": shared.TranslateTextGlossaryConfig{
+                    Glossary: "voluptatum",
                     IgnoreCase: false,
                 },
-                "iste": shared.TranslateTextGlossaryConfig{
-                    Glossary: "vitae",
-                    IgnoreCase: true,
-                },
-                "dolores": shared.TranslateTextGlossaryConfig{
-                    Glossary: "illum",
-                    IgnoreCase: true,
+                "autem": shared.TranslateTextGlossaryConfig{
+                    Glossary: "vel",
+                    IgnoreCase: false,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "odio",
+                        InputURI: "deleniti",
                     },
                 },
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "dolore",
+                        InputURI: "similique",
+                    },
+                },
+                shared.BatchDocumentInputConfig{
+                    GcsSource: &shared.GcsSource{
+                        InputURI: "reprehenderit",
                     },
                 },
             },
             Models: map[string]string{
-                "aspernatur": "accusantium",
-                "totam": "commodi",
+                "quo": "quasi",
+                "laboriosam": "dicta",
+                "est": "voluptatem",
+                "consequatur": "fugiat",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "quis",
+                    OutputURIPrefix: "a",
                 },
             },
-            SourceLanguageCode: "est",
+            SourceLanguageCode: "omnis",
             TargetLanguageCodes: []string{
-                "odit",
-                "non",
-                "voluptas",
+                "accusamus",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.TranslateProjectsLocationsBatchTranslateDocument(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -104,13 +109,15 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `TranslateProjectsLocationsBatchTranslateDocument` - Translates a large volume of document in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
 * `TranslateProjectsLocationsBatchTranslateText` - Translates a large volume of text in asynchronous batch mode. This function provides real-time output as the inputs are being processed. If caller cancels a request, the partial results (for an input file, it's all or nothing) may still be available on the specified output location. This call returns immediately and you can use google.longrunning.Operation.name to poll the status of the call.
@@ -136,7 +143,6 @@ func main() {
 * `TranslateProjectsLocationsOperationsWait` - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
 * `TranslateProjectsLocationsTranslateDocument` - Translates documents in synchronous mode.
 * `TranslateProjectsLocationsTranslateText` - Translates input text and returns translated text.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

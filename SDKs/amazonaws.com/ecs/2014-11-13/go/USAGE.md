@@ -3,65 +3,68 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateCapacityProviderRequest{
         Headers: operations.CreateCapacityProviderHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
         },
         Request: shared.CreateCapacityProviderRequest{
             AutoScalingGroupProvider: shared.AutoScalingGroupProvider{
-                AutoScalingGroupArn: "fugit",
+                AutoScalingGroupArn: "nihil",
                 ManagedScaling: &shared.ManagedScaling{
-                    InstanceWarmupPeriod: 1543572285742637646,
-                    MaximumScalingStepSize: 2661732831099943416,
-                    MinimumScalingStepSize: 8325060299420976708,
-                    Status: "DISABLED",
-                    TargetCapacity: 2518412263346885298,
+                    InstanceWarmupPeriod: 623564,
+                    MaximumScalingStepSize: 645894,
+                    MinimumScalingStepSize: 384382,
+                    Status: "ENABLED",
+                    TargetCapacity: 297534,
                 },
-                ManagedTerminationProtection: "ENABLED",
+                ManagedTerminationProtection: "DISABLED",
             },
-            Name: "et",
+            Name: "inventore",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "dolorem",
-                    Value: "et",
+                    Key: "enim",
+                    Value: "eum",
                 },
                 shared.Tag{
-                    Key: "voluptate",
-                    Value: "iste",
+                    Key: "voluptatum",
+                    Value: "autem",
                 },
                 shared.Tag{
-                    Key: "vitae",
-                    Value: "totam",
+                    Key: "vel",
+                    Value: "non",
+                },
+                shared.Tag{
+                    Key: "deleniti",
+                    Value: "similique",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateCapacityProvider(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -70,5 +73,6 @@ func main() {
     if res.CreateCapacityProviderResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

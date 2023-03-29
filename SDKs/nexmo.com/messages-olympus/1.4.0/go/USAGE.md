@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,16 +12,18 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.SendMessageRequest{
         Security: operations.SendMessageSecurity{
-            BearerAuth: &shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
+            BasicAuth: &shared.SchemeBasicAuth{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
             },
         },
-        Request: "sit",
+        Request: operations.SendMessageRequestBody{},
     }
-    
+
+    ctx := context.Background()
     res, err := s.SendMessage(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -28,5 +32,6 @@ func main() {
     if res.SendMessage202ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

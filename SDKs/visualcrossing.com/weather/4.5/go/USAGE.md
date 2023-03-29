@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,25 +12,26 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest{
         QueryParams: operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams{
-            AggregateHours: "sit",
+            AggregateHours: "unde",
             AllowAsynch: false,
-            CollectStationContributions: true,
-            ContentType: "expedita",
-            EndDateTime: "consequuntur",
+            CollectStationContributions: false,
+            ContentType: "deserunt",
+            EndDateTime: "porro",
             IncludeNormals: false,
-            Key: "expedita",
-            Locations: "voluptas",
-            MaxDistance: "fugit",
-            MaxStations: "et",
-            ShortColumnNames: true,
-            StartDateTime: "rerum",
-            UnitGroup: "dicta",
+            Key: "nulla",
+            Locations: "id",
+            MaxDistance: "vero",
+            MaxStations: "perspiciatis",
+            ShortColumnNames: false,
+            StartDateTime: "nulla",
+            UnitGroup: "nihil",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.HistoricalWeather.GetVisualCrossingWebServicesRestServicesWeatherdataHistory(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -37,5 +40,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

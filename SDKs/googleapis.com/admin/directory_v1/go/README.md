@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/admin/directory_v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DirectoryAspsDeleteRequest{
         Security: operations.DirectoryAspsDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,24 +34,25 @@ func main() {
             },
         },
         PathParams: operations.DirectoryAspsDeletePathParams{
-            CodeID: 8717895732742165505,
-            UserKey: "voluptas",
+            CodeID: 548814,
+            UserKey: "deserunt",
         },
         QueryParams: operations.DirectoryAspsDeleteQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            AccessToken: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Asps.DirectoryAspsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -58,23 +61,25 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### asps
+
+### Asps
 
 * `DirectoryAspsDelete` - Deletes an ASP issued by a user.
 * `DirectoryAspsGet` - Gets information about an ASP issued by a user.
 * `DirectoryAspsList` - Lists the ASPs issued by a user.
 
-### channels
+### Channels
 
 * `AdminChannelsStop` - Stops watching resources through this channel.
 
-### chromeosdevices
+### Chromeosdevices
 
 * `DirectoryChromeosdevicesAction` - Takes an action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling devices. *Warning:* * Deprovisioning a device will stop device policy syncing and remove device-level printers. After a device is deprovisioned, it must be wiped before it can be re-enrolled. * Lost or stolen devices should use the disable action. * Re-enabling a disabled device will consume a device license. If you do not have sufficient licenses available when completing the re-enable action, you will receive an error. For more information about deprovisioning and disabling devices, visit the [help center](https://support.google.com/chrome/a/answer/3523633).
 * `DirectoryChromeosdevicesGet` - Retrieves a Chrome OS device's properties.
@@ -83,12 +88,12 @@ func main() {
 * `DirectoryChromeosdevicesPatch` - Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
 * `DirectoryChromeosdevicesUpdate` - Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`.
 
-### customer
+### Customer
 
 * `AdminCustomerDevicesChromeosCommandsGet` - Gets command data a specific command issued to the device.
 * `AdminCustomerDevicesChromeosIssueCommand` - Issues a command for the device to execute.
 
-### customers
+### Customers
 
 * `AdminCustomersChromePrintServersBatchCreatePrintServers` - Creates multiple print servers.
 * `AdminCustomersChromePrintServersBatchDeletePrintServers` - Deletes multiple print servers.
@@ -106,21 +111,21 @@ func main() {
 * `DirectoryCustomersPatch` - Patches a customer.
 * `DirectoryCustomersUpdate` - Updates a customer.
 
-### domainAliases
+### DomainAliases
 
 * `DirectoryDomainAliasesDelete` - Deletes a domain Alias of the customer.
 * `DirectoryDomainAliasesGet` - Retrieves a domain alias of the customer.
 * `DirectoryDomainAliasesInsert` - Inserts a domain alias of the customer.
 * `DirectoryDomainAliasesList` - Lists the domain aliases of the customer.
 
-### domains
+### Domains
 
 * `DirectoryDomainsDelete` - Deletes a domain of the customer.
 * `DirectoryDomainsGet` - Retrieves a domain of the customer.
 * `DirectoryDomainsInsert` - Inserts a domain of the customer.
 * `DirectoryDomainsList` - Lists the domains of the customer.
 
-### groups
+### Groups
 
 * `DirectoryGroupsAliasesDelete` - Removes an alias.
 * `DirectoryGroupsAliasesInsert` - Adds an alias for the group.
@@ -132,7 +137,7 @@ func main() {
 * `DirectoryGroupsPatch` - Updates a group's properties. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
 * `DirectoryGroupsUpdate` - Updates a group's properties.
 
-### members
+### Members
 
 * `DirectoryMembersDelete` - Removes a member from a group.
 * `DirectoryMembersGet` - Retrieves a group member's properties.
@@ -142,14 +147,14 @@ func main() {
 * `DirectoryMembersPatch` - Updates the membership properties of a user in the specified group. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
 * `DirectoryMembersUpdate` - Updates the membership of a user in the specified group.
 
-### mobiledevices
+### Mobiledevices
 
 * `DirectoryMobiledevicesAction` - Takes an action that affects a mobile device. For example, remotely wiping a device.
 * `DirectoryMobiledevicesDelete` - Removes a mobile device.
 * `DirectoryMobiledevicesGet` - Retrieves a mobile device's properties.
 * `DirectoryMobiledevicesList` - Retrieves a paginated list of all user-owned mobile devices for an account. To retrieve a list that includes company-owned devices, use the Cloud Identity [Devices API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead. This method times out after 60 minutes. For more information, see [Troubleshoot error codes](https://developers.google.com/admin-sdk/directory/v1/guides/troubleshoot-error-codes).
 
-### orgunits
+### Orgunits
 
 * `DirectoryOrgunitsDelete` - Removes an organizational unit.
 * `DirectoryOrgunitsGet` - Retrieves an organizational unit.
@@ -158,11 +163,11 @@ func main() {
 * `DirectoryOrgunitsPatch` - Updates an organizational unit. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch)
 * `DirectoryOrgunitsUpdate` - Updates an organizational unit.
 
-### privileges
+### Privileges
 
 * `DirectoryPrivilegesList` - Retrieves a paginated list of all privileges for a customer.
 
-### resources
+### Resources
 
 * `DirectoryResourcesBuildingsDelete` - Deletes a building.
 * `DirectoryResourcesBuildingsGet` - Retrieves a building.
@@ -184,14 +189,14 @@ func main() {
 * `DirectoryResourcesFeaturesRename` - Renames a feature.
 * `DirectoryResourcesFeaturesUpdate` - Updates a feature.
 
-### roleAssignments
+### RoleAssignments
 
 * `DirectoryRoleAssignmentsDelete` - Deletes a role assignment.
 * `DirectoryRoleAssignmentsGet` - Retrieves a role assignment.
 * `DirectoryRoleAssignmentsInsert` - Creates a role assignment.
 * `DirectoryRoleAssignmentsList` - Retrieves a paginated list of all roleAssignments.
 
-### roles
+### Roles
 
 * `DirectoryRolesDelete` - Deletes a role.
 * `DirectoryRolesGet` - Retrieves a role.
@@ -200,7 +205,7 @@ func main() {
 * `DirectoryRolesPatch` - Patches a role.
 * `DirectoryRolesUpdate` - Updates a role.
 
-### schemas
+### Schemas
 
 * `DirectorySchemasDelete` - Deletes a schema.
 * `DirectorySchemasGet` - Retrieves a schema.
@@ -209,17 +214,17 @@ func main() {
 * `DirectorySchemasPatch` - Patches a schema.
 * `DirectorySchemasUpdate` - Updates a schema.
 
-### tokens
+### Tokens
 
 * `DirectoryTokensDelete` - Deletes all access tokens issued by a user for an application.
 * `DirectoryTokensGet` - Gets information about an access token issued by a user.
 * `DirectoryTokensList` - Returns the set of tokens specified user has issued to 3rd party applications.
 
-### twoStepVerification
+### TwoStepVerification
 
 * `DirectoryTwoStepVerificationTurnOff` - Turns off 2-Step Verification for user.
 
-### users
+### Users
 
 * `DirectoryUsersAliasesDelete` - Removes an alias.
 * `DirectoryUsersAliasesInsert` - Adds an alias.
@@ -230,7 +235,7 @@ func main() {
 * `DirectoryUsersInsert` - Creates a user.
 * `DirectoryUsersList` - Retrieves a paginated list of either deleted users or all users in a domain.
 * `DirectoryUsersMakeAdmin` - Makes a user a super administrator.
-* `DirectoryUsersPatch` - Updates a user using patch semantics. The update method should be used instead, since it also supports patch semantics and has better performance. This method is unable to clear fields that contain repeated objects (`addresses`, `phones`, etc). Use the update method instead.
+* `DirectoryUsersPatch` - Updates a user using patch semantics. The update method should be used instead, because it also supports patch semantics and has better performance. If you're mapping an external identity to a Google identity, use the [`update`](https://developers.google.com/admin-sdk/directory/v1/reference/users/update) method instead of the `patch` method. This method is unable to clear fields that contain repeated objects (`addresses`, `phones`, etc). Use the update method instead.
 * `DirectoryUsersPhotosDelete` - Removes the user's photo.
 * `DirectoryUsersPhotosGet` - Retrieves the user's photo.
 * `DirectoryUsersPhotosPatch` - Adds a photo for the user. This method supports [patch semantics](/admin-sdk/directory/v1/guides/performance#patch).
@@ -240,12 +245,11 @@ func main() {
 * `DirectoryUsersUpdate` - Updates a user. This method supports patch semantics, meaning that you only need to include the fields you wish to update. Fields that are not present in the request will be preserved, and fields set to `null` will be cleared. For repeating fields that contain arrays, individual items in the array can't be patched piecemeal; they must be supplied in the request body with the desired values for all items. See the [user accounts guide](https://developers.google.com/admin-sdk/directory/v1/guides/manage-users#update_user) for more information.
 * `DirectoryUsersWatch` - Watches for changes in users list.
 
-### verificationCodes
+### VerificationCodes
 
 * `DirectoryVerificationCodesGenerate` - Generates new backup verification codes for the user.
 * `DirectoryVerificationCodesInvalidate` - Invalidates the current backup verification codes for the user.
 * `DirectoryVerificationCodesList` - Returns the current set of valid backup verification codes for the specified user.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

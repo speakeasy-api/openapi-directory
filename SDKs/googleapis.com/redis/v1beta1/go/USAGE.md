@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.RedisProjectsLocationsInstancesCreateRequest{
         Security: operations.RedisProjectsLocationsInstancesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,57 +23,69 @@ func main() {
             },
         },
         PathParams: operations.RedisProjectsLocationsInstancesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.RedisProjectsLocationsInstancesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            InstanceID: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            InstanceID: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.InstanceInput{
-            AlternativeLocationID: "debitis",
-            AuthEnabled: true,
-            AuthorizedNetwork: "et",
+            AlternativeLocationID: "iusto",
+            AuthEnabled: false,
+            AuthorizedNetwork: "ullam",
             AvailableMaintenanceVersions: []string{
-                "dolorem",
-                "et",
-                "voluptate",
+                "inventore",
+                "sapiente",
+                "enim",
+                "eum",
             },
-            ConnectMode: "PRIVATE_SERVICE_ACCESS",
-            CustomerManagedKey: "vitae",
-            DisplayName: "totam",
+            ConnectMode: "DIRECT_PEERING",
+            CustomerManagedKey: "autem",
+            DisplayName: "vel",
             Labels: map[string]string{
-                "illum": "debitis",
+                "deleniti": "similique",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
             },
-            LocationID: "vel",
+            LocationID: "laboriosam",
             MaintenancePolicy: &shared.MaintenancePolicyInput{
-                Description: "odio",
+                Description: "dicta",
                 WeeklyMaintenanceWindow: []shared.WeeklyMaintenanceWindowInput{
                     shared.WeeklyMaintenanceWindowInput{
-                        Day: "THURSDAY",
+                        Day: "DAY_OF_WEEK_UNSPECIFIED",
                         StartTime: &shared.TimeOfDay{
-                            Hours: 959367522974354090,
-                            Minutes: 2914295034816259174,
-                            Nanos: 1395437218309923052,
-                            Seconds: 6745438398739480977,
+                            Hours: 368241,
+                            Minutes: 832620,
+                            Nanos: 957156,
+                            Seconds: 778157,
+                        },
+                    },
+                    shared.WeeklyMaintenanceWindowInput{
+                        Day: "MONDAY",
+                        StartTime: &shared.TimeOfDay{
+                            Hours: 870013,
+                            Minutes: 870088,
+                            Nanos: 978619,
+                            Seconds: 473608,
                         },
                     },
                     shared.WeeklyMaintenanceWindowInput{
                         Day: "SATURDAY",
                         StartTime: &shared.TimeOfDay{
-                            Hours: 3398579248012586914,
-                            Minutes: 5974317550424871033,
-                            Nanos: 3317123977833389635,
-                            Seconds: 5001958211167890979,
+                            Hours: 800911,
+                            Minutes: 461479,
+                            Nanos: 520478,
+                            Seconds: 780529,
                         },
                     },
                 },
@@ -79,31 +93,34 @@ func main() {
             MaintenanceSchedule: &shared.MaintenanceScheduleInput{
                 CanReschedule: false,
             },
-            MaintenanceVersion: "omnis",
-            MemorySizeGb: 1059542851699319360,
-            Name: "illo",
+            MaintenanceVersion: "soluta",
+            MemorySizeGb: 118274,
+            Name: "quisquam",
             PersistenceConfig: &shared.PersistenceConfigInput{
-                PersistenceMode: "RDB",
-                RdbSnapshotPeriod: "TWENTY_FOUR_HOURS",
-                RdbSnapshotStartTime: "autem",
+                PersistenceMode: "DISABLED",
+                RdbSnapshotPeriod: "SIX_HOURS",
+                RdbSnapshotStartTime: "qui",
             },
-            ReadReplicasMode: "READ_REPLICAS_MODE_UNSPECIFIED",
+            ReadReplicasMode: "READ_REPLICAS_DISABLED",
             RedisConfigs: map[string]string{
-                "odio": "qui",
+                "possimus": "occaecati",
+                "odit": "esse",
+                "rem": "voluptatem",
+                "amet": "est",
             },
-            RedisVersion: "recusandae",
-            ReplicaCount: 7561811714888168464,
-            ReservedIPRange: "ipsum",
-            SecondaryIPRange: "eveniet",
+            RedisVersion: "id",
+            ReplicaCount: 456150,
+            ReservedIPRange: "numquam",
+            SecondaryIPRange: "similique",
             SuspensionReasons: []shared.InstanceSuspensionReasonsEnum{
                 "SUSPENSION_REASON_UNSPECIFIED",
-                "CUSTOMER_MANAGED_KEY_ISSUE",
             },
-            Tier: "STANDARD_HA",
-            TransitEncryptionMode: "DISABLED",
+            Tier: "TIER_UNSPECIFIED",
+            TransitEncryptionMode: "SERVER_AUTHENTICATION",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.RedisProjectsLocationsInstancesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -112,5 +129,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

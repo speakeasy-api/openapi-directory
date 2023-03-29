@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.Adexchangebuyer2AccountsClientsCreateRequest{
         Security: operations.Adexchangebuyer2AccountsClientsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,34 +23,35 @@ func main() {
             },
         },
         PathParams: operations.Adexchangebuyer2AccountsClientsCreatePathParams{
-            AccountID: "sit",
+            AccountID: "unde",
         },
         QueryParams: operations.Adexchangebuyer2AccountsClientsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Client{
-            ClientAccountID: "dicta",
-            ClientName: "debitis",
-            EntityID: "voluptatum",
-            EntityName: "et",
-            EntityType: "ADVERTISER",
-            PartnerClientID: "dolorem",
-            Role: "CLIENT_DEAL_NEGOTIATOR",
-            Status: "CLIENT_STATUS_UNSPECIFIED",
-            VisibleToSeller: true,
+            ClientAccountID: "eum",
+            ClientName: "iusto",
+            EntityID: "ullam",
+            EntityName: "saepe",
+            EntityType: "ENTITY_TYPE_UNSPECIFIED",
+            PartnerClientID: "sapiente",
+            Role: "CLIENT_DEAL_VIEWER",
+            Status: "DISABLED",
+            VisibleToSeller: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.Adexchangebuyer2AccountsClientsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -57,5 +60,6 @@ func main() {
     if res.Client != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

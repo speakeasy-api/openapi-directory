@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.RedactMessageRequest{
         Security: operations.RedactMessageSecurity{
             BasicAuth: shared.SchemeBasicAuth{
@@ -19,12 +21,13 @@ func main() {
             },
         },
         Request: shared.RedactTransaction{
-            ID: "sit",
+            ID: "209ab3c7536542b91e8b5aef032f6861",
             Product: "sms",
             Type: "outbound",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.RedactMessage(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -33,5 +36,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

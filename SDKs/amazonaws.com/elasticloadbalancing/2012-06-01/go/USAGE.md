@@ -3,46 +3,46 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetApplySecurityGroupsToLoadBalancerRequest{
-        QueryParams: operations.GetApplySecurityGroupsToLoadBalancerQueryParams{
+    req := operations.GETApplySecurityGroupsToLoadBalancerRequest{
+        QueryParams: operations.GETApplySecurityGroupsToLoadBalancerQueryParams{
             Action: "ApplySecurityGroupsToLoadBalancer",
-            LoadBalancerName: "voluptas",
+            LoadBalancerName: "deserunt",
             SecurityGroups: []string{
-                "expedita",
-                "consequuntur",
+                "nulla",
+                "id",
+                "vero",
             },
             Version: "2012-06-01",
         },
-        Headers: operations.GetApplySecurityGroupsToLoadBalancerHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "fugit",
-            XAmzDate: "et",
-            XAmzSecurityToken: "nihil",
-            XAmzSignature: "rerum",
-            XAmzSignedHeaders: "dicta",
+        Headers: operations.GETApplySecurityGroupsToLoadBalancerHeaders{
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "nihil",
+            XAmzCredential: "fuga",
+            XAmzDate: "facilis",
+            XAmzSecurityToken: "eum",
+            XAmzSignature: "iusto",
+            XAmzSignedHeaders: "ullam",
         },
     }
-    
-    res, err := s.GetApplySecurityGroupsToLoadBalancer(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETApplySecurityGroupsToLoadBalancer(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -50,5 +50,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

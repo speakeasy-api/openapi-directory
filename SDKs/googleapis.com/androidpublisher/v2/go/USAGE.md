@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AndroidpublisherEditsApklistingsDeleteRequest{
         Security: operations.AndroidpublisherEditsApklistingsDeleteSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,22 +23,23 @@ func main() {
             },
         },
         PathParams: operations.AndroidpublisherEditsApklistingsDeletePathParams{
-            ApkVersionCode: 8717895732742165505,
-            EditID: "voluptas",
-            Language: "culpa",
-            PackageName: "expedita",
+            ApkVersionCode: 548814,
+            EditID: "deserunt",
+            Language: "porro",
+            PackageName: "nulla",
         },
         QueryParams: operations.AndroidpublisherEditsApklistingsDeleteQueryParams{
             Alt: "json",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UserIP: "nihil",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UserIP: "fuga",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Edits.AndroidpublisherEditsApklistingsDelete(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -45,5 +48,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

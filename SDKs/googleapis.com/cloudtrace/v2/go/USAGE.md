@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudtraceProjectsTracesBatchWriteRequest{
         Security: operations.CloudtraceProjectsTracesBatchWriteSecurity{
             Option1: &operations.CloudtraceProjectsTracesBatchWriteSecurityOption1{
@@ -23,634 +25,282 @@ func main() {
             },
         },
         PathParams: operations.CloudtraceProjectsTracesBatchWritePathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.CloudtraceProjectsTracesBatchWriteQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.BatchWriteSpansRequest{
             Spans: []shared.Span{
                 shared.Span{
                     Attributes: &shared.Attributes{
                         AttributeMap: map[string]shared.AttributeValue{
-                            "voluptatum": shared.AttributeValue{
+                            "ullam": shared.AttributeValue{
                                 BoolValue: false,
-                                IntValue: "ut",
+                                IntValue: "saepe",
                                 StringValue: &shared.TruncatableString{
-                                    TruncatedByteCount: 161231572858529631,
-                                    Value: "et",
+                                    TruncatedByteCount: 56713,
+                                    Value: "sapiente",
+                                },
+                            },
+                            "enim": shared.AttributeValue{
+                                BoolValue: false,
+                                IntValue: "eum",
+                                StringValue: &shared.TruncatableString{
+                                    TruncatedByteCount: 477665,
+                                    Value: "autem",
                                 },
                             },
                         },
-                        DroppedAttributesCount: 7373105480197164748,
+                        DroppedAttributesCount: 812169,
                     },
-                    ChildSpanCount: 3287288577352441706,
+                    ChildSpanCount: 528895,
                     DisplayName: &shared.TruncatableString{
-                        TruncatedByteCount: 3930927879439176946,
-                        Value: "totam",
+                        TruncatedByteCount: 479977,
+                        Value: "similique",
                     },
-                    EndTime: "dolores",
+                    EndTime: "reprehenderit",
                     Links: &shared.Links{
-                        DroppedLinksCount: 1929546706668609706,
+                        DroppedLinksCount: 925597,
                         Link: []shared.Link{
                             shared.Link{
                                 Attributes: &shared.Attributes{
                                     AttributeMap: map[string]shared.AttributeValue{
-                                        "odio": shared.AttributeValue{
-                                            BoolValue: true,
-                                            IntValue: "id",
-                                            StringValue: &shared.TruncatableString{
-                                                TruncatedByteCount: 959367522974354090,
-                                                Value: "accusantium",
-                                            },
-                                        },
-                                        "totam": shared.AttributeValue{
+                                        "laboriosam": shared.AttributeValue{
                                             BoolValue: false,
-                                            IntValue: "quis",
+                                            IntValue: "dicta",
                                             StringValue: &shared.TruncatableString{
-                                                TruncatedByteCount: 3398579248012586914,
-                                                Value: "aut",
+                                                TruncatedByteCount: 648172,
+                                                Value: "voluptatem",
                                             },
                                         },
                                     },
-                                    DroppedAttributesCount: 3317123977833389635,
+                                    DroppedAttributesCount: 368241,
                                 },
-                                SpanID: "non",
-                                TraceID: "voluptas",
-                                Type: "CHILD_LINKED_SPAN",
+                                SpanID: "fugiat",
+                                TraceID: "a",
+                                Type: "PARENT_LINKED_SPAN",
                             },
-                        },
-                    },
-                    Name: "aut",
-                    ParentSpanID: "illo",
-                    SameProcessAsParentSpan: false,
-                    SpanID: "officiis",
-                    SpanKind: "INTERNAL",
-                    StackTrace: &shared.StackTrace{
-                        StackFrames: &shared.StackFrames{
-                            DroppedFramesCount: 8514850266767180993,
-                            Frame: []shared.StackFrame{
-                                shared.StackFrame{
-                                    ColumnNumber: "odio",
-                                    FileName: &shared.TruncatableString{
-                                        TruncatedByteCount: 7699391924090763411,
-                                        Value: "recusandae",
-                                    },
-                                    FunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 7561811714888168464,
-                                        Value: "ipsum",
-                                    },
-                                    LineNumber: "eveniet",
-                                    LoadModule: &shared.Module{
-                                        BuildID: &shared.TruncatableString{
-                                            TruncatedByteCount: 303089054982227392,
-                                            Value: "sint",
-                                        },
-                                        Module: &shared.TruncatableString{
-                                            TruncatedByteCount: 5392504858645185670,
-                                            Value: "ut",
-                                        },
-                                    },
-                                    OriginalFunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 406703151708498928,
-                                        Value: "aut",
-                                    },
-                                    SourceVersion: &shared.TruncatableString{
-                                        TruncatedByteCount: 5837486892148644279,
-                                        Value: "tempore",
-                                    },
-                                },
-                            },
-                        },
-                        StackTraceHashID: "maiores",
-                    },
-                    StartTime: "incidunt",
-                    Status: &shared.Status{
-                        Code: 7242748068272024738,
-                        Details: []map[string]interface{}{
-                            map[string]interface{}{
-                                "in": "et",
-                                "omnis": "ipsum",
-                            },
-                            map[string]interface{}{
-                                "dolores": "placeat",
-                            },
-                            map[string]interface{}{
-                                "rerum": "mollitia",
-                                "voluptas": "quam",
-                            },
-                        },
-                        Message: "reprehenderit",
-                    },
-                    TimeEvents: &shared.TimeEvents{
-                        DroppedAnnotationsCount: 6056649900269286653,
-                        DroppedMessageEventsCount: 8056746523676181822,
-                        TimeEvent: []shared.TimeEvent{
-                            shared.TimeEvent{
-                                Annotation: &shared.Annotation{
-                                    Attributes: &shared.Attributes{
-                                        AttributeMap: map[string]shared.AttributeValue{
-                                            "autem": shared.AttributeValue{
-                                                BoolValue: true,
-                                                IntValue: "ut",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 8559453321117178323,
-                                                    Value: "ab",
-                                                },
-                                            },
-                                            "neque": shared.AttributeValue{
-                                                BoolValue: true,
-                                                IntValue: "et",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 4304520335772049496,
-                                                    Value: "esse",
-                                                },
-                                            },
-                                        },
-                                        DroppedAttributesCount: 5902760509050140210,
-                                    },
-                                    Description: &shared.TruncatableString{
-                                        TruncatedByteCount: 9021104375654741729,
-                                        Value: "velit",
-                                    },
-                                },
-                                MessageEvent: &shared.MessageEvent{
-                                    CompressedSizeBytes: "cumque",
-                                    ID: "soluta",
-                                    Type: "SENT",
-                                    UncompressedSizeBytes: "voluptates",
-                                },
-                                Time: "magni",
-                            },
-                            shared.TimeEvent{
-                                Annotation: &shared.Annotation{
-                                    Attributes: &shared.Attributes{
-                                        AttributeMap: map[string]shared.AttributeValue{
-                                            "optio": shared.AttributeValue{
-                                                BoolValue: true,
-                                                IntValue: "earum",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 4391202566038595699,
-                                                    Value: "omnis",
-                                                },
-                                            },
-                                            "ut": shared.AttributeValue{
-                                                BoolValue: false,
-                                                IntValue: "dolor",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 7945398411639602224,
-                                                    Value: "error",
-                                                },
-                                            },
-                                            "reprehenderit": shared.AttributeValue{
-                                                BoolValue: false,
-                                                IntValue: "nostrum",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 950400323440343118,
-                                                    Value: "laboriosam",
-                                                },
-                                            },
-                                        },
-                                        DroppedAttributesCount: 1937101031588528881,
-                                    },
-                                    Description: &shared.TruncatableString{
-                                        TruncatedByteCount: 6604365855503062775,
-                                        Value: "soluta",
-                                    },
-                                },
-                                MessageEvent: &shared.MessageEvent{
-                                    CompressedSizeBytes: "aut",
-                                    ID: "quas",
-                                    Type: "RECEIVED",
-                                    UncompressedSizeBytes: "laudantium",
-                                },
-                                Time: "autem",
-                            },
-                            shared.TimeEvent{
-                                Annotation: &shared.Annotation{
-                                    Attributes: &shared.Attributes{
-                                        AttributeMap: map[string]shared.AttributeValue{
-                                            "expedita": shared.AttributeValue{
-                                                BoolValue: false,
-                                                IntValue: "perferendis",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 8497925768463229012,
-                                                    Value: "ratione",
-                                                },
-                                            },
-                                        },
-                                        DroppedAttributesCount: 3967212276624460248,
-                                    },
-                                    Description: &shared.TruncatableString{
-                                        TruncatedByteCount: 1681876124477381252,
-                                        Value: "ea",
-                                    },
-                                },
-                                MessageEvent: &shared.MessageEvent{
-                                    CompressedSizeBytes: "maxime",
-                                    ID: "eum",
-                                    Type: "SENT",
-                                    UncompressedSizeBytes: "et",
-                                },
-                                Time: "rerum",
-                            },
-                        },
-                    },
-                },
-                shared.Span{
-                    Attributes: &shared.Attributes{
-                        AttributeMap: map[string]shared.AttributeValue{
-                            "quis": shared.AttributeValue{
-                                BoolValue: true,
-                                IntValue: "minima",
-                                StringValue: &shared.TruncatableString{
-                                    TruncatedByteCount: 2333048574390956331,
-                                    Value: "est",
-                                },
-                            },
-                            "quis": shared.AttributeValue{
-                                BoolValue: true,
-                                IntValue: "labore",
-                                StringValue: &shared.TruncatableString{
-                                    TruncatedByteCount: 544981646038740619,
-                                    Value: "impedit",
-                                },
-                            },
-                            "ad": shared.AttributeValue{
-                                BoolValue: true,
-                                IntValue: "vel",
-                                StringValue: &shared.TruncatableString{
-                                    TruncatedByteCount: 5310832663795041070,
-                                    Value: "modi",
-                                },
-                            },
-                        },
-                        DroppedAttributesCount: 8279128640960530079,
-                    },
-                    ChildSpanCount: 1011676084465510524,
-                    DisplayName: &shared.TruncatableString{
-                        TruncatedByteCount: 8764227983217623240,
-                        Value: "eaque",
-                    },
-                    EndTime: "sunt",
-                    Links: &shared.Links{
-                        DroppedLinksCount: 157519078836327761,
-                        Link: []shared.Link{
                             shared.Link{
                                 Attributes: &shared.Attributes{
                                     AttributeMap: map[string]shared.AttributeValue{
-                                        "vel": shared.AttributeValue{
-                                            BoolValue: false,
-                                            IntValue: "placeat",
-                                            StringValue: &shared.TruncatableString{
-                                                TruncatedByteCount: 3755969145755718156,
-                                                Value: "nisi",
-                                            },
-                                        },
-                                        "quis": shared.AttributeValue{
-                                            BoolValue: false,
-                                            IntValue: "porro",
-                                            StringValue: &shared.TruncatableString{
-                                                TruncatedByteCount: 4230816687517220040,
-                                                Value: "et",
-                                            },
-                                        },
                                         "accusamus": shared.AttributeValue{
-                                            BoolValue: true,
-                                            IntValue: "laborum",
-                                            StringValue: &shared.TruncatableString{
-                                                TruncatedByteCount: 8958290475970215309,
-                                                Value: "ut",
-                                            },
-                                        },
-                                    },
-                                    DroppedAttributesCount: 4400124260933614083,
-                                },
-                                SpanID: "fugit",
-                                TraceID: "quis",
-                                Type: "CHILD_LINKED_SPAN",
-                            },
-                        },
-                    },
-                    Name: "soluta",
-                    ParentSpanID: "aperiam",
-                    SameProcessAsParentSpan: true,
-                    SpanID: "excepturi",
-                    SpanKind: "PRODUCER",
-                    StackTrace: &shared.StackTrace{
-                        StackFrames: &shared.StackFrames{
-                            DroppedFramesCount: 1377327594979300801,
-                            Frame: []shared.StackFrame{
-                                shared.StackFrame{
-                                    ColumnNumber: "ipsa",
-                                    FileName: &shared.TruncatableString{
-                                        TruncatedByteCount: 8997481548049309375,
-                                        Value: "animi",
-                                    },
-                                    FunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 2606774689767964810,
-                                        Value: "aliquam",
-                                    },
-                                    LineNumber: "fuga",
-                                    LoadModule: &shared.Module{
-                                        BuildID: &shared.TruncatableString{
-                                            TruncatedByteCount: 7899896093082851758,
-                                            Value: "sed",
-                                        },
-                                        Module: &shared.TruncatableString{
-                                            TruncatedByteCount: 6464511094049078446,
-                                            Value: "consequuntur",
-                                        },
-                                    },
-                                    OriginalFunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 3308475210590835610,
-                                        Value: "cupiditate",
-                                    },
-                                    SourceVersion: &shared.TruncatableString{
-                                        TruncatedByteCount: 432317278959866118,
-                                        Value: "molestiae",
-                                    },
-                                },
-                            },
-                        },
-                        StackTraceHashID: "pariatur",
-                    },
-                    StartTime: "quasi",
-                    Status: &shared.Status{
-                        Code: 5534365872829545664,
-                        Details: []map[string]interface{}{
-                            map[string]interface{}{
-                                "sit": "possimus",
-                            },
-                            map[string]interface{}{
-                                "neque": "consequuntur",
-                                "quia": "et",
-                            },
-                        },
-                        Message: "est",
-                    },
-                    TimeEvents: &shared.TimeEvents{
-                        DroppedAnnotationsCount: 6028661030721431741,
-                        DroppedMessageEventsCount: 7949662743330369695,
-                        TimeEvent: []shared.TimeEvent{
-                            shared.TimeEvent{
-                                Annotation: &shared.Annotation{
-                                    Attributes: &shared.Attributes{
-                                        AttributeMap: map[string]shared.AttributeValue{
-                                            "temporibus": shared.AttributeValue{
-                                                BoolValue: false,
-                                                IntValue: "quae",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 5042961816383320698,
-                                                    Value: "ut",
-                                                },
-                                            },
-                                            "necessitatibus": shared.AttributeValue{
-                                                BoolValue: true,
-                                                IntValue: "possimus",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 1123791776565256914,
-                                                    Value: "dolorum",
-                                                },
-                                            },
-                                            "doloribus": shared.AttributeValue{
-                                                BoolValue: true,
-                                                IntValue: "sunt",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 2676265675595725604,
-                                                    Value: "et",
-                                                },
-                                            },
-                                        },
-                                        DroppedAttributesCount: 6499763367080957833,
-                                    },
-                                    Description: &shared.TruncatableString{
-                                        TruncatedByteCount: 1514803956160473307,
-                                        Value: "et",
-                                    },
-                                },
-                                MessageEvent: &shared.MessageEvent{
-                                    CompressedSizeBytes: "est",
-                                    ID: "ipsum",
-                                    Type: "TYPE_UNSPECIFIED",
-                                    UncompressedSizeBytes: "voluptas",
-                                },
-                                Time: "nihil",
-                            },
-                            shared.TimeEvent{
-                                Annotation: &shared.Annotation{
-                                    Attributes: &shared.Attributes{
-                                        AttributeMap: map[string]shared.AttributeValue{
-                                            "suscipit": shared.AttributeValue{
-                                                BoolValue: true,
-                                                IntValue: "non",
-                                                StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 2991421044203248760,
-                                                    Value: "ut",
-                                                },
-                                            },
-                                        },
-                                        DroppedAttributesCount: 3357930257403748968,
-                                    },
-                                    Description: &shared.TruncatableString{
-                                        TruncatedByteCount: 371208508841907247,
-                                        Value: "qui",
-                                    },
-                                },
-                                MessageEvent: &shared.MessageEvent{
-                                    CompressedSizeBytes: "quia",
-                                    ID: "ipsam",
-                                    Type: "SENT",
-                                    UncompressedSizeBytes: "enim",
-                                },
-                                Time: "blanditiis",
-                            },
-                        },
-                    },
-                },
-                shared.Span{
-                    Attributes: &shared.Attributes{
-                        AttributeMap: map[string]shared.AttributeValue{
-                            "delectus": shared.AttributeValue{
-                                BoolValue: true,
-                                IntValue: "dolore",
-                                StringValue: &shared.TruncatableString{
-                                    TruncatedByteCount: 7274936573655343394,
-                                    Value: "velit",
-                                },
-                            },
-                        },
-                        DroppedAttributesCount: 1469755398674317289,
-                    },
-                    ChildSpanCount: 8230160685758639177,
-                    DisplayName: &shared.TruncatableString{
-                        TruncatedByteCount: 6225508190691823821,
-                        Value: "voluptas",
-                    },
-                    EndTime: "amet",
-                    Links: &shared.Links{
-                        DroppedLinksCount: 8268186752735240934,
-                        Link: []shared.Link{
-                            shared.Link{
-                                Attributes: &shared.Attributes{
-                                    AttributeMap: map[string]shared.AttributeValue{
-                                        "excepturi": shared.AttributeValue{
                                             BoolValue: false,
-                                            IntValue: "corporis",
+                                            IntValue: "accusamus",
                                             StringValue: &shared.TruncatableString{
-                                                TruncatedByteCount: 4588799179103092032,
+                                                TruncatedByteCount: 978619,
                                                 Value: "rem",
                                             },
                                         },
-                                        "doloremque": shared.AttributeValue{
+                                    },
+                                    DroppedAttributesCount: 799159,
+                                },
+                                SpanID: "et",
+                                TraceID: "praesentium",
+                                Type: "CHILD_LINKED_SPAN",
+                            },
+                            shared.Link{
+                                Attributes: &shared.Attributes{
+                                    AttributeMap: map[string]shared.AttributeValue{
+                                        "soluta": shared.AttributeValue{
                                             BoolValue: false,
-                                            IntValue: "nisi",
+                                            IntValue: "sed",
                                             StringValue: &shared.TruncatableString{
-                                                TruncatedByteCount: 7977311963062833636,
-                                                Value: "qui",
+                                                TruncatedByteCount: 720633,
+                                                Value: "rerum",
+                                            },
+                                        },
+                                        "culpa": shared.AttributeValue{
+                                            BoolValue: false,
+                                            IntValue: "qui",
+                                            StringValue: &shared.TruncatableString{
+                                                TruncatedByteCount: 537373,
+                                                Value: "rerum",
+                                            },
+                                        },
+                                        "possimus": shared.AttributeValue{
+                                            BoolValue: false,
+                                            IntValue: "occaecati",
+                                            StringValue: &shared.TruncatableString{
+                                                TruncatedByteCount: 105907,
+                                                Value: "esse",
+                                            },
+                                        },
+                                        "rem": shared.AttributeValue{
+                                            BoolValue: false,
+                                            IntValue: "voluptatem",
+                                            StringValue: &shared.TruncatableString{
+                                                TruncatedByteCount: 186332,
+                                                Value: "est",
                                             },
                                         },
                                     },
-                                    DroppedAttributesCount: 3553406609570696275,
+                                    DroppedAttributesCount: 736918,
                                 },
-                                SpanID: "et",
-                                TraceID: "rerum",
+                                SpanID: "blanditiis",
+                                TraceID: "numquam",
+                                Type: "CHILD_LINKED_SPAN",
+                            },
+                            shared.Link{
+                                Attributes: &shared.Attributes{
+                                    AttributeMap: map[string]shared.AttributeValue{
+                                        "sit": shared.AttributeValue{
+                                            BoolValue: false,
+                                            IntValue: "quia",
+                                            StringValue: &shared.TruncatableString{
+                                                TruncatedByteCount: 617636,
+                                                Value: "voluptatem",
+                                            },
+                                        },
+                                    },
+                                    DroppedAttributesCount: 612096,
+                                },
+                                SpanID: "modi",
+                                TraceID: "et",
                                 Type: "CHILD_LINKED_SPAN",
                             },
                         },
                     },
-                    Name: "rem",
-                    ParentSpanID: "eos",
+                    Name: "earum",
+                    ParentSpanID: "ut",
                     SameProcessAsParentSpan: false,
-                    SpanID: "reiciendis",
-                    SpanKind: "SPAN_KIND_UNSPECIFIED",
+                    SpanID: "soluta",
+                    SpanKind: "SERVER",
                     StackTrace: &shared.StackTrace{
                         StackFrames: &shared.StackFrames{
-                            DroppedFramesCount: 5683174242247563523,
+                            DroppedFramesCount: 359508,
                             Frame: []shared.StackFrame{
                                 shared.StackFrame{
-                                    ColumnNumber: "nihil",
+                                    ColumnNumber: "iusto",
                                     FileName: &shared.TruncatableString{
-                                        TruncatedByteCount: 4897843869982862208,
-                                        Value: "consequatur",
+                                        TruncatedByteCount: 902349,
+                                        Value: "optio",
                                     },
                                     FunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 3196051979344515342,
-                                        Value: "accusantium",
+                                        TruncatedByteCount: 99280,
+                                        Value: "inventore",
                                     },
-                                    LineNumber: "atque",
+                                    LineNumber: "ut",
                                     LoadModule: &shared.Module{
                                         BuildID: &shared.TruncatableString{
-                                            TruncatedByteCount: 1444501184389758573,
-                                            Value: "nisi",
-                                        },
-                                        Module: &shared.TruncatableString{
-                                            TruncatedByteCount: 1782404925332466934,
-                                            Value: "est",
-                                        },
-                                    },
-                                    OriginalFunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 9117043256905423229,
-                                        Value: "vero",
-                                    },
-                                    SourceVersion: &shared.TruncatableString{
-                                        TruncatedByteCount: 8663396966358647741,
-                                        Value: "totam",
-                                    },
-                                },
-                                shared.StackFrame{
-                                    ColumnNumber: "deserunt",
-                                    FileName: &shared.TruncatableString{
-                                        TruncatedByteCount: 1958777829936408748,
-                                        Value: "repellat",
-                                    },
-                                    FunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 7470170325123997143,
-                                        Value: "omnis",
-                                    },
-                                    LineNumber: "totam",
-                                    LoadModule: &shared.Module{
-                                        BuildID: &shared.TruncatableString{
-                                            TruncatedByteCount: 6110482739283003758,
+                                            TruncatedByteCount: 666767,
                                             Value: "et",
                                         },
                                         Module: &shared.TruncatableString{
-                                            TruncatedByteCount: 7167106058699817943,
-                                            Value: "necessitatibus",
+                                            TruncatedByteCount: 670638,
+                                            Value: "ipsum",
                                         },
                                     },
                                     OriginalFunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 4525004039791920848,
-                                        Value: "culpa",
+                                        TruncatedByteCount: 210382,
+                                        Value: "ea",
                                     },
                                     SourceVersion: &shared.TruncatableString{
-                                        TruncatedByteCount: 8364267861508686372,
-                                        Value: "voluptas",
+                                        TruncatedByteCount: 128926,
+                                        Value: "placeat",
                                     },
                                 },
                                 shared.StackFrame{
-                                    ColumnNumber: "ut",
+                                    ColumnNumber: "ipsam",
                                     FileName: &shared.TruncatableString{
-                                        TruncatedByteCount: 2118949171484888039,
-                                        Value: "architecto",
+                                        TruncatedByteCount: 607831,
+                                        Value: "commodi",
                                     },
                                     FunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 9207329833049742865,
-                                        Value: "rerum",
+                                        TruncatedByteCount: 325047,
+                                        Value: "similique",
                                     },
-                                    LineNumber: "quo",
+                                    LineNumber: "eaque",
                                     LoadModule: &shared.Module{
                                         BuildID: &shared.TruncatableString{
-                                            TruncatedByteCount: 7465719782626729327,
-                                            Value: "saepe",
+                                            TruncatedByteCount: 438601,
+                                            Value: "harum",
                                         },
                                         Module: &shared.TruncatableString{
-                                            TruncatedByteCount: 1215184329252422444,
-                                            Value: "in",
+                                            TruncatedByteCount: 988374,
+                                            Value: "a",
                                         },
                                     },
                                     OriginalFunctionName: &shared.TruncatableString{
-                                        TruncatedByteCount: 8590975497400104807,
-                                        Value: "asperiores",
+                                        TruncatedByteCount: 102044,
+                                        Value: "et",
                                     },
                                     SourceVersion: &shared.TruncatableString{
-                                        TruncatedByteCount: 5721519542403305305,
-                                        Value: "ea",
+                                        TruncatedByteCount: 208876,
+                                        Value: "quidem",
+                                    },
+                                },
+                                shared.StackFrame{
+                                    ColumnNumber: "neque",
+                                    FileName: &shared.TruncatableString{
+                                        TruncatedByteCount: 995300,
+                                        Value: "et",
+                                    },
+                                    FunctionName: &shared.TruncatableString{
+                                        TruncatedByteCount: 581850,
+                                        Value: "aliquam",
+                                    },
+                                    LineNumber: "esse",
+                                    LoadModule: &shared.Module{
+                                        BuildID: &shared.TruncatableString{
+                                            TruncatedByteCount: 466311,
+                                            Value: "voluptatum",
+                                        },
+                                        Module: &shared.TruncatableString{
+                                            TruncatedByteCount: 244425,
+                                            Value: "fuga",
+                                        },
+                                    },
+                                    OriginalFunctionName: &shared.TruncatableString{
+                                        TruncatedByteCount: 158969,
+                                        Value: "laboriosam",
+                                    },
+                                    SourceVersion: &shared.TruncatableString{
+                                        TruncatedByteCount: 110375,
+                                        Value: "cum",
                                     },
                                 },
                             },
                         },
-                        StackTraceHashID: "soluta",
+                        StackTraceHashID: "expedita",
                     },
-                    StartTime: "tempora",
+                    StartTime: "ipsam",
                     Status: &shared.Status{
-                        Code: 5850174490929081658,
+                        Code: 138183,
                         Details: []map[string]interface{}{
                             map[string]interface{}{
-                                "in": "et",
-                                "odit": "est",
+                                "hic": "consequatur",
                             },
                             map[string]interface{}{
-                                "ipsum": "aut",
-                                "perspiciatis": "et",
-                                "vero": "voluptatem",
+                                "qui": "perferendis",
+                                "aspernatur": "fuga",
+                                "quo": "tempore",
+                            },
+                            map[string]interface{}{
+                                "aut": "reiciendis",
+                            },
+                            map[string]interface{}{
+                                "totam": "molestias",
+                                "reiciendis": "illo",
+                                "id": "qui",
+                                "quod": "sit",
                             },
                         },
-                        Message: "ex",
+                        Message: "eaque",
                     },
                     TimeEvents: &shared.TimeEvents{
-                        DroppedAnnotationsCount: 1253678802066634880,
-                        DroppedMessageEventsCount: 5185464786920936105,
+                        DroppedAnnotationsCount: 441711,
+                        DroppedMessageEventsCount: 282807,
                         TimeEvent: []shared.TimeEvent{
                             shared.TimeEvent{
                                 Annotation: &shared.Annotation{
@@ -658,35 +308,405 @@ func main() {
                                         AttributeMap: map[string]shared.AttributeValue{
                                             "ea": shared.AttributeValue{
                                                 BoolValue: false,
-                                                IntValue: "non",
+                                                IntValue: "exercitationem",
                                                 StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 930977177771307407,
-                                                    Value: "beatae",
+                                                    TruncatedByteCount: 480894,
+                                                    Value: "sed",
                                                 },
                                             },
-                                            "quae": shared.AttributeValue{
+                                        },
+                                        DroppedAttributesCount: 688661,
+                                    },
+                                    Description: &shared.TruncatableString{
+                                        TruncatedByteCount: 317983,
+                                        Value: "aut",
+                                    },
+                                },
+                                MessageEvent: &shared.MessageEvent{
+                                    CompressedSizeBytes: "esse",
+                                    ID: "sint",
+                                    Type: "TYPE_UNSPECIFIED",
+                                    UncompressedSizeBytes: "numquam",
+                                },
+                                Time: "eligendi",
+                            },
+                            shared.TimeEvent{
+                                Annotation: &shared.Annotation{
+                                    Attributes: &shared.Attributes{
+                                        AttributeMap: map[string]shared.AttributeValue{
+                                            "similique": shared.AttributeValue{
                                                 BoolValue: false,
-                                                IntValue: "magni",
+                                                IntValue: "et",
                                                 StringValue: &shared.TruncatableString{
-                                                    TruncatedByteCount: 6901636176146439792,
+                                                    TruncatedByteCount: 265389,
+                                                    Value: "molestias",
+                                                },
+                                            },
+                                            "cupiditate": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "sint",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 93940,
+                                                    Value: "et",
+                                                },
+                                            },
+                                            "in": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "vitae",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 929297,
+                                                    Value: "minima",
+                                                },
+                                            },
+                                        },
+                                        DroppedAttributesCount: 318569,
+                                    },
+                                    Description: &shared.TruncatableString{
+                                        TruncatedByteCount: 9356,
+                                        Value: "libero",
+                                    },
+                                },
+                                MessageEvent: &shared.MessageEvent{
+                                    CompressedSizeBytes: "voluptas",
+                                    ID: "magni",
+                                    Type: "SENT",
+                                    UncompressedSizeBytes: "porro",
+                                },
+                                Time: "voluptas",
+                            },
+                            shared.TimeEvent{
+                                Annotation: &shared.Annotation{
+                                    Attributes: &shared.Attributes{
+                                        AttributeMap: map[string]shared.AttributeValue{
+                                            "voluptatem": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "sit",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 397821,
+                                                    Value: "officia",
+                                                },
+                                            },
+                                            "omnis": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "voluptatem",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 164940,
+                                                    Value: "eum",
+                                                },
+                                            },
+                                        },
+                                        DroppedAttributesCount: 369808,
+                                    },
+                                    Description: &shared.TruncatableString{
+                                        TruncatedByteCount: 4695,
+                                        Value: "ratione",
+                                    },
+                                },
+                                MessageEvent: &shared.MessageEvent{
+                                    CompressedSizeBytes: "cum",
+                                    ID: "similique",
+                                    Type: "TYPE_UNSPECIFIED",
+                                    UncompressedSizeBytes: "nihil",
+                                },
+                                Time: "id",
+                            },
+                            shared.TimeEvent{
+                                Annotation: &shared.Annotation{
+                                    Attributes: &shared.Attributes{
+                                        AttributeMap: map[string]shared.AttributeValue{
+                                            "sapiente": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "et",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 248753,
+                                                    Value: "possimus",
+                                                },
+                                            },
+                                            "in": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "qui",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 592042,
+                                                    Value: "eveniet",
+                                                },
+                                            },
+                                        },
+                                        DroppedAttributesCount: 572252,
+                                    },
+                                    Description: &shared.TruncatableString{
+                                        TruncatedByteCount: 638921,
+                                        Value: "modi",
+                                    },
+                                },
+                                MessageEvent: &shared.MessageEvent{
+                                    CompressedSizeBytes: "necessitatibus",
+                                    ID: "tenetur",
+                                    Type: "RECEIVED",
+                                    UncompressedSizeBytes: "ducimus",
+                                },
+                                Time: "ducimus",
+                            },
+                        },
+                    },
+                },
+                shared.Span{
+                    Attributes: &shared.Attributes{
+                        AttributeMap: map[string]shared.AttributeValue{
+                            "reiciendis": shared.AttributeValue{
+                                BoolValue: false,
+                                IntValue: "cumque",
+                                StringValue: &shared.TruncatableString{
+                                    TruncatedByteCount: 116202,
+                                    Value: "ullam",
+                                },
+                            },
+                            "voluptas": shared.AttributeValue{
+                                BoolValue: false,
+                                IntValue: "vel",
+                                StringValue: &shared.TruncatableString{
+                                    TruncatedByteCount: 411820,
+                                    Value: "qui",
+                                },
+                            },
+                            "cum": shared.AttributeValue{
+                                BoolValue: false,
+                                IntValue: "aut",
+                                StringValue: &shared.TruncatableString{
+                                    TruncatedByteCount: 249796,
+                                    Value: "culpa",
+                                },
+                            },
+                            "enim": shared.AttributeValue{
+                                BoolValue: false,
+                                IntValue: "aut",
+                                StringValue: &shared.TruncatableString{
+                                    TruncatedByteCount: 965417,
+                                    Value: "eligendi",
+                                },
+                            },
+                        },
+                        DroppedAttributesCount: 588465,
+                    },
+                    ChildSpanCount: 725255,
+                    DisplayName: &shared.TruncatableString{
+                        TruncatedByteCount: 659669,
+                        Value: "et",
+                    },
+                    EndTime: "provident",
+                    Links: &shared.Links{
+                        DroppedLinksCount: 956084,
+                        Link: []shared.Link{
+                            shared.Link{
+                                Attributes: &shared.Attributes{
+                                    AttributeMap: map[string]shared.AttributeValue{
+                                        "qui": shared.AttributeValue{
+                                            BoolValue: false,
+                                            IntValue: "nihil",
+                                            StringValue: &shared.TruncatableString{
+                                                TruncatedByteCount: 618809,
+                                                Value: "id",
+                                            },
+                                        },
+                                        "voluptatum": shared.AttributeValue{
+                                            BoolValue: false,
+                                            IntValue: "sit",
+                                            StringValue: &shared.TruncatableString{
+                                                TruncatedByteCount: 470132,
+                                                Value: "corporis",
+                                            },
+                                        },
+                                        "porro": shared.AttributeValue{
+                                            BoolValue: false,
+                                            IntValue: "distinctio",
+                                            StringValue: &shared.TruncatableString{
+                                                TruncatedByteCount: 287991,
+                                                Value: "nostrum",
+                                            },
+                                        },
+                                    },
+                                    DroppedAttributesCount: 383462,
+                                },
+                                SpanID: "et",
+                                TraceID: "placeat",
+                                Type: "CHILD_LINKED_SPAN",
+                            },
+                        },
+                    },
+                    Name: "debitis",
+                    ParentSpanID: "dolores",
+                    SameProcessAsParentSpan: false,
+                    SpanID: "aut",
+                    SpanKind: "INTERNAL",
+                    StackTrace: &shared.StackTrace{
+                        StackFrames: &shared.StackFrames{
+                            DroppedFramesCount: 92373,
+                            Frame: []shared.StackFrame{
+                                shared.StackFrame{
+                                    ColumnNumber: "ex",
+                                    FileName: &shared.TruncatableString{
+                                        TruncatedByteCount: 590873,
+                                        Value: "omnis",
+                                    },
+                                    FunctionName: &shared.TruncatableString{
+                                        TruncatedByteCount: 574325,
+                                        Value: "aperiam",
+                                    },
+                                    LineNumber: "et",
+                                    LoadModule: &shared.Module{
+                                        BuildID: &shared.TruncatableString{
+                                            TruncatedByteCount: 968962,
+                                            Value: "et",
+                                        },
+                                        Module: &shared.TruncatableString{
+                                            TruncatedByteCount: 320997,
+                                            Value: "et",
+                                        },
+                                    },
+                                    OriginalFunctionName: &shared.TruncatableString{
+                                        TruncatedByteCount: 221262,
+                                        Value: "eveniet",
+                                    },
+                                    SourceVersion: &shared.TruncatableString{
+                                        TruncatedByteCount: 141264,
+                                        Value: "consequatur",
+                                    },
+                                },
+                                shared.StackFrame{
+                                    ColumnNumber: "aspernatur",
+                                    FileName: &shared.TruncatableString{
+                                        TruncatedByteCount: 435865,
+                                        Value: "maiores",
+                                    },
+                                    FunctionName: &shared.TruncatableString{
+                                        TruncatedByteCount: 891924,
+                                        Value: "quaerat",
+                                    },
+                                    LineNumber: "aut",
+                                    LoadModule: &shared.Module{
+                                        BuildID: &shared.TruncatableString{
+                                            TruncatedByteCount: 537023,
+                                            Value: "nihil",
+                                        },
+                                        Module: &shared.TruncatableString{
+                                            TruncatedByteCount: 447926,
+                                            Value: "aspernatur",
+                                        },
+                                    },
+                                    OriginalFunctionName: &shared.TruncatableString{
+                                        TruncatedByteCount: 99569,
+                                        Value: "sint",
+                                    },
+                                    SourceVersion: &shared.TruncatableString{
+                                        TruncatedByteCount: 352312,
+                                        Value: "quo",
+                                    },
+                                },
+                                shared.StackFrame{
+                                    ColumnNumber: "totam",
+                                    FileName: &shared.TruncatableString{
+                                        TruncatedByteCount: 998848,
+                                        Value: "voluptas",
+                                    },
+                                    FunctionName: &shared.TruncatableString{
+                                        TruncatedByteCount: 149448,
+                                        Value: "et",
+                                    },
+                                    LineNumber: "accusamus",
+                                    LoadModule: &shared.Module{
+                                        BuildID: &shared.TruncatableString{
+                                            TruncatedByteCount: 37559,
+                                            Value: "neque",
+                                        },
+                                        Module: &shared.TruncatableString{
+                                            TruncatedByteCount: 508315,
+                                            Value: "et",
+                                        },
+                                    },
+                                    OriginalFunctionName: &shared.TruncatableString{
+                                        TruncatedByteCount: 166847,
+                                        Value: "quia",
+                                    },
+                                    SourceVersion: &shared.TruncatableString{
+                                        TruncatedByteCount: 779051,
+                                        Value: "pariatur",
+                                    },
+                                },
+                            },
+                        },
+                        StackTraceHashID: "et",
+                    },
+                    StartTime: "consequatur",
+                    Status: &shared.Status{
+                        Code: 411397,
+                        Details: []map[string]interface{}{
+                            map[string]interface{}{
+                                "voluptate": "aperiam",
+                            },
+                            map[string]interface{}{
+                                "voluptatibus": "optio",
+                            },
+                            map[string]interface{}{
+                                "qui": "quam",
+                                "quisquam": "ab",
+                            },
+                        },
+                        Message: "et",
+                    },
+                    TimeEvents: &shared.TimeEvents{
+                        DroppedAnnotationsCount: 365496,
+                        DroppedMessageEventsCount: 975522,
+                        TimeEvent: []shared.TimeEvent{
+                            shared.TimeEvent{
+                                Annotation: &shared.Annotation{
+                                    Attributes: &shared.Attributes{
+                                        AttributeMap: map[string]shared.AttributeValue{
+                                            "incidunt": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "aut",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 764912,
+                                                    Value: "ea",
+                                                },
+                                            },
+                                            "rerum": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "qui",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 749999,
+                                                    Value: "ipsum",
+                                                },
+                                            },
+                                            "laboriosam": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "occaecati",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 489549,
+                                                    Value: "illo",
+                                                },
+                                            },
+                                            "laboriosam": shared.AttributeValue{
+                                                BoolValue: false,
+                                                IntValue: "velit",
+                                                StringValue: &shared.TruncatableString{
+                                                    TruncatedByteCount: 179490,
                                                     Value: "sit",
                                                 },
                                             },
                                         },
-                                        DroppedAttributesCount: 3696118768821457648,
+                                        DroppedAttributesCount: 170986,
                                     },
                                     Description: &shared.TruncatableString{
-                                        TruncatedByteCount: 3450989031171849556,
-                                        Value: "iusto",
+                                        TruncatedByteCount: 793698,
+                                        Value: "laudantium",
                                     },
                                 },
                                 MessageEvent: &shared.MessageEvent{
-                                    CompressedSizeBytes: "quia",
-                                    ID: "repudiandae",
-                                    Type: "TYPE_UNSPECIFIED",
-                                    UncompressedSizeBytes: "autem",
+                                    CompressedSizeBytes: "modi",
+                                    ID: "officiis",
+                                    Type: "SENT",
+                                    UncompressedSizeBytes: "rerum",
                                 },
-                                Time: "odit",
+                                Time: "non",
                             },
                         },
                     },
@@ -694,7 +714,8 @@ func main() {
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.CloudtraceProjectsTracesBatchWrite(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -703,5 +724,6 @@ func main() {
     if res.Empty != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

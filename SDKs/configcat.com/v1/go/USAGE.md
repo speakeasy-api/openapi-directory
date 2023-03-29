@@ -3,40 +3,37 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Basic: shared.SchemeBasic{
-                    Password: "YOUR_PASSWORD_HERE",
-                    Username: "YOUR_USERNAME_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Basic: shared.SchemeBasic{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.GetAuditlogsRequest{
         PathParams: operations.GetAuditlogsPathParams{
-            ProductID: "sit",
+            ProductID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
         },
         QueryParams: operations.GetAuditlogsQueryParams{
-            AuditLogType: map[string]interface{}{
-                "culpa": "expedita",
-            },
-            ConfigID: "consequuntur",
-            EnvironmentID: "dolor",
-            FromUtcDateTime: "2009-11-26T21:53:53Z",
-            ToUtcDateTime: "1978-05-28T16:08:43Z",
+            AuditLogType: "organizationSubscriptionTypeChanged",
+            ConfigID: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
+            EnvironmentID: "b7392059-2939-46fe-a759-6eb10faaa235",
+            FromUtcDateTime: "2023-02-10T11:11:42.837Z",
+            ToUtcDateTime: "2022-06-28T12:34:45.127Z",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AuditLogs.GetAuditlogs(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -45,5 +42,6 @@ func main() {
     if res.AuditLogItemModels != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

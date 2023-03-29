@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetUserRequest{
         Security: operations.GetUserSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,7 +20,8 @@ func main() {
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.User.GetUser(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.UserResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

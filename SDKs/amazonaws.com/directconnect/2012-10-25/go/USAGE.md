@@ -3,47 +3,52 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AcceptDirectConnectGatewayAssociationProposalRequest{
         Headers: operations.AcceptDirectConnectGatewayAssociationProposalHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "OvertureService.AcceptDirectConnectGatewayAssociationProposal",
         },
         Request: shared.AcceptDirectConnectGatewayAssociationProposalRequest{
-            AssociatedGatewayOwnerAccount: "fugit",
-            DirectConnectGatewayID: "et",
+            AssociatedGatewayOwnerAccount: "nihil",
+            DirectConnectGatewayID: "fuga",
             OverrideAllowedPrefixesToDirectConnectGateway: []shared.RouteFilterPrefix{
                 shared.RouteFilterPrefix{
-                    Cidr: "rerum",
+                    Cidr: "eum",
+                },
+                shared.RouteFilterPrefix{
+                    Cidr: "iusto",
+                },
+                shared.RouteFilterPrefix{
+                    Cidr: "ullam",
                 },
             },
-            ProposalID: "dicta",
+            ProposalID: "saepe",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AcceptDirectConnectGatewayAssociationProposal(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -52,5 +57,6 @@ func main() {
     if res.AcceptDirectConnectGatewayAssociationProposalResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

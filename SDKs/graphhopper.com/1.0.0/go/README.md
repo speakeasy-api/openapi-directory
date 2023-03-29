@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/graphhopper.com/1.0.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,71 +14,70 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKey: shared.SchemeAPIKey{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKey: shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AsyncClusteringProblemRequest{
         Request: shared.ClusterRequest{
             Configuration: &shared.ClusterConfiguration{
                 Clustering: &shared.ClusterConfigurationClustering{
-                    MaxQuantity: 74.099998,
-                    MinQuantity: 53.099998,
-                    NumClusters: 15.100000,
+                    MaxQuantity: 50,
+                    MinQuantity: 30,
+                    NumClusters: 10,
                 },
-                ResponseType: "expedita",
+                ResponseType: "json",
                 Routing: &shared.ClusterConfigurationRouting{
-                    CostPerMeter: 77.099998,
-                    CostPerSecond: 28.100000,
-                    Profile: "rerum",
+                    CostPerMeter: 5488.14,
+                    CostPerSecond: 1,
+                    Profile: "car",
                 },
             },
             Customers: []shared.ClusterCustomer{
                 shared.ClusterCustomer{
                     Address: &shared.ClusterCustomerAddress{
-                        Lat: 48.099998,
-                        Lon: 26.200001,
-                        StreetHint: "dolorem",
+                        Lat: 48.118434,
+                        Lon: 11.53941,
+                        StreetHint: "Lindenschmitstraße 52",
                     },
-                    ID: "et",
-                    Quantity: 94.199997,
+                    ID: "GraphHopper GmbH",
+                    Quantity: 10,
                 },
                 shared.ClusterCustomer{
                     Address: &shared.ClusterCustomerAddress{
-                        Lat: 68.099998,
-                        Lon: 80.199997,
-                        StreetHint: "debitis",
+                        Lat: 48.118434,
+                        Lon: 11.53941,
+                        StreetHint: "Lindenschmitstraße 52",
                     },
-                    ID: "vel",
-                    Quantity: 20.200001,
+                    ID: "GraphHopper GmbH",
+                    Quantity: 10,
                 },
                 shared.ClusterCustomer{
                     Address: &shared.ClusterCustomerAddress{
-                        Lat: 12.200000,
-                        Lon: 88.199997,
-                        StreetHint: "commodi",
+                        Lat: 48.118434,
+                        Lon: 11.53941,
+                        StreetHint: "Lindenschmitstraße 52",
                     },
-                    ID: "quis",
-                    Quantity: 93.099998,
+                    ID: "GraphHopper GmbH",
+                    Quantity: 10,
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ClusterAPI.AsyncClusteringProblem(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -87,49 +86,50 @@ func main() {
     if res.JobID != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Cluster API
+
+### ClusterAPI
 
 * `AsyncClusteringProblem` - Batch Cluster Endpoint
 * `GetClusterSolution` - GET Batch Solution Endpoint
 * `SolveClusteringProblem` - POST Cluster Endpoint
 
-### Geocoding API
+### GeocodingAPI
 
 * `GetGeocode` - Geocoding Endpoint
 
-### Isochrone API
+### IsochroneAPI
 
 * `GetIsochrone` - Isochrone Endpoint
 
-### Map Matching API
+### MapMatchingAPI
 
-* `PostGpx` - Map-match a GPX file
+* `PostGPX` - Map-match a GPX file
 
-### Matrix API
+### MatrixAPI
 
 * `CalculateMatrix` - Batch Matrix Endpoint
 * `GetMatrix` - GET Matrix Endpoint
 * `GetMatrixSolution` - GET Batch Matrix Endpoint
 * `PostMatrix` - POST Matrix Endpoint
 
-### Route Optimization API
+### RouteOptimizationAPI
 
-* `AsyncVrp` - POST route optimization problem (batch mode)
+* `AsyncVRP` - POST route optimization problem (batch mode)
 * `GetSolution` - GET the solution (batch mode)
-* `SolveVrp` - POST route optimization problem
+* `SolveVRP` - POST route optimization problem
 
-### Routing API
+### RoutingAPI
 
 * `GetRoute` - GET Route Endpoint
 * `GetRouteInfo` - Coverage information
 * `PostRoute` - POST Route Endpoint
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

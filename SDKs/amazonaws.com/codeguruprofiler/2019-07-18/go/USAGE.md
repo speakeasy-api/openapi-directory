@@ -3,50 +3,59 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AddNotificationChannelsRequest{
         PathParams: operations.AddNotificationChannelsPathParams{
-            ProfilingGroupName: "sit",
+            ProfilingGroupName: "unde",
         },
         Headers: operations.AddNotificationChannelsHeaders{
-            XAmzAlgorithm: "voluptas",
-            XAmzContentSha256: "culpa",
-            XAmzCredential: "expedita",
-            XAmzDate: "consequuntur",
-            XAmzSecurityToken: "dolor",
-            XAmzSignature: "expedita",
-            XAmzSignedHeaders: "voluptas",
+            XAmzAlgorithm: "deserunt",
+            XAmzContentSha256: "porro",
+            XAmzCredential: "nulla",
+            XAmzDate: "id",
+            XAmzSecurityToken: "vero",
+            XAmzSignature: "perspiciatis",
+            XAmzSignedHeaders: "nulla",
         },
         Request: operations.AddNotificationChannelsRequestBody{
             Channels: []shared.Channel{
                 shared.Channel{
                     EventPublishers: []shared.EventPublisherEnum{
                         "AnomalyDetection",
+                        "AnomalyDetection",
+                        "AnomalyDetection",
                     },
-                    ID: "rerum",
-                    URI: "dicta",
+                    ID: "ullam",
+                    URI: "https://anahi.org",
+                },
+                shared.Channel{
+                    EventPublishers: []shared.EventPublisherEnum{
+                        "AnomalyDetection",
+                        "AnomalyDetection",
+                    },
+                    ID: "autem",
+                    URI: "https://june.info",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AddNotificationChannels(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -55,5 +64,6 @@ func main() {
     if res.AddNotificationChannelsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

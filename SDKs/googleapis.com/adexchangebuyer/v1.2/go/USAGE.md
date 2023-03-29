@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AdexchangebuyerAccountsGetRequest{
         Security: operations.AdexchangebuyerAccountsGetSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,19 +23,20 @@ func main() {
             },
         },
         PathParams: operations.AdexchangebuyerAccountsGetPathParams{
-            ID: 8717895732742165505,
+            ID: 548814,
         },
         QueryParams: operations.AdexchangebuyerAccountsGetQueryParams{
             Alt: "json",
-            Fields: "culpa",
-            Key: "expedita",
-            OauthToken: "consequuntur",
+            Fields: "porro",
+            Key: "nulla",
+            OauthToken: "id",
             PrettyPrint: false,
-            QuotaUser: "expedita",
-            UserIP: "voluptas",
+            QuotaUser: "vero",
+            UserIP: "perspiciatis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Accounts.AdexchangebuyerAccountsGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -42,5 +45,6 @@ func main() {
     if res.Account != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

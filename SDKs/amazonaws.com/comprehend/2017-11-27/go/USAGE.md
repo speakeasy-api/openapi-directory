@@ -3,42 +3,42 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.BatchDetectDominantLanguageRequest{
         Headers: operations.BatchDetectDominantLanguageHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "Comprehend_20171127.BatchDetectDominantLanguage",
         },
         Request: shared.BatchDetectDominantLanguageRequest{
             TextList: []string{
-                "et",
+                "fuga",
+                "facilis",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BatchDetectDominantLanguage(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +47,6 @@ func main() {
     if res.BatchDetectDominantLanguageResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

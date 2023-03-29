@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,23 +12,34 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.PostTransfersRequest{
-        Security: operations.PostTransfersSecurity{
+
+    req := operations.GetTransactionsRequest{
+        Security: operations.GetTransactionsSecurity{
             APIKeyAuth: shared.SchemeAPIKeyAuth{
                 APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        Request: "sit",
+        QueryParams: operations.GetTransactionsQueryParams{
+            AccountHolderID: "unde",
+            BalanceAccountID: "deserunt",
+            BalancePlatform: "porro",
+            CreatedSince: "2022-05-25T08:44:08.628Z",
+            CreatedUntil: "2022-08-21T12:17:47.244Z",
+            Cursor: "vero",
+            Limit: 544883,
+            PaymentInstrumentID: "nulla",
+        },
     }
-    
-    res, err := s.General.PostTransfers(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Transactions.GetTransactions(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Transfer != nil {
+    if res.TransactionSearchResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

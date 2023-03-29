@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/qldb-session/2019-07-11/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,79 +14,75 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.SendCommandRequest{
         Headers: operations.SendCommandHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "QLDBSession.SendCommand",
         },
         Request: shared.SendCommandRequest{
             AbortTransaction: map[string]interface{}{
-                "et": "nihil",
+                "fuga": "facilis",
+                "eum": "iusto",
             },
             CommitTransaction: &shared.CommitTransactionRequest{
-                CommitDigest: "rerum",
-                TransactionID: "dicta",
+                CommitDigest: "ullam",
+                TransactionID: "saepe",
             },
             EndSession: map[string]interface{}{
-                "voluptatum": "et",
+                "sapiente": "enim",
             },
             ExecuteStatement: &shared.ExecuteStatementRequest{
                 Parameters: []shared.ValueHolder{
                     shared.ValueHolder{
-                        IonBinary: "dolorem",
-                        IonText: "et",
+                        IonBinary: "voluptatum",
+                        IonText: "autem",
                     },
                     shared.ValueHolder{
-                        IonBinary: "voluptate",
-                        IonText: "iste",
-                    },
-                    shared.ValueHolder{
-                        IonBinary: "vitae",
-                        IonText: "totam",
+                        IonBinary: "vel",
+                        IonText: "non",
                     },
                 },
-                Statement: "dolores",
-                TransactionID: "illum",
+                Statement: "deleniti",
+                TransactionID: "similique",
             },
             FetchPage: &shared.FetchPageRequest{
-                NextPageToken: "debitis",
-                TransactionID: "vel",
+                NextPageToken: "reprehenderit",
+                TransactionID: "molestiae",
             },
-            SessionToken: "odio",
+            SessionToken: "quo",
             StartSession: &shared.StartSessionRequest{
-                LedgerName: "dolore",
+                LedgerName: "quasi",
             },
             StartTransaction: map[string]interface{}{
-                "aspernatur": "accusantium",
-                "totam": "commodi",
+                "dicta": "est",
+                "voluptatem": "consequatur",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.SendCommand(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -95,6 +91,7 @@ func main() {
     if res.SendCommandResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -104,7 +101,6 @@ func main() {
 ### SDK SDK
 
 * `SendCommand` - <p>Sends a command to an Amazon QLDB ledger.</p> <note> <p>Instead of interacting directly with this API, we recommend using the QLDB driver or the QLDB shell to execute data transactions on a ledger.</p> <ul> <li> <p>If you are working with an AWS SDK, use the QLDB driver. The driver provides a high-level abstraction layer above this <i>QLDB Session</i> data plane and manages <code>SendCommand</code> API calls for you. For information and a list of supported programming languages, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/getting-started-driver.html">Getting started with the driver</a> in the <i>Amazon QLDB Developer Guide</i>.</p> </li> <li> <p>If you are working with the AWS Command Line Interface (AWS CLI), use the QLDB shell. The shell is a command line interface that uses the QLDB driver to interact with a ledger. For information, see <a href="https://docs.aws.amazon.com/qldb/latest/developerguide/data-shell.html">Accessing Amazon QLDB using the QLDB shell</a>.</p> </li> </ul> </note>
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

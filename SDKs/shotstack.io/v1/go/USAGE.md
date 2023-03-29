@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetRenderRequest{
         Security: operations.GetRenderSecurity{
             DeveloperKey: shared.SchemeDeveloperKey{
@@ -18,10 +20,11 @@ func main() {
             },
         },
         PathParams: operations.GetRenderPathParams{
-            ID: "sit",
+            ID: "unde",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Edit.GetRender(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -30,5 +33,6 @@ func main() {
     if res.RenderResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

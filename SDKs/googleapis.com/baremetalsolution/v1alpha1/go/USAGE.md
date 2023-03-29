@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigRequest{
         Security: operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,115 +23,239 @@ func main() {
             },
         },
         PathParams: operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigPathParams{
-            Location: "sit",
-            Project: "voluptas",
+            Location: "unde",
+            Project: "deserunt",
         },
         QueryParams: operations.BaremetalsolutionProjectsLocationsSubmitProvisioningConfigQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            AccessToken: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.SubmitProvisioningConfigRequest{
-            Email: "debitis",
+            Email: "Eli96@yahoo.com",
             ProvisioningConfig: &shared.ProvisioningConfig{
                 Instances: []shared.InstanceConfig{
                     shared.InstanceConfig{
                         ClientNetwork: &shared.NetworkAddress{
-                            Address: "et",
-                            ExistingNetworkID: "ut",
-                            NetworkID: "dolorem",
+                            Address: "4785 Gladys Manor",
+                            ExistingNetworkID: "molestiae",
+                            NetworkID: "quo",
                         },
                         Hyperthreading: false,
-                        ID: "voluptate",
-                        InstanceType: "iste",
-                        Location: "vitae",
-                        OsImage: "totam",
+                        ID: "quasi",
+                        InstanceType: "laboriosam",
+                        Location: "dicta",
+                        OsImage: "est",
                         PrivateNetwork: &shared.NetworkAddress{
-                            Address: "dolores",
-                            ExistingNetworkID: "illum",
-                            NetworkID: "debitis",
+                            Address: "38971 Wilford Track",
+                            ExistingNetworkID: "rem",
+                            NetworkID: "quibusdam",
                         },
-                        UserNote: "vel",
+                        UserNote: "et",
+                    },
+                    shared.InstanceConfig{
+                        ClientNetwork: &shared.NetworkAddress{
+                            Address: "5761 Kristina Roads",
+                            ExistingNetworkID: "qui",
+                            NetworkID: "sed",
+                        },
+                        Hyperthreading: false,
+                        ID: "rerum",
+                        InstanceType: "possimus",
+                        Location: "occaecati",
+                        OsImage: "odit",
+                        PrivateNetwork: &shared.NetworkAddress{
+                            Address: "4217 Emmerich Rue",
+                            ExistingNetworkID: "similique",
+                            NetworkID: "dolores",
+                        },
+                        UserNote: "sit",
                     },
                 },
                 Networks: []shared.NetworkConfig{
                     shared.NetworkConfig{
-                        Bandwidth: "BW_1_GBPS",
-                        Cidr: "id",
-                        ID: "aspernatur",
-                        Location: "accusantium",
-                        ServiceCidr: "SERVICE_CIDR_UNSPECIFIED",
+                        Bandwidth: "BW_5_GBPS",
+                        Cidr: "voluptatem",
+                        ID: "laborum",
+                        Location: "modi",
+                        ServiceCidr: "HIGH_27",
                         Type: "CLIENT",
-                        UserNote: "quis",
+                        UserNote: "earum",
                         VlanAttachments: []shared.VlanAttachment{
                             shared.VlanAttachment{
-                                ID: "aut",
-                                PairingKey: "odit",
+                                ID: "soluta",
+                                PairingKey: "qui",
                             },
                             shared.VlanAttachment{
-                                ID: "non",
-                                PairingKey: "voluptas",
+                                ID: "ea",
+                                PairingKey: "laborum",
+                            },
+                            shared.VlanAttachment{
+                                ID: "iusto",
+                                PairingKey: "ut",
+                            },
+                            shared.VlanAttachment{
+                                ID: "optio",
+                                PairingKey: "aspernatur",
+                            },
+                        },
+                    },
+                    shared.NetworkConfig{
+                        Bandwidth: "BANDWIDTH_UNSPECIFIED",
+                        Cidr: "ut",
+                        ID: "libero",
+                        Location: "et",
+                        ServiceCidr: "HIGH_27",
+                        Type: "TYPE_UNSPECIFIED",
+                        UserNote: "non",
+                        VlanAttachments: []shared.VlanAttachment{
+                            shared.VlanAttachment{
+                                ID: "magni",
+                                PairingKey: "placeat",
+                            },
+                            shared.VlanAttachment{
+                                ID: "ipsam",
+                                PairingKey: "est",
                             },
                         },
                     },
                 },
-                TicketID: "omnis",
+                TicketID: "commodi",
                 Volumes: []shared.VolumeConfig{
                     shared.VolumeConfig{
-                        ID: "illo",
-                        Location: "sed",
+                        ID: "similique",
+                        Location: "eaque",
                         LunRanges: []shared.LunRange{
                             shared.LunRange{
-                                Quantity: 771642788862502430,
-                                SizeGb: 8514850266767180993,
+                                Quantity: 634274,
+                                SizeGb: 988374,
                             },
                             shared.LunRange{
-                                Quantity: 8683452355129068124,
-                                SizeGb: 4345851588384648695,
+                                Quantity: 958950,
+                                SizeGb: 102044,
                             },
                         },
                         MachineIds: []string{
-                            "recusandae",
+                            "non",
+                            "quidem",
+                            "neque",
                         },
                         NfsExports: []shared.NfsExport{
                             shared.NfsExport{
                                 AllowDev: false,
-                                AllowSuid: true,
-                                Cidr: "modi",
-                                MachineID: "sint",
-                                NetworkID: "inventore",
-                                NoRootSquash: true,
+                                AllowSuid: false,
+                                Cidr: "et",
+                                MachineID: "culpa",
+                                NetworkID: "aliquam",
+                                NoRootSquash: false,
+                                Permissions: "READ_ONLY",
+                            },
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: false,
+                                Cidr: "totam",
+                                MachineID: "voluptatum",
+                                NetworkID: "et",
+                                NoRootSquash: false,
+                                Permissions: "READ_ONLY",
+                            },
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: false,
+                                Cidr: "nesciunt",
+                                MachineID: "laboriosam",
+                                NetworkID: "aut",
+                                NoRootSquash: false,
                                 Permissions: "READ_WRITE",
                             },
                             shared.NfsExport{
-                                AllowDev: true,
+                                AllowDev: false,
                                 AllowSuid: false,
-                                Cidr: "tempore",
-                                MachineID: "maiores",
-                                NetworkID: "incidunt",
+                                Cidr: "expedita",
+                                MachineID: "ipsam",
+                                NetworkID: "eos",
                                 NoRootSquash: false,
                                 Permissions: "READ_WRITE",
                             },
                         },
-                        Protocol: "PROTOCOL_FC",
-                        SizeGb: 2671030200101705776,
+                        Protocol: "PROTOCOL_UNSPECIFIED",
+                        SizeGb: 949572,
                         SnapshotsEnabled: false,
                         Type: "FLASH",
-                        UserNote: "ipsum",
+                        UserNote: "distinctio",
+                    },
+                    shared.VolumeConfig{
+                        ID: "qui",
+                        Location: "perferendis",
+                        LunRanges: []shared.LunRange{
+                            shared.LunRange{
+                                Quantity: 622846,
+                                SizeGb: 837945,
+                            },
+                        },
+                        MachineIds: []string{
+                            "explicabo",
+                            "aut",
+                            "reiciendis",
+                        },
+                        NfsExports: []shared.NfsExport{
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: false,
+                                Cidr: "totam",
+                                MachineID: "molestias",
+                                NetworkID: "reiciendis",
+                                NoRootSquash: false,
+                                Permissions: "PERMISSIONS_UNSPECIFIED",
+                            },
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: false,
+                                Cidr: "id",
+                                MachineID: "qui",
+                                NetworkID: "quod",
+                                NoRootSquash: false,
+                                Permissions: "PERMISSIONS_UNSPECIFIED",
+                            },
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: false,
+                                Cidr: "eaque",
+                                MachineID: "odio",
+                                NetworkID: "veniam",
+                                NoRootSquash: false,
+                                Permissions: "READ_WRITE",
+                            },
+                            shared.NfsExport{
+                                AllowDev: false,
+                                AllowSuid: false,
+                                Cidr: "sed",
+                                MachineID: "ea",
+                                NetworkID: "exercitationem",
+                                NoRootSquash: false,
+                                Permissions: "READ_ONLY",
+                            },
+                        },
+                        Protocol: "PROTOCOL_UNSPECIFIED",
+                        SizeGb: 688661,
+                        SnapshotsEnabled: false,
+                        Type: "TYPE_UNSPECIFIED",
+                        UserNote: "aut",
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.BaremetalsolutionProjectsLocationsSubmitProvisioningConfig(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -138,5 +264,6 @@ func main() {
     if res.ProvisioningConfig != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

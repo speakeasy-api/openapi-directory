@@ -3,47 +3,54 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CopyBackupToRegionRequest{
         Headers: operations.CopyBackupToRegionHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "BaldrApiService.CopyBackupToRegion",
         },
         Request: shared.CopyBackupToRegionRequest{
-            BackupID: "fugit",
-            DestinationRegion: "et",
+            BackupID: "nihil",
+            DestinationRegion: "fuga",
             TagList: []shared.Tag{
                 shared.Tag{
-                    Key: "rerum",
-                    Value: "dicta",
+                    Key: "eum",
+                    Value: "iusto",
+                },
+                shared.Tag{
+                    Key: "ullam",
+                    Value: "saepe",
+                },
+                shared.Tag{
+                    Key: "inventore",
+                    Value: "sapiente",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CopyBackupToRegion(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -52,5 +59,6 @@ func main() {
     if res.CopyBackupToRegionResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

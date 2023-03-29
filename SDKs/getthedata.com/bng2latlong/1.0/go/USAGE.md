@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetBng2latlongEastingNorthingRequest{
         PathParams: operations.GetBng2latlongEastingNorthingPathParams{
-            Easting: 8717895732742165505,
-            Northing: 2259404117704393152,
+            Easting: 548814,
+            Northing: 592845,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetBng2latlongEastingNorthing(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -26,5 +29,6 @@ func main() {
     if res.GetBng2latlongEastingNorthing200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

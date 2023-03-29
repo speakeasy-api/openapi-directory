@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BeyondcorpProjectsLocationsAppConnectionsCreateRequest{
         Security: operations.BeyondcorpProjectsLocationsAppConnectionsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,49 +23,49 @@ func main() {
             },
         },
         PathParams: operations.BeyondcorpProjectsLocationsAppConnectionsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BeyondcorpProjectsLocationsAppConnectionsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            AppConnectionID: "consequuntur",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            AppConnectionID: "id",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
-            ValidateOnly: true,
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
+            ValidateOnly: false,
         },
         Request: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput{
             ApplicationEndpoint: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint{
-                Host: "et",
-                Port: 7144924247938981575,
+                Host: "ullam",
+                Port: 891773,
             },
             Connectors: []string{
-                "et",
-                "voluptate",
-                "iste",
+                "sapiente",
             },
-            DisplayName: "vitae",
+            DisplayName: "enim",
             Gateway: &shared.GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput{
-                AppGateway: "totam",
+                AppGateway: "eum",
                 Type: "TYPE_UNSPECIFIED",
             },
             Labels: map[string]string{
-                "debitis": "vel",
-                "odio": "dolore",
-                "id": "aspernatur",
+                "vel": "non",
+                "deleniti": "similique",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
             },
-            Name: "accusantium",
-            Type: "TCP_PROXY",
+            Name: "laboriosam",
+            Type: "TYPE_UNSPECIFIED",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.BeyondcorpProjectsLocationsAppConnectionsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -72,5 +74,6 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

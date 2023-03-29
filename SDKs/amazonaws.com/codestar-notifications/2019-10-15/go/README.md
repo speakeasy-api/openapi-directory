@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/codestar-notifications/2019-10-15/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,63 +14,63 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateNotificationRuleRequest{
         Headers: operations.CreateNotificationRuleHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateNotificationRuleRequestBody{
-            ClientRequestToken: "voluptas",
+            ClientRequestToken: "nulla",
             DetailType: "BASIC",
             EventTypeIds: []string{
-                "nihil",
+                "facilis",
+                "eum",
+                "iusto",
             },
-            Name: "rerum",
-            Resource: "dicta",
+            Name: "ullam",
+            Resource: "saepe",
             Status: "ENABLED",
             Tags: map[string]string{
-                "et": "ut",
+                "enim": "eum",
+                "voluptatum": "autem",
+                "vel": "non",
+                "deleniti": "similique",
             },
             Targets: []shared.Target{
                 shared.Target{
-                    TargetAddress: "et",
-                    TargetType: "voluptate",
+                    TargetAddress: "molestiae",
+                    TargetType: "quo",
                 },
                 shared.Target{
-                    TargetAddress: "iste",
-                    TargetType: "vitae",
-                },
-                shared.Target{
-                    TargetAddress: "totam",
-                    TargetType: "dolores",
+                    TargetAddress: "quasi",
+                    TargetType: "laboriosam",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateNotificationRule(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -79,6 +79,7 @@ func main() {
     if res.CreateNotificationRuleResult != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -87,20 +88,19 @@ func main() {
 
 ### SDK SDK
 
-* `CreateNotificationRule` - Creates a notification rule for a resource. The rule specifies the events you want notifications about and the targets (such as SNS topics) where you want to receive them.
+* `CreateNotificationRule` - Creates a notification rule for a resource. The rule specifies the events you want notifications about and the targets (such as Chatbot topics or Chatbot clients configured for Slack) where you want to receive them.
 * `DeleteNotificationRule` - Deletes a notification rule for a resource.
 * `DeleteTarget` - Deletes a specified target for notifications.
 * `DescribeNotificationRule` - Returns information about a specified notification rule.
 * `ListEventTypes` - Returns information about the event types available for configuring notifications.
-* `ListNotificationRules` - Returns a list of the notification rules for an AWS account.
+* `ListNotificationRules` - Returns a list of the notification rules for an Amazon Web Services account.
 * `ListTagsForResource` - Returns a list of the tags associated with a notification rule.
-* `ListTargets` - Returns a list of the notification rule targets for an AWS account.
-* `Subscribe` - Creates an association between a notification rule and an SNS topic so that the associated target can receive notifications when the events described in the rule are triggered.
+* `ListTargets` - Returns a list of the notification rule targets for an Amazon Web Services account.
+* `Subscribe` - Creates an association between a notification rule and an Chatbot topic or Chatbot client so that the associated target can receive notifications when the events described in the rule are triggered.
 * `TagResource` - Associates a set of provided tags with a notification rule.
-* `Unsubscribe` - Removes an association between a notification rule and an Amazon SNS topic so that subscribers to that topic stop receiving notifications when the events described in the rule are triggered.
+* `Unsubscribe` - Removes an association between a notification rule and an Chatbot topic so that subscribers to that topic stop receiving notifications when the events described in the rule are triggered.
 * `UntagResource` - Removes the association between one or more provided tags and a notification rule.
 * `UpdateNotificationRule` - <p>Updates a notification rule for a resource. You can change the events that trigger the notification rule, the status of the rule, and the targets that receive the notifications.</p> <note> <p>To add or remove tags for a notification rule, you must use <a>TagResource</a> and <a>UntagResource</a>.</p> </note>
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

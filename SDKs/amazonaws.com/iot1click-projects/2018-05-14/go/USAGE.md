@@ -3,44 +3,43 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AssociateDeviceWithPlacementRequest{
         PathParams: operations.AssociateDeviceWithPlacementPathParams{
-            DeviceTemplateName: "sit",
-            PlacementName: "voluptas",
-            ProjectName: "culpa",
+            DeviceTemplateName: "unde",
+            PlacementName: "deserunt",
+            ProjectName: "porro",
         },
         Headers: operations.AssociateDeviceWithPlacementHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "consequuntur",
-            XAmzCredential: "dolor",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "voluptas",
-            XAmzSignature: "fugit",
-            XAmzSignedHeaders: "et",
+            XAmzAlgorithm: "nulla",
+            XAmzContentSha256: "id",
+            XAmzCredential: "vero",
+            XAmzDate: "perspiciatis",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "nihil",
+            XAmzSignedHeaders: "fuga",
         },
         Request: operations.AssociateDeviceWithPlacementRequestBody{
-            DeviceID: "nihil",
+            DeviceID: "facilis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AssociateDeviceWithPlacement(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +48,6 @@ func main() {
     if res.AssociateDeviceWithPlacementResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

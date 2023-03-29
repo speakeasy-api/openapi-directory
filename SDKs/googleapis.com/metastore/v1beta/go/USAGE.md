@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.MetastoreProjectsLocationsFederationsCreateRequest{
         Security: operations.MetastoreProjectsLocationsFederationsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,39 +23,46 @@ func main() {
             },
         },
         PathParams: operations.MetastoreProjectsLocationsFederationsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.MetastoreProjectsLocationsFederationsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            FederationID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            FederationID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.FederationInput{
             BackendMetastores: map[string]shared.BackendMetastore{
-                "et": shared.BackendMetastore{
-                    MetastoreType: "DATAPROC_METASTORE",
-                    Name: "dolorem",
+                "saepe": shared.BackendMetastore{
+                    MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
+                    Name: "sapiente",
+                },
+                "enim": shared.BackendMetastore{
+                    MetastoreType: "BIGQUERY",
+                    Name: "voluptatum",
                 },
             },
             Labels: map[string]string{
-                "voluptate": "iste",
-                "vitae": "totam",
+                "vel": "non",
+                "deleniti": "similique",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
             },
-            Name: "dolores",
-            Version: "illum",
+            Name: "laboriosam",
+            Version: "dicta",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.MetastoreProjectsLocationsFederationsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -62,5 +71,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

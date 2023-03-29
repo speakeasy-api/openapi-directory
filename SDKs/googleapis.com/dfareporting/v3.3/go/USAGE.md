@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DfareportingAccountActiveAdSummariesGetRequest{
         Security: operations.DfareportingAccountActiveAdSummariesGetSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,24 +23,25 @@ func main() {
             },
         },
         PathParams: operations.DfareportingAccountActiveAdSummariesGetPathParams{
-            ProfileID: "sit",
-            SummaryAccountID: "voluptas",
+            ProfileID: "unde",
+            SummaryAccountID: "deserunt",
         },
         QueryParams: operations.DfareportingAccountActiveAdSummariesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            AccessToken: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AccountActiveAdSummaries.DfareportingAccountActiveAdSummariesGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -47,5 +50,6 @@ func main() {
     if res.AccountActiveAdSummary != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

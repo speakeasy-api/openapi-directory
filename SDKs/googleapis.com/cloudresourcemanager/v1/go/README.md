@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudresourcemanager/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudresourcemanagerLiensCreateRequest{
         Security: operations.CloudresourcemanagerLiensCreateSecurity{
             Option1: &operations.CloudresourcemanagerLiensCreateSecurityOption1{
@@ -34,32 +36,31 @@ func main() {
             },
         },
         QueryParams: operations.CloudresourcemanagerLiensCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.Lien{
-            CreateTime: "rerum",
-            Name: "dicta",
-            Origin: "debitis",
-            Parent: "voluptatum",
-            Reason: "et",
+            CreateTime: "facilis",
+            Name: "eum",
+            Origin: "iusto",
+            Parent: "ullam",
+            Reason: "saepe",
             Restrictions: []string{
-                "dolorem",
-                "et",
-                "voluptate",
+                "sapiente",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Liens.CloudresourcemanagerLiensCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -68,19 +69,21 @@ func main() {
     if res.Lien != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### liens
+
+### Liens
 
 * `CloudresourcemanagerLiensCreate` - Create a Lien which applies to the resource denoted by the `parent` field. Callers of this method will require permission on the `parent` resource. For example, applying to `projects/1234` requires permission `resourcemanager.projects.updateLiens`. NOTE: Some resources may limit the number of Liens which may be applied.
 * `CloudresourcemanagerLiensDelete` - Delete a Lien by `name`. Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent` of `projects/1234` requires permission `resourcemanager.projects.updateLiens`.
 * `CloudresourcemanagerLiensList` - List all Liens applied to the `parent` resource. Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent` of `projects/1234` requires permission `resourcemanager.projects.get`.
 
-### organizations
+### Organizations
 
 * `CloudresourcemanagerOrganizationsGet` - Fetches an Organization resource identified by the specified resource name.
 * `CloudresourcemanagerOrganizationsGetIamPolicy` - Gets the access control policy for an Organization resource. May be empty if no such policy or resource exists. The `resource` field should be the organization's resource name, e.g. "organizations/123". Authorization requires the Google IAM permission `resourcemanager.organizations.getIamPolicy` on the specified organization
@@ -88,7 +91,7 @@ func main() {
 * `CloudresourcemanagerOrganizationsSetIamPolicy` - Sets the access control policy on an Organization resource. Replaces any existing policy. The `resource` field should be the organization's resource name, e.g. "organizations/123". Authorization requires the Google IAM permission `resourcemanager.organizations.setIamPolicy` on the specified organization
 * `CloudresourcemanagerOrganizationsTestIamPermissions` - Returns permissions that a caller has on the specified Organization. The `resource` field should be the organization's resource name, e.g. "organizations/123". There are no permissions required for making this API call.
 
-### projects
+### Projects
 
 * `CloudresourcemanagerProjectsClearOrgPolicy` - Clears a `Policy` from a resource.
 * `CloudresourcemanagerProjectsCreate` - Request that a new Project be created. The result is an Operation which can be used to track the creation process. This process usually takes a few seconds, but can sometimes take much longer. The tracking Operation is automatically deleted after a few hours, so there is no need to call DeleteOperation. Authorization requires the Google IAM permission `resourcemanager.projects.create` on the specified parent for the new project. The parent is identified by a specified ResourceId, which must include both an ID and a type, such as organization. This method does not associate the new project with a billing account. You can set or update the billing account associated with a project using the [`projects.updateBillingInfo`] (/billing/reference/rest/v1/projects/updateBillingInfo) method.
@@ -106,7 +109,6 @@ func main() {
 * `CloudresourcemanagerProjectsTestIamPermissions` - Returns permissions that a caller has on the specified Project. For additional information about `resource` (e.g. my-project-id) structure and identification, see [Resource Names](https://cloud.google.com/apis/design/resource_names). There are no permissions required for making this API call.
 * `CloudresourcemanagerProjectsUndelete` - Restores the Project identified by the specified `project_id` (for example, `my-project-123`). You can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED. After deletion starts, the Project cannot be restored. The caller must have undelete permissions for this Project.
 * `CloudresourcemanagerProjectsUpdate` - Updates the attributes of the Project identified by the specified `project_id` (for example, `my-project-123`). The caller must have modify permissions for this Project.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

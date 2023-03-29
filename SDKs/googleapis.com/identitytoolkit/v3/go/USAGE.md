@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.IdentitytoolkitRelyingpartyCreateAuthURIRequest{
         Security: operations.IdentitytoolkitRelyingpartyCreateAuthURISecurity{
             Oauth2: shared.SchemeOauth2{
@@ -22,37 +24,37 @@ func main() {
         },
         QueryParams: operations.IdentitytoolkitRelyingpartyCreateAuthURIQueryParams{
             Alt: "json",
-            Fields: "voluptas",
-            Key: "culpa",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "dolor",
-            UserIP: "expedita",
+            Fields: "deserunt",
+            Key: "porro",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "id",
+            UserIP: "vero",
         },
         Request: &shared.IdentitytoolkitRelyingpartyCreateAuthURIRequest{
-            AppID: "voluptas",
-            AuthFlowType: "fugit",
-            ClientID: "et",
-            Context: "nihil",
-            ContinueURI: "rerum",
+            AppID: "perspiciatis",
+            AuthFlowType: "nulla",
+            ClientID: "nihil",
+            Context: "fuga",
+            ContinueURI: "facilis",
             CustomParameter: map[string]string{
-                "debitis": "voluptatum",
-                "et": "ut",
-                "dolorem": "et",
+                "iusto": "ullam",
+                "saepe": "inventore",
             },
-            HostedDomain: "voluptate",
-            Identifier: "iste",
-            OauthConsumerKey: "vitae",
-            OauthScope: "totam",
-            OpenidRealm: "dolores",
-            OtaApp: "illum",
-            ProviderID: "debitis",
-            SessionID: "vel",
-            TenantID: "odio",
-            TenantProjectNumber: "dolore",
+            HostedDomain: "sapiente",
+            Identifier: "enim",
+            OauthConsumerKey: "eum",
+            OauthScope: "voluptatum",
+            OpenidRealm: "autem",
+            OtaApp: "vel",
+            ProviderID: "non",
+            SessionID: "deleniti",
+            TenantID: "similique",
+            TenantProjectNumber: "reprehenderit",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Relyingparty.IdentitytoolkitRelyingpartyCreateAuthURI(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -61,5 +63,6 @@ func main() {
     if res.CreateAuthURIResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

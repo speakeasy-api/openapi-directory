@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/stackexchange.com/2.0/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,19 +23,20 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAccessTokensAccessTokensRequest{
         PathParams: operations.GetAccessTokensAccessTokensPathParams{
-            AccessTokens: "sit",
+            AccessTokens: "unde",
         },
         QueryParams: operations.GetAccessTokensAccessTokensQueryParams{
-            Callback: "voluptas",
-            Filter: "culpa",
-            Page: 501233450539197794,
-            Pagesize: 3390393562759376202,
+            Callback: "deserunt",
+            Filter: "porro",
+            Page: 844266,
+            Pagesize: 602763,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetAccessTokensAccessTokens(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -42,6 +45,7 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -1351,7 +1355,6 @@ This method return the created comment.
 Use an access_token with write_access to create a new comment on a post.
  
 This method returns the created comment.
-
 
 <!-- End SDK Available Operations -->
 

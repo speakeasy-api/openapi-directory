@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/displayvideo/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DisplayvideoAdvertisersAssetsUploadRequest{
         Security: operations.DisplayvideoAdvertisersAssetsUploadSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,24 +34,25 @@ func main() {
             },
         },
         PathParams: operations.DisplayvideoAdvertisersAssetsUploadPathParams{
-            AdvertiserID: "sit",
+            AdvertiserID: "unde",
         },
         QueryParams: operations.DisplayvideoAdvertisersAssetsUploadQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
-        Request: []byte("dicta"),
+        Request: []byte("eum"),
     }
-    
+
+    ctx := context.Background()
     res, err := s.Advertisers.DisplayvideoAdvertisersAssetsUpload(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -58,13 +61,15 @@ func main() {
     if res.CreateAssetResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### advertisers
+
+### Advertisers
 
 * `DisplayvideoAdvertisersAssetsUpload` - Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be used within the [multipart media upload process](/display-video/api/guides/how-tos/upload#multipart). Examples using provided client libraries can be found in our [Creating Creatives guide](/display-video/api/guides/creating-creatives/overview#upload_an_asset).
 * `DisplayvideoAdvertisersAudit` - Audits an advertiser. Returns the counts of used entities per resource type under the advertiser provided. Used entities count towards their respective resource limit. See https://support.google.com/displayvideo/answer/6071450.
@@ -142,12 +147,12 @@ func main() {
 * `DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet` - Gets a single targeting option assigned to an advertiser.
 * `DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList` - Lists the targeting options assigned to an advertiser.
 
-### combinedAudiences
+### CombinedAudiences
 
 * `DisplayvideoCombinedAudiencesGet` - Gets a combined audience.
 * `DisplayvideoCombinedAudiencesList` - Lists combined audiences. The order is defined by the order_by parameter.
 
-### customBiddingAlgorithms
+### CustomBiddingAlgorithms
 
 * `DisplayvideoCustomBiddingAlgorithmsCreate` - Creates a new custom bidding algorithm. Returns the newly created custom bidding algorithm if successful.
 * `DisplayvideoCustomBiddingAlgorithmsGet` - Gets a custom bidding algorithm.
@@ -158,12 +163,12 @@ func main() {
 * `DisplayvideoCustomBiddingAlgorithmsScriptsList` - Lists custom bidding scripts that belong to the given algorithm. The order is defined by the order_by parameter.
 * `DisplayvideoCustomBiddingAlgorithmsUploadScript` - Creates a custom bidding script reference object for a script file. The resulting reference object provides a resource path to which the script file should be uploaded. This reference object should be included in when creating a new custom bidding script object.
 
-### customLists
+### CustomLists
 
 * `DisplayvideoCustomListsGet` - Gets a custom list.
 * `DisplayvideoCustomListsList` - Lists custom lists. The order is defined by the order_by parameter.
 
-### firstAndThirdPartyAudiences
+### FirstAndThirdPartyAudiences
 
 * `DisplayvideoFirstAndThirdPartyAudiencesCreate` - Creates a FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
 * `DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembers` - Updates the member list of a Customer Match audience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
@@ -171,16 +176,16 @@ func main() {
 * `DisplayvideoFirstAndThirdPartyAudiencesList` - Lists first and third party audiences. The order is defined by the order_by parameter.
 * `DisplayvideoFirstAndThirdPartyAudiencesPatch` - Updates an existing FirstAndThirdPartyAudience. Only supported for the following audience_type: * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
 
-### floodlightGroups
+### FloodlightGroups
 
 * `DisplayvideoFloodlightGroupsGet` - Gets a Floodlight group.
 
-### googleAudiences
+### GoogleAudiences
 
 * `DisplayvideoGoogleAudiencesGet` - Gets a Google audience.
 * `DisplayvideoGoogleAudiencesList` - Lists Google audiences. The order is defined by the order_by parameter.
 
-### guaranteedOrders
+### GuaranteedOrders
 
 * `DisplayvideoGuaranteedOrdersCreate` - Creates a new guaranteed order. Returns the newly created guaranteed order if successful.
 * `DisplayvideoGuaranteedOrdersEditGuaranteedOrderReadAccessors` - Edits read advertisers of a guaranteed order.
@@ -188,7 +193,7 @@ func main() {
 * `DisplayvideoGuaranteedOrdersList` - Lists guaranteed orders that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, guaranteed orders with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
 * `DisplayvideoGuaranteedOrdersPatch` - Updates an existing guaranteed order. Returns the updated guaranteed order if successful.
 
-### inventorySourceGroups
+### InventorySourceGroups
 
 * `DisplayvideoInventorySourceGroupsAssignedInventorySourcesBulkEdit` - Bulk edits multiple assignments between inventory sources and a single inventory source group. The operation will delete the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.deleted_assigned_inventory_sources and then create the assigned inventory sources provided in BulkEditAssignedInventorySourcesRequest.created_assigned_inventory_sources.
 * `DisplayvideoInventorySourceGroupsAssignedInventorySourcesCreate` - Creates an assignment between an inventory source and an inventory source group.
@@ -199,7 +204,7 @@ func main() {
 * `DisplayvideoInventorySourceGroupsGet` - Gets an inventory source group.
 * `DisplayvideoInventorySourceGroupsList` - Lists inventory source groups that are accessible to the current user. The order is defined by the order_by parameter.
 
-### inventorySources
+### InventorySources
 
 * `DisplayvideoInventorySourcesCreate` - Creates a new inventory source. Returns the newly created inventory source if successful.
 * `DisplayvideoInventorySourcesEditInventorySourceReadWriteAccessors` - Edits read/write accessors of an inventory source. Returns the updated read_write_accessors for the inventory source.
@@ -207,12 +212,12 @@ func main() {
 * `DisplayvideoInventorySourcesList` - Lists inventory sources that are accessible to the current user. The order is defined by the order_by parameter. If a filter by entity_status is not specified, inventory sources with entity status `ENTITY_STATUS_ARCHIVED` will not be included in the results.
 * `DisplayvideoInventorySourcesPatch` - Updates an existing inventory source. Returns the updated inventory source if successful.
 
-### media
+### Media
 
 * `DisplayvideoMediaDownload` - Downloads media. Download is supported on the URI `/download/{resource_name=**}?alt=media.` **Note**: Download requests will not be successful without including `alt=media` query string.
 * `DisplayvideoMediaUpload` - Uploads media. Upload is supported on the URI `/upload/media/{resource_name=**}?upload_type=media.` **Note**: Upload requests will not be successful without including `upload_type=media` query string.
 
-### partners
+### Partners
 
 * `DisplayvideoPartnersBulkEditPartnerAssignedTargetingOptions` - Bulk edits targeting options under a single partner. The operation will delete the assigned targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.deleteRequests and then create the assigned targeting options provided in BulkEditPartnerAssignedTargetingOptionsRequest.createRequests .
 * `DisplayvideoPartnersChannelsCreate` - Creates a new channel. Returns the newly created channel if successful.
@@ -229,18 +234,18 @@ func main() {
 * `DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsGet` - Gets a single targeting option assigned to a partner.
 * `DisplayvideoPartnersTargetingTypesAssignedTargetingOptionsList` - Lists the targeting options assigned to a partner.
 
-### sdfdownloadtasks
+### Sdfdownloadtasks
 
 * `DisplayvideoSdfdownloadtasksCreate` - Creates an SDF Download Task. Returns an Operation. An SDF Download Task is a long-running, asynchronous operation. The metadata type of this operation is SdfDownloadTaskMetadata. If the request is successful, the response type of the operation is SdfDownloadTask. The response will not include the download files, which must be retrieved with media.download. The state of operation can be retrieved with sdfdownloadtask.operations.get. Any errors can be found in the error.message. Note that error.details is expected to be empty.
 * `DisplayvideoSdfdownloadtasksOperationsGet` - Gets the latest state of an asynchronous SDF download task operation. Clients should poll this method at intervals of 30 seconds.
 
-### targetingTypes
+### TargetingTypes
 
 * `DisplayvideoTargetingTypesTargetingOptionsGet` - Gets a single targeting option.
 * `DisplayvideoTargetingTypesTargetingOptionsList` - Lists targeting options of a given type.
 * `DisplayvideoTargetingTypesTargetingOptionsSearch` - Searches for targeting options of a given type based on the given search terms.
 
-### users
+### Users
 
 * `DisplayvideoUsersBulkEditAssignedUserRoles` - Bulk edits user roles for a user. The operation will delete the assigned user roles provided in BulkEditAssignedUserRolesRequest.deletedAssignedUserRoles and then assign the user roles provided in BulkEditAssignedUserRolesRequest.createdAssignedUserRoles.
 * `DisplayvideoUsersCreate` - Creates a new user. Returns the newly created user if successful.
@@ -248,7 +253,6 @@ func main() {
 * `DisplayvideoUsersGet` - Gets a user.
 * `DisplayvideoUsersList` - Lists users that are accessible to the current user. If two users have user roles on the same partner or advertiser, they can access each other.
 * `DisplayvideoUsersPatch` - Updates an existing user. Returns the updated user if successful.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

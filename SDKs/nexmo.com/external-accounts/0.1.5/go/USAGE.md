@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,20 +12,22 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAllAccountsRequest{
         Security: operations.GetAllAccountsSecurity{
-            BearerAuth: &shared.SchemeBearerAuth{
-                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
+            BasicAuth: &shared.SchemeBasicAuth{
+                Password: "YOUR_PASSWORD_HERE",
+                Username: "YOUR_USERNAME_HERE",
             },
         },
         QueryParams: operations.GetAllAccountsQueryParams{
-            PageNumber: 8717895732742165505,
-            PageSize: 2259404117704393152,
+            PageNumber: 1,
+            PageSize: 1,
             Provider: "viber_service_msg",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Account.GetAllAccounts(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -32,5 +36,6 @@ func main() {
     if res.GetAllAccounts200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

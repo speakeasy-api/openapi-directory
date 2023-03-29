@@ -3,46 +3,53 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateActivityRequest{
         Headers: operations.CreateActivityHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWSStepFunctions.CreateActivity",
         },
         Request: shared.CreateActivityInput{
-            Name: "fugit",
+            Name: "nihil",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "nihil",
-                    Value: "rerum",
+                    Key: "facilis",
+                    Value: "eum",
+                },
+                shared.Tag{
+                    Key: "iusto",
+                    Value: "ullam",
+                },
+                shared.Tag{
+                    Key: "saepe",
+                    Value: "inventore",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateActivity(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +58,6 @@ func main() {
     if res.CreateActivityOutput != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

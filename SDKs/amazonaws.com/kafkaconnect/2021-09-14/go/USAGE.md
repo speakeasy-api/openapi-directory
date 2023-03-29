@@ -3,70 +3,72 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateConnectorRequest{
         Headers: operations.CreateConnectorHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateConnectorRequestBody{
             Capacity: operations.CreateConnectorRequestBodyCapacity{
                 AutoScaling: &shared.AutoScaling{
-                    MaxWorkerCount: 6044372234677422456,
-                    McuCount: 8274930044578894929,
-                    MinWorkerCount: 1543572285742637646,
+                    MaxWorkerCount: 847252,
+                    McuCount: 423655,
+                    MinWorkerCount: 623564,
                     ScaleInPolicy: &shared.ScaleInPolicy{
-                        CPUUtilizationPercentage: 2661732831099943416,
+                        CPUUtilizationPercentage: 645894,
                     },
                     ScaleOutPolicy: &shared.ScaleOutPolicy{
-                        CPUUtilizationPercentage: 8325060299420976708,
+                        CPUUtilizationPercentage: 384382,
                     },
                 },
                 ProvisionedCapacity: &shared.ProvisionedCapacity{
-                    McuCount: 7837839688282259259,
-                    WorkerCount: 2518412263346885298,
+                    McuCount: 437587,
+                    WorkerCount: 297534,
                 },
             },
             ConnectorConfiguration: map[string]string{
-                "et": "ut",
+                "inventore": "sapiente",
+                "enim": "eum",
+                "voluptatum": "autem",
+                "vel": "non",
             },
-            ConnectorDescription: "dolorem",
-            ConnectorName: "et",
+            ConnectorDescription: "deleniti",
+            ConnectorName: "similique",
             KafkaCluster: operations.CreateConnectorRequestBodyKafkaCluster{
                 ApacheKafkaCluster: &shared.ApacheKafkaCluster{
-                    BootstrapServers: "voluptate",
+                    BootstrapServers: "reprehenderit",
                     Vpc: shared.Vpc{
                         SecurityGroups: []string{
-                            "vitae",
-                            "totam",
-                            "dolores",
+                            "quo",
+                            "quasi",
+                            "laboriosam",
+                            "dicta",
                         },
                         Subnets: []string{
-                            "debitis",
-                            "vel",
-                            "odio",
+                            "voluptatem",
+                            "consequatur",
+                            "fugiat",
                         },
                     },
                 },
@@ -75,54 +77,61 @@ func main() {
                 AuthenticationType: "IAM",
             },
             KafkaClusterEncryptionInTransit: operations.CreateConnectorRequestBodyKafkaClusterEncryptionInTransit{
-                EncryptionType: "PLAINTEXT",
+                EncryptionType: "TLS",
             },
-            KafkaConnectVersion: "aspernatur",
+            KafkaConnectVersion: "eos",
             LogDelivery: &operations.CreateConnectorRequestBodyLogDelivery{
                 WorkerLogDelivery: &shared.WorkerLogDelivery{
                     CloudWatchLogs: &shared.CloudWatchLogsLogDelivery{
-                        Enabled: true,
-                        LogGroup: "totam",
+                        Enabled: false,
+                        LogGroup: "accusamus",
                     },
                     Firehose: &shared.FirehoseLogDelivery{
-                        DeliveryStream: "commodi",
-                        Enabled: true,
+                        DeliveryStream: "accusamus",
+                        Enabled: false,
                     },
                     S3: &shared.S3LogDelivery{
-                        Bucket: "est",
-                        Enabled: true,
-                        Prefix: "odit",
+                        Bucket: "reiciendis",
+                        Enabled: false,
+                        Prefix: "rem",
                     },
                 },
             },
             Plugins: []shared.Plugin{
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "voluptas",
-                        Revision: 4778690082005258714,
+                        CustomPluginArn: "et",
+                        Revision: 461479,
                     },
                 },
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "aut",
-                        Revision: 6972732843819909978,
+                        CustomPluginArn: "occaecati",
+                        Revision: 780529,
                     },
                 },
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "sed",
-                        Revision: 7845762441295307478,
+                        CustomPluginArn: "soluta",
+                        Revision: 118274,
+                    },
+                },
+                shared.Plugin{
+                    CustomPlugin: shared.CustomPlugin{
+                        CustomPluginArn: "quisquam",
+                        Revision: 639921,
                     },
                 },
             },
-            ServiceExecutionRoleArn: "autem",
+            ServiceExecutionRoleArn: "culpa",
             WorkerConfiguration: &operations.CreateConnectorRequestBodyWorkerConfiguration{
-                Revision: 8514850266767180993,
-                WorkerConfigurationArn: "nobis",
+                Revision: 143353,
+                WorkerConfigurationArn: "sed",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateConnector(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -131,5 +140,6 @@ func main() {
     if res.CreateConnectorResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.TpuProjectsLocationsAcceleratorTypesListRequest{
         Security: operations.TpuProjectsLocationsAcceleratorTypesListSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,27 +23,28 @@ func main() {
             },
         },
         PathParams: operations.TpuProjectsLocationsAcceleratorTypesListPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.TpuProjectsLocationsAcceleratorTypesListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Filter: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
-            OrderBy: "et",
-            PageSize: 2661732831099943416,
-            PageToken: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Filter: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
+            OrderBy: "fuga",
+            PageSize: 645894,
+            PageToken: "eum",
             PrettyPrint: false,
-            QuotaUser: "debitis",
-            UploadType: "voluptatum",
-            UploadProtocol: "et",
+            QuotaUser: "iusto",
+            UploadType: "ullam",
+            UploadProtocol: "saepe",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.TpuProjectsLocationsAcceleratorTypesList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +53,6 @@ func main() {
     if res.ListAcceleratorTypesResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

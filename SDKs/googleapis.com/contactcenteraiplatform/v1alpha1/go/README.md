@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/contactcenteraiplatform/v1alpha1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateRequest{
         Security: operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,51 +34,56 @@ func main() {
             },
         },
         PathParams: operations.ContactcenteraiplatformProjectsLocationsContactCentersCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.ContactcenteraiplatformProjectsLocationsContactCentersCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            ContactCenterID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            ContactCenterID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.ContactCenterInput{
-            CcaipManagedUsers: true,
-            CustomerDomainPrefix: "et",
-            DisplayName: "ut",
+            AdminUser: &shared.AdminUser{
+                FamilyName: "ullam",
+                GivenName: "saepe",
+            },
+            CcaipManagedUsers: false,
+            CustomerDomainPrefix: "inventore",
+            DisplayName: "sapiente",
             InstanceConfig: &shared.InstanceConfig{
-                InstanceSize: "STANDARD_MEDIUM",
+                InstanceSize: "STANDARD_SMALL",
             },
             Labels: map[string]string{
-                "voluptate": "iste",
-                "vitae": "totam",
+                "voluptatum": "autem",
+                "vel": "non",
             },
-            Name: "dolores",
-            SamlParams: &shared.SamlParams{
-                Certificate: "illum",
-                EntityID: "debitis",
-                SsoURI: "vel",
-                UserEmail: "odio",
+            Name: "deleniti",
+            SamlParams: &shared.SAMLParams{
+                Certificate: "similique",
+                EntityID: "reprehenderit",
+                SsoURI: "molestiae",
+                UserEmail: "quo",
             },
-            Uris: &shared.UrIs{
-                ChatBotURI: "dolore",
-                MediaURI: "id",
-                RootURI: "aspernatur",
-                VirtualAgentStreamingServiceURI: "accusantium",
+            Uris: &shared.URIs{
+                ChatBotURI: "quasi",
+                MediaURI: "laboriosam",
+                RootURI: "dicta",
+                VirtualAgentStreamingServiceURI: "est",
             },
-            UserEmail: "totam",
+            UserEmail: "voluptatem",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.ContactcenteraiplatformProjectsLocationsContactCentersCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -85,13 +92,15 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `ContactcenteraiplatformProjectsLocationsContactCentersCreate` - Creates a new ContactCenter in a given project and location.
 * `ContactcenteraiplatformProjectsLocationsContactCentersList` - Lists ContactCenters in a given project and location.
@@ -102,7 +111,6 @@ func main() {
 * `ContactcenteraiplatformProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `ContactcenteraiplatformProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 * `ContactcenteraiplatformProjectsLocationsQueryContactCenterQuota` - Queries the contact center quota, an aggregation over all the projects, that belongs to the billing account, which the input project belongs to.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,44 +3,45 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetDeleteAlarmsRequest{
-        QueryParams: operations.GetDeleteAlarmsQueryParams{
+    req := operations.GETDeleteAlarmsRequest{
+        QueryParams: operations.GETDeleteAlarmsQueryParams{
             Action: "DeleteAlarms",
             AlarmNames: []string{
-                "culpa",
+                "porro",
+                "nulla",
+                "id",
             },
             Version: "2010-08-01",
         },
-        Headers: operations.GetDeleteAlarmsHeaders{
-            XAmzAlgorithm: "consequuntur",
-            XAmzContentSha256: "dolor",
-            XAmzCredential: "expedita",
-            XAmzDate: "voluptas",
-            XAmzSecurityToken: "fugit",
-            XAmzSignature: "et",
-            XAmzSignedHeaders: "nihil",
+        Headers: operations.GETDeleteAlarmsHeaders{
+            XAmzAlgorithm: "perspiciatis",
+            XAmzContentSha256: "nulla",
+            XAmzCredential: "nihil",
+            XAmzDate: "fuga",
+            XAmzSecurityToken: "facilis",
+            XAmzSignature: "eum",
+            XAmzSignedHeaders: "iusto",
         },
     }
-    
-    res, err := s.GetDeleteAlarms(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.GETDeleteAlarms(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -48,5 +49,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

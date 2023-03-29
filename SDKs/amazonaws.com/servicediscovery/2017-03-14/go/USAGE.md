@@ -3,56 +3,51 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateHTTPNamespaceRequest{
         Headers: operations.CreateHTTPNamespaceHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "Route53AutoNaming_v20170314.CreateHttpNamespace",
         },
         Request: shared.CreateHTTPNamespaceRequest{
-            CreatorRequestID: "fugit",
-            Description: "et",
-            Name: "nihil",
+            CreatorRequestID: "nihil",
+            Description: "fuga",
+            Name: "facilis",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "dicta",
-                    Value: "debitis",
+                    Key: "iusto",
+                    Value: "ullam",
                 },
                 shared.Tag{
-                    Key: "voluptatum",
-                    Value: "et",
-                },
-                shared.Tag{
-                    Key: "ut",
-                    Value: "dolorem",
+                    Key: "saepe",
+                    Value: "inventore",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateHTTPNamespace(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -61,5 +56,6 @@ func main() {
     if res.CreateHTTPNamespaceResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

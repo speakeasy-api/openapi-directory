@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetRateLimitsRequest{
         Security: operations.GetRateLimitsSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,11 +20,12 @@ func main() {
             },
         },
         QueryParams: operations.GetRateLimitsQueryParams{
-            APIContext: "sit",
-            APIName: "voluptas",
+            APIContext: "unde",
+            APIName: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.RateLimit.GetRateLimits(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.RateLimitsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

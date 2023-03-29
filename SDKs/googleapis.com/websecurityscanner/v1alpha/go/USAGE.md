@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.WebsecurityscannerProjectsScanConfigsCreateRequest{
         Security: operations.WebsecurityscannerProjectsScanConfigsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,69 +23,70 @@ func main() {
             },
         },
         PathParams: operations.WebsecurityscannerProjectsScanConfigsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.ScanConfig{
             Authentication: &shared.Authentication{
                 CustomAccount: &shared.CustomAccount{
-                    LoginURL: "dicta",
-                    Password: "debitis",
-                    Username: "voluptatum",
+                    LoginURL: "eum",
+                    Password: "iusto",
+                    Username: "Eli96",
                 },
                 GoogleAccount: &shared.GoogleAccount{
-                    Password: "et",
-                    Username: "ut",
+                    Password: "enim",
+                    Username: "Gerald_Kreiger52",
                 },
             },
             BlacklistPatterns: []string{
-                "et",
-                "voluptate",
-                "iste",
+                "similique",
+                "reprehenderit",
             },
-            DisplayName: "vitae",
+            DisplayName: "molestiae",
             LatestRun: &shared.ScanRun{
-                EndTime: "totam",
+                EndTime: "quo",
                 ExecutionState: "EXECUTION_STATE_UNSPECIFIED",
                 HasVulnerabilities: false,
-                Name: "debitis",
-                ProgressPercent: 3706853784096366226,
-                ResultState: "RESULT_STATE_UNSPECIFIED",
-                StartTime: "dolore",
-                UrlsCrawledCount: "id",
-                UrlsTestedCount: "aspernatur",
+                Name: "laboriosam",
+                ProgressPercent: 87129,
+                ResultState: "ERROR",
+                StartTime: "voluptatem",
+                UrlsCrawledCount: "consequatur",
+                UrlsTestedCount: "fugiat",
             },
-            MaxQPS: 2914295034816259174,
-            Name: "totam",
+            MaxQPS: 957156,
+            Name: "omnis",
             Schedule: &shared.Schedule{
-                IntervalDurationDays: 6745438398739480977,
-                ScheduleTime: "quis",
+                IntervalDurationDays: 140350,
+                ScheduleTime: "accusamus",
             },
             StartingUrls: []string{
-                "aut",
-                "odit",
+                "reiciendis",
+                "rem",
+                "quibusdam",
+                "et",
             },
             TargetPlatforms: []shared.ScanConfigTargetPlatformsEnum{
-                "CLOUD_FUNCTIONS",
                 "COMPUTE",
-                "CLOUD_FUNCTIONS",
+                "CLOUD_RUN",
             },
-            UserAgent: "USER_AGENT_UNSPECIFIED",
+            UserAgent: "CHROME_ANDROID",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.WebsecurityscannerProjectsScanConfigsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -92,5 +95,6 @@ func main() {
     if res.ScanConfig != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

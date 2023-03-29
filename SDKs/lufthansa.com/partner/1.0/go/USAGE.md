@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BaggageTripAndContactRequest{
         Security: operations.BaggageTripAndContactSecurity{
             Auth: shared.SchemeAuth{
@@ -18,13 +20,14 @@ func main() {
             },
         },
         PathParams: operations.BaggageTripAndContactPathParams{
-            SearchID: "sit",
+            SearchID: "unde",
         },
         Headers: operations.BaggageTripAndContactHeaders{
-            Accept: "voluptas",
+            Accept: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Baggage.BaggageTripAndContact(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -33,5 +36,6 @@ func main() {
     if res.BaggageTripAndContact200ApplicationJSONString != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

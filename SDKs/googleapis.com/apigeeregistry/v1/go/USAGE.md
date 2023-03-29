@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ApigeeregistryProjectsLocationsApisCreateRequest{
         Security: operations.ApigeeregistryProjectsLocationsApisCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,38 +23,43 @@ func main() {
             },
         },
         PathParams: operations.ApigeeregistryProjectsLocationsApisCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.ApigeeregistryProjectsLocationsApisCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            APIID: "consequuntur",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            APIID: "id",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.APIInput{
             Annotations: map[string]string{
-                "voluptatum": "et",
+                "ullam": "saepe",
+                "inventore": "sapiente",
             },
-            Availability: "ut",
-            Description: "dolorem",
-            DisplayName: "et",
+            Availability: "enim",
+            Description: "eum",
+            DisplayName: "voluptatum",
             Labels: map[string]string{
-                "iste": "vitae",
+                "vel": "non",
+                "deleniti": "similique",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
             },
-            Name: "totam",
-            RecommendedDeployment: "dolores",
-            RecommendedVersion: "illum",
+            Name: "laboriosam",
+            RecommendedDeployment: "dicta",
+            RecommendedVersion: "est",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.ApigeeregistryProjectsLocationsApisCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -61,5 +68,6 @@ func main() {
     if res.API != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

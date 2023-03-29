@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.NotebooksProjectsLocationsEnvironmentsCreateRequest{
         Security: operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,38 +23,39 @@ func main() {
             },
         },
         PathParams: operations.NotebooksProjectsLocationsEnvironmentsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.NotebooksProjectsLocationsEnvironmentsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            EnvironmentID: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            EnvironmentID: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.EnvironmentInput{
             ContainerImage: &shared.ContainerImage{
-                Repository: "debitis",
-                Tag: "voluptatum",
+                Repository: "iusto",
+                Tag: "ullam",
             },
-            Description: "et",
-            DisplayName: "ut",
-            PostStartupScript: "dolorem",
+            Description: "saepe",
+            DisplayName: "inventore",
+            PostStartupScript: "sapiente",
             VMImage: &shared.VMImage{
-                ImageFamily: "et",
-                ImageName: "voluptate",
-                Project: "iste",
+                ImageFamily: "enim",
+                ImageName: "eum",
+                Project: "voluptatum",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.NotebooksProjectsLocationsEnvironmentsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -61,5 +64,6 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

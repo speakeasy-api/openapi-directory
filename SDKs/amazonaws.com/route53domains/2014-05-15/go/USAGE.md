@@ -3,41 +3,40 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AcceptDomainTransferFromAnotherAwsAccountRequest{
         Headers: operations.AcceptDomainTransferFromAnotherAwsAccountHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "Route53Domains_v20140515.AcceptDomainTransferFromAnotherAwsAccount",
         },
         Request: shared.AcceptDomainTransferFromAnotherAwsAccountRequest{
-            DomainName: "fugit",
-            Password: "et",
+            DomainName: "nihil",
+            Password: "fuga",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.AcceptDomainTransferFromAnotherAwsAccount(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -46,5 +45,6 @@ func main() {
     if res.AcceptDomainTransferFromAnotherAwsAccountResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

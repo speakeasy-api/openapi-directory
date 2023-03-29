@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/cloudsearch/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest{
         Security: operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurity{
             Option1: &operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption1{
@@ -34,33 +36,34 @@ func main() {
             },
         },
         PathParams: operations.CloudsearchDebugDatasourcesItemsCheckAccessPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.CloudsearchDebugDatasourcesItemsCheckAccessQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
             DebugOptionsEnableDebugging: false,
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
             PrettyPrint: false,
             QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Principal{
-            GroupResourceName: "debitis",
+            GroupResourceName: "eum",
             GsuitePrincipal: &shared.GSuitePrincipal{
-                GsuiteDomain: true,
-                GsuiteGroupEmail: "et",
-                GsuiteUserEmail: "ut",
+                GsuiteDomain: false,
+                GsuiteGroupEmail: "iusto",
+                GsuiteUserEmail: "ullam",
             },
-            UserResourceName: "dolorem",
+            UserResourceName: "saepe",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Debug.CloudsearchDebugDatasourcesItemsCheckAccess(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -69,20 +72,22 @@ func main() {
     if res.CheckAccessResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### debug
+
+### Debug
 
 * `CloudsearchDebugDatasourcesItemsCheckAccess` - Checks whether an item is accessible by specified principal. Principal must be a user; groups and domain values aren't supported. **Note:** This API requires an admin account to execute.
 * `CloudsearchDebugDatasourcesItemsSearchByViewURL` - Fetches the item whose viewUrl exactly matches that of the URL provided in the request. **Note:** This API requires an admin account to execute.
 * `CloudsearchDebugIdentitysourcesItemsListForunmappedidentity` - Lists names of items associated with an unmapped identity. **Note:** This API requires an admin account to execute.
 * `CloudsearchDebugIdentitysourcesUnmappedidsList` - Lists unmapped user identities for an identity source. **Note:** This API requires an admin account to execute.
 
-### indexing
+### Indexing
 
 * `CloudsearchIndexingDatasourcesDeleteSchema` - Deletes the schema of a data source. **Note:** This API requires an admin or service account to execute.
 * `CloudsearchIndexingDatasourcesGetSchema` - Gets the schema of a data source. **Note:** This API requires an admin or service account to execute.
@@ -97,22 +102,22 @@ func main() {
 * `CloudsearchIndexingDatasourcesItemsUpload` - Creates an upload session for uploading item content. For items smaller than 100 KB, it's easier to embed the content inline within an index request. This API requires an admin or service account to execute. The service account used is the one whitelisted in the corresponding data source.
 * `CloudsearchIndexingDatasourcesUpdateSchema` - Updates the schema of a data source. This method does not perform incremental updates to the schema. Instead, this method updates the schema by overwriting the entire schema. **Note:** This API requires an admin or service account to execute.
 
-### media
+### Media
 
 * `CloudsearchMediaUpload` - Uploads media for indexing. The upload endpoint supports direct and resumable upload protocols and is intended for large items that can not be [inlined during index requests](https://developers.google.com/cloud-search/docs/reference/rest/v1/indexing.datasources.items#itemcontent). To index large content: 1. Call indexing.datasources.items.upload with the item name to begin an upload session and retrieve the UploadItemRef. 1. Call media.upload to upload the content, as a streaming request, using the same resource name from the UploadItemRef from step 1. 1. Call indexing.datasources.items.index to index the item. Populate the [ItemContent](/cloud-search/docs/reference/rest/v1/indexing.datasources.items#ItemContent) with the UploadItemRef from step 1. For additional information, see [Create a content connector using the REST API](https://developers.google.com/cloud-search/docs/guides/content-connector#rest). **Note:** This API requires a service account to execute.
 
-### operations
+### Operations
 
 * `CloudsearchOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `CloudsearchOperationsLroList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 
-### query
+### Query
 
 * `CloudsearchQuerySearch` - The Cloud Search Query API provides the search method, which returns the most relevant results from a user query. The results can come from Google Workspace apps, such as Gmail or Google Drive, or they can come from data that you have indexed from a third party. **Note:** This API requires a standard end user account to execute. A service account can't perform Query API requests directly; to use a service account to perform queries, set up [Google Workspace domain-wide delegation of authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
 * `CloudsearchQuerySourcesList` - Returns list of sources that user can use for Search and Suggest APIs. **Note:** This API requires a standard end user account to execute. A service account can't perform Query API requests directly; to use a service account to perform queries, set up [Google Workspace domain-wide delegation of authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
 * `CloudsearchQuerySuggest` - Provides suggestions for autocompleting the query. **Note:** This API requires a standard end user account to execute. A service account can't perform Query API requests directly; to use a service account to perform queries, set up [Google Workspace domain-wide delegation of authority](https://developers.google.com/cloud-search/docs/guides/delegation/).
 
-### settings
+### Settings
 
 * `CloudsearchSettingsDatasourcesCreate` - Creates a datasource. **Note:** This API requires an admin account to execute.
 * `CloudsearchSettingsDatasourcesList` - Lists datasources. **Note:** This API requires an admin account to execute.
@@ -126,7 +131,7 @@ func main() {
 * `CloudsearchSettingsSearchapplicationsUpdate` - Updates a search application. **Note:** This API requires an admin account to execute.
 * `CloudsearchSettingsUpdateCustomer` - Update customer settings. **Note:** This API requires an admin account to execute.
 
-### stats
+### Stats
 
 * `CloudsearchStatsGetIndex` - Gets indexed item statistics aggreggated across all data sources. This API only returns statistics for previous dates; it doesn't return statistics for the current day. **Note:** This API requires a standard end user account to execute.
 * `CloudsearchStatsGetQuery` - Get the query statistics for customer. **Note:** This API requires a standard end user account to execute.
@@ -138,10 +143,9 @@ func main() {
 * `CloudsearchStatsSessionSearchapplicationsGet` - Get the # of search sessions, % of successful sessions with a click query statistics for search application. **Note:** This API requires a standard end user account to execute.
 * `CloudsearchStatsUserSearchapplicationsGet` - Get the users statistics for search application. **Note:** This API requires a standard end user account to execute.
 
-### v1
+### V1
 
 * `CloudsearchInitializeCustomer` - Enables `third party` support in Google Cloud Search. **Note:** This API requires an admin account to execute.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

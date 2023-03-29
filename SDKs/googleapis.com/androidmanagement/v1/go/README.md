@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/androidmanagement/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.AndroidmanagementEnterprisesCreateRequest{
         Security: operations.AndroidmanagementEnterprisesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,102 +34,109 @@ func main() {
             },
         },
         QueryParams: operations.AndroidmanagementEnterprisesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            AgreementAccepted: true,
-            Alt: "media",
-            Callback: "consequuntur",
-            EnterpriseToken: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            AgreementAccepted: false,
+            Alt: "proto",
+            Callback: "nulla",
+            EnterpriseToken: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
             PrettyPrint: false,
             ProjectID: "nihil",
-            QuotaUser: "rerum",
-            SignupURLName: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            QuotaUser: "fuga",
+            SignupURLName: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
         Request: &shared.Enterprise{
             AppAutoApprovalEnabled: false,
             ContactInfo: &shared.ContactInfo{
-                ContactEmail: "ut",
-                DataProtectionOfficerEmail: "dolorem",
-                DataProtectionOfficerName: "et",
-                DataProtectionOfficerPhone: "voluptate",
-                EuRepresentativeEmail: "iste",
-                EuRepresentativeName: "vitae",
-                EuRepresentativePhone: "totam",
+                ContactEmail: "ullam",
+                DataProtectionOfficerEmail: "saepe",
+                DataProtectionOfficerName: "inventore",
+                DataProtectionOfficerPhone: "sapiente",
+                EuRepresentativeEmail: "enim",
+                EuRepresentativeName: "eum",
+                EuRepresentativePhone: "voluptatum",
             },
             EnabledNotificationTypes: []shared.EnterpriseEnabledNotificationTypesEnum{
-                "USAGE_LOGS",
+                "COMMAND",
+                "STATUS_REPORT",
+                "COMPLIANCE_REPORT",
+                "STATUS_REPORT",
             },
-            EnterpriseDisplayName: "debitis",
+            EnterpriseDisplayName: "reprehenderit",
             Logo: &shared.ExternalData{
-                Sha256Hash: "vel",
-                URL: "odio",
+                Sha256Hash: "molestiae",
+                URL: "quo",
             },
-            Name: "dolore",
-            PrimaryColor: 4035568504096476779,
-            PubsubTopic: "aspernatur",
+            Name: "quasi",
+            PrimaryColor: 337396,
+            PubsubTopic: "dicta",
             SigninDetails: []shared.SigninDetail{
                 shared.SigninDetail{
-                    AllowPersonalUsage: "PERSONAL_USAGE_DISALLOWED",
-                    QrCode: "commodi",
-                    SigninEnrollmentToken: "quis",
-                    SigninURL: "est",
+                    AllowPersonalUsage: "ALLOW_PERSONAL_USAGE_UNSPECIFIED",
+                    QrCode: "consequatur",
+                    SigninEnrollmentToken: "fugiat",
+                    SigninURL: "a",
                 },
                 shared.SigninDetail{
                     AllowPersonalUsage: "PERSONAL_USAGE_DISALLOWED",
-                    QrCode: "odit",
-                    SigninEnrollmentToken: "non",
-                    SigninURL: "voluptas",
+                    QrCode: "eos",
+                    SigninEnrollmentToken: "accusamus",
+                    SigninURL: "accusamus",
                 },
                 shared.SigninDetail{
-                    AllowPersonalUsage: "PERSONAL_USAGE_ALLOWED",
-                    QrCode: "aut",
-                    SigninEnrollmentToken: "illo",
-                    SigninURL: "sed",
+                    AllowPersonalUsage: "PERSONAL_USAGE_DISALLOWED",
+                    QrCode: "rem",
+                    SigninEnrollmentToken: "quibusdam",
+                    SigninURL: "et",
                 },
             },
             TermsAndConditions: []shared.TermsAndConditions{
                 shared.TermsAndConditions{
                     Content: &shared.UserFacingMessage{
-                        DefaultMessage: "autem",
+                        DefaultMessage: "occaecati",
                         LocalizedMessages: map[string]string{
-                            "nobis": "odio",
+                            "soluta": "sed",
+                            "quisquam": "rerum",
+                            "culpa": "qui",
+                            "sed": "rerum",
                         },
                     },
                     Header: &shared.UserFacingMessage{
-                        DefaultMessage: "qui",
+                        DefaultMessage: "possimus",
                         LocalizedMessages: map[string]string{
-                            "at": "ipsum",
-                            "eveniet": "modi",
-                            "sint": "inventore",
+                            "odit": "esse",
+                            "rem": "voluptatem",
+                            "amet": "est",
                         },
                     },
                 },
                 shared.TermsAndConditions{
                     Content: &shared.UserFacingMessage{
-                        DefaultMessage: "ut",
+                        DefaultMessage: "id",
                         LocalizedMessages: map[string]string{
-                            "aut": "reprehenderit",
-                            "tempore": "maiores",
-                            "incidunt": "dolor",
+                            "numquam": "similique",
+                            "dolores": "sit",
                         },
                     },
                     Header: &shared.UserFacingMessage{
-                        DefaultMessage: "beatae",
+                        DefaultMessage: "quia",
                         LocalizedMessages: map[string]string{
-                            "in": "et",
-                            "omnis": "ipsum",
+                            "voluptatem": "laborum",
+                            "modi": "et",
+                            "iure": "earum",
                         },
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Enterprises.AndroidmanagementEnterprisesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -136,15 +145,17 @@ func main() {
     if res.Enterprise != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### enterprises
 
-* `AndroidmanagementEnterprisesCreate` - Creates an enterprise. This is the last step in the enterprise signup flow.
+### Enterprises
+
+* `AndroidmanagementEnterprisesCreate` - Creates an enterprise. This is the last step in the enterprise signup flow. See also: SigninDetail
 * `AndroidmanagementEnterprisesDevicesIssueCommand` - Issues a command to a device. The Operation resource returned contains a Command in its metadata field. Use the get operation method to get the status of the command.
 * `AndroidmanagementEnterprisesDevicesList` - Lists devices for a given enterprise. Deleted devices are not returned in the response.
 * `AndroidmanagementEnterprisesDevicesOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
@@ -159,10 +170,9 @@ func main() {
 * `AndroidmanagementEnterprisesWebAppsPatch` - Updates a web app.
 * `AndroidmanagementEnterprisesWebTokensCreate` - Creates a web token to access an embeddable managed Google Play web UI for a given enterprise.
 
-### signupUrls
+### SignupUrls
 
 * `AndroidmanagementSignupUrlsCreate` - Creates an enterprise signup URL.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

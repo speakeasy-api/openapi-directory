@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.RuntimeconfigProjectsConfigsCreateRequest{
         Security: operations.RuntimeconfigProjectsConfigsCreateSecurity{
             Option1: &operations.RuntimeconfigProjectsConfigsCreateSecurityOption1{
@@ -23,28 +25,29 @@ func main() {
             },
         },
         PathParams: operations.RuntimeconfigProjectsConfigsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.RuntimeconfigProjectsConfigsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            RequestID: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            RequestID: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.RuntimeConfig{
-            Description: "debitis",
-            Name: "voluptatum",
+            Description: "iusto",
+            Name: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.RuntimeconfigProjectsConfigsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +56,6 @@ func main() {
     if res.RuntimeConfig != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

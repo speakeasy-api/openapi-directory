@@ -3,34 +3,33 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                APIKeyAuth: shared.SchemeAPIKeyAuth{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            APIKeyAuth: shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.AnalyticsRequest{
         QueryParams: operations.AnalyticsQueryParams{
-            End: "sit",
+            End: "unde",
             GroupBy: "subaccount",
-            Label: "culpa",
-            Start: "expedita",
-            Subaccounts: "consequuntur",
+            Label: "porro",
+            Start: "nulla",
+            Subaccounts: "id",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Analytics.Analytics(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -39,5 +38,6 @@ func main() {
     if res.Analytics200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

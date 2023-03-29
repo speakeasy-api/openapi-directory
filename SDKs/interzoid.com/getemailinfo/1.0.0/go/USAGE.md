@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,14 +12,15 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetemailinfoRequest{
         QueryParams: operations.GetemailinfoQueryParams{
-            Email: "sit",
-            License: "voluptas",
+            Email: "Larry_Rau85@yahoo.com",
+            License: "perspiciatis",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.EmailAddressInformation.Getemailinfo(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -26,5 +29,6 @@ func main() {
     if res.Getemailinfo200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

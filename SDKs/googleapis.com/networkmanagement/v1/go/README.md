@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/networkmanagement/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreateRequest{
         Security: operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,321 +34,321 @@ func main() {
             },
         },
         PathParams: operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            TestID: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            TestID: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.ConnectivityTestInput{
-            Description: "debitis",
+            Description: "iusto",
             Destination: &shared.Endpoint{
                 AppEngineVersion: &shared.AppEngineVersionEndpoint{
-                    URI: "voluptatum",
+                    URI: "http://sim.com",
                 },
                 CloudFunction: &shared.CloudFunctionEndpoint{
-                    URI: "et",
+                    URI: "https://donny.info",
                 },
                 CloudRunRevision: &shared.CloudRunRevisionEndpoint{
-                    URI: "ut",
+                    URI: "http://pauline.net",
                 },
-                CloudSQLInstance: "dolorem",
-                GkeMasterCluster: "et",
-                Instance: "voluptate",
-                IPAddress: "iste",
-                Network: "vitae",
+                CloudSQLInstance: "non",
+                GkeMasterCluster: "deleniti",
+                Instance: "similique",
+                IPAddress: "reprehenderit",
+                Network: "molestiae",
                 NetworkType: "NON_GCP_NETWORK",
-                Port: 2217592893536642650,
-                ProjectID: "illum",
+                Port: 71036,
+                ProjectID: "laboriosam",
             },
             Labels: map[string]string{
-                "vel": "odio",
+                "est": "voluptatem",
             },
-            Name: "dolore",
-            Protocol: "id",
+            Name: "consequatur",
+            Protocol: "fugiat",
             ReachabilityDetails: &shared.ReachabilityDetails{
                 Error: &shared.Status{
-                    Code: 959367522974354090,
+                    Code: 957156,
                     Details: []map[string]interface{}{
                         map[string]interface{}{
-                            "commodi": "quis",
-                            "est": "aut",
-                            "odit": "non",
+                            "accusamus": "accusamus",
                         },
                         map[string]interface{}{
-                            "omnis": "aut",
+                            "rem": "quibusdam",
+                            "et": "praesentium",
+                            "occaecati": "dolor",
+                            "soluta": "sed",
                         },
                         map[string]interface{}{
-                            "sed": "officiis",
+                            "rerum": "culpa",
+                            "qui": "sed",
+                            "rerum": "possimus",
+                        },
+                        map[string]interface{}{
+                            "odit": "esse",
+                            "rem": "voluptatem",
+                            "amet": "est",
                         },
                     },
-                    Message: "autem",
+                    Message: "id",
                 },
-                Result: "AMBIGUOUS",
+                Result: "UNREACHABLE",
                 Traces: []shared.Trace{
                     shared.Trace{
                         EndpointInfo: &shared.EndpointInfo{
-                            DestinationIP: "odio",
-                            DestinationNetworkURI: "qui",
-                            DestinationPort: 388440063886460141,
-                            Protocol: "at",
-                            SourceIP: "ipsum",
-                            SourceNetworkURI: "eveniet",
-                            SourcePort: 303089054982227392,
+                            DestinationIP: "similique",
+                            DestinationNetworkURI: "dolores",
+                            DestinationPort: 18789,
+                            Protocol: "quia",
+                            SourceIP: "et",
+                            SourceNetworkURI: "voluptatem",
+                            SourcePort: 612096,
                         },
                         Steps: []shared.Step{
                             shared.Step{
                                 Abort: &shared.AbortInfo{
-                                    Cause: "UNKNOWN_PROJECT",
+                                    Cause: "SOURCE_ENDPOINT_NOT_FOUND",
                                     ProjectsMissingPermission: []string{
-                                        "exercitationem",
-                                        "aut",
-                                        "reprehenderit",
+                                        "earum",
+                                        "ut",
                                     },
-                                    ResourceURI: "tempore",
+                                    ResourceURI: "soluta",
                                 },
                                 AppEngineVersion: &shared.AppEngineVersionInfo{
-                                    DisplayName: "maiores",
-                                    Environment: "incidunt",
-                                    Runtime: "dolor",
-                                    URI: "beatae",
+                                    DisplayName: "qui",
+                                    Environment: "ea",
+                                    Runtime: "laborum",
+                                    URI: "http://sterling.net",
                                 },
-                                CausesDrop: true,
+                                CausesDrop: false,
                                 CloudFunction: &shared.CloudFunctionInfo{
-                                    DisplayName: "in",
-                                    Location: "et",
-                                    URI: "omnis",
-                                    VersionID: "ipsum",
+                                    DisplayName: "aspernatur",
+                                    Location: "inventore",
+                                    URI: "https://manuel.name",
+                                    VersionID: "libero",
                                 },
                                 CloudRunRevision: &shared.CloudRunRevisionInfo{
-                                    DisplayName: "ex",
-                                    Location: "dolores",
-                                    ServiceURI: "placeat",
-                                    URI: "vel",
+                                    DisplayName: "ipsum",
+                                    Location: "non",
+                                    ServiceURI: "ea",
+                                    URI: "http://nestor.biz",
                                 },
                                 CloudSQLInstance: &shared.CloudSQLInstanceInfo{
-                                    DisplayName: "rerum",
-                                    ExternalIP: "mollitia",
-                                    InternalIP: "voluptas",
-                                    NetworkURI: "quam",
-                                    Region: "reprehenderit",
-                                    URI: "qui",
+                                    DisplayName: "est",
+                                    ExternalIP: "commodi",
+                                    InternalIP: "quia",
+                                    NetworkURI: "similique",
+                                    Region: "eaque",
+                                    URI: "http://lorenza.org",
                                 },
                                 Deliver: &shared.DeliverInfo{
-                                    ResourceURI: "qui",
-                                    Target: "INTERNET",
+                                    ResourceURI: "a",
+                                    Target: "TARGET_UNSPECIFIED",
                                 },
-                                Description: "in",
+                                Description: "et",
                                 Drop: &shared.DropInfo{
-                                    Cause: "CLOUD_SQL_INSTANCE_NOT_CONFIGURED_FOR_EXTERNAL_TRAFFIC",
-                                    ResourceURI: "qui",
+                                    Cause: "PRIVATE_TRAFFIC_TO_INTERNET",
+                                    ResourceURI: "quidem",
                                 },
                                 Endpoint: &shared.EndpointInfo{
-                                    DestinationIP: "ut",
-                                    DestinationNetworkURI: "itaque",
-                                    DestinationPort: 2006924026344156168,
-                                    Protocol: "neque",
-                                    SourceIP: "ullam",
-                                    SourceNetworkURI: "et",
-                                    SourcePort: 4304520335772049496,
+                                    DestinationIP: "neque",
+                                    DestinationNetworkURI: "asperiores",
+                                    DestinationPort: 653108,
+                                    Protocol: "culpa",
+                                    SourceIP: "aliquam",
+                                    SourceNetworkURI: "esse",
+                                    SourcePort: 466311,
                                 },
                                 Firewall: &shared.FirewallInfo{
-                                    Action: "esse",
-                                    Direction: "architecto",
-                                    DisplayName: "quam",
-                                    FirewallRuleType: "IMPLIED_VPC_FIREWALL_RULE",
-                                    NetworkURI: "cumque",
-                                    Policy: "soluta",
-                                    Priority: 759605945513541974,
+                                    Action: "voluptatum",
+                                    Direction: "et",
+                                    DisplayName: "fuga",
+                                    FirewallRuleType: "FIREWALL_RULE_TYPE_UNSPECIFIED",
+                                    NetworkURI: "laboriosam",
+                                    Policy: "aut",
+                                    Priority: 674752,
                                     TargetServiceAccounts: []string{
-                                        "magni",
-                                        "et",
+                                        "ipsam",
+                                        "eos",
+                                        "omnis",
                                     },
                                     TargetTags: []string{
-                                        "qui",
-                                        "earum",
-                                        "illo",
+                                        "hic",
                                     },
-                                    URI: "omnis",
+                                    URI: "http://makayla.net",
                                 },
                                 Forward: &shared.ForwardInfo{
-                                    ResourceURI: "ut",
-                                    Target: "CLOUD_SQL_INSTANCE",
+                                    ResourceURI: "perferendis",
+                                    Target: "TARGET_UNSPECIFIED",
                                 },
                                 ForwardingRule: &shared.ForwardingRuleInfo{
-                                    DisplayName: "dolor",
-                                    MatchedPortRange: "commodi",
-                                    MatchedProtocol: "error",
-                                    NetworkURI: "reprehenderit",
-                                    Target: "consectetur",
-                                    URI: "nostrum",
-                                    Vip: "ut",
+                                    DisplayName: "fuga",
+                                    MatchedPortRange: "quo",
+                                    MatchedProtocol: "tempore",
+                                    NetworkURI: "explicabo",
+                                    Target: "aut",
+                                    URI: "https://shad.info",
+                                    Vip: "molestias",
                                 },
-                                GkeMaster: &shared.GkeMasterInfo{
-                                    ClusterNetworkURI: "laboriosam",
-                                    ClusterURI: "sed",
-                                    ExternalIP: "a",
-                                    InternalIP: "soluta",
+                                GkeMaster: &shared.GKEMasterInfo{
+                                    ClusterNetworkURI: "reiciendis",
+                                    ClusterURI: "illo",
+                                    ExternalIP: "id",
+                                    InternalIP: "qui",
                                 },
                                 Instance: &shared.InstanceInfo{
-                                    DisplayName: "aut",
-                                    ExternalIP: "quas",
-                                    Interface: "consequuntur",
-                                    InternalIP: "laudantium",
+                                    DisplayName: "quod",
+                                    ExternalIP: "sit",
+                                    Interface: "eaque",
+                                    InternalIP: "odio",
                                     NetworkTags: []string{
-                                        "ipsa",
+                                        "reiciendis",
+                                        "sed",
                                     },
-                                    NetworkURI: "expedita",
-                                    ServiceAccount: "doloremque",
-                                    URI: "perferendis",
+                                    NetworkURI: "ea",
+                                    ServiceAccount: "exercitationem",
+                                    URI: "http://blair.net",
                                 },
                                 LoadBalancer: &shared.LoadBalancerInfo{
-                                    BackendType: "TARGET_POOL",
-                                    BackendURI: "ratione",
+                                    BackendType: "BACKEND_SERVICE",
+                                    BackendURI: "aut",
                                     Backends: []shared.LoadBalancerBackend{
+                                        shared.LoadBalancerBackend{
+                                            DisplayName: "sint",
+                                            HealthCheckAllowingFirewallRules: []string{
+                                                "numquam",
+                                            },
+                                            HealthCheckBlockingFirewallRules: []string{
+                                                "error",
+                                                "similique",
+                                                "et",
+                                            },
+                                            HealthCheckFirewallState: "HEALTH_CHECK_FIREWALL_STATE_UNSPECIFIED",
+                                            URI: "https://juanita.org",
+                                        },
                                         shared.LoadBalancerBackend{
                                             DisplayName: "explicabo",
                                             HealthCheckAllowingFirewallRules: []string{
-                                                "maxime",
-                                            },
-                                            HealthCheckBlockingFirewallRules: []string{
-                                                "perferendis",
-                                            },
-                                            HealthCheckFirewallState: "HEALTH_CHECK_FIREWALL_STATE_UNSPECIFIED",
-                                            URI: "rerum",
-                                        },
-                                        shared.LoadBalancerBackend{
-                                            DisplayName: "reiciendis",
-                                            HealthCheckAllowingFirewallRules: []string{
-                                                "cumque",
+                                                "in",
+                                                "vitae",
+                                                "non",
                                                 "minima",
-                                                "necessitatibus",
                                             },
                                             HealthCheckBlockingFirewallRules: []string{
-                                                "quis",
-                                                "eum",
+                                                "aut",
+                                                "libero",
                                             },
-                                            HealthCheckFirewallState: "HEALTH_CHECK_FIREWALL_STATE_UNSPECIFIED",
-                                            URI: "et",
-                                        },
-                                        shared.LoadBalancerBackend{
-                                            DisplayName: "impedit",
-                                            HealthCheckAllowingFirewallRules: []string{
-                                                "expedita",
-                                                "vel",
-                                                "qui",
-                                            },
-                                            HealthCheckBlockingFirewallRules: []string{
-                                                "nihil",
-                                                "tempora",
-                                            },
-                                            HealthCheckFirewallState: "HEALTH_CHECK_FIREWALL_STATE_UNSPECIFIED",
-                                            URI: "eaque",
+                                            HealthCheckFirewallState: "MISCONFIGURED",
+                                            URI: "http://luther.net",
                                         },
                                     },
-                                    HealthCheckURI: "sunt",
-                                    LoadBalancerType: "TCP_PROXY",
+                                    HealthCheckURI: "voluptas",
+                                    LoadBalancerType: "INTERNAL_TCP_UDP",
                                 },
                                 Network: &shared.NetworkInfo{
-                                    DisplayName: "autem",
-                                    MatchedIPRange: "quis",
-                                    URI: "vel",
+                                    DisplayName: "voluptatem",
+                                    MatchedIPRange: "sit",
+                                    URI: "http://kyleigh.name",
                                 },
-                                ProjectID: "vel",
+                                ProjectID: "voluptatem",
                                 Route: &shared.RouteInfo{
-                                    DestIPRange: "placeat",
+                                    DestIPRange: "dolorem",
                                     DestPortRanges: []string{
-                                        "nisi",
+                                        "quis",
+                                        "consequatur",
+                                        "ratione",
+                                        "cum",
                                     },
-                                    DisplayName: "quis",
+                                    DisplayName: "similique",
                                     InstanceTags: []string{
-                                        "porro",
-                                        "rerum",
+                                        "nihil",
+                                        "id",
                                     },
-                                    NetworkURI: "et",
-                                    NextHop: "accusamus",
-                                    NextHopType: "NEXT_HOP_ILB",
-                                    Priority: 2223751782546645906,
+                                    NetworkURI: "quis",
+                                    NextHop: "sapiente",
+                                    NextHopType: "NEXT_HOP_INTERCONNECT",
+                                    Priority: 248753,
                                     Protocols: []string{
-                                        "ut",
-                                        "laborum",
-                                        "fugit",
+                                        "in",
+                                        "qui",
+                                        "deserunt",
+                                        "eveniet",
                                     },
-                                    RouteType: "DYNAMIC",
-                                    SrcIPRange: "minus",
+                                    RouteType: "PEERING_SUBNET",
+                                    SrcIPRange: "rerum",
                                     SrcPortRanges: []string{
-                                        "aperiam",
+                                        "necessitatibus",
                                     },
-                                    URI: "consequuntur",
+                                    URI: "https://marilie.info",
                                 },
                                 State: "APPLY_FORWARDING_RULE",
                                 VpcConnector: &shared.VpcConnectorInfo{
-                                    DisplayName: "mollitia",
-                                    Location: "inventore",
-                                    URI: "delectus",
+                                    DisplayName: "nulla",
+                                    Location: "reiciendis",
+                                    URI: "https://bettye.biz",
                                 },
                                 VpnGateway: &shared.VpnGatewayInfo{
-                                    DisplayName: "ipsa",
-                                    IPAddress: "animi",
-                                    NetworkURI: "animi",
-                                    Region: "ut",
-                                    URI: "aliquam",
-                                    VpnTunnelURI: "fuga",
+                                    DisplayName: "voluptas",
+                                    IPAddress: "vel",
+                                    NetworkURI: "velit",
+                                    Region: "qui",
+                                    URI: "https://shaniya.biz",
+                                    VpnTunnelURI: "culpa",
                                 },
                                 VpnTunnel: &shared.VpnTunnelInfo{
-                                    DisplayName: "sed",
-                                    NetworkURI: "sed",
-                                    Region: "et",
-                                    RemoteGateway: "consequuntur",
-                                    RemoteGatewayIP: "non",
+                                    DisplayName: "enim",
+                                    NetworkURI: "aut",
+                                    Region: "delectus",
+                                    RemoteGateway: "eligendi",
+                                    RemoteGatewayIP: "officia",
                                     RoutingType: "POLICY_BASED",
-                                    SourceGateway: "provident",
-                                    SourceGatewayIP: "molestiae",
-                                    URI: "pariatur",
+                                    SourceGateway: "distinctio",
+                                    SourceGatewayIP: "et",
+                                    URI: "https://verla.biz",
                                 },
                             },
                         },
                     },
                 },
-                VerifyTime: "quasi",
+                VerifyTime: "facilis",
             },
             RelatedProjects: []string{
-                "enim",
-                "qui",
-                "sit",
+                "nihil",
+                "dolorum",
             },
             Source: &shared.Endpoint{
                 AppEngineVersion: &shared.AppEngineVersionEndpoint{
-                    URI: "possimus",
+                    URI: "https://jaron.com",
                 },
                 CloudFunction: &shared.CloudFunctionEndpoint{
-                    URI: "modi",
+                    URI: "http://elisha.net",
                 },
                 CloudRunRevision: &shared.CloudRunRevisionEndpoint{
-                    URI: "neque",
+                    URI: "https://edward.biz",
                 },
-                CloudSQLInstance: "consequuntur",
-                GkeMasterCluster: "quia",
-                Instance: "et",
-                IPAddress: "est",
-                Network: "occaecati",
+                CloudSQLInstance: "eum",
+                GkeMasterCluster: "et",
+                Instance: "placeat",
+                IPAddress: "molestiae",
+                Network: "debitis",
                 NetworkType: "NETWORK_TYPE_UNSPECIFIED",
-                Port: 4932993544835283753,
-                ProjectID: "quia",
+                Port: 102863,
+                ProjectID: "ullam",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -355,13 +357,15 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `NetworkmanagementProjectsLocationsGlobalConnectivityTestsCreate` - Creates a new Connectivity Test. After you create a test, the reachability analysis is performed as part of the long running operation, which completes when the analysis completes. If the endpoint specifications in `ConnectivityTest` are invalid (for example, containing non-existent resources in the network, or you don't have read permissions to the network configurations of listed projects), then the reachability result returns a value of `UNKNOWN`. If the endpoint specifications in `ConnectivityTest` are incomplete, the reachability result returns a value of AMBIGUOUS. For more information, see the Connectivity Test documentation.
 * `NetworkmanagementProjectsLocationsGlobalConnectivityTestsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -375,7 +379,6 @@ func main() {
 * `NetworkmanagementProjectsLocationsGlobalOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `NetworkmanagementProjectsLocationsGlobalOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
 * `NetworkmanagementProjectsLocationsList` - Lists information about the supported locations for this service.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,11 +12,20 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CreateTicketRequest{
-        Request: "sit",
+        Request: shared.AbuseTicketCreate{
+            Info: "unde",
+            InfoURL: "deserunt",
+            Intentional: false,
+            Proxy: "porro",
+            Source: "nulla",
+            Target: "id",
+            Type: "PHISHING",
+        },
     }
-    
+
+    ctx := context.Background()
     res, err := s.V1.CreateTicket(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -23,5 +34,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

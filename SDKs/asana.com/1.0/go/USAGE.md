@@ -3,48 +3,49 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                PersonalAccessToken: &shared.SchemePersonalAccessToken{
-                    Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Oauth2: &shared.SchemeOauth2{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateAttachmentForTaskRequest{
         PathParams: operations.CreateAttachmentForTaskPathParams{
-            TaskGid: "sit",
+            TaskGid: "unde",
         },
         QueryParams: operations.CreateAttachmentForTaskQueryParams{
-            Limit: 2259404117704393152,
-            Offset: "culpa",
+            Limit: 592845,
+            Offset: "porro",
             OptFields: []string{
-                "consequuntur",
-                "dolor",
+                "id",
+                "vero",
+                "perspiciatis",
+                "nulla",
             },
-            OptPretty: true,
+            OptPretty: false,
         },
         Request: shared.AttachmentRequest{
             File: &shared.AttachmentRequestFile{
-                Content: []byte("voluptas"),
-                File: "fugit",
+                Content: []byte("nihil"),
+                File: "fuga",
             },
-            Name: "et",
+            Name: "facilis",
             ResourceSubtype: "asana_file_attachments",
-            URL: "rerum",
+            URL: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Attachments.CreateAttachmentForTask(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +54,6 @@ func main() {
     if res.CreateAttachmentForTask200ApplicationJSONObject != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

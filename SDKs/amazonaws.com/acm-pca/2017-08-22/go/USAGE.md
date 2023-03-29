@@ -3,46 +3,44 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateCertificateAuthorityRequest{
         Headers: operations.CreateCertificateAuthorityHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "ACMPrivateCA.CreateCertificateAuthority",
         },
         Request: shared.CreateCertificateAuthorityRequest{
             CertificateAuthorityConfiguration: shared.CertificateAuthorityConfiguration{
                 CsrExtensions: &shared.CsrExtensions{
                     KeyUsage: &shared.KeyUsage{
-                        CRLSign: true,
+                        CRLSign: false,
                         DataEncipherment: false,
-                        DecipherOnly: true,
-                        DigitalSignature: true,
+                        DecipherOnly: false,
+                        DigitalSignature: false,
                         EncipherOnly: false,
-                        KeyAgreement: true,
-                        KeyCertSign: true,
+                        KeyAgreement: false,
+                        KeyCertSign: false,
                         KeyEncipherment: false,
                         NonRepudiation: false,
                     },
@@ -50,160 +48,167 @@ func main() {
                         shared.AccessDescription{
                             AccessLocation: shared.GeneralName{
                                 DirectoryName: &shared.Asn1Subject{
-                                    CommonName: "et",
-                                    Country: "voluptate",
-                                    DistinguishedNameQualifier: "iste",
-                                    GenerationQualifier: "vitae",
-                                    GivenName: "totam",
-                                    Initials: "dolores",
-                                    Locality: "illum",
-                                    Organization: "debitis",
-                                    OrganizationalUnit: "vel",
-                                    Pseudonym: "odio",
-                                    SerialNumber: "dolore",
-                                    State: "id",
-                                    Surname: "aspernatur",
-                                    Title: "accusantium",
-                                },
-                                DNSName: "totam",
-                                EdiPartyName: &shared.EdiPartyName{
-                                    NameAssigner: "commodi",
-                                    PartyName: "quis",
-                                },
-                                IPAddress: "est",
-                                OtherName: &shared.OtherName{
-                                    TypeID: "aut",
-                                    Value: "odit",
-                                },
-                                RegisteredID: "non",
-                                Rfc822Name: "voluptas",
-                                UniformResourceIdentifier: "omnis",
-                            },
-                            AccessMethod: shared.AccessMethod{
-                                AccessMethodType: "CA_REPOSITORY",
-                                CustomObjectIdentifier: "illo",
-                            },
-                        },
-                        shared.AccessDescription{
-                            AccessLocation: shared.GeneralName{
-                                DirectoryName: &shared.Asn1Subject{
-                                    CommonName: "sed",
-                                    Country: "officiis",
-                                    DistinguishedNameQualifier: "autem",
-                                    GenerationQualifier: "consectetur",
-                                    GivenName: "nobis",
-                                    Initials: "odio",
-                                    Locality: "qui",
-                                    Organization: "recusandae",
-                                    OrganizationalUnit: "at",
-                                    Pseudonym: "ipsum",
-                                    SerialNumber: "eveniet",
-                                    State: "modi",
-                                    Surname: "sint",
-                                    Title: "inventore",
-                                },
-                                DNSName: "ut",
-                                EdiPartyName: &shared.EdiPartyName{
-                                    NameAssigner: "exercitationem",
-                                    PartyName: "aut",
-                                },
-                                IPAddress: "reprehenderit",
-                                OtherName: &shared.OtherName{
-                                    TypeID: "tempore",
-                                    Value: "maiores",
-                                },
-                                RegisteredID: "incidunt",
-                                Rfc822Name: "dolor",
-                                UniformResourceIdentifier: "beatae",
-                            },
-                            AccessMethod: shared.AccessMethod{
-                                AccessMethodType: "RESOURCE_PKI_MANIFEST",
-                                CustomObjectIdentifier: "in",
-                            },
-                        },
-                        shared.AccessDescription{
-                            AccessLocation: shared.GeneralName{
-                                DirectoryName: &shared.Asn1Subject{
-                                    CommonName: "et",
-                                    Country: "omnis",
-                                    DistinguishedNameQualifier: "ipsum",
-                                    GenerationQualifier: "ex",
-                                    GivenName: "dolores",
-                                    Initials: "placeat",
-                                    Locality: "vel",
-                                    Organization: "rerum",
-                                    OrganizationalUnit: "mollitia",
-                                    Pseudonym: "voluptas",
-                                    SerialNumber: "quam",
+                                    CommonName: "fuga",
+                                    Country: "Niger",
+                                    CustomAttributes: []shared.CustomAttribute{
+                                        shared.CustomAttribute{
+                                            ObjectIdentifier: "iusto",
+                                            Value: "ullam",
+                                        },
+                                        shared.CustomAttribute{
+                                            ObjectIdentifier: "saepe",
+                                            Value: "inventore",
+                                        },
+                                    },
+                                    DistinguishedNameQualifier: "sapiente",
+                                    GenerationQualifier: "enim",
+                                    GivenName: "eum",
+                                    Initials: "voluptatum",
+                                    Locality: "autem",
+                                    Organization: "vel",
+                                    OrganizationalUnit: "non",
+                                    Pseudonym: "deleniti",
+                                    SerialNumber: "similique",
                                     State: "reprehenderit",
-                                    Surname: "qui",
-                                    Title: "qui",
+                                    Surname: "molestiae",
+                                    Title: "Internal Brand Director",
                                 },
-                                DNSName: "unde",
+                                DNSName: "dicta",
                                 EdiPartyName: &shared.EdiPartyName{
-                                    NameAssigner: "in",
-                                    PartyName: "autem",
+                                    NameAssigner: "est",
+                                    PartyName: "voluptatem",
                                 },
-                                IPAddress: "qui",
+                                IPAddress: "consequatur",
                                 OtherName: &shared.OtherName{
-                                    TypeID: "ut",
-                                    Value: "itaque",
+                                    TypeID: "fugiat",
+                                    Value: "a",
                                 },
-                                RegisteredID: "ab",
-                                Rfc822Name: "neque",
-                                UniformResourceIdentifier: "ullam",
+                                RegisteredID: "omnis",
+                                Rfc822Name: "eos",
+                                UniformResourceIdentifier: "accusamus",
                             },
                             AccessMethod: shared.AccessMethod{
                                 AccessMethodType: "RESOURCE_PKI_NOTIFY",
-                                CustomObjectIdentifier: "accusantium",
+                                CustomObjectIdentifier: "reiciendis",
+                            },
+                        },
+                        shared.AccessDescription{
+                            AccessLocation: shared.GeneralName{
+                                DirectoryName: &shared.Asn1Subject{
+                                    CommonName: "rem",
+                                    Country: "Seychelles",
+                                    CustomAttributes: []shared.CustomAttribute{
+                                        shared.CustomAttribute{
+                                            ObjectIdentifier: "praesentium",
+                                            Value: "occaecati",
+                                        },
+                                        shared.CustomAttribute{
+                                            ObjectIdentifier: "dolor",
+                                            Value: "soluta",
+                                        },
+                                        shared.CustomAttribute{
+                                            ObjectIdentifier: "sed",
+                                            Value: "quisquam",
+                                        },
+                                        shared.CustomAttribute{
+                                            ObjectIdentifier: "rerum",
+                                            Value: "culpa",
+                                        },
+                                    },
+                                    DistinguishedNameQualifier: "qui",
+                                    GenerationQualifier: "sed",
+                                    GivenName: "rerum",
+                                    Initials: "possimus",
+                                    Locality: "occaecati",
+                                    Organization: "odit",
+                                    OrganizationalUnit: "esse",
+                                    Pseudonym: "rem",
+                                    SerialNumber: "voluptatem",
+                                    State: "amet",
+                                    Surname: "est",
+                                    Title: "Legacy Division Manager",
+                                },
+                                DNSName: "similique",
+                                EdiPartyName: &shared.EdiPartyName{
+                                    NameAssigner: "dolores",
+                                    PartyName: "sit",
+                                },
+                                IPAddress: "quia",
+                                OtherName: &shared.OtherName{
+                                    TypeID: "et",
+                                    Value: "voluptatem",
+                                },
+                                RegisteredID: "laborum",
+                                Rfc822Name: "modi",
+                                UniformResourceIdentifier: "et",
+                            },
+                            AccessMethod: shared.AccessMethod{
+                                AccessMethodType: "RESOURCE_PKI_MANIFEST",
+                                CustomObjectIdentifier: "earum",
                             },
                         },
                     },
                 },
-                KeyAlgorithm: "RSA_2048",
+                KeyAlgorithm: "EC_secp384r1",
                 SigningAlgorithm: "SHA384WITHRSA",
                 Subject: shared.Asn1Subject{
-                    CommonName: "quam",
-                    Country: "velit",
-                    DistinguishedNameQualifier: "cumque",
-                    GenerationQualifier: "soluta",
-                    GivenName: "sunt",
-                    Initials: "voluptates",
-                    Locality: "magni",
-                    Organization: "et",
-                    OrganizationalUnit: "optio",
-                    Pseudonym: "qui",
-                    SerialNumber: "earum",
-                    State: "illo",
-                    Surname: "omnis",
-                    Title: "ut",
+                    CommonName: "qui",
+                    Country: "Guernsey",
+                    CustomAttributes: []shared.CustomAttribute{
+                        shared.CustomAttribute{
+                            ObjectIdentifier: "iusto",
+                            Value: "ut",
+                        },
+                        shared.CustomAttribute{
+                            ObjectIdentifier: "optio",
+                            Value: "aspernatur",
+                        },
+                        shared.CustomAttribute{
+                            ObjectIdentifier: "inventore",
+                            Value: "ut",
+                        },
+                    },
+                    DistinguishedNameQualifier: "libero",
+                    GenerationQualifier: "et",
+                    GivenName: "libero",
+                    Initials: "ipsum",
+                    Locality: "non",
+                    Organization: "ea",
+                    OrganizationalUnit: "magni",
+                    Pseudonym: "placeat",
+                    SerialNumber: "ipsam",
+                    State: "est",
+                    Surname: "commodi",
+                    Title: "National Intranet Supervisor",
                 },
             },
             CertificateAuthorityType: "ROOT",
-            IdempotencyToken: "dolor",
-            KeyStorageSecurityStandard: "FIPS_140_2_LEVEL_2_OR_HIGHER",
+            IdempotencyToken: "harum",
+            KeyStorageSecurityStandard: "FIPS_140_2_LEVEL_3_OR_HIGHER",
             RevocationConfiguration: &shared.RevocationConfiguration{
                 CrlConfiguration: &shared.CrlConfiguration{
-                    CustomCname: "error",
+                    CustomCname: "a",
                     Enabled: false,
-                    ExpirationInDays: 4989862523986425397,
-                    S3BucketName: "nostrum",
-                    S3ObjectACL: "BUCKET_OWNER_FULL_CONTROL",
+                    ExpirationInDays: 102044,
+                    S3BucketName: "et",
+                    S3ObjectACL: "PUBLIC_READ",
                 },
                 OcspConfiguration: &shared.OcspConfiguration{
                     Enabled: false,
-                    OcspCustomCname: "sed",
+                    OcspCustomCname: "quidem",
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "soluta",
-                    Value: "aut",
+                    Key: "asperiores",
+                    Value: "et",
                 },
             },
+            UsageMode: "SHORT_LIVED_CERTIFICATE",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateCertificateAuthority(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -212,5 +217,6 @@ func main() {
     if res.CreateCertificateAuthorityResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,39 +12,41 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.ChromeuxreportRecordsQueryRecordRequest{
-        QueryParams: operations.ChromeuxreportRecordsQueryRecordQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+
+    req := operations.ChromeuxreportRecordsQueryHistoryRecordRequest{
+        QueryParams: operations.ChromeuxreportRecordsQueryHistoryRecordQueryParams{
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
-        Request: &shared.QueryRequest{
-            EffectiveConnectionType: "rerum",
-            FormFactor: "TABLET",
+        Request: &shared.QueryHistoryRequest{
+            FormFactor: "DESKTOP",
             Metrics: []string{
-                "voluptatum",
+                "iusto",
+                "ullam",
             },
-            Origin: "et",
-            URL: "ut",
+            Origin: "saepe",
+            URL: "inventore",
         },
     }
-    
-    res, err := s.Records.ChromeuxreportRecordsQueryRecord(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.Records.ChromeuxreportRecordsQueryHistoryRecord(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.QueryResponse != nil {
+    if res.QueryHistoryResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

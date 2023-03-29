@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudresourcemanagerOrganizationsGetRequest{
         Security: operations.CloudresourcemanagerOrganizationsGetSecurity{
             Option1: &operations.CloudresourcemanagerOrganizationsGetSecurityOption1{
@@ -23,24 +25,25 @@ func main() {
             },
         },
         PathParams: operations.CloudresourcemanagerOrganizationsGetPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.CloudresourcemanagerOrganizationsGetQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            OrganizationID: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            OrganizationID: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Organizations.CloudresourcemanagerOrganizationsGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -49,5 +52,6 @@ func main() {
     if res.Organization != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

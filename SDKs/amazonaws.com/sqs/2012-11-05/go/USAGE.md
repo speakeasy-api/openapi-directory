@@ -3,47 +3,56 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
+
+    req := operations.GETAddPermissionRequest{
+        PathParams: operations.GETAddPermissionPathParams{
+            AccountNumber: 548814,
+            QueueName: "deserunt",
+        },
+        QueryParams: operations.GETAddPermissionQueryParams{
+            AWSAccountIds: []string{
+                "nulla",
+                "id",
+                "vero",
+            },
+            Action: "AddPermission",
+            Actions: []string{
+                "nihil",
+                "fuga",
+                "facilis",
+                "eum",
+            },
+            Label: "iusto",
+            Version: "2012-11-05",
+        },
+        Headers: operations.GETAddPermissionHeaders{
+            XAmzAlgorithm: "saepe",
+            XAmzContentSha256: "inventore",
+            XAmzCredential: "sapiente",
+            XAmzDate: "enim",
+            XAmzSecurityToken: "eum",
+            XAmzSignature: "voluptatum",
+            XAmzSignedHeaders: "autem",
+        },
     }
 
-    s := sdk.New(opts...)
-    
-    req := operations.GetChangeMessageVisibilityRequest{
-        PathParams: operations.GetChangeMessageVisibilityPathParams{
-            AccountNumber: 8717895732742165505,
-            QueueName: "voluptas",
-        },
-        QueryParams: operations.GetChangeMessageVisibilityQueryParams{
-            Action: "ChangeMessageVisibility",
-            ReceiptHandle: "expedita",
-            Version: "2012-11-05",
-            VisibilityTimeout: 2669985732393126063,
-        },
-        Headers: operations.GetChangeMessageVisibilityHeaders{
-            XAmzAlgorithm: "expedita",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "fugit",
-            XAmzDate: "et",
-            XAmzSecurityToken: "nihil",
-            XAmzSignature: "rerum",
-            XAmzSignedHeaders: "dicta",
-        },
-    }
-    
-    res, err := s.GetChangeMessageVisibility(ctx, req)
+    ctx := context.Background()
+    res, err := s.GETAddPermission(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -51,5 +60,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,43 +3,42 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.DeleteScalingPolicyRequest{
         Headers: operations.DeleteScalingPolicyHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AnyScaleFrontendService.DeleteScalingPolicy",
         },
         Request: shared.DeleteScalingPolicyRequest{
-            PolicyName: "fugit",
-            ResourceID: "et",
+            PolicyName: "nihil",
+            ResourceID: "fuga",
             ScalableDimension: "comprehend:entity-recognizer-endpoint:DesiredInferenceUnits",
-            ServiceNamespace: "elasticmapreduce",
+            ServiceNamespace: "rds",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.DeleteScalingPolicy(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -48,5 +47,6 @@ func main() {
     if res.DeleteScalingPolicyResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

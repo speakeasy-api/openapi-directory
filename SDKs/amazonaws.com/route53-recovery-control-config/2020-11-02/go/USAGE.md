@@ -3,40 +3,44 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateClusterRequest{
         Headers: operations.CreateClusterHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
         Request: operations.CreateClusterRequestBody{
-            ClientToken: "voluptas",
-            ClusterName: "fugit",
+            ClientToken: "nulla",
+            ClusterName: "nihil",
+            Tags: map[string]string{
+                "facilis": "eum",
+                "iusto": "ullam",
+                "saepe": "inventore",
+            },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateCluster(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -45,5 +49,6 @@ func main() {
     if res.CreateClusterResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

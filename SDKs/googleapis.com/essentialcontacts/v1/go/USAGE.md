@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.EssentialcontactsProjectsContactsComputeRequest{
         Security: operations.EssentialcontactsProjectsContactsComputeSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,30 +23,32 @@ func main() {
             },
         },
         PathParams: operations.EssentialcontactsProjectsContactsComputePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.EssentialcontactsProjectsContactsComputeQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
             NotificationCategories: []EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum{
-                "NOTIFICATION_CATEGORY_UNSPECIFIED",
                 "SECURITY",
-                "LEGAL",
+                "BILLING",
+                "BILLING",
+                "SECURITY",
             },
-            OauthToken: "rerum",
-            PageSize: 7837839688282259259,
-            PageToken: "debitis",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "ut",
-            UploadProtocol: "dolorem",
+            OauthToken: "iusto",
+            PageSize: 297534,
+            PageToken: "saepe",
+            PrettyPrint: false,
+            QuotaUser: "inventore",
+            UploadType: "sapiente",
+            UploadProtocol: "enim",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.EssentialcontactsProjectsContactsCompute(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -53,5 +57,6 @@ func main() {
     if res.GoogleCloudEssentialcontactsV1ComputeContactsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

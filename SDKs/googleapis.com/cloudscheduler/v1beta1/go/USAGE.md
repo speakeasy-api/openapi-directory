@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudschedulerProjectsLocationsJobsCreateRequest{
         Security: operations.CloudschedulerProjectsLocationsJobsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,103 +23,105 @@ func main() {
             },
         },
         PathParams: operations.CloudschedulerProjectsLocationsJobsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudschedulerProjectsLocationsJobsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.Job{
             AppEngineHTTPTarget: &shared.AppEngineHTTPTarget{
                 AppEngineRouting: &shared.AppEngineRouting{
-                    Host: "dicta",
-                    Instance: "debitis",
-                    Service: "voluptatum",
-                    Version: "et",
+                    Host: "eum",
+                    Instance: "iusto",
+                    Service: "ullam",
+                    Version: "saepe",
                 },
-                Body: "ut",
+                Body: "inventore",
                 Headers: map[string]string{
-                    "et": "voluptate",
-                    "iste": "vitae",
-                    "totam": "dolores",
+                    "enim": "eum",
+                    "voluptatum": "autem",
+                    "vel": "non",
+                    "deleniti": "similique",
                 },
-                HTTPMethod: "POST",
-                RelativeURI: "debitis",
+                HTTPMethod: "HEAD",
+                RelativeURI: "molestiae",
             },
-            AttemptDeadline: "vel",
-            Description: "odio",
+            AttemptDeadline: "quo",
+            Description: "quasi",
             HTTPTarget: &shared.HTTPTarget{
-                Body: "dolore",
+                Body: "laboriosam",
                 Headers: map[string]string{
-                    "aspernatur": "accusantium",
-                    "totam": "commodi",
+                    "est": "voluptatem",
                 },
-                HTTPMethod: "PATCH",
+                HTTPMethod: "GET",
                 OauthToken: &shared.OAuthToken{
-                    Scope: "est",
-                    ServiceAccountEmail: "aut",
+                    Scope: "fugiat",
+                    ServiceAccountEmail: "a",
                 },
                 OidcToken: &shared.OidcToken{
-                    Audience: "odit",
-                    ServiceAccountEmail: "non",
+                    Audience: "omnis",
+                    ServiceAccountEmail: "eos",
                 },
-                URI: "voluptas",
+                URI: "https://sarah.org",
             },
-            LastAttemptTime: "omnis",
+            LastAttemptTime: "rem",
             LegacyAppEngineCron: false,
-            Name: "illo",
+            Name: "quibusdam",
             PubsubTarget: &shared.PubsubTarget{
                 Attributes: map[string]string{
-                    "officiis": "autem",
-                    "consectetur": "nobis",
-                    "odio": "qui",
+                    "praesentium": "occaecati",
+                    "dolor": "soluta",
+                    "sed": "quisquam",
+                    "rerum": "culpa",
                 },
-                Data: "recusandae",
-                TopicName: "at",
+                Data: "qui",
+                TopicName: "sed",
             },
             RetryConfig: &shared.RetryConfig{
-                MaxBackoffDuration: "ipsum",
-                MaxDoublings: 8902041070398994519,
-                MaxRetryDuration: "modi",
-                MinBackoffDuration: "sint",
-                RetryCount: 5392504858645185670,
+                MaxBackoffDuration: "rerum",
+                MaxDoublings: 758616,
+                MaxRetryDuration: "occaecati",
+                MinBackoffDuration: "odit",
+                RetryCount: 414662,
             },
-            Schedule: "ut",
-            ScheduleTime: "exercitationem",
-            State: "UPDATE_FAILED",
+            Schedule: "rem",
+            ScheduleTime: "voluptatem",
+            State: "STATE_UNSPECIFIED",
             Status: &shared.Status{
-                Code: 5837486892148644279,
+                Code: 774234,
                 Details: []map[string]interface{}{
                     map[string]interface{}{
-                        "incidunt": "dolor",
+                        "numquam": "similique",
+                        "dolores": "sit",
                     },
                     map[string]interface{}{
-                        "veritatis": "in",
-                        "et": "omnis",
-                        "ipsum": "ex",
+                        "et": "voluptatem",
+                        "laborum": "modi",
                     },
                     map[string]interface{}{
-                        "placeat": "vel",
-                        "rerum": "mollitia",
-                        "voluptas": "quam",
+                        "iure": "earum",
+                        "ut": "soluta",
+                        "qui": "ea",
                     },
                 },
-                Message: "reprehenderit",
+                Message: "laborum",
             },
-            TimeZone: "qui",
-            UserUpdateTime: "qui",
+            TimeZone: "iusto",
+            UserUpdateTime: "ut",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.CloudschedulerProjectsLocationsJobsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -126,5 +130,6 @@ func main() {
     if res.Job != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,27 +12,30 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PagespeedonlinePagespeedapiRunpagespeedRequest{
         QueryParams: operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams{
             Alt: "json",
-            Fields: "voluptas",
-            FilterThirdPartyResources: true,
-            Key: "expedita",
-            Locale: "consequuntur",
-            OauthToken: "dolor",
-            PrettyPrint: true,
-            QuotaUser: "voluptas",
+            Fields: "deserunt",
+            FilterThirdPartyResources: false,
+            Key: "porro",
+            Locale: "nulla",
+            OauthToken: "id",
+            PrettyPrint: false,
+            QuotaUser: "vero",
             Rule: []string{
-                "et",
+                "nulla",
+                "nihil",
+                "fuga",
             },
-            Screenshot: true,
+            Screenshot: false,
             Strategy: "mobile",
-            URL: "dicta",
-            UserIP: "debitis",
+            URL: "eum",
+            UserIP: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Pagespeedapi.PagespeedonlinePagespeedapiRunpagespeed(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -39,5 +44,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/datastream/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest{
         Security: operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,88 +34,90 @@ func main() {
             },
         },
         PathParams: operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            ConnectionProfileID: "dolor",
-            Fields: "expedita",
-            Force: true,
-            Key: "fugit",
-            OauthToken: "et",
-            PrettyPrint: true,
-            QuotaUser: "rerum",
-            RequestID: "dicta",
-            UploadType: "debitis",
-            UploadProtocol: "voluptatum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            ConnectionProfileID: "vero",
+            Fields: "perspiciatis",
+            Force: false,
+            Key: "nulla",
+            OauthToken: "nihil",
+            PrettyPrint: false,
+            QuotaUser: "fuga",
+            RequestID: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
             ValidateOnly: false,
         },
         Request: &shared.ConnectionProfileInput{
             BigqueryProfile: map[string]interface{}{
-                "dolorem": "et",
-                "voluptate": "iste",
-                "vitae": "totam",
+                "saepe": "inventore",
+                "sapiente": "enim",
             },
-            DisplayName: "dolores",
+            DisplayName: "eum",
             ForwardSSHConnectivity: &shared.ForwardSSHTunnelConnectivity{
-                Hostname: "illum",
-                Password: "debitis",
-                Port: 3706853784096366226,
-                PrivateKey: "odio",
-                Username: "dolore",
+                Hostname: "jason.net",
+                Password: "vel",
+                Port: 528895,
+                PrivateKey: "deleniti",
+                Username: "Kenyon_Huel7",
             },
             GcsProfile: &shared.GcsProfile{
-                Bucket: "id",
-                RootPath: "aspernatur",
+                Bucket: "laboriosam",
+                RootPath: "dicta",
             },
             Labels: map[string]string{
-                "totam": "commodi",
-                "quis": "est",
-                "aut": "odit",
+                "voluptatem": "consequatur",
+                "fugiat": "a",
+                "omnis": "eos",
             },
             MysqlProfile: &shared.MysqlProfileInput{
-                Hostname: "non",
-                Password: "voluptas",
-                Port: 4778690082005258714,
+                Hostname: "sarah.org",
+                Password: "reiciendis",
+                Port: 473608,
                 SslConfig: &shared.MysqlSslConfigInput{
-                    CaCertificate: "aut",
-                    ClientCertificate: "illo",
-                    ClientKey: "sed",
+                    CaCertificate: "quibusdam",
+                    ClientCertificate: "et",
+                    ClientKey: "praesentium",
                 },
-                Username: "officiis",
+                Username: "Josue.Sauer72",
             },
             OracleProfile: &shared.OracleProfile{
                 ConnectionAttributes: map[string]string{
-                    "consectetur": "nobis",
-                    "odio": "qui",
+                    "culpa": "qui",
+                    "sed": "rerum",
+                    "possimus": "occaecati",
                 },
-                DatabaseService: "recusandae",
-                Hostname: "at",
-                Password: "ipsum",
-                Port: 8902041070398994519,
-                Username: "modi",
+                DatabaseService: "odit",
+                Hostname: "harry.info",
+                Password: "voluptatem",
+                Port: 186332,
+                Username: "Ona.Rippin",
             },
             PostgresqlProfile: &shared.PostgresqlProfile{
-                Database: "sint",
-                Hostname: "inventore",
-                Password: "ut",
-                Port: 406703151708498928,
-                Username: "aut",
+                Database: "similique",
+                Hostname: "brianne.com",
+                Password: "quia",
+                Port: 617636,
+                Username: "Cameron61",
             },
             PrivateConnectivity: &shared.PrivateConnectivity{
-                PrivateConnection: "reprehenderit",
+                PrivateConnection: "iure",
             },
             StaticServiceIPConnectivity: map[string]interface{}{
-                "maiores": "incidunt",
-                "dolor": "beatae",
-                "veritatis": "in",
+                "ut": "soluta",
+                "qui": "ea",
+                "laborum": "iusto",
+                "ut": "optio",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DatastreamProjectsLocationsConnectionProfilesCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -122,13 +126,15 @@ func main() {
     if res.Operation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `DatastreamProjectsLocationsConnectionProfilesCreate` - Use this method to create a connection profile in a project and location.
 * `DatastreamProjectsLocationsConnectionProfilesDiscover` - Use this method to discover a connection profile. The discover API call exposes the data objects and metadata belonging to the profile. Typically, a request returns children data objects of a parent data object that's optionally supplied in the request.
@@ -150,7 +156,6 @@ func main() {
 * `DatastreamProjectsLocationsStreamsObjectsStartBackfillJob` - Use this method to start a backfill job for the specified stream object.
 * `DatastreamProjectsLocationsStreamsObjectsStopBackfillJob` - Use this method to stop a backfill job for the specified stream object.
 * `DatastreamProjectsLocationsStreamsPatch` - Use this method to update the configuration of a stream.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

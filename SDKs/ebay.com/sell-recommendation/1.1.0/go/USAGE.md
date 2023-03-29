@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.FindListingRecommendationsRequest{
         Security: operations.FindListingRecommendationsSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,22 +20,23 @@ func main() {
             },
         },
         QueryParams: operations.FindListingRecommendationsQueryParams{
-            Filter: "sit",
-            Limit: "voluptas",
-            Offset: "culpa",
+            Filter: "unde",
+            Limit: "deserunt",
+            Offset: "porro",
         },
         Headers: operations.FindListingRecommendationsHeaders{
-            XEBAYCMARKETPLACEID: "expedita",
+            XEbayCMarketplaceID: "nulla",
         },
         Request: &shared.FindListingRecommendationRequest{
             ListingIds: []string{
-                "dolor",
-                "expedita",
-                "voluptas",
+                "vero",
+                "perspiciatis",
+                "nulla",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.ListingRecommendation.FindListingRecommendations(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -42,5 +45,6 @@ func main() {
     if res.PagedListingRecommendationCollection != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

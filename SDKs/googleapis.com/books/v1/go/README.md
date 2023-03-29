@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/books/v1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BooksBookshelvesGetRequest{
         Security: operations.BooksBookshelvesGetSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,25 +34,26 @@ func main() {
             },
         },
         PathParams: operations.BooksBookshelvesGetPathParams{
-            Shelf: "sit",
-            UserID: "voluptas",
+            Shelf: "unde",
+            UserID: "deserunt",
         },
         QueryParams: operations.BooksBookshelvesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "expedita",
-            Alt: "proto",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            AccessToken: "nulla",
+            Alt: "media",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            Source: "rerum",
-            UploadType: "dicta",
-            UploadProtocol: "debitis",
+            QuotaUser: "fuga",
+            Source: "facilis",
+            UploadType: "eum",
+            UploadProtocol: "iusto",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Bookshelves.BooksBookshelvesGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -59,35 +62,37 @@ func main() {
     if res.Bookshelf != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### bookshelves
+
+### Bookshelves
 
 * `BooksBookshelvesGet` - Retrieves metadata for a specific bookshelf for the specified user.
 * `BooksBookshelvesList` - Retrieves a list of public bookshelves for the specified user.
 * `BooksBookshelvesVolumesList` - Retrieves volumes in a specific bookshelf for the specified user.
 
-### cloudloading
+### Cloudloading
 
 * `BooksCloudloadingAddBook` - Add a user-upload volume and triggers processing.
 * `BooksCloudloadingDeleteBook` - Remove the book and its contents
 * `BooksCloudloadingUpdateBook` - Updates a user-upload volume.
 
-### dictionary
+### Dictionary
 
 * `BooksDictionaryListOfflineMetadata` - Returns a list of offline dictionary metadata available
 
-### familysharing
+### Familysharing
 
 * `BooksFamilysharingGetFamilyInfo` - Gets information regarding the family that the user is part of.
 * `BooksFamilysharingShare` - Initiates sharing of the content with the user's family. Empty response indicates success.
 * `BooksFamilysharingUnshare` - Initiates revoking content that has already been shared with the user's family. Empty response indicates success.
 
-### layers
+### Layers
 
 * `BooksLayersAnnotationDataGet` - Gets the annotation data.
 * `BooksLayersAnnotationDataList` - Gets the annotation data for a volume and layer.
@@ -96,7 +101,7 @@ func main() {
 * `BooksLayersVolumeAnnotationsGet` - Gets the volume annotation.
 * `BooksLayersVolumeAnnotationsList` - Gets the volume annotations for a volume and layer.
 
-### myconfig
+### Myconfig
 
 * `BooksMyconfigGetUserSettings` - Gets the current settings for the user.
 * `BooksMyconfigReleaseDownloadAccess` - Release downloaded content access restriction.
@@ -104,7 +109,7 @@ func main() {
 * `BooksMyconfigSyncVolumeLicenses` - Request downloaded content access for specified volumes on the My eBooks shelf.
 * `BooksMyconfigUpdateUserSettings` - Sets the settings for the user. If a sub-object is specified, it will overwrite the existing sub-object stored in the server. Unspecified sub-objects will retain the existing value.
 
-### mylibrary
+### Mylibrary
 
 * `BooksMylibraryAnnotationsDelete` - Deletes an annotation.
 * `BooksMylibraryAnnotationsInsert` - Inserts a new annotation.
@@ -121,31 +126,31 @@ func main() {
 * `BooksMylibraryReadingpositionsGet` - Retrieves my reading position information for a volume.
 * `BooksMylibraryReadingpositionsSetPosition` - Sets my reading position information for a volume.
 
-### notification
+### Notification
 
 * `BooksNotificationGet` - Returns notification details for a given notification id.
 
-### onboarding
+### Onboarding
 
 * `BooksOnboardingListCategories` - List categories for onboarding experience.
 * `BooksOnboardingListCategoryVolumes` - List available volumes under categories for onboarding experience.
 
-### personalizedstream
+### Personalizedstream
 
 * `BooksPersonalizedstreamGet` - Returns a stream of personalized book clusters
 
-### promooffer
+### Promooffer
 
 * `BooksPromoofferAccept` - Accepts the promo offer.
 * `BooksPromoofferDismiss` - Marks the promo offer as dismissed.
 * `BooksPromoofferGet` - Returns a list of promo offers available to the user
 
-### series
+### Series
 
 * `BooksSeriesGet` - Returns Series metadata for the given series ids.
 * `BooksSeriesMembershipGet` - Returns Series membership data given the series id.
 
-### volumes
+### Volumes
 
 * `BooksVolumesAssociatedList` - Return a list of associated books.
 * `BooksVolumesGet` - Gets volume information for a single volume.
@@ -154,7 +159,6 @@ func main() {
 * `BooksVolumesRecommendedList` - Return a list of recommended books for the current user.
 * `BooksVolumesRecommendedRate` - Rate a recommended book for the current user.
 * `BooksVolumesUseruploadedList` - Return a list of books uploaded by the current user.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -3,59 +3,58 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateEnvironmentEc2Request{
         Headers: operations.CreateEnvironmentEc2Headers{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2",
         },
         Request: shared.CreateEnvironmentEc2Request{
-            AutomaticStopTimeMinutes: 8274930044578894929,
-            ClientRequestToken: "et",
-            ConnectionType: "CONNECT_SSH",
-            Description: "rerum",
+            AutomaticStopTimeMinutes: 423655,
+            ClientRequestToken: "fuga",
+            ConnectionType: "CONNECT_SSM",
+            Description: "eum",
             DryRun: false,
-            ImageID: "debitis",
-            InstanceType: "voluptatum",
-            Name: "et",
-            OwnerArn: "ut",
-            SubnetID: "dolorem",
+            ImageID: "iusto",
+            InstanceType: "ullam",
+            Name: "saepe",
+            OwnerArn: "inventore",
+            SubnetID: "sapiente",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "voluptate",
-                    Value: "iste",
+                    Key: "eum",
+                    Value: "voluptatum",
                 },
                 shared.Tag{
-                    Key: "vitae",
-                    Value: "totam",
+                    Key: "autem",
+                    Value: "vel",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateEnvironmentEc2(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -64,5 +63,6 @@ func main() {
     if res.CreateEnvironmentEc2Result != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,118 +3,146 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
-    req := operations.AddLfTagsToResourceRequest{
-        Headers: operations.AddLfTagsToResourceHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
-            XAmzTarget: "AWSLakeFormation.AddLFTagsToResource",
+    req := operations.AddLFTagsToResourceRequest{
+        Headers: operations.AddLFTagsToResourceHeaders{
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
         },
-        Request: shared.AddLfTagsToResourceRequest{
-            CatalogID: "fugit",
-            LFTags: []shared.LfTagPair{
-                shared.LfTagPair{
-                    CatalogID: "nihil",
-                    TagKey: "rerum",
+        Request: operations.AddLFTagsToResourceRequestBody{
+            CatalogID: "nulla",
+            LFTags: []shared.LFTagPair{
+                shared.LFTagPair{
+                    CatalogID: "fuga",
+                    TagKey: "facilis",
                     TagValues: []string{
-                        "debitis",
+                        "iusto",
+                        "ullam",
+                    },
+                },
+                shared.LFTagPair{
+                    CatalogID: "saepe",
+                    TagKey: "inventore",
+                    TagValues: []string{
+                        "enim",
+                        "eum",
                         "voluptatum",
-                        "et",
+                        "autem",
                     },
                 },
             },
-            Resource: shared.Resource{
+            Resource: operations.AddLFTagsToResourceRequestBodyResource{
                 Catalog: map[string]interface{}{
-                    "dolorem": "et",
-                    "voluptate": "iste",
-                    "vitae": "totam",
+                    "non": "deleniti",
+                    "similique": "reprehenderit",
+                    "molestiae": "quo",
+                    "quasi": "laboriosam",
+                },
+                DataCellsFilter: &shared.DataCellsFilterResource{
+                    DatabaseName: "dicta",
+                    Name: "est",
+                    TableCatalogID: "voluptatem",
+                    TableName: "consequatur",
                 },
                 DataLocation: &shared.DataLocationResource{
-                    CatalogID: "dolores",
-                    ResourceArn: "illum",
+                    CatalogID: "fugiat",
+                    ResourceArn: "a",
                 },
                 Database: &shared.DatabaseResource{
-                    CatalogID: "debitis",
-                    Name: "vel",
+                    CatalogID: "omnis",
+                    Name: "eos",
                 },
-                LFTag: &shared.LfTagKeyResource{
-                    CatalogID: "odio",
-                    TagKey: "dolore",
+                LFTag: &shared.LFTagKeyResource{
+                    CatalogID: "accusamus",
+                    TagKey: "accusamus",
                     TagValues: []string{
-                        "aspernatur",
-                        "accusantium",
+                        "rem",
+                        "quibusdam",
+                        "et",
+                        "praesentium",
                     },
                 },
-                LFTagPolicy: &shared.LfTagPolicyResource{
-                    CatalogID: "totam",
-                    Expression: []shared.LfTag{
-                        shared.LfTag{
-                            TagKey: "quis",
+                LFTagPolicy: &shared.LFTagPolicyResource{
+                    CatalogID: "occaecati",
+                    Expression: []shared.LFTag{
+                        shared.LFTag{
+                            TagKey: "soluta",
                             TagValues: []string{
-                                "aut",
-                                "odit",
+                                "quisquam",
                             },
                         },
-                        shared.LfTag{
-                            TagKey: "non",
+                        shared.LFTag{
+                            TagKey: "rerum",
                             TagValues: []string{
-                                "omnis",
+                                "qui",
+                                "sed",
+                                "rerum",
+                            },
+                        },
+                        shared.LFTag{
+                            TagKey: "possimus",
+                            TagValues: []string{
+                                "odit",
+                                "esse",
+                                "rem",
+                            },
+                        },
+                        shared.LFTag{
+                            TagKey: "voluptatem",
+                            TagValues: []string{
+                                "est",
                             },
                         },
                     },
-                    ResourceType: "DATABASE",
+                    ResourceType: "TABLE",
                 },
                 Table: &shared.TableResource{
-                    CatalogID: "illo",
-                    DatabaseName: "sed",
-                    Name: "officiis",
+                    CatalogID: "blanditiis",
+                    DatabaseName: "numquam",
+                    Name: "similique",
                     TableWildcard: map[string]interface{}{
-                        "consectetur": "nobis",
-                        "odio": "qui",
+                        "sit": "quia",
                     },
                 },
                 TableWithColumns: &shared.TableWithColumnsResource{
-                    CatalogID: "recusandae",
+                    CatalogID: "et",
                     ColumnNames: []string{
-                        "ipsum",
-                        "eveniet",
+                        "laborum",
                     },
                     ColumnWildcard: &shared.ColumnWildcard{
                         ExcludedColumnNames: []string{
-                            "sint",
-                            "inventore",
+                            "et",
                         },
                     },
-                    DatabaseName: "ut",
-                    Name: "exercitationem",
+                    DatabaseName: "iure",
+                    Name: "earum",
                 },
             },
         },
     }
-    
-    res, err := s.AddLfTagsToResource(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AddLFTagsToResource(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -122,5 +150,6 @@ func main() {
     if res.AddLFTagsToResourceResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

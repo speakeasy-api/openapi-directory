@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,20 +12,21 @@ import (
 
 func main() {
     s := sdk.New()
-    
-    req := operations.DeleteAeAssessmentRequest{
-        PathParams: operations.DeleteAeAssessmentPathParams{
-            AEAssessmentID: "sit",
-            EmployeeID: "voluptas",
-            EmployerID: "culpa",
+
+    req := operations.DeleteAEAssessmentRequest{
+        PathParams: operations.DeleteAEAssessmentPathParams{
+            AEAssessmentID: "unde",
+            EmployeeID: "deserunt",
+            EmployerID: "porro",
         },
-        Headers: operations.DeleteAeAssessmentHeaders{
-            APIVersion: "expedita",
-            Authorization: "consequuntur",
+        Headers: operations.DeleteAEAssessmentHeaders{
+            APIVersion: "nulla",
+            Authorization: "id",
         },
     }
-    
-    res, err := s.AEAssessment.DeleteAeAssessment(ctx, req)
+
+    ctx := context.Background()
+    res, err := s.AEAssessment.DeleteAEAssessment(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -31,5 +34,6 @@ func main() {
     if res.StatusCode == http.StatusOK {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

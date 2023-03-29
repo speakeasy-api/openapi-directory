@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/googleapis.com/binaryauthorization/v1beta1/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,6 +14,8 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -21,7 +23,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BinaryauthorizationProjectsAttestorsCreateRequest{
         Security: operations.BinaryauthorizationProjectsAttestorsCreateSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -32,61 +34,71 @@ func main() {
             },
         },
         PathParams: operations.BinaryauthorizationProjectsAttestorsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BinaryauthorizationProjectsAttestorsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            AttestorID: "consequuntur",
-            Callback: "dolor",
-            Fields: "expedita",
-            Key: "voluptas",
-            OauthToken: "fugit",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            AttestorID: "id",
+            Callback: "vero",
+            Fields: "perspiciatis",
+            Key: "nulla",
+            OauthToken: "nihil",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            QuotaUser: "fuga",
+            UploadType: "facilis",
+            UploadProtocol: "eum",
         },
         Request: &shared.AttestorInput{
-            Description: "debitis",
-            Etag: "voluptatum",
-            Name: "et",
+            Description: "iusto",
+            Etag: "ullam",
+            Name: "saepe",
             UserOwnedDrydockNote: &shared.UserOwnedDrydockNoteInput{
-                NoteReference: "ut",
+                NoteReference: "inventore",
                 PublicKeys: []shared.AttestorPublicKey{
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "et",
-                        Comment: "voluptate",
-                        ID: "iste",
+                        ASCIIArmoredPgpPublicKey: "enim",
+                        Comment: "eum",
+                        ID: "voluptatum",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "vitae",
+                            PublicKeyPem: "autem",
+                            SignatureAlgorithm: "ECDSA_P384_SHA384",
+                        },
+                    },
+                    shared.AttestorPublicKey{
+                        ASCIIArmoredPgpPublicKey: "non",
+                        Comment: "deleniti",
+                        ID: "similique",
+                        PkixPublicKey: &shared.PkixPublicKey{
+                            PublicKeyPem: "reprehenderit",
                             SignatureAlgorithm: "ECDSA_P521_SHA512",
                         },
                     },
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "dolores",
-                        Comment: "illum",
-                        ID: "debitis",
+                        ASCIIArmoredPgpPublicKey: "quo",
+                        Comment: "quasi",
+                        ID: "laboriosam",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "vel",
-                            SignatureAlgorithm: "EC_SIGN_P256_SHA256",
+                            PublicKeyPem: "dicta",
+                            SignatureAlgorithm: "RSA_SIGN_PKCS1_4096_SHA512",
                         },
                     },
                     shared.AttestorPublicKey{
-                        ASCIIArmoredPgpPublicKey: "dolore",
-                        Comment: "id",
-                        ID: "aspernatur",
+                        ASCIIArmoredPgpPublicKey: "voluptatem",
+                        Comment: "consequatur",
+                        ID: "fugiat",
                         PkixPublicKey: &shared.PkixPublicKey{
-                            PublicKeyPem: "accusantium",
-                            SignatureAlgorithm: "ECDSA_P256_SHA256",
+                            PublicKeyPem: "a",
+                            SignatureAlgorithm: "EC_SIGN_P256_SHA256",
                         },
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.BinaryauthorizationProjectsAttestorsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -95,13 +107,15 @@ func main() {
     if res.Attestor != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### projects
+
+### Projects
 
 * `BinaryauthorizationProjectsAttestorsCreate` - Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the attestor already exists.
 * `BinaryauthorizationProjectsAttestorsDelete` - Deletes an attestor. Returns NOT_FOUND if the attestor does not exist.
@@ -112,10 +126,9 @@ func main() {
 * `BinaryauthorizationProjectsPolicySetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 * `BinaryauthorizationProjectsPolicyTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 
-### systempolicy
+### Systempolicy
 
 * `BinaryauthorizationSystempolicyGetPolicy` - Gets the current system policy in the specified location.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

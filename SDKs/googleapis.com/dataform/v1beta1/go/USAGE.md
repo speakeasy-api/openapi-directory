@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DataformProjectsLocationsListRequest{
         Security: operations.DataformProjectsLocationsListSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,27 +23,28 @@ func main() {
             },
         },
         PathParams: operations.DataformProjectsLocationsListPathParams{
-            Name: "sit",
+            Name: "unde",
         },
         QueryParams: operations.DataformProjectsLocationsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Filter: "expedita",
-            IncludeUnrevealedLocations: true,
-            Key: "fugit",
-            OauthToken: "et",
-            PageSize: 2661732831099943416,
-            PageToken: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Filter: "perspiciatis",
+            IncludeUnrevealedLocations: false,
+            Key: "nulla",
+            OauthToken: "nihil",
+            PageSize: 623564,
+            PageToken: "facilis",
             PrettyPrint: false,
-            QuotaUser: "debitis",
-            UploadType: "voluptatum",
-            UploadProtocol: "et",
+            QuotaUser: "eum",
+            UploadType: "iusto",
+            UploadProtocol: "ullam",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DataformProjectsLocationsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -50,5 +53,6 @@ func main() {
     if res.ListLocationsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

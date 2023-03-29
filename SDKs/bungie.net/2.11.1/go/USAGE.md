@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,8 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
+    ctx := context.Background()
     res, err := s.DotGetAvailableLocales(ctx)
     if err != nil {
         log.Fatal(err)
@@ -19,5 +22,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

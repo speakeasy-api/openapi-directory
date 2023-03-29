@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetOrderRequest{
         Security: operations.GetOrderSecurity{
             APIAuth: shared.SchemeAPIAuth{
@@ -18,13 +20,14 @@ func main() {
             },
         },
         PathParams: operations.GetOrderPathParams{
-            OrderID: "sit",
+            OrderID: "unde",
         },
         QueryParams: operations.GetOrderQueryParams{
-            FieldGroups: "voluptas",
+            FieldGroups: "deserunt",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Order.GetOrder(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -33,5 +36,6 @@ func main() {
     if res.Order != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,19 +12,20 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetAccessTokensAccessTokensRequest{
         PathParams: operations.GetAccessTokensAccessTokensPathParams{
-            AccessTokens: "sit",
+            AccessTokens: "unde",
         },
         QueryParams: operations.GetAccessTokensAccessTokensQueryParams{
-            Callback: "voluptas",
-            Filter: "culpa",
-            Page: 501233450539197794,
-            Pagesize: 3390393562759376202,
+            Callback: "deserunt",
+            Filter: "porro",
+            Page: 844266,
+            Pagesize: 602763,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetAccessTokensAccessTokens(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -31,5 +34,6 @@ func main() {
     if res.Body != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

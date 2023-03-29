@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.BillingbudgetsBillingAccountsBudgetsCreateRequest{
         Security: operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity{
             Option1: &operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1{
@@ -23,110 +25,112 @@ func main() {
             },
         },
         PathParams: operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput{
             Budget: &shared.GoogleCloudBillingBudgetsV1beta1BudgetInput{
                 AllUpdatesRule: &shared.GoogleCloudBillingBudgetsV1beta1AllUpdatesRule{
                     DisableDefaultIamRecipients: false,
                     MonitoringNotificationChannels: []string{
-                        "voluptatum",
+                        "iusto",
+                        "ullam",
                     },
-                    PubsubTopic: "et",
-                    SchemaVersion: "ut",
+                    PubsubTopic: "saepe",
+                    SchemaVersion: "inventore",
                 },
                 Amount: &shared.GoogleCloudBillingBudgetsV1beta1BudgetAmount{
                     LastPeriodAmount: map[string]interface{}{
-                        "et": "voluptate",
-                        "iste": "vitae",
-                        "totam": "dolores",
+                        "enim": "eum",
+                        "voluptatum": "autem",
+                        "vel": "non",
+                        "deleniti": "similique",
                     },
                     SpecifiedAmount: &shared.GoogleTypeMoney{
-                        CurrencyCode: "illum",
-                        Nanos: 6392442863481646880,
-                        Units: "vel",
+                        CurrencyCode: "reprehenderit",
+                        Nanos: 925597,
+                        Units: "quo",
                     },
                 },
                 BudgetFilter: &shared.GoogleCloudBillingBudgetsV1beta1Filter{
                     CalendarPeriod: "CALENDAR_PERIOD_UNSPECIFIED",
                     CreditTypes: []string{
-                        "id",
-                        "aspernatur",
+                        "dicta",
+                        "est",
                     },
                     CreditTypesTreatment: "CREDIT_TYPES_TREATMENT_UNSPECIFIED",
                     CustomPeriod: &shared.GoogleCloudBillingBudgetsV1beta1CustomPeriod{
                         EndDate: &shared.GoogleTypeDate{
-                            Day: 1395437218309923052,
-                            Month: 6745438398739480977,
-                            Year: 2897681629866238117,
+                            Day: 368241,
+                            Month: 832620,
+                            Year: 957156,
                         },
                         StartDate: &shared.GoogleTypeDate{
-                            Day: 3398579248012586914,
-                            Month: 5974317550424871033,
-                            Year: 3317123977833389635,
+                            Day: 778157,
+                            Month: 140350,
+                            Year: 870013,
                         },
                     },
                     Labels: map[string][]interface{}{
-                        "voluptas": []interface{}{
-                            "aut",
-                            "illo",
+                        "reiciendis": []interface{}{
+                            "quibusdam",
+                            "et",
                         },
-                        "sed": []interface{}{
-                            "autem",
-                            "consectetur",
+                        "praesentium": []interface{}{
+                            "dolor",
+                            "soluta",
+                            "sed",
                         },
-                        "nobis": []interface{}{
+                        "quisquam": []interface{}{
+                            "culpa",
                             "qui",
+                            "sed",
+                        },
+                        "rerum": []interface{}{
+                            "occaecati",
+                            "odit",
+                            "esse",
+                            "rem",
                         },
                     },
                     Projects: []string{
-                        "at",
-                        "ipsum",
-                        "eveniet",
+                        "amet",
+                        "est",
                     },
                     Services: []string{
-                        "sint",
-                        "inventore",
+                        "blanditiis",
+                        "numquam",
+                        "similique",
                     },
                     Subaccounts: []string{
-                        "exercitationem",
-                        "aut",
-                        "reprehenderit",
+                        "sit",
                     },
                 },
-                DisplayName: "tempore",
-                Etag: "maiores",
+                DisplayName: "quia",
+                Etag: "et",
                 ThresholdRules: []shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
                     shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
                         SpendBasis: "CURRENT_SPEND",
-                        ThresholdPercent: 23.200001,
-                    },
-                    shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
-                        SpendBasis: "FORECASTED_SPEND",
-                        ThresholdPercent: 69.199997,
-                    },
-                    shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
-                        SpendBasis: "BASIS_UNSPECIFIED",
-                        ThresholdPercent: 66.099998,
+                        ThresholdPercent: 2223.21,
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.BillingAccounts.BillingbudgetsBillingAccountsBudgetsCreate(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -135,5 +139,6 @@ func main() {
     if res.GoogleCloudBillingBudgetsV1beta1Budget != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

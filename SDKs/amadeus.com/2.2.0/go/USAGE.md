@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,26 +12,27 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetFlightOffersRequest{
         QueryParams: operations.GetFlightOffersQueryParams{
-            Adults: 8717895732742165505,
-            Children: 2259404117704393152,
-            CurrencyCode: "culpa",
-            DepartureDate: "2019-04-21",
-            DestinationLocationCode: "consequuntur",
-            ExcludedAirlineCodes: "dolor",
-            IncludedAirlineCodes: "expedita",
-            Infants: 6044372234677422456,
-            Max: 8274930044578894929,
-            MaxPrice: 1543572285742637646,
-            NonStop: true,
-            OriginLocationCode: "rerum",
-            ReturnDate: "2004-06-02",
-            TravelClass: "ECONOMY",
+            Adults: 548814,
+            Children: 592845,
+            CurrencyCode: "porro",
+            DepartureDate: "2022-05-25",
+            DestinationLocationCode: "id",
+            ExcludedAirlineCodes: "vero",
+            IncludedAirlineCodes: "perspiciatis",
+            Infants: 847252,
+            Max: 423655,
+            MaxPrice: 623564,
+            NonStop: false,
+            OriginLocationCode: "facilis",
+            ReturnDate: "2022-11-09",
+            TravelClass: "PREMIUM_ECONOMY",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Shopping.GetFlightOffers(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -38,5 +41,6 @@ func main() {
     if res.Success != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

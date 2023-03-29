@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.CloudassetAssetsListRequest{
         Security: operations.CloudassetAssetsListSecurity{
             Oauth2: shared.SchemeOauth2{
@@ -21,32 +23,33 @@ func main() {
             },
         },
         PathParams: operations.CloudassetAssetsListPathParams{
-            Parent: "sit",
+            Parent: "unde",
         },
         QueryParams: operations.CloudassetAssetsListQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
             AssetTypes: []string{
-                "dolor",
-                "expedita",
-                "voluptas",
+                "vero",
+                "perspiciatis",
+                "nulla",
             },
-            Callback: "fugit",
+            Callback: "nihil",
             ContentType: "ORG_POLICY",
-            Fields: "nihil",
-            Key: "rerum",
-            OauthToken: "dicta",
-            PageSize: 2518412263346885298,
-            PageToken: "voluptatum",
+            Fields: "facilis",
+            Key: "eum",
+            OauthToken: "iusto",
+            PageSize: 297534,
+            PageToken: "saepe",
             PrettyPrint: false,
-            QuotaUser: "ut",
-            ReadTime: "dolorem",
-            UploadType: "et",
-            UploadProtocol: "voluptate",
+            QuotaUser: "inventore",
+            ReadTime: "sapiente",
+            UploadType: "enim",
+            UploadProtocol: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Assets.CloudassetAssetsList(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -55,5 +58,6 @@ func main() {
     if res.ListAssetsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

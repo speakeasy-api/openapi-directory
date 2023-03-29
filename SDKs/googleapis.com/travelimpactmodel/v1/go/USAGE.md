@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,60 +12,61 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.TravelimpactmodelFlightsComputeFlightEmissionsRequest{
         QueryParams: operations.TravelimpactmodelFlightsComputeFlightEmissionsQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.ComputeFlightEmissionsRequest{
             Flights: []shared.Flight{
                 shared.Flight{
                     DepartureDate: &shared.Date{
-                        Day: 7837839688282259259,
-                        Month: 2518412263346885298,
-                        Year: 5617773211005988520,
+                        Day: 384382,
+                        Month: 437587,
+                        Year: 297534,
                     },
-                    Destination: "et",
-                    FlightNumber: 7144924247938981575,
-                    OperatingCarrierCode: "dolorem",
-                    Origin: "et",
+                    Destination: "saepe",
+                    FlightNumber: 56713,
+                    OperatingCarrierCode: "sapiente",
+                    Origin: "enim",
                 },
                 shared.Flight{
                     DepartureDate: &shared.Date{
-                        Day: 7373105480197164748,
-                        Month: 3287288577352441706,
-                        Year: 3930927879439176946,
+                        Day: 383441,
+                        Month: 477665,
+                        Year: 791725,
                     },
-                    Destination: "totam",
-                    FlightNumber: 2217592893536642650,
-                    OperatingCarrierCode: "illum",
-                    Origin: "debitis",
+                    Destination: "vel",
+                    FlightNumber: 528895,
+                    OperatingCarrierCode: "deleniti",
+                    Origin: "similique",
                 },
                 shared.Flight{
                     DepartureDate: &shared.Date{
-                        Day: 3706853784096366226,
-                        Month: 2627038740284806767,
-                        Year: 6303220950515014660,
+                        Day: 392785,
+                        Month: 925597,
+                        Year: 836079,
                     },
-                    Destination: "id",
-                    FlightNumber: 959367522974354090,
-                    OperatingCarrierCode: "accusantium",
-                    Origin: "totam",
+                    Destination: "quasi",
+                    FlightNumber: 337396,
+                    OperatingCarrierCode: "dicta",
+                    Origin: "est",
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Flights.TravelimpactmodelFlightsComputeFlightEmissions(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -72,5 +75,6 @@ func main() {
     if res.ComputeFlightEmissionsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

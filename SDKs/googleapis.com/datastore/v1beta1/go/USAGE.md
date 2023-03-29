@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatastoreProjectsExportRequest{
         Security: operations.DatastoreProjectsExportSecurity{
             Option1: &operations.DatastoreProjectsExportSecurityOption1{
@@ -23,43 +25,43 @@ func main() {
             },
         },
         PathParams: operations.DatastoreProjectsExportPathParams{
-            ProjectID: "sit",
+            ProjectID: "unde",
         },
         QueryParams: operations.DatastoreProjectsExportQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.GoogleDatastoreAdminV1beta1ExportEntitiesRequest{
             EntityFilter: &shared.GoogleDatastoreAdminV1beta1EntityFilter{
                 Kinds: []string{
-                    "debitis",
-                    "voluptatum",
-                    "et",
+                    "iusto",
+                    "ullam",
                 },
                 NamespaceIds: []string{
-                    "dolorem",
-                    "et",
-                    "voluptate",
+                    "inventore",
+                    "sapiente",
+                    "enim",
+                    "eum",
                 },
             },
             Labels: map[string]string{
-                "vitae": "totam",
-                "dolores": "illum",
-                "debitis": "vel",
+                "autem": "vel",
+                "non": "deleniti",
             },
-            OutputURLPrefix: "odio",
+            OutputURLPrefix: "similique",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DatastoreProjectsExport(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -68,5 +70,6 @@ func main() {
     if res.GoogleLongrunningOperation != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

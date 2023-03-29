@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.GetCallLogsRequest{
         Security: operations.GetCallLogsSecurity{
             BearerAuth: shared.SchemeBearerAuth{
@@ -18,23 +20,24 @@ func main() {
             },
         },
         PathParams: operations.GetCallLogsPathParams{
-            AccountID: "sit",
+            AccountID: "unde",
         },
         QueryParams: operations.GetCallLogsQueryParams{
-            DestinationUser: "voluptas",
+            DestinationUser: "deserunt",
             Direction: "Outbound",
-            EndGte: "expedita",
-            EndLte: "consequuntur",
-            From: "dolor",
-            Page: 67.199997,
-            PageSize: 88.099998,
+            EndGte: "nulla",
+            EndLte: "id",
+            From: "vero",
+            Page: 5448.83,
+            PageSize: 8472.52,
             SourceUser: "nihil",
-            StartGte: "rerum",
-            StartLte: "dicta",
-            To: "debitis",
+            StartGte: "fuga",
+            StartLte: "facilis",
+            To: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.GetCallLogs(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -43,5 +46,6 @@ func main() {
     if res.CallLogsHalResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

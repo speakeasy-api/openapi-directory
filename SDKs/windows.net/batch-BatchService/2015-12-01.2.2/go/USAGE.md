@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,22 +12,23 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ApplicationGetRequest{
         PathParams: operations.ApplicationGetPathParams{
-            ApplicationID: "sit",
+            ApplicationID: "unde",
         },
         QueryParams: operations.ApplicationGetQueryParams{
-            APIVersion: "voluptas",
-            Timeout: 6050128673802995827,
+            APIVersion: "deserunt",
+            Timeout: 715190,
         },
         Headers: operations.ApplicationGetHeaders{
-            ClientRequestID: "expedita",
-            OcpDate: "consequuntur",
+            ClientRequestID: "nulla",
+            OcpDate: "id",
             ReturnClientRequestID: false,
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Applications.ApplicationGet(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -34,5 +37,6 @@ func main() {
     if res.ApplicationSummary != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DriveactivityActivityQueryRequest{
         Security: operations.DriveactivityActivityQuerySecurity{
             Option1: &operations.DriveactivityActivityQuerySecurityOption1{
@@ -23,37 +25,40 @@ func main() {
             },
         },
         QueryParams: operations.DriveactivityActivityQueryQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            Callback: "expedita",
-            Fields: "consequuntur",
-            Key: "dolor",
-            OauthToken: "expedita",
-            PrettyPrint: true,
-            QuotaUser: "fugit",
-            UploadType: "et",
-            UploadProtocol: "nihil",
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            Callback: "nulla",
+            Fields: "id",
+            Key: "vero",
+            OauthToken: "perspiciatis",
+            PrettyPrint: false,
+            QuotaUser: "nulla",
+            UploadType: "nihil",
+            UploadProtocol: "fuga",
         },
         Request: &shared.QueryDriveActivityRequest{
-            AncestorName: "rerum",
+            AncestorName: "facilis",
             ConsolidationStrategy: &shared.ConsolidationStrategy{
                 Legacy: map[string]interface{}{
-                    "debitis": "voluptatum",
-                    "et": "ut",
-                    "dolorem": "et",
+                    "iusto": "ullam",
+                    "saepe": "inventore",
                 },
                 None: map[string]interface{}{
-                    "iste": "vitae",
+                    "enim": "eum",
+                    "voluptatum": "autem",
+                    "vel": "non",
+                    "deleniti": "similique",
                 },
             },
-            Filter: "totam",
-            ItemName: "dolores",
-            PageSize: 1929546706668609706,
-            PageToken: "debitis",
+            Filter: "reprehenderit",
+            ItemName: "molestiae",
+            PageSize: 836079,
+            PageToken: "quasi",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Activity.DriveactivityActivityQuery(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -62,5 +67,6 @@ func main() {
     if res.QueryDriveActivityResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

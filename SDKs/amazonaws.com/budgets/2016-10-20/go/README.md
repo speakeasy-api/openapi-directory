@@ -4,7 +4,7 @@
 ## SDK Installation
 
 ```bash
-go get openapi
+go get github.com/speakeasy-api/openapi-directory/SDKs/amazonaws.com/budgets/2016-10-20/go
 ```
 <!-- End SDK Installation -->
 
@@ -14,129 +14,169 @@ go get openapi
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.CreateBudgetRequest{
         Headers: operations.CreateBudgetHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AWSBudgetServiceGateway.CreateBudget",
         },
         Request: shared.CreateBudgetRequest{
-            AccountID: "fugit",
+            AccountID: "nihil",
             Budget: shared.Budget{
-                BudgetLimit: &shared.Spend{
-                    Amount: "et",
-                    Unit: "nihil",
+                AutoAdjustData: &shared.AutoAdjustData{
+                    AutoAdjustType: "FORECAST",
+                    HistoricalOptions: &shared.HistoricalOptions{
+                        BudgetAdjustmentPeriod: 645894,
+                        LookBackAvailablePeriods: 384382,
+                    },
+                    LastAutoAdjustTime: "2022-10-20T19:14:38.951Z",
                 },
-                BudgetName: "rerum",
+                BudgetLimit: &shared.Spend{
+                    Amount: "ullam",
+                    Unit: "saepe",
+                },
+                BudgetName: "inventore",
                 BudgetType: "SAVINGS_PLANS_COVERAGE",
                 CalculatedSpend: &shared.CalculatedSpend{
                     ActualSpend: shared.Spend{
-                        Amount: "debitis",
-                        Unit: "voluptatum",
+                        Amount: "enim",
+                        Unit: "eum",
                     },
                     ForecastedSpend: &shared.Spend{
-                        Amount: "et",
-                        Unit: "ut",
+                        Amount: "voluptatum",
+                        Unit: "autem",
                     },
                 },
                 CostFilters: map[string][]string{
-                    "et": []string{
-                        "iste",
+                    "non": []string{
+                        "similique",
+                        "reprehenderit",
                     },
-                    "vitae": []string{
-                        "dolores",
-                        "illum",
-                        "debitis",
+                    "molestiae": []string{
+                        "quasi",
+                        "laboriosam",
+                        "dicta",
+                        "est",
                     },
-                    "vel": []string{
-                        "dolore",
+                    "voluptatem": []string{
+                        "fugiat",
+                        "a",
+                    },
+                    "omnis": []string{
+                        "accusamus",
                     },
                 },
                 CostTypes: &shared.CostTypes{
                     IncludeCredit: false,
-                    IncludeDiscount: true,
-                    IncludeOtherSubscription: true,
+                    IncludeDiscount: false,
+                    IncludeOtherSubscription: false,
                     IncludeRecurring: false,
                     IncludeRefund: false,
-                    IncludeSubscription: true,
+                    IncludeSubscription: false,
                     IncludeSupport: false,
-                    IncludeTax: true,
-                    IncludeUpfront: true,
-                    UseAmortized: true,
+                    IncludeTax: false,
+                    IncludeUpfront: false,
+                    UseAmortized: false,
                     UseBlended: false,
                 },
-                LastUpdatedTime: "1987-09-29T10:21:53Z",
+                LastUpdatedTime: "2022-05-15T22:32:38.090Z",
                 PlannedBudgetLimits: map[string]shared.Spend{
-                    "illo": shared.Spend{
+                    "rem": shared.Spend{
+                        Amount: "quibusdam",
+                        Unit: "et",
+                    },
+                    "praesentium": shared.Spend{
+                        Amount: "occaecati",
+                        Unit: "dolor",
+                    },
+                    "soluta": shared.Spend{
                         Amount: "sed",
-                        Unit: "officiis",
+                        Unit: "quisquam",
+                    },
+                    "rerum": shared.Spend{
+                        Amount: "culpa",
+                        Unit: "qui",
                     },
                 },
                 TimePeriod: &shared.TimePeriod{
-                    End: "2017-04-22T14:51:53Z",
-                    Start: "1990-12-08T19:16:18Z",
+                    End: "2022-09-14T09:07:07.183Z",
+                    Start: "2022-04-18T17:12:30.698Z",
                 },
-                TimeUnit: "MONTHLY",
+                TimeUnit: "ANNUALLY",
             },
             NotificationsWithSubscribers: []shared.NotificationWithSubscribers{
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "LESS_THAN",
+                        ComparisonOperator: "GREATER_THAN",
                         NotificationState: "OK",
                         NotificationType: "ACTUAL",
-                        Threshold: 19.100000,
-                        ThresholdType: "ABSOLUTE_VALUE",
+                        Threshold: 2645.55,
+                        ThresholdType: "PERCENTAGE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "exercitationem",
+                            Address: "id",
                             SubscriptionType: "SNS",
                         },
                         shared.Subscriber{
-                            Address: "reprehenderit",
+                            Address: "numquam",
                             SubscriptionType: "EMAIL",
                         },
                         shared.Subscriber{
-                            Address: "maiores",
+                            Address: "dolores",
                             SubscriptionType: "SNS",
+                        },
+                        shared.Subscriber{
+                            Address: "quia",
+                            SubscriptionType: "EMAIL",
                         },
                     },
                 },
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "LESS_THAN",
+                        ComparisonOperator: "GREATER_THAN",
                         NotificationState: "ALARM",
-                        NotificationType: "FORECASTED",
-                        Threshold: 80.199997,
-                        ThresholdType: "ABSOLUTE_VALUE",
+                        NotificationType: "ACTUAL",
+                        Threshold: 6169.34,
+                        ThresholdType: "PERCENTAGE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "ex",
+                            Address: "ut",
+                            SubscriptionType: "EMAIL",
+                        },
+                        shared.Subscriber{
+                            Address: "qui",
                             SubscriptionType: "SNS",
+                        },
+                        shared.Subscriber{
+                            Address: "laborum",
+                            SubscriptionType: "SNS",
+                        },
+                        shared.Subscriber{
+                            Address: "ut",
+                            SubscriptionType: "EMAIL",
                         },
                     },
                 },
@@ -145,12 +185,20 @@ func main() {
                         ComparisonOperator: "GREATER_THAN",
                         NotificationState: "OK",
                         NotificationType: "FORECASTED",
-                        Threshold: 89.099998,
+                        Threshold: 6667.67,
                         ThresholdType: "ABSOLUTE_VALUE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "qui",
+                            Address: "ipsum",
+                            SubscriptionType: "SNS",
+                        },
+                        shared.Subscriber{
+                            Address: "ea",
+                            SubscriptionType: "SNS",
+                        },
+                        shared.Subscriber{
+                            Address: "placeat",
                             SubscriptionType: "SNS",
                         },
                     },
@@ -158,7 +206,8 @@ func main() {
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.CreateBudget(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -167,6 +216,7 @@ func main() {
     if res.CreateBudgetResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -188,16 +238,16 @@ func main() {
 * `DescribeBudgetActionHistories` -  Describes a budget action history detail. 
 * `DescribeBudgetActionsForAccount` -  Describes all of the budget actions for an account. 
 * `DescribeBudgetActionsForBudget` -  Describes all of the budget actions for a budget. 
+* `DescribeBudgetNotificationsForAccount` -  Lists the budget names and notifications that are associated with an account. 
 * `DescribeBudgetPerformanceHistory` - Describes the history for <code>DAILY</code>, <code>MONTHLY</code>, and <code>QUARTERLY</code> budgets. Budget history isn't available for <code>ANNUAL</code> budgets.
 * `DescribeBudgets` - <p>Lists the budgets that are associated with an account.</p> <important> <p>The Request Syntax section shows the <code>BudgetLimit</code> syntax. For <code>PlannedBudgetLimits</code>, see the <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_DescribeBudgets.html#API_DescribeBudgets_Examples">Examples</a> section. </p> </important>
 * `DescribeNotificationsForBudget` - Lists the notifications that are associated with a budget.
 * `DescribeSubscribersForNotification` - Lists the subscribers that are associated with a notification.
 * `ExecuteBudgetAction` -  Executes a budget action. 
-* `UpdateBudget` - <p>Updates a budget. You can change every part of a budget except for the <code>budgetName</code> and the <code>calculatedSpend</code>. When you modify a budget, the <code>calculatedSpend</code> drops to zero until AWS has new usage data to use for forecasting.</p> <important> <p>Only one of <code>BudgetLimit</code> or <code>PlannedBudgetLimits</code> can be present in the syntax at one time. Use the syntax that matches your case. The Request Syntax section shows the <code>BudgetLimit</code> syntax. For <code>PlannedBudgetLimits</code>, see the <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_UpdateBudget.html#API_UpdateBudget_Examples">Examples</a> section. </p> </important>
+* `UpdateBudget` - <p>Updates a budget. You can change every part of a budget except for the <code>budgetName</code> and the <code>calculatedSpend</code>. When you modify a budget, the <code>calculatedSpend</code> drops to zero until Amazon Web Services has new usage data to use for forecasting.</p> <important> <p>Only one of <code>BudgetLimit</code> or <code>PlannedBudgetLimits</code> can be present in the syntax at one time. Use the syntax that matches your case. The Request Syntax section shows the <code>BudgetLimit</code> syntax. For <code>PlannedBudgetLimits</code>, see the <a href="https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_UpdateBudget.html#API_UpdateBudget_Examples">Examples</a> section. </p> </important>
 * `UpdateBudgetAction` -  Updates a budget action. 
 * `UpdateNotification` - Updates a notification.
 * `UpdateSubscriber` - Updates a subscriber.
-
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

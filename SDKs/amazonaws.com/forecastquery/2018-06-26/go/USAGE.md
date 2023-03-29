@@ -3,46 +3,47 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
 )
 
 func main() {
-    opts := []sdk.SDKOption{
-        sdk.WithSecurity(
-            shared.Security{
-                Hmac: shared.SchemeHmac{
-                    APIKey: "YOUR_API_KEY_HERE",
-                },
-            }
-        ),
-    }
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Hmac: shared.SchemeHmac{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    s := sdk.New(opts...)
-    
     req := operations.QueryForecastRequest{
         Headers: operations.QueryForecastHeaders{
-            XAmzAlgorithm: "sit",
-            XAmzContentSha256: "voluptas",
-            XAmzCredential: "culpa",
-            XAmzDate: "expedita",
-            XAmzSecurityToken: "consequuntur",
-            XAmzSignature: "dolor",
-            XAmzSignedHeaders: "expedita",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "deserunt",
+            XAmzCredential: "porro",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "id",
+            XAmzSignature: "vero",
+            XAmzSignedHeaders: "perspiciatis",
             XAmzTarget: "AmazonForecastRuntime.QueryForecast",
         },
         Request: shared.QueryForecastRequest{
-            EndDate: "fugit",
+            EndDate: "nihil",
             Filters: map[string]string{
-                "nihil": "rerum",
+                "facilis": "eum",
+                "iusto": "ullam",
+                "saepe": "inventore",
             },
-            ForecastArn: "dicta",
-            NextToken: "debitis",
-            StartDate: "voluptatum",
+            ForecastArn: "sapiente",
+            NextToken: "enim",
+            StartDate: "eum",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.QueryForecast(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -51,5 +52,6 @@ func main() {
     if res.QueryForecastResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

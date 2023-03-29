@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.LanguageDetectionsDetectRequest{
         Security: operations.LanguageDetectionsDetectSecurity{
             Option1: &operations.LanguageDetectionsDetectSecurityOption1{
@@ -23,27 +25,29 @@ func main() {
             },
         },
         QueryParams: operations.LanguageDetectionsDetectQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "voluptas",
-            Alt: "media",
-            BearerToken: "expedita",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            Pp: true,
+            DollarXgafv: "2",
+            AccessToken: "deserunt",
+            Alt: "proto",
+            BearerToken: "nulla",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            Pp: false,
             PrettyPrint: false,
             QuotaUser: "nihil",
-            UploadType: "rerum",
-            UploadProtocol: "dicta",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.DetectLanguageRequest{
             Q: []string{
-                "voluptatum",
+                "iusto",
+                "ullam",
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Detections.LanguageDetectionsDetect(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -52,5 +56,6 @@ func main() {
     if res.DetectionsListResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

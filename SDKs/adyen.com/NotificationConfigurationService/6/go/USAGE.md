@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,17 +12,43 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.PostCreateNotificationConfigurationRequest{
         Security: operations.PostCreateNotificationConfigurationSecurity{
-            BasicAuth: &shared.SchemeBasicAuth{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
+            APIKeyAuth: &shared.SchemeAPIKeyAuth{
+                APIKey: "YOUR_API_KEY_HERE",
             },
         },
-        Request: "sit",
+        Request: &shared.CreateNotificationConfigurationRequest{
+            ConfigurationDetails: shared.NotificationConfigurationDetails{
+                Active: false,
+                APIVersion: 548814,
+                Description: "deserunt",
+                EventConfigs: []shared.NotificationEventConfiguration{
+                    shared.NotificationEventConfiguration{
+                        EventType: "SCHEDULED_REFUNDS",
+                        IncludeMode: "INCLUDE",
+                    },
+                    shared.NotificationEventConfiguration{
+                        EventType: "SCHEDULED_REFUNDS",
+                        IncludeMode: "INCLUDE",
+                    },
+                    shared.NotificationEventConfiguration{
+                        EventType: "SCHEDULED_REFUNDS",
+                        IncludeMode: "EXCLUDE",
+                    },
+                },
+                HmacSignatureKey: "fuga",
+                NotificationID: 645894,
+                NotifyPassword: "eum",
+                NotifyURL: "iusto",
+                NotifyUsername: "ullam",
+                SslProtocol: "TLSv13",
+            },
+        },
     }
-    
+
+    ctx := context.Background()
     res, err := s.General.PostCreateNotificationConfiguration(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -29,5 +57,6 @@ func main() {
     if res.GetNotificationConfigurationResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

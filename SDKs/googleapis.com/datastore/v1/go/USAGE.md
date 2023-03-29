@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,7 +12,7 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.DatastoreProjectsAllocateIdsRequest{
         Security: operations.DatastoreProjectsAllocateIdsSecurity{
             Option1: &operations.DatastoreProjectsAllocateIdsSecurityOption1{
@@ -23,52 +25,72 @@ func main() {
             },
         },
         PathParams: operations.DatastoreProjectsAllocateIdsPathParams{
-            ProjectID: "sit",
+            ProjectID: "unde",
         },
         QueryParams: operations.DatastoreProjectsAllocateIdsQueryParams{
-            DollarXgafv: "1",
-            AccessToken: "culpa",
-            Alt: "media",
-            Callback: "consequuntur",
-            Fields: "dolor",
-            Key: "expedita",
-            OauthToken: "voluptas",
-            PrettyPrint: true,
-            QuotaUser: "et",
-            UploadType: "nihil",
-            UploadProtocol: "rerum",
+            DollarXgafv: "2",
+            AccessToken: "porro",
+            Alt: "proto",
+            Callback: "id",
+            Fields: "vero",
+            Key: "perspiciatis",
+            OauthToken: "nulla",
+            PrettyPrint: false,
+            QuotaUser: "nihil",
+            UploadType: "fuga",
+            UploadProtocol: "facilis",
         },
         Request: &shared.AllocateIdsRequest{
-            DatabaseID: "dicta",
+            DatabaseID: "eum",
             Keys: []shared.Key{
                 shared.Key{
                     PartitionID: &shared.PartitionID{
-                        DatabaseID: "voluptatum",
-                        NamespaceID: "et",
-                        ProjectID: "ut",
+                        DatabaseID: "ullam",
+                        NamespaceID: "saepe",
+                        ProjectID: "inventore",
                     },
                     Path: []shared.PathElement{
                         shared.PathElement{
-                            ID: "et",
-                            Kind: "voluptate",
-                            Name: "iste",
+                            ID: "enim",
+                            Kind: "eum",
+                            Name: "voluptatum",
                         },
                         shared.PathElement{
-                            ID: "vitae",
-                            Kind: "totam",
-                            Name: "dolores",
+                            ID: "autem",
+                            Kind: "vel",
+                            Name: "non",
                         },
                         shared.PathElement{
-                            ID: "illum",
-                            Kind: "debitis",
-                            Name: "vel",
+                            ID: "deleniti",
+                            Kind: "similique",
+                            Name: "reprehenderit",
+                        },
+                        shared.PathElement{
+                            ID: "molestiae",
+                            Kind: "quo",
+                            Name: "quasi",
+                        },
+                    },
+                },
+                shared.Key{
+                    PartitionID: &shared.PartitionID{
+                        DatabaseID: "laboriosam",
+                        NamespaceID: "dicta",
+                        ProjectID: "est",
+                    },
+                    Path: []shared.PathElement{
+                        shared.PathElement{
+                            ID: "consequatur",
+                            Kind: "fugiat",
+                            Name: "a",
                         },
                     },
                 },
             },
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Projects.DatastoreProjectsAllocateIds(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -77,5 +99,6 @@ func main() {
     if res.AllocateIdsResponse != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->

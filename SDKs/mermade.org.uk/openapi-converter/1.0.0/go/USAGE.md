@@ -3,6 +3,8 @@
 package main
 
 import (
+    "context"
+    "log"
     "openapi"
     "openapi/pkg/models/shared"
     "openapi/pkg/models/operations"
@@ -10,15 +12,16 @@ import (
 
 func main() {
     s := sdk.New()
-    
+
     req := operations.ConvertRequest{
         Request: &operations.ConvertRequestBody{
-            Filename: "sit",
-            Source: "voluptas",
+            Filename: "unde",
+            Source: "deserunt",
             Validate: "on",
         },
     }
-    
+
+    ctx := context.Background()
     res, err := s.Conversion.Convert(ctx, req)
     if err != nil {
         log.Fatal(err)
@@ -27,5 +30,6 @@ func main() {
     if res.Convert200ApplicationJSONAny != nil {
         // handle response
     }
+}
 ```
 <!-- End SDK Example Usage -->
