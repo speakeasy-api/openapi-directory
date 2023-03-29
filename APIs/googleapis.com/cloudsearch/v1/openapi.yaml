@@ -2188,7 +2188,7 @@ paths:
       - $ref: "#/components/parameters/uploadType"
   "/v1/{name}/lro":
     get:
-      description: "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id."
+      description: Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
       operationId: cloudsearch.operations.lro.list
       parameters:
         - description: The name of the operation's parent resource.
@@ -2516,7 +2516,7 @@ components:
       properties: {}
       type: object
     Annotation:
-      description: "NOTE WHEN ADDING NEW PROTO FIELDS: Be sure to add datapol annotations to new fields with potential PII, so they get scrubbed when logging protos for errors. NEXT TAG: 31"
+      description: "NOTE WHEN ADDING NEW PROTO FIELDS: Be sure to add datapol annotations to new fields with potential PII, so they get scrubbed when logging protos for errors. NEXT TAG: 32"
       properties:
         babelPlaceholderMetadata:
           $ref: "#/components/schemas/BabelPlaceholderMetadata"
@@ -2531,6 +2531,9 @@ components:
             - RENDER_IF_POSSIBLE
             - DO_NOT_RENDER
           type: string
+        componentSearchInfo:
+          $ref: "#/components/schemas/AppsDynamiteSharedMessageComponentSearchInfo"
+          description: "Contains additional metadata that further enhances the annotation when it is returned as part of search response. For example, this can be used to define how the annotation matches the search. Information can be used to highlight in rendering search results. The following are the different annotation text fields that can be highlighted by this field: 1. DriveMetadata.title 2. UploadMetadata.content_name 3. GsuiteIntegrationMetadata.TasksMessageIntegrationRenderData.title 4. GsuiteIntegrationMetadata.CalendarEventAnnotationData.title"
         consentedAppUnfurlMetadata:
           $ref: "#/components/schemas/ConsentedAppUnfurlMetadata"
         customEmojiMetadata:
@@ -3265,6 +3268,16 @@ components:
           description: Required. A URL, in the format "https://meet.google.com/*" (e.g. https://meet.google.com/cxv-zbgj-wzw), to identify and access the meeting space.
           type: string
       type: object
+    AppsDynamiteSharedMessageComponentSearchInfo:
+      description: Metadata used to describe search information in a specific component of a chat message, for example an annotation or an attachment.
+      properties:
+        matchedSearch:
+          description: Whether the whole component matched the search.
+          type: boolean
+        titleTextWithDescription:
+          $ref: "#/components/schemas/AppsDynamiteSharedTextWithDescription"
+          description: Backend should always set TextWithDescription.text_body based on the title (or its snippet) of the annotation or attachment.
+      type: object
     AppsDynamiteSharedMessageInfo:
       description: Information that references a Dynamite chat message. This is only used for Activity Feed messages.
       properties:
@@ -3496,6 +3509,41 @@ components:
     AppsDynamiteSharedTasksMessageIntegrationPayload:
       description: A payload containing Tasks metadata for rendering a live card. Currently not used by the Tasks integration.
       properties: {}
+      type: object
+    AppsDynamiteSharedTextSegment:
+      description: Defines a segment in a text.
+      properties:
+        length:
+          description: Length of the segment in the text.
+          format: int32
+          type: integer
+        startIndex:
+          description: Start index (0-indexed and inclusive) of the segment in the text.
+          format: int32
+          type: integer
+      type: object
+    AppsDynamiteSharedTextSegmentsWithDescription:
+      description: Defines text segments with description type associated.
+      properties:
+        descriptionType:
+          enum:
+            - DESCRIPTION_TYPE_UNSPECIFIED
+            - KEYWORD_MATCH
+          type: string
+        textSegment:
+          items:
+            $ref: "#/components/schemas/AppsDynamiteSharedTextSegment"
+          type: array
+      type: object
+    AppsDynamiteSharedTextWithDescription:
+      description: Defines a text with descriptive text segments associated.
+      properties:
+        textBody:
+          type: string
+        textSegmentsWithDescription:
+          items:
+            $ref: "#/components/schemas/AppsDynamiteSharedTextSegmentsWithDescription"
+          type: array
       type: object
     AppsDynamiteSharedUserBlockRelationship:
       description: User-block relationship
@@ -3909,6 +3957,9 @@ components:
         knownIcon:
           description: The icon specified by the string name of a list of known icons
           type: string
+        materialIcon:
+          $ref: "#/components/schemas/AppsDynamiteStorageMaterialIcon"
+          description: 'Display one of the [Google Material Icons](https://fonts.google.com/icons). For example, to display a [check box icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048), use "material_icon": { "name": "check_box" }'
       type: object
     AppsDynamiteStorageImage:
       description: An image that is specified by a URL and can have an onClick action.
@@ -3953,6 +4004,24 @@ components:
             - RECTANGLE_CUSTOM
             - RECTANGLE_4_3
           type: string
+      type: object
+    AppsDynamiteStorageMaterialIcon:
+      description: 'A [Google Font Icon](https://fonts.google.com/icons), which includes over 2500+ options. For example, to display a [check box icon](https://fonts.google.com/icons?selected=Material%20Symbols%20Outlined%3Acheck_box%3AFILL%400%3Bwght%40400%3BGRAD%400%3Bopsz%4048) with customized weight and grade, write { "name": "check_box", "fill": true, "weight": 300, "grade": -25 }'
+      properties:
+        fill:
+          description: Whether it renders a filled icon. Default value is false. See Customization in [Google Font Icon](https://fonts.google.com/icons) for details.
+          type: boolean
+        grade:
+          description: Weight and grade affect a symbol’s thickness. Adjustments to grade are more granular than adjustments to weight and have a small impact on the size of the symbol. Choose from {-25, 0, 200}. If absent, default value is 0. If any other value is specified, a broken image icon will be displayed. See Customization in [Google Font Icon](https://fonts.google.com/icons) for details.
+          format: int32
+          type: integer
+        name:
+          description: The icon name defined in the [Google Material Icon](https://fonts.google.com/icons) in snake_case. e.g. "check_box". Any invalid name will be trimmed as empty string result in the icon falied to render.
+          type: string
+        weight:
+          description: The stroke weight of the icon. Choose from {100, 200, 300, 400, 500, 600, 700}. If absent, default value is 400. If any other value is specified, a broken image icon will be displayed. See Customization in [Google Font Icon](https://fonts.google.com/icons) for details.
+          format: int32
+          type: integer
       type: object
     AppsDynamiteStorageOnClick:
       properties:
@@ -4737,6 +4806,7 @@ components:
               - ACCESS_TYPE_OPEN
               - ACCESS_TYPE_TRUSTED
               - ACCESS_TYPE_RESTRICTED
+              - ACCESS_TYPE_CLOSED
             type: string
           type: array
         availableReactions:
@@ -4817,6 +4887,7 @@ components:
             - ACCESS_TYPE_OPEN
             - ACCESS_TYPE_TRUSTED
             - ACCESS_TYPE_RESTRICTED
+            - ACCESS_TYPE_CLOSED
           type: string
         allowJoiningBeforeHost:
           description: Whether users can join this conference before a host (Host or Cohost).
@@ -5591,14 +5662,29 @@ components:
     Divider:
       properties: {}
       type: object
+    DlpAction:
+      properties:
+        actionType:
+          enum:
+            - NO_ACTION
+            - BLOCK
+            - AUDIT_ONLY
+            - WARN
+          type: string
+        unsafeHtmlMessageBody:
+          description: The custom error message defined by the customer administrator.
+          type: string
+      type: object
     DlpScanSummary:
       description: A summary of a DLP scan event. This is a summary and should contain the minimum amount of data required to identify and process DLP scans. It is written to Starcast and encoded & returned to the client on attachment upload.
       properties:
+        dlpAction:
+          $ref: "#/components/schemas/DlpAction"
         scanId:
           description: The scan ID of the corresponding {@link DlpViolationScanRecord} in the {@link EphemeralDlpScans} Spanner table. This can be used to fetch additional details about the scan, e.g. for audit logging.
           type: string
         scanNotApplicableForContext:
-          description: Indicates that was no attempt to scan a message or attachment because it was not applicable in the given context (e.g. atomic mutuate). If this is true, scan_outcome should not be set. This flag is used to identify messages that DLP did not attempt to scan for monitoring scan coverage. Contents that DLP attempted to scan but skipped can be identified by DlpScanOutcome.SCAN_SKIPPED_* reasons.
+          description: "Indicates that was no attempt to scan a message or attachment because it was not applicable in the given context (e.g. atomic mutuate). If this is true, scan_outcome should not be set. This flag is used to identify messages that DLP did not attempt to scan for monitoring scan coverage. Contents that DLP attempted to scan but skipped can be identified by DlpScanOutcome.SCAN_SKIPPED_* reasons. DEPRECATED: The prober can determine this from the context."
           type: boolean
         scanOutcome:
           description: The outcome of a DLP Scan. If this is set, scan_not_applicable_for_context should not be true.
@@ -5836,6 +5922,9 @@ components:
           type: string
         creatorInSearcherContactList:
           type: boolean
+        crowdingMultiplier:
+          format: double
+          type: number
         dasContactCount:
           format: int64
           type: string
@@ -5897,6 +5986,9 @@ components:
         lastReadTimestampSecs:
           format: int64
           type: string
+        memberCountScore:
+          format: double
+          type: number
         memberMetadataCount:
           format: double
           type: number
@@ -7361,7 +7453,7 @@ components:
           description: The updated space retention settings
       type: object
     GsuiteIntegrationMetadata:
-      description: Annotation metadata for an GsuiteIntegration artifact.
+      description: Annotation metadata for a GsuiteIntegration artifact.
       properties:
         activityFeedData:
           $ref: "#/components/schemas/AppsDynamiteSharedActivityFeedAnnotationData"
@@ -7602,7 +7694,7 @@ components:
       description: Identifies a particular object, including both Users and DirEntries. This Id is unique across the entire server instance, such as the production or qa instance.
       properties:
         creatorUserId:
-          description: The User account in which the DirEntry was originally created. If name_space==GAIA, then it's the gaia_id of the user this id is referring to.
+          description: The User account in which the DirEntry was originally created. If name_space==GAIA, then it's the gaia_id of the user this id is referring to. This field should really be called the "bucket ID", not the creator ID. In some circumstances, such as copying a Google Docs file, a user can create an item in a different user's bucket, so it should not be relied upon for anything other than bucket location. To look up the requesting user who initially created item, use the `creator_id` DirEntry field instead.
           format: uint64
           type: string
         localId:
@@ -8947,40 +9039,9 @@ components:
         deletedByVault:
           description: Was this message deleted by Vault (Only used for Vault support) This is false if message is live or message was deleted by user.
           type: boolean
-        dlpScanOutcome:
-          description: "Data Loss Prevention scan information for this message. Messages are evaluated in the backend on create message/topic and edit message actions. DEPRECATED: use dlp_scan_summary instead."
-          enum:
-            - SCAN_UNKNOWN_OUTCOME
-            - SCAN_SUCCEEDED_NO_VIOLATION
-            - SCAN_SUCCEEDED_BLOCK
-            - SCAN_SUCCEEDED_WARN
-            - SCAN_SUCCEEDED_AUDIT_ONLY
-            - SCAN_FAILURE_EXCEPTION
-            - SCAN_FAILURE_RULE_FETCH_FAILED
-            - SCAN_FAILURE_TIMEOUT
-            - SCAN_FAILURE_ALL_RULES_FAILED
-            - SCAN_FAILURE_ILLEGAL_STATE_FOR_ATTACHMENTS
-            - SCAN_SKIPPED_EXPERIMENT_DISABLED
-            - SCAN_SKIPPED_CONSUMER
-            - SCAN_SKIPPED_NON_HUMAN_USER
-            - SCAN_SKIPPED_NO_MESSAGE
-            - SCAN_SKIPPED_USER_ACKNOWLEDGED_WARNING
-            - SCAN_SKIPPED_MESSAGE_FROM_UNSUPPORTED_ORIGIN
-            - SCAN_SKIPPED_MESSAGE_SENT_DURING_SPACE_MIGRATION
-            - SCAN_RULE_EVALUATION_SKIPPED_NO_RULES_FOUND
-            - SCAN_RULE_EVALUATION_SKIPPED_NO_APPLICABLE_RULES_FOR_ACTION_PARAMS
-            - SCAN_RULE_EVALUATION_SKIPPED_NO_APPLICABLE_RULES_FOR_TRIGGER
-            - SCAN_RULE_EVALUATION_SKIPPED_CHANGELING_PERMANENT_ERROR
-            - SCAN_RULE_EVALUATION_SKIPPED_CHANGELING_EMPTY_RESPONSE
-            - SCAN_RULE_EVALUATION_SKIPPED_UNSUPPORTED_FILE_TYPE
-            - SCAN_SUCCEEDED_WITH_FAILURES_NO_VIOLATION
-            - SCAN_SUCCEEDED_WITH_FAILURES_BLOCK
-            - SCAN_SUCCEEDED_WITH_FAILURES_WARN
-            - SCAN_SUCCEEDED_WITH_FAILURES_AUDIT_ONLY
-          type: string
         dlpScanSummary:
           $ref: "#/components/schemas/DlpScanSummary"
-          description: Data Loss Prevention scan information for this message. Messages are evaluated in the backend on create message/topic and edit message actions.
+          description: "Data Loss Prevention scan information for this message. Messages are evaluated in the backend on create message/topic and edit message actions. DEPRECATED: Use DATA_LOSS_PREVENTION Annotation."
         editableBy:
           description: Indicates who can edit the message. This field is set on the read path (e.g. ListTopics) but doesn’t have any effect on the write path (e.g. CreateMessageRequest).
           enum:
@@ -10417,6 +10478,7 @@ components:
               - REQUIRED_FEATURE_MESSAGE_QUOTING
               - REQUIRED_FEATURE_TOMBSTONES_IN_DMS_AND_UFRS
               - REQUIRED_FEATURE_CUSTOM_HYPERLINK
+              - REQUIRED_FEATURE_SMART_CHIP
             type: string
           type: array
       type: object
@@ -11035,6 +11097,7 @@ components:
             - ACCESS_TYPE_OPEN
             - ACCESS_TYPE_TRUSTED
             - ACCESS_TYPE_RESTRICTED
+            - ACCESS_TYPE_CLOSED
           type: string
         allowJoiningBeforeHost:
           description: Whether users can join before host in the conferences of this meeting space.

@@ -37,6 +37,11 @@ paths:
       description: List labels.
       operationId: drivelabels.labels.list
       parameters:
+        - description: 'The customer to scope this list request to. For example: "customers/abcd1234". If unset, will return all labels within the current customer.'
+          in: query
+          name: customer
+          schema:
+            type: string
         - description: The BCP-47 language code to use for evaluating localized field labels. When not specified, values in the default configured language are used.
           in: query
           name: languageCode
@@ -201,9 +206,9 @@ paths:
           required: true
           schema:
             type: string
-        - description: The BCP-47 language code to use for evaluating localized field labels. When not specified, values in the default configured language are used.
+        - description: 'The customer to scope this request to. For example: "customers/abcd1234". If unset, will return settings within the current customer.'
           in: query
-          name: languageCode
+          name: customer
           schema:
             type: string
         - description: Set to `true` in order to use the user's admin credentials. The server verifies that the user is an admin for the label before allowing access.
@@ -1604,6 +1609,10 @@ components:
           $ref: "#/components/schemas/GoogleAppsDriveLabelsV2betaUserInfo"
           description: Output only. The user who created this label.
           readOnly: true
+        customer:
+          description: 'Output only. The customer this label belongs to. For example: "customers/123abc789."'
+          readOnly: true
+          type: string
         disableTime:
           description: Output only. The time this label was disabled. This value has no meaning when the label is not disabled.
           format: google-datetime

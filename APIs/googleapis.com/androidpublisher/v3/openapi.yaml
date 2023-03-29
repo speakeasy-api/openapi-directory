@@ -1643,7 +1643,7 @@ paths:
           required: true
           schema:
             type: string
-        - description: Identifier of the track.
+        - description: Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks#ff-track-name)
           in: path
           name: track
           required: true
@@ -1691,7 +1691,7 @@ paths:
           required: true
           schema:
             type: string
-        - description: Identifier of the track.
+        - description: Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks#ff-track-name)
           in: path
           name: track
           required: true
@@ -1732,7 +1732,7 @@ paths:
           required: true
           schema:
             type: string
-        - description: Identifier of the track.
+        - description: Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks#ff-track-name)
           in: path
           name: track
           required: true
@@ -2351,6 +2351,51 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/ProductPurchasesAcknowledgeRequest"
+      responses:
+        "200":
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/androidpublisher
+          Oauth2c:
+            - https://www.googleapis.com/auth/androidpublisher
+      tags:
+        - purchases
+  "/androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}:consume":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+    post:
+      description: Consumes a purchase for an inapp item.
+      operationId: androidpublisher.purchases.products.consume
+      parameters:
+        - description: The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+          in: path
+          name: packageName
+          required: true
+          schema:
+            type: string
+        - description: The inapp product SKU (for example, 'com.some.thing.inapp1').
+          in: path
+          name: productId
+          required: true
+          schema:
+            type: string
+        - description: The token provided to the user's device when the inapp product was purchased.
+          in: path
+          name: token
+          required: true
+          schema:
+            type: string
       responses:
         "200":
           description: Successful response
@@ -4518,7 +4563,7 @@ components:
       properties: {}
       type: object
     DeviceGroup:
-      description: LINT.IfChange A group of devices. A group is defined by a set of device selectors. A device belongs to the group if it matches any selector (logical OR).
+      description: A group of devices. A group is defined by a set of device selectors. A device belongs to the group if it matches any selector (logical OR).
       properties:
         deviceSelectors:
           description: Device selectors for this group. A device matching any of the selectors is included in this group.
@@ -4652,7 +4697,7 @@ components:
           type: integer
       type: object
     DeviceTierConfig:
-      description: LINT.IfChange Configuration describing device targeting criteria for the content of an app.
+      description: Configuration describing device targeting criteria for the content of an app.
       properties:
         deviceGroups:
           description: Definition of device groups for the app.
@@ -5996,7 +6041,7 @@ components:
             $ref: "#/components/schemas/TrackRelease"
           type: array
         track:
-          description: Identifier of the track.
+          description: Identifier of the track. Form factor tracks have a special prefix as an identifier, for example `wear:production`, `automotive:production`. [More on track name](https://developers.google.com/android-publisher/tracks#ff-track-name)
           type: string
       type: object
     TrackCountryAvailability:

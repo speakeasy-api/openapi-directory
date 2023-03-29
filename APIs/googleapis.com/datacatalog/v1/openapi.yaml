@@ -222,7 +222,7 @@ paths:
         - projects
   "/v1/{name}/operations":
     get:
-      description: "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id."
+      description: Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
       operationId: datacatalog.projects.locations.operations.list
       parameters:
         - description: The name of the operation's parent resource.
@@ -1559,6 +1559,38 @@ components:
           $ref: "#/components/schemas/GoogleCloudDatacatalogV1EntryOverview"
           description: Entry overview fields for rich text descriptions of entries.
       type: object
+    GoogleCloudDatacatalogV1CloudBigtableInstanceSpec:
+      description: Specification that applies to Instance entries that are part of `CLOUD_BIGTABLE` system. (user_specified_type)
+      properties:
+        cloudBigtableClusterSpecs:
+          description: The list of clusters for the Instance.
+          items:
+            $ref: "#/components/schemas/GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClusterSpec"
+          type: array
+      type: object
+    GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClusterSpec:
+      description: Spec that applies to clusters of an Instance of Cloud Bigtable.
+      properties:
+        displayName:
+          description: Name of the cluster.
+          type: string
+        linkedResource:
+          description: A link back to the parent resource, in this case Instance.
+          type: string
+        location:
+          description: Location of the cluster, typically a Cloud zone.
+          type: string
+        type:
+          description: Type of the resource. For a cluster this would be "CLUSTER".
+          type: string
+      type: object
+    GoogleCloudDatacatalogV1CloudBigtableSystemSpec:
+      description: Specification that applies to all entries that are part of `CLOUD_BIGTABLE` system (user_specified_type)
+      properties:
+        instanceDisplayName:
+          description: Display name of the Instance. This is user specified and different from the resource name.
+          type: string
+      type: object
     GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec:
       description: Specification for the BigQuery connection to a Cloud SQL instance.
       properties:
@@ -1630,7 +1662,7 @@ components:
             - DIMENSION_GROUP
             - FILTER
             - MEASURE
-            - PAREMETER
+            - PARAMETER
           type: string
       type: object
     GoogleCloudDatacatalogV1CommonUsageStats:
@@ -1750,6 +1782,8 @@ components:
             - CLOUD_PUBSUB
             - DATAPROC_METASTORE
             - DATAPLEX
+            - CLOUD_SPANNER
+            - CLOUD_BIGTABLE
             - CLOUD_SQL
             - LOOKER
           type: string
@@ -1792,6 +1826,13 @@ components:
           description: Indicates if the table schema is managed by the user or not.
           type: boolean
       type: object
+    GoogleCloudDatacatalogV1DumpItem:
+      description: Wrapper for any item that can be contained in the dump.
+      properties:
+        taggedEntry:
+          $ref: "#/components/schemas/GoogleCloudDatacatalogV1TaggedEntry"
+          description: Entry and its tags.
+      type: object
     GoogleCloudDatacatalogV1Entry:
       description: Entry metadata. A Data Catalog entry represents another resource in Google Cloud Platform (such as a BigQuery dataset or a Pub/Sub topic) or outside of it. You can use the `linked_resource` field in the entry resource to refer to the original resource ID of the source system. An entry resource contains resource details, for example, its schema. Additionally, you can attach flexible metadata to an entry in the form of a Tag.
       properties:
@@ -1806,6 +1847,9 @@ components:
         businessContext:
           $ref: "#/components/schemas/GoogleCloudDatacatalogV1BusinessContext"
           description: Business Context of the entry. Not supported for BigQuery datasets
+        cloudBigtableSystemSpec:
+          $ref: "#/components/schemas/GoogleCloudDatacatalogV1CloudBigtableSystemSpec"
+          description: Specification that applies to Cloud Bigtable system. Only settable when `integrated_system` is equal to `CLOUD_BIGTABLE`
         dataSource:
           $ref: "#/components/schemas/GoogleCloudDatacatalogV1DataSource"
           description: Output only. Physical location of the entry.
@@ -1839,6 +1883,8 @@ components:
             - CLOUD_PUBSUB
             - DATAPROC_METASTORE
             - DATAPLEX
+            - CLOUD_SPANNER
+            - CLOUD_BIGTABLE
             - CLOUD_SQL
             - LOOKER
           readOnly: true
@@ -1868,6 +1914,9 @@ components:
         schema:
           $ref: "#/components/schemas/GoogleCloudDatacatalogV1Schema"
           description: Schema of the entry. An entry might not have any schema attached to it.
+        serviceSpec:
+          $ref: "#/components/schemas/GoogleCloudDatacatalogV1ServiceSpec"
+          description: Specification that applies to a Service resource.
         sourceSystemTimestamps:
           $ref: "#/components/schemas/GoogleCloudDatacatalogV1SystemTimestamps"
           description: Timestamps from the underlying resource, not from the Data Catalog entry. Output only when the entry has a system listed in the `IntegratedSystem` enum. For entries with `user_specified_system`, this field is optional and defaults to an empty timestamp.
@@ -2464,6 +2513,8 @@ components:
             - CLOUD_PUBSUB
             - DATAPROC_METASTORE
             - DATAPLEX
+            - CLOUD_SPANNER
+            - CLOUD_BIGTABLE
             - CLOUD_SQL
             - LOOKER
           readOnly: true
@@ -2533,6 +2584,13 @@ components:
           items:
             $ref: "#/components/schemas/GoogleCloudDatacatalogV1SerializedPolicyTag"
           type: array
+      type: object
+    GoogleCloudDatacatalogV1ServiceSpec:
+      description: Specification that applies to a Service resource. Valid only for entries with the `SERVICE` type.
+      properties:
+        cloudBigtableInstanceSpec:
+          $ref: "#/components/schemas/GoogleCloudDatacatalogV1CloudBigtableInstanceSpec"
+          description: Specification that applies to Instance entries of `CLOUD_BIGTABLE` system.
       type: object
     GoogleCloudDatacatalogV1SqlDatabaseSystemSpec:
       description: Specification that applies to entries that are part `SQL_DATABASE` system (user_specified_type)
@@ -2695,6 +2753,23 @@ components:
         type:
           $ref: "#/components/schemas/GoogleCloudDatacatalogV1FieldType"
           description: Required. The type of value this tag field can contain.
+      type: object
+    GoogleCloudDatacatalogV1TaggedEntry:
+      description: Wrapper containing Entry and information about Tags that should and should not be attached to it.
+      properties:
+        absentTags:
+          description: Tags that should be deleted from the Data Catalog. Caller should populate template name and column only.
+          items:
+            $ref: "#/components/schemas/GoogleCloudDatacatalogV1Tag"
+          type: array
+        presentTags:
+          description: Tags that should be ingested into the Data Catalog. Caller should populate template name, column and fields.
+          items:
+            $ref: "#/components/schemas/GoogleCloudDatacatalogV1Tag"
+          type: array
+        v1Entry:
+          $ref: "#/components/schemas/GoogleCloudDatacatalogV1Entry"
+          description: Non-encrypted Data Catalog v1 Entry.
       type: object
     GoogleCloudDatacatalogV1Taxonomy:
       description: 'A taxonomy is a collection of hierarchical policy tags that classify data along a common axis. For example, a "data sensitivity" taxonomy might contain the following policy tags: ``` + PII + Account number + Age + SSN + Zipcode + Financials + Revenue ``` A "data origin" taxonomy might contain the following policy tags: ``` + User data + Employee data + Partner data + Public data ```'

@@ -127,7 +127,7 @@ paths:
         - projects
   "/v1alpha/{name}/operations":
     get:
-      description: "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id."
+      description: Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
       operationId: discoveryengine.projects.operations.list
       parameters:
         - description: The name of the operation's parent resource.
@@ -646,7 +646,7 @@ components:
       description: BigQuery source import data from.
       properties:
         dataSchema:
-          description: "The schema to use when parsing the data from the source. Supported values for imports: * `user_event` (default): One JSON UserEvent per line. * `document` (default): One JSON Document per line. Each document must have a valid document.id."
+          description: "The schema to use when parsing the data from the source. Supported values for user event imports: * `user_event` (default): One UserEvent per row. Supported values for document imports: * `document` (default): One Document format per row. Each document must have a valid Document.id and one of Document.json_data or Document.struct_data. * `custom`: One custom data per row in arbitrary format that conforms the defined Schema of the data store. This can only be used by the GENERIC Data Store vertical."
           type: string
         datasetId:
           description: Required. The BigQuery data set to copy the data from with a length limit of 1,024 characters.
@@ -706,7 +706,7 @@ components:
           description: The identifier of the parent document. Currently supports at most two level document hierarchy. Id should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
           type: string
         schemaId:
-          description: Required. The identifier of the schema located in the same data store.
+          description: The identifier of the schema located in the same data store.
           type: string
         structData:
           additionalProperties:
@@ -737,10 +737,10 @@ components:
       description: Cloud Storage location for input content.
       properties:
         dataSchema:
-          description: "The schema to use when parsing the data from the source. Supported values for imports: * `user_event` (default): One JSON UserEvent per line. * `document` (default): One JSON Document per line. Each document must have a valid Document.id."
+          description: "The schema to use when parsing the data from the source. Supported values for document imports: * `document` (default): One JSON Document per line. Each document must have a valid Document.id. * `content`: Unstructured data (e.g. PDF, HTML). Each file matched by `input_uris` will become a document, with the ID set to the first 128 bits of SHA256(URI) encoded as a hex string. * `custom`: One custom data JSON per row in arbitrary format that conforms the defined Schema of the data store. This can only be used by the GENERIC Data Store vertical. Supported values for user even imports: * `user_event` (default): One JSON UserEvent per line."
           type: string
         inputUris:
-          description: Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern matching one or more files, such as `gs://bucket/directory/*.json`. A request can contain at most 100 files, and each file can be up to 2 GB.
+          description: Required. Cloud Storage URIs to input files. URI can be up to 2000 characters long. URIs can match the full object path (for example, `gs://bucket/directory/object.json`) or a pattern matching one or more files, such as `gs://bucket/directory/*.json`. A request can contain at most 100 files (or 100,000 files if `data_schema` is `content`). Each file can be up to 2 GB (or 100 MB if `data_schema` is `content`).
           items:
             type: string
           type: array
@@ -999,6 +999,21 @@ components:
           description: "Additional Document metadata / annotations. Possible values: * `score`: Recommendation score in double value. Is set if `returnScore` is set to true in RecommendRequest.params."
           type: object
       type: object
+    GoogleCloudDiscoveryengineV1alphaSchema:
+      description: Defines the structure and layout of a type of document data.
+      properties:
+        jsonSchema:
+          description: The JSON representation of the schema.
+          type: string
+        name:
+          description: Immutable. The full resource name of the schema, in the format of `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/schemas/{schema}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+          type: string
+        structSchema:
+          additionalProperties:
+            description: Properties of the object.
+          description: The structured representation of the schema.
+          type: object
+      type: object
     GoogleCloudDiscoveryengineV1alphaSearchInfo:
       description: Detailed search information.
       properties:
@@ -1194,6 +1209,21 @@ components:
           description: Count of user events imported, but with Document information not found in the existing Branch.
           format: int64
           type: string
+      type: object
+    GoogleCloudDiscoveryengineV1betaSchema:
+      description: Defines the structure and layout of a type of document data.
+      properties:
+        jsonSchema:
+          description: The JSON representation of the schema.
+          type: string
+        name:
+          description: Immutable. The full resource name of the schema, in the format of `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/schemas/{schema}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+          type: string
+        structSchema:
+          additionalProperties:
+            description: Properties of the object.
+          description: The structured representation of the schema.
+          type: object
       type: object
     GoogleLongrunningListOperationsResponse:
       description: The response message for Operations.ListOperations.

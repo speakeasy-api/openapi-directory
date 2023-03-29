@@ -219,7 +219,7 @@ paths:
         - projects
   "/v1/{name}/operations":
     get:
-      description: "Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `\"/v1/{name=users/*}/operations\"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id."
+      description: Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
       operationId: contactcenterinsights.projects.locations.operations.list
       parameters:
         - description: The name of the operation's parent resource.
@@ -2384,6 +2384,10 @@ components:
           description: To select the annotators to run and the phrase matchers to use (if any). If not specified, all annotators will be run.
         runtimeIntegrationAnalysisPercentage:
           description: Percentage of conversations created using Dialogflow runtime integration to analyze automatically, between [0, 100].
+          format: double
+          type: number
+        uploadConversationAnalysisPercentage:
+          description: Percentage of conversations created using the UploadConversation endpoint to analyze automatically, between [0, 100].
           format: double
           type: number
       type: object

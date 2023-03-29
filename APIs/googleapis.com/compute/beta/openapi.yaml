@@ -152,7 +152,7 @@ paths:
           name: pageToken
           schema:
             type: string
-        - description: Parent ID for this request.
+        - description: Parent ID for this request. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
           in: query
           name: parentId
           schema:
@@ -683,7 +683,7 @@ paths:
           required: true
           schema:
             type: string
-        - description: The new parent of the firewall policy.
+        - description: The new parent of the firewall policy. The ID can be either be "folders/[FOLDER_ID]" if the parent is a folder or "organizations/[ORGANIZATION_ID]" if the parent is an organization.
           in: query
           name: parentId
           schema:
@@ -5657,7 +5657,7 @@ paths:
       tags:
         - globalAddresses
     get:
-      description: Returns the specified address resource. Gets a list of available addresses by making a list() request.
+      description: Returns the specified address resource.
       operationId: compute.globalAddresses.get
       parameters:
         - description: Project ID for this request.
@@ -5707,6 +5707,64 @@ paths:
       - $ref: "#/components/parameters/upload_protocol"
       - $ref: "#/components/parameters/uploadType"
       - $ref: "#/components/parameters/userIp"
+  "/projects/{project}/global/addresses/{address}/move":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Moves the specified address resource from one project to another project.
+      operationId: compute.globalAddresses.move
+      parameters:
+        - description: Source project ID which the Address is moved from.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: Name of the address resource to move.
+          in: path
+          name: address
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GlobalAddressesMoveRequest"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - globalAddresses
   "/projects/{project}/global/addresses/{resource}/setLabels":
     parameters:
       - $ref: "#/components/parameters/_.xgafv"
@@ -5968,7 +6026,7 @@ paths:
       tags:
         - backendBuckets
     get:
-      description: Returns the specified BackendBucket resource. Gets a list of available backend buckets by making a list() request.
+      description: Returns the specified BackendBucket resource.
       operationId: compute.backendBuckets.get
       parameters:
         - description: Project ID for this request.
@@ -6599,7 +6657,7 @@ paths:
       tags:
         - backendServices
     get:
-      description: Returns the specified BackendService resource. Gets a list of available backend services.
+      description: Returns the specified BackendService resource.
       operationId: compute.backendServices.get
       parameters:
         - description: Project ID for this request.
@@ -9308,7 +9366,7 @@ paths:
       tags:
         - healthChecks
     get:
-      description: Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+      description: Returns the specified HealthCheck resource.
       operationId: compute.healthChecks.get
       parameters:
         - description: Project ID for this request.
@@ -9654,7 +9712,7 @@ paths:
       tags:
         - httpHealthChecks
     get:
-      description: Returns the specified HttpHealthCheck resource. Gets a list of available HTTP health checks by making a list() request.
+      description: Returns the specified HttpHealthCheck resource.
       operationId: compute.httpHealthChecks.get
       parameters:
         - description: Project ID for this request.
@@ -10000,7 +10058,7 @@ paths:
       tags:
         - httpsHealthChecks
     get:
-      description: Returns the specified HttpsHealthCheck resource. Gets a list of available HTTPS health checks by making a list() request.
+      description: Returns the specified HttpsHealthCheck resource.
       operationId: compute.httpsHealthChecks.get
       parameters:
         - description: Project ID for this request.
@@ -10415,7 +10473,7 @@ paths:
       tags:
         - images
     get:
-      description: Returns the specified image. Gets a list of available images by making a list() request.
+      description: Returns the specified image.
       operationId: compute.images.get
       parameters:
         - description: Project ID for this request.
@@ -10938,7 +10996,7 @@ paths:
       tags:
         - instanceTemplates
     get:
-      description: Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+      description: Returns the specified instance template.
       operationId: compute.instanceTemplates.get
       parameters:
         - description: Project ID for this request.
@@ -12331,7 +12389,7 @@ paths:
       tags:
         - machineImages
     get:
-      description: Returns the specified machine image. Gets a list of available machine images by making a list() request.
+      description: Returns the specified machine image.
       operationId: compute.machineImages.get
       parameters:
         - description: Project ID for this request.
@@ -12699,7 +12757,7 @@ paths:
       tags:
         - globalNetworkEndpointGroups
     get:
-      description: Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+      description: Returns the specified network endpoint group.
       operationId: compute.globalNetworkEndpointGroups.get
       parameters:
         - description: Project ID for this request.
@@ -13094,7 +13152,7 @@ paths:
       tags:
         - networks
     get:
-      description: Returns the specified network. Gets a list of available networks by making a list() request.
+      description: Returns the specified network.
       operationId: compute.networks.get
       parameters:
         - description: Project ID for this request.
@@ -14524,7 +14582,7 @@ paths:
       tags:
         - routes
     get:
-      description: Returns the specified Route resource. Gets a list of available routes by making a list() request.
+      description: Returns the specified Route resource.
       operationId: compute.routes.get
       parameters:
         - description: Project ID for this request.
@@ -15156,6 +15214,11 @@ paths:
           name: priority
           schema:
             type: integer
+        - description: Indicates fields to be cleared as part of this request.
+          in: query
+          name: updateMask
+          schema:
+            type: string
         - description: If true, the request will not be committed.
           in: query
           name: validateOnly
@@ -15608,7 +15671,7 @@ paths:
       tags:
         - snapshots
     get:
-      description: Returns the specified Snapshot resource. Gets a list of available snapshots by making a list() request.
+      description: Returns the specified Snapshot resource.
       operationId: compute.snapshots.get
       parameters:
         - description: Project ID for this request.
@@ -15866,7 +15929,7 @@ paths:
       tags:
         - sslCertificates
     get:
-      description: Returns the specified SslCertificate resource. Gets a list of available SSL certificates by making a list() request.
+      description: Returns the specified SslCertificate resource.
       operationId: compute.sslCertificates.get
       parameters:
         - description: Project ID for this request.
@@ -15989,7 +16052,7 @@ paths:
       - $ref: "#/components/parameters/uploadType"
       - $ref: "#/components/parameters/userIp"
     post:
-      description: Returns the specified SSL policy resource. Gets a list of available SSL policies by making a list() request.
+      description: Returns the specified SSL policy resource.
       operationId: compute.sslPolicies.insert
       parameters:
         - description: Project ID for this request.
@@ -16800,7 +16863,7 @@ paths:
       tags:
         - targetHttpProxies
     get:
-      description: Returns the specified TargetHttpProxy resource. Gets a list of available target HTTP proxies by making a list() request.
+      description: Returns the specified TargetHttpProxy resource.
       operationId: compute.targetHttpProxies.get
       parameters:
         - description: Project ID for this request.
@@ -17102,7 +17165,7 @@ paths:
       tags:
         - targetHttpsProxies
     get:
-      description: Returns the specified TargetHttpsProxy resource. Gets a list of available target HTTPS proxies by making a list() request.
+      description: Returns the specified TargetHttpsProxy resource.
       operationId: compute.targetHttpsProxies.get
       parameters:
         - description: Project ID for this request.
@@ -17578,7 +17641,7 @@ paths:
       tags:
         - targetSslProxies
     get:
-      description: Returns the specified TargetSslProxy resource. Gets a list of available target SSL proxies by making a list() request.
+      description: Returns the specified TargetSslProxy resource.
       operationId: compute.targetSslProxies.get
       parameters:
         - description: Project ID for this request.
@@ -18126,7 +18189,7 @@ paths:
       tags:
         - targetTcpProxies
     get:
-      description: Returns the specified TargetTcpProxy resource. Gets a list of available target TCP proxies by making a list() request.
+      description: Returns the specified TargetTcpProxy resource.
       operationId: compute.targetTcpProxies.get
       parameters:
         - description: Project ID for this request.
@@ -18500,7 +18563,7 @@ paths:
       tags:
         - urlMaps
     get:
-      description: Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+      description: Returns the specified UrlMap resource.
       operationId: compute.urlMaps.get
       parameters:
         - description: Project ID for this request.
@@ -19000,7 +19063,7 @@ paths:
       - $ref: "#/components/parameters/userIp"
   "/projects/{project}/regions/{region}":
     get:
-      description: Returns the specified Region resource. Gets a list of available regions by making a list() request. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
+      description: Returns the specified Region resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
       operationId: compute.regions.get
       parameters:
         - description: Project ID for this request.
@@ -19275,6 +19338,70 @@ paths:
       - $ref: "#/components/parameters/upload_protocol"
       - $ref: "#/components/parameters/uploadType"
       - $ref: "#/components/parameters/userIp"
+  "/projects/{project}/regions/{region}/addresses/{address}/move":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Moves the specified address resource.
+      operationId: compute.addresses.move
+      parameters:
+        - description: Source project ID which the Address is moved from.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: Name of the region for this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: Name of the address resource to move.
+          in: path
+          name: address
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegionAddressesMoveRequest"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - addresses
   "/projects/{project}/regions/{region}/addresses/{resource}/setLabels":
     parameters:
       - $ref: "#/components/parameters/_.xgafv"
@@ -20484,7 +20611,7 @@ paths:
         - regionCommitments
   "/projects/{project}/regions/{region}/commitments/{commitment}":
     get:
-      description: Returns the specified commitment resource. Gets a list of available commitments by making a list() request.
+      description: Returns the specified commitment resource.
       operationId: compute.regionCommitments.get
       parameters:
         - description: Project ID for this request.
@@ -20810,7 +20937,7 @@ paths:
       - $ref: "#/components/parameters/userIp"
   "/projects/{project}/regions/{region}/diskTypes/{diskType}":
     get:
-      description: Returns the specified regional disk type. Gets a list of available disk types by making a list() request.
+      description: Returns the specified regional disk type.
       operationId: compute.regionDiskTypes.get
       parameters:
         - description: Project ID for this request.
@@ -20975,6 +21102,122 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/Disk"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - regionDisks
+  "/projects/{project}/regions/{region}/disks/bulkInsert":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Bulk create a set of disks.
+      operationId: compute.regionDisks.bulkInsert
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the region for this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BulkInsertDiskResource"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - regionDisks
+  "/projects/{project}/regions/{region}/disks/stopGroupAsyncReplication":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+      operationId: compute.regionDisks.stopGroupAsyncReplication
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the region for this request. This must be the region of the primary or secondary disks in the consistency group.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DisksStopGroupAsyncReplicationResource"
       responses:
         "200":
           content:
@@ -21397,6 +21640,129 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/RegionDisksResizeRequest"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - regionDisks
+  "/projects/{project}/regions/{region}/disks/{disk}/startAsyncReplication":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Starts asynchronous replication. Must be invoked on the primary disk.
+      operationId: compute.regionDisks.startAsyncReplication
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the region for this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: The name of the persistent disk.
+          in: path
+          name: disk
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RegionDisksStartAsyncReplicationRequest"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - regionDisks
+  "/projects/{project}/regions/{region}/disks/{disk}/stopAsyncReplication":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+      operationId: compute.regionDisks.stopAsyncReplication
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the region for this request.
+          in: path
+          name: region
+          required: true
+          schema:
+            type: string
+        - description: The name of the persistent disk.
+          in: path
+          name: disk
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
       responses:
         "200":
           content:
@@ -23685,7 +24051,7 @@ paths:
       tags:
         - regionHealthChecks
     get:
-      description: Returns the specified HealthCheck resource. Gets a list of available health checks by making a list() request.
+      description: Returns the specified HealthCheck resource.
       operationId: compute.regionHealthChecks.get
       parameters:
         - description: Project ID for this request.
@@ -25889,7 +26255,7 @@ paths:
       tags:
         - regionInstanceTemplates
     get:
-      description: Returns the specified instance template. Gets a list of available instance templates by making a list() request.
+      description: Returns the specified instance template.
       operationId: compute.regionInstanceTemplates.get
       parameters:
         - description: Project ID for this request.
@@ -27218,7 +27584,7 @@ paths:
       tags:
         - regionNetworkEndpointGroups
     get:
-      description: Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+      description: Returns the specified network endpoint group.
       operationId: compute.regionNetworkEndpointGroups.get
       parameters:
         - description: Project ID for this request.
@@ -27443,7 +27809,7 @@ paths:
       tags:
         - nodeTemplates
     get:
-      description: Returns the specified node template. Gets a list of available node templates by making a list() request.
+      description: Returns the specified node template.
       operationId: compute.nodeTemplates.get
       parameters:
         - description: Project ID for this request.
@@ -29512,7 +29878,7 @@ paths:
       tags:
         - routers
     get:
-      description: Returns the specified Router resource. Gets a list of available routers by making a list() request.
+      description: Returns the specified Router resource.
       operationId: compute.routers.get
       parameters:
         - description: Project ID for this request.
@@ -31676,7 +32042,7 @@ paths:
       tags:
         - subnetworks
     get:
-      description: Returns the specified subnetwork. Gets a list of available subnetworks list() request.
+      description: Returns the specified subnetwork.
       operationId: compute.subnetworks.get
       parameters:
         - description: Project ID for this request.
@@ -32147,7 +32513,7 @@ paths:
       tags:
         - regionTargetHttpProxies
     get:
-      description: Returns the specified TargetHttpProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
+      description: Returns the specified TargetHttpProxy resource in the specified region.
       operationId: compute.regionTargetHttpProxies.get
       parameters:
         - description: Project ID for this request.
@@ -32499,7 +32865,7 @@ paths:
       tags:
         - regionTargetHttpsProxies
     get:
-      description: Returns the specified TargetHttpsProxy resource in the specified region. Gets a list of available target HTTP proxies by making a list() request.
+      description: Returns the specified TargetHttpsProxy resource in the specified region.
       operationId: compute.regionTargetHttpsProxies.get
       parameters:
         - description: Project ID for this request.
@@ -32965,7 +33331,7 @@ paths:
       tags:
         - targetPools
     get:
-      description: Returns the specified target pool. Gets a list of available target pools by making a list() request.
+      description: Returns the specified target pool.
       operationId: compute.targetPools.get
       parameters:
         - description: Project ID for this request.
@@ -33993,7 +34359,7 @@ paths:
       tags:
         - targetVpnGateways
     get:
-      description: Returns the specified target VPN gateway. Gets a list of available target VPN gateways by making a list() request.
+      description: Returns the specified target VPN gateway.
       operationId: compute.targetVpnGateways.get
       parameters:
         - description: Project ID for this request.
@@ -34281,7 +34647,7 @@ paths:
       tags:
         - regionUrlMaps
     get:
-      description: Returns the specified UrlMap resource. Gets a list of available URL maps by making a list() request.
+      description: Returns the specified UrlMap resource.
       operationId: compute.regionUrlMaps.get
       parameters:
         - description: Project ID for this request.
@@ -34856,7 +35222,7 @@ paths:
       tags:
         - vpnGateways
     get:
-      description: Returns the specified VPN gateway. Gets a list of available VPN gateways by making a list() request.
+      description: Returns the specified VPN gateway.
       operationId: compute.vpnGateways.get
       parameters:
         - description: Project ID for this request.
@@ -35266,7 +35632,7 @@ paths:
       tags:
         - vpnTunnels
     get:
-      description: Returns the specified VpnTunnel resource. Gets a list of available VPN tunnels by making a list() request.
+      description: Returns the specified VpnTunnel resource.
       operationId: compute.vpnTunnels.get
       parameters:
         - description: Project ID for this request.
@@ -35738,7 +36104,7 @@ paths:
       - $ref: "#/components/parameters/userIp"
   "/projects/{project}/zones/{zone}":
     get:
-      description: Returns the specified Zone resource. Gets a list of available zones by making a list() request.
+      description: Returns the specified Zone resource.
       operationId: compute.zones.get
       parameters:
         - description: Project ID for this request.
@@ -36191,7 +36557,7 @@ paths:
       tags:
         - autoscalers
     get:
-      description: Returns the specified autoscaler resource. Gets a list of available autoscalers by making a list() request.
+      description: Returns the specified autoscaler resource.
       operationId: compute.autoscalers.get
       parameters:
         - description: Project ID for this request.
@@ -36390,7 +36756,7 @@ paths:
       - $ref: "#/components/parameters/userIp"
   "/projects/{project}/zones/{zone}/diskTypes/{diskType}":
     get:
-      description: Returns the specified disk type. Gets a list of available disk types by making a list() request.
+      description: Returns the specified disk type.
       operationId: compute.diskTypes.get
       parameters:
         - description: Project ID for this request.
@@ -36573,6 +36939,122 @@ paths:
             - https://www.googleapis.com/auth/compute
       tags:
         - disks
+  "/projects/{project}/zones/{zone}/disks/bulkInsert":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Bulk create a set of disks.
+      operationId: compute.disks.bulkInsert
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the zone for this request.
+          in: path
+          name: zone
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BulkInsertDiskResource"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - disks
+  "/projects/{project}/zones/{zone}/disks/stopGroupAsyncReplication":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
+      operationId: compute.disks.stopGroupAsyncReplication
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the zone for this request. This must be the zone of the primary or secondary disks in the consistency group.
+          in: path
+          name: zone
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DisksStopGroupAsyncReplicationResource"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - disks
   "/projects/{project}/zones/{zone}/disks/{disk}":
     delete:
       description: Deletes the specified persistent disk. Deleting a disk removes its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
@@ -36620,7 +37102,7 @@ paths:
       tags:
         - disks
     get:
-      description: Returns a specified persistent disk. Gets a list of available persistent disks by making a list() request.
+      description: Returns the specified persistent disk.
       operationId: compute.disks.get
       parameters:
         - description: Project ID for this request.
@@ -36982,6 +37464,129 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/DisksResizeRequest"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - disks
+  "/projects/{project}/zones/{zone}/disks/{disk}/startAsyncReplication":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Starts asynchronous replication. Must be invoked on the primary disk.
+      operationId: compute.disks.startAsyncReplication
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the zone for this request.
+          in: path
+          name: zone
+          required: true
+          schema:
+            type: string
+        - description: The name of the persistent disk.
+          in: path
+          name: disk
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DisksStartAsyncReplicationRequest"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Operation"
+          description: Successful response
+      security:
+        - Oauth2:
+            - https://www.googleapis.com/auth/cloud-platform
+          Oauth2c:
+            - https://www.googleapis.com/auth/cloud-platform
+        - Oauth2:
+            - https://www.googleapis.com/auth/compute
+          Oauth2c:
+            - https://www.googleapis.com/auth/compute
+      tags:
+        - disks
+  "/projects/{project}/zones/{zone}/disks/{disk}/stopAsyncReplication":
+    parameters:
+      - $ref: "#/components/parameters/_.xgafv"
+      - $ref: "#/components/parameters/access_token"
+      - $ref: "#/components/parameters/alt"
+      - $ref: "#/components/parameters/callback"
+      - $ref: "#/components/parameters/fields"
+      - $ref: "#/components/parameters/key"
+      - $ref: "#/components/parameters/oauth_token"
+      - $ref: "#/components/parameters/prettyPrint"
+      - $ref: "#/components/parameters/quotaUser"
+      - $ref: "#/components/parameters/upload_protocol"
+      - $ref: "#/components/parameters/uploadType"
+      - $ref: "#/components/parameters/userIp"
+    post:
+      description: Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
+      operationId: compute.disks.stopAsyncReplication
+      parameters:
+        - description: Project ID for this request.
+          in: path
+          name: project
+          required: true
+          schema:
+            type: string
+        - description: The name of the zone for this request.
+          in: path
+          name: zone
+          required: true
+          schema:
+            type: string
+        - description: The name of the persistent disk.
+          in: path
+          name: disk
+          required: true
+          schema:
+            type: string
+        - description: An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
+          in: query
+          name: requestId
+          schema:
+            type: string
       responses:
         "200":
           content:
@@ -37476,7 +38081,7 @@ paths:
       tags:
         - instanceGroupManagers
     get:
-      description: Returns all of the details about the specified managed instance group. Gets a list of available managed instance groups by making a list() request.
+      description: Returns all of the details about the specified managed instance group.
       operationId: compute.instanceGroupManagers.get
       parameters:
         - description: Project ID for this request.
@@ -39576,7 +40181,7 @@ paths:
       tags:
         - instances
     get:
-      description: Returns the specified Instance resource. Gets a list of available instances by making a list() request.
+      description: Returns the specified Instance resource.
       operationId: compute.instances.get
       parameters:
         - description: Project ID for this request.
@@ -42479,7 +43084,7 @@ paths:
       - $ref: "#/components/parameters/userIp"
   "/projects/{project}/zones/{zone}/machineTypes/{machineType}":
     get:
-      description: Returns the specified machine type. Gets a list of available machine types by making a list() request.
+      description: Returns the specified machine type.
       operationId: compute.machineTypes.get
       parameters:
         - description: Project ID for this request.
@@ -42704,7 +43309,7 @@ paths:
       tags:
         - networkEndpointGroups
     get:
-      description: Returns the specified network endpoint group. Gets a list of available network endpoint groups by making a list() request.
+      description: Returns the specified network endpoint group.
       operationId: compute.networkEndpointGroups.get
       parameters:
         - description: Project ID for this request.
@@ -43926,7 +44531,7 @@ paths:
       - $ref: "#/components/parameters/userIp"
   "/projects/{project}/zones/{zone}/nodeTypes/{nodeType}":
     get:
-      description: Returns the specified node type. Gets a list of available node types by making a list() request.
+      description: Returns the specified node type.
       operationId: compute.nodeTypes.get
       parameters:
         - description: Project ID for this request.
@@ -44981,7 +45586,7 @@ paths:
       tags:
         - targetInstances
     get:
-      description: Returns the specified TargetInstance resource. Gets a list of available target instances by making a list() request.
+      description: Returns the specified TargetInstance resource.
       operationId: compute.targetInstances.get
       parameters:
         - description: Project ID for this request.
@@ -45392,10 +45997,10 @@ components:
       description: An access configuration attached to an instance's network interface. Only one access config per instance is supported.
       properties:
         externalIpv6:
-          description: The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, GCP will automatically assign an external IPv6 address from the instance's subnetwork.
+          description: Applies to ipv6AccessConfigs only. The first IPv6 address of the external IPv6 range associated with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig. To use a static external IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.
           type: string
         externalIpv6PrefixLength:
-          description: The prefix length of the external IPv6 range.
+          description: Applies to ipv6AccessConfigs only. The prefix length of the external IPv6 range.
           format: int32
           type: integer
         kind:
@@ -45403,10 +46008,10 @@ components:
           description: "[Output Only] Type of the resource. Always compute#accessConfig for access configs."
           type: string
         name:
-          description: The name of this access configuration. The default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access.
+          description: The name of this access configuration. In accessConfigs (IPv4), the default and recommended name is External NAT, but you can use any arbitrary string, such as My external IP or Network Access. In ipv6AccessConfigs, the recommend name is External IPv6.
           type: string
         natIP:
-          description: An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.
+          description: Applies to accessConfigs (IPv4) only. An external IP address associated with this instance. Specify an unused static external IP address available to the project or leave this field undefined to use an IP from a shared ephemeral IP address pool. If you specify a static external IP address, it must live in the same region as the zone of the instance.
           type: string
         networkTier:
           description: "This signifies the networking tier used for configuring this access configuration and can only take the following values: PREMIUM, STANDARD. If an AccessConfig is specified without a valid external IP address, an ephemeral IP will be created with this networkTier. If an AccessConfig with a valid external IP address is specified, it must match that of the networkTier associated with the Address resource owning that IP."
@@ -45423,8 +46028,7 @@ components:
           description: Specifies whether a public DNS 'PTR' record should be created to map the external IP address of the instance to a DNS domain name. This field is not used in ipv6AccessConfig. A default PTR record will be created if the VM has external IPv6 range associated.
           type: boolean
         type:
-          default: ONE_TO_ONE_NAT
-          description: The type of configuration. The default and only option is ONE_TO_ONE_NAT.
+          description: The type of configuration. In accessConfigs (IPv4), the default and only option is ONE_TO_ONE_NAT. In ipv6AccessConfigs, the default and only option is DIRECT_IPV6.
           enum:
             - DIRECT_IPV6
             - ONE_TO_ONE_NAT
@@ -47519,6 +48123,13 @@ components:
           description: Role that is assigned to the list of `members`, or principals. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
           type: string
       type: object
+    BulkInsertDiskResource:
+      description: A transient resource used in compute.disks.bulkInsert and compute.regionDisks.bulkInsert. It is only used to process requests and is not persisted.
+      properties:
+        sourceConsistencyGroupPolicy:
+          description: "The URL of the DiskConsistencyGroupPolicy for the group of disks to clone. This may be a full or partial URL, such as: - https://www.googleapis.com/compute/v1/projects/project/regions/region /resourcePolicies/resourcePolicy - projects/project/regions/region/resourcePolicies/resourcePolicy - regions/region/resourcePolicies/resourcePolicy "
+          type: string
+      type: object
     BulkInsertInstanceResource:
       description: A transient resource used in compute.instances.bulkInsert and compute.regionInstances.bulkInsert . This resource is not persisted anywhere, it is used only for processing the requests.
       properties:
@@ -48156,6 +48767,14 @@ components:
             - ARM64
             - X86_64
           type: string
+        asyncPrimaryDisk:
+          $ref: "#/components/schemas/DiskAsyncReplication"
+          description: Disk asynchronously replicated into this disk.
+        asyncSecondaryDisks:
+          additionalProperties:
+            $ref: "#/components/schemas/DiskAsyncReplicationList"
+          description: "[Output Only] A list of disks this disk is asynchronously replicated to."
+          type: object
         creationTimestamp:
           description: "[Output Only] Creation timestamp in RFC3339 text format."
           type: string
@@ -48258,6 +48877,9 @@ components:
           items:
             type: string
           type: array
+        resourceStatus:
+          $ref: "#/components/schemas/DiskResourceStatus"
+          description: "[Output Only] Status information for the disk resource."
         satisfiesPzs:
           description: "[Output Only] Reserved for future use."
           type: boolean
@@ -48267,6 +48889,12 @@ components:
         sizeGb:
           description: Size, in GB, of the persistent disk. You can specify this field when creating a persistent disk using the sourceImage, sourceSnapshot, or sourceDisk parameter, or specify it alone to create an empty persistent disk. If you specify this field along with a source, the value of sizeGb must not be less than the size of the source. Acceptable values are 1 to 65536, inclusive.
           format: int64
+          type: string
+        sourceConsistencyGroupPolicy:
+          description: "[Output Only] URL of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group."
+          type: string
+        sourceConsistencyGroupPolicyId:
+          description: "[Output Only] ID of the DiskConsistencyGroupPolicy for a secondary disk that was created using a consistency group."
           type: string
         sourceDisk:
           description: "The source disk used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk "
@@ -48404,6 +49032,20 @@ components:
               type: string
           type: object
       type: object
+    DiskAsyncReplication:
+      properties:
+        disk:
+          description: "The other disk asynchronously replicated to or from the current disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk "
+          type: string
+        diskId:
+          description: "[Output Only] The unique ID of the other disk asynchronously replicated to or from the current disk. This value identifies the exact disk that was used to create this replication. For example, if you started replicating the persistent disk from a disk that was later deleted and recreated under the same name, the disk ID would identify the exact version of the disk that was used."
+          type: string
+      type: object
+    DiskAsyncReplicationList:
+      properties:
+        asyncReplicationDisk:
+          $ref: "#/components/schemas/DiskAsyncReplication"
+      type: object
     DiskInstantiationConfig:
       description: A specification of the desired way to instantiate a disk in the instance template when its created from a source instance.
       properties:
@@ -48517,6 +49159,28 @@ components:
             type: string
           description: Resource manager tags to be bound to the disk. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
           type: object
+      type: object
+    DiskResourceStatus:
+      properties:
+        asyncPrimaryDisk:
+          $ref: "#/components/schemas/DiskResourceStatusAsyncReplicationStatus"
+        asyncSecondaryDisks:
+          additionalProperties:
+            $ref: "#/components/schemas/DiskResourceStatusAsyncReplicationStatus"
+          description: "Key: disk, value: AsyncReplicationStatus message"
+          type: object
+      type: object
+    DiskResourceStatusAsyncReplicationStatus:
+      properties:
+        state:
+          enum:
+            - ACTIVE
+            - CREATED
+            - STARTING
+            - STATE_UNSPECIFIED
+            - STOPPED
+            - STOPPING
+          type: string
       type: object
     DiskType:
       description: "Represents a Disk Type resource. Google Compute Engine has two Disk Type resources: * [Regional](/compute/docs/reference/rest/beta/regionDiskTypes) * [Zonal](/compute/docs/reference/rest/beta/diskTypes) You can choose from a variety of disk types based on your needs. For more information, read Storage options. The diskTypes resource represents disk types for a zonal persistent disk. For more information, read Zonal persistent disks. The regionDiskTypes resource represents disk types for a regional persistent disk. For more information, read Regional persistent disks."
@@ -48846,6 +49510,19 @@ components:
               description: "[Output Only] A human-readable description of the warning code."
               type: string
           type: object
+      type: object
+    DisksStartAsyncReplicationRequest:
+      properties:
+        asyncSecondaryDisk:
+          description: "The secondary disk to start asynchronous replication to. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk "
+          type: string
+      type: object
+    DisksStopGroupAsyncReplicationResource:
+      description: A transient resource used in compute.disks.stopGroupAsyncReplication and compute.regionDisks.stopGroupAsyncReplication. It is only used to process requests and is not persisted.
+      properties:
+        resourcePolicy:
+          description: "The URL of the DiskConsistencyGroupPolicy for the group of disks to stop. This may be a full or partial URL, such as: - https://www.googleapis.com/compute/v1/projects/project/regions/region /resourcePolicies/resourcePolicy - projects/project/regions/region/resourcePolicies/resourcePolicy - regions/region/resourcePolicies/resourcePolicy "
+          type: string
       type: object
     DisplayDevice:
       description: A set of Display Device options
@@ -50062,6 +50739,15 @@ components:
             - USE_SERVING_PORT
           type: string
       type: object
+    GlobalAddressesMoveRequest:
+      properties:
+        description:
+          description: An optional destination address description if intended to be different from the source.
+          type: string
+        destinationAddress:
+          description: "The URL of the destination address to move to. This can be a full or partial URL. For example, the following are all valid URLs to a address: - https://www.googleapis.com/compute/v1/projects/project /global/addresses/address - projects/project/global/addresses/address Note that destination project must be different from the source project. So /global/addresses/address is not valid partial url."
+          type: string
+      type: object
     GlobalNetworkEndpointGroupsAttachEndpointsRequest:
       properties:
         networkEndpoints:
@@ -50168,13 +50854,14 @@ components:
       description: Guest OS features.
       properties:
         type:
-          description: "The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE - SEV_SNP_CAPABLE For more information, see Enabling guest operating system features."
+          description: "The ID of a supported feature. To add multiple values, use commas to separate values. Set to one or more of the following values: - VIRTIO_SCSI_MULTIQUEUE - WINDOWS - MULTI_IP_SUBNET - UEFI_COMPATIBLE - GVNIC - SEV_CAPABLE - SUSPEND_RESUME_COMPATIBLE - SEV_LIVE_MIGRATABLE - SEV_SNP_CAPABLE - TDX_CAPABLE For more information, see Enabling guest operating system features."
           enum:
             - FEATURE_TYPE_UNSPECIFIED
             - GVNIC
             - MULTI_IP_SUBNET
             - SECURE_BOOT
             - SEV_CAPABLE
+            - SEV_LIVE_MIGRATABLE
             - SEV_SNP_CAPABLE
             - UEFI_COMPATIBLE
             - VIRTIO_SCSI_MULTIQUEUE
@@ -50717,7 +51404,7 @@ components:
           description: A forwarding rule IP address assigned to this instance.
           type: string
         healthState:
-          description: Health state of the instance.
+          description: Health state of the IPv4 address of the instance.
           enum:
             - HEALTHY
             - UNHEALTHY
@@ -50947,7 +51634,7 @@ components:
           format: int32
           type: integer
         requestPath:
-          description: The request path of the HTTP health check request. The default value is /. This field does not support query parameters.
+          description: The request path of the HTTP health check request. The default value is /. This field does not support query parameters. Must comply with RFC3986.
           type: string
         selfLink:
           description: "[Output Only] Server-defined URL for the resource."
@@ -51234,7 +51921,7 @@ components:
           format: int32
           type: integer
         requestPath:
-          description: The request path of the HTTPS health check request. The default value is "/".
+          description: The request path of the HTTPS health check request. The default value is "/". Must comply with RFC3986.
           type: string
         selfLink:
           description: "[Output Only] Server-defined URL for the resource."
@@ -52556,7 +53243,7 @@ components:
     InstanceGroupManagersDeleteInstancesRequest:
       properties:
         instances:
-          description: The URLs of one or more instances to delete. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].
+          description: The URLs of one or more instances to delete. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME]. Queued instances do not have URL and can be deleted only by name. One cannot specify both URLs and names in a single request.
           items:
             type: string
           type: array
@@ -53749,7 +54436,7 @@ components:
           type: string
       type: object
     Interconnect:
-      description: Represents an Interconnect resource. An Interconnect resource is a dedicated connection between the GCP network and your on-premises network. For more information, read the Dedicated Interconnect Overview.
+      description: Represents an Interconnect resource. An Interconnect resource is a dedicated connection between the Google Cloud network and your on-premises network. For more information, read the Dedicated Interconnect Overview.
       properties:
         adminEnabled:
           description: Administrative status of the interconnect. When this is set to true, the Interconnect is functional and can carry traffic. When set to false, no packets can be carried over the interconnect and no BGP routes are exchanged over it. By default, the status is set to true.
@@ -53842,7 +54529,7 @@ components:
           format: int32
           type: integer
         satisfiesPzs:
-          description: "[Output Only] Set to true if the resource satisfies the zone separation organization policy constraints and false otherwise. Defaults to false if the field is not present."
+          description: "[Output Only] Reserved for future use."
           type: boolean
         selfLink:
           description: "[Output Only] Server-defined URL for the resource."
@@ -53938,7 +54625,7 @@ components:
           description: URL of the underlying Interconnect object that this attachment's traffic will traverse through.
           type: string
         ipsecInternalAddresses:
-          description: "A list of URLs of addresses that have been reserved for the VLAN attachment. Used only for the VLAN attachment that has the encryption option as IPSEC. The addresses must be regional internal IP address ranges. When creating an HA VPN gateway over the VLAN attachment, if the attachment is configured to use a regional internal IP address, then the VPN gateway's IP address is allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is paired to this VLAN attachment, then a regional internal IP address for the VPN gateway interface 0 will be allocated from the IP address specified for this VLAN attachment. If this field is not specified when creating the VLAN attachment, then later on when creating an HA VPN gateway on this VLAN attachment, the HA VPN gateway's IP address is allocated from the regional external IP address pool. Not currently available publicly. "
+          description: A list of URLs of addresses that have been reserved for the VLAN attachment. Used only for the VLAN attachment that has the encryption option as IPSEC. The addresses must be regional internal IP address ranges. When creating an HA VPN gateway over the VLAN attachment, if the attachment is configured to use a regional internal IP address, then the VPN gateway's IP address is allocated from the IP address range specified here. For example, if the HA VPN gateway's interface 0 is paired to this VLAN attachment, then a regional internal IP address for the VPN gateway interface 0 will be allocated from the IP address specified for this VLAN attachment. If this field is not specified when creating the VLAN attachment, then later on when creating an HA VPN gateway on this VLAN attachment, the HA VPN gateway's IP address is allocated from the regional external IP address pool.
           items:
             type: string
           type: array
@@ -53989,7 +54676,7 @@ components:
           description: URL of the Cloud Router to be used for dynamic routing. This router must be in the same region as this InterconnectAttachment. The InterconnectAttachment will automatically connect the Interconnect to the network & region within which the Cloud Router is configured.
           type: string
         satisfiesPzs:
-          description: "[Output Only] Set to true if the resource satisfies the zone separation organization policy constraints and false otherwise. Defaults to false if the field is not present."
+          description: "[Output Only] Reserved for future use."
           type: boolean
         selfLink:
           description: "[Output Only] Server-defined URL for the resource."
@@ -54501,7 +55188,7 @@ components:
             - CLOSED
           type: string
         supportsPzs:
-          description: "[Output Only] Set to true for locations that support physical zone separation. Defaults to false if the field is not present."
+          description: "[Output Only] Reserved for future use."
           type: boolean
       type: object
     InterconnectLocationList:
@@ -55580,7 +56267,7 @@ components:
           description: "[Output Only] URL of the firewall policy the network is associated with."
           type: string
         gatewayIPv4:
-          description: "[Output Only] The gateway address for default routing out of the network, selected by GCP."
+          description: "[Output Only] The gateway address for default routing out of the network, selected by Google Cloud."
           pattern: "[0-9]{1,3}(?:\\.[0-9]{1,3}){3}"
           type: string
         id:
@@ -56640,7 +57327,7 @@ components:
             - INTERNAL
           type: string
         ipv6Address:
-          description: An IPv6 internal network address for this network interface. To use a static internal IP address, it must be unused and in the same region as the instance's zone. If not specified, GCP will automatically assign an internal IPv6 address from the instance's subnetwork.
+          description: An IPv6 internal network address for this network interface. To use a static internal IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an internal IPv6 address from the instance's subnetwork.
           type: string
         kind:
           default: compute#networkInterface
@@ -56670,7 +57357,7 @@ components:
           format: int32
           type: integer
         stackType:
-          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used. This field can be both set at instance creation and update network interface operations.
+          description: The stack type for this network interface. To assign only IPv4 addresses, use IPV4_ONLY. To assign both IPv4 and IPv6 addresses, use IPV4_IPV6. If not specified, IPV4_ONLY is used. This field can be both set at instance creation and update network interface operations.
           enum:
             - IPV4_IPV6
             - IPV4_ONLY
@@ -57400,7 +58087,7 @@ components:
           type: string
         nodeTypeFlexibility:
           $ref: "#/components/schemas/NodeTemplateNodeTypeFlexibility"
-          description: The flexible properties of the desired node type. Node groups that use this node template will create nodes of a type that matches these properties. This field is mutually exclusive with the node_type property; you can only define one or the other, but not both.
+          description: Do not use. Instead, use the node_type property.
         region:
           description: "[Output Only] The name of the region where the node template resides, such as us-central1."
           type: string
@@ -59772,6 +60459,15 @@ components:
             type: string
           type: array
       type: object
+    RegionAddressesMoveRequest:
+      properties:
+        description:
+          description: An optional destination address description if intended to be different from the source.
+          type: string
+        destinationAddress:
+          description: "The URL of the destination address to move to. This can be a full or partial URL. For example, the following are all valid URLs to a address: - https://www.googleapis.com/compute/v1/projects/project/regions/region /addresses/address - projects/project/regions/region/addresses/address Note that destination project must be different from the source project. So /regions/region/addresses/address is not valid partial url."
+          type: string
+      type: object
     RegionAutoscalerList:
       description: Contains a list of autoscalers.
       properties:
@@ -59944,6 +60640,12 @@ components:
         sizeGb:
           description: The new size of the regional persistent disk, which is specified in GB.
           format: int64
+          type: string
+      type: object
+    RegionDisksStartAsyncReplicationRequest:
+      properties:
+        asyncSecondaryDisk:
+          description: "The secondary disk to start asynchronous replication to. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - https://www.googleapis.com/compute/v1/projects/project/regions/region /disks/disk - projects/project/zones/zone/disks/disk - projects/project/regions/region/disks/disk - zones/zone/disks/disk - regions/region/disks/disk "
           type: string
       type: object
     RegionInstanceGroupList:
@@ -60937,6 +61639,9 @@ components:
           type: string
         description:
           type: string
+        diskConsistencyGroupPolicy:
+          $ref: "#/components/schemas/ResourcePolicyDiskConsistencyGroupPolicy"
+          description: Resource policy for disk consistency groups.
         groupPlacementPolicy:
           $ref: "#/components/schemas/ResourcePolicyGroupPlacementPolicy"
           description: Resource policy for instances for placement configuration.
@@ -61070,6 +61775,10 @@ components:
           description: Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
           type: string
       type: object
+    ResourcePolicyDiskConsistencyGroupPolicy:
+      description: Resource policy for disk consistency groups.
+      properties: {}
+      type: object
     ResourcePolicyGroupPlacementPolicy:
       description: A GroupPlacementPolicy specifies resource placement configuration. It specifies the failure bucket separation as well as network locality
       properties:
@@ -61116,7 +61825,7 @@ components:
           description: The start time of the schedule. The timestamp is an RFC3339 string.
           type: string
         timeZone:
-          description: "Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database."
+          description: "Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: https://wikipedia.org/wiki/Tz_database."
           type: string
         vmStartSchedule:
           $ref: "#/components/schemas/ResourcePolicyInstanceSchedulePolicySchedule"
@@ -61745,7 +62454,7 @@ components:
             - DEFAULT
           type: string
         advertisedGroups:
-          description: "User-specified list of prefix groups to advertise in custom mode, which can take one of the following options: - ALL_SUBNETS: Advertises all available subnets, including peer VPC subnets. - ALL_VPC_SUBNETS: Advertises the router's own VPC subnets. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the \"bgp\" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups."
+          description: "User-specified list of prefix groups to advertise in custom mode, which currently supports the following option: - ALL_SUBNETS: Advertises all of the router's own VPC subnets. This excludes any routes learned for subnets that use VPC Network Peering. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the \"bgp\" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups."
           items:
             enum:
               - ALL_SUBNETS
@@ -62882,6 +63591,11 @@ components:
             - NORMAL
             - VERBOSE
           type: string
+        userIpRequestHeaders:
+          description: An optional list of case-insensitive request header names to use for resolving the callers client IP address.
+          items:
+            type: string
+          type: array
       type: object
     SecurityPolicyAdvancedOptionsConfigJsonCustomConfig:
       properties:
@@ -62911,6 +63625,7 @@ components:
         ddosProtection:
           enum:
             - ADVANCED
+            - ADVANCED_PREVIEW
             - STANDARD
           type: string
       type: object
@@ -63319,7 +64034,7 @@ components:
           type: array
       type: object
     ServiceAttachment:
-      description: Represents a ServiceAttachment resource. A service attachment represents a service that a producer has exposed. It encapsulates the load balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to represent the consumers connecting to the service. next tag = 20
+      description: Represents a ServiceAttachment resource. A service attachment represents a service that a producer has exposed. It encapsulates the load balancer which fronts the service runs and a list of NAT IP ranges that the producers uses to represent the consumers connecting to the service.
       properties:
         connectedEndpoints:
           description: "[Output Only] An array of connections for all the consumers connected to this service attachment."
@@ -65661,7 +66376,7 @@ components:
           description: "[Output Only] Server-defined URL for the resource."
           type: string
         serverTlsPolicy:
-          description: "Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact."
+          description: Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are not encrypted.
           type: string
         sslCertificates:
           description: URLs to SslCertificate resources that are used to authenticate connections between users and the load balancer. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.

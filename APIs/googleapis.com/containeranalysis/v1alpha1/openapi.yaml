@@ -857,6 +857,14 @@ components:
         cve:
           description: Holds the MITRE standard Common Vulnerabilities and Exposures (CVE) tracking number for the vulnerability.
           type: string
+        impacts:
+          description: Contains information about the impact of this vulnerability, this will change with time.
+          items:
+            type: string
+          type: array
+        justification:
+          $ref: "#/components/schemas/Justification"
+          description: Justification provides the justification when the state of the assessment if NOT_AFFECTED.
         longDescription:
           description: A detailed description of this Vex.
           type: string
@@ -882,11 +890,6 @@ components:
             - FIXED
             - UNDER_INVESTIGATION
           type: string
-        threats:
-          description: Contains information about this vulnerability, this will change with time.
-          items:
-            $ref: "#/components/schemas/Threat"
-          type: array
       type: object
     Attestation:
       description: Occurrence that represents a single "attestation". The authenticity of an Attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the AttestationAuthority to which this Attestation is attached is primarily useful for look-up (how to find this Attestation if you already know the Authority and artifact to be verified) and intent (which authority was this attestation intended to sign for).
@@ -1602,6 +1605,12 @@ components:
     ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions:
       description: Optional arguments to enable specific features of builds.
       properties:
+        defaultLogsBucketBehavior:
+          description: Optional. Option to specify how default logs buckets are setup.
+          enum:
+            - DEFAULT_LOGS_BUCKET_BEHAVIOR_UNSPECIFIED
+            - REGIONAL_USER_OWNED_BUCKET
+          type: string
         diskSizeGb:
           description: Requested disk size for the VM that runs the build. Note that this is *NOT* "disk free"; some of the space will be used by the operating system and build utilities. Also note that this is the minimum disk size that will be allocated for the build -- the build may run with a larger disk than requested. At present, the maximum disk size is 2000GB; builds that request more than the maximum are rejected with an error.
           format: int64
@@ -2817,6 +2826,23 @@ components:
           description: Output only. The version of the package.
           readOnly: true
       type: object
+    Justification:
+      description: Justification provides the justification when the state of the assessment if NOT_AFFECTED.
+      properties:
+        details:
+          description: Additional details on why this justification was chosen.
+          type: string
+        justificationType:
+          description: The justification type for this vulnerability.
+          enum:
+            - JUSTIFICATION_TYPE_UNSPECIFIED
+            - COMPONENT_NOT_PRESENT
+            - VULNERABLE_CODE_NOT_PRESENT
+            - VULNERABLE_CODE_NOT_IN_EXECUTE_PATH
+            - VULNERABLE_CODE_CANNOT_BE_CONTROLLED_BY_ADVERSARY
+            - INLINE_MITIGATIONS_ALREADY_EXIST
+          type: string
+      type: object
     Layer:
       description: Layer holds metadata specific to a layer of a Docker image.
       properties:
@@ -3391,14 +3417,14 @@ components:
     Publisher:
       description: Publisher contains information about the publisher of this Note.
       properties:
-        context:
-          description: "The context or namespace. Contains a URL which is under control of the issuing party and can be used as a globally unique identifier for that issuing party. Example: https://csaf.io"
-          type: string
         issuingAuthority:
           description: Provides information about the authority of the issuing party to release the document, in particular, the party's constituency and responsibilities or other obligations.
           type: string
         name:
           description: "Name of the publisher. Examples: 'Google', 'Google Cloud Platform'."
+          type: string
+        publisherNamespace:
+          description: "The context or namespace. Contains a URL which is under control of the issuing party and can be used as a globally unique identifier for that issuing party. Example: https://csaf.io"
           type: string
       type: object
     Recipe:
@@ -3558,10 +3584,6 @@ components:
       properties:
         details:
           description: Contains a comprehensive human-readable discussion of the remediation.
-          type: string
-        remediationTime:
-          description: Contains the date from which the remediation is available.
-          format: google-datetime
           type: string
         remediationType:
           description: The type of remediation that can be applied.
@@ -3852,20 +3874,6 @@ components:
             type: string
           type: array
       type: object
-    Threat:
-      description: Contains the vulnerability kinetic information. This information can change as the vulnerability ages and new information becomes available.
-      properties:
-        details:
-          description: Represents a thorough human-readable discussion of the threat.
-          type: string
-        threatType:
-          description: The type of threat.
-          enum:
-            - THREAT_TYPE_UNSPECIFIED
-            - IMPACT
-            - EXPLOIT_STATUS
-          type: string
-      type: object
     TimeSpan:
       description: "Start and end times for a build execution phase. Next ID: 3"
       properties:
@@ -3975,6 +3983,14 @@ components:
         cve:
           description: Holds the MITRE standard Common Vulnerabilities and Exposures (CVE) tracking number for the vulnerability.
           type: string
+        impacts:
+          description: Contains information about the impact of this vulnerability, this will change with time.
+          items:
+            type: string
+          type: array
+        justification:
+          $ref: "#/components/schemas/Justification"
+          description: Justification provides the justification when the state of the assessment if NOT_AFFECTED.
         noteName:
           description: "The VulnerabilityAssessment note from which this VexAssessment was generated. This will be of the form: `projects/[PROJECT_ID]/notes/[NOTE_ID]`."
           type: string
@@ -3997,11 +4013,6 @@ components:
             - FIXED
             - UNDER_INVESTIGATION
           type: string
-        threats:
-          description: Contains information about this vulnerability, this will change with time.
-          items:
-            $ref: "#/components/schemas/Threat"
-          type: array
       type: object
     Volume:
       description: "Volume describes a Docker container volume which is mounted into build steps in order to persist files across build step execution. Next ID: 3"
