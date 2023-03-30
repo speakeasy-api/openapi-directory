@@ -60,10 +60,10 @@ func main() {
                 },
                 Permission: shared.Permission{
                     AccessMode: "STORE",
-                    DataEraseAt: "2022-08-14T12:15:58.782Z",
+                    DataEraseAt: "2022-08-14T12:42:09.097Z",
                     DateRange: shared.PermissionDateRange{
-                        From: "2022-08-06T08:39:06.720Z",
-                        To: "2022-11-09T19:30:01.722Z",
+                        From: "2022-08-06T09:05:17.035Z",
+                        To: "2022-11-09T19:56:12.037Z",
                     },
                     Frequency: shared.PermissionFrequency{
                         Repeats: 437587,
@@ -86,7 +86,7 @@ func main() {
                 },
             },
             RequestID: "499a5a4a-7dda-4f20-9b67-e24589627061",
-            Timestamp: "2022-06-06T16:05:10.748Z",
+            Timestamp: "2022-06-06T16:31:21.065Z",
         },
     }
 

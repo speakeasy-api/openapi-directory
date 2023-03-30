@@ -35,8 +35,8 @@ func main() {
             DatabaseName: "vel",
             PartitionInputList: []shared.PartitionInput{
                 shared.PartitionInput{
-                    LastAccessTime: "2022-08-06T08:21:14.935Z",
-                    LastAnalyzedTime: "2022-11-09T19:12:09.937Z",
+                    LastAccessTime: "2022-08-06T08:47:14.505Z",
+                    LastAnalyzedTime: "2022-11-09T19:38:09.507Z",
                     Parameters: map[string]string{
                         "magnam": "debitis",
                         "ipsa": "delectus",
@@ -135,8 +135,8 @@ func main() {
                     },
                 },
                 shared.PartitionInput{
-                    LastAccessTime: "2023-02-21T20:41:26.047Z",
-                    LastAnalyzedTime: "2023-03-08T02:48:40.862Z",
+                    LastAccessTime: "2023-02-21T21:07:25.625Z",
+                    LastAnalyzedTime: "2023-03-08T03:14:40.440Z",
                     Parameters: map[string]string{
                         "est": "mollitia",
                         "laborum": "dolores",
@@ -234,8 +234,8 @@ func main() {
                     },
                 },
                 shared.PartitionInput{
-                    LastAccessTime: "2022-09-04T19:19:55.621Z",
-                    LastAnalyzedTime: "2022-09-04T06:57:28.411Z",
+                    LastAccessTime: "2022-09-04T19:45:55.204Z",
+                    LastAnalyzedTime: "2022-09-04T07:23:27.994Z",
                     Parameters: map[string]string{
                         "modi": "praesentium",
                         "rem": "voluptates",

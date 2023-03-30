@@ -31,7 +31,7 @@ func main() {
             Parentfeature: "nulla",
             Price: 5448.83,
             Quantity: "illum",
-            StartDate: "2022-10-26T11:28:15.481Z",
+            StartDate: "2022-10-26T11:54:26.054Z",
             TimeVolume: "error",
             TimeVolumePeriod: "deserunt",
             UsedQuantity: "suscipit",

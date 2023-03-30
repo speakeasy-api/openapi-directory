@@ -35,7 +35,7 @@ func main() {
         Request: operations.CreateScheduleRequestBody{
             ClientToken: "vel",
             Description: "error",
-            EndDate: "2022-08-06T08:22:54.906Z",
+            EndDate: "2022-08-06T08:48:54.783Z",
             FlexibleTimeWindow: operations.CreateScheduleRequestBodyFlexibleTimeWindow{
                 MaximumWindowInMinutes: 384382,
                 Mode: "OFF",
@@ -44,7 +44,7 @@ func main() {
             KmsKeyArn: "debitis",
             ScheduleExpression: "ipsa",
             ScheduleExpressionTimezone: "delectus",
-            StartDate: "2022-12-20T13:56:42.445Z",
+            StartDate: "2022-12-20T14:22:42.320Z",
             State: "ENABLED",
             Target: operations.CreateScheduleRequestBodyTarget{
                 Arn: "molestiae",

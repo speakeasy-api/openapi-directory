@@ -55,8 +55,8 @@ func main() {
                     Permission: shared.ConsentArtifactSchemaConsentPermission{
                         Access: "quibusdam",
                         DateRange: shared.ConsentArtifactSchemaConsentPermissionDateRange{
-                            From: "2022-08-22T02:14:59.591Z",
-                            To: "2022-05-20T22:51:12.427Z",
+                            From: "2022-08-22T02:40:58.925Z",
+                            To: "2022-05-20T23:17:11.761Z",
                         },
                         Frequency: shared.ConsentArtifactSchemaConsentPermissionFrequency{
                             Repeats: 5448.83,
@@ -67,7 +67,7 @@ func main() {
                     Purpose: shared.ConsentArtifactSchemaConsentPurpose{
                         Description: "error",
                     },
-                    Timestamp: "2022-08-06T08:25:28.470Z",
+                    Timestamp: "2022-08-06T08:51:27.804Z",
                     User: shared.ConsentArtifactSchemaConsentUser{
                         Email: "Hunter.Gulgowski96@yahoo.com",
                         IDNumber: "tempora",

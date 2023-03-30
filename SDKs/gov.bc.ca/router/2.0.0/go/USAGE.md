@@ -26,7 +26,7 @@ func main() {
         QueryParams: operations.GetDirectionsOutputFormatQueryParams{
             CorrectSide: false,
             Criteria: "fastest",
-            Departure: "2022-07-12T01:36:04.159Z",
+            Departure: "2022-07-12T02:02:16.444Z",
             Disable: "quibusdam",
             DistanceUnit: "mi",
             OutputSRS: "26910",

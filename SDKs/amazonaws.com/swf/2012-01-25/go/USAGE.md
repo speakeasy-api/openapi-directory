@@ -35,16 +35,16 @@ func main() {
                 Status: "TIMED_OUT",
             },
             CloseTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-10-26T11:12:21.467Z",
-                OldestDate: "2022-08-14T12:00:14.610Z",
+                LatestDate: "2022-10-26T11:38:21.298Z",
+                OldestDate: "2022-08-14T12:26:14.440Z",
             },
             Domain: "deserunt",
             ExecutionFilter: &shared.WorkflowExecutionFilter{
                 WorkflowID: "suscipit",
             },
             StartTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-10-21T09:09:28.900Z",
-                OldestDate: "2022-12-11T12:01:07.702Z",
+                LatestDate: "2022-10-21T09:35:28.731Z",
+                OldestDate: "2022-12-11T12:27:07.533Z",
             },
             TagFilter: &shared.TagFilter{
                 Tag: "debitis",

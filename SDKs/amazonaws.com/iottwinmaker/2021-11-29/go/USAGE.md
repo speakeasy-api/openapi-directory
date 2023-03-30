@@ -47,7 +47,7 @@ func main() {
                     PropertyValues: []shared.PropertyValue{
                         shared.PropertyValue{
                             Time: "suscipit",
-                            Timestamp: "2022-10-06T18:02:35.663Z",
+                            Timestamp: "2022-10-06T18:28:35.643Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
                                 DoubleValue: 7917.25,
@@ -71,7 +71,7 @@ func main() {
                         },
                         shared.PropertyValue{
                             Time: "deserunt",
-                            Timestamp: "2023-03-22T17:16:34.736Z",
+                            Timestamp: "2023-03-22T17:42:34.730Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
                                 DoubleValue: 3682.41,
@@ -111,7 +111,7 @@ func main() {
                     PropertyValues: []shared.PropertyValue{
                         shared.PropertyValue{
                             Time: "deleniti",
-                            Timestamp: "2022-04-19T07:05:24.083Z",
+                            Timestamp: "2022-04-19T07:31:24.085Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
                                 DoubleValue: 7586.16,

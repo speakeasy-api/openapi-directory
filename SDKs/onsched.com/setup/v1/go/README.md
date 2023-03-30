@@ -36,7 +36,7 @@ func main() {
             CalendarID: "provident",
             CustomerID: "distinctio",
             Email: "Leda_Stiedemann@hotmail.com",
-            EndDate: "2022-10-26T11:28:55.671Z",
+            EndDate: "2022-10-26T11:55:06.324Z",
             Lastname: "Mueller",
             Limit: 645894,
             LocationID: "suscipit",
@@ -44,7 +44,7 @@ func main() {
             ResourceID: "magnam",
             ServiceAllocationID: "debitis",
             ServiceID: "ipsa",
-            StartDate: "2022-04-12T09:00:44.956Z",
+            StartDate: "2022-04-12T09:26:55.610Z",
             Status: "tempora",
         },
     }

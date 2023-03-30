@@ -37,7 +37,7 @@ func main() {
                         SingleUse: false,
                     },
                     ResultKey: "vel",
-                    ValidTillDate: "2022-08-14T11:56:06.855Z",
+                    ValidTillDate: "2022-08-14T12:22:05.213Z",
                 },
                 shared.Permit{
                     PartnerID: "deserunt",
@@ -54,7 +54,7 @@ func main() {
                         SingleUse: false,
                     },
                     ResultKey: "delectus",
-                    ValidTillDate: "2022-12-20T13:53:02.332Z",
+                    ValidTillDate: "2022-12-20T14:19:00.689Z",
                 },
                 shared.Permit{
                     PartnerID: "suscipit",
@@ -71,7 +71,7 @@ func main() {
                         SingleUse: false,
                     },
                     ResultKey: "excepturi",
-                    ValidTillDate: "2022-11-06T17:33:30.120Z",
+                    ValidTillDate: "2022-11-06T17:59:28.477Z",
                 },
             },
             RecurringDetailReference: "recusandae",

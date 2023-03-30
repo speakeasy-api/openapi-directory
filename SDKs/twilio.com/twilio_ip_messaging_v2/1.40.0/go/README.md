@@ -40,8 +40,8 @@ func main() {
         Request: &operations.CreateChannelCreateChannelRequest{
             Attributes: "distinctio",
             CreatedBy: "quibusdam",
-            DateCreated: "2022-08-22T02:31:50.066Z",
-            DateUpdated: "2022-05-20T23:08:02.902Z",
+            DateCreated: "2022-08-22T02:57:52.852Z",
+            DateUpdated: "2022-05-20T23:34:05.688Z",
             FriendlyName: "corrupti",
             Type: "private",
             UniqueName: "vel",

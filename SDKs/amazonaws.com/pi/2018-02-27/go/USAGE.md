@@ -40,7 +40,7 @@ func main() {
                 "suscipit",
                 "iure",
             },
-            EndTime: "2022-12-11T11:59:59.856Z",
+            EndTime: "2022-12-11T12:25:59.890Z",
             Filter: map[string]string{
                 "ipsa": "delectus",
                 "tempora": "suscipit",
@@ -68,7 +68,7 @@ func main() {
             },
             PeriodInSeconds: 778157,
             ServiceType: "RDS",
-            StartTime: "2022-05-16T13:05:48.732Z",
+            StartTime: "2022-05-16T13:31:48.764Z",
         },
     }
 

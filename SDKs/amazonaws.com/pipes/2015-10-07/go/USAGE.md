@@ -101,7 +101,7 @@ func main() {
                     OnPartialBatchItemFailure: "AUTOMATIC_BISECT",
                     ParallelizationFactor: 143353,
                     StartingPosition: "LATEST",
-                    StartingPositionTimestamp: "2022-04-19T07:06:16.045Z",
+                    StartingPositionTimestamp: "2022-04-19T07:32:16.564Z",
                 },
                 ManagedStreamingKafkaParameters: &shared.PipeSourceManagedStreamingKafkaParameters{
                     BatchSize: 758616,

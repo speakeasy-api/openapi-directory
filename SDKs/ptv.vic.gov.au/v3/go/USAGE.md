@@ -19,7 +19,7 @@ func main() {
             StopID: 592845,
         },
         QueryParams: operations.DeparturesGetForStopQueryParams{
-            DateUtc: "2022-07-12T01:38:55.326Z",
+            DateUtc: "2022-07-12T02:05:04.269Z",
             Devid: "quibusdam",
             DirectionID: 602763,
             Expand: []DeparturesGetForStopExpandEnum{

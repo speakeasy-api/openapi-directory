@@ -47,7 +47,7 @@ func main() {
                 TLSPolicy: "OPTIONAL",
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "2022-08-06T08:22:17.083Z",
+                LastFreshStart: "2022-08-06T08:48:17.381Z",
                 ReputationMetricsEnabled: false,
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{

@@ -33,8 +33,8 @@ func main() {
             ClipFragmentSelector: operations.GetClipRequestBodyClipFragmentSelector{
                 FragmentSelectorType: "SERVER_TIMESTAMP",
                 TimestampRange: &shared.ClipTimestampRange{
-                    EndTimestamp: "2022-10-26T11:10:29.339Z",
-                    StartTimestamp: "2022-08-14T11:58:22.481Z",
+                    EndTimestamp: "2022-10-26T11:36:29.252Z",
+                    StartTimestamp: "2022-08-14T12:24:22.394Z",
                 },
             },
             StreamARN: "deserunt",

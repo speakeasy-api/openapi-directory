@@ -56,7 +56,7 @@ func main() {
                     },
                     Properties: "delectus",
                     RecommendationID: "tempora",
-                    SentAt: "2022-11-10T03:27:17.987Z",
+                    SentAt: "2022-11-10T03:53:18.412Z",
                 },
                 shared.Event{
                     EventID: "molestiae",
@@ -73,7 +73,7 @@ func main() {
                     },
                     Properties: "ab",
                     RecommendationID: "quis",
-                    SentAt: "2023-02-26T07:09:00.001Z",
+                    SentAt: "2023-02-26T07:35:00.428Z",
                 },
                 shared.Event{
                     EventID: "deserunt",
@@ -91,7 +91,7 @@ func main() {
                     },
                     Properties: "molestiae",
                     RecommendationID: "quod",
-                    SentAt: "2022-06-10T18:25:28.736Z",
+                    SentAt: "2022-06-10T18:51:29.165Z",
                 },
                 shared.Event{
                     EventID: "esse",
@@ -108,7 +108,7 @@ func main() {
                     },
                     Properties: "deleniti",
                     RecommendationID: "hic",
-                    SentAt: "2022-06-26T04:55:47.981Z",
+                    SentAt: "2022-06-26T05:21:48.412Z",
                 },
             },
             SessionID: "totam",

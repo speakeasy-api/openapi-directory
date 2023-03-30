@@ -52,7 +52,7 @@ func main() {
                     Value: shared.TypedAttributeValue{
                         BinaryValue: "iure",
                         BooleanValue: false,
-                        DatetimeValue: "2022-12-11T11:57:35.758Z",
+                        DatetimeValue: "2022-12-11T12:23:33.239Z",
                         NumberValue: "debitis",
                         StringValue: "ipsa",
                     },
@@ -66,7 +66,7 @@ func main() {
                     Value: shared.TypedAttributeValue{
                         BinaryValue: "molestiae",
                         BooleanValue: false,
-                        DatetimeValue: "2022-06-14T02:51:06.910Z",
+                        DatetimeValue: "2022-06-14T03:17:04.392Z",
                         NumberValue: "placeat",
                         StringValue: "voluptatum",
                     },

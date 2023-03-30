@@ -48,7 +48,7 @@ func main() {
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            DataSetPublicationDate: "2022-04-12T08:42:38.741Z",
+            DataSetPublicationDate: "2022-04-12T09:08:38.697Z",
             DataSetType: "daily_business_new_product_subscribers",
             DestinationS3BucketName: "suscipit",
             DestinationS3Prefix: "molestiae",

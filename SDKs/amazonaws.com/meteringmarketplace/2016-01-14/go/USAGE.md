@@ -37,7 +37,7 @@ func main() {
                     CustomerIdentifier: "error",
                     Dimension: "deserunt",
                     Quantity: 384382,
-                    Timestamp: "2022-10-21T09:07:59.721Z",
+                    Timestamp: "2022-10-21T09:33:59.832Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
                             AllocatedUsageQuantity: 891773,
@@ -67,7 +67,7 @@ func main() {
                     CustomerIdentifier: "excepturi",
                     Dimension: "nisi",
                     Quantity: 925597,
-                    Timestamp: "2022-05-28T22:20:50.323Z",
+                    Timestamp: "2022-05-28T22:46:50.432Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
                             AllocatedUsageQuantity: 337396,

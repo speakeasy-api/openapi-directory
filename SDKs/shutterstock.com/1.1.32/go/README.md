@@ -36,17 +36,17 @@ func main() {
         Request: shared.CollectionItemRequest{
             Items: []shared.CollectionItem{
                 shared.CollectionItem{
-                    AddedTime: "2022-07-12T01:39:23.605Z",
+                    AddedTime: "2022-07-12T02:05:27.691Z",
                     ID: "quibusdam",
                     MediaType: "unde",
                 },
                 shared.CollectionItem{
-                    AddedTime: "2022-05-20T23:06:42.495Z",
+                    AddedTime: "2022-05-20T23:32:46.580Z",
                     ID: "corrupti",
                     MediaType: "illum",
                 },
                 shared.CollectionItem{
-                    AddedTime: "2022-10-26T11:29:57.458Z",
+                    AddedTime: "2022-10-26T11:56:01.543Z",
                     ID: "error",
                     MediaType: "deserunt",
                 },

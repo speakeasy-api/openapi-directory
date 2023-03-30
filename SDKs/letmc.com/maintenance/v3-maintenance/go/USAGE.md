@@ -44,7 +44,7 @@ func main() {
             PropertyAddress4: "tempora",
             PropertyCountry: "suscipit",
             PropertyPostcode: "molestiae",
-            ReportedAt: "2022-06-14T03:09:43.975Z",
+            ReportedAt: "2022-06-14T03:35:55.580Z",
             TenantEMailAddress: "placeat",
             TenantForename: "voluptatum",
             TenantPhonePrimary: "iusto",
