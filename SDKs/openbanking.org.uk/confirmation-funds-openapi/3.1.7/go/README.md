@@ -31,21 +31,21 @@ func main() {
             },
         },
         Headers: operations.CreateFundsConfirmationConsentsHeaders{
-            Authorization: "unde",
-            XCustomerUserAgent: "deserunt",
-            XFapiAuthDate: "porro",
-            XFapiCustomerIPAddress: "nulla",
-            XFapiInteractionID: "id",
+            Authorization: "corrupti",
+            XCustomerUserAgent: "provident",
+            XFapiAuthDate: "distinctio",
+            XFapiCustomerIPAddress: "quibusdam",
+            XFapiInteractionID: "unde",
         },
         Request: shared.OBFundsConfirmationConsent1{
             Data: shared.OBFundsConfirmationConsent1Data{
                 DebtorAccount: shared.OBFundsConfirmationConsent1DataDebtorAccount{
-                    Identification: "vero",
-                    Name: "perspiciatis",
-                    SchemeName: "nulla",
-                    SecondaryIdentification: "nihil",
+                    Identification: "nulla",
+                    Name: "corrupti",
+                    SchemeName: "illum",
+                    SecondaryIdentification: "vel",
                 },
-                ExpirationDateTime: "2022-08-14T10:23:47.914Z",
+                ExpirationDateTime: "2022-08-14T12:16:44.686Z",
             },
         },
     }

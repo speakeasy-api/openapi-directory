@@ -32,32 +32,32 @@ func main() {
 
     req := operations.GetPersonalizedRankingRequest{
         Headers: operations.GetPersonalizedRankingHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.GetPersonalizedRankingRequestBody{
-            CampaignArn: "nulla",
+            CampaignArn: "illum",
             Context: map[string]string{
-                "fuga": "facilis",
-                "eum": "iusto",
+                "error": "deserunt",
+                "suscipit": "iure",
             },
-            FilterArn: "ullam",
+            FilterArn: "magnam",
             FilterValues: map[string]string{
-                "inventore": "sapiente",
-                "enim": "eum",
-                "voluptatum": "autem",
-                "vel": "non",
+                "ipsa": "delectus",
+                "tempora": "suscipit",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
             },
             InputList: []string{
-                "similique",
-                "reprehenderit",
+                "excepturi",
+                "nisi",
             },
-            UserID: "molestiae",
+            UserID: "recusandae",
         },
     }
 

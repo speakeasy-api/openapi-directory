@@ -32,42 +32,42 @@ func main() {
 
     req := operations.AssociateRepositoryRequest{
         Headers: operations.AssociateRepositoryHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.AssociateRepositoryRequestBody{
-            ClientRequestToken: "nulla",
+            ClientRequestToken: "illum",
             KMSKeyDetails: &operations.AssociateRepositoryRequestBodyKMSKeyDetails{
                 EncryptionOption: "AWS_OWNED_CMK",
-                KMSKeyID: "fuga",
+                KMSKeyID: "error",
             },
             Repository: operations.AssociateRepositoryRequestBodyRepository{
                 Bitbucket: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "facilis",
-                    Name: "eum",
-                    Owner: "iusto",
+                    ConnectionArn: "deserunt",
+                    Name: "suscipit",
+                    Owner: "iure",
                 },
                 CodeCommit: &shared.CodeCommitRepository{
-                    Name: "ullam",
+                    Name: "magnam",
                 },
                 GitHubEnterpriseServer: &shared.ThirdPartySourceRepository{
-                    ConnectionArn: "saepe",
-                    Name: "inventore",
-                    Owner: "sapiente",
+                    ConnectionArn: "debitis",
+                    Name: "ipsa",
+                    Owner: "delectus",
                 },
                 S3Bucket: &shared.S3Repository{
-                    BucketName: "enim",
-                    Name: "eum",
+                    BucketName: "tempora",
+                    Name: "suscipit",
                 },
             },
             Tags: map[string]string{
-                "autem": "vel",
-                "non": "deleniti",
+                "minus": "placeat",
+                "voluptatum": "iusto",
             },
         },
     }

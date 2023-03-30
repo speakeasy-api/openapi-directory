@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetUsersRequest{
         QueryParams: operations.GetUsersQueryParams{
-            Cursor: "unde",
+            Cursor: "corrupti",
             Order: "desc",
             PageSize: 715190,
         },

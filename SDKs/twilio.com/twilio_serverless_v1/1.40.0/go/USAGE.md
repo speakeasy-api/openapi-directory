@@ -21,10 +21,10 @@ func main() {
             },
         },
         PathParams: operations.CreateAssetPathParams{
-            ServiceSid: "unde",
+            ServiceSid: "corrupti",
         },
         Request: &operations.CreateAssetCreateAssetRequest{
-            FriendlyName: "deserunt",
+            FriendlyName: "provident",
         },
     }
 

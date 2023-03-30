@@ -21,16 +21,16 @@ func main() {
 
     req := operations.GetLatestConfigurationRequest{
         QueryParams: operations.GetLatestConfigurationQueryParams{
-            ConfigurationToken: "unde",
+            ConfigurationToken: "corrupti",
         },
         Headers: operations.GetLatestConfigurationHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
     }
 

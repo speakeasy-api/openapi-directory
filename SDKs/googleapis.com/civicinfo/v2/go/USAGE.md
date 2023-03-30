@@ -16,17 +16,17 @@ func main() {
     req := operations.CivicinfoDivisionsSearchRequest{
         QueryParams: operations.CivicinfoDivisionsSearchQueryParams{
             DollarXgafv: "2",
-            AccessToken: "deserunt",
+            AccessToken: "provident",
             Alt: "proto",
-            Callback: "nulla",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Callback: "quibusdam",
+            Fields: "unde",
+            Key: "nulla",
+            OauthToken: "corrupti",
             PrettyPrint: false,
-            Query: "nulla",
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            Query: "illum",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
     }
 

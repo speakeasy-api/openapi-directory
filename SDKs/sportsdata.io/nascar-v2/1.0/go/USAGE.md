@@ -21,7 +21,7 @@ func main() {
 
     req := operations.DriverDetailsRequest{
         PathParams: operations.DriverDetailsPathParams{
-            Driverid: "unde",
+            Driverid: "corrupti",
             Format: "json",
         },
     }

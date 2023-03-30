@@ -26,21 +26,21 @@ func main() {
 
     req := operations.MybusinesslodgingLocationsGetLodgingRequest{
         PathParams: operations.MybusinesslodgingLocationsGetLodgingPathParams{
-            Name: "unde",
+            Name: "corrupti",
         },
         QueryParams: operations.MybusinesslodgingLocationsGetLodgingQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            ReadMask: "fuga",
-            UploadType: "facilis",
-            UploadProtocol: "eum",
+            QuotaUser: "vel",
+            ReadMask: "error",
+            UploadType: "deserunt",
+            UploadProtocol: "suscipit",
         },
     }
 

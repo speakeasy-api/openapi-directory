@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetOauthV1AccessTokensTokenGetRequest{
         PathParams: operations.GetOauthV1AccessTokensTokenGetPathParams{
-            Token: "unde",
+            Token: "corrupti",
         },
     }
 

@@ -21,24 +21,24 @@ func main() {
 
     req := operations.BatchGetFieldRequest{
         PathParams: operations.BatchGetFieldPathParams{
-            DomainID: "unde",
+            DomainID: "corrupti",
         },
         Headers: operations.BatchGetFieldHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.BatchGetFieldRequestBody{
             Fields: []shared.FieldIdentifier{
                 shared.FieldIdentifier{
-                    ID: "fuga",
+                    ID: "error",
                 },
                 shared.FieldIdentifier{
-                    ID: "facilis",
+                    ID: "deserunt",
                 },
             },
         },

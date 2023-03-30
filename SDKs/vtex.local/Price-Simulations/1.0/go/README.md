@@ -26,8 +26,8 @@ func main() {
 
     req := operations.GetVCustomPricesSessionSchemaRequest{
         Headers: operations.GetVCustomPricesSessionSchemaHeaders{
-            Accept: "unde",
-            ContentType: "deserunt",
+            Accept: "corrupti",
+            ContentType: "provident",
         },
     }
 

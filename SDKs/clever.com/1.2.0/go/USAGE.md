@@ -21,7 +21,7 @@ func main() {
 
     req := operations.GetContactRequest{
         PathParams: operations.GetContactPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

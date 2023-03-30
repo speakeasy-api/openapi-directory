@@ -32,26 +32,26 @@ func main() {
 
     req := operations.AddLayerVersionPermissionRequest{
         PathParams: operations.AddLayerVersionPermissionPathParams{
-            LayerName: "unde",
+            LayerName: "corrupti",
             VersionNumber: 592845,
         },
         QueryParams: operations.AddLayerVersionPermissionQueryParams{
-            RevisionID: "porro",
+            RevisionID: "distinctio",
         },
         Headers: operations.AddLayerVersionPermissionHeaders{
-            XAmzAlgorithm: "nulla",
-            XAmzContentSha256: "id",
-            XAmzCredential: "vero",
-            XAmzDate: "perspiciatis",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "nihil",
-            XAmzSignedHeaders: "fuga",
+            XAmzAlgorithm: "quibusdam",
+            XAmzContentSha256: "unde",
+            XAmzCredential: "nulla",
+            XAmzDate: "corrupti",
+            XAmzSecurityToken: "illum",
+            XAmzSignature: "vel",
+            XAmzSignedHeaders: "error",
         },
         Request: operations.AddLayerVersionPermissionRequestBody{
-            Action: "facilis",
-            OrganizationID: "eum",
-            Principal: "iusto",
-            StatementID: "ullam",
+            Action: "deserunt",
+            OrganizationID: "suscipit",
+            Principal: "iure",
+            StatementID: "magnam",
         },
     }
 

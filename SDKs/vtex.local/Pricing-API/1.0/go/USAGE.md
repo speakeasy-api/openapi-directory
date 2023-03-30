@@ -28,7 +28,7 @@ func main() {
         },
         Headers: operations.GetrulesforapricetableHeaders{
             Accept: "application/json",
-            ContentType: "unde",
+            ContentType: "corrupti",
         },
     }
 

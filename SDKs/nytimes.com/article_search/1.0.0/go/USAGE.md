@@ -21,15 +21,15 @@ func main() {
 
     req := operations.GetArticlesearchJSONRequest{
         QueryParams: operations.GetArticlesearchJSONQueryParams{
-            BeginDate: "unde",
-            EndDate: "deserunt",
-            FacetField: "porro",
+            BeginDate: "corrupti",
+            EndDate: "provident",
+            FacetField: "distinctio",
             FacetFilter: false,
-            Fl: "nulla",
-            Fq: "id",
+            Fl: "quibusdam",
+            Fq: "unde",
             Hl: false,
             Page: 857946,
-            Q: "perspiciatis",
+            Q: "corrupti",
             Sort: "oldest",
         },
     }

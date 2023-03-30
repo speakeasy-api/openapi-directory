@@ -21,19 +21,19 @@ func main() {
 
     req := operations.AssociateDomainRequest{
         Headers: operations.AssociateDomainHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.AssociateDomainRequestBody{
-            AcmCertificateArn: "nulla",
-            DisplayName: "nihil",
-            DomainName: "fuga",
-            FleetArn: "facilis",
+            AcmCertificateArn: "illum",
+            DisplayName: "vel",
+            DomainName: "error",
+            FleetArn: "deserunt",
         },
     }
 

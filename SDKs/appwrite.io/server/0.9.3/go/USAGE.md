@@ -23,8 +23,8 @@ func main() {
             },
         },
         Request: &operations.AccountCreateRecoveryRequestBody{
-            Email: "Larry_Rau85@yahoo.com",
-            URL: "perspiciatis",
+            Email: "Larue_Rau85@yahoo.com",
+            URL: "corrupti",
         },
     }
 

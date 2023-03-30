@@ -21,13 +21,13 @@ func main() {
             },
         },
         Request: &operations.CreateBundleCreateBundleRequest{
-            Email: "Larry_Rau85@yahoo.com",
+            Email: "Larue_Rau85@yahoo.com",
             EndUserType: "business",
-            FriendlyName: "nulla",
-            IsoCountry: "nihil",
-            NumberType: "fuga",
-            RegulationSid: "facilis",
-            StatusCallback: "http://humberto.biz",
+            FriendlyName: "illum",
+            IsoCountry: "vel",
+            NumberType: "error",
+            RegulationSid: "deserunt",
+            StatusCallback: "http://innocent-effect.org",
         },
     }
 

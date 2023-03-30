@@ -26,10 +26,10 @@ func main() {
 
     req := operations.OptCapProgramInPriceRequest{
         Headers: operations.OptCapProgramInPriceHeaders{
-            WmConsumerChannelType: "unde",
-            WmQosCorrelationID: "deserunt",
-            WmSecAccessToken: "porro",
-            WmSvcName: "nulla",
+            WmConsumerChannelType: "corrupti",
+            WmQosCorrelationID: "provident",
+            WmSecAccessToken: "distinctio",
+            WmSvcName: "quibusdam",
         },
         Request: operations.OptCapProgramInPriceRequestBody{
             SubsidyEnrolled: false,

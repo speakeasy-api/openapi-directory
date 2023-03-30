@@ -23,61 +23,61 @@ func main() {
             },
         },
         PathParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.ClouddeployProjectsLocationsDeliveryPipelinesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            DeliveryPipelineID: "vero",
-            Fields: "perspiciatis",
-            Key: "nulla",
-            OauthToken: "nihil",
+            Callback: "unde",
+            DeliveryPipelineID: "nulla",
+            Fields: "corrupti",
+            Key: "illum",
+            OauthToken: "vel",
             PrettyPrint: false,
-            QuotaUser: "fuga",
-            RequestID: "facilis",
-            UploadType: "eum",
-            UploadProtocol: "iusto",
+            QuotaUser: "error",
+            RequestID: "deserunt",
+            UploadType: "suscipit",
+            UploadProtocol: "iure",
             ValidateOnly: false,
         },
         Request: &shared.DeliveryPipelineInput{
             Annotations: map[string]string{
-                "saepe": "inventore",
-                "sapiente": "enim",
+                "debitis": "ipsa",
+                "delectus": "tempora",
             },
             Condition: &shared.PipelineCondition{
                 PipelineReadyCondition: &shared.PipelineReadyCondition{
                     Status: false,
-                    UpdateTime: "eum",
+                    UpdateTime: "suscipit",
                 },
                 TargetsPresentCondition: &shared.TargetsPresentCondition{
                     MissingTargets: []string{
-                        "autem",
-                        "vel",
+                        "minus",
+                        "placeat",
                     },
                     Status: false,
-                    UpdateTime: "non",
+                    UpdateTime: "voluptatum",
                 },
                 TargetsTypeCondition: &shared.TargetsTypeCondition{
-                    ErrorDetails: "deleniti",
+                    ErrorDetails: "iusto",
                     Status: false,
                 },
             },
-            Description: "similique",
-            Etag: "reprehenderit",
+            Description: "excepturi",
+            Etag: "nisi",
             Labels: map[string]string{
-                "quo": "quasi",
-                "laboriosam": "dicta",
-                "est": "voluptatem",
-                "consequatur": "fugiat",
+                "temporibus": "ab",
+                "quis": "veritatis",
+                "deserunt": "perferendis",
+                "ipsam": "repellendus",
             },
-            Name: "a",
+            Name: "sapiente",
             SerialPipeline: &shared.SerialPipeline{
                 Stages: []shared.Stage{
                     shared.Stage{
                         Profiles: []string{
-                            "accusamus",
+                            "at",
                         },
                         Strategy: &shared.Strategy{
                             Canary: &shared.Canary{
@@ -94,21 +94,21 @@ func main() {
                                     PhaseConfigs: []shared.PhaseConfig{
                                         shared.PhaseConfig{
                                             Percentage: 520478,
-                                            PhaseID: "dolor",
+                                            PhaseID: "porro",
                                             Profiles: []string{
-                                                "sed",
-                                                "quisquam",
-                                                "rerum",
+                                                "dicta",
+                                                "nam",
+                                                "officia",
                                             },
                                             Verify: false,
                                         },
                                         shared.PhaseConfig{
                                             Percentage: 582020,
-                                            PhaseID: "qui",
+                                            PhaseID: "fugit",
                                             Profiles: []string{
-                                                "rerum",
-                                                "possimus",
-                                                "occaecati",
+                                                "hic",
+                                                "optio",
+                                                "totam",
                                             },
                                             Verify: false,
                                         },
@@ -120,13 +120,13 @@ func main() {
                                     },
                                     Kubernetes: &shared.KubernetesConfig{
                                         GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "odit",
-                                            HTTPRoute: "esse",
-                                            Service: "rem",
+                                            Deployment: "beatae",
+                                            HTTPRoute: "commodi",
+                                            Service: "molestiae",
                                         },
                                         ServiceNetworking: &shared.ServiceNetworking{
-                                            Deployment: "voluptatem",
-                                            Service: "amet",
+                                            Deployment: "modi",
+                                            Service: "qui",
                                         },
                                     },
                                 },
@@ -135,13 +135,13 @@ func main() {
                                 Verify: false,
                             },
                         },
-                        TargetID: "est",
+                        TargetID: "impedit",
                     },
                     shared.Stage{
                         Profiles: []string{
-                            "blanditiis",
-                            "numquam",
-                            "similique",
+                            "esse",
+                            "ipsum",
+                            "excepturi",
                         },
                         Strategy: &shared.Strategy{
                             Canary: &shared.Canary{
@@ -155,21 +155,21 @@ func main() {
                                     PhaseConfigs: []shared.PhaseConfig{
                                         shared.PhaseConfig{
                                             Percentage: 617636,
-                                            PhaseID: "voluptatem",
+                                            PhaseID: "sed",
                                             Profiles: []string{
-                                                "modi",
-                                                "et",
-                                                "iure",
+                                                "dolor",
+                                                "natus",
+                                                "laboriosam",
                                             },
                                             Verify: false,
                                         },
                                         shared.PhaseConfig{
                                             Percentage: 943749,
-                                            PhaseID: "ut",
+                                            PhaseID: "saepe",
                                             Profiles: []string{
-                                                "qui",
-                                                "ea",
-                                                "laborum",
+                                                "in",
+                                                "corporis",
+                                                "iste",
                                             },
                                             Verify: false,
                                         },
@@ -181,13 +181,13 @@ func main() {
                                     },
                                     Kubernetes: &shared.KubernetesConfig{
                                         GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "iusto",
-                                            HTTPRoute: "ut",
-                                            Service: "optio",
+                                            Deployment: "iure",
+                                            HTTPRoute: "saepe",
+                                            Service: "quidem",
                                         },
                                         ServiceNetworking: &shared.ServiceNetworking{
-                                            Deployment: "aspernatur",
-                                            Service: "inventore",
+                                            Deployment: "architecto",
+                                            Service: "ipsa",
                                         },
                                     },
                                 },
@@ -196,13 +196,13 @@ func main() {
                                 Verify: false,
                             },
                         },
-                        TargetID: "ut",
+                        TargetID: "reiciendis",
                     },
                     shared.Stage{
                         Profiles: []string{
-                            "et",
-                            "libero",
-                            "ipsum",
+                            "mollitia",
+                            "laborum",
+                            "dolores",
                         },
                         Strategy: &shared.Strategy{
                             Canary: &shared.Canary{
@@ -216,11 +216,11 @@ func main() {
                                     PhaseConfigs: []shared.PhaseConfig{
                                         shared.PhaseConfig{
                                             Percentage: 750686,
-                                            PhaseID: "ipsam",
+                                            PhaseID: "enim",
                                             Profiles: []string{
-                                                "commodi",
-                                                "quia",
-                                                "similique",
+                                                "nemo",
+                                                "minima",
+                                                "excepturi",
                                             },
                                             Verify: false,
                                         },
@@ -232,13 +232,13 @@ func main() {
                                     },
                                     Kubernetes: &shared.KubernetesConfig{
                                         GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "eaque",
-                                            HTTPRoute: "odio",
-                                            Service: "harum",
+                                            Deployment: "accusantium",
+                                            HTTPRoute: "iure",
+                                            Service: "culpa",
                                         },
                                         ServiceNetworking: &shared.ServiceNetworking{
                                             Deployment: "doloribus",
-                                            Service: "a",
+                                            Service: "sapiente",
                                         },
                                     },
                                 },
@@ -247,13 +247,13 @@ func main() {
                                 Verify: false,
                             },
                         },
-                        TargetID: "aut",
+                        TargetID: "architecto",
                     },
                     shared.Stage{
                         Profiles: []string{
-                            "non",
-                            "quidem",
-                            "neque",
+                            "dolorem",
+                            "culpa",
+                            "consequuntur",
                         },
                         Strategy: &shared.Strategy{
                             Canary: &shared.Canary{
@@ -270,20 +270,20 @@ func main() {
                                     PhaseConfigs: []shared.PhaseConfig{
                                         shared.PhaseConfig{
                                             Percentage: 474697,
-                                            PhaseID: "et",
+                                            PhaseID: "velit",
                                             Profiles: []string{
-                                                "nesciunt",
-                                                "laboriosam",
-                                                "aut",
+                                                "quia",
+                                                "quis",
+                                                "vitae",
                                             },
                                             Verify: false,
                                         },
                                         shared.PhaseConfig{
                                             Percentage: 674752,
-                                            PhaseID: "expedita",
+                                            PhaseID: "animi",
                                             Profiles: []string{
-                                                "eos",
-                                                "omnis",
+                                                "odit",
+                                                "quo",
                                             },
                                             Verify: false,
                                         },
@@ -295,13 +295,13 @@ func main() {
                                     },
                                     Kubernetes: &shared.KubernetesConfig{
                                         GatewayServiceMesh: &shared.GatewayServiceMesh{
-                                            Deployment: "adipisci",
-                                            HTTPRoute: "hic",
-                                            Service: "consequatur",
+                                            Deployment: "sequi",
+                                            HTTPRoute: "tenetur",
+                                            Service: "ipsam",
                                         },
                                         ServiceNetworking: &shared.ServiceNetworking{
-                                            Deployment: "distinctio",
-                                            Service: "qui",
+                                            Deployment: "id",
+                                            Service: "possimus",
                                         },
                                     },
                                 },
@@ -310,7 +310,7 @@ func main() {
                                 Verify: false,
                             },
                         },
-                        TargetID: "perferendis",
+                        TargetID: "aut",
                     },
                 },
             },

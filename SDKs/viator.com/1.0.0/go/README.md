@@ -49,10 +49,10 @@ func main() {
                     Count: 544883,
                 },
             },
-            CurrencyCode: "nulla",
-            Month: "nihil",
-            ProductCode: "fuga",
-            Year: "facilis",
+            CurrencyCode: "illum",
+            Month: "vel",
+            ProductCode: "error",
+            Year: "deserunt",
         },
     }
 

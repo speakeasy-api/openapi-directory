@@ -20,9 +20,9 @@ func main() {
             },
         },
         PathParams: operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDPathParams{
-            ID: "unde",
-            MemberSlug: "deserunt",
-            WorkspaceSlug: "porro",
+            ID: "corrupti",
+            MemberSlug: "provident",
+            WorkspaceSlug: "distinctio",
         },
     }
 

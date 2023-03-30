@@ -27,8 +27,8 @@ func main() {
             ProductID: "1",
         },
         Headers: operations.GetProductRatingHeaders{
-            Accept: "unde",
-            ContentType: "deserunt",
+            Accept: "corrupti",
+            ContentType: "provident",
         },
     }
 

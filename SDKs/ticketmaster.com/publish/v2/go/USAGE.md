@@ -15,47 +15,47 @@ func main() {
 
     req := operations.PatchAttractionRequest{
         PathParams: operations.PatchAttractionPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
         Headers: operations.PatchAttractionHeaders{
-            TMPSCorrelationID: "deserunt",
+            TMPSCorrelationID: "provident",
         },
         Request: shared.AugmentationData{
             Changes: []shared.Change{
                 shared.Change{
-                    From: "nulla",
+                    From: "quibusdam",
                     Op: "move",
-                    Path: "vero",
+                    Path: "nulla",
                     Value: map[string]interface{}{
-                        "nulla": "nihil",
-                        "fuga": "facilis",
-                        "eum": "iusto",
+                        "illum": "vel",
+                        "error": "deserunt",
+                        "suscipit": "iure",
                     },
                 },
                 shared.Change{
-                    From: "ullam",
+                    From: "magnam",
                     Op: "test",
-                    Path: "inventore",
+                    Path: "ipsa",
                     Value: map[string]interface{}{
-                        "enim": "eum",
-                        "voluptatum": "autem",
-                        "vel": "non",
-                        "deleniti": "similique",
+                        "tempora": "suscipit",
+                        "molestiae": "minus",
+                        "placeat": "voluptatum",
+                        "iusto": "excepturi",
                     },
                 },
                 shared.Change{
-                    From: "reprehenderit",
+                    From: "nisi",
                     Op: "test",
-                    Path: "quo",
+                    Path: "temporibus",
                     Value: map[string]interface{}{
-                        "laboriosam": "dicta",
+                        "quis": "veritatis",
                     },
                 },
             },
-            RelatedEntityID: "est",
+            RelatedEntityID: "deserunt",
             RelatedEntityType: "event",
             Score: 3682.41,
-            Source: "fugiat",
+            Source: "repellendus",
             VersionNumber: 957156,
         },
     }

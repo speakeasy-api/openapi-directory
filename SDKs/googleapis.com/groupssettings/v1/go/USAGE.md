@@ -23,16 +23,16 @@ func main() {
             },
         },
         PathParams: operations.GroupsSettingsGroupsGetPathParams{
-            GroupUniqueID: "unde",
+            GroupUniqueID: "corrupti",
         },
         QueryParams: operations.GroupsSettingsGroupsGetQueryParams{
             Alt: "json",
-            Fields: "porro",
-            Key: "nulla",
-            OauthToken: "id",
+            Fields: "distinctio",
+            Key: "quibusdam",
+            OauthToken: "unde",
             PrettyPrint: false,
-            QuotaUser: "vero",
-            UserIP: "perspiciatis",
+            QuotaUser: "nulla",
+            UserIP: "corrupti",
         },
     }
 

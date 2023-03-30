@@ -21,10 +21,10 @@ func main() {
             },
         },
         PathParams: operations.CreateCredentialListPathParams{
-            TrunkSid: "unde",
+            TrunkSid: "corrupti",
         },
         Request: &operations.CreateCredentialListCreateCredentialListRequest{
-            CredentialListSid: "deserunt",
+            CredentialListSid: "provident",
         },
     }
 

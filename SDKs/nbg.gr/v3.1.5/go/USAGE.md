@@ -23,14 +23,14 @@ func main() {
             },
         },
         PathParams: operations.DeleteAccountAccessConsentsConsentIDPathParams{
-            ConsentID: "unde",
+            ConsentID: "corrupti",
         },
         Headers: operations.DeleteAccountAccessConsentsConsentIDHeaders{
-            SandboxID: "deserunt",
-            XCustomerUserAgent: "porro",
-            XFapiAuthDate: "nulla",
-            XFapiCustomerIPAddress: "id",
-            XFapiInteractionID: "vero",
+            SandboxID: "provident",
+            XCustomerUserAgent: "distinctio",
+            XFapiAuthDate: "quibusdam",
+            XFapiCustomerIPAddress: "unde",
+            XFapiInteractionID: "nulla",
         },
     }
 

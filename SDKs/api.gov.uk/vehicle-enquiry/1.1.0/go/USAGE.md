@@ -15,11 +15,11 @@ func main() {
 
     req := operations.GetVehicleDetailsByRegistrationNumberRequest{
         Headers: operations.GetVehicleDetailsByRegistrationNumberHeaders{
-            XCorrelationID: "unde",
-            XAPIKey: "deserunt",
+            XCorrelationID: "corrupti",
+            XAPIKey: "provident",
         },
         Request: shared.VehicleRequest{
-            RegistrationNumber: "porro",
+            RegistrationNumber: "distinctio",
         },
     }
 

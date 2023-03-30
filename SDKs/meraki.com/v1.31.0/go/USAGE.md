@@ -21,7 +21,7 @@ func main() {
 
     req := operations.GetNetworkSwitchAccessControlListsRequest{
         PathParams: operations.GetNetworkSwitchAccessControlListsPathParams{
-            NetworkID: "unde",
+            NetworkID: "corrupti",
         },
     }
 

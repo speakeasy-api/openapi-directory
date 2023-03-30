@@ -21,10 +21,10 @@ func main() {
             },
         },
         PathParams: operations.CreateAlphaSenderPathParams{
-            ServiceSid: "unde",
+            ServiceSid: "corrupti",
         },
         Request: &operations.CreateAlphaSenderCreateAlphaSenderRequest{
-            AlphaSender: "deserunt",
+            AlphaSender: "provident",
         },
     }
 

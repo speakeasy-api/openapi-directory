@@ -33,9 +33,9 @@ func main() {
     req := operations.PlayByPlayRequest{
         PathParams: operations.PlayByPlayPathParams{
             Format: "JSON",
-            Hometeam: "deserunt",
-            Season: "porro",
-            Week: "nulla",
+            Hometeam: "provident",
+            Season: "distinctio",
+            Week: "quibusdam",
         },
     }
 

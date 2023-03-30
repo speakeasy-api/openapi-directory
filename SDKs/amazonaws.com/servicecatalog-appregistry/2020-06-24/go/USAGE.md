@@ -21,17 +21,17 @@ func main() {
 
     req := operations.AssociateAttributeGroupRequest{
         PathParams: operations.AssociateAttributeGroupPathParams{
-            Application: "unde",
-            AttributeGroup: "deserunt",
+            Application: "corrupti",
+            AttributeGroup: "provident",
         },
         Headers: operations.AssociateAttributeGroupHeaders{
-            XAmzAlgorithm: "porro",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "id",
-            XAmzDate: "vero",
-            XAmzSecurityToken: "perspiciatis",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "nihil",
+            XAmzAlgorithm: "distinctio",
+            XAmzContentSha256: "quibusdam",
+            XAmzCredential: "unde",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "corrupti",
+            XAmzSignature: "illum",
+            XAmzSignedHeaders: "vel",
         },
     }
 

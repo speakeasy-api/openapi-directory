@@ -25,44 +25,44 @@ func main() {
             },
         },
         PathParams: operations.FirestoreProjectsDatabasesDocumentsBatchGetPathParams{
-            Database: "unde",
+            Database: "corrupti",
         },
         QueryParams: operations.FirestoreProjectsDatabasesDocumentsBatchGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.BatchGetDocumentsRequest{
             Documents: []string{
-                "iusto",
-                "ullam",
+                "iure",
+                "magnam",
             },
             Mask: &shared.DocumentMask{
                 FieldPaths: []string{
-                    "inventore",
-                    "sapiente",
-                    "enim",
-                    "eum",
+                    "ipsa",
+                    "delectus",
+                    "tempora",
+                    "suscipit",
                 },
             },
             NewTransaction: &shared.TransactionOptions{
                 ReadOnly: &shared.ReadOnly{
-                    ReadTime: "voluptatum",
+                    ReadTime: "molestiae",
                 },
                 ReadWrite: &shared.ReadWrite{
-                    RetryTransaction: "autem",
+                    RetryTransaction: "minus",
                 },
             },
-            ReadTime: "vel",
-            Transaction: "non",
+            ReadTime: "placeat",
+            Transaction: "voluptatum",
         },
     }
 

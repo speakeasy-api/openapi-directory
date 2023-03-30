@@ -15,11 +15,11 @@ func main() {
 
     req := operations.GetDomainsTldZoneIDDownloadRequest{
         PathParams: operations.GetDomainsTldZoneIDDownloadPathParams{
-            ZoneID: "unde",
+            ZoneID: "corrupti",
         },
         QueryParams: operations.GetDomainsTldZoneIDDownloadQueryParams{
-            APIKey: "deserunt",
-            Date: "porro",
+            APIKey: "provident",
+            Date: "distinctio",
         },
     }
 

@@ -26,9 +26,9 @@ func main() {
 
     req := operations.GlobalpageloadRequest{
         QueryParams: operations.GlobalpageloadQueryParams{
-            License: "unde",
-            Origin: "deserunt",
-            URL: "porro",
+            License: "corrupti",
+            Origin: "provident",
+            URL: "distinctio",
         },
     }
 

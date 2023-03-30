@@ -32,17 +32,17 @@ func main() {
 
     req := operations.AssociateAdminAccountRequest{
         Headers: operations.AssociateAdminAccountHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSFMS_20180101.AssociateAdminAccount",
         },
         Request: shared.AssociateAdminAccountRequest{
-            AdminAccount: "nihil",
+            AdminAccount: "illum",
         },
     }
 

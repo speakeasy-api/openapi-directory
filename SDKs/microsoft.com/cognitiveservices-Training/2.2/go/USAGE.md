@@ -18,7 +18,7 @@ func main() {
             DomainID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
         },
         Headers: operations.GetDomainHeaders{
-            TrainingKey: "est",
+            TrainingKey: "deserunt",
         },
     }
 

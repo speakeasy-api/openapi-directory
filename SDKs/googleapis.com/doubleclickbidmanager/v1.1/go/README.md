@@ -35,69 +35,65 @@ func main() {
         },
         QueryParams: operations.DoubleclickbidmanagerQueriesCreatequeryQueryParams{
             DollarXgafv: "2",
-            AccessToken: "deserunt",
+            AccessToken: "provident",
             Alt: "proto",
             Asynchronous: false,
-            Callback: "nulla",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Callback: "quibusdam",
+            Fields: "unde",
+            Key: "nulla",
+            OauthToken: "corrupti",
             PrettyPrint: false,
-            QuotaUser: "nulla",
-            UploadType: "nihil",
-            UploadProtocol: "fuga",
+            QuotaUser: "illum",
+            UploadType: "vel",
+            UploadProtocol: "error",
         },
         Request: &shared.Query{
-            Kind: "facilis",
+            Kind: "deserunt",
             Metadata: &shared.QueryMetadata{
                 DataRange: "PREVIOUS_WEEK",
                 Format: "EXCEL_CSV",
-                GoogleCloudStoragePathForLatestReport: "ullam",
-                GoogleDrivePathForLatestReport: "saepe",
-                LatestReportRunTimeMs: "inventore",
-                Locale: "sapiente",
+                GoogleCloudStoragePathForLatestReport: "magnam",
+                GoogleDrivePathForLatestReport: "debitis",
+                LatestReportRunTimeMs: "ipsa",
+                Locale: "delectus",
                 ReportCount: 272656,
                 Running: false,
                 SendNotification: false,
                 ShareEmailAddress: []string{
-                    "voluptatum",
-                    "autem",
+                    "molestiae",
+                    "minus",
                 },
-                Title: "Forward Operations Architect",
+                Title: "Dr.",
             },
             Params: &shared.Parameters{
                 Filters: []shared.FilterPair{
                     shared.FilterPair{
+                        Type: "FILTER_AMP_PAGE_REQUEST",
+                        Value: "excepturi",
+                    },
+                    shared.FilterPair{
                         Type: "FILTER_AUTHORIZED_SELLER_STATE",
-                        Value: "molestiae",
+                        Value: "recusandae",
                     },
                     shared.FilterPair{
                         Type: "FILTER_VIDEO_DURATION",
-                        Value: "quasi",
-                    },
-                    shared.FilterPair{
-                        Type: "FILTER_NOT_SUPPORTED",
-                        Value: "dicta",
+                        Value: "ab",
                     },
                 },
                 GroupBys: []shared.ParametersGroupBysEnum{
-                    "FILTER_YEAR",
-                    "FILTER_DEVICE_MAKE",
-                    "FILTER_VIDEO_CONTINUOUS_PLAY",
+                    "FILTER_PARTNER_CURRENCY",
+                    "FILTER_GMAIL_COUNTRY_NAME",
                 },
                 IncludeInviteData: false,
                 Metrics: []shared.ParametersMetricsEnum{
-                    "METRIC_IMPRESSIONS_WITH_POSITIVE_CUSTOM_VALUE",
-                    "METRIC_MEDIA_COST_ECPA_USD",
-                    "METRIC_UNIQUE_REACH_TOTAL_REACH",
-                    "METRIC_UNIQUE_REACH_TOTAL_REACH",
+                    "METRIC_FEE16_ADVERTISER",
                 },
                 Options: &shared.Options{
                     IncludeOnlyTargetedUserLists: false,
                     PathQueryOptions: &shared.PathQueryOptions{
                         ChannelGrouping: &shared.ChannelGrouping{
-                            FallbackName: "reiciendis",
-                            Name: "rem",
+                            FallbackName: "repellendus",
+                            Name: "sapiente",
                             Rules: []shared.Rule{
                                 shared.Rule{
                                     DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
@@ -105,12 +101,23 @@ func main() {
                                             EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_AUDIENCE_TYPE",
-                                                        Match: "BEGINS_WITH",
+                                                        Filter: "FILTER_TRUEVIEW_PLACEMENT_ID",
+                                                        Match: "WILDCARD_EXPRESSION",
                                                         Values: []string{
-                                                            "sed",
-                                                            "quisquam",
-                                                            "rerum",
+                                                            "quod",
+                                                            "quod",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_TRUEVIEW_REGION_NAME",
+                                                        Match: "PARTIAL",
+                                                        Values: []string{
+                                                            "dolorum",
+                                                            "dicta",
+                                                            "nam",
+                                                            "officia",
                                                         },
                                                     },
                                                 },
@@ -119,23 +126,46 @@ func main() {
                                                         Filter: "FILTER_GAM_INSERTION_ORDER",
                                                         Match: "UNKNOWN",
                                                         Values: []string{
-                                                            "rerum",
-                                                            "possimus",
-                                                            "occaecati",
+                                                            "hic",
+                                                            "optio",
+                                                            "totam",
                                                         },
                                                     },
                                                 },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_ADVERTISER_INTEGRATION_STATUS",
+                                                        Filter: "FILTER_USER_LIST_THIRD_PARTY",
                                                         Match: "PARTIAL",
                                                         Values: []string{
-                                                            "amet",
-                                                            "est",
+                                                            "modi",
+                                                            "qui",
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    Name: "impedit",
+                                },
+                                shared.Rule{
+                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_NIELSEN_DEVICE_ID",
+                                                        Match: "PARTIAL",
+                                                        Values: []string{
+                                                            "perferendis",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_TRUEVIEW_REGION",
+                                                        Match: "BEGINS_WITH",
+                                                        Values: []string{
+                                                            "iste",
                                                         },
                                                     },
                                                 },
@@ -143,35 +173,104 @@ func main() {
                                         },
                                         shared.DisjunctiveMatchStatement{
                                             EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_TRUEVIEW_DMA_NAME",
-                                                        Match: "EXACT",
-                                                        Values: []string{
-                                                            "dolores",
-                                                            "sit",
-                                                            "quia",
-                                                        },
-                                                    },
-                                                },
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
                                                         Filter: "FILTER_EXTENSION_STATUS",
-                                                        Match: "UNKNOWN",
+                                                        Match: "EXACT",
                                                         Values: []string{
-                                                            "modi",
-                                                            "et",
-                                                            "iure",
+                                                            "saepe",
+                                                            "fuga",
+                                                            "in",
+                                                            "corporis",
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_NIELSEN_RESTATEMENT_DATE",
+                                                        Match: "WILDCARD_EXPRESSION",
+                                                        Values: []string{
+                                                            "architecto",
+                                                            "ipsa",
+                                                            "reiciendis",
                                                         },
                                                     },
                                                 },
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_LINE_ITEM_PACING_PERCENTAGE",
+                                                        Filter: "FILTER_HOUSEHOLD_INCOME",
+                                                        Match: "BEGINS_WITH",
+                                                        Values: []string{
+                                                            "dolores",
+                                                            "dolorem",
+                                                            "corporis",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_KEYWORD",
+                                                        Match: "BEGINS_WITH",
+                                                        Values: []string{
+                                                            "omnis",
+                                                            "nemo",
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    Name: "minima",
+                                },
+                                shared.Rule{
+                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_NIELSEN_RESTATEMENT_DATE",
+                                                        Match: "BEGINS_WITH",
+                                                        Values: []string{
+                                                            "sapiente",
+                                                            "architecto",
+                                                            "mollitia",
+                                                            "dolorem",
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_ZIP_CODE",
                                                         Match: "WILDCARD_EXPRESSION",
                                                         Values: []string{
-                                                            "qui",
-                                                            "ea",
+                                                            "occaecati",
+                                                            "numquam",
+                                                            "commodi",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_ACTIVE_VIEW_CUSTOM_METRIC_NAME",
+                                                        Match: "PARTIAL",
+                                                        Values: []string{
+                                                            "error",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_INVENTORY_FORMAT",
+                                                        Match: "EXACT",
+                                                        Values: []string{
                                                             "laborum",
                                                         },
                                                     },
@@ -182,92 +281,58 @@ func main() {
                                             EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_VIDEO_CONTENT_DURATION",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "inventore",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_VERIFICATION_VIDEO_PLAYER_SIZE_THIRD_QUARTILE",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "libero",
-                                                            "ipsum",
-                                                            "non",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Name: "ea",
-                                },
-                                shared.Rule{
-                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_TRUEVIEW_PLACEMENT",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "quia",
-                                                            "similique",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_EXCHANGE_ID",
-                                                        Match: "PARTIAL",
-                                                        Values: []string{
-                                                            "doloribus",
-                                                            "a",
-                                                            "aut",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_GMAIL_DEVICE_TYPE",
-                                                        Match: "EXACT",
-                                                        Values: []string{
-                                                            "neque",
-                                                            "asperiores",
-                                                            "et",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_GAM_INSERTION_ORDER",
-                                                        Match: "EXACT",
-                                                        Values: []string{
-                                                            "totam",
-                                                            "voluptatum",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Name: "et",
-                                },
-                                shared.Rule{
-                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_NOT_SUPPORTED",
+                                                        Filter: "FILTER_TRUEVIEW_URL",
                                                         Match: "UNKNOWN",
                                                         Values: []string{
-                                                            "expedita",
+                                                            "sequi",
+                                                            "tenetur",
                                                             "ipsam",
-                                                            "eos",
+                                                            "id",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_VERIFICATION_VIDEO_PLAYER_SIZE",
+                                                        Match: "UNKNOWN",
+                                                        Values: []string{
+                                                            "error",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_YOUTUBE_ADAPTED_AUDIENCE_LIST",
+                                                        Match: "BEGINS_WITH",
+                                                        Values: []string{
+                                                            "reiciendis",
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    },
+                                    Name: "voluptatibus",
+                                },
+                                shared.Rule{
+                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_AUDIENCE_LIST",
+                                                        Match: "WILDCARD_EXPRESSION",
+                                                        Values: []string{
+                                                            "omnis",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_DMA_NAME",
+                                                        Match: "BEGINS_WITH",
+                                                        Values: []string{
+                                                            "doloremque",
                                                         },
                                                     },
                                                 },
@@ -277,96 +342,99 @@ func main() {
                                             EventFilters: []shared.EventFilter{
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_TRUEVIEW_CONVERSION_TYPE",
+                                                        Filter: "FILTER_TRUEVIEW_IAR_REGION",
                                                         Match: "WILDCARD_EXPRESSION",
                                                         Values: []string{
-                                                            "distinctio",
+                                                            "corporis",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_TRUEVIEW_IAR_PARENTAL_STATUS",
+                                                        Match: "PARTIAL",
+                                                        Values: []string{
+                                                            "harum",
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_EVENT_TYPE",
+                                                        Match: "PARTIAL",
+                                                        Values: []string{
+                                                            "quae",
+                                                            "ipsum",
+                                                            "quidem",
+                                                            "molestias",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_CREATIVE_STATUS",
+                                                        Match: "WILDCARD_EXPRESSION",
+                                                        Values: []string{
+                                                            "praesentium",
+                                                            "rem",
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                        shared.DisjunctiveMatchStatement{
+                                            EventFilters: []shared.EventFilter{
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_ADVERTISER_TIMEZONE",
+                                                        Match: "WILDCARD_EXPRESSION",
+                                                        Values: []string{
+                                                            "veritatis",
+                                                            "itaque",
+                                                            "incidunt",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_TRUEVIEW_URL",
+                                                        Match: "UNKNOWN",
+                                                        Values: []string{
+                                                            "quibusdam",
+                                                            "explicabo",
+                                                            "deserunt",
+                                                        },
+                                                    },
+                                                },
+                                                shared.EventFilter{
+                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
+                                                        Filter: "FILTER_LINE_ITEM_STATUS",
+                                                        Match: "WILDCARD_EXPRESSION",
+                                                        Values: []string{
+                                                            "modi",
                                                             "qui",
                                                         },
                                                     },
                                                 },
                                                 shared.EventFilter{
                                                     DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_WEEK",
-                                                        Match: "UNKNOWN",
-                                                        Values: []string{
-                                                            "quo",
-                                                            "tempore",
-                                                            "explicabo",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_VERIFICATION_VIDEO_PLAYER_SIZE_THIRD_QUARTILE",
-                                                        Match: "WILDCARD_EXPRESSION",
-                                                        Values: []string{
-                                                            "totam",
-                                                            "molestias",
-                                                            "reiciendis",
-                                                            "illo",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_ELIGIBLE_COOKIES_ON_THIRD_PARTY_AUDIENCE_LIST_AND_INTEREST",
+                                                        Filter: "FILTER_VIDEO_DURATION_SECONDS_RANGE",
                                                         Match: "PARTIAL",
                                                         Values: []string{
-                                                            "sit",
-                                                            "eaque",
-                                                            "odio",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_VERIFICATION_VIDEO_RESIZED",
-                                                        Match: "UNKNOWN",
-                                                        Values: []string{
-                                                            "exercitationem",
-                                                            "deleniti",
-                                                        },
-                                                    },
-                                                },
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_ORDER_ID",
-                                                        Match: "BEGINS_WITH",
-                                                        Values: []string{
-                                                            "aut",
-                                                            "esse",
+                                                            "perferendis",
+                                                            "magni",
+                                                            "assumenda",
                                                         },
                                                     },
                                                 },
                                             },
                                         },
                                     },
-                                    Name: "sint",
-                                },
-                                shared.Rule{
-                                    DisjunctiveMatchStatements: []shared.DisjunctiveMatchStatement{
-                                        shared.DisjunctiveMatchStatement{
-                                            EventFilters: []shared.EventFilter{
-                                                shared.EventFilter{
-                                                    DimensionFilter: &shared.PathQueryOptionsFilter{
-                                                        Filter: "FILTER_INVENTORY_SOURCE_GROUP_ID",
-                                                        Match: "PARTIAL",
-                                                        Values: []string{
-                                                            "et",
-                                                            "ut",
-                                                            "molestias",
-                                                        },
-                                                    },
-                                                },
-                                            },
-                                        },
-                                    },
-                                    Name: "cupiditate",
+                                    Name: "ipsam",
                                 },
                             },
                         },
@@ -375,134 +443,33 @@ func main() {
                                 EventFilters: []shared.EventFilter{
                                     shared.EventFilter{
                                         DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_BUDGET_SEGMENT_START_DATE",
+                                            Filter: "FILTER_INSERTION_ORDER_INTEGRATION_CODE",
                                             Match: "PARTIAL",
                                             Values: []string{
-                                                "non",
+                                                "facilis",
+                                                "tempore",
                                             },
                                         },
                                     },
                                 },
                                 PathMatchPosition: "ANY",
                             },
-                            shared.PathFilter{
-                                EventFilters: []shared.EventFilter{
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_DAY_OF_WEEK",
-                                            Match: "BEGINS_WITH",
-                                            Values: []string{
-                                                "magni",
-                                                "est",
-                                                "porro",
-                                                "voluptas",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_TRUEVIEW_IAR_REMARKETING_LIST",
-                                            Match: "EXACT",
-                                            Values: []string{
-                                                "in",
-                                            },
-                                        },
-                                    },
-                                },
-                                PathMatchPosition: "FIRST",
-                            },
-                            shared.PathFilter{
-                                EventFilters: []shared.EventFilter{
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_YEAR",
-                                            Match: "UNKNOWN",
-                                            Values: []string{
-                                                "quis",
-                                                "consequatur",
-                                                "ratione",
-                                                "cum",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_DATA_PROVIDER_NAME",
-                                            Match: "EXACT",
-                                            Values: []string{
-                                                "id",
-                                                "quis",
-                                                "sapiente",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_USER_LIST_THIRD_PARTY_NAME",
-                                            Match: "EXACT",
-                                            Values: []string{
-                                                "in",
-                                                "qui",
-                                                "deserunt",
-                                                "eveniet",
-                                            },
-                                        },
-                                    },
-                                },
-                                PathMatchPosition: "FIRST",
-                            },
-                            shared.PathFilter{
-                                EventFilters: []shared.EventFilter{
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_NIELSEN_AGE",
-                                            Match: "WILDCARD_EXPRESSION",
-                                            Values: []string{
-                                                "soluta",
-                                                "ducimus",
-                                                "ducimus",
-                                                "nulla",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_VERIFICATION_VIDEO_RESIZED",
-                                            Match: "BEGINS_WITH",
-                                            Values: []string{
-                                                "ullam",
-                                            },
-                                        },
-                                    },
-                                    shared.EventFilter{
-                                        DimensionFilter: &shared.PathQueryOptionsFilter{
-                                            Filter: "FILTER_REWARDED",
-                                            Match: "WILDCARD_EXPRESSION",
-                                            Values: []string{
-                                                "qui",
-                                                "cum",
-                                            },
-                                        },
-                                    },
-                                },
-                                PathMatchPosition: "LAST",
-                            },
                         },
                     },
                 },
-                Type: "TYPE_THIRD_PARTY_DATA_PROVIDER",
+                Type: "TYPE_PATH",
             },
-            QueryID: "culpa",
-            ReportDataEndTimeMs: "enim",
-            ReportDataStartTimeMs: "aut",
+            QueryID: "eum",
+            ReportDataEndTimeMs: "non",
+            ReportDataStartTimeMs: "eligendi",
             Schedule: &shared.QuerySchedule{
-                EndTimeMs: "delectus",
-                Frequency: "MONTHLY",
-                NextRunMinuteOfDay: 588465,
-                NextRunTimezoneCode: "est",
-                StartTimeMs: "distinctio",
+                EndTimeMs: "sint",
+                Frequency: "WEEKLY",
+                NextRunMinuteOfDay: 592042,
+                NextRunTimezoneCode: "necessitatibus",
+                StartTimeMs: "sint",
             },
-            TimezoneCode: "et",
+            TimezoneCode: "officia",
         },
     }
 

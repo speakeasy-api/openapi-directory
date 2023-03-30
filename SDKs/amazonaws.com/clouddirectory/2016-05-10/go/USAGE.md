@@ -21,52 +21,52 @@ func main() {
 
     req := operations.AddFacetToObjectRequest{
         Headers: operations.AddFacetToObjectHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
-            XAmzDataPartition: "nulla",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
+            XAmzDataPartition: "illum",
         },
         Request: operations.AddFacetToObjectRequestBody{
             ObjectAttributeList: []shared.AttributeKeyAndValue{
                 shared.AttributeKeyAndValue{
                     Key: shared.AttributeKey{
-                        FacetName: "fuga",
-                        Name: "facilis",
-                        SchemaArn: "eum",
+                        FacetName: "error",
+                        Name: "deserunt",
+                        SchemaArn: "suscipit",
                     },
                     Value: shared.TypedAttributeValue{
-                        BinaryValue: "iusto",
+                        BinaryValue: "iure",
                         BooleanValue: false,
-                        DatetimeValue: "2022-12-11T09:27:20.839Z",
-                        NumberValue: "saepe",
-                        StringValue: "inventore",
+                        DatetimeValue: "2022-12-11T11:57:35.722Z",
+                        NumberValue: "debitis",
+                        StringValue: "ipsa",
                     },
                 },
                 shared.AttributeKeyAndValue{
                     Key: shared.AttributeKey{
-                        FacetName: "sapiente",
-                        Name: "enim",
-                        SchemaArn: "eum",
+                        FacetName: "delectus",
+                        Name: "tempora",
+                        SchemaArn: "suscipit",
                     },
                     Value: shared.TypedAttributeValue{
-                        BinaryValue: "voluptatum",
+                        BinaryValue: "molestiae",
                         BooleanValue: false,
-                        DatetimeValue: "2022-06-14T00:20:51.991Z",
-                        NumberValue: "vel",
-                        StringValue: "non",
+                        DatetimeValue: "2022-06-14T02:51:06.874Z",
+                        NumberValue: "placeat",
+                        StringValue: "voluptatum",
                     },
                 },
             },
             ObjectReference: operations.AddFacetToObjectRequestBodyObjectReference{
-                Selector: "deleniti",
+                Selector: "iusto",
             },
             SchemaFacet: operations.AddFacetToObjectRequestBodySchemaFacet{
-                FacetName: "similique",
-                SchemaArn: "reprehenderit",
+                FacetName: "excepturi",
+                SchemaArn: "nisi",
             },
         },
     }

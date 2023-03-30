@@ -26,14 +26,14 @@ func main() {
 
     req := operations.AccountListNodeAgentSkusRequest{
         QueryParams: operations.AccountListNodeAgentSkusQueryParams{
-            DollarFilter: "unde",
-            APIVersion: "deserunt",
+            DollarFilter: "corrupti",
+            APIVersion: "provident",
             Maxresults: 715190,
             Timeout: 844266,
         },
         Headers: operations.AccountListNodeAgentSkusHeaders{
-            ClientRequestID: "id",
-            OcpDate: "vero",
+            ClientRequestID: "unde",
+            OcpDate: "nulla",
             ReturnClientRequestID: false,
         },
     }

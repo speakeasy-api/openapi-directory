@@ -20,8 +20,8 @@ func main() {
             },
         },
         QueryParams: operations.CollectionsAllQueryParams{
-            Cursor: "unde",
-            Fields: "deserunt",
+            Cursor: "corrupti",
+            Fields: "provident",
             Limit: 715190,
             Raw: false,
             Sort: &shared.CollectionsSort{
@@ -30,9 +30,9 @@ func main() {
             },
         },
         Headers: operations.CollectionsAllHeaders{
-            XApideckAppID: "id",
-            XApideckConsumerID: "vero",
-            XApideckServiceID: "perspiciatis",
+            XApideckAppID: "unde",
+            XApideckConsumerID: "nulla",
+            XApideckServiceID: "corrupti",
         },
     }
 

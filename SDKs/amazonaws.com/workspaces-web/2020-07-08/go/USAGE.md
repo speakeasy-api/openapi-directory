@@ -21,19 +21,19 @@ func main() {
 
     req := operations.AssociateBrowserSettingsRequest{
         PathParams: operations.AssociateBrowserSettingsPathParams{
-            PortalArn: "unde",
+            PortalArn: "corrupti",
         },
         QueryParams: operations.AssociateBrowserSettingsQueryParams{
-            BrowserSettingsArn: "deserunt",
+            BrowserSettingsArn: "provident",
         },
         Headers: operations.AssociateBrowserSettingsHeaders{
-            XAmzAlgorithm: "porro",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "id",
-            XAmzDate: "vero",
-            XAmzSecurityToken: "perspiciatis",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "nihil",
+            XAmzAlgorithm: "distinctio",
+            XAmzContentSha256: "quibusdam",
+            XAmzCredential: "unde",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "corrupti",
+            XAmzSignature: "illum",
+            XAmzSignedHeaders: "vel",
         },
     }
 

@@ -21,7 +21,7 @@ func main() {
 
     req := operations.DeleteRealmAttackDetectionBruteForceUsersRequest{
         PathParams: operations.DeleteRealmAttackDetectionBruteForceUsersPathParams{
-            Realm: "unde",
+            Realm: "corrupti",
         },
     }
 

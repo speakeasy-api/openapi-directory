@@ -32,7 +32,7 @@ func main() {
 
     req := operations.GetAccountsRequest{
         QueryParams: operations.GetAccountsQueryParams{
-            Account: "unde",
+            Account: "corrupti",
         },
     }
 

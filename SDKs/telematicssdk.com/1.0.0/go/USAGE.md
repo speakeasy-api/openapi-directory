@@ -15,7 +15,7 @@ func main() {
 
     req := operations.TripsTripDetailsRequest{
         QueryParams: operations.TripsTripDetailsQueryParams{
-            TrackToken: "unde",
+            TrackToken: "corrupti",
         },
     }
 

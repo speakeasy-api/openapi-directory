@@ -32,7 +32,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteContentPathParams{
-            Sid: "unde",
+            Sid: "corrupti",
         },
     }
 

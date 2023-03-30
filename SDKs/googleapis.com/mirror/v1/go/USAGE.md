@@ -15,53 +15,43 @@ func main() {
 
     req := operations.MirrorAccountsInsertRequest{
         PathParams: operations.MirrorAccountsInsertPathParams{
-            AccountName: "unde",
-            AccountType: "deserunt",
-            UserToken: "porro",
+            AccountName: "corrupti",
+            AccountType: "provident",
+            UserToken: "distinctio",
         },
         QueryParams: operations.MirrorAccountsInsertQueryParams{
             Alt: "json",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Fields: "quibusdam",
+            Key: "unde",
+            OauthToken: "nulla",
             PrettyPrint: false,
-            QuotaUser: "nulla",
-            UserIP: "nihil",
+            QuotaUser: "corrupti",
+            UserIP: "illum",
         },
         Request: &shared.Account{
             AuthTokens: []shared.AuthToken{
                 shared.AuthToken{
-                    AuthToken: "facilis",
-                    Type: "eum",
+                    AuthToken: "error",
+                    Type: "deserunt",
                 },
                 shared.AuthToken{
-                    AuthToken: "iusto",
-                    Type: "ullam",
-                },
-                shared.AuthToken{
-                    AuthToken: "saepe",
-                    Type: "inventore",
+                    AuthToken: "suscipit",
+                    Type: "iure",
                 },
             },
             Features: []string{
-                "enim",
-                "eum",
-                "voluptatum",
-                "autem",
+                "debitis",
+                "ipsa",
             },
-            Password: "vel",
+            Password: "delectus",
             UserData: []shared.UserData{
                 shared.UserData{
-                    Key: "deleniti",
-                    Value: "similique",
-                },
-                shared.UserData{
-                    Key: "reprehenderit",
+                    Key: "suscipit",
                     Value: "molestiae",
                 },
                 shared.UserData{
-                    Key: "quo",
-                    Value: "quasi",
+                    Key: "minus",
+                    Value: "placeat",
                 },
             },
         },

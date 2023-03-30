@@ -20,7 +20,7 @@ func main() {
             },
         },
         Request: &shared.GetOnboardingURLRequest{
-            AccountHolderCode: "unde",
+            AccountHolderCode: "corrupti",
             CollectInformation: &shared.CollectInformation{
                 BankDetails: false,
                 BusinessDetails: false,
@@ -30,10 +30,10 @@ func main() {
                 ShareholderDetails: false,
             },
             EditMode: false,
-            MobileOAuthCallbackURL: "deserunt",
-            PlatformName: "porro",
-            ReturnURL: "nulla",
-            ShopperLocale: "id",
+            MobileOAuthCallbackURL: "provident",
+            PlatformName: "distinctio",
+            ReturnURL: "quibusdam",
+            ShopperLocale: "unde",
             ShowPages: &shared.ShowPages{
                 BankDetailsSummaryPage: false,
                 BankVerificationPage: false,

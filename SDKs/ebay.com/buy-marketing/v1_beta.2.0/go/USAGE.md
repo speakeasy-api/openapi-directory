@@ -20,10 +20,10 @@ func main() {
             },
         },
         QueryParams: operations.GetMerchandisedProductsQueryParams{
-            AspectFilter: "unde",
-            CategoryID: "deserunt",
-            Limit: "porro",
-            MetricName: "nulla",
+            AspectFilter: "corrupti",
+            CategoryID: "provident",
+            Limit: "distinctio",
+            MetricName: "quibusdam",
         },
     }
 

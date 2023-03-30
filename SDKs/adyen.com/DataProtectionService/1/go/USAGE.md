@@ -21,8 +21,8 @@ func main() {
         },
         Request: &shared.SubjectErasureByPspReferenceRequest{
             ForceErasure: false,
-            MerchantAccount: "unde",
-            PspReference: "deserunt",
+            MerchantAccount: "corrupti",
+            PspReference: "provident",
         },
     }
 

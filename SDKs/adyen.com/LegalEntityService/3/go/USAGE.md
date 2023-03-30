@@ -20,7 +20,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteBusinessLinesIDPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

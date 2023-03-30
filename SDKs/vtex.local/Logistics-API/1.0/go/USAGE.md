@@ -24,11 +24,11 @@ func main() {
 
     req := operations.ActivateDockRequest{
         PathParams: operations.ActivateDockPathParams{
-            DockID: "unde",
+            DockID: "corrupti",
         },
         Headers: operations.ActivateDockHeaders{
-            Accept: "deserunt",
-            ContentType: "porro",
+            Accept: "provident",
+            ContentType: "distinctio",
         },
     }
 

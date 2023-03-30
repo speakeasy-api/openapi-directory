@@ -31,8 +31,8 @@ func main() {
             },
         },
         QueryParams: operations.GetAPIV1ScansQueryParams{
-            Name: "unde",
-            PerPage: "deserunt",
+            Name: "corrupti",
+            PerPage: "provident",
         },
     }
 

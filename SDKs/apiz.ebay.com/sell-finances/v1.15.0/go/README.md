@@ -31,10 +31,10 @@ func main() {
             },
         },
         PathParams: operations.GetPayoutPathParams{
-            PayoutID: "unde",
+            PayoutID: "corrupti",
         },
         Headers: operations.GetPayoutHeaders{
-            XEbayCMarketplaceID: "deserunt",
+            XEbayCMarketplaceID: "provident",
         },
     }
 

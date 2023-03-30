@@ -35,42 +35,42 @@ func main() {
         },
         QueryParams: operations.CommentanalyzerCommentsAnalyzeQueryParams{
             DollarXgafv: "2",
-            AccessToken: "deserunt",
+            AccessToken: "provident",
             Alt: "proto",
-            Callback: "nulla",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Callback: "quibusdam",
+            Fields: "unde",
+            Key: "nulla",
+            OauthToken: "corrupti",
             PrettyPrint: false,
-            QuotaUser: "nulla",
-            UploadType: "nihil",
-            UploadProtocol: "fuga",
+            QuotaUser: "illum",
+            UploadType: "vel",
+            UploadProtocol: "error",
         },
         Request: &shared.AnalyzeCommentRequest{
-            ClientToken: "facilis",
+            ClientToken: "deserunt",
             Comment: &shared.TextEntry{
-                Text: "eum",
+                Text: "suscipit",
                 Type: "PLAIN_TEXT",
             },
-            CommunityID: "ullam",
+            CommunityID: "magnam",
             Context: &shared.Context{
                 ArticleAndParentComment: &shared.ArticleAndParentComment{
                     Article: &shared.TextEntry{
-                        Text: "saepe",
+                        Text: "debitis",
                         Type: "TEXT_TYPE_UNSPECIFIED",
                     },
                     ParentComment: &shared.TextEntry{
-                        Text: "sapiente",
+                        Text: "delectus",
                         Type: "TEXT_TYPE_UNSPECIFIED",
                     },
                 },
                 Entries: []shared.TextEntry{
                     shared.TextEntry{
-                        Text: "voluptatum",
+                        Text: "molestiae",
                         Type: "HTML",
                     },
                     shared.TextEntry{
-                        Text: "vel",
+                        Text: "placeat",
                         Type: "PLAIN_TEXT",
                     },
                 },
@@ -78,28 +78,28 @@ func main() {
             DoNotStore: false,
             DropUnsupportedAttributes: false,
             Languages: []string{
-                "similique",
-                "reprehenderit",
+                "excepturi",
+                "nisi",
             },
             RequestedAttributes: map[string]shared.AttributeParameters{
-                "quo": shared.AttributeParameters{
+                "temporibus": shared.AttributeParameters{
                     ScoreThreshold: 710.36,
                     ScoreType: "PROBABILITY",
                 },
-                "dicta": shared.AttributeParameters{
+                "veritatis": shared.AttributeParameters{
                     ScoreThreshold: 6481.72,
                     ScoreType: "SCORE_TYPE_UNSPECIFIED",
                 },
-                "consequatur": shared.AttributeParameters{
+                "ipsam": shared.AttributeParameters{
                     ScoreThreshold: 8326.2,
                     ScoreType: "RAW",
                 },
-                "omnis": shared.AttributeParameters{
+                "quo": shared.AttributeParameters{
                     ScoreThreshold: 1403.5,
                     ScoreType: "RAW",
                 },
             },
-            SessionID: "accusamus",
+            SessionID: "at",
             SpanAnnotations: false,
         },
     }

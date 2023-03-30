@@ -22,17 +22,17 @@ func main() {
     req := operations.GETCreateDomainRequest{
         QueryParams: operations.GETCreateDomainQueryParams{
             Action: "CreateDomain",
-            DomainName: "deserunt",
+            DomainName: "corrupti",
             Version: "2011-02-01",
         },
         Headers: operations.GETCreateDomainHeaders{
-            XAmzAlgorithm: "nulla",
-            XAmzContentSha256: "id",
-            XAmzCredential: "vero",
-            XAmzDate: "perspiciatis",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
             XAmzSecurityToken: "nulla",
-            XAmzSignature: "nihil",
-            XAmzSignedHeaders: "fuga",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
     }
 

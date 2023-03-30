@@ -21,7 +21,7 @@ func main() {
 
     req := operations.ActionARealTimeDecisionRequest{
         PathParams: operations.ActionARealTimeDecisionPathParams{
-            RealTimeDecisionID: "unde",
+            RealTimeDecisionID: "corrupti",
         },
         Request: shared.ActionARealTimeDecisionParameters{
             CardAuthorization: &shared.ActionARealTimeDecisionParametersCardAuthorization{
@@ -32,12 +32,12 @@ func main() {
             },
             DigitalWalletToken: &shared.ActionARealTimeDecisionParametersDigitalWalletToken{
                 Approval: &shared.ActionARealTimeDecisionParametersDigitalWalletTokenApproval{
-                    CardProfileID: "nulla",
-                    Email: "Ruthie.Little62@yahoo.com",
-                    Phone: "542-909-2347 x8545",
+                    CardProfileID: "quibusdam",
+                    Email: "Ryan.Little62@yahoo.com",
+                    Phone: "1-542-909-2347 x8545",
                 },
                 Decline: &shared.ActionARealTimeDecisionParametersDigitalWalletTokenDecline{
-                    Reason: "reprehenderit",
+                    Reason: "nisi",
                 },
             },
         },

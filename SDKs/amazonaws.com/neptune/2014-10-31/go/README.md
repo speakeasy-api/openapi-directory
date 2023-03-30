@@ -33,19 +33,19 @@ func main() {
     req := operations.GETAddRoleToDBClusterRequest{
         QueryParams: operations.GETAddRoleToDBClusterQueryParams{
             Action: "AddRoleToDBCluster",
-            DBClusterIdentifier: "deserunt",
-            FeatureName: "porro",
-            RoleArn: "nulla",
+            DBClusterIdentifier: "corrupti",
+            FeatureName: "provident",
+            RoleArn: "distinctio",
             Version: "2014-10-31",
         },
         Headers: operations.GETAddRoleToDBClusterHeaders{
-            XAmzAlgorithm: "vero",
-            XAmzContentSha256: "perspiciatis",
+            XAmzAlgorithm: "quibusdam",
+            XAmzContentSha256: "unde",
             XAmzCredential: "nulla",
-            XAmzDate: "nihil",
-            XAmzSecurityToken: "fuga",
-            XAmzSignature: "facilis",
-            XAmzSignedHeaders: "eum",
+            XAmzDate: "corrupti",
+            XAmzSecurityToken: "illum",
+            XAmzSignature: "vel",
+            XAmzSignedHeaders: "error",
         },
     }
 

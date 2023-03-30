@@ -27,11 +27,11 @@ func main() {
 
     req := operations.GetAuditCaseRequest{
         QueryParams: operations.GetAuditCaseQueryParams{
-            APIKey: "unde",
+            APIKey: "corrupti",
             AuditCaseID: []string{
-                "porro",
-                "nulla",
-                "id",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
             AuditID: []int{
                 544883,
@@ -40,17 +40,17 @@ func main() {
                 623564,
             },
             CandidateID: []string{
-                "eum",
-                "iusto",
-                "ullam",
+                "suscipit",
+                "iure",
+                "magnam",
             },
-            CommitteeDesignation: "saepe",
+            CommitteeDesignation: "debitis",
             CommitteeID: []string{
-                "sapiente",
+                "delectus",
             },
             CommitteeType: []string{
-                "eum",
-                "voluptatum",
+                "suscipit",
+                "molestiae",
             },
             Cycle: []int{
                 812169,
@@ -62,23 +62,23 @@ func main() {
             MinElectionCycle: 925597,
             Page: 836079,
             PerPage: 71036,
-            PrimaryCategoryID: "laboriosam",
+            PrimaryCategoryID: "quis",
             Q: []string{
-                "est",
+                "deserunt",
             },
             Qq: []string{
-                "consequatur",
+                "ipsam",
             },
             Sort: []string{
-                "a",
-                "omnis",
-                "eos",
-                "accusamus",
+                "sapiente",
+                "quo",
+                "odit",
+                "at",
             },
             SortHideNull: false,
             SortNullOnly: false,
             SortNullsLast: false,
-            SubCategoryID: "accusamus",
+            SubCategoryID: "at",
         },
     }
 

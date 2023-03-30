@@ -21,27 +21,31 @@ func main() {
 
     req := operations.CreateHTTPNamespaceRequest{
         Headers: operations.CreateHTTPNamespaceHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "Route53AutoNaming_v20170314.CreateHttpNamespace",
         },
         Request: shared.CreateHTTPNamespaceRequest{
-            CreatorRequestID: "nihil",
-            Description: "fuga",
-            Name: "facilis",
+            CreatorRequestID: "illum",
+            Description: "vel",
+            Name: "error",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iusto",
-                    Value: "ullam",
+                    Key: "suscipit",
+                    Value: "iure",
                 },
                 shared.Tag{
-                    Key: "saepe",
-                    Value: "inventore",
+                    Key: "magnam",
+                    Value: "debitis",
+                },
+                shared.Tag{
+                    Key: "ipsa",
+                    Value: "delectus",
                 },
             },
         },

@@ -29,8 +29,8 @@ func main() {
             Authorization: "q9PdaWuD4j6DK6vsUgehhL8pgarSrS9m",
         },
         Request: shared.DeleteAddressRequest{
-            Ethereumaddress: "unde",
-            Password: "deserunt",
+            Ethereumaddress: "corrupti",
+            Password: "provident",
         },
     }
 

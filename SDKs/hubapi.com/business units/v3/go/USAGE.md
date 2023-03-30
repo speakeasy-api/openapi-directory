@@ -20,19 +20,19 @@ func main() {
             },
         },
         PathParams: operations.GetBusinessUnitsV3BusinessUnitsUserUserIDPathParams{
-            UserID: "unde",
+            UserID: "corrupti",
         },
         QueryParams: operations.GetBusinessUnitsV3BusinessUnitsUserUserIDQueryParams{
             Name: []string{
-                "porro",
-                "nulla",
-                "id",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
             Properties: []string{
-                "perspiciatis",
-                "nulla",
-                "nihil",
-                "fuga",
+                "corrupti",
+                "illum",
+                "vel",
+                "error",
             },
         },
     }

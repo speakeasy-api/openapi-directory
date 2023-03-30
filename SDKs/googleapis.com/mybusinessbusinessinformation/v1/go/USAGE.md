@@ -15,52 +15,52 @@ func main() {
 
     req := operations.MybusinessbusinessinformationAccountsLocationsCreateRequest{
         PathParams: operations.MybusinessbusinessinformationAccountsLocationsCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.MybusinessbusinessinformationAccountsLocationsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            RequestID: "fuga",
-            UploadType: "facilis",
-            UploadProtocol: "eum",
+            QuotaUser: "vel",
+            RequestID: "error",
+            UploadType: "deserunt",
+            UploadProtocol: "suscipit",
             ValidateOnly: false,
         },
         Request: &shared.LocationInput{
             AdWordsLocationExtensions: &shared.AdWordsLocationExtensions{
-                AdPhone: "iusto",
+                AdPhone: "iure",
             },
             Categories: &shared.CategoriesInput{
                 AdditionalCategories: []shared.CategoryInput{
                     shared.CategoryInput{
-                        Name: "saepe",
+                        Name: "debitis",
                     },
                     shared.CategoryInput{
-                        Name: "inventore",
+                        Name: "ipsa",
                     },
                 },
                 PrimaryCategory: &shared.CategoryInput{
-                    Name: "sapiente",
+                    Name: "delectus",
                 },
             },
             Labels: []string{
-                "eum",
-                "voluptatum",
+                "suscipit",
+                "molestiae",
             },
-            LanguageCode: "autem",
+            LanguageCode: "minus",
             Latlng: &shared.LatLng{
                 Latitude: 8121.69,
                 Longitude: 5288.95,
             },
             MoreHours: []shared.MoreHours{
                 shared.MoreHours{
-                    HoursTypeID: "similique",
+                    HoursTypeID: "excepturi",
                     Periods: []shared.TimePeriod{
                         shared.TimePeriod{
                             CloseDay: "SUNDAY",
@@ -97,7 +97,7 @@ func main() {
                     },
                 },
                 shared.MoreHours{
-                    HoursTypeID: "dolor",
+                    HoursTypeID: "porro",
                     Periods: []shared.TimePeriod{
                         shared.TimePeriod{
                             CloseDay: "DAY_OF_WEEK_UNSPECIFIED",
@@ -150,7 +150,7 @@ func main() {
                     },
                 },
             },
-            Name: "soluta",
+            Name: "fuga",
             OpenInfo: &shared.OpenInfoInput{
                 OpeningDate: &shared.Date{
                     Day: 449950,
@@ -161,15 +161,15 @@ func main() {
             },
             PhoneNumbers: &shared.PhoneNumbers{
                 AdditionalPhones: []string{
-                    "optio",
-                    "aspernatur",
-                    "inventore",
-                    "ut",
+                    "quidem",
+                    "architecto",
+                    "ipsa",
+                    "reiciendis",
                 },
-                PrimaryPhone: "libero",
+                PrimaryPhone: "est",
             },
             Profile: &shared.Profile{
-                Description: "et",
+                Description: "mollitia",
             },
             RegularHours: &shared.BusinessHours{
                 Periods: []shared.TimePeriod{
@@ -226,17 +226,17 @@ func main() {
             RelationshipData: &shared.RelationshipData{
                 ChildrenLocations: []shared.RelevantLocation{
                     shared.RelevantLocation{
-                        PlaceID: "aut",
+                        PlaceID: "vitae",
                         RelationType: "INDEPENDENT_ESTABLISHMENT_IN",
                     },
                     shared.RelevantLocation{
-                        PlaceID: "expedita",
+                        PlaceID: "animi",
                         RelationType: "RELATION_TYPE_UNSPECIFIED",
                     },
                 },
-                ParentChain: "eos",
+                ParentChain: "odit",
                 ParentLocation: &shared.RelevantLocation{
-                    PlaceID: "omnis",
+                    PlaceID: "quo",
                     RelationType: "RELATION_TYPE_UNSPECIFIED",
                 },
             },
@@ -245,92 +245,92 @@ func main() {
                 Places: &shared.Places{
                     PlaceInfos: []shared.PlaceInfo{
                         shared.PlaceInfo{
-                            PlaceID: "distinctio",
-                            PlaceName: "qui",
+                            PlaceID: "id",
+                            PlaceName: "possimus",
                         },
                         shared.PlaceInfo{
-                            PlaceID: "perferendis",
-                            PlaceName: "aspernatur",
+                            PlaceID: "aut",
+                            PlaceName: "quasi",
                         },
                     },
                 },
-                RegionCode: "fuga",
+                RegionCode: "error",
             },
             ServiceItems: []shared.ServiceItem{
                 shared.ServiceItem{
                     FreeFormServiceItem: &shared.FreeFormServiceItem{
-                        Category: "tempore",
+                        Category: "laborum",
                         Label: &shared.Label{
-                            Description: "explicabo",
-                            DisplayName: "aut",
-                            LanguageCode: "reiciendis",
+                            Description: "quasi",
+                            DisplayName: "reiciendis",
+                            LanguageCode: "voluptatibus",
                         },
                     },
                     Price: &shared.Money{
-                        CurrencyCode: "debitis",
+                        CurrencyCode: "vero",
                         Nanos: 468651,
-                        Units: "molestias",
+                        Units: "praesentium",
                     },
                     StructuredServiceItem: &shared.StructuredServiceItem{
-                        Description: "reiciendis",
-                        ServiceTypeID: "illo",
+                        Description: "voluptatibus",
+                        ServiceTypeID: "ipsa",
                     },
                 },
                 shared.ServiceItem{
                     FreeFormServiceItem: &shared.FreeFormServiceItem{
-                        Category: "id",
+                        Category: "omnis",
                         Label: &shared.Label{
-                            Description: "qui",
-                            DisplayName: "quod",
-                            LanguageCode: "sit",
+                            Description: "voluptate",
+                            DisplayName: "cum",
+                            LanguageCode: "perferendis",
                         },
                     },
                     Price: &shared.Money{
-                        CurrencyCode: "eaque",
+                        CurrencyCode: "doloremque",
                         Nanos: 441711,
-                        Units: "veniam",
-                    },
-                    StructuredServiceItem: &shared.StructuredServiceItem{
-                        Description: "reiciendis",
-                        ServiceTypeID: "sed",
-                    },
-                },
-                shared.ServiceItem{
-                    FreeFormServiceItem: &shared.FreeFormServiceItem{
-                        Category: "ea",
-                        Label: &shared.Label{
-                            Description: "exercitationem",
-                            DisplayName: "deleniti",
-                            LanguageCode: "sed",
-                        },
-                    },
-                    Price: &shared.Money{
-                        CurrencyCode: "est",
-                        Nanos: 317983,
-                        Units: "aut",
-                    },
-                    StructuredServiceItem: &shared.StructuredServiceItem{
-                        Description: "esse",
-                        ServiceTypeID: "sint",
-                    },
-                },
-                shared.ServiceItem{
-                    FreeFormServiceItem: &shared.FreeFormServiceItem{
-                        Category: "veritatis",
-                        Label: &shared.Label{
-                            Description: "numquam",
-                            DisplayName: "eligendi",
-                            LanguageCode: "error",
-                        },
-                    },
-                    Price: &shared.Money{
-                        CurrencyCode: "similique",
-                        Nanos: 865103,
                         Units: "ut",
                     },
                     StructuredServiceItem: &shared.StructuredServiceItem{
-                        Description: "molestias",
-                        ServiceTypeID: "cupiditate",
+                        Description: "maiores",
+                        ServiceTypeID: "dicta",
+                    },
+                },
+                shared.ServiceItem{
+                    FreeFormServiceItem: &shared.FreeFormServiceItem{
+                        Category: "corporis",
+                        Label: &shared.Label{
+                            Description: "dolore",
+                            DisplayName: "iusto",
+                            LanguageCode: "dicta",
+                        },
+                    },
+                    Price: &shared.Money{
+                        CurrencyCode: "harum",
+                        Nanos: 317983,
+                        Units: "accusamus",
+                    },
+                    StructuredServiceItem: &shared.StructuredServiceItem{
+                        Description: "commodi",
+                        ServiceTypeID: "repudiandae",
+                    },
+                },
+                shared.ServiceItem{
+                    FreeFormServiceItem: &shared.FreeFormServiceItem{
+                        Category: "quae",
+                        Label: &shared.Label{
+                            Description: "ipsum",
+                            DisplayName: "quidem",
+                            LanguageCode: "molestias",
+                        },
+                    },
+                    Price: &shared.Money{
+                        CurrencyCode: "excepturi",
+                        Nanos: 865103,
+                        Units: "modi",
+                    },
+                    StructuredServiceItem: &shared.StructuredServiceItem{
+                        Description: "praesentium",
+                        ServiceTypeID: "rem",
                     },
                 },
             },
@@ -438,30 +438,30 @@ func main() {
                     },
                 },
             },
-            StoreCode: "qui",
+            StoreCode: "aliquid",
             StorefrontAddress: &shared.PostalAddress{
                 AddressLines: []string{
-                    "aut",
-                    "magnam",
-                    "culpa",
+                    "accusamus",
+                    "non",
+                    "occaecati",
                 },
                 AdministrativeArea: "enim",
-                LanguageCode: "aut",
+                LanguageCode: "accusamus",
                 Locality: "delectus",
-                Organization: "eligendi",
+                Organization: "quidem",
                 PostalCode: "76559-2634",
                 Recipients: []string{
-                    "id",
-                    "voluptatum",
-                    "sit",
+                    "omnis",
+                    "molestiae",
+                    "perferendis",
                 },
-                RegionCode: "rem",
+                RegionCode: "nihil",
                 Revision: 301575,
-                SortingCode: "porro",
-                Sublocality: "distinctio",
+                SortingCode: "distinctio",
+                Sublocality: "id",
             },
-            Title: "Product Response Coordinator",
-            WebsiteURI: "et",
+            Title: "Mrs.",
+            WebsiteURI: "labore",
         },
     }
 

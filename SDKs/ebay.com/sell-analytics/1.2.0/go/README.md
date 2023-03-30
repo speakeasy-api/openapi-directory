@@ -31,11 +31,11 @@ func main() {
             },
         },
         PathParams: operations.GetCustomerServiceMetricPathParams{
-            CustomerServiceMetricType: "unde",
-            EvaluationType: "deserunt",
+            CustomerServiceMetricType: "corrupti",
+            EvaluationType: "provident",
         },
         QueryParams: operations.GetCustomerServiceMetricQueryParams{
-            EvaluationMarketplaceID: "porro",
+            EvaluationMarketplaceID: "distinctio",
         },
     }
 

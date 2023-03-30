@@ -32,21 +32,21 @@ func main() {
 
     req := operations.AssociateLensesRequest{
         PathParams: operations.AssociateLensesPathParams{
-            WorkloadID: "unde",
+            WorkloadID: "corrupti",
         },
         Headers: operations.AssociateLensesHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.AssociateLensesRequestBody{
             LensAliases: []string{
-                "fuga",
-                "facilis",
+                "error",
+                "deserunt",
             },
         },
     }

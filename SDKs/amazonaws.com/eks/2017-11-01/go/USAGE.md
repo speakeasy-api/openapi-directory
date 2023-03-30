@@ -21,44 +21,44 @@ func main() {
 
     req := operations.AssociateEncryptionConfigRequest{
         PathParams: operations.AssociateEncryptionConfigPathParams{
-            Name: "unde",
+            Name: "corrupti",
         },
         Headers: operations.AssociateEncryptionConfigHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.AssociateEncryptionConfigRequestBody{
-            ClientRequestToken: "nihil",
+            ClientRequestToken: "vel",
             EncryptionConfig: []shared.EncryptionConfig{
                 shared.EncryptionConfig{
                     Provider: &shared.Provider{
-                        KeyArn: "facilis",
+                        KeyArn: "deserunt",
                     },
                     Resources: []string{
-                        "iusto",
-                        "ullam",
+                        "iure",
+                        "magnam",
                     },
                 },
                 shared.EncryptionConfig{
                     Provider: &shared.Provider{
-                        KeyArn: "saepe",
+                        KeyArn: "debitis",
                     },
                     Resources: []string{
-                        "sapiente",
+                        "delectus",
                     },
                 },
                 shared.EncryptionConfig{
                     Provider: &shared.Provider{
-                        KeyArn: "enim",
+                        KeyArn: "tempora",
                     },
                     Resources: []string{
-                        "voluptatum",
-                        "autem",
+                        "molestiae",
+                        "minus",
                     },
                 },
             },

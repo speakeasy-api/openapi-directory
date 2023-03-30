@@ -31,9 +31,9 @@ func main() {
             OccurredBefore: 715190,
             Page: 844266,
             PerPage: 602763,
-            Proximity: "vero",
+            Proximity: "nulla",
             ProximitySquare: 544883,
-            Query: "nulla",
+            Query: "illum",
         },
     }
 

@@ -15,8 +15,8 @@ func main() {
 
     req := operations.AdultContentDetectionRequest{
         Request: &operations.AdultContentDetectionRequestBody{
-            APIKey: "unde",
-            Text: "deserunt",
+            APIKey: "corrupti",
+            Text: "provident",
         },
     }
 

@@ -34,9 +34,9 @@ func main() {
             Raw: false,
         },
         Headers: operations.MessagesAddHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "deserunt",
-            XApideckServiceID: "porro",
+            XApideckAppID: "corrupti",
+            XApideckConsumerID: "provident",
+            XApideckServiceID: "distinctio",
         },
         Request: shared.MessageInput{
             Body: "Hi! How are you doing?",

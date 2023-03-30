@@ -32,22 +32,22 @@ func main() {
 
     req := operations.AttachCustomerManagedPolicyReferenceToPermissionSetRequest{
         Headers: operations.AttachCustomerManagedPolicyReferenceToPermissionSetHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "SWBExternalService.AttachCustomerManagedPolicyReferenceToPermissionSet",
         },
         Request: shared.AttachCustomerManagedPolicyReferenceToPermissionSetRequest{
             CustomerManagedPolicyReference: shared.CustomerManagedPolicyReference{
-                Name: "nihil",
-                Path: "fuga",
+                Name: "illum",
+                Path: "vel",
             },
-            InstanceArn: "facilis",
-            PermissionSetArn: "eum",
+            InstanceArn: "error",
+            PermissionSetArn: "deserunt",
         },
     }
 

@@ -20,24 +20,24 @@ func main() {
             },
         },
         PathParams: operations.AddTrackCollectionItemsPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
         Request: shared.CollectionItemRequest{
             Items: []shared.CollectionItem{
                 shared.CollectionItem{
-                    AddedTime: "2022-07-11T23:47:51.934Z",
-                    ID: "nulla",
-                    MediaType: "id",
+                    AddedTime: "2022-07-12T01:39:23.605Z",
+                    ID: "quibusdam",
+                    MediaType: "unde",
                 },
                 shared.CollectionItem{
-                    AddedTime: "2022-05-20T21:15:10.824Z",
-                    ID: "perspiciatis",
-                    MediaType: "nulla",
+                    AddedTime: "2022-05-20T23:06:42.495Z",
+                    ID: "corrupti",
+                    MediaType: "illum",
                 },
                 shared.CollectionItem{
-                    AddedTime: "2022-10-26T09:38:25.786Z",
-                    ID: "fuga",
-                    MediaType: "facilis",
+                    AddedTime: "2022-10-26T11:29:57.458Z",
+                    ID: "error",
+                    MediaType: "deserunt",
                 },
             },
         },

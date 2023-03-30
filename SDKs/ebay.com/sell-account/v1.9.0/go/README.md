@@ -31,10 +31,10 @@ func main() {
             },
         },
         QueryParams: operations.GetAdvertisingEligibilityQueryParams{
-            ProgramTypes: "unde",
+            ProgramTypes: "corrupti",
         },
         Headers: operations.GetAdvertisingEligibilityHeaders{
-            XEbayCMarketplaceID: "deserunt",
+            XEbayCMarketplaceID: "provident",
         },
     }
 

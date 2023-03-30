@@ -26,11 +26,11 @@ func main() {
 
     req := operations.GetAccessTokensAccessTokensRequest{
         PathParams: operations.GetAccessTokensAccessTokensPathParams{
-            AccessTokens: "unde",
+            AccessTokens: "corrupti",
         },
         QueryParams: operations.GetAccessTokensAccessTokensQueryParams{
-            Callback: "deserunt",
-            Filter: "porro",
+            Callback: "provident",
+            Filter: "distinctio",
             Page: 844266,
             Pagesize: 602763,
         },

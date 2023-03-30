@@ -20,7 +20,7 @@ func main() {
             },
         },
         Request: &shared.AccountHolderBalanceRequest{
-            AccountHolderCode: "unde",
+            AccountHolderCode: "corrupti",
         },
     }
 

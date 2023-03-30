@@ -27,25 +27,25 @@ func main() {
     req := operations.ChromeuxreportRecordsQueryHistoryRecordRequest{
         QueryParams: operations.ChromeuxreportRecordsQueryHistoryRecordQueryParams{
             DollarXgafv: "2",
-            AccessToken: "deserunt",
+            AccessToken: "provident",
             Alt: "proto",
-            Callback: "nulla",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Callback: "quibusdam",
+            Fields: "unde",
+            Key: "nulla",
+            OauthToken: "corrupti",
             PrettyPrint: false,
-            QuotaUser: "nulla",
-            UploadType: "nihil",
-            UploadProtocol: "fuga",
+            QuotaUser: "illum",
+            UploadType: "vel",
+            UploadProtocol: "error",
         },
         Request: &shared.QueryHistoryRequest{
             FormFactor: "DESKTOP",
             Metrics: []string{
-                "iusto",
-                "ullam",
+                "iure",
+                "magnam",
             },
-            Origin: "saepe",
-            URL: "inventore",
+            Origin: "debitis",
+            URL: "ipsa",
         },
     }
 

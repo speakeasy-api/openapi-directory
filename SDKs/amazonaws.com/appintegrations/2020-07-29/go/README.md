@@ -32,58 +32,58 @@ func main() {
 
     req := operations.CreateDataIntegrationRequest{
         Headers: operations.CreateDataIntegrationHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateDataIntegrationRequestBody{
-            ClientToken: "nulla",
-            Description: "nihil",
+            ClientToken: "illum",
+            Description: "vel",
             FileConfiguration: &operations.CreateDataIntegrationRequestBodyFileConfiguration{
                 Filters: map[string][]string{
-                    "facilis": []string{
-                        "iusto",
-                        "ullam",
+                    "deserunt": []string{
+                        "iure",
+                        "magnam",
                     },
-                    "saepe": []string{
-                        "sapiente",
+                    "debitis": []string{
+                        "delectus",
                     },
-                    "enim": []string{
-                        "voluptatum",
-                        "autem",
+                    "tempora": []string{
+                        "molestiae",
+                        "minus",
                     },
                 },
                 Folders: []string{
-                    "non",
-                    "deleniti",
-                    "similique",
-                    "reprehenderit",
+                    "voluptatum",
+                    "iusto",
+                    "excepturi",
+                    "nisi",
                 },
             },
-            KmsKey: "molestiae",
-            Name: "quo",
+            KmsKey: "recusandae",
+            Name: "temporibus",
             ObjectConfiguration: map[string]map[string][]string{
-                "laboriosam": map[string][]string{
-                    "est": []string{
-                        "consequatur",
+                "quis": map[string][]string{
+                    "deserunt": []string{
+                        "ipsam",
                     },
                 },
             },
             ScheduleConfig: operations.CreateDataIntegrationRequestBodyScheduleConfig{
-                FirstExecutionFrom: "fugiat",
-                Object: "a",
-                ScheduleExpression: "omnis",
+                FirstExecutionFrom: "repellendus",
+                Object: "sapiente",
+                ScheduleExpression: "quo",
             },
-            SourceURI: "eos",
+            SourceURI: "odit",
             Tags: map[string]string{
-                "accusamus": "reiciendis",
-                "rem": "quibusdam",
-                "et": "praesentium",
-                "occaecati": "dolor",
+                "at": "maiores",
+                "molestiae": "quod",
+                "quod": "esse",
+                "totam": "porro",
             },
         },
     }

@@ -32,7 +32,7 @@ func main() {
 
     req := operations.GetActionOrganizationActivityListRequest{
         QueryParams: operations.GetActionOrganizationActivityListQueryParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

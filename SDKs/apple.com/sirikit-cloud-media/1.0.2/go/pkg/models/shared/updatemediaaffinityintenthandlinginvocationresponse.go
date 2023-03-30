@@ -12,10 +12,10 @@ import (
 type UpdateMediaAffinityIntentHandlingInvocationResponseType string
 
 const (
+	UpdateMediaAffinityIntentHandlingInvocationResponseTypeProtocolException                                    UpdateMediaAffinityIntentHandlingInvocationResponseType = "ProtocolException"
 	UpdateMediaAffinityIntentHandlingInvocationResponseTypeUpdateMediaAffinityIntentHandlingHandle              UpdateMediaAffinityIntentHandlingInvocationResponseType = "UpdateMediaAffinityIntentHandling.handle"
 	UpdateMediaAffinityIntentHandlingInvocationResponseTypeUpdateMediaAffinityIntentHandlingResolveAffinityType UpdateMediaAffinityIntentHandlingInvocationResponseType = "UpdateMediaAffinityIntentHandling.resolveAffinityType"
 	UpdateMediaAffinityIntentHandlingInvocationResponseTypeUpdateMediaAffinityIntentHandlingResolveMediaItems   UpdateMediaAffinityIntentHandlingInvocationResponseType = "UpdateMediaAffinityIntentHandling.resolveMediaItems"
-	UpdateMediaAffinityIntentHandlingInvocationResponseTypeProtocolException                                    UpdateMediaAffinityIntentHandlingInvocationResponseType = "ProtocolException"
 )
 
 type UpdateMediaAffinityIntentHandlingInvocationResponse struct {
@@ -25,6 +25,17 @@ type UpdateMediaAffinityIntentHandlingInvocationResponse struct {
 	ProtocolExceptionInvocationResponse                                    *ProtocolExceptionInvocationResponse
 
 	Type UpdateMediaAffinityIntentHandlingInvocationResponseType
+}
+
+func CreateUpdateMediaAffinityIntentHandlingInvocationResponseProtocolException(protocolException ProtocolExceptionInvocationResponse) UpdateMediaAffinityIntentHandlingInvocationResponse {
+	typ := UpdateMediaAffinityIntentHandlingInvocationResponseTypeProtocolException
+	typStr := string(typ)
+	protocolException.Method = typStr
+
+	return UpdateMediaAffinityIntentHandlingInvocationResponse{
+		ProtocolExceptionInvocationResponse: &protocolException,
+		Type:                                typ,
+	}
 }
 
 func CreateUpdateMediaAffinityIntentHandlingInvocationResponseUpdateMediaAffinityIntentHandlingHandle(updateMediaAffinityIntentHandlingHandle UpdateMediaAffinityIntentHandlingHandleInvocationResponse) UpdateMediaAffinityIntentHandlingInvocationResponse {
@@ -60,17 +71,6 @@ func CreateUpdateMediaAffinityIntentHandlingInvocationResponseUpdateMediaAffinit
 	}
 }
 
-func CreateUpdateMediaAffinityIntentHandlingInvocationResponseProtocolException(protocolException ProtocolExceptionInvocationResponse) UpdateMediaAffinityIntentHandlingInvocationResponse {
-	typ := UpdateMediaAffinityIntentHandlingInvocationResponseTypeProtocolException
-	typStr := string(typ)
-	protocolException.Method = typStr
-
-	return UpdateMediaAffinityIntentHandlingInvocationResponse{
-		ProtocolExceptionInvocationResponse: &protocolException,
-		Type:                                typ,
-	}
-}
-
 func (u *UpdateMediaAffinityIntentHandlingInvocationResponse) UnmarshalJSON(data []byte) error {
 	var d *json.Decoder
 
@@ -84,6 +84,17 @@ func (u *UpdateMediaAffinityIntentHandlingInvocationResponse) UnmarshalJSON(data
 	}
 
 	switch dis.Method {
+	case "ProtocolException":
+		d = json.NewDecoder(bytes.NewReader(data))
+		d.DisallowUnknownFields()
+		protocolExceptionInvocationResponse := new(ProtocolExceptionInvocationResponse)
+		if err := d.Decode(&protocolExceptionInvocationResponse); err != nil {
+			return fmt.Errorf("could not unmarshal expected type: %w", err)
+		}
+
+		u.ProtocolExceptionInvocationResponse = protocolExceptionInvocationResponse
+		u.Type = UpdateMediaAffinityIntentHandlingInvocationResponseTypeProtocolException
+		return nil
 	case "UpdateMediaAffinityIntentHandling.handle":
 		d = json.NewDecoder(bytes.NewReader(data))
 		d.DisallowUnknownFields()
@@ -116,17 +127,6 @@ func (u *UpdateMediaAffinityIntentHandlingInvocationResponse) UnmarshalJSON(data
 
 		u.UpdateMediaAffinityIntentHandlingResolveMediaItemsInvocationResponse = updateMediaAffinityIntentHandlingResolveMediaItemsInvocationResponse
 		u.Type = UpdateMediaAffinityIntentHandlingInvocationResponseTypeUpdateMediaAffinityIntentHandlingResolveMediaItems
-		return nil
-	case "ProtocolException":
-		d = json.NewDecoder(bytes.NewReader(data))
-		d.DisallowUnknownFields()
-		protocolExceptionInvocationResponse := new(ProtocolExceptionInvocationResponse)
-		if err := d.Decode(&protocolExceptionInvocationResponse); err != nil {
-			return fmt.Errorf("could not unmarshal expected type: %w", err)
-		}
-
-		u.ProtocolExceptionInvocationResponse = protocolExceptionInvocationResponse
-		u.Type = UpdateMediaAffinityIntentHandlingInvocationResponseTypeProtocolException
 		return nil
 	}
 

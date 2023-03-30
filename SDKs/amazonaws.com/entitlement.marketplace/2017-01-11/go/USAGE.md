@@ -21,29 +21,44 @@ func main() {
 
     req := operations.GetEntitlementsRequest{
         Headers: operations.GetEntitlementsHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSMPEntitlementService.GetEntitlements",
         },
         Request: shared.GetEntitlementsRequest{
             Filter: map[string][]string{
-                "fuga": []string{
-                    "eum",
-                    "iusto",
-                    "ullam",
+                "vel": []string{
+                    "deserunt",
+                    "suscipit",
+                    "iure",
                 },
-                "saepe": []string{
-                    "sapiente",
+                "magnam": []string{
+                    "ipsa",
+                    "delectus",
+                    "tempora",
+                    "suscipit",
+                },
+                "molestiae": []string{
+                    "placeat",
+                    "voluptatum",
+                    "iusto",
+                    "excepturi",
+                },
+                "nisi": []string{
+                    "temporibus",
+                    "ab",
+                    "quis",
+                    "veritatis",
                 },
             },
-            MaxResults: 272656,
-            NextToken: "eum",
-            ProductCode: "voluptatum",
+            MaxResults: 648172,
+            NextToken: "perferendis",
+            ProductCode: "ipsam",
         },
     }
 

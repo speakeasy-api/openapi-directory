@@ -26,14 +26,14 @@ func main() {
 
     req := operations.AppDGETRequest{
         PathParams: operations.AppDGETPathParams{
-            AppDID: "unde",
+            AppDID: "corrupti",
         },
         QueryParams: operations.AppDGETQueryParams{
-            AllFields: "deserunt",
-            ExcludeDefault: "porro",
-            ExcludeFields: "nulla",
-            Fields: "id",
-            Filter: "vero",
+            AllFields: "provident",
+            ExcludeDefault: "distinctio",
+            ExcludeFields: "quibusdam",
+            Fields: "unde",
+            Filter: "nulla",
         },
     }
 

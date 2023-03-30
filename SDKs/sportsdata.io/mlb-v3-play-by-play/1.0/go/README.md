@@ -33,7 +33,7 @@ func main() {
     req := operations.PlayByPlayRequest{
         PathParams: operations.PlayByPlayPathParams{
             Format: "JSON",
-            Gameid: "deserunt",
+            Gameid: "provident",
         },
     }
 

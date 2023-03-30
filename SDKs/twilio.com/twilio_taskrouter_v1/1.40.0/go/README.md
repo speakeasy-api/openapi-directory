@@ -32,11 +32,11 @@ func main() {
             },
         },
         PathParams: operations.CreateActivityPathParams{
-            WorkspaceSid: "unde",
+            WorkspaceSid: "corrupti",
         },
         Request: &operations.CreateActivityCreateActivityRequest{
             Available: false,
-            FriendlyName: "deserunt",
+            FriendlyName: "provident",
         },
     }
 

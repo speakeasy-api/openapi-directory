@@ -23,20 +23,20 @@ func main() {
         QueryParams: operations.GETDeleteAlarmsQueryParams{
             Action: "DeleteAlarms",
             AlarmNames: []string{
-                "porro",
-                "nulla",
-                "id",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
             Version: "2010-08-01",
         },
         Headers: operations.GETDeleteAlarmsHeaders{
-            XAmzAlgorithm: "perspiciatis",
+            XAmzAlgorithm: "unde",
             XAmzContentSha256: "nulla",
-            XAmzCredential: "nihil",
-            XAmzDate: "fuga",
-            XAmzSecurityToken: "facilis",
-            XAmzSignature: "eum",
-            XAmzSignedHeaders: "iusto",
+            XAmzCredential: "corrupti",
+            XAmzDate: "illum",
+            XAmzSecurityToken: "vel",
+            XAmzSignature: "error",
+            XAmzSignedHeaders: "deserunt",
         },
     }
 

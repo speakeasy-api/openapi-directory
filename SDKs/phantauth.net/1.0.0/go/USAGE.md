@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetClientClientIDRequest{
         PathParams: operations.GetClientClientIDPathParams{
-            ClientID: "unde",
+            ClientID: "corrupti",
         },
     }
 

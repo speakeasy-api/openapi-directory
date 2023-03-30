@@ -32,7 +32,7 @@ func main() {
 
     req := operations.DeleteChargeStationRequest{
         PathParams: operations.DeleteChargeStationPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

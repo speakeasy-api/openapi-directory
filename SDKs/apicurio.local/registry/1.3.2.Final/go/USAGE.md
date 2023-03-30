@@ -15,10 +15,10 @@ func main() {
 
     req := operations.CreateArtifactRuleRequest{
         PathParams: operations.CreateArtifactRulePathParams{
-            ArtifactID: "unde",
+            ArtifactID: "corrupti",
         },
         Request: shared.Rule{
-            Config: "deserunt",
+            Config: "provident",
             Type: "VALIDITY",
         },
     }

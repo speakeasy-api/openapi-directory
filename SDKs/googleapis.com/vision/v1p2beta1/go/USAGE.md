@@ -26,30 +26,30 @@ func main() {
         },
         QueryParams: operations.VisionFilesAnnotateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "deserunt",
+            AccessToken: "provident",
             Alt: "proto",
-            Callback: "nulla",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Callback: "quibusdam",
+            Fields: "unde",
+            Key: "nulla",
+            OauthToken: "corrupti",
             PrettyPrint: false,
-            QuotaUser: "nulla",
-            UploadType: "nihil",
-            UploadProtocol: "fuga",
+            QuotaUser: "illum",
+            UploadType: "vel",
+            UploadProtocol: "error",
         },
         Request: &shared.GoogleCloudVisionV1p2beta1BatchAnnotateFilesRequest{
-            Parent: "facilis",
+            Parent: "deserunt",
             Requests: []shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                 shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p2beta1Feature{
                         shared.GoogleCloudVisionV1p2beta1Feature{
                             MaxResults: 297534,
-                            Model: "saepe",
+                            Model: "debitis",
                             Type: "TYPE_UNSPECIFIED",
                         },
                         shared.GoogleCloudVisionV1p2beta1Feature{
                             MaxResults: 963663,
-                            Model: "enim",
+                            Model: "tempora",
                             Type: "LABEL_DETECTION",
                         },
                     },
@@ -61,9 +61,9 @@ func main() {
                             },
                         },
                         LanguageHints: []string{
-                            "deleniti",
-                            "similique",
-                            "reprehenderit",
+                            "iusto",
+                            "excepturi",
+                            "nisi",
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p2beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
@@ -94,20 +94,20 @@ func main() {
                                     },
                                 },
                             },
-                            Filter: "accusamus",
+                            Filter: "at",
                             ProductCategories: []string{
-                                "reiciendis",
-                                "rem",
-                                "quibusdam",
-                                "et",
+                                "maiores",
+                                "molestiae",
+                                "quod",
+                                "quod",
                             },
-                            ProductSet: "praesentium",
+                            ProductSet: "esse",
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p2beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
-                                "dolor",
-                                "soluta",
-                                "sed",
+                                "porro",
+                                "dolorum",
+                                "dicta",
                             },
                             EnableTextDetectionConfidenceScore: false,
                         },
@@ -116,58 +116,59 @@ func main() {
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p2beta1InputConfig{
-                        Content: "quisquam",
+                        Content: "nam",
                         GcsSource: &shared.GoogleCloudVisionV1p2beta1GcsSource{
-                            URI: "https://kristina.com",
+                            URI: "https://oily-cephalopod.name",
                         },
-                        MimeType: "sed",
+                        MimeType: "hic",
                     },
                     Pages: []int{
-                        758616,
                         521848,
                         105907,
                         414662,
+                        473600,
                     },
                 },
                 shared.GoogleCloudVisionV1p2beta1AnnotateFileRequest{
                     Features: []shared.GoogleCloudVisionV1p2beta1Feature{
                         shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 264555,
-                            Model: "amet",
-                            Type: "WEB_DETECTION",
+                            MaxResults: 186332,
+                            Model: "impedit",
+                            Type: "CROP_HINTS",
                         },
                         shared.GoogleCloudVisionV1p2beta1Feature{
-                            MaxResults: 736918,
-                            Model: "blanditiis",
-                            Type: "LANDMARK_DETECTION",
+                            MaxResults: 456150,
+                            Model: "ipsum",
+                            Type: "SAFE_SEARCH_DETECTION",
                         },
                     },
                     ImageContext: &shared.GoogleCloudVisionV1p2beta1ImageContext{
                         CropHintsParams: &shared.GoogleCloudVisionV1p2beta1CropHintsParams{
                             AspectRatios: []float32{
-                                1352.18,
                                 187.89,
-                                3241.41,
                             },
                         },
                         LanguageHints: []string{
-                            "voluptatem",
-                            "laborum",
-                            "modi",
+                            "natus",
+                            "sed",
                         },
                         LatLongRect: &shared.GoogleCloudVisionV1p2beta1LatLongRect{
                             MaxLatLng: &shared.LatLng{
-                                Latitude: 6169.34,
-                                Longitude: 3864.89,
+                                Latitude: 6120.96,
+                                Longitude: 2223.21,
                             },
                             MinLatLng: &shared.LatLng{
-                                Latitude: 9437.49,
-                                Longitude: 9025.99,
+                                Latitude: 6169.34,
+                                Longitude: 3864.89,
                             },
                         },
                         ProductSearchParams: &shared.GoogleCloudVisionV1p2beta1ProductSearchParams{
                             BoundingPoly: &shared.GoogleCloudVisionV1p2beta1BoundingPoly{
                                 NormalizedVertices: []shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
+                                    shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
+                                        X: 9025.99,
+                                        Y: 6818.2,
+                                    },
                                     shared.GoogleCloudVisionV1p2beta1NormalizedVertex{
                                         X: 4499.5,
                                         Y: 3595.08,
@@ -188,17 +189,17 @@ func main() {
                                     },
                                 },
                             },
-                            Filter: "libero",
+                            Filter: "est",
                             ProductCategories: []string{
-                                "libero",
-                                "ipsum",
-                                "non",
+                                "laborum",
+                                "dolores",
+                                "dolorem",
                             },
-                            ProductSet: "ea",
+                            ProductSet: "corporis",
                         },
                         TextDetectionParams: &shared.GoogleCloudVisionV1p2beta1TextDetectionParams{
                             AdvancedOcrOptions: []string{
-                                "placeat",
+                                "nobis",
                             },
                             EnableTextDetectionConfidenceScore: false,
                         },
@@ -207,14 +208,15 @@ func main() {
                         },
                     },
                     InputConfig: &shared.GoogleCloudVisionV1p2beta1InputConfig{
-                        Content: "ipsam",
+                        Content: "enim",
                         GcsSource: &shared.GoogleCloudVisionV1p2beta1GcsSource{
-                            URI: "https://frank.biz",
+                            URI: "https://gummy-expedition.name",
                         },
-                        MimeType: "similique",
+                        MimeType: "accusantium",
                     },
                     Pages: []int{
-                        438601,
+                        634274,
+                        988374,
                     },
                 },
             },

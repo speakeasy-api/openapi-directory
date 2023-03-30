@@ -34,17 +34,17 @@ func main() {
             },
         },
         PathParams: operations.CalendarACLDeletePathParams{
-            CalendarID: "unde",
-            RuleID: "deserunt",
+            CalendarID: "corrupti",
+            RuleID: "provident",
         },
         QueryParams: operations.CalendarACLDeleteQueryParams{
             Alt: "json",
-            Fields: "nulla",
-            Key: "id",
-            OauthToken: "vero",
+            Fields: "distinctio",
+            Key: "quibusdam",
+            OauthToken: "unde",
             PrettyPrint: false,
-            QuotaUser: "perspiciatis",
-            UserIP: "nulla",
+            QuotaUser: "nulla",
+            UserIP: "corrupti",
         },
     }
 

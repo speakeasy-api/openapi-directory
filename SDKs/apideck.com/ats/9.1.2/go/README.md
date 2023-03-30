@@ -34,9 +34,9 @@ func main() {
             Raw: false,
         },
         Headers: operations.ApplicantsAddHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "deserunt",
-            XApideckServiceID: "porro",
+            XApideckAppID: "corrupti",
+            XApideckConsumerID: "provident",
+            XApideckServiceID: "distinctio",
         },
         Request: shared.ApplicantInput{
             Addresses: []shared.Address{
@@ -143,9 +143,9 @@ func main() {
             },
             Anonymized: true,
             Applications: []string{
-                "vero",
-                "perspiciatis",
                 "nulla",
+                "corrupti",
+                "illum",
             },
             Archived: false,
             Birthday: "2000-08-12",
@@ -181,8 +181,8 @@ func main() {
             },
             FirstName: "Elon",
             Followers: []string{
-                "ullam",
-                "saepe",
+                "magnam",
+                "debitis",
             },
             Headline: "PepsiCo, Inc, Central Perk",
             Initials: "EM",
@@ -227,15 +227,15 @@ func main() {
                 },
             },
             Sources: []string{
-                "eum",
-                "voluptatum",
+                "suscipit",
+                "molestiae",
             },
             StageID: "12345",
             Tags: []string{
-                "vel",
-                "non",
-                "deleniti",
-                "similique",
+                "placeat",
+                "voluptatum",
+                "iusto",
+                "excepturi",
             },
             Title: "CEO",
             Websites: []shared.ApplicantWebsites{

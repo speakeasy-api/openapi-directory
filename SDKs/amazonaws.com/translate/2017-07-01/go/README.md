@@ -32,31 +32,35 @@ func main() {
 
     req := operations.CreateParallelDataRequest{
         Headers: operations.CreateParallelDataHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSShineFrontendService_20170701.CreateParallelData",
         },
         Request: shared.CreateParallelDataRequest{
-            ClientToken: "nihil",
-            Description: "fuga",
+            ClientToken: "illum",
+            Description: "vel",
             EncryptionKey: &shared.EncryptionKey{
-                ID: "facilis",
+                ID: "error",
                 Type: "KMS",
             },
-            Name: "iusto",
+            Name: "deserunt",
             ParallelDataConfig: shared.ParallelDataConfig{
-                Format: "TSV",
-                S3URI: "saepe",
+                Format: "CSV",
+                S3URI: "iure",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "sapiente",
-                    Value: "enim",
+                    Key: "debitis",
+                    Value: "ipsa",
+                },
+                shared.Tag{
+                    Key: "delectus",
+                    Value: "tempora",
                 },
             },
         },

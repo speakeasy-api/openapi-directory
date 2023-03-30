@@ -15,15 +15,15 @@ func main() {
 
     req := operations.GetAssociationBySubjectAndAssocTypeRequest{
         PathParams: operations.GetAssociationBySubjectAndAssocTypePathParams{
-            AssociationType: "unde",
+            AssociationType: "corrupti",
         },
         QueryParams: operations.GetAssociationBySubjectAndAssocTypeQueryParams{
-            Evidence: "deserunt",
+            Evidence: "provident",
             ExcludeAutomaticAssertions: false,
-            Object: "porro",
+            Object: "distinctio",
             Rows: 844266,
             Start: 602763,
-            Subject: "vero",
+            Subject: "nulla",
             UnselectEvidence: false,
             UseCompactAssociations: false,
         },

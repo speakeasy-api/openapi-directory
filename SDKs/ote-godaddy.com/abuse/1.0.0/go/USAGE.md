@@ -15,12 +15,12 @@ func main() {
 
     req := operations.CreateTicketRequest{
         Request: shared.AbuseTicketCreate{
-            Info: "unde",
-            InfoURL: "deserunt",
+            Info: "corrupti",
+            InfoURL: "provident",
             Intentional: false,
-            Proxy: "porro",
-            Source: "nulla",
-            Target: "id",
+            Proxy: "distinctio",
+            Source: "quibusdam",
+            Target: "unde",
             Type: "PHISHING",
         },
     }

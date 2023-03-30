@@ -15,7 +15,7 @@ func main() {
 
     req := operations.DeleteKeyKeyRequest{
         PathParams: operations.DeleteKeyKeyPathParams{
-            Key: "unde",
+            Key: "corrupti",
         },
     }
 

@@ -25,50 +25,50 @@ func main() {
             },
         },
         PathParams: operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput{
             Budget: &shared.GoogleCloudBillingBudgetsV1beta1BudgetInput{
                 AllUpdatesRule: &shared.GoogleCloudBillingBudgetsV1beta1AllUpdatesRule{
                     DisableDefaultIamRecipients: false,
                     MonitoringNotificationChannels: []string{
-                        "iusto",
-                        "ullam",
+                        "iure",
+                        "magnam",
                     },
-                    PubsubTopic: "saepe",
-                    SchemaVersion: "inventore",
+                    PubsubTopic: "debitis",
+                    SchemaVersion: "ipsa",
                 },
                 Amount: &shared.GoogleCloudBillingBudgetsV1beta1BudgetAmount{
                     LastPeriodAmount: map[string]interface{}{
-                        "enim": "eum",
-                        "voluptatum": "autem",
-                        "vel": "non",
-                        "deleniti": "similique",
+                        "tempora": "suscipit",
+                        "molestiae": "minus",
+                        "placeat": "voluptatum",
+                        "iusto": "excepturi",
                     },
                     SpecifiedAmount: &shared.GoogleTypeMoney{
-                        CurrencyCode: "reprehenderit",
+                        CurrencyCode: "nisi",
                         Nanos: 925597,
-                        Units: "quo",
+                        Units: "temporibus",
                     },
                 },
                 BudgetFilter: &shared.GoogleCloudBillingBudgetsV1beta1Filter{
                     CalendarPeriod: "CALENDAR_PERIOD_UNSPECIFIED",
                     CreditTypes: []string{
-                        "dicta",
-                        "est",
+                        "veritatis",
+                        "deserunt",
                     },
                     CreditTypesTreatment: "CREDIT_TYPES_TREATMENT_UNSPECIFIED",
                     CustomPeriod: &shared.GoogleCloudBillingBudgetsV1beta1CustomPeriod{
@@ -84,42 +84,42 @@ func main() {
                         },
                     },
                     Labels: map[string][]interface{}{
-                        "reiciendis": []interface{}{
-                            "quibusdam",
-                            "et",
+                        "maiores": []interface{}{
+                            "quod",
+                            "quod",
                         },
-                        "praesentium": []interface{}{
-                            "dolor",
-                            "soluta",
-                            "sed",
+                        "esse": []interface{}{
+                            "porro",
+                            "dolorum",
+                            "dicta",
                         },
-                        "quisquam": []interface{}{
-                            "culpa",
-                            "qui",
-                            "sed",
-                        },
-                        "rerum": []interface{}{
+                        "nam": []interface{}{
                             "occaecati",
-                            "odit",
-                            "esse",
-                            "rem",
+                            "fugit",
+                            "deleniti",
+                        },
+                        "hic": []interface{}{
+                            "totam",
+                            "beatae",
+                            "commodi",
+                            "molestiae",
                         },
                     },
                     Projects: []string{
-                        "amet",
-                        "est",
+                        "qui",
+                        "impedit",
                     },
                     Services: []string{
-                        "blanditiis",
-                        "numquam",
-                        "similique",
+                        "esse",
+                        "ipsum",
+                        "excepturi",
                     },
                     Subaccounts: []string{
-                        "sit",
+                        "perferendis",
                     },
                 },
-                DisplayName: "quia",
-                Etag: "et",
+                DisplayName: "ad",
+                Etag: "natus",
                 ThresholdRules: []shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
                     shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule{
                         SpendBasis: "CURRENT_SPEND",

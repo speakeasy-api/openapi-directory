@@ -21,22 +21,22 @@ func main() {
 
     req := operations.AddTagsToStreamRequest{
         Headers: operations.AddTagsToStreamHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "Kinesis_20131202.AddTagsToStream",
         },
         Request: shared.AddTagsToStreamInput{
-            StreamARN: "nihil",
-            StreamName: "fuga",
+            StreamARN: "illum",
+            StreamName: "vel",
             Tags: map[string]string{
-                "eum": "iusto",
-                "ullam": "saepe",
-                "inventore": "sapiente",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
         },
     }

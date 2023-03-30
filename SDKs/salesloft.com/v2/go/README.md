@@ -35,11 +35,11 @@ func main() {
             LimitPagingCounts: false,
             Page: 602763,
             PerPage: 857946,
-            SortBy: "perspiciatis",
-            SortDirection: "nulla",
+            SortBy: "corrupti",
+            SortDirection: "illum",
             UpdatedAt: []string{
-                "fuga",
-                "facilis",
+                "error",
+                "deserunt",
             },
         },
     }

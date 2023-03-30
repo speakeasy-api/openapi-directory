@@ -31,62 +31,62 @@ func main() {
             },
         },
         Request: &shared.CreatePermitRequest{
-            MerchantAccount: "unde",
+            MerchantAccount: "corrupti",
             Permits: []shared.Permit{
                 shared.Permit{
-                    PartnerID: "porro",
-                    ProfileReference: "nulla",
+                    PartnerID: "distinctio",
+                    ProfileReference: "quibusdam",
                     Restriction: &shared.PermitRestriction{
                         MaxAmount: &shared.Amount{
-                            Currency: "id",
+                            Currency: "unde",
                             Value: 857946,
                         },
                         SingleTransactionLimit: &shared.Amount{
-                            Currency: "perspiciatis",
+                            Currency: "corrupti",
                             Value: 847252,
                         },
                         SingleUse: false,
                     },
-                    ResultKey: "nihil",
-                    ValidTillDate: "2022-08-14T09:24:48.619Z",
+                    ResultKey: "vel",
+                    ValidTillDate: "2022-08-14T11:56:07.744Z",
                 },
                 shared.Permit{
-                    PartnerID: "facilis",
-                    ProfileReference: "eum",
+                    PartnerID: "deserunt",
+                    ProfileReference: "suscipit",
                     Restriction: &shared.PermitRestriction{
                         MaxAmount: &shared.Amount{
-                            Currency: "iusto",
+                            Currency: "iure",
                             Value: 297534,
                         },
                         SingleTransactionLimit: &shared.Amount{
-                            Currency: "saepe",
+                            Currency: "debitis",
                             Value: 56713,
                         },
                         SingleUse: false,
                     },
-                    ResultKey: "sapiente",
-                    ValidTillDate: "2022-12-20T11:21:44.095Z",
+                    ResultKey: "delectus",
+                    ValidTillDate: "2022-12-20T13:53:03.222Z",
                 },
                 shared.Permit{
-                    PartnerID: "eum",
-                    ProfileReference: "voluptatum",
+                    PartnerID: "suscipit",
+                    ProfileReference: "molestiae",
                     Restriction: &shared.PermitRestriction{
                         MaxAmount: &shared.Amount{
-                            Currency: "autem",
+                            Currency: "minus",
                             Value: 812169,
                         },
                         SingleTransactionLimit: &shared.Amount{
-                            Currency: "non",
+                            Currency: "voluptatum",
                             Value: 479977,
                         },
                         SingleUse: false,
                     },
-                    ResultKey: "similique",
-                    ValidTillDate: "2022-11-06T15:02:11.882Z",
+                    ResultKey: "excepturi",
+                    ValidTillDate: "2022-11-06T17:33:31.011Z",
                 },
             },
-            RecurringDetailReference: "molestiae",
-            ShopperReference: "quo",
+            RecurringDetailReference: "recusandae",
+            ShopperReference: "temporibus",
         },
     }
 

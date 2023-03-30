@@ -27,8 +27,8 @@ func main() {
     req := operations.SvgconvertRequest{
         Request: operations.SvgconvertFileToConvert{
             File: &operations.SvgconvertFileToConvertFile{
-                Content: []byte("unde"),
-                File: "deserunt",
+                Content: []byte("corrupti"),
+                File: "provident",
             },
         },
     }

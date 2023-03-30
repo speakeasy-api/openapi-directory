@@ -26,7 +26,7 @@ func main() {
 
     req := operations.GroundhogRequest{
         PathParams: operations.GroundhogPathParams{
-            Slug: "unde",
+            Slug: "corrupti",
         },
     }
 

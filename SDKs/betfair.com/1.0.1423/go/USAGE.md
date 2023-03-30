@@ -16,21 +16,21 @@ func main() {
     req := operations.PostRequestRequest{
         Request: shared.AllRequestTypesExample{
             Authentication: &shared.AuthenticationMessage{
-                AppKey: "unde",
+                AppKey: "corrupti",
                 ID: 592845,
-                Op: "porro",
-                Session: "nulla",
+                Op: "distinctio",
+                Session: "quibusdam",
             },
             Heartbeat: &shared.HeartbeatMessage{
                 ID: 602763,
-                Op: "vero",
+                Op: "nulla",
             },
             MarketSubscription: &shared.MarketSubscriptionMessage{
-                Clk: "perspiciatis",
+                Clk: "corrupti",
                 ConflateMs: 847252,
                 HeartbeatMs: 423655,
                 ID: 623564,
-                InitialClk: "facilis",
+                InitialClk: "deserunt",
                 MarketDataFilter: &shared.MarketDataFilter{
                     Fields: []shared.MarketDataFilterFieldsEnum{
                         "EX_TRADED",
@@ -44,47 +44,47 @@ func main() {
                     },
                     BspMarket: false,
                     CountryCodes: []string{
-                        "eum",
-                        "voluptatum",
+                        "suscipit",
+                        "molestiae",
                     },
                     EventIds: []string{
-                        "vel",
-                        "non",
-                        "deleniti",
-                        "similique",
+                        "placeat",
+                        "voluptatum",
+                        "iusto",
+                        "excepturi",
                     },
                     EventTypeIds: []string{
-                        "molestiae",
-                        "quo",
+                        "recusandae",
+                        "temporibus",
                     },
                     MarketIds: []string{
-                        "laboriosam",
+                        "quis",
                     },
                     MarketTypes: []string{
-                        "est",
+                        "deserunt",
                     },
                     RaceTypes: []string{
-                        "consequatur",
+                        "ipsam",
                     },
                     TurnInPlayEnabled: false,
                     Venues: []string{
-                        "a",
-                        "omnis",
-                        "eos",
-                        "accusamus",
+                        "sapiente",
+                        "quo",
+                        "odit",
+                        "at",
                     },
                 },
-                Op: "accusamus",
+                Op: "at",
                 SegmentationEnabled: false,
             },
             OpTypes: "orderSubscription",
             OrderSubscriptionMessage: &shared.OrderSubscriptionMessage{
-                Clk: "rem",
+                Clk: "molestiae",
                 ConflateMs: 799159,
                 HeartbeatMs: 800911,
                 ID: 461479,
-                InitialClk: "occaecati",
-                Op: "dolor",
+                InitialClk: "totam",
+                Op: "porro",
                 OrderFilter: &shared.OrderFilter{
                     AccountIds: []int64{
                         118274,
@@ -92,9 +92,9 @@ func main() {
                         639921,
                     },
                     CustomerStrategyRefs: []string{
-                        "qui",
-                        "sed",
-                        "rerum",
+                        "fugit",
+                        "deleniti",
+                        "hic",
                     },
                     IncludeOverallPosition: false,
                     PartitionMatchedByStrategyRef: false,

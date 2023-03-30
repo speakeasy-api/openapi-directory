@@ -27,7 +27,7 @@ func main() {
     req := operations.GetActionNotificationExportResultsRequest{
         QueryParams: operations.GetActionNotificationExportResultsQueryParams{
             ActionNotificationExportID: 548814,
-            Cursor: "deserunt",
+            Cursor: "provident",
             PerPage: 715190,
             UserID: 844266,
         },

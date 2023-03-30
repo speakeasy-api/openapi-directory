@@ -32,16 +32,16 @@ func main() {
 
     req := operations.AddNotificationChannelsRequest{
         PathParams: operations.AddNotificationChannelsPathParams{
-            ProfilingGroupName: "unde",
+            ProfilingGroupName: "corrupti",
         },
         Headers: operations.AddNotificationChannelsHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.AddNotificationChannelsRequestBody{
             Channels: []shared.Channel{
@@ -51,16 +51,15 @@ func main() {
                         "AnomalyDetection",
                         "AnomalyDetection",
                     },
-                    ID: "ullam",
-                    URI: "https://anahi.org",
+                    ID: "deserunt",
+                    URI: "http://innocent-effect.org",
                 },
                 shared.Channel{
                     EventPublishers: []shared.EventPublisherEnum{
                         "AnomalyDetection",
-                        "AnomalyDetection",
                     },
-                    ID: "autem",
-                    URI: "https://june.info",
+                    ID: "delectus",
+                    URI: "http://hideous-jam.net",
                 },
             },
         },

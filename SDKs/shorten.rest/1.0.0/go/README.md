@@ -31,50 +31,50 @@ func main() {
             },
         },
         QueryParams: operations.CreateAliasQueryParams{
-            AliasName: "unde",
-            DomainName: "deserunt",
+            AliasName: "corrupti",
+            DomainName: "provident",
         },
         Request: shared.CreateAliasModel{
             Destinations: []shared.DestinationModel{
                 shared.DestinationModel{
                     Country: "Suriname",
-                    Os: "id",
-                    URL: "vero",
+                    Os: "unde",
+                    URL: "nulla",
                 },
                 shared.DestinationModel{
                     Country: "Mali",
-                    Os: "nulla",
-                    URL: "nihil",
+                    Os: "illum",
+                    URL: "vel",
                 },
                 shared.DestinationModel{
                     Country: "Netherlands Antilles",
-                    Os: "facilis",
-                    URL: "eum",
+                    Os: "deserunt",
+                    URL: "suscipit",
                 },
             },
             Metatags: []shared.MetaTagModel{
                 shared.MetaTagModel{
-                    Content: "ullam",
-                    Name: "saepe",
+                    Content: "magnam",
+                    Name: "debitis",
                 },
                 shared.MetaTagModel{
-                    Content: "inventore",
-                    Name: "sapiente",
+                    Content: "ipsa",
+                    Name: "delectus",
                 },
             },
             Snippets: []shared.SnippetModel{
                 shared.SnippetModel{
-                    ID: "eum",
+                    ID: "suscipit",
                     Parameters: map[string]string{
-                        "autem": "vel",
-                        "non": "deleniti",
+                        "minus": "placeat",
+                        "voluptatum": "iusto",
                     },
                 },
                 shared.SnippetModel{
-                    ID: "similique",
+                    ID: "excepturi",
                     Parameters: map[string]string{
-                        "molestiae": "quo",
-                        "quasi": "laboriosam",
+                        "recusandae": "temporibus",
+                        "ab": "quis",
                     },
                 },
             },

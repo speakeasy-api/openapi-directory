@@ -35,9 +35,9 @@ func main() {
 
     req := operations.BadWordFilterRequest{
         Request: operations.BadWordFilterRequestBody{
-            Catalog: "unde",
-            CensorCharacter: "deserunt",
-            Content: "porro",
+            Catalog: "corrupti",
+            CensorCharacter: "provident",
+            Content: "distinctio",
         },
     }
 

@@ -15,15 +15,15 @@ func main() {
 
     req := operations.ApplicationGetRequest{
         PathParams: operations.ApplicationGetPathParams{
-            ApplicationID: "unde",
+            ApplicationID: "corrupti",
         },
         QueryParams: operations.ApplicationGetQueryParams{
-            APIVersion: "deserunt",
+            APIVersion: "provident",
             Timeout: 715190,
         },
         Headers: operations.ApplicationGetHeaders{
-            ClientRequestID: "nulla",
-            OcpDate: "id",
+            ClientRequestID: "quibusdam",
+            OcpDate: "unde",
             ReturnClientRequestID: false,
         },
     }

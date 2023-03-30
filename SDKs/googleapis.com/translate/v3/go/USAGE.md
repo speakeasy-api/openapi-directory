@@ -23,69 +23,69 @@ func main() {
             },
         },
         PathParams: operations.TranslateProjectsLocationsBatchTranslateDocumentPathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.TranslateProjectsLocationsBatchTranslateDocumentQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.BatchTranslateDocumentRequest{
-            CustomizedAttribution: "eum",
+            CustomizedAttribution: "suscipit",
             EnableShadowRemovalNativePdf: false,
             FormatConversions: map[string]string{
-                "ullam": "saepe",
-                "inventore": "sapiente",
+                "magnam": "debitis",
+                "ipsa": "delectus",
             },
             Glossaries: map[string]shared.TranslateTextGlossaryConfig{
-                "eum": shared.TranslateTextGlossaryConfig{
-                    Glossary: "voluptatum",
+                "suscipit": shared.TranslateTextGlossaryConfig{
+                    Glossary: "molestiae",
                     IgnoreCase: false,
                 },
-                "autem": shared.TranslateTextGlossaryConfig{
-                    Glossary: "vel",
+                "minus": shared.TranslateTextGlossaryConfig{
+                    Glossary: "placeat",
                     IgnoreCase: false,
                 },
             },
             InputConfigs: []shared.BatchDocumentInputConfig{
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "deleniti",
+                        InputURI: "iusto",
                     },
                 },
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "similique",
+                        InputURI: "excepturi",
                     },
                 },
                 shared.BatchDocumentInputConfig{
                     GcsSource: &shared.GcsSource{
-                        InputURI: "reprehenderit",
+                        InputURI: "nisi",
                     },
                 },
             },
             Models: map[string]string{
-                "quo": "quasi",
-                "laboriosam": "dicta",
-                "est": "voluptatem",
-                "consequatur": "fugiat",
+                "temporibus": "ab",
+                "quis": "veritatis",
+                "deserunt": "perferendis",
+                "ipsam": "repellendus",
             },
             OutputConfig: &shared.BatchDocumentOutputConfig{
                 GcsDestination: &shared.GcsDestination{
-                    OutputURIPrefix: "a",
+                    OutputURIPrefix: "sapiente",
                 },
             },
-            SourceLanguageCode: "omnis",
+            SourceLanguageCode: "quo",
             TargetLanguageCodes: []string{
-                "accusamus",
+                "at",
             },
         },
     }

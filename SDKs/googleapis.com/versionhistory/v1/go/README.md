@@ -26,22 +26,22 @@ func main() {
 
     req := operations.VersionhistoryPlatformsChannelsListRequest{
         PathParams: operations.VersionhistoryPlatformsChannelsListPathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.VersionhistoryPlatformsChannelsListQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PageSize: 423655,
-            PageToken: "fuga",
+            PageToken: "error",
             PrettyPrint: false,
-            QuotaUser: "facilis",
-            UploadType: "eum",
-            UploadProtocol: "iusto",
+            QuotaUser: "deserunt",
+            UploadType: "suscipit",
+            UploadProtocol: "iure",
         },
     }
 

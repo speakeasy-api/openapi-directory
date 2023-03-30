@@ -20,7 +20,7 @@ func main() {
             },
         },
         PathParams: operations.GetRenderPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

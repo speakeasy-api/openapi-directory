@@ -23,31 +23,31 @@ func main() {
         Request: shared.CreateOrUpdateTemplateRequest{
             Components: []map[string]interface{}{
                 map[string]interface{}{
-                    "porro": "nulla",
-                    "id": "vero",
-                    "perspiciatis": "nulla",
+                    "distinctio": "quibusdam",
+                    "unde": "nulla",
+                    "corrupti": "illum",
                 },
                 map[string]interface{}{
-                    "fuga": "facilis",
-                    "eum": "iusto",
+                    "error": "deserunt",
+                    "suscipit": "iure",
                 },
                 map[string]interface{}{
-                    "saepe": "inventore",
-                    "sapiente": "enim",
+                    "debitis": "ipsa",
+                    "delectus": "tempora",
                 },
             },
-            CSS: "eum",
-            FooterHTML: "voluptatum",
+            CSS: "suscipit",
+            FooterHTML: "molestiae",
             Format: "a5",
-            HeaderHTML: "vel",
-            Name: "non",
+            HeaderHTML: "placeat",
+            Name: "voluptatum",
             Orientation: "landscape",
             PreviewPayload: map[string]interface{}{
-                "reprehenderit": "molestiae",
-                "quo": "quasi",
-                "laboriosam": "dicta",
+                "nisi": "recusandae",
+                "temporibus": "ab",
+                "quis": "veritatis",
             },
-            TemplateHTML: "est",
+            TemplateHTML: "deserunt",
         },
     }
 

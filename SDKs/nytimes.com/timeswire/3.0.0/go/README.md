@@ -32,7 +32,7 @@ func main() {
 
     req := operations.GetContentJSONRequest{
         QueryParams: operations.GetContentJSONQueryParams{
-            URL: "unde",
+            URL: "corrupti",
         },
     }
 

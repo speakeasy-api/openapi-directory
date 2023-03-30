@@ -20,7 +20,7 @@ func main() {
             },
         },
         QueryParams: operations.DoctorsListQueryParams{
-            Cursor: "unde",
+            Cursor: "corrupti",
             Doctor: 592845,
             PageSize: 715190,
         },

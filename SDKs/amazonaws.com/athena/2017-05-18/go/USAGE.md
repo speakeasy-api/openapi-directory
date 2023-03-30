@@ -21,19 +21,21 @@ func main() {
 
     req := operations.BatchGetNamedQueryRequest{
         Headers: operations.BatchGetNamedQueryHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AmazonAthena.BatchGetNamedQuery",
         },
         Request: shared.BatchGetNamedQueryInput{
             NamedQueryIds: []string{
-                "fuga",
-                "facilis",
+                "vel",
+                "error",
+                "deserunt",
+                "suscipit",
             },
         },
     }

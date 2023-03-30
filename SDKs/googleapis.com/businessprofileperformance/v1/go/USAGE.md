@@ -15,13 +15,13 @@ func main() {
 
     req := operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesRequest{
         PathParams: operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesPathParams{
-            Location: "unde",
+            Location: "corrupti",
         },
         QueryParams: operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
+            Callback: "unde",
             DailyMetrics: []BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum{
                 "BUSINESS_DIRECTION_REQUESTS",
                 "BUSINESS_FOOD_ORDERS",
@@ -34,13 +34,13 @@ func main() {
             DailyRangeStartDateDay: 297534,
             DailyRangeStartDateMonth: 891773,
             DailyRangeStartDateYear: 56713,
-            Fields: "sapiente",
-            Key: "enim",
-            OauthToken: "eum",
+            Fields: "delectus",
+            Key: "tempora",
+            OauthToken: "suscipit",
             PrettyPrint: false,
-            QuotaUser: "voluptatum",
-            UploadType: "autem",
-            UploadProtocol: "vel",
+            QuotaUser: "molestiae",
+            UploadType: "minus",
+            UploadProtocol: "placeat",
         },
     }
 

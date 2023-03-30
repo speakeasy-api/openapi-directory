@@ -26,7 +26,7 @@ func main() {
 
     req := operations.GetReisezentrenRequest{
         QueryParams: operations.GetReisezentrenQueryParams{
-            Name: "unde",
+            Name: "corrupti",
         },
     }
 

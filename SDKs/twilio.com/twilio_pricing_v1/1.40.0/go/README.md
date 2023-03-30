@@ -32,7 +32,7 @@ func main() {
             },
         },
         PathParams: operations.FetchMessagingCountryPathParams{
-            IsoCountry: "unde",
+            IsoCountry: "corrupti",
         },
     }
 

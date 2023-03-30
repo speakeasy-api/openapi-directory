@@ -32,13 +32,13 @@ func main() {
             },
         },
         PathParams: operations.CreateChannelPathParams{
-            ServiceSid: "unde",
+            ServiceSid: "corrupti",
         },
         Request: &operations.CreateChannelCreateChannelRequest{
-            Attributes: "deserunt",
-            FriendlyName: "porro",
+            Attributes: "provident",
+            FriendlyName: "distinctio",
             Type: "private",
-            UniqueName: "id",
+            UniqueName: "unde",
         },
     }
 

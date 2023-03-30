@@ -20,7 +20,7 @@ func main() {
             },
         },
         QueryParams: operations.GetApodQueryParams{
-            Date: "unde",
+            Date: "corrupti",
             Hd: false,
         },
     }

@@ -24,10 +24,10 @@ func main() {
 
     req := operations.CreateGiftCardRequest{
         Headers: operations.CreateGiftCardHeaders{
-            Accept: "unde",
-            ContentType: "deserunt",
-            XVTEXAPIAppKey: "porro",
-            XVTEXAPIAppToken: "nulla",
+            Accept: "corrupti",
+            ContentType: "provident",
+            XVTEXAPIAppKey: "distinctio",
+            XVTEXAPIAppToken: "quibusdam",
         },
         Request: shared.CreateGiftCardRequest{
             Caption: "rewards program",

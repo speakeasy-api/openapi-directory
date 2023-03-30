@@ -20,10 +20,10 @@ func main() {
             },
         },
         Request: &shared.DisableRequest{
-            Contract: "unde",
-            MerchantAccount: "deserunt",
-            RecurringDetailReference: "porro",
-            ShopperReference: "nulla",
+            Contract: "corrupti",
+            MerchantAccount: "provident",
+            RecurringDetailReference: "distinctio",
+            ShopperReference: "quibusdam",
         },
     }
 

@@ -21,7 +21,7 @@ func main() {
             },
         },
         QueryParams: operations.DevicesQueryParams{
-            Os: "unde",
+            Os: "corrupti",
         },
     }
 

@@ -15,8 +15,8 @@ func main() {
 
     req := operations.GsiDispatchRequest{
         QueryParams: operations.GsiDispatchQueryParams{
-            Key: "unde",
-            Zip: "deserunt",
+            Key: "corrupti",
+            Zip: "provident",
         },
     }
 

@@ -15,7 +15,7 @@ func main() {
 
     req := operations.ConfigConfigGetRequest{
         Headers: operations.ConfigConfigGetHeaders{
-            Authorization: "unde",
+            Authorization: "corrupti",
         },
     }
 

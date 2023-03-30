@@ -23,42 +23,42 @@ func main() {
             },
         },
         PathParams: operations.MetastoreProjectsLocationsFederationsCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.MetastoreProjectsLocationsFederationsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            FederationID: "vero",
-            Fields: "perspiciatis",
-            Key: "nulla",
-            OauthToken: "nihil",
+            Callback: "unde",
+            FederationID: "nulla",
+            Fields: "corrupti",
+            Key: "illum",
+            OauthToken: "vel",
             PrettyPrint: false,
-            QuotaUser: "fuga",
-            RequestID: "facilis",
-            UploadType: "eum",
-            UploadProtocol: "iusto",
+            QuotaUser: "error",
+            RequestID: "deserunt",
+            UploadType: "suscipit",
+            UploadProtocol: "iure",
         },
         Request: &shared.FederationInput{
             BackendMetastores: map[string]shared.BackendMetastore{
-                "saepe": shared.BackendMetastore{
+                "debitis": shared.BackendMetastore{
                     MetastoreType: "METASTORE_TYPE_UNSPECIFIED",
-                    Name: "sapiente",
+                    Name: "delectus",
                 },
-                "enim": shared.BackendMetastore{
+                "tempora": shared.BackendMetastore{
                     MetastoreType: "DATAPLEX",
-                    Name: "voluptatum",
+                    Name: "molestiae",
                 },
             },
             Labels: map[string]string{
-                "vel": "non",
-                "deleniti": "similique",
-                "reprehenderit": "molestiae",
-                "quo": "quasi",
+                "placeat": "voluptatum",
+                "iusto": "excepturi",
+                "nisi": "recusandae",
+                "temporibus": "ab",
             },
-            Name: "laboriosam",
-            Version: "dicta",
+            Name: "quis",
+            Version: "veritatis",
         },
     }
 

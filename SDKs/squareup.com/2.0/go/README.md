@@ -31,7 +31,7 @@ func main() {
             },
         },
         Request: shared.RegisterDomainRequest{
-            DomainName: "unde",
+            DomainName: "corrupti",
         },
     }
 

@@ -33,32 +33,31 @@ func main() {
     req := operations.GETAddPermissionRequest{
         PathParams: operations.GETAddPermissionPathParams{
             AccountNumber: 548814,
-            QueueName: "deserunt",
+            QueueName: "provident",
         },
         QueryParams: operations.GETAddPermissionQueryParams{
             AWSAccountIds: []string{
+                "quibusdam",
+                "unde",
                 "nulla",
-                "id",
-                "vero",
             },
             Action: "AddPermission",
             Actions: []string{
-                "nihil",
-                "fuga",
-                "facilis",
-                "eum",
+                "illum",
+                "vel",
+                "error",
             },
-            Label: "iusto",
+            Label: "deserunt",
             Version: "2012-11-05",
         },
         Headers: operations.GETAddPermissionHeaders{
-            XAmzAlgorithm: "saepe",
-            XAmzContentSha256: "inventore",
-            XAmzCredential: "sapiente",
-            XAmzDate: "enim",
-            XAmzSecurityToken: "eum",
-            XAmzSignature: "voluptatum",
-            XAmzSignedHeaders: "autem",
+            XAmzAlgorithm: "suscipit",
+            XAmzContentSha256: "iure",
+            XAmzCredential: "magnam",
+            XAmzDate: "debitis",
+            XAmzSecurityToken: "ipsa",
+            XAmzSignature: "delectus",
+            XAmzSignedHeaders: "tempora",
         },
     }
 

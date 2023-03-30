@@ -32,8 +32,8 @@ func main() {
 
     req := operations.PostCheckCodeRequest{
         Request: operations.PostCheckCodeRequestBody{
-            Code: "unde",
-            Email: "Michale_Sporer@yahoo.com",
+            Code: "corrupti",
+            Email: "Micheal_Sporer@yahoo.com",
         },
     }
 

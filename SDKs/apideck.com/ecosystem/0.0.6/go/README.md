@@ -26,10 +26,10 @@ func main() {
 
     req := operations.CategoriesAllRequest{
         PathParams: operations.CategoriesAllPathParams{
-            EcosystemID: "unde",
+            EcosystemID: "corrupti",
         },
         QueryParams: operations.CategoriesAllQueryParams{
-            Cursor: "deserunt",
+            Cursor: "provident",
             Limit: 715190,
         },
     }

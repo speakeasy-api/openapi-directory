@@ -26,14 +26,14 @@ func main() {
 
     req := operations.GetInventoryRequest{
         QueryParams: operations.GetInventoryQueryParams{
-            ShipNode: "unde",
-            Sku: "deserunt",
+            ShipNode: "corrupti",
+            Sku: "provident",
         },
         Headers: operations.GetInventoryHeaders{
-            WmConsumerChannelType: "porro",
-            WmQosCorrelationID: "nulla",
-            WmSecAccessToken: "id",
-            WmSvcName: "vero",
+            WmConsumerChannelType: "distinctio",
+            WmQosCorrelationID: "quibusdam",
+            WmSecAccessToken: "unde",
+            WmSvcName: "nulla",
         },
     }
 

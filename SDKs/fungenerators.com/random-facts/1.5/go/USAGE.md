@@ -20,7 +20,7 @@ func main() {
             },
         },
         QueryParams: operations.GetFactFodQueryParams{
-            Category: "unde",
+            Category: "corrupti",
         },
     }
 

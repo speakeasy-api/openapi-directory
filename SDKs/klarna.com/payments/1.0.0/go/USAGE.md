@@ -15,7 +15,7 @@ func main() {
 
     req := operations.CancelAuthorizationRequest{
         PathParams: operations.CancelAuthorizationPathParams{
-            AuthorizationToken: "unde",
+            AuthorizationToken: "corrupti",
         },
     }
 

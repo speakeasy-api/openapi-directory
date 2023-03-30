@@ -20,7 +20,7 @@ func main() {
             },
         },
         PathParams: operations.GetSalesTaxJurisdictionsPathParams{
-            CountryCode: "unde",
+            CountryCode: "corrupti",
         },
     }
 

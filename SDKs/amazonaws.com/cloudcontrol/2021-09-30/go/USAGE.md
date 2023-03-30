@@ -21,17 +21,17 @@ func main() {
 
     req := operations.CancelResourceRequestRequest{
         Headers: operations.CancelResourceRequestHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "CloudApiService.CancelResourceRequest",
         },
         Request: shared.CancelResourceRequestInput{
-            RequestToken: "nihil",
+            RequestToken: "illum",
         },
     }
 

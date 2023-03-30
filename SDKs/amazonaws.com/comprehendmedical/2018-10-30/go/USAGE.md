@@ -21,17 +21,17 @@ func main() {
 
     req := operations.DescribeEntitiesDetectionV2JobRequest{
         Headers: operations.DescribeEntitiesDetectionV2JobHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "ComprehendMedical_20181030.DescribeEntitiesDetectionV2Job",
         },
         Request: shared.DescribeEntitiesDetectionV2JobRequest{
-            JobID: "nihil",
+            JobID: "illum",
         },
     }
 

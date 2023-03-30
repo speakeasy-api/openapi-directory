@@ -27,11 +27,11 @@ func main() {
     req := operations.CreateANewQuestionRequest{
         Request: &operations.CreateANewQuestionRequestBody{
             Choices: []string{
-                "deserunt",
-                "porro",
-                "nulla",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
-            Question: "id",
+            Question: "unde",
         },
     }
 

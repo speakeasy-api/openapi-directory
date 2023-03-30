@@ -32,12 +32,12 @@ func main() {
 
     req := operations.CreateBankAccountRequest{
         Request: shared.BankAccountInput{
-            AccountNumber: "unde",
-            AccountNumberIban: "deserunt",
+            AccountNumber: "corrupti",
+            AccountNumberIban: "provident",
             Currency: "PLN",
-            Name: "nulla",
+            Name: "quibusdam",
             NeedQr: false,
-            Swift: "id",
+            Swift: "unde",
         },
     }
 

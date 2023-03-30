@@ -32,28 +32,28 @@ func main() {
 
     req := operations.BatchEvaluateFeatureRequest{
         PathParams: operations.BatchEvaluateFeaturePathParams{
-            Project: "unde",
+            Project: "corrupti",
         },
         Headers: operations.BatchEvaluateFeatureHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.BatchEvaluateFeatureRequestBody{
             Requests: []shared.EvaluationRequest{
                 shared.EvaluationRequest{
-                    EntityID: "fuga",
-                    EvaluationContext: "facilis",
-                    Feature: "eum",
+                    EntityID: "error",
+                    EvaluationContext: "deserunt",
+                    Feature: "suscipit",
                 },
                 shared.EvaluationRequest{
-                    EntityID: "iusto",
-                    EvaluationContext: "ullam",
-                    Feature: "saepe",
+                    EntityID: "iure",
+                    EvaluationContext: "magnam",
+                    Feature: "debitis",
                 },
             },
         },

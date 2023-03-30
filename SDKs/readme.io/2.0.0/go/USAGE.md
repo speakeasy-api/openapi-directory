@@ -21,7 +21,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteAPISpecificationPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

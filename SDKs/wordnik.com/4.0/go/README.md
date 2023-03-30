@@ -26,7 +26,7 @@ func main() {
 
     req := operations.GetAudioRequest{
         PathParams: operations.GetAudioPathParams{
-            Word: "unde",
+            Word: "corrupti",
         },
         QueryParams: operations.GetAudioQueryParams{
             Limit: 592845,

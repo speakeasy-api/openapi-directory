@@ -25,10 +25,10 @@ func main() {
                 "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
                 "b7392059-2939-46fe-a759-6eb10faaa235",
             },
-            IsCountry: "magni",
+            IsCountry: "explicabo",
             PageNumber: 750686,
             PageSize: 315428,
-            Q: "est",
+            Q: "omnis",
             Sort: []GetClassificationsSortEnum{
                 "created_at",
                 "updated_at",

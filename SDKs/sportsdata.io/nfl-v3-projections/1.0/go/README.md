@@ -33,7 +33,7 @@ func main() {
     req := operations.DfsSlateOwnershipProjectionsBySlateidRequest{
         PathParams: operations.DfsSlateOwnershipProjectionsBySlateidPathParams{
             Format: "JSON",
-            SlateID: "deserunt",
+            SlateID: "provident",
         },
     }
 

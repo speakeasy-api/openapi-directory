@@ -23,18 +23,18 @@ func main() {
         Request: []shared.MeasureUnitDTO{
             shared.MeasureUnitDTO{
                 ID: 592845,
-                Name: "porro",
-                Type: "nulla",
+                Name: "distinctio",
+                Type: "quibusdam",
             },
             shared.MeasureUnitDTO{
                 ID: 602763,
-                Name: "vero",
-                Type: "perspiciatis",
+                Name: "nulla",
+                Type: "corrupti",
             },
             shared.MeasureUnitDTO{
                 ID: 847252,
-                Name: "nihil",
-                Type: "fuga",
+                Name: "vel",
+                Type: "error",
             },
         },
     }

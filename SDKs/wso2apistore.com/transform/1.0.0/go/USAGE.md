@@ -14,7 +14,7 @@ func main() {
     s := sdk.New()
 
     req := operations.PostJsontoxmlRequest{
-        Request: "unde",
+        Request: "corrupti",
     }
 
     ctx := context.Background()

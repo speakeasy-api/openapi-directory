@@ -34,9 +34,9 @@ func main() {
             Raw: false,
         },
         Headers: operations.CompaniesAddHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "deserunt",
-            XApideckServiceID: "porro",
+            XApideckAppID: "corrupti",
+            XApideckConsumerID: "provident",
+            XApideckServiceID: "distinctio",
         },
         Request: shared.HrisCompanyInput{
             Addresses: []shared.Address{

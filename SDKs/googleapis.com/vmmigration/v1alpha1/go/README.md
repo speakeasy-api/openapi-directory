@@ -34,23 +34,23 @@ func main() {
             },
         },
         PathParams: operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationPathParams{
-            Group: "unde",
+            Group: "corrupti",
         },
         QueryParams: operations.VmmigrationProjectsLocationsGroupsAddGroupMigrationQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.AddGroupMigrationRequest{
-            MigratingVM: "eum",
+            MigratingVM: "suscipit",
         },
     }
 

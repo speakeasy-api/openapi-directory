@@ -25,8 +25,8 @@ func main() {
             VersionNumber: "2",
         },
         QueryParams: operations.GetSearchVersionNumberAdditionalDataExtQueryParams{
-            Geometries: "porro",
-            GeometriesZoom: "19",
+            Geometries: "corrupti",
+            GeometriesZoom: "13",
         },
     }
 

@@ -21,8 +21,8 @@ func main() {
             },
         },
         Request: &operations.CreateSinkCreateSinkRequest{
-            Description: "unde",
-            SinkConfiguration: "deserunt",
+            Description: "corrupti",
+            SinkConfiguration: "provident",
             SinkType: "segment",
         },
     }

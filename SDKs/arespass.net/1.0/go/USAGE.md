@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetAboutRequest{
         QueryParams: operations.GetAboutQueryParams{
-            OutputFormat: "unde",
+            OutputFormat: "corrupti",
         },
     }
 

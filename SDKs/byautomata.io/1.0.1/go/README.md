@@ -26,7 +26,7 @@ func main() {
 
     req := operations.GetContentproSearchRequest{
         QueryParams: operations.GetContentproSearchQueryParams{
-            Terms: "unde",
+            Terms: "corrupti",
         },
     }
 

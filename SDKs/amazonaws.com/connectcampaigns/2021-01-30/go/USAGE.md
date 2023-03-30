@@ -21,16 +21,16 @@ func main() {
 
     req := operations.CreateCampaignRequest{
         Headers: operations.CreateCampaignHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateCampaignRequestBody{
-            ConnectInstanceID: "nulla",
+            ConnectInstanceID: "illum",
             DialerConfig: operations.CreateCampaignRequestBodyDialerConfig{
                 PredictiveDialerConfig: &shared.PredictiveDialerConfig{
                     BandwidthAllocation: 4236.55,
@@ -39,20 +39,20 @@ func main() {
                     BandwidthAllocation: 6235.64,
                 },
             },
-            Name: "facilis",
+            Name: "deserunt",
             OutboundCallConfig: operations.CreateCampaignRequestBodyOutboundCallConfig{
                 AnswerMachineDetectionConfig: &shared.AnswerMachineDetectionConfig{
                     EnableAnswerMachineDetection: false,
                 },
-                ConnectContactFlowID: "eum",
-                ConnectQueueID: "iusto",
-                ConnectSourcePhoneNumber: "ullam",
+                ConnectContactFlowID: "suscipit",
+                ConnectQueueID: "iure",
+                ConnectSourcePhoneNumber: "magnam",
             },
             Tags: map[string]string{
-                "inventore": "sapiente",
-                "enim": "eum",
-                "voluptatum": "autem",
-                "vel": "non",
+                "ipsa": "delectus",
+                "tempora": "suscipit",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
             },
         },
     }

@@ -19,8 +19,8 @@ func main() {
             StopID: 592845,
         },
         QueryParams: operations.DeparturesGetForStopQueryParams{
-            DateUtc: "2022-07-11T23:46:58.096Z",
-            Devid: "nulla",
+            DateUtc: "2022-07-12T01:38:55.326Z",
+            Devid: "quibusdam",
             DirectionID: 602763,
             Expand: []DeparturesGetForStopExpandEnum{
                 "Direction",
@@ -37,8 +37,8 @@ func main() {
                 437587,
                 297534,
             },
-            Signature: "saepe",
-            Token: "inventore",
+            Signature: "debitis",
+            Token: "ipsa",
         },
     }
 

@@ -21,20 +21,20 @@ func main() {
 
     req := operations.CloneBackendRequest{
         PathParams: operations.CloneBackendPathParams{
-            AppID: "unde",
-            BackendEnvironmentName: "deserunt",
+            AppID: "corrupti",
+            BackendEnvironmentName: "provident",
         },
         Headers: operations.CloneBackendHeaders{
-            XAmzAlgorithm: "porro",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "id",
-            XAmzDate: "vero",
-            XAmzSecurityToken: "perspiciatis",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "nihil",
+            XAmzAlgorithm: "distinctio",
+            XAmzContentSha256: "quibusdam",
+            XAmzCredential: "unde",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "corrupti",
+            XAmzSignature: "illum",
+            XAmzSignedHeaders: "vel",
         },
         Request: operations.CloneBackendRequestBody{
-            TargetEnvironmentName: "fuga",
+            TargetEnvironmentName: "error",
         },
     }
 

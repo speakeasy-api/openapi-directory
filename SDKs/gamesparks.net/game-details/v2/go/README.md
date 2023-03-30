@@ -26,12 +26,12 @@ func main() {
 
     req := operations.GETAnalyticsDataUsingGETRequest{
         PathParams: operations.GETAnalyticsDataUsingGETPathParams{
-            APIKey: "unde",
+            APIKey: "corrupti",
         },
         QueryParams: operations.GETAnalyticsDataUsingGETQueryParams{
             DataType: "sessionAnalytic",
-            EndDate: "2022-07-11",
-            Keys: "nulla",
+            EndDate: "2022-07-12",
+            Keys: "quibusdam",
             Precision: "DAILY",
             Stage: "PREVIEW",
             StartDate: "2022-09-12",

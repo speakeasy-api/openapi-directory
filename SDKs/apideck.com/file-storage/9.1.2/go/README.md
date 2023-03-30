@@ -34,9 +34,9 @@ func main() {
             Raw: false,
         },
         Headers: operations.DriveGroupsAddHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "deserunt",
-            XApideckServiceID: "porro",
+            XApideckAppID: "corrupti",
+            XApideckConsumerID: "provident",
+            XApideckServiceID: "distinctio",
         },
         Request: shared.DriveGroupInput{
             Description: "A description",

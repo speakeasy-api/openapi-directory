@@ -21,7 +21,7 @@ func main() {
             },
         },
         PathParams: operations.GetEventPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

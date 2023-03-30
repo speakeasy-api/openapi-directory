@@ -31,11 +31,11 @@ func main() {
             },
         },
         QueryParams: operations.FindEligibleItemsQueryParams{
-            Limit: "unde",
-            Offset: "deserunt",
+            Limit: "corrupti",
+            Offset: "provident",
         },
         Headers: operations.FindEligibleItemsHeaders{
-            XEbayCMarketplaceID: "porro",
+            XEbayCMarketplaceID: "distinctio",
         },
     }
 

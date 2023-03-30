@@ -28,8 +28,8 @@ func main() {
             SkuSellerID: "71",
         },
         Headers: operations.ActivateSKUBindingHeaders{
-            Accept: "unde",
-            ContentType: "deserunt",
+            Accept: "corrupti",
+            ContentType: "provident",
         },
     }
 

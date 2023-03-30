@@ -32,29 +32,25 @@ func main() {
 
     req := operations.AddTagsToCertificateRequest{
         Headers: operations.AddTagsToCertificateHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "CertificateManager.AddTagsToCertificate",
         },
         Request: shared.AddTagsToCertificateRequest{
-            CertificateArn: "nihil",
+            CertificateArn: "illum",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "facilis",
-                    Value: "eum",
+                    Key: "error",
+                    Value: "deserunt",
                 },
                 shared.Tag{
-                    Key: "iusto",
-                    Value: "ullam",
-                },
-                shared.Tag{
-                    Key: "saepe",
-                    Value: "inventore",
+                    Key: "suscipit",
+                    Value: "iure",
                 },
             },
         },

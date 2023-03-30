@@ -21,7 +21,7 @@ func main() {
 
     req := operations.DeleteCacheRequest{
         PathParams: operations.DeleteCachePathParams{
-            Key: "unde",
+            Key: "corrupti",
         },
     }
 

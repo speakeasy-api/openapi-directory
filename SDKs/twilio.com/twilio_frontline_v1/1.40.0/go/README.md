@@ -32,7 +32,7 @@ func main() {
             },
         },
         PathParams: operations.FetchUserPathParams{
-            Sid: "unde",
+            Sid: "corrupti",
         },
     }
 

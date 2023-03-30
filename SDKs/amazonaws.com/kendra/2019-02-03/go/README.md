@@ -32,28 +32,36 @@ func main() {
 
     req := operations.AssociateEntitiesToExperienceRequest{
         Headers: operations.AssociateEntitiesToExperienceHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSKendraFrontendService.AssociateEntitiesToExperience",
         },
         Request: shared.AssociateEntitiesToExperienceRequest{
             EntityList: []shared.EntityConfiguration{
                 shared.EntityConfiguration{
-                    EntityID: "fuga",
+                    EntityID: "vel",
                     EntityType: "GROUP",
                 },
                 shared.EntityConfiguration{
-                    EntityID: "eum",
+                    EntityID: "deserunt",
+                    EntityType: "USER",
+                },
+                shared.EntityConfiguration{
+                    EntityID: "iure",
+                    EntityType: "USER",
+                },
+                shared.EntityConfiguration{
+                    EntityID: "debitis",
                     EntityType: "USER",
                 },
             },
-            ID: "ullam",
-            IndexID: "saepe",
+            ID: "delectus",
+            IndexID: "tempora",
         },
     }
 

@@ -26,194 +26,194 @@ func main() {
 
     req := operations.PolicyCreateOrUpdateRequest{
         PathParams: operations.PolicyCreateOrUpdatePathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
         Headers: operations.PolicyCreateOrUpdateHeaders{
-            Accept: "deserunt",
-            ContentType: "porro",
+            Accept: "provident",
+            ContentType: "distinctio",
         },
         Request: &shared.PolicySaveRequest{
-            Description: "nulla",
-            Name: "id",
+            Description: "quibusdam",
+            Name: "unde",
             Statements: []shared.StatementGetResponse{
                 shared.StatementGetResponse{
                     Actions: []interface{}{
-                        "nulla",
-                        "nihil",
-                        "fuga",
+                        "illum",
+                        "vel",
+                        "error",
                     },
                     Condition: &shared.StatementGetResponseCondition{
                         Conditions: []shared.StatementGetResponseConditionConditions{
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "iusto",
-                                    "ullam",
+                                    "iure",
+                                    "magnam",
                                 },
-                                Key: "saepe",
-                                Operation: "inventore",
+                                Key: "debitis",
+                                Operation: "ipsa",
                                 Values: []string{
-                                    "enim",
-                                    "eum",
+                                    "tempora",
+                                    "suscipit",
+                                    "molestiae",
+                                    "minus",
+                                },
+                            },
+                            shared.StatementGetResponseConditionConditions{
+                                Conditions: []string{
                                     "voluptatum",
-                                    "autem",
+                                    "iusto",
+                                    "excepturi",
+                                    "nisi",
+                                },
+                                Key: "recusandae",
+                                Operation: "temporibus",
+                                Values: []string{
+                                    "quis",
                                 },
                             },
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "non",
-                                    "deleniti",
-                                    "similique",
-                                    "reprehenderit",
+                                    "deserunt",
                                 },
-                                Key: "molestiae",
-                                Operation: "quo",
+                                Key: "perferendis",
+                                Operation: "ipsam",
                                 Values: []string{
-                                    "laboriosam",
-                                },
-                            },
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
-                                    "est",
-                                },
-                                Key: "voluptatem",
-                                Operation: "consequatur",
-                                Values: []string{
-                                    "a",
-                                    "omnis",
-                                    "eos",
-                                    "accusamus",
+                                    "sapiente",
+                                    "quo",
+                                    "odit",
+                                    "at",
                                 },
                             },
                         },
                     },
-                    Effect: "accusamus",
-                    Operation: "reiciendis",
-                    Resource: "rem",
+                    Effect: "at",
+                    Operation: "maiores",
+                    Resource: "molestiae",
                 },
                 shared.StatementGetResponse{
                     Actions: []interface{}{
-                        "et",
-                        "praesentium",
-                        "occaecati",
-                        "dolor",
+                        "quod",
+                        "esse",
+                        "totam",
+                        "porro",
                     },
                     Condition: &shared.StatementGetResponseCondition{
                         Conditions: []shared.StatementGetResponseConditionConditions{
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "quisquam",
+                                    "nam",
                                 },
-                                Key: "rerum",
-                                Operation: "culpa",
+                                Key: "officia",
+                                Operation: "occaecati",
                                 Values: []string{
+                                    "deleniti",
+                                },
+                            },
+                            shared.StatementGetResponseConditionConditions{
+                                Conditions: []string{
+                                    "optio",
+                                    "totam",
+                                    "beatae",
+                                    "commodi",
+                                },
+                                Key: "molestiae",
+                                Operation: "modi",
+                                Values: []string{
+                                    "impedit",
+                                },
+                            },
+                            shared.StatementGetResponseConditionConditions{
+                                Conditions: []string{
+                                    "esse",
+                                    "ipsum",
+                                    "excepturi",
+                                },
+                                Key: "aspernatur",
+                                Operation: "perferendis",
+                                Values: []string{
+                                    "natus",
                                     "sed",
                                 },
                             },
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
-                                    "possimus",
-                                    "occaecati",
-                                    "odit",
-                                    "esse",
-                                },
-                                Key: "rem",
-                                Operation: "voluptatem",
-                                Values: []string{
-                                    "est",
-                                },
-                            },
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
-                                    "blanditiis",
-                                    "numquam",
-                                    "similique",
-                                },
-                                Key: "dolores",
-                                Operation: "sit",
-                                Values: []string{
-                                    "et",
-                                    "voluptatem",
-                                },
-                            },
                         },
                     },
-                    Effect: "laborum",
-                    Operation: "modi",
-                    Resource: "et",
+                    Effect: "iste",
+                    Operation: "dolor",
+                    Resource: "natus",
                 },
                 shared.StatementGetResponse{
                     Actions: []interface{}{
-                        "earum",
-                        "ut",
+                        "hic",
+                        "saepe",
                     },
                     Condition: &shared.StatementGetResponseCondition{
                         Conditions: []shared.StatementGetResponseConditionConditions{
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "ea",
+                                    "corporis",
+                                    "iste",
+                                },
+                                Key: "iure",
+                                Operation: "saepe",
+                                Values: []string{
+                                    "architecto",
+                                    "ipsa",
+                                    "reiciendis",
+                                },
+                            },
+                            shared.StatementGetResponseConditionConditions{
+                                Conditions: []string{
+                                    "mollitia",
                                     "laborum",
+                                    "dolores",
                                 },
-                                Key: "iusto",
-                                Operation: "ut",
+                                Key: "dolorem",
+                                Operation: "corporis",
                                 Values: []string{
-                                    "aspernatur",
-                                    "inventore",
-                                    "ut",
+                                    "nobis",
                                 },
                             },
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "et",
-                                    "libero",
-                                    "ipsum",
+                                    "omnis",
+                                    "nemo",
                                 },
-                                Key: "non",
-                                Operation: "ea",
+                                Key: "minima",
+                                Operation: "excepturi",
                                 Values: []string{
-                                    "placeat",
-                                },
-                            },
-                            shared.StatementGetResponseConditionConditions{
-                                Conditions: []string{
-                                    "est",
-                                    "commodi",
-                                },
-                                Key: "quia",
-                                Operation: "similique",
-                                Values: []string{
-                                    "odio",
+                                    "iure",
                                 },
                             },
                         },
                     },
-                    Effect: "harum",
+                    Effect: "culpa",
                     Operation: "doloribus",
-                    Resource: "a",
+                    Resource: "sapiente",
                 },
                 shared.StatementGetResponse{
                     Actions: []interface{}{
-                        "et",
+                        "mollitia",
                     },
                     Condition: &shared.StatementGetResponseCondition{
                         Conditions: []shared.StatementGetResponseConditionConditions{
                             shared.StatementGetResponseConditionConditions{
                                 Conditions: []string{
-                                    "neque",
-                                    "asperiores",
-                                    "et",
+                                    "consequuntur",
+                                    "repellat",
+                                    "mollitia",
                                 },
-                                Key: "culpa",
-                                Operation: "aliquam",
+                                Key: "occaecati",
+                                Operation: "numquam",
                                 Values: []string{
-                                    "totam",
-                                    "voluptatum",
+                                    "quam",
+                                    "molestiae",
                                 },
                             },
                         },
                     },
-                    Effect: "et",
-                    Operation: "fuga",
-                    Resource: "nesciunt",
+                    Effect: "velit",
+                    Operation: "error",
+                    Resource: "quia",
                 },
             },
         },

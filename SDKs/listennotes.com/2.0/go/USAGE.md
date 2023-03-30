@@ -15,16 +15,16 @@ func main() {
 
     req := operations.GetBestPodcastsRequest{
         QueryParams: operations.GetBestPodcastsQueryParams{
-            GenreID: "unde",
-            Language: "deserunt",
+            GenreID: "corrupti",
+            Language: "provident",
             Page: 715190,
-            PublisherRegion: "nulla",
-            Region: "id",
+            PublisherRegion: "quibusdam",
+            Region: "unde",
             SafeMode: "1",
             Sort: "recent_published_first",
         },
         Headers: operations.GetBestPodcastsHeaders{
-            XListenAPIKey: "nulla",
+            XListenAPIKey: "illum",
         },
     }
 

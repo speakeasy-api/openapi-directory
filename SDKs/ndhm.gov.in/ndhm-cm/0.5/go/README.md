@@ -26,7 +26,7 @@ func main() {
 
     req := operations.PostV05ConsentRequestsInitJSONRequest{
         Headers: operations.PostV05ConsentRequestsInitJSONHeaders{
-            Authorization: "unde",
+            Authorization: "corrupti",
         },
         Request: shared.ConsentRequest{
             Consent: shared.ConsentRequestConsent{
@@ -50,20 +50,20 @@ func main() {
                     "DiagnosticReport",
                 },
                 Hip: &shared.ConsentRequestConsentHip{
-                    ID: "perspiciatis",
+                    ID: "corrupti",
                 },
                 Hiu: shared.ConsentRequestConsentHiu{
-                    ID: "nulla",
+                    ID: "illum",
                 },
                 Patient: shared.ConsentRequestConsentPatient{
                     ID: "hinapatel79@ndhm",
                 },
                 Permission: shared.Permission{
                     AccessMode: "STORE",
-                    DataEraseAt: "2022-08-14T10:21:55.852Z",
+                    DataEraseAt: "2022-08-14T12:15:58.782Z",
                     DateRange: shared.PermissionDateRange{
-                        From: "2022-08-06T06:45:03.790Z",
-                        To: "2022-11-09T17:35:58.792Z",
+                        From: "2022-08-06T08:39:06.720Z",
+                        To: "2022-11-09T19:30:01.722Z",
                     },
                     Frequency: shared.PermissionFrequency{
                         Repeats: 437587,
@@ -72,9 +72,9 @@ func main() {
                     },
                 },
                 Purpose: shared.UsePurpose{
-                    Code: "inventore",
-                    RefURI: "https://donny.info",
-                    Text: "voluptatum",
+                    Code: "ipsa",
+                    RefURI: "https://fatherly-geyser.info",
+                    Text: "minus",
                 },
                 Requester: shared.Requester{
                     Identifier: &shared.RequesterIdentifier{
@@ -86,7 +86,7 @@ func main() {
                 },
             },
             RequestID: "499a5a4a-7dda-4f20-9b67-e24589627061",
-            Timestamp: "2022-06-14T01:16:20.096Z",
+            Timestamp: "2022-06-06T16:05:10.748Z",
         },
     }
 

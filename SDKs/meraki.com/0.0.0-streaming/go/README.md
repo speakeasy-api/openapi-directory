@@ -32,19 +32,19 @@ func main() {
 
     req := operations.GetOrganizationAPIRequestsRequest{
         PathParams: operations.GetOrganizationAPIRequestsPathParams{
-            OrganizationID: "unde",
+            OrganizationID: "corrupti",
         },
         QueryParams: operations.GetOrganizationAPIRequestsQueryParams{
-            AdminID: "deserunt",
-            EndingBefore: "porro",
-            Method: "nulla",
-            Path: "id",
+            AdminID: "provident",
+            EndingBefore: "distinctio",
+            Method: "quibusdam",
+            Path: "unde",
             PerPage: 857946,
             ResponseCode: 544883,
-            SourceIP: "nulla",
-            StartingAfter: "nihil",
-            T0: "fuga",
-            T1: "facilis",
+            SourceIP: "illum",
+            StartingAfter: "vel",
+            T0: "error",
+            T1: "deserunt",
             Timespan: 3843.82,
         },
     }

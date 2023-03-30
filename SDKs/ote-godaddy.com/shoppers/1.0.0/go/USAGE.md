@@ -15,7 +15,7 @@ func main() {
 
     req := operations.ChangePasswordRequest{
         PathParams: operations.ChangePasswordPathParams{
-            ShopperID: "unde",
+            ShopperID: "corrupti",
         },
         Request: shared.Secret{
             Secret: "P@55w0rd+",

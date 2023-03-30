@@ -40,7 +40,7 @@ func main() {
             From: "AcmeInc",
             MessageClass: "2",
             ProtocolID: 127,
-            Sig: "deserunt",
+            Sig: "provident",
             StatusReportReq: false,
             Text: "Hello World!",
             To: "447700900000",

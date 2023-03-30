@@ -24,15 +24,15 @@ func main() {
 
     req := operations.GetProductoffersRequest{
         PathParams: operations.GetProductoffersPathParams{
-            ProductID: "unde",
+            ProductID: "corrupti",
         },
         QueryParams: operations.GetProductoffersQueryParams{
-            AccountName: "deserunt",
-            Environment: "porro",
+            AccountName: "provident",
+            Environment: "distinctio",
         },
         Headers: operations.GetProductoffersHeaders{
-            Accept: "nulla",
-            ContentType: "id",
+            Accept: "quibusdam",
+            ContentType: "unde",
         },
     }
 

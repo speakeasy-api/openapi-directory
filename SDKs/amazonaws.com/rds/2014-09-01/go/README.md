@@ -33,18 +33,18 @@ func main() {
     req := operations.GETAddSourceIdentifierToSubscriptionRequest{
         QueryParams: operations.GETAddSourceIdentifierToSubscriptionQueryParams{
             Action: "AddSourceIdentifierToSubscription",
-            SourceIdentifier: "deserunt",
-            SubscriptionName: "porro",
+            SourceIdentifier: "corrupti",
+            SubscriptionName: "provident",
             Version: "2014-09-01",
         },
         Headers: operations.GETAddSourceIdentifierToSubscriptionHeaders{
-            XAmzAlgorithm: "id",
-            XAmzContentSha256: "vero",
-            XAmzCredential: "perspiciatis",
+            XAmzAlgorithm: "distinctio",
+            XAmzContentSha256: "quibusdam",
+            XAmzCredential: "unde",
             XAmzDate: "nulla",
-            XAmzSecurityToken: "nihil",
-            XAmzSignature: "fuga",
-            XAmzSignedHeaders: "facilis",
+            XAmzSecurityToken: "corrupti",
+            XAmzSignature: "illum",
+            XAmzSignedHeaders: "vel",
         },
     }
 

@@ -33,11 +33,11 @@ func main() {
 
     req := operations.CrmCheckRequest{
         PathParams: operations.CrmCheckPathParams{
-            Vin: "unde",
+            Vin: "corrupti",
         },
         QueryParams: operations.CrmCheckQueryParams{
-            APIKey: "deserunt",
-            SaleDate: "porro",
+            APIKey: "provident",
+            SaleDate: "distinctio",
         },
     }
 

@@ -15,17 +15,17 @@ func main() {
 
     req := operations.AuthorizeRequest{
         QueryParams: operations.AuthorizeQueryParams{
-            ClientID: "unde",
-            Display: "deserunt",
+            ClientID: "corrupti",
+            Display: "provident",
             MaxAge: 715190,
-            Nonce: "nulla",
-            Prompt: "id",
-            RedirectURI: "vero",
-            ResponseMode: "perspiciatis",
-            ResponseType: "nulla",
-            Scope: "nihil",
-            State: "fuga",
-            UILocales: "facilis",
+            Nonce: "quibusdam",
+            Prompt: "unde",
+            RedirectURI: "nulla",
+            ResponseMode: "corrupti",
+            ResponseType: "illum",
+            Scope: "vel",
+            State: "error",
+            UILocales: "deserunt",
         },
     }
 

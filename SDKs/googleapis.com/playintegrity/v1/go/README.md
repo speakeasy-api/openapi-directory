@@ -34,23 +34,23 @@ func main() {
             },
         },
         PathParams: operations.PlayintegrityDecodeIntegrityTokenPathParams{
-            PackageName: "unde",
+            PackageName: "corrupti",
         },
         QueryParams: operations.PlayintegrityDecodeIntegrityTokenQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.DecodeIntegrityTokenRequest{
-            IntegrityToken: "eum",
+            IntegrityToken: "suscipit",
         },
     }
 

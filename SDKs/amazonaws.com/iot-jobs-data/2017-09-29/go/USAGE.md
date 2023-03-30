@@ -21,21 +21,21 @@ func main() {
 
     req := operations.DescribeJobExecutionRequest{
         PathParams: operations.DescribeJobExecutionPathParams{
-            JobID: "unde",
-            ThingName: "deserunt",
+            JobID: "corrupti",
+            ThingName: "provident",
         },
         QueryParams: operations.DescribeJobExecutionQueryParams{
             ExecutionNumber: 715190,
             IncludeJobDocument: false,
         },
         Headers: operations.DescribeJobExecutionHeaders{
-            XAmzAlgorithm: "nulla",
-            XAmzContentSha256: "id",
-            XAmzCredential: "vero",
-            XAmzDate: "perspiciatis",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "nihil",
-            XAmzSignedHeaders: "fuga",
+            XAmzAlgorithm: "quibusdam",
+            XAmzContentSha256: "unde",
+            XAmzCredential: "nulla",
+            XAmzDate: "corrupti",
+            XAmzSecurityToken: "illum",
+            XAmzSignature: "vel",
+            XAmzSignedHeaders: "error",
         },
     }
 

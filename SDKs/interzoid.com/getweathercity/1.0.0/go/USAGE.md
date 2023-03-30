@@ -15,9 +15,9 @@ func main() {
 
     req := operations.GetweatherRequest{
         QueryParams: operations.GetweatherQueryParams{
-            City: "Larrychester",
-            License: "nulla",
-            State: "id",
+            City: "Laruecester",
+            License: "quibusdam",
+            State: "unde",
         },
     }
 

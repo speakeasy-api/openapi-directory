@@ -27,91 +27,91 @@ func main() {
     req := operations.DigitalassetlinksAssetlinksBulkCheckRequest{
         QueryParams: operations.DigitalassetlinksAssetlinksBulkCheckQueryParams{
             DollarXgafv: "2",
-            AccessToken: "deserunt",
+            AccessToken: "provident",
             Alt: "proto",
-            Callback: "nulla",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Callback: "quibusdam",
+            Fields: "unde",
+            Key: "nulla",
+            OauthToken: "corrupti",
             PrettyPrint: false,
-            QuotaUser: "nulla",
-            UploadType: "nihil",
-            UploadProtocol: "fuga",
+            QuotaUser: "illum",
+            UploadType: "vel",
+            UploadProtocol: "error",
         },
         Request: &shared.BulkCheckRequest{
             AllowGoogleInternalDataSources: false,
-            DefaultRelation: "facilis",
+            DefaultRelation: "deserunt",
             DefaultSource: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "eum",
+                        Sha256Fingerprint: "suscipit",
                     },
-                    PackageName: "iusto",
+                    PackageName: "iure",
                 },
                 Web: &shared.WebAsset{
-                    Site: "ullam",
+                    Site: "magnam",
                 },
             },
             DefaultTarget: &shared.Asset{
                 AndroidApp: &shared.AndroidAppAsset{
                     Certificate: &shared.CertificateInfo{
-                        Sha256Fingerprint: "saepe",
+                        Sha256Fingerprint: "debitis",
                     },
-                    PackageName: "inventore",
+                    PackageName: "ipsa",
                 },
                 Web: &shared.WebAsset{
-                    Site: "sapiente",
+                    Site: "delectus",
                 },
             },
             SkipCacheLookup: false,
             Statements: []shared.StatementTemplate{
                 shared.StatementTemplate{
-                    Relation: "eum",
-                    Source: &shared.Asset{
-                        AndroidApp: &shared.AndroidAppAsset{
-                            Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "voluptatum",
-                            },
-                            PackageName: "autem",
-                        },
-                        Web: &shared.WebAsset{
-                            Site: "vel",
-                        },
-                    },
-                    Target: &shared.Asset{
-                        AndroidApp: &shared.AndroidAppAsset{
-                            Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "non",
-                            },
-                            PackageName: "deleniti",
-                        },
-                        Web: &shared.WebAsset{
-                            Site: "similique",
-                        },
-                    },
-                },
-                shared.StatementTemplate{
-                    Relation: "reprehenderit",
+                    Relation: "suscipit",
                     Source: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
                                 Sha256Fingerprint: "molestiae",
                             },
-                            PackageName: "quo",
+                            PackageName: "minus",
                         },
                         Web: &shared.WebAsset{
-                            Site: "quasi",
+                            Site: "placeat",
                         },
                     },
                     Target: &shared.Asset{
                         AndroidApp: &shared.AndroidAppAsset{
                             Certificate: &shared.CertificateInfo{
-                                Sha256Fingerprint: "laboriosam",
+                                Sha256Fingerprint: "voluptatum",
                             },
-                            PackageName: "dicta",
+                            PackageName: "iusto",
                         },
                         Web: &shared.WebAsset{
-                            Site: "est",
+                            Site: "excepturi",
+                        },
+                    },
+                },
+                shared.StatementTemplate{
+                    Relation: "nisi",
+                    Source: &shared.Asset{
+                        AndroidApp: &shared.AndroidAppAsset{
+                            Certificate: &shared.CertificateInfo{
+                                Sha256Fingerprint: "recusandae",
+                            },
+                            PackageName: "temporibus",
+                        },
+                        Web: &shared.WebAsset{
+                            Site: "ab",
+                        },
+                    },
+                    Target: &shared.Asset{
+                        AndroidApp: &shared.AndroidAppAsset{
+                            Certificate: &shared.CertificateInfo{
+                                Sha256Fingerprint: "quis",
+                            },
+                            PackageName: "veritatis",
+                        },
+                        Web: &shared.WebAsset{
+                            Site: "deserunt",
                         },
                     },
                 },

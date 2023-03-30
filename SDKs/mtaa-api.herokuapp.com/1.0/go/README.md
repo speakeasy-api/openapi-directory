@@ -27,7 +27,7 @@ func main() {
     req := operations.DistrictsInARegionRequest{
         PathParams: operations.DistrictsInARegionPathParams{
             Country: "Malta",
-            Region: "deserunt",
+            Region: "provident",
         },
     }
 

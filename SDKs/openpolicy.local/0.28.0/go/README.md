@@ -26,15 +26,15 @@ func main() {
 
     req := operations.PostCompileRequest{
         QueryParams: operations.PostCompileQueryParams{
-            Explain: "unde",
+            Explain: "corrupti",
             Instrument: false,
             Metrics: false,
             Pretty: false,
         },
         Request: map[string]interface{}{
-            "porro": "nulla",
-            "id": "vero",
-            "perspiciatis": "nulla",
+            "distinctio": "quibusdam",
+            "unde": "nulla",
+            "corrupti": "illum",
         },
     }
 

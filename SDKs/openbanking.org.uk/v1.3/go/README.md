@@ -26,8 +26,8 @@ func main() {
 
     req := operations.GetAtmsRequest{
         Headers: operations.GetAtmsHeaders{
-            IfModifiedSince: "unde",
-            IfNoneMatch: "deserunt",
+            IfModifiedSince: "corrupti",
+            IfNoneMatch: "provident",
         },
     }
 

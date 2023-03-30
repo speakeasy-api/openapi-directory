@@ -21,13 +21,13 @@ func main() {
 
     req := operations.GetAlmawsV1TaskListsRsLendingRequestsRequest{
         QueryParams: operations.GetAlmawsV1TaskListsRsLendingRequestsQueryParams{
-            Library: "unde",
-            Partner: "deserunt",
-            Printed: "porro",
-            Reported: "nulla",
-            RequestedFormat: "id",
-            Status: "vero",
-            SuppliedFormat: "perspiciatis",
+            Library: "corrupti",
+            Partner: "provident",
+            Printed: "distinctio",
+            Reported: "quibusdam",
+            RequestedFormat: "unde",
+            Status: "nulla",
+            SuppliedFormat: "corrupti",
         },
     }
 

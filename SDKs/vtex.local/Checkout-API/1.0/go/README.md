@@ -35,14 +35,14 @@ func main() {
 
     req := operations.AddClientPreferencesRequest{
         PathParams: operations.AddClientPreferencesPathParams{
-            OrderFormID: "unde",
+            OrderFormID: "corrupti",
         },
         Headers: operations.AddClientPreferencesHeaders{
-            Accept: "deserunt",
-            ContentType: "porro",
+            Accept: "provident",
+            ContentType: "distinctio",
         },
         Request: operations.AddClientPreferencesRequestBody{
-            Locale: "nulla",
+            Locale: "quibusdam",
             OptinNewsLetter: false,
         },
     }

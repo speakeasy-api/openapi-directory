@@ -32,66 +32,66 @@ func main() {
 
     req := operations.BatchGetRecordRequest{
         Headers: operations.BatchGetRecordHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.BatchGetRecordRequestBody{
             Identifiers: []shared.BatchGetRecordIdentifier{
                 shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "nihil",
+                    FeatureGroupName: "vel",
                     FeatureNames: []string{
-                        "facilis",
-                        "eum",
-                        "iusto",
+                        "deserunt",
+                        "suscipit",
+                        "iure",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "saepe",
-                        "inventore",
+                        "debitis",
+                        "ipsa",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "delectus",
+                    FeatureNames: []string{
+                        "suscipit",
+                        "molestiae",
+                    },
+                    RecordIdentifiersValueAsString: []string{
+                        "placeat",
+                        "voluptatum",
+                        "iusto",
+                        "excepturi",
+                    },
+                },
+                shared.BatchGetRecordIdentifier{
+                    FeatureGroupName: "nisi",
+                    FeatureNames: []string{
+                        "temporibus",
+                        "ab",
+                        "quis",
+                        "veritatis",
+                    },
+                    RecordIdentifiersValueAsString: []string{
+                        "perferendis",
+                        "ipsam",
+                        "repellendus",
                     },
                 },
                 shared.BatchGetRecordIdentifier{
                     FeatureGroupName: "sapiente",
                     FeatureNames: []string{
-                        "eum",
-                        "voluptatum",
+                        "odit",
+                        "at",
+                        "at",
+                        "maiores",
                     },
                     RecordIdentifiersValueAsString: []string{
-                        "vel",
-                        "non",
-                        "deleniti",
-                        "similique",
-                    },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "reprehenderit",
-                    FeatureNames: []string{
-                        "quo",
-                        "quasi",
-                        "laboriosam",
-                        "dicta",
-                    },
-                    RecordIdentifiersValueAsString: []string{
-                        "voluptatem",
-                        "consequatur",
-                        "fugiat",
-                    },
-                },
-                shared.BatchGetRecordIdentifier{
-                    FeatureGroupName: "a",
-                    FeatureNames: []string{
-                        "eos",
-                        "accusamus",
-                        "accusamus",
-                        "reiciendis",
-                    },
-                    RecordIdentifiersValueAsString: []string{
-                        "quibusdam",
-                        "et",
+                        "quod",
+                        "quod",
                     },
                 },
             },

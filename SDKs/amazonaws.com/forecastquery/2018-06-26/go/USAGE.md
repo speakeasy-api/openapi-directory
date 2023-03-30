@@ -21,25 +21,24 @@ func main() {
 
     req := operations.QueryForecastRequest{
         Headers: operations.QueryForecastHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AmazonForecastRuntime.QueryForecast",
         },
         Request: shared.QueryForecastRequest{
-            EndDate: "nihil",
+            EndDate: "illum",
             Filters: map[string]string{
-                "facilis": "eum",
-                "iusto": "ullam",
-                "saepe": "inventore",
+                "error": "deserunt",
+                "suscipit": "iure",
             },
-            ForecastArn: "sapiente",
-            NextToken: "enim",
-            StartDate: "eum",
+            ForecastArn: "magnam",
+            NextToken: "debitis",
+            StartDate: "ipsa",
         },
     }
 

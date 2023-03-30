@@ -15,20 +15,20 @@ func main() {
 
     req := operations.PolyAssetsGetRequest{
         PathParams: operations.PolyAssetsGetPathParams{
-            Name: "unde",
+            Name: "corrupti",
         },
         QueryParams: operations.PolyAssetsGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
     }
 

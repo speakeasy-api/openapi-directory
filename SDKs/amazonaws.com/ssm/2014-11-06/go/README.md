@@ -32,30 +32,30 @@ func main() {
 
     req := operations.AddTagsToResourceRequest{
         Headers: operations.AddTagsToResourceHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AmazonSSM.AddTagsToResource",
         },
         Request: shared.AddTagsToResourceRequest{
-            ResourceID: "nihil",
-            ResourceType: "OpsItem",
+            ResourceID: "illum",
+            ResourceType: "Parameter",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "eum",
-                    Value: "iusto",
+                    Key: "deserunt",
+                    Value: "suscipit",
                 },
                 shared.Tag{
-                    Key: "ullam",
-                    Value: "saepe",
+                    Key: "iure",
+                    Value: "magnam",
                 },
                 shared.Tag{
-                    Key: "inventore",
-                    Value: "sapiente",
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
             },
         },

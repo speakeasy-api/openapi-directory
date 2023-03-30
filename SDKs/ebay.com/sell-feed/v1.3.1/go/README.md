@@ -31,24 +31,24 @@ func main() {
             },
         },
         Headers: operations.CreateCustomerServiceMetricTaskHeaders{
-            AcceptLanguage: "unde",
+            AcceptLanguage: "corrupti",
         },
         Request: shared.CreateServiceMetricsTaskRequest{
-            FeedType: "deserunt",
+            FeedType: "provident",
             FilterCriteria: &shared.CustomerServiceMetricsFilterCriteria{
-                CustomerServiceMetricType: "porro",
-                EvaluationMarketplaceID: "nulla",
+                CustomerServiceMetricType: "distinctio",
+                EvaluationMarketplaceID: "quibusdam",
                 ListingCategories: []string{
-                    "vero",
-                    "perspiciatis",
                     "nulla",
+                    "corrupti",
+                    "illum",
                 },
                 ShippingRegions: []string{
-                    "fuga",
-                    "facilis",
+                    "error",
+                    "deserunt",
                 },
             },
-            SchemaVersion: "eum",
+            SchemaVersion: "suscipit",
         },
     }
 

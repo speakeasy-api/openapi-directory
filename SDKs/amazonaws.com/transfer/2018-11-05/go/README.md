@@ -32,46 +32,44 @@ func main() {
 
     req := operations.CreateAccessRequest{
         Headers: operations.CreateAccessHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "TransferService.CreateAccess",
         },
         Request: shared.CreateAccessRequest{
-            ExternalID: "nihil",
-            HomeDirectory: "fuga",
+            ExternalID: "illum",
+            HomeDirectory: "vel",
             HomeDirectoryMappings: []shared.HomeDirectoryMapEntry{
                 shared.HomeDirectoryMapEntry{
-                    Entry: "eum",
-                    Target: "iusto",
+                    Entry: "deserunt",
+                    Target: "suscipit",
                 },
                 shared.HomeDirectoryMapEntry{
-                    Entry: "ullam",
-                    Target: "saepe",
+                    Entry: "iure",
+                    Target: "magnam",
                 },
                 shared.HomeDirectoryMapEntry{
-                    Entry: "inventore",
-                    Target: "sapiente",
+                    Entry: "debitis",
+                    Target: "ipsa",
                 },
             },
-            HomeDirectoryType: "PATH",
-            Policy: "eum",
+            HomeDirectoryType: "LOGICAL",
+            Policy: "tempora",
             PosixProfile: &shared.PosixProfile{
-                Gid: 477665,
+                Gid: 383441,
                 SecondaryGids: []int64{
+                    791725,
                     812169,
-                    528895,
-                    479977,
-                    568045,
                 },
-                UID: 392785,
+                UID: 528895,
             },
-            Role: "molestiae",
-            ServerID: "quo",
+            Role: "iusto",
+            ServerID: "excepturi",
         },
     }
 

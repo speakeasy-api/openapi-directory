@@ -21,9 +21,9 @@ func main() {
 
     req := operations.BrowseCSVRequest{
         QueryParams: operations.BrowseCSVQueryParams{
-            AdditionalOrder: "unde",
-            SecondarySeparator: "deserunt",
-            Separator: "porro",
+            AdditionalOrder: "corrupti",
+            SecondarySeparator: "provident",
+            Separator: "distinctio",
             ViewID: 844266,
         },
     }

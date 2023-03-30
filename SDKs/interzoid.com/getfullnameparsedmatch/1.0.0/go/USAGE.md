@@ -15,9 +15,9 @@ func main() {
 
     req := operations.GetfullnameparsedmatchRequest{
         QueryParams: operations.GetfullnameparsedmatchQueryParams{
-            Firstname: "Katelynn",
+            Firstname: "Katharina",
             Lastname: "Medhurst",
-            License: "porro",
+            License: "distinctio",
         },
     }
 

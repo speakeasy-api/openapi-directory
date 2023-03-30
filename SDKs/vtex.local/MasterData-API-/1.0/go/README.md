@@ -35,10 +35,10 @@ func main() {
 
     req := operations.RetrieveattachmentRequest{
         PathParams: operations.RetrieveattachmentPathParams{
-            Acronym: "unde",
-            Field: "deserunt",
-            FileName: "porro",
-            ID: "nulla",
+            Acronym: "corrupti",
+            Field: "provident",
+            FileName: "distinctio",
+            ID: "quibusdam",
         },
     }
 

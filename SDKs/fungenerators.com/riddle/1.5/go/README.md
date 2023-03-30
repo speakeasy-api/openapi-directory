@@ -31,7 +31,7 @@ func main() {
             },
         },
         QueryParams: operations.DeleteRiddleQueryParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

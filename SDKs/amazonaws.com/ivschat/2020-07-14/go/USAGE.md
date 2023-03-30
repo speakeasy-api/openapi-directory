@@ -21,20 +21,20 @@ func main() {
 
     req := operations.CreateChatTokenRequest{
         Headers: operations.CreateChatTokenHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateChatTokenRequestBody{
             Attributes: map[string]string{
-                "nihil": "fuga",
-                "facilis": "eum",
-                "iusto": "ullam",
-                "saepe": "inventore",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
             Capabilities: []shared.ChatTokenCapabilityEnum{
                 "SEND_MESSAGE",
@@ -42,9 +42,9 @@ func main() {
                 "DISCONNECT_USER",
                 "DELETE_MESSAGE",
             },
-            RoomIdentifier: "vel",
+            RoomIdentifier: "placeat",
             SessionDurationInMinutes: 528895,
-            UserID: "deleniti",
+            UserID: "iusto",
         },
     }
 

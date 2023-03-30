@@ -20,7 +20,7 @@ func main() {
             },
         },
         PathParams: operations.GetAccountHoldersIDPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

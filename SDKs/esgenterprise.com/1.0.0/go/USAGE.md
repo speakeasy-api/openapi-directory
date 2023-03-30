@@ -20,7 +20,7 @@ func main() {
             },
         },
         QueryParams: operations.GetSearchQueryParams{
-            Q: "unde",
+            Q: "corrupti",
         },
     }
 

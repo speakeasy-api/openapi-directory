@@ -46,7 +46,7 @@ func main() {
             },
         },
         Request: shared.ImageURL{
-            URL: "facilis",
+            URL: "deserunt",
         },
     }
 

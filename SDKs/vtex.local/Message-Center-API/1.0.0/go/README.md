@@ -35,7 +35,7 @@ func main() {
 
     req := operations.CreateDKIMRequest{
         PathParams: operations.CreateDKIMPathParams{
-            EmailProvider: "unde",
+            EmailProvider: "corrupti",
         },
     }
 

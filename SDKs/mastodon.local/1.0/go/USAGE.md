@@ -20,8 +20,8 @@ func main() {
             },
         },
         PathParams: operations.DeleteAPIV1AnnouncementsIDReactionsNamePathParams{
-            ID: "unde",
-            Name: "deserunt",
+            ID: "corrupti",
+            Name: "provident",
         },
     }
 

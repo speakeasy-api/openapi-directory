@@ -32,13 +32,13 @@ func main() {
         },
         Request: &shared.BalanceTransferRequest{
             Amount: shared.Amount{
-                Currency: "unde",
+                Currency: "corrupti",
                 Value: 592845,
             },
-            Description: "porro",
-            FromMerchant: "nulla",
-            Reference: "id",
-            ToMerchant: "vero",
+            Description: "distinctio",
+            FromMerchant: "quibusdam",
+            Reference: "unde",
+            ToMerchant: "nulla",
             Type: "credit",
         },
     }

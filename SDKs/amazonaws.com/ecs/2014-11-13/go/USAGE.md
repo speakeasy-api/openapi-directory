@@ -21,44 +21,32 @@ func main() {
 
     req := operations.CreateCapacityProviderRequest{
         Headers: operations.CreateCapacityProviderHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider",
         },
         Request: shared.CreateCapacityProviderRequest{
             AutoScalingGroupProvider: shared.AutoScalingGroupProvider{
-                AutoScalingGroupArn: "nihil",
+                AutoScalingGroupArn: "illum",
                 ManagedScaling: &shared.ManagedScaling{
-                    InstanceWarmupPeriod: 623564,
-                    MaximumScalingStepSize: 645894,
-                    MinimumScalingStepSize: 384382,
+                    InstanceWarmupPeriod: 423655,
+                    MaximumScalingStepSize: 623564,
+                    MinimumScalingStepSize: 645894,
                     Status: "ENABLED",
-                    TargetCapacity: 297534,
+                    TargetCapacity: 437587,
                 },
-                ManagedTerminationProtection: "DISABLED",
+                ManagedTerminationProtection: "ENABLED",
             },
-            Name: "inventore",
+            Name: "debitis",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "enim",
-                    Value: "eum",
-                },
-                shared.Tag{
-                    Key: "voluptatum",
-                    Value: "autem",
-                },
-                shared.Tag{
-                    Key: "vel",
-                    Value: "non",
-                },
-                shared.Tag{
-                    Key: "deleniti",
-                    Value: "similique",
+                    Key: "delectus",
+                    Value: "tempora",
                 },
             },
         },

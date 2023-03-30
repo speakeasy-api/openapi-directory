@@ -25,7 +25,7 @@ func main() {
             VersionNumber: "1",
         },
         QueryParams: operations.GetMapVersionNumberCopyrightsFormatQueryParams{
-            Callback: "porro",
+            Callback: "provident",
         },
     }
 

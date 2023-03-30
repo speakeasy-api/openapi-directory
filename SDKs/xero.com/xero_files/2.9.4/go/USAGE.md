@@ -23,7 +23,7 @@ func main() {
             FileID: "4ff1e5cc-9835-40d5-bb18-09fdb118db9c",
         },
         Headers: operations.CreateFileAssociationHeaders{
-            XeroTenantID: "unde",
+            XeroTenantID: "corrupti",
         },
         Request: &shared.Association{
             FileID: "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",

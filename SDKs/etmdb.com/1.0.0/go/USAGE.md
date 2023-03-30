@@ -15,7 +15,7 @@ func main() {
 
     req := operations.CinemaSearchReadRequest{
         PathParams: operations.CinemaSearchReadPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

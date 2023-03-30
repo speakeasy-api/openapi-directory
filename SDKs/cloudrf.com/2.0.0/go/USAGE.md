@@ -20,8 +20,8 @@ func main() {
             },
         },
         QueryParams: operations.InterferenceQueryParams{
-            Name: "unde",
-            Network: "deserunt",
+            Name: "corrupti",
+            Network: "provident",
         },
     }
 

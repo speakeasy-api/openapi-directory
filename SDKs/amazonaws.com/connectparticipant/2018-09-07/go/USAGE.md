@@ -21,21 +21,21 @@ func main() {
 
     req := operations.CompleteAttachmentUploadRequest{
         Headers: operations.CompleteAttachmentUploadHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzBearer: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "corrupti",
+            XAmzBearer: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.CompleteAttachmentUploadRequestBody{
             AttachmentIds: []string{
-                "fuga",
-                "facilis",
+                "error",
+                "deserunt",
             },
-            ClientToken: "eum",
+            ClientToken: "suscipit",
         },
     }
 

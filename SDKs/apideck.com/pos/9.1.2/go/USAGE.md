@@ -23,17 +23,17 @@ func main() {
             Raw: false,
         },
         Headers: operations.ItemsAddHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "deserunt",
-            XApideckServiceID: "porro",
+            XApideckAppID: "corrupti",
+            XApideckConsumerID: "provident",
+            XApideckServiceID: "distinctio",
         },
         Request: shared.ItemInput{
             Abbreviation: "Ch",
             AbsentAtLocationIds: []string{
-                "id",
-                "vero",
-                "perspiciatis",
+                "unde",
                 "nulla",
+                "corrupti",
+                "illum",
             },
             Available: true,
             AvailableForPickup: false,
@@ -45,14 +45,14 @@ func main() {
                         "12345",
                         "12345",
                     },
-                    Name: "facilis",
+                    Name: "deserunt",
                 },
                 shared.ItemCategoriesInput{
                     ImageIds: []string{
                         "12345",
                         "12345",
                     },
-                    Name: "iusto",
+                    Name: "iure",
                 },
             },
             Code: "11910345",
@@ -82,10 +82,10 @@ func main() {
             ProductType: "regular",
             Sku: "11910345",
             TaxIds: []string{
-                "inventore",
-                "sapiente",
-                "enim",
-                "eum",
+                "ipsa",
+                "delectus",
+                "tempora",
+                "suscipit",
             },
             Variations: []shared.ItemVariationsInput{
                 shared.ItemVariationsInput{

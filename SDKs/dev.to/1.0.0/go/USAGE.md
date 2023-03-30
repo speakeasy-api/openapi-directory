@@ -22,15 +22,15 @@ func main() {
     req := operations.CreateArticleRequest{
         Request: &shared.Article{
             Article: &shared.ArticleArticle{
-                BodyMarkdown: "unde",
-                CanonicalURL: "deserunt",
-                Description: "porro",
-                MainImage: "nulla",
+                BodyMarkdown: "corrupti",
+                CanonicalURL: "provident",
+                Description: "distinctio",
+                MainImage: "quibusdam",
                 OrganizationID: 602763,
                 Published: false,
-                Series: "vero",
-                Tags: "perspiciatis",
-                Title: "Internal Group Orchestrator",
+                Series: "nulla",
+                Tags: "corrupti",
+                Title: "Dr.",
             },
         },
     }

@@ -21,51 +21,49 @@ func main() {
 
     req := operations.CreateBatchInferenceJobRequest{
         Headers: operations.CreateBatchInferenceJobHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AmazonPersonalize.CreateBatchInferenceJob",
         },
         Request: shared.CreateBatchInferenceJobRequest{
             BatchInferenceJobConfig: &shared.BatchInferenceJobConfig{
                 ItemExplorationConfig: map[string]string{
-                    "fuga": "facilis",
-                    "eum": "iusto",
+                    "vel": "error",
+                    "deserunt": "suscipit",
+                    "iure": "magnam",
+                    "debitis": "ipsa",
                 },
             },
-            FilterArn: "ullam",
+            FilterArn: "delectus",
             JobInput: shared.BatchInferenceJobInput{
                 S3DataSource: shared.S3DataConfig{
-                    KmsKeyArn: "saepe",
-                    Path: "inventore",
+                    KmsKeyArn: "tempora",
+                    Path: "suscipit",
                 },
             },
-            JobName: "sapiente",
+            JobName: "molestiae",
             JobOutput: shared.BatchInferenceJobOutput{
                 S3DataDestination: shared.S3DataConfig{
-                    KmsKeyArn: "enim",
-                    Path: "eum",
+                    KmsKeyArn: "minus",
+                    Path: "placeat",
                 },
             },
-            NumResults: 477665,
-            RoleArn: "autem",
-            SolutionVersionArn: "vel",
+            NumResults: 528895,
+            RoleArn: "iusto",
+            SolutionVersionArn: "excepturi",
             Tags: []shared.Tag{
                 shared.Tag{
-                    TagKey: "deleniti",
-                    TagValue: "similique",
+                    TagKey: "recusandae",
+                    TagValue: "temporibus",
                 },
                 shared.Tag{
-                    TagKey: "reprehenderit",
-                    TagValue: "molestiae",
-                },
-                shared.Tag{
-                    TagKey: "quo",
-                    TagValue: "quasi",
+                    TagKey: "ab",
+                    TagValue: "quis",
                 },
             },
         },

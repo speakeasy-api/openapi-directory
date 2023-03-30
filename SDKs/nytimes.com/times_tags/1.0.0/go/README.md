@@ -34,7 +34,7 @@ func main() {
         QueryParams: operations.GetTimestagsQueryParams{
             Filter: "Org",
             Max: 592845,
-            Query: "porro",
+            Query: "distinctio",
         },
     }
 

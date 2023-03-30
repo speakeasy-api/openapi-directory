@@ -20,7 +20,7 @@ func main() {
             },
         },
         QueryParams: operations.DeleteQuoteQueryParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

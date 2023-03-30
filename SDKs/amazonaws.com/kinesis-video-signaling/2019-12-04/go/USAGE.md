@@ -21,19 +21,19 @@ func main() {
 
     req := operations.GetIceServerConfigRequest{
         Headers: operations.GetIceServerConfigHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.GetIceServerConfigRequestBody{
-            ChannelARN: "nulla",
-            ClientID: "nihil",
+            ChannelARN: "illum",
+            ClientID: "vel",
             Service: "TURN",
-            Username: "Luna.Hoppe",
+            Username: "Linda.Oberbrunner",
         },
     }
 

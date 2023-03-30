@@ -17,7 +17,7 @@ func main() {
         QueryParams: operations.GetQueryParams{
             List: "nbsIscc",
             Noduplicates: false,
-            Values: "deserunt",
+            Values: "provident",
         },
     }
 

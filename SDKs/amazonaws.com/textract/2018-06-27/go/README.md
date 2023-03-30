@@ -32,55 +32,73 @@ func main() {
 
     req := operations.AnalyzeDocumentRequest{
         Headers: operations.AnalyzeDocumentHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "Textract.AnalyzeDocument",
         },
         Request: shared.AnalyzeDocumentRequest{
             Document: shared.Document{
-                Bytes: "nihil",
+                Bytes: "illum",
                 S3Object: &shared.S3Object{
-                    Bucket: "fuga",
-                    Name: "facilis",
-                    Version: "eum",
+                    Bucket: "vel",
+                    Name: "error",
+                    Version: "deserunt",
                 },
             },
             FeatureTypes: []shared.FeatureTypeEnum{
                 "FORMS",
-                "SIGNATURES",
+                "FORMS",
             },
             HumanLoopConfig: &shared.HumanLoopConfig{
                 DataAttributes: &shared.HumanLoopDataAttributes{
                     ContentClassifiers: []shared.ContentClassifierEnum{
+                        "FreeOfPersonallyIdentifiableInformation",
                         "FreeOfAdultContent",
+                        "FreeOfPersonallyIdentifiableInformation",
+                        "FreeOfPersonallyIdentifiableInformation",
                     },
                 },
-                FlowDefinitionArn: "enim",
-                HumanLoopName: "eum",
+                FlowDefinitionArn: "molestiae",
+                HumanLoopName: "minus",
             },
             QueriesConfig: &shared.QueriesConfig{
                 Queries: []shared.Query{
                     shared.Query{
-                        Alias: "autem",
+                        Alias: "voluptatum",
                         Pages: []string{
-                            "non",
-                            "deleniti",
-                            "similique",
-                            "reprehenderit",
+                            "excepturi",
+                            "nisi",
                         },
-                        Text: "molestiae",
+                        Text: "recusandae",
                     },
                     shared.Query{
-                        Alias: "quo",
+                        Alias: "temporibus",
                         Pages: []string{
-                            "laboriosam",
+                            "quis",
                         },
-                        Text: "dicta",
+                        Text: "veritatis",
+                    },
+                    shared.Query{
+                        Alias: "deserunt",
+                        Pages: []string{
+                            "ipsam",
+                        },
+                        Text: "repellendus",
+                    },
+                    shared.Query{
+                        Alias: "sapiente",
+                        Pages: []string{
+                            "odit",
+                            "at",
+                            "at",
+                            "maiores",
+                        },
+                        Text: "molestiae",
                     },
                 },
             },

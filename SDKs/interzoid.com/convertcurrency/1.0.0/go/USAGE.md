@@ -15,10 +15,10 @@ func main() {
 
     req := operations.ConvertcurrencyRequest{
         QueryParams: operations.ConvertcurrencyQueryParams{
-            Amount: "unde",
-            From: "deserunt",
-            License: "porro",
-            To: "nulla",
+            Amount: "corrupti",
+            From: "provident",
+            License: "distinctio",
+            To: "quibusdam",
         },
     }
 

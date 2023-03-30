@@ -35,11 +35,11 @@ func main() {
             Color: "white",
             IsPrimeurs: false,
             Limit: 592845,
-            Lwin: "porro",
-            Lwin11: "nulla",
+            Lwin: "distinctio",
+            Lwin11: "quibusdam",
             Offset: 602763,
             Ordering: "-score",
-            Vintage: "perspiciatis",
+            Vintage: "corrupti",
             WineID: []int64{
                 423655,
                 623564,
@@ -48,7 +48,7 @@ func main() {
             },
         },
         Headers: operations.GetGlobalwinescoresLatestHeaders{
-            Authorization: "iusto",
+            Authorization: "iure",
         },
     }
 

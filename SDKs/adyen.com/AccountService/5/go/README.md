@@ -31,7 +31,7 @@ func main() {
             },
         },
         Request: &shared.CloseAccountHolderRequest{
-            AccountHolderCode: "unde",
+            AccountHolderCode: "corrupti",
         },
     }
 

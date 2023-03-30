@@ -21,24 +21,26 @@ func main() {
 
     req := operations.DeleteRecommendationPreferencesRequest{
         Headers: operations.DeleteRecommendationPreferencesHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "ComputeOptimizerService.DeleteRecommendationPreferences",
         },
         Request: shared.DeleteRecommendationPreferencesRequest{
             RecommendationPreferenceNames: []shared.RecommendationPreferenceNameEnum{
                 "InferredWorkloadTypes",
                 "InferredWorkloadTypes",
+                "InferredWorkloadTypes",
+                "InferredWorkloadTypes",
             },
             ResourceType: "EbsVolume",
             Scope: &shared.Scope{
-                Name: "AccountId",
-                Value: "ullam",
+                Name: "Organization",
+                Value: "debitis",
             },
         },
     }

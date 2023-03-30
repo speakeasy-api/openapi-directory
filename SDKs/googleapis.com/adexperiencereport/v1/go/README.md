@@ -26,20 +26,20 @@ func main() {
 
     req := operations.AdexperiencereportSitesGetRequest{
         PathParams: operations.AdexperiencereportSitesGetPathParams{
-            Name: "unde",
+            Name: "corrupti",
         },
         QueryParams: operations.AdexperiencereportSitesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
     }
 

@@ -21,13 +21,13 @@ func main() {
             },
         },
         Request: &operations.CreateAssistantCreateAssistantRequest{
-            CallbackEvents: "unde",
-            CallbackURL: "https://michale.org",
-            Defaults: "id",
-            FriendlyName: "vero",
+            CallbackEvents: "corrupti",
+            CallbackURL: "https://salty-stag.name",
+            Defaults: "nulla",
+            FriendlyName: "corrupti",
             LogQueries: false,
-            StyleSheet: "perspiciatis",
-            UniqueName: "nulla",
+            StyleSheet: "illum",
+            UniqueName: "vel",
         },
     }
 

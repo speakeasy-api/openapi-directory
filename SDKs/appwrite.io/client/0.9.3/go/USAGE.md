@@ -20,9 +20,9 @@ func main() {
             },
         },
         Request: &operations.AccountCreateRequestBody{
-            Email: "Larry_Rau85@yahoo.com",
-            Name: "perspiciatis",
-            Password: "nulla",
+            Email: "Larue_Rau85@yahoo.com",
+            Name: "corrupti",
+            Password: "illum",
         },
     }
 

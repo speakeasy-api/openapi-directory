@@ -32,22 +32,22 @@ func main() {
 
     req := operations.AcceptPageRequest{
         Headers: operations.AcceptPageHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "SSMContacts.AcceptPage",
         },
         Request: shared.AcceptPageRequest{
-            AcceptCode: "nihil",
-            AcceptCodeValidation: "ENFORCE",
+            AcceptCode: "illum",
+            AcceptCodeValidation: "IGNORE",
             AcceptType: "READ",
-            ContactChannelID: "eum",
-            Note: "iusto",
-            PageID: "ullam",
+            ContactChannelID: "deserunt",
+            Note: "suscipit",
+            PageID: "iure",
         },
     }
 

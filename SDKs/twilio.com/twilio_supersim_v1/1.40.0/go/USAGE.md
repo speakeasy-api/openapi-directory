@@ -22,8 +22,8 @@ func main() {
         },
         Request: &operations.CreateEsimProfileCreateEsimProfileRequest{
             CallbackMethod: "PATCH",
-            CallbackURL: "deserunt",
-            Eid: "porro",
+            CallbackURL: "provident",
+            Eid: "distinctio",
             GenerateMatchingID: false,
         },
     }

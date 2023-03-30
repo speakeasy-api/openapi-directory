@@ -21,7 +21,7 @@ func main() {
             },
         },
         PathParams: operations.FetchPhoneNumberPathParams{
-            PhoneNumber: "unde",
+            PhoneNumber: "corrupti",
         },
     }
 

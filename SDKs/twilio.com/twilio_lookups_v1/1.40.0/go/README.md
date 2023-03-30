@@ -32,23 +32,23 @@ func main() {
             },
         },
         PathParams: operations.FetchPhoneNumberPathParams{
-            PhoneNumber: "unde",
+            PhoneNumber: "corrupti",
         },
         QueryParams: operations.FetchPhoneNumberQueryParams{
             AddOns: []string{
-                "porro",
-                "nulla",
-                "id",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
             AddOnsData: map[string]interface{}{
-                "perspiciatis": "nulla",
-                "nihil": "fuga",
-                "facilis": "eum",
-                "iusto": "ullam",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
             },
-            CountryCode: "saepe",
+            CountryCode: "debitis",
             Type: []string{
-                "sapiente",
+                "delectus",
             },
         },
     }

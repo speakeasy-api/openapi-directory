@@ -20,8 +20,8 @@ func main() {
             },
         },
         QueryParams: operations.CustomersAllQueryParams{
-            Cursor: "unde",
-            Fields: "deserunt",
+            Cursor: "corrupti",
+            Fields: "provident",
             Filter: &shared.EcommerceCustomersFilter{
                 Email: "elon@musk.com",
                 PhoneNumber: "111-111-1111",
@@ -30,9 +30,9 @@ func main() {
             Raw: false,
         },
         Headers: operations.CustomersAllHeaders{
-            XApideckAppID: "nulla",
-            XApideckConsumerID: "id",
-            XApideckServiceID: "vero",
+            XApideckAppID: "quibusdam",
+            XApideckConsumerID: "unde",
+            XApideckServiceID: "nulla",
         },
     }
 

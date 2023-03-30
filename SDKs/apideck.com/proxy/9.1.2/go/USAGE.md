@@ -20,11 +20,11 @@ func main() {
             },
         },
         Headers: operations.DeleteProxyHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "deserunt",
-            XApideckDownstreamAuthorization: "porro",
-            XApideckDownstreamURL: "nulla",
-            XApideckServiceID: "id",
+            XApideckAppID: "corrupti",
+            XApideckConsumerID: "provident",
+            XApideckDownstreamAuthorization: "distinctio",
+            XApideckDownstreamURL: "quibusdam",
+            XApideckServiceID: "unde",
         },
     }
 

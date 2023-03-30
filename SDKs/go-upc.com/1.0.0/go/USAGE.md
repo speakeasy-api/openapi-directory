@@ -21,7 +21,7 @@ func main() {
 
     req := operations.GetProductInfoRequest{
         PathParams: operations.GetProductInfoPathParams{
-            Code: "unde",
+            Code: "corrupti",
         },
     }
 

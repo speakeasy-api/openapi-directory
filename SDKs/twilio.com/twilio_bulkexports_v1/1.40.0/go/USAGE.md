@@ -21,15 +21,15 @@ func main() {
             },
         },
         PathParams: operations.CreateExportCustomJobPathParams{
-            ResourceType: "unde",
+            ResourceType: "corrupti",
         },
         Request: &operations.CreateExportCustomJobCreateExportCustomJobRequest{
-            Email: "Michale_Sporer@yahoo.com",
-            EndDay: "perspiciatis",
-            FriendlyName: "nulla",
-            StartDay: "nihil",
-            WebhookMethod: "fuga",
-            WebhookURL: "facilis",
+            Email: "Micheal_Sporer@yahoo.com",
+            EndDay: "corrupti",
+            FriendlyName: "illum",
+            StartDay: "vel",
+            WebhookMethod: "error",
+            WebhookURL: "deserunt",
         },
     }
 

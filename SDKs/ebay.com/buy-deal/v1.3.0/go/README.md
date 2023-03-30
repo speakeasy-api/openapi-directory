@@ -31,14 +31,14 @@ func main() {
             },
         },
         QueryParams: operations.GetDealItemsQueryParams{
-            CategoryIds: "unde",
-            Commissionable: "deserunt",
-            DeliveryCountry: "porro",
-            Limit: "nulla",
-            Offset: "id",
+            CategoryIds: "corrupti",
+            Commissionable: "provident",
+            DeliveryCountry: "distinctio",
+            Limit: "quibusdam",
+            Offset: "unde",
         },
         Headers: operations.GetDealItemsHeaders{
-            XEbayCMarketplaceID: "vero",
+            XEbayCMarketplaceID: "nulla",
         },
     }
 

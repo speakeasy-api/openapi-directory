@@ -31,11 +31,11 @@ func main() {
             },
         },
         PathParams: operations.APIResourceCoverageOnePathParams{
-            ID: "unde",
-            ResourceID: "deserunt",
+            ID: "corrupti",
+            ResourceID: "provident",
         },
         Headers: operations.APIResourceCoverageOneHeaders{
-            XApideckAppID: "porro",
+            XApideckAppID: "distinctio",
         },
     }
 

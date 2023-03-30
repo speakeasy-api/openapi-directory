@@ -21,9 +21,9 @@ func main() {
 
     req := operations.CompleteOpenIDLoginRequest{
         QueryParams: operations.CompleteOpenIDLoginQueryParams{
-            Code: "unde",
-            IDToken: "deserunt",
-            State: "porro",
+            Code: "corrupti",
+            IDToken: "provident",
+            State: "distinctio",
         },
     }
 

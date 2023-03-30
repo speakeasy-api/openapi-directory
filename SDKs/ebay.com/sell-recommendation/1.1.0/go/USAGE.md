@@ -20,18 +20,18 @@ func main() {
             },
         },
         QueryParams: operations.FindListingRecommendationsQueryParams{
-            Filter: "unde",
-            Limit: "deserunt",
-            Offset: "porro",
+            Filter: "corrupti",
+            Limit: "provident",
+            Offset: "distinctio",
         },
         Headers: operations.FindListingRecommendationsHeaders{
-            XEbayCMarketplaceID: "nulla",
+            XEbayCMarketplaceID: "quibusdam",
         },
         Request: &shared.FindListingRecommendationRequest{
             ListingIds: []string{
-                "vero",
-                "perspiciatis",
                 "nulla",
+                "corrupti",
+                "illum",
             },
         },
     }

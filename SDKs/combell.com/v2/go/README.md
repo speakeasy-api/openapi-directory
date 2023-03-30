@@ -26,8 +26,8 @@ func main() {
 
     req := operations.CreateAccountRequest{
         Request: &shared.CreateAccount{
-            FtpPassword: "unde",
-            Identifier: "deserunt",
+            FtpPassword: "corrupti",
+            Identifier: "provident",
             ServicepackID: 715190,
         },
     }

@@ -17,7 +17,7 @@ func main() {
         QueryParams: operations.GetQueryParams{
             Format: "xml",
             IP: "8.8.8.8",
-            Key: "deserunt",
+            Key: "provident",
             Lang: "pt",
         },
     }

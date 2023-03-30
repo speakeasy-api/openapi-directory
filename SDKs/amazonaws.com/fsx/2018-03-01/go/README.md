@@ -32,22 +32,24 @@ func main() {
 
     req := operations.AssociateFileSystemAliasesRequest{
         Headers: operations.AssociateFileSystemAliasesHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSSimbaAPIService_v20180301.AssociateFileSystemAliases",
         },
         Request: shared.AssociateFileSystemAliasesRequest{
             Aliases: []string{
-                "fuga",
-                "facilis",
+                "vel",
+                "error",
+                "deserunt",
+                "suscipit",
             },
-            ClientRequestToken: "eum",
-            FileSystemID: "iusto",
+            ClientRequestToken: "iure",
+            FileSystemID: "magnam",
         },
     }
 

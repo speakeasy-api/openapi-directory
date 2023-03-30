@@ -34,22 +34,22 @@ func main() {
             },
         },
         PathParams: operations.DisplayvideoAdvertisersAssetsUploadPathParams{
-            AdvertiserID: "unde",
+            AdvertiserID: "corrupti",
         },
         QueryParams: operations.DisplayvideoAdvertisersAssetsUploadQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
-        Request: []byte("eum"),
+        Request: []byte("suscipit"),
     }
 
     ctx := context.Background()

@@ -26,7 +26,7 @@ func main() {
 
     req := operations.ConnectRequest{
         Request: &operations.ConnectRequestBody{
-            Endpoint: "unde",
+            Endpoint: "corrupti",
         },
     }
 

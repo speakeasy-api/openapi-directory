@@ -32,22 +32,22 @@ func main() {
 
     req := operations.AssociateUserRequest{
         Headers: operations.AssociateUserHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.AssociateUserRequestBody{
-            Domain: "nulla",
+            Domain: "illum",
             IdentityProvider: operations.AssociateUserRequestBodyIdentityProvider{
                 ActiveDirectoryIdentityProvider: &shared.ActiveDirectoryIdentityProvider{
-                    DirectoryID: "nihil",
+                    DirectoryID: "vel",
                 },
             },
-            InstanceID: "fuga",
+            InstanceID: "error",
             Username: "Luna.Hoppe",
         },
     }

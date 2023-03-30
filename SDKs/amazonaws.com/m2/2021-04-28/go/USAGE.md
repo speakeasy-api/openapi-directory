@@ -21,17 +21,17 @@ func main() {
 
     req := operations.CancelBatchJobExecutionRequest{
         PathParams: operations.CancelBatchJobExecutionPathParams{
-            ApplicationID: "unde",
-            ExecutionID: "deserunt",
+            ApplicationID: "corrupti",
+            ExecutionID: "provident",
         },
         Headers: operations.CancelBatchJobExecutionHeaders{
-            XAmzAlgorithm: "porro",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "id",
-            XAmzDate: "vero",
-            XAmzSecurityToken: "perspiciatis",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "nihil",
+            XAmzAlgorithm: "distinctio",
+            XAmzContentSha256: "quibusdam",
+            XAmzCredential: "unde",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "corrupti",
+            XAmzSignature: "illum",
+            XAmzSignedHeaders: "vel",
         },
     }
 

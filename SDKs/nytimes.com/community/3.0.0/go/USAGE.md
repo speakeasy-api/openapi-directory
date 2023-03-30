@@ -20,7 +20,7 @@ func main() {
             },
         },
         QueryParams: operations.GETUserContentByDateJSONQueryParams{
-            Date: "unde",
+            Date: "corrupti",
         },
     }
 

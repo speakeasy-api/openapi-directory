@@ -17,14 +17,14 @@ func main() {
         Request: shared.CreateActionRequestInput{
             Data: shared.ActionResourceInput{
                 Attributes: &shared.ActionResourceAttributesInput{
-                    Thread: "unde",
+                    Thread: "corrupti",
                     Details: map[string]interface{}{
-                        "porro": "nulla",
-                        "id": "vero",
-                        "perspiciatis": "nulla",
+                        "distinctio": "quibusdam",
+                        "unde": "nulla",
+                        "corrupti": "illum",
                     },
-                    EffectiveFrom: "nihil",
-                    EffectiveTo: "fuga",
+                    EffectiveFrom: "vel",
+                    EffectiveTo: "error",
                     FrequencyGoal: &shared.ActionResourceAttributesFrequencyGoal{
                         Weeks: &shared.ActionResourceAttributesFrequencyGoalWeeks{
                             Days: []shared.ActionResourceAttributesFrequencyGoalWeeksDaysEnum{
@@ -36,150 +36,144 @@ func main() {
                     },
                     Identifiers: []shared.Identifier{
                         shared.Identifier{
-                            Label: "inventore",
-                            System: "sapiente",
-                            Value: "enim",
+                            Label: "ipsa",
+                            System: "delectus",
+                            Value: "tempora",
                         },
                         shared.Identifier{
-                            Label: "eum",
+                            Label: "suscipit",
+                            System: "molestiae",
+                            Value: "minus",
+                        },
+                        shared.Identifier{
+                            Label: "placeat",
                             System: "voluptatum",
-                            Value: "autem",
+                            Value: "iusto",
                         },
                         shared.Identifier{
-                            Label: "vel",
-                            System: "non",
-                            Value: "deleniti",
-                        },
-                        shared.Identifier{
-                            Label: "similique",
-                            System: "reprehenderit",
-                            Value: "molestiae",
+                            Label: "excepturi",
+                            System: "nisi",
+                            Value: "recusandae",
                         },
                     },
                     Intake: map[string]interface{}{
-                        "quasi": "laboriosam",
-                        "dicta": "est",
-                        "voluptatem": "consequatur",
-                        "fugiat": "a",
+                        "ab": "quis",
+                        "veritatis": "deserunt",
+                        "perferendis": "ipsam",
+                        "repellendus": "sapiente",
                     },
                     MetricRequired: false,
                     Metrics: []shared.ActionMetric{
                         shared.ActionMetric{
                             Goal: map[string]interface{}{
-                                "accusamus": "accusamus",
+                                "at": "at",
                             },
-                            MetricType: "reiciendis",
-                            Unit: "rem",
+                            MetricType: "maiores",
+                            Unit: "molestiae",
                             Validations: &shared.ActionMetricValidations{
                                 Maximum: &shared.ActionMetricValidationsMaximum{
-                                    Unit: "quibusdam",
+                                    Unit: "quod",
                                     Value: 8009.11,
                                 },
                                 Minimum: &shared.ActionMetricValidationsMinimum{
-                                    Unit: "praesentium",
+                                    Unit: "esse",
                                     Value: 5204.78,
                                 },
                             },
                         },
                         shared.ActionMetric{
                             Goal: map[string]interface{}{
-                                "soluta": "sed",
-                                "quisquam": "rerum",
-                                "culpa": "qui",
-                                "sed": "rerum",
+                                "dolorum": "dicta",
+                                "nam": "officia",
+                                "occaecati": "fugit",
+                                "deleniti": "hic",
                             },
-                            MetricType: "possimus",
-                            Unit: "occaecati",
+                            MetricType: "optio",
+                            Unit: "totam",
                             Validations: &shared.ActionMetricValidations{
                                 Maximum: &shared.ActionMetricValidationsMaximum{
-                                    Unit: "odit",
+                                    Unit: "beatae",
                                     Value: 4146.62,
                                 },
                                 Minimum: &shared.ActionMetricValidationsMinimum{
-                                    Unit: "rem",
+                                    Unit: "molestiae",
                                     Value: 2645.55,
                                 },
                             },
                         },
                         shared.ActionMetric{
                             Goal: map[string]interface{}{
-                                "est": "id",
+                                "impedit": "cum",
                             },
-                            MetricType: "blanditiis",
-                            Unit: "numquam",
+                            MetricType: "esse",
+                            Unit: "ipsum",
                             Validations: &shared.ActionMetricValidations{
                                 Maximum: &shared.ActionMetricValidationsMaximum{
-                                    Unit: "similique",
+                                    Unit: "excepturi",
                                     Value: 1352.18,
                                 },
                                 Minimum: &shared.ActionMetricValidationsMinimum{
-                                    Unit: "sit",
+                                    Unit: "perferendis",
                                     Value: 3241.41,
                                 },
                             },
                         },
                         shared.ActionMetric{
                             Goal: map[string]interface{}{
-                                "voluptatem": "laborum",
-                                "modi": "et",
-                                "iure": "earum",
+                                "sed": "iste",
+                                "dolor": "natus",
+                                "laboriosam": "hic",
                             },
-                            MetricType: "ut",
-                            Unit: "soluta",
+                            MetricType: "saepe",
+                            Unit: "fuga",
                             Validations: &shared.ActionMetricValidations{
                                 Maximum: &shared.ActionMetricValidationsMaximum{
-                                    Unit: "qui",
+                                    Unit: "in",
                                     Value: 3595.08,
                                 },
                                 Minimum: &shared.ActionMetricValidationsMinimum{
-                                    Unit: "laborum",
+                                    Unit: "iste",
                                     Value: 4370.32,
                                 },
                             },
                         },
                     },
-                    Title: "Human Quality Executive",
+                    Title: "Dr.",
                     Tracking: false,
                     Type: "other_lifestyle",
                     Windows: []shared.ActionWindow{
                         shared.ActionWindow{
-                            ID: "libero",
-                            Title: "Dynamic Branding Officer",
-                            Type: "non",
+                            ID: "architecto",
+                            Title: "Mr.",
+                            Type: "reiciendis",
                         },
                         shared.ActionWindow{
-                            ID: "ea",
-                            Title: "Direct Mobility Specialist",
-                            Type: "est",
+                            ID: "est",
+                            Title: "Miss",
+                            Type: "laborum",
                         },
                         shared.ActionWindow{
-                            ID: "commodi",
-                            Title: "National Intranet Supervisor",
-                            Type: "odio",
-                        },
-                        shared.ActionWindow{
-                            ID: "harum",
-                            Title: "Principal Usability Executive",
-                            Type: "et",
+                            ID: "dolores",
+                            Title: "Mrs.",
+                            Type: "corporis",
                         },
                     },
                 },
-                ID: "non",
+                ID: "explicabo",
                 Relationships: &shared.ActionResourceRelationships{
                     Plan: &shared.ActionResourceRelationshipsPlan{
                         Data: &shared.ActionResourceRelationshipsPlanData{
-                            ID: "quidem",
-                            Type: "neque",
+                            ID: "nobis",
+                            Type: "enim",
                         },
                         Links: map[string]interface{}{
-                            "et": "culpa",
-                            "aliquam": "esse",
-                            "totam": "voluptatum",
-                            "et": "fuga",
+                            "nemo": "minima",
+                            "excepturi": "accusantium",
+                            "iure": "culpa",
                         },
                     },
                 },
-                Type: "nesciunt",
+                Type: "doloribus",
             },
         },
     }

@@ -24,16 +24,16 @@ func main() {
         },
         QueryParams: operations.VideointelligenceVideosAnnotateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "deserunt",
+            AccessToken: "provident",
             Alt: "proto",
-            Callback: "nulla",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Callback: "quibusdam",
+            Fields: "unde",
+            Key: "nulla",
+            OauthToken: "corrupti",
             PrettyPrint: false,
-            QuotaUser: "nulla",
-            UploadType: "nihil",
-            UploadProtocol: "fuga",
+            QuotaUser: "illum",
+            UploadType: "vel",
+            UploadProtocol: "error",
         },
         Request: &shared.GoogleCloudVideointelligenceV1beta2AnnotateVideoRequest{
             Features: []shared.GoogleCloudVideointelligenceV1beta2AnnotateVideoRequestFeaturesEnum{
@@ -41,28 +41,28 @@ func main() {
                 "FACE_DETECTION",
                 "SHOT_CHANGE_DETECTION",
             },
-            InputContent: "saepe",
-            InputURI: "inventore",
-            LocationID: "sapiente",
-            OutputURI: "enim",
+            InputContent: "debitis",
+            InputURI: "ipsa",
+            LocationID: "delectus",
+            OutputURI: "tempora",
             VideoContext: &shared.GoogleCloudVideointelligenceV1beta2VideoContext{
                 ExplicitContentDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2ExplicitContentDetectionConfig{
-                    Model: "eum",
+                    Model: "suscipit",
                 },
                 FaceDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2FaceDetectionConfig{
                     IncludeAttributes: false,
                     IncludeBoundingBoxes: false,
-                    Model: "voluptatum",
+                    Model: "molestiae",
                 },
                 LabelDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2LabelDetectionConfig{
                     FrameConfidenceThreshold: 7917.25,
                     LabelDetectionMode: "SHOT_AND_FRAME_MODE",
-                    Model: "non",
+                    Model: "voluptatum",
                     StationaryCamera: false,
                     VideoConfidenceThreshold: 4799.77,
                 },
                 ObjectTrackingConfig: &shared.GoogleCloudVideointelligenceV1beta2ObjectTrackingConfig{
-                    Model: "similique",
+                    Model: "excepturi",
                 },
                 PersonDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2PersonDetectionConfig{
                     IncludeAttributes: false,
@@ -71,16 +71,16 @@ func main() {
                 },
                 Segments: []shared.GoogleCloudVideointelligenceV1beta2VideoSegment{
                     shared.GoogleCloudVideointelligenceV1beta2VideoSegment{
-                        EndTimeOffset: "molestiae",
-                        StartTimeOffset: "quo",
+                        EndTimeOffset: "recusandae",
+                        StartTimeOffset: "temporibus",
                     },
                     shared.GoogleCloudVideointelligenceV1beta2VideoSegment{
-                        EndTimeOffset: "quasi",
-                        StartTimeOffset: "laboriosam",
+                        EndTimeOffset: "ab",
+                        StartTimeOffset: "quis",
                     },
                 },
                 ShotChangeDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig{
-                    Model: "dicta",
+                    Model: "veritatis",
                 },
                 SpeechTranscriptionConfig: &shared.GoogleCloudVideointelligenceV1beta2SpeechTranscriptionConfig{
                     AudioTracks: []int{
@@ -93,47 +93,47 @@ func main() {
                     EnableSpeakerDiarization: false,
                     EnableWordConfidence: false,
                     FilterProfanity: false,
-                    LanguageCode: "omnis",
+                    LanguageCode: "quo",
                     MaxAlternatives: 140350,
                     SpeechContexts: []shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
                         shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
                             Phrases: []string{
-                                "reiciendis",
-                                "rem",
-                                "quibusdam",
-                                "et",
+                                "maiores",
+                                "molestiae",
+                                "quod",
+                                "quod",
                             },
                         },
                         shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
                             Phrases: []string{
-                                "occaecati",
-                                "dolor",
+                                "totam",
+                                "porro",
                             },
                         },
                         shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
                             Phrases: []string{
-                                "sed",
-                                "quisquam",
-                                "rerum",
+                                "dicta",
+                                "nam",
+                                "officia",
                             },
                         },
                         shared.GoogleCloudVideointelligenceV1beta2SpeechContext{
                             Phrases: []string{
-                                "qui",
-                                "sed",
-                                "rerum",
+                                "fugit",
+                                "deleniti",
+                                "hic",
                             },
                         },
                     },
                 },
                 TextDetectionConfig: &shared.GoogleCloudVideointelligenceV1beta2TextDetectionConfig{
                     LanguageHints: []string{
-                        "occaecati",
-                        "odit",
-                        "esse",
-                        "rem",
+                        "totam",
+                        "beatae",
+                        "commodi",
+                        "molestiae",
                     },
-                    Model: "voluptatem",
+                    Model: "modi",
                 },
             },
         },

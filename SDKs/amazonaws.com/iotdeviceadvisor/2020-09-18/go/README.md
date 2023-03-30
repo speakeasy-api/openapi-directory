@@ -32,38 +32,38 @@ func main() {
 
     req := operations.CreateSuiteDefinitionRequest{
         Headers: operations.CreateSuiteDefinitionHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateSuiteDefinitionRequestBody{
             SuiteDefinitionConfiguration: operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration{
-                DevicePermissionRoleArn: "nulla",
+                DevicePermissionRoleArn: "illum",
                 Devices: []shared.DeviceUnderTest{
                     shared.DeviceUnderTest{
-                        CertificateArn: "fuga",
-                        ThingArn: "facilis",
+                        CertificateArn: "error",
+                        ThingArn: "deserunt",
                     },
                     shared.DeviceUnderTest{
-                        CertificateArn: "eum",
-                        ThingArn: "iusto",
+                        CertificateArn: "suscipit",
+                        ThingArn: "iure",
                     },
                 },
                 IntendedForQualification: false,
                 IsLongDurationTest: false,
                 Protocol: "MqttV3_1_1",
-                RootGroup: "saepe",
-                SuiteDefinitionName: "inventore",
+                RootGroup: "debitis",
+                SuiteDefinitionName: "ipsa",
             },
             Tags: map[string]string{
-                "enim": "eum",
-                "voluptatum": "autem",
-                "vel": "non",
-                "deleniti": "similique",
+                "tempora": "suscipit",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
+                "iusto": "excepturi",
             },
         },
     }

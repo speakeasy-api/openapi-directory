@@ -21,29 +21,39 @@ func main() {
 
     req := operations.AddAttributesToFindingsRequest{
         Headers: operations.AddAttributesToFindingsHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "InspectorService.AddAttributesToFindings",
         },
         Request: shared.AddAttributesToFindingsRequest{
             Attributes: []shared.Attribute{
                 shared.Attribute{
-                    Key: "fuga",
-                    Value: "facilis",
+                    Key: "vel",
+                    Value: "error",
                 },
                 shared.Attribute{
-                    Key: "eum",
-                    Value: "iusto",
+                    Key: "deserunt",
+                    Value: "suscipit",
+                },
+                shared.Attribute{
+                    Key: "iure",
+                    Value: "magnam",
+                },
+                shared.Attribute{
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
             },
             FindingArns: []string{
-                "saepe",
-                "inventore",
+                "tempora",
+                "suscipit",
+                "molestiae",
+                "minus",
             },
         },
     }

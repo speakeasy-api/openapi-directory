@@ -20,15 +20,15 @@ func main() {
             },
         },
         PathParams: operations.CompanyAlternativeSearchPathParams{
-            Country: "unde",
+            Country: "corrupti",
         },
         Request: &operations.CompanyAlternativeSearchRequestBody{
-            Address: "7868 Henri Neck",
-            Name: "fuga",
-            Number: "facilis",
-            Phone: "528.292.3478",
-            URL: "non",
-            Vat: "deleniti",
+            Address: "7868 Stamm Junctions",
+            Name: "error",
+            Number: "deserunt",
+            Phone: "1-528-292-3478 x545",
+            URL: "nisi",
+            Vat: "recusandae",
         },
     }
 

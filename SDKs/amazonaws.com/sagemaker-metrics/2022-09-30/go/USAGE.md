@@ -21,42 +21,42 @@ func main() {
 
     req := operations.BatchPutMetricsRequest{
         Headers: operations.BatchPutMetricsHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.BatchPutMetricsRequestBody{
             MetricData: []shared.RawMetricData{
                 shared.RawMetricData{
-                    MetricName: "nihil",
+                    MetricName: "vel",
                     Step: 623564,
-                    Timestamp: "2022-08-06T05:59:43.386Z",
+                    Timestamp: "2022-08-06T08:22:51.090Z",
                     Value: 3843.82,
                 },
                 shared.RawMetricData{
-                    MetricName: "iusto",
+                    MetricName: "iure",
                     Step: 297534,
-                    Timestamp: "2022-05-08T12:05:47.062Z",
+                    Timestamp: "2022-05-08T14:28:54.766Z",
                     Value: 567.13,
                 },
                 shared.RawMetricData{
-                    MetricName: "sapiente",
+                    MetricName: "delectus",
                     Step: 272656,
-                    Timestamp: "2022-11-10T01:04:48.122Z",
+                    Timestamp: "2022-11-10T03:27:55.826Z",
                     Value: 4776.65,
                 },
                 shared.RawMetricData{
-                    MetricName: "autem",
+                    MetricName: "minus",
                     Step: 812169,
-                    Timestamp: "2022-09-17T22:54:29.838Z",
+                    Timestamp: "2022-09-18T01:17:37.542Z",
                     Value: 4799.77,
                 },
             },
-            TrialComponentName: "similique",
+            TrialComponentName: "excepturi",
         },
     }
 

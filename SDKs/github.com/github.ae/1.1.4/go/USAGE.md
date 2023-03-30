@@ -15,9 +15,9 @@ func main() {
 
     req := operations.ActionsAddSelectedRepoToOrgSecretRequest{
         PathParams: operations.ActionsAddSelectedRepoToOrgSecretPathParams{
-            Org: "unde",
+            Org: "corrupti",
             RepositoryID: 592845,
-            SecretName: "porro",
+            SecretName: "distinctio",
         },
     }
 

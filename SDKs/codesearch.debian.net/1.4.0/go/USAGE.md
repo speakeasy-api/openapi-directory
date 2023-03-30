@@ -21,7 +21,7 @@ func main() {
         },
         QueryParams: operations.SearchQueryParams{
             MatchMode: "regexp",
-            Query: "deserunt",
+            Query: "provident",
         },
     }
 

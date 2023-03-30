@@ -32,22 +32,22 @@ func main() {
 
     req := operations.CreateGameRequest{
         Headers: operations.CreateGameHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateGameRequestBody{
-            ClientToken: "nulla",
-            Description: "nihil",
-            GameName: "fuga",
+            ClientToken: "illum",
+            Description: "vel",
+            GameName: "error",
             Tags: map[string]string{
-                "eum": "iusto",
-                "ullam": "saepe",
-                "inventore": "sapiente",
+                "suscipit": "iure",
+                "magnam": "debitis",
+                "ipsa": "delectus",
             },
         },
     }

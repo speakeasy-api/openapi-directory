@@ -34,9 +34,9 @@ func main() {
             Raw: false,
         },
         Headers: operations.ActivitiesAddHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "deserunt",
-            XApideckServiceID: "porro",
+            XApideckAppID: "corrupti",
+            XApideckConsumerID: "provident",
+            XApideckServiceID: "distinctio",
         },
         Request: shared.ActivityInput{
             AccountID: "12345",
@@ -103,9 +103,9 @@ func main() {
                     ID: "2389328923893298",
                     Name: "employee_level",
                     Value: []string{
-                        "nulla",
-                        "nihil",
-                        "fuga",
+                        "illum",
+                        "vel",
+                        "error",
                     },
                 },
                 shared.CustomField{

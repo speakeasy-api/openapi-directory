@@ -21,52 +21,57 @@ func main() {
 
     req := operations.SendCommandRequest{
         Headers: operations.SendCommandHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "QLDBSession.SendCommand",
         },
         Request: shared.SendCommandRequest{
             AbortTransaction: map[string]interface{}{
-                "fuga": "facilis",
-                "eum": "iusto",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
             CommitTransaction: &shared.CommitTransactionRequest{
-                CommitDigest: "ullam",
-                TransactionID: "saepe",
+                CommitDigest: "delectus",
+                TransactionID: "tempora",
             },
             EndSession: map[string]interface{}{
-                "sapiente": "enim",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
             },
             ExecuteStatement: &shared.ExecuteStatementRequest{
                 Parameters: []shared.ValueHolder{
                     shared.ValueHolder{
-                        IonBinary: "voluptatum",
-                        IonText: "autem",
+                        IonBinary: "excepturi",
+                        IonText: "nisi",
                     },
                     shared.ValueHolder{
-                        IonBinary: "vel",
-                        IonText: "non",
+                        IonBinary: "recusandae",
+                        IonText: "temporibus",
                     },
                 },
-                Statement: "deleniti",
-                TransactionID: "similique",
+                Statement: "ab",
+                TransactionID: "quis",
             },
             FetchPage: &shared.FetchPageRequest{
-                NextPageToken: "reprehenderit",
-                TransactionID: "molestiae",
+                NextPageToken: "veritatis",
+                TransactionID: "deserunt",
             },
-            SessionToken: "quo",
+            SessionToken: "perferendis",
             StartSession: &shared.StartSessionRequest{
-                LedgerName: "quasi",
+                LedgerName: "ipsam",
             },
             StartTransaction: map[string]interface{}{
-                "dicta": "est",
-                "voluptatem": "consequatur",
+                "sapiente": "quo",
+                "odit": "at",
+                "at": "maiores",
+                "molestiae": "quod",
             },
         },
     }

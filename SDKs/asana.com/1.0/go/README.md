@@ -33,22 +33,22 @@ func main() {
     req := operations.CreateAttachmentForObjectRequest{
         QueryParams: operations.CreateAttachmentForObjectQueryParams{
             OptFields: []string{
-                "deserunt",
-                "porro",
-                "nulla",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
             OptPretty: false,
         },
         Request: shared.AttachmentRequest{
             ConnectToApp: false,
             File: &shared.AttachmentRequestFile{
-                Content: []byte("id"),
-                File: "vero",
+                Content: []byte("unde"),
+                File: "nulla",
             },
-            Name: "perspiciatis",
-            Parent: "nulla",
+            Name: "corrupti",
+            Parent: "illum",
             ResourceSubtype: "external",
-            URL: "nihil",
+            URL: "vel",
         },
     }
 

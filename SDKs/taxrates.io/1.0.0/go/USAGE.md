@@ -18,9 +18,9 @@ func main() {
             CountryCode: "US",
             Date: "2020-09-02",
             Domain: "api.taxrates.io",
-            Filter: "unde",
+            Filter: "corrupti",
             ProductCodes: "C010",
-            Province: "deserunt",
+            Province: "provident",
             Zip: "71642",
         },
     }

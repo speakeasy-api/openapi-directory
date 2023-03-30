@@ -22,13 +22,13 @@ func main() {
 
     req := operations.RequestAccessTokenRequest{
         PathParams: operations.RequestAccessTokenPathParams{
-            KeyName: "unde",
+            KeyName: "corrupti",
         },
         QueryParams: operations.RequestAccessTokenQueryParams{
             Format: "msgpack",
         },
         Headers: operations.RequestAccessTokenHeaders{
-            XAblyVersion: "porro",
+            XAblyVersion: "distinctio",
         },
         Request: &operations.RequestAccessTokenRequestBody{},
     }

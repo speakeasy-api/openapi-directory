@@ -23,58 +23,58 @@ func main() {
             },
         },
         PathParams: operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.GoogleCloudRecommendationengineV1beta1CatalogItem{
             CategoryHierarchies: []shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                 shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                     Categories: []string{
-                        "ullam",
-                        "saepe",
+                        "magnam",
+                        "debitis",
                     },
                 },
                 shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy{
                     Categories: []string{
-                        "sapiente",
+                        "delectus",
                     },
                 },
             },
-            Description: "enim",
-            ID: "eum",
+            Description: "tempora",
+            ID: "suscipit",
             ItemAttributes: &shared.GoogleCloudRecommendationengineV1beta1FeatureMap{
                 CategoricalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
-                    "autem": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                    "minus": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
                         Value: []string{
-                            "non",
-                            "deleniti",
-                            "similique",
-                            "reprehenderit",
+                            "voluptatum",
+                            "iusto",
+                            "excepturi",
+                            "nisi",
                         },
                     },
-                    "molestiae": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
+                    "recusandae": shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList{
                         Value: []string{
-                            "quasi",
-                            "laboriosam",
-                            "dicta",
-                            "est",
+                            "ab",
+                            "quis",
+                            "veritatis",
+                            "deserunt",
                         },
                     },
                 },
                 NumericalFeatures: map[string]shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
-                    "consequatur": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
+                    "ipsam": shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList{
                         Value: []float32{
                             9571.56,
                             7781.57,
@@ -84,18 +84,18 @@ func main() {
                     },
                 },
             },
-            ItemGroupID: "accusamus",
-            LanguageCode: "reiciendis",
+            ItemGroupID: "at",
+            LanguageCode: "maiores",
             ProductMetadata: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItem{
-                AvailableQuantity: "rem",
-                CanonicalProductURI: "quibusdam",
+                AvailableQuantity: "molestiae",
+                CanonicalProductURI: "quod",
                 Costs: map[string]float32{
-                    "praesentium": 5204.78,
-                    "dolor": 6788.8,
-                    "sed": 7206.33,
-                    "rerum": 5820.2,
+                    "esse": 5204.78,
+                    "porro": 6788.8,
+                    "dicta": 7206.33,
+                    "officia": 5820.2,
                 },
-                CurrencyCode: "qui",
+                CurrencyCode: "fugit",
                 ExactPrice: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice{
                     DisplayPrice: 5373.73,
                     OriginalPrice: 9446.69,
@@ -103,36 +103,38 @@ func main() {
                 Images: []shared.GoogleCloudRecommendationengineV1beta1Image{
                     shared.GoogleCloudRecommendationengineV1beta1Image{
                         Height: 521848,
-                        URI: "http://harry.info",
-                        Width: 264555,
+                        URI: "http://immense-investor.biz",
+                        Width: 186332,
                     },
                     shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 186332,
-                        URI: "https://myles.info",
-                        Width: 216550,
+                        Height: 774234,
+                        URI: "https://jolly-cowboy.name",
+                        Width: 135218,
                     },
                     shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 568434,
-                        URI: "http://aiden.biz",
-                        Width: 617636,
+                        Height: 18789,
+                        URI: "http://perky-charset.name",
+                        Width: 222321,
                     },
                     shared.GoogleCloudRecommendationengineV1beta1Image{
-                        Height: 149675,
-                        URI: "https://dameon.name",
-                        Width: 386489,
+                        Height: 616934,
+                        URI: "http://wary-thistle.net",
+                        Width: 449950,
                     },
                 },
                 PriceRange: &shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange{
-                    Max: 9437.49,
-                    Min: 9025.99,
+                    Max: 3595.08,
+                    Min: 6130.64,
                 },
-                StockState: "PREORDER",
+                StockState: "OUT_OF_STOCK",
             },
             Tags: []string{
-                "ea",
-                "laborum",
+                "quidem",
+                "architecto",
+                "ipsa",
+                "reiciendis",
             },
-            Title: "District Interactions Developer",
+            Title: "Miss",
         },
     }
 

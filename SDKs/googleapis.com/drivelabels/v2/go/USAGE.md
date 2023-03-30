@@ -16,17 +16,17 @@ func main() {
     req := operations.DrivelabelsLabelsCreateRequest{
         QueryParams: operations.DrivelabelsLabelsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "deserunt",
+            AccessToken: "provident",
             Alt: "proto",
-            Callback: "nulla",
-            Fields: "id",
-            Key: "vero",
-            LanguageCode: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "quibusdam",
+            Fields: "unde",
+            Key: "nulla",
+            LanguageCode: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
             UseAdminAccess: false,
         },
         Request: &shared.GoogleAppsDriveLabelsV2LabelInput{
@@ -39,15 +39,15 @@ func main() {
                 CopyMode: "DO_NOT_COPY",
             },
             Creator: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                Person: "iusto",
+                Person: "iure",
             },
             Disabler: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                Person: "ullam",
+                Person: "magnam",
             },
             DisplayHints: &shared.GoogleAppsDriveLabelsV2LabelDisplayHints{
                 Disabled: false,
                 HiddenInSearch: false,
-                Priority: "saepe",
+                Priority: "debitis",
                 ShownInApply: false,
             },
             Fields: []shared.GoogleAppsDriveLabelsV2FieldInput{
@@ -58,7 +58,7 @@ func main() {
                         CanWrite: false,
                     },
                     Creator: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                        Person: "sapiente",
+                        Person: "delectus",
                     },
                     DateOptions: &shared.GoogleAppsDriveLabelsV2FieldDateOptionsInput{
                         DateFormatType: "DATE_FORMAT_UNSPECIFIED",
@@ -74,7 +74,7 @@ func main() {
                         },
                     },
                     Disabler: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                        Person: "similique",
+                        Person: "excepturi",
                     },
                     DisplayHints: &shared.GoogleAppsDriveLabelsV2FieldDisplayHints{
                         Disabled: false,
@@ -89,12 +89,12 @@ func main() {
                         },
                     },
                     Properties: &shared.GoogleAppsDriveLabelsV2FieldProperties{
-                        DisplayName: "reprehenderit",
-                        InsertBeforeField: "molestiae",
+                        DisplayName: "nisi",
+                        InsertBeforeField: "recusandae",
                         Required: false,
                     },
                     Publisher: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                        Person: "quo",
+                        Person: "temporibus",
                     },
                     SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2FieldSchemaCapabilities{
                         CanDelete: false,
@@ -111,10 +111,10 @@ func main() {
                                     CanSelect: false,
                                 },
                                 Creator: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                                    Person: "laboriosam",
+                                    Person: "quis",
                                 },
                                 Disabler: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                                    Person: "dicta",
+                                    Person: "veritatis",
                                 },
                                 DisplayHints: &shared.GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints{
                                     BadgeColors: &shared.GoogleAppsDriveLabelsV2BadgeColors{
@@ -137,7 +137,7 @@ func main() {
                                             Red: 7991.59,
                                         },
                                     },
-                                    BadgePriority: "et",
+                                    BadgePriority: "quod",
                                     DarkBadgeColors: &shared.GoogleAppsDriveLabelsV2BadgeColors{
                                         BackgroundColor: &shared.GoogleTypeColor{
                                             Alpha: 4614.79,
@@ -162,7 +162,7 @@ func main() {
                                     HiddenInSearch: false,
                                     ShownInApply: false,
                                 },
-                                ID: "occaecati",
+                                ID: "totam",
                                 Lifecycle: &shared.GoogleAppsDriveLabelsV2LifecycleInput{
                                     DisabledPolicy: &shared.GoogleAppsDriveLabelsV2LifecycleDisabledPolicy{
                                         HideInSearch: false,
@@ -177,14 +177,14 @@ func main() {
                                             Green: 4736,
                                             Red: 2645.55,
                                         },
-                                        PriorityOverride: "amet",
+                                        PriorityOverride: "qui",
                                     },
-                                    Description: "est",
-                                    DisplayName: "id",
-                                    InsertBeforeChoice: "blanditiis",
+                                    Description: "impedit",
+                                    DisplayName: "cum",
+                                    InsertBeforeChoice: "esse",
                                 },
                                 Publisher: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                                    Person: "numquam",
+                                    Person: "ipsum",
                                 },
                                 SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceSchemaCapabilities{
                                     CanDelete: false,
@@ -193,7 +193,7 @@ func main() {
                                     CanUpdate: false,
                                 },
                                 Updater: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                                    Person: "similique",
+                                    Person: "excepturi",
                                 },
                             },
                         },
@@ -202,7 +202,7 @@ func main() {
                         },
                     },
                     Updater: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                        Person: "sit",
+                        Person: "perferendis",
                     },
                     UserOptions: &shared.GoogleAppsDriveLabelsV2FieldUserOptions{
                         ListOptions: &shared.GoogleAppsDriveLabelsV2FieldListOptions{
@@ -212,7 +212,7 @@ func main() {
                 },
             },
             LabelType: "SHARED",
-            LearnMoreURI: "voluptatem",
+            LearnMoreURI: "sed",
             Lifecycle: &shared.GoogleAppsDriveLabelsV2LifecycleInput{
                 DisabledPolicy: &shared.GoogleAppsDriveLabelsV2LifecycleDisabledPolicy{
                     HideInSearch: false,
@@ -220,14 +220,14 @@ func main() {
                 },
             },
             Properties: &shared.GoogleAppsDriveLabelsV2LabelProperties{
-                Description: "laborum",
-                Title: "Dynamic Communications Coordinator",
+                Description: "iste",
+                Title: "Mrs.",
             },
             Publisher: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                Person: "earum",
+                Person: "natus",
             },
             RevisionCreator: &shared.GoogleAppsDriveLabelsV2UserInfo{
-                Person: "ut",
+                Person: "laboriosam",
             },
             SchemaCapabilities: &shared.GoogleAppsDriveLabelsV2LabelSchemaCapabilities{
                 CanDelete: false,

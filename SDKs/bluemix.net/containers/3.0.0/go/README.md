@@ -26,8 +26,8 @@ func main() {
 
     req := operations.GetContainersMessagesRequest{
         Headers: operations.GetContainersMessagesHeaders{
-            XAuthProjectID: "unde",
-            XAuthToken: "deserunt",
+            XAuthProjectID: "corrupti",
+            XAuthToken: "provident",
         },
     }
 

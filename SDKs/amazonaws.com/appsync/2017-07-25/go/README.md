@@ -32,19 +32,19 @@ func main() {
 
     req := operations.AssociateAPIRequest{
         PathParams: operations.AssociateAPIPathParams{
-            DomainName: "unde",
+            DomainName: "corrupti",
         },
         Headers: operations.AssociateAPIHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.AssociateAPIRequestBody{
-            APIID: "nihil",
+            APIID: "vel",
         },
     }
 

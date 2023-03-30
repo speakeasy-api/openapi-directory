@@ -21,13 +21,13 @@ func main() {
 
     req := operations.CreateConnectorRequest{
         Headers: operations.CreateConnectorHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateConnectorRequestBody{
             Capacity: operations.CreateConnectorRequestBodyCapacity{
@@ -48,27 +48,27 @@ func main() {
                 },
             },
             ConnectorConfiguration: map[string]string{
-                "inventore": "sapiente",
-                "enim": "eum",
-                "voluptatum": "autem",
-                "vel": "non",
+                "ipsa": "delectus",
+                "tempora": "suscipit",
+                "molestiae": "minus",
+                "placeat": "voluptatum",
             },
-            ConnectorDescription: "deleniti",
-            ConnectorName: "similique",
+            ConnectorDescription: "iusto",
+            ConnectorName: "excepturi",
             KafkaCluster: operations.CreateConnectorRequestBodyKafkaCluster{
                 ApacheKafkaCluster: &shared.ApacheKafkaCluster{
-                    BootstrapServers: "reprehenderit",
+                    BootstrapServers: "nisi",
                     Vpc: shared.Vpc{
                         SecurityGroups: []string{
-                            "quo",
-                            "quasi",
-                            "laboriosam",
-                            "dicta",
+                            "temporibus",
+                            "ab",
+                            "quis",
+                            "veritatis",
                         },
                         Subnets: []string{
-                            "voluptatem",
-                            "consequatur",
-                            "fugiat",
+                            "perferendis",
+                            "ipsam",
+                            "repellendus",
                         },
                     },
                 },
@@ -79,54 +79,54 @@ func main() {
             KafkaClusterEncryptionInTransit: operations.CreateConnectorRequestBodyKafkaClusterEncryptionInTransit{
                 EncryptionType: "TLS",
             },
-            KafkaConnectVersion: "eos",
+            KafkaConnectVersion: "odit",
             LogDelivery: &operations.CreateConnectorRequestBodyLogDelivery{
                 WorkerLogDelivery: &shared.WorkerLogDelivery{
                     CloudWatchLogs: &shared.CloudWatchLogsLogDelivery{
                         Enabled: false,
-                        LogGroup: "accusamus",
+                        LogGroup: "at",
                     },
                     Firehose: &shared.FirehoseLogDelivery{
-                        DeliveryStream: "accusamus",
+                        DeliveryStream: "at",
                         Enabled: false,
                     },
                     S3: &shared.S3LogDelivery{
-                        Bucket: "reiciendis",
+                        Bucket: "maiores",
                         Enabled: false,
-                        Prefix: "rem",
+                        Prefix: "molestiae",
                     },
                 },
             },
             Plugins: []shared.Plugin{
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "et",
+                        CustomPluginArn: "quod",
                         Revision: 461479,
                     },
                 },
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "occaecati",
+                        CustomPluginArn: "totam",
                         Revision: 780529,
                     },
                 },
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "soluta",
+                        CustomPluginArn: "dolorum",
                         Revision: 118274,
                     },
                 },
                 shared.Plugin{
                     CustomPlugin: shared.CustomPlugin{
-                        CustomPluginArn: "quisquam",
+                        CustomPluginArn: "nam",
                         Revision: 639921,
                     },
                 },
             },
-            ServiceExecutionRoleArn: "culpa",
+            ServiceExecutionRoleArn: "occaecati",
             WorkerConfiguration: &operations.CreateConnectorRequestBodyWorkerConfiguration{
                 Revision: 143353,
-                WorkerConfigurationArn: "sed",
+                WorkerConfigurationArn: "deleniti",
             },
         },
     }

@@ -23,21 +23,21 @@ func main() {
             },
         },
         PathParams: operations.AndroidpublisherApplicationsDeviceTierConfigsCreatePathParams{
-            PackageName: "unde",
+            PackageName: "corrupti",
         },
         QueryParams: operations.AndroidpublisherApplicationsDeviceTierConfigsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             AllowUnknownDevices: false,
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.DeviceTierConfigInput{
             DeviceGroups: []shared.DeviceGroup{
@@ -45,261 +45,261 @@ func main() {
                     DeviceSelectors: []shared.DeviceSelector{
                         shared.DeviceSelector{
                             DeviceRAM: &shared.DeviceRAM{
-                                MaxBytes: "ullam",
-                                MinBytes: "saepe",
+                                MaxBytes: "magnam",
+                                MinBytes: "debitis",
                             },
                             ExcludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "sapiente",
-                                    BuildDevice: "enim",
+                                    BuildBrand: "delectus",
+                                    BuildDevice: "tempora",
                                 },
                             },
                             ForbiddenSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "voluptatum",
+                                    Name: "molestiae",
                                 },
                                 shared.SystemFeature{
-                                    Name: "autem",
+                                    Name: "minus",
                                 },
                             },
                             IncludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "non",
-                                    BuildDevice: "deleniti",
+                                    BuildBrand: "voluptatum",
+                                    BuildDevice: "iusto",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "similique",
-                                    BuildDevice: "reprehenderit",
+                                    BuildBrand: "excepturi",
+                                    BuildDevice: "nisi",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "molestiae",
-                                    BuildDevice: "quo",
+                                    BuildBrand: "recusandae",
+                                    BuildDevice: "temporibus",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "quasi",
-                                    BuildDevice: "laboriosam",
+                                    BuildBrand: "ab",
+                                    BuildDevice: "quis",
                                 },
                             },
                             RequiredSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "est",
+                                    Name: "deserunt",
                                 },
                             },
                         },
                         shared.DeviceSelector{
                             DeviceRAM: &shared.DeviceRAM{
-                                MaxBytes: "voluptatem",
-                                MinBytes: "consequatur",
+                                MaxBytes: "perferendis",
+                                MinBytes: "ipsam",
                             },
                             ExcludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "a",
-                                    BuildDevice: "omnis",
+                                    BuildBrand: "sapiente",
+                                    BuildDevice: "quo",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "eos",
-                                    BuildDevice: "accusamus",
+                                    BuildBrand: "odit",
+                                    BuildDevice: "at",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "accusamus",
-                                    BuildDevice: "reiciendis",
+                                    BuildBrand: "at",
+                                    BuildDevice: "maiores",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "rem",
-                                    BuildDevice: "quibusdam",
+                                    BuildBrand: "molestiae",
+                                    BuildDevice: "quod",
                                 },
                             },
                             ForbiddenSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "praesentium",
+                                    Name: "esse",
                                 },
                                 shared.SystemFeature{
-                                    Name: "occaecati",
+                                    Name: "totam",
                                 },
                                 shared.SystemFeature{
-                                    Name: "dolor",
+                                    Name: "porro",
                                 },
                                 shared.SystemFeature{
-                                    Name: "soluta",
+                                    Name: "dolorum",
                                 },
                             },
                             IncludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "quisquam",
-                                    BuildDevice: "rerum",
+                                    BuildBrand: "nam",
+                                    BuildDevice: "officia",
                                 },
                             },
                             RequiredSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "qui",
+                                    Name: "fugit",
                                 },
                                 shared.SystemFeature{
-                                    Name: "sed",
+                                    Name: "deleniti",
                                 },
                                 shared.SystemFeature{
-                                    Name: "rerum",
+                                    Name: "hic",
                                 },
                             },
                         },
                     },
-                    Name: "possimus",
+                    Name: "optio",
                 },
                 shared.DeviceGroup{
                     DeviceSelectors: []shared.DeviceSelector{
                         shared.DeviceSelector{
                             DeviceRAM: &shared.DeviceRAM{
-                                MaxBytes: "odit",
-                                MinBytes: "esse",
+                                MaxBytes: "beatae",
+                                MinBytes: "commodi",
                             },
                             ExcludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "voluptatem",
-                                    BuildDevice: "amet",
+                                    BuildBrand: "modi",
+                                    BuildDevice: "qui",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "est",
-                                    BuildDevice: "id",
+                                    BuildBrand: "impedit",
+                                    BuildDevice: "cum",
                                 },
                             },
                             ForbiddenSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "numquam",
+                                    Name: "ipsum",
                                 },
                                 shared.SystemFeature{
-                                    Name: "similique",
+                                    Name: "excepturi",
                                 },
                             },
                             IncludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "sit",
-                                    BuildDevice: "quia",
+                                    BuildBrand: "perferendis",
+                                    BuildDevice: "ad",
                                 },
                             },
                             RequiredSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "voluptatem",
+                                    Name: "sed",
                                 },
                                 shared.SystemFeature{
-                                    Name: "laborum",
+                                    Name: "iste",
                                 },
                                 shared.SystemFeature{
-                                    Name: "modi",
+                                    Name: "dolor",
                                 },
                             },
                         },
                         shared.DeviceSelector{
                             DeviceRAM: &shared.DeviceRAM{
-                                MaxBytes: "et",
-                                MinBytes: "iure",
+                                MaxBytes: "natus",
+                                MinBytes: "laboriosam",
                             },
                             ExcludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "ut",
-                                    BuildDevice: "soluta",
+                                    BuildBrand: "saepe",
+                                    BuildDevice: "fuga",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "qui",
-                                    BuildDevice: "ea",
+                                    BuildBrand: "in",
+                                    BuildDevice: "corporis",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "iste",
+                                    BuildDevice: "iure",
+                                },
+                                shared.DeviceID{
+                                    BuildBrand: "saepe",
+                                    BuildDevice: "quidem",
+                                },
+                            },
+                            ForbiddenSystemFeatures: []shared.SystemFeature{
+                                shared.SystemFeature{
+                                    Name: "ipsa",
+                                },
+                            },
+                            IncludedDeviceIds: []shared.DeviceID{
+                                shared.DeviceID{
+                                    BuildBrand: "est",
+                                    BuildDevice: "mollitia",
                                 },
                                 shared.DeviceID{
                                     BuildBrand: "laborum",
-                                    BuildDevice: "iusto",
+                                    BuildDevice: "dolores",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "ut",
-                                    BuildDevice: "optio",
-                                },
-                            },
-                            ForbiddenSystemFeatures: []shared.SystemFeature{
-                                shared.SystemFeature{
-                                    Name: "inventore",
-                                },
-                            },
-                            IncludedDeviceIds: []shared.DeviceID{
-                                shared.DeviceID{
-                                    BuildBrand: "libero",
-                                    BuildDevice: "et",
+                                    BuildBrand: "dolorem",
+                                    BuildDevice: "corporis",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "libero",
-                                    BuildDevice: "ipsum",
-                                },
-                                shared.DeviceID{
-                                    BuildBrand: "non",
-                                    BuildDevice: "ea",
-                                },
-                                shared.DeviceID{
-                                    BuildBrand: "magni",
-                                    BuildDevice: "placeat",
+                                    BuildBrand: "explicabo",
+                                    BuildDevice: "nobis",
                                 },
                             },
                             RequiredSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "est",
+                                    Name: "omnis",
                                 },
                                 shared.SystemFeature{
-                                    Name: "commodi",
+                                    Name: "nemo",
                                 },
                             },
                         },
                         shared.DeviceSelector{
                             DeviceRAM: &shared.DeviceRAM{
-                                MaxBytes: "quia",
-                                MinBytes: "similique",
+                                MaxBytes: "minima",
+                                MinBytes: "excepturi",
                             },
                             ExcludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "odio",
-                                    BuildDevice: "harum",
+                                    BuildBrand: "iure",
+                                    BuildDevice: "culpa",
                                 },
                             },
                             ForbiddenSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "a",
+                                    Name: "sapiente",
                                 },
                                 shared.SystemFeature{
-                                    Name: "aut",
+                                    Name: "architecto",
                                 },
                                 shared.SystemFeature{
-                                    Name: "et",
+                                    Name: "mollitia",
                                 },
                                 shared.SystemFeature{
-                                    Name: "non",
+                                    Name: "dolorem",
                                 },
                             },
                             IncludedDeviceIds: []shared.DeviceID{
                                 shared.DeviceID{
-                                    BuildBrand: "neque",
-                                    BuildDevice: "asperiores",
+                                    BuildBrand: "consequuntur",
+                                    BuildDevice: "repellat",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "et",
-                                    BuildDevice: "culpa",
+                                    BuildBrand: "mollitia",
+                                    BuildDevice: "occaecati",
                                 },
                                 shared.DeviceID{
-                                    BuildBrand: "aliquam",
-                                    BuildDevice: "esse",
+                                    BuildBrand: "numquam",
+                                    BuildDevice: "commodi",
                                 },
                             },
                             RequiredSystemFeatures: []shared.SystemFeature{
                                 shared.SystemFeature{
-                                    Name: "voluptatum",
+                                    Name: "molestiae",
                                 },
                                 shared.SystemFeature{
-                                    Name: "et",
+                                    Name: "velit",
                                 },
                             },
                         },
                     },
-                    Name: "fuga",
+                    Name: "error",
                 },
             },
             DeviceTierSet: &shared.DeviceTierSet{
                 DeviceTiers: []shared.DeviceTier{
                     shared.DeviceTier{
                         DeviceGroupNames: []string{
-                            "aut",
-                            "cum",
+                            "vitae",
+                            "laborum",
                         },
                         Level: 656330,
                     },
@@ -308,18 +308,18 @@ func main() {
             UserCountrySets: []shared.UserCountrySet{
                 shared.UserCountrySet{
                     CountryCodes: []string{
-                        "omnis",
+                        "quo",
                     },
-                    Name: "adipisci",
+                    Name: "sequi",
                 },
                 shared.UserCountrySet{
                     CountryCodes: []string{
-                        "consequatur",
-                        "distinctio",
-                        "qui",
-                        "perferendis",
+                        "ipsam",
+                        "id",
+                        "possimus",
+                        "aut",
                     },
-                    Name: "aspernatur",
+                    Name: "quasi",
                 },
             },
         },

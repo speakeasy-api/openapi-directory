@@ -20,21 +20,21 @@ func main() {
             },
         },
         PathParams: operations.PredictJSONPathParams{
-            Deployment: "unde",
-            Namespace: "deserunt",
+            Deployment: "corrupti",
+            Namespace: "provident",
         },
         Request: shared.SeldonMessage{
-            BinData: "porro",
+            BinData: "distinctio",
             Data: &shared.DefaultData{
                 Names: []string{
-                    "id",
-                    "vero",
-                    "perspiciatis",
+                    "unde",
                     "nulla",
+                    "corrupti",
+                    "illum",
                 },
                 Ndarray: []interface{}{
-                    "fuga",
-                    "facilis",
+                    "error",
+                    "deserunt",
                 },
                 Tensor: &shared.Tensor{
                     Shape: []int{
@@ -72,10 +72,10 @@ func main() {
                         368241,
                     },
                     Int64Val: []string{
-                        "a",
-                        "omnis",
-                        "eos",
-                        "accusamus",
+                        "sapiente",
+                        "quo",
+                        "odit",
+                        "at",
                     },
                     IntVal: []int{
                         978619,
@@ -85,18 +85,18 @@ func main() {
                     },
                     ResourceHandleVal: []shared.TensorflowResourceHandleProto{
                         shared.TensorflowResourceHandleProto{
-                            Container: "occaecati",
-                            Device: "dolor",
-                            HashCode: "soluta",
-                            MaybeTypeName: "sed",
-                            Name: "quisquam",
+                            Container: "totam",
+                            Device: "porro",
+                            HashCode: "dolorum",
+                            MaybeTypeName: "dicta",
+                            Name: "nam",
                         },
                         shared.TensorflowResourceHandleProto{
-                            Container: "rerum",
-                            Device: "culpa",
-                            HashCode: "qui",
-                            MaybeTypeName: "sed",
-                            Name: "rerum",
+                            Container: "officia",
+                            Device: "occaecati",
+                            HashCode: "fugit",
+                            MaybeTypeName: "deleniti",
+                            Name: "hic",
                         },
                     },
                     ScomplexVal: []float32{
@@ -106,19 +106,19 @@ func main() {
                         4736,
                     },
                     StringVal: []string{
-                        "amet",
-                        "est",
+                        "qui",
+                        "impedit",
                     },
-                    TensorContent: "id",
+                    TensorContent: "cum",
                     TensorShape: &shared.TensorflowTensorShapeProto{
                         Dim: []shared.TensorShapeProtoDim{
                             shared.TensorShapeProtoDim{
-                                Name: "numquam",
-                                Size: "similique",
+                                Name: "ipsum",
+                                Size: "excepturi",
                             },
                             shared.TensorShapeProtoDim{
-                                Name: "dolores",
-                                Size: "sit",
+                                Name: "aspernatur",
+                                Size: "perferendis",
                             },
                         },
                         UnknownRank: false,
@@ -128,47 +128,47 @@ func main() {
                         149675,
                     },
                     Uint64Val: []string{
-                        "modi",
-                        "et",
-                        "iure",
+                        "dolor",
+                        "natus",
+                        "laboriosam",
                     },
                     VariantVal: []shared.TensorflowVariantTensorDataProto{
                         shared.TensorflowVariantTensorDataProto{
-                            Metadata: "ut",
+                            Metadata: "saepe",
                             Tensors: []shared.TensorflowTensorProto{
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
                             },
-                            TypeName: "qui",
+                            TypeName: "in",
                         },
                         shared.TensorflowVariantTensorDataProto{
-                            Metadata: "ea",
+                            Metadata: "corporis",
                             Tensors: []shared.TensorflowTensorProto{
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
                             },
-                            TypeName: "iusto",
+                            TypeName: "iure",
                         },
                         shared.TensorflowVariantTensorDataProto{
-                            Metadata: "ut",
+                            Metadata: "saepe",
                             Tensors: []shared.TensorflowTensorProto{
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
                             },
-                            TypeName: "aspernatur",
+                            TypeName: "architecto",
                         },
                         shared.TensorflowVariantTensorDataProto{
-                            Metadata: "inventore",
+                            Metadata: "ipsa",
                             Tensors: []shared.TensorflowTensorProto{
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
                                 shared.TensorflowTensorProto{},
                             },
-                            TypeName: "libero",
+                            TypeName: "est",
                         },
                     },
                     VersionNumber: 653140,
@@ -177,44 +177,44 @@ func main() {
             Meta: &shared.Meta{
                 Metrics: []shared.Metric{
                     shared.Metric{
-                        Key: "ipsum",
+                        Key: "dolores",
                         Type: "COUNTER",
                         Value: 3581.52,
                     },
                     shared.Metric{
-                        Key: "magni",
+                        Key: "explicabo",
                         Type: "TIMER",
                         Value: 3154.28,
                     },
                     shared.Metric{
-                        Key: "est",
+                        Key: "omnis",
                         Type: "GAUGE",
                         Value: 3250.47,
                     },
                 },
-                Puid: "similique",
+                Puid: "excepturi",
                 RequestPath: map[string]string{
-                    "odio": "harum",
+                    "iure": "culpa",
                 },
                 Routing: map[string]int{
-                    "a": 102044,
-                    "et": 208876,
-                    "quidem": 161309,
-                    "asperiores": 653108,
+                    "sapiente": 102044,
+                    "mollitia": 208876,
+                    "culpa": 161309,
+                    "repellat": 653108,
                 },
                 Tags: map[string]interface{}{
-                    "aliquam": "esse",
-                    "totam": "voluptatum",
-                    "et": "fuga",
+                    "numquam": "commodi",
+                    "quam": "molestiae",
+                    "velit": "error",
                 },
             },
             Status: &shared.Status{
                 Code: 158969,
-                Info: "laboriosam",
-                Reason: "aut",
+                Info: "quis",
+                Reason: "vitae",
                 Status: "FAILURE",
             },
-            StrData: "expedita",
+            StrData: "animi",
         },
     }
 

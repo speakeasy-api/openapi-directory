@@ -32,17 +32,17 @@ func main() {
 
     req := operations.AcceptHandshakeRequest{
         Headers: operations.AcceptHandshakeHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSOrganizationsV20161128.AcceptHandshake",
         },
         Request: shared.AcceptHandshakeRequest{
-            HandshakeID: "nihil",
+            HandshakeID: "illum",
         },
     }
 

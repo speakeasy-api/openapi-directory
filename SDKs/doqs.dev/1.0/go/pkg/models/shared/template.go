@@ -13,10 +13,10 @@ import (
 type TemplateFieldsType string
 
 const (
-	TemplateFieldsTypeText  TemplateFieldsType = "text"
 	TemplateFieldsTypeCheck TemplateFieldsType = "check"
 	TemplateFieldsTypeDate  TemplateFieldsType = "date"
 	TemplateFieldsTypeImage TemplateFieldsType = "image"
+	TemplateFieldsTypeText  TemplateFieldsType = "text"
 )
 
 type TemplateFields struct {
@@ -26,17 +26,6 @@ type TemplateFields struct {
 	CheckBoxField *CheckBoxField
 
 	Type TemplateFieldsType
-}
-
-func CreateTemplateFieldsText(text TextField) TemplateFields {
-	typ := TemplateFieldsTypeText
-	typStr := TextFieldTypeEnum(typ)
-	text.Type = typStr
-
-	return TemplateFields{
-		TextField: &text,
-		Type:      typ,
-	}
 }
 
 func CreateTemplateFieldsCheck(check CheckBoxField) TemplateFields {
@@ -72,6 +61,17 @@ func CreateTemplateFieldsImage(image ImageField) TemplateFields {
 	}
 }
 
+func CreateTemplateFieldsText(text TextField) TemplateFields {
+	typ := TemplateFieldsTypeText
+	typStr := TextFieldTypeEnum(typ)
+	text.Type = typStr
+
+	return TemplateFields{
+		TextField: &text,
+		Type:      typ,
+	}
+}
+
 func (u *TemplateFields) UnmarshalJSON(data []byte) error {
 	var d *json.Decoder
 
@@ -85,17 +85,6 @@ func (u *TemplateFields) UnmarshalJSON(data []byte) error {
 	}
 
 	switch dis.Type {
-	case "text":
-		d = json.NewDecoder(bytes.NewReader(data))
-		d.DisallowUnknownFields()
-		textField := new(TextField)
-		if err := d.Decode(&textField); err != nil {
-			return fmt.Errorf("could not unmarshal expected type: %w", err)
-		}
-
-		u.TextField = textField
-		u.Type = TemplateFieldsTypeText
-		return nil
 	case "check":
 		d = json.NewDecoder(bytes.NewReader(data))
 		d.DisallowUnknownFields()
@@ -128,6 +117,17 @@ func (u *TemplateFields) UnmarshalJSON(data []byte) error {
 
 		u.ImageField = imageField
 		u.Type = TemplateFieldsTypeImage
+		return nil
+	case "text":
+		d = json.NewDecoder(bytes.NewReader(data))
+		d.DisallowUnknownFields()
+		textField := new(TextField)
+		if err := d.Decode(&textField); err != nil {
+			return fmt.Errorf("could not unmarshal expected type: %w", err)
+		}
+
+		u.TextField = textField
+		u.Type = TemplateFieldsTypeText
 		return nil
 	}
 

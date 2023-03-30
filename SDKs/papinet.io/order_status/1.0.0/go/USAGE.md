@@ -15,8 +15,8 @@ func main() {
 
     req := operations.GetOrdersRequest{
         QueryParams: operations.GetOrdersQueryParams{
-            Limit: "unde",
-            Offset: "deserunt",
+            Limit: "corrupti",
+            Offset: "provident",
             OrderStatus: "Completed",
         },
     }

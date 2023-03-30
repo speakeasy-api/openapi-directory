@@ -22,7 +22,7 @@ func main() {
             },
             Format: "xml",
             IP: "8.8.8.8",
-            Key: "vero",
+            Key: "nulla",
             Lang: "ja",
             Package: "WS22",
         },

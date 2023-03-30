@@ -26,26 +26,26 @@ func main() {
 
     req := operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest{
         PathParams: operations.MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.PlaceActionLinkInput{
             IsPreferred: false,
-            Name: "eum",
+            Name: "suscipit",
             PlaceActionType: "DINING_RESERVATION",
-            URI: "http://sim.com",
+            URI: "http://unique-baboon.org",
         },
     }
 

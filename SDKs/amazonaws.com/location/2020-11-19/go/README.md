@@ -32,19 +32,19 @@ func main() {
 
     req := operations.AssociateTrackerConsumerRequest{
         PathParams: operations.AssociateTrackerConsumerPathParams{
-            TrackerName: "unde",
+            TrackerName: "corrupti",
         },
         Headers: operations.AssociateTrackerConsumerHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.AssociateTrackerConsumerRequestBody{
-            ConsumerArn: "nihil",
+            ConsumerArn: "vel",
         },
     }
 

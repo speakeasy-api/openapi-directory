@@ -15,7 +15,7 @@ func main() {
 
     req := operations.CheckSpellingRussianRequest{
         Headers: operations.CheckSpellingRussianHeaders{
-            XRapidAPIKey: "unde",
+            XRapidAPIKey: "corrupti",
         },
         Request: &operations.CheckSpellingRussianRequestBody{
             LangCode: "ru",

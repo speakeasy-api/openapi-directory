@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetV1Request{
         QueryParams: operations.GetV1QueryParams{
-            APIKey: "unde",
+            APIKey: "corrupti",
             Fields: "country,city,timezone",
             IPAddress: "195.154.25.40",
         },

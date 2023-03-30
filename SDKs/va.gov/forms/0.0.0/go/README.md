@@ -31,7 +31,7 @@ func main() {
             },
         },
         PathParams: operations.FindFormByFormNamePathParams{
-            FormName: "unde",
+            FormName: "corrupti",
         },
     }
 

@@ -16,26 +16,26 @@ func main() {
     req := operations.AddUserToAccountRequest{
         Request: operations.AddUserToAccountRequestBody{
             Account: operations.AddUserToAccountRequestBodyAccount{
-                AccountID: "unde",
-                Domain: "deserunt",
+                AccountID: "corrupti",
+                Domain: "provident",
             },
             Users: []AddUserToAccountRequestBodyUsers{
                 operations.AddUserToAccountRequestBodyUsers{
                     Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
-                        Email: "Leatha_Stiedemann@hotmail.com",
-                        UserID: "nihil",
+                        Email: "Leda_Stiedemann@hotmail.com",
+                        UserID: "vel",
                     },
                 },
                 operations.AddUserToAccountRequestBodyUsers{
                     Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
                         Email: "Luna.Hoppe@yahoo.com",
-                        UserID: "saepe",
+                        UserID: "debitis",
                     },
                 },
                 operations.AddUserToAccountRequestBodyUsers{
                     Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
                         Email: "Vincenzo.Goldner@gmail.com",
-                        UserID: "autem",
+                        UserID: "minus",
                     },
                 },
             },

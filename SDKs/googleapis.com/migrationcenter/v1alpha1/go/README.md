@@ -34,32 +34,32 @@ func main() {
             },
         },
         PathParams: operations.MigrationcenterProjectsLocationsAssetsAggregateValuesPathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.MigrationcenterProjectsLocationsAssetsAggregateValuesQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.AggregateAssetsValuesRequest{
             Aggregations: []shared.Aggregation{
                 shared.Aggregation{
                     Count: map[string]interface{}{
-                        "ullam": "saepe",
-                        "inventore": "sapiente",
+                        "magnam": "debitis",
+                        "ipsa": "delectus",
                     },
-                    Field: "enim",
+                    Field: "tempora",
                     Frequency: map[string]interface{}{
-                        "voluptatum": "autem",
-                        "vel": "non",
+                        "molestiae": "minus",
+                        "placeat": "voluptatum",
                     },
                     Histogram: &shared.AggregationHistogram{
                         LowerBounds: []float64{
@@ -68,24 +68,24 @@ func main() {
                         },
                     },
                     Sum: map[string]interface{}{
-                        "quo": "quasi",
-                        "laboriosam": "dicta",
-                        "est": "voluptatem",
-                        "consequatur": "fugiat",
+                        "temporibus": "ab",
+                        "quis": "veritatis",
+                        "deserunt": "perferendis",
+                        "ipsam": "repellendus",
                     },
                 },
                 shared.Aggregation{
                     Count: map[string]interface{}{
-                        "omnis": "eos",
-                        "accusamus": "accusamus",
-                        "reiciendis": "rem",
-                        "quibusdam": "et",
+                        "quo": "odit",
+                        "at": "at",
+                        "maiores": "molestiae",
+                        "quod": "quod",
                     },
-                    Field: "praesentium",
+                    Field: "esse",
                     Frequency: map[string]interface{}{
-                        "dolor": "soluta",
-                        "sed": "quisquam",
-                        "rerum": "culpa",
+                        "porro": "dolorum",
+                        "dicta": "nam",
+                        "officia": "occaecati",
                     },
                     Histogram: &shared.AggregationHistogram{
                         LowerBounds: []float64{
@@ -93,14 +93,14 @@ func main() {
                         },
                     },
                     Sum: map[string]interface{}{
-                        "possimus": "occaecati",
-                        "odit": "esse",
-                        "rem": "voluptatem",
-                        "amet": "est",
+                        "optio": "totam",
+                        "beatae": "commodi",
+                        "molestiae": "modi",
+                        "qui": "impedit",
                     },
                 },
             },
-            Filter: "id",
+            Filter: "cum",
         },
     }
 

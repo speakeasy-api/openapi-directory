@@ -31,8 +31,8 @@ func main() {
             },
         },
         QueryParams: operations.GetRateLimitsQueryParams{
-            APIContext: "unde",
-            APIName: "deserunt",
+            APIContext: "corrupti",
+            APIName: "provident",
         },
     }
 

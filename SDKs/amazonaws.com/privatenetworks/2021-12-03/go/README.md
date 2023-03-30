@@ -32,16 +32,16 @@ func main() {
 
     req := operations.AcknowledgeOrderReceiptRequest{
         Headers: operations.AcknowledgeOrderReceiptHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.AcknowledgeOrderReceiptRequestBody{
-            OrderArn: "nulla",
+            OrderArn: "illum",
         },
     }
 

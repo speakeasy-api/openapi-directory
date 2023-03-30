@@ -20,16 +20,16 @@ func main() {
             },
         },
         Request: shared.BehavioralEventHTTPCompletionRequest{
-            Email: "Larry_Rau85@yahoo.com",
-            EventName: "perspiciatis",
-            ObjectID: "nulla",
-            OccurredAt: "2022-10-26T09:30:20.953Z",
+            Email: "Larue_Rau85@yahoo.com",
+            EventName: "corrupti",
+            ObjectID: "illum",
+            OccurredAt: "2022-10-26T11:26:46.128Z",
             Properties: map[string]string{
-                "facilis": "eum",
-                "iusto": "ullam",
-                "saepe": "inventore",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
-            Utk: "sapiente",
+            Utk: "delectus",
         },
     }
 

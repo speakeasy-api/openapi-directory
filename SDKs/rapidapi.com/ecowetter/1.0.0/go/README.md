@@ -26,9 +26,9 @@ func main() {
 
     req := operations.GetPublicHistoryRequest{
         QueryParams: operations.GetPublicHistoryQueryParams{
-            From: "unde",
-            Q: "deserunt",
-            To: "porro",
+            From: "corrupti",
+            Q: "provident",
+            To: "distinctio",
         },
     }
 

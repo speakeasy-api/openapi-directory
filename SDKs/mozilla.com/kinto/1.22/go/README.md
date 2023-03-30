@@ -26,9 +26,9 @@ func main() {
 
     req := operations.CreateAttachmentRequest{
         PathParams: operations.CreateAttachmentPathParams{
-            BucketID: "unde",
-            CollectionID: "deserunt",
-            ID: "porro",
+            BucketID: "corrupti",
+            CollectionID: "provident",
+            ID: "distinctio",
         },
     }
 

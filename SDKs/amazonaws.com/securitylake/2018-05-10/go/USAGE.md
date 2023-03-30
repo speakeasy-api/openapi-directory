@@ -21,82 +21,82 @@ func main() {
 
     req := operations.CreateAwsLogSourceRequest{
         Headers: operations.CreateAwsLogSourceHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateAwsLogSourceRequestBody{
             EnableAllDimensions: map[string]map[string][]string{
-                "nihil": map[string][]string{
-                    "facilis": []string{
-                        "iusto",
-                        "ullam",
+                "vel": map[string][]string{
+                    "deserunt": []string{
+                        "iure",
+                        "magnam",
                     },
-                    "saepe": []string{
+                    "debitis": []string{
+                        "delectus",
+                    },
+                    "tempora": []string{
+                        "molestiae",
+                        "minus",
+                    },
+                },
+                "placeat": map[string][]string{
+                    "iusto": []string{
+                        "nisi",
+                        "recusandae",
+                        "temporibus",
+                    },
+                    "ab": []string{
+                        "veritatis",
+                        "deserunt",
+                    },
+                    "perferendis": []string{
+                        "repellendus",
                         "sapiente",
                     },
-                    "enim": []string{
-                        "voluptatum",
-                        "autem",
-                    },
                 },
-                "vel": map[string][]string{
-                    "deleniti": []string{
-                        "reprehenderit",
+                "quo": map[string][]string{
+                    "at": []string{
+                        "maiores",
                         "molestiae",
-                        "quo",
+                        "quod",
+                        "quod",
                     },
-                    "quasi": []string{
+                },
+                "esse": map[string][]string{
+                    "porro": []string{
                         "dicta",
-                        "est",
+                        "nam",
+                        "officia",
                     },
-                    "voluptatem": []string{
-                        "fugiat",
-                        "a",
+                    "occaecati": []string{
+                        "deleniti",
                     },
-                },
-                "omnis": map[string][]string{
-                    "accusamus": []string{
-                        "reiciendis",
-                        "rem",
-                        "quibusdam",
-                        "et",
-                    },
-                },
-                "praesentium": map[string][]string{
-                    "dolor": []string{
-                        "sed",
-                        "quisquam",
-                        "rerum",
-                    },
-                    "culpa": []string{
-                        "sed",
-                    },
-                    "rerum": []string{
-                        "occaecati",
-                        "odit",
-                        "esse",
-                        "rem",
+                    "hic": []string{
+                        "totam",
+                        "beatae",
+                        "commodi",
+                        "molestiae",
                     },
                 },
             },
             EnableSingleDimension: []string{
-                "amet",
-                "est",
+                "qui",
+                "impedit",
             },
             EnableTwoDimensions: map[string][]string{
-                "blanditiis": []string{
-                    "similique",
+                "esse": []string{
+                    "excepturi",
                 },
-                "dolores": []string{
-                    "quia",
+                "aspernatur": []string{
+                    "ad",
                 },
-                "et": []string{
-                    "laborum",
+                "natus": []string{
+                    "iste",
                 },
             },
             InputOrder: []shared.DimensionEnum{

@@ -15,11 +15,11 @@ func main() {
 
     req := operations.GetRequest{
         PathParams: operations.GetPathParams{
-            OrderID: "unde",
+            OrderID: "corrupti",
         },
         Headers: operations.GetHeaders{
-            XMarketID: "deserunt",
-            XShopperID: "porro",
+            XMarketID: "provident",
+            XShopperID: "distinctio",
         },
     }
 

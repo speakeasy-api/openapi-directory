@@ -15,17 +15,17 @@ func main() {
 
     req := operations.DiscoveryApisGetRestRequest{
         PathParams: operations.DiscoveryApisGetRestPathParams{
-            API: "unde",
-            Version: "deserunt",
+            API: "corrupti",
+            Version: "provident",
         },
         QueryParams: operations.DiscoveryApisGetRestQueryParams{
             Alt: "json",
-            Fields: "nulla",
-            Key: "id",
-            OauthToken: "vero",
+            Fields: "distinctio",
+            Key: "quibusdam",
+            OauthToken: "unde",
             PrettyPrint: false,
-            QuotaUser: "perspiciatis",
-            UserIP: "nulla",
+            QuotaUser: "nulla",
+            UserIP: "corrupti",
         },
     }
 

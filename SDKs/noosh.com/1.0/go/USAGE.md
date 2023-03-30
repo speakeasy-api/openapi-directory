@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetBillingRecipientsRequest{
         PathParams: operations.GetBillingRecipientsPathParams{
-            WorkgroupID: "unde",
+            WorkgroupID: "corrupti",
         },
     }
 

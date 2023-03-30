@@ -36,16 +36,16 @@ func main() {
                 StartDate: "2021-01-01",
             },
             PassThrough: map[string]interface{}{
-                "deserunt": "porro",
-                "nulla": "id",
-                "vero": "perspiciatis",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
             },
             Raw: false,
         },
         Headers: operations.BalanceSheetOneHeaders{
-            XApideckAppID: "nulla",
-            XApideckConsumerID: "nihil",
-            XApideckServiceID: "fuga",
+            XApideckAppID: "illum",
+            XApideckConsumerID: "vel",
+            XApideckServiceID: "error",
         },
     }
 

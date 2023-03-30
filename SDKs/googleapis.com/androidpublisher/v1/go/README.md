@@ -34,18 +34,18 @@ func main() {
             },
         },
         PathParams: operations.AndroidpublisherPurchasesCancelPathParams{
-            PackageName: "unde",
-            SubscriptionID: "deserunt",
-            Token: "porro",
+            PackageName: "corrupti",
+            SubscriptionID: "provident",
+            Token: "distinctio",
         },
         QueryParams: operations.AndroidpublisherPurchasesCancelQueryParams{
             Alt: "json",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Fields: "quibusdam",
+            Key: "unde",
+            OauthToken: "nulla",
             PrettyPrint: false,
-            QuotaUser: "nulla",
-            UserIP: "nihil",
+            QuotaUser: "corrupti",
+            UserIP: "illum",
         },
     }
 

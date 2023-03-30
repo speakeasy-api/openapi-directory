@@ -15,10 +15,10 @@ func main() {
 
     req := operations.KeywordSearchRequest{
         QueryParams: operations.KeywordSearchQueryParams{
-            DomainCode: "unde",
-            Keyword: "deserunt",
+            DomainCode: "corrupti",
+            Keyword: "provident",
             NumberOfProducts: 715190,
-            SortBy: "nulla",
+            SortBy: "quibusdam",
         },
     }
 

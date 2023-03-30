@@ -33,15 +33,15 @@ func main() {
     req := operations.ClassifyImageRequest{
         PathParams: operations.ClassifyImagePathParams{
             ProjectID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-            PublishedName: "est",
+            PublishedName: "deserunt",
         },
         QueryParams: operations.ClassifyImageQueryParams{
-            Application: "voluptatem",
+            Application: "perferendis",
         },
         Request: operations.ClassifyImageRequestBody{
             ImageData: operations.ClassifyImageRequestBodyImageData{
-                Content: []byte("consequatur"),
-                ImageData: "fugiat",
+                Content: []byte("ipsam"),
+                ImageData: "repellendus",
             },
         },
     }

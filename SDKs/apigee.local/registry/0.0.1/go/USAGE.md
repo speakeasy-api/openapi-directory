@@ -15,28 +15,28 @@ func main() {
 
     req := operations.RegistryCreateAPIRequest{
         PathParams: operations.RegistryCreateAPIPathParams{
-            Location: "unde",
-            Project: "deserunt",
+            Location: "corrupti",
+            Project: "provident",
         },
         QueryParams: operations.RegistryCreateAPIQueryParams{
-            APIID: "porro",
+            APIID: "distinctio",
         },
         Request: shared.APIInput{
             Annotations: map[string]string{
-                "id": "vero",
-                "perspiciatis": "nulla",
-                "nihil": "fuga",
-                "facilis": "eum",
+                "unde": "nulla",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
             },
-            Availability: "iusto",
-            Description: "ullam",
-            DisplayName: "saepe",
+            Availability: "iure",
+            Description: "magnam",
+            DisplayName: "debitis",
             Labels: map[string]string{
-                "sapiente": "enim",
+                "delectus": "tempora",
             },
-            Name: "eum",
-            RecommendedDeployment: "voluptatum",
-            RecommendedVersion: "autem",
+            Name: "suscipit",
+            RecommendedDeployment: "molestiae",
+            RecommendedVersion: "minus",
         },
     }
 

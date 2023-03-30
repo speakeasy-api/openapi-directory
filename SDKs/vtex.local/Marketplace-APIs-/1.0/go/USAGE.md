@@ -24,15 +24,15 @@ func main() {
 
     req := operations.GetSuggestionRequest{
         PathParams: operations.GetSuggestionPathParams{
-            SellerID: "unde",
-            SellerSkuID: "deserunt",
+            SellerID: "corrupti",
+            SellerSkuID: "provident",
         },
         QueryParams: operations.GetSuggestionQueryParams{
-            AccountName: "porro",
+            AccountName: "distinctio",
         },
         Headers: operations.GetSuggestionHeaders{
-            Accept: "nulla",
-            ContentType: "id",
+            Accept: "quibusdam",
+            ContentType: "unde",
         },
     }
 

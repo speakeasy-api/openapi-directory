@@ -21,20 +21,20 @@ func main() {
 
     req := operations.DeleteScalingPolicyRequest{
         Headers: operations.DeleteScalingPolicyHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AnyScaleFrontendService.DeleteScalingPolicy",
         },
         Request: shared.DeleteScalingPolicyRequest{
-            PolicyName: "nihil",
-            ResourceID: "fuga",
+            PolicyName: "illum",
+            ResourceID: "vel",
             ScalableDimension: "comprehend:entity-recognizer-endpoint:DesiredInferenceUnits",
-            ServiceNamespace: "rds",
+            ServiceNamespace: "lambda",
         },
     }
 

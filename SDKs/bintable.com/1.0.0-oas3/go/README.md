@@ -26,7 +26,7 @@ func main() {
 
     req := operations.BalanceLookupRequest{
         QueryParams: operations.BalanceLookupQueryParams{
-            APIKey: "unde",
+            APIKey: "corrupti",
         },
     }
 

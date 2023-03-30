@@ -32,217 +32,217 @@ func main() {
 
     req := operations.CreateExperimentTemplateRequest{
         Headers: operations.CreateExperimentTemplateHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateExperimentTemplateRequestBody{
             Actions: map[string]shared.CreateExperimentTemplateActionInput{
-                "nihil": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "fuga",
-                    Description: "facilis",
+                "vel": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "error",
+                    Description: "deserunt",
                     Parameters: map[string]string{
-                        "iusto": "ullam",
-                        "saepe": "inventore",
+                        "iure": "magnam",
+                        "debitis": "ipsa",
                     },
                     StartAfter: []string{
-                        "enim",
-                        "eum",
-                        "voluptatum",
-                        "autem",
+                        "tempora",
+                        "suscipit",
+                        "molestiae",
+                        "minus",
                     },
                     Targets: map[string]string{
-                        "non": "deleniti",
-                        "similique": "reprehenderit",
-                        "molestiae": "quo",
-                        "quasi": "laboriosam",
+                        "voluptatum": "iusto",
+                        "excepturi": "nisi",
+                        "recusandae": "temporibus",
+                        "ab": "quis",
                     },
                 },
-                "dicta": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "est",
-                    Description: "voluptatem",
+                "veritatis": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "deserunt",
+                    Description: "perferendis",
                     Parameters: map[string]string{
-                        "fugiat": "a",
-                        "omnis": "eos",
+                        "repellendus": "sapiente",
+                        "quo": "odit",
                     },
                     StartAfter: []string{
-                        "accusamus",
-                        "reiciendis",
-                        "rem",
-                        "quibusdam",
+                        "at",
+                        "maiores",
+                        "molestiae",
+                        "quod",
                     },
                     Targets: map[string]string{
-                        "praesentium": "occaecati",
-                        "dolor": "soluta",
-                        "sed": "quisquam",
-                        "rerum": "culpa",
+                        "esse": "totam",
+                        "porro": "dolorum",
+                        "dicta": "nam",
+                        "officia": "occaecati",
                     },
                 },
-                "qui": shared.CreateExperimentTemplateActionInput{
+                "fugit": shared.CreateExperimentTemplateActionInput{
+                    ActionID: "deleniti",
+                    Description: "hic",
+                    Parameters: map[string]string{
+                        "totam": "beatae",
+                        "commodi": "molestiae",
+                        "modi": "qui",
+                        "impedit": "cum",
+                    },
+                    StartAfter: []string{
+                        "ipsum",
+                        "excepturi",
+                    },
+                    Targets: map[string]string{
+                        "perferendis": "ad",
+                    },
+                },
+                "natus": shared.CreateExperimentTemplateActionInput{
                     ActionID: "sed",
-                    Description: "rerum",
+                    Description: "iste",
                     Parameters: map[string]string{
-                        "occaecati": "odit",
-                        "esse": "rem",
-                        "voluptatem": "amet",
-                        "est": "id",
+                        "natus": "laboriosam",
                     },
                     StartAfter: []string{
-                        "numquam",
-                        "similique",
+                        "saepe",
+                        "fuga",
+                        "in",
+                        "corporis",
                     },
                     Targets: map[string]string{
-                        "sit": "quia",
-                    },
-                },
-                "et": shared.CreateExperimentTemplateActionInput{
-                    ActionID: "voluptatem",
-                    Description: "laborum",
-                    Parameters: map[string]string{
-                        "et": "iure",
-                    },
-                    StartAfter: []string{
-                        "ut",
-                        "soluta",
-                        "qui",
-                        "ea",
-                    },
-                    Targets: map[string]string{
-                        "iusto": "ut",
-                        "optio": "aspernatur",
-                        "inventore": "ut",
+                        "iure": "saepe",
+                        "quidem": "architecto",
+                        "ipsa": "reiciendis",
                     },
                 },
             },
-            ClientToken: "libero",
-            Description: "et",
+            ClientToken: "est",
+            Description: "mollitia",
             LogConfiguration: &operations.CreateExperimentTemplateRequestBodyLogConfiguration{
                 CloudWatchLogsConfiguration: &shared.ExperimentTemplateCloudWatchLogsLogConfigurationInput{
-                    LogGroupArn: "libero",
+                    LogGroupArn: "laborum",
                 },
                 LogSchemaVersion: 170909,
                 S3Configuration: &shared.ExperimentTemplateS3LogConfigurationInput{
-                    BucketName: "non",
-                    Prefix: "ea",
+                    BucketName: "dolorem",
+                    Prefix: "corporis",
                 },
             },
-            RoleArn: "magni",
+            RoleArn: "explicabo",
             StopConditions: []shared.CreateExperimentTemplateStopConditionInput{
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "ipsam",
-                    Value: "est",
+                    Source: "enim",
+                    Value: "omnis",
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "commodi",
-                    Value: "quia",
+                    Source: "nemo",
+                    Value: "minima",
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "similique",
-                    Value: "eaque",
+                    Source: "excepturi",
+                    Value: "accusantium",
                 },
                 shared.CreateExperimentTemplateStopConditionInput{
-                    Source: "odio",
-                    Value: "harum",
+                    Source: "iure",
+                    Value: "culpa",
                 },
             },
             Tags: map[string]string{
-                "a": "aut",
-                "et": "non",
-                "quidem": "neque",
-                "asperiores": "et",
+                "sapiente": "architecto",
+                "mollitia": "dolorem",
+                "culpa": "consequuntur",
+                "repellat": "mollitia",
             },
             Targets: map[string]shared.CreateExperimentTemplateTargetInput{
-                "aliquam": shared.CreateExperimentTemplateTargetInput{
+                "numquam": shared.CreateExperimentTemplateTargetInput{
                     Filters: []shared.ExperimentTemplateTargetInputFilter{
                         shared.ExperimentTemplateTargetInputFilter{
-                            Path: "totam",
+                            Path: "quam",
                             Values: []string{
-                                "et",
-                                "fuga",
-                            },
-                        },
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "nesciunt",
-                            Values: []string{
-                                "aut",
-                                "cum",
-                            },
-                        },
-                    },
-                    Parameters: map[string]string{
-                        "ipsam": "eos",
-                        "omnis": "adipisci",
-                        "hic": "consequatur",
-                    },
-                    ResourceArns: []string{
-                        "qui",
-                        "perferendis",
-                        "aspernatur",
-                    },
-                    ResourceTags: map[string]string{
-                        "quo": "tempore",
-                        "explicabo": "aut",
-                        "reiciendis": "debitis",
-                    },
-                    ResourceType: "totam",
-                    SelectionMode: "molestias",
-                },
-                "reiciendis": shared.CreateExperimentTemplateTargetInput{
-                    Filters: []shared.ExperimentTemplateTargetInputFilter{
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "id",
-                            Values: []string{
-                                "quod",
-                                "sit",
-                            },
-                        },
-                    },
-                    Parameters: map[string]string{
-                        "odio": "veniam",
-                    },
-                    ResourceArns: []string{
-                        "sed",
-                        "ea",
-                        "exercitationem",
-                        "deleniti",
-                    },
-                    ResourceTags: map[string]string{
-                        "est": "voluptatem",
-                    },
-                    ResourceType: "aut",
-                    SelectionMode: "esse",
-                },
-                "sint": shared.CreateExperimentTemplateTargetInput{
-                    Filters: []shared.ExperimentTemplateTargetInputFilter{
-                        shared.ExperimentTemplateTargetInputFilter{
-                            Path: "numquam",
-                            Values: []string{
+                                "velit",
                                 "error",
-                                "similique",
-                                "et",
+                            },
+                        },
+                        shared.ExperimentTemplateTargetInputFilter{
+                            Path: "quia",
+                            Values: []string{
+                                "vitae",
+                                "laborum",
                             },
                         },
                     },
                     Parameters: map[string]string{
-                        "molestias": "cupiditate",
-                        "sint": "explicabo",
+                        "enim": "odit",
+                        "quo": "sequi",
+                        "tenetur": "ipsam",
                     },
                     ResourceArns: []string{
-                        "in",
-                        "vitae",
-                        "non",
-                        "minima",
+                        "possimus",
+                        "aut",
+                        "quasi",
                     },
                     ResourceTags: map[string]string{
-                        "aut": "libero",
-                        "voluptas": "magni",
+                        "temporibus": "laborum",
+                        "quasi": "reiciendis",
+                        "voluptatibus": "vero",
                     },
-                    ResourceType: "est",
-                    SelectionMode: "porro",
+                    ResourceType: "nihil",
+                    SelectionMode: "praesentium",
+                },
+                "voluptatibus": shared.CreateExperimentTemplateTargetInput{
+                    Filters: []shared.ExperimentTemplateTargetInputFilter{
+                        shared.ExperimentTemplateTargetInputFilter{
+                            Path: "omnis",
+                            Values: []string{
+                                "cum",
+                                "perferendis",
+                            },
+                        },
+                    },
+                    Parameters: map[string]string{
+                        "reprehenderit": "ut",
+                    },
+                    ResourceArns: []string{
+                        "dicta",
+                        "corporis",
+                        "dolore",
+                        "iusto",
+                    },
+                    ResourceTags: map[string]string{
+                        "harum": "enim",
+                    },
+                    ResourceType: "accusamus",
+                    SelectionMode: "commodi",
+                },
+                "repudiandae": shared.CreateExperimentTemplateTargetInput{
+                    Filters: []shared.ExperimentTemplateTargetInputFilter{
+                        shared.ExperimentTemplateTargetInputFilter{
+                            Path: "ipsum",
+                            Values: []string{
+                                "molestias",
+                                "excepturi",
+                                "pariatur",
+                            },
+                        },
+                    },
+                    Parameters: map[string]string{
+                        "praesentium": "rem",
+                        "voluptates": "quasi",
+                    },
+                    ResourceArns: []string{
+                        "sint",
+                        "veritatis",
+                        "itaque",
+                        "incidunt",
+                    },
+                    ResourceTags: map[string]string{
+                        "consequatur": "est",
+                        "quibusdam": "explicabo",
+                    },
+                    ResourceType: "deserunt",
+                    SelectionMode: "distinctio",
                 },
             },
         },

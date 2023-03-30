@@ -31,7 +31,7 @@ func main() {
             },
         },
         Headers: operations.CreateFeedConnectionsHeaders{
-            XeroTenantID: "unde",
+            XeroTenantID: "corrupti",
         },
         Request: shared.FeedConnections{
             Items: []shared.FeedConnection{

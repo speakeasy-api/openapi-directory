@@ -27,22 +27,23 @@ func main() {
     req := operations.PagespeedonlinePagespeedapiRunpagespeedRequest{
         QueryParams: operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams{
             Alt: "json",
-            Fields: "deserunt",
+            Fields: "corrupti",
             FilterThirdPartyResources: false,
-            Key: "porro",
-            Locale: "nulla",
-            OauthToken: "id",
+            Key: "provident",
+            Locale: "distinctio",
+            OauthToken: "quibusdam",
             PrettyPrint: false,
-            QuotaUser: "vero",
+            QuotaUser: "unde",
             Rule: []string{
-                "nulla",
-                "nihil",
-                "fuga",
+                "corrupti",
+                "illum",
+                "vel",
+                "error",
             },
             Screenshot: false,
             Strategy: "mobile",
-            URL: "eum",
-            UserIP: "iusto",
+            URL: "suscipit",
+            UserIP: "iure",
         },
     }
 

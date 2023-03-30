@@ -32,19 +32,19 @@ func main() {
 
     req := operations.AddAssociationRequest{
         Headers: operations.AddAssociationHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "SageMaker.AddAssociation",
         },
         Request: shared.AddAssociationRequest{
-            AssociationType: "AssociatedWith",
-            DestinationArn: "fuga",
-            SourceArn: "facilis",
+            AssociationType: "Produced",
+            DestinationArn: "vel",
+            SourceArn: "error",
         },
     }
 

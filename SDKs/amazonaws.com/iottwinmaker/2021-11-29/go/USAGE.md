@@ -21,37 +21,37 @@ func main() {
 
     req := operations.BatchPutPropertyValuesRequest{
         PathParams: operations.BatchPutPropertyValuesPathParams{
-            WorkspaceID: "unde",
+            WorkspaceID: "corrupti",
         },
         Headers: operations.BatchPutPropertyValuesHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.BatchPutPropertyValuesRequestBody{
             Entries: []shared.PropertyValueEntry{
                 shared.PropertyValueEntry{
                     EntityPropertyReference: shared.EntityPropertyReference{
-                        ComponentName: "fuga",
-                        EntityID: "facilis",
+                        ComponentName: "error",
+                        EntityID: "deserunt",
                         ExternalIDProperty: map[string]string{
-                            "iusto": "ullam",
-                            "saepe": "inventore",
+                            "iure": "magnam",
+                            "debitis": "ipsa",
                         },
-                        PropertyName: "sapiente",
+                        PropertyName: "delectus",
                     },
                     PropertyValues: []shared.PropertyValue{
                         shared.PropertyValue{
-                            Time: "eum",
-                            Timestamp: "2022-10-06T15:36:45.360Z",
+                            Time: "suscipit",
+                            Timestamp: "2022-10-06T18:02:35.663Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
                                 DoubleValue: 7917.25,
-                                Expression: "vel",
+                                Expression: "placeat",
                                 IntegerValue: 528895,
                                 ListValue: []shared.DataValue{
                                     shared.DataValue{},
@@ -59,23 +59,23 @@ func main() {
                                 },
                                 LongValue: 568045,
                                 MapValue: map[string]shared.DataValue{
-                                    "molestiae": shared.DataValue{},
-                                    "quo": shared.DataValue{},
+                                    "recusandae": shared.DataValue{},
+                                    "temporibus": shared.DataValue{},
                                 },
                                 RelationshipValue: &shared.RelationshipValue{
-                                    TargetComponentName: "quasi",
-                                    TargetEntityID: "laboriosam",
+                                    TargetComponentName: "ab",
+                                    TargetEntityID: "quis",
                                 },
-                                StringValue: "dicta",
+                                StringValue: "veritatis",
                             },
                         },
                         shared.PropertyValue{
-                            Time: "est",
-                            Timestamp: "2023-03-22T14:50:44.430Z",
+                            Time: "deserunt",
+                            Timestamp: "2023-03-22T17:16:34.736Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
                                 DoubleValue: 3682.41,
-                                Expression: "fugiat",
+                                Expression: "repellendus",
                                 IntegerValue: 957156,
                                 ListValue: []shared.DataValue{
                                     shared.DataValue{},
@@ -85,37 +85,37 @@ func main() {
                                 },
                                 LongValue: 140350,
                                 MapValue: map[string]shared.DataValue{
-                                    "accusamus": shared.DataValue{},
-                                    "reiciendis": shared.DataValue{},
-                                    "rem": shared.DataValue{},
-                                    "quibusdam": shared.DataValue{},
+                                    "at": shared.DataValue{},
+                                    "maiores": shared.DataValue{},
+                                    "molestiae": shared.DataValue{},
+                                    "quod": shared.DataValue{},
                                 },
                                 RelationshipValue: &shared.RelationshipValue{
-                                    TargetComponentName: "et",
-                                    TargetEntityID: "praesentium",
+                                    TargetComponentName: "quod",
+                                    TargetEntityID: "esse",
                                 },
-                                StringValue: "occaecati",
+                                StringValue: "totam",
                             },
                         },
                     },
                 },
                 shared.PropertyValueEntry{
                     EntityPropertyReference: shared.EntityPropertyReference{
-                        ComponentName: "dolor",
-                        EntityID: "soluta",
+                        ComponentName: "porro",
+                        EntityID: "dolorum",
                         ExternalIDProperty: map[string]string{
-                            "quisquam": "rerum",
+                            "nam": "officia",
                         },
-                        PropertyName: "culpa",
+                        PropertyName: "occaecati",
                     },
                     PropertyValues: []shared.PropertyValue{
                         shared.PropertyValue{
-                            Time: "sed",
-                            Timestamp: "2022-04-19T04:39:33.773Z",
+                            Time: "deleniti",
+                            Timestamp: "2022-04-19T07:05:24.083Z",
                             Value: shared.DataValue{
                                 BooleanValue: false,
                                 DoubleValue: 7586.16,
-                                Expression: "occaecati",
+                                Expression: "totam",
                                 IntegerValue: 105907,
                                 ListValue: []shared.DataValue{
                                     shared.DataValue{},
@@ -123,14 +123,14 @@ func main() {
                                 },
                                 LongValue: 473600,
                                 MapValue: map[string]shared.DataValue{
-                                    "amet": shared.DataValue{},
-                                    "est": shared.DataValue{},
+                                    "qui": shared.DataValue{},
+                                    "impedit": shared.DataValue{},
                                 },
                                 RelationshipValue: &shared.RelationshipValue{
-                                    TargetComponentName: "id",
-                                    TargetEntityID: "blanditiis",
+                                    TargetComponentName: "cum",
+                                    TargetEntityID: "esse",
                                 },
-                                StringValue: "numquam",
+                                StringValue: "ipsum",
                             },
                         },
                     },

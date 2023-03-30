@@ -26,9 +26,9 @@ func main() {
 
     req := operations.GetCountriesRequest{
         QueryParams: operations.GetCountriesQueryParams{
-            MarketID: "unde",
+            MarketID: "corrupti",
             Order: "descending",
-            RegionName: "porro",
+            RegionName: "distinctio",
             RegionTypeID: 844266,
             Sort: "label",
         },

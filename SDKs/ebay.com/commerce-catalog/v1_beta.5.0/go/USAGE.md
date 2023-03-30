@@ -20,10 +20,10 @@ func main() {
             },
         },
         PathParams: operations.GetProductPathParams{
-            Epid: "unde",
+            Epid: "corrupti",
         },
         Headers: operations.GetProductHeaders{
-            XEbayCMarketplaceID: "deserunt",
+            XEbayCMarketplaceID: "provident",
         },
     }
 

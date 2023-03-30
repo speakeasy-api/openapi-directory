@@ -20,13 +20,13 @@ func main() {
             },
         },
         PathParams: operations.ConnectionSettingsAllPathParams{
-            Resource: "unde",
-            ServiceID: "deserunt",
-            UnifiedAPI: "porro",
+            Resource: "corrupti",
+            ServiceID: "provident",
+            UnifiedAPI: "distinctio",
         },
         Headers: operations.ConnectionSettingsAllHeaders{
-            XApideckAppID: "nulla",
-            XApideckConsumerID: "id",
+            XApideckAppID: "quibusdam",
+            XApideckConsumerID: "unde",
         },
     }
 

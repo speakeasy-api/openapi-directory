@@ -23,9 +23,9 @@ func main() {
             Raw: false,
         },
         Headers: operations.LeadsAddHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "deserunt",
-            XApideckServiceID: "porro",
+            XApideckAppID: "corrupti",
+            XApideckConsumerID: "provident",
+            XApideckServiceID: "distinctio",
         },
         Request: shared.LeadInput{
             Addresses: []shared.Address{
@@ -140,9 +140,9 @@ func main() {
                     ID: "2389328923893298",
                     Name: "employee_level",
                     Value: []string{
-                        "nulla",
-                        "nihil",
-                        "fuga",
+                        "illum",
+                        "vel",
+                        "error",
                     },
                 },
                 shared.CustomField{
@@ -222,7 +222,7 @@ func main() {
             },
             Status: "New",
             Tags: []string{
-                "sapiente",
+                "delectus",
             },
             Title: "CEO",
             Websites: []shared.Website{

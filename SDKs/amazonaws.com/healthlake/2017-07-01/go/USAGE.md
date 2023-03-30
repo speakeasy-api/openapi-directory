@@ -21,44 +21,36 @@ func main() {
 
     req := operations.CreateFHIRDatastoreRequest{
         Headers: operations.CreateFHIRDatastoreHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "HealthLake.CreateFHIRDatastore",
         },
         Request: shared.CreateFHIRDatastoreRequest{
-            ClientToken: "nihil",
-            DatastoreName: "fuga",
+            ClientToken: "illum",
+            DatastoreName: "vel",
             DatastoreTypeVersion: "R4",
             PreloadDataConfig: &shared.PreloadDataConfig{
                 PreloadDataType: "SYNTHEA",
             },
             SseConfiguration: &shared.SseConfiguration{
                 KmsEncryptionConfig: shared.KmsEncryptionConfig{
-                    CmkType: "CUSTOMER_MANAGED_KMS_KEY",
-                    KmsKeyID: "ullam",
+                    CmkType: "AWS_OWNED_KMS_KEY",
+                    KmsKeyID: "deserunt",
                 },
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "inventore",
-                    Value: "sapiente",
+                    Key: "iure",
+                    Value: "magnam",
                 },
                 shared.Tag{
-                    Key: "enim",
-                    Value: "eum",
-                },
-                shared.Tag{
-                    Key: "voluptatum",
-                    Value: "autem",
-                },
-                shared.Tag{
-                    Key: "vel",
-                    Value: "non",
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
             },
         },

@@ -22,9 +22,9 @@ func main() {
 
     req := operations.AccessAddRequest{
         PathParams: operations.AccessAddPathParams{
-            Agents: "unde",
-            Mask: "deserunt",
-            User: "porro",
+            Agents: "corrupti",
+            Mask: "provident",
+            User: "distinctio",
         },
     }
 

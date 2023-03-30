@@ -23,47 +23,47 @@ func main() {
             },
         },
         PathParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput{
             RepricingConfig: &shared.GoogleCloudChannelV1RepricingConfig{
                 Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                     PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                         Percentage: &shared.GoogleTypeDecimal{
-                            Value: "eum",
+                            Value: "suscipit",
                         },
                     },
                 },
                 ChannelPartnerGranularity: map[string]interface{}{
-                    "ullam": "saepe",
-                    "inventore": "sapiente",
+                    "magnam": "debitis",
+                    "ipsa": "delectus",
                 },
                 ConditionalOverrides: []shared.GoogleCloudChannelV1ConditionalOverride{
                     shared.GoogleCloudChannelV1ConditionalOverride{
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "eum",
+                                    Value: "suscipit",
                                 },
                             },
                         },
                         RebillingBasis: "COST_AT_LIST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "autem",
+                                SkuGroup: "minus",
                             },
                         },
                     },
@@ -71,14 +71,14 @@ func main() {
                         Adjustment: &shared.GoogleCloudChannelV1RepricingAdjustment{
                             PercentageAdjustment: &shared.GoogleCloudChannelV1PercentageAdjustment{
                                 Percentage: &shared.GoogleTypeDecimal{
-                                    Value: "vel",
+                                    Value: "placeat",
                                 },
                             },
                         },
                         RebillingBasis: "COST_AT_LIST",
                         RepricingCondition: &shared.GoogleCloudChannelV1RepricingCondition{
                             SkuGroupCondition: &shared.GoogleCloudChannelV1SkuGroupCondition{
-                                SkuGroup: "deleniti",
+                                SkuGroup: "iusto",
                             },
                         },
                     },
@@ -89,7 +89,7 @@ func main() {
                     Year: 925597,
                 },
                 EntitlementGranularity: &shared.GoogleCloudChannelV1RepricingConfigEntitlementGranularity{
-                    Entitlement: "quo",
+                    Entitlement: "temporibus",
                 },
                 RebillingBasis: "REBILLING_BASIS_UNSPECIFIED",
             },

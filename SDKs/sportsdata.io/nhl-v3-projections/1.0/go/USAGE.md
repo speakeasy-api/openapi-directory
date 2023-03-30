@@ -21,7 +21,7 @@ func main() {
 
     req := operations.DfsSlatesByDateRequest{
         PathParams: operations.DfsSlatesByDatePathParams{
-            Date: "unde",
+            Date: "corrupti",
             Format: "JSON",
         },
     }

@@ -27,8 +27,8 @@ func main() {
     req := operations.SmsConversionRequest{
         QueryParams: operations.SmsConversionQueryParams{
             Delivered: "0",
-            MessageID: "deserunt",
-            Timestamp: "porro",
+            MessageID: "provident",
+            Timestamp: "distinctio",
         },
     }
 

@@ -23,8 +23,8 @@ func main() {
     req := operations.PostPostReviewRequest{
         QueryParams: operations.PostPostReviewQueryParams{
             Rating: "3",
-            UserEmail: "deserunt",
-            UserName: "Michale_Sporer",
+            UserEmail: "provident",
+            UserName: "Micheal_Sporer",
         },
         Request: operations.PostPostReviewRequestBody{
             Rating: 5,

@@ -36,18 +36,18 @@ func main() {
             },
         },
         PathParams: operations.BigqueryDatasetsDeletePathParams{
-            DatasetID: "unde",
-            ProjectID: "deserunt",
+            DatasetID: "corrupti",
+            ProjectID: "provident",
         },
         QueryParams: operations.BigqueryDatasetsDeleteQueryParams{
             Alt: "json",
             DeleteContents: false,
-            Fields: "nulla",
-            Key: "id",
-            OauthToken: "vero",
+            Fields: "distinctio",
+            Key: "quibusdam",
+            OauthToken: "unde",
             PrettyPrint: false,
-            QuotaUser: "perspiciatis",
-            UserIP: "nulla",
+            QuotaUser: "nulla",
+            UserIP: "corrupti",
         },
     }
 

@@ -26,8 +26,8 @@ func main() {
 
     req := operations.AnimateImageRequest{
         QueryParams: operations.AnimateImageQueryParams{
-            Type: "unde",
-            URL: "deserunt",
+            Type: "corrupti",
+            URL: "provident",
         },
     }
 

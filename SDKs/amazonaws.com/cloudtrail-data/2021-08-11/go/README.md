@@ -32,34 +32,34 @@ func main() {
 
     req := operations.PutAuditEventsRequest{
         QueryParams: operations.PutAuditEventsQueryParams{
-            ChannelArn: "unde",
-            ExternalID: "deserunt",
+            ChannelArn: "corrupti",
+            ExternalID: "provident",
         },
         Headers: operations.PutAuditEventsHeaders{
-            XAmzAlgorithm: "porro",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "id",
-            XAmzDate: "vero",
-            XAmzSecurityToken: "perspiciatis",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "nihil",
+            XAmzAlgorithm: "distinctio",
+            XAmzContentSha256: "quibusdam",
+            XAmzCredential: "unde",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "corrupti",
+            XAmzSignature: "illum",
+            XAmzSignedHeaders: "vel",
         },
         Request: operations.PutAuditEventsRequestBody{
             AuditEvents: []shared.AuditEvent{
                 shared.AuditEvent{
-                    EventData: "facilis",
-                    EventDataChecksum: "eum",
-                    ID: "iusto",
+                    EventData: "deserunt",
+                    EventDataChecksum: "suscipit",
+                    ID: "iure",
                 },
                 shared.AuditEvent{
-                    EventData: "ullam",
-                    EventDataChecksum: "saepe",
-                    ID: "inventore",
+                    EventData: "magnam",
+                    EventDataChecksum: "debitis",
+                    ID: "ipsa",
                 },
                 shared.AuditEvent{
-                    EventData: "sapiente",
-                    EventDataChecksum: "enim",
-                    ID: "eum",
+                    EventData: "delectus",
+                    EventDataChecksum: "tempora",
+                    ID: "suscipit",
                 },
             },
         },

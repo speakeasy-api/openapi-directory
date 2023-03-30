@@ -33,7 +33,7 @@ func main() {
     req := operations.AllStarsRequest{
         PathParams: operations.AllStarsPathParams{
             Format: "JSON",
-            Season: "deserunt",
+            Season: "provident",
         },
     }
 

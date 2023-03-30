@@ -31,10 +31,10 @@ func main() {
             },
         },
         PathParams: operations.GetOrderPathParams{
-            OrderID: "unde",
+            OrderID: "corrupti",
         },
         QueryParams: operations.GetOrderQueryParams{
-            FieldGroups: "deserunt",
+            FieldGroups: "provident",
         },
     }
 

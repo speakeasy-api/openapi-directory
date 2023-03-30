@@ -31,7 +31,7 @@ func main() {
             },
         },
         PathParams: operations.UserCtrlGetUserByIDPathParams{
-            AccountID: "unde",
+            AccountID: "corrupti",
             UserID: 5928.45,
         },
     }

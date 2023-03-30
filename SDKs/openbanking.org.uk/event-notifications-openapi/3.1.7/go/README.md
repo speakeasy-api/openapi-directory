@@ -26,10 +26,10 @@ func main() {
 
     req := operations.CreateEventNotificationRequest{
         Headers: operations.CreateEventNotificationHeaders{
-            XFapiFinancialID: "unde",
-            XFapiInteractionID: "deserunt",
+            XFapiFinancialID: "corrupti",
+            XFapiInteractionID: "provident",
         },
-        Request: "porro",
+        Request: "distinctio",
     }
 
     ctx := context.Background()

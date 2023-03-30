@@ -26,11 +26,11 @@ func main() {
 
     req := operations.GetItineraryPriceMetricsRequest{
         QueryParams: operations.GetItineraryPriceMetricsQueryParams{
-            CurrencyCode: "unde",
-            DepartureDate: "deserunt",
-            DestinationIataCode: "porro",
+            CurrencyCode: "corrupti",
+            DepartureDate: "provident",
+            DestinationIataCode: "distinctio",
             OneWay: false,
-            OriginIataCode: "nulla",
+            OriginIataCode: "quibusdam",
         },
     }
 

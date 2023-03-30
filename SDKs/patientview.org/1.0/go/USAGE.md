@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetBasicUserInformationRequest{
         PathParams: operations.GetBasicUserInformationPathParams{
-            Token: "unde",
+            Token: "corrupti",
         },
     }
 

@@ -15,21 +15,21 @@ func main() {
 
     req := operations.ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteRequest{
         PathParams: operations.ReaderrevenuesubscriptionlinkingPublicationsReadersDeletePathParams{
-            Name: "unde",
+            Name: "corrupti",
         },
         QueryParams: operations.ReaderrevenuesubscriptionlinkingPublicationsReadersDeleteQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
+            Callback: "unde",
+            Fields: "nulla",
             Force: false,
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
     }
 

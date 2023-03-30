@@ -29,7 +29,7 @@ func main() {
             DeviceID: 548814,
         },
         QueryParams: operations.CollectNowQueryParams{
-            MonitorClass: "deserunt",
+            MonitorClass: "provident",
         },
     }
 

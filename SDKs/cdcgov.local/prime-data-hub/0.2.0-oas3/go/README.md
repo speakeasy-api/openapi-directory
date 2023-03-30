@@ -31,7 +31,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteSettingsOrganizationsOrganizationNamePathParams{
-            OrganizationName: "unde",
+            OrganizationName: "corrupti",
         },
     }
 

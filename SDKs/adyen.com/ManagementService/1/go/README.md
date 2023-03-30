@@ -31,7 +31,7 @@ func main() {
             },
         },
         PathParams: operations.GetCompaniesCompanyIDAPICredentialsPathParams{
-            CompanyID: "unde",
+            CompanyID: "corrupti",
         },
         QueryParams: operations.GetCompaniesCompanyIDAPICredentialsQueryParams{
             PageNumber: 592845,

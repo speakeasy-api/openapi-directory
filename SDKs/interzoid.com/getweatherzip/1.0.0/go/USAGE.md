@@ -15,8 +15,8 @@ func main() {
 
     req := operations.GetweatherzipcodeRequest{
         QueryParams: operations.GetweatherzipcodeQueryParams{
-            License: "unde",
-            Zip: "deserunt",
+            License: "corrupti",
+            Zip: "provident",
         },
     }
 

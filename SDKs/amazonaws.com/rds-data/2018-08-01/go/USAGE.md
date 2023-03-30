@@ -21,20 +21,20 @@ func main() {
 
     req := operations.BatchExecuteStatementRequest{
         Headers: operations.BatchExecuteStatementHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.BatchExecuteStatementRequestBody{
-            Database: "nulla",
+            Database: "illum",
             ParameterSets: [][]shared.SQLParameter{
                 []shared.SQLParameter{
                     shared.SQLParameter{
-                        Name: "facilis",
+                        Name: "deserunt",
                         TypeHint: "TIMESTAMP",
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
@@ -57,21 +57,21 @@ func main() {
                                     812169,
                                 },
                                 StringValues: []string{
-                                    "deleniti",
-                                    "similique",
-                                    "reprehenderit",
+                                    "iusto",
+                                    "excepturi",
+                                    "nisi",
                                 },
                             },
-                            BlobValue: "molestiae",
+                            BlobValue: "recusandae",
                             BooleanValue: false,
                             DoubleValue: 8360.79,
                             IsNull: false,
                             LongValue: 71036,
-                            StringValue: "laboriosam",
+                            StringValue: "quis",
                         },
                     },
                     shared.SQLParameter{
-                        Name: "dicta",
+                        Name: "veritatis",
                         TypeHint: "DATE",
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
@@ -95,20 +95,20 @@ func main() {
                                     800911,
                                 },
                                 StringValues: []string{
-                                    "occaecati",
-                                    "dolor",
+                                    "totam",
+                                    "porro",
                                 },
                             },
-                            BlobValue: "soluta",
+                            BlobValue: "dolorum",
                             BooleanValue: false,
                             DoubleValue: 1182.74,
                             IsNull: false,
                             LongValue: 720633,
-                            StringValue: "rerum",
+                            StringValue: "officia",
                         },
                     },
                     shared.SQLParameter{
-                        Name: "culpa",
+                        Name: "occaecati",
                         TypeHint: "JSON",
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
@@ -134,23 +134,23 @@ func main() {
                                     774234,
                                 },
                                 StringValues: []string{
-                                    "blanditiis",
-                                    "numquam",
-                                    "similique",
+                                    "esse",
+                                    "ipsum",
+                                    "excepturi",
                                 },
                             },
-                            BlobValue: "dolores",
+                            BlobValue: "aspernatur",
                             BooleanValue: false,
                             DoubleValue: 187.89,
                             IsNull: false,
                             LongValue: 324141,
-                            StringValue: "et",
+                            StringValue: "natus",
                         },
                     },
                 },
                 []shared.SQLParameter{
                     shared.SQLParameter{
-                        Name: "laborum",
+                        Name: "iste",
                         TypeHint: "UUID",
                         Value: &shared.Field{
                             ArrayValue: &shared.ArrayValue{
@@ -175,24 +175,24 @@ func main() {
                                     697631,
                                 },
                                 StringValues: []string{
-                                    "inventore",
+                                    "ipsa",
                                 },
                             },
-                            BlobValue: "ut",
+                            BlobValue: "reiciendis",
                             BooleanValue: false,
                             DoubleValue: 6667.67,
                             IsNull: false,
                             LongValue: 653140,
-                            StringValue: "libero",
+                            StringValue: "laborum",
                         },
                     },
                 },
             },
-            ResourceArn: "ipsum",
-            Schema: "non",
-            SecretArn: "ea",
-            SQL: "magni",
-            TransactionID: "placeat",
+            ResourceArn: "dolores",
+            Schema: "dolorem",
+            SecretArn: "corporis",
+            SQL: "explicabo",
+            TransactionID: "nobis",
         },
     }
 

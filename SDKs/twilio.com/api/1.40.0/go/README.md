@@ -32,7 +32,7 @@ func main() {
             },
         },
         Request: &operations.CreateAccountCreateAccountRequest{
-            FriendlyName: "unde",
+            FriendlyName: "corrupti",
         },
     }
 

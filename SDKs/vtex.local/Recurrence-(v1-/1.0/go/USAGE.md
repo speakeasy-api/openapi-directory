@@ -24,7 +24,7 @@ func main() {
 
     req := operations.AddrecurrenceitemRequest{
         PathParams: operations.AddrecurrenceitemPathParams{
-            RecurrenceID: "unde",
+            RecurrenceID: "corrupti",
         },
         Headers: operations.AddrecurrenceitemHeaders{
             Accept: "application/json",
@@ -34,32 +34,32 @@ func main() {
             shared.AddrecurrenceitemRequest{
                 Frequency: shared.Frequency{
                     Interval: 715190,
-                    Periodicity: "nulla",
+                    Periodicity: "quibusdam",
                 },
                 Quantity: 602763,
-                Seller: "vero",
-                ShippingAddressID: "perspiciatis",
-                Sku: "nulla",
+                Seller: "nulla",
+                ShippingAddressID: "corrupti",
+                Sku: "illum",
             },
             shared.AddrecurrenceitemRequest{
                 Frequency: shared.Frequency{
                     Interval: 423655,
-                    Periodicity: "fuga",
+                    Periodicity: "error",
                 },
                 Quantity: 645894,
-                Seller: "eum",
-                ShippingAddressID: "iusto",
-                Sku: "ullam",
+                Seller: "suscipit",
+                ShippingAddressID: "iure",
+                Sku: "magnam",
             },
             shared.AddrecurrenceitemRequest{
                 Frequency: shared.Frequency{
                     Interval: 891773,
-                    Periodicity: "inventore",
+                    Periodicity: "ipsa",
                 },
                 Quantity: 963663,
-                Seller: "enim",
-                ShippingAddressID: "eum",
-                Sku: "voluptatum",
+                Seller: "tempora",
+                ShippingAddressID: "suscipit",
+                Sku: "molestiae",
             },
         },
     }

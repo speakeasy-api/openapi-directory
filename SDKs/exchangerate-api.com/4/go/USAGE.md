@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetLatestBaseCurrencyRequest{
         PathParams: operations.GetLatestBaseCurrencyPathParams{
-            BaseCurrency: "unde",
+            BaseCurrency: "corrupti",
         },
     }
 

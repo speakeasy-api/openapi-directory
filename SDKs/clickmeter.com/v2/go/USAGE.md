@@ -21,7 +21,7 @@ func main() {
 
     req := operations.AccountDeleteDomainWhitelistRequest{
         PathParams: operations.AccountDeleteDomainWhitelistPathParams{
-            WhitelistID: "unde",
+            WhitelistID: "corrupti",
         },
     }
 

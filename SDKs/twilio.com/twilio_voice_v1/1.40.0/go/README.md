@@ -33,15 +33,15 @@ func main() {
         },
         Request: &operations.CreateByocTrunkCreateByocTrunkRequest{
             CnamLookupEnabled: false,
-            ConnectionPolicySid: "unde",
-            FriendlyName: "deserunt",
-            FromDomainSid: "porro",
+            ConnectionPolicySid: "corrupti",
+            FriendlyName: "provident",
+            FromDomainSid: "distinctio",
             StatusCallbackMethod: "DELETE",
-            StatusCallbackURL: "https://ruthie.name",
-            VoiceFallbackMethod: "DELETE",
-            VoiceFallbackURL: "http://linda.name",
-            VoiceMethod: "POST",
-            VoiceURL: "http://eli.org",
+            StatusCallbackURL: "https://tidy-mascara.org",
+            VoiceFallbackMethod: "POST",
+            VoiceFallbackURL: "https://present-giggle.info",
+            VoiceMethod: "GET",
+            VoiceURL: "https://awesome-voter.biz",
         },
     }
 

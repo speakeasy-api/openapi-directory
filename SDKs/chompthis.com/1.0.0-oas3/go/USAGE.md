@@ -20,7 +20,7 @@ func main() {
             },
         },
         QueryParams: operations.GetFoodBrandedBarcodePhpQueryParams{
-            Code: "unde",
+            Code: "corrupti",
         },
     }
 

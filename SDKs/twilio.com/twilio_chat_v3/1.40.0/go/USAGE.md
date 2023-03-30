@@ -21,14 +21,14 @@ func main() {
             },
         },
         PathParams: operations.UpdateChannelPathParams{
-            ServiceSid: "unde",
-            Sid: "deserunt",
+            ServiceSid: "corrupti",
+            Sid: "provident",
         },
         Headers: operations.UpdateChannelHeaders{
             XTwilioWebhookEnabled: "false",
         },
         Request: &operations.UpdateChannelUpdateChannelRequest{
-            MessagingServiceSid: "nulla",
+            MessagingServiceSid: "quibusdam",
             Type: "private",
         },
     }

@@ -31,7 +31,7 @@ func main() {
             },
         },
         Headers: operations.WebhooksAddHeaders{
-            XApideckAppID: "unde",
+            XApideckAppID: "corrupti",
         },
         Request: shared.CreateWebhookRequest{
             DeliveryURL: "https://example.com/my/webhook/endpoint",

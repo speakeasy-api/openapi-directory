@@ -32,22 +32,22 @@ func main() {
 
     req := operations.CreateApplicationRequest{
         Headers: operations.CreateApplicationHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateApplicationRequestBody{
-            ApplicationDescription: "nulla",
-            ApplicationName: "nihil",
-            ClientToken: "fuga",
-            RoleArn: "facilis",
+            ApplicationDescription: "illum",
+            ApplicationName: "vel",
+            ClientToken: "error",
+            RoleArn: "deserunt",
             Tags: map[string]string{
-                "iusto": "ullam",
-                "saepe": "inventore",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
         },
     }

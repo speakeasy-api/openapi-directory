@@ -21,34 +21,34 @@ func main() {
 
     req := operations.BatchCreateCustomVocabularyItemRequest{
         PathParams: operations.BatchCreateCustomVocabularyItemPathParams{
-            BotID: "unde",
-            BotVersion: "deserunt",
-            LocaleID: "porro",
+            BotID: "corrupti",
+            BotVersion: "provident",
+            LocaleID: "distinctio",
         },
         Headers: operations.BatchCreateCustomVocabularyItemHeaders{
-            XAmzAlgorithm: "nulla",
-            XAmzContentSha256: "id",
-            XAmzCredential: "vero",
-            XAmzDate: "perspiciatis",
-            XAmzSecurityToken: "nulla",
-            XAmzSignature: "nihil",
-            XAmzSignedHeaders: "fuga",
+            XAmzAlgorithm: "quibusdam",
+            XAmzContentSha256: "unde",
+            XAmzCredential: "nulla",
+            XAmzDate: "corrupti",
+            XAmzSecurityToken: "illum",
+            XAmzSignature: "vel",
+            XAmzSignedHeaders: "error",
         },
         Request: operations.BatchCreateCustomVocabularyItemRequestBody{
             CustomVocabularyItemList: []shared.NewCustomVocabularyItem{
                 shared.NewCustomVocabularyItem{
-                    DisplayAs: "eum",
-                    Phrase: "iusto",
+                    DisplayAs: "suscipit",
+                    Phrase: "iure",
                     Weight: 297534,
                 },
                 shared.NewCustomVocabularyItem{
-                    DisplayAs: "saepe",
-                    Phrase: "inventore",
+                    DisplayAs: "debitis",
+                    Phrase: "ipsa",
                     Weight: 963663,
                 },
                 shared.NewCustomVocabularyItem{
-                    DisplayAs: "enim",
-                    Phrase: "eum",
+                    DisplayAs: "tempora",
+                    Phrase: "suscipit",
                     Weight: 477665,
                 },
             },

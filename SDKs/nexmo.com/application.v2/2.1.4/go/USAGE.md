@@ -40,7 +40,7 @@ func main() {
                     },
                 },
                 Messages: &shared.MessagesCapability{
-                    Version: "unde",
+                    Version: "corrupti",
                     Webhooks: &shared.MessagesCapabilityWebhooks{
                         InboundURL: &shared.MessagesCapabilityWebhooksInboundURL{
                             Address: "https://example.com/webhooks/inbound",
@@ -63,9 +63,9 @@ func main() {
                     },
                 },
                 Vbc: map[string]interface{}{
-                    "porro": "nulla",
-                    "id": "vero",
-                    "perspiciatis": "nulla",
+                    "distinctio": "quibusdam",
+                    "unde": "nulla",
+                    "corrupti": "illum",
                 },
                 Verify: &shared.VerifyCapability{
                     Version: "v2",

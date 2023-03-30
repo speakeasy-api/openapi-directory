@@ -31,7 +31,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteAPIV1ClipsIDPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

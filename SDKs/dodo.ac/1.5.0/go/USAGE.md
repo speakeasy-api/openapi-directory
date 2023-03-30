@@ -15,12 +15,12 @@ func main() {
 
     req := operations.GetNhArtRequest{
         QueryParams: operations.GetNhArtQueryParams{
-            Excludedetails: "unde",
-            Hasfake: "deserunt",
+            Excludedetails: "corrupti",
+            Hasfake: "provident",
             Thumbsize: 715190,
         },
         Headers: operations.GetNhArtHeaders{
-            AcceptVersion: "nulla",
+            AcceptVersion: "quibusdam",
             XAPIKey: "9d8d69a6-74e0-4f46-bcc8-796ed151a05d",
         },
     }

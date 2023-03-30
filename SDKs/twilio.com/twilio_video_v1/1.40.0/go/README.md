@@ -33,22 +33,22 @@ func main() {
         },
         Request: &operations.CreateCompositionCreateCompositionRequest{
             AudioSources: []string{
-                "deserunt",
-                "porro",
-                "nulla",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
             AudioSourcesExcluded: []string{
-                "vero",
-                "perspiciatis",
                 "nulla",
+                "corrupti",
+                "illum",
             },
             Format: "mp4",
-            Resolution: "fuga",
-            RoomSid: "facilis",
-            StatusCallback: "http://humberto.biz",
-            StatusCallbackMethod: "DELETE",
+            Resolution: "error",
+            RoomSid: "deserunt",
+            StatusCallback: "http://innocent-effect.org",
+            StatusCallbackMethod: "HEAD",
             Trim: false,
-            VideoLayout: "inventore",
+            VideoLayout: "delectus",
         },
     }
 

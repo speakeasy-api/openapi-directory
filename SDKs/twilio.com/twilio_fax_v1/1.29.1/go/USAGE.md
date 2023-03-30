@@ -21,7 +21,7 @@ func main() {
             },
         },
         PathParams: operations.DeleteFaxPathParams{
-            Sid: "unde",
+            Sid: "corrupti",
         },
     }
 

@@ -20,9 +20,9 @@ func main() {
             },
         },
         QueryParams: operations.FindPlacesFindPlacesGetQueryParams{
-            Key: "unde",
+            Key: "corrupti",
             Language: "fr",
-            Text: "porro",
+            Text: "distinctio",
         },
     }
 

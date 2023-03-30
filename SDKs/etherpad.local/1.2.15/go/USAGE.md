@@ -21,8 +21,8 @@ func main() {
 
     req := operations.AppendTextUsingGETRequest{
         QueryParams: operations.AppendTextUsingGETQueryParams{
-            PadID: "unde",
-            Text: "deserunt",
+            PadID: "corrupti",
+            Text: "provident",
         },
     }
 

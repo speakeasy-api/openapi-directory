@@ -15,7 +15,7 @@ func main() {
 
     req := operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest{
         Headers: operations.AerodromesByDistanceUsV1AerodromesDistanceQueryPostHeaders{
-            XAPIKey: "unde",
+            XAPIKey: "corrupti",
         },
         Request: shared.AerodromesByDistance{
             Distance: 715190,

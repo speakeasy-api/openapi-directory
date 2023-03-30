@@ -32,11 +32,11 @@ func main() {
 
     req := operations.ContactModeratorsRequest{
         PathParams: operations.ContactModeratorsPathParams{
-            GroupID: "unde",
+            GroupID: "corrupti",
         },
         Request: operations.ContactModeratorsRequestBody{
-            Message: "deserunt",
-            Subject: "porro",
+            Message: "provident",
+            Subject: "distinctio",
         },
     }
 

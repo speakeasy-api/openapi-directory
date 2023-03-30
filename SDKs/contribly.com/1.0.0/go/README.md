@@ -26,7 +26,7 @@ func main() {
 
     req := operations.DeleteAssignmentsIDRequest{
         PathParams: operations.DeleteAssignmentsIDPathParams{
-            ID: "unde",
+            ID: "corrupti",
         },
     }
 

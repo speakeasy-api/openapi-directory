@@ -29,7 +29,7 @@ func main() {
             Format: "apiblueprint",
         },
         Request: &operations.ConvertAPIRequestBody{
-            URL: "deserunt",
+            URL: "provident",
         },
     }
 

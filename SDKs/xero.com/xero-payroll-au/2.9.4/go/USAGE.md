@@ -20,7 +20,7 @@ func main() {
             },
         },
         Headers: operations.CreateEmployeeHeaders{
-            XeroTenantID: "unde",
+            XeroTenantID: "corrupti",
         },
         Request: []shared.EmployeeInput{
             shared.EmployeeInput{
@@ -413,7 +413,7 @@ func main() {
                 TwitterUserName: "xeroapi",
                 ValidationErrors: []shared.ValidationError{
                     shared.ValidationError{
-                        Message: "similique",
+                        Message: "excepturi",
                     },
                 },
             },
@@ -758,13 +758,13 @@ func main() {
                 TwitterUserName: "xeroapi",
                 ValidationErrors: []shared.ValidationError{
                     shared.ValidationError{
-                        Message: "ipsam",
+                        Message: "enim",
                     },
                     shared.ValidationError{
-                        Message: "eos",
+                        Message: "odit",
                     },
                     shared.ValidationError{
-                        Message: "omnis",
+                        Message: "quo",
                     },
                 },
             },
@@ -1141,13 +1141,13 @@ func main() {
                 TwitterUserName: "xeroapi",
                 ValidationErrors: []shared.ValidationError{
                     shared.ValidationError{
-                        Message: "omnis",
+                        Message: "quos",
                     },
                     shared.ValidationError{
-                        Message: "voluptatem",
+                        Message: "perferendis",
                     },
                     shared.ValidationError{
-                        Message: "dolorem",
+                        Message: "magni",
                     },
                 },
             },

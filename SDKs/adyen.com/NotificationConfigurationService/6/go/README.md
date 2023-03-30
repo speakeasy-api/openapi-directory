@@ -34,7 +34,7 @@ func main() {
             ConfigurationDetails: shared.NotificationConfigurationDetails{
                 Active: false,
                 APIVersion: 548814,
-                Description: "deserunt",
+                Description: "provident",
                 EventConfigs: []shared.NotificationEventConfiguration{
                     shared.NotificationEventConfiguration{
                         EventType: "SCHEDULED_REFUNDS",
@@ -49,11 +49,11 @@ func main() {
                         IncludeMode: "EXCLUDE",
                     },
                 },
-                HmacSignatureKey: "fuga",
+                HmacSignatureKey: "error",
                 NotificationID: 645894,
-                NotifyPassword: "eum",
-                NotifyURL: "iusto",
-                NotifyUsername: "ullam",
+                NotifyPassword: "suscipit",
+                NotifyURL: "iure",
+                NotifyUsername: "magnam",
                 SslProtocol: "TLSv13",
             },
         },

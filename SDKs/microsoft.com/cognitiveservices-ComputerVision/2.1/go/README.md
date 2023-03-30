@@ -50,7 +50,7 @@ func main() {
             },
         },
         Request: shared.ImageURL{
-            URL: "ullam",
+            URL: "magnam",
         },
     }
 

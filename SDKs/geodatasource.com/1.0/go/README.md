@@ -27,7 +27,7 @@ func main() {
     req := operations.GetCityRequest{
         QueryParams: operations.GetCityQueryParams{
             Format: "xml",
-            Key: "deserunt",
+            Key: "provident",
             Lat: 7151.9,
             Lng: 8442.66,
         },

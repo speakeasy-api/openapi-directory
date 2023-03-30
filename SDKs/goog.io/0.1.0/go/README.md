@@ -32,7 +32,7 @@ func main() {
 
     req := operations.CrawlRequest{
         PathParams: operations.CrawlPathParams{
-            Query: "unde",
+            Query: "corrupti",
         },
     }
 

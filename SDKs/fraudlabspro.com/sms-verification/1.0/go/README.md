@@ -27,9 +27,9 @@ func main() {
     req := operations.GetV1VerificationResultRequest{
         QueryParams: operations.GetV1VerificationResultQueryParams{
             Format: "xml",
-            Key: "deserunt",
-            Otp: "porro",
-            TranID: "nulla",
+            Key: "provident",
+            Otp: "distinctio",
+            TranID: "quibusdam",
         },
     }
 

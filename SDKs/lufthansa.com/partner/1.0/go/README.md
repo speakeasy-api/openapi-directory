@@ -31,10 +31,10 @@ func main() {
             },
         },
         PathParams: operations.BaggageTripAndContactPathParams{
-            SearchID: "unde",
+            SearchID: "corrupti",
         },
         Headers: operations.BaggageTripAndContactHeaders{
-            Accept: "deserunt",
+            Accept: "provident",
         },
     }
 

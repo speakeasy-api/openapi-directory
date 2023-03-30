@@ -29,7 +29,7 @@ func main() {
             IDClient: 548814,
         },
         QueryParams: operations.DeleteClientsIDClientQueryParams{
-            Expand: "deserunt",
+            Expand: "provident",
         },
     }
 

@@ -20,13 +20,13 @@ func main() {
             },
         },
         Headers: operations.ImageOcrImageLinesWithLocationHeaders{
-            Language: "unde",
-            Preprocessing: "deserunt",
+            Language: "corrupti",
+            Preprocessing: "provident",
         },
         Request: operations.ImageOcrImageLinesWithLocationRequestBody{
             ImageFile: operations.ImageOcrImageLinesWithLocationRequestBodyImageFile{
-                Content: []byte("porro"),
-                ImageFile: "nulla",
+                Content: []byte("distinctio"),
+                ImageFile: "quibusdam",
             },
         },
     }

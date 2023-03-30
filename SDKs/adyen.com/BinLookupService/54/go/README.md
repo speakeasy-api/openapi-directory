@@ -32,20 +32,20 @@ func main() {
         },
         Request: &shared.ThreeDSAvailabilityRequest{
             AdditionalData: map[string]string{
-                "deserunt": "porro",
-                "nulla": "id",
-                "vero": "perspiciatis",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
             },
             Brands: []string{
-                "nihil",
-                "fuga",
-                "facilis",
-                "eum",
+                "vel",
+                "error",
+                "deserunt",
+                "suscipit",
             },
-            CardNumber: "iusto",
-            MerchantAccount: "ullam",
-            RecurringDetailReference: "saepe",
-            ShopperReference: "inventore",
+            CardNumber: "iure",
+            MerchantAccount: "magnam",
+            RecurringDetailReference: "debitis",
+            ShopperReference: "ipsa",
         },
     }
 

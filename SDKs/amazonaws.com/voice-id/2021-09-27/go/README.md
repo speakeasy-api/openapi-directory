@@ -32,19 +32,19 @@ func main() {
 
     req := operations.AssociateFraudsterRequest{
         Headers: operations.AssociateFraudsterHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "VoiceID.AssociateFraudster",
         },
         Request: shared.AssociateFraudsterRequest{
-            DomainID: "nihil",
-            FraudsterID: "fuga",
-            WatchlistID: "facilis",
+            DomainID: "illum",
+            FraudsterID: "vel",
+            WatchlistID: "error",
         },
     }
 

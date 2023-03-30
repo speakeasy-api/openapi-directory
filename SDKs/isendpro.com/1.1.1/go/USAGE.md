@@ -15,8 +15,8 @@ func main() {
 
     req := operations.AddShortlinkRequest{
         Request: shared.ShortlinkRequest{
-            Keyid: "unde",
-            Shortlink: "deserunt",
+            Keyid: "corrupti",
+            Shortlink: "provident",
         },
     }
 

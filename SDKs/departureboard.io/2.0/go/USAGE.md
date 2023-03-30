@@ -15,12 +15,12 @@ func main() {
 
     req := operations.GetArrivalsAndDeparturesByCRSRequest{
         PathParams: operations.GetArrivalsAndDeparturesByCRSPathParams{
-            Crs: "unde",
+            Crs: "corrupti",
         },
         QueryParams: operations.GetArrivalsAndDeparturesByCRSQueryParams{
-            APIKey: "deserunt",
-            FilterStation: "porro",
-            FilterType: "nulla",
+            APIKey: "provident",
+            FilterStation: "distinctio",
+            FilterType: "quibusdam",
             NumServices: 602763,
             ServiceDetails: false,
             TimeOffset: 857946,

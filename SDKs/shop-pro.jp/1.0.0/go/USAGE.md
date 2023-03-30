@@ -20,10 +20,10 @@ func main() {
             },
         },
         PathParams: operations.CreateUsageChargePathParams{
-            RecurringApplicationChargeID: "unde",
+            RecurringApplicationChargeID: "corrupti",
         },
         Headers: operations.CreateUsageChargeHeaders{
-            XAppstoreUsageChargeToken: "deserunt",
+            XAppstoreUsageChargeToken: "provident",
         },
         Request: operations.CreateUsageChargeRequestBody{
             UsageCharge: &operations.CreateUsageChargeRequestBodyUsageCharge{

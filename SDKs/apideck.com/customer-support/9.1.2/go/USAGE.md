@@ -23,9 +23,9 @@ func main() {
             Raw: false,
         },
         Headers: operations.CustomersAddHeaders{
-            XApideckAppID: "unde",
-            XApideckConsumerID: "deserunt",
-            XApideckServiceID: "porro",
+            XApideckAppID: "corrupti",
+            XApideckConsumerID: "provident",
+            XApideckServiceID: "distinctio",
         },
         Request: shared.CustomerSupportCustomerInput{
             Addresses: []shared.Address{

@@ -30,11 +30,11 @@ func main() {
     req := operations.GetCallToken1Request{
         Request: shared.GetCallTokenRequest{
             User: map[string]interface{}{
-                "deserunt": "porro",
-                "nulla": "id",
-                "vero": "perspiciatis",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
             },
-            UserID: "nulla",
+            UserID: "illum",
         },
     }
 

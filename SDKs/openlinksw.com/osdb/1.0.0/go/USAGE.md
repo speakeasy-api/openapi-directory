@@ -15,8 +15,8 @@ func main() {
 
     req := operations.ActionHelpRequest{
         PathParams: operations.ActionHelpPathParams{
-            ActionID: "unde",
-            ServiceID: "deserunt",
+            ActionID: "corrupti",
+            ServiceID: "provident",
         },
     }
 

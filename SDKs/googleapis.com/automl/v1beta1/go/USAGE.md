@@ -23,79 +23,79 @@ func main() {
             },
         },
         PathParams: operations.AutomlProjectsLocationsDatasetsCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.AutomlProjectsLocationsDatasetsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.Dataset{
-            CreateTime: "eum",
-            Description: "iusto",
-            DisplayName: "ullam",
-            Etag: "saepe",
+            CreateTime: "suscipit",
+            Description: "iure",
+            DisplayName: "magnam",
+            Etag: "debitis",
             ExampleCount: 56713,
             ImageClassificationDatasetMetadata: &shared.ImageClassificationDatasetMetadata{
                 ClassificationType: "MULTILABEL",
             },
             ImageObjectDetectionDatasetMetadata: map[string]interface{}{
-                "eum": "voluptatum",
-                "autem": "vel",
+                "suscipit": "molestiae",
+                "minus": "placeat",
             },
-            Name: "non",
+            Name: "voluptatum",
             TablesDatasetMetadata: &shared.TablesDatasetMetadata{
-                MlUseColumnSpecID: "deleniti",
-                PrimaryTableSpecID: "similique",
-                StatsUpdateTime: "reprehenderit",
+                MlUseColumnSpecID: "iusto",
+                PrimaryTableSpecID: "excepturi",
+                StatsUpdateTime: "nisi",
                 TargetColumnCorrelations: map[string]shared.CorrelationStats{
-                    "quo": shared.CorrelationStats{
+                    "temporibus": shared.CorrelationStats{
                         CramersV: 710.36,
                     },
-                    "laboriosam": shared.CorrelationStats{
+                    "quis": shared.CorrelationStats{
                         CramersV: 871.29,
                     },
-                    "est": shared.CorrelationStats{
+                    "deserunt": shared.CorrelationStats{
                         CramersV: 202.18,
                     },
-                    "consequatur": shared.CorrelationStats{
+                    "ipsam": shared.CorrelationStats{
                         CramersV: 8326.2,
                     },
                 },
-                TargetColumnSpecID: "a",
-                WeightColumnSpecID: "omnis",
+                TargetColumnSpecID: "sapiente",
+                WeightColumnSpecID: "quo",
             },
             TextClassificationDatasetMetadata: &shared.TextClassificationDatasetMetadata{
                 ClassificationType: "CLASSIFICATION_TYPE_UNSPECIFIED",
             },
             TextExtractionDatasetMetadata: map[string]interface{}{
-                "accusamus": "reiciendis",
-                "rem": "quibusdam",
-                "et": "praesentium",
-                "occaecati": "dolor",
+                "at": "maiores",
+                "molestiae": "quod",
+                "quod": "esse",
+                "totam": "porro",
             },
             TextSentimentDatasetMetadata: &shared.TextSentimentDatasetMetadata{
                 SentimentMax: 678880,
             },
             TranslationDatasetMetadata: &shared.TranslationDatasetMetadata{
-                SourceLanguageCode: "sed",
-                TargetLanguageCode: "quisquam",
+                SourceLanguageCode: "dicta",
+                TargetLanguageCode: "nam",
             },
             VideoClassificationDatasetMetadata: map[string]interface{}{
-                "culpa": "qui",
-                "sed": "rerum",
-                "possimus": "occaecati",
+                "occaecati": "fugit",
+                "deleniti": "hic",
+                "optio": "totam",
             },
             VideoObjectTrackingDatasetMetadata: map[string]interface{}{
-                "esse": "rem",
+                "commodi": "molestiae",
             },
         },
     }

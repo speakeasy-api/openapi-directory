@@ -21,29 +21,25 @@ func main() {
 
     req := operations.AddAttachmentsToSetRequest{
         Headers: operations.AddAttachmentsToSetHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSSupport_20130415.AddAttachmentsToSet",
         },
         Request: shared.AddAttachmentsToSetRequest{
-            AttachmentSetID: "nihil",
+            AttachmentSetID: "illum",
             Attachments: []shared.Attachment{
                 shared.Attachment{
-                    Data: "facilis",
-                    FileName: "eum",
+                    Data: "error",
+                    FileName: "deserunt",
                 },
                 shared.Attachment{
-                    Data: "iusto",
-                    FileName: "ullam",
-                },
-                shared.Attachment{
-                    Data: "saepe",
-                    FileName: "inventore",
+                    Data: "suscipit",
+                    FileName: "iure",
                 },
             },
         },

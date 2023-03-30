@@ -21,15 +21,15 @@ func main() {
 
     req := operations.GetWellKnownMercureRequest{
         QueryParams: operations.GetWellKnownMercureQueryParams{
-            LastEventID: "unde",
+            LastEventID: "corrupti",
             Topic: []string{
-                "porro",
-                "nulla",
-                "id",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
         },
         Headers: operations.GetWellKnownMercureHeaders{
-            LastEventID: "vero",
+            LastEventID: "nulla",
         },
     }
 

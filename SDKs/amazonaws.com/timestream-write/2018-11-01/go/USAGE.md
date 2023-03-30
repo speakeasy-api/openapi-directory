@@ -21,135 +21,157 @@ func main() {
 
     req := operations.CreateBatchLoadTaskRequest{
         Headers: operations.CreateBatchLoadTaskHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "Timestream_20181101.CreateBatchLoadTask",
         },
         Request: shared.CreateBatchLoadTaskRequest{
-            ClientToken: "nihil",
+            ClientToken: "illum",
             DataModelConfiguration: &shared.DataModelConfiguration{
                 DataModel: &shared.DataModel{
                     DimensionMappings: []shared.DimensionMapping{
                         shared.DimensionMapping{
-                            DestinationColumn: "facilis",
-                            SourceColumn: "eum",
+                            DestinationColumn: "error",
+                            SourceColumn: "deserunt",
                         },
                         shared.DimensionMapping{
-                            DestinationColumn: "iusto",
-                            SourceColumn: "ullam",
-                        },
-                        shared.DimensionMapping{
-                            DestinationColumn: "saepe",
-                            SourceColumn: "inventore",
+                            DestinationColumn: "suscipit",
+                            SourceColumn: "iure",
                         },
                     },
-                    MeasureNameColumn: "sapiente",
+                    MeasureNameColumn: "magnam",
                     MixedMeasureMappings: []shared.MixedMeasureMapping{
                         shared.MixedMeasureMapping{
-                            MeasureName: "eum",
-                            MeasureValueType: "VARCHAR",
+                            MeasureName: "ipsa",
+                            MeasureValueType: "MULTI",
+                            MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
+                                shared.MultiMeasureAttributeMapping{
+                                    MeasureValueType: "BIGINT",
+                                    SourceColumn: "molestiae",
+                                    TargetMultiMeasureAttributeName: "minus",
+                                },
+                                shared.MultiMeasureAttributeMapping{
+                                    MeasureValueType: "TIMESTAMP",
+                                    SourceColumn: "voluptatum",
+                                    TargetMultiMeasureAttributeName: "iusto",
+                                },
+                            },
+                            SourceColumn: "excepturi",
+                            TargetMeasureName: "nisi",
+                        },
+                        shared.MixedMeasureMapping{
+                            MeasureName: "recusandae",
+                            MeasureValueType: "MULTI",
+                            MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
+                                shared.MultiMeasureAttributeMapping{
+                                    MeasureValueType: "BIGINT",
+                                    SourceColumn: "veritatis",
+                                    TargetMultiMeasureAttributeName: "deserunt",
+                                },
+                            },
+                            SourceColumn: "perferendis",
+                            TargetMeasureName: "ipsam",
+                        },
+                        shared.MixedMeasureMapping{
+                            MeasureName: "repellendus",
+                            MeasureValueType: "MULTI",
+                            MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
+                                shared.MultiMeasureAttributeMapping{
+                                    MeasureValueType: "DOUBLE",
+                                    SourceColumn: "at",
+                                    TargetMultiMeasureAttributeName: "at",
+                                },
+                                shared.MultiMeasureAttributeMapping{
+                                    MeasureValueType: "TIMESTAMP",
+                                    SourceColumn: "molestiae",
+                                    TargetMultiMeasureAttributeName: "quod",
+                                },
+                                shared.MultiMeasureAttributeMapping{
+                                    MeasureValueType: "TIMESTAMP",
+                                    SourceColumn: "esse",
+                                    TargetMultiMeasureAttributeName: "totam",
+                                },
+                                shared.MultiMeasureAttributeMapping{
+                                    MeasureValueType: "VARCHAR",
+                                    SourceColumn: "dolorum",
+                                    TargetMultiMeasureAttributeName: "dicta",
+                                },
+                            },
+                            SourceColumn: "nam",
+                            TargetMeasureName: "officia",
+                        },
+                        shared.MixedMeasureMapping{
+                            MeasureName: "occaecati",
+                            MeasureValueType: "DOUBLE",
                             MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                                 shared.MultiMeasureAttributeMapping{
                                     MeasureValueType: "TIMESTAMP",
-                                    SourceColumn: "non",
-                                    TargetMultiMeasureAttributeName: "deleniti",
-                                },
-                                shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "BOOLEAN",
-                                    SourceColumn: "reprehenderit",
-                                    TargetMultiMeasureAttributeName: "molestiae",
-                                },
-                                shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "TIMESTAMP",
-                                    SourceColumn: "quasi",
-                                    TargetMultiMeasureAttributeName: "laboriosam",
+                                    SourceColumn: "optio",
+                                    TargetMultiMeasureAttributeName: "totam",
                                 },
                                 shared.MultiMeasureAttributeMapping{
                                     MeasureValueType: "DOUBLE",
-                                    SourceColumn: "est",
-                                    TargetMultiMeasureAttributeName: "voluptatem",
+                                    SourceColumn: "commodi",
+                                    TargetMultiMeasureAttributeName: "molestiae",
                                 },
-                            },
-                            SourceColumn: "consequatur",
-                            TargetMeasureName: "fugiat",
-                        },
-                        shared.MixedMeasureMapping{
-                            MeasureName: "a",
-                            MeasureValueType: "TIMESTAMP",
-                            MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                                 shared.MultiMeasureAttributeMapping{
-                                    MeasureValueType: "TIMESTAMP",
-                                    SourceColumn: "accusamus",
-                                    TargetMultiMeasureAttributeName: "reiciendis",
+                                    MeasureValueType: "BIGINT",
+                                    SourceColumn: "qui",
+                                    TargetMultiMeasureAttributeName: "impedit",
                                 },
                             },
-                            SourceColumn: "rem",
-                            TargetMeasureName: "quibusdam",
+                            SourceColumn: "cum",
+                            TargetMeasureName: "esse",
                         },
                     },
                     MultiMeasureMappings: &shared.MultiMeasureMappings{
                         MultiMeasureAttributeMappings: []shared.MultiMeasureAttributeMapping{
                             shared.MultiMeasureAttributeMapping{
                                 MeasureValueType: "BOOLEAN",
-                                SourceColumn: "occaecati",
-                                TargetMultiMeasureAttributeName: "dolor",
-                            },
-                            shared.MultiMeasureAttributeMapping{
-                                MeasureValueType: "VARCHAR",
-                                SourceColumn: "sed",
-                                TargetMultiMeasureAttributeName: "quisquam",
-                            },
-                            shared.MultiMeasureAttributeMapping{
-                                MeasureValueType: "VARCHAR",
-                                SourceColumn: "culpa",
-                                TargetMultiMeasureAttributeName: "qui",
-                            },
-                            shared.MultiMeasureAttributeMapping{
-                                MeasureValueType: "BOOLEAN",
-                                SourceColumn: "rerum",
-                                TargetMultiMeasureAttributeName: "possimus",
+                                SourceColumn: "aspernatur",
+                                TargetMultiMeasureAttributeName: "perferendis",
                             },
                         },
-                        TargetMultiMeasureName: "occaecati",
+                        TargetMultiMeasureName: "ad",
                     },
-                    TimeColumn: "odit",
-                    TimeUnit: "SECONDS",
+                    TimeColumn: "natus",
+                    TimeUnit: "MILLISECONDS",
                 },
                 DataModelS3Configuration: &shared.DataModelS3Configuration{
-                    BucketName: "rem",
-                    ObjectKey: "voluptatem",
+                    BucketName: "iste",
+                    ObjectKey: "dolor",
                 },
             },
             DataSourceConfiguration: shared.DataSourceConfiguration{
                 CsvConfiguration: &shared.CsvConfiguration{
-                    ColumnSeparator: "amet",
-                    EscapeChar: "est",
-                    NullValue: "id",
-                    QuoteChar: "blanditiis",
+                    ColumnSeparator: "natus",
+                    EscapeChar: "laboriosam",
+                    NullValue: "hic",
+                    QuoteChar: "saepe",
                     TrimWhiteSpace: false,
                 },
                 DataFormat: "CSV",
                 DataSourceS3Configuration: shared.DataSourceS3Configuration{
-                    BucketName: "similique",
-                    ObjectKeyPrefix: "dolores",
+                    BucketName: "fuga",
+                    ObjectKeyPrefix: "in",
                 },
             },
-            RecordVersion: 18789,
+            RecordVersion: 359508,
             ReportConfiguration: shared.ReportConfiguration{
                 ReportS3Configuration: &shared.ReportS3Configuration{
-                    BucketName: "quia",
-                    EncryptionOption: "SSE_KMS",
-                    KmsKeyID: "voluptatem",
-                    ObjectKeyPrefix: "laborum",
+                    BucketName: "iste",
+                    EncryptionOption: "SSE_S3",
+                    KmsKeyID: "saepe",
+                    ObjectKeyPrefix: "quidem",
                 },
             },
-            TargetDatabaseName: "modi",
-            TargetTableName: "et",
+            TargetDatabaseName: "architecto",
+            TargetTableName: "ipsa",
         },
     }
 

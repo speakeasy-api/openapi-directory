@@ -21,7 +21,7 @@ func main() {
 
     req := operations.GetProgrammesAtoZSearchRequest{
         PathParams: operations.GetProgrammesAtoZSearchPathParams{
-            Letter: "unde",
+            Letter: "corrupti",
         },
         QueryParams: operations.GetProgrammesAtoZSearchQueryParams{
             Availability: "available",

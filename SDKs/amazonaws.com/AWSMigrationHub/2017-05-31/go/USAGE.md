@@ -21,23 +21,23 @@ func main() {
 
     req := operations.AssociateCreatedArtifactRequest{
         Headers: operations.AssociateCreatedArtifactHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSMigrationHub.AssociateCreatedArtifact",
         },
         Request: shared.AssociateCreatedArtifactRequest{
             CreatedArtifact: shared.CreatedArtifact{
-                Description: "nihil",
-                Name: "fuga",
+                Description: "illum",
+                Name: "vel",
             },
             DryRun: false,
-            MigrationTaskName: "facilis",
-            ProgressUpdateStream: "eum",
+            MigrationTaskName: "error",
+            ProgressUpdateStream: "deserunt",
         },
     }
 

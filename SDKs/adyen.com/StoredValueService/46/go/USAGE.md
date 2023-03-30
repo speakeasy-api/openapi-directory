@@ -21,22 +21,22 @@ func main() {
         },
         Request: &shared.StoredValueStatusChangeRequest{
             Amount: &shared.Amount{
-                Currency: "unde",
+                Currency: "corrupti",
                 Value: 592845,
             },
-            MerchantAccount: "porro",
+            MerchantAccount: "distinctio",
             PaymentMethod: map[string]string{
-                "id": "vero",
-                "perspiciatis": "nulla",
-                "nihil": "fuga",
-                "facilis": "eum",
+                "unde": "nulla",
+                "corrupti": "illum",
+                "vel": "error",
+                "deserunt": "suscipit",
             },
-            RecurringDetailReference: "iusto",
-            Reference: "ullam",
+            RecurringDetailReference: "iure",
+            Reference: "magnam",
             ShopperInteraction: "POS",
-            ShopperReference: "inventore",
+            ShopperReference: "ipsa",
             Status: "inactive",
-            Store: "enim",
+            Store: "tempora",
         },
     }
 

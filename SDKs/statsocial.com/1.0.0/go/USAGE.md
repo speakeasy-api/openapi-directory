@@ -21,7 +21,7 @@ func main() {
 
     req := operations.GetApplicationsStatusRequest{
         QueryParams: operations.GetApplicationsStatusQueryParams{
-            Key: "unde",
+            Key: "corrupti",
         },
     }
 

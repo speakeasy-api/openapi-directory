@@ -23,75 +23,75 @@ func main() {
             },
         },
         PathParams: operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            APIConfigID: "id",
-            Callback: "vero",
-            Fields: "perspiciatis",
-            Key: "nulla",
-            OauthToken: "nihil",
+            APIConfigID: "unde",
+            Callback: "nulla",
+            Fields: "corrupti",
+            Key: "illum",
+            OauthToken: "vel",
             PrettyPrint: false,
-            QuotaUser: "fuga",
-            UploadType: "facilis",
-            UploadProtocol: "eum",
+            QuotaUser: "error",
+            UploadType: "deserunt",
+            UploadProtocol: "suscipit",
         },
         Request: &shared.ApigatewayAPIConfigInput{
-            DisplayName: "iusto",
+            DisplayName: "iure",
             GatewayConfig: &shared.ApigatewayGatewayConfig{
                 BackendConfig: &shared.ApigatewayBackendConfig{
-                    GoogleServiceAccount: "ullam",
+                    GoogleServiceAccount: "magnam",
                 },
             },
-            GatewayServiceAccount: "saepe",
+            GatewayServiceAccount: "debitis",
             GrpcServices: []shared.ApigatewayAPIConfigGrpcServiceDefinition{
                 shared.ApigatewayAPIConfigGrpcServiceDefinition{
                     FileDescriptorSet: &shared.ApigatewayAPIConfigFile{
-                        Contents: "sapiente",
-                        Path: "enim",
+                        Contents: "delectus",
+                        Path: "tempora",
                     },
                     Source: []shared.ApigatewayAPIConfigFile{
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "voluptatum",
-                            Path: "autem",
+                            Contents: "molestiae",
+                            Path: "minus",
                         },
                         shared.ApigatewayAPIConfigFile{
-                            Contents: "vel",
-                            Path: "non",
+                            Contents: "placeat",
+                            Path: "voluptatum",
                         },
                     },
                 },
             },
             Labels: map[string]string{
-                "similique": "reprehenderit",
-                "molestiae": "quo",
+                "excepturi": "nisi",
+                "recusandae": "temporibus",
             },
             ManagedServiceConfigs: []shared.ApigatewayAPIConfigFile{
                 shared.ApigatewayAPIConfigFile{
-                    Contents: "laboriosam",
-                    Path: "dicta",
+                    Contents: "quis",
+                    Path: "veritatis",
                 },
             },
             OpenapiDocuments: []shared.ApigatewayAPIConfigOpenAPIDocument{
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "voluptatem",
-                        Path: "consequatur",
+                        Contents: "perferendis",
+                        Path: "ipsam",
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "fugiat",
-                        Path: "a",
+                        Contents: "repellendus",
+                        Path: "sapiente",
                     },
                 },
                 shared.ApigatewayAPIConfigOpenAPIDocument{
                     Document: &shared.ApigatewayAPIConfigFile{
-                        Contents: "omnis",
-                        Path: "eos",
+                        Contents: "quo",
+                        Path: "odit",
                     },
                 },
             },

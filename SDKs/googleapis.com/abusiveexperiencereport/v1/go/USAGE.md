@@ -15,20 +15,20 @@ func main() {
 
     req := operations.AbusiveexperiencereportSitesGetRequest{
         PathParams: operations.AbusiveexperiencereportSitesGetPathParams{
-            Name: "unde",
+            Name: "corrupti",
         },
         QueryParams: operations.AbusiveexperiencereportSitesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
     }
 

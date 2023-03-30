@@ -35,16 +35,16 @@ func main() {
         },
         QueryParams: operations.KeepNotesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "deserunt",
+            AccessToken: "provident",
             Alt: "proto",
-            Callback: "nulla",
-            Fields: "id",
-            Key: "vero",
-            OauthToken: "perspiciatis",
+            Callback: "quibusdam",
+            Fields: "unde",
+            Key: "nulla",
+            OauthToken: "corrupti",
             PrettyPrint: false,
-            QuotaUser: "nulla",
-            UploadType: "nihil",
-            UploadProtocol: "fuga",
+            QuotaUser: "illum",
+            UploadType: "vel",
+            UploadProtocol: "error",
         },
         Request: &shared.NoteInput{
             Body: &shared.Section{
@@ -57,7 +57,7 @@ func main() {
                                 shared.ListItem{},
                             },
                             Text: &shared.TextContent{
-                                Text: "iusto",
+                                Text: "iure",
                             },
                         },
                         shared.ListItem{
@@ -67,7 +67,7 @@ func main() {
                                 shared.ListItem{},
                             },
                             Text: &shared.TextContent{
-                                Text: "saepe",
+                                Text: "debitis",
                             },
                         },
                         shared.ListItem{
@@ -76,16 +76,16 @@ func main() {
                                 shared.ListItem{},
                             },
                             Text: &shared.TextContent{
-                                Text: "sapiente",
+                                Text: "delectus",
                             },
                         },
                     },
                 },
                 Text: &shared.TextContent{
-                    Text: "enim",
+                    Text: "tempora",
                 },
             },
-            Title: "Regional Applications Consultant",
+            Title: "Mrs.",
         },
     }
 

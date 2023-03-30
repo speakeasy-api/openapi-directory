@@ -32,9 +32,9 @@ func main() {
         },
         Request: shared.CredentialOptions{
             ACL: map[string]interface{}{
-                "deserunt": "porro",
-                "nulla": "id",
-                "vero": "perspiciatis",
+                "provident": "distinctio",
+                "quibusdam": "unde",
+                "nulla": "corrupti",
             },
             Cidrs: "10.0.0.17/32, 192.168.1.0/24",
             Global: false,

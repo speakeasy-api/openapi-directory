@@ -15,8 +15,8 @@ func main() {
 
     req := operations.GetareacodeRequest{
         QueryParams: operations.GetareacodeQueryParams{
-            Areacode: "unde",
-            License: "deserunt",
+            Areacode: "corrupti",
+            License: "provident",
         },
     }
 

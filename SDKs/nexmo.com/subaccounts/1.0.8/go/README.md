@@ -32,7 +32,7 @@ func main() {
             },
         },
         PathParams: operations.CreateSubAccountPathParams{
-            APIKey: "unde",
+            APIKey: "corrupti",
         },
         Request: shared.NewSubaccountRequest{
             Name: "Subaccount department A",

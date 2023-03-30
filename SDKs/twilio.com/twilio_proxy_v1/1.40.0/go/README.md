@@ -32,16 +32,16 @@ func main() {
             },
         },
         PathParams: operations.CreateMessageInteractionPathParams{
-            ParticipantSid: "unde",
-            ServiceSid: "deserunt",
-            SessionSid: "porro",
+            ParticipantSid: "corrupti",
+            ServiceSid: "provident",
+            SessionSid: "distinctio",
         },
         Request: &operations.CreateMessageInteractionCreateMessageInteractionRequest{
-            Body: "nulla",
+            Body: "quibusdam",
             MediaURL: []string{
-                "https://karlee.org",
-                "http://linda.name",
-                "http://humberto.biz",
+                "https://moral-star.info",
+                "https://present-giggle.info",
+                "http://unique-baboon.org",
             },
         },
     }

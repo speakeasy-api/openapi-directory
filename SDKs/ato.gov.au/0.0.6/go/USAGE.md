@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetClassificationsAddressTypesRequest{
         Headers: operations.GetClassificationsAddressTypesHeaders{
-            APIKey: "unde",
+            APIKey: "corrupti",
         },
     }
 

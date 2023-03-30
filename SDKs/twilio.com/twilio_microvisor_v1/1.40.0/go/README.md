@@ -32,8 +32,8 @@ func main() {
             },
         },
         Request: &operations.CreateAccountConfigCreateAccountConfigRequest{
-            Key: "unde",
-            Value: "deserunt",
+            Key: "corrupti",
+            Value: "provident",
         },
     }
 

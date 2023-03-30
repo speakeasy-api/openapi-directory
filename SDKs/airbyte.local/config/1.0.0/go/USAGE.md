@@ -35,8 +35,8 @@ func main() {
                         RecordsEmitted: 297534,
                         StateMessagesEmitted: 891773,
                     },
-                    StreamName: "inventore",
-                    StreamNamespace: "sapiente",
+                    StreamName: "ipsa",
+                    StreamNamespace: "delectus",
                 },
                 shared.AttemptStreamStats{
                     Stats: shared.AttemptStats{
@@ -47,8 +47,8 @@ func main() {
                         RecordsEmitted: 812169,
                         StateMessagesEmitted: 528895,
                     },
-                    StreamName: "deleniti",
-                    StreamNamespace: "similique",
+                    StreamName: "iusto",
+                    StreamNamespace: "excepturi",
                 },
             },
         },

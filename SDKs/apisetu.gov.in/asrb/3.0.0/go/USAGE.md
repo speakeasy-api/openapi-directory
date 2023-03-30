@@ -32,39 +32,39 @@ func main() {
                 Consent: shared.ConsentArtifactSchemaConsent{
                     ConsentID: "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba",
                     Data: shared.ConsentArtifactSchemaConsentData{
-                        ID: "unde",
+                        ID: "corrupti",
                     },
                     DataConsumer: shared.ConsentArtifactSchemaConsentDataConsumer{
-                        ID: "deserunt",
+                        ID: "provident",
                     },
                     DataProvider: shared.ConsentArtifactSchemaConsentDataProvider{
-                        ID: "porro",
+                        ID: "distinctio",
                     },
                     Permission: shared.ConsentArtifactSchemaConsentPermission{
-                        Access: "nulla",
+                        Access: "quibusdam",
                         DateRange: shared.ConsentArtifactSchemaConsentPermissionDateRange{
-                            From: "2022-08-21T23:51:57.189Z",
-                            To: "2022-05-20T20:28:10.026Z",
+                            From: "2022-08-22T02:13:34.121Z",
+                            To: "2022-05-20T22:49:46.957Z",
                         },
                         Frequency: shared.ConsentArtifactSchemaConsentPermissionFrequency{
                             Repeats: 5448.83,
-                            Unit: "nulla",
+                            Unit: "illum",
                             Value: 4236.55,
                         },
                     },
                     Purpose: shared.ConsentArtifactSchemaConsentPurpose{
-                        Description: "fuga",
+                        Description: "error",
                     },
-                    Timestamp: "2022-08-06T06:02:26.068Z",
+                    Timestamp: "2022-08-06T08:24:02.999Z",
                     User: shared.ConsentArtifactSchemaConsentUser{
-                        Email: "Humberto.Gulgowski96@yahoo.com",
-                        IDNumber: "enim",
-                        IDType: "eum",
-                        Mobile: "(885) 553-9803 x060",
+                        Email: "Hunter.Gulgowski96@yahoo.com",
+                        IDNumber: "tempora",
+                        IDType: "suscipit",
+                        Mobile: "885.553.9803 x060",
                     },
                 },
                 Signature: shared.ConsentArtifactSchemaSignature{
-                    Signature: "consequatur",
+                    Signature: "ipsam",
                 },
             },
             Format: "pdf",

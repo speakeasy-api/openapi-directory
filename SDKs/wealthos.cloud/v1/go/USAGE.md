@@ -20,13 +20,13 @@ func main() {
             },
         },
         PathParams: operations.UpdateBankAccountPathParams{
-            BankAccountID: "unde",
+            BankAccountID: "corrupti",
         },
         Headers: operations.UpdateBankAccountHeaders{
-            XAPIKey: "deserunt",
+            XAPIKey: "provident",
         },
         Request: operations.UpdateBankAccountUpdateRequestBodyForBankAccount{
-            AccountName: "porro",
+            AccountName: "distinctio",
             AccountStatus: "inactive",
             DefaultAccount: "no",
             ReferenceVersion: 1,

@@ -32,7 +32,7 @@ func main() {
             },
         },
         QueryParams: operations.FetchAccountSettingsQueryParams{
-            SubaccountSid: "unde",
+            SubaccountSid: "corrupti",
         },
     }
 

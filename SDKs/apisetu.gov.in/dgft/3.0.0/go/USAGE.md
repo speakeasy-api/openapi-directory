@@ -20,7 +20,7 @@ func main() {
             },
         },
         PathParams: operations.ImporterExporterCodeVerificationAPIPathParams{
-            Iec: "unde",
+            Iec: "corrupti",
         },
     }
 

@@ -26,7 +26,7 @@ func main() {
 
     req := operations.CertificateActionRetrieveRequest{
         PathParams: operations.CertificateActionRetrievePathParams{
-            CertificateID: "unde",
+            CertificateID: "corrupti",
         },
     }
 

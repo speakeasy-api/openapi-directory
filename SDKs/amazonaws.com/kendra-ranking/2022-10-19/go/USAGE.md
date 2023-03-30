@@ -21,30 +21,30 @@ func main() {
 
     req := operations.CreateRescoreExecutionPlanRequest{
         Headers: operations.CreateRescoreExecutionPlanHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSKendraRerankingFrontendService.CreateRescoreExecutionPlan",
         },
         Request: shared.CreateRescoreExecutionPlanRequest{
             CapacityUnits: &shared.CapacityUnitsConfiguration{
-                RescoreCapacityUnits: 423655,
+                RescoreCapacityUnits: 847252,
             },
-            ClientToken: "fuga",
-            Description: "facilis",
-            Name: "eum",
+            ClientToken: "vel",
+            Description: "error",
+            Name: "deserunt",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "ullam",
-                    Value: "saepe",
+                    Key: "iure",
+                    Value: "magnam",
                 },
                 shared.Tag{
-                    Key: "inventore",
-                    Value: "sapiente",
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
             },
         },

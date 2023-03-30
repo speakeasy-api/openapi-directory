@@ -32,17 +32,17 @@ func main() {
 
     req := operations.DisableControlRequest{
         Headers: operations.DisableControlHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.DisableControlRequestBody{
-            ControlIdentifier: "nulla",
-            TargetIdentifier: "nihil",
+            ControlIdentifier: "illum",
+            TargetIdentifier: "vel",
         },
     }
 

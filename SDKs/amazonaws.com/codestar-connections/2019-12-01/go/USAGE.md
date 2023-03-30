@@ -21,27 +21,31 @@ func main() {
 
     req := operations.CreateConnectionRequest{
         Headers: operations.CreateConnectionHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "com.amazonaws.codestar.connections.CodeStar_connections_20191201.CreateConnection",
         },
         Request: shared.CreateConnectionInput{
-            ConnectionName: "nihil",
-            HostArn: "fuga",
+            ConnectionName: "illum",
+            HostArn: "vel",
             ProviderType: "GitHub",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iusto",
-                    Value: "ullam",
+                    Key: "suscipit",
+                    Value: "iure",
                 },
                 shared.Tag{
-                    Key: "saepe",
-                    Value: "inventore",
+                    Key: "magnam",
+                    Value: "debitis",
+                },
+                shared.Tag{
+                    Key: "ipsa",
+                    Value: "delectus",
                 },
             },
         },

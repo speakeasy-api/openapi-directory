@@ -16,8 +16,8 @@ func main() {
     req := operations.GetChildrenRequest{
         PathParams: operations.GetChildrenPathParams{
             Count: 548814,
-            Cursor: "deserunt",
-            Sha1: "porro",
+            Cursor: "provident",
+            Sha1: "distinctio",
         },
     }
 

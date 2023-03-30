@@ -21,7 +21,7 @@ func main() {
 
     req := operations.GetCriticsResourceTypeJSONRequest{
         PathParams: operations.GetCriticsResourceTypeJSONPathParams{
-            ResourceType: "unde",
+            ResourceType: "corrupti",
         },
     }
 

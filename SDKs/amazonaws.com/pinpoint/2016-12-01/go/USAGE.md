@@ -21,20 +21,20 @@ func main() {
 
     req := operations.CreateAppRequest{
         Headers: operations.CreateAppHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateAppRequestBody{
             CreateApplicationRequest: operations.CreateAppRequestBodyCreateApplicationRequest{
-                Name: "nulla",
+                Name: "illum",
                 Tags: map[string]string{
-                    "fuga": "facilis",
-                    "eum": "iusto",
+                    "error": "deserunt",
+                    "suscipit": "iure",
                 },
             },
         },

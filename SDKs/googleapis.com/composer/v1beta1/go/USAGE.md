@@ -23,23 +23,23 @@ func main() {
             },
         },
         PathParams: operations.ComposerProjectsLocationsEnvironmentsCheckUpgradePathParams{
-            Environment: "unde",
+            Environment: "corrupti",
         },
         QueryParams: operations.ComposerProjectsLocationsEnvironmentsCheckUpgradeQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.CheckUpgradeRequest{
-            ImageVersion: "eum",
+            ImageVersion: "suscipit",
         },
     }
 

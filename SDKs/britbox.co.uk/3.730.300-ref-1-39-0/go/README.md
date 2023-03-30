@@ -36,11 +36,11 @@ func main() {
                 "cas",
                 "lrl",
             },
-            Lang: "id",
+            Lang: "unde",
         },
         Request: shared.AddPaymentMethodRequest{
             MakeDefault: false,
-            Token: "vero",
+            Token: "nulla",
             Type: "Card",
         },
     }

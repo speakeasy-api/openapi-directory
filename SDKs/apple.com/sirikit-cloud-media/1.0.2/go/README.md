@@ -26,13 +26,13 @@ func main() {
 
     req := operations.ExtensionConfigurationRequest{
         Headers: operations.ExtensionConfigurationHeaders{
-            AcceptLanguage: "unde",
-            CacheControl: "deserunt",
-            IfNoneMatch: "porro",
+            AcceptLanguage: "corrupti",
+            CacheControl: "provident",
+            IfNoneMatch: "distinctio",
             RequestTimeout: 8442.66,
-            UserAgent: "id",
+            UserAgent: "unde",
             XApplecloudextensionRetryCount: 8579.46,
-            XApplecloudextensionSessionID: "perspiciatis",
+            XApplecloudextensionSessionID: "corrupti",
         },
     }
 

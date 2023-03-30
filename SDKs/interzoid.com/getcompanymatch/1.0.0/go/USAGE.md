@@ -16,7 +16,7 @@ func main() {
     req := operations.GetcompanymatchRequest{
         QueryParams: operations.GetcompanymatchQueryParams{
             Company: "Medhurst - Rau",
-            License: "nulla",
+            License: "quibusdam",
         },
     }
 

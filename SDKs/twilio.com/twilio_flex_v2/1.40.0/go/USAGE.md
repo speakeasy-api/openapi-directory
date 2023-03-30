@@ -21,10 +21,10 @@ func main() {
             },
         },
         Request: &operations.CreateWebChannelCreateWebChannelRequest{
-            AddressSid: "unde",
-            ChatFriendlyName: "deserunt",
-            CustomerFriendlyName: "porro",
-            PreEngagementData: "nulla",
+            AddressSid: "corrupti",
+            ChatFriendlyName: "provident",
+            CustomerFriendlyName: "distinctio",
+            PreEngagementData: "quibusdam",
         },
     }
 

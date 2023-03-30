@@ -22,16 +22,16 @@ func main() {
         },
         Request: &operations.CreateDeviceCodeCreateDeviceCodeRequest{
             Audiences: []string{
-                "deserunt",
-                "porro",
-                "nulla",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
-            ClientSid: "id",
+            ClientSid: "unde",
             Scopes: []string{
-                "perspiciatis",
-                "nulla",
-                "nihil",
-                "fuga",
+                "corrupti",
+                "illum",
+                "vel",
+                "error",
             },
         },
     }

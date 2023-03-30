@@ -31,23 +31,25 @@ func main() {
             },
         },
         QueryParams: operations.GetAccountingQueryParams{
-            FromDate: "unde",
+            FromDate: "corrupti",
             Hydrate: []GetAccountingHydrateEnum{
                 "items",
                 "items",
                 "items",
             },
-            Limit: 857946,
+            Limit: 715190,
             OrderIds: []int64{
+                602763,
+                857946,
+                544883,
                 847252,
-                423655,
-                623564,
             },
-            Page: 645894,
-            ToDate: "eum",
+            Page: 423655,
+            ToDate: "error",
             WarehouseIds: []int64{
+                384382,
+                437587,
                 297534,
-                891773,
             },
         },
     }

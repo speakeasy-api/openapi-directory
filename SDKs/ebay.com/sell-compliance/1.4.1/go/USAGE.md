@@ -20,14 +20,14 @@ func main() {
             },
         },
         QueryParams: operations.GetListingViolationsQueryParams{
-            ComplianceType: "unde",
-            Filter: "deserunt",
-            Limit: "porro",
-            ListingID: "nulla",
-            Offset: "id",
+            ComplianceType: "corrupti",
+            Filter: "provident",
+            Limit: "distinctio",
+            ListingID: "quibusdam",
+            Offset: "unde",
         },
         Headers: operations.GetListingViolationsHeaders{
-            XEbayCMarketplaceID: "vero",
+            XEbayCMarketplaceID: "nulla",
         },
     }
 

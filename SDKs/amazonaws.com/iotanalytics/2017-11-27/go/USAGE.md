@@ -21,24 +21,24 @@ func main() {
 
     req := operations.BatchPutMessageRequest{
         Headers: operations.BatchPutMessageHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.BatchPutMessageRequestBody{
-            ChannelName: "nulla",
+            ChannelName: "illum",
             Messages: []shared.Message{
                 shared.Message{
-                    MessageID: "fuga",
-                    Payload: "facilis",
+                    MessageID: "error",
+                    Payload: "deserunt",
                 },
                 shared.Message{
-                    MessageID: "eum",
-                    Payload: "iusto",
+                    MessageID: "suscipit",
+                    Payload: "iure",
                 },
             },
         },

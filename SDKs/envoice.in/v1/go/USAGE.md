@@ -15,8 +15,8 @@ func main() {
 
     req := operations.ClientAPIAllRequest{
         Headers: operations.ClientAPIAllHeaders{
-            XAuthKey: "unde",
-            XAuthSecret: "deserunt",
+            XAuthKey: "corrupti",
+            XAuthSecret: "provident",
         },
     }
 

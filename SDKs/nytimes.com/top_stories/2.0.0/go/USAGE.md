@@ -25,7 +25,7 @@ func main() {
             Section: "theater",
         },
         QueryParams: operations.GetSectionFormatQueryParams{
-            Callback: "porro",
+            Callback: "distinctio",
         },
     }
 

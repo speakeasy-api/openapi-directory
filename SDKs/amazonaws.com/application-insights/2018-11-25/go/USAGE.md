@@ -21,13 +21,13 @@ func main() {
 
     req := operations.CreateApplicationRequest{
         Headers: operations.CreateApplicationHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "EC2WindowsBarleyService.CreateApplication",
         },
         Request: shared.CreateApplicationRequest{
@@ -36,16 +36,20 @@ func main() {
             CWEMonitorEnabled: false,
             GroupingType: "ACCOUNT_BASED",
             OpsCenterEnabled: false,
-            OpsItemSNSTopicArn: "fuga",
-            ResourceGroupName: "facilis",
+            OpsItemSNSTopicArn: "illum",
+            ResourceGroupName: "vel",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iusto",
-                    Value: "ullam",
+                    Key: "deserunt",
+                    Value: "suscipit",
                 },
                 shared.Tag{
-                    Key: "saepe",
-                    Value: "inventore",
+                    Key: "iure",
+                    Value: "magnam",
+                },
+                shared.Tag{
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
             },
         },

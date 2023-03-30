@@ -26,9 +26,9 @@ func main() {
 
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
-            Domain: "unde",
-            Format: "deserunt",
-            Key: "porro",
+            Domain: "corrupti",
+            Format: "provident",
+            Key: "distinctio",
         },
     }
 

@@ -26,32 +26,32 @@ func main() {
 
     req := operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest{
         PathParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.GoogleSearchIdeahubV1betaIdeaActivity{
             Ideas: []string{
-                "iusto",
-                "ullam",
+                "iure",
+                "magnam",
             },
-            Name: "saepe",
+            Name: "debitis",
             Topics: []string{
-                "sapiente",
+                "delectus",
             },
             Type: "POST_DRAFTED",
-            URI: "http://jason.net",
+            URI: "http://lasting-sex.net",
         },
     }
 

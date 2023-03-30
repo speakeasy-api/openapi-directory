@@ -37,8 +37,8 @@ func main() {
             TargetVersionID: 715190,
         },
         QueryParams: operations.GetScreenshotsTargetScreenshotTestIDTargetVersionIDComparisonParallelBaseVersionIDQueryParams{
-            Callback: "nulla",
-            Format: "id",
+            Callback: "quibusdam",
+            Format: "unde",
             Tolerance: 8579.46,
         },
     }

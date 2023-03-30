@@ -32,7 +32,7 @@ func main() {
         },
         PathParams: operations.DeleteCrmV3ExtensionsCardsAppIDCardIDArchivePathParams{
             AppID: 548814,
-            CardID: "deserunt",
+            CardID: "provident",
         },
     }
 

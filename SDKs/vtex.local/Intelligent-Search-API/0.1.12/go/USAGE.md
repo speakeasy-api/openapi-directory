@@ -15,8 +15,8 @@ func main() {
 
     req := operations.GetAutocompleteSuggestionsRequest{
         QueryParams: operations.GetAutocompleteSuggestionsQueryParams{
-            Locale: "unde",
-            Query: "deserunt",
+            Locale: "corrupti",
+            Query: "provident",
         },
     }
 

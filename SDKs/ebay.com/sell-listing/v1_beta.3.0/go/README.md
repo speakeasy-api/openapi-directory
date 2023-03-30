@@ -31,56 +31,56 @@ func main() {
             },
         },
         Headers: operations.CreateItemDraftHeaders{
-            ContentLanguage: "unde",
-            XEbayCMarketplaceID: "deserunt",
+            ContentLanguage: "corrupti",
+            XEbayCMarketplaceID: "provident",
         },
         Request: &shared.ItemDraft{
-            CategoryID: "porro",
+            CategoryID: "distinctio",
             Charity: &shared.Charity{
-                CharityID: "nulla",
-                DonationPercentage: "id",
+                CharityID: "quibusdam",
+                DonationPercentage: "unde",
             },
-            Condition: "vero",
-            Format: "perspiciatis",
+            Condition: "nulla",
+            Format: "corrupti",
             PricingSummary: &shared.PricingSummary{
                 AuctionReservePrice: &shared.Amount{
-                    Currency: "nulla",
-                    Value: "nihil",
+                    Currency: "illum",
+                    Value: "vel",
                 },
                 AuctionStartPrice: &shared.Amount{
-                    Currency: "fuga",
-                    Value: "facilis",
+                    Currency: "error",
+                    Value: "deserunt",
                 },
                 Price: &shared.Amount{
-                    Currency: "eum",
-                    Value: "iusto",
+                    Currency: "suscipit",
+                    Value: "iure",
                 },
             },
             Product: &shared.Product{
                 Aspects: []shared.Aspect{
                     shared.Aspect{
-                        Name: "saepe",
+                        Name: "debitis",
                         Values: []string{
-                            "sapiente",
+                            "delectus",
                         },
                     },
                     shared.Aspect{
-                        Name: "enim",
+                        Name: "tempora",
                         Values: []string{
-                            "voluptatum",
-                            "autem",
+                            "molestiae",
+                            "minus",
                         },
                     },
                 },
-                Brand: "vel",
-                Description: "non",
-                Epid: "deleniti",
+                Brand: "placeat",
+                Description: "voluptatum",
+                Epid: "iusto",
                 ImageUrls: []string{
-                    "reprehenderit",
-                    "molestiae",
-                    "quo",
+                    "nisi",
+                    "recusandae",
+                    "temporibus",
                 },
-                Title: "Senior Tactics Executive",
+                Title: "Mr.",
             },
         },
     }

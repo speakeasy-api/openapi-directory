@@ -32,23 +32,22 @@ func main() {
 
     req := operations.AcceptMatchRequest{
         Headers: operations.AcceptMatchHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "GameLift.AcceptMatch",
         },
         Request: shared.AcceptMatchInput{
-            AcceptanceType: "ACCEPT",
+            AcceptanceType: "REJECT",
             PlayerIds: []string{
-                "facilis",
-                "eum",
-                "iusto",
+                "error",
+                "deserunt",
             },
-            TicketID: "ullam",
+            TicketID: "suscipit",
         },
     }
 

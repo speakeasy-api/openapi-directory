@@ -28,7 +28,7 @@ func main() {
         QueryParams: operations.GetResourcesCampaignsJSONQueryParams{
             Max: 548814,
             Offset: 592845,
-            Sort: "porro",
+            Sort: "distinctio",
         },
     }
 

@@ -22,16 +22,16 @@ func main() {
     req := operations.AssociateLicenseRequest{
         PathParams: operations.AssociateLicensePathParams{
             LicenseType: "ENTERPRISE_FREE_TRIAL",
-            WorkspaceID: "deserunt",
+            WorkspaceID: "provident",
         },
         Headers: operations.AssociateLicenseHeaders{
-            XAmzAlgorithm: "porro",
-            XAmzContentSha256: "nulla",
-            XAmzCredential: "id",
-            XAmzDate: "vero",
-            XAmzSecurityToken: "perspiciatis",
-            XAmzSignature: "nulla",
-            XAmzSignedHeaders: "nihil",
+            XAmzAlgorithm: "distinctio",
+            XAmzContentSha256: "quibusdam",
+            XAmzCredential: "unde",
+            XAmzDate: "nulla",
+            XAmzSecurityToken: "corrupti",
+            XAmzSignature: "illum",
+            XAmzSignedHeaders: "vel",
         },
     }
 

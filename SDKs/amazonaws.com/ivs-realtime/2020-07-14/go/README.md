@@ -32,20 +32,20 @@ func main() {
 
     req := operations.CreateParticipantTokenRequest{
         Headers: operations.CreateParticipantTokenHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateParticipantTokenRequestBody{
             Attributes: map[string]string{
-                "nihil": "fuga",
-                "facilis": "eum",
-                "iusto": "ullam",
-                "saepe": "inventore",
+                "vel": "error",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
             Capabilities: []shared.ParticipantTokenCapabilityEnum{
                 "PUBLISH",
@@ -54,8 +54,8 @@ func main() {
                 "SUBSCRIBE",
             },
             Duration: 812169,
-            StageArn: "non",
-            UserID: "deleniti",
+            StageArn: "voluptatum",
+            UserID: "iusto",
         },
     }
 

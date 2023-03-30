@@ -31,15 +31,15 @@ func main() {
             },
         },
         Request: &shared.AssignTerminalsRequest{
-            CompanyAccount: "unde",
-            MerchantAccount: "deserunt",
+            CompanyAccount: "corrupti",
+            MerchantAccount: "provident",
             MerchantInventory: false,
-            Store: "porro",
+            Store: "distinctio",
             Terminals: []string{
-                "id",
-                "vero",
-                "perspiciatis",
+                "unde",
                 "nulla",
+                "corrupti",
+                "illum",
             },
         },
     }

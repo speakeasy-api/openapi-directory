@@ -28,9 +28,9 @@ func main() {
         QueryParams: operations.PostV1OrderFeedbackQueryParams{
             Action: "REJECT",
             Format: "xml",
-            ID: "porro",
-            Key: "nulla",
-            Notes: "id",
+            ID: "distinctio",
+            Key: "quibusdam",
+            Notes: "unde",
         },
     }
 

@@ -15,7 +15,7 @@ func main() {
 
     req := operations.CompanyControllerGetBranchesRequest{
         PathParams: operations.CompanyControllerGetBranchesPathParams{
-            ShortName: "unde",
+            ShortName: "corrupti",
         },
         QueryParams: operations.CompanyControllerGetBranchesQueryParams{
             Count: 592845,

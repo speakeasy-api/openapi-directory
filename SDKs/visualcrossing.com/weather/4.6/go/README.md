@@ -26,19 +26,19 @@ func main() {
 
     req := operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryRequest{
         QueryParams: operations.GetVisualCrossingWebServicesRestServicesWeatherdataHistoryQueryParams{
-            AggregateHours: "unde",
+            AggregateHours: "corrupti",
             AllowAsynch: false,
             CollectStationContributions: false,
-            ContentType: "deserunt",
-            EndDateTime: "porro",
+            ContentType: "provident",
+            EndDateTime: "distinctio",
             IncludeNormals: false,
-            Key: "nulla",
-            Locations: "id",
-            MaxDistance: "vero",
-            MaxStations: "perspiciatis",
+            Key: "quibusdam",
+            Locations: "unde",
+            MaxDistance: "nulla",
+            MaxStations: "corrupti",
             ShortColumnNames: false,
-            StartDateTime: "nulla",
-            UnitGroup: "nihil",
+            StartDateTime: "illum",
+            UnitGroup: "vel",
         },
     }
 

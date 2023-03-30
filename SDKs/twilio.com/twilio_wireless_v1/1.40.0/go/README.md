@@ -33,12 +33,12 @@ func main() {
         },
         Request: &operations.CreateCommandCreateCommandRequest{
             CallbackMethod: "PATCH",
-            CallbackURL: "https://michale.org",
-            Command: "id",
+            CallbackURL: "https://salty-stag.name",
+            Command: "nulla",
             CommandMode: "binary",
             DeliveryReceiptRequested: false,
-            IncludeSid: "perspiciatis",
-            Sim: "nulla",
+            IncludeSid: "illum",
+            Sim: "vel",
         },
     }
 

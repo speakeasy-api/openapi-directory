@@ -21,17 +21,17 @@ func main() {
 
     req := operations.CreateAccessPointRequest{
         Headers: operations.CreateAccessPointHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateAccessPointRequestBody{
-            ClientToken: "nulla",
-            FileSystemID: "nihil",
+            ClientToken: "illum",
+            FileSystemID: "vel",
             PosixUser: &operations.CreateAccessPointRequestBodyPosixUser{
                 Gid: 623564,
                 SecondaryGids: []int64{
@@ -45,18 +45,18 @@ func main() {
                 CreationInfo: &shared.CreationInfo{
                     OwnerGid: 56713,
                     OwnerUID: 963663,
-                    Permissions: "enim",
+                    Permissions: "tempora",
                 },
-                Path: "eum",
+                Path: "suscipit",
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "autem",
-                    Value: "vel",
+                    Key: "minus",
+                    Value: "placeat",
                 },
                 shared.Tag{
-                    Key: "non",
-                    Value: "deleniti",
+                    Key: "voluptatum",
+                    Value: "iusto",
                 },
             },
         },

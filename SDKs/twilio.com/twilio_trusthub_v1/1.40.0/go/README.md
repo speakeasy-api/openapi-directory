@@ -32,10 +32,10 @@ func main() {
             },
         },
         Request: &operations.CreateCustomerProfileCreateCustomerProfileRequest{
-            Email: "Larry_Rau85@yahoo.com",
-            FriendlyName: "perspiciatis",
-            PolicySid: "nulla",
-            StatusCallback: "http://linda.name",
+            Email: "Larue_Rau85@yahoo.com",
+            FriendlyName: "corrupti",
+            PolicySid: "illum",
+            StatusCallback: "http://physical-pegboard.info",
         },
     }
 

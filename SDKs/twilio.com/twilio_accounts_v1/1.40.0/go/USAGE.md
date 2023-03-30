@@ -21,9 +21,9 @@ func main() {
             },
         },
         Request: &operations.CreateCredentialAwsCreateCredentialAwsRequest{
-            AccountSid: "unde",
-            Credentials: "deserunt",
-            FriendlyName: "porro",
+            AccountSid: "corrupti",
+            Credentials: "provident",
+            FriendlyName: "distinctio",
         },
     }
 

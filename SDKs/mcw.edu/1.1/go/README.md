@@ -26,7 +26,7 @@ func main() {
 
     req := operations.GETAffectedGenomicModelsUsingGETRequest{
         PathParams: operations.GETAffectedGenomicModelsUsingGETPathParams{
-            TaxonID: "unde",
+            TaxonID: "corrupti",
         },
     }
 

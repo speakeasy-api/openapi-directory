@@ -31,13 +31,13 @@ func main() {
             },
         },
         QueryParams: operations.GETListsBestSellersHistoryJSONQueryParams{
-            AgeGroup: "unde",
-            Author: "deserunt",
-            Contributor: "porro",
-            Isbn: "nulla",
-            Price: "id",
-            Publisher: "vero",
-            Title: "Global Configuration Administrator",
+            AgeGroup: "corrupti",
+            Author: "provident",
+            Contributor: "distinctio",
+            Isbn: "quibusdam",
+            Price: "unde",
+            Publisher: "nulla",
+            Title: "Ms.",
         },
     }
 

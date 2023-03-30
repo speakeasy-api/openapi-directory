@@ -31,10 +31,10 @@ func main() {
             },
         },
         PathParams: operations.GetCharityOrgPathParams{
-            CharityOrgID: "unde",
+            CharityOrgID: "corrupti",
         },
         Headers: operations.GetCharityOrgHeaders{
-            XEbayCMarketplaceID: "deserunt",
+            XEbayCMarketplaceID: "provident",
         },
     }
 

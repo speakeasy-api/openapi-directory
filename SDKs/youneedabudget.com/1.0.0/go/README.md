@@ -32,12 +32,12 @@ func main() {
 
     req := operations.CreateAccountRequest{
         PathParams: operations.CreateAccountPathParams{
-            BudgetID: "unde",
+            BudgetID: "corrupti",
         },
         Request: shared.PostAccountWrapper{
             Account: shared.SaveAccount{
                 Balance: 592845,
-                Name: "porro",
+                Name: "distinctio",
                 Type: "personalLoan",
             },
         },

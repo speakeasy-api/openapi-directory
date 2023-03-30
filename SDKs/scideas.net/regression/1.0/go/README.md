@@ -29,28 +29,28 @@ func main() {
             ConvertDateTo: "month",
             Data: []map[string]interface{}{
                 map[string]interface{}{
-                    "porro": "nulla",
-                    "id": "vero",
-                    "perspiciatis": "nulla",
+                    "distinctio": "quibusdam",
+                    "unde": "nulla",
+                    "corrupti": "illum",
                 },
                 map[string]interface{}{
-                    "fuga": "facilis",
-                    "eum": "iusto",
+                    "error": "deserunt",
+                    "suscipit": "iure",
                 },
                 map[string]interface{}{
-                    "saepe": "inventore",
-                    "sapiente": "enim",
+                    "debitis": "ipsa",
+                    "delectus": "tempora",
                 },
             },
             IgnoreVariables: []map[string]interface{}{
                 map[string]interface{}{
-                    "autem": "vel",
-                    "non": "deleniti",
+                    "minus": "placeat",
+                    "voluptatum": "iusto",
                 },
                 map[string]interface{}{
-                    "reprehenderit": "molestiae",
-                    "quo": "quasi",
-                    "laboriosam": "dicta",
+                    "nisi": "recusandae",
+                    "temporibus": "ab",
+                    "quis": "veritatis",
                 },
             },
             Key: "abc123",

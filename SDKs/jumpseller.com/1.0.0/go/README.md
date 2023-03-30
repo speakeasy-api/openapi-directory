@@ -26,11 +26,11 @@ func main() {
 
     req := operations.DeleteJsappsCodeJSONRequest{
         PathParams: operations.DeleteJsappsCodeJSONPathParams{
-            Code: "unde",
+            Code: "corrupti",
         },
         QueryParams: operations.DeleteJsappsCodeJSONQueryParams{
-            Authtoken: "deserunt",
-            Login: "porro",
+            Authtoken: "provident",
+            Login: "distinctio",
         },
     }
 

@@ -32,57 +32,49 @@ func main() {
 
     req := operations.CreateRuleRequest{
         Headers: operations.CreateRuleHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateRuleRequestBody{
-            Description: "nulla",
+            Description: "illum",
             LockConfiguration: &operations.CreateRuleRequestBodyLockConfiguration{
                 UnlockDelay: &shared.UnlockDelay{
                     UnlockDelayUnit: "DAYS",
-                    UnlockDelayValue: 623564,
+                    UnlockDelayValue: 423655,
                 },
             },
             ResourceTags: []shared.ResourceTag{
                 shared.ResourceTag{
-                    ResourceTagKey: "eum",
-                    ResourceTagValue: "iusto",
+                    ResourceTagKey: "deserunt",
+                    ResourceTagValue: "suscipit",
                 },
                 shared.ResourceTag{
-                    ResourceTagKey: "ullam",
-                    ResourceTagValue: "saepe",
+                    ResourceTagKey: "iure",
+                    ResourceTagValue: "magnam",
                 },
                 shared.ResourceTag{
-                    ResourceTagKey: "inventore",
-                    ResourceTagValue: "sapiente",
+                    ResourceTagKey: "debitis",
+                    ResourceTagValue: "ipsa",
                 },
             },
-            ResourceType: "EBS_SNAPSHOT",
+            ResourceType: "EC2_IMAGE",
             RetentionPeriod: operations.CreateRuleRequestBodyRetentionPeriod{
                 RetentionPeriodUnit: "DAYS",
-                RetentionPeriodValue: 477665,
+                RetentionPeriodValue: 272656,
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "vel",
-                    Value: "non",
+                    Key: "molestiae",
+                    Value: "minus",
                 },
                 shared.Tag{
-                    Key: "deleniti",
-                    Value: "similique",
-                },
-                shared.Tag{
-                    Key: "reprehenderit",
-                    Value: "molestiae",
-                },
-                shared.Tag{
-                    Key: "quo",
-                    Value: "quasi",
+                    Key: "placeat",
+                    Value: "voluptatum",
                 },
             },
         },

@@ -21,12 +21,12 @@ func main() {
             },
         },
         Request: &operations.CreateMediaProcessorCreateMediaProcessorRequest{
-            Extension: "unde",
-            ExtensionContext: "deserunt",
-            ExtensionEnvironment: "porro",
+            Extension: "corrupti",
+            ExtensionContext: "provident",
+            ExtensionEnvironment: "distinctio",
             MaxDuration: 844266,
-            StatusCallback: "https://ruthie.name",
-            StatusCallbackMethod: "DELETE",
+            StatusCallback: "https://tidy-mascara.org",
+            StatusCallbackMethod: "POST",
         },
     }
 

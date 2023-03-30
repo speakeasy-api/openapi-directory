@@ -21,8 +21,8 @@ func main() {
 
     req := operations.CreateAccessTokenRequest{
         Request: operations.CreateAccessTokenRequestBody{
-            ExpiresTime: "2022-09-10T16:15:55.093Z",
-            Name: "deserunt",
+            ExpiresTime: "2022-09-10T18:45:35.413Z",
+            Name: "provident",
         },
     }
 

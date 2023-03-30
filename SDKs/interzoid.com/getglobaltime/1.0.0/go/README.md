@@ -26,8 +26,8 @@ func main() {
 
     req := operations.GetglobaltimeRequest{
         QueryParams: operations.GetglobaltimeQueryParams{
-            License: "unde",
-            Locale: "deserunt",
+            License: "corrupti",
+            Locale: "provident",
         },
     }
 

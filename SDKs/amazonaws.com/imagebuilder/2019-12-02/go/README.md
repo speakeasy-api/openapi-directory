@@ -32,17 +32,17 @@ func main() {
 
     req := operations.CancelImageCreationRequest{
         Headers: operations.CancelImageCreationHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CancelImageCreationRequestBody{
-            ClientToken: "nulla",
-            ImageBuildVersionArn: "nihil",
+            ClientToken: "illum",
+            ImageBuildVersionArn: "vel",
         },
     }
 

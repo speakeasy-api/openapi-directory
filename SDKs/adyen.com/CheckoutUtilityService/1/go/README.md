@@ -27,9 +27,9 @@ func main() {
     req := operations.PostOriginKeysRequest{
         Request: &shared.CheckoutUtilityRequest{
             OriginDomains: []string{
-                "deserunt",
-                "porro",
-                "nulla",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
         },
     }

@@ -21,27 +21,31 @@ func main() {
 
     req := operations.ConvertRecoveryPointToSnapshotRequest{
         Headers: operations.ConvertRecoveryPointToSnapshotHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "RedshiftServerless.ConvertRecoveryPointToSnapshot",
         },
         Request: shared.ConvertRecoveryPointToSnapshotRequest{
-            RecoveryPointID: "nihil",
-            RetentionPeriod: 623564,
-            SnapshotName: "facilis",
+            RecoveryPointID: "illum",
+            RetentionPeriod: 423655,
+            SnapshotName: "error",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iusto",
-                    Value: "ullam",
+                    Key: "suscipit",
+                    Value: "iure",
                 },
                 shared.Tag{
-                    Key: "saepe",
-                    Value: "inventore",
+                    Key: "magnam",
+                    Value: "debitis",
+                },
+                shared.Tag{
+                    Key: "ipsa",
+                    Value: "delectus",
                 },
             },
         },

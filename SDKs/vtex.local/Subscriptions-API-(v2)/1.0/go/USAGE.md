@@ -24,11 +24,11 @@ func main() {
 
     req := operations.GetreportstatusbyIDRequest{
         PathParams: operations.GetreportstatusbyIDPathParams{
-            ReportID: "unde",
+            ReportID: "corrupti",
         },
         Headers: operations.GetreportstatusbyIDHeaders{
-            Accept: "deserunt",
-            ContentType: "porro",
+            Accept: "provident",
+            ContentType: "distinctio",
         },
     }
 

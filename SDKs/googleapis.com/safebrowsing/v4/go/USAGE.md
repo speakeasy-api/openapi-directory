@@ -15,22 +15,22 @@ func main() {
 
     req := operations.SafebrowsingEncodedFullHashesGetRequest{
         PathParams: operations.SafebrowsingEncodedFullHashesGetPathParams{
-            EncodedRequest: "unde",
+            EncodedRequest: "corrupti",
         },
         QueryParams: operations.SafebrowsingEncodedFullHashesGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            ClientID: "vero",
-            ClientVersion: "perspiciatis",
-            Fields: "nulla",
-            Key: "nihil",
-            OauthToken: "fuga",
+            Callback: "unde",
+            ClientID: "nulla",
+            ClientVersion: "corrupti",
+            Fields: "illum",
+            Key: "vel",
+            OauthToken: "error",
             PrettyPrint: false,
-            QuotaUser: "facilis",
-            UploadType: "eum",
-            UploadProtocol: "iusto",
+            QuotaUser: "deserunt",
+            UploadType: "suscipit",
+            UploadProtocol: "iure",
         },
     }
 

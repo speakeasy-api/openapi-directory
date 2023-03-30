@@ -36,18 +36,18 @@ func main() {
             },
         },
         PathParams: operations.AdsenseAccountsAdclientsGetAdCodePathParams{
-            AccountID: "unde",
-            AdClientID: "deserunt",
+            AccountID: "corrupti",
+            AdClientID: "provident",
         },
         QueryParams: operations.AdsenseAccountsAdclientsGetAdCodeQueryParams{
             Alt: "json",
-            Fields: "nulla",
-            Key: "id",
-            OauthToken: "vero",
+            Fields: "quibusdam",
+            Key: "unde",
+            OauthToken: "nulla",
             PrettyPrint: false,
-            QuotaUser: "perspiciatis",
-            TagPartner: "nulla",
-            UserIP: "nihil",
+            QuotaUser: "corrupti",
+            TagPartner: "illum",
+            UserIP: "vel",
         },
     }
 

@@ -21,20 +21,20 @@ func main() {
 
     req := operations.GetSetupV1AppointmentsRequest{
         QueryParams: operations.GetSetupV1AppointmentsQueryParams{
-            BookedBy: "unde",
-            CalendarID: "deserunt",
-            CustomerID: "porro",
-            Email: "Leatha_Stiedemann@hotmail.com",
-            EndDate: "2022-10-26T09:35:47.073Z",
+            BookedBy: "corrupti",
+            CalendarID: "provident",
+            CustomerID: "distinctio",
+            Email: "Leda_Stiedemann@hotmail.com",
+            EndDate: "2022-10-26T11:28:55.671Z",
             Lastname: "Mueller",
             Limit: 645894,
-            LocationID: "eum",
+            LocationID: "suscipit",
             Offset: 437587,
-            ResourceID: "ullam",
-            ServiceAllocationID: "saepe",
-            ServiceID: "inventore",
-            StartDate: "2022-04-12T07:07:36.357Z",
-            Status: "enim",
+            ResourceID: "magnam",
+            ServiceAllocationID: "debitis",
+            ServiceID: "ipsa",
+            StartDate: "2022-04-12T09:00:44.956Z",
+            Status: "tempora",
         },
     }
 

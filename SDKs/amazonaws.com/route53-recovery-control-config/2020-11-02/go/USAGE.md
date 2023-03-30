@@ -21,21 +21,21 @@ func main() {
 
     req := operations.CreateClusterRequest{
         Headers: operations.CreateClusterHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateClusterRequestBody{
-            ClientToken: "nulla",
-            ClusterName: "nihil",
+            ClientToken: "illum",
+            ClusterName: "vel",
             Tags: map[string]string{
-                "facilis": "eum",
-                "iusto": "ullam",
-                "saepe": "inventore",
+                "deserunt": "suscipit",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
         },
     }

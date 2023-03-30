@@ -26,13 +26,13 @@ func main() {
 
     req := operations.GetWaybackV1AvailableRequest{
         QueryParams: operations.GetWaybackV1AvailableQueryParams{
-            Callback: "unde",
+            Callback: "corrupti",
             Closest: "before",
             StatusCode: "421",
-            Tag: "nulla",
+            Tag: "quibusdam",
             Timeout: 6027.63,
-            Timestamp: "vero",
-            URL: "perspiciatis",
+            Timestamp: "nulla",
+            URL: "corrupti",
         },
     }
 

@@ -15,9 +15,9 @@ func main() {
 
     req := operations.GetRecommendedLocationRequest{
         QueryParams: operations.GetRecommendedLocationQueryParams{
-            CityCodes: "unde",
-            DestinationCountryCodes: "deserunt",
-            TravelerCountryCode: "porro",
+            CityCodes: "corrupti",
+            DestinationCountryCodes: "provident",
+            TravelerCountryCode: "distinctio",
         },
     }
 

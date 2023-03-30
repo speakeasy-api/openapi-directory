@@ -34,17 +34,17 @@ func main() {
             },
         },
         PathParams: operations.AdsensehostAccountsAdclientsGetPathParams{
-            AccountID: "unde",
-            AdClientID: "deserunt",
+            AccountID: "corrupti",
+            AdClientID: "provident",
         },
         QueryParams: operations.AdsensehostAccountsAdclientsGetQueryParams{
             Alt: "json",
-            Fields: "nulla",
-            Key: "id",
-            OauthToken: "vero",
+            Fields: "quibusdam",
+            Key: "unde",
+            OauthToken: "nulla",
             PrettyPrint: false,
-            QuotaUser: "perspiciatis",
-            UserIP: "nulla",
+            QuotaUser: "corrupti",
+            UserIP: "illum",
         },
     }
 

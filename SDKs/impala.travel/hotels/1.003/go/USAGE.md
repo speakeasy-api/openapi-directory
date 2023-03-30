@@ -21,7 +21,7 @@ func main() {
 
     req := operations.CancelBookingRequest{
         PathParams: operations.CancelBookingPathParams{
-            BookingID: "unde",
+            BookingID: "corrupti",
         },
     }
 

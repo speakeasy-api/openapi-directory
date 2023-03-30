@@ -26,7 +26,7 @@ func main() {
 
     req := operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest{
         PathParams: operations.ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams{
-            Org: "unde",
+            Org: "corrupti",
             RepositoryID: 592845,
             RunnerGroupID: 715190,
         },

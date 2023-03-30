@@ -16,10 +16,10 @@ func main() {
     req := operations.GetEventsRequest{
         QueryParams: operations.GetEventsQueryParams{
             Company: "Medhurst - Rau",
-            Deal: "nulla",
-            Nexttoken: "id",
-            Queryexecutionid: "vero",
-            Site: "perspiciatis",
+            Deal: "quibusdam",
+            Nexttoken: "unde",
+            Queryexecutionid: "nulla",
+            Site: "corrupti",
             Type: "contacts",
         },
     }

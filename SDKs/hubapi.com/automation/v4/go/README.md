@@ -33,26 +33,26 @@ func main() {
         Request: shared.BatchInputCallbackCompletionBatchRequest{
             Inputs: []shared.CallbackCompletionBatchRequest{
                 shared.CallbackCompletionBatchRequest{
-                    CallbackID: "deserunt",
+                    CallbackID: "provident",
                     OutputFields: map[string]string{
-                        "nulla": "id",
-                        "vero": "perspiciatis",
-                        "nulla": "nihil",
+                        "quibusdam": "unde",
+                        "nulla": "corrupti",
+                        "illum": "vel",
                     },
                 },
                 shared.CallbackCompletionBatchRequest{
-                    CallbackID: "fuga",
+                    CallbackID: "error",
                     OutputFields: map[string]string{
-                        "eum": "iusto",
-                        "ullam": "saepe",
-                        "inventore": "sapiente",
+                        "suscipit": "iure",
+                        "magnam": "debitis",
+                        "ipsa": "delectus",
                     },
                 },
                 shared.CallbackCompletionBatchRequest{
-                    CallbackID: "enim",
+                    CallbackID: "tempora",
                     OutputFields: map[string]string{
-                        "voluptatum": "autem",
-                        "vel": "non",
+                        "molestiae": "minus",
+                        "placeat": "voluptatum",
                     },
                 },
             },

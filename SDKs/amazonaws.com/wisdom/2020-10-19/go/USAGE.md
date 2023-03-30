@@ -21,24 +21,24 @@ func main() {
 
     req := operations.CreateAssistantRequest{
         Headers: operations.CreateAssistantHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateAssistantRequestBody{
-            ClientToken: "nulla",
-            Description: "nihil",
-            Name: "fuga",
+            ClientToken: "illum",
+            Description: "vel",
+            Name: "error",
             ServerSideEncryptionConfiguration: &operations.CreateAssistantRequestBodyServerSideEncryptionConfiguration{
-                KmsKeyID: "facilis",
+                KmsKeyID: "deserunt",
             },
             Tags: map[string]string{
-                "iusto": "ullam",
-                "saepe": "inventore",
+                "iure": "magnam",
+                "debitis": "ipsa",
             },
             Type: "AGENT",
         },

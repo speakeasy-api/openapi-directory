@@ -21,13 +21,13 @@ func main() {
             },
         },
         PathParams: operations.CreateAccessTokenPathParams{
-            ServiceSid: "unde",
+            ServiceSid: "corrupti",
         },
         Request: &operations.CreateAccessTokenCreateAccessTokenRequest{
-            FactorFriendlyName: "deserunt",
+            FactorFriendlyName: "provident",
             FactorType: "push",
-            Identity: "nulla",
-            TTL: 602763,
+            Identity: "distinctio",
+            TTL: 844266,
         },
     }
 

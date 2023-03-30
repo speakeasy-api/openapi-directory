@@ -26,7 +26,7 @@ func main() {
 
     req := operations.CreateGlobalRuleRequest{
         Request: shared.Rule{
-            Config: "unde",
+            Config: "corrupti",
             Type: "VALIDITY",
         },
     }

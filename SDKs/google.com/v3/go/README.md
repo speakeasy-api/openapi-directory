@@ -26,33 +26,33 @@ func main() {
 
     req := operations.TravelpartnerAccountsAccountLinksCreateRequest{
         PathParams: operations.TravelpartnerAccountsAccountLinksCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.TravelpartnerAccountsAccountLinksCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
         Request: &shared.AccountLink{
             AccountLinkTarget: &shared.AccountLinkTarget{
                 AllHotels: false,
                 HotelList: &shared.HotelList{
                     PartnerHotelIds: []string{
-                        "iusto",
-                        "ullam",
+                        "iure",
+                        "magnam",
                     },
                 },
             },
-            GoogleAdsCustomerName: "saepe",
-            Name: "inventore",
+            GoogleAdsCustomerName: "debitis",
+            Name: "ipsa",
             Status: "APPROVED",
         },
     }

@@ -15,7 +15,7 @@ func main() {
 
     req := operations.KeysAPICurrentRequest{
         PathParams: operations.KeysAPICurrentPathParams{
-            Serial: "unde",
+            Serial: "corrupti",
         },
     }
 

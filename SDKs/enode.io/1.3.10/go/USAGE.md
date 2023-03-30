@@ -20,7 +20,7 @@ func main() {
             },
         },
         PathParams: operations.ControlChargerChargingPathParams{
-            ChargerID: "unde",
+            ChargerID: "corrupti",
         },
         Request: &operations.ControlChargerChargingRequestBody{
             Action: "START",

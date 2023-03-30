@@ -20,7 +20,7 @@ func main() {
             },
         },
         Headers: operations.CreateAssetHeaders{
-            XeroTenantID: "unde",
+            XeroTenantID: "corrupti",
         },
         Request: shared.Asset{
             AccountingBookValue: 5928.45,

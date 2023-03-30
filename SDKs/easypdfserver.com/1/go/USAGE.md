@@ -15,9 +15,9 @@ func main() {
 
     req := operations.PostMakePdfRequest{
         Request: operations.PostMakePdfRequestBody{
-            HTML: "unde",
-            Key: "deserunt",
-            URL: "porro",
+            HTML: "corrupti",
+            Key: "provident",
+            URL: "distinctio",
         },
     }
 

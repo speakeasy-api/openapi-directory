@@ -21,7 +21,7 @@ func main() {
             },
         },
         PathParams: operations.FetchAlertPathParams{
-            Sid: "unde",
+            Sid: "corrupti",
         },
     }
 

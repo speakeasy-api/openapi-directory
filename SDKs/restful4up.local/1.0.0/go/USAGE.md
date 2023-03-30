@@ -16,15 +16,15 @@ func main() {
     req := operations.ApplyYaraRulesRequest{
         Request: operations.ApplyYaraRulesRequestBody{
             File: operations.ApplyYaraRulesRequestBodyFile{
-                Content: []byte("unde"),
-                File: "deserunt",
+                Content: []byte("corrupti"),
+                File: "provident",
             },
             IsUnpackingRequired: "false",
             Rules: []string{
-                "id",
-                "vero",
-                "perspiciatis",
+                "unde",
                 "nulla",
+                "corrupti",
+                "illum",
             },
         },
     }

@@ -31,7 +31,7 @@ func main() {
             },
         },
         Headers: operations.GetStatusHeaders{
-            IfNoneMatch: "unde",
+            IfNoneMatch: "corrupti",
         },
     }
 

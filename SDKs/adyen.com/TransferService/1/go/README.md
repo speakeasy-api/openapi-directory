@@ -31,14 +31,14 @@ func main() {
             },
         },
         QueryParams: operations.GetTransactionsQueryParams{
-            AccountHolderID: "unde",
-            BalanceAccountID: "deserunt",
-            BalancePlatform: "porro",
-            CreatedSince: "2022-05-25T20:03:54.165Z",
-            CreatedUntil: "2022-08-21T23:37:32.781Z",
-            Cursor: "vero",
+            AccountHolderID: "corrupti",
+            BalanceAccountID: "provident",
+            BalancePlatform: "distinctio",
+            CreatedSince: "2022-05-25T22:35:08.499Z",
+            CreatedUntil: "2022-08-22T02:08:47.115Z",
+            Cursor: "nulla",
             Limit: 544883,
-            PaymentInstrumentID: "nulla",
+            PaymentInstrumentID: "illum",
         },
     }
 

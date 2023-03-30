@@ -21,7 +21,7 @@ func main() {
         },
         QueryParams: operations.DevicelistQueryParams{
             AppType: "app_station",
-            DeviceID: "deserunt",
+            DeviceID: "provident",
             GetFavorites: false,
         },
     }

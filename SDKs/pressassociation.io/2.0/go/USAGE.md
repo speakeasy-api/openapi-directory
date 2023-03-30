@@ -20,7 +20,7 @@ func main() {
             },
         },
         PathParams: operations.GetAssetPathParams{
-            AssetID: "unde",
+            AssetID: "corrupti",
         },
         QueryParams: operations.GetAssetQueryParams{
             Aliases: false,

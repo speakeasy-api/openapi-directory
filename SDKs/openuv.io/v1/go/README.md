@@ -33,7 +33,7 @@ func main() {
             Ozone: 304.5,
         },
         Headers: operations.GetForecastHeaders{
-            XAccessToken: "unde",
+            XAccessToken: "corrupti",
         },
     }
 

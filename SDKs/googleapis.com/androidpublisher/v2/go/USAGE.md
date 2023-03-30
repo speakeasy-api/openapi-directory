@@ -24,18 +24,18 @@ func main() {
         },
         PathParams: operations.AndroidpublisherEditsApklistingsDeletePathParams{
             ApkVersionCode: 548814,
-            EditID: "deserunt",
-            Language: "porro",
-            PackageName: "nulla",
+            EditID: "provident",
+            Language: "distinctio",
+            PackageName: "quibusdam",
         },
         QueryParams: operations.AndroidpublisherEditsApklistingsDeleteQueryParams{
             Alt: "json",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Fields: "unde",
+            Key: "nulla",
+            OauthToken: "corrupti",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UserIP: "fuga",
+            QuotaUser: "illum",
+            UserIP: "vel",
         },
     }
 

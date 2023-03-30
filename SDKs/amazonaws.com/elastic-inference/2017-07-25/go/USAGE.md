@@ -21,20 +21,20 @@ func main() {
 
     req := operations.DescribeAcceleratorOfferingsRequest{
         Headers: operations.DescribeAcceleratorOfferingsHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.DescribeAcceleratorOfferingsRequestBody{
             AcceleratorTypes: []string{
-                "nihil",
-                "fuga",
-                "facilis",
-                "eum",
+                "vel",
+                "error",
+                "deserunt",
+                "suscipit",
             },
             LocationType: "availability-zone",
         },

@@ -26,8 +26,8 @@ func main() {
 
     req := operations.PostAuthRequest{
         QueryParams: operations.PostAuthQueryParams{
-            ClientID: "unde",
-            ClientSecret: "deserunt",
+            ClientID: "corrupti",
+            ClientSecret: "provident",
         },
     }
 

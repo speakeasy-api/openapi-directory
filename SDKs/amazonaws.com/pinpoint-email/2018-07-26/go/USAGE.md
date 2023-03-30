@@ -21,22 +21,22 @@ func main() {
 
     req := operations.CreateConfigurationSetRequest{
         Headers: operations.CreateConfigurationSetHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateConfigurationSetRequestBody{
-            ConfigurationSetName: "nulla",
+            ConfigurationSetName: "illum",
             DeliveryOptions: &operations.CreateConfigurationSetRequestBodyDeliveryOptions{
-                SendingPoolName: "nihil",
+                SendingPoolName: "vel",
                 TLSPolicy: "OPTIONAL",
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "2022-08-06T05:57:56.871Z",
+                LastFreshStart: "2022-08-06T08:22:17.083Z",
                 ReputationMetricsEnabled: false,
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{
@@ -44,16 +44,16 @@ func main() {
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iusto",
-                    Value: "ullam",
+                    Key: "iure",
+                    Value: "magnam",
                 },
                 shared.Tag{
-                    Key: "saepe",
-                    Value: "inventore",
+                    Key: "debitis",
+                    Value: "ipsa",
                 },
             },
             TrackingOptions: &operations.CreateConfigurationSetRequestBodyTrackingOptions{
-                CustomRedirectDomain: "sapiente",
+                CustomRedirectDomain: "delectus",
             },
         },
     }

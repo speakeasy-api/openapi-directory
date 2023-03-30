@@ -36,15 +36,15 @@ func main() {
         Request: shared.CreateCategoriesRequest{
             Categories: []shared.CategoryDTO{
                 shared.CategoryDTO{
-                    Name: "voluptatem",
+                    Name: "perferendis",
                     UUID: "5dfc2ddf-7cc7-48ca-9ba9-28fc816742cb",
                 },
                 shared.CategoryDTO{
-                    Name: "blanditiis",
+                    Name: "esse",
                     UUID: "39205929-396f-4ea7-996e-b10faaa2352c",
                 },
                 shared.CategoryDTO{
-                    Name: "ipsam",
+                    Name: "enim",
                     UUID: "955907af-f1a3-4a2f-a946-7739251aa52c",
                 },
             },

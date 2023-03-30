@@ -21,21 +21,21 @@ func main() {
 
     req := operations.BatchDeleteReadSetRequest{
         PathParams: operations.BatchDeleteReadSetPathParams{
-            SequenceStoreID: "unde",
+            SequenceStoreID: "corrupti",
         },
         Headers: operations.BatchDeleteReadSetHeaders{
-            XAmzAlgorithm: "deserunt",
-            XAmzContentSha256: "porro",
-            XAmzCredential: "nulla",
-            XAmzDate: "id",
-            XAmzSecurityToken: "vero",
-            XAmzSignature: "perspiciatis",
-            XAmzSignedHeaders: "nulla",
+            XAmzAlgorithm: "provident",
+            XAmzContentSha256: "distinctio",
+            XAmzCredential: "quibusdam",
+            XAmzDate: "unde",
+            XAmzSecurityToken: "nulla",
+            XAmzSignature: "corrupti",
+            XAmzSignedHeaders: "illum",
         },
         Request: operations.BatchDeleteReadSetRequestBody{
             Ids: []string{
-                "fuga",
-                "facilis",
+                "error",
+                "deserunt",
             },
         },
     }

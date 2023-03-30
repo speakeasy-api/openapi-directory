@@ -35,8 +35,8 @@ func main() {
 
     req := operations.GetWindowToChangeSellerRequest{
         Headers: operations.GetWindowToChangeSellerHeaders{
-            Accept: "unde",
-            ContentType: "deserunt",
+            Accept: "corrupti",
+            ContentType: "provident",
         },
     }
 

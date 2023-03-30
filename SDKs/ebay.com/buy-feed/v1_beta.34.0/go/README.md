@@ -31,14 +31,14 @@ func main() {
             },
         },
         QueryParams: operations.GetItemFeedQueryParams{
-            CategoryID: "unde",
-            Date: "deserunt",
-            FeedScope: "porro",
+            CategoryID: "corrupti",
+            Date: "provident",
+            FeedScope: "distinctio",
         },
         Headers: operations.GetItemFeedHeaders{
-            Accept: "nulla",
-            Range: "id",
-            XEbayCMarketplaceID: "vero",
+            Accept: "quibusdam",
+            Range: "unde",
+            XEbayCMarketplaceID: "nulla",
         },
     }
 

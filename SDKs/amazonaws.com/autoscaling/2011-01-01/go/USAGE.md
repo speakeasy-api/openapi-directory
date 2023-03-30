@@ -22,22 +22,22 @@ func main() {
     req := operations.GETAttachInstancesRequest{
         QueryParams: operations.GETAttachInstancesQueryParams{
             Action: "AttachInstances",
-            AutoScalingGroupName: "deserunt",
+            AutoScalingGroupName: "corrupti",
             InstanceIds: []string{
-                "nulla",
-                "id",
-                "vero",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
             Version: "2011-01-01",
         },
         Headers: operations.GETAttachInstancesHeaders{
             XAmzAlgorithm: "nulla",
-            XAmzContentSha256: "nihil",
-            XAmzCredential: "fuga",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "eum",
-            XAmzSignature: "iusto",
-            XAmzSignedHeaders: "ullam",
+            XAmzContentSha256: "corrupti",
+            XAmzCredential: "illum",
+            XAmzDate: "vel",
+            XAmzSecurityToken: "error",
+            XAmzSignature: "deserunt",
+            XAmzSignedHeaders: "suscipit",
         },
     }
 

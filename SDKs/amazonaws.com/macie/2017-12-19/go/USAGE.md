@@ -21,17 +21,17 @@ func main() {
 
     req := operations.AssociateMemberAccountRequest{
         Headers: operations.AssociateMemberAccountHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "MacieService.AssociateMemberAccount",
         },
         Request: shared.AssociateMemberAccountRequest{
-            MemberAccountID: "nihil",
+            MemberAccountID: "illum",
         },
     }
 

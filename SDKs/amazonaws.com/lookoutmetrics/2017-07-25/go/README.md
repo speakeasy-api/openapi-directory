@@ -32,16 +32,16 @@ func main() {
 
     req := operations.ActivateAnomalyDetectorRequest{
         Headers: operations.ActivateAnomalyDetectorHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.ActivateAnomalyDetectorRequestBody{
-            AnomalyDetectorArn: "nulla",
+            AnomalyDetectorArn: "illum",
         },
     }
 

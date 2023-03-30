@@ -32,7 +32,7 @@ func main() {
             },
         },
         PathParams: operations.FetchTrunkingCountryPathParams{
-            IsoCountry: "unde",
+            IsoCountry: "corrupti",
         },
     }
 

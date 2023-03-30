@@ -34,195 +34,195 @@ func main() {
             },
         },
         PathParams: operations.OsconfigProjectsGuestPoliciesCreatePathParams{
-            Parent: "unde",
+            Parent: "corrupti",
         },
         QueryParams: operations.OsconfigProjectsGuestPoliciesCreateQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            GuestPolicyID: "perspiciatis",
-            Key: "nulla",
-            OauthToken: "nihil",
+            Callback: "unde",
+            Fields: "nulla",
+            GuestPolicyID: "corrupti",
+            Key: "illum",
+            OauthToken: "vel",
             PrettyPrint: false,
-            QuotaUser: "fuga",
-            UploadType: "facilis",
-            UploadProtocol: "eum",
+            QuotaUser: "error",
+            UploadType: "deserunt",
+            UploadProtocol: "suscipit",
         },
         Request: &shared.GuestPolicyInput{
             Assignment: &shared.Assignment{
                 GroupLabels: []shared.AssignmentGroupLabel{
                     shared.AssignmentGroupLabel{
                         Labels: map[string]string{
-                            "saepe": "inventore",
-                            "sapiente": "enim",
+                            "debitis": "ipsa",
+                            "delectus": "tempora",
                         },
                     },
                     shared.AssignmentGroupLabel{
                         Labels: map[string]string{
-                            "voluptatum": "autem",
-                            "vel": "non",
+                            "molestiae": "minus",
+                            "placeat": "voluptatum",
                         },
                     },
                 },
                 InstanceNamePrefixes: []string{
-                    "similique",
-                    "reprehenderit",
+                    "excepturi",
+                    "nisi",
                 },
                 Instances: []string{
-                    "quo",
-                    "quasi",
-                    "laboriosam",
-                    "dicta",
+                    "temporibus",
+                    "ab",
+                    "quis",
+                    "veritatis",
                 },
                 OsTypes: []shared.AssignmentOsType{
                     shared.AssignmentOsType{
-                        OsArchitecture: "voluptatem",
-                        OsShortName: "consequatur",
-                        OsVersion: "fugiat",
+                        OsArchitecture: "perferendis",
+                        OsShortName: "ipsam",
+                        OsVersion: "repellendus",
                     },
                     shared.AssignmentOsType{
-                        OsArchitecture: "a",
-                        OsShortName: "omnis",
-                        OsVersion: "eos",
+                        OsArchitecture: "sapiente",
+                        OsShortName: "quo",
+                        OsVersion: "odit",
                     },
                     shared.AssignmentOsType{
-                        OsArchitecture: "accusamus",
-                        OsShortName: "accusamus",
-                        OsVersion: "reiciendis",
+                        OsArchitecture: "at",
+                        OsShortName: "at",
+                        OsVersion: "maiores",
                     },
                 },
                 Zones: []string{
-                    "quibusdam",
-                    "et",
+                    "quod",
+                    "quod",
                 },
             },
-            Description: "praesentium",
-            Etag: "occaecati",
-            Name: "dolor",
+            Description: "esse",
+            Etag: "totam",
+            Name: "porro",
             PackageRepositories: []shared.PackageRepository{
                 shared.PackageRepository{
                     Apt: &shared.AptRepository{
                         ArchiveType: "ARCHIVE_TYPE_UNSPECIFIED",
                         Components: []string{
-                            "rerum",
-                            "culpa",
-                            "qui",
+                            "officia",
+                            "occaecati",
+                            "fugit",
                         },
-                        Distribution: "sed",
-                        GpgKey: "rerum",
-                        URI: "https://jovany.com",
+                        Distribution: "deleniti",
+                        GpgKey: "hic",
+                        URI: "https://mean-brick.info",
                     },
                     Goo: &shared.GooRepository{
-                        Name: "esse",
-                        URL: "rem",
+                        Name: "molestiae",
+                        URL: "modi",
                     },
                     Yum: &shared.YumRepository{
-                        BaseURL: "voluptatem",
-                        DisplayName: "amet",
+                        BaseURL: "qui",
+                        DisplayName: "impedit",
                         GpgKeys: []string{
-                            "id",
-                            "blanditiis",
-                            "numquam",
-                            "similique",
-                        },
-                        ID: "dolores",
-                    },
-                    Zypper: &shared.ZypperRepository{
-                        BaseURL: "sit",
-                        DisplayName: "quia",
-                        GpgKeys: []string{
-                            "voluptatem",
-                            "laborum",
-                            "modi",
-                        },
-                        ID: "et",
-                    },
-                },
-                shared.PackageRepository{
-                    Apt: &shared.AptRepository{
-                        ArchiveType: "DEB",
-                        Components: []string{
-                            "ut",
-                            "soluta",
-                            "qui",
-                            "ea",
-                        },
-                        Distribution: "laborum",
-                        GpgKey: "iusto",
-                        URI: "https://max.com",
-                    },
-                    Goo: &shared.GooRepository{
-                        Name: "inventore",
-                        URL: "ut",
-                    },
-                    Yum: &shared.YumRepository{
-                        BaseURL: "libero",
-                        DisplayName: "et",
-                        GpgKeys: []string{
+                            "esse",
                             "ipsum",
-                            "non",
-                            "ea",
+                            "excepturi",
                         },
-                        ID: "magni",
+                        ID: "aspernatur",
                     },
                     Zypper: &shared.ZypperRepository{
-                        BaseURL: "placeat",
-                        DisplayName: "ipsam",
+                        BaseURL: "perferendis",
+                        DisplayName: "ad",
                         GpgKeys: []string{
-                            "commodi",
-                            "quia",
-                            "similique",
+                            "sed",
+                            "iste",
+                            "dolor",
                         },
-                        ID: "eaque",
+                        ID: "natus",
                     },
                 },
                 shared.PackageRepository{
                     Apt: &shared.AptRepository{
                         ArchiveType: "DEB",
                         Components: []string{
-                            "doloribus",
-                            "a",
-                            "aut",
+                            "saepe",
+                            "fuga",
+                            "in",
+                            "corporis",
                         },
-                        Distribution: "et",
-                        GpgKey: "non",
-                        URI: "https://carolyn.org",
+                        Distribution: "iste",
+                        GpgKey: "iure",
+                        URI: "https://rich-bouquet.com",
                     },
                     Goo: &shared.GooRepository{
-                        Name: "et",
-                        URL: "culpa",
+                        Name: "reiciendis",
+                        URL: "est",
                     },
                     Yum: &shared.YumRepository{
-                        BaseURL: "aliquam",
-                        DisplayName: "esse",
+                        BaseURL: "mollitia",
+                        DisplayName: "laborum",
                         GpgKeys: []string{
-                            "voluptatum",
-                            "et",
+                            "dolorem",
                         },
-                        ID: "fuga",
+                        ID: "corporis",
                     },
                     Zypper: &shared.ZypperRepository{
-                        BaseURL: "nesciunt",
-                        DisplayName: "laboriosam",
+                        BaseURL: "explicabo",
+                        DisplayName: "nobis",
                         GpgKeys: []string{
-                            "cum",
+                            "omnis",
+                            "nemo",
                         },
-                        ID: "expedita",
+                        ID: "minima",
+                    },
+                },
+                shared.PackageRepository{
+                    Apt: &shared.AptRepository{
+                        ArchiveType: "DEB",
+                        Components: []string{
+                            "iure",
+                        },
+                        Distribution: "culpa",
+                        GpgKey: "doloribus",
+                        URI: "https://buttery-petitioner.biz",
+                    },
+                    Goo: &shared.GooRepository{
+                        Name: "culpa",
+                        URL: "consequuntur",
+                    },
+                    Yum: &shared.YumRepository{
+                        BaseURL: "repellat",
+                        DisplayName: "mollitia",
+                        GpgKeys: []string{
+                            "numquam",
+                            "commodi",
+                            "quam",
+                        },
+                        ID: "molestiae",
+                    },
+                    Zypper: &shared.ZypperRepository{
+                        BaseURL: "velit",
+                        DisplayName: "error",
+                        GpgKeys: []string{
+                            "quis",
+                        },
+                        ID: "vitae",
                     },
                 },
             },
             Packages: []shared.Package{
                 shared.Package{
-                    DesiredState: "DESIRED_STATE_UNSPECIFIED",
-                    Manager: "ZYPPER",
-                    Name: "adipisci",
+                    DesiredState: "UPDATED",
+                    Manager: "ANY",
+                    Name: "odit",
                 },
                 shared.Package{
                     DesiredState: "REMOVED",
-                    Manager: "APT",
-                    Name: "distinctio",
+                    Manager: "ANY",
+                    Name: "tenetur",
+                },
+                shared.Package{
+                    DesiredState: "INSTALLED",
+                    Manager: "YUM",
+                    Name: "possimus",
                 },
             },
             Recipes: []shared.SoftwareRecipe{
@@ -231,525 +231,14 @@ func main() {
                         shared.SoftwareRecipeArtifact{
                             AllowInsecure: false,
                             Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "aspernatur",
-                                Generation: "fuga",
-                                Object: "quo",
+                                Bucket: "error",
+                                Generation: "temporibus",
+                                Object: "laborum",
                             },
-                            ID: "tempore",
+                            ID: "quasi",
                             Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "explicabo",
-                                URI: "https://weston.org",
-                            },
-                        },
-                    },
-                    DesiredState: "INSTALLED",
-                    InstallSteps: []shared.SoftwareRecipeStep{
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "reiciendis",
-                                Destination: "illo",
-                                Type: "TAR_LZMA",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "qui",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "quod",
-                                Destination: "sit",
-                                Overwrite: false,
-                                Permissions: "eaque",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    282807,
-                                    979587,
-                                },
-                                Args: []string{
-                                    "ea",
-                                },
-                                ArtifactID: "exercitationem",
-                                LocalPath: "deleniti",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    688661,
-                                },
-                                ArtifactID: "voluptatem",
-                                Flags: []string{
-                                    "esse",
-                                    "sint",
-                                    "veritatis",
-                                    "numquam",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "eligendi",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    566602,
-                                    865103,
-                                    265389,
-                                },
-                                Interpreter: "SHELL",
-                                Script: "cupiditate",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "sint",
-                                Destination: "explicabo",
-                                Type: "ZIP",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "in",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "vitae",
-                                Destination: "non",
-                                Overwrite: false,
-                                Permissions: "minima",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    9356,
-                                    667411,
-                                },
-                                Args: []string{
-                                    "magni",
-                                    "est",
-                                    "porro",
-                                    "voluptas",
-                                },
-                                ArtifactID: "nostrum",
-                                LocalPath: "voluptatem",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    397821,
-                                },
-                                ArtifactID: "officia",
-                                Flags: []string{
-                                    "voluptatem",
-                                    "dolorem",
-                                    "eum",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "quis",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    146441,
-                                },
-                                Interpreter: "POWERSHELL",
-                                Script: "similique",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "enim",
-                                Destination: "nihil",
-                                Type: "TAR_XZ",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "quis",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "sapiente",
-                                Destination: "et",
-                                Overwrite: false,
-                                Permissions: "dolore",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    576157,
-                                    396098,
-                                    592042,
-                                    896039,
-                                },
-                                Args: []string{
-                                    "rerum",
-                                    "modi",
-                                    "necessitatibus",
-                                },
-                                ArtifactID: "tenetur",
-                                LocalPath: "soluta",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    449198,
-                                    846409,
-                                },
-                                ArtifactID: "reiciendis",
-                                Flags: []string{
-                                    "fugit",
-                                    "ullam",
-                                    "voluptas",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "vel",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    396506,
-                                    675439,
-                                },
-                                Interpreter: "POWERSHELL",
-                                Script: "magnam",
-                            },
-                        },
-                    },
-                    Name: "culpa",
-                    UpdateSteps: []shared.SoftwareRecipeStep{
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "aut",
-                                Destination: "delectus",
-                                Type: "TAR_LZMA",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "officia",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "est",
-                                Destination: "distinctio",
-                                Overwrite: false,
-                                Permissions: "et",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    956084,
-                                    230533,
-                                    643990,
-                                },
-                                Args: []string{
-                                    "nihil",
-                                    "dolorum",
-                                },
-                                ArtifactID: "id",
-                                LocalPath: "voluptatum",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    470132,
-                                },
-                                ArtifactID: "corporis",
-                                Flags: []string{
-                                    "distinctio",
-                                    "quis",
-                                    "nostrum",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "eum",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    749170,
-                                    428769,
-                                    878453,
-                                },
-                                Interpreter: "INTERPRETER_UNSPECIFIED",
-                                Script: "aut",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "ullam",
-                                Destination: "explicabo",
-                                Type: "TAR_BZIP",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "ex",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "deserunt",
-                                Destination: "omnis",
-                                Overwrite: false,
-                                Permissions: "in",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    653201,
-                                },
-                                Args: []string{
-                                    "et",
-                                    "voluptatem",
-                                    "et",
-                                    "modi",
-                                },
-                                ArtifactID: "eveniet",
-                                LocalPath: "qui",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    97260,
-                                    435865,
-                                },
-                                ArtifactID: "maiores",
-                                Flags: []string{
-                                    "quaerat",
-                                    "aut",
-                                    "sed",
-                                    "nihil",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "ducimus",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    99569,
-                                },
-                                Interpreter: "POWERSHELL",
-                                Script: "aliquid",
-                            },
-                        },
-                    },
-                    Version: "quo",
-                },
-                shared.SoftwareRecipe{
-                    Artifacts: []shared.SoftwareRecipeArtifact{
-                        shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
-                            Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "repellat",
-                                Generation: "voluptas",
-                                Object: "voluptatem",
-                            },
-                            ID: "et",
-                            Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "accusamus",
-                                URI: "http://carroll.name",
-                            },
-                        },
-                        shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
-                            Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "et",
-                                Generation: "dolorem",
-                                Object: "quia",
-                            },
-                            ID: "omnis",
-                            Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "pariatur",
-                                URI: "https://raegan.info",
-                            },
-                        },
-                    },
-                    DesiredState: "UPDATED",
-                    InstallSteps: []shared.SoftwareRecipeStep{
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "voluptate",
-                                Destination: "aperiam",
-                                Type: "ARCHIVE_TYPE_UNSPECIFIED",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "voluptatibus",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "optio",
-                                Destination: "quis",
-                                Overwrite: false,
-                                Permissions: "qui",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    722056,
-                                    50588,
-                                },
-                                Args: []string{
-                                    "consequatur",
-                                    "aut",
-                                    "sit",
-                                    "vero",
-                                },
-                                ArtifactID: "incidunt",
-                                LocalPath: "aut",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    359978,
-                                    944124,
-                                    729991,
-                                    749999,
-                                },
-                                ArtifactID: "ipsum",
-                                Flags: []string{
-                                    "occaecati",
-                                    "corrupti",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "illo",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    199996,
-                                    179490,
-                                },
-                                Interpreter: "INTERPRETER_UNSPECIFIED",
-                                Script: "ipsum",
-                            },
-                        },
-                    },
-                    Name: "autem",
-                    UpdateSteps: []shared.SoftwareRecipeStep{
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "modi",
-                                Destination: "officiis",
-                                Type: "TAR_GZIP",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "rerum",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "non",
-                                Destination: "est",
-                                Overwrite: false,
-                                Permissions: "nihil",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    31838,
-                                    783645,
-                                    164694,
-                                },
-                                Args: []string{
-                                    "dolorum",
-                                    "ab",
-                                    "in",
-                                },
-                                ArtifactID: "cumque",
-                                LocalPath: "labore",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    934214,
-                                    267262,
-                                    613966,
-                                    679091,
-                                },
-                                ArtifactID: "sed",
-                                Flags: []string{
-                                    "officia",
-                                    "placeat",
-                                    "qui",
-                                    "delectus",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "enim",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    398221,
-                                    212390,
-                                    209843,
-                                },
-                                Interpreter: "INTERPRETER_UNSPECIFIED",
-                                Script: "amet",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "eius",
-                                Destination: "rerum",
-                                Type: "TAR_BZIP",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "quod",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "qui",
-                                Destination: "quos",
-                                Overwrite: false,
-                                Permissions: "ut",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    680545,
-                                },
-                                Args: []string{
-                                    "dicta",
-                                    "inventore",
-                                },
-                                ArtifactID: "inventore",
-                                LocalPath: "iusto",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    311796,
-                                    881005,
-                                },
-                                ArtifactID: "optio",
-                                Flags: []string{
-                                    "vel",
-                                    "et",
-                                    "dolor",
-                                    "perspiciatis",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "accusantium",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    67249,
-                                    743835,
-                                    679393,
-                                    478596,
-                                },
-                                Interpreter: "SHELL",
-                                Script: "cum",
-                            },
-                        },
-                    },
-                    Version: "sed",
-                },
-                shared.SoftwareRecipe{
-                    Artifacts: []shared.SoftwareRecipeArtifact{
-                        shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
-                            Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "eveniet",
-                                Generation: "quo",
-                                Object: "doloribus",
-                            },
-                            ID: "totam",
-                            Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "eius",
-                                URI: "http://makenna.org",
-                            },
-                        },
-                        shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
-                            Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "voluptatem",
-                                Generation: "eos",
-                                Object: "voluptatem",
-                            },
-                            ID: "incidunt",
-                            Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "possimus",
-                                URI: "https://emmet.org",
-                            },
-                        },
-                        shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
-                            Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "eum",
-                                Generation: "facilis",
-                                Object: "officia",
-                            },
-                            ID: "quia",
-                            Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "eum",
-                                URI: "https://logan.com",
+                                Checksum: "reiciendis",
+                                URI: "https://twin-intent.name",
                             },
                         },
                     },
@@ -757,530 +246,271 @@ func main() {
                     InstallSteps: []shared.SoftwareRecipeStep{
                         shared.SoftwareRecipeStep{
                             ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "ad",
-                                Destination: "nihil",
+                                ArtifactID: "omnis",
+                                Destination: "voluptate",
                                 Type: "TAR_XZ",
                             },
                             DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "rerum",
+                                ArtifactID: "perferendis",
                             },
                             FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "amet",
-                                Destination: "soluta",
+                                ArtifactID: "doloremque",
+                                Destination: "reprehenderit",
                                 Overwrite: false,
-                                Permissions: "tenetur",
+                                Permissions: "ut",
                             },
                             FileExec: &shared.SoftwareRecipeStepExecFile{
                                 AllowedExitCodes: []int{
-                                    687488,
-                                    483409,
+                                    120196,
+                                    359444,
+                                    296140,
+                                    480894,
                                 },
                                 Args: []string{
-                                    "temporibus",
+                                    "harum",
                                 },
-                                ArtifactID: "rerum",
-                                LocalPath: "incidunt",
+                                ArtifactID: "enim",
+                                LocalPath: "accusamus",
                             },
                             MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
                                 AllowedExitCodes: []int{
-                                    880298,
-                                    253941,
-                                    313692,
+                                    918236,
+                                    64147,
                                 },
-                                ArtifactID: "numquam",
+                                ArtifactID: "ipsum",
                                 Flags: []string{
-                                    "occaecati",
-                                    "rem",
-                                    "accusantium",
-                                    "quo",
+                                    "molestias",
+                                    "excepturi",
+                                    "pariatur",
                                 },
                             },
                             RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "quia",
+                                ArtifactID: "modi",
                             },
                             ScriptRun: &shared.SoftwareRecipeStepRunScript{
                                 AllowedExitCodes: []int{
-                                    424685,
+                                    523248,
+                                    916723,
+                                    93940,
                                 },
                                 Interpreter: "POWERSHELL",
-                                Script: "autem",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "facilis",
-                                Destination: "laudantium",
-                                Type: "TAR",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "minima",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "amet",
-                                Destination: "officia",
-                                Overwrite: false,
-                                Permissions: "consequatur",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    747080,
-                                    117531,
-                                    674848,
-                                    517379,
-                                },
-                                Args: []string{
-                                    "magni",
-                                    "quia",
-                                },
-                                ArtifactID: "porro",
-                                LocalPath: "nihil",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    463150,
-                                    565421,
-                                },
-                                ArtifactID: "voluptas",
-                                Flags: []string{
-                                    "quia",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "ratione",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    488056,
-                                },
-                                Interpreter: "INTERPRETER_UNSPECIFIED",
-                                Script: "ex",
+                                Script: "sint",
                             },
                         },
                     },
-                    Name: "quisquam",
+                    Name: "veritatis",
                     UpdateSteps: []shared.SoftwareRecipeStep{
                         shared.SoftwareRecipeStep{
                             ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "doloremque",
-                                Destination: "voluptas",
-                                Type: "TAR_XZ",
+                                ArtifactID: "incidunt",
+                                Destination: "enim",
+                                Type: "ARCHIVE_TYPE_UNSPECIFIED",
                             },
                             DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "placeat",
+                                ArtifactID: "est",
                             },
                             FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "explicabo",
-                                Destination: "et",
+                                ArtifactID: "quibusdam",
+                                Destination: "explicabo",
                                 Overwrite: false,
-                                Permissions: "eius",
+                                Permissions: "deserunt",
                             },
                             FileExec: &shared.SoftwareRecipeStepExecFile{
                                 AllowedExitCodes: []int{
-                                    749255,
+                                    841386,
+                                    289406,
+                                    264730,
                                 },
                                 Args: []string{
-                                    "minus",
-                                    "qui",
-                                    "quae",
+                                    "aliquid",
                                 },
-                                ArtifactID: "sapiente",
-                                LocalPath: "non",
+                                ArtifactID: "cupiditate",
+                                LocalPath: "quos",
                             },
                             MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
                                 AllowedExitCodes: []int{
-                                    286915,
-                                    240829,
+                                    164940,
                                 },
-                                ArtifactID: "cum",
+                                ArtifactID: "assumenda",
                                 Flags: []string{
-                                    "veritatis",
+                                    "alias",
+                                    "fugit",
                                 },
                             },
                             RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "sit",
+                                ArtifactID: "dolorum",
                             },
                             ScriptRun: &shared.SoftwareRecipeStepRunScript{
                                 AllowedExitCodes: []int{
-                                    929530,
-                                    9240,
-                                    669917,
+                                    270008,
+                                    703737,
+                                    735194,
                                 },
-                                Interpreter: "POWERSHELL",
-                                Script: "repellendus",
+                                Interpreter: "INTERPRETER_UNSPECIFIED",
+                                Script: "delectus",
                             },
                         },
                         shared.SoftwareRecipeStep{
                             ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "eum",
+                                Destination: "non",
+                                Type: "TAR_XZ",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "sint",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "aliquid",
+                                Destination: "provident",
+                                Overwrite: false,
+                                Permissions: "necessitatibus",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int{
+                                    638921,
+                                    223081,
+                                    891555,
+                                },
+                                Args: []string{
+                                    "dolorum",
+                                    "in",
+                                    "in",
+                                    "illum",
+                                },
                                 ArtifactID: "maiores",
-                                Destination: "veniam",
-                                Type: "TAR_LZMA",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "officia",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "sit",
-                                Destination: "veritatis",
-                                Overwrite: false,
-                                Permissions: "excepturi",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    580447,
-                                    977496,
-                                },
-                                Args: []string{
-                                    "debitis",
-                                    "est",
-                                    "laboriosam",
-                                    "eius",
-                                },
-                                ArtifactID: "sapiente",
-                                LocalPath: "blanditiis",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    878870,
-                                },
-                                ArtifactID: "hic",
-                                Flags: []string{
-                                    "earum",
-                                    "porro",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "et",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    630448,
-                                    708548,
-                                },
-                                Interpreter: "POWERSHELL",
-                                Script: "et",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "nostrum",
-                                Destination: "nulla",
-                                Type: "TAR_XZ",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "adipisci",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "et",
-                                Destination: "est",
-                                Overwrite: false,
-                                Permissions: "perferendis",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    347233,
-                                    862310,
-                                    148141,
-                                    780427,
-                                },
-                                Args: []string{
-                                    "maiores",
-                                    "deleniti",
-                                    "facere",
-                                    "dolores",
-                                },
-                                ArtifactID: "consequatur",
                                 LocalPath: "rerum",
                             },
                             MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
                                 AllowedExitCodes: []int{
-                                    368584,
-                                    410492,
+                                    297437,
                                 },
-                                ArtifactID: "eos",
+                                ArtifactID: "cumque",
                                 Flags: []string{
-                                    "qui",
-                                    "ullam",
+                                    "ea",
+                                    "aliquid",
+                                    "laborum",
+                                    "accusamus",
                                 },
                             },
                             RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "consectetur",
+                                ArtifactID: "non",
                             },
                             ScriptRun: &shared.SoftwareRecipeStepRunScript{
                                 AllowedExitCodes: []int{
-                                    511319,
-                                    120657,
+                                    313218,
+                                    881736,
+                                    965417,
                                 },
-                                Interpreter: "INTERPRETER_UNSPECIFIED",
-                                Script: "voluptatibus",
+                                Interpreter: "POWERSHELL",
+                                Script: "provident",
                             },
                         },
                         shared.SoftwareRecipeStep{
                             ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "aspernatur",
-                                Destination: "voluptate",
-                                Type: "ZIP",
+                                ArtifactID: "nam",
+                                Destination: "id",
+                                Type: "TAR_BZIP",
                             },
                             DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "similique",
+                                ArtifactID: "deleniti",
                             },
                             FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "aut",
-                                Destination: "nisi",
+                                ArtifactID: "sapiente",
+                                Destination: "amet",
                                 Overwrite: false,
-                                Permissions: "sapiente",
+                                Permissions: "deserunt",
                             },
                             FileExec: &shared.SoftwareRecipeStepExecFile{
                                 AllowedExitCodes: []int{
-                                    906556,
-                                    411372,
-                                    774048,
-                                    359271,
+                                    423855,
+                                    618809,
                                 },
                                 Args: []string{
-                                    "in",
-                                    "vitae",
-                                },
-                                ArtifactID: "corporis",
-                                LocalPath: "voluptate",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    232234,
-                                    926213,
-                                    132487,
-                                    325310,
-                                },
-                                ArtifactID: "illo",
-                                Flags: []string{
-                                    "est",
+                                    "molestiae",
                                     "perferendis",
-                                    "aut",
-                                    "provident",
+                                    "nihil",
                                 },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "assumenda",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    146946,
-                                    882860,
-                                },
-                                Interpreter: "INTERPRETER_UNSPECIFIED",
-                                Script: "magnam",
-                            },
-                        },
-                    },
-                    Version: "sunt",
-                },
-                shared.SoftwareRecipe{
-                    Artifacts: []shared.SoftwareRecipeArtifact{
-                        shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
-                            Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "tempore",
-                                Generation: "consequatur",
-                                Object: "dolore",
-                            },
-                            ID: "et",
-                            Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "quam",
-                                URI: "https://keagan.net",
-                            },
-                        },
-                        shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
-                            Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "eos",
-                                Generation: "vel",
-                                Object: "qui",
-                            },
-                            ID: "aspernatur",
-                            Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "enim",
-                                URI: "http://brenden.name",
-                            },
-                        },
-                        shared.SoftwareRecipeArtifact{
-                            AllowInsecure: false,
-                            Gcs: &shared.SoftwareRecipeArtifactGcs{
-                                Bucket: "illo",
-                                Generation: "voluptatum",
-                                Object: "corporis",
-                            },
-                            ID: "corrupti",
-                            Remote: &shared.SoftwareRecipeArtifactRemote{
-                                Checksum: "voluptatem",
-                                URI: "http://jackson.name",
-                            },
-                        },
-                    },
-                    DesiredState: "UPDATED",
-                    InstallSteps: []shared.SoftwareRecipeStep{
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "optio",
-                                Destination: "at",
-                                Type: "TAR",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "et",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "vel",
-                                Destination: "dolorem",
-                                Overwrite: false,
-                                Permissions: "sit",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    788546,
-                                    86377,
-                                    56848,
-                                },
-                                Args: []string{
-                                    "optio",
-                                    "quia",
-                                    "omnis",
-                                },
-                                ArtifactID: "nulla",
-                                LocalPath: "omnis",
+                                ArtifactID: "magnam",
+                                LocalPath: "distinctio",
                             },
                             MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
                                 AllowedExitCodes: []int{
-                                    259422,
-                                    178367,
-                                    373813,
+                                    287991,
+                                    290077,
+                                    383462,
+                                },
+                                ArtifactID: "natus",
+                                Flags: []string{
+                                    "eum",
+                                    "vero",
+                                    "aspernatur",
+                                },
+                            },
+                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
+                                ArtifactID: "architecto",
+                            },
+                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                                AllowedExitCodes: []int{
+                                    92373,
+                                    569965,
+                                },
+                                Interpreter: "SHELL",
+                                Script: "provident",
+                            },
+                        },
+                        shared.SoftwareRecipeStep{
+                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
+                                ArtifactID: "quos",
+                                Destination: "sint",
+                                Type: "ARCHIVE_TYPE_UNSPECIFIED",
+                            },
+                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
+                                ArtifactID: "mollitia",
+                            },
+                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
+                                ArtifactID: "reiciendis",
+                                Destination: "mollitia",
+                                Overwrite: false,
+                                Permissions: "ad",
+                            },
+                            FileExec: &shared.SoftwareRecipeStepExecFile{
+                                AllowedExitCodes: []int{
+                                    221262,
+                                    896547,
+                                },
+                                Args: []string{
+                                    "nemo",
                                 },
                                 ArtifactID: "quasi",
-                                Flags: []string{
-                                    "aut",
-                                    "enim",
-                                    "saepe",
-                                },
+                                LocalPath: "iure",
                             },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "quis",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
+                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
                                 AllowedExitCodes: []int{
-                                    197054,
-                                },
-                                Interpreter: "POWERSHELL",
-                                Script: "praesentium",
-                            },
-                        },
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "molestiae",
-                                Destination: "quae",
-                                Type: "TAR_XZ",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "et",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "quos",
-                                Destination: "beatae",
-                                Overwrite: false,
-                                Permissions: "totam",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    882710,
-                                    306810,
-                                    488410,
-                                },
-                                Args: []string{
-                                    "esse",
-                                    "a",
-                                    "quia",
+                                    891924,
+                                    260341,
+                                    806194,
+                                    537023,
                                 },
                                 ArtifactID: "facilis",
-                                LocalPath: "voluptatum",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    783648,
-                                },
-                                ArtifactID: "et",
                                 Flags: []string{
-                                    "molestias",
-                                    "nesciunt",
-                                    "sed",
+                                    "architecto",
+                                    "architecto",
                                 },
                             },
                             RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "qui",
+                                ArtifactID: "repudiandae",
                             },
                             ScriptRun: &shared.SoftwareRecipeStepRunScript{
                                 AllowedExitCodes: []int{
-                                    649463,
-                                    277596,
-                                    539224,
-                                },
-                                Interpreter: "INTERPRETER_UNSPECIFIED",
-                                Script: "voluptas",
-                            },
-                        },
-                    },
-                    Name: "reprehenderit",
-                    UpdateSteps: []shared.SoftwareRecipeStep{
-                        shared.SoftwareRecipeStep{
-                            ArchiveExtraction: &shared.SoftwareRecipeStepExtractArchive{
-                                ArtifactID: "a",
-                                Destination: "nesciunt",
-                                Type: "TAR",
-                            },
-                            DpkgInstallation: &shared.SoftwareRecipeStepInstallDpkg{
-                                ArtifactID: "magni",
-                            },
-                            FileCopy: &shared.SoftwareRecipeStepCopyFile{
-                                ArtifactID: "et",
-                                Destination: "culpa",
-                                Overwrite: false,
-                                Permissions: "perspiciatis",
-                            },
-                            FileExec: &shared.SoftwareRecipeStepExecFile{
-                                AllowedExitCodes: []int{
-                                    456911,
-                                },
-                                Args: []string{
-                                    "aut",
-                                    "vitae",
-                                    "praesentium",
-                                    "et",
-                                },
-                                ArtifactID: "est",
-                                LocalPath: "debitis",
-                            },
-                            MsiInstallation: &shared.SoftwareRecipeStepInstallMsi{
-                                AllowedExitCodes: []int{
-                                    93459,
-                                    904045,
-                                },
-                                ArtifactID: "molestiae",
-                                Flags: []string{
-                                    "rem",
-                                    "cumque",
-                                    "culpa",
-                                },
-                            },
-                            RpmInstallation: &shared.SoftwareRecipeStepInstallRpm{
-                                ArtifactID: "voluptas",
-                            },
-                            ScriptRun: &shared.SoftwareRecipeStepRunScript{
-                                AllowedExitCodes: []int{
-                                    756779,
-                                    27069,
-                                    636061,
+                                    714242,
+                                    469249,
                                 },
                                 Interpreter: "POWERSHELL",
-                                Script: "labore",
+                                Script: "quibusdam",
                             },
                         },
                     },
-                    Version: "voluptas",
+                    Version: "sed",
                 },
             },
         },

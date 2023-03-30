@@ -15,8 +15,8 @@ func main() {
 
     req := operations.GetemailinfoRequest{
         QueryParams: operations.GetemailinfoQueryParams{
-            Email: "Larry_Rau85@yahoo.com",
-            License: "perspiciatis",
+            Email: "Larue_Rau85@yahoo.com",
+            License: "corrupti",
         },
     }
 

@@ -21,19 +21,19 @@ func main() {
 
     req := operations.DeleteSessionRequest{
         PathParams: operations.DeleteSessionPathParams{
-            BotAliasID: "unde",
-            BotID: "deserunt",
-            LocaleID: "porro",
-            SessionID: "nulla",
+            BotAliasID: "corrupti",
+            BotID: "provident",
+            LocaleID: "distinctio",
+            SessionID: "quibusdam",
         },
         Headers: operations.DeleteSessionHeaders{
-            XAmzAlgorithm: "id",
-            XAmzContentSha256: "vero",
-            XAmzCredential: "perspiciatis",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "nihil",
-            XAmzSignature: "fuga",
-            XAmzSignedHeaders: "facilis",
+            XAmzAlgorithm: "unde",
+            XAmzContentSha256: "nulla",
+            XAmzCredential: "corrupti",
+            XAmzDate: "illum",
+            XAmzSecurityToken: "vel",
+            XAmzSignature: "error",
+            XAmzSignedHeaders: "deserunt",
         },
     }
 

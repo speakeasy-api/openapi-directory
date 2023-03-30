@@ -15,8 +15,8 @@ func main() {
 
     req := operations.GetaddressmatchRequest{
         QueryParams: operations.GetaddressmatchQueryParams{
-            Address: "5786 Roselyn Throughway",
-            License: "nihil",
+            Address: "5786 Little Streets",
+            License: "vel",
         },
     }
 

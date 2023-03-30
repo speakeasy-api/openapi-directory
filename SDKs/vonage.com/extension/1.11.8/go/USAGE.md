@@ -20,7 +20,7 @@ func main() {
             },
         },
         PathParams: operations.ExtensionCtrlGetAccountExtensionByIDPathParams{
-            AccountID: "unde",
+            AccountID: "corrupti",
             ExtensionNumber: 5928.45,
         },
     }

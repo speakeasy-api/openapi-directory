@@ -36,12 +36,12 @@ func main() {
         },
         Request: shared.AdditionalTaxIdentifierCreate{
             Country: "Montenegro",
-            County: "porro",
-            Identifier: "nulla",
-            Scheme: "id",
-            Superscheme: "vero",
-            ThirdPartyPassword: "perspiciatis",
-            ThirdPartyUsername: "nulla",
+            County: "distinctio",
+            Identifier: "quibusdam",
+            Scheme: "unde",
+            Superscheme: "nulla",
+            ThirdPartyPassword: "corrupti",
+            ThirdPartyUsername: "illum",
         },
     }
 

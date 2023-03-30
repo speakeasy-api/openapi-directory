@@ -15,20 +15,20 @@ func main() {
 
     req := operations.AcmednsAcmeChallengeSetsGetRequest{
         PathParams: operations.AcmednsAcmeChallengeSetsGetPathParams{
-            RootDomain: "unde",
+            RootDomain: "corrupti",
         },
         QueryParams: operations.AcmednsAcmeChallengeSetsGetQueryParams{
             DollarXgafv: "2",
-            AccessToken: "porro",
+            AccessToken: "distinctio",
             Alt: "proto",
-            Callback: "id",
-            Fields: "vero",
-            Key: "perspiciatis",
-            OauthToken: "nulla",
+            Callback: "unde",
+            Fields: "nulla",
+            Key: "corrupti",
+            OauthToken: "illum",
             PrettyPrint: false,
-            QuotaUser: "nihil",
-            UploadType: "fuga",
-            UploadProtocol: "facilis",
+            QuotaUser: "vel",
+            UploadType: "error",
+            UploadProtocol: "deserunt",
         },
     }
 

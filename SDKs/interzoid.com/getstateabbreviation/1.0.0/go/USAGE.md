@@ -15,8 +15,8 @@ func main() {
 
     req := operations.GetstateabbreviationRequest{
         QueryParams: operations.GetstateabbreviationQueryParams{
-            License: "unde",
-            State: "deserunt",
+            License: "corrupti",
+            State: "provident",
         },
     }
 

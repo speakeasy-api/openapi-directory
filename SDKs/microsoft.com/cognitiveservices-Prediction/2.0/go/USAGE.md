@@ -18,16 +18,16 @@ func main() {
             ProjectID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
         },
         QueryParams: operations.PredictImageQueryParams{
-            Application: "est",
+            Application: "deserunt",
             IterationID: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
         },
         Headers: operations.PredictImageHeaders{
-            PredictionKey: "id",
+            PredictionKey: "cum",
         },
         Request: operations.PredictImageRequestBody{
             ImageData: operations.PredictImageRequestBodyImageData{
-                Content: []byte("blanditiis"),
-                ImageData: "numquam",
+                Content: []byte("esse"),
+                ImageData: "ipsum",
             },
         },
     }

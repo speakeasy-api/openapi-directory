@@ -15,8 +15,8 @@ func main() {
 
     req := operations.AckMessageRequest{
         PathParams: operations.AckMessagePathParams{
-            QueueMessageID: "unde",
-            QueueName: "deserunt",
+            QueueMessageID: "corrupti",
+            QueueName: "provident",
         },
     }
 

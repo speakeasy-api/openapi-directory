@@ -33,8 +33,8 @@ func main() {
     req := operations.AnonymizeRequest{
         PathParams: operations.AnonymizePathParams{
             Anonymized: false,
-            Source: "unde",
-            Token: "deserunt",
+            Source: "corrupti",
+            Token: "provident",
         },
     }
 

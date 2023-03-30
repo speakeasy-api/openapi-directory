@@ -32,13 +32,13 @@ func main() {
 
     req := operations.CreateAutoPredictorRequest{
         Headers: operations.CreateAutoPredictorHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AmazonForecast.CreateAutoPredictor",
         },
         Request: shared.CreateAutoPredictorRequest{
@@ -46,91 +46,114 @@ func main() {
                 AdditionalDatasets: []shared.AdditionalDataset{
                     shared.AdditionalDataset{
                         Configuration: map[string][]string{
-                            "facilis": []string{
-                                "iusto",
-                                "ullam",
+                            "error": []string{
+                                "suscipit",
+                                "iure",
+                                "magnam",
                             },
-                            "saepe": []string{
-                                "sapiente",
-                            },
-                            "enim": []string{
-                                "voluptatum",
-                                "autem",
+                            "debitis": []string{
+                                "delectus",
                             },
                         },
-                        Name: "vel",
+                        Name: "tempora",
                     },
                     shared.AdditionalDataset{
                         Configuration: map[string][]string{
-                            "deleniti": []string{
-                                "reprehenderit",
-                                "molestiae",
-                                "quo",
+                            "molestiae": []string{
+                                "placeat",
+                                "voluptatum",
+                                "iusto",
+                                "excepturi",
                             },
-                            "quasi": []string{
-                                "dicta",
-                                "est",
-                            },
-                            "voluptatem": []string{
-                                "fugiat",
-                                "a",
+                            "nisi": []string{
+                                "temporibus",
+                                "ab",
+                                "quis",
+                                "veritatis",
                             },
                         },
-                        Name: "omnis",
+                        Name: "deserunt",
+                    },
+                    shared.AdditionalDataset{
+                        Configuration: map[string][]string{
+                            "ipsam": []string{
+                                "sapiente",
+                                "quo",
+                                "odit",
+                                "at",
+                            },
+                        },
+                        Name: "at",
+                    },
+                    shared.AdditionalDataset{
+                        Configuration: map[string][]string{
+                            "molestiae": []string{
+                                "quod",
+                                "esse",
+                                "totam",
+                                "porro",
+                            },
+                            "dolorum": []string{
+                                "nam",
+                            },
+                            "officia": []string{
+                                "fugit",
+                                "deleniti",
+                                "hic",
+                            },
+                            "optio": []string{
+                                "beatae",
+                                "commodi",
+                                "molestiae",
+                            },
+                        },
+                        Name: "modi",
                     },
                 },
                 AttributeConfigs: []shared.AttributeConfig{
                     shared.AttributeConfig{
-                        AttributeName: "accusamus",
+                        AttributeName: "impedit",
                         Transformations: map[string]string{
-                            "reiciendis": "rem",
-                            "quibusdam": "et",
-                            "praesentium": "occaecati",
-                            "dolor": "soluta",
+                            "esse": "ipsum",
+                            "excepturi": "aspernatur",
+                            "perferendis": "ad",
                         },
                     },
                 },
-                DatasetGroupArn: "sed",
+                DatasetGroupArn: "natus",
             },
             EncryptionConfig: &shared.EncryptionConfig{
-                KMSKeyArn: "quisquam",
-                RoleArn: "rerum",
+                KMSKeyArn: "sed",
+                RoleArn: "iste",
             },
             ExplainPredictor: false,
             ForecastDimensions: []string{
-                "qui",
-                "sed",
-                "rerum",
+                "natus",
             },
-            ForecastFrequency: "possimus",
-            ForecastHorizon: 521848,
+            ForecastFrequency: "laboriosam",
+            ForecastHorizon: 943749,
             ForecastTypes: []string{
-                "esse",
+                "fuga",
+                "in",
+                "corporis",
+                "iste",
             },
             MonitorConfig: &shared.MonitorConfig{
-                MonitorName: "rem",
+                MonitorName: "iure",
             },
-            OptimizationMetric: "RMSE",
-            PredictorName: "amet",
-            ReferencePredictorArn: "est",
+            OptimizationMetric: "MAPE",
+            PredictorName: "quidem",
+            ReferencePredictorArn: "architecto",
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "blanditiis",
-                    Value: "numquam",
-                },
-                shared.Tag{
-                    Key: "similique",
-                    Value: "dolores",
-                },
-                shared.Tag{
-                    Key: "sit",
-                    Value: "quia",
+                    Key: "reiciendis",
+                    Value: "est",
                 },
             },
             TimeAlignmentBoundary: &shared.TimeAlignmentBoundary{
-                DayOfMonth: 617636,
-                DayOfWeek: "TUESDAY",
-                Hour: 612096,
+                DayOfMonth: 653140,
+                DayOfWeek: "FRIDAY",
+                Hour: 170909,
                 Month: "MARCH",
             },
         },

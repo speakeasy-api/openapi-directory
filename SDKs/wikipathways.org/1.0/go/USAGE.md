@@ -16,7 +16,7 @@ func main() {
     req := operations.GetFindInteractionsRequest{
         QueryParams: operations.GetFindInteractionsQueryParams{
             Format: "dump",
-            Query: "deserunt",
+            Query: "provident",
         },
     }
 

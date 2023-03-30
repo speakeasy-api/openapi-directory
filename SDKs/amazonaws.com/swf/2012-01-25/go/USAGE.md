@@ -21,37 +21,37 @@ func main() {
 
     req := operations.CountClosedWorkflowExecutionsRequest{
         Headers: operations.CountClosedWorkflowExecutionsHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "SimpleWorkflowService.CountClosedWorkflowExecutions",
         },
         Request: shared.CountClosedWorkflowExecutionsInput{
             CloseStatusFilter: &shared.CloseStatusFilter{
-                Status: "CANCELED",
+                Status: "TIMED_OUT",
             },
             CloseTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-08-14T09:37:38.486Z",
-                OldestDate: "2022-08-06T06:00:46.424Z",
+                LatestDate: "2022-10-26T11:12:21.467Z",
+                OldestDate: "2022-08-14T12:00:14.610Z",
             },
-            Domain: "eum",
+            Domain: "deserunt",
             ExecutionFilter: &shared.WorkflowExecutionFilter{
-                WorkflowID: "iusto",
+                WorkflowID: "suscipit",
             },
             StartTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-12-11T09:38:31.578Z",
-                OldestDate: "2022-05-08T12:06:50.100Z",
+                LatestDate: "2022-10-21T09:09:28.900Z",
+                OldestDate: "2022-12-11T12:01:07.702Z",
             },
             TagFilter: &shared.TagFilter{
-                Tag: "inventore",
+                Tag: "debitis",
             },
             TypeFilter: &shared.WorkflowTypeFilter{
-                Name: "sapiente",
-                Version: "enim",
+                Name: "ipsa",
+                Version: "delectus",
             },
         },
     }

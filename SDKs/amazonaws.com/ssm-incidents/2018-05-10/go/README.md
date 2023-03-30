@@ -32,27 +32,27 @@ func main() {
 
     req := operations.CreateReplicationSetRequest{
         Headers: operations.CreateReplicationSetHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
         },
         Request: operations.CreateReplicationSetRequestBody{
-            ClientToken: "nulla",
+            ClientToken: "illum",
             Regions: map[string]shared.RegionMapInputValue{
-                "fuga": shared.RegionMapInputValue{
-                    SseKmsKeyID: "facilis",
+                "error": shared.RegionMapInputValue{
+                    SseKmsKeyID: "deserunt",
                 },
-                "eum": shared.RegionMapInputValue{
-                    SseKmsKeyID: "iusto",
+                "suscipit": shared.RegionMapInputValue{
+                    SseKmsKeyID: "iure",
                 },
             },
             Tags: map[string]string{
-                "saepe": "inventore",
-                "sapiente": "enim",
+                "debitis": "ipsa",
+                "delectus": "tempora",
             },
         },
     }

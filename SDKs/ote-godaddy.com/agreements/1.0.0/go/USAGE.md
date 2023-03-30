@@ -16,13 +16,13 @@ func main() {
     req := operations.GetRequest{
         QueryParams: operations.GetQueryParams{
             Keys: []string{
-                "deserunt",
-                "porro",
-                "nulla",
+                "provident",
+                "distinctio",
+                "quibusdam",
             },
         },
         Headers: operations.GetHeaders{
-            XMarketID: "id",
+            XMarketID: "unde",
             XPrivateLabelID: 857946,
         },
     }

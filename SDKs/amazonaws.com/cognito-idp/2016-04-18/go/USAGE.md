@@ -21,49 +21,79 @@ func main() {
 
     req := operations.AddCustomAttributesRequest{
         Headers: operations.AddCustomAttributesHeaders{
-            XAmzAlgorithm: "unde",
-            XAmzContentSha256: "deserunt",
-            XAmzCredential: "porro",
-            XAmzDate: "nulla",
-            XAmzSecurityToken: "id",
-            XAmzSignature: "vero",
-            XAmzSignedHeaders: "perspiciatis",
+            XAmzAlgorithm: "corrupti",
+            XAmzContentSha256: "provident",
+            XAmzCredential: "distinctio",
+            XAmzDate: "quibusdam",
+            XAmzSecurityToken: "unde",
+            XAmzSignature: "nulla",
+            XAmzSignedHeaders: "corrupti",
             XAmzTarget: "AWSCognitoIdentityProviderService.AddCustomAttributes",
         },
         Request: shared.AddCustomAttributesRequest{
             CustomAttributes: []shared.SchemaAttributeType{
                 shared.SchemaAttributeType{
-                    AttributeDataType: "DateTime",
+                    AttributeDataType: "Number",
                     DeveloperOnlyAttribute: false,
                     Mutable: false,
-                    Name: "facilis",
+                    Name: "error",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "eum",
+                        MaxValue: "deserunt",
+                        MinValue: "suscipit",
+                    },
+                    Required: false,
+                    StringAttributeConstraints: &shared.StringAttributeConstraintsType{
+                        MaxLength: "iure",
+                        MinLength: "magnam",
+                    },
+                },
+                shared.SchemaAttributeType{
+                    AttributeDataType: "Boolean",
+                    DeveloperOnlyAttribute: false,
+                    Mutable: false,
+                    Name: "ipsa",
+                    NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
+                        MaxValue: "delectus",
+                        MinValue: "tempora",
+                    },
+                    Required: false,
+                    StringAttributeConstraints: &shared.StringAttributeConstraintsType{
+                        MaxLength: "suscipit",
+                        MinLength: "molestiae",
+                    },
+                },
+                shared.SchemaAttributeType{
+                    AttributeDataType: "Boolean",
+                    DeveloperOnlyAttribute: false,
+                    Mutable: false,
+                    Name: "placeat",
+                    NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
+                        MaxValue: "voluptatum",
                         MinValue: "iusto",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "ullam",
-                        MinLength: "saepe",
+                        MaxLength: "excepturi",
+                        MinLength: "nisi",
                     },
                 },
                 shared.SchemaAttributeType{
-                    AttributeDataType: "String",
+                    AttributeDataType: "Boolean",
                     DeveloperOnlyAttribute: false,
                     Mutable: false,
-                    Name: "sapiente",
+                    Name: "temporibus",
                     NumberAttributeConstraints: &shared.NumberAttributeConstraintsType{
-                        MaxValue: "enim",
-                        MinValue: "eum",
+                        MaxValue: "ab",
+                        MinValue: "quis",
                     },
                     Required: false,
                     StringAttributeConstraints: &shared.StringAttributeConstraintsType{
-                        MaxLength: "voluptatum",
-                        MinLength: "autem",
+                        MaxLength: "veritatis",
+                        MinLength: "deserunt",
                     },
                 },
             },
-            UserPoolID: "vel",
+            UserPoolID: "perferendis",
         },
     }
 

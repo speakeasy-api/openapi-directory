@@ -22,22 +22,22 @@ func main() {
     req := operations.GETApplySecurityGroupsToLoadBalancerRequest{
         QueryParams: operations.GETApplySecurityGroupsToLoadBalancerQueryParams{
             Action: "ApplySecurityGroupsToLoadBalancer",
-            LoadBalancerName: "deserunt",
+            LoadBalancerName: "corrupti",
             SecurityGroups: []string{
-                "nulla",
-                "id",
-                "vero",
+                "distinctio",
+                "quibusdam",
+                "unde",
             },
             Version: "2012-06-01",
         },
         Headers: operations.GETApplySecurityGroupsToLoadBalancerHeaders{
             XAmzAlgorithm: "nulla",
-            XAmzContentSha256: "nihil",
-            XAmzCredential: "fuga",
-            XAmzDate: "facilis",
-            XAmzSecurityToken: "eum",
-            XAmzSignature: "iusto",
-            XAmzSignedHeaders: "ullam",
+            XAmzContentSha256: "corrupti",
+            XAmzCredential: "illum",
+            XAmzDate: "vel",
+            XAmzSecurityToken: "error",
+            XAmzSignature: "deserunt",
+            XAmzSignedHeaders: "suscipit",
         },
     }
 
