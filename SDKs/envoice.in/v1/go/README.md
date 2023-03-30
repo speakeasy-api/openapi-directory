@@ -105,6 +105,7 @@ func main() {
 * `InvoiceAPINewForm` - Create an invoice
 * `InvoiceAPINewJSON` - Create an invoice
 * `InvoiceAPINewRaw` - Create an invoice
+* `InvoiceAPIPdf` - Return the PDF for the invoice
 * `InvoiceAPISendToAccountantForm` - Send the provided invoice to the accountant
 * `InvoiceAPISendToAccountantJSON` - Send the provided invoice to the accountant
 * `InvoiceAPISendToAccountantRaw` - Send the provided invoice to the accountant

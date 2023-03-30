@@ -19,17 +19,17 @@ type CreateTimelineEventHeaders struct {
 }
 
 type CreateTimelineEventRequestBody struct {
-	// A token ensuring that the action is called only once with the specified details.
+	// A token that ensures that a client calls the action only once with the specified details.
 	ClientToken *string `json:"clientToken,omitempty"`
 	// A short description of the event.
 	EventData string `json:"eventData"`
-	// Adds one or more references to the <code>TimelineEvent</code>. A reference can be an Amazon Web Services resource involved in the incident or in some way associated with it. When you specify a reference, you enter the Amazon Resource Name (ARN) of the resource. You can also specify a related item. As an example, you could specify the ARN of an Amazon DynamoDB (DynamoDB) table. The table for this example is the resource. You could also specify a Amazon CloudWatch metric for that table. The metric is the related item.
+	// Adds one or more references to the <code>TimelineEvent</code>. A reference is an Amazon Web Services resource involved or associated with the incident. To specify a reference, enter its Amazon Resource Name (ARN). You can also specify a related item associated with a resource. For example, to specify an Amazon DynamoDB (DynamoDB) table as a resource, use the table's ARN. You can also specify an Amazon CloudWatch metric associated with the DynamoDB table as a related item.
 	EventReferences []shared.EventReference `json:"eventReferences,omitempty"`
 	// The time that the event occurred.
 	EventTime time.Time `json:"eventTime"`
-	// The type of the event. You can create timeline events of type <code>Custom Event</code>.
+	// The type of event. You can create timeline events of type <code>Custom Event</code>.
 	EventType string `json:"eventType"`
-	// The Amazon Resource Name (ARN) of the incident record to which the event will be added.
+	// The Amazon Resource Name (ARN) of the incident record that the action adds the incident to.
 	IncidentRecordArn string `json:"incidentRecordArn"`
 }
 

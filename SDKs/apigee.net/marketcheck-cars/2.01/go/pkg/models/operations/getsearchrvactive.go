@@ -10,14 +10,22 @@ import (
 type GetSearchRvActiveQueryParams struct {
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
+	// Base exterior color to match. Valid filter values are those that our Search facets API returns for unique base exterior colors. You can pass in multiple base interior color values comma separated
+	BaseExteriorColor *string `queryParam:"style=form,explode=true,name=base_exterior_color"`
+	// Base interior color to match. Valid filter values are those that our Search facets API returns for unique base interior colors. You can pass in multiple base interior color values comma separated
+	BaseInteriorColor *string `queryParam:"style=form,explode=true,name=base_interior_color"`
 	// To filter listing on City in which they are listed
 	City *string `queryParam:"style=form,explode=true,name=city"`
 	// Filter RV listings on class
 	Class *string `queryParam:"style=form,explode=true,name=class"`
+	// To filter listing on their cylinders
+	Cylinders *string `queryParam:"style=form,explode=true,name=cylinders"`
 	// Dealer id to filter the listings.
 	DealerID *string `queryParam:"style=form,explode=true,name=dealer_id"`
 	// Filter listings on dealer_name
 	DealerName *string `queryParam:"style=form,explode=true,name=dealer_name"`
+	// Doors to filter the cars on. Valid filter values are those that our Search facets API returns for unique doors. You can pass in multiple doors values comma separated
+	Doors *string `queryParam:"style=form,explode=true,name=doors"`
 	// To filter listing on their engine
 	Engine *string `queryParam:"style=form,explode=true,name=engine"`
 	// Exterior color to match. Valid filter values are those that our Search facets API returns for unique exterior colors. You can pass in multiple exterior color values comma separated
@@ -30,8 +38,12 @@ type GetSearchRvActiveQueryParams struct {
 	FirstSeenDays *string `queryParam:"style=form,explode=true,name=first_seen_days"`
 	// First seen date range to filter listings with the first seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
 	FirstSeenRange *string `queryParam:"style=form,explode=true,name=first_seen_range"`
+	// To filter on fresh water capacity of vehicle
+	FreshWaterCapacity *string `queryParam:"style=form,explode=true,name=fresh_water_capacity"`
 	// To filter listing on their fuel type
 	FuelType *string `queryParam:"style=form,explode=true,name=fuel_type"`
+	// To filter on the maximum total weight of your vehicle
+	Gvwr *string `queryParam:"style=form,explode=true,name=gvwr"`
 	// Interior color to match. Valid filter values are those that our Search facets API returns for unique interior colors. You can pass in multiple interior color values comma separated
 	InteriorColor *string `queryParam:"style=form,explode=true,name=interior_color"`
 	// To filter listing on their condition. Either used or new
@@ -42,6 +54,10 @@ type GetSearchRvActiveQueryParams struct {
 	LastSeenRange *string `queryParam:"style=form,explode=true,name=last_seen_range"`
 	// Latitude component of location
 	Latitude *float64 `queryParam:"style=form,explode=true,name=latitude"`
+	// Filter RV listings on length
+	Length *string `queryParam:"style=form,explode=true,name=length"`
+	// length range to filter listings with the length in the range given. Range to be given in the format - min-max e.g. 50-200
+	LengthRange *string `queryParam:"style=form,explode=true,name=length_range"`
 	// Longitude component of location
 	Longitude *float64 `queryParam:"style=form,explode=true,name=longitude"`
 	// To filter listings on their make
@@ -56,6 +72,8 @@ type GetSearchRvActiveQueryParams struct {
 	MsaCode *string `queryParam:"style=form,explode=true,name=msa_code"`
 	// MSRP range to filter listings with the msrp in the range given. Range to be given in the format - min-max e.g. 1000-5000
 	MsrpRange *string `queryParam:"style=form,explode=true,name=msrp_range"`
+	// To filter on number_of_awnings
+	NumberOfAwnings *string `queryParam:"style=form,explode=true,name=number_of_awnings"`
 	// Price range to filter listings with the price in the range given. Range to be given in the format - min-max e.g. 1000-5000
 	PriceRange *string `queryParam:"style=form,explode=true,name=price_range"`
 	// Radius around the search location (Unit - Miles)
@@ -66,6 +84,12 @@ type GetSearchRvActiveQueryParams struct {
 	Rows *int `queryParam:"style=form,explode=true,name=rows"`
 	// To search a substring across entire document
 	SearchText *string `queryParam:"style=form,explode=true,name=search_text"`
+	// To filter on vehicle seating capacity
+	SeatingCapacity *string `queryParam:"style=form,explode=true,name=seating_capacity"`
+	// To filter data based on sleeps
+	Sleeps *string `queryParam:"style=form,explode=true,name=sleeps"`
+	// Filter RV listings on slideouts
+	Slideouts *string `queryParam:"style=form,explode=true,name=slideouts"`
 	// Sort by field. Default sort field is distance from the given point
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Sort order - asc or desc. Default sort order is asc
@@ -86,6 +110,8 @@ type GetSearchRvActiveQueryParams struct {
 	Vin *string `queryParam:"style=form,explode=true,name=vin"`
 	// To filter listing on their year
 	Year *string `queryParam:"style=form,explode=true,name=year"`
+	// Year range to filter listings with the year in the range given. Range to be given in the format - min-max e.g. 2019-2021
+	YearRange *string `queryParam:"style=form,explode=true,name=year_range"`
 	// To filter listing on ZIP around which they are listed
 	Zip *string `queryParam:"style=form,explode=true,name=zip"`
 }

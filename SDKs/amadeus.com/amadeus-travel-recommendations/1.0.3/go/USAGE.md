@@ -1,0 +1,35 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "context"
+    "log"
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+
+    req := operations.GetRecommendedLocationRequest{
+        QueryParams: operations.GetRecommendedLocationQueryParams{
+            CityCodes: "unde",
+            DestinationCountryCodes: "deserunt",
+            TravelerCountryCode: "porro",
+        },
+    }
+
+    ctx := context.Background()
+    res, err := s.RecommendedLocations.GetRecommendedLocation(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.GetRecommendedLocation200ApplicationVndAmadeusPlusJSONObject != nil {
+        // handle response
+    }
+}
+```
+<!-- End SDK Example Usage -->

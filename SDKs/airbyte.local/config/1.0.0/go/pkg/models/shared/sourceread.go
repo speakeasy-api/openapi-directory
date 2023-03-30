@@ -6,6 +6,7 @@ package shared
 type SourceRead struct {
 	// The values required to configure the source. The schema for this must match the schema return by source_definition_specifications/get for the source.
 	ConnectionConfiguration interface{} `json:"connectionConfiguration"`
+	Icon                    *string     `json:"icon,omitempty"`
 	Name                    string      `json:"name"`
 	SourceDefinitionID      string      `json:"sourceDefinitionId"`
 	SourceID                string      `json:"sourceId"`

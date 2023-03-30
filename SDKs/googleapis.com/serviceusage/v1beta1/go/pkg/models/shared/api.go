@@ -11,8 +11,9 @@ import (
 type APISyntaxEnum string
 
 const (
-	APISyntaxEnumSyntaxProto2 APISyntaxEnum = "SYNTAX_PROTO2"
-	APISyntaxEnumSyntaxProto3 APISyntaxEnum = "SYNTAX_PROTO3"
+	APISyntaxEnumSyntaxProto2   APISyntaxEnum = "SYNTAX_PROTO2"
+	APISyntaxEnumSyntaxProto3   APISyntaxEnum = "SYNTAX_PROTO3"
+	APISyntaxEnumSyntaxEditions APISyntaxEnum = "SYNTAX_EDITIONS"
 )
 
 func (e *APISyntaxEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *APISyntaxEnum) UnmarshalJSON(data []byte) error {
 	case "SYNTAX_PROTO2":
 		fallthrough
 	case "SYNTAX_PROTO3":
+		fallthrough
+	case "SYNTAX_EDITIONS":
 		*e = APISyntaxEnum(s)
 		return nil
 	default:

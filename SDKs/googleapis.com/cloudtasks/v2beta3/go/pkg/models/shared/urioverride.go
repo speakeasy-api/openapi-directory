@@ -63,11 +63,11 @@ func (e *URIOverrideURIOverrideEnforceModeEnum) UnmarshalJSON(data []byte) error
 
 // URIOverride - URI Override. When specified, all the HTTP tasks inside the queue will be partially or fully overridden depending on the configured values.
 type URIOverride struct {
-	// Host override. When specified, will replace the host part of the task URL. For example, if the task URL is "https://www.google.com", and host value is set to "example.net", the overridden URI will be changed to "https://example.net". Host value cannot be an empty string.
+	// Host override. When specified, replaces the host part of the task URL. For example, if the task URL is "https://www.google.com," and host value is set to "example.net", the overridden URI will be changed to "https://example.net." Host value cannot be an empty string (INVALID_ARGUMENT).
 	Host *string `json:"host,omitempty"`
 	// PathOverride. Path message defines path override for HTTP targets.
 	PathOverride *PathOverride `json:"pathOverride,omitempty"`
-	// Port override. When specified, will replace the port part of the task URI. For instance, for a URI http://www.google.com/foo and port=123, the overridden URI becomes http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the port to 0 (Zero) clears the URI port.
+	// Port override. When specified, replaces the port part of the task URI. For instance, for a URI http://www.google.com/foo and port=123, the overridden URI becomes http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the port to 0 (Zero) clears the URI port.
 	Port *string `json:"port,omitempty"`
 	// QueryOverride. Query message defines query override for HTTP targets.
 	QueryOverride *QueryOverride `json:"queryOverride,omitempty"`

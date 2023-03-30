@@ -19,7 +19,7 @@ type CardConfiguration struct {
 	// The ID of the card configuration profile that contains the settings of the card. For example, the envelope and PIN mailer designs or the logistics company handling the shipment. All the settings in the profile are applied to the card, unless you provide other fields to override them.
 	//
 	// For example, send the `shipmentMethod` to override the logistics company defined in the card configuration profile.
-	ConfigurationProfileID string `json:"configurationProfileId"`
+	ConfigurationProfileID *string `json:"configurationProfileId,omitempty"`
 	// The three-letter [ISO-4217](https://en.wikipedia.org/wiki/ISO_4217) currency code of the card. For example, **EUR**.
 	Currency *string `json:"currency,omitempty"`
 	// Overrides the envelope design ID defined in the `configurationProfileId`.

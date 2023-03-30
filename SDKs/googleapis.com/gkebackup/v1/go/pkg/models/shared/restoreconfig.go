@@ -91,13 +91,13 @@ func (e *RestoreConfigVolumeDataRestorePolicyEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-// RestoreConfig - Configuration of a restore. Next id: 9
+// RestoreConfig - Configuration of a restore. Next id: 12
 type RestoreConfig struct {
 	// Restore all namespaced resources in the Backup if set to "True". Specifying this field to "False" is an error.
 	AllNamespaces *bool `json:"allNamespaces,omitempty"`
 	// Defines the behavior for handling the situation where cluster-scoped resources being restored already exist in the target cluster. This MUST be set to a value other than CLUSTER_RESOURCE_CONFLICT_POLICY_UNSPECIFIED if cluster_resource_restore_scope is not empty.
 	ClusterResourceConflictPolicy *RestoreConfigClusterResourceConflictPolicyEnum `json:"clusterResourceConflictPolicy,omitempty"`
-	// Identifies the cluster-scoped resources to restore from the Backup.
+	// Defines the scope of cluster-scoped resources to restore. Some group kinds are not reasonable choices for a restore, and will cause an error if selected here. Any scope selection that would restore "all valid" resources automatically excludes these group kinds. - gkebackup.gke.io/BackupJob - gkebackup.gke.io/RestoreJob - metrics.k8s.io/NodeMetrics - migration.k8s.io/StorageState - migration.k8s.io/StorageVersionMigration - Node - snapshot.storage.k8s.io/VolumeSnapshotContent - storage.k8s.io/CSINode Some group kinds are driven by restore configuration elsewhere, and will cause an error if selected here. - Namespace - PersistentVolume
 	ClusterResourceRestoreScope *ClusterResourceRestoreScope `json:"clusterResourceRestoreScope,omitempty"`
 	// Defines the behavior for handling the situation where sets of namespaced resources being restored already exist in the target cluster. This MUST be set to a value other than NAMESPACED_RESOURCE_RESTORE_MODE_UNSPECIFIED.
 	NamespacedResourceRestoreMode *RestoreConfigNamespacedResourceRestoreModeEnum `json:"namespacedResourceRestoreMode,omitempty"`

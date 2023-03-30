@@ -35,6 +35,6 @@ type DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// Unexpected error.
+	// User is not authorized to write to the repository.
 	Error map[string]interface{}
 }

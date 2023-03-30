@@ -6,20 +6,36 @@ import (
 	"net/http"
 )
 
-type AddUserToAccountPathParams struct {
+// AddUserToAccountRequestBodyAccount - Account identification requires an accountId, domain or both
+type AddUserToAccountRequestBodyAccount struct {
 	// Unique identifier for the account in your database
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	AccountID *string `json:"accountId,omitempty"`
+	// The domain associated with the account (e.g. acme-inc.com)
+	Domain *string `json:"domain,omitempty"`
 }
 
-// AddUserToAccountRequestBody - The user being added/removed from the account
-type AddUserToAccountRequestBody struct {
+// AddUserToAccountRequestBodyUsersIdentification - User identification requires a userId, email or both
+type AddUserToAccountRequestBodyUsersIdentification struct {
+	// Email address of the user
+	Email *string `json:"email,omitempty"`
 	// Unique identifier for the user in your database
-	UserID string `json:"userId"`
+	UserID *string `json:"userId,omitempty"`
+}
+
+type AddUserToAccountRequestBodyUsers struct {
+	// User identification requires a userId, email or both
+	Identification AddUserToAccountRequestBodyUsersIdentification `json:"identification"`
+}
+
+// AddUserToAccountRequestBody - The identification for user and account
+type AddUserToAccountRequestBody struct {
+	// Account identification requires an accountId, domain or both
+	Account AddUserToAccountRequestBodyAccount `json:"account"`
+	Users   []AddUserToAccountRequestBodyUsers `json:"users"`
 }
 
 type AddUserToAccountRequest struct {
-	PathParams AddUserToAccountPathParams
-	Request    AddUserToAccountRequestBody `request:"mediaType=application/json"`
+	Request AddUserToAccountRequestBody `request:"mediaType=application/json"`
 }
 
 type AddUserToAccount500ApplicationJSONMeta struct {
@@ -27,7 +43,7 @@ type AddUserToAccount500ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// AddUserToAccount500ApplicationJSON - The error message should specify what cause the error
+// AddUserToAccount500ApplicationJSON - The message specifies what is done
 type AddUserToAccount500ApplicationJSON struct {
 	Message string                                 `json:"message"`
 	Meta    AddUserToAccount500ApplicationJSONMeta `json:"meta"`
@@ -38,7 +54,7 @@ type AddUserToAccount429ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// AddUserToAccount429ApplicationJSON - The error message should specify what cause the error
+// AddUserToAccount429ApplicationJSON - The message specifies what is done
 type AddUserToAccount429ApplicationJSON struct {
 	Message string                                 `json:"message"`
 	Meta    AddUserToAccount429ApplicationJSONMeta `json:"meta"`
@@ -49,7 +65,7 @@ type AddUserToAccount401ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// AddUserToAccount401ApplicationJSON - The error message should specify what cause the error
+// AddUserToAccount401ApplicationJSON - The message specifies what is done
 type AddUserToAccount401ApplicationJSON struct {
 	Message string                                 `json:"message"`
 	Meta    AddUserToAccount401ApplicationJSONMeta `json:"meta"`
@@ -75,7 +91,7 @@ type AddUserToAccount400ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// AddUserToAccount400ApplicationJSON - The error message should specify what cause the error
+// AddUserToAccount400ApplicationJSON - The message specifies what is done
 type AddUserToAccount400ApplicationJSON struct {
 	// Map that sums up all received values that seemed incorrect
 	Errors  AddUserToAccount400ApplicationJSONErrors `json:"errors"`
@@ -88,7 +104,7 @@ type AddUserToAccount201ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// AddUserToAccount201ApplicationJSON - The object was created
+// AddUserToAccount201ApplicationJSON - The message specifies what is done
 type AddUserToAccount201ApplicationJSON struct {
 	Message string                                 `json:"message"`
 	Meta    AddUserToAccount201ApplicationJSONMeta `json:"meta"`

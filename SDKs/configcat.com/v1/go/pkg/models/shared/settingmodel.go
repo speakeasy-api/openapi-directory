@@ -2,21 +2,15 @@
 
 package shared
 
-import (
-	"time"
-)
-
 // SettingModel - When the creation was successful.
 type SettingModel struct {
-	ConfigID            *string          `json:"configId,omitempty"`
-	ConfigName          *string          `json:"configName,omitempty"`
-	ExpirationWarningAt *time.Time       `json:"expirationWarningAt,omitempty"`
-	Hint                *string          `json:"hint,omitempty"`
-	Key                 *string          `json:"key,omitempty"`
-	Name                *string          `json:"name,omitempty"`
-	OwnerUserEmail      *string          `json:"ownerUserEmail,omitempty"`
-	OwnerUserFullName   *string          `json:"ownerUserFullName,omitempty"`
-	SettingID           *int             `json:"settingId,omitempty"`
-	SettingType         *SettingTypeEnum `json:"settingType,omitempty"`
-	Tags                []TagModel       `json:"tags,omitempty"`
+	ConfigID    *string          `json:"configId,omitempty"`
+	ConfigName  *string          `json:"configName,omitempty"`
+	Hint        *string          `json:"hint,omitempty"`
+	Key         *string          `json:"key,omitempty"`
+	Name        *string          `json:"name,omitempty"`
+	Order       *int             `json:"order,omitempty"`
+	SettingID   *int             `json:"settingId,omitempty"`
+	SettingType *SettingTypeEnum `json:"settingType,omitempty"`
+	Tags        []TagModel       `json:"tags,omitempty"`
 }

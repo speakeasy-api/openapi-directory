@@ -14,7 +14,7 @@ type GetAccountsIDTransactionsPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
-// GetAccountsIDTransactionsTypeEnum - Only return transactions of this type.
+// GetAccountsIDTransactionsTypeEnum - Limit to transactions of this type.
 type GetAccountsIDTransactionsTypeEnum string
 
 const (
@@ -39,18 +39,22 @@ func (e *GetAccountsIDTransactionsTypeEnum) UnmarshalJSON(data []byte) error {
 }
 
 type GetAccountsIDTransactionsQueryParams struct {
-	// Return transactions that fall on or before this date. Required if start_date is provided. If not provided, defaults to today's date.
+	// Limit to transactions on or before this date. Required if start_date is provided. If not provided, defaults to today's date.
 	EndDate *string `queryParam:"style=form,explode=true,name=end_date"`
-	// If set, will return only uncategorised results.
-	OnlyUncategorised *int64 `queryParam:"style=form,explode=true,name=only_uncategorised"`
+	// Limit to transactions that need to be reviewed.
+	NeedsReview *int64 `queryParam:"style=form,explode=true,name=needs_review"`
 	// Choose a particular page of the results.
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
-	// Return transactions matching a keyword search string. The provided string is matched against the transaction amount, account name, payee, category title, note, labels, and the date in yyyy-mm-dd format.
+	// Limit to transactions matching a keyword search string. The provided string is matched against the transaction amount, account name, payee, category title, note, labels, and the date in ISO 8601 format.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-	// Return only transactions on or after this date. Required if end_date is provided. If not provided, defaults to the furtherest date allowed by the user's subscription.
+	// Limit to transactions on or after this date. Required if end_date is provided. If not provided, defaults to the furtherest date allowed by the user's subscription.
 	StartDate *string `queryParam:"style=form,explode=true,name=start_date"`
-	// Only return transactions of this type.
+	// Limit to transactions of this type.
 	Type *GetAccountsIDTransactionsTypeEnum `queryParam:"style=form,explode=true,name=type"`
+	// Limit to uncategorised transactions.
+	Uncategorised *int64 `queryParam:"style=form,explode=true,name=uncategorised"`
+	// Limit to transactions updated since an ISO 8601 timestamp.
+	UpdatedSince *string `queryParam:"style=form,explode=true,name=updated_since"`
 }
 
 type GetAccountsIDTransactionsRequest struct {

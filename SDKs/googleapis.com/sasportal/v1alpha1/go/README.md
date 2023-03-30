@@ -26,11 +26,13 @@ func main() {
 
     req := operations.SasportalCustomersListRequest{
         Security: operations.SasportalCustomersListSecurity{
-            Oauth2: shared.SchemeOauth2{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
-            },
-            Oauth2c: shared.SchemeOauth2c{
-                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            Option1: &operations.SasportalCustomersListSecurityOption1{
+                Oauth2: shared.SchemeOauth2{
+                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+                },
+                Oauth2c: shared.SchemeOauth2c{
+                    Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+                },
             },
         },
         QueryParams: operations.SasportalCustomersListQueryParams{

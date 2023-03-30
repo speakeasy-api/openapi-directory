@@ -35,6 +35,11 @@ type GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams struct {
 	Context *int64 `queryParam:"style=form,explode=true,name=context"`
 	// Generate diffs that ignore whitespace.
 	IgnoreWhitespace *bool `queryParam:"style=form,explode=true,name=ignore_whitespace"`
+	// This parameter is deprecated and will be removed at the end
+	// of 2022. The 'topic' parameter should be used instead. The
+	// 'merge' and 'topic' parameters cannot be both used at the same
+	// time.
+	//
 	// If true, the source commit is merged into the
 	// destination commit, and then a diff from the
 	// destination to the merge result is returned. If false,
@@ -46,6 +51,12 @@ type GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams struct {
 	Path *string `queryParam:"style=form,explode=true,name=path"`
 	// Whether to perform rename detection, true if omitted.
 	Renames *bool `queryParam:"style=form,explode=true,name=renames"`
+	// If true, returns 2-way 'three-dot' diff.
+	// This is a diff between the source commit and the merge base
+	// of the source commit and the destination commit.
+	// If false, a simple 'two dot' diff between the source and
+	// destination is returned.
+	Topic *bool `queryParam:"style=form,explode=true,name=topic"`
 }
 
 type GetRepositoriesWorkspaceRepoSlugDiffSpecRequest struct {

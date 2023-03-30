@@ -45,3 +45,31 @@ type GoogleAppsDriveLabelsV2Field struct {
 	// Options for the user field type.
 	UserOptions *GoogleAppsDriveLabelsV2FieldUserOptions `json:"userOptions,omitempty"`
 }
+
+// GoogleAppsDriveLabelsV2FieldInput - Defines a field that has a display name, data type, and other configuration options. This field defines the kind of metadata that may be set on a Drive item.
+type GoogleAppsDriveLabelsV2FieldInput struct {
+	// The capabilities related to this field on applied metadata.
+	AppliedCapabilities *GoogleAppsDriveLabelsV2FieldAppliedCapabilities `json:"appliedCapabilities,omitempty"`
+	// Information about a user.
+	Creator *GoogleAppsDriveLabelsV2UserInfo `json:"creator,omitempty"`
+	// Options for the date field type.
+	DateOptions *GoogleAppsDriveLabelsV2FieldDateOptionsInput `json:"dateOptions,omitempty"`
+	// Information about a user.
+	Disabler *GoogleAppsDriveLabelsV2UserInfo `json:"disabler,omitempty"`
+	// UI display hints for rendering a field.
+	DisplayHints *GoogleAppsDriveLabelsV2FieldDisplayHints `json:"displayHints,omitempty"`
+	// The lifecycle state of an object, such as label, field, or choice. The lifecycle enforces the following transitions: * `UNPUBLISHED_DRAFT` (starting state) * `UNPUBLISHED_DRAFT` -> `PUBLISHED` * `UNPUBLISHED_DRAFT` -> (Deleted) * `PUBLISHED` -> `DISABLED` * `DISABLED` -> `PUBLISHED` * `DISABLED` -> (Deleted) The published and disabled states have some distinct characteristics: * Published—Some kinds of changes might be made to an object in this state, in which case `has_unpublished_changes` will be true. Also, some kinds of changes are not permitted. Generally, any change that would invalidate or cause new restrictions on existing metadata related to the label are rejected. * Disabled—When disabled, the configured `DisabledPolicy` takes effect.
+	Lifecycle *GoogleAppsDriveLabelsV2LifecycleInput `json:"lifecycle,omitempty"`
+	// The basic properties of the field.
+	Properties *GoogleAppsDriveLabelsV2FieldProperties `json:"properties,omitempty"`
+	// Information about a user.
+	Publisher *GoogleAppsDriveLabelsV2UserInfo `json:"publisher,omitempty"`
+	// The capabilities related to this field when editing the field.
+	SchemaCapabilities *GoogleAppsDriveLabelsV2FieldSchemaCapabilities `json:"schemaCapabilities,omitempty"`
+	// Options for the selection field type.
+	SelectionOptions *GoogleAppsDriveLabelsV2FieldSelectionOptionsInput `json:"selectionOptions,omitempty"`
+	// Information about a user.
+	Updater *GoogleAppsDriveLabelsV2UserInfo `json:"updater,omitempty"`
+	// Options for the user field type.
+	UserOptions *GoogleAppsDriveLabelsV2FieldUserOptions `json:"userOptions,omitempty"`
+}

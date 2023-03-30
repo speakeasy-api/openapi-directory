@@ -2,8 +2,9 @@
 
 package shared
 
-// RegistrationConfig - The configuration defining the action to take when a duplicate fraudster is detected, and the similarity threshold to use for detecting a duplicate fraudster during a batch fraudster registration job.
+// RegistrationConfig - The registration configuration to be used during the batch fraudster registration job.
 type RegistrationConfig struct {
 	DuplicateRegistrationAction  *DuplicateRegistrationActionEnum `json:"DuplicateRegistrationAction,omitempty"`
 	FraudsterSimilarityThreshold *int64                           `json:"FraudsterSimilarityThreshold,omitempty"`
+	WatchlistIds                 []string                         `json:"WatchlistIds,omitempty"`
 }

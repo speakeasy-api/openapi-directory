@@ -52,7 +52,7 @@ func (e *GETStopDBInstanceAutomatedBackupsReplicationVersionEnum) UnmarshalJSON(
 
 type GETStopDBInstanceAutomatedBackupsReplicationQueryParams struct {
 	Action GETStopDBInstanceAutomatedBackupsReplicationActionEnum `queryParam:"style=form,explode=true,name=Action"`
-	// The Amazon Resource Name (ARN) of the source DB instance for which to stop replicating automated backups, for example, <code>arn:aws:rds:us-west-2:123456789012:db:mydatabase</code>.
+	// The Amazon Resource Name (ARN) of the source DB instance for which to stop replicating automate backups, for example, <code>arn:aws:rds:us-west-2:123456789012:db:mydatabase</code>.
 	SourceDBInstanceArn string                                                  `queryParam:"style=form,explode=true,name=SourceDBInstanceArn"`
 	Version             GETStopDBInstanceAutomatedBackupsReplicationVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

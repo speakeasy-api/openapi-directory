@@ -5,7 +5,7 @@ package shared
 // GetNotificationConfigurationListResponse - OK - the request has succeeded.
 type GetNotificationConfigurationListResponse struct {
 	// Details of the notification subscription configurations.
-	Configurations []NotificationConfigurationDetails `json:"configurations"`
+	Configurations []NotificationConfigurationDetails `json:"configurations,omitempty"`
 	// Contains field validation errors that would prevent requests from being processed.
 	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.

@@ -11,6 +11,10 @@ type Player struct {
 	GlobalTeamID         *int64  `json:"GlobalTeamID,omitempty"`
 	Height               *int64  `json:"Height,omitempty"`
 	HighSchool           *string `json:"HighSchool,omitempty"`
+	InjuryBodyPart       *string `json:"InjuryBodyPart,omitempty"`
+	InjuryNotes          *string `json:"InjuryNotes,omitempty"`
+	InjuryStartDate      *string `json:"InjuryStartDate,omitempty"`
+	InjuryStatus         *string `json:"InjuryStatus,omitempty"`
 	Jersey               *int64  `json:"Jersey,omitempty"`
 	LastName             *string `json:"LastName,omitempty"`
 	PlayerID             *int64  `json:"PlayerID,omitempty"`

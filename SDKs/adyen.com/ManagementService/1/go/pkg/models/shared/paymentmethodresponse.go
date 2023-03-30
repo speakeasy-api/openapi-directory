@@ -10,12 +10,15 @@ import (
 type PaymentMethodResponseTypesWithErrorsEnum string
 
 const (
+	PaymentMethodResponseTypesWithErrorsEnumAfterpaytouch   PaymentMethodResponseTypesWithErrorsEnum = "afterpaytouch"
 	PaymentMethodResponseTypesWithErrorsEnumAlipay          PaymentMethodResponseTypesWithErrorsEnum = "alipay"
+	PaymentMethodResponseTypesWithErrorsEnumAlipayHk        PaymentMethodResponseTypesWithErrorsEnum = "alipay_hk"
 	PaymentMethodResponseTypesWithErrorsEnumAmex            PaymentMethodResponseTypesWithErrorsEnum = "amex"
 	PaymentMethodResponseTypesWithErrorsEnumApplepay        PaymentMethodResponseTypesWithErrorsEnum = "applepay"
 	PaymentMethodResponseTypesWithErrorsEnumBcmc            PaymentMethodResponseTypesWithErrorsEnum = "bcmc"
 	PaymentMethodResponseTypesWithErrorsEnumBlik            PaymentMethodResponseTypesWithErrorsEnum = "blik"
 	PaymentMethodResponseTypesWithErrorsEnumCartebancaire   PaymentMethodResponseTypesWithErrorsEnum = "cartebancaire"
+	PaymentMethodResponseTypesWithErrorsEnumClearpay        PaymentMethodResponseTypesWithErrorsEnum = "clearpay"
 	PaymentMethodResponseTypesWithErrorsEnumCup             PaymentMethodResponseTypesWithErrorsEnum = "cup"
 	PaymentMethodResponseTypesWithErrorsEnumDiners          PaymentMethodResponseTypesWithErrorsEnum = "diners"
 	PaymentMethodResponseTypesWithErrorsEnumDirectEbanking  PaymentMethodResponseTypesWithErrorsEnum = "directEbanking"
@@ -44,10 +47,12 @@ const (
 	PaymentMethodResponseTypesWithErrorsEnumMealVoucherFr   PaymentMethodResponseTypesWithErrorsEnum = "mealVoucher_FR"
 	PaymentMethodResponseTypesWithErrorsEnumMobilepay       PaymentMethodResponseTypesWithErrorsEnum = "mobilepay"
 	PaymentMethodResponseTypesWithErrorsEnumMultibanco      PaymentMethodResponseTypesWithErrorsEnum = "multibanco"
+	PaymentMethodResponseTypesWithErrorsEnumOnlineBankingPl PaymentMethodResponseTypesWithErrorsEnum = "onlineBanking_PL"
 	PaymentMethodResponseTypesWithErrorsEnumPaypal          PaymentMethodResponseTypesWithErrorsEnum = "paypal"
 	PaymentMethodResponseTypesWithErrorsEnumPayshop         PaymentMethodResponseTypesWithErrorsEnum = "payshop"
 	PaymentMethodResponseTypesWithErrorsEnumSwish           PaymentMethodResponseTypesWithErrorsEnum = "swish"
 	PaymentMethodResponseTypesWithErrorsEnumTrustly         PaymentMethodResponseTypesWithErrorsEnum = "trustly"
+	PaymentMethodResponseTypesWithErrorsEnumVipps           PaymentMethodResponseTypesWithErrorsEnum = "vipps"
 	PaymentMethodResponseTypesWithErrorsEnumVisa            PaymentMethodResponseTypesWithErrorsEnum = "visa"
 	PaymentMethodResponseTypesWithErrorsEnumVisadebit       PaymentMethodResponseTypesWithErrorsEnum = "visadebit"
 	PaymentMethodResponseTypesWithErrorsEnumVpay            PaymentMethodResponseTypesWithErrorsEnum = "vpay"
@@ -61,7 +66,11 @@ func (e *PaymentMethodResponseTypesWithErrorsEnum) UnmarshalJSON(data []byte) er
 		return err
 	}
 	switch s {
+	case "afterpaytouch":
+		fallthrough
 	case "alipay":
+		fallthrough
+	case "alipay_hk":
 		fallthrough
 	case "amex":
 		fallthrough
@@ -72,6 +81,8 @@ func (e *PaymentMethodResponseTypesWithErrorsEnum) UnmarshalJSON(data []byte) er
 	case "blik":
 		fallthrough
 	case "cartebancaire":
+		fallthrough
+	case "clearpay":
 		fallthrough
 	case "cup":
 		fallthrough
@@ -129,6 +140,8 @@ func (e *PaymentMethodResponseTypesWithErrorsEnum) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "multibanco":
 		fallthrough
+	case "onlineBanking_PL":
+		fallthrough
 	case "paypal":
 		fallthrough
 	case "payshop":
@@ -136,6 +149,8 @@ func (e *PaymentMethodResponseTypesWithErrorsEnum) UnmarshalJSON(data []byte) er
 	case "swish":
 		fallthrough
 	case "trustly":
+		fallthrough
+	case "vipps":
 		fallthrough
 	case "visa":
 		fallthrough

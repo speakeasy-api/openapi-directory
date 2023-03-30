@@ -32,16 +32,47 @@ func main() {
         Request: operations.CreateDataIntegrationRequestBody{
             ClientToken: "nulla",
             Description: "nihil",
-            KmsKey: "fuga",
-            Name: "facilis",
-            ScheduleConfig: &operations.CreateDataIntegrationRequestBodyScheduleConfig{
-                FirstExecutionFrom: "eum",
-                Object: "iusto",
-                ScheduleExpression: "ullam",
+            FileConfiguration: &operations.CreateDataIntegrationRequestBodyFileConfiguration{
+                Filters: map[string][]string{
+                    "facilis": []string{
+                        "iusto",
+                        "ullam",
+                    },
+                    "saepe": []string{
+                        "sapiente",
+                    },
+                    "enim": []string{
+                        "voluptatum",
+                        "autem",
+                    },
+                },
+                Folders: []string{
+                    "non",
+                    "deleniti",
+                    "similique",
+                    "reprehenderit",
+                },
             },
-            SourceURI: "saepe",
+            KmsKey: "molestiae",
+            Name: "quo",
+            ObjectConfiguration: map[string]map[string][]string{
+                "laboriosam": map[string][]string{
+                    "est": []string{
+                        "consequatur",
+                    },
+                },
+            },
+            ScheduleConfig: operations.CreateDataIntegrationRequestBodyScheduleConfig{
+                FirstExecutionFrom: "fugiat",
+                Object: "a",
+                ScheduleExpression: "omnis",
+            },
+            SourceURI: "eos",
             Tags: map[string]string{
-                "sapiente": "enim",
+                "accusamus": "reiciendis",
+                "rem": "quibusdam",
+                "et": "praesentium",
+                "occaecati": "dolor",
             },
         },
     }

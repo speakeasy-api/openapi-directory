@@ -33,10 +33,10 @@ func newDestinationDefinition(defaultClient, securityClient HTTPClient, serverUR
 	}
 }
 
-// CreateDestinationDefinition - Creates a destinationsDefinition
-func (s *destinationDefinition) CreateDestinationDefinition(ctx context.Context, request operations.CreateDestinationDefinitionRequest) (*operations.CreateDestinationDefinitionResponse, error) {
+// CreateCustomDestinationDefinition - Creates a custom destinationDefinition for the given workspace
+func (s *destinationDefinition) CreateCustomDestinationDefinition(ctx context.Context, request operations.CreateCustomDestinationDefinitionRequest) (*operations.CreateCustomDestinationDefinitionResponse, error) {
 	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/v1/destination_definitions/create"
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/destination_definitions/create_custom"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -63,7 +63,7 @@ func (s *destinationDefinition) CreateDestinationDefinition(ctx context.Context,
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.CreateDestinationDefinitionResponse{
+	res := &operations.CreateCustomDestinationDefinitionResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -78,6 +78,71 @@ func (s *destinationDefinition) CreateDestinationDefinition(ctx context.Context,
 			}
 
 			res.DestinationDefinitionRead = out
+		}
+	case httpRes.StatusCode == 422:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InvalidInputExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidInputExceptionInfo = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteDestinationDefinition - Delete a destination definition
+func (s *destinationDefinition) DeleteDestinationDefinition(ctx context.Context, request operations.DeleteDestinationDefinitionRequest) (*operations.DeleteDestinationDefinitionResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/destination_definitions/delete"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteDestinationDefinitionResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.NotFoundKnownExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.NotFoundKnownExceptionInfo = out
 		}
 	case httpRes.StatusCode == 422:
 		switch {
@@ -168,6 +233,154 @@ func (s *destinationDefinition) GetDestinationDefinition(ctx context.Context, re
 	return res, nil
 }
 
+// GetDestinationDefinitionForWorkspace - Get a destinationDefinition that is configured for the given workspace
+func (s *destinationDefinition) GetDestinationDefinitionForWorkspace(ctx context.Context, request operations.GetDestinationDefinitionForWorkspaceRequest) (*operations.GetDestinationDefinitionForWorkspaceResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/destination_definitions/get_for_workspace"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetDestinationDefinitionForWorkspaceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DestinationDefinitionRead
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DestinationDefinitionRead = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.NotFoundKnownExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.NotFoundKnownExceptionInfo = out
+		}
+	case httpRes.StatusCode == 422:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InvalidInputExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidInputExceptionInfo = out
+		}
+	}
+
+	return res, nil
+}
+
+// GrantDestinationDefinitionToWorkspace - grant a private, non-custom destinationDefinition to a given workspace
+func (s *destinationDefinition) GrantDestinationDefinitionToWorkspace(ctx context.Context, request operations.GrantDestinationDefinitionToWorkspaceRequest) (*operations.GrantDestinationDefinitionToWorkspaceResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/destination_definitions/grant_definition"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GrantDestinationDefinitionToWorkspaceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PrivateDestinationDefinitionRead
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PrivateDestinationDefinitionRead = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.NotFoundKnownExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.NotFoundKnownExceptionInfo = out
+		}
+	case httpRes.StatusCode == 422:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InvalidInputExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidInputExceptionInfo = out
+		}
+	}
+
+	return res, nil
+}
+
 // ListDestinationDefinitions - List all the destinationDefinitions the current Airbyte deployment is configured to use
 func (s *destinationDefinition) ListDestinationDefinitions(ctx context.Context) (*operations.ListDestinationDefinitionsResponse, error) {
 	baseURL := s.serverURL
@@ -192,6 +405,57 @@ func (s *destinationDefinition) ListDestinationDefinitions(ctx context.Context) 
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.ListDestinationDefinitionsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DestinationDefinitionReadList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DestinationDefinitionReadList = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListDestinationDefinitionsForWorkspace - List all the destinationDefinitions the given workspace is configured to use
+func (s *destinationDefinition) ListDestinationDefinitionsForWorkspace(ctx context.Context, request operations.ListDestinationDefinitionsForWorkspaceRequest) (*operations.ListDestinationDefinitionsForWorkspaceResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/destination_definitions/list_for_workspace"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListDestinationDefinitionsForWorkspaceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -251,6 +515,122 @@ func (s *destinationDefinition) ListLatestDestinationDefinitions(ctx context.Con
 			}
 
 			res.DestinationDefinitionReadList = out
+		}
+	}
+
+	return res, nil
+}
+
+// ListPrivateDestinationDefinitions - List all private, non-custom destinationDefinitions, and for each indicate whether the given workspace has a grant for using the definition. Used by admins to view and modify a given workspace's grants.
+func (s *destinationDefinition) ListPrivateDestinationDefinitions(ctx context.Context, request operations.ListPrivateDestinationDefinitionsRequest) (*operations.ListPrivateDestinationDefinitionsResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/destination_definitions/list_private"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ListPrivateDestinationDefinitionsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PrivateDestinationDefinitionReadList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PrivateDestinationDefinitionReadList = out
+		}
+	}
+
+	return res, nil
+}
+
+// RevokeDestinationDefinitionFromWorkspace - revoke a grant to a private, non-custom destinationDefinition from a given workspace
+func (s *destinationDefinition) RevokeDestinationDefinitionFromWorkspace(ctx context.Context, request operations.RevokeDestinationDefinitionFromWorkspaceRequest) (*operations.RevokeDestinationDefinitionFromWorkspaceResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/destination_definitions/revoke_definition"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RevokeDestinationDefinitionFromWorkspaceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.NotFoundKnownExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.NotFoundKnownExceptionInfo = out
+		}
+	case httpRes.StatusCode == 422:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InvalidInputExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidInputExceptionInfo = out
 		}
 	}
 

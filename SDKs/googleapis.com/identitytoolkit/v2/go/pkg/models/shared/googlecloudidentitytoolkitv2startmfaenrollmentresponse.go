@@ -6,4 +6,6 @@ package shared
 type GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse struct {
 	// Phone Verification info for a StartMfa response.
 	PhoneSessionInfo *GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo `json:"phoneSessionInfo,omitempty"`
+	// Mfa response info specific to TOTP auth for StartMfa.
+	TotpSessionInfo *GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo `json:"totpSessionInfo,omitempty"`
 }

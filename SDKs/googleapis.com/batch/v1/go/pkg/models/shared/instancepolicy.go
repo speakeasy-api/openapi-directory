@@ -41,13 +41,13 @@ func (e *InstancePolicyProvisioningModelEnum) UnmarshalJSON(data []byte) error {
 type InstancePolicy struct {
 	// The accelerators attached to each VM instance.
 	Accelerators []Accelerator `json:"accelerators,omitempty"`
-	// A new persistent disk or a local ssd. A VM can only have one local SSD setting but multiple local SSD partitions. https://cloud.google.com/compute/docs/disks#pdspecs. https://cloud.google.com/compute/docs/disks#localssds.
+	// A new persistent disk or a local ssd. A VM can only have one local SSD setting but multiple local SSD partitions. See https://cloud.google.com/compute/docs/disks#pdspecs and https://cloud.google.com/compute/docs/disks#localssds.
 	BootDisk *Disk `json:"bootDisk,omitempty"`
 	// Non-boot disks to be attached for each VM created by this InstancePolicy. New disks will be deleted when the VM is deleted.
 	Disks []AttachedDisk `json:"disks,omitempty"`
 	// The Compute Engine machine type.
 	MachineType *string `json:"machineType,omitempty"`
-	// The minimum CPU platform. See `https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform`. Not yet implemented.
+	// The minimum CPU platform. See https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform. Not yet implemented.
 	MinCPUPlatform *string `json:"minCpuPlatform,omitempty"`
 	// The provisioning model.
 	ProvisioningModel *InstancePolicyProvisioningModelEnum `json:"provisioningModel,omitempty"`

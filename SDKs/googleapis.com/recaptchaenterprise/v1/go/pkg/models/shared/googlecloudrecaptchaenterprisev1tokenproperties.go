@@ -46,6 +46,7 @@ func (e *GoogleCloudRecaptchaenterpriseV1TokenPropertiesInvalidReasonEnum) Unmar
 	}
 }
 
+// GoogleCloudRecaptchaenterpriseV1TokenProperties - Properties of the provided event token.
 type GoogleCloudRecaptchaenterpriseV1TokenProperties struct {
 	// Action name provided at token generation.
 	Action *string `json:"action,omitempty"`

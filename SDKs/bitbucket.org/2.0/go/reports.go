@@ -36,7 +36,8 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-// BulkCreateOrUpdateAnnotations - Bulk upload of annotations.
+// BulkCreateOrUpdateAnnotations - Bulk create or update annotations
+// Bulk upload of annotations.
 // Annotations are individual findings that have been identified as part of a report, for example, a line of code that represents a vulnerability. These annotations can be attached to a specific file and even a specific line in that file, however, that is optional. Annotations are not mandatory and a report can contain up to 1000 annotations.
 //
 // Add the annotations you want to upload as objects in a JSON array and make sure each annotation has the external_id field set to a unique value. If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-annotation001. The external id can later be used to identify the report as an alternative to the generated [UUID](https://developer.atlassian.com/bitbucket/api/2/reference/meta/uri-uuid#uuid). You can upload up to 100 annotations per POST request.
@@ -129,7 +130,8 @@ func (s *reports) BulkCreateOrUpdateAnnotations(ctx context.Context, request ope
 	return res, nil
 }
 
-// CreateOrUpdateAnnotation - Creates or updates an individual annotation for the specified report.
+// CreateOrUpdateAnnotation - Create or update an annotation
+// Creates or updates an individual annotation for the specified report.
 // Annotations are individual findings that have been identified as part of a report, for example, a line of code that represents a vulnerability. These annotations can be attached to a specific file and even a specific line in that file, however, that is optional. Annotations are not mandatory and a report can contain up to 1000 annotations.
 //
 // Just as reports, annotation needs to be uploaded with a unique ID that can later be used to identify the report as an alternative to the generated [UUID](https://developer.atlassian.com/bitbucket/api/2/reference/meta/uri-uuid#uuid). If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-annotation001.
@@ -219,7 +221,8 @@ func (s *reports) CreateOrUpdateAnnotation(ctx context.Context, request operatio
 	return res, nil
 }
 
-// CreateOrUpdateReport - Creates or updates a report for the specified commit.
+// CreateOrUpdateReport - Create or update a report
+// Creates or updates a report for the specified commit.
 // To upload a report, make sure to generate an ID that is unique across all reports for that commit. If you want to use an existing id from your own system, we recommend prefixing it with your system's name to avoid collisions, for example, mySystem-001.
 //
 // ### Sample cURL request:
@@ -331,7 +334,8 @@ func (s *reports) CreateOrUpdateReport(ctx context.Context, request operations.C
 	return res, nil
 }
 
-// DeleteAnnotation - Deletes a single Annotation matching the provided ID.
+// DeleteAnnotation - Delete an annotation
+// Deletes a single Annotation matching the provided ID.
 func (s *reports) DeleteAnnotation(ctx context.Context, request operations.DeleteAnnotationRequest) (*operations.DeleteAnnotationResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request.PathParams, nil)
@@ -366,7 +370,8 @@ func (s *reports) DeleteAnnotation(ctx context.Context, request operations.Delet
 	return res, nil
 }
 
-// DeleteReport - Deletes a single Report matching the provided ID.
+// DeleteReport - Delete a report
+// Deletes a single Report matching the provided ID.
 func (s *reports) DeleteReport(ctx context.Context, request operations.DeleteReportRequest) (*operations.DeleteReportResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request.PathParams, nil)
@@ -401,7 +406,8 @@ func (s *reports) DeleteReport(ctx context.Context, request operations.DeleteRep
 	return res, nil
 }
 
-// GetAnnotation - Returns a single Annotation matching the provided ID.
+// GetAnnotation - Get an annotation
+// Returns a single Annotation matching the provided ID.
 func (s *reports) GetAnnotation(ctx context.Context, request operations.GetAnnotationRequest) (*operations.GetAnnotationResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations/{annotationId}", request.PathParams, nil)
@@ -455,7 +461,8 @@ func (s *reports) GetAnnotation(ctx context.Context, request operations.GetAnnot
 	return res, nil
 }
 
-// GetAnnotationsForReport - Returns a paginated list of Annotations for a specified report.
+// GetAnnotationsForReport - List annotations
+// Returns a paginated list of Annotations for a specified report.
 func (s *reports) GetAnnotationsForReport(ctx context.Context, request operations.GetAnnotationsForReportRequest) (*operations.GetAnnotationsForReportResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}/annotations", request.PathParams, nil)
@@ -499,7 +506,8 @@ func (s *reports) GetAnnotationsForReport(ctx context.Context, request operation
 	return res, nil
 }
 
-// GetReport - Returns a single Report matching the provided ID.
+// GetReport - Get a report
+// Returns a single Report matching the provided ID.
 func (s *reports) GetReport(ctx context.Context, request operations.GetReportRequest) (*operations.GetReportResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports/{reportId}", request.PathParams, nil)
@@ -553,7 +561,8 @@ func (s *reports) GetReport(ctx context.Context, request operations.GetReportReq
 	return res, nil
 }
 
-// GetReportsForCommit - Returns a paginated list of Reports linked to this commit.
+// GetReportsForCommit - List reports
+// Returns a paginated list of Reports linked to this commit.
 func (s *reports) GetReportsForCommit(ctx context.Context, request operations.GetReportsForCommitRequest) (*operations.GetReportsForCommitResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/reports", request.PathParams, nil)

@@ -31,6 +31,34 @@ func (e *CustomFieldRequestCustomLabelPositionEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
+// CustomFieldRequestDateValue - *Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.
+type CustomFieldRequestDateValue struct {
+	// A string representing the date in YYYY-MM-DD format.
+	Date *string `json:"date,omitempty"`
+	// A string representing the date in ISO 8601 format. If no time value is selected, the value of `date-time` will be `null`.
+	DateTime *string `json:"date_time,omitempty"`
+}
+
+// CustomFieldRequestEnumValueInput - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.
+//
+// You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
+//
+// **It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.
+//
+// On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.
+//
+// Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.
+//
+// An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.
+type CustomFieldRequestEnumValueInput struct {
+	// The color of the enum option. Defaults to ‘none’.
+	Color *string `json:"color,omitempty"`
+	// Whether or not the enum option is a selectable value for the custom field.
+	Enabled *bool `json:"enabled,omitempty"`
+	// The name of the enum option.
+	Name *string `json:"name,omitempty"`
+}
+
 // CustomFieldRequestFormatEnum - The format of this custom field.
 type CustomFieldRequestFormatEnum string
 
@@ -72,6 +100,8 @@ const (
 	CustomFieldRequestResourceSubtypeEnumEnum      CustomFieldRequestResourceSubtypeEnum = "enum"
 	CustomFieldRequestResourceSubtypeEnumMultiEnum CustomFieldRequestResourceSubtypeEnum = "multi_enum"
 	CustomFieldRequestResourceSubtypeEnumNumber    CustomFieldRequestResourceSubtypeEnum = "number"
+	CustomFieldRequestResourceSubtypeEnumDate      CustomFieldRequestResourceSubtypeEnum = "date"
+	CustomFieldRequestResourceSubtypeEnumPeople    CustomFieldRequestResourceSubtypeEnum = "people"
 )
 
 func (e *CustomFieldRequestResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
@@ -87,6 +117,10 @@ func (e *CustomFieldRequestResourceSubtypeEnum) UnmarshalJSON(data []byte) error
 	case "multi_enum":
 		fallthrough
 	case "number":
+		fallthrough
+	case "date":
+		fallthrough
+	case "people":
 		*e = CustomFieldRequestResourceSubtypeEnum(s)
 		return nil
 	default:
@@ -104,20 +138,27 @@ type CustomFieldRequestInput struct {
 	CustomLabel *string `json:"custom_label,omitempty"`
 	// Only relevant for custom fields with `custom` format. This depicts where to place the custom label. This will be null if the `format` is not `custom`.
 	CustomLabelPosition *CustomFieldRequestCustomLabelPositionEnum `json:"custom_label_position,omitempty"`
+	// *Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.
+	DateValue *CustomFieldRequestDateValue `json:"date_value,omitempty"`
 	// [Opt In](/docs/input-output-options). The description of the custom field.
 	Description *string `json:"description,omitempty"`
 	// *Conditional*. Determines if the custom field is enabled or not.
 	Enabled *bool `json:"enabled,omitempty"`
 	// *Conditional*. Only relevant for custom fields of type `enum`. This array specifies the possible values which an `enum` custom field can adopt. To modify the enum options, refer to [working with enum options](/docs/create-an-enum-option).
-	EnumOptions []EnumOptionInput `json:"enum_options,omitempty"`
+	EnumOptions []EnumOptionInput                 `json:"enum_options,omitempty"`
+	EnumValue   *CustomFieldRequestEnumValueInput `json:"enum_value,omitempty"`
 	// The format of this custom field.
 	Format *CustomFieldRequestFormatEnum `json:"format,omitempty"`
 	// *Conditional*. This flag describes whether a follower of a task with this field should receive inbox notifications from changes to this field.
 	HasNotificationsEnabled *bool `json:"has_notifications_enabled,omitempty"`
+	// *Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field.
+	MultiEnumValues []EnumOptionInput `json:"multi_enum_values,omitempty"`
 	// The name of the custom field.
 	Name *string `json:"name,omitempty"`
-	// *Conditional*. This number is the value of a number custom field.
+	// *Conditional*. This number is the value of a `number` custom field.
 	NumberValue *float64 `json:"number_value,omitempty"`
+	// *Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array.
+	PeopleValue []string `json:"people_value,omitempty"`
 	// Only relevant for custom fields of type ‘Number’. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.
 	// For percentage format, this may be unintuitive, as a value of 0.25 has a precision of 0, while a value of 0.251 has a precision of 1. This is due to 0.25 being displayed as 25%.
 	// The identifier format will always have a precision of 0.
@@ -125,7 +166,7 @@ type CustomFieldRequestInput struct {
 	// The type of the custom field. Must be one of the given values.
 	//
 	ResourceSubtype *CustomFieldRequestResourceSubtypeEnum `json:"resource_subtype,omitempty"`
-	// *Conditional*. This string is the value of a text custom field.
+	// *Conditional*. This string is the value of a `text` custom field.
 	TextValue *string `json:"text_value,omitempty"`
 	// *Create-Only* The workspace to create a custom field in.
 	Workspace string `json:"workspace"`

@@ -22,6 +22,9 @@ func main() {
         PathParams: operations.GetProductPathParams{
             Epid: "unde",
         },
+        Headers: operations.GetProductHeaders{
+            XEbayCMarketplaceID: "deserunt",
+        },
     }
 
     ctx := context.Background()

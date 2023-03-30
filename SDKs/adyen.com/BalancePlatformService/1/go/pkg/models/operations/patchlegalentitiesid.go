@@ -19,7 +19,7 @@ type PatchLegalEntitiesIDPathParams struct {
 
 type PatchLegalEntitiesIDRequest struct {
 	PathParams PatchLegalEntitiesIDPathParams
-	Request    *shared.GenericEntityInfoInput `request:"mediaType=application/json"`
+	Request    *shared.LegalEntityInfoInput `request:"mediaType=application/json"`
 	Security   PatchLegalEntitiesIDSecurity
 }
 

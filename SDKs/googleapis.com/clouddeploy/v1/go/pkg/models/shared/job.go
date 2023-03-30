@@ -18,6 +18,8 @@ const (
 	JobStateEnumSucceeded        JobStateEnum = "SUCCEEDED"
 	JobStateEnumFailed           JobStateEnum = "FAILED"
 	JobStateEnumAborted          JobStateEnum = "ABORTED"
+	JobStateEnumSkipped          JobStateEnum = "SKIPPED"
+	JobStateEnumIgnored          JobStateEnum = "IGNORED"
 )
 
 func (e *JobStateEnum) UnmarshalJSON(data []byte) error {
@@ -39,6 +41,10 @@ func (e *JobStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "ABORTED":
+		fallthrough
+	case "SKIPPED":
+		fallthrough
+	case "IGNORED":
 		*e = JobStateEnum(s)
 		return nil
 	default:
@@ -48,12 +54,18 @@ func (e *JobStateEnum) UnmarshalJSON(data []byte) error {
 
 // Job - Job represents an operation for a `Rollout`.
 type Job struct {
+	// An advanceChildRollout Job.
+	AdvanceChildRolloutJob map[string]interface{} `json:"advanceChildRolloutJob,omitempty"`
+	// A createChildRollout Job.
+	CreateChildRolloutJob map[string]interface{} `json:"createChildRolloutJob,omitempty"`
 	// A deploy Job.
 	DeployJob map[string]interface{} `json:"deployJob,omitempty"`
 	// Output only. The ID of the Job.
 	ID *string `json:"id,omitempty"`
 	// Output only. The name of the `JobRun` responsible for the most recent invocation of this Job.
 	JobRun *string `json:"jobRun,omitempty"`
+	// Output only. Additional information on why the Job was skipped, if available.
+	SkipMessage *string `json:"skipMessage,omitempty"`
 	// Output only. The current state of the Job.
 	State *JobStateEnum `json:"state,omitempty"`
 	// A verify Job.

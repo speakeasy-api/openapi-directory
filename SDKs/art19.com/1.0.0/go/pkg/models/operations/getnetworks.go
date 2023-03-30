@@ -9,6 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetNetworksSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetNetworksAdDealStatusEnum string
 
 const (
@@ -95,6 +99,7 @@ type GetNetworksQueryParams struct {
 
 type GetNetworksRequest struct {
 	QueryParams GetNetworksQueryParams
+	Security    GetNetworksSecurity
 }
 
 // GetNetworks400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

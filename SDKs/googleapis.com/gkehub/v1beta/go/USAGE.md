@@ -357,24 +357,29 @@ func main() {
                                         Management: "MANAGEMENT_UNSPECIFIED",
                                     },
                                 },
+                                TemplateLibrary: &shared.PolicyControllerTemplateLibraryConfig{
+                                    Included: false,
+                                    Installation: "INSTALLATION_UNSPECIFIED",
+                                },
                             },
                             ReferentialRulesEnabled: false,
                             TemplateLibraryConfig: &shared.PolicyControllerTemplateLibraryConfig{
                                 Included: false,
+                                Installation: "NOT_INSTALLED",
                             },
                         },
-                        Version: "sit",
+                        Version: "officia",
                     },
                 },
-                "in": shared.MembershipFeatureSpecInput{
+                "omnis": shared.MembershipFeatureSpecInput{
                     Anthosobservability: &shared.AnthosObservabilityMembershipSpec{
                         DoNotOptimizeMetrics: false,
                         EnableStackdriverOnApplications: false,
-                        Version: "officia",
+                        Version: "voluptatem",
                     },
                     Cloudbuild: &shared.MembershipSpec{
-                        SecurityPolicy: "NON_PRIVILEGED",
-                        Version: "voluptatem",
+                        SecurityPolicy: "SECURITY_POLICY_UNSPECIFIED",
+                        Version: "eum",
                     },
                     Configmanagement: &shared.ConfigManagementMembershipSpec{
                         Binauthz: &shared.ConfigManagementBinauthzConfig{
@@ -384,24 +389,24 @@ func main() {
                             AllowVerticalScale: false,
                             Enabled: false,
                             Git: &shared.ConfigManagementGitConfig{
-                                GcpServiceAccountEmail: "dolorem",
-                                HTTPSProxy: "eum",
-                                PolicyDir: "quis",
-                                SecretType: "consequatur",
-                                SyncBranch: "ratione",
-                                SyncRepo: "cum",
-                                SyncRev: "similique",
-                                SyncWaitSecs: "enim",
+                                GcpServiceAccountEmail: "quis",
+                                HTTPSProxy: "consequatur",
+                                PolicyDir: "ratione",
+                                SecretType: "cum",
+                                SyncBranch: "similique",
+                                SyncRepo: "enim",
+                                SyncRev: "nihil",
+                                SyncWaitSecs: "id",
                             },
                             Oci: &shared.ConfigManagementOciConfig{
-                                GcpServiceAccountEmail: "nihil",
-                                PolicyDir: "id",
-                                SecretType: "quis",
-                                SyncRepo: "sapiente",
-                                SyncWaitSecs: "et",
+                                GcpServiceAccountEmail: "quis",
+                                PolicyDir: "sapiente",
+                                SecretType: "et",
+                                SyncRepo: "dolore",
+                                SyncWaitSecs: "possimus",
                             },
                             PreventDrift: false,
-                            SourceFormat: "dolore",
+                            SourceFormat: "in",
                         },
                         HierarchyController: &shared.ConfigManagementHierarchyControllerConfig{
                             EnableHierarchicalResourceQuota: false,
@@ -409,18 +414,16 @@ func main() {
                             Enabled: false,
                         },
                         PolicyController: &shared.ConfigManagementPolicyController{
-                            AuditIntervalSeconds: "possimus",
+                            AuditIntervalSeconds: "qui",
                             Enabled: false,
                             ExemptableNamespaces: []string{
-                                "qui",
-                                "deserunt",
                                 "eveniet",
+                                "sunt",
+                                "rerum",
                             },
                             LogDeniesEnabled: false,
                             Monitoring: &shared.ConfigManagementPolicyControllerMonitoring{
                                 Backends: []shared.ConfigManagementPolicyControllerMonitoringBackendsEnum{
-                                    "PROMETHEUS",
-                                    "MONITORING_BACKEND_UNSPECIFIED",
                                     "CLOUD_MONITORING",
                                 },
                             },
@@ -591,24 +594,29 @@ func main() {
                                         Management: "INSTALLED",
                                     },
                                 },
+                                TemplateLibrary: &shared.PolicyControllerTemplateLibraryConfig{
+                                    Included: false,
+                                    Installation: "ALL",
+                                },
                             },
                             ReferentialRulesEnabled: false,
                             TemplateLibraryConfig: &shared.PolicyControllerTemplateLibraryConfig{
                                 Included: false,
+                                Installation: "NOT_INSTALLED",
                             },
                         },
-                        Version: "optio",
+                        Version: "qui",
                     },
                 },
-                "quis": shared.MembershipFeatureSpecInput{
+                "quam": shared.MembershipFeatureSpecInput{
                     Anthosobservability: &shared.AnthosObservabilityMembershipSpec{
                         DoNotOptimizeMetrics: false,
                         EnableStackdriverOnApplications: false,
-                        Version: "qui",
+                        Version: "quisquam",
                     },
                     Cloudbuild: &shared.MembershipSpec{
-                        SecurityPolicy: "NON_PRIVILEGED",
-                        Version: "quisquam",
+                        SecurityPolicy: "SECURITY_POLICY_UNSPECIFIED",
+                        Version: "et",
                     },
                     Configmanagement: &shared.ConfigManagementMembershipSpec{
                         Binauthz: &shared.ConfigManagementBinauthzConfig{
@@ -618,24 +626,24 @@ func main() {
                             AllowVerticalScale: false,
                             Enabled: false,
                             Git: &shared.ConfigManagementGitConfig{
-                                GcpServiceAccountEmail: "ab",
-                                HTTPSProxy: "et",
-                                PolicyDir: "consequatur",
-                                SecretType: "aut",
-                                SyncBranch: "sit",
-                                SyncRepo: "vero",
-                                SyncRev: "incidunt",
-                                SyncWaitSecs: "aut",
+                                GcpServiceAccountEmail: "consequatur",
+                                HTTPSProxy: "aut",
+                                PolicyDir: "sit",
+                                SecretType: "vero",
+                                SyncBranch: "incidunt",
+                                SyncRepo: "aut",
+                                SyncRev: "voluptas",
+                                SyncWaitSecs: "ea",
                             },
                             Oci: &shared.ConfigManagementOciConfig{
-                                GcpServiceAccountEmail: "voluptas",
-                                PolicyDir: "ea",
-                                SecretType: "rerum",
-                                SyncRepo: "qui",
-                                SyncWaitSecs: "placeat",
+                                GcpServiceAccountEmail: "rerum",
+                                PolicyDir: "qui",
+                                SecretType: "placeat",
+                                SyncRepo: "ipsum",
+                                SyncWaitSecs: "laboriosam",
                             },
                             PreventDrift: false,
-                            SourceFormat: "ipsum",
+                            SourceFormat: "occaecati",
                         },
                         HierarchyController: &shared.ConfigManagementHierarchyControllerConfig{
                             EnableHierarchicalResourceQuota: false,
@@ -643,11 +651,9 @@ func main() {
                             Enabled: false,
                         },
                         PolicyController: &shared.ConfigManagementPolicyController{
-                            AuditIntervalSeconds: "laboriosam",
+                            AuditIntervalSeconds: "corrupti",
                             Enabled: false,
                             ExemptableNamespaces: []string{
-                                "corrupti",
-                                "illo",
                                 "laboriosam",
                             },
                             LogDeniesEnabled: false,
@@ -846,22 +852,26 @@ func main() {
                                         Management: "MANAGEMENT_UNSPECIFIED",
                                     },
                                 },
+                                TemplateLibrary: &shared.PolicyControllerTemplateLibraryConfig{
+                                    Included: false,
+                                    Installation: "INSTALLATION_UNSPECIFIED",
+                                },
                             },
                             ReferentialRulesEnabled: false,
                             TemplateLibraryConfig: &shared.PolicyControllerTemplateLibraryConfig{
                                 Included: false,
+                                Installation: "ALL",
                             },
                         },
-                        Version: "numquam",
+                        Version: "rerum",
                     },
                 },
             },
             ResourceState: &shared.FeatureResourceState{
-                State: "UPDATING",
+                State: "ENABLING",
             },
             ScopeSpecs: map[string]map[string]interface{}{
-                "incidunt": map[string]interface{}{
-                    "aut": "aliquam",
+                "aut": map[string]interface{}{
                     "ipsam": "numquam",
                     "a": "occaecati",
                 },
@@ -872,45 +882,45 @@ func main() {
                     "qui": "autem",
                     "facilis": "laudantium",
                 },
-                "numquam": map[string]interface{}{
-                    "amet": "officia",
-                    "consequatur": "et",
-                },
             },
             Spec: &shared.CommonFeatureSpec{
                 Anthosobservability: &shared.AnthosObservabilityFeatureSpec{
                     DefaultMembershipSpec: &shared.AnthosObservabilityMembershipSpec{
                         DoNotOptimizeMetrics: false,
                         EnableStackdriverOnApplications: false,
-                        Version: "placeat",
+                        Version: "numquam",
                     },
                 },
                 Appdevexperience: map[string]interface{}{
-                    "cum": "sint",
+                    "amet": "officia",
+                    "consequatur": "et",
                 },
                 Fleetobservability: map[string]interface{}{
+                    "sed": "cum",
+                    "sint": "ad",
                     "magni": "quia",
-                    "porro": "nihil",
                 },
                 Multiclusteringress: &shared.MultiClusterIngressFeatureSpec{
-                    Billing: "PAY_AS_YOU_GO",
-                    ConfigMembership: "laudantium",
+                    Billing: "ANTHOS_LICENSE",
+                    ConfigMembership: "nihil",
                 },
             },
             State: &shared.CommonFeatureState{
                 Appdevexperience: &shared.AppDevExperienceFeatureState{
                     NetworkingInstallSucceeded: &shared.Status{
-                        Code: "FAILED",
-                        Description: "voluptas",
+                        Code: "OK",
+                        Description: "laudantium",
                     },
                 },
                 Fleetobservability: map[string]interface{}{
+                    "voluptas": "sit",
                     "quia": "ratione",
+                    "dolorem": "corrupti",
                 },
                 State: &shared.FeatureState{
                     Code: "CODE_UNSPECIFIED",
-                    Description: "corrupti",
-                    UpdateTime: "consequuntur",
+                    Description: "ex",
+                    UpdateTime: "quisquam",
                 },
             },
         },

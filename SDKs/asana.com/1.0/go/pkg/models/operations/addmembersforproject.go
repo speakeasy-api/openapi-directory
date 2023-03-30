@@ -36,8 +36,7 @@ type AddMembersForProjectRequest struct {
 
 // AddMembersForProject200ApplicationJSON - Successfully added members to the project.
 type AddMembersForProject200ApplicationJSON struct {
-	// An empty object. Some endpoints do not return an object on success. The success is conveyed through a 2-- status code and returning an empty object.
-	Data map[string]interface{} `json:"data,omitempty"`
+	Data *shared.ProjectResponse `json:"data,omitempty"`
 }
 
 type AddMembersForProjectResponse struct {

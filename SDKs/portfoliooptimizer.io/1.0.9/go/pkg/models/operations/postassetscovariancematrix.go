@@ -28,7 +28,7 @@ type PostAssetsCovarianceMatrixRequestBody2 struct {
 }
 
 type PostAssetsCovarianceMatrixRequestBody1Assets struct {
-	// assetReturns[t] is the return of the asset at the time t, in percentage; all the assetReturns arrays must have the same length
+	// assetReturns[t] is the return of the asset at the time t; all the assetReturns arrays must have the same length
 	AssetReturns []float64 `json:"assetReturns"`
 }
 

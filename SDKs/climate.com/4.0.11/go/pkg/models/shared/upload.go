@@ -11,13 +11,23 @@ import (
 type UploadContentTypeEnum string
 
 const (
-	UploadContentTypeEnumApplicationVndClimateFieldGeojson UploadContentTypeEnum = "application/vnd.climate.field.geojson"
-	UploadContentTypeEnumImageVndClimateThermalGeotiff     UploadContentTypeEnum = "image/vnd.climate.thermal.geotiff"
-	UploadContentTypeEnumImageVndClimateNdviGeotiff        UploadContentTypeEnum = "image/vnd.climate.ndvi.geotiff"
-	UploadContentTypeEnumImageVndClimateWaterstressGeotiff UploadContentTypeEnum = "image/vnd.climate.waterstress.geotiff"
-	UploadContentTypeEnumImageVndClimateElevationGeotiff   UploadContentTypeEnum = "image/vnd.climate.elevation.geotiff"
-	UploadContentTypeEnumImageVndClimateRawGeotiff         UploadContentTypeEnum = "image/vnd.climate.raw.geotiff"
-	UploadContentTypeEnumImageVndClimateRgbGeotiff         UploadContentTypeEnum = "image/vnd.climate.rgb.geotiff"
+	UploadContentTypeEnumImageVndClimateThermalGeotiff             UploadContentTypeEnum = "image/vnd.climate.thermal.geotiff"
+	UploadContentTypeEnumImageVndClimateNdviGeotiff                UploadContentTypeEnum = "image/vnd.climate.ndvi.geotiff"
+	UploadContentTypeEnumImageVndClimateRgbGeotiff                 UploadContentTypeEnum = "image/vnd.climate.rgb.geotiff"
+	UploadContentTypeEnumImageVndClimateRgbNirGeotiff              UploadContentTypeEnum = "image/vnd.climate.rgb-nir.geotiff"
+	UploadContentTypeEnumImageVndClimateRgbCirGeotiff              UploadContentTypeEnum = "image/vnd.climate.rgb-cir.geotiff"
+	UploadContentTypeEnumImageVndClimateWaterstressGeotiff         UploadContentTypeEnum = "image/vnd.climate.waterstress.geotiff"
+	UploadContentTypeEnumImageVndClimateElevationGeotiff           UploadContentTypeEnum = "image/vnd.climate.elevation.geotiff"
+	UploadContentTypeEnumImageVndClimateRawGeotiff                 UploadContentTypeEnum = "image/vnd.climate.raw.geotiff"
+	UploadContentTypeEnumApplicationVndClimateFieldGeojson         UploadContentTypeEnum = "application/vnd.climate.field.geojson"
+	UploadContentTypeEnumApplicationVndClimateRxPlantingShp        UploadContentTypeEnum = "application/vnd.climate.rx.planting.shp"
+	UploadContentTypeEnumApplicationVndClimatePrescriptionZonesShp UploadContentTypeEnum = "application/vnd.climate.prescription.zones.shp"
+	UploadContentTypeEnumApplicationVndClimateModusXML             UploadContentTypeEnum = "application/vnd.climate.modus.xml"
+	UploadContentTypeEnumApplicationVndClimateStandCountGeojson    UploadContentTypeEnum = "application/vnd.climate.stand-count.geojson"
+	UploadContentTypeEnumApplicationVndClimateWeedCountGeojson     UploadContentTypeEnum = "application/vnd.climate.weed-count.geojson"
+	UploadContentTypeEnumApplicationVndClimateAsAppliedZip         UploadContentTypeEnum = "application/vnd.climate.as-applied.zip"
+	UploadContentTypeEnumApplicationVndClimateAsPlantedZip         UploadContentTypeEnum = "application/vnd.climate.as-planted.zip"
+	UploadContentTypeEnumApplicationVndClimateAsHarvestedZip       UploadContentTypeEnum = "application/vnd.climate.as-harvested.zip"
 )
 
 func (e *UploadContentTypeEnum) UnmarshalJSON(data []byte) error {
@@ -26,11 +36,15 @@ func (e *UploadContentTypeEnum) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch s {
-	case "application/vnd.climate.field.geojson":
-		fallthrough
 	case "image/vnd.climate.thermal.geotiff":
 		fallthrough
 	case "image/vnd.climate.ndvi.geotiff":
+		fallthrough
+	case "image/vnd.climate.rgb.geotiff":
+		fallthrough
+	case "image/vnd.climate.rgb-nir.geotiff":
+		fallthrough
+	case "image/vnd.climate.rgb-cir.geotiff":
 		fallthrough
 	case "image/vnd.climate.waterstress.geotiff":
 		fallthrough
@@ -38,7 +52,23 @@ func (e *UploadContentTypeEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "image/vnd.climate.raw.geotiff":
 		fallthrough
-	case "image/vnd.climate.rgb.geotiff":
+	case "application/vnd.climate.field.geojson":
+		fallthrough
+	case "application/vnd.climate.rx.planting.shp":
+		fallthrough
+	case "application/vnd.climate.prescription.zones.shp":
+		fallthrough
+	case "application/vnd.climate.modus.xml":
+		fallthrough
+	case "application/vnd.climate.stand-count.geojson":
+		fallthrough
+	case "application/vnd.climate.weed-count.geojson":
+		fallthrough
+	case "application/vnd.climate.as-applied.zip":
+		fallthrough
+	case "application/vnd.climate.as-planted.zip":
+		fallthrough
+	case "application/vnd.climate.as-harvested.zip":
 		*e = UploadContentTypeEnum(s)
 		return nil
 	default:

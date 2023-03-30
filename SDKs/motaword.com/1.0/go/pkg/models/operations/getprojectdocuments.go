@@ -38,7 +38,7 @@ func (e *GetProjectDocumentsWithEnum) UnmarshalJSON(data []byte) error {
 }
 
 type GetProjectDocumentsQueryParams struct {
-	// Attach further information. Possible values 'preview' to fetch temporary preview URLs for Box.com or native PDF. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
+	// Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
 	With []GetProjectDocumentsWithEnum `queryParam:"style=form,explode=true,name=with[]"`
 }
 

@@ -16,6 +16,14 @@ type SendMessagesRequestMedia struct {
 	URL *string `json:"url,omitempty"`
 }
 
+type SendMessagesRequestPhoneNumberFilterGroup struct {
+	ID *string `json:"id,omitempty"`
+}
+
+type SendMessagesRequestPhoneNumberFilter struct {
+	Group *SendMessagesRequestPhoneNumberFilterGroup `json:"group,omitempty"`
+}
+
 type SendMessagesRequestTypeEnum string
 
 const (
@@ -46,7 +54,8 @@ type SendMessagesRequest struct {
 	Conversations []string                    `json:"conversations,omitempty"`
 	Filters       *SendMessagesRequestFilters `json:"filters,omitempty"`
 	// List of media objects to attach to message
-	Media    []SendMessagesRequestMedia   `json:"media,omitempty"`
-	Template *string                      `json:"template,omitempty"`
-	Type     *SendMessagesRequestTypeEnum `json:"type,omitempty"`
+	Media             []SendMessagesRequestMedia            `json:"media,omitempty"`
+	PhoneNumberFilter *SendMessagesRequestPhoneNumberFilter `json:"phoneNumberFilter,omitempty"`
+	Template          *string                               `json:"template,omitempty"`
+	Type              *SendMessagesRequestTypeEnum          `json:"type,omitempty"`
 }

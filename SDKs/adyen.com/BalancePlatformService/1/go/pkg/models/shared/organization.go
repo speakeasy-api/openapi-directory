@@ -71,6 +71,38 @@ func (e *OrganizationTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type OrganizationInput struct {
+	// Your description for the organization.
+	Description *string `json:"description,omitempty"`
+	// The organization's trading name, if different from the registered legal name.
+	DoingBusinessAs *string `json:"doingBusinessAs,omitempty"`
+	// The email address of the legal entity.
+	Email *string `json:"email,omitempty"`
+	// The organization's legal name.
+	LegalName                string        `json:"legalName"`
+	Phone                    *PhoneNumber2 `json:"phone,omitempty"`
+	PrincipalPlaceOfBusiness *Address3     `json:"principalPlaceOfBusiness,omitempty"`
+	RegisteredAddress        Address3      `json:"registeredAddress"`
+	// The organization's registration number.
+	RegistrationNumber *string    `json:"registrationNumber,omitempty"`
+	StockData          *StockData `json:"stockData,omitempty"`
+	// Indicates whether the legal entity is exempt from tax. When **true**, the `taxIdAbsenceReason` must be provided.
+	//
+	//
+	TaxExempt *bool `json:"taxExempt,omitempty"`
+	// The organization's tax identifier.
+	TaxID *string `json:"taxId,omitempty"`
+	// The reason the organization has not provided a tax identifier.
+	//
+	// Possible values: **industryExemption**, **belowTaxThreshold**.
+	TaxIDAbsenceReason *OrganizationTaxIDAbsenceReasonEnum `json:"taxIdAbsenceReason,omitempty"`
+	// Type of organization.
+	//
+	// Possible values: **associationIncorporated**, **governmentalOrganization**, **listedPublicCompany**, **nonProfit**, **partnershipIncorporated**, **privateCompany**.
+	Type    *OrganizationTypeEnum `json:"type,omitempty"`
+	WebData *WebDataInput         `json:"webData,omitempty"`
+}
+
 type Organization struct {
 	// Your description for the organization.
 	Description *string `json:"description,omitempty"`
@@ -79,10 +111,10 @@ type Organization struct {
 	// The email address of the legal entity.
 	Email *string `json:"email,omitempty"`
 	// The organization's legal name.
-	LegalName                string       `json:"legalName"`
-	Phone                    *PhoneNumber `json:"phone,omitempty"`
-	PrincipalPlaceOfBusiness *Address     `json:"principalPlaceOfBusiness,omitempty"`
-	RegisteredAddress        Address      `json:"registeredAddress"`
+	LegalName                string        `json:"legalName"`
+	Phone                    *PhoneNumber2 `json:"phone,omitempty"`
+	PrincipalPlaceOfBusiness *Address3     `json:"principalPlaceOfBusiness,omitempty"`
+	RegisteredAddress        Address3      `json:"registeredAddress"`
 	// The organization's registration number.
 	RegistrationNumber *string    `json:"registrationNumber,omitempty"`
 	StockData          *StockData `json:"stockData,omitempty"`

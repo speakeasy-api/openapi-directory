@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// DriveBackgroundImageFile - An image file and cropping parameters from which a background image for this shared drive is set. This is a write only field; it can only be set on drive.drives.update requests that don't set themeId. When specified, all fields of the backgroundImageFile must be set.
+// DriveBackgroundImageFile - An image file and cropping parameters from which a background image for this shared drive is set. This is a write-only field; it can only be set on drive.drives.update requests that don't set themeId. When specified, all fields of the backgroundImageFile must be set.
 type DriveBackgroundImageFile struct {
 	// The ID of an image file in Google Drive to use for the background image.
 	ID *string `json:"id,omitempty"`
@@ -78,13 +78,13 @@ type DriveRestrictions struct {
 
 // Drive - Representation of a shared drive.
 type Drive struct {
-	// An image file and cropping parameters from which a background image for this shared drive is set. This is a write only field; it can only be set on drive.drives.update requests that don't set themeId. When specified, all fields of the backgroundImageFile must be set.
+	// An image file and cropping parameters from which a background image for this shared drive is set. This is a write-only field; it can only be set on drive.drives.update requests that don't set themeId. When specified, all fields of the backgroundImageFile must be set.
 	BackgroundImageFile *DriveBackgroundImageFile `json:"backgroundImageFile,omitempty"`
 	// A short-lived link to this shared drive's background image.
 	BackgroundImageLink *string `json:"backgroundImageLink,omitempty"`
 	// Capabilities the current user has on this shared drive.
 	Capabilities *DriveCapabilities `json:"capabilities,omitempty"`
-	// The color of this shared drive as an RGB hex string. It can only be set on a drive.drives.update request that does not set themeId.
+	// The color of this shared drive as an RGB hex string. It can only be set on drive.drives.update requests that don't set themeId.
 	ColorRgb *string `json:"colorRgb,omitempty"`
 	// The time at which the shared drive was created (RFC 3339 date-time).
 	CreatedTime *time.Time `json:"createdTime,omitempty"`
@@ -100,6 +100,6 @@ type Drive struct {
 	OrgUnitID *string `json:"orgUnitId,omitempty"`
 	// A set of restrictions that apply to this shared drive or items inside this shared drive.
 	Restrictions *DriveRestrictions `json:"restrictions,omitempty"`
-	// The ID of the theme from which the background image and color will be set. The set of possible driveThemes can be retrieved from a drive.about.get response. When not specified on a drive.drives.create request, a random theme is chosen from which the background image and color are set. This is a write-only field; it can only be set on requests that don't set colorRgb or backgroundImageFile.
+	// The ID of the theme from which the background image and color are set. The set of possible driveThemes can be retrieved from a drive.about.get response. When not specified on a drive.drives.create request, a random theme is chosen from which the background image and color are set. This is a write-only field; it can only be set on requests that don't set colorRgb or backgroundImageFile.
 	ThemeID *string `json:"themeId,omitempty"`
 }

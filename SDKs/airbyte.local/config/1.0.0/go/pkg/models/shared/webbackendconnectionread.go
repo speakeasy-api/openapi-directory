@@ -4,9 +4,13 @@ package shared
 
 // WebBackendConnectionRead - Successful operation
 type WebBackendConnectionRead struct {
+	// Describes the difference between two Airbyte catalogs.
+	CatalogDiff   *CatalogDiff    `json:"catalogDiff,omitempty"`
+	CatalogID     *string         `json:"catalogId,omitempty"`
 	ConnectionID  string          `json:"connectionId"`
 	Destination   DestinationRead `json:"destination"`
 	DestinationID string          `json:"destinationId"`
+	Geography     *GeographyEnum  `json:"geography,omitempty"`
 	IsSyncing     bool            `json:"isSyncing"`
 	// epoch time of the latest sync job. null if no sync job has taken place.
 	LatestSyncJobCreatedAt *int64         `json:"latestSyncJobCreatedAt,omitempty"`
@@ -15,17 +19,24 @@ type WebBackendConnectionRead struct {
 	// Method used for computing final namespace in destination
 	NamespaceDefinition *NamespaceDefinitionTypeEnum `json:"namespaceDefinition,omitempty"`
 	// Used when namespaceDefinition is 'customformat'. If blank then behaves like namespaceDefinition = 'destination'. If "${SOURCE_NAMESPACE}" then behaves like namespaceDefinition = 'source'.
-	NamespaceFormat *string         `json:"namespaceFormat,omitempty"`
-	OperationIds    []string        `json:"operationIds,omitempty"`
-	Operations      []OperationRead `json:"operations,omitempty"`
+	NamespaceFormat              *string                          `json:"namespaceFormat,omitempty"`
+	NonBreakingChangesPreference NonBreakingChangesPreferenceEnum `json:"nonBreakingChangesPreference"`
+	NotifySchemaChanges          bool                             `json:"notifySchemaChanges"`
+	OperationIds                 []string                         `json:"operationIds,omitempty"`
+	Operations                   []OperationRead                  `json:"operations,omitempty"`
 	// Prefix that will be prepended to the name of each stream when it is written to the destination.
 	Prefix *string `json:"prefix,omitempty"`
 	// optional resource requirements to run workers (blank for unbounded allocations)
 	ResourceRequirements *ResourceRequirements `json:"resourceRequirements,omitempty"`
 	// if null, then no schedule is set.
 	Schedule *ConnectionSchedule `json:"schedule,omitempty"`
-	Source   SourceRead          `json:"source"`
-	SourceID string              `json:"sourceId"`
+	// schedule for when the the connection should run, per the schedule type
+	ScheduleData *ConnectionScheduleData `json:"scheduleData,omitempty"`
+	// determine how the schedule data should be interpreted
+	ScheduleType *ConnectionScheduleTypeEnum `json:"scheduleType,omitempty"`
+	SchemaChange SchemaChangeEnum            `json:"schemaChange"`
+	Source       SourceRead                  `json:"source"`
+	SourceID     string                      `json:"sourceId"`
 	// Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced.
 	Status ConnectionStatusEnum `json:"status"`
 	// describes the available schema (catalog).

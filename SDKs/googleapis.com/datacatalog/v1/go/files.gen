@@ -59,6 +59,9 @@ pkg/models/shared/googleclouddatacatalogv1usagestats.go
 pkg/models/shared/googleclouddatacatalogv1commonusagestats.go
 pkg/models/shared/googleclouddatacatalogv1sqldatabasesystemspec.go
 pkg/models/shared/googleclouddatacatalogv1systemtimestamps.go
+pkg/models/shared/googleclouddatacatalogv1servicespec.go
+pkg/models/shared/googleclouddatacatalogv1cloudbigtableinstancespec.go
+pkg/models/shared/googleclouddatacatalogv1cloudbigtableinstancespeccloudbigtableclusterspec.go
 pkg/models/shared/googleclouddatacatalogv1schema.go
 pkg/models/shared/googleclouddatacatalogv1columnschema.go
 pkg/models/shared/googleclouddatacatalogv1columnschemalookercolumnspec.go
@@ -85,6 +88,7 @@ pkg/models/shared/googleclouddatacatalogv1bigqueryconnectionspec.go
 pkg/models/shared/googleclouddatacatalogv1cloudsqlbigqueryconnectionspec.go
 pkg/models/shared/googleclouddatacatalogv1datasource.go
 pkg/models/shared/googleclouddatacatalogv1storageproperties.go
+pkg/models/shared/googleclouddatacatalogv1cloudbigtablesystemspec.go
 pkg/models/shared/googleclouddatacatalogv1businesscontext.go
 pkg/models/shared/googleclouddatacatalogv1entryoverview.go
 pkg/models/shared/googleclouddatacatalogv1contacts.go

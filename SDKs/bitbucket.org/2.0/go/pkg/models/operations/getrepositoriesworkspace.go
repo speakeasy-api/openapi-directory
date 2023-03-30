@@ -59,7 +59,7 @@ func (e *GetRepositoriesWorkspaceRoleEnum) UnmarshalJSON(data []byte) error {
 }
 
 type GetRepositoriesWorkspaceQueryParams struct {
-	// Query string to narrow down the response as per [filtering and sorting](../../meta/filtering).
+	// Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Filters the result based on the authenticated user's role on each repository.
@@ -70,7 +70,7 @@ type GetRepositoriesWorkspaceQueryParams struct {
 	// * **owner**: returns all repositories owned by the current user
 	//
 	Role *GetRepositoriesWorkspaceRoleEnum `queryParam:"style=form,explode=true,name=role"`
-	// Field by which the results should be sorted as per [filtering and sorting](../../meta/filtering).
+	// Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }

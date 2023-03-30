@@ -12,7 +12,8 @@ import (
 	"strings"
 )
 
-// webBackend - Connection between sources and destinations.
+// webBackend - Endpoints for the Airbyte web application. Those APIs should not be called outside the web application implementation and are not
+// guaranteeing any backwards compatibility.
 type webBackend struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -31,6 +32,124 @@ func newWebBackend(defaultClient, securityClient HTTPClient, serverURL, language
 		sdkVersion:     sdkVersion,
 		genVersion:     genVersion,
 	}
+}
+
+// GetStateType - Fetch the current state type for a connection.
+func (s *webBackend) GetStateType(ctx context.Context, request operations.GetStateTypeRequest) (*operations.GetStateTypeResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/state/get_type"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetStateTypeResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ConnectionStateTypeEnum
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ConnectionStateType = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.NotFoundKnownExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.NotFoundKnownExceptionInfo = out
+		}
+	case httpRes.StatusCode == 422:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InvalidInputExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidInputExceptionInfo = out
+		}
+	}
+
+	return res, nil
+}
+
+// WebBackendCheckUpdates - Returns a summary of source and destination definitions that could be updated.
+func (s *webBackend) WebBackendCheckUpdates(ctx context.Context) (*operations.WebBackendCheckUpdatesResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/check_updates"
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.WebBackendCheckUpdatesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.WebBackendCheckUpdatesRead
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.WebBackendCheckUpdatesRead = out
+		}
+	}
+
+	return res, nil
 }
 
 // WebBackendCreateConnection - Create a connection
@@ -171,7 +290,78 @@ func (s *webBackend) WebBackendGetConnection(ctx context.Context, request operat
 	return res, nil
 }
 
-// WebBackendListConnectionsForWorkspace - Returns all connections for a workspace.
+// WebBackendGetWorkspaceState - Returns the current state of a workspace
+func (s *webBackend) WebBackendGetWorkspaceState(ctx context.Context, request operations.WebBackendGetWorkspaceStateRequest) (*operations.WebBackendGetWorkspaceStateResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/workspace/state"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.WebBackendGetWorkspaceStateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.WebBackendWorkspaceStateResult
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.WebBackendWorkspaceStateResult = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.NotFoundKnownExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.NotFoundKnownExceptionInfo = out
+		}
+	case httpRes.StatusCode == 422:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InvalidInputExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidInputExceptionInfo = out
+		}
+	}
+
+	return res, nil
+}
+
+// WebBackendListConnectionsForWorkspace - Returns all non-deleted connections for a workspace.
 func (s *webBackend) WebBackendListConnectionsForWorkspace(ctx context.Context, request operations.WebBackendListConnectionsForWorkspaceRequest) (*operations.WebBackendListConnectionsForWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/connections/list"
@@ -245,25 +435,20 @@ func (s *webBackend) WebBackendListConnectionsForWorkspace(ctx context.Context, 
 	return res, nil
 }
 
-// WebBackendRecreateDestination - Recreate a destination
-func (s *webBackend) WebBackendRecreateDestination(ctx context.Context, request operations.WebBackendRecreateDestinationRequest) (*operations.WebBackendRecreateDestinationResponse, error) {
+// WebBackendListGeographies - Returns available geographies can be selected to run data syncs in a particular geography.
+// The 'auto' entry indicates that the sync will be automatically assigned to a geography according
+// to the platform default behavior. Entries other than 'auto' are two-letter country codes that
+// follow the ISO 3166-1 alpha-2 standard.
+//
+// Returns all available geographies in which a data sync can run.
+func (s *webBackend) WebBackendListGeographies(ctx context.Context) (*operations.WebBackendListGeographiesResponse, error) {
 	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/destinations/recreate"
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/geographies/list"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-
-	req.Header.Set("Content-Type", reqContentType)
 
 	client := s.defaultClient
 
@@ -278,7 +463,7 @@ func (s *webBackend) WebBackendRecreateDestination(ctx context.Context, request 
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.WebBackendRecreateDestinationResponse{
+	res := &operations.WebBackendListGeographiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -287,86 +472,12 @@ func (s *webBackend) WebBackendRecreateDestination(ctx context.Context, request 
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.DestinationRead
+			var out *shared.WebBackendGeographiesListResult
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.DestinationRead = out
-		}
-	case httpRes.StatusCode == 422:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.InvalidInputExceptionInfo
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.InvalidInputExceptionInfo = out
-		}
-	}
-
-	return res, nil
-}
-
-// WebBackendRecreateSource - Recreate a source
-func (s *webBackend) WebBackendRecreateSource(ctx context.Context, request operations.WebBackendRecreateSourceRequest) (*operations.WebBackendRecreateSourceResponse, error) {
-	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/sources/recreate"
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := s.defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.WebBackendRecreateSourceResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.SourceRead
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.SourceRead = out
-		}
-	case httpRes.StatusCode == 422:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.InvalidInputExceptionInfo
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.InvalidInputExceptionInfo = out
+			res.WebBackendGeographiesListResult = out
 		}
 	}
 
@@ -374,6 +485,13 @@ func (s *webBackend) WebBackendRecreateSource(ctx context.Context, request opera
 }
 
 // WebBackendUpdateConnection - Update a connection
+// Apply a patch-style update to a connection. Only fields present on the update request body will be updated.
+// Any operations that lack an ID will be created. Then, the newly created operationId will be applied to the
+// connection along with the rest of the operationIds in the request body.
+// Apply a patch-style update to a connection. Only fields present on the update request body will be updated.
+// Note that if a catalog is present in the request body, the connection's entire catalog will be replaced
+// with the catalog from the request. This means that to modify a single stream, the entire new catalog
+// containing the updated stream needs to be sent.
 func (s *webBackend) WebBackendUpdateConnection(ctx context.Context, request operations.WebBackendUpdateConnectionRequest) (*operations.WebBackendUpdateConnectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/web_backend/connections/update"

@@ -31,7 +31,7 @@ func newCategories(defaultClient, securityClient HTTPClient, serverURL, language
 	}
 }
 
-// CreateCategories - Creates a new category
+// CreateCategories - Create a new category
 func (s *categories) CreateCategories(ctx context.Context, request operations.CreateCategoriesRequest) (*operations.CreateCategoriesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2", request.PathParams, nil)
@@ -72,13 +72,52 @@ func (s *categories) CreateCategories(ctx context.Context, request operations.Cr
 	switch {
 	case httpRes.StatusCode == 201:
 		fallthrough
+	case httpRes.StatusCode == 400:
+		fallthrough
 	case httpRes.StatusCode == 404:
 	}
 
 	return res, nil
 }
 
-// GetProductTypes - Retrieves all categories
+// DeleteCategory - Delete a category
+func (s *categories) DeleteCategory(ctx context.Context, request operations.DeleteCategoryRequest) (*operations.DeleteCategoryResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteCategoryResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+		fallthrough
+	case httpRes.StatusCode == 404:
+	}
+
+	return res, nil
+}
+
+// GetProductTypes - Retrieve all categories
 func (s *categories) GetProductTypes(ctx context.Context, request operations.GetProductTypesRequest) (*operations.GetProductTypesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2", request.PathParams, nil)
@@ -117,6 +156,55 @@ func (s *categories) GetProductTypes(ctx context.Context, request operations.Get
 
 			res.CategoryResponse = out
 		}
+	}
+
+	return res, nil
+}
+
+// RenameCategory - Rename a category
+func (s *categories) RenameCategory(ctx context.Context, request operations.RenameCategoryRequest) (*operations.RenameCategoryResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/categories/v2/{categoryUuid}", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RenameCategoryResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+		fallthrough
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 404:
 	}
 
 	return res, nil

@@ -4,7 +4,7 @@ package shared
 
 // SamlSpConfig - SAML SP (service provider) configuration.
 type SamlSpConfig struct {
-	// Output only. The SAML **Assertion Consumer Service (ACS) URL** to be used for the IDP-initiated login. Currently assumed to accept response messages via the `HTTP-POST` binding.
+	// Output only. The SAML **Assertion Consumer Service (ACS) URL** to be used for the IDP-initiated login. Assumed to accept response messages via the `HTTP-POST` binding.
 	AssertionConsumerServiceURI *string `json:"assertionConsumerServiceUri,omitempty"`
 	// Output only. The SAML **Entity ID** for this service provider.
 	EntityID *string `json:"entityId,omitempty"`

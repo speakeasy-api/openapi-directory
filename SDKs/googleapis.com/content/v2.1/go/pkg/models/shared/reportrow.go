@@ -16,7 +16,7 @@ type ReportRow struct {
 	PriceInsights *PriceInsights `json:"priceInsights,omitempty"`
 	// Product cluster fields. A product cluster is a grouping for different offers that represent the same product. Values are only set for fields requested explicitly in the request's search query.
 	ProductCluster *ProductCluster `json:"productCluster,omitempty"`
-	// Product fields. Values are only set for fields requested explicitly in the request's search query. Available only to selected merchants. Submit the [interest form](https://forms.gle/7Uy8htzAN8oNokz9A) to request access.
+	// Product fields. Values are only set for fields requested explicitly in the request's search query.
 	ProductView *ProductView `json:"productView,omitempty"`
 	// Dimensions according to which metrics are segmented in the response. Values of product dimensions, such as `offer_id`, reflect the state of a product at the time of the corresponding event, for example, impression or order. Segment fields cannot be selected in queries without also selecting at least one metric field. Values are only set for dimensions requested explicitly in the request's search query.
 	Segments *Segments `json:"segments,omitempty"`

@@ -46,7 +46,8 @@ func (e *DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum) Un
 
 // DescribeVpcEndpointsResultVpcEndpointsDNSOptions - The DNS options for the endpoint.
 type DescribeVpcEndpointsResultVpcEndpointsDNSOptions struct {
-	DNSRecordIPType *DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum
+	DNSRecordIPType                          *DescribeVpcEndpointsResultVpcEndpointsDNSOptionsDNSRecordIPTypeEnum
+	PrivateDNSOnlyForInboundResolverEndpoint *bool
 }
 
 // DescribeVpcEndpointsResultVpcEndpointsGroups - Describes a security group.

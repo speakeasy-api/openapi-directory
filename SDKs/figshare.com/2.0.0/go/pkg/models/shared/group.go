@@ -4,13 +4,13 @@ package shared
 
 type Group struct {
 	// HR code associated with group, if code exists
-	AssociationCriteria *string `json:"association_criteria,omitempty"`
+	AssociationCriteria string `json:"association_criteria"`
 	// Group id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Group name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// Parent group if any
-	ParentID *int64 `json:"parent_id,omitempty"`
+	ParentID int64 `json:"parent_id"`
 	// Group resource id
-	ResourceID *string `json:"resource_id,omitempty"`
+	ResourceID string `json:"resource_id"`
 }

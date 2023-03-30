@@ -57,7 +57,7 @@ type UpdateSubscriptionNotificationConfigurationRequestBody struct {
 	HTTPSAPIKeyValue *string `json:"httpsApiKeyValue,omitempty"`
 	// The HTTPS method used for the subscription notification.
 	HTTPSMethod *UpdateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum `json:"httpsMethod,omitempty"`
-	// The Amazon Resource Name (ARN) specifying the role of the subscriber.
+	// The Amazon Resource Name (ARN) specifying the role of the subscriber. For more information about ARNs and how to use them in policies, see, see the <a href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data access</a> and <a href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services Managed Policies</a>in the Amazon Security Lake User Guide.
 	RoleArn *string `json:"roleArn,omitempty"`
 	// The subscription endpoint in Security Lake.
 	SubscriptionEndpoint *string `json:"subscriptionEndpoint,omitempty"`

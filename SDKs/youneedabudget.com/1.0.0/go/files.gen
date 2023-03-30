@@ -42,6 +42,7 @@ pkg/models/operations/getpayees.go
 pkg/models/operations/getscheduledtransactionbyid.go
 pkg/models/operations/getscheduledtransactions.go
 pkg/models/operations/createtransaction.go
+pkg/models/operations/deletetransaction.go
 pkg/models/operations/gettransactionbyid.go
 pkg/models/operations/gettransactions.go
 pkg/models/operations/gettransactionsbyaccount.go
@@ -55,7 +56,8 @@ pkg/models/shared/errorresponse.go
 pkg/models/shared/errordetail.go
 pkg/models/shared/accountresponse.go
 pkg/models/shared/account.go
-pkg/models/shared/saveaccountwrapper.go
+pkg/models/shared/accounttypeenum.go
+pkg/models/shared/postaccountwrapper.go
 pkg/models/shared/saveaccount.go
 pkg/models/shared/accountsresponse.go
 pkg/models/shared/budgetdetailresponse.go
@@ -79,7 +81,7 @@ pkg/models/shared/categoriesresponse.go
 pkg/models/shared/categorygroupwithcategories.go
 pkg/models/shared/categoryresponse.go
 pkg/models/shared/savecategoryresponse.go
-pkg/models/shared/savemonthcategorywrapper.go
+pkg/models/shared/patchmonthcategorywrapper.go
 pkg/models/shared/savemonthcategory.go
 pkg/models/shared/bulkresponse.go
 pkg/models/shared/bulktransactions.go
@@ -97,15 +99,15 @@ pkg/models/shared/scheduledtransactiondetail.go
 pkg/models/shared/scheduledtransactionsresponse.go
 pkg/models/shared/savetransactionsresponse.go
 pkg/models/shared/transactiondetail.go
-pkg/models/shared/savetransactionswrapper.go
+pkg/models/shared/posttransactionswrapper.go
 pkg/models/shared/transactionresponse.go
 pkg/models/shared/transactionsresponse.go
 pkg/models/shared/hybridtransactionsresponse.go
 pkg/models/shared/hybridtransaction.go
 pkg/models/shared/transactionsimportresponse.go
-pkg/models/shared/savetransactionwrapper.go
-pkg/models/shared/updatetransactionswrapper.go
-pkg/models/shared/updatetransaction.go
+pkg/models/shared/puttransactionwrapper.go
+pkg/models/shared/patchtransactionswrapper.go
+pkg/models/shared/savetransactionwithid.go
 pkg/models/shared/userresponse.go
 pkg/models/shared/user.go
 pkg/models/shared/security.go

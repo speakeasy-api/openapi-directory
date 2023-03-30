@@ -111,7 +111,7 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
-// AddTagsToResource - Adds metadata tags to an DMS resource, including replication instance, endpoint, security group, and migration task. These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a Condition statement in an IAM policy for DMS. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type description.
+// AddTagsToResource - Adds metadata tags to an DMS resource, including replication instance, endpoint, subnet group, and migration task. These tags can also be used with cost allocation reporting to track cost associated with DMS resources, or used in a Condition statement in an IAM policy for DMS. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type description.
 func (s *SDK) AddTagsToResource(ctx context.Context, request operations.AddTagsToResourceRequest) (*operations.AddTagsToResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonDMSv20160101.AddTagsToResource"
@@ -229,6 +229,92 @@ func (s *SDK) ApplyPendingMaintenanceAction(ctx context.Context, request operati
 			res.ApplyPendingMaintenanceActionResponse = out
 		}
 	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResourceNotFoundFault = out
+		}
+	}
+
+	return res, nil
+}
+
+// BatchStartRecommendations - <p>Starts the analysis of up to 20 source databases to recommend target engines for each source database. This is a batch version of <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_StartRecommendations.html">StartRecommendations</a>.</p> <p>The result of analysis of each source database is reported individually in the response. Because the batch request can result in a combination of successful and unsuccessful actions, you should check for batch errors even when the call returns an HTTP status code of <code>200</code>.</p>
+func (s *SDK) BatchStartRecommendations(ctx context.Context, request operations.BatchStartRecommendationsRequest) (*operations.BatchStartRecommendationsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonDMSv20160101.BatchStartRecommendations"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.BatchStartRecommendationsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BatchStartRecommendationsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BatchStartRecommendationsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidResourceStateFault = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AccessDeniedFault = out
+		}
+	case httpRes.StatusCode == 482:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out interface{}
@@ -3018,6 +3104,166 @@ func (s *SDK) DescribePendingMaintenanceActions(ctx context.Context, request ope
 	return res, nil
 }
 
+// DescribeRecommendationLimitations - Returns a paginated list of limitations for recommendations of target Amazon Web Services engines.
+func (s *SDK) DescribeRecommendationLimitations(ctx context.Context, request operations.DescribeRecommendationLimitationsRequest) (*operations.DescribeRecommendationLimitationsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonDMSv20160101.DescribeRecommendationLimitations"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DescribeRecommendationLimitationsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DescribeRecommendationLimitationsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DescribeRecommendationLimitationsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidResourceStateFault = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AccessDeniedFault = out
+		}
+	}
+
+	return res, nil
+}
+
+// DescribeRecommendations - Returns a paginated list of target engine recommendations for your source databases.
+func (s *SDK) DescribeRecommendations(ctx context.Context, request operations.DescribeRecommendationsRequest) (*operations.DescribeRecommendationsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonDMSv20160101.DescribeRecommendations"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DescribeRecommendationsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DescribeRecommendationsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DescribeRecommendationsResponse = out
+		}
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidResourceStateFault = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AccessDeniedFault = out
+		}
+	}
+
+	return res, nil
+}
+
 // DescribeRefreshSchemasStatus - Returns the status of the RefreshSchemas operation.
 func (s *SDK) DescribeRefreshSchemasStatus(ctx context.Context, request operations.DescribeRefreshSchemasStatusRequest) (*operations.DescribeRefreshSchemasStatusResponse, error) {
 	baseURL := s._serverURL
@@ -3840,7 +4086,7 @@ func (s *SDK) ImportCertificate(ctx context.Context, request operations.ImportCe
 	return res, nil
 }
 
-// ListTagsForResource - Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, security group, and migration task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type description.
+// ListTagsForResource - Lists all metadata tags attached to an DMS resource, including replication instance, endpoint, subnet group, and migration task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type description.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonDMSv20160101.ListTagsForResource"
@@ -4850,7 +5096,7 @@ func (s *SDK) ReloadTables(ctx context.Context, request operations.ReloadTablesR
 	return res, nil
 }
 
-// RemoveTagsFromResource - Removes metadata tags from an DMS resource, including replication instance, endpoint, security group, and migration task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type description.
+// RemoveTagsFromResource - Removes metadata tags from an DMS resource, including replication instance, endpoint, subnet group, and migration task. For more information, see <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_Tag.html"> <code>Tag</code> </a> data type description.
 func (s *SDK) RemoveTagsFromResource(ctx context.Context, request operations.RemoveTagsFromResourceRequest) (*operations.RemoveTagsFromResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonDMSv20160101.RemoveTagsFromResource"
@@ -4968,6 +5214,83 @@ func (s *SDK) RunFleetAdvisorLsaAnalysis(ctx context.Context, request operations
 			res.InvalidResourceStateFault = out
 		}
 	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ResourceNotFoundFault = out
+		}
+	}
+
+	return res, nil
+}
+
+// StartRecommendations - <p>Starts the analysis of your source database to provide recommendations of target engines.</p> <p>You can create recommendations for multiple source databases using <a href="https://docs.aws.amazon.com/dms/latest/APIReference/API_BatchStartRecommendations.html">BatchStartRecommendations</a>.</p>
+func (s *SDK) StartRecommendations(ctx context.Context, request operations.StartRecommendationsRequest) (*operations.StartRecommendationsResponse, error) {
+	baseURL := s._serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonDMSv20160101.StartRecommendations"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.StartRecommendationsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 480:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidResourceStateFault = out
+		}
+	case httpRes.StatusCode == 481:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AccessDeniedFault = out
+		}
+	case httpRes.StatusCode == 482:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out interface{}

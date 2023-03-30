@@ -13,6 +13,7 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/aregamesinprogress.go
 pkg/models/operations/byeweeks.go
+pkg/models/operations/depthcharts.go
 pkg/models/operations/gamestatsbyseasondeprecateduseteamgamestatsinstead.go
 pkg/models/operations/gamestatsbyweekdeprecateduseteamgamestatsinstead.go
 pkg/models/operations/news.go
@@ -35,6 +36,7 @@ pkg/models/operations/seasonlastcompleted.go
 pkg/models/operations/seasonupcoming.go
 pkg/models/operations/stadiums.go
 pkg/models/operations/standings.go
+pkg/models/operations/teamgamelogsbyseason.go
 pkg/models/operations/teamgamestats.go
 pkg/models/operations/teamseasonstats.go
 pkg/models/operations/teamsactive.go
@@ -46,6 +48,8 @@ pkg/models/operations/weeklastcompleted.go
 pkg/models/operations/weekupcoming.go
 pkg/models/operations/xping.go
 pkg/models/shared/bye.go
+pkg/models/shared/teamdepthchart.go
+pkg/models/shared/depthchart.go
 pkg/models/shared/game.go
 pkg/models/shared/stadium.go
 pkg/models/shared/news.go

@@ -33,7 +33,8 @@ func newCommitStatuses(defaultClient, securityClient HTTPClient, serverURL, lang
 	}
 }
 
-// GetRepositoriesWorkspaceRepoSlugCommitCommitStatuses - Returns all statuses (e.g. build results) for a specific commit.
+// GetRepositoriesWorkspaceRepoSlugCommitCommitStatuses - List commit statuses for a commit
+// Returns all statuses (e.g. build results) for a specific commit.
 func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugCommitCommitStatuses(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses", request.PathParams, nil)
@@ -92,7 +93,8 @@ func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugCommitCommitStatuses(ct
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Returns the specified build status for a commit.
+// GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Get a build status for a commit
+// Returns the specified build status for a commit.
 func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request.PathParams, nil)
@@ -147,7 +149,8 @@ func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBui
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses - Returns all statuses (e.g. build results) for the given pull
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses - List commit statuses for a pull request
+// Returns all statuses (e.g. build results) for the given pull
 // request.
 func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesResponse, error) {
 	baseURL := s.serverURL
@@ -207,7 +210,8 @@ func (s *commitStatuses) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequest
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild - Creates a new build status against the specified commit.
+// PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild - Create a build status for a commit
+// Creates a new build status against the specified commit.
 //
 // If the specified key already exists, the existing status object will
 // be overwritten.
@@ -294,7 +298,8 @@ func (s *commitStatuses) PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBu
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Used to update the current status of a build status object on the
+// PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Update a build status for a commit
+// Used to update the current status of a build status object on the
 // specific commit.
 //
 // This operation can also be used to change other properties of the

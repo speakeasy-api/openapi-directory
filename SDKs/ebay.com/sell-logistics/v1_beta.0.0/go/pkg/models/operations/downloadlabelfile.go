@@ -12,7 +12,7 @@ type DownloadLabelFileSecurity struct {
 }
 
 type DownloadLabelFilePathParams struct {
-	// This path parameter specifies the unique eBay-assigned ID of the shipment associated with the shipping label you want to download. The shipmentId value is generated and returned by a call to createFromShippingQuote.
+	// This path parameter specifies the unique eBay-assigned ID of the shipment associated with the shipping label you want to download. The <b>shipmentId</b> value is generated and returned by a call to <b>createFromShippingQuote</b>.
 	ShipmentID string `pathParam:"style=simple,explode=false,name=shipmentId"`
 }
 

@@ -8,32 +8,34 @@ import (
 
 // UsageSnapshotEntity - List Usage Snapshots
 type UsageSnapshotEntity struct {
-	// Site usage report created at date/time
-	CreatedAt *time.Time `json:"created_at,omitempty"`
-	// Current site usage as of report
+	// Transfer Usage for period - Outbound GB from Files Native Storage
+	BytesSent *float64 `json:"bytes_sent,omitempty"`
+	// Current total Storage Usage GB as of end date (not necessarily high water mark, which is used for billing)
 	CurrentStorage *float64 `json:"current_storage,omitempty"`
-	// Usage for files that are deleted but uploaded within last 30 days
+	// Storage Usage for files that are deleted but uploaded within last 30 days as of end date (not necessarily high water mark, which is used for billing)
 	DeletedFilesCountedInMinimum *float64 `json:"deleted_files_counted_in_minimum,omitempty"`
-	// Usage for files that are deleted but retained as backups
+	// Storage Usage for files that are deleted but retained as backups as of end date (not necessarily high water mark, which is used for billing)
 	DeletedFilesStorage *float64 `json:"deleted_files_storage,omitempty"`
-	// Site usage report end date/time
+	// Usage snapshot end date/time
 	EndAt *time.Time `json:"end_at,omitempty"`
-	// Site usage report highest usage in time period
+	// Highest Storage Usage GB recorded in time period (used for billing)
 	HighWaterStorage *float64 `json:"high_water_storage,omitempty"`
-	// Site usage report highest usage in time period
+	// Highest user count number in time period
 	HighWaterUserCount *float64 `json:"high_water_user_count,omitempty"`
-	// Site usage ID
+	// Usage snapshot ID
 	ID *int `json:"id,omitempty"`
-	// Usage for root folder
+	// Storage Usage for root folder as of end date (not necessarily high water mark, which is used for billing)
 	RootStorage *float64 `json:"root_storage,omitempty"`
-	// Site usage report start date/time
+	// Usage snapshot start date/time
 	StartAt *time.Time `json:"start_at,omitempty"`
-	// Number of downloads in report time period
-	TotalDownloads *int `json:"total_downloads,omitempty"`
-	// Number of uploads in time period
-	TotalUploads *int `json:"total_uploads,omitempty"`
-	// The last time this site usage report was updated
-	UpdatedAt *time.Time `json:"updated_at,omitempty"`
-	// A map of root folders to their total usage
+	// Transfer Usage for period - Inbound GB to Remote Servers (Sync/Mount)
+	SyncBytesReceived *float64 `json:"sync_bytes_received,omitempty"`
+	// Transfer Usage for period - Outbound GB from Remote Servers (Sync/Mount)
+	SyncBytesSent *float64 `json:"sync_bytes_sent,omitempty"`
+	// Transfer usage for period - Total Billable amount
+	TotalBillableTransferUsage *float64 `json:"total_billable_transfer_usage,omitempty"`
+	// Storage + Transfer Usage - Total Billable amount
+	TotalBillableUsage *float64 `json:"total_billable_usage,omitempty"`
+	// Storage Usage - map of root folders to their usage as of end date (not necessarily high water mark, which is used for billing)
 	UsageByTopLevelDir map[string]interface{} `json:"usage_by_top_level_dir,omitempty"`
 }

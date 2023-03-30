@@ -24,6 +24,7 @@ pkg/models/shared/googleplaydeveloperreportingv1alpha1timelinespec.go
 pkg/models/shared/googletypedatetime.go
 pkg/models/shared/googletypetimezone.go
 pkg/models/shared/googleplaydeveloperreportingv1alpha1metricvalue.go
+pkg/models/shared/googleplaydeveloperreportingv1alpha1decimalconfidenceinterval.go
 pkg/models/shared/googletypedecimal.go
 pkg/models/shared/googleplaydeveloperreportingv1alpha1dimensionvalue.go
 pkg/models/shared/altenum.go

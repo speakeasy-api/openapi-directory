@@ -4,9 +4,11 @@ package shared
 
 // ContainerDetail - An object that represents the details of a container that's part of a job.
 type ContainerDetail struct {
-	Command                      []string                      `json:"command,omitempty"`
-	ContainerInstanceArn         *string                       `json:"containerInstanceArn,omitempty"`
-	Environment                  []KeyValuePair                `json:"environment,omitempty"`
+	Command              []string       `json:"command,omitempty"`
+	ContainerInstanceArn *string        `json:"containerInstanceArn,omitempty"`
+	Environment          []KeyValuePair `json:"environment,omitempty"`
+	// The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on Fargate.
+	EphemeralStorage             *EphemeralStorage             `json:"ephemeralStorage,omitempty"`
 	ExecutionRoleArn             *string                       `json:"executionRoleArn,omitempty"`
 	ExitCode                     *int64                        `json:"exitCode,omitempty"`
 	FargatePlatformConfiguration *FargatePlatformConfiguration `json:"fargatePlatformConfiguration,omitempty"`

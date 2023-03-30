@@ -36,7 +36,7 @@ type IapUpdateIapSettingsQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
-	// The field mask specifying which IAP settings should be updated. If omitted, the all of the settings are updated. See https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask
+	// The field mask specifying which IAP settings should be updated. If omitted, then all of the settings are updated. See https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask. Note: All IAP reauth settings must always be set together, using the field mask: `iapSettings.accessSettings.reauthSettings`.
 	UpdateMask *string `queryParam:"style=form,explode=true,name=updateMask"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`

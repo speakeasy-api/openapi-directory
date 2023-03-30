@@ -12,6 +12,7 @@ import (
 	"strings"
 )
 
+// addons - Addons represent a user connection to an external service, some addons allow for additional storage, some modify user authentication or add a redirect link to a project.
 type addons struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -34,14 +35,14 @@ func newAddons(defaultClient, securityClient HTTPClient, serverURL, language, sd
 
 // AddonsList - List all addons
 //
-// A paginated list of addons configurable with the OSF
+// A paginated list of addons configurable with the OSF, for read purposes only.
 // #### Returns
 // Returns a JSON object containing `data` and `links` keys.
 //
 // The `data` key contains an array of up to 10 addons. Each resource in the array is a separate addon object.
 //
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
-//
+// #### Errors
 // This request should never return an error.
 func (s *addons) AddonsList(ctx context.Context) (*operations.AddonsListResponse, error) {
 	baseURL := s.serverURL

@@ -201,6 +201,8 @@ type JourneyJourneyResultsQueryParams struct {
 	ApplyHTMLMarkup *bool `queryParam:"style=form,explode=true,name=applyHtmlMarkup"`
 	// A comma separated list of cycling proficiency levels. eg possible options: "easy,moderate,fast"
 	BikeProficiency []JourneyJourneyResultsBikeProficiencyEnum `queryParam:"style=form,explode=true,name=bikeProficiency"`
+	// A boolean to make Journey Planner calculate journeys in one temporal direction only. In other words, only calculate journeys after the 'depart' time, or before the 'arrive' time. By default, the Journey Planner engine (EFA) calculates journeys in both temporal directions.
+	CalcOneDirection *bool `queryParam:"style=form,explode=true,name=calcOneDirection"`
 	// The cycle preference. eg possible options: "allTheWay" | "leaveAtStation" | "takeOnTransport" | "cycleHire"
 	CyclePreference *JourneyJourneyResultsCyclePreferenceEnum `queryParam:"style=form,explode=true,name=cyclePreference"`
 	// The date must be in yyyyMMdd format

@@ -13,216 +13,54 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateConnectionRequest{
-        Request: shared.ConnectionCreate{
-            DestinationID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-            Name: "est",
-            NamespaceDefinition: "source",
-            NamespaceFormat: "${SOURCE_NAMESPACE}",
-            OperationIds: []string{
-                "dfc2ddf7-cc78-4ca1-ba92-8fc816742cb7",
-                "39205929-396f-4ea7-996e-b10faaa2352c",
+    req := operations.SaveStatsRequest{
+        Request: shared.SaveStatsRequestBody{
+            AttemptNumber: 548814,
+            JobID: 592845,
+            Stats: shared.AttemptStats{
+                BytesEmitted: 715190,
+                EstimatedBytes: 844266,
+                EstimatedRecords: 602763,
+                RecordsCommitted: 857946,
+                RecordsEmitted: 544883,
+                StateMessagesEmitted: 847252,
             },
-            Prefix: "ipsam",
-            ResourceRequirements: &shared.ResourceRequirements{
-                CPULimit: "est",
-                CPURequest: "commodi",
-                MemoryLimit: "quia",
-                MemoryRequest: "similique",
-            },
-            Schedule: &shared.ConnectionSchedule{
-                TimeUnit: "minutes",
-                Units: 438601,
-            },
-            SourceID: "aff1a3a2-fa94-4677-b925-1aa52c3f5ad0",
-            Status: "active",
-            SyncCatalog: &shared.AirbyteCatalog{
-                Streams: []shared.AirbyteStreamAndConfiguration{
-                    shared.AirbyteStreamAndConfiguration{
-                        Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "quo",
-                            CursorField: []string{
-                                "explicabo",
-                                "aut",
-                                "reiciendis",
-                            },
-                            DestinationSyncMode: "append_dedup",
-                            PrimaryKey: [][]string{
-                                []string{
-                                    "reiciendis",
-                                    "illo",
-                                    "id",
-                                },
-                                []string{
-                                    "quod",
-                                    "sit",
-                                },
-                            },
-                            Selected: false,
-                            SyncMode: "full_refresh",
-                        },
-                        Stream: &shared.AirbyteStream{
-                            DefaultCursorField: []string{
-                                "veniam",
-                                "reiciendis",
-                            },
-                            JSONSchema: map[string]interface{}{
-                                "ea": "exercitationem",
-                            },
-                            Name: "deleniti",
-                            Namespace: "sed",
-                            SourceDefinedCursor: false,
-                            SourceDefinedPrimaryKey: [][]string{
-                                []string{
-                                    "aut",
-                                    "esse",
-                                },
-                                []string{
-                                    "veritatis",
-                                    "numquam",
-                                    "eligendi",
-                                    "error",
-                                },
-                                []string{
-                                    "et",
-                                    "ut",
-                                    "molestias",
-                                },
-                            },
-                            SupportedSyncModes: []shared.SyncModeEnum{
-                                "incremental",
-                                "full_refresh",
-                                "incremental",
-                            },
-                        },
+            StreamStats: []shared.AttemptStreamStats{
+                shared.AttemptStreamStats{
+                    Stats: shared.AttemptStats{
+                        BytesEmitted: 623564,
+                        EstimatedBytes: 645894,
+                        EstimatedRecords: 384382,
+                        RecordsCommitted: 437587,
+                        RecordsEmitted: 297534,
+                        StateMessagesEmitted: 891773,
                     },
-                    shared.AirbyteStreamAndConfiguration{
-                        Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "in",
-                            CursorField: []string{
-                                "non",
-                            },
-                            DestinationSyncMode: "append",
-                            PrimaryKey: [][]string{
-                                []string{
-                                    "libero",
-                                },
-                                []string{
-                                    "magni",
-                                    "est",
-                                    "porro",
-                                    "voluptas",
-                                },
-                            },
-                            Selected: false,
-                            SyncMode: "full_refresh",
-                        },
-                        Stream: &shared.AirbyteStream{
-                            DefaultCursorField: []string{
-                                "sit",
-                                "in",
-                            },
-                            JSONSchema: map[string]interface{}{
-                                "omnis": "voluptatem",
-                                "dolorem": "eum",
-                                "quis": "consequatur",
-                            },
-                            Name: "ratione",
-                            Namespace: "cum",
-                            SourceDefinedCursor: false,
-                            SourceDefinedPrimaryKey: [][]string{
-                                []string{
-                                    "nihil",
-                                    "id",
-                                },
-                                []string{
-                                    "sapiente",
-                                    "et",
-                                },
-                                []string{
-                                    "possimus",
-                                },
-                            },
-                            SupportedSyncModes: []shared.SyncModeEnum{
-                                "full_refresh",
-                                "incremental",
-                                "incremental",
-                            },
-                        },
+                    StreamName: "inventore",
+                    StreamNamespace: "sapiente",
+                },
+                shared.AttemptStreamStats{
+                    Stats: shared.AttemptStats{
+                        BytesEmitted: 272656,
+                        EstimatedBytes: 383441,
+                        EstimatedRecords: 477665,
+                        RecordsCommitted: 791725,
+                        RecordsEmitted: 812169,
+                        StateMessagesEmitted: 528895,
                     },
-                    shared.AirbyteStreamAndConfiguration{
-                        Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "sunt",
-                            CursorField: []string{
-                                "modi",
-                                "necessitatibus",
-                                "tenetur",
-                            },
-                            DestinationSyncMode: "append_dedup",
-                            PrimaryKey: [][]string{
-                                []string{
-                                    "nulla",
-                                    "reiciendis",
-                                },
-                                []string{
-                                    "fugit",
-                                    "ullam",
-                                    "voluptas",
-                                },
-                            },
-                            Selected: false,
-                            SyncMode: "incremental",
-                        },
-                        Stream: &shared.AirbyteStream{
-                            DefaultCursorField: []string{
-                                "qui",
-                                "cum",
-                            },
-                            JSONSchema: map[string]interface{}{
-                                "magnam": "culpa",
-                                "enim": "aut",
-                                "delectus": "eligendi",
-                                "officia": "est",
-                            },
-                            Name: "distinctio",
-                            Namespace: "et",
-                            SourceDefinedCursor: false,
-                            SourceDefinedPrimaryKey: [][]string{
-                                []string{
-                                    "incidunt",
-                                    "facilis",
-                                    "qui",
-                                    "nihil",
-                                },
-                                []string{
-                                    "id",
-                                    "voluptatum",
-                                    "sit",
-                                },
-                                []string{
-                                    "corporis",
-                                    "porro",
-                                },
-                            },
-                            SupportedSyncModes: []shared.SyncModeEnum{
-                                "full_refresh",
-                                "full_refresh",
-                                "full_refresh",
-                            },
-                        },
-                    },
+                    StreamName: "deleniti",
+                    StreamNamespace: "similique",
                 },
             },
         },
     }
 
     ctx := context.Background()
-    res, err := s.Connection.CreateConnection(ctx, req)
+    res, err := s.Attempt.SaveStats(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.ConnectionRead != nil {
+    if res.InternalOperationResult != nil {
         // handle response
     }
 }

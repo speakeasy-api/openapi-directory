@@ -11,16 +11,32 @@ type NodesDraftRegistrationsCreatePathParams struct {
 	NodeID string `pathParam:"style=simple,explode=false,name=node_id"`
 }
 
-// NodesDraftRegistrationsCreateDraftRegistrationAttributesInput - The properties of the draft registration entity.
+type NodesDraftRegistrationsCreateDraftRegistrationAttributesNodeLicense struct {
+	// A list of names of copyright holders for the license.
+	CopyrightHolders []string `json:"copyright_holders,omitempty"`
+	// The year the copyright was made.
+	Year *int64 `json:"year,omitempty"`
+}
+
+// NodesDraftRegistrationsCreateDraftRegistrationAttributesInput - The properties of the Draft Registration entity.
 type NodesDraftRegistrationsCreateDraftRegistrationAttributesInput struct {
+	// The category of the Draft Registration.
+	Category *string `json:"category,omitempty"`
+	// The description of the Draft Registration.
+	Description *string                                                              `json:"description,omitempty"`
+	NodeLicense *NodesDraftRegistrationsCreateDraftRegistrationAttributesNodeLicense `json:"node_license,omitempty"`
+	// This is a legacy format for `registration_responses`.
+	RegistrationMetadata map[string]interface{} `json:"registration_metadata,omitempty"`
 	// A dictionary of question IDs and responses from the registration schema.
-	RegistrationMetadata *string `json:"registration_metadata,omitempty"`
-	// The ID of an active registration schema that this registration will conform to.
-	RegistrationSupplement string `json:"registration_supplement"`
+	RegistrationResponses map[string]interface{} `json:"registration_responses,omitempty"`
+	// The searchable tags of the Draft Registration.
+	Tags []string `json:"tags,omitempty"`
+	// The title of the Draft Registration.
+	Title *string `json:"title,omitempty"`
 }
 
 type NodesDraftRegistrationsCreateDraftRegistrationInput struct {
-	// The properties of the draft registration entity.
+	// The properties of the Draft Registration entity.
 	Attributes NodesDraftRegistrationsCreateDraftRegistrationAttributesInput `json:"attributes"`
 }
 

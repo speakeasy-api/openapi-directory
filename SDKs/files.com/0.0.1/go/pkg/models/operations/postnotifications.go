@@ -10,8 +10,18 @@ import (
 type PostNotificationsRequestBody struct {
 	// The ID of the group to notify.  Provide `user_id`, `username` or `group_id`.
 	GroupID *int `multipartForm:"name=group_id"`
+	// Custom message to include in notification emails.
+	Message *string `multipartForm:"name=message"`
 	// If `true`, copying or moving resources into this path will trigger a notification, in addition to just uploads.
 	NotifyOnCopy *bool `multipartForm:"name=notify_on_copy"`
+	// Triggers notification when deleting files from this path
+	NotifyOnDelete *bool `multipartForm:"name=notify_on_delete"`
+	// Triggers notification when downloading files from this path
+	NotifyOnDownload *bool `multipartForm:"name=notify_on_download"`
+	// Triggers notification when moving files to this path
+	NotifyOnMove *bool `multipartForm:"name=notify_on_move"`
+	// Triggers notification when uploading new files to this path
+	NotifyOnUpload *bool `multipartForm:"name=notify_on_upload"`
 	// If `true` actions initiated by the user will still result in a notification
 	NotifyUserActions *bool `multipartForm:"name=notify_user_actions"`
 	// Path
@@ -20,6 +30,14 @@ type PostNotificationsRequestBody struct {
 	Recursive *bool `multipartForm:"name=recursive"`
 	// The time interval that notifications are aggregated by.  Can be `five_minutes`, `fifteen_minutes`, `hourly`, or `daily`.
 	SendInterval *string `multipartForm:"name=send_interval"`
+	// Notify when actions are performed by a share recipient?
+	TriggerByShareRecipients *bool `multipartForm:"name=trigger_by_share_recipients"`
+	// Array of filenames (possibly with wildcards) to match for action path
+	TriggeringFilenames []string `multipartForm:"name=triggering_filenames"`
+	// Only notify on actions made by a member of one of the specified groups
+	TriggeringGroupIds []int `multipartForm:"name=triggering_group_ids"`
+	// Only notify on actions made one of the specified users
+	TriggeringUserIds []int `multipartForm:"name=triggering_user_ids"`
 	// The id of the user to notify. Provide `user_id`, `username` or `group_id`.
 	UserID *int `multipartForm:"name=user_id"`
 	// The username of the user to notify.  Provide `user_id`, `username` or `group_id`.

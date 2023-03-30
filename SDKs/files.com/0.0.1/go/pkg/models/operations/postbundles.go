@@ -3,10 +3,53 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 	"time"
 )
+
+// PostBundlesRequestBodyPermissionsEnum - Permissions that apply to Folders in this Share Link.
+type PostBundlesRequestBodyPermissionsEnum string
+
+const (
+	PostBundlesRequestBodyPermissionsEnumRead        PostBundlesRequestBodyPermissionsEnum = "read"
+	PostBundlesRequestBodyPermissionsEnumWrite       PostBundlesRequestBodyPermissionsEnum = "write"
+	PostBundlesRequestBodyPermissionsEnumReadWrite   PostBundlesRequestBodyPermissionsEnum = "read_write"
+	PostBundlesRequestBodyPermissionsEnumFull        PostBundlesRequestBodyPermissionsEnum = "full"
+	PostBundlesRequestBodyPermissionsEnumNone        PostBundlesRequestBodyPermissionsEnum = "none"
+	PostBundlesRequestBodyPermissionsEnumPreviewOnly PostBundlesRequestBodyPermissionsEnum = "preview_only"
+)
+
+func (e *PostBundlesRequestBodyPermissionsEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "read":
+		fallthrough
+	case "write":
+		fallthrough
+	case "read_write":
+		fallthrough
+	case "full":
+		fallthrough
+	case "none":
+		fallthrough
+	case "preview_only":
+		*e = PostBundlesRequestBodyPermissionsEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostBundlesRequestBodyPermissionsEnum: %s", s)
+	}
+}
+
+type PostBundlesRequestBodyWatermarkAttachmentFile struct {
+	Content                 []byte `multipartForm:"content"`
+	WatermarkAttachmentFile string `multipartForm:"name=watermark_attachment_file"`
+}
 
 type PostBundlesRequestBody struct {
 	// ID of the clickwrap to use with this bundle.
@@ -15,6 +58,8 @@ type PostBundlesRequestBody struct {
 	Code *string `multipartForm:"name=code"`
 	// Public description
 	Description *string `multipartForm:"name=description"`
+	// Do not create subfolders for files uploaded to this share. Note: there are subtle security pitfalls with allowing anonymous uploads from multiple users to live in the same folder. We strongly discourage use of this option unless absolutely required.
+	DontSeparateSubmissionsByFolder *bool `multipartForm:"name=dont_separate_submissions_by_folder"`
 	// Bundle expiration date/time
 	ExpiresAt *time.Time `multipartForm:"name=expires_at"`
 	// Id of Form Field Set to use with this bundle
@@ -27,16 +72,30 @@ type PostBundlesRequestBody struct {
 	Note *string `multipartForm:"name=note"`
 	// Password for this bundle.
 	Password *string `multipartForm:"name=password"`
+	// Template for creating submission subfolders. Can use the uploader's name, email address, ip, company, and any custom form data.
+	PathTemplate *string `multipartForm:"name=path_template"`
 	// A list of paths to include in this bundle.
 	Paths []string `multipartForm:"name=paths"`
+	// Permissions that apply to Folders in this Share Link.
+	Permissions *PostBundlesRequestBodyPermissionsEnum `multipartForm:"name=permissions"`
 	// Restrict users to previewing files only?
 	PreviewOnly *bool `multipartForm:"name=preview_only"`
 	// Show a registration page that captures the downloader's name and email address?
 	RequireRegistration *bool `multipartForm:"name=require_registration"`
 	// Only allow access to recipients who have explicitly received the share via an email sent through the Files.com UI?
 	RequireShareRecipient *bool `multipartForm:"name=require_share_recipient"`
+	// Send delivery receipt to the uploader. Note: For writable share only
+	SendEmailReceiptToUploader *bool `multipartForm:"name=send_email_receipt_to_uploader"`
+	// BundleRegistrations can be saved without providing company?
+	SkipCompany *bool `multipartForm:"name=skip_company"`
+	// BundleRegistrations can be saved without providing email?
+	SkipEmail *bool `multipartForm:"name=skip_email"`
+	// BundleRegistrations can be saved without providing name?
+	SkipName *bool `multipartForm:"name=skip_name"`
 	// User ID.  Provide a value of `0` to operate the current session's user.
 	UserID *int `multipartForm:"name=user_id"`
+	// Preview watermark image applied to all bundle items.
+	WatermarkAttachmentFile *PostBundlesRequestBodyWatermarkAttachmentFile `multipartForm:"file"`
 }
 
 type PostBundlesRequest struct {

@@ -413,7 +413,7 @@ func (s *SDK) AnalyzeExpense(ctx context.Context, request operations.AnalyzeExpe
 	return res, nil
 }
 
-// AnalyzeID - Analyzes identity documents for relevant information. This information is extracted and returned as <code>IdentityDocumentFields</code>, which records both the normalized field and value of the extracted text.Unlike other Amazon Textract operations, <code>AnalyzeID</code> doesn't return any Geometry data.
+// AnalyzeID - Analyzes identity documents for relevant information. This information is extracted and returned as <code>IdentityDocumentFields</code>, which records both the normalized field and value of the extracted text. Unlike other Amazon Textract operations, <code>AnalyzeID</code> doesn't return any Geometry data.
 func (s *SDK) AnalyzeID(ctx context.Context, request operations.AnalyzeIDRequest) (*operations.AnalyzeIDResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Textract.AnalyzeID"

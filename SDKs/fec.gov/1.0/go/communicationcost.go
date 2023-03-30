@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-// communicationCost - Reports of communication costs by corporations and membership organizations from the FEC [F7 forms](http://www.fec.gov/pdf/forms/fecform7.pdf).
+// communicationCost - Reports of communication costs by corporations and membership organizations from the FEC [F7 forms](https://www.fec.gov/pdf/forms/fecform7.pdf).
 type communicationCost struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient

@@ -37,6 +37,33 @@ func (e *RemoteServerEntityAuthStatusEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// RemoteServerEntityFilesAgentPermissionSetEnum - Local permissions for files agent. read_only, write_only, or read_write
+type RemoteServerEntityFilesAgentPermissionSetEnum string
+
+const (
+	RemoteServerEntityFilesAgentPermissionSetEnumReadWrite RemoteServerEntityFilesAgentPermissionSetEnum = "read_write"
+	RemoteServerEntityFilesAgentPermissionSetEnumReadOnly  RemoteServerEntityFilesAgentPermissionSetEnum = "read_only"
+	RemoteServerEntityFilesAgentPermissionSetEnumWriteOnly RemoteServerEntityFilesAgentPermissionSetEnum = "write_only"
+)
+
+func (e *RemoteServerEntityFilesAgentPermissionSetEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "read_write":
+		fallthrough
+	case "read_only":
+		fallthrough
+	case "write_only":
+		*e = RemoteServerEntityFilesAgentPermissionSetEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for RemoteServerEntityFilesAgentPermissionSetEnum: %s", s)
+	}
+}
+
 // RemoteServerEntityOneDriveAccountTypeEnum - Either personal or business_other account types
 type RemoteServerEntityOneDriveAccountTypeEnum string
 
@@ -104,6 +131,9 @@ const (
 	RemoteServerEntityServerTypeEnumAzure              RemoteServerEntityServerTypeEnum = "azure"
 	RemoteServerEntityServerTypeEnumSharepoint         RemoteServerEntityServerTypeEnum = "sharepoint"
 	RemoteServerEntityServerTypeEnumS3Compatible       RemoteServerEntityServerTypeEnum = "s3_compatible"
+	RemoteServerEntityServerTypeEnumAzureFiles         RemoteServerEntityServerTypeEnum = "azure_files"
+	RemoteServerEntityServerTypeEnumFilesAgent         RemoteServerEntityServerTypeEnum = "files_agent"
+	RemoteServerEntityServerTypeEnumFilebase           RemoteServerEntityServerTypeEnum = "filebase"
 )
 
 func (e *RemoteServerEntityServerTypeEnum) UnmarshalJSON(data []byte) error {
@@ -141,6 +171,12 @@ func (e *RemoteServerEntityServerTypeEnum) UnmarshalJSON(data []byte) error {
 	case "sharepoint":
 		fallthrough
 	case "s3_compatible":
+		fallthrough
+	case "azure_files":
+		fallthrough
+	case "files_agent":
+		fallthrough
+	case "filebase":
 		*e = RemoteServerEntityServerTypeEnum(s)
 		return nil
 	default:
@@ -188,16 +224,38 @@ type RemoteServerEntity struct {
 	AuthStatus *RemoteServerEntityAuthStatusEnum `json:"auth_status,omitempty"`
 	// Type of authentication method
 	AuthenticationMethod *string `json:"authentication_method,omitempty"`
+	// AWS Access Key.
+	AwsAccessKey *string `json:"aws_access_key,omitempty"`
 	// Azure Blob Storage Account name
 	AzureBlobStorageAccount *string `json:"azure_blob_storage_account,omitempty"`
 	// Azure Blob Storage Container name
 	AzureBlobStorageContainer *string `json:"azure_blob_storage_container,omitempty"`
+	// Shared Access Signature (SAS) token
+	AzureBlobStorageSasToken *string `json:"azure_blob_storage_sas_token,omitempty"`
+	// Azure File Storage Account name
+	AzureFilesStorageAccount *string `json:"azure_files_storage_account,omitempty"`
+	// Shared Access Signature (SAS) token
+	AzureFilesStorageSasToken *string `json:"azure_files_storage_sas_token,omitempty"`
+	// Azure File Storage Share name
+	AzureFilesStorageShareName *string `json:"azure_files_storage_share_name,omitempty"`
 	// Backblaze B2 Cloud Storage Bucket name
 	BackblazeB2Bucket *string `json:"backblaze_b2_bucket,omitempty"`
 	// Backblaze B2 Cloud Storage S3 Endpoint
 	BackblazeB2S3Endpoint *string `json:"backblaze_b2_s3_endpoint,omitempty"`
+	// If true, this server has been disabled due to failures.  Make any change or set disabled to false to clear this flag.
+	Disabled *bool `json:"disabled,omitempty"`
 	// `true` if remote server only accepts connections from dedicated IPs
 	EnableDedicatedIps *bool `json:"enable_dedicated_ips,omitempty"`
+	// Filebase Access Key.
+	FilebaseAccessKey *string `json:"filebase_access_key,omitempty"`
+	// Filebase Bucket name
+	FilebaseBucket *string `json:"filebase_bucket,omitempty"`
+	// Files Agent API Token
+	FilesAgentAPIToken *string `json:"files_agent_api_token,omitempty"`
+	// Local permissions for files agent. read_only, write_only, or read_write
+	FilesAgentPermissionSet *RemoteServerEntityFilesAgentPermissionSetEnum `json:"files_agent_permission_set,omitempty"`
+	// Agent local root path
+	FilesAgentRoot *string `json:"files_agent_root,omitempty"`
 	// Google Cloud Storage bucket name
 	GoogleCloudStorageBucket *string `json:"google_cloud_storage_bucket,omitempty"`
 	// Google Cloud Project ID
@@ -212,6 +270,10 @@ type RemoteServerEntity struct {
 	Name *string `json:"name,omitempty"`
 	// Either personal or business_other account types
 	OneDriveAccountType *RemoteServerEntityOneDriveAccountTypeEnum `json:"one_drive_account_type,omitempty"`
+	// If true, we will ensure that all communications with this remote server are made through the primary region of the site.  This setting can also be overridden by a sitewide setting which will force it to true.
+	PinToSiteRegion *bool `json:"pin_to_site_region,omitempty"`
+	// If set, all communciations with this remote server are made through the provided region.
+	PinnedRegion *string `json:"pinned_region,omitempty"`
 	// Port for remote server.  Not needed for S3.
 	Port *int `json:"port,omitempty"`
 	// The name of the container (top level directory) where files will sync.
@@ -224,11 +286,13 @@ type RemoteServerEntity struct {
 	RemoteHomePath *string `json:"remote_home_path,omitempty"`
 	// S3 bucket name
 	S3Bucket *string `json:"s3_bucket,omitempty"`
+	// S3-compatible Access Key.
+	S3CompatibleAccessKey *string `json:"s3_compatible_access_key,omitempty"`
 	// S3-compatible Bucket name
 	S3CompatibleBucket *string `json:"s3_compatible_bucket,omitempty"`
 	// S3-compatible endpoint
 	S3CompatibleEndpoint *string `json:"s3_compatible_endpoint,omitempty"`
-	// S3-compatible Bucket name
+	// S3-compatible endpoint
 	S3CompatibleRegion *string `json:"s3_compatible_region,omitempty"`
 	// S3 region
 	S3Region *string `json:"s3_region,omitempty"`
@@ -242,6 +306,8 @@ type RemoteServerEntity struct {
 	Ssl *RemoteServerEntitySslEnum `json:"ssl,omitempty"`
 	// Remote server username.  Not needed for S3 buckets.
 	Username *string `json:"username,omitempty"`
+	// Wasabi access key.
+	WasabiAccessKey *string `json:"wasabi_access_key,omitempty"`
 	// Wasabi Bucket name
 	WasabiBucket *string `json:"wasabi_bucket,omitempty"`
 	// Wasabi region

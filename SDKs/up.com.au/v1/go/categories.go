@@ -132,3 +132,53 @@ func (s *categories) GetCategoriesID(ctx context.Context, request operations.Get
 
 	return res, nil
 }
+
+// PatchTransactionsTransactionIDRelationshipsCategory - Categorize transaction
+// Updates the category associated with a transaction. Only transactions
+// for which `isCategorizable` is set to true support this operation. The
+// `id` is taken from the list exposed on `/categories` and cannot be one of
+// the top-level (parent) categories. To de-categorize a transaction, set
+// the entire `data` key to `null`. An HTTP `204` is returned on success.
+// The associated category, along with its request URL is also exposed via
+// the `category` relationship on the transaction resource returned from
+// `/transactions/{id}`.
+func (s *categories) PatchTransactionsTransactionIDRelationshipsCategory(ctx context.Context, request operations.PatchTransactionsTransactionIDRelationshipsCategoryRequest) (*operations.PatchTransactionsTransactionIDRelationshipsCategoryResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/transactions/{transactionId}/relationships/category", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PatchTransactionsTransactionIDRelationshipsCategoryResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	}
+
+	return res, nil
+}

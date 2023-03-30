@@ -31,6 +31,54 @@ func newBudgeting(defaultClient, securityClient HTTPClient, serverURL, language,
 	}
 }
 
+// DeleteUsersIDForecastCache - Delete forecast cache for user
+// Delete the user's cached forecast by recalculating the forecast.
+func (s *budgeting) DeleteUsersIDForecastCache(ctx context.Context, request operations.DeleteUsersIDForecastCacheRequest) (*operations.DeleteUsersIDForecastCacheResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/users/{id}/forecast_cache", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteUsersIDForecastCacheResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // GetUsersIDBudget - List budget for user
 // Lists the user's budget, consisting of one or more budget analysis packages, one per category. Akin to the list on the Budget page in PocketSmith.
 func (s *budgeting) GetUsersIDBudget(ctx context.Context, request operations.GetUsersIDBudgetRequest) (*operations.GetUsersIDBudgetResponse, error) {
@@ -124,6 +172,20 @@ func (s *budgeting) GetUsersIDBudgetSummary(ctx context.Context, request operati
 
 			res.BudgetAnalysisPackages = out
 		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
 	}
 
 	return res, nil
@@ -172,6 +234,22 @@ func (s *budgeting) GetUsersIDTrendAnalysis(ctx context.Context, request operati
 			}
 
 			res.BudgetAnalysisPackages = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 422:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
 		}
 	}
 

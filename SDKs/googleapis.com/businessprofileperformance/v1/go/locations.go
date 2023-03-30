@@ -31,6 +31,54 @@ func newLocations(defaultClient, securityClient HTTPClient, serverURL, language,
 	}
 }
 
+// BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeries -  Returns the values for each date from a given time range and optionally the sub entity type, where applicable, that are associated with the specific daily metrics. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locations/12345:fetchMultiDailyMetricsTimeSeries?dailyMetrics=WEBSITE_CLICKS&dailyMetrics=CALL_CLICKS&daily_range.start_date.year=2022&daily_range.start_date.month=1&daily_range.start_date.day=1&daily_range.end_date.year=2022&daily_range.end_date.month=3&daily_range.end_date.day=31`
+func (s *locations) BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeries(ctx context.Context, request operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesRequest) (*operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{location}:fetchMultiDailyMetricsTimeSeries", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.FetchMultiDailyMetricsTimeSeriesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FetchMultiDailyMetricsTimeSeriesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // BusinessprofileperformanceLocationsGetDailyMetricsTimeSeries -  Returns the values for each date from a given time range that are associated with the specific daily metric. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locations/12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS&daily_range.start_date.year=2022&daily_range.start_date.month=1&daily_range.start_date.day=1&daily_range.end_date.year=2022&daily_range.end_date.month=3&daily_range.end_date.day=31`
 func (s *locations) BusinessprofileperformanceLocationsGetDailyMetricsTimeSeries(ctx context.Context, request operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest) (*operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesResponse, error) {
 	baseURL := s.serverURL

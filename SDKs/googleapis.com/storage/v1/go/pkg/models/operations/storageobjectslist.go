@@ -84,6 +84,8 @@ type StorageObjectsListQueryParams struct {
 	IncludeTrailingDelimiter *bool `queryParam:"style=form,explode=true,name=includeTrailingDelimiter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
+	// Filter results to objects and prefixes that match this glob pattern.
+	MatchGlob *string `queryParam:"style=form,explode=true,name=matchGlob"`
 	// Maximum number of items plus prefixes to return in a single page of responses. As duplicate prefixes are omitted, fewer total results may be returned than requested. The service will use this parameter or 1,000 items, whichever is smaller.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// OAuth 2.0 token for the current user.

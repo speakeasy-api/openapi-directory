@@ -26,6 +26,7 @@ const (
 	DatabaseEntityEntityTypeEnumDatabaseEntityTypeDatabasePackage DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE_PACKAGE"
 	DatabaseEntityEntityTypeEnumDatabaseEntityTypeUdt             DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_UDT"
 	DatabaseEntityEntityTypeEnumDatabaseEntityTypeMaterialView    DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_MATERIAL_VIEW"
+	DatabaseEntityEntityTypeEnumDatabaseEntityTypeDatabase        DatabaseEntityEntityTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE"
 )
 
 func (e *DatabaseEntityEntityTypeEnum) UnmarshalJSON(data []byte) error {
@@ -63,6 +64,8 @@ func (e *DatabaseEntityEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DATABASE_ENTITY_TYPE_UDT":
 		fallthrough
 	case "DATABASE_ENTITY_TYPE_MATERIAL_VIEW":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_DATABASE":
 		*e = DatabaseEntityEntityTypeEnum(s)
 		return nil
 	default:

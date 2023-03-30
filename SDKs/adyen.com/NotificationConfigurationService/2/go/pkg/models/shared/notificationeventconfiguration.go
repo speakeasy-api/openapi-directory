@@ -29,6 +29,7 @@ const (
 	NotificationEventConfigurationEventTypeEnumBeneficiarySetup               NotificationEventConfigurationEventTypeEnum = "BENEFICIARY_SETUP"
 	NotificationEventConfigurationEventTypeEnumCompensateNegativeBalance      NotificationEventConfigurationEventTypeEnum = "COMPENSATE_NEGATIVE_BALANCE"
 	NotificationEventConfigurationEventTypeEnumDirectDebitInitiated           NotificationEventConfigurationEventTypeEnum = "DIRECT_DEBIT_INITIATED"
+	NotificationEventConfigurationEventTypeEnumFundsMigrated                  NotificationEventConfigurationEventTypeEnum = "FUNDS_MIGRATED"
 	NotificationEventConfigurationEventTypeEnumPaymentFailure                 NotificationEventConfigurationEventTypeEnum = "PAYMENT_FAILURE"
 	NotificationEventConfigurationEventTypeEnumPendingCredit                  NotificationEventConfigurationEventTypeEnum = "PENDING_CREDIT"
 	NotificationEventConfigurationEventTypeEnumRefundFundsTransfer            NotificationEventConfigurationEventTypeEnum = "REFUND_FUNDS_TRANSFER"
@@ -76,6 +77,8 @@ func (e *NotificationEventConfigurationEventTypeEnum) UnmarshalJSON(data []byte)
 	case "COMPENSATE_NEGATIVE_BALANCE":
 		fallthrough
 	case "DIRECT_DEBIT_INITIATED":
+		fallthrough
+	case "FUNDS_MIGRATED":
 		fallthrough
 	case "PAYMENT_FAILURE":
 		fallthrough

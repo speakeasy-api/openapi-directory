@@ -4,6 +4,7 @@ package shared
 
 type FileNeedsVendor struct {
 	FileID         *int64   `json:"fileId,omitempty"`
+	GUID           *string  `json:"guid,omitempty"`
 	ProjectID      *int64   `json:"projectId,omitempty"`
 	Reason         *string  `json:"reason,omitempty"`
 	TargetLanguage []string `json:"targetLanguage,omitempty"`

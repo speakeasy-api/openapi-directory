@@ -1,4 +1,5 @@
 compileapi.go
+configapi.go
 dataapi.go
 healthapi.go
 policyapi.go
@@ -17,6 +18,7 @@ pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/postcompile.go
+pkg/models/operations/getconfig.go
 pkg/models/operations/deletedocument.go
 pkg/models/operations/getdocument.go
 pkg/models/operations/getdocumentwithpath.go
@@ -33,6 +35,7 @@ pkg/models/operations/postquery.go
 pkg/models/operations/postsimplequery.go
 pkg/models/shared/fourhundred.go
 pkg/models/shared/fourhundredandfour.go
+pkg/models/shared/twohundredsingleresult.go
 pkg/models/shared/patchesschema.go
 pkg/models/shared/twohundredresult.go
 USAGE.md

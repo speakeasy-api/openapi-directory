@@ -4,7 +4,7 @@ package shared
 
 // UnSuspendAccountHolderResponse - OK - the request has succeeded.
 type UnSuspendAccountHolderResponse struct {
-	AccountHolderStatus AccountHolderStatus `json:"accountHolderStatus"`
+	AccountHolderStatus *AccountHolderStatus `json:"accountHolderStatus,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
 	// The result code.

@@ -361,9 +361,9 @@ type EmployeeHomeAddress struct {
 	County *string `json:"county,omitempty"`
 	// Email. <br  />Max length: 50
 	EmailAddress *string `json:"emailAddress,omitempty"`
-	// Mobile phone number.<br  /> Max length: 12
+	// Mobile phone number.<br  /> Max length: 20
 	MobilePhone *string `json:"mobilePhone,omitempty"`
-	// Phone number.<br  /> Max length: 12
+	// Phone number.<br  /> Max length: 20
 	Phone *string `json:"phone,omitempty"`
 	// Postal code.<br  /> Max length: 10
 	PostalCode *string `json:"postalCode,omitempty"`
@@ -439,9 +439,9 @@ type EmployeeNonPrimaryStateTax struct {
 
 // EmployeePrimaryPayRate - Add or update hourly or salary pay rate, effective date, and pay frequency.
 type EmployeePrimaryPayRate struct {
-	// Employee annual salary.<br />Decimal (12,2)
+	// Employee annual salary.<br />Decimal (12,6)
 	AnnualSalary *float64 `json:"annualSalary,omitempty"`
-	// Employee base rate, used for Hourly employees. <br  />Decimal (12,2)
+	// Employee base rate, used for Hourly employees. <br  />Decimal (12,6)
 	BaseRate *float64 `json:"baseRate,omitempty"`
 	// The date of the first check on which the new pay rate will appear. This value is only applicable when updating an existing employee. Common formats include *MM-DD-CCYY*, *CCYY-MM-DD*.
 	BeginCheckDate *string `json:"beginCheckDate,omitempty"`
@@ -463,7 +463,7 @@ type EmployeePrimaryPayRate struct {
 	PayType *string `json:"payType,omitempty"`
 	// Employee base rate frequency used with payType Hourly. Common values are *Hour, Week*. Default is Hour. <br  />Max length: 10
 	RatePer *string `json:"ratePer,omitempty"`
-	// Employee gross salary per pay period used with payType Salary.<br  />Decimal (12,2)
+	// Employee gross salary per pay period used with payType Salary.<br  />Decimal (12,6)
 	Salary *float64 `json:"salary,omitempty"`
 }
 
@@ -513,6 +513,10 @@ type EmployeeStatus struct {
 	IsEligibleForRehire *bool `json:"isEligibleForRehire,omitempty"`
 	// Rehire date if employee is rehired.  Updates to re-hire date are not allowed and will be ignored. Common formats are *MM-DD-CCYY, CCYY-MM-DD*.
 	ReHireDate *string `json:"reHireDate,omitempty"`
+	// The Status Type associated with the Employee Status code. Each Employee Status  code for a company is assigned to one of the Status Type values of  A (Active), L (Leave of Absence), T (Terminated).
+	StatusType *string `json:"statusType,omitempty"`
+	// Employee termination date. Common formats include *MM-DD-CCYY*, *CCYY-MM-DD*.
+	TerminationDate *string `json:"terminationDate,omitempty"`
 }
 
 // EmployeeTaxSetup - Add tax form, 1099 exempt reasons and notes, and 943 agricultural employee information. Once the employee receives wages, this information cannot be updated. Add or update SUI tax state, retirement plan, and statutory information.
@@ -583,11 +587,11 @@ type EmployeeWorkAddress struct {
 	Location *string `json:"location,omitempty"`
 	// Employee mail stop.<br  /> Max length: 10
 	MailStop *string `json:"mailStop,omitempty"`
-	// Mobile phone number.<br  /> Max length: 12
+	// Mobile phone number.<br  /> Max length: 20
 	MobilePhone *string `json:"mobilePhone,omitempty"`
 	// Employee pager number.<br  /> Max length: 20
 	Pager *string `json:"pager,omitempty"`
-	// Phone number.<br  /> Max length: 12
+	// Phone number.<br  /> Max length: 20
 	Phone *string `json:"phone,omitempty"`
 	// Phone number extension.<br  /> Max length: 10
 	PhoneExtension *string `json:"phoneExtension,omitempty"`
@@ -639,6 +643,8 @@ type Employee struct {
 	BenefitSetup *EmployeeBenefitSetup `json:"benefitSetup,omitempty"`
 	// Employee birthdate. Common formats include *MM-DD-CCYY*, *CCYY-MM-DD*.
 	BirthDate *string `json:"birthDate,omitempty"`
+	// Unique idenifier for SSO.<br  />Max length: 20
+	CoEmpCode *string `json:"coEmpCode,omitempty"`
 	// Company FEIN as defined in Web Pay, applicable with GET requests only.<br  /> Max length: 20
 	CompanyFEIN *string `json:"companyFEIN,omitempty"`
 	// Company name as defined in Web Pay, applicable with GET requests only.<br  /> Max length: 50
@@ -661,7 +667,7 @@ type Employee struct {
 	DisabilityDescription *string `json:"disabilityDescription,omitempty"`
 	// Add or update Emergency Contacts.
 	EmergencyContacts []EmployeeEmergencyContacts `json:"emergencyContacts,omitempty"`
-	// Leave blank to have Web Pay automatically assign the next available employee ID.<br  />Max length: 10
+	// Leave blank to have Web Pay automatically assign the next available employee ID.<br  />Max length: 9
 	EmployeeID *string `json:"employeeId,omitempty"`
 	// Employee ethnicity.<br  /> Max length: 10
 	Ethnicity *string `json:"ethnicity,omitempty"`

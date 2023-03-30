@@ -100,6 +100,8 @@ type GetSearchMotorcycleAutoCompleteQueryParams struct {
 	Drivetrain *string `queryParam:"style=form,explode=true,name=drivetrain"`
 	// To filter listing on their engine
 	Engine *string `queryParam:"style=form,explode=true,name=engine"`
+	// Provide minimum count value for facets
+	FacetMinCount *float64 `queryParam:"style=form,explode=true,name=facet_min_count"`
 	// Field name for which you want auto-completion
 	Field GetSearchMotorcycleAutoCompleteFieldEnum `queryParam:"style=form,explode=true,name=field"`
 	// To filter listing on their fuel type
@@ -114,6 +116,10 @@ type GetSearchMotorcycleAutoCompleteQueryParams struct {
 	Make *string `queryParam:"style=form,explode=true,name=make"`
 	// To filter listings on their model
 	Model *string `queryParam:"style=form,explode=true,name=model"`
+	// Radius around the search location (Unit - Miles)
+	Radius *int `queryParam:"style=form,explode=true,name=radius"`
+	// seller type for autocomplete
+	SellerType *string `queryParam:"style=form,explode=true,name=seller_type"`
 	// Sort the response, either by index or count(default)
 	SortBy *GetSearchMotorcycleAutoCompleteSortByEnum `queryParam:"style=form,explode=true,name=sort_by"`
 	// To filter listing on State in which they are listed
@@ -128,6 +134,8 @@ type GetSearchMotorcycleAutoCompleteQueryParams struct {
 	VehicleType *string `queryParam:"style=form,explode=true,name=vehicle_type"`
 	// To filter listing on their year
 	Year *string `queryParam:"style=form,explode=true,name=year"`
+	// To filter listing on ZIP around which they are listed
+	Zip *string `queryParam:"style=form,explode=true,name=zip"`
 }
 
 type GetSearchMotorcycleAutoCompleteRequest struct {

@@ -28,11 +28,11 @@ type GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesPathParams struct {
 
 type GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesQueryParams struct {
 	// Query string to narrow down the response as per
-	// [filtering and sorting](../../../../../../meta/filtering).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Field by which the results should be sorted as per
-	// [filtering and sorting](../../../../../../meta/filtering).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	// Defaults to `created_on`.
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`

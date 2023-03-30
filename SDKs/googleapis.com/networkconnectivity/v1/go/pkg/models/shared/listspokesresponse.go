@@ -4,7 +4,7 @@ package shared
 
 // ListSpokesResponse - The response for HubService.ListSpokes.
 type ListSpokesResponse struct {
-	// The next pagination token in the List response. It should be used as page_token for the following request. An empty value means no more result.
+	// The token for the next page of the response. To see more results, use this value as the page_token for your next request. If this value is empty, there are no more results.
 	NextPageToken *string `json:"nextPageToken,omitempty"`
 	// The requested spokes.
 	Spokes []Spoke `json:"spokes,omitempty"`

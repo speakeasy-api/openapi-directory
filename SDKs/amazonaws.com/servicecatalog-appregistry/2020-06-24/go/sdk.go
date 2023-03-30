@@ -207,7 +207,7 @@ func (s *SDK) AssociateAttributeGroup(ctx context.Context, request operations.As
 	return res, nil
 }
 
-// AssociateResource - Associates a resource with an application. Both the resource and the application can be specified either by ID or name.
+// AssociateResource -  Associates a resource with an application. The resource can be specified by its ARN or name. The application can be specified by ARN, ID, or name.
 func (s *SDK) AssociateResource(ctx context.Context, request operations.AssociateResourceRequest) (*operations.AssociateResourceResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}/resources/{resourceType}/{resource}", request.PathParams, nil)
@@ -297,6 +297,16 @@ func (s *SDK) AssociateResource(ctx context.Context, request operations.Associat
 			}
 
 			res.ValidationException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ThrottlingException = out
 		}
 	}
 
@@ -393,6 +403,16 @@ func (s *SDK) CreateApplication(ctx context.Context, request operations.CreateAp
 			}
 
 			res.ValidationException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ThrottlingException = out
 		}
 	}
 
@@ -495,7 +515,7 @@ func (s *SDK) CreateAttributeGroup(ctx context.Context, request operations.Creat
 	return res, nil
 }
 
-// DeleteApplication - Deletes an application that is specified either by its application ID or name. All associated attribute groups and resources must be disassociated from it before deleting an application.
+// DeleteApplication - Deletes an application that is specified either by its application ID, name, or ARN. All associated attribute groups and resources must be disassociated from it before deleting an application.
 func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteApplicationRequest) (*operations.DeleteApplicationResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}", request.PathParams, nil)
@@ -571,7 +591,7 @@ func (s *SDK) DeleteApplication(ctx context.Context, request operations.DeleteAp
 	return res, nil
 }
 
-// DeleteAttributeGroup - Deletes an attribute group, specified either by its attribute group ID or name.
+// DeleteAttributeGroup - Deletes an attribute group, specified either by its attribute group ID, name, or ARN.
 func (s *SDK) DeleteAttributeGroup(ctx context.Context, request operations.DeleteAttributeGroupRequest) (*operations.DeleteAttributeGroupResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/attribute-groups/{attributeGroup}", request.PathParams, nil)
@@ -794,12 +814,22 @@ func (s *SDK) DisassociateResource(ctx context.Context, request operations.Disas
 
 			res.ValidationException = out
 		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ThrottlingException = out
+		}
 	}
 
 	return res, nil
 }
 
-// GetApplication - Retrieves metadata information about one of your applications. The application can be specified either by its unique ID or by its name (which is unique within one account in one region at a given point in time). Specify by ID in automated workflows if you want to make sure that the exact same application is returned or a <code>ResourceNotFoundException</code> is thrown, avoiding the ABA addressing problem.
+// GetApplication -  Retrieves metadata information about one of your applications. The application can be specified by its ARN, ID, or name (which is unique within one account in one region at a given point in time). Specify by ARN or ID in automated workflows if you want to make sure that the exact same application is returned or a <code>ResourceNotFoundException</code> is thrown, avoiding the ABA addressing problem.
 func (s *SDK) GetApplication(ctx context.Context, request operations.GetApplicationRequest) (*operations.GetApplicationResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/applications/{application}", request.PathParams, nil)
@@ -961,7 +991,7 @@ func (s *SDK) GetAssociatedResource(ctx context.Context, request operations.GetA
 	return res, nil
 }
 
-// GetAttributeGroup - Retrieves an attribute group, either by its name or its ID. The attribute group can be specified either by its unique ID or by its name.
+// GetAttributeGroup -  Retrieves an attribute group by its ARN, ID, or name. The attribute group can be specified by its ARN, ID, or name.
 func (s *SDK) GetAttributeGroup(ctx context.Context, request operations.GetAttributeGroupRequest) (*operations.GetAttributeGroupResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/attribute-groups/{attributeGroup}", request.PathParams, nil)
@@ -1707,6 +1737,26 @@ func (s *SDK) SyncResource(ctx context.Context, request operations.SyncResourceR
 
 			res.ConflictException = out
 		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ThrottlingException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ValidationException = out
+		}
 	}
 
 	return res, nil
@@ -1968,6 +2018,16 @@ func (s *SDK) UpdateApplication(ctx context.Context, request operations.UpdateAp
 			}
 
 			res.InternalServerException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ThrottlingException = out
 		}
 	}
 

@@ -13,6 +13,10 @@ type UpdateTranslationMemoryUnitRequest struct {
 
 type UpdateTranslationMemoryUnitResponse struct {
 	ContentType string
-	StatusCode  int
-	RawResponse *http.Response
+	// Corporate id, source language, target language, source string or target string is not provided
+	Error *shared.Error
+	// Translation updated by adding new translation memory unit
+	OperationStatus *shared.OperationStatus
+	StatusCode      int
+	RawResponse     *http.Response
 }

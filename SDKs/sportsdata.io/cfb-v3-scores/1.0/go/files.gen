@@ -19,11 +19,13 @@ pkg/models/operations/currentseasontype.go
 pkg/models/operations/currentweek.go
 pkg/models/operations/gamesbydate.go
 pkg/models/operations/gamesbyweek.go
+pkg/models/operations/injuredplayers.go
 pkg/models/operations/playerdetailsbyactive.go
 pkg/models/operations/playerdetailsbyplayer.go
 pkg/models/operations/playerdetailsbyteam.go
 pkg/models/operations/schedules.go
 pkg/models/operations/stadiums.go
+pkg/models/operations/teamgamelogsbyseason.go
 pkg/models/operations/teamgamestatsbyweek.go
 pkg/models/operations/teamseasonstatsstandings.go
 pkg/models/operations/teams.go

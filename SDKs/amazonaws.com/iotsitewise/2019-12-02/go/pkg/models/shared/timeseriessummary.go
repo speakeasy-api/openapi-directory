@@ -13,6 +13,7 @@ type TimeSeriesSummary struct {
 	DataType                 PropertyDataTypeEnum `json:"dataType"`
 	DataTypeSpec             *string              `json:"dataTypeSpec,omitempty"`
 	PropertyID               *string              `json:"propertyId,omitempty"`
+	TimeSeriesArn            string               `json:"timeSeriesArn"`
 	TimeSeriesCreationDate   time.Time            `json:"timeSeriesCreationDate"`
 	TimeSeriesID             string               `json:"timeSeriesId"`
 	TimeSeriesLastUpdateDate time.Time            `json:"timeSeriesLastUpdateDate"`

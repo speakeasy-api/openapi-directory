@@ -36,9 +36,9 @@ func (e *GroupEmbargoOptionsTypeEnum) UnmarshalJSON(data []byte) error {
 
 type GroupEmbargoOptions struct {
 	// Embargo option id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// IP range name; value appears if type is ip_range
-	IPName *string `json:"ip_name,omitempty"`
+	IPName string `json:"ip_name"`
 	// Embargo permission type
-	Type *GroupEmbargoOptionsTypeEnum `json:"type,omitempty"`
+	Type GroupEmbargoOptionsTypeEnum `json:"type"`
 }

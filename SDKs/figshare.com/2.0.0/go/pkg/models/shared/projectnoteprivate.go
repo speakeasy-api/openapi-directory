@@ -5,17 +5,17 @@ package shared
 // ProjectNotePrivate - OK. Note representation
 type ProjectNotePrivate struct {
 	// Note Abstract - short/truncated content
-	Abstract *string `json:"abstract,omitempty"`
+	Abstract string `json:"abstract"`
 	// Date when note was created
-	CreatedDate *string `json:"created_date,omitempty"`
+	CreatedDate string `json:"created_date"`
 	// Project note id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Date when note was last modified
-	ModifiedDate *string `json:"modified_date,omitempty"`
+	ModifiedDate string `json:"modified_date"`
 	// Full text of note
-	Text *string `json:"text,omitempty"`
+	Text string `json:"text"`
 	// User who wrote the note
-	UserID *int64 `json:"user_id,omitempty"`
+	UserID int64 `json:"user_id"`
 	// Username of the one who wrote the note
-	UserName *string `json:"user_name,omitempty"`
+	UserName string `json:"user_name"`
 }

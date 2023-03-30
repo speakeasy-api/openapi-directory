@@ -28,7 +28,7 @@ type GetEmployeeResponse struct {
 	StatusCode  int
 	RawResponse *http.Response
 	// Successfully Retrieved
-	Employees []shared.Employee
+	Employee *shared.Employee
 	// The employee does not exist
 	Errors []shared.Error
 }

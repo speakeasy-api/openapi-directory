@@ -7,6 +7,28 @@ import (
 	"fmt"
 )
 
+// ConnectorInput - Definition of a Serverless VPC Access connector.
+type ConnectorInput struct {
+	// The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
+	IPCidrRange *string `json:"ipCidrRange,omitempty"`
+	// Machine type of VM Instance underlying connector. Default is e2-micro
+	MachineType *string `json:"machineType,omitempty"`
+	// Maximum value of instances in autoscaling group underlying the connector.
+	MaxInstances *int `json:"maxInstances,omitempty"`
+	// Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
+	MaxThroughput *int `json:"maxThroughput,omitempty"`
+	// Minimum value of instances in autoscaling group underlying the connector.
+	MinInstances *int `json:"minInstances,omitempty"`
+	// Minimum throughput of the connector in Mbps. Default and min is 200.
+	MinThroughput *int `json:"minThroughput,omitempty"`
+	// The resource name in the format `projects/*/locations/*/connectors/*`.
+	Name *string `json:"name,omitempty"`
+	// Name of a VPC network.
+	Network *string `json:"network,omitempty"`
+	// The subnet in which to house the connector
+	Subnet *Subnet `json:"subnet,omitempty"`
+}
+
 // ConnectorStateEnum - Output only. State of the VPC access connector.
 type ConnectorStateEnum string
 
@@ -65,28 +87,6 @@ type Connector struct {
 	Network *string `json:"network,omitempty"`
 	// Output only. State of the VPC access connector.
 	State *ConnectorStateEnum `json:"state,omitempty"`
-	// The subnet in which to house the connector
-	Subnet *Subnet `json:"subnet,omitempty"`
-}
-
-// ConnectorInput - Definition of a Serverless VPC Access connector.
-type ConnectorInput struct {
-	// The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
-	IPCidrRange *string `json:"ipCidrRange,omitempty"`
-	// Machine type of VM Instance underlying connector. Default is e2-micro
-	MachineType *string `json:"machineType,omitempty"`
-	// Maximum value of instances in autoscaling group underlying the connector.
-	MaxInstances *int `json:"maxInstances,omitempty"`
-	// Maximum throughput of the connector in Mbps. Default is 300, max is 1000.
-	MaxThroughput *int `json:"maxThroughput,omitempty"`
-	// Minimum value of instances in autoscaling group underlying the connector.
-	MinInstances *int `json:"minInstances,omitempty"`
-	// Minimum throughput of the connector in Mbps. Default and min is 200.
-	MinThroughput *int `json:"minThroughput,omitempty"`
-	// The resource name in the format `projects/*/locations/*/connectors/*`.
-	Name *string `json:"name,omitempty"`
-	// Name of a VPC network.
-	Network *string `json:"network,omitempty"`
 	// The subnet in which to house the connector
 	Subnet *Subnet `json:"subnet,omitempty"`
 }

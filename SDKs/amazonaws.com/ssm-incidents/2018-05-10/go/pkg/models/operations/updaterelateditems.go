@@ -24,9 +24,9 @@ type UpdateRelatedItemsRequestBodyRelatedItemsUpdate struct {
 }
 
 type UpdateRelatedItemsRequestBody struct {
-	// A token ensuring that the operation is called only once with the specified details.
+	// A token that ensures that a client calls the operation only once with the specified details.
 	ClientToken *string `json:"clientToken,omitempty"`
-	// The Amazon Resource Name (ARN) of the incident record containing the related items you are updating.
+	// The Amazon Resource Name (ARN) of the incident record that contains the related items that you update.
 	IncidentRecordArn string `json:"incidentRecordArn"`
 	// Details about the related item you're adding.
 	RelatedItemsUpdate UpdateRelatedItemsRequestBodyRelatedItemsUpdate `json:"relatedItemsUpdate"`

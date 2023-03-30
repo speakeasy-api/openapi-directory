@@ -146,7 +146,7 @@ func (s *transactionAccounts) GetUsersIDTransactionAccounts(ctx context.Context,
 }
 
 // PutTransactionAccountsID - Update transaction account
-// Change which institution the transaction account belongs to.
+// Updates the transaction account by its ID.
 func (s *transactionAccounts) PutTransactionAccountsID(ctx context.Context, request operations.PutTransactionAccountsIDRequest) (*operations.PutTransactionAccountsIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/transaction_accounts/{id}", request.PathParams, nil)
@@ -195,6 +195,8 @@ func (s *transactionAccounts) PutTransactionAccountsID(ctx context.Context, requ
 	case httpRes.StatusCode == 403:
 		fallthrough
 	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 422:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.Error

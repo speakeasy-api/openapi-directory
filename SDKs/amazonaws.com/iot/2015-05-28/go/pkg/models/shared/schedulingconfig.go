@@ -4,7 +4,8 @@ package shared
 
 // SchedulingConfig - Specifies the date and time that a job will begin the rollout of the job document to all devices in the target group. Additionally, you can specify the end behavior for each job execution when it reaches the scheduled end time.
 type SchedulingConfig struct {
-	EndBehavior *JobEndBehaviorEnum `json:"endBehavior,omitempty"`
-	EndTime     *string             `json:"endTime,omitempty"`
-	StartTime   *string             `json:"startTime,omitempty"`
+	EndBehavior        *JobEndBehaviorEnum `json:"endBehavior,omitempty"`
+	EndTime            *string             `json:"endTime,omitempty"`
+	MaintenanceWindows []MaintenanceWindow `json:"maintenanceWindows,omitempty"`
+	StartTime          *string             `json:"startTime,omitempty"`
 }

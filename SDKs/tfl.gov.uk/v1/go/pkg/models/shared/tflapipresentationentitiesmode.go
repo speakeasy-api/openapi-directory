@@ -7,4 +7,6 @@ type TflAPIPresentationEntitiesMode struct {
 	IsScheduledService *bool   `json:"isScheduledService,omitempty"`
 	IsTflService       *bool   `json:"isTflService,omitempty"`
 	ModeName           *string `json:"modeName,omitempty"`
+	MotType            *string `json:"motType,omitempty"`
+	Network            *string `json:"network,omitempty"`
 }

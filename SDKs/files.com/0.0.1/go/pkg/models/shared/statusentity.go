@@ -9,9 +9,10 @@ type StatusEntity struct {
 	// Required Clickwrap id
 	ClickwrapID *int `json:"clickwrap_id,omitempty"`
 	// Status HTTP code
-	Code   *int          `json:"code,omitempty"`
-	Data   *AutoEntity   `json:"data,omitempty"`
-	Errors *ErrorsEntity `json:"errors,omitempty"`
+	Code *int        `json:"code,omitempty"`
+	Data *AutoEntity `json:"data,omitempty"`
+	// A list of api errors
+	Errors []ErrorsEntity `json:"errors,omitempty"`
 	// Error message
 	Message *string `json:"message,omitempty"`
 	// Status message

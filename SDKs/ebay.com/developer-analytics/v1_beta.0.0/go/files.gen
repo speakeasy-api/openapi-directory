@@ -15,8 +15,6 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/getratelimits.go
 pkg/models/operations/getuserratelimits.go
-pkg/models/shared/error.go
-pkg/models/shared/errorparameter.go
 pkg/models/shared/ratelimitsresponse.go
 pkg/models/shared/ratelimit.go
 pkg/models/shared/resource.go

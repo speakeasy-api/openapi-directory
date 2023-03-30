@@ -40,11 +40,11 @@ func (e *CurationCommentTypeEnum) UnmarshalJSON(data []byte) error {
 // CurationComment - OK. A curation review's comments.
 type CurationComment struct {
 	// The ID of the account which generated this comment.
-	AccountID *int64 `json:"account_id,omitempty"`
+	AccountID int64 `json:"account_id"`
 	// The ID of the comment.
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// The value/content of the comment.
-	Text *string `json:"text,omitempty"`
+	Text string `json:"text"`
 	// The ID of the account which generated this comment.
-	Type *CurationCommentTypeEnum `json:"type,omitempty"`
+	Type CurationCommentTypeEnum `json:"type"`
 }

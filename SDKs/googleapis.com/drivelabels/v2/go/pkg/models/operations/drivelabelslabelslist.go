@@ -75,6 +75,8 @@ type DrivelabelsLabelsListQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
+	// The customer to scope this list request to. For example: "customers/abcd1234". If unset, will return all labels within the current customer.
+	Customer *string `queryParam:"style=form,explode=true,name=customer"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.

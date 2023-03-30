@@ -37,6 +37,8 @@ type PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse stru
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// Unexpected error.
+	// The specified user was successfully added to the default reviewers
+	Account map[string]interface{}
+	// If the authenticated user tried to add a team, bot user, or user without access to the repository to the default reviewers
 	Error map[string]interface{}
 }

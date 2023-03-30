@@ -35,7 +35,7 @@ func newConversations(defaultClient, securityClient HTTPClient, serverURL, langu
 // ConversationsClose - Closes a conversation
 func (s *conversations) ConversationsClose(ctx context.Context, request operations.ConversationsCloseRequest) (*operations.ConversationsCloseResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/conversations/{conversationId}/close", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}/close", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {
@@ -79,7 +79,7 @@ func (s *conversations) ConversationsClose(ctx context.Context, request operatio
 // ConversationsFetch - Fetch conversation by ID
 func (s *conversations) ConversationsFetch(ctx context.Context, request operations.ConversationsFetchRequest) (*operations.ConversationsFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/conversations/{conversationId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations/{conversationId}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -123,7 +123,7 @@ func (s *conversations) ConversationsFetch(ctx context.Context, request operatio
 // ConversationsFetchAll - Fetch conversations
 func (s *conversations) ConversationsFetchAll(ctx context.Context, request operations.ConversationsFetchAllRequest) (*operations.ConversationsFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/conversations", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/conversations", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {

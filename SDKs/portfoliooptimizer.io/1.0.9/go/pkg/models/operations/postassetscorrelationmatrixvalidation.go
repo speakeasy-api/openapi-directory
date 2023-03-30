@@ -9,6 +9,7 @@ import (
 )
 
 type PostAssetsCorrelationMatrixValidationRequestBody struct {
+	// The number of assets
 	Assets int64 `json:"assets"`
 	// assetsCorrelationMatrix[i][j] is the correlation between the asset i and the asset j
 	AssetsCorrelationMatrix [][]float64 `json:"assetsCorrelationMatrix"`

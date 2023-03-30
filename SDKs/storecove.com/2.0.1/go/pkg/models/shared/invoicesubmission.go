@@ -28,11 +28,11 @@ func (e *InvoiceSubmissionModeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// InvoiceSubmission - The invoice you want Storecove to process, with some meta-data.
+// InvoiceSubmission - DEPRECATED. The invoice you want Storecove to process, with some meta-data.
 type InvoiceSubmission struct {
 	// An array of attachments. You may provide up to 10 attchments, but the total size must not exceed 10MB after Base64 encoding.
 	Attachments []Attachment `json:"attachments,omitempty"`
-	// Whether or not to create a primary image (PDF) if one is not provided.
+	// DEPRECATED. In the future we will no longer support creating PDF invoices. Whether or not to create a primary image (PDF) if one is not provided. For customers who started from December 1st 2022, the default is false. For customers who started before that, the default is true.
 	CreatePrimaryImage *bool `json:"createPrimaryImage,omitempty"`
 	// DEPRECATED. Use attachments.
 	Document *string `json:"document,omitempty"`
@@ -40,7 +40,7 @@ type InvoiceSubmission struct {
 	DocumentURL *string `json:"documentUrl,omitempty"`
 	// A guid that you generated for this InvoiceSubmission to achieve idempotency. If you submit multiple documents with the same idempotencyGuid, only the first one will be processed.
 	IdempotencyGUID *string `json:"idempotencyGuid,omitempty"`
-	// The invoice to send.  Provide either invoice, or invoiceData, but not both.
+	// The invoice to send. Provide either invoice, or invoiceData, but not both.
 	Invoice *Invoice `json:"invoice,omitempty"`
 	// The invoice to send, in base64 encoded format. Provide either invoice, or invoiceData, but not both.
 	InvoiceData *InvoiceData `json:"invoiceData,omitempty"`

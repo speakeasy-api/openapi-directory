@@ -8,6 +8,8 @@ type TargetArtifact struct {
 	ArtifactURI *string `json:"artifactUri,omitempty"`
 	// Output only. File path of the rendered manifest relative to the URI.
 	ManifestPath *string `json:"manifestPath,omitempty"`
+	// Output only. Map from the phase ID to the phase artifacts for the `Target`.
+	PhaseArtifacts map[string]PhaseArtifact `json:"phaseArtifacts,omitempty"`
 	// Output only. File path of the resolved Skaffold configuration relative to the URI.
 	SkaffoldConfigPath *string `json:"skaffoldConfigPath,omitempty"`
 }

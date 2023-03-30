@@ -38,7 +38,7 @@ func (s *projectDocument) CreateProjectDocument(ctx context.Context, request ope
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -159,8 +159,8 @@ func (s *projectDocument) DeleteProjectDocument(ctx context.Context, request ope
 	return res, nil
 }
 
-// DownloadProjectDocument - Download a document
-// Download a document
+// DownloadProjectDocument - Download a project source document
+// Download an actual source file you uploaded to be translated in your project.
 func (s *projectDocument) DownloadProjectDocument(ctx context.Context, request operations.DownloadProjectDocumentRequest) (*operations.DownloadProjectDocumentResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/download", request.PathParams, nil)
@@ -215,7 +215,8 @@ func (s *projectDocument) DownloadProjectDocument(ctx context.Context, request o
 	return res, nil
 }
 
-// DownloadTranslatedDocumentForLanguage - Download single translated file
+// DownloadTranslatedDocumentForLanguage - Download translated document
+// Download translated document in the given target language.
 func (s *projectDocument) DownloadTranslatedDocumentForLanguage(ctx context.Context, request operations.DownloadTranslatedDocumentForLanguageRequest) (*operations.DownloadTranslatedDocumentForLanguageResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/translations/download/{language}", request.PathParams, nil)
@@ -273,8 +274,8 @@ func (s *projectDocument) DownloadTranslatedDocumentForLanguage(ctx context.Cont
 	return res, nil
 }
 
-// GetProjectDocument - Get single document
-// Get single document
+// GetProjectDocument - View a project source document
+// View the details of a source file you uploaded to be translated in your project.
 func (s *projectDocument) GetProjectDocument(ctx context.Context, request operations.GetProjectDocumentRequest) (*operations.GetProjectDocumentResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request.PathParams, nil)
@@ -332,8 +333,8 @@ func (s *projectDocument) GetProjectDocument(ctx context.Context, request operat
 	return res, nil
 }
 
-// GetProjectDocuments - Get a list of documents
-// Get a list of documents
+// GetProjectDocuments - View project source documents
+// Get a list of source files you uploaded to be translated in your project.
 func (s *projectDocument) GetProjectDocuments(ctx context.Context, request operations.GetProjectDocumentsRequest) (*operations.GetProjectDocumentsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents", request.PathParams, nil)
@@ -391,9 +392,79 @@ func (s *projectDocument) GetProjectDocuments(ctx context.Context, request opera
 	return res, nil
 }
 
-// UpdateProjectDocument - Update the document.
+// UpdateProjectDocumentJSON - Update the document.
 // Update the document. File name and contents will replaced with the new one.
-func (s *projectDocument) UpdateProjectDocument(ctx context.Context, request operations.UpdateProjectDocumentRequest) (*operations.UpdateProjectDocumentResponse, error) {
+func (s *projectDocument) UpdateProjectDocumentJSON(ctx context.Context, request operations.UpdateProjectDocumentJSONRequest) (*operations.UpdateProjectDocumentJSONResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateProjectDocumentJSONResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Document
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Document = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		fallthrough
+	case httpRes.StatusCode == 406:
+		fallthrough
+	case httpRes.StatusCode == 409:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateProjectDocumentMultipart - Update the document.
+// Update the document. File name and contents will replaced with the new one.
+func (s *projectDocument) UpdateProjectDocumentMultipart(ctx context.Context, request operations.UpdateProjectDocumentMultipartRequest) (*operations.UpdateProjectDocumentMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}", request.PathParams, nil)
 
@@ -422,7 +493,7 @@ func (s *projectDocument) UpdateProjectDocument(ctx context.Context, request ope
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.UpdateProjectDocumentResponse{
+	res := &operations.UpdateProjectDocumentMultipartResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

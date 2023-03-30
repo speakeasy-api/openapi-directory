@@ -50,7 +50,7 @@ type ChatSpacesMembersListQueryParams struct {
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
 	// The maximum number of memberships to return. The service may return fewer than this value. If unspecified, at most 100 memberships are returned. The maximum value is 1000; values above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-	// A page token, received from a previous list memberships call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided should match the call that provided the page token. Passing different values to the other parameters may lead to unexpected results.
+	// A page token, received from a previous call to list memberships. Provide this to retrieve the subsequent page. When paginating, all other parameters provided should match the call that provided the page token. Passing different values to the other parameters may lead to unexpected results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`

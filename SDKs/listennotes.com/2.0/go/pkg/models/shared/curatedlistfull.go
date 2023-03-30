@@ -6,7 +6,7 @@ package shared
 type CuratedListFull struct {
 	// This curated list's description.
 	Description *string `json:"description,omitempty"`
-	// Curated list id.
+	// Curated list id, which can be used to further fetch detailed curated list metadata via `GET /curated_podcasts/{id}`.
 	ID *string `json:"id,omitempty"`
 	// The url of this curated list on [ListenNotes.com](https://www.ListenNotes.com).
 	ListennotesURL *string `json:"listennotes_url,omitempty"`

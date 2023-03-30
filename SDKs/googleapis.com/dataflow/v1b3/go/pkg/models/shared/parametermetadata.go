@@ -65,6 +65,8 @@ func (e *ParameterMetadataParamTypeEnum) UnmarshalJSON(data []byte) error {
 type ParameterMetadata struct {
 	// Optional. Additional metadata for describing this parameter.
 	CustomMetadata map[string]string `json:"customMetadata,omitempty"`
+	// Optional. Specifies a group name for this parameter to be rendered under. Group header text will be rendered exactly as specified in this field. Only considered when parent_name is NOT provided.
+	GroupName *string `json:"groupName,omitempty"`
 	// Required. The help text to display for the parameter.
 	HelpText *string `json:"helpText,omitempty"`
 	// Optional. Whether the parameter is optional. Defaults to false.
@@ -75,6 +77,10 @@ type ParameterMetadata struct {
 	Name *string `json:"name,omitempty"`
 	// Optional. The type of the parameter. Used for selecting input picker.
 	ParamType *ParameterMetadataParamTypeEnum `json:"paramType,omitempty"`
+	// Optional. Specifies the name of the parent parameter. Used in conjunction with 'parent_trigger_values' to make this parameter conditional (will only be rendered conditionally). Should be mappable to a ParameterMetadata.name field.
+	ParentName *string `json:"parentName,omitempty"`
+	// Optional. The value(s) of the 'parent_name' parameter which will trigger this parameter to be shown. If left empty, ANY non-empty value in parent_name will trigger this parameter to be shown. Only considered when this parameter is conditional (when 'parent_name' has been provided).
+	ParentTriggerValues []string `json:"parentTriggerValues,omitempty"`
 	// Optional. Regexes that the parameter must match.
 	Regexes []string `json:"regexes,omitempty"`
 }

@@ -15,7 +15,7 @@ type RestoreInput struct {
 	Description *string `json:"description,omitempty"`
 	// A set of custom labels supplied by user.
 	Labels map[string]string `json:"labels,omitempty"`
-	// Configuration of a restore. Next id: 9
+	// Configuration of a restore. Next id: 12
 	RestoreConfig *RestoreConfig `json:"restoreConfig,omitempty"`
 }
 
@@ -79,7 +79,7 @@ type Restore struct {
 	ResourcesFailedCount *int `json:"resourcesFailedCount,omitempty"`
 	// Output only. Number of resources restored during the restore execution.
 	ResourcesRestoredCount *int `json:"resourcesRestoredCount,omitempty"`
-	// Configuration of a restore. Next id: 9
+	// Configuration of a restore. Next id: 12
 	RestoreConfig *RestoreConfig `json:"restoreConfig,omitempty"`
 	// Output only. The current state of the Restore.
 	State *RestoreStateEnum `json:"state,omitempty"`

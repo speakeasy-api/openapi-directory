@@ -17,7 +17,7 @@ type PostLoadBalancersIDActionsUpdateServicePathParams struct {
 type PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheckHTTP struct {
 	// Host header to send in the HTTP request. May not contain spaces, percent or backslash symbols. Can be null, in that case no host header is sent.
 	Domain string `json:"domain"`
-	// HTTP path to use for health checks
+	// HTTP path to use for health checks. May not contain literal spaces, use percent-encoding instead.
 	Path string `json:"path"`
 	// String that must be contained in HTTP response in order to pass the health check
 	Response *string `json:"response,omitempty"`
@@ -67,14 +67,14 @@ type PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServi
 	Timeout int64 `json:"timeout"`
 }
 
-// PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceHTTP - Configuration option for protocols http and https
-type PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceHTTP struct {
+// PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHTTP - Configuration option for protocols http and https
+type PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHTTP struct {
 	// IDs of the Certificates to use for TLS/SSL termination by the Load Balancer; empty for TLS/SSL passthrough or if `protocol` is "http"
 	Certificates []int64 `json:"certificates,omitempty"`
 	// Lifetime of the cookie used for sticky sessions
-	CookieLifetime int64 `json:"cookie_lifetime"`
+	CookieLifetime *int64 `json:"cookie_lifetime,omitempty"`
 	// Name of the cookie used for sticky sessions
-	CookieName string `json:"cookie_name"`
+	CookieName *string `json:"cookie_name,omitempty"`
 	// Redirect HTTP requests to HTTPS. Only available if protocol is "https". Default `false`
 	RedirectHTTP *bool `json:"redirect_http,omitempty"`
 	// Use sticky sessions. Only available if protocol is "http" or "https". Default `false`
@@ -114,7 +114,7 @@ type PostLoadBalancersIDActionsUpdateServiceLoadBalancerService struct {
 	// Service health check
 	HealthCheck PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHealthCheck `json:"health_check"`
 	// Configuration option for protocols http and https
-	HTTP *PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceHTTP `json:"http,omitempty"`
+	HTTP *PostLoadBalancersIDActionsUpdateServiceLoadBalancerServiceLoadBalancerServiceHTTP `json:"http,omitempty"`
 	// Port the Load Balancer listens on
 	ListenPort int64 `json:"listen_port"`
 	// Protocol of the Load Balancer

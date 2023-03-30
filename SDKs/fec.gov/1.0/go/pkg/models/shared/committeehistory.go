@@ -2,6 +2,18 @@
 
 package shared
 
+import (
+	"openapi/pkg/types"
+)
+
+type CommitteeHistoryJfcCommittee struct {
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	JointCommitteeID *string `json:"joint_committee_id,omitempty"`
+	// The name of the committee. If a committee changes its name,     the most recent name will be shown. Committee names are not unique. Use committee_id     for looking up records.
+	JointCommitteeName *string `json:"joint_committee_name,omitempty"`
+}
+
 type CommitteeHistory struct {
 	// Affiliated committee or connected organization
 	//
@@ -21,7 +33,7 @@ type CommitteeHistory struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -40,7 +52,7 @@ type CommitteeHistory struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -54,8 +66,6 @@ type CommitteeHistory struct {
 	//         - Z national party non-federal account
 	//
 	CommitteeTypeFull *string `json:"committee_type_full,omitempty"`
-	// True indicates that a candidate committee had been converted to a PAC
-	ConvertToPacFlag *bool `json:"convert_to_pac_flag,omitempty"`
 	// A two year election cycle that the committee was active- (after original registration
 	// date but before expiration date in Form 1s) The cycle begins with
 	// an odd year and is named for its ending, even year.
@@ -71,7 +81,7 @@ type CommitteeHistory struct {
 	//
 	CyclesHasActivity []int `json:"cycles_has_activity,omitempty"`
 	// A two year election cycle that the committee was active- (after original registration
-	// date but before expiration date in Form 1s), and the commitee files the financial reports
+	// date but before expiration date in Form 1s), and the committee files the financial reports
 	// ('F3', 'F3X', 'F3P', 'F3L', 'F4', 'F5', 'F7', 'F13') during this cycle.
 	//
 	CyclesHasFinancial []int `json:"cycles_has_financial,omitempty"`
@@ -103,19 +113,14 @@ type CommitteeHistory struct {
 	//          - W Waived
 	//
 	FilingFrequency *string `json:"filing_frequency,omitempty"`
-	// Year a candidate runs for federal office.
-	FormerCandidateElectionYear *int `json:"former_candidate_election_year,omitempty"`
-	// A unique identifier assigned to each candidate registered with the FEC.
-	// If a person runs for several offices, that person will have separate candidate IDs for each office.
-	//
-	FormerCandidateID *string `json:"former_candidate_id,omitempty"`
-	// Name of candidate running for office
-	FormerCandidateName *string `json:"former_candidate_name,omitempty"`
-	// The name of the committee. If a committee changes its name,     the most recent name will be shown. Committee names are not unique. Use committee_id     for looking up records.
-	FormerCommitteeName *string `json:"former_committee_name,omitempty"`
+	// The day the FEC received the committee's first Form 1
+	FirstF1Date *types.Date `json:"first_f1_date,omitempty"`
+	// The day the FEC received the committee's first filing. This is usually a Form 1 committee registration.
+	FirstFileDate *types.Date `json:"first_file_date,omitempty"`
 	// True indicates that a committee is active.
 	//
-	IsActive *bool `json:"is_active,omitempty"`
+	IsActive     *bool                          `json:"is_active,omitempty"`
+	JfcCommittee []CommitteeHistoryJfcCommittee `json:"jfc_committee,omitempty"`
 	// The latest two year election cycle that the committee has filings
 	//
 	LastCycleHasActivity *int `json:"last_cycle_has_activity,omitempty"`
@@ -123,6 +128,10 @@ type CommitteeHistory struct {
 	// ('F3', 'F3X', 'F3P', 'F3L', 'F4', 'F5', 'F7', 'F13').
 	//
 	LastCycleHasFinancial *int `json:"last_cycle_has_financial,omitempty"`
+	// The day the FEC received the committee's most recent Form 1
+	LastF1Date *types.Date `json:"last_f1_date,omitempty"`
+	// The day the FEC received the committee's most recent filing
+	LastFileDate *types.Date `json:"last_file_date,omitempty"`
 	// The name of the committee. If a committee changes its name,     the most recent name will be shown. Committee names are not unique. Use committee_id     for looking up records.
 	Name *string `json:"name,omitempty"`
 	// The one-letter code for the kind for organization:
@@ -147,10 +156,6 @@ type CommitteeHistory struct {
 	Party *string `json:"party,omitempty"`
 	// Three-letter code for the party affiliated with a candidate or committee. For example, DEM for Democratic Party and REP for Republican Party.
 	PartyFull *string `json:"party_full,omitempty"`
-	// A unique identifier assigned to each candidate registered with the FEC.
-	// If a person runs for several offices, that person will have separate candidate IDs for each office. This is a filter for Leadership PAC sponsor.
-	//
-	SponsorCandidateIds []string `json:"sponsor_candidate_ids,omitempty"`
 	// State of the committee's address as filed on the Form 1
 	//
 	State *string `json:"state,omitempty"`

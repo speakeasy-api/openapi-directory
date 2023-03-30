@@ -2,11 +2,12 @@
 
 package shared
 
-// AppInputSource - The list of AWS Resilience Hub application input sources.
+// AppInputSource - The list of Resilience Hub application input sources.
 type AppInputSource struct {
-	ImportType      ResourceMappingTypeEnum `json:"importType"`
-	ResourceCount   *int64                  `json:"resourceCount,omitempty"`
-	SourceArn       *string                 `json:"sourceArn,omitempty"`
-	SourceName      *string                 `json:"sourceName,omitempty"`
-	TerraformSource *TerraformSource        `json:"terraformSource,omitempty"`
+	EksSourceClusterNamespace *EksSourceClusterNamespace `json:"eksSourceClusterNamespace,omitempty"`
+	ImportType                ResourceMappingTypeEnum    `json:"importType"`
+	ResourceCount             *int64                     `json:"resourceCount,omitempty"`
+	SourceArn                 *string                    `json:"sourceArn,omitempty"`
+	SourceName                *string                    `json:"sourceName,omitempty"`
+	TerraformSource           *TerraformSource           `json:"terraformSource,omitempty"`
 }

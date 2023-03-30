@@ -38,6 +38,8 @@ type DirectoryRoleAssignmentsListQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
+	// When set to `true`, fetches indirect role assignments (i.e. role assignment via a group) as well as direct ones. Defaults to `false`. You must specify `user_key` or the indirect role assignments will not be included.
+	IncludeIndirectRoleAssignments *bool `queryParam:"style=form,explode=true,name=includeIndirectRoleAssignments"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// Maximum number of results to return.
@@ -56,7 +58,7 @@ type DirectoryRoleAssignmentsListQueryParams struct {
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").
 	UploadProtocol *string `queryParam:"style=form,explode=true,name=upload_protocol"`
-	// The user's primary email address, alias email address, or unique user ID. If included in the request, returns role assignments only for this user.
+	// The primary email address, alias email address, or unique user or group ID. If included in the request, returns role assignments only for this user or group.
 	UserKey *string `queryParam:"style=form,explode=true,name=userKey"`
 }
 

@@ -9,6 +9,33 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+// PostRemoteServersRequestBodyFilesAgentPermissionSetEnum - Local permissions for files agent. read_only, write_only, or read_write
+type PostRemoteServersRequestBodyFilesAgentPermissionSetEnum string
+
+const (
+	PostRemoteServersRequestBodyFilesAgentPermissionSetEnumReadWrite PostRemoteServersRequestBodyFilesAgentPermissionSetEnum = "read_write"
+	PostRemoteServersRequestBodyFilesAgentPermissionSetEnumReadOnly  PostRemoteServersRequestBodyFilesAgentPermissionSetEnum = "read_only"
+	PostRemoteServersRequestBodyFilesAgentPermissionSetEnumWriteOnly PostRemoteServersRequestBodyFilesAgentPermissionSetEnum = "write_only"
+)
+
+func (e *PostRemoteServersRequestBodyFilesAgentPermissionSetEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "read_write":
+		fallthrough
+	case "read_only":
+		fallthrough
+	case "write_only":
+		*e = PostRemoteServersRequestBodyFilesAgentPermissionSetEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostRemoteServersRequestBodyFilesAgentPermissionSetEnum: %s", s)
+	}
+}
+
 // PostRemoteServersRequestBodyOneDriveAccountTypeEnum - Either personal or business_other account types
 type PostRemoteServersRequestBodyOneDriveAccountTypeEnum string
 
@@ -76,6 +103,9 @@ const (
 	PostRemoteServersRequestBodyServerTypeEnumAzure              PostRemoteServersRequestBodyServerTypeEnum = "azure"
 	PostRemoteServersRequestBodyServerTypeEnumSharepoint         PostRemoteServersRequestBodyServerTypeEnum = "sharepoint"
 	PostRemoteServersRequestBodyServerTypeEnumS3Compatible       PostRemoteServersRequestBodyServerTypeEnum = "s3_compatible"
+	PostRemoteServersRequestBodyServerTypeEnumAzureFiles         PostRemoteServersRequestBodyServerTypeEnum = "azure_files"
+	PostRemoteServersRequestBodyServerTypeEnumFilesAgent         PostRemoteServersRequestBodyServerTypeEnum = "files_agent"
+	PostRemoteServersRequestBodyServerTypeEnumFilebase           PostRemoteServersRequestBodyServerTypeEnum = "filebase"
 )
 
 func (e *PostRemoteServersRequestBodyServerTypeEnum) UnmarshalJSON(data []byte) error {
@@ -113,6 +143,12 @@ func (e *PostRemoteServersRequestBodyServerTypeEnum) UnmarshalJSON(data []byte) 
 	case "sharepoint":
 		fallthrough
 	case "s3_compatible":
+		fallthrough
+	case "azure_files":
+		fallthrough
+	case "files_agent":
+		fallthrough
+	case "filebase":
 		*e = PostRemoteServersRequestBodyServerTypeEnum(s)
 		return nil
 	default:
@@ -161,6 +197,16 @@ type PostRemoteServersRequestBody struct {
 	AzureBlobStorageAccount *string `multipartForm:"name=azure_blob_storage_account"`
 	// Azure Blob Storage Container name
 	AzureBlobStorageContainer *string `multipartForm:"name=azure_blob_storage_container"`
+	// Shared Access Signature (SAS) token
+	AzureBlobStorageSasToken *string `multipartForm:"name=azure_blob_storage_sas_token"`
+	// Azure File Storage access key.
+	AzureFilesStorageAccessKey *string `multipartForm:"name=azure_files_storage_access_key"`
+	// Azure File Storage Account name
+	AzureFilesStorageAccount *string `multipartForm:"name=azure_files_storage_account"`
+	// Shared Access Signature (SAS) token
+	AzureFilesStorageSasToken *string `multipartForm:"name=azure_files_storage_sas_token"`
+	// Azure File Storage Share name
+	AzureFilesStorageShareName *string `multipartForm:"name=azure_files_storage_share_name"`
 	// Backblaze B2 Cloud Storage applicationKey.
 	BackblazeB2ApplicationKey *string `multipartForm:"name=backblaze_b2_application_key"`
 	// Backblaze B2 Cloud Storage Bucket name
@@ -171,6 +217,16 @@ type PostRemoteServersRequestBody struct {
 	BackblazeB2S3Endpoint *string `multipartForm:"name=backblaze_b2_s3_endpoint"`
 	// `true` if remote server only accepts connections from dedicated IPs
 	EnableDedicatedIps *bool `multipartForm:"name=enable_dedicated_ips"`
+	// Filebase Access Key.
+	FilebaseAccessKey *string `multipartForm:"name=filebase_access_key"`
+	// Filebase Bucket name
+	FilebaseBucket *string `multipartForm:"name=filebase_bucket"`
+	// Filebase secret key
+	FilebaseSecretKey *string `multipartForm:"name=filebase_secret_key"`
+	// Local permissions for files agent. read_only, write_only, or read_write
+	FilesAgentPermissionSet *PostRemoteServersRequestBodyFilesAgentPermissionSetEnum `multipartForm:"name=files_agent_permission_set"`
+	// Agent local root path
+	FilesAgentRoot *string `multipartForm:"name=files_agent_root"`
 	// Google Cloud Storage bucket name
 	GoogleCloudStorageBucket *string `multipartForm:"name=google_cloud_storage_bucket"`
 	// A JSON file that contains the private key. To generate see https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing#APIKey
@@ -187,10 +243,14 @@ type PostRemoteServersRequestBody struct {
 	OneDriveAccountType *PostRemoteServersRequestBodyOneDriveAccountTypeEnum `multipartForm:"name=one_drive_account_type"`
 	// Password if needed.
 	Password *string `multipartForm:"name=password"`
+	// If true, we will ensure that all communications with this remote server are made through the primary region of the site.  This setting can also be overridden by a sitewide setting which will force it to true.
+	PinToSiteRegion *bool `multipartForm:"name=pin_to_site_region"`
 	// Port for remote server.  Not needed for S3.
 	Port *int `multipartForm:"name=port"`
 	// Private key if needed.
 	PrivateKey *string `multipartForm:"name=private_key"`
+	// Passphrase for private key if needed.
+	PrivateKeyPassphrase *string `multipartForm:"name=private_key_passphrase"`
 	// Rackspace API key from the Rackspace Cloud Control Panel.
 	RackspaceAPIKey *string `multipartForm:"name=rackspace_api_key"`
 	// The name of the container (top level directory) where files will sync.
@@ -203,13 +263,13 @@ type PostRemoteServersRequestBody struct {
 	ResetAuthentication *bool `multipartForm:"name=reset_authentication"`
 	// S3 bucket name
 	S3Bucket *string `multipartForm:"name=s3_bucket"`
-	// S3-compatible access key
+	// S3-compatible Access Key.
 	S3CompatibleAccessKey *string `multipartForm:"name=s3_compatible_access_key"`
 	// S3-compatible Bucket name
 	S3CompatibleBucket *string `multipartForm:"name=s3_compatible_bucket"`
 	// S3-compatible endpoint
 	S3CompatibleEndpoint *string `multipartForm:"name=s3_compatible_endpoint"`
-	// S3-compatible Bucket name
+	// S3-compatible endpoint
 	S3CompatibleRegion *string `multipartForm:"name=s3_compatible_region"`
 	// S3-compatible secret key
 	S3CompatibleSecretKey *string `multipartForm:"name=s3_compatible_secret_key"`

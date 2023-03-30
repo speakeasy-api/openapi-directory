@@ -15,7 +15,7 @@ func main() {
 
     req := operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionRequest{
         PathParams: operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionPathParams{
-            FileFormatExtension: "shp",
+            FileFormatExtension: "shpz",
             GeomarkID: "deserunt",
         },
         QueryParams: operations.GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionQueryParams{

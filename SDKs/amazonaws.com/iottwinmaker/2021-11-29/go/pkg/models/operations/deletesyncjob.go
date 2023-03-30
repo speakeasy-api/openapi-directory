@@ -8,9 +8,9 @@ import (
 )
 
 type DeleteSyncJobPathParams struct {
-	// <p>The sync source.</p> <note> <p>Currently the only supported syncSoucre is <code>SITEWISE </code>.</p> </note>
+	// <p>The sync source.</p> <note> <p>Currently the only supported syncSource is <code>SITEWISE </code>.</p> </note>
 	SyncSource string `pathParam:"style=simple,explode=false,name=syncSource"`
-	// The workspace Id.
+	// The workspace ID.
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 

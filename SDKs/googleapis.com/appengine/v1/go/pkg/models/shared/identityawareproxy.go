@@ -10,6 +10,16 @@ type IdentityAwareProxy struct {
 	Oauth2ClientID *string `json:"oauth2ClientId,omitempty"`
 	// OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly
 	Oauth2ClientSecret *string `json:"oauth2ClientSecret,omitempty"`
-	// Hex-encoded SHA-256 hash of the client secret.@OutputOnly
+	// Output only. Hex-encoded SHA-256 hash of the client secret.@OutputOnly
 	Oauth2ClientSecretSha256 *string `json:"oauth2ClientSecretSha256,omitempty"`
+}
+
+// IdentityAwareProxyInput - Identity-Aware Proxy
+type IdentityAwareProxyInput struct {
+	// Whether the serving infrastructure will authenticate and authorize all incoming requests.If true, the oauth2_client_id and oauth2_client_secret fields must be non-empty.
+	Enabled *bool `json:"enabled,omitempty"`
+	// OAuth2 client ID to use for the authentication flow.
+	Oauth2ClientID *string `json:"oauth2ClientId,omitempty"`
+	// OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly
+	Oauth2ClientSecret *string `json:"oauth2ClientSecret,omitempty"`
 }

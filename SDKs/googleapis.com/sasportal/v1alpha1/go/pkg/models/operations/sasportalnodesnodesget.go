@@ -7,9 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SasportalNodesNodesGetSecurity struct {
+type SasportalNodesNodesGetSecurityOption1 struct {
 	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
 	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type SasportalNodesNodesGetSecurityOption2 struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type SasportalNodesNodesGetSecurity struct {
+	Option1 *SasportalNodesNodesGetSecurityOption1 `security:"option"`
+	Option2 *SasportalNodesNodesGetSecurityOption2 `security:"option"`
 }
 
 type SasportalNodesNodesGetPathParams struct {

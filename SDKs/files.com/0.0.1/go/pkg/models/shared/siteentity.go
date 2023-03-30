@@ -8,6 +8,141 @@ import (
 	"time"
 )
 
+// SiteEntityBundleActivityNotificationsEnum - Do Bundle owners receive activity notifications?
+type SiteEntityBundleActivityNotificationsEnum string
+
+const (
+	SiteEntityBundleActivityNotificationsEnumNever            SiteEntityBundleActivityNotificationsEnum = "never"
+	SiteEntityBundleActivityNotificationsEnumAlways           SiteEntityBundleActivityNotificationsEnum = "always"
+	SiteEntityBundleActivityNotificationsEnumPerBundleSetting SiteEntityBundleActivityNotificationsEnum = "per_bundle_setting"
+)
+
+func (e *SiteEntityBundleActivityNotificationsEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "never":
+		fallthrough
+	case "always":
+		fallthrough
+	case "per_bundle_setting":
+		*e = SiteEntityBundleActivityNotificationsEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SiteEntityBundleActivityNotificationsEnum: %s", s)
+	}
+}
+
+// SiteEntityBundleRegistrationNotificationsEnum - Do Bundle owners receive registration notification?
+type SiteEntityBundleRegistrationNotificationsEnum string
+
+const (
+	SiteEntityBundleRegistrationNotificationsEnumNever            SiteEntityBundleRegistrationNotificationsEnum = "never"
+	SiteEntityBundleRegistrationNotificationsEnumAlways           SiteEntityBundleRegistrationNotificationsEnum = "always"
+	SiteEntityBundleRegistrationNotificationsEnumPerBundleSetting SiteEntityBundleRegistrationNotificationsEnum = "per_bundle_setting"
+)
+
+func (e *SiteEntityBundleRegistrationNotificationsEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "never":
+		fallthrough
+	case "always":
+		fallthrough
+	case "per_bundle_setting":
+		*e = SiteEntityBundleRegistrationNotificationsEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SiteEntityBundleRegistrationNotificationsEnum: %s", s)
+	}
+}
+
+// SiteEntityBundleUploadReceiptNotificationsEnum - Do Bundle uploaders receive upload confirmation notifications?
+type SiteEntityBundleUploadReceiptNotificationsEnum string
+
+const (
+	SiteEntityBundleUploadReceiptNotificationsEnumNever            SiteEntityBundleUploadReceiptNotificationsEnum = "never"
+	SiteEntityBundleUploadReceiptNotificationsEnumAlways           SiteEntityBundleUploadReceiptNotificationsEnum = "always"
+	SiteEntityBundleUploadReceiptNotificationsEnumPerBundleSetting SiteEntityBundleUploadReceiptNotificationsEnum = "per_bundle_setting"
+)
+
+func (e *SiteEntityBundleUploadReceiptNotificationsEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "never":
+		fallthrough
+	case "always":
+		fallthrough
+	case "per_bundle_setting":
+		*e = SiteEntityBundleUploadReceiptNotificationsEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SiteEntityBundleUploadReceiptNotificationsEnum: %s", s)
+	}
+}
+
+// SiteEntityDomainLetsencryptChainEnum - Letsencrypt chain to use when registering SSL Certificate for domain.
+type SiteEntityDomainLetsencryptChainEnum string
+
+const (
+	SiteEntityDomainLetsencryptChainEnumDefault     SiteEntityDomainLetsencryptChainEnum = "default"
+	SiteEntityDomainLetsencryptChainEnumIsrgRootX1  SiteEntityDomainLetsencryptChainEnum = "isrg_root_x1"
+	SiteEntityDomainLetsencryptChainEnumDstRootCaX3 SiteEntityDomainLetsencryptChainEnum = "dst_root_ca_x3"
+)
+
+func (e *SiteEntityDomainLetsencryptChainEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "default":
+		fallthrough
+	case "isrg_root_x1":
+		fallthrough
+	case "dst_root_ca_x3":
+		*e = SiteEntityDomainLetsencryptChainEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SiteEntityDomainLetsencryptChainEnum: %s", s)
+	}
+}
+
+// SiteEntityOfficeIntegrationTypeEnum - Office integration application used to edit and view the MS Office documents
+type SiteEntityOfficeIntegrationTypeEnum string
+
+const (
+	SiteEntityOfficeIntegrationTypeEnumOnlyOffice SiteEntityOfficeIntegrationTypeEnum = "only_office"
+	SiteEntityOfficeIntegrationTypeEnumOffice365  SiteEntityOfficeIntegrationTypeEnum = "office_365"
+	SiteEntityOfficeIntegrationTypeEnumDisabled   SiteEntityOfficeIntegrationTypeEnum = "disabled"
+)
+
+func (e *SiteEntityOfficeIntegrationTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "only_office":
+		fallthrough
+	case "office_365":
+		fallthrough
+	case "disabled":
+		*e = SiteEntityOfficeIntegrationTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SiteEntityOfficeIntegrationTypeEnum: %s", s)
+	}
+}
+
 // SiteEntityRequire2faUserTypeEnum - What type of user is required to use two-factor authentication (when require_2fa is set to `true` for this site)?
 type SiteEntityRequire2faUserTypeEnum string
 
@@ -32,6 +167,33 @@ func (e *SiteEntityRequire2faUserTypeEnum) UnmarshalJSON(data []byte) error {
 		return nil
 	default:
 		return fmt.Errorf("invalid value for SiteEntityRequire2faUserTypeEnum: %s", s)
+	}
+}
+
+// SiteEntitySftpHostKeyTypeEnum - Sftp Host Key Type
+type SiteEntitySftpHostKeyTypeEnum string
+
+const (
+	SiteEntitySftpHostKeyTypeEnumDefault  SiteEntitySftpHostKeyTypeEnum = "default"
+	SiteEntitySftpHostKeyTypeEnumExavault SiteEntitySftpHostKeyTypeEnum = "exavault"
+	SiteEntitySftpHostKeyTypeEnumCustom   SiteEntitySftpHostKeyTypeEnum = "custom"
+)
+
+func (e *SiteEntitySftpHostKeyTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "default":
+		fallthrough
+	case "exavault":
+		fallthrough
+	case "custom":
+		*e = SiteEntitySftpHostKeyTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SiteEntitySftpHostKeyTypeEnum: %s", s)
 	}
 }
 
@@ -64,16 +226,22 @@ func (e *SiteEntityWelcomeScreenEnum) UnmarshalJSON(data []byte) error {
 
 // SiteEntity - Show site settings
 type SiteEntity struct {
+	// Id of the currently selected custom SFTP Host Key
+	ActiveSftpHostKeyID *int `json:"active_sftp_host_key_id,omitempty"`
 	// User ID for the main site administrator
 	AdminUserID *int `json:"admin_user_id,omitempty"`
 	// Are manual Bundle names allowed?
 	AllowBundleNames *bool `json:"allow_bundle_names,omitempty"`
+	// Are users allowed to configure their two factor authentication to be bypassed for FTP/SFTP/WebDAV?
+	Allowed2faMethodBypassForFtpSftpDav *bool `json:"allowed_2fa_method_bypass_for_ftp_sftp_dav,omitempty"`
 	// Is SMS two factor authentication allowed?
 	Allowed2faMethodSms *bool `json:"allowed_2fa_method_sms,omitempty"`
 	// Is TOTP two factor authentication allowed?
 	Allowed2faMethodTotp *bool `json:"allowed_2fa_method_totp,omitempty"`
 	// Is U2F two factor authentication allowed?
 	Allowed2faMethodU2f *bool `json:"allowed_2fa_method_u2f,omitempty"`
+	// Is WebAuthn two factor authentication allowed?
+	Allowed2faMethodWebauthn *bool `json:"allowed_2fa_method_webauthn,omitempty"`
 	// Is yubikey two factor authentication allowed?
 	Allowed2faMethodYubi *bool `json:"allowed_2fa_method_yubi,omitempty"`
 	// Comma seperated list of allowed Country codes
@@ -82,12 +250,21 @@ type SiteEntity struct {
 	AllowedIps *string `json:"allowed_ips,omitempty"`
 	// If false, rename conflicting files instead of asking for overwrite confirmation.  Only applies to web interface.
 	AskAboutOverwrites *bool `json:"ask_about_overwrites,omitempty"`
+	// Do Bundle owners receive activity notifications?
+	BundleActivityNotifications *SiteEntityBundleActivityNotificationsEnum `json:"bundle_activity_notifications,omitempty"`
 	// Site-wide Bundle expiration in days
 	BundleExpiration *int `json:"bundle_expiration,omitempty"`
 	// Do Bundles require password protection?
 	BundlePasswordRequired *bool `json:"bundle_password_required,omitempty"`
+	// Do Bundle owners receive registration notification?
+	BundleRegistrationNotifications *SiteEntityBundleRegistrationNotificationsEnum `json:"bundle_registration_notifications,omitempty"`
 	// Do Bundles require recipients for sharing?
 	BundleRequireShareRecipient *bool `json:"bundle_require_share_recipient,omitempty"`
+	// Do Bundle uploaders receive upload confirmation notifications?
+	BundleUploadReceiptNotifications *SiteEntityBundleUploadReceiptNotificationsEnum `json:"bundle_upload_receipt_notifications,omitempty"`
+	BundleWatermarkAttachment        *ImageEntity                                    `json:"bundle_watermark_attachment,omitempty"`
+	// Preview watermark settings applied to all bundle items. Uses the same keys as Behavior.value
+	BundleWatermarkValue map[string]interface{} `json:"bundle_watermark_value,omitempty"`
 	// Page link and button color
 	Color2Left *string `json:"color2_left,omitempty"`
 	// Top bar link color
@@ -116,6 +293,8 @@ type SiteEntity struct {
 	DesktopAppSessionIPPinning *bool `json:"desktop_app_session_ip_pinning,omitempty"`
 	// Desktop app session lifetime (in hours)
 	DesktopAppSessionLifetime *int `json:"desktop_app_session_lifetime,omitempty"`
+	// If set, Files.com will not set the CAA records required to generate future SSL certificates for this domain.
+	DisableFilesCertificateGeneration *bool `json:"disable_files_certificate_generation,omitempty"`
 	// Are notifications disabled?
 	DisableNotifications *bool `json:"disable_notifications,omitempty"`
 	// Is password reset disabled?
@@ -126,10 +305,16 @@ type SiteEntity struct {
 	DisallowedCountries *string `json:"disallowed_countries,omitempty"`
 	// Custom domain
 	Domain *string `json:"domain,omitempty"`
+	// Send HSTS (HTTP Strict Transport Security) header when visitors access the site via a custom domain?
+	DomainHstsHeader *bool `json:"domain_hsts_header,omitempty"`
+	// Letsencrypt chain to use when registering SSL Certificate for domain.
+	DomainLetsencryptChain *SiteEntityDomainLetsencryptChainEnum `json:"domain_letsencrypt_chain,omitempty"`
 	// Main email for this site
 	Email *string `json:"email,omitempty"`
 	// If true, permissions for this site must be bound to a group (not a user). Otherwise, permissions must be bound to a user.
 	FolderPermissionsGroupsOnly *bool `json:"folder_permissions_groups_only,omitempty"`
+	// Is FTP enabled?
+	FtpEnabled *bool `json:"ftp_enabled,omitempty"`
 	// Is there a signed HIPAA BAA between Files.com and this site?
 	Hipaa   *bool        `json:"hipaa,omitempty"`
 	Icon128 *ImageEntity `json:"icon128,omitempty"`
@@ -185,6 +370,12 @@ type SiteEntity struct {
 	MobileAppSessionIPPinning *bool `json:"mobile_app_session_ip_pinning,omitempty"`
 	// Mobile app session lifetime (in hours)
 	MobileAppSessionLifetime *int `json:"mobile_app_session_lifetime,omitempty"`
+	// A message to show users when they connect via FTP or SFTP.
+	MotdText *string `json:"motd_text,omitempty"`
+	// Show message to users connecting via FTP
+	MotdUseForFtp *bool `json:"motd_use_for_ftp,omitempty"`
+	// Show message to users connecting via SFTP
+	MotdUseForSftp *bool `json:"motd_use_for_sftp,omitempty"`
 	// Site name
 	Name *string `json:"name,omitempty"`
 	// Next billing amount
@@ -197,6 +388,8 @@ type SiteEntity struct {
 	NonSsoUsersAllowed *bool `json:"non_sso_users_allowed,omitempty"`
 	// Allow users to use Office for the web?
 	OfficeIntegrationAvailable *bool `json:"office_integration_available,omitempty"`
+	// Office integration application used to edit and view the MS Office documents
+	OfficeIntegrationType *SiteEntityOfficeIntegrationTypeEnum `json:"office_integration_type,omitempty"`
 	// Link to scheduling a meeting with our Sales team
 	OncehubLink *string `json:"oncehub_link,omitempty"`
 	// Use servers in the USA only?
@@ -225,6 +418,8 @@ type SiteEntity struct {
 	PasswordValidityDays *int `json:"password_validity_days,omitempty"`
 	// Site phone number
 	Phone *string `json:"phone,omitempty"`
+	// If true, we will ensure that all internal communications with any remote server are made through the primary region of the site. This setting overrides individual remote server settings.
+	PinAllRemoteServersToSiteRegion *bool `json:"pin_all_remote_servers_to_site_region,omitempty"`
 	// Reply-to email for this site
 	ReplyToEmail *string `json:"reply_to_email,omitempty"`
 	// Require two-factor authentication for all users?
@@ -237,8 +432,16 @@ type SiteEntity struct {
 	Session *SessionEntity `json:"session,omitempty"`
 	// Session expiry in hours
 	SessionExpiry *float64 `json:"session_expiry,omitempty"`
+	// Session expiry in minutes
+	SessionExpiryMinutes *int `json:"session_expiry_minutes,omitempty"`
 	// Are sessions locked to the same IP? (i.e. do users need to log in again if they change IPs?)
 	SessionPinnedByIP *bool `json:"session_pinned_by_ip,omitempty"`
+	// Is SFTP enabled?
+	SftpEnabled *bool `json:"sftp_enabled,omitempty"`
+	// Sftp Host Key Type
+	SftpHostKeyType *SiteEntitySftpHostKeyTypeEnum `json:"sftp_host_key_type,omitempty"`
+	// Are Insecure Ciphers allowed for SFTP?  Note:  Settting TLS Disabled -> True will always allow insecure ciphers for SFTP as well.  Enabling this is insecure.
+	SftpInsecureCiphers *bool `json:"sftp_insecure_ciphers,omitempty"`
 	// Use user FTP roots also for SFTP?
 	SftpUserRootEnabled *bool `json:"sftp_user_root_enabled,omitempty"`
 	// Allow bundle creation
@@ -265,7 +468,7 @@ type SiteEntity struct {
 	Subdomain *string `json:"subdomain,omitempty"`
 	// If switching plans, when does the new plan take effect?
 	SwitchToPlanDate *time.Time `json:"switch_to_plan_date,omitempty"`
-	// Is TLS disabled(site setting)?
+	// Are Insecure TLS and SFTP Ciphers allowed?  Enabling this is insecure.
 	TLSDisabled *bool `json:"tls_disabled,omitempty"`
 	// Number of days left in trial
 	TrialDaysLeft *int `json:"trial_days_left,omitempty"`
@@ -273,6 +476,8 @@ type SiteEntity struct {
 	TrialUntil *time.Time `json:"trial_until,omitempty"`
 	// Last time this Site was updated
 	UpdatedAt *time.Time `json:"updated_at,omitempty"`
+	// Do incoming emails in the Inboxes require checking for SPF/DKIM/DMARC?
+	UploadsViaEmailAuthentication *bool `json:"uploads_via_email_authentication,omitempty"`
 	// Allow uploaders to set `provided_modified_at` for uploaded files?
 	UseProvidedModifiedAt *bool `json:"use_provided_modified_at,omitempty"`
 	// Create User
@@ -287,12 +492,16 @@ type SiteEntity struct {
 	UserLockoutWithin *int `json:"user_lockout_within,omitempty"`
 	// Enable User Requests feature
 	UserRequestsEnabled *bool `json:"user_requests_enabled,omitempty"`
+	// Send email to site admins when a user request is received?
+	UserRequestsNotifyAdmins *bool `json:"user_requests_notify_admins,omitempty"`
 	// Custom text send in user welcome email
 	WelcomeCustomText *string `json:"welcome_custom_text,omitempty"`
 	// Include this email in welcome emails if enabled
 	WelcomeEmailCc *string `json:"welcome_email_cc,omitempty"`
 	// Will the welcome email be sent to new users?
 	WelcomeEmailEnabled *bool `json:"welcome_email_enabled,omitempty"`
+	// Include this email subject in welcome emails if enabled
+	WelcomeEmailSubject *string `json:"welcome_email_subject,omitempty"`
 	// Does the welcome screen appear?
 	WelcomeScreen *SiteEntityWelcomeScreenEnum `json:"welcome_screen,omitempty"`
 	// Does FTP user Windows emulation mode?

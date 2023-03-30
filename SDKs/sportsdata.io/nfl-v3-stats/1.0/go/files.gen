@@ -77,6 +77,7 @@ pkg/models/operations/seasonlastcompleted.go
 pkg/models/operations/seasonupcoming.go
 pkg/models/operations/stadiums.go
 pkg/models/operations/standings.go
+pkg/models/operations/teamgamelogsbyseason.go
 pkg/models/operations/teamgamestats.go
 pkg/models/operations/teamseasonstats.go
 pkg/models/operations/teamsactive.go

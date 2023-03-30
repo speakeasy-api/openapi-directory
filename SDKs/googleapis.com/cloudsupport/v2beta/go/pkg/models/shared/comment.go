@@ -4,7 +4,7 @@ package shared
 
 // Comment - A comment associated with a support case.
 type Comment struct {
-	// The full comment body. Maximum of 120000 characters. This can contain rich text syntax.
+	// The full comment body. Maximum of 12800 characters. This can contain rich text syntax.
 	Body *string `json:"body,omitempty"`
 	// Output only. The time when this comment was created.
 	CreateTime *string `json:"createTime,omitempty"`
@@ -18,7 +18,7 @@ type Comment struct {
 
 // CommentInput - A comment associated with a support case.
 type CommentInput struct {
-	// The full comment body. Maximum of 120000 characters. This can contain rich text syntax.
+	// The full comment body. Maximum of 12800 characters. This can contain rich text syntax.
 	Body *string `json:"body,omitempty"`
 	// An object containing information about the effective user and authenticated principal responsible for an action.
 	Creator *ActorInput `json:"creator,omitempty"`

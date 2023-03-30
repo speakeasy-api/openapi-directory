@@ -30,14 +30,14 @@ type GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathPathParams struct {
 
 type GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathQueryParams struct {
 	// Query string to narrow down the response as per
-	// [filtering and sorting](../../../../../../meta/filtering).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// When `true`, Bitbucket will follow the history of the file across
 	// renames (this is the default behavior). This can be turned off by
 	// specifying `false`.
 	Renames *string `queryParam:"style=form,explode=true,name=renames"`
 	// Name of a response property sort the result by as per
-	// [filtering and sorting](../../../../../../meta/filtering#query-sort).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results).
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }

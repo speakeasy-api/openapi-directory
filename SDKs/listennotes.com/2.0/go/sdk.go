@@ -26,7 +26,10 @@ func String(s string) *string { return &s }
 type SDK struct {
 	// DirectoryAPI - Endpoints to fetch podcasts data
 	DirectoryAPI *directoryAPI
-	PlaylistAPI  *playlistAPI
+	// InsightsAPI - Endpoints to get insights of podcasts, e.g., audience demographics
+	InsightsAPI *insightsAPI
+	// PlaylistAPI - Endpoints to fetch Listen Later playlists data
+	PlaylistAPI *playlistAPI
 	// PodcasterAPI - Endpoints to improve the podcast database
 	PodcasterAPI *podcasterAPI
 	// SearchAPI - Endpoints to search podcasts
@@ -93,6 +96,15 @@ func New(opts ...SDKOption) *SDK {
 	}
 
 	sdk.DirectoryAPI = newDirectoryAPI(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.InsightsAPI = newInsightsAPI(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

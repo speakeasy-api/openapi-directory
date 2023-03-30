@@ -19,10 +19,10 @@ type PrivateProjectCreateRequest struct {
 
 type PrivateProjectCreateResponse struct {
 	ContentType string
+	// Created
+	CreateProjectResponse *shared.CreateProjectResponse
 	// Forbidden
 	ErrorMessage *shared.ErrorMessage
-	// Created
-	Location    *shared.Location
-	StatusCode  int
-	RawResponse *http.Response
+	StatusCode   int
+	RawResponse  *http.Response
 }

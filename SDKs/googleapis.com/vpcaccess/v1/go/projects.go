@@ -182,6 +182,61 @@ func (s *projects) VpcaccessProjectsLocationsConnectorsList(ctx context.Context,
 	return res, nil
 }
 
+// VpcaccessProjectsLocationsConnectorsPatch - Updates a Serverless VPC Access connector, returns an operation.
+func (s *projects) VpcaccessProjectsLocationsConnectorsPatch(ctx context.Context, request operations.VpcaccessProjectsLocationsConnectorsPatchRequest) (*operations.VpcaccessProjectsLocationsConnectorsPatchResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.VpcaccessProjectsLocationsConnectorsPatchResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
 // VpcaccessProjectsLocationsList - Lists information about the supported locations for this service.
 func (s *projects) VpcaccessProjectsLocationsList(ctx context.Context, request operations.VpcaccessProjectsLocationsListRequest) (*operations.VpcaccessProjectsLocationsListResponse, error) {
 	baseURL := s.serverURL
@@ -278,7 +333,7 @@ func (s *projects) VpcaccessProjectsLocationsOperationsGet(ctx context.Context, 
 	return res, nil
 }
 
-// VpcaccessProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+// VpcaccessProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) VpcaccessProjectsLocationsOperationsList(ctx context.Context, request operations.VpcaccessProjectsLocationsOperationsListRequest) (*operations.VpcaccessProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)

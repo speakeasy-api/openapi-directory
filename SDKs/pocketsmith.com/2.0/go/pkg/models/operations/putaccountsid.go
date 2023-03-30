@@ -3,6 +3,8 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -12,11 +14,66 @@ type PutAccountsIDPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
+// PutAccountsIDRequestBodyTypeEnum - The type of the account.
+type PutAccountsIDRequestBodyTypeEnum string
+
+const (
+	PutAccountsIDRequestBodyTypeEnumBank           PutAccountsIDRequestBodyTypeEnum = "bank"
+	PutAccountsIDRequestBodyTypeEnumCredits        PutAccountsIDRequestBodyTypeEnum = "credits"
+	PutAccountsIDRequestBodyTypeEnumCash           PutAccountsIDRequestBodyTypeEnum = "cash"
+	PutAccountsIDRequestBodyTypeEnumLoans          PutAccountsIDRequestBodyTypeEnum = "loans"
+	PutAccountsIDRequestBodyTypeEnumMortgage       PutAccountsIDRequestBodyTypeEnum = "mortgage"
+	PutAccountsIDRequestBodyTypeEnumStocks         PutAccountsIDRequestBodyTypeEnum = "stocks"
+	PutAccountsIDRequestBodyTypeEnumVehicle        PutAccountsIDRequestBodyTypeEnum = "vehicle"
+	PutAccountsIDRequestBodyTypeEnumProperty       PutAccountsIDRequestBodyTypeEnum = "property"
+	PutAccountsIDRequestBodyTypeEnumInsurance      PutAccountsIDRequestBodyTypeEnum = "insurance"
+	PutAccountsIDRequestBodyTypeEnumOtherAsset     PutAccountsIDRequestBodyTypeEnum = "other_asset"
+	PutAccountsIDRequestBodyTypeEnumOtherLiability PutAccountsIDRequestBodyTypeEnum = "other_liability"
+)
+
+func (e *PutAccountsIDRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "bank":
+		fallthrough
+	case "credits":
+		fallthrough
+	case "cash":
+		fallthrough
+	case "loans":
+		fallthrough
+	case "mortgage":
+		fallthrough
+	case "stocks":
+		fallthrough
+	case "vehicle":
+		fallthrough
+	case "property":
+		fallthrough
+	case "insurance":
+		fallthrough
+	case "other_asset":
+		fallthrough
+	case "other_liability":
+		*e = PutAccountsIDRequestBodyTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PutAccountsIDRequestBodyTypeEnum: %s", s)
+	}
+}
+
 type PutAccountsIDRequestBody struct {
 	// A new currency code for the account.
 	CurrencyCode *string `json:"currency_code,omitempty"`
+	// Whether the account is a net worth account.
+	IsNetWorth *bool `json:"is_net_worth,omitempty"`
 	// A new title for the account.
 	Title *string `json:"title,omitempty"`
+	// The type of the account.
+	Type *PutAccountsIDRequestBodyTypeEnum `json:"type,omitempty"`
 }
 
 type PutAccountsIDRequest struct {

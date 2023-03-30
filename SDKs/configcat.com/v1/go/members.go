@@ -34,6 +34,62 @@ func newMembers(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
+// AddMemberToGroup - Update Member Permissions
+// This endpoint adds a Member identified by the `userId` to one or more Permission Groups.
+// This endpoint can also be used to move a Member between Permission Groups within a Product.
+// Only a single Permission Group can be set per Product.
+func (s *members) AddMemberToGroup(ctx context.Context, request operations.AddMemberToGroupRequest) (*operations.AddMemberToGroupResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/organizations/{organizationId}/members/{userId}", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AddMemberToGroupResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		fallthrough
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
 // DeleteOrganizationMember - Delete Member from Organization
 // This endpoint removes a Member identified by the `userId` from the
 // given Organization identified by the `organizationId` parameter.

@@ -4,9 +4,11 @@ package shared
 
 type PrivateLink struct {
 	// Date when link will expire
-	ExpiresDate *string `json:"expires_date,omitempty"`
+	ExpiresDate string `json:"expires_date"`
+	// HTML url for private link
+	HTMLLocation string `json:"html_location"`
 	// Private link id
-	ID *string `json:"id,omitempty"`
+	ID string `json:"id"`
 	// True if private link is active
-	IsActive *bool `json:"is_active,omitempty"`
+	IsActive bool `json:"is_active"`
 }

@@ -21,14 +21,16 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
-// SDK - Please see the complete Orbit API documentation at [https://docs.orbit.love/reference](https://docs.orbit.love/reference).
+// SDK - Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).
 type SDK struct {
 	Activities    *activities
 	ActivityTypes *activityTypes
 	Members       *members
 	Notes         *notes
+	Organizations *organizations
 	Reports       *reports
 	Users         *users
+	Webhooks      *webhooks
 	Workspaces    *workspaces
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
@@ -127,6 +129,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.Organizations = newOrganizations(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.Reports = newReports(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -137,6 +148,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.Users = newUsers(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Webhooks = newWebhooks(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

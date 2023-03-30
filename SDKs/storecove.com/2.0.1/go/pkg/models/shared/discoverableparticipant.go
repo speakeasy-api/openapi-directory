@@ -10,13 +10,12 @@ import (
 type DiscoverableParticipantDocumentTypesEnum string
 
 const (
-	DiscoverableParticipantDocumentTypesEnumInvoice              DiscoverableParticipantDocumentTypesEnum = "invoice"
-	DiscoverableParticipantDocumentTypesEnumCreditnote           DiscoverableParticipantDocumentTypesEnum = "creditnote"
-	DiscoverableParticipantDocumentTypesEnumInvoiceResponse      DiscoverableParticipantDocumentTypesEnum = "invoice_response"
-	DiscoverableParticipantDocumentTypesEnumOrder                DiscoverableParticipantDocumentTypesEnum = "order"
-	DiscoverableParticipantDocumentTypesEnumOrderResponse        DiscoverableParticipantDocumentTypesEnum = "order_response"
-	DiscoverableParticipantDocumentTypesEnumDespatchNotification DiscoverableParticipantDocumentTypesEnum = "despatch_notification"
-	DiscoverableParticipantDocumentTypesEnumProductCatalogue     DiscoverableParticipantDocumentTypesEnum = "product_catalogue"
+	DiscoverableParticipantDocumentTypesEnumInvoice         DiscoverableParticipantDocumentTypesEnum = "invoice"
+	DiscoverableParticipantDocumentTypesEnumCreditnote      DiscoverableParticipantDocumentTypesEnum = "creditnote"
+	DiscoverableParticipantDocumentTypesEnumInvoiceResponse DiscoverableParticipantDocumentTypesEnum = "invoice_response"
+	DiscoverableParticipantDocumentTypesEnumOrder           DiscoverableParticipantDocumentTypesEnum = "order"
+	DiscoverableParticipantDocumentTypesEnumOrdering        DiscoverableParticipantDocumentTypesEnum = "ordering"
+	DiscoverableParticipantDocumentTypesEnumOrderResponse   DiscoverableParticipantDocumentTypesEnum = "order_response"
 )
 
 func (e *DiscoverableParticipantDocumentTypesEnum) UnmarshalJSON(data []byte) error {
@@ -33,11 +32,9 @@ func (e *DiscoverableParticipantDocumentTypesEnum) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "order":
 		fallthrough
+	case "ordering":
+		fallthrough
 	case "order_response":
-		fallthrough
-	case "despatch_notification":
-		fallthrough
-	case "product_catalogue":
 		*e = DiscoverableParticipantDocumentTypesEnum(s)
 		return nil
 	default:
@@ -47,7 +44,7 @@ func (e *DiscoverableParticipantDocumentTypesEnum) UnmarshalJSON(data []byte) er
 
 // DiscoverableParticipant - A participant to be discovered.
 type DiscoverableParticipant struct {
-	// An array of document types to discover. The default is '["invoice", "creditnote"]'
+	// An array of document types to discover. The default is '["invoice", "creditnote"]'. This is ignored when only checking existence.
 	DocumentTypes []DiscoverableParticipantDocumentTypesEnum `json:"documentTypes,omitempty"`
 	// The actual identifier.
 	Identifier string `json:"identifier"`
@@ -55,6 +52,6 @@ type DiscoverableParticipant struct {
 	MetaScheme *string `json:"metaScheme,omitempty"`
 	// The network to check. Currently only 'peppol' is supported.
 	Network *string `json:"network,omitempty"`
-	// The scheme of the identifier. See <<_peppol_participant_identifier_list>> for a list.
+	// The scheme of the identifier. See <<_receiver_identifiers_list>> for a list.
 	Scheme string `json:"scheme"`
 }

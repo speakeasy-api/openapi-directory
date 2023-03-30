@@ -24,14 +24,16 @@ func String(s string) *string { return &s }
 
 // SDK - Storecove API
 type SDK struct {
-	Administrations     *administrations
-	Discovery           *discovery
-	DocumentSubmissions *documentSubmissions
-	InvoiceSubmissions  *invoiceSubmissions
-	LegalEntities       *legalEntities
-	PeppolIdentifiers   *peppolIdentifiers
-	PurchaseInvoices    *purchaseInvoices
-	WebhookInstances    *webhookInstances
+	AdditionalTaxIdentifiers *additionalTaxIdentifiers
+	Administrations          *administrations
+	Discovery                *discovery
+	DocumentSubmissions      *documentSubmissions
+	InvoiceSubmissions       *invoiceSubmissions
+	LegalEntities            *legalEntities
+	PeppolIdentifiers        *peppolIdentifiers
+	PurchaseInvoices         *purchaseInvoices
+	ReceivedDocuments        *receivedDocuments
+	WebhookInstances         *webhookInstances
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -104,6 +106,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
+	sdk.AdditionalTaxIdentifiers = newAdditionalTaxIdentifiers(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.Administrations = newAdministrations(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -159,6 +170,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.PurchaseInvoices = newPurchaseInvoices(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.ReceivedDocuments = newReceivedDocuments(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

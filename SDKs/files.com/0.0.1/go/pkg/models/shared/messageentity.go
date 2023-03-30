@@ -6,8 +6,8 @@ package shared
 type MessageEntity struct {
 	// Message body.
 	Body *string `json:"body,omitempty"`
-	// List Message Comments
-	Comments *MessageCommentEntity `json:"comments,omitempty"`
+	// Comments.
+	Comments []MessageCommentEntity `json:"comments,omitempty"`
 	// Message ID
 	ID *int `json:"id,omitempty"`
 	// Message subject.

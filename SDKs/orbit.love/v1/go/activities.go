@@ -30,10 +30,10 @@ func newActivities(defaultClient, securityClient HTTPClient, serverURL, language
 	}
 }
 
-// DeleteWorkspaceIDMembersMemberIDActivitiesID - Delete a post activity
-func (s *activities) DeleteWorkspaceIDMembersMemberIDActivitiesID(ctx context.Context, request operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDRequest) (*operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDResponse, error) {
+// DeleteWorkspaceSlugMembersMemberSlugActivitiesID - Delete a post activity
+func (s *activities) DeleteWorkspaceSlugMembersMemberSlugActivitiesID(ctx context.Context, request operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDRequest) (*operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{member_id}/activities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities/{id}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -53,22 +53,24 @@ func (s *activities) DeleteWorkspaceIDMembersMemberIDActivitiesID(ctx context.Co
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDResponse{
+	res := &operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+		fallthrough
+	case httpRes.StatusCode == 403:
 	}
 
 	return res, nil
 }
 
-// GetWorkspaceIDActivities - List activities for a workspace
-func (s *activities) GetWorkspaceIDActivities(ctx context.Context, request operations.GetWorkspaceIDActivitiesRequest) (*operations.GetWorkspaceIDActivitiesResponse, error) {
+// GetWorkspaceSlugActivities - List activities for a workspace
+func (s *activities) GetWorkspaceSlugActivities(ctx context.Context, request operations.GetWorkspaceSlugActivitiesRequest) (*operations.GetWorkspaceSlugActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/activities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activities", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -92,7 +94,7 @@ func (s *activities) GetWorkspaceIDActivities(ctx context.Context, request opera
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspaceIDActivitiesResponse{
+	res := &operations.GetWorkspaceSlugActivitiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -104,10 +106,10 @@ func (s *activities) GetWorkspaceIDActivities(ctx context.Context, request opera
 	return res, nil
 }
 
-// GetWorkspaceIDActivitiesID - Get an activity in the workspace
-func (s *activities) GetWorkspaceIDActivitiesID(ctx context.Context, request operations.GetWorkspaceIDActivitiesIDRequest) (*operations.GetWorkspaceIDActivitiesIDResponse, error) {
+// GetWorkspaceSlugActivitiesID - Get an activity in the workspace
+func (s *activities) GetWorkspaceSlugActivitiesID(ctx context.Context, request operations.GetWorkspaceSlugActivitiesIDRequest) (*operations.GetWorkspaceSlugActivitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/activities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activities/{id}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -127,7 +129,7 @@ func (s *activities) GetWorkspaceIDActivitiesID(ctx context.Context, request ope
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspaceIDActivitiesIDResponse{
+	res := &operations.GetWorkspaceSlugActivitiesIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -139,10 +141,10 @@ func (s *activities) GetWorkspaceIDActivitiesID(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetWorkspaceIDMembersMemberIDActivities - List activities for a member
-func (s *activities) GetWorkspaceIDMembersMemberIDActivities(ctx context.Context, request operations.GetWorkspaceIDMembersMemberIDActivitiesRequest) (*operations.GetWorkspaceIDMembersMemberIDActivitiesResponse, error) {
+// GetWorkspaceSlugMembersMemberSlugActivities - List activities for a member
+func (s *activities) GetWorkspaceSlugMembersMemberSlugActivities(ctx context.Context, request operations.GetWorkspaceSlugMembersMemberSlugActivitiesRequest) (*operations.GetWorkspaceSlugMembersMemberSlugActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{member_id}/activities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -166,7 +168,7 @@ func (s *activities) GetWorkspaceIDMembersMemberIDActivities(ctx context.Context
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspaceIDMembersMemberIDActivitiesResponse{
+	res := &operations.GetWorkspaceSlugMembersMemberSlugActivitiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -178,11 +180,50 @@ func (s *activities) GetWorkspaceIDMembersMemberIDActivities(ctx context.Context
 	return res, nil
 }
 
-// PostWorkspaceIDActivities - Create a Custom or a Content activity for a new or existing member
+// GetWorkspaceSlugOrganizationsOrganizationIDActivities - List member activities in an organization
+func (s *activities) GetWorkspaceSlugOrganizationsOrganizationIDActivities(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsOrganizationIDActivitiesRequest) (*operations.GetWorkspaceSlugOrganizationsOrganizationIDActivitiesResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}/activities", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspaceSlugOrganizationsOrganizationIDActivitiesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	}
+
+	return res, nil
+}
+
+// PostWorkspaceSlugActivities - Create a Custom or a Content activity for a new or existing member
 // Use this method when you know an identity of the member (github, email, twitter, etc.) but not their Orbit ID. Pass fields in the member object to update the member in addition to creating the activity.
-func (s *activities) PostWorkspaceIDActivities(ctx context.Context, request operations.PostWorkspaceIDActivitiesRequest) (*operations.PostWorkspaceIDActivitiesResponse, error) {
+func (s *activities) PostWorkspaceSlugActivities(ctx context.Context, request operations.PostWorkspaceSlugActivitiesRequest) (*operations.PostWorkspaceSlugActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/activities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activities", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -209,7 +250,7 @@ func (s *activities) PostWorkspaceIDActivities(ctx context.Context, request oper
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostWorkspaceIDActivitiesResponse{
+	res := &operations.PostWorkspaceSlugActivitiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -217,16 +258,18 @@ func (s *activities) PostWorkspaceIDActivities(ctx context.Context, request oper
 	switch {
 	case httpRes.StatusCode == 201:
 		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
 	case httpRes.StatusCode == 422:
 	}
 
 	return res, nil
 }
 
-// PostWorkspaceIDMembersMemberIDActivities - Create a Custom or a Content activity for a member
-func (s *activities) PostWorkspaceIDMembersMemberIDActivities(ctx context.Context, request operations.PostWorkspaceIDMembersMemberIDActivitiesRequest) (*operations.PostWorkspaceIDMembersMemberIDActivitiesResponse, error) {
+// PostWorkspaceSlugMembersMemberSlugActivities - Create a Custom or a Content activity for a member
+func (s *activities) PostWorkspaceSlugMembersMemberSlugActivities(ctx context.Context, request operations.PostWorkspaceSlugMembersMemberSlugActivitiesRequest) (*operations.PostWorkspaceSlugMembersMemberSlugActivitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{member_id}/activities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -253,7 +296,7 @@ func (s *activities) PostWorkspaceIDMembersMemberIDActivities(ctx context.Contex
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostWorkspaceIDMembersMemberIDActivitiesResponse{
+	res := &operations.PostWorkspaceSlugMembersMemberSlugActivitiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -261,16 +304,18 @@ func (s *activities) PostWorkspaceIDMembersMemberIDActivities(ctx context.Contex
 	switch {
 	case httpRes.StatusCode == 201:
 		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
 	case httpRes.StatusCode == 422:
 	}
 
 	return res, nil
 }
 
-// PutWorkspaceIDMembersMemberIDActivitiesID - Update a custom activity for a member
-func (s *activities) PutWorkspaceIDMembersMemberIDActivitiesID(ctx context.Context, request operations.PutWorkspaceIDMembersMemberIDActivitiesIDRequest) (*operations.PutWorkspaceIDMembersMemberIDActivitiesIDResponse, error) {
+// PutWorkspaceSlugMembersMemberSlugActivitiesID - Update a custom activity for a member
+func (s *activities) PutWorkspaceSlugMembersMemberSlugActivitiesID(ctx context.Context, request operations.PutWorkspaceSlugMembersMemberSlugActivitiesIDRequest) (*operations.PutWorkspaceSlugMembersMemberSlugActivitiesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{member_id}/activities/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/activities/{id}", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -297,13 +342,15 @@ func (s *activities) PutWorkspaceIDMembersMemberIDActivitiesID(ctx context.Conte
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PutWorkspaceIDMembersMemberIDActivitiesIDResponse{
+	res := &operations.PutWorkspaceSlugMembersMemberSlugActivitiesIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+		fallthrough
+	case httpRes.StatusCode == 403:
 		fallthrough
 	case httpRes.StatusCode == 422:
 	}

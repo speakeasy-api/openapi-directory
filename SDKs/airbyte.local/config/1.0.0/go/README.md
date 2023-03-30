@@ -24,216 +24,54 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.CreateConnectionRequest{
-        Request: shared.ConnectionCreate{
-            DestinationID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
-            Name: "est",
-            NamespaceDefinition: "source",
-            NamespaceFormat: "${SOURCE_NAMESPACE}",
-            OperationIds: []string{
-                "dfc2ddf7-cc78-4ca1-ba92-8fc816742cb7",
-                "39205929-396f-4ea7-996e-b10faaa2352c",
+    req := operations.SaveStatsRequest{
+        Request: shared.SaveStatsRequestBody{
+            AttemptNumber: 548814,
+            JobID: 592845,
+            Stats: shared.AttemptStats{
+                BytesEmitted: 715190,
+                EstimatedBytes: 844266,
+                EstimatedRecords: 602763,
+                RecordsCommitted: 857946,
+                RecordsEmitted: 544883,
+                StateMessagesEmitted: 847252,
             },
-            Prefix: "ipsam",
-            ResourceRequirements: &shared.ResourceRequirements{
-                CPULimit: "est",
-                CPURequest: "commodi",
-                MemoryLimit: "quia",
-                MemoryRequest: "similique",
-            },
-            Schedule: &shared.ConnectionSchedule{
-                TimeUnit: "minutes",
-                Units: 438601,
-            },
-            SourceID: "aff1a3a2-fa94-4677-b925-1aa52c3f5ad0",
-            Status: "active",
-            SyncCatalog: &shared.AirbyteCatalog{
-                Streams: []shared.AirbyteStreamAndConfiguration{
-                    shared.AirbyteStreamAndConfiguration{
-                        Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "quo",
-                            CursorField: []string{
-                                "explicabo",
-                                "aut",
-                                "reiciendis",
-                            },
-                            DestinationSyncMode: "append_dedup",
-                            PrimaryKey: [][]string{
-                                []string{
-                                    "reiciendis",
-                                    "illo",
-                                    "id",
-                                },
-                                []string{
-                                    "quod",
-                                    "sit",
-                                },
-                            },
-                            Selected: false,
-                            SyncMode: "full_refresh",
-                        },
-                        Stream: &shared.AirbyteStream{
-                            DefaultCursorField: []string{
-                                "veniam",
-                                "reiciendis",
-                            },
-                            JSONSchema: map[string]interface{}{
-                                "ea": "exercitationem",
-                            },
-                            Name: "deleniti",
-                            Namespace: "sed",
-                            SourceDefinedCursor: false,
-                            SourceDefinedPrimaryKey: [][]string{
-                                []string{
-                                    "aut",
-                                    "esse",
-                                },
-                                []string{
-                                    "veritatis",
-                                    "numquam",
-                                    "eligendi",
-                                    "error",
-                                },
-                                []string{
-                                    "et",
-                                    "ut",
-                                    "molestias",
-                                },
-                            },
-                            SupportedSyncModes: []shared.SyncModeEnum{
-                                "incremental",
-                                "full_refresh",
-                                "incremental",
-                            },
-                        },
+            StreamStats: []shared.AttemptStreamStats{
+                shared.AttemptStreamStats{
+                    Stats: shared.AttemptStats{
+                        BytesEmitted: 623564,
+                        EstimatedBytes: 645894,
+                        EstimatedRecords: 384382,
+                        RecordsCommitted: 437587,
+                        RecordsEmitted: 297534,
+                        StateMessagesEmitted: 891773,
                     },
-                    shared.AirbyteStreamAndConfiguration{
-                        Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "in",
-                            CursorField: []string{
-                                "non",
-                            },
-                            DestinationSyncMode: "append",
-                            PrimaryKey: [][]string{
-                                []string{
-                                    "libero",
-                                },
-                                []string{
-                                    "magni",
-                                    "est",
-                                    "porro",
-                                    "voluptas",
-                                },
-                            },
-                            Selected: false,
-                            SyncMode: "full_refresh",
-                        },
-                        Stream: &shared.AirbyteStream{
-                            DefaultCursorField: []string{
-                                "sit",
-                                "in",
-                            },
-                            JSONSchema: map[string]interface{}{
-                                "omnis": "voluptatem",
-                                "dolorem": "eum",
-                                "quis": "consequatur",
-                            },
-                            Name: "ratione",
-                            Namespace: "cum",
-                            SourceDefinedCursor: false,
-                            SourceDefinedPrimaryKey: [][]string{
-                                []string{
-                                    "nihil",
-                                    "id",
-                                },
-                                []string{
-                                    "sapiente",
-                                    "et",
-                                },
-                                []string{
-                                    "possimus",
-                                },
-                            },
-                            SupportedSyncModes: []shared.SyncModeEnum{
-                                "full_refresh",
-                                "incremental",
-                                "incremental",
-                            },
-                        },
+                    StreamName: "inventore",
+                    StreamNamespace: "sapiente",
+                },
+                shared.AttemptStreamStats{
+                    Stats: shared.AttemptStats{
+                        BytesEmitted: 272656,
+                        EstimatedBytes: 383441,
+                        EstimatedRecords: 477665,
+                        RecordsCommitted: 791725,
+                        RecordsEmitted: 812169,
+                        StateMessagesEmitted: 528895,
                     },
-                    shared.AirbyteStreamAndConfiguration{
-                        Config: &shared.AirbyteStreamConfiguration{
-                            AliasName: "sunt",
-                            CursorField: []string{
-                                "modi",
-                                "necessitatibus",
-                                "tenetur",
-                            },
-                            DestinationSyncMode: "append_dedup",
-                            PrimaryKey: [][]string{
-                                []string{
-                                    "nulla",
-                                    "reiciendis",
-                                },
-                                []string{
-                                    "fugit",
-                                    "ullam",
-                                    "voluptas",
-                                },
-                            },
-                            Selected: false,
-                            SyncMode: "incremental",
-                        },
-                        Stream: &shared.AirbyteStream{
-                            DefaultCursorField: []string{
-                                "qui",
-                                "cum",
-                            },
-                            JSONSchema: map[string]interface{}{
-                                "magnam": "culpa",
-                                "enim": "aut",
-                                "delectus": "eligendi",
-                                "officia": "est",
-                            },
-                            Name: "distinctio",
-                            Namespace: "et",
-                            SourceDefinedCursor: false,
-                            SourceDefinedPrimaryKey: [][]string{
-                                []string{
-                                    "incidunt",
-                                    "facilis",
-                                    "qui",
-                                    "nihil",
-                                },
-                                []string{
-                                    "id",
-                                    "voluptatum",
-                                    "sit",
-                                },
-                                []string{
-                                    "corporis",
-                                    "porro",
-                                },
-                            },
-                            SupportedSyncModes: []shared.SyncModeEnum{
-                                "full_refresh",
-                                "full_refresh",
-                                "full_refresh",
-                            },
-                        },
-                    },
+                    StreamName: "deleniti",
+                    StreamNamespace: "similique",
                 },
             },
         },
     }
 
     ctx := context.Background()
-    res, err := s.Connection.CreateConnection(ctx, req)
+    res, err := s.Attempt.SaveStats(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.ConnectionRead != nil {
+    if res.InternalOperationResult != nil {
         // handle response
     }
 }
@@ -244,52 +82,82 @@ func main() {
 ## SDK Available Operations
 
 
+### Attempt
+
+* `SaveStats` - For worker to set sync stats of a running attempt.
+* `SaveSyncConfig` - For worker to save the AttemptSyncConfig for an attempt.
+* `SetWorkflowInAttempt` - For worker to register the workflow id in attempt.
+
 ### Connection
 
 * `CreateConnection` - Create a connection between a source and a destination
 * `DeleteConnection` - Delete a connection
 * `GetConnection` - Get a connection
-* `GetState` - Fetch the current state for a connection.
+* `ListAllConnectionsForWorkspace` - Returns all connections for a workspace, including deleted connections.
 * `ListConnectionsForWorkspace` - Returns all connections for a workspace.
 * `ResetConnection` - Reset the data for the connection. Deletes data generated by the connection in the destination. Resets any cursors back to initial state.
+* `SearchConnections` - Search connections
 * `SyncConnection` - Trigger a manual sync of the connection
 * `UpdateConnection` - Update a connection
-
-### Deployment
-
-* `ExportArchive` - Export Airbyte Configuration and Data Archive
-* `ImportArchive` - Import Airbyte Configuration and Data Archive
 
 ### Destination
 
 * `CheckConnectionToDestination` - Check connection to the destination
 * `CheckConnectionToDestinationForUpdate` - Check connection for a proposed update to a destination
+* `CloneDestination` - Clone destination
 * `CreateDestination` - Create a destination
 * `DeleteDestination` - Delete the destination
 * `GetDestination` - Get configured destination
 * `ListDestinationsForWorkspace` - List configured destinations for a workspace
+* `SearchDestinations` - Search destinations
 * `UpdateDestination` - Update a destination
 
 ### DestinationDefinition
 
-* `CreateDestinationDefinition` - Creates a destinationsDefinition
+* `CreateCustomDestinationDefinition` - Creates a custom destinationDefinition for the given workspace
+* `DeleteDestinationDefinition` - Delete a destination definition
 * `GetDestinationDefinition` - Get destinationDefinition
+* `GetDestinationDefinitionForWorkspace` - Get a destinationDefinition that is configured for the given workspace
+* `GrantDestinationDefinitionToWorkspace` - grant a private, non-custom destinationDefinition to a given workspace
 * `ListDestinationDefinitions` - List all the destinationDefinitions the current Airbyte deployment is configured to use
+* `ListDestinationDefinitionsForWorkspace` - List all the destinationDefinitions the given workspace is configured to use
 * `ListLatestDestinationDefinitions` - List the latest destinationDefinitions Airbyte supports
+* `ListPrivateDestinationDefinitions` - List all private, non-custom destinationDefinitions, and for each indicate whether the given workspace has a grant for using the definition. Used by admins to view and modify a given workspace's grants.
+* `RevokeDestinationDefinitionFromWorkspace` - revoke a grant to a private, non-custom destinationDefinition from a given workspace
 * `UpdateDestinationDefinition` - Update destinationDefinition
 
 ### DestinationDefinitionSpecification
 
 * `GetDestinationDefinitionSpecification` - Get specification for a destinationDefinition
 
+### DestinationOauth
+
+* `CompleteDestinationOAuth` - Given a destination def ID generate an access/refresh token etc.
+* `GetDestinationOAuthConsent` - Given a destination connector definition ID, return the URL to the consent screen where to redirect the user to.
+* `SetInstancewideDestinationOauthParams` - Sets instancewide variables to be used for the oauth flow when creating this destination. When set, these variables will be injected into a connector's configuration before any interaction with the connector image itself. This enables running oauth flows with consistent variables e.g: the company's Google Ads developer_token, client_id, and client_secret without the user having to know about these variables.
+
+
 ### Health
 
 * `GetHealthCheck` - Health Check
 
+### Internal
+
+* `CreateOrUpdateState` - Create or update the state for a connection.
+* `GetAttemptNormalizationStatusesForJob` - Get normalization status to determine if we can bypass normalization phase
+* `SaveStats` - For worker to set sync stats of a running attempt.
+* `SaveSyncConfig` - For worker to save the AttemptSyncConfig for an attempt.
+* `SetWorkflowInAttempt` - For worker to register the workflow id in attempt.
+* `WriteDiscoverCatalogResult` - Should only called from worker, to write result from discover activity back to DB.
+
 ### Jobs
 
 * `CancelJob` - Cancels a job
+* `GetAttemptNormalizationStatusesForJob` - Get normalization status to determine if we can bypass normalization phase
+* `GetJobDebugInfo` - Gets all information needed to debug this job
 * `GetJobInfo` - Get information about a job
+* `GetJobInfoLight` - Get information about a job excluding attempt info and logs
+* `GetLastReplicationJob`
 * `ListJobsFor` - Returns recent jobs for a connection. Jobs are returned in descending order by createdAt.
 
 ### Logs
@@ -323,32 +191,60 @@ func main() {
 
 * `CheckConnectionToSource` - Check connection to the source
 * `CheckConnectionToSourceForUpdate` - Check connection for a proposed update to a source
+* `CloneSource` - Clone source
 * `CreateSource` - Create a source
 * `DeleteSource` - Delete a source
 * `DiscoverSchemaForSource` - Discover the schema catalog of the source
+* `GetMostRecentSourceActorCatalog` - Get most recent ActorCatalog for source
 * `GetSource` - Get source
 * `ListSourcesForWorkspace` - List sources for workspace
+* `SearchSources` - Search sources
 * `UpdateSource` - Update a source
+* `WriteDiscoverCatalogResult` - Should only called from worker, to write result from discover activity back to DB.
 
 ### SourceDefinition
 
-* `CreateSourceDefinition` - Creates a sourceDefinition
+* `CreateCustomSourceDefinition` - Creates a custom sourceDefinition for the given workspace
+* `DeleteSourceDefinition` - Delete a source definition
 * `GetSourceDefinition` - Get source
+* `GetSourceDefinitionForWorkspace` - Get a sourceDefinition that is configured for the given workspace
+* `GrantSourceDefinitionToWorkspace` - grant a private, non-custom sourceDefinition to a given workspace
 * `ListLatestSourceDefinitions` - List the latest sourceDefinitions Airbyte supports
+* `ListPrivateSourceDefinitions` - List all private, non-custom sourceDefinitions, and for each indicate whether the given workspace has a grant for using the definition. Used by admins to view and modify a given workspace's grants.
 * `ListSourceDefinitions` - List all the sourceDefinitions the current Airbyte deployment is configured to use
+* `ListSourceDefinitionsForWorkspace` - List all the sourceDefinitions the given workspace is configured to use
+* `RevokeSourceDefinitionFromWorkspace` - revoke a grant to a private, non-custom sourceDefinition from a given workspace
 * `UpdateSourceDefinition` - Update a sourceDefinition
 
 ### SourceDefinitionSpecification
 
 * `GetSourceDefinitionSpecification` - Get specification for a SourceDefinition.
 
+### SourceOauth
+
+* `CompleteSourceOAuth` - Given a source def ID generate an access/refresh token etc.
+* `GetSourceOAuthConsent` - Given a source connector definition ID, return the URL to the consent screen where to redirect the user to.
+* `SetInstancewideSourceOauthParams` - Sets instancewide variables to be used for the oauth flow when creating this source. When set, these variables will be injected into a connector's configuration before any interaction with the connector image itself. This enables running oauth flows with consistent variables e.g: the company's Google Ads developer_token, client_id, and client_secret without the user having to know about these variables.
+
+
+### State
+
+* `CreateOrUpdateState` - Create or update the state for a connection.
+* `GetState` - Fetch the current state for a connection.
+
 ### WebBackend
 
+* `GetStateType` - Fetch the current state type for a connection.
+* `WebBackendCheckUpdates` - Returns a summary of source and destination definitions that could be updated.
 * `WebBackendCreateConnection` - Create a connection
 * `WebBackendGetConnection` - Get a connection
-* `WebBackendListConnectionsForWorkspace` - Returns all connections for a workspace.
-* `WebBackendRecreateDestination` - Recreate a destination
-* `WebBackendRecreateSource` - Recreate a source
+* `WebBackendGetWorkspaceState` - Returns the current state of a workspace
+* `WebBackendListConnectionsForWorkspace` - Returns all non-deleted connections for a workspace.
+* `WebBackendListGeographies` - Returns available geographies can be selected to run data syncs in a particular geography.
+The 'auto' entry indicates that the sync will be automatically assigned to a geography according
+to the platform default behavior. Entries other than 'auto' are two-letter country codes that
+follow the ISO 3166-1 alpha-2 standard.
+
 * `WebBackendUpdateConnection` - Update a connection
 
 ### Workspace
@@ -356,9 +252,12 @@ func main() {
 * `CreateWorkspace` - Creates a workspace
 * `DeleteWorkspace` - Deletes a workspace
 * `GetWorkspace` - Find workspace by ID
+* `GetWorkspaceByConnectionID` - Find workspace by connection id
 * `GetWorkspaceBySlug` - Find workspace by slug
 * `ListWorkspaces` - List all workspaces registered in the current Airbyte deployment
 * `UpdateWorkspace` - Update workspace state
+* `UpdateWorkspaceFeedback` - Update workspace feedback state
+* `UpdateWorkspaceName` - Update workspace name
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

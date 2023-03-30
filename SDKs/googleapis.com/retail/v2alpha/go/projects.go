@@ -251,7 +251,7 @@ func (s *projects) RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalog
 	return res, nil
 }
 
-// RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces - Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the added place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
+// RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces - It is recommended to use the ProductService.AddLocalInventories method instead of ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the added place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
 func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlaces(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{product}:addFulfillmentPlaces", request.PathParams, nil)
@@ -574,7 +574,7 @@ func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsPurge(ctx cont
 	return res, nil
 }
 
-// RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlaces - Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the removed place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
+// RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlaces - It is recommended to use the ProductService.RemoveLocalInventories method instead of ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the removed place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
 func (s *projects) RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlaces(ctx context.Context, request operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesRequest) (*operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{product}:removeFulfillmentPlaces", request.PathParams, nil)
@@ -1035,6 +1035,109 @@ func (s *projects) RetailProjectsLocationsCatalogsList(ctx context.Context, requ
 			}
 
 			res.GoogleCloudRetailV2alphaListCatalogsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLink - Creates a MerchantCenterAccountLink. MerchantCenterAccountLink cannot be set to a different oneof field, if so an INVALID_ARGUMENT is returned.
+func (s *projects) RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLink(ctx context.Context, request operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkRequest) (*operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleLongrunningOperation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleLongrunningOperation = out
+		}
+	}
+
+	return res, nil
+}
+
+// RetailProjectsLocationsCatalogsMerchantCenterAccountLinksList - Lists all MerchantCenterAccountLinks under the specified parent Catalog.
+func (s *projects) RetailProjectsLocationsCatalogsMerchantCenterAccountLinksList(ctx context.Context, request operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListRequest) (*operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{parent}/merchantCenterAccountLinks", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudRetailV2alphaListMerchantCenterAccountLinksResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudRetailV2alphaListMerchantCenterAccountLinksResponse = out
 		}
 	}
 
@@ -2106,7 +2209,7 @@ func (s *projects) RetailProjectsOperationsGet(ctx context.Context, request oper
 	return res, nil
 }
 
-// RetailProjectsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+// RetailProjectsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) RetailProjectsOperationsList(ctx context.Context, request operations.RetailProjectsOperationsListRequest) (*operations.RetailProjectsOperationsListResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v2alpha/{name}/operations", request.PathParams, nil)

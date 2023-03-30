@@ -168,6 +168,7 @@ pkg/models/shared/loggingcomponentconfig.go
 pkg/models/shared/legacyabac.go
 pkg/models/shared/ipallocationpolicy.go
 pkg/models/shared/identityserviceconfig.go
+pkg/models/shared/fleet.go
 pkg/models/shared/databaseencryption.go
 pkg/models/shared/costmanagementconfig.go
 pkg/models/shared/clustertelemetry.go

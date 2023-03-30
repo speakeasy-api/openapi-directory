@@ -42,6 +42,8 @@ const (
 	RoutineLanguageEnumSQL                 RoutineLanguageEnum = "SQL"
 	RoutineLanguageEnumJavascript          RoutineLanguageEnum = "JAVASCRIPT"
 	RoutineLanguageEnumPython              RoutineLanguageEnum = "PYTHON"
+	RoutineLanguageEnumJava                RoutineLanguageEnum = "JAVA"
+	RoutineLanguageEnumScala               RoutineLanguageEnum = "SCALA"
 )
 
 func (e *RoutineLanguageEnum) UnmarshalJSON(data []byte) error {
@@ -57,6 +59,10 @@ func (e *RoutineLanguageEnum) UnmarshalJSON(data []byte) error {
 	case "JAVASCRIPT":
 		fallthrough
 	case "PYTHON":
+		fallthrough
+	case "JAVA":
+		fallthrough
+	case "SCALA":
 		*e = RoutineLanguageEnum(s)
 		return nil
 	default:

@@ -57,6 +57,7 @@ const (
 	DirectoryChromeosdevicesCommandTypeEnumWipeUsers              DirectoryChromeosdevicesCommandTypeEnum = "WIPE_USERS"
 	DirectoryChromeosdevicesCommandTypeEnumRemotePowerwash        DirectoryChromeosdevicesCommandTypeEnum = "REMOTE_POWERWASH"
 	DirectoryChromeosdevicesCommandTypeEnumDeviceStartCrdSession  DirectoryChromeosdevicesCommandTypeEnum = "DEVICE_START_CRD_SESSION"
+	DirectoryChromeosdevicesCommandTypeEnumCaptureLogs            DirectoryChromeosdevicesCommandTypeEnum = "CAPTURE_LOGS"
 )
 
 func (e *DirectoryChromeosdevicesCommandTypeEnum) UnmarshalJSON(data []byte) error {
@@ -78,6 +79,8 @@ func (e *DirectoryChromeosdevicesCommandTypeEnum) UnmarshalJSON(data []byte) err
 	case "REMOTE_POWERWASH":
 		fallthrough
 	case "DEVICE_START_CRD_SESSION":
+		fallthrough
+	case "CAPTURE_LOGS":
 		*e = DirectoryChromeosdevicesCommandTypeEnum(s)
 		return nil
 	default:

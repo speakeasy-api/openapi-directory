@@ -21,7 +21,7 @@ type PostHistoryExportsRequestBody struct {
 	QueryFileID *string `multipartForm:"name=query_file_id"`
 	// Return results that are file actions related to files or folders inside this folder path.
 	QueryFolder *string `multipartForm:"name=query_folder"`
-	// Filter results by this this interface type. Valid values: `web`, `ftp`, `robot`, `jsapi`, `webdesktopapi`, `sftp`, `dav`, `desktop`, `restapi`, `scim`, `office`, `mobile`
+	// Filter results by this this interface type. Valid values: `web`, `ftp`, `robot`, `jsapi`, `webdesktopapi`, `sftp`, `dav`, `desktop`, `restapi`, `scim`, `office`, `mobile`, `as2`, `inbound_email`, `remote`
 	QueryInterface *string `multipartForm:"name=query_interface"`
 	// Filter results by this IP address.
 	QueryIP *string `multipartForm:"name=query_ip"`

@@ -11,7 +11,7 @@ import (
 	"openapi/pkg/utils"
 )
 
-// customFieldSettings - Custom fields are attached to a particular project with the Custom Field Settings resource. This resource both represents the many-to-many join of the Custom Field and Project as well as stores information that is relevant to that particular pairing; for instance, the `is_important` property determines some possible application-specific handling of that custom field.
+// customFieldSettings - Custom fields are attached to a particular project with the custom field settings resource. This resource both represents the many-to-many join of the custom field and project as well as stores information that is relevant to that particular pairing. For instance, the `is_important` property determines some possible application-specific handling of that custom field.
 type customFieldSettings struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient

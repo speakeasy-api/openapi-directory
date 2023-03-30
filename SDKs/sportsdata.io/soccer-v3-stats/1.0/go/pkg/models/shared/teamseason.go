@@ -46,6 +46,7 @@ type TeamSeason struct {
 	Shots                       *float64 `json:"Shots,omitempty"`
 	ShotsOnGoal                 *float64 `json:"ShotsOnGoal,omitempty"`
 	StatID                      *int64   `json:"StatId,omitempty"`
+	Tackles                     *float64 `json:"Tackles,omitempty"`
 	TacklesWon                  *float64 `json:"TacklesWon,omitempty"`
 	Team                        *string  `json:"Team,omitempty"`
 	TeamID                      *int64   `json:"TeamId,omitempty"`

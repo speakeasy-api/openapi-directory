@@ -36,7 +36,7 @@ func newWebhooks(defaultClient, securityClient HTTPClient, serverURL, language, 
 // When messages are acknowledge by carriers, a notification is sent to the specified URL
 func (s *webhooks) WebhooksFetchAll(ctx context.Context, request operations.WebhooksFetchAllRequest) (*operations.WebhooksFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -81,7 +81,7 @@ func (s *webhooks) WebhooksFetchAll(ctx context.Context, request operations.Webh
 // When messages are acknowledge by carriers, a notification is sent to the specified URL
 func (s *webhooks) WebhooksSubscribe(ctx context.Context, request operations.WebhooksSubscribeRequest) (*operations.WebhooksSubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/webhooks", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -136,7 +136,7 @@ func (s *webhooks) WebhooksSubscribe(ctx context.Context, request operations.Web
 // Delete subscription for receiving notifications
 func (s *webhooks) WebhooksUnsubscribe(ctx context.Context, request operations.WebhooksUnsubscribeRequest) (*operations.WebhooksUnsubscribeResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/webhooks/{url}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/webhooks/{url}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {

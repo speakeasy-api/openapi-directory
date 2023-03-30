@@ -12,7 +12,7 @@ type GetScheduleTemplateSecurity struct {
 }
 
 type GetScheduleTemplatePathParams struct {
-	// The ID of the template to retrieve. If you do not know the schedule_template_id, refer to the documentation or use the getScheduleTemplates method to find the available schedule templates.
+	// The ID of the template to retrieve. If you do not know the <strong>schedule_template_id</strong>, refer to the documentation or use the <strong>getScheduleTemplates</strong> method to find the available schedule templates.
 	ScheduleTemplateID string `pathParam:"style=simple,explode=false,name=schedule_template_id"`
 }
 

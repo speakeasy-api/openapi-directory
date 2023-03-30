@@ -3,6 +3,7 @@
 package shared
 
 type Game struct {
+	Attendance                        *int64   `json:"Attendance,omitempty"`
 	AwayPointSpreadPayout             *int64   `json:"AwayPointSpreadPayout,omitempty"`
 	AwayRotationNumber                *int64   `json:"AwayRotationNumber,omitempty"`
 	AwayTeam                          *string  `json:"AwayTeam,omitempty"`
@@ -16,6 +17,7 @@ type Game struct {
 	Bracket                           *string  `json:"Bracket,omitempty"`
 	Channel                           *string  `json:"Channel,omitempty"`
 	DateTime                          *string  `json:"DateTime,omitempty"`
+	DateTimeUTC                       *string  `json:"DateTimeUTC,omitempty"`
 	Day                               *string  `json:"Day,omitempty"`
 	GameEndDateTime                   *string  `json:"GameEndDateTime,omitempty"`
 	GameID                            *int64   `json:"GameID,omitempty"`

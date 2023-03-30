@@ -1,3 +1,4 @@
+accounting.go
 auth.go
 inventory.go
 orders.go
@@ -18,6 +19,7 @@ pkg/utils/requestbody.go
 pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
+pkg/models/operations/getaccounting.go
 pkg/models/operations/postoauthaccesstoken.go
 pkg/models/operations/getinventory.go
 pkg/models/operations/deleteordersid.go
@@ -30,8 +32,8 @@ pkg/models/operations/getreturns.go
 pkg/models/operations/putreturns.go
 pkg/models/operations/gettrack.go
 pkg/models/operations/getusersme.go
-pkg/models/shared/oneordersgetresponses404contentapplication1jsonschema.go
 pkg/models/shared/security.go
+pkg/models/shared/oneordersgetresponses404contentapplication1jsonschema.go
 pkg/models/shared/oneorderspostresponses201contentapplication1jsonschema.go
 pkg/models/shared/oneorderspostresponses201contentapplication1jsonschemapropertiesoriginalconsignee.go
 pkg/models/shared/onereturnsgetresponses200contentapplication1jsonschemapropertiesdataitemspropertiesupdatedby.go

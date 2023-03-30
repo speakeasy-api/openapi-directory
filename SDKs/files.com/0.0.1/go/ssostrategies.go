@@ -164,3 +164,59 @@ func (s *ssoStrategies) GetSsoStrategiesID(ctx context.Context, request operatio
 
 	return res, nil
 }
+
+// PostSsoStrategiesIDSync - Synchronize provisioning data with the SSO remote server.
+// Synchronize provisioning data with the SSO remote server.
+func (s *ssoStrategies) PostSsoStrategiesIDSync(ctx context.Context, request operations.PostSsoStrategiesIDSyncRequest) (*operations.PostSsoStrategiesIDSyncResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/sso_strategies/{id}/sync", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostSsoStrategiesIDSyncResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+		fallthrough
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		fallthrough
+	case httpRes.StatusCode == 409:
+		fallthrough
+	case httpRes.StatusCode == 412:
+		fallthrough
+	case httpRes.StatusCode == 422:
+		fallthrough
+	case httpRes.StatusCode == 423:
+		fallthrough
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}

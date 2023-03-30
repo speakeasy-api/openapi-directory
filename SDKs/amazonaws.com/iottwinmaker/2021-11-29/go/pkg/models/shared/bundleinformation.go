@@ -2,7 +2,7 @@
 
 package shared
 
-// BundleInformation - Information about pricing bundle.
+// BundleInformation - Information about the pricing bundle.
 type BundleInformation struct {
 	BundleNames []string         `json:"bundleNames"`
 	PricingTier *PricingTierEnum `json:"pricingTier,omitempty"`

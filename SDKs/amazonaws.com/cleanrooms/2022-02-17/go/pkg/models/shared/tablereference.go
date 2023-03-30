@@ -2,7 +2,7 @@
 
 package shared
 
-// TableReference - A pointer to the data set that underlies this table. Currently, this can only be an AWS Glue table.
+// TableReference - A pointer to the dataset that underlies this table. Currently, this can only be an AWS Glue table.
 type TableReference struct {
 	Glue *GlueTableReference `json:"glue,omitempty"`
 }

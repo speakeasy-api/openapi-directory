@@ -11,8 +11,9 @@ import (
 type EnumSyntaxEnum string
 
 const (
-	EnumSyntaxEnumSyntaxProto2 EnumSyntaxEnum = "SYNTAX_PROTO2"
-	EnumSyntaxEnumSyntaxProto3 EnumSyntaxEnum = "SYNTAX_PROTO3"
+	EnumSyntaxEnumSyntaxProto2   EnumSyntaxEnum = "SYNTAX_PROTO2"
+	EnumSyntaxEnumSyntaxProto3   EnumSyntaxEnum = "SYNTAX_PROTO3"
+	EnumSyntaxEnumSyntaxEditions EnumSyntaxEnum = "SYNTAX_EDITIONS"
 )
 
 func (e *EnumSyntaxEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *EnumSyntaxEnum) UnmarshalJSON(data []byte) error {
 	case "SYNTAX_PROTO2":
 		fallthrough
 	case "SYNTAX_PROTO3":
+		fallthrough
+	case "SYNTAX_EDITIONS":
 		*e = EnumSyntaxEnum(s)
 		return nil
 	default:
@@ -33,6 +36,8 @@ func (e *EnumSyntaxEnum) UnmarshalJSON(data []byte) error {
 
 // Enum - Enum type definition.
 type Enum struct {
+	// The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+	Edition *string `json:"edition,omitempty"`
 	// Enum value definitions.
 	Enumvalue []EnumValue `json:"enumvalue,omitempty"`
 	// Enum type name.

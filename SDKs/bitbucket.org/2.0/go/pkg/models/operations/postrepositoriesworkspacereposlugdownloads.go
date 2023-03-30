@@ -33,6 +33,6 @@ type PostRepositoriesWorkspaceRepoSlugDownloadsResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// Unexpected error.
+	// Bad Request.
 	Error map[string]interface{}
 }

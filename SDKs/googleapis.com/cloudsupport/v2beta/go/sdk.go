@@ -27,6 +27,7 @@ type SDK struct {
 	CaseClassifications *caseClassifications
 	Cases               *cases
 	Media               *media
+	Projects            *projects
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -107,6 +108,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.Media = newMedia(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Projects = newProjects(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

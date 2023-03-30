@@ -8,7 +8,7 @@ type V1Beta1ConsumerQuotaLimit struct {
 	IsPrecise *bool `json:"isPrecise,omitempty"`
 	// The name of the parent metric of this limit. An example name would be: `compute.googleapis.com/cpus`
 	Metric *string `json:"metric,omitempty"`
-	// The resource name of the quota limit. An example name would be: `services/compute.googleapis.com/projects/123/quotas/metrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion` The resource name is intended to be opaque and should not be parsed for its component strings, since its representation could change in the future.
+	// The resource name of the quota limit. An example name would be: `services/compute.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus/limits/%2Fproject%2Fregion` The resource name is intended to be opaque and should not be parsed for its component strings, since its representation could change in the future.
 	Name *string `json:"name,omitempty"`
 	// Summary of the enforced quota buckets, organized by quota dimension, ordered from least specific to most specific (for example, the global default bucket, with no quota dimensions, will always appear first).
 	QuotaBuckets []V1Beta1QuotaBucket `json:"quotaBuckets,omitempty"`

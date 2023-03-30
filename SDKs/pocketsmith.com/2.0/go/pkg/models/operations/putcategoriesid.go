@@ -3,6 +3,8 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -12,11 +14,46 @@ type PutCategoriesIDPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
+// PutCategoriesIDRequestBodyRefundBehaviourEnum - Set the refund behaviour of the category.
+type PutCategoriesIDRequestBodyRefundBehaviourEnum string
+
+const (
+	PutCategoriesIDRequestBodyRefundBehaviourEnumDebitsAreDeductions PutCategoriesIDRequestBodyRefundBehaviourEnum = "debits_are_deductions"
+	PutCategoriesIDRequestBodyRefundBehaviourEnumCreditsAreRefunds   PutCategoriesIDRequestBodyRefundBehaviourEnum = "credits_are_refunds"
+	PutCategoriesIDRequestBodyRefundBehaviourEnumNull                PutCategoriesIDRequestBodyRefundBehaviourEnum = "null"
+)
+
+func (e *PutCategoriesIDRequestBodyRefundBehaviourEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "debits_are_deductions":
+		fallthrough
+	case "credits_are_refunds":
+		fallthrough
+	case "null":
+		*e = PutCategoriesIDRequestBodyRefundBehaviourEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PutCategoriesIDRequestBodyRefundBehaviourEnum: %s", s)
+	}
+}
+
 type PutCategoriesIDRequestBody struct {
 	// A new CSS-style hex colour for the category.
 	Colour *string `json:"colour,omitempty"`
+	// Set the category as a bill category.
+	IsBill *bool `json:"is_bill,omitempty"`
+	// Set the category as a transfer category.
+	IsTransfer *bool `json:"is_transfer,omitempty"`
 	// The unique identifier of a parent category for the category, making this category a child of that category.
 	ParentID *int64 `json:"parent_id,omitempty"`
+	// Set the refund behaviour of the category.
+	RefundBehaviour *PutCategoriesIDRequestBodyRefundBehaviourEnum `json:"refund_behaviour,omitempty"`
+	// Set the category to be rolled up into its parent category.
+	RollUp *bool `json:"roll_up,omitempty"`
 	// A new title for the category.
 	Title *string `json:"title,omitempty"`
 }

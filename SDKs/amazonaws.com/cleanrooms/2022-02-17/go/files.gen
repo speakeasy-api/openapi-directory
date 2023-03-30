@@ -38,7 +38,10 @@ pkg/models/operations/listmembers.go
 pkg/models/operations/listmemberships.go
 pkg/models/operations/listprotectedqueries.go
 pkg/models/operations/listschemas.go
+pkg/models/operations/listtagsforresource.go
 pkg/models/operations/startprotectedquery.go
+pkg/models/operations/tagresource.go
+pkg/models/operations/untagresource.go
 pkg/models/operations/updatecollaboration.go
 pkg/models/operations/updateconfiguredtable.go
 pkg/models/operations/updateconfiguredtableanalysisrule.go
@@ -119,6 +122,7 @@ pkg/models/shared/listprotectedqueriesoutput.go
 pkg/models/shared/protectedquerysummary.go
 pkg/models/shared/listschemasoutput.go
 pkg/models/shared/schemasummary.go
+pkg/models/shared/listtagsforresourceoutput.go
 pkg/models/shared/startprotectedqueryoutput.go
 pkg/models/shared/updatecollaborationoutput.go
 pkg/models/shared/updateconfiguredtableoutput.go

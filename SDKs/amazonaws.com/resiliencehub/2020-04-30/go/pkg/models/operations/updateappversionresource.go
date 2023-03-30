@@ -19,6 +19,7 @@ type UpdateAppVersionResourceHeaders struct {
 
 // UpdateAppVersionResourceRequestBodyLogicalResourceID - Defines a logical resource identifier.
 type UpdateAppVersionResourceRequestBodyLogicalResourceID struct {
+	EksSourceName       *string `json:"eksSourceName,omitempty"`
 	Identifier          *string `json:"identifier,omitempty"`
 	LogicalStackName    *string `json:"logicalStackName,omitempty"`
 	ResourceGroupName   *string `json:"resourceGroupName,omitempty"`
@@ -36,7 +37,7 @@ type UpdateAppVersionResourceRequestBody struct {
 	AwsAccountID *string `json:"awsAccountId,omitempty"`
 	// The Amazon Web Services region that owns the physical resource.
 	AwsRegion *string `json:"awsRegion,omitempty"`
-	// <p>Indicates if a resource is excluded from an AWS Resilience Hub application.</p> <note> <p>You can exclude only imported resources from an AWS Resilience Hub application.</p> </note>
+	// <p>Indicates if a resource is excluded from an Resilience Hub application.</p> <note> <p>You can exclude only imported resources from an Resilience Hub application.</p> </note>
 	Excluded *bool `json:"excluded,omitempty"`
 	// Defines a logical resource identifier.
 	LogicalResourceID *UpdateAppVersionResourceRequestBodyLogicalResourceID `json:"logicalResourceId,omitempty"`

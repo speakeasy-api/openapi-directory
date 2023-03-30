@@ -38,6 +38,7 @@ pkg/models/operations/cloudidentitygroupsmembershipsgetmembershipgraph.go
 pkg/models/operations/cloudidentitygroupsmembershipslist.go
 pkg/models/operations/cloudidentitygroupsmembershipslookup.go
 pkg/models/operations/cloudidentitygroupsmembershipsmodifymembershiproles.go
+pkg/models/operations/cloudidentitygroupsmembershipssearchdirectgroups.go
 pkg/models/operations/cloudidentitygroupsmembershipssearchtransitivegroups.go
 pkg/models/operations/cloudidentitygroupsmembershipssearchtransitivememberships.go
 pkg/models/operations/cloudidentitygroupssearch.go
@@ -89,6 +90,8 @@ pkg/models/shared/lookupmembershipnameresponse.go
 pkg/models/shared/modifymembershiprolesresponse.go
 pkg/models/shared/modifymembershiprolesrequest.go
 pkg/models/shared/updatemembershiprolesparams.go
+pkg/models/shared/searchdirectgroupsresponse.go
+pkg/models/shared/membershiprelation.go
 pkg/models/shared/searchtransitivegroupsresponse.go
 pkg/models/shared/grouprelation.go
 pkg/models/shared/transitivemembershiprole.go

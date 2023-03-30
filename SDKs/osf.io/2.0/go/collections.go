@@ -32,7 +32,7 @@ func newCollections(defaultClient, securityClient HTTPClient, serverURL, languag
 	}
 }
 
-// CollectionsAddMetadata - Add Metadata or Subjects to a Entitiy in a Collection
+// CollectionsAddMetadata - Add Metadata or Subjects to a Entity in a Collection
 // List of user created metadata for entities within a collection.
 // #### Permissions
 // To edit this collection a user must have collections write permissions
@@ -95,6 +95,8 @@ func (s *collections) CollectionsAddMetadata(ctx context.Context, request operat
 //
 // The `data` key contains an array of nodes ids.
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+// #### Errors
+// This request should never return an error, other then permissions errors.
 func (s *collections) CollectionsCollectedMetadata(ctx context.Context, request operations.CollectionsCollectedMetadataRequest) (*operations.CollectionsCollectedMetadataResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}/subjects/", request.PathParams, nil)
@@ -862,6 +864,8 @@ func (s *collections) CollectionsMetadataDetail(ctx context.Context, request ope
 //
 // The `data` key contains an array of nodes ids.
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+// #### Errors
+// This request should never return an error.
 func (s *collections) CollectionsMetadataRegistrationsDetail(ctx context.Context, request operations.CollectionsMetadataRegistrationsDetailRequest) (*operations.CollectionsMetadataRegistrationsDetailResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/{cgm_id}", request.PathParams, nil)
@@ -905,6 +909,8 @@ func (s *collections) CollectionsMetadataRegistrationsDetail(ctx context.Context
 //
 // The `data` key contains an array of nodes ids.
 // The `links` key contains a dictionary of links that can be used for [pagination](#tag/Pagination).
+// #### Errors
+// This request should never return an error.
 func (s *collections) CollectionsMetadataRegistrationsList(ctx context.Context, request operations.CollectionsMetadataRegistrationsListRequest) (*operations.CollectionsMetadataRegistrationsListResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/collections/{collection_id}/collected_metadata/", request.PathParams, nil)

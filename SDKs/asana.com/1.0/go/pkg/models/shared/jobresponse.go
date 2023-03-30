@@ -7,12 +7,13 @@ import (
 	"fmt"
 )
 
+// JobResponseStatusEnum - The current status of this job. The value is one of: `not_started`, `in_progress`, `succeeded`, or `failed`.
 type JobResponseStatusEnum string
 
 const (
 	JobResponseStatusEnumNotStarted JobResponseStatusEnum = "not_started"
 	JobResponseStatusEnumInProgress JobResponseStatusEnum = "in_progress"
-	JobResponseStatusEnumCompleted  JobResponseStatusEnum = "completed"
+	JobResponseStatusEnumSucceeded  JobResponseStatusEnum = "succeeded"
 	JobResponseStatusEnumFailed     JobResponseStatusEnum = "failed"
 )
 
@@ -26,7 +27,7 @@ func (e *JobResponseStatusEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "in_progress":
 		fallthrough
-	case "completed":
+	case "succeeded":
 		fallthrough
 	case "failed":
 		*e = JobResponseStatusEnum(s)
@@ -39,12 +40,14 @@ func (e *JobResponseStatusEnum) UnmarshalJSON(data []byte) error {
 // JobResponse - A *job* is an object representing a process that handles asynchronous work.
 type JobResponse struct {
 	// Globally unique identifier of the resource, as a string.
-	Gid        *string         `json:"gid,omitempty"`
-	NewProject *ProjectCompact `json:"new_project,omitempty"`
-	NewTask    *TaskCompact    `json:"new_task,omitempty"`
+	Gid                *string                 `json:"gid,omitempty"`
+	NewProject         *ProjectCompact         `json:"new_project,omitempty"`
+	NewProjectTemplate *ProjectTemplateCompact `json:"new_project_template,omitempty"`
+	NewTask            *TaskCompact            `json:"new_task,omitempty"`
 	// The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
 	ResourceSubtype *string `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
-	ResourceType *string                `json:"resource_type,omitempty"`
-	Status       *JobResponseStatusEnum `json:"status,omitempty"`
+	ResourceType *string `json:"resource_type,omitempty"`
+	// The current status of this job. The value is one of: `not_started`, `in_progress`, `succeeded`, or `failed`.
+	Status *JobResponseStatusEnum `json:"status,omitempty"`
 }

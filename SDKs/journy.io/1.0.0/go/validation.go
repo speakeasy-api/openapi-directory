@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-// validation - Endpoints for validating API keys
+// validation - Endpoints for validating API keys.
 type validation struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient

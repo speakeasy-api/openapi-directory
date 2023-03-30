@@ -37,7 +37,7 @@ type RevokePermissionsRequestBodyResource struct {
 type RevokePermissionsRequestBody struct {
 	// The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
 	CatalogID *string `json:"CatalogId,omitempty"`
-	// The permissions revoked to the principal on the resource. For information about permissions, see <a href="https://docs-aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control to Metadata and Data</a>.
+	// The permissions revoked to the principal on the resource. For information about permissions, see <a href="https://docs.aws.amazon.com/lake-formation/latest/dg/security-data-access.html">Security and Access Control to Metadata and Data</a>.
 	Permissions []shared.PermissionEnum `json:"Permissions"`
 	// Indicates a list of permissions for which to revoke the grant option allowing the principal to pass permissions to other principals.
 	PermissionsWithGrantOption []shared.PermissionEnum `json:"PermissionsWithGrantOption,omitempty"`

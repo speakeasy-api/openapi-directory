@@ -6,9 +6,9 @@ package shared
 type TextStream struct {
 	// The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
 	Codec *string `json:"codec,omitempty"`
-	// The name for this particular text stream that will be added to the HLS/DASH manifest.
+	// The name for this particular text stream that will be added to the HLS/DASH manifest. Not supported in MP4 files.
 	DisplayName *string `json:"displayName,omitempty"`
-	// The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+	// The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier. Not supported in MP4 files.
 	LanguageCode *string `json:"languageCode,omitempty"`
 	// The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
 	Mapping []TextMapping `json:"mapping,omitempty"`

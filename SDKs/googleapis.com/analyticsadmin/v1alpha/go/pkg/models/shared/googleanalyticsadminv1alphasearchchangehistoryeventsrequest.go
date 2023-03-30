@@ -56,7 +56,7 @@ const (
 	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumDataStream                            GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "DATA_STREAM"
 	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumAttributionSettings                   GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "ATTRIBUTION_SETTINGS"
 	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumExpandedDataSet                       GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "EXPANDED_DATA_SET"
-	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumChannelGroup                          GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "CHANNEL_GROUP"
+	GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnumEnhancedMeasurementSettings           GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum = "ENHANCED_MEASUREMENT_SETTINGS"
 )
 
 func (e *GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -99,7 +99,7 @@ func (e *GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceType
 		fallthrough
 	case "EXPANDED_DATA_SET":
 		fallthrough
-	case "CHANNEL_GROUP":
+	case "ENHANCED_MEASUREMENT_SETTINGS":
 		*e = GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsRequestResourceTypeEnum(s)
 		return nil
 	default:

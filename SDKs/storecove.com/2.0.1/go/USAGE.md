@@ -19,26 +19,28 @@ func main() {
         }),
     )
 
-    req := operations.CreateAdministrationRequest{
-        PathParams: operations.CreateAdministrationPathParams{
+    req := operations.CreateAdditionalTaxIdentifierRequest{
+        PathParams: operations.CreateAdditionalTaxIdentifierPathParams{
             LegalEntityID: 548814,
         },
-        Request: shared.AdministrationCreate{
-            Email: "Michale_Sporer@yahoo.com",
-            LegalEntityID: 544883,
-            PackageVersion: "peppol_bis_v3",
-            Packaging: "ubl",
-            SenderEmailIdentityID: 623564,
+        Request: shared.AdditionalTaxIdentifierCreate{
+            Country: "Montenegro",
+            County: "porro",
+            Identifier: "nulla",
+            Scheme: "id",
+            Superscheme: "vero",
+            ThirdPartyPassword: "perspiciatis",
+            ThirdPartyUsername: "nulla",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Administrations.CreateAdministration(ctx, req)
+    res, err := s.AdditionalTaxIdentifiers.CreateAdditionalTaxIdentifier(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Administration != nil {
+    if res.AdditionalTaxIdentifier != nil {
         // handle response
     }
 }

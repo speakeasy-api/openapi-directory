@@ -10,6 +10,8 @@ type Namespace struct {
 	Labels map[string]string `json:"labels,omitempty"`
 	// Immutable. The resource name for the namespace in the format `projects/*/locations/*/namespaces/*`.
 	Name *string `json:"name,omitempty"`
+	// Output only. A globally unique identifier (in UUID4 format) for this namespace.
+	UID *string `json:"uid,omitempty"`
 	// Output only. The timestamp when the namespace was last updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
 }

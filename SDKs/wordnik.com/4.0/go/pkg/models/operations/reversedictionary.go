@@ -12,7 +12,7 @@ import (
 type ReverseDictionaryExcludeSourceDictionariesEnum string
 
 const (
-	ReverseDictionaryExcludeSourceDictionariesEnumAhd        ReverseDictionaryExcludeSourceDictionariesEnum = "ahd"
+	ReverseDictionaryExcludeSourceDictionariesEnumAhd5       ReverseDictionaryExcludeSourceDictionariesEnum = "ahd-5"
 	ReverseDictionaryExcludeSourceDictionariesEnumCentury    ReverseDictionaryExcludeSourceDictionariesEnum = "century"
 	ReverseDictionaryExcludeSourceDictionariesEnumCmu        ReverseDictionaryExcludeSourceDictionariesEnum = "cmu"
 	ReverseDictionaryExcludeSourceDictionariesEnumMacmillan  ReverseDictionaryExcludeSourceDictionariesEnum = "macmillan"
@@ -27,7 +27,7 @@ func (e *ReverseDictionaryExcludeSourceDictionariesEnum) UnmarshalJSON(data []by
 		return err
 	}
 	switch s {
-	case "ahd":
+	case "ahd-5":
 		fallthrough
 	case "century":
 		fallthrough
@@ -51,7 +51,7 @@ func (e *ReverseDictionaryExcludeSourceDictionariesEnum) UnmarshalJSON(data []by
 type ReverseDictionaryIncludeSourceDictionariesEnum string
 
 const (
-	ReverseDictionaryIncludeSourceDictionariesEnumAhd        ReverseDictionaryIncludeSourceDictionariesEnum = "ahd"
+	ReverseDictionaryIncludeSourceDictionariesEnumAhd5       ReverseDictionaryIncludeSourceDictionariesEnum = "ahd-5"
 	ReverseDictionaryIncludeSourceDictionariesEnumCentury    ReverseDictionaryIncludeSourceDictionariesEnum = "century"
 	ReverseDictionaryIncludeSourceDictionariesEnumCmu        ReverseDictionaryIncludeSourceDictionariesEnum = "cmu"
 	ReverseDictionaryIncludeSourceDictionariesEnumMacmillan  ReverseDictionaryIncludeSourceDictionariesEnum = "macmillan"
@@ -66,7 +66,7 @@ func (e *ReverseDictionaryIncludeSourceDictionariesEnum) UnmarshalJSON(data []by
 		return err
 	}
 	switch s {
-	case "ahd":
+	case "ahd-5":
 		fallthrough
 	case "century":
 		fallthrough

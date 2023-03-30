@@ -33,6 +33,100 @@ func newOMInvoiceAPIGeneration(defaultClient, securityClient HTTPClient, serverU
 	}
 }
 
+// GenerateBatchOrderInvoice - Generate an Order Invoice batch
+func (s *omInvoiceAPIGeneration) GenerateBatchOrderInvoice(ctx context.Context, request operations.GenerateBatchOrderInvoiceRequest) (*operations.GenerateBatchOrderInvoiceResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v2/user/marketplaces/orders/invoices/generate"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GenerateBatchOrderInvoiceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 202:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.GenerateOrderInvoiceResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GenerateBatchOrderInvoiceResponse = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.GenerateBatchOrderInvoiceErrorResponseItem
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GenerateBatchOrderInvoiceErrorResponseItems = out
+		}
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 409:
+		fallthrough
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ErrorResponseMessage
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorResponseMessage = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.BeezUPCommonErrorResponseMessage
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BeezUPCommonErrorResponseMessage = out
+		}
+	}
+
+	return res, nil
+}
+
 // GenerateOrderInvoice - Generate an Order Invoice
 func (s *omInvoiceAPIGeneration) GenerateOrderInvoice(ctx context.Context, request operations.GenerateOrderInvoiceRequest) (*operations.GenerateOrderInvoiceResponse, error) {
 	baseURL := s.serverURL

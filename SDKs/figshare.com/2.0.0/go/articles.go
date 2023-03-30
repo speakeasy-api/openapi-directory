@@ -85,7 +85,7 @@ func (s *articles) AccountArticleReport(ctx context.Context, request operations.
 }
 
 // AccountArticleReportGenerate - Initiate a new Report
-// Initiate a new Article Report for this Account
+// Initiate a new Article Report for this Account. There is a limit of 1 report per day.
 func (s *articles) AccountArticleReportGenerate(ctx context.Context, request operations.AccountArticleReportGenerateRequest) (*operations.AccountArticleReportGenerateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/account/articles/export"
@@ -124,6 +124,8 @@ func (s *articles) AccountArticleReportGenerate(ctx context.Context, request ope
 
 			res.AccountReport = out
 		}
+	case httpRes.StatusCode == 429:
+		fallthrough
 	case httpRes.StatusCode == 500:
 	}
 
@@ -430,8 +432,78 @@ func (s *articles) ArticleVersionEmbargo(ctx context.Context, request operations
 	return res, nil
 }
 
-// ArticleVersionUpdateThumb - Article Version Update Thumb
-// For a given public article version update the article thumb by choosing one of the associated files
+// ArticleVersionUpdate - Update article version
+// Updating an article version by passing body parameters; request can also be made with the PATCH method.
+func (s *articles) ArticleVersionUpdate(ctx context.Context, request operations.ArticleVersionUpdateRequest) (*operations.ArticleVersionUpdateResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/versions/{version_id}/", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ArticleVersionUpdateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 205:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.LocationWarningsUpdate
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LocationWarningsUpdate = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ErrorMessage
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorMessage = out
+		}
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 500:
+	}
+
+	return res, nil
+}
+
+// ArticleVersionUpdateThumb - Update article version thumbnail
+// For a given public article version update the article thumbnail by choosing one of the associated files
 func (s *articles) ArticleVersionUpdateThumb(ctx context.Context, request operations.ArticleVersionUpdateThumbRequest) (*operations.ArticleVersionUpdateThumbResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/versions/{version_id}/update_thumb", request.PathParams, nil)
@@ -552,6 +624,8 @@ func (s *articles) ArticlesList(ctx context.Context, request operations.Articles
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
 	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
@@ -576,6 +650,8 @@ func (s *articles) ArticlesList(ctx context.Context, request operations.Articles
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out []shared.Article
@@ -613,6 +689,8 @@ func (s *articles) ArticlesSearch(ctx context.Context, request operations.Articl
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
 	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
@@ -633,14 +711,16 @@ func (s *articles) ArticlesSearch(ctx context.Context, request operations.Articl
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.Article
+			var out []shared.ArticleWithProject
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Articles = out
+			res.ArticleWithProjects = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -1339,12 +1419,12 @@ func (s *articles) PrivateArticleCreate(ctx context.Context, request operations.
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Location
+			var out *shared.LocationWarnings
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Location = out
+			res.LocationWarnings = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -1921,12 +2001,12 @@ func (s *articles) PrivateArticlePrivateLinkCreate(ctx context.Context, request 
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Location
+			var out *shared.PrivateLinkResponse
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Location = out
+			res.PrivateLinkResponse = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -2065,7 +2145,7 @@ func (s *articles) PrivateArticlePrivateLinkUpdate(ctx context.Context, request 
 }
 
 // PrivateArticlePublish - Private Article Publish
-// - If the whole article is under embargo, it will not be published immediatly, but when the embargo expires or is lifted.
+// - If the whole article is under embargo, it will not be published immediately, but when the embargo expires or is lifted.
 // - When an article is published, a new public version will be generated. Any further updates to the article will affect the private article data. In order to make these changes publicly visible, an explicit publish operation is needed.
 func (s *articles) PrivateArticlePublish(ctx context.Context, request operations.PrivateArticlePublishRequest) (*operations.PrivateArticlePublishResponse, error) {
 	baseURL := s.serverURL
@@ -2247,8 +2327,80 @@ func (s *articles) PrivateArticleReserveHandle(ctx context.Context, request oper
 	return res, nil
 }
 
+// PrivateArticleResource - Private Article Resource
+// Edit article resource data.
+func (s *articles) PrivateArticleResource(ctx context.Context, request operations.PrivateArticleResourceRequest) (*operations.PrivateArticleResourceResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}/resource", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PrivateArticleResourceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 205:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Location
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Location = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 422:
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ErrorMessage
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorMessage = out
+		}
+	}
+
+	return res, nil
+}
+
 // PrivateArticleUpdate - Update article
-// Updating an article by passing body parameters
+// Updating an article by passing body parameters; request can also be made with the PATCH method.
 func (s *articles) PrivateArticleUpdate(ctx context.Context, request operations.PrivateArticleUpdateRequest) (*operations.PrivateArticleUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/account/articles/{article_id}", request.PathParams, nil)
@@ -2290,6 +2442,15 @@ func (s *articles) PrivateArticleUpdate(ctx context.Context, request operations.
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
 
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.LocationWarningsUpdate
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LocationWarningsUpdate = out
+		}
 	case httpRes.StatusCode == 403:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
@@ -2539,12 +2700,12 @@ func (s *articles) PrivateArticlesSearch(ctx context.Context, request operations
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.Article
+			var out []shared.ArticleWithProject
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Articles = out
+			res.ArticleWithProjects = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough

@@ -8,7 +8,9 @@ import (
 	"net/http"
 )
 
-// GetSitesWithinOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+// GetSitesWithinOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+//
+// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 type GetSitesWithinOutputFormatOutputFormatEnum string
 
 const (
@@ -48,11 +50,13 @@ func (e *GetSitesWithinOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) 
 }
 
 type GetSitesWithinOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 	OutputFormat GetSitesWithinOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 }
 
-// GetSitesWithinOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+// GetSitesWithinOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
 type GetSitesWithinOutputFormatLocationDescriptorEnum string
 
 const (
@@ -88,7 +92,7 @@ func (e *GetSitesWithinOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []
 	}
 }
 
-// GetSitesWithinOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+// GetSitesWithinOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetSitesWithinOutputFormatOutputSrsEnum string
 
 const (
@@ -131,19 +135,19 @@ func (e *GetSitesWithinOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) err
 }
 
 type GetSitesWithinOutputFormatQueryParams struct {
-	// A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#bbox target="_blank">bbox</a>
+	// A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#bbox target="_blank">bbox</a>
 	Bbox string `queryParam:"style=form,explode=true,name=bbox"`
 	// If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
 	Brief *bool `queryParam:"style=form,explode=true,name=brief"`
 	// If true, excludes sites that are units of a parent site
 	ExcludeUnits *bool `queryParam:"style=form,explode=true,name=excludeUnits"`
-	// Describes the nature of the address location. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+	// Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
 	LocationDescriptor *GetSitesWithinOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
 	// The maximum number of search results to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// If true, excludes sites without a civic address
 	OnlyCivic *bool `queryParam:"style=form,explode=true,name=onlyCivic"`
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetSitesWithinOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
 	SetBack *int64 `queryParam:"style=form,explode=true,name=setBack"`

@@ -2,7 +2,7 @@
 
 package shared
 
-// ComponentPropertyGroupRequest - <p/>
+// ComponentPropertyGroupRequest - The component property group request.
 type ComponentPropertyGroupRequest struct {
 	GroupType     *GroupTypeEnum               `json:"groupType,omitempty"`
 	PropertyNames []string                     `json:"propertyNames,omitempty"`

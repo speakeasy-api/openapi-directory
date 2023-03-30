@@ -156,6 +156,12 @@ Ordering is allowed by "id" field.
 * `PaymentsPut` - Updates an existing Payment.
 * `GetV1PaymentsID` - Returns information about a single Payments.
 
+### ProductTypes
+
+* `ProductTypesGet` - Returns a list of global Product Types. Supports OData querying protocol.
+Filtering is forbidden.
+Ordering is allowed by "id" field.
+
 ### Products
 
 * `ProductsDelete` - Removes an existing Product.

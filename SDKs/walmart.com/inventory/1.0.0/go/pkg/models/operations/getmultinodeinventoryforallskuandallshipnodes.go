@@ -16,10 +16,8 @@ type GetMultiNodeInventoryForAllSkuAndAllShipNodesQueryParams struct {
 }
 
 type GetMultiNodeInventoryForAllSkuAndAllShipNodesHeaders struct {
-	// Basic authorization header. Base 64 encodes the Client ID and Client Secret retrieved in step two of the integration steps.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
-	WmConsumerChannelType string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
+	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
 	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
 	// The access token retrieved in the Token API call
@@ -54,8 +52,9 @@ func (e *GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElements
 	}
 }
 
+// GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQty - Quantity of an item that is available to be allocated to orders
 type GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQty struct {
-	// The number available in the inventory
+	// Inventory Count
 	Amount float64 `json:"amount"`
 	// The unit of measurement. Example: 'EACH'
 	Unit GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQtyUnitEnum `json:"unit"`
@@ -82,16 +81,50 @@ func (e *GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElements
 	}
 }
 
+// GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQty - Quantity of an item that is input by the seller
 type GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQty struct {
-	// The number available in the inventory
+	// Inventory Count
 	Amount float64 `json:"amount"`
 	// The unit of measurement. Example: 'EACH'
 	Unit GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQtyUnitEnum `json:"unit"`
 }
 
+// GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnum - The unit of measurement. Example: 'EACH'
+type GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnum string
+
+const (
+	GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnumEach GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnum = "EACH"
+)
+
+func (e *GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "EACH":
+		*e = GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnum: %s", s)
+	}
+}
+
+// GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQty - Quantity that has been ordered by the customers but not yet shipped
+type GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQty struct {
+	// Inventory Count
+	Amount float64 `json:"amount"`
+	// The unit of measurement. Example: 'EACH'
+	Unit GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQtyUnitEnum `json:"unit"`
+}
+
 type GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodes struct {
+	// Quantity of an item that is available to be allocated to orders
 	AvailToSellQty *GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQty `json:"availToSellQty,omitempty"`
-	InputQty       *GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQty       `json:"inputQty,omitempty"`
+	// Quantity of an item that is input by the seller
+	InputQty *GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesInputQty `json:"inputQty,omitempty"`
+	// Quantity that has been ordered by the customers but not yet shipped
+	ReservedQty *GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesReservedQty `json:"reservedQty,omitempty"`
 	// ShipNode Id of the ship node for which the inventory is requested
 	ShipNode *string `json:"shipNode,omitempty"`
 }

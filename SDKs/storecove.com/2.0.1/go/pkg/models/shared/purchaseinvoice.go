@@ -9,6 +9,8 @@ import (
 
 // PurchaseInvoicePurchaseInvoiceDeliveryLocation - The location the goods/services were delivered to.
 type PurchaseInvoicePurchaseInvoiceDeliveryLocation struct {
+	// The building number. Used in SA.
+	BuildingNumber *string `json:"building_number,omitempty"`
 	// Address city.
 	City *string `json:"city,omitempty"`
 	// Address country.
@@ -23,8 +25,12 @@ type PurchaseInvoicePurchaseInvoiceDeliveryLocation struct {
 	Line1 *string `json:"line1,omitempty"`
 	// Address line 2.
 	Line2 *string `json:"line2,omitempty"`
+	// The neighborhood. Used in SA.
+	Neighborhood *string `json:"neighborhood,omitempty"`
 	// The scheme id for the id of the location.
 	SchemeID *string `json:"scheme_id,omitempty"`
+	// The secondary number. Used in SA.
+	SecondaryNumber *string `json:"secondary_number,omitempty"`
 	// Address zip code
 	Zip *string `json:"zip,omitempty"`
 }
@@ -43,6 +49,27 @@ type PurchaseInvoicePurchaseInvoiceDelivery struct {
 	Location *PurchaseInvoicePurchaseInvoiceDeliveryLocation `json:"location,omitempty"`
 	// The party the goods/services were delivered to.
 	Party *PurchaseInvoicePurchaseInvoiceDeliveryPurchaseInvoiceParty `json:"party,omitempty"`
+}
+
+// PurchaseInvoiceDocumentTypeEnum - The type of document. Only "invoice" for now.
+type PurchaseInvoiceDocumentTypeEnum string
+
+const (
+	PurchaseInvoiceDocumentTypeEnumInvoice PurchaseInvoiceDocumentTypeEnum = "invoice"
+)
+
+func (e *PurchaseInvoiceDocumentTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "invoice":
+		*e = PurchaseInvoiceDocumentTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PurchaseInvoiceDocumentTypeEnum: %s", s)
+	}
 }
 
 // PurchaseInvoiceInvoiceTypeEnum - The type of invoice.
@@ -110,6 +137,33 @@ func (e *PurchaseInvoiceInvoiceSourceEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// PurchaseInvoiceDocumentSubtypeEnum - The subtype of document.
+type PurchaseInvoiceDocumentSubtypeEnum string
+
+const (
+	PurchaseInvoiceDocumentSubtypeEnumInvoice           PurchaseInvoiceDocumentSubtypeEnum = "invoice"
+	PurchaseInvoiceDocumentSubtypeEnumCreditnote        PurchaseInvoiceDocumentSubtypeEnum = "creditnote"
+	PurchaseInvoiceDocumentSubtypeEnumCorrectioninvoice PurchaseInvoiceDocumentSubtypeEnum = "correctioninvoice"
+)
+
+func (e *PurchaseInvoiceDocumentSubtypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "invoice":
+		fallthrough
+	case "creditnote":
+		fallthrough
+	case "correctioninvoice":
+		*e = PurchaseInvoiceDocumentSubtypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PurchaseInvoiceDocumentSubtypeEnum: %s", s)
+	}
+}
+
 // PurchaseInvoice - Success
 type PurchaseInvoice struct {
 	Accounting *PurchaseInvoiceAccountingDetails `json:"accounting,omitempty"`
@@ -118,8 +172,6 @@ type PurchaseInvoice struct {
 	// DEPRECATED - Use the allowance_charges array.
 	AllowanceCharge  *float64                         `json:"allowance_charge,omitempty"`
 	AllowanceCharges []PurchaseInvoiceAllowanceCharge `json:"allowance_charges,omitempty"`
-	// The total invoice amount payable, including tax. This is equal to the sum of the invoice_lines (amount_excluding_tax + tax.amount)
-	AmountIncludingTax *float64 `json:"amount_including_tax,omitempty"`
 	// DEPRECATED - Use amount_including_tax.
 	AmountIncludingVat *float64                    `json:"amount_including_vat,omitempty"`
 	Attachments        []PurchaseInvoiceAttachment `json:"attachments,omitempty"`
@@ -131,15 +183,18 @@ type PurchaseInvoice struct {
 	ContractDocumentReference *string `json:"contract_document_reference,omitempty"`
 	// The details of the delivery associated with this invoice.
 	Delivery *PurchaseInvoicePurchaseInvoiceDelivery `json:"delivery,omitempty"`
-	// DEPRECTATED. Use the new atatchments array.
+	// DEPRECATED. Use the new atatchments array.
 	Document *string `json:"document,omitempty"`
 	// The ISO 4217 currency for the invoice.
-	DocumentCurrencyCode *string `json:"document_currency_code,omitempty"`
+	DocumentCurrencyCode *string                        `json:"document_currency_code,omitempty"`
+	DocumentTotals       *PurchaseInvoiceDocumentTotals `json:"document_totals,omitempty"`
+	// The type of document. Only "invoice" for now.
+	DocumentType *PurchaseInvoiceDocumentTypeEnum `json:"document_type,omitempty"`
 	// The date the invoice must be payed by. Format "YYYY-MM-DD".
 	DueDate *string `json:"due_date,omitempty"`
-	// Used for accountants. The id you specified for the organization.
+	// Deprecated. Used for accountants. The id you specified for the organization.
 	ExternalKey *string `json:"external_key,omitempty"`
-	// Used for the embedded portal retrieval service. The external_user_id you provided when the ShopAccount was created.
+	// Deprecated. Used for the embedded portal retrieval service. The external_user_id you provided when the ShopAccount was created.
 	ExternalUserID *string `json:"external_user_id,omitempty"`
 	// The GUID of the invoice
 	GUID         *string                      `json:"guid,omitempty"`
@@ -156,10 +211,6 @@ type PurchaseInvoice struct {
 	Note *string `json:"note,omitempty"`
 	// Reference to the order. Used for matching the invoice to an order.
 	OrderReference *string `json:"order_reference,omitempty"`
-	// The total invoice amount payable including tax. This is equal to amount_including_tax + allowance_charge + payable_rounding_amount. This property is redundant and provided only to make invoice processing easier. You can also choose to only store this property, instead of the underlying fields.
-	PayableAmount *float64 `json:"payable_amount,omitempty"`
-	// The difference between the invoice total and the sum of the invoice lines.
-	PayableRoundingAmount *float64 `json:"payable_rounding_amount,omitempty"`
 	// DEPRECATED - Use the new payment_means_array array.
 	PaymentMeans *PurchaseInvoicePaymentMeansDEPRECATED `json:"payment_means,omitempty"`
 	// The different payment means that can be used to pay the invoice.
@@ -172,14 +223,14 @@ type PurchaseInvoice struct {
 	PeriodEnd *string `json:"period_end,omitempty"`
 	// The start date of the period this invoice relates to. Format "YYYY-MM-DD".
 	PeriodStart *string `json:"period_start,omitempty"`
-	// The amount already paid.
-	PrepaidAmount *float64 `json:"prepaid_amount,omitempty"`
 	// Reference to the project.
 	ProjectReference *string                `json:"project_reference,omitempty"`
 	Sender           *PurchaseInvoiceSender `json:"sender,omitempty"`
 	// The source the invoice was received from.
 	Source *PurchaseInvoiceInvoiceSourceEnum `json:"source,omitempty"`
-	// Whether or not the document image (PDF) was generated by Storecove. If true, it means the invoice was received without any attachments and Storecove generated one for you. If false, the invoice will contain at least one attachment, which was received from the invoice sender..
+	// The subtype of document.
+	SubType *PurchaseInvoiceDocumentSubtypeEnum `json:"sub_type,omitempty"`
+	// Whether or not the document image (PDF) was generated by Storecove. If true, it means the invoice was received without any attachments and Storecove generated one for you. If false, the invoice will contain at least one attachment, which was received from the invoice sender.
 	SystemGeneratedPrimaryImage *bool `json:"system_generated_primary_image,omitempty"`
 	// The date the invoice was issued for tax purposes. In most countries MUST match the issue_date. Format "YYYY-MM-DD".
 	TaxPointDate *string                      `json:"tax_point_date,omitempty"`

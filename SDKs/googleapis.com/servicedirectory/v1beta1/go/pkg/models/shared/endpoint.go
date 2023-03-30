@@ -16,6 +16,8 @@ type Endpoint struct {
 	Network *string `json:"network,omitempty"`
 	// Optional. Service Directory rejects values outside of `[0, 65535]`.
 	Port *int `json:"port,omitempty"`
+	// Output only. A globally unique identifier (in UUID4 format) for this endpoint.
+	UID *string `json:"uid,omitempty"`
 	// Output only. The timestamp when the endpoint was last updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
 }

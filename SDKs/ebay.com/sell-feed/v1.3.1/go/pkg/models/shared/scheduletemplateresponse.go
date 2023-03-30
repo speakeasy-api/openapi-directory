@@ -2,17 +2,17 @@
 
 package shared
 
-// ScheduleTemplateResponse - The type that defines the fields for a paginated result set of available schedule templates. The response consists of 0 or more sequenced pages where each page has 0 or more items.
+// ScheduleTemplateResponse - The type that defines the fields for a paginated result set of available schedule templates. The response consists of 0 or more sequenced <em> pages</em> where each page has 0 or more items.
 type ScheduleTemplateResponse struct {
-	// The feed type of the schedule template. Note: When calling createSchedule and updateSchedule methods you must match the feed type specified by the schedule template (this feedType).
+	// The feed type of the schedule template. <p> <span class="tablenote"><strong>Note:</strong> When calling <strong>createSchedule</strong> and <strong>updateSchedule</strong> methods you must match the feed type specified by the schedule template (this feedType).</span></p>
 	FeedType *string `json:"feedType,omitempty"`
-	// This field specifies how often the schedule is generated. If set to HALF_HOUR or ONE_HOUR, you cannot set a preferredTriggerHour using createSchedule or updateSchedule. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:FrequencyEnum'>eBay API documentation</a>
+	// This field specifies how often the schedule is generated. If set to <code>HALF_HOUR</code> or <code>ONE_HOUR</code>, you cannot set a <strong>preferredTriggerHour</strong> using <strong>createSchedule</strong> or <strong>updateSchedule</strong>. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:FrequencyEnum'>eBay API documentation</a>
 	Frequency *string `json:"frequency,omitempty"`
 	// The template name provided by the template.
 	Name *string `json:"name,omitempty"`
 	// The ID of the template. Use this ID to create a schedule based on the properties of this schedule template.
 	ScheduleTemplateID *string `json:"scheduleTemplateId,omitempty"`
-	// The present status of the template. You cannot create or modify a schedule using a template with an INACTIVE status. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:StatusEnum'>eBay API documentation</a>
+	// The present status of the template. You cannot create or modify a schedule using a template with an <code>INACTIVE</code> status.  For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:StatusEnum'>eBay API documentation</a>
 	Status *string `json:"status,omitempty"`
 	// An array of the configuration supported by this template.
 	SupportedConfigurations []SupportedConfiguration `json:"supportedConfigurations,omitempty"`

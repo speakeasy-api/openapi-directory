@@ -36,7 +36,8 @@ type RemoveDependenciesForTaskRequest struct {
 
 // RemoveDependenciesForTask200ApplicationJSON - Successfully unlinked the dependencies from the specified task.
 type RemoveDependenciesForTask200ApplicationJSON struct {
-	Data []map[string]interface{} `json:"data,omitempty"`
+	// An empty object. Some endpoints do not return an object on success. The success is conveyed through a 2-- status code and returning an empty object.
+	Data map[string]interface{} `json:"data,omitempty"`
 }
 
 type RemoveDependenciesForTaskResponse struct {

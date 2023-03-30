@@ -339,26 +339,6 @@ func (s *uploads) FetchUploadStatuses(ctx context.Context, request operations.Fe
 //
 //	  Requires either imagery:write or platform scope.
 //	</details>
-//	<details><summary> __application/vnd.climate.field.geojson__</summary>
-//
-//	  Allows for the upload of a valid geojson feature (https://tools.ietf.org/html/rfc7946#section-3.2).
-//
-//	  The feature must contain the following entry in the properties section:
-//	    * fieldName
-//
-//	  Optionally, the feature may contain the following entries in the properties properties:
-//	    * farmName - defaults to *default*
-//	    * clientName - defaults to *default*
-//
-//	  Additionally, the type field of the geometry field must one of the following:
-//	    * Polygon
-//	    * MultiPolygon
-//
-//	  The coordinates field of the geometry field must contain no more than 10,000 points.
-//	  The total area of the field may not be larger than 20,000 acres in size.
-//
-//	  Requires either fields:write or platform scope.
-//	</details>
 //	<details><summary> __application/vnd.climate.rx.planting.shp__</summary>
 //
 //	  Allows for the upload of a planting prescription in shapefile format.  The upload must be an archive in the zip format.  It should contain one and only one of each of the following file types:
@@ -369,6 +349,20 @@ func (s *uploads) FetchUploadStatuses(ctx context.Context, request operations.Fe
 //	  All files with the above suffixes must have the same prefix, ie Back40.shp, Back40.shx and Back40.dbf.
 //
 //	  Requires either rx:write or platform scope.
+//	</details>
+//	<details><summary> __application/vnd.climate.prescription.zones.shp__</summary>
+//
+//	  Allows for the upload of a zones prescription in shapefile format.  The upload must be an archive in the zip format.  It should contain one and only one of each of the following file types:
+//	    * .shp
+//	    * .shx
+//	    * .dbf
+//
+//	  All files with the above suffixes must have the same prefix, ie Back40.shp, Back40.shx and Back40.dbf.
+//
+//	  The following metadata entries are required:
+//	    * fieldId - field identifier for prescription zones.
+//
+//	  Requires either rxZones:write or platform scope.
 //	</details>
 //	<details><summary> __application/vnd.climate.modus.xml__</summary>
 //
@@ -411,6 +405,42 @@ func (s *uploads) FetchUploadStatuses(ctx context.Context, request operations.Fe
 //	    * Point
 //
 //	  Requires `imagery:write` scope.
+//	 </details>
+//	 <details><summary> __application/vnd.climate.as-applied.zip__</summary>
+//
+//	  Allows for the upload of a valid application data [supported formats](https://support.climate.com/kt#/kA02A000000DjvOSAS/en_US).
+//
+//	  The following metadata entries are required:
+//	    * fileName - name of the file being uploaded.
+//
+//	  The following metadata entries are optional:
+//	    * resourceOwner - the grower's account email, where dealer/partner wants to upload data. As a prerequisite the grower must share their operation with the dealer/partner.
+//
+//	  Requires `asApplied:write` scope.
+//	 </details>
+//	 <details><summary> __application/vnd.climate.as-planted.zip__</summary>
+//
+//	  Allows for the upload of a valid planting data [supported formats](https://support.climate.com/kt#/kA02A000000DjvOSAS/en_US).
+//
+//	  The following metadata entries are required:
+//	    * fileName - name of the file being uploaded.
+//
+//	  The following metadata entries are optional:
+//	    * resourceOwner - the grower's account email, where dealer/partner wants to upload data. As a prerequisite the grower must share their operation with the dealer/partner.
+//
+//	  Requires `asPlanted:write` scope.
+//	 </details>
+//	 <details><summary> __application/vnd.climate.as-harvested.zip__</summary>
+//
+//	  Allows for the upload of a valid harvest data [supported formats](https://support.climate.com/kt#/kA02A000000DjvOSAS/en_US).
+//
+//	  The following metadata entries are required:
+//	    * fileName - name of the file being uploaded.
+//
+//	  The following metadata entries are optional:
+//	    * resourceOwner - the grower's account email, where dealer/partner wants to upload data. As a prerequisite the grower must share their operation with the dealer/partner.
+//
+//	  Requires `asHarvested:write` scope.
 //	 </details>
 func (s *uploads) PostUpload(ctx context.Context, request operations.PostUploadRequest) (*operations.PostUploadResponse, error) {
 	baseURL := s.serverURL

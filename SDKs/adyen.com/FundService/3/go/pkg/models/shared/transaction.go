@@ -15,7 +15,7 @@ type TransactionTransactionStatusEnum string
 const (
 	TransactionTransactionStatusEnumBalanceNotPaidOutTransfer            TransactionTransactionStatusEnum = "BalanceNotPaidOutTransfer"
 	TransactionTransactionStatusEnumBalancePlatformSweep                 TransactionTransactionStatusEnum = "BalancePlatformSweep"
-	TransactionTransactionStatusEnumBalancePlatfromSweepReturned         TransactionTransactionStatusEnum = "BalancePlatfromSweepReturned"
+	TransactionTransactionStatusEnumBalancePlatformSweepReturned         TransactionTransactionStatusEnum = "BalancePlatformSweepReturned"
 	TransactionTransactionStatusEnumChargeback                           TransactionTransactionStatusEnum = "Chargeback"
 	TransactionTransactionStatusEnumChargebackCorrection                 TransactionTransactionStatusEnum = "ChargebackCorrection"
 	TransactionTransactionStatusEnumChargebackCorrectionReceived         TransactionTransactionStatusEnum = "ChargebackCorrectionReceived"
@@ -70,7 +70,7 @@ func (e *TransactionTransactionStatusEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "BalancePlatformSweep":
 		fallthrough
-	case "BalancePlatfromSweepReturned":
+	case "BalancePlatformSweepReturned":
 		fallthrough
 	case "Chargeback":
 		fallthrough

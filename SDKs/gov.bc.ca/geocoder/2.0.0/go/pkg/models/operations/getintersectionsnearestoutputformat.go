@@ -8,7 +8,9 @@ import (
 	"net/http"
 )
 
-// GetIntersectionsNearestOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+// GetIntersectionsNearestOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+//
+// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 type GetIntersectionsNearestOutputFormatOutputFormatEnum string
 
 const (
@@ -48,11 +50,13 @@ func (e *GetIntersectionsNearestOutputFormatOutputFormatEnum) UnmarshalJSON(data
 }
 
 type GetIntersectionsNearestOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 	OutputFormat GetIntersectionsNearestOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 }
 
-// GetIntersectionsNearestOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+// GetIntersectionsNearestOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetIntersectionsNearestOutputFormatOutputSrsEnum string
 
 const (
@@ -101,7 +105,7 @@ type GetIntersectionsNearestOutputFormatQueryParams struct {
 	MaxDistance *int64 `queryParam:"style=form,explode=true,name=maxDistance"`
 	// The minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.
 	MinDegree *int64 `queryParam:"style=form,explode=true,name=minDegree"`
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetIntersectionsNearestOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// Example: -122.377,50.121  The point (x,y) from which the nearest site will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.
 	Point string `queryParam:"style=form,explode=true,name=point"`

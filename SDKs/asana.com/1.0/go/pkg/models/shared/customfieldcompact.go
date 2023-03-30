@@ -7,6 +7,38 @@ import (
 	"fmt"
 )
 
+// CustomFieldCompactDateValue - *Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.
+type CustomFieldCompactDateValue struct {
+	// A string representing the date in YYYY-MM-DD format.
+	Date *string `json:"date,omitempty"`
+	// A string representing the date in ISO 8601 format. If no time value is selected, the value of `date-time` will be `null`.
+	DateTime *string `json:"date_time,omitempty"`
+}
+
+// CustomFieldCompactEnumValue - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.
+//
+// You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
+//
+// **It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.
+//
+// On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.
+//
+// Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.
+//
+// An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.
+type CustomFieldCompactEnumValue struct {
+	// The color of the enum option. Defaults to ‘none’.
+	Color *string `json:"color,omitempty"`
+	// Whether or not the enum option is a selectable value for the custom field.
+	Enabled *bool `json:"enabled,omitempty"`
+	// Globally unique identifier of the resource, as a string.
+	Gid *string `json:"gid,omitempty"`
+	// The name of the enum option.
+	Name *string `json:"name,omitempty"`
+	// The base type of this resource.
+	ResourceType *string `json:"resource_type,omitempty"`
+}
+
 // CustomFieldCompactResourceSubtypeEnum - The type of the custom field. Must be one of the given values.
 type CustomFieldCompactResourceSubtypeEnum string
 
@@ -15,6 +47,8 @@ const (
 	CustomFieldCompactResourceSubtypeEnumEnum      CustomFieldCompactResourceSubtypeEnum = "enum"
 	CustomFieldCompactResourceSubtypeEnumMultiEnum CustomFieldCompactResourceSubtypeEnum = "multi_enum"
 	CustomFieldCompactResourceSubtypeEnumNumber    CustomFieldCompactResourceSubtypeEnum = "number"
+	CustomFieldCompactResourceSubtypeEnumDate      CustomFieldCompactResourceSubtypeEnum = "date"
+	CustomFieldCompactResourceSubtypeEnumPeople    CustomFieldCompactResourceSubtypeEnum = "people"
 )
 
 func (e *CustomFieldCompactResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
@@ -30,6 +64,10 @@ func (e *CustomFieldCompactResourceSubtypeEnum) UnmarshalJSON(data []byte) error
 	case "multi_enum":
 		fallthrough
 	case "number":
+		fallthrough
+	case "date":
+		fallthrough
+	case "people":
 		*e = CustomFieldCompactResourceSubtypeEnum(s)
 		return nil
 	default:
@@ -71,24 +109,29 @@ func (e *CustomFieldCompactTypeEnum) UnmarshalJSON(data []byte) error {
 //
 // Users in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.
 type CustomFieldCompact struct {
+	// *Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.
+	DateValue *CustomFieldCompactDateValue `json:"date_value,omitempty"`
 	// A string representation for the value of the custom field. Integrations that don't require the underlying type should use this field to read values. Using this field will future-proof an app against new custom field types.
 	DisplayValue *string `json:"display_value,omitempty"`
 	// *Conditional*. Determines if the custom field is enabled or not.
 	Enabled *bool `json:"enabled,omitempty"`
 	// *Conditional*. Only relevant for custom fields of type `enum`. This array specifies the possible values which an `enum` custom field can adopt. To modify the enum options, refer to [working with enum options](/docs/create-an-enum-option).
-	EnumOptions []EnumOption `json:"enum_options,omitempty"`
+	EnumOptions []EnumOption                 `json:"enum_options,omitempty"`
+	EnumValue   *CustomFieldCompactEnumValue `json:"enum_value,omitempty"`
 	// Globally unique identifier of the resource, as a string.
 	Gid *string `json:"gid,omitempty"`
+	// *Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field.
+	MultiEnumValues []EnumOption `json:"multi_enum_values,omitempty"`
 	// The name of the custom field.
 	Name *string `json:"name,omitempty"`
-	// *Conditional*. This number is the value of a number custom field.
+	// *Conditional*. This number is the value of a `number` custom field.
 	NumberValue *float64 `json:"number_value,omitempty"`
 	// The type of the custom field. Must be one of the given values.
 	//
 	ResourceSubtype *CustomFieldCompactResourceSubtypeEnum `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
-	// *Conditional*. This string is the value of a text custom field.
+	// *Conditional*. This string is the value of a `text` custom field.
 	TextValue *string `json:"text_value,omitempty"`
 	// *Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.
 	//

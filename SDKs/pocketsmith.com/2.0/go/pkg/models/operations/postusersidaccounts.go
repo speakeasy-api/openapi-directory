@@ -20,11 +20,13 @@ type PostUsersIDAccountsRequestBodyTypeEnum string
 const (
 	PostUsersIDAccountsRequestBodyTypeEnumBank           PostUsersIDAccountsRequestBodyTypeEnum = "bank"
 	PostUsersIDAccountsRequestBodyTypeEnumCredits        PostUsersIDAccountsRequestBodyTypeEnum = "credits"
+	PostUsersIDAccountsRequestBodyTypeEnumCash           PostUsersIDAccountsRequestBodyTypeEnum = "cash"
 	PostUsersIDAccountsRequestBodyTypeEnumLoans          PostUsersIDAccountsRequestBodyTypeEnum = "loans"
 	PostUsersIDAccountsRequestBodyTypeEnumMortgage       PostUsersIDAccountsRequestBodyTypeEnum = "mortgage"
 	PostUsersIDAccountsRequestBodyTypeEnumStocks         PostUsersIDAccountsRequestBodyTypeEnum = "stocks"
 	PostUsersIDAccountsRequestBodyTypeEnumVehicle        PostUsersIDAccountsRequestBodyTypeEnum = "vehicle"
 	PostUsersIDAccountsRequestBodyTypeEnumProperty       PostUsersIDAccountsRequestBodyTypeEnum = "property"
+	PostUsersIDAccountsRequestBodyTypeEnumInsurance      PostUsersIDAccountsRequestBodyTypeEnum = "insurance"
 	PostUsersIDAccountsRequestBodyTypeEnumOtherAsset     PostUsersIDAccountsRequestBodyTypeEnum = "other_asset"
 	PostUsersIDAccountsRequestBodyTypeEnumOtherLiability PostUsersIDAccountsRequestBodyTypeEnum = "other_liability"
 )
@@ -39,6 +41,8 @@ func (e *PostUsersIDAccountsRequestBodyTypeEnum) UnmarshalJSON(data []byte) erro
 		fallthrough
 	case "credits":
 		fallthrough
+	case "cash":
+		fallthrough
 	case "loans":
 		fallthrough
 	case "mortgage":
@@ -48,6 +52,8 @@ func (e *PostUsersIDAccountsRequestBodyTypeEnum) UnmarshalJSON(data []byte) erro
 	case "vehicle":
 		fallthrough
 	case "property":
+		fallthrough
+	case "insurance":
 		fallthrough
 	case "other_asset":
 		fallthrough

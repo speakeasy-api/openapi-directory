@@ -13,6 +13,7 @@ const (
 	PricingRuleScopeEnumGlobal        PricingRuleScopeEnum = "GLOBAL"
 	PricingRuleScopeEnumService       PricingRuleScopeEnum = "SERVICE"
 	PricingRuleScopeEnumBillingEntity PricingRuleScopeEnum = "BILLING_ENTITY"
+	PricingRuleScopeEnumSku           PricingRuleScopeEnum = "SKU"
 )
 
 func (e *PricingRuleScopeEnum) UnmarshalJSON(data []byte) error {
@@ -26,6 +27,8 @@ func (e *PricingRuleScopeEnum) UnmarshalJSON(data []byte) error {
 	case "SERVICE":
 		fallthrough
 	case "BILLING_ENTITY":
+		fallthrough
+	case "SKU":
 		*e = PricingRuleScopeEnum(s)
 		return nil
 	default:

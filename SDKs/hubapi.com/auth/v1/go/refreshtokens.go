@@ -32,7 +32,7 @@ func newRefreshTokens(defaultClient, securityClient HTTPClient, serverURL, langu
 	}
 }
 
-func (s *refreshTokens) DeleteOauthV1RefreshTokensTokenArchiveRefreshToken(ctx context.Context, request operations.DeleteOauthV1RefreshTokensTokenArchiveRefreshTokenRequest) (*operations.DeleteOauthV1RefreshTokensTokenArchiveRefreshTokenResponse, error) {
+func (s *refreshTokens) DeleteOauthV1RefreshTokensTokenArchive(ctx context.Context, request operations.DeleteOauthV1RefreshTokensTokenArchiveRequest) (*operations.DeleteOauthV1RefreshTokensTokenArchiveResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/oauth/v1/refresh-tokens/{token}", request.PathParams, nil)
 
@@ -54,7 +54,7 @@ func (s *refreshTokens) DeleteOauthV1RefreshTokensTokenArchiveRefreshToken(ctx c
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.DeleteOauthV1RefreshTokensTokenArchiveRefreshTokenResponse{
+	res := &operations.DeleteOauthV1RefreshTokensTokenArchiveResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -75,7 +75,7 @@ func (s *refreshTokens) DeleteOauthV1RefreshTokensTokenArchiveRefreshToken(ctx c
 
 	return res, nil
 }
-func (s *refreshTokens) GetOauthV1RefreshTokensTokenGetRefreshToken(ctx context.Context, request operations.GetOauthV1RefreshTokensTokenGetRefreshTokenRequest) (*operations.GetOauthV1RefreshTokensTokenGetRefreshTokenResponse, error) {
+func (s *refreshTokens) GetOauthV1RefreshTokensTokenGet(ctx context.Context, request operations.GetOauthV1RefreshTokensTokenGetRequest) (*operations.GetOauthV1RefreshTokensTokenGetResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/oauth/v1/refresh-tokens/{token}", request.PathParams, nil)
 
@@ -97,7 +97,7 @@ func (s *refreshTokens) GetOauthV1RefreshTokensTokenGetRefreshToken(ctx context.
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetOauthV1RefreshTokensTokenGetRefreshTokenResponse{
+	res := &operations.GetOauthV1RefreshTokensTokenGetResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

@@ -62,12 +62,19 @@ func main() {
 * `FetchBoundaryByID` - Retrieve a Boundary by ID
 * `UploadBoundary` - Upload a boundary
 
+### Exports
+
+* `FetchExportContentsByID` - Retrieve the binary contents of a processed export request.
+* `FetchExportStatusByID` - Retrieve the status of an Export.
+* `PostExport` - Initiate a new export request.
+
 ### FarmOrganizations
 
 * `FetchFarmOrganizationByTypeAndID` - Retrieve a specific farm organization by organization type and ID
 
 ### Fields
 
+* `FetchAllFields` - Retrieve list of all Fields the user has access to.
 * `FetchFieldByID` - Retrieve a specific Field by ID
 * `FetchFields` - Retrieve list of Fields
 
@@ -83,6 +90,10 @@ func main() {
 * `GetV4LayersScoutingObservationsScoutingObservationID` - Retrieve individual scouting observation
 * `GetV4LayersScoutingObservationsScoutingObservationIDAttachments` - Retrieve attachments associated with a given scouting observation.
 * `GetV4LayersScoutingObservationsScoutingObservationIDAttachmentsAttachmentIDContents` - Retrieve the binary contents of a scouting observation’s attachment.
+
+### Operations
+
+* `FetchOperations` - Retrieve the operations accessible to a a given user.
 
 ### ResourceOwners
 

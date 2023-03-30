@@ -152,7 +152,7 @@ type LineItemInput struct {
 	PartnerCosts []PartnerCost `json:"partnerCosts,omitempty"`
 	// Settings that control how partner revenue is calculated.
 	PartnerRevenueModel *PartnerRevenueModel `json:"partnerRevenueModel,omitempty"`
-	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level.
+	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
 	TargetingExpansion *TargetingExpansionConfig `json:"targetingExpansion,omitempty"`
 	// Settings for YouTube and Partners line items.
 	YoutubeAndPartnersSettings *YoutubeAndPartnersSettingsInput `json:"youtubeAndPartnersSettings,omitempty"`
@@ -208,6 +208,7 @@ const (
 	LineItemWarningMessagesEnumNoValidCreative                              LineItemWarningMessagesEnum = "NO_VALID_CREATIVE"
 	LineItemWarningMessagesEnumParentInsertionOrderPaused                   LineItemWarningMessagesEnum = "PARENT_INSERTION_ORDER_PAUSED"
 	LineItemWarningMessagesEnumParentInsertionOrderExpired                  LineItemWarningMessagesEnum = "PARENT_INSERTION_ORDER_EXPIRED"
+	LineItemWarningMessagesEnumDeprecatedFirstPartyAudienceExclusion        LineItemWarningMessagesEnum = "DEPRECATED_FIRST_PARTY_AUDIENCE_EXCLUSION"
 )
 
 func (e *LineItemWarningMessagesEnum) UnmarshalJSON(data []byte) error {
@@ -237,6 +238,8 @@ func (e *LineItemWarningMessagesEnum) UnmarshalJSON(data []byte) error {
 	case "PARENT_INSERTION_ORDER_PAUSED":
 		fallthrough
 	case "PARENT_INSERTION_ORDER_EXPIRED":
+		fallthrough
+	case "DEPRECATED_FIRST_PARTY_AUDIENCE_EXCLUSION":
 		*e = LineItemWarningMessagesEnum(s)
 		return nil
 	default:
@@ -288,7 +291,7 @@ type LineItem struct {
 	PartnerRevenueModel *PartnerRevenueModel `json:"partnerRevenueModel,omitempty"`
 	// Output only. The reservation type of the line item.
 	ReservationType *LineItemReservationTypeEnum `json:"reservationType,omitempty"`
-	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level.
+	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
 	TargetingExpansion *TargetingExpansionConfig `json:"targetingExpansion,omitempty"`
 	// Output only. The timestamp when the line item was last updated. Assigned by the system.
 	UpdateTime *string `json:"updateTime,omitempty"`

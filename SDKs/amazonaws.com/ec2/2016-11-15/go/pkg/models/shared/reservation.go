@@ -91,12 +91,13 @@ type ReservationInstancesBlockDeviceMappings struct {
 	Ebs        *ReservationInstancesBlockDeviceMappingsEbs
 }
 
-// ReservationInstancesBootModeEnum - The boot mode of the instance. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User Guide</i>.
+// ReservationInstancesBootModeEnum - <p>The boot mode that was specified by the AMI. If the value is <code>uefi-preferred</code>, the AMI supports both UEFI and Legacy BIOS. The <code>currentInstanceBootMode</code> parameter is the boot mode that is used to boot the instance at launch or start.</p> <note> <p>The operating system contained in the AMI must be configured to support the specified boot mode.</p> </note> <p>For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User Guide</i>.</p>
 type ReservationInstancesBootModeEnum string
 
 const (
-	ReservationInstancesBootModeEnumLegacyBios ReservationInstancesBootModeEnum = "legacy-bios"
-	ReservationInstancesBootModeEnumUefi       ReservationInstancesBootModeEnum = "uefi"
+	ReservationInstancesBootModeEnumLegacyBios    ReservationInstancesBootModeEnum = "legacy-bios"
+	ReservationInstancesBootModeEnumUefi          ReservationInstancesBootModeEnum = "uefi"
+	ReservationInstancesBootModeEnumUefiPreferred ReservationInstancesBootModeEnum = "uefi-preferred"
 )
 
 func (e *ReservationInstancesBootModeEnum) UnmarshalJSON(data []byte) error {
@@ -108,6 +109,8 @@ func (e *ReservationInstancesBootModeEnum) UnmarshalJSON(data []byte) error {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
+		fallthrough
+	case "uefi-preferred":
 		*e = ReservationInstancesBootModeEnum(s)
 		return nil
 	default:
@@ -155,6 +158,30 @@ type ReservationInstancesCapacityReservationSpecification struct {
 type ReservationInstancesCPUOptions struct {
 	CoreCount      *int64
 	ThreadsPerCore *int64
+}
+
+// ReservationInstancesCurrentInstanceBootModeEnum - The boot mode that is used to boot the instance at launch or start. For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ami-boot.html">Boot modes</a> in the <i>Amazon EC2 User Guide</i>.
+type ReservationInstancesCurrentInstanceBootModeEnum string
+
+const (
+	ReservationInstancesCurrentInstanceBootModeEnumLegacyBios ReservationInstancesCurrentInstanceBootModeEnum = "legacy-bios"
+	ReservationInstancesCurrentInstanceBootModeEnumUefi       ReservationInstancesCurrentInstanceBootModeEnum = "uefi"
+)
+
+func (e *ReservationInstancesCurrentInstanceBootModeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "legacy-bios":
+		fallthrough
+	case "uefi":
+		*e = ReservationInstancesCurrentInstanceBootModeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ReservationInstancesCurrentInstanceBootModeEnum: %s", s)
+	}
 }
 
 // ReservationInstancesElasticGpuAssociations - Describes the association between an instance and an Elastic Graphics accelerator.
@@ -860,6 +887,25 @@ const (
 	ReservationInstancesInstanceTypeEnumR6idn16xlarge   ReservationInstancesInstanceTypeEnum = "r6idn.16xlarge"
 	ReservationInstancesInstanceTypeEnumR6idn24xlarge   ReservationInstancesInstanceTypeEnum = "r6idn.24xlarge"
 	ReservationInstancesInstanceTypeEnumR6idn32xlarge   ReservationInstancesInstanceTypeEnum = "r6idn.32xlarge"
+	ReservationInstancesInstanceTypeEnumC7gMetal        ReservationInstancesInstanceTypeEnum = "c7g.metal"
+	ReservationInstancesInstanceTypeEnumM7gMedium       ReservationInstancesInstanceTypeEnum = "m7g.medium"
+	ReservationInstancesInstanceTypeEnumM7gLarge        ReservationInstancesInstanceTypeEnum = "m7g.large"
+	ReservationInstancesInstanceTypeEnumM7gXlarge       ReservationInstancesInstanceTypeEnum = "m7g.xlarge"
+	ReservationInstancesInstanceTypeEnumM7g2xlarge      ReservationInstancesInstanceTypeEnum = "m7g.2xlarge"
+	ReservationInstancesInstanceTypeEnumM7g4xlarge      ReservationInstancesInstanceTypeEnum = "m7g.4xlarge"
+	ReservationInstancesInstanceTypeEnumM7g8xlarge      ReservationInstancesInstanceTypeEnum = "m7g.8xlarge"
+	ReservationInstancesInstanceTypeEnumM7g12xlarge     ReservationInstancesInstanceTypeEnum = "m7g.12xlarge"
+	ReservationInstancesInstanceTypeEnumM7g16xlarge     ReservationInstancesInstanceTypeEnum = "m7g.16xlarge"
+	ReservationInstancesInstanceTypeEnumM7gMetal        ReservationInstancesInstanceTypeEnum = "m7g.metal"
+	ReservationInstancesInstanceTypeEnumR7gMedium       ReservationInstancesInstanceTypeEnum = "r7g.medium"
+	ReservationInstancesInstanceTypeEnumR7gLarge        ReservationInstancesInstanceTypeEnum = "r7g.large"
+	ReservationInstancesInstanceTypeEnumR7gXlarge       ReservationInstancesInstanceTypeEnum = "r7g.xlarge"
+	ReservationInstancesInstanceTypeEnumR7g2xlarge      ReservationInstancesInstanceTypeEnum = "r7g.2xlarge"
+	ReservationInstancesInstanceTypeEnumR7g4xlarge      ReservationInstancesInstanceTypeEnum = "r7g.4xlarge"
+	ReservationInstancesInstanceTypeEnumR7g8xlarge      ReservationInstancesInstanceTypeEnum = "r7g.8xlarge"
+	ReservationInstancesInstanceTypeEnumR7g12xlarge     ReservationInstancesInstanceTypeEnum = "r7g.12xlarge"
+	ReservationInstancesInstanceTypeEnumR7g16xlarge     ReservationInstancesInstanceTypeEnum = "r7g.16xlarge"
+	ReservationInstancesInstanceTypeEnumR7gMetal        ReservationInstancesInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *ReservationInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -2105,6 +2151,44 @@ func (e *ReservationInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) error 
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = ReservationInstancesInstanceTypeEnum(s)
 		return nil
 	default:
@@ -2693,6 +2777,7 @@ type ReservationInstances struct {
 	CapacityReservationSpecification        *ReservationInstancesCapacityReservationSpecification
 	ClientToken                             *string
 	CPUOptions                              *ReservationInstancesCPUOptions
+	CurrentInstanceBootMode                 *ReservationInstancesCurrentInstanceBootModeEnum
 	EbsOptimized                            *bool
 	ElasticGpuAssociations                  []ReservationInstancesElasticGpuAssociations
 	ElasticInferenceAcceleratorAssociations []ReservationInstancesElasticInferenceAcceleratorAssociations

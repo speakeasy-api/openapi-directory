@@ -35,6 +35,8 @@ func (e *LegalEntityTypeEnum) UnmarshalJSON(data []byte) error {
 
 // LegalEntity - OK - the request has succeeded.
 type LegalEntity struct {
+	// Contains key-value pairs that specify the actions that the legal entity can do in your platform.The key is a capability required for your integration. For example, **issueCard** for Issuing.The value is an object containing the settings for the capability.
+	Capabilities map[string]LegalEntityCapability `json:"capabilities,omitempty"`
 	// List of documents uploaded for the legal entity.
 	Documents []EntityReference `json:"documents,omitempty"`
 	// List of legal entities associated with the current legal entity.
@@ -46,10 +48,10 @@ type LegalEntity struct {
 	Organization *Organization `json:"organization,omitempty"`
 	// Your reference for the legal entity, maximum 150 characters.
 	Reference *string `json:"reference,omitempty"`
-	// List of transfer instruments owned by the legal entity.
-	TransferInstruments []EntityReference `json:"transferInstruments,omitempty"`
+	// List of transfer instruments that the legal entity owns.
+	TransferInstruments []TransferInstrumentReference `json:"transferInstruments,omitempty"`
 	// The type of legal entity.
 	//
 	//  Possible values: **individual** or **organization**
-	Type LegalEntityTypeEnum `json:"type"`
+	Type *LegalEntityTypeEnum `json:"type,omitempty"`
 }

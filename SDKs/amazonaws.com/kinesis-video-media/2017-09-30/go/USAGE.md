@@ -34,7 +34,7 @@ func main() {
                 AfterFragmentNumber: "nulla",
                 ContinuationToken: "nihil",
                 StartSelectorType: "NOW",
-                StartTimestamp: "2022-08-05T18:29:55.818Z",
+                StartTimestamp: "2022-08-06T05:55:53.567Z",
             },
             StreamARN: "eum",
             StreamName: "iusto",

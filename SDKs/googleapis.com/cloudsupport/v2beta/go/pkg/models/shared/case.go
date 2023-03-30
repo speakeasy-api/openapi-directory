@@ -79,6 +79,34 @@ func (e *CaseSeverityEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// CaseInput - A support case.
+type CaseInput struct {
+	// A classification object with a product type and value.
+	Classification *CaseClassification `json:"classification,omitempty"`
+	// An object containing information about the effective user and authenticated principal responsible for an action.
+	Creator *ActorInput `json:"creator,omitempty"`
+	// A broad description of the issue.
+	Description *string `json:"description,omitempty"`
+	// The short summary of the issue reported in this case.
+	DisplayName *string `json:"displayName,omitempty"`
+	// Whether the case is currently escalated.
+	Escalated *bool `json:"escalated,omitempty"`
+	// The language the user has requested to receive support in. This should be a BCP 47 language code (e.g., `"en"`, `"zh-CN"`, `"zh-TW"`, `"ja"`, `"ko"`). If no language or an unsupported language is specified, this field defaults to English (en). Language selection during case creation may affect your available support options. For a list of supported languages and their support working hours, see: https://cloud.google.com/support/docs/language-working-hours
+	LanguageCode *string `json:"languageCode,omitempty"`
+	// The resource name for the case.
+	Name *string `json:"name,omitempty"`
+	// The priority of this case. If this is set, do not set severity.
+	Priority *CasePriorityEnum `json:"priority,omitempty"`
+	// The severity of this case. Deprecated. Use priority instead.
+	Severity *CaseSeverityEnum `json:"severity,omitempty"`
+	// The email addresses to receive updates on this case.
+	SubscriberEmailAddresses []string `json:"subscriberEmailAddresses,omitempty"`
+	// Whether this case was created for internal API testing and should not be acted on by the support team.
+	TestCase *bool `json:"testCase,omitempty"`
+	// The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
+	TimeZone *string `json:"timeZone,omitempty"`
+}
+
 // CaseStateEnum - Output only. The current status of the support case.
 type CaseStateEnum string
 
@@ -147,32 +175,4 @@ type Case struct {
 	TimeZone *string `json:"timeZone,omitempty"`
 	// Output only. The time this case was last updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
-}
-
-// CaseInput - A support case.
-type CaseInput struct {
-	// A classification object with a product type and value.
-	Classification *CaseClassification `json:"classification,omitempty"`
-	// An object containing information about the effective user and authenticated principal responsible for an action.
-	Creator *ActorInput `json:"creator,omitempty"`
-	// A broad description of the issue.
-	Description *string `json:"description,omitempty"`
-	// The short summary of the issue reported in this case.
-	DisplayName *string `json:"displayName,omitempty"`
-	// Whether the case is currently escalated.
-	Escalated *bool `json:"escalated,omitempty"`
-	// The language the user has requested to receive support in. This should be a BCP 47 language code (e.g., `"en"`, `"zh-CN"`, `"zh-TW"`, `"ja"`, `"ko"`). If no language or an unsupported language is specified, this field defaults to English (en). Language selection during case creation may affect your available support options. For a list of supported languages and their support working hours, see: https://cloud.google.com/support/docs/language-working-hours
-	LanguageCode *string `json:"languageCode,omitempty"`
-	// The resource name for the case.
-	Name *string `json:"name,omitempty"`
-	// The priority of this case. If this is set, do not set severity.
-	Priority *CasePriorityEnum `json:"priority,omitempty"`
-	// The severity of this case. Deprecated. Use priority instead.
-	Severity *CaseSeverityEnum `json:"severity,omitempty"`
-	// The email addresses to receive updates on this case.
-	SubscriberEmailAddresses []string `json:"subscriberEmailAddresses,omitempty"`
-	// Whether this case was created for internal API testing and should not be acted on by the support team.
-	TestCase *bool `json:"testCase,omitempty"`
-	// The timezone of the user who created the support case. It should be in a format IANA recognizes: https://www.iana.org/time-zones. There is no additional validation done by the API.
-	TimeZone *string `json:"timeZone,omitempty"`
 }

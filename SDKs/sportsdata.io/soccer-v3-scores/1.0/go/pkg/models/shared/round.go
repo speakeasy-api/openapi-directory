@@ -3,14 +3,18 @@
 package shared
 
 type Round struct {
-	CurrentRound *bool   `json:"CurrentRound,omitempty"`
-	CurrentWeek  *int64  `json:"CurrentWeek,omitempty"`
-	EndDate      *string `json:"EndDate,omitempty"`
-	Name         *string `json:"Name,omitempty"`
-	RoundID      *int64  `json:"RoundId,omitempty"`
-	Season       *int64  `json:"Season,omitempty"`
-	SeasonID     *int64  `json:"SeasonId,omitempty"`
-	SeasonType   *int64  `json:"SeasonType,omitempty"`
-	StartDate    *string `json:"StartDate,omitempty"`
-	Type         *string `json:"Type,omitempty"`
+	CurrentRound  *bool          `json:"CurrentRound,omitempty"`
+	CurrentWeek   *int64         `json:"CurrentWeek,omitempty"`
+	EndDate       *string        `json:"EndDate,omitempty"`
+	Games         []Game         `json:"Games,omitempty"`
+	Name          *string        `json:"Name,omitempty"`
+	PlayerSeasons []PlayerSeason `json:"PlayerSeasons,omitempty"`
+	RoundID       *int64         `json:"RoundId,omitempty"`
+	Season        *int64         `json:"Season,omitempty"`
+	SeasonID      *int64         `json:"SeasonId,omitempty"`
+	SeasonType    *int64         `json:"SeasonType,omitempty"`
+	Standings     []Standing     `json:"Standings,omitempty"`
+	StartDate     *string        `json:"StartDate,omitempty"`
+	TeamSeasons   []TeamSeason   `json:"TeamSeasons,omitempty"`
+	Type          *string        `json:"Type,omitempty"`
 }

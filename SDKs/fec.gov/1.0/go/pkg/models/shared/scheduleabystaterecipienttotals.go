@@ -8,7 +8,7 @@ type ScheduleAByStateRecipientTotals struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -27,7 +27,7 @@ type ScheduleAByStateRecipientTotals struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential

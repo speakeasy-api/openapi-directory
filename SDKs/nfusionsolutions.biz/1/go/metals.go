@@ -10,6 +10,7 @@ import (
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
+	"strings"
 )
 
 type metals struct {
@@ -32,16 +33,16 @@ func newMetals(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
-// GetAPIVVersionMetalsBenchmarkHistory - Get historical benchmark prices for requested metals
+// MetalsBenchmarkHistoryGET - Get historical benchmark prices for requested metals
 // Historical OHLC data for the specified period and interval size
 //
 // The combination of the interval parameter and start and end dates can result in results
 // being truncated to conform to result size limits. See comments on interval parameter for details on valid interval values.
 //
 // The historicalfx flag is used to determine whether to apply today's fx rates to a historical period, or to apply the historical rates from that same time frame.
-func (s *metals) GetAPIVVersionMetalsBenchmarkHistory(ctx context.Context, request operations.GetAPIVVersionMetalsBenchmarkHistoryRequest) (*operations.GetAPIVVersionMetalsBenchmarkHistoryResponse, error) {
+func (s *metals) MetalsBenchmarkHistoryGET(ctx context.Context, request operations.MetalsBenchmarkHistoryGETRequest) (*operations.MetalsBenchmarkHistoryGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/benchmark/history", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/benchmark/history"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -52,7 +53,7 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkHistory(ctx context.Context, reque
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -65,7 +66,7 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkHistory(ctx context.Context, reque
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionMetalsBenchmarkHistoryResponse{
+	res := &operations.MetalsBenchmarkHistoryGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -91,32 +92,16 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkHistory(ctx context.Context, reque
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionMetalsBenchmarkSummary - Get latest Benchmark prices for requested metals
+// MetalsBenchmarkSummaryGET - Get latest Benchmark prices for requested metals
 // Benchmark price information
-func (s *metals) GetAPIVVersionMetalsBenchmarkSummary(ctx context.Context, request operations.GetAPIVVersionMetalsBenchmarkSummaryRequest) (*operations.GetAPIVVersionMetalsBenchmarkSummaryResponse, error) {
+func (s *metals) MetalsBenchmarkSummaryGET(ctx context.Context, request operations.MetalsBenchmarkSummaryGETRequest) (*operations.MetalsBenchmarkSummaryGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/benchmark/summary", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/benchmark/summary"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -127,7 +112,7 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkSummary(ctx context.Context, reque
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -140,7 +125,7 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkSummary(ctx context.Context, reque
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionMetalsBenchmarkSummaryResponse{
+	res := &operations.MetalsBenchmarkSummaryGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -166,31 +151,15 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkSummary(ctx context.Context, reque
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionMetalsBenchmarkSupported - Get list of symbols supported by the benchmark endpoints
-func (s *metals) GetAPIVVersionMetalsBenchmarkSupported(ctx context.Context, request operations.GetAPIVVersionMetalsBenchmarkSupportedRequest) (*operations.GetAPIVVersionMetalsBenchmarkSupportedResponse, error) {
+// MetalsBenchmarkSupportedMetalsGET - Get list of symbols supported by the benchmark endpoints
+func (s *metals) MetalsBenchmarkSupportedMetalsGET(ctx context.Context, request operations.MetalsBenchmarkSupportedMetalsGETRequest) (*operations.MetalsBenchmarkSupportedMetalsGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/benchmark/supported", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/benchmark/supported"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -201,7 +170,7 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkSupported(ctx context.Context, req
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,7 +183,7 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkSupported(ctx context.Context, req
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionMetalsBenchmarkSupportedResponse{
+	res := &operations.MetalsBenchmarkSupportedMetalsGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -228,7 +197,7 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkSupported(ctx context.Context, req
 				return nil, err
 			}
 
-			res.GetAPIVVersionMetalsBenchmarkSupported200ApplicationJSONStrings = out
+			res.MetalsBenchmarkSupportedMetalsGET200ApplicationJSONStrings = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -240,7 +209,54 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkSupported(ctx context.Context, req
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
+	}
+
+	return res, nil
+}
+
+// MetalsSpotAnnualHistoricalPerformanceGET - Get Historical Annual Performance for requested metals
+// Annual Historical Performance information
+func (s *metals) MetalsSpotAnnualHistoricalPerformanceGET(ctx context.Context, request operations.MetalsSpotAnnualHistoricalPerformanceGETRequest) (*operations.MetalsSpotAnnualHistoricalPerformanceGETResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/spot/performance/annual"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.MetalsSpotAnnualHistoricalPerformanceGETResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
 		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.IntervalCollectionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.IntervalCollectionResponses = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -248,29 +264,84 @@ func (s *metals) GetAPIVVersionMetalsBenchmarkSupported(ctx context.Context, req
 			}
 
 			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
 		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionMetalsSpotHistory - Get historical Spot prices for requested metals
+// MetalsSpotHistoricalPerformanceGET - Get Historical Performance for requested metals
+// Historical Performance information
+func (s *metals) MetalsSpotHistoricalPerformanceGET(ctx context.Context, request operations.MetalsSpotHistoricalPerformanceGETRequest) (*operations.MetalsSpotHistoricalPerformanceGETResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/spot/performance"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.MetalsSpotHistoricalPerformanceGETResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.IntervalCollectionResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.IntervalCollectionResponses = out
+		case utils.MatchContentType(contentType, `application/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+	}
+
+	return res, nil
+}
+
+// MetalsSpotHistoryGET - Get historical Spot prices for requested metals
 // Historical OHLC data for the specified period and interval size
 //
 // The combination of the interval parameter and start and end dates can result in results
 // being truncated to conform to result size limits. See comments on interval parameter for details on valid interval values.
 //
 // The historicalfx flag is used to determine whether to apply today's fx rates to a historical period, or to apply the historical rates from that same time frame.
-func (s *metals) GetAPIVVersionMetalsSpotHistory(ctx context.Context, request operations.GetAPIVVersionMetalsSpotHistoryRequest) (*operations.GetAPIVVersionMetalsSpotHistoryResponse, error) {
+func (s *metals) MetalsSpotHistoryGET(ctx context.Context, request operations.MetalsSpotHistoryGETRequest) (*operations.MetalsSpotHistoryGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/spot/history", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/spot/history"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -281,7 +352,7 @@ func (s *metals) GetAPIVVersionMetalsSpotHistory(ctx context.Context, request op
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -294,7 +365,7 @@ func (s *metals) GetAPIVVersionMetalsSpotHistory(ctx context.Context, request op
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionMetalsSpotHistoryResponse{
+	res := &operations.MetalsSpotHistoryGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -320,185 +391,19 @@ func (s *metals) GetAPIVVersionMetalsSpotHistory(ctx context.Context, request op
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionMetalsSpotPerformance - Get Historical Performance for requested metals
-// Historical Performance information
-func (s *metals) GetAPIVVersionMetalsSpotPerformance(ctx context.Context, request operations.GetAPIVVersionMetalsSpotPerformanceRequest) (*operations.GetAPIVVersionMetalsSpotPerformanceResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/spot/performance", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := s.defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIVVersionMetalsSpotPerformanceResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.IntervalCollectionResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.IntervalCollectionResponses = out
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetAPIVVersionMetalsSpotPerformanceAnnual - Get Historical Annual Performance for requested metals
-// Annual Historical Performance information
-func (s *metals) GetAPIVVersionMetalsSpotPerformanceAnnual(ctx context.Context, request operations.GetAPIVVersionMetalsSpotPerformanceAnnualRequest) (*operations.GetAPIVVersionMetalsSpotPerformanceAnnualResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/spot/performance/annual", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := s.defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIVVersionMetalsSpotPerformanceAnnualResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.IntervalCollectionResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.IntervalCollectionResponses = out
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetAPIVVersionMetalsSpotRatioHistory - Get historical Spot Ratio prices for requested metals
+// MetalsSpotRatioHistoryGET - Get historical Spot Ratio prices for requested metals
 // Historical data for the specified period and interval size
 //
 // The combination of the interval parameter and start and end dates can result in results
 // being truncated to conform to result size limits. See comments on interval parameter for details on valid interval values.
-func (s *metals) GetAPIVVersionMetalsSpotRatioHistory(ctx context.Context, request operations.GetAPIVVersionMetalsSpotRatioHistoryRequest) (*operations.GetAPIVVersionMetalsSpotRatioHistoryResponse, error) {
+func (s *metals) MetalsSpotRatioHistoryGET(ctx context.Context, request operations.MetalsSpotRatioHistoryGETRequest) (*operations.MetalsSpotRatioHistoryGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/spot/ratio/history", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/spot/ratio/history"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -509,7 +414,7 @@ func (s *metals) GetAPIVVersionMetalsSpotRatioHistory(ctx context.Context, reque
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -522,7 +427,7 @@ func (s *metals) GetAPIVVersionMetalsSpotRatioHistory(ctx context.Context, reque
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionMetalsSpotRatioHistoryResponse{
+	res := &operations.MetalsSpotRatioHistoryGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -548,32 +453,16 @@ func (s *metals) GetAPIVVersionMetalsSpotRatioHistory(ctx context.Context, reque
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionMetalsSpotRatioSummary - Get latest Spot Summary for requested metal ratios
+// MetalsSpotRatioSummaryGET - Get latest Spot Summary for requested metal ratios
 // Ratios between prices of two metals
-func (s *metals) GetAPIVVersionMetalsSpotRatioSummary(ctx context.Context, request operations.GetAPIVVersionMetalsSpotRatioSummaryRequest) (*operations.GetAPIVVersionMetalsSpotRatioSummaryResponse, error) {
+func (s *metals) MetalsSpotRatioSummaryGET(ctx context.Context, request operations.MetalsSpotRatioSummaryGETRequest) (*operations.MetalsSpotRatioSummaryGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/spot/ratio/summary", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/spot/ratio/summary"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -584,7 +473,7 @@ func (s *metals) GetAPIVVersionMetalsSpotRatioSummary(ctx context.Context, reque
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -597,7 +486,7 @@ func (s *metals) GetAPIVVersionMetalsSpotRatioSummary(ctx context.Context, reque
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionMetalsSpotRatioSummaryResponse{
+	res := &operations.MetalsSpotRatioSummaryGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -623,32 +512,16 @@ func (s *metals) GetAPIVVersionMetalsSpotRatioSummary(ctx context.Context, reque
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionMetalsSpotSummary - Get latest Spot Summary for requested metals
+// MetalsSpotSummaryGET - Get latest Spot Summary for requested metals
 // Current and daily summary information combined into a single quote
-func (s *metals) GetAPIVVersionMetalsSpotSummary(ctx context.Context, request operations.GetAPIVVersionMetalsSpotSummaryRequest) (*operations.GetAPIVVersionMetalsSpotSummaryResponse, error) {
+func (s *metals) MetalsSpotSummaryGET(ctx context.Context, request operations.MetalsSpotSummaryGETRequest) (*operations.MetalsSpotSummaryGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/spot/summary", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/spot/summary"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -659,7 +532,7 @@ func (s *metals) GetAPIVVersionMetalsSpotSummary(ctx context.Context, request op
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -672,7 +545,7 @@ func (s *metals) GetAPIVVersionMetalsSpotSummary(ctx context.Context, request op
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionMetalsSpotSummaryResponse{
+	res := &operations.MetalsSpotSummaryGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -698,31 +571,15 @@ func (s *metals) GetAPIVVersionMetalsSpotSummary(ctx context.Context, request op
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionMetalsSpotSupported - Get list of symbols supported by the spot endpoints
-func (s *metals) GetAPIVVersionMetalsSpotSupported(ctx context.Context, request operations.GetAPIVVersionMetalsSpotSupportedRequest) (*operations.GetAPIVVersionMetalsSpotSupportedResponse, error) {
+// MetalsSpotSupportedMetalsGET - Get list of symbols supported by the spot endpoints
+func (s *metals) MetalsSpotSupportedMetalsGET(ctx context.Context, request operations.MetalsSpotSupportedMetalsGETRequest) (*operations.MetalsSpotSupportedMetalsGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/spot/supported", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/spot/supported"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -733,7 +590,7 @@ func (s *metals) GetAPIVVersionMetalsSpotSupported(ctx context.Context, request 
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -746,7 +603,7 @@ func (s *metals) GetAPIVVersionMetalsSpotSupported(ctx context.Context, request 
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionMetalsSpotSupportedResponse{
+	res := &operations.MetalsSpotSupportedMetalsGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -760,7 +617,7 @@ func (s *metals) GetAPIVVersionMetalsSpotSupported(ctx context.Context, request 
 				return nil, err
 			}
 
-			res.GetAPIVVersionMetalsSpotSupported200ApplicationJSONStrings = out
+			res.MetalsSpotSupportedMetalsGET200ApplicationJSONStrings = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -772,31 +629,15 @@ func (s *metals) GetAPIVVersionMetalsSpotSupported(ctx context.Context, request 
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionMetalsSupportedCurrency - Get list of currencies supported by metals endpoints for currency conversion
-func (s *metals) GetAPIVVersionMetalsSupportedCurrency(ctx context.Context, request operations.GetAPIVVersionMetalsSupportedCurrencyRequest) (*operations.GetAPIVVersionMetalsSupportedCurrencyResponse, error) {
+// MetalsSupportedCurrenciesMetalsGET - Get list of currencies supported by metals endpoints for currency conversion
+func (s *metals) MetalsSupportedCurrenciesMetalsGET(ctx context.Context, request operations.MetalsSupportedCurrenciesMetalsGETRequest) (*operations.MetalsSupportedCurrenciesMetalsGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Metals/supported/currency", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Metals/supported/currency"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -807,7 +648,7 @@ func (s *metals) GetAPIVVersionMetalsSupportedCurrency(ctx context.Context, requ
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -820,7 +661,7 @@ func (s *metals) GetAPIVVersionMetalsSupportedCurrency(ctx context.Context, requ
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionMetalsSupportedCurrencyResponse{
+	res := &operations.MetalsSupportedCurrenciesMetalsGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -834,7 +675,7 @@ func (s *metals) GetAPIVVersionMetalsSupportedCurrency(ctx context.Context, requ
 				return nil, err
 			}
 
-			res.GetAPIVVersionMetalsSupportedCurrency200ApplicationJSONStrings = out
+			res.MetalsSupportedCurrenciesMetalsGET200ApplicationJSONStrings = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -846,22 +687,6 @@ func (s *metals) GetAPIVVersionMetalsSupportedCurrency(ctx context.Context, requ
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil

@@ -344,6 +344,16 @@ func (s *SDK) CreateAccessPolicy(ctx context.Context, request operations.CreateA
 
 			res.ValidationException = out
 		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceQuotaExceededException = out
+		}
 	}
 
 	return res, nil
@@ -408,7 +418,7 @@ func (s *SDK) CreateCollection(ctx context.Context, request operations.CreateCol
 				return nil, err
 			}
 
-			res.InternalServerException = out
+			res.OcuLimitExceededException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -418,7 +428,7 @@ func (s *SDK) CreateCollection(ctx context.Context, request operations.CreateCol
 				return nil, err
 			}
 
-			res.ConflictException = out
+			res.InternalServerException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -428,7 +438,27 @@ func (s *SDK) CreateCollection(ctx context.Context, request operations.CreateCol
 				return nil, err
 			}
 
+			res.ConflictException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
 			res.ValidationException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceQuotaExceededException = out
 		}
 	}
 
@@ -516,6 +546,16 @@ func (s *SDK) CreateSecurityConfig(ctx context.Context, request operations.Creat
 
 			res.ValidationException = out
 		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceQuotaExceededException = out
+		}
 	}
 
 	return res, nil
@@ -602,6 +642,16 @@ func (s *SDK) CreateSecurityPolicy(ctx context.Context, request operations.Creat
 
 			res.ValidationException = out
 		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceQuotaExceededException = out
+		}
 	}
 
 	return res, nil
@@ -687,6 +737,16 @@ func (s *SDK) CreateVpcEndpoint(ctx context.Context, request operations.CreateVp
 			}
 
 			res.ValidationException = out
+		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceQuotaExceededException = out
 		}
 	}
 
@@ -2150,6 +2210,16 @@ func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceReq
 
 			res.ValidationException = out
 		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceQuotaExceededException = out
+		}
 	}
 
 	return res, nil
@@ -2347,7 +2417,7 @@ func (s *SDK) UpdateAccessPolicy(ctx context.Context, request operations.UpdateA
 	return res, nil
 }
 
-// UpdateAccountSettings - Update the OpenSearch Serverless settings for the current Amazon Web Services account. For more information, see <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-scaling">Autoscaling</a>.
+// UpdateAccountSettings - Update the OpenSearch Serverless settings for the current Amazon Web Services account. For more information, see <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-scaling.html">Managing capacity limits for Amazon OpenSearch Serverless</a>.
 func (s *SDK) UpdateAccountSettings(ctx context.Context, request operations.UpdateAccountSettingsRequest) (*operations.UpdateAccountSettingsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=OpenSearchServerless.UpdateAccountSettings"
@@ -2695,6 +2765,16 @@ func (s *SDK) UpdateSecurityPolicy(ctx context.Context, request operations.Updat
 			}
 
 			res.ValidationException = out
+		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ServiceQuotaExceededException = out
 		}
 	}
 

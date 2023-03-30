@@ -31,7 +31,7 @@ type UpsertUser500ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertUser500ApplicationJSON - The error message should specify what cause the error
+// UpsertUser500ApplicationJSON - The message specifies what is done
 type UpsertUser500ApplicationJSON struct {
 	Message string                           `json:"message"`
 	Meta    UpsertUser500ApplicationJSONMeta `json:"meta"`
@@ -42,7 +42,7 @@ type UpsertUser429ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertUser429ApplicationJSON - The error message should specify what cause the error
+// UpsertUser429ApplicationJSON - The message specifies what is done
 type UpsertUser429ApplicationJSON struct {
 	Message string                           `json:"message"`
 	Meta    UpsertUser429ApplicationJSONMeta `json:"meta"`
@@ -53,7 +53,7 @@ type UpsertUser403ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertUser403ApplicationJSON - The error message should specify what cause the error
+// UpsertUser403ApplicationJSON - The message specifies what is done
 type UpsertUser403ApplicationJSON struct {
 	Message string                           `json:"message"`
 	Meta    UpsertUser403ApplicationJSONMeta `json:"meta"`
@@ -64,7 +64,7 @@ type UpsertUser401ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertUser401ApplicationJSON - The error message should specify what cause the error
+// UpsertUser401ApplicationJSON - The message specifies what is done
 type UpsertUser401ApplicationJSON struct {
 	Message string                           `json:"message"`
 	Meta    UpsertUser401ApplicationJSONMeta `json:"meta"`
@@ -90,7 +90,7 @@ type UpsertUser400ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertUser400ApplicationJSON - The error message should specify what cause the error
+// UpsertUser400ApplicationJSON - The message specifies what is done
 type UpsertUser400ApplicationJSON struct {
 	// Map that sums up all received values that seemed incorrect
 	Errors  UpsertUser400ApplicationJSONErrors `json:"errors"`
@@ -103,10 +103,12 @@ type UpsertUser201ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertUser201ApplicationJSON - The object was created
+// UpsertUser201ApplicationJSON - Specifies if any warnings occurred when validating the properties
 type UpsertUser201ApplicationJSON struct {
 	Message string                           `json:"message"`
 	Meta    UpsertUser201ApplicationJSONMeta `json:"meta"`
+	// If validation fails, specifies property name and error description
+	Rejected map[string]string `json:"rejected,omitempty"`
 }
 
 type UpsertUserResponse struct {
@@ -114,7 +116,7 @@ type UpsertUserResponse struct {
 	Headers     map[string][]string
 	StatusCode  int
 	RawResponse *http.Response
-	// Object was created
+	// User will be created
 	UpsertUser201ApplicationJSONObject *UpsertUser201ApplicationJSON
 	// Bad request, some fields or parameters are incorrect
 	UpsertUser400ApplicationJSONObject *UpsertUser400ApplicationJSON

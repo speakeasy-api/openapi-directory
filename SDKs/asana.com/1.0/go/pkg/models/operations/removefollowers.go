@@ -8,7 +8,7 @@ import (
 )
 
 type RemoveFollowersPathParams struct {
-	// Automatically added
+	// Globally unique identifier for the goal.
 	GoalGid string `pathParam:"style=simple,explode=false,name=goal_gid"`
 }
 
@@ -34,8 +34,8 @@ type RemoveFollowersRequest struct {
 	Request RemoveFollowersRequestBody `request:"mediaType=application/json"`
 }
 
-// RemoveFollowers201ApplicationJSON - Successfully removed users as collaborators.
-type RemoveFollowers201ApplicationJSON struct {
+// RemoveFollowers200ApplicationJSON - Successfully removed users as collaborators.
+type RemoveFollowers200ApplicationJSON struct {
 	Data *shared.GoalResponse `json:"data,omitempty"`
 }
 
@@ -46,5 +46,5 @@ type RemoveFollowersResponse struct {
 	StatusCode    int
 	RawResponse   *http.Response
 	// Successfully removed users as collaborators.
-	RemoveFollowers201ApplicationJSONObject *RemoveFollowers201ApplicationJSON
+	RemoveFollowers200ApplicationJSONObject *RemoveFollowers200ApplicationJSON
 }

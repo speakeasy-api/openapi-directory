@@ -31,8 +31,8 @@ func newActivity(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// GetActivities - Get a list of realtime activities.
-// Get a list of realtime activities on the project, such as translation suggestion and translation approval.
+// GetActivities - Monitor project activities
+// Get a list of real-time activities in the project, such as translation suggestion and translation approval.
 func (s *activity) GetActivities(ctx context.Context, request operations.GetActivitiesRequest) (*operations.GetActivitiesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities", request.PathParams, nil)
@@ -90,8 +90,8 @@ func (s *activity) GetActivities(ctx context.Context, request operations.GetActi
 	return res, nil
 }
 
-// GetActivity - Get a single realtime activity.
-// Get a single realtime activity.
+// GetActivity - View an activity
+// View the details of an activity in the project.
 func (s *activity) GetActivity(ctx context.Context, request operations.GetActivityRequest) (*operations.GetActivityResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}", request.PathParams, nil)
@@ -145,8 +145,8 @@ func (s *activity) GetActivity(ctx context.Context, request operations.GetActivi
 	return res, nil
 }
 
-// GetActivityComments - Get a list of comments belonging to this activity.
-// Get a list of comments belonging to this activity.
+// GetActivityComments - View activity comments
+// View a list of comments added to this activity.
 func (s *activity) GetActivityComments(ctx context.Context, request operations.GetActivityCommentsRequest) (*operations.GetActivityCommentsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}/comments", request.PathParams, nil)
@@ -200,8 +200,8 @@ func (s *activity) GetActivityComments(ctx context.Context, request operations.G
 	return res, nil
 }
 
-// GetComments - Get a list of activity comments throughout the whole project.
-// Get a list of activity comments throughout the whole project.
+// GetComments - View all project comments
+// View a list of activity comments in the project.
 func (s *activity) GetComments(ctx context.Context, request operations.GetCommentsRequest) (*operations.GetCommentsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/comments", request.PathParams, nil)
@@ -322,7 +322,7 @@ func (s *activity) InsertSalesActivity(ctx context.Context, request operations.I
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/sales/activities", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -378,9 +378,71 @@ func (s *activity) InsertSalesActivity(ctx context.Context, request operations.I
 	return res, nil
 }
 
-// SubmitComment - Submit a comment to an activity.
-// Submit a comment to an activity.
-func (s *activity) SubmitComment(ctx context.Context, request operations.SubmitCommentRequest) (*operations.SubmitCommentResponse, error) {
+// SubmitCommentJSON - Submit comment to an activity
+// Submit a comment to an activity in the project, such as translation or editing.
+func (s *activity) SubmitCommentJSON(ctx context.Context, request operations.SubmitCommentJSONRequest) (*operations.SubmitCommentJSONResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SubmitCommentJSONResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Comment
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Comment = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// SubmitCommentMultipart - Submit comment to an activity
+// Submit a comment to an activity in the project, such as translation or editing.
+func (s *activity) SubmitCommentMultipart(ctx context.Context, request operations.SubmitCommentMultipartRequest) (*operations.SubmitCommentMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/activities/{activityId}", request.PathParams, nil)
 
@@ -409,7 +471,7 @@ func (s *activity) SubmitComment(ctx context.Context, request operations.SubmitC
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.SubmitCommentResponse{
+	res := &operations.SubmitCommentMultipartResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

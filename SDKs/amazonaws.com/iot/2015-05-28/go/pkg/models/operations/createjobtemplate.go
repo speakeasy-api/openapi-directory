@@ -64,6 +64,8 @@ type CreateJobTemplateRequestBody struct {
 	JobExecutionsRetryConfig *CreateJobTemplateRequestBodyJobExecutionsRetryConfig `json:"jobExecutionsRetryConfig,omitempty"`
 	// Allows you to create a staged rollout of a job.
 	JobExecutionsRolloutConfig *CreateJobTemplateRequestBodyJobExecutionsRolloutConfig `json:"jobExecutionsRolloutConfig,omitempty"`
+	// Allows you to configure an optional maintenance window for the rollout of a job document to all devices in the target group for a job.
+	MaintenanceWindows []shared.MaintenanceWindow `json:"maintenanceWindows,omitempty"`
 	// Configuration for pre-signed S3 URLs.
 	PresignedURLConfig *CreateJobTemplateRequestBodyPresignedURLConfig `json:"presignedUrlConfig,omitempty"`
 	// Metadata that can be used to manage the job template.

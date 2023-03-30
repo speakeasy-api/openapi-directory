@@ -17,7 +17,7 @@ type GetTextPronunciationsPathParams struct {
 type GetTextPronunciationsSourceDictionaryEnum string
 
 const (
-	GetTextPronunciationsSourceDictionaryEnumAhd        GetTextPronunciationsSourceDictionaryEnum = "ahd"
+	GetTextPronunciationsSourceDictionaryEnumAhd5       GetTextPronunciationsSourceDictionaryEnum = "ahd-5"
 	GetTextPronunciationsSourceDictionaryEnumCentury    GetTextPronunciationsSourceDictionaryEnum = "century"
 	GetTextPronunciationsSourceDictionaryEnumCmu        GetTextPronunciationsSourceDictionaryEnum = "cmu"
 	GetTextPronunciationsSourceDictionaryEnumMacmillan  GetTextPronunciationsSourceDictionaryEnum = "macmillan"
@@ -32,7 +32,7 @@ func (e *GetTextPronunciationsSourceDictionaryEnum) UnmarshalJSON(data []byte) e
 		return err
 	}
 	switch s {
-	case "ahd":
+	case "ahd-5":
 		fallthrough
 	case "century":
 		fallthrough
@@ -56,7 +56,7 @@ func (e *GetTextPronunciationsSourceDictionaryEnum) UnmarshalJSON(data []byte) e
 type GetTextPronunciationsTypeFormatEnum string
 
 const (
-	GetTextPronunciationsTypeFormatEnumAhd              GetTextPronunciationsTypeFormatEnum = "ahd"
+	GetTextPronunciationsTypeFormatEnumAhd5             GetTextPronunciationsTypeFormatEnum = "ahd-5"
 	GetTextPronunciationsTypeFormatEnumArpabet          GetTextPronunciationsTypeFormatEnum = "arpabet"
 	GetTextPronunciationsTypeFormatEnumGcideDiacritical GetTextPronunciationsTypeFormatEnum = "gcide-diacritical"
 	GetTextPronunciationsTypeFormatEnumIpa              GetTextPronunciationsTypeFormatEnum = "IPA"
@@ -68,7 +68,7 @@ func (e *GetTextPronunciationsTypeFormatEnum) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch s {
-	case "ahd":
+	case "ahd-5":
 		fallthrough
 	case "arpabet":
 		fallthrough

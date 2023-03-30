@@ -30,10 +30,10 @@ func newReports(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-// GetWorkspaceIDReports - Get a workspace stats
-func (s *reports) GetWorkspaceIDReports(ctx context.Context, request operations.GetWorkspaceIDReportsRequest) (*operations.GetWorkspaceIDReportsResponse, error) {
+// GetWorkspaceSlugReports - Get a workspace stats
+func (s *reports) GetWorkspaceSlugReports(ctx context.Context, request operations.GetWorkspaceSlugReportsRequest) (*operations.GetWorkspaceSlugReportsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/reports", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/reports", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -57,7 +57,7 @@ func (s *reports) GetWorkspaceIDReports(ctx context.Context, request operations.
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspaceIDReportsResponse{
+	res := &operations.GetWorkspaceSlugReportsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

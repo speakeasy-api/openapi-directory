@@ -170,6 +170,9 @@ pkg/models/shared/awss3bucketserversideencryptionconfiguration.go
 pkg/models/shared/awss3bucketserversideencryptionrule.go
 pkg/models/shared/awss3bucketserversideencryptionbydefault.go
 pkg/models/shared/awss3accountpublicaccessblockdetails.go
+pkg/models/shared/awss3bucketobjectlockconfiguration.go
+pkg/models/shared/awss3bucketobjectlockconfigurationruledetails.go
+pkg/models/shared/awss3bucketobjectlockconfigurationruledefaultretentiondetails.go
 pkg/models/shared/awss3bucketwebsiteconfiguration.go
 pkg/models/shared/awss3bucketwebsiteconfigurationroutingrule.go
 pkg/models/shared/awss3bucketwebsiteconfigurationroutingruleredirect.go
@@ -429,6 +432,11 @@ pkg/models/shared/awsec2securitygroupuseridgrouppair.go
 pkg/models/shared/awsec2securitygroupprefixlistid.go
 pkg/models/shared/awsec2securitygroupipv6range.go
 pkg/models/shared/awsec2securitygroupiprange.go
+pkg/models/shared/awsec2routetabledetails.go
+pkg/models/shared/routesetdetails.go
+pkg/models/shared/propagatingvgwsetdetails.go
+pkg/models/shared/associationsetdetails.go
+pkg/models/shared/associationstatedetails.go
 pkg/models/shared/awsec2networkinterfacedetails.go
 pkg/models/shared/awsec2networkinterfacesecuritygroup.go
 pkg/models/shared/awsec2networkinterfaceprivateipaddressdetail.go
@@ -476,6 +484,7 @@ pkg/models/shared/awsec2launchtemplatedatablockdevicemappingsetdetails.go
 pkg/models/shared/awsec2launchtemplatedatablockdevicemappingsetebsdetails.go
 pkg/models/shared/awsec2instancedetails.go
 pkg/models/shared/awsec2instancenetworkinterfacesdetails.go
+pkg/models/shared/awsec2instancemonitoringdetails.go
 pkg/models/shared/awsec2instancemetadataoptions.go
 pkg/models/shared/awsec2eipdetails.go
 pkg/models/shared/awsdynamodbtabledetails.go

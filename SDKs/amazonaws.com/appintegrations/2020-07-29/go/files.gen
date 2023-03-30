@@ -28,6 +28,7 @@ pkg/models/operations/updatedataintegration.go
 pkg/models/operations/updateeventintegration.go
 pkg/models/shared/createdataintegrationresponse.go
 pkg/models/shared/scheduleconfiguration.go
+pkg/models/shared/fileconfiguration.go
 pkg/models/shared/createeventintegrationresponse.go
 pkg/models/shared/getdataintegrationresponse.go
 pkg/models/shared/geteventintegrationresponse.go

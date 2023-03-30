@@ -43,7 +43,7 @@ func main() {
             Data: shared.OBWriteDomesticConsent4Data{
                 Authorisation: &shared.OBWriteDomesticConsent4DataAuthorisation{
                     AuthorisationType: "Single",
-                    CompletionDateTime: "2022-10-25T21:32:34.304Z",
+                    CompletionDateTime: "2022-10-26T09:36:01.325Z",
                 },
                 Initiation: shared.OBWriteDomesticConsent4DataInitiation{
                     CreditorAccount: shared.OBWriteDomesticConsent4DataInitiationCreditorAccount{

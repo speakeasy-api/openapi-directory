@@ -37,7 +37,7 @@ type PlayersByTeamPathParams struct {
 	// Desired response format. Valid entries are <code>XML</code> or <code>JSON</code>.
 	Format PlayersByTeamFormatEnum `pathParam:"style=simple,explode=false,name=format"`
 	// The abbreviation of the requested team.
-	// <br>Examples: <code>SF</code>, <code>NYY</code>.
+	// <br>Examples: <code>PHI</code>, <code>BKN</code>.
 	Team string `pathParam:"style=simple,explode=false,name=team"`
 }
 

@@ -28,7 +28,7 @@ type AddEmployeeResponse struct {
 	StatusCode  int
 	RawResponse *http.Response
 	// Successfully added
-	EmployeeIDResponses []shared.EmployeeIDResponse
+	EmployeeIDResponse *shared.EmployeeIDResponse
 	// Bad Request
 	Errors []shared.Error
 }

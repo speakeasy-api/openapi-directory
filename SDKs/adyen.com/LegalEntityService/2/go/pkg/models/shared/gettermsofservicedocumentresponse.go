@@ -13,8 +13,10 @@ type GetTermsOfServiceDocumentResponseTypeEnum string
 const (
 	GetTermsOfServiceDocumentResponseTypeEnumAdyenAccount              GetTermsOfServiceDocumentResponseTypeEnum = "adyenAccount"
 	GetTermsOfServiceDocumentResponseTypeEnumAdyenCapital              GetTermsOfServiceDocumentResponseTypeEnum = "adyenCapital"
+	GetTermsOfServiceDocumentResponseTypeEnumAdyenCard                 GetTermsOfServiceDocumentResponseTypeEnum = "adyenCard"
 	GetTermsOfServiceDocumentResponseTypeEnumAdyenForPlatformsAdvanced GetTermsOfServiceDocumentResponseTypeEnum = "adyenForPlatformsAdvanced"
 	GetTermsOfServiceDocumentResponseTypeEnumAdyenForPlatformsManage   GetTermsOfServiceDocumentResponseTypeEnum = "adyenForPlatformsManage"
+	GetTermsOfServiceDocumentResponseTypeEnumAdyenFranchisee           GetTermsOfServiceDocumentResponseTypeEnum = "adyenFranchisee"
 	GetTermsOfServiceDocumentResponseTypeEnumAdyenIssuing              GetTermsOfServiceDocumentResponseTypeEnum = "adyenIssuing"
 )
 
@@ -28,9 +30,13 @@ func (e *GetTermsOfServiceDocumentResponseTypeEnum) UnmarshalJSON(data []byte) e
 		fallthrough
 	case "adyenCapital":
 		fallthrough
+	case "adyenCard":
+		fallthrough
 	case "adyenForPlatformsAdvanced":
 		fallthrough
 	case "adyenForPlatformsManage":
+		fallthrough
+	case "adyenFranchisee":
 		fallthrough
 	case "adyenIssuing":
 		*e = GetTermsOfServiceDocumentResponseTypeEnum(s)

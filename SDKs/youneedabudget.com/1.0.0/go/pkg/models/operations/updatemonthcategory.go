@@ -20,7 +20,7 @@ type UpdateMonthCategoryPathParams struct {
 type UpdateMonthCategoryRequest struct {
 	PathParams UpdateMonthCategoryPathParams
 	// The category to update.  Only `budgeted` amount can be updated and any other fields specified will be ignored.
-	Request shared.SaveMonthCategoryWrapper `request:"mediaType=application/json"`
+	Request shared.PatchMonthCategoryWrapper `request:"mediaType=application/json"`
 }
 
 type UpdateMonthCategoryResponse struct {

@@ -22,14 +22,18 @@ type ProductModelHaljsonLinks struct {
 	Environments     *string `json:"environments,omitempty"`
 	Members          *string `json:"members,omitempty"`
 	PermissionGroups *string `json:"permission-groups,omitempty"`
+	Segments         *string `json:"segments,omitempty"`
 	Self             *string `json:"self,omitempty"`
 	Tags             *string `json:"tags,omitempty"`
 }
 
 // ProductModelHaljson - When the creation was successful.
 type ProductModelHaljson struct {
-	Embedded  *ProductModelHaljsonEmbedded `json:"_embedded,omitempty"`
-	Links     *ProductModelHaljsonLinks    `json:"_links,omitempty"`
-	Name      *string                      `json:"name,omitempty"`
-	ProductID *string                      `json:"productId,omitempty"`
+	Embedded       *ProductModelHaljsonEmbedded `json:"_embedded,omitempty"`
+	Links          *ProductModelHaljsonLinks    `json:"_links,omitempty"`
+	Description    *string                      `json:"description,omitempty"`
+	Name           *string                      `json:"name,omitempty"`
+	Order          *int                         `json:"order,omitempty"`
+	ProductID      *string                      `json:"productId,omitempty"`
+	ReasonRequired *bool                        `json:"reasonRequired,omitempty"`
 }

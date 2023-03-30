@@ -26,6 +26,7 @@ const (
 	SynonymEntitySourceTypeEnumDatabaseEntityTypeDatabasePackage SynonymEntitySourceTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE_PACKAGE"
 	SynonymEntitySourceTypeEnumDatabaseEntityTypeUdt             SynonymEntitySourceTypeEnum = "DATABASE_ENTITY_TYPE_UDT"
 	SynonymEntitySourceTypeEnumDatabaseEntityTypeMaterialView    SynonymEntitySourceTypeEnum = "DATABASE_ENTITY_TYPE_MATERIAL_VIEW"
+	SynonymEntitySourceTypeEnumDatabaseEntityTypeDatabase        SynonymEntitySourceTypeEnum = "DATABASE_ENTITY_TYPE_DATABASE"
 )
 
 func (e *SynonymEntitySourceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -63,6 +64,8 @@ func (e *SynonymEntitySourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DATABASE_ENTITY_TYPE_UDT":
 		fallthrough
 	case "DATABASE_ENTITY_TYPE_MATERIAL_VIEW":
+		fallthrough
+	case "DATABASE_ENTITY_TYPE_DATABASE":
 		*e = SynonymEntitySourceTypeEnum(s)
 		return nil
 	default:

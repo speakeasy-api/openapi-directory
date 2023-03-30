@@ -37,8 +37,7 @@ func newTerminalsTerminalLevel(defaultClient, securityClient HTTPClient, serverU
 // When using `searchQuery`, other query parameters are ignored.
 //
 // To make this request, your API credential must have the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
-// * POS Terminal Management API
-// * Management API—Terminal settings read
+// * Management API — Terminal actions read
 func (s *terminalsTerminalLevel) GetTerminals(ctx context.Context, request operations.GetTerminalsRequest) (*operations.GetTerminalsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/terminals"

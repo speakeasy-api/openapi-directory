@@ -1209,7 +1209,7 @@ func (s *serverActions) PostServersIDActionsReset(ctx context.Context, request o
 }
 
 // PostServersIDActionsResetPassword - Reset root Password of a Server
-// Resets the root password. Only works for Linux systems that are running the qemu guest agent. Server must be powered on (state `on`) in order for this operation to succeed.
+// Resets the root password. Only works for Linux systems that are running the qemu guest agent. Server must be powered on (status `running`) in order for this operation to succeed.
 //
 // This will generate a new password for this Server and return it.
 //

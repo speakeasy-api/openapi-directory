@@ -2,11 +2,31 @@
 
 package shared
 
+// GoogleCloudRecaptchaenterpriseV1KeyInput - A key used to identify and configure applications (web and/or mobile) that use reCAPTCHA Enterprise.
+type GoogleCloudRecaptchaenterpriseV1KeyInput struct {
+	// Settings specific to keys that can be used by Android apps.
+	AndroidSettings *GoogleCloudRecaptchaenterpriseV1AndroidKeySettings `json:"androidSettings,omitempty"`
+	// Human-readable display name of this key. Modifiable by user.
+	DisplayName *string `json:"displayName,omitempty"`
+	// Settings specific to keys that can be used by iOS apps.
+	IosSettings *GoogleCloudRecaptchaenterpriseV1IOSKeySettings `json:"iosSettings,omitempty"`
+	// See Creating and managing labels.
+	Labels map[string]string `json:"labels,omitempty"`
+	// The resource name for the Key in the format "projects/{project}/keys/{key}".
+	Name *string `json:"name,omitempty"`
+	// Options for user acceptance testing.
+	TestingOptions *GoogleCloudRecaptchaenterpriseV1TestingOptions `json:"testingOptions,omitempty"`
+	// Settings specific to keys that can be used for WAF (Web Application Firewall).
+	WafSettings *GoogleCloudRecaptchaenterpriseV1WafSettings `json:"wafSettings,omitempty"`
+	// Settings specific to keys that can be used by websites.
+	WebSettings *GoogleCloudRecaptchaenterpriseV1WebKeySettings `json:"webSettings,omitempty"`
+}
+
 // GoogleCloudRecaptchaenterpriseV1Key - A key used to identify and configure applications (web and/or mobile) that use reCAPTCHA Enterprise.
 type GoogleCloudRecaptchaenterpriseV1Key struct {
 	// Settings specific to keys that can be used by Android apps.
 	AndroidSettings *GoogleCloudRecaptchaenterpriseV1AndroidKeySettings `json:"androidSettings,omitempty"`
-	// The timestamp corresponding to the creation of this Key.
+	// Output only. The timestamp corresponding to the creation of this key.
 	CreateTime *string `json:"createTime,omitempty"`
 	// Human-readable display name of this key. Modifiable by user.
 	DisplayName *string `json:"displayName,omitempty"`

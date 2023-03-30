@@ -4,7 +4,7 @@ package shared
 
 // GroupEntity - List Groups
 type GroupEntity struct {
-	// List of user IDs who are group administrators (separated by commas)
+	// Comma-delimited list of user IDs who are group administrators (separated by commas)
 	AdminIds *string `json:"admin_ids,omitempty"`
 	// Group ID
 	ID *int `json:"id,omitempty"`
@@ -12,8 +12,8 @@ type GroupEntity struct {
 	Name *string `json:"name,omitempty"`
 	// Notes about this group
 	Notes *string `json:"notes,omitempty"`
-	// List of user IDs who belong to this group (separated by commas)
-	UserIds []int `json:"user_ids,omitempty"`
-	// List of usernames who belong to this group (separated by commas)
-	Usernames []string `json:"usernames,omitempty"`
+	// Comma-delimited list of user IDs who belong to this group (separated by commas)
+	UserIds *string `json:"user_ids,omitempty"`
+	// Comma-delimited list of usernames who belong to this group (separated by commas)
+	Usernames *string `json:"usernames,omitempty"`
 }

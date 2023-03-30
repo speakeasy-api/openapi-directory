@@ -4,7 +4,7 @@ package shared
 
 // Product - This type contains the full details of a specified product, including information about the product's identifiers, product images, aspects, and categories.
 type Product struct {
-	// Contains information about additional images associated with this product. For the primary image, see the image container.
+	// Contains information about  additional images associated with this product. For the primary image, see the <b>image</b> container.
 	AdditionalImages []Image `json:"additionalImages,omitempty"`
 	// Contains an array of the category aspects and their values that are associated with this product.
 	Aspects []Aspect `json:"aspects,omitempty"`
@@ -24,9 +24,9 @@ type Product struct {
 	Isbn []string `json:"isbn,omitempty"`
 	// A list of all MPN values that the manufacturer uses to identify this product.
 	Mpn []string `json:"mpn,omitempty"`
-	// A list of category IDs (other than the value of primaryCategoryId) for all the leaf categories to which this product might belong.
+	// A list of category IDs (other than the value of <b>primaryCategoryId</b>) for all the leaf categories to which this product might belong.
 	OtherApplicableCategoryIds []string `json:"otherApplicableCategoryIds,omitempty"`
-	// The identifier of the leaf category that eBay recommends using to list this product, based on previous listings of similar products. Products in the eBay catalog are not automatically associated with any particular category, but using an inappropriate category can make it difficult for prospective buyers to find the product. For other possible categories that might be used, see otherApplicableCategoryIds.
+	// The identifier of the leaf category that eBay recommends using to list this product, based on previous listings of similar products. Products in the eBay catalog are not automatically associated with any particular category, but using an inappropriate category can make it difficult for prospective buyers to find the product. For other possible categories that might be used, see <b>otherApplicableCategoryIds</b>.
 	PrimaryCategoryID *string `json:"primaryCategoryId,omitempty"`
 	// The URL for this product's eBay product page.
 	ProductWebURL *string `json:"productWebUrl,omitempty"`

@@ -41,6 +41,7 @@ pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/security.go
 pkg/models/shared/sasportalprovisiondeploymentresponse.go
+pkg/models/shared/sasportalprovisiondeploymentrequest.go
 pkg/models/shared/sasportalgeneratesecretresponse.go
 pkg/models/shared/sasportalvalidateinstallerrequest.go
 pkg/models/shared/sasportalsigndevicerequest.go

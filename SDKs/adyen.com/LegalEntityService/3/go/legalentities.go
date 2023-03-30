@@ -308,17 +308,10 @@ func (s *legalEntities) PostLegalEntitiesIDCheckVerificationErrors(ctx context.C
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}/checkVerificationErrors", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-
-	req.Header.Set("Content-Type", reqContentType)
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 

@@ -13,6 +13,7 @@ type IntegrationLinkTypeEnum string
 const (
 	IntegrationLinkTypeEnumTrello IntegrationLinkTypeEnum = "trello"
 	IntegrationLinkTypeEnumJira   IntegrationLinkTypeEnum = "jira"
+	IntegrationLinkTypeEnumMonday IntegrationLinkTypeEnum = "monday"
 )
 
 func (e *IntegrationLinkTypeEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *IntegrationLinkTypeEnum) UnmarshalJSON(data []byte) error {
 	case "trello":
 		fallthrough
 	case "jira":
+		fallthrough
+	case "monday":
 		*e = IntegrationLinkTypeEnum(s)
 		return nil
 	default:

@@ -19,71 +19,81 @@ type GetOrganizationAuditlogsPathParams struct {
 type GetOrganizationAuditlogsAuditLogTypeEnum string
 
 const (
-	GetOrganizationAuditlogsAuditLogTypeEnumProductCreated                           GetOrganizationAuditlogsAuditLogTypeEnum = "productCreated"
-	GetOrganizationAuditlogsAuditLogTypeEnumProductChanged                           GetOrganizationAuditlogsAuditLogTypeEnum = "productChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumProductOwnershipTransferred              GetOrganizationAuditlogsAuditLogTypeEnum = "productOwnershipTransferred"
-	GetOrganizationAuditlogsAuditLogTypeEnumProductDeleted                           GetOrganizationAuditlogsAuditLogTypeEnum = "productDeleted"
-	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvited                        GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvited"
-	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvitationRevoked              GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvitationRevoked"
-	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberJoined                         GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberJoined"
-	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberPermissionGroupChanged         GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberPermissionGroupChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberRemoved                        GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberLeft                           GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberLeft"
-	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvitationChanged              GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvitationChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvitationResent               GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvitationResent"
-	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvitationRejected             GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvitationRejected"
-	GetOrganizationAuditlogsAuditLogTypeEnumConfigCreated                            GetOrganizationAuditlogsAuditLogTypeEnum = "configCreated"
-	GetOrganizationAuditlogsAuditLogTypeEnumConfigChanged                            GetOrganizationAuditlogsAuditLogTypeEnum = "configChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumConfigDeleted                            GetOrganizationAuditlogsAuditLogTypeEnum = "configDeleted"
-	GetOrganizationAuditlogsAuditLogTypeEnumEnvironmentCreated                       GetOrganizationAuditlogsAuditLogTypeEnum = "environmentCreated"
-	GetOrganizationAuditlogsAuditLogTypeEnumEnvironmentChanged                       GetOrganizationAuditlogsAuditLogTypeEnum = "environmentChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumEnvironmentDeleted                       GetOrganizationAuditlogsAuditLogTypeEnum = "environmentDeleted"
-	GetOrganizationAuditlogsAuditLogTypeEnumSettingCreated                           GetOrganizationAuditlogsAuditLogTypeEnum = "settingCreated"
-	GetOrganizationAuditlogsAuditLogTypeEnumSettingChanged                           GetOrganizationAuditlogsAuditLogTypeEnum = "settingChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumSettingDeleted                           GetOrganizationAuditlogsAuditLogTypeEnum = "settingDeleted"
-	GetOrganizationAuditlogsAuditLogTypeEnumSettingValueChanged                      GetOrganizationAuditlogsAuditLogTypeEnum = "settingValueChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumWebHookCreated                           GetOrganizationAuditlogsAuditLogTypeEnum = "webHookCreated"
-	GetOrganizationAuditlogsAuditLogTypeEnumWebHookChanged                           GetOrganizationAuditlogsAuditLogTypeEnum = "webHookChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumWebHookDeleted                           GetOrganizationAuditlogsAuditLogTypeEnum = "webHookDeleted"
-	GetOrganizationAuditlogsAuditLogTypeEnumSubscriptionChanged                      GetOrganizationAuditlogsAuditLogTypeEnum = "subscriptionChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumPermissionGroupCreated                   GetOrganizationAuditlogsAuditLogTypeEnum = "permissionGroupCreated"
-	GetOrganizationAuditlogsAuditLogTypeEnumPermissionGroupChanged                   GetOrganizationAuditlogsAuditLogTypeEnum = "permissionGroupChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumPermissionGroupDeleted                   GetOrganizationAuditlogsAuditLogTypeEnum = "permissionGroupDeleted"
-	GetOrganizationAuditlogsAuditLogTypeEnumPermissionGroupDefault                   GetOrganizationAuditlogsAuditLogTypeEnum = "permissionGroupDefault"
-	GetOrganizationAuditlogsAuditLogTypeEnumAPIKeyAdded                              GetOrganizationAuditlogsAuditLogTypeEnum = "apiKeyAdded"
-	GetOrganizationAuditlogsAuditLogTypeEnumAPIKeyRemoved                            GetOrganizationAuditlogsAuditLogTypeEnum = "apiKeyRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationAdded                         GetOrganizationAuditlogsAuditLogTypeEnum = "integrationAdded"
-	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationChanged                       GetOrganizationAuditlogsAuditLogTypeEnum = "integrationChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationRemoved                       GetOrganizationAuditlogsAuditLogTypeEnum = "integrationRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumAPIKeyConnected                          GetOrganizationAuditlogsAuditLogTypeEnum = "apiKeyConnected"
-	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationLinkAdded                     GetOrganizationAuditlogsAuditLogTypeEnum = "integrationLinkAdded"
-	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationLinkRemoved                   GetOrganizationAuditlogsAuditLogTypeEnum = "integrationLinkRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdded                        GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdded"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationRemoved                      GetOrganizationAuditlogsAuditLogTypeEnum = "organizationRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationChanged                      GetOrganizationAuditlogsAuditLogTypeEnum = "organizationChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationSubscriptionTypeChanged      GetOrganizationAuditlogsAuditLogTypeEnum = "organizationSubscriptionTypeChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdminAdded                   GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdminAdded"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdminChanged                 GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdminChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdminRemoved                 GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdminRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdminLeft                    GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdminLeft"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdminDisabled2Fa             GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdminDisabled2FA"
-	GetOrganizationAuditlogsAuditLogTypeEnumTagAdded                                 GetOrganizationAuditlogsAuditLogTypeEnum = "tagAdded"
-	GetOrganizationAuditlogsAuditLogTypeEnumTagChanged                               GetOrganizationAuditlogsAuditLogTypeEnum = "tagChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumTagRemoved                               GetOrganizationAuditlogsAuditLogTypeEnum = "tagRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumSettingTagAdded                          GetOrganizationAuditlogsAuditLogTypeEnum = "settingTagAdded"
-	GetOrganizationAuditlogsAuditLogTypeEnumSettingTagRemoved                        GetOrganizationAuditlogsAuditLogTypeEnum = "settingTagRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumPublicAPIAccessTokenAdded                GetOrganizationAuditlogsAuditLogTypeEnum = "publicApiAccessTokenAdded"
-	GetOrganizationAuditlogsAuditLogTypeEnumPublicAPIAccessTokenRemoved              GetOrganizationAuditlogsAuditLogTypeEnum = "publicApiAccessTokenRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumDomainAdded                              GetOrganizationAuditlogsAuditLogTypeEnum = "domainAdded"
-	GetOrganizationAuditlogsAuditLogTypeEnumDomainVerified                           GetOrganizationAuditlogsAuditLogTypeEnum = "domainVerified"
-	GetOrganizationAuditlogsAuditLogTypeEnumDomainRemoved                            GetOrganizationAuditlogsAuditLogTypeEnum = "domainRemoved"
-	GetOrganizationAuditlogsAuditLogTypeEnumDomainSamlConfigured                     GetOrganizationAuditlogsAuditLogTypeEnum = "domainSamlConfigured"
-	GetOrganizationAuditlogsAuditLogTypeEnumDomainSamlDeleted                        GetOrganizationAuditlogsAuditLogTypeEnum = "domainSamlDeleted"
-	GetOrganizationAuditlogsAuditLogTypeEnumAutoProvisioningConfigurationChanged     GetOrganizationAuditlogsAuditLogTypeEnum = "autoProvisioningConfigurationChanged"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationMemberJoined                 GetOrganizationAuditlogsAuditLogTypeEnum = "organizationMemberJoined"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationMemberProductAccessRequested GetOrganizationAuditlogsAuditLogTypeEnum = "organizationMemberProductAccessRequested"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationMemberAccessRequestDeclined  GetOrganizationAuditlogsAuditLogTypeEnum = "organizationMemberAccessRequestDeclined"
-	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationMemberAccessRequestAccepted  GetOrganizationAuditlogsAuditLogTypeEnum = "organizationMemberAccessRequestAccepted"
+	GetOrganizationAuditlogsAuditLogTypeEnumProductCreated                               GetOrganizationAuditlogsAuditLogTypeEnum = "productCreated"
+	GetOrganizationAuditlogsAuditLogTypeEnumProductChanged                               GetOrganizationAuditlogsAuditLogTypeEnum = "productChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumProductOwnershipTransferred                  GetOrganizationAuditlogsAuditLogTypeEnum = "productOwnershipTransferred"
+	GetOrganizationAuditlogsAuditLogTypeEnumProductDeleted                               GetOrganizationAuditlogsAuditLogTypeEnum = "productDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumProductsReordered                            GetOrganizationAuditlogsAuditLogTypeEnum = "productsReordered"
+	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvited                            GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvited"
+	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvitationRevoked                  GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvitationRevoked"
+	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberJoined                             GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberJoined"
+	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberPermissionGroupChanged             GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberPermissionGroupChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberRemoved                            GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberRemoved"
+	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberLeft                               GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberLeft"
+	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvitationChanged                  GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvitationChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvitationResent                   GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvitationResent"
+	GetOrganizationAuditlogsAuditLogTypeEnumTeamMemberInvitationRejected                 GetOrganizationAuditlogsAuditLogTypeEnum = "teamMemberInvitationRejected"
+	GetOrganizationAuditlogsAuditLogTypeEnumConfigCreated                                GetOrganizationAuditlogsAuditLogTypeEnum = "configCreated"
+	GetOrganizationAuditlogsAuditLogTypeEnumConfigChanged                                GetOrganizationAuditlogsAuditLogTypeEnum = "configChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumConfigDeleted                                GetOrganizationAuditlogsAuditLogTypeEnum = "configDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumConfigsReordered                             GetOrganizationAuditlogsAuditLogTypeEnum = "configsReordered"
+	GetOrganizationAuditlogsAuditLogTypeEnumEnvironmentCreated                           GetOrganizationAuditlogsAuditLogTypeEnum = "environmentCreated"
+	GetOrganizationAuditlogsAuditLogTypeEnumEnvironmentChanged                           GetOrganizationAuditlogsAuditLogTypeEnum = "environmentChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumEnvironmentDeleted                           GetOrganizationAuditlogsAuditLogTypeEnum = "environmentDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumEnvironmentsReordered                        GetOrganizationAuditlogsAuditLogTypeEnum = "environmentsReordered"
+	GetOrganizationAuditlogsAuditLogTypeEnumSettingCreated                               GetOrganizationAuditlogsAuditLogTypeEnum = "settingCreated"
+	GetOrganizationAuditlogsAuditLogTypeEnumSettingChanged                               GetOrganizationAuditlogsAuditLogTypeEnum = "settingChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumSettingDeleted                               GetOrganizationAuditlogsAuditLogTypeEnum = "settingDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumSettingsReordered                            GetOrganizationAuditlogsAuditLogTypeEnum = "settingsReordered"
+	GetOrganizationAuditlogsAuditLogTypeEnumSettingValueChanged                          GetOrganizationAuditlogsAuditLogTypeEnum = "settingValueChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumWebHookCreated                               GetOrganizationAuditlogsAuditLogTypeEnum = "webHookCreated"
+	GetOrganizationAuditlogsAuditLogTypeEnumWebHookChanged                               GetOrganizationAuditlogsAuditLogTypeEnum = "webHookChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumWebHookDeleted                               GetOrganizationAuditlogsAuditLogTypeEnum = "webHookDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumSubscriptionChanged                          GetOrganizationAuditlogsAuditLogTypeEnum = "subscriptionChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumPermissionGroupCreated                       GetOrganizationAuditlogsAuditLogTypeEnum = "permissionGroupCreated"
+	GetOrganizationAuditlogsAuditLogTypeEnumPermissionGroupChanged                       GetOrganizationAuditlogsAuditLogTypeEnum = "permissionGroupChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumPermissionGroupDeleted                       GetOrganizationAuditlogsAuditLogTypeEnum = "permissionGroupDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumPermissionGroupDefault                       GetOrganizationAuditlogsAuditLogTypeEnum = "permissionGroupDefault"
+	GetOrganizationAuditlogsAuditLogTypeEnumAPIKeyAdded                                  GetOrganizationAuditlogsAuditLogTypeEnum = "apiKeyAdded"
+	GetOrganizationAuditlogsAuditLogTypeEnumAPIKeyRemoved                                GetOrganizationAuditlogsAuditLogTypeEnum = "apiKeyRemoved"
+	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationAdded                             GetOrganizationAuditlogsAuditLogTypeEnum = "integrationAdded"
+	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationChanged                           GetOrganizationAuditlogsAuditLogTypeEnum = "integrationChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationRemoved                           GetOrganizationAuditlogsAuditLogTypeEnum = "integrationRemoved"
+	GetOrganizationAuditlogsAuditLogTypeEnumAPIKeyConnected                              GetOrganizationAuditlogsAuditLogTypeEnum = "apiKeyConnected"
+	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationLinkAdded                         GetOrganizationAuditlogsAuditLogTypeEnum = "integrationLinkAdded"
+	GetOrganizationAuditlogsAuditLogTypeEnumIntegrationLinkRemoved                       GetOrganizationAuditlogsAuditLogTypeEnum = "integrationLinkRemoved"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdded                            GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdded"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationRemoved                          GetOrganizationAuditlogsAuditLogTypeEnum = "organizationRemoved"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationChanged                          GetOrganizationAuditlogsAuditLogTypeEnum = "organizationChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationSubscriptionTypeChanged          GetOrganizationAuditlogsAuditLogTypeEnum = "organizationSubscriptionTypeChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdminChanged                     GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdminChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdminLeft                        GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdminLeft"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationAdminDisabled2Fa                 GetOrganizationAuditlogsAuditLogTypeEnum = "organizationAdminDisabled2FA"
+	GetOrganizationAuditlogsAuditLogTypeEnumTagAdded                                     GetOrganizationAuditlogsAuditLogTypeEnum = "tagAdded"
+	GetOrganizationAuditlogsAuditLogTypeEnumTagChanged                                   GetOrganizationAuditlogsAuditLogTypeEnum = "tagChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumTagRemoved                                   GetOrganizationAuditlogsAuditLogTypeEnum = "tagRemoved"
+	GetOrganizationAuditlogsAuditLogTypeEnumSettingTagAdded                              GetOrganizationAuditlogsAuditLogTypeEnum = "settingTagAdded"
+	GetOrganizationAuditlogsAuditLogTypeEnumSettingTagRemoved                            GetOrganizationAuditlogsAuditLogTypeEnum = "settingTagRemoved"
+	GetOrganizationAuditlogsAuditLogTypeEnumPublicAPIAccessTokenAdded                    GetOrganizationAuditlogsAuditLogTypeEnum = "publicApiAccessTokenAdded"
+	GetOrganizationAuditlogsAuditLogTypeEnumPublicAPIAccessTokenRemoved                  GetOrganizationAuditlogsAuditLogTypeEnum = "publicApiAccessTokenRemoved"
+	GetOrganizationAuditlogsAuditLogTypeEnumDomainAdded                                  GetOrganizationAuditlogsAuditLogTypeEnum = "domainAdded"
+	GetOrganizationAuditlogsAuditLogTypeEnumDomainVerified                               GetOrganizationAuditlogsAuditLogTypeEnum = "domainVerified"
+	GetOrganizationAuditlogsAuditLogTypeEnumDomainRemoved                                GetOrganizationAuditlogsAuditLogTypeEnum = "domainRemoved"
+	GetOrganizationAuditlogsAuditLogTypeEnumDomainSamlConfigured                         GetOrganizationAuditlogsAuditLogTypeEnum = "domainSamlConfigured"
+	GetOrganizationAuditlogsAuditLogTypeEnumDomainSamlDeleted                            GetOrganizationAuditlogsAuditLogTypeEnum = "domainSamlDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumAutoProvisioningConfigurationChanged         GetOrganizationAuditlogsAuditLogTypeEnum = "autoProvisioningConfigurationChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationMemberJoined                     GetOrganizationAuditlogsAuditLogTypeEnum = "organizationMemberJoined"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationMemberProductJoinRequested       GetOrganizationAuditlogsAuditLogTypeEnum = "organizationMemberProductJoinRequested"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationMemberProductJoinRequestRejected GetOrganizationAuditlogsAuditLogTypeEnum = "organizationMemberProductJoinRequestRejected"
+	GetOrganizationAuditlogsAuditLogTypeEnumOrganizationMemberProductJoinRequestApproved GetOrganizationAuditlogsAuditLogTypeEnum = "organizationMemberProductJoinRequestApproved"
+	GetOrganizationAuditlogsAuditLogTypeEnumCodeReferencesUploaded                       GetOrganizationAuditlogsAuditLogTypeEnum = "codeReferencesUploaded"
+	GetOrganizationAuditlogsAuditLogTypeEnumCodeReferenceDeleted                         GetOrganizationAuditlogsAuditLogTypeEnum = "codeReferenceDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumCodeReferenceStaleBranchDeleted              GetOrganizationAuditlogsAuditLogTypeEnum = "codeReferenceStaleBranchDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumSegmentCreated                               GetOrganizationAuditlogsAuditLogTypeEnum = "segmentCreated"
+	GetOrganizationAuditlogsAuditLogTypeEnumSegmentChanged                               GetOrganizationAuditlogsAuditLogTypeEnum = "segmentChanged"
+	GetOrganizationAuditlogsAuditLogTypeEnumSegmentDeleted                               GetOrganizationAuditlogsAuditLogTypeEnum = "segmentDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumWebhookSigningKeyDeleted                     GetOrganizationAuditlogsAuditLogTypeEnum = "webhookSigningKeyDeleted"
+	GetOrganizationAuditlogsAuditLogTypeEnumWebhookSigningKeyCreated                     GetOrganizationAuditlogsAuditLogTypeEnum = "webhookSigningKeyCreated"
 )
 
 func (e *GetOrganizationAuditlogsAuditLogTypeEnum) UnmarshalJSON(data []byte) error {
@@ -99,6 +109,8 @@ func (e *GetOrganizationAuditlogsAuditLogTypeEnum) UnmarshalJSON(data []byte) er
 	case "productOwnershipTransferred":
 		fallthrough
 	case "productDeleted":
+		fallthrough
+	case "productsReordered":
 		fallthrough
 	case "teamMemberInvited":
 		fallthrough
@@ -124,17 +136,23 @@ func (e *GetOrganizationAuditlogsAuditLogTypeEnum) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "configDeleted":
 		fallthrough
+	case "configsReordered":
+		fallthrough
 	case "environmentCreated":
 		fallthrough
 	case "environmentChanged":
 		fallthrough
 	case "environmentDeleted":
 		fallthrough
+	case "environmentsReordered":
+		fallthrough
 	case "settingCreated":
 		fallthrough
 	case "settingChanged":
 		fallthrough
 	case "settingDeleted":
+		fallthrough
+	case "settingsReordered":
 		fallthrough
 	case "settingValueChanged":
 		fallthrough
@@ -178,11 +196,7 @@ func (e *GetOrganizationAuditlogsAuditLogTypeEnum) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "organizationSubscriptionTypeChanged":
 		fallthrough
-	case "organizationAdminAdded":
-		fallthrough
 	case "organizationAdminChanged":
-		fallthrough
-	case "organizationAdminRemoved":
 		fallthrough
 	case "organizationAdminLeft":
 		fallthrough
@@ -216,11 +230,27 @@ func (e *GetOrganizationAuditlogsAuditLogTypeEnum) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "organizationMemberJoined":
 		fallthrough
-	case "organizationMemberProductAccessRequested":
+	case "organizationMemberProductJoinRequested":
 		fallthrough
-	case "organizationMemberAccessRequestDeclined":
+	case "organizationMemberProductJoinRequestRejected":
 		fallthrough
-	case "organizationMemberAccessRequestAccepted":
+	case "organizationMemberProductJoinRequestApproved":
+		fallthrough
+	case "codeReferencesUploaded":
+		fallthrough
+	case "codeReferenceDeleted":
+		fallthrough
+	case "codeReferenceStaleBranchDeleted":
+		fallthrough
+	case "segmentCreated":
+		fallthrough
+	case "segmentChanged":
+		fallthrough
+	case "segmentDeleted":
+		fallthrough
+	case "webhookSigningKeyDeleted":
+		fallthrough
+	case "webhookSigningKeyCreated":
 		*e = GetOrganizationAuditlogsAuditLogTypeEnum(s)
 		return nil
 	default:

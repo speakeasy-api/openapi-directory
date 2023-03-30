@@ -159,9 +159,9 @@ type EnterpriseCrmFrontendsEventbusProtoTaskConfig struct {
 	Description *string `json:"description,omitempty"`
 	// If this config contains a TypedTask, allow validation to succeed if an input is read from the output of another TypedTask whose output type is declared as a superclass of the requested input type. For instance, if the previous task declares an output of type Message, any task with this flag enabled will pass validation when attempting to read any proto Message type from the resultant Event parameter.
 	DisableStrictTypeValidation *bool `json:"disableStrictTypeValidation,omitempty"`
-	// Optional Error catcher config id of the error catch flow which will be executed when execution error happens in the task
-	ErrorCatcherConfigID *string                                                            `json:"errorCatcherConfigId,omitempty"`
-	ExternalTaskType     *EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum `json:"externalTaskType,omitempty"`
+	// Optional Error catcher id of the error catch flow which will be executed when execution error happens in the task
+	ErrorCatcherID   *string                                                            `json:"errorCatcherId,omitempty"`
+	ExternalTaskType *EnterpriseCrmFrontendsEventbusProtoTaskConfigExternalTaskTypeEnum `json:"externalTaskType,omitempty"`
 	// Policy that defines the task retry logic and failure type. If no FailurePolicy is defined for a task, all its dependent tasks will not be executed (i.e, a `retry_strategy` of NONE will be applied).
 	FailurePolicy *EnterpriseCrmEventbusProtoFailurePolicy `json:"failurePolicy,omitempty"`
 	// The number of edges leading into this TaskConfig.

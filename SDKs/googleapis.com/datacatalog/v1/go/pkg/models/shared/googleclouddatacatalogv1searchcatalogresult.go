@@ -16,6 +16,8 @@ const (
 	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumCloudPubsub                 GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "CLOUD_PUBSUB"
 	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumDataprocMetastore           GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "DATAPROC_METASTORE"
 	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumDataplex                    GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "DATAPLEX"
+	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumCloudSpanner                GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "CLOUD_SPANNER"
+	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumCloudBigtable               GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "CLOUD_BIGTABLE"
 	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumCloudSQL                    GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "CLOUD_SQL"
 	GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnumLooker                      GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum = "LOOKER"
 )
@@ -35,6 +37,10 @@ func (e *GoogleCloudDatacatalogV1SearchCatalogResultIntegratedSystemEnum) Unmars
 	case "DATAPROC_METASTORE":
 		fallthrough
 	case "DATAPLEX":
+		fallthrough
+	case "CLOUD_SPANNER":
+		fallthrough
+	case "CLOUD_BIGTABLE":
 		fallthrough
 	case "CLOUD_SQL":
 		fallthrough

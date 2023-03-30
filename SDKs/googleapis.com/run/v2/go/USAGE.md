@@ -665,7 +665,7 @@ func main() {
                 },
             },
             TerminalCondition: &shared.GoogleCloudRunV2Condition{
-                ExecutionReason: "NON_ZERO_EXIT_CODE",
+                ExecutionReason: "CANCELLED",
                 LastTransitionTime: "soluta",
                 Message: "sed",
                 Reason: "IMMEDIATE_RETRY",

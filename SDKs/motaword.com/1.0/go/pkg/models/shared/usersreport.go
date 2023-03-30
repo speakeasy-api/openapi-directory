@@ -3,6 +3,7 @@
 package shared
 
 type UsersReportReport struct {
+	Currency  *string  `json:"currency,omitempty"`
 	Spending  *float32 `json:"spending,omitempty"`
 	User      *User    `json:"user,omitempty"`
 	WordCount *int64   `json:"word_count,omitempty"`

@@ -6,10 +6,14 @@ package shared
 type NetworkConfig struct {
 	// Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
 	Consumers []Consumer `json:"consumers,omitempty"`
+	// Enables custom routes to be imported and exported for the Dataproc Metastore service's peered VPC network.
+	CustomRoutesEnabled *bool `json:"customRoutesEnabled,omitempty"`
 }
 
 // NetworkConfigInput - Network configuration for the Dataproc Metastore service.
 type NetworkConfigInput struct {
 	// Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
 	Consumers []ConsumerInput `json:"consumers,omitempty"`
+	// Enables custom routes to be imported and exported for the Dataproc Metastore service's peered VPC network.
+	CustomRoutesEnabled *bool `json:"customRoutesEnabled,omitempty"`
 }

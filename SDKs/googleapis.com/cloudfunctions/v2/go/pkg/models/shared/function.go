@@ -114,4 +114,6 @@ type Function struct {
 	StateMessages []GoogleCloudFunctionsV2StateMessage `json:"stateMessages,omitempty"`
 	// Output only. The last update timestamp of a Cloud Function.
 	UpdateTime *string `json:"updateTime,omitempty"`
+	// Output only. The deployed url for the function.
+	URL *string `json:"url,omitempty"`
 }

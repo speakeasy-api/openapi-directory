@@ -28,7 +28,7 @@ type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsPathParams struct {
 
 type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsQueryParams struct {
 	// Query string to narrow down the response as per
-	// [filtering and sorting](../../../../../../meta/filtering).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 }
 

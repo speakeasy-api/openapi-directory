@@ -13,7 +13,7 @@ type PostGetNotificationConfigurationListSecurity struct {
 }
 
 type PostGetNotificationConfigurationListRequest struct {
-	Request  interface{} `request:"mediaType=application/json"`
+	Request  map[string]interface{} `request:"mediaType=application/json"`
 	Security PostGetNotificationConfigurationListSecurity
 }
 

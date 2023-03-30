@@ -8,4 +8,6 @@ type GoogleCloudRecaptchaenterpriseV1AndroidKeySettings struct {
 	AllowAllPackageNames *bool `json:"allowAllPackageNames,omitempty"`
 	// Android package names of apps allowed to use the key. Example: 'com.companyname.appname'
 	AllowedPackageNames []string `json:"allowedPackageNames,omitempty"`
+	// Set to true for keys that are used in an Android application that is available for download in app stores in addition to the Google Play Store.
+	SupportNonGoogleAppStoreDistribution *bool `json:"supportNonGoogleAppStoreDistribution,omitempty"`
 }

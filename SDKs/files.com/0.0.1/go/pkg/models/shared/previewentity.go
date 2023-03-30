@@ -8,9 +8,9 @@ type PreviewEntity struct {
 	// Preview ID
 	ID *int `json:"id,omitempty"`
 	// Preview size
-	Size *int `json:"size,omitempty"`
+	Size *string `json:"size,omitempty"`
 	// Preview status.  Can be invalid, not_generated, generating, complete, or file_too_large
 	Status *string `json:"status,omitempty"`
-	// Preview status.  Can be invalid, not_generated, generating, complete, or file_too_large
+	// Preview type. Can be image, pdf, pdf_native, video, or audio
 	Type *string `json:"type,omitempty"`
 }

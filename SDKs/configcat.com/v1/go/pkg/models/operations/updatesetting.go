@@ -14,7 +14,7 @@ type UpdateSettingPathParams struct {
 
 type UpdateSettingRequest struct {
 	PathParams UpdateSettingPathParams
-	Request    []shared.Operation `request:"mediaType=application/json"`
+	Request    shared.JSONPatchInput `request:"mediaType=application/json"`
 }
 
 type UpdateSettingResponse struct {

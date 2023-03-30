@@ -85,7 +85,8 @@ type SDK struct {
 	// Alias - **Operations:** Create, Get, Update, Delete, Get List
 	Alias *alias
 	// Click - **Operations:** Get List
-	Click *click
+	Click      *click
+	Statistics *statistics
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -157,6 +158,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.Click = newClick(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Statistics = newStatistics(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

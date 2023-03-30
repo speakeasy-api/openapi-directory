@@ -12,8 +12,10 @@ type PricingRuleListElement struct {
 	LastModifiedTime           *int64                `json:"LastModifiedTime,omitempty"`
 	ModifierPercentage         *float64              `json:"ModifierPercentage,omitempty"`
 	Name                       *string               `json:"Name,omitempty"`
+	Operation                  *string               `json:"Operation,omitempty"`
 	Scope                      *PricingRuleScopeEnum `json:"Scope,omitempty"`
 	Service                    *string               `json:"Service,omitempty"`
 	Tiering                    *Tiering              `json:"Tiering,omitempty"`
 	Type                       *PricingRuleTypeEnum  `json:"Type,omitempty"`
+	UsageType                  *string               `json:"UsageType,omitempty"`
 }

@@ -121,51 +121,6 @@ func (s *radioSettings) DeleteNetworkWirelessRfProfile(ctx context.Context, requ
 	return res, nil
 }
 
-// GetNetworkDeviceWirelessRadioSettings - Return the radio settings of a device
-// Return the radio settings of a device
-func (s *radioSettings) GetNetworkDeviceWirelessRadioSettings(ctx context.Context, request operations.GetNetworkDeviceWirelessRadioSettingsRequest) (*operations.GetNetworkDeviceWirelessRadioSettingsResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/networks/{networkId}/devices/{serial}/wireless/radioSettings", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetNetworkDeviceWirelessRadioSettingsResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GetNetworkDeviceWirelessRadioSettings200ApplicationJSONObject = out
-		}
-	}
-
-	return res, nil
-}
-
 // GetNetworkWirelessRfProfile - Return a RF profile
 // Return a RF profile
 func (s *radioSettings) GetNetworkWirelessRfProfile(ctx context.Context, request operations.GetNetworkWirelessRfProfileRequest) (*operations.GetNetworkWirelessRfProfileResponse, error) {

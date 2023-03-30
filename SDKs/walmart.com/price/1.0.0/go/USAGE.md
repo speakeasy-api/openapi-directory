@@ -11,22 +11,14 @@ import (
 )
 
 func main() {
-    s := sdk.New(
-        sdk.WithSecurity(shared.Security{
-            BasicScheme: shared.SchemeBasicScheme{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        }),
-    )
+    s := sdk.New()
 
     req := operations.OptCapProgramInPriceRequest{
         Headers: operations.OptCapProgramInPriceHeaders{
-            Authorization: "unde",
-            WmConsumerChannelType: "deserunt",
-            WmQosCorrelationID: "porro",
-            WmSecAccessToken: "nulla",
-            WmSvcName: "id",
+            WmConsumerChannelType: "unde",
+            WmQosCorrelationID: "deserunt",
+            WmSecAccessToken: "porro",
+            WmSvcName: "nulla",
         },
         Request: operations.OptCapProgramInPriceRequestBody{
             SubsidyEnrolled: false,

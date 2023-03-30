@@ -98,6 +98,8 @@ pkg/models/shared/searchbackgroundjobsresponse.go
 pkg/models/shared/backgroundjoblogentry.go
 pkg/models/shared/seedjobdetails.go
 pkg/models/shared/importrulesjobdetails.go
+pkg/models/shared/convertjobdetails.go
+pkg/models/shared/applyjobdetails.go
 pkg/models/shared/seedconversionworkspacerequest.go
 pkg/models/shared/fetchstaticipsresponse.go
 pkg/models/shared/listlocationsresponse.go

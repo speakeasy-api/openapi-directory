@@ -10,8 +10,9 @@ import (
 type ValidationEnum string
 
 const (
-	ValidationEnumEnable  ValidationEnum = "ENABLE"
-	ValidationEnumDisable ValidationEnum = "DISABLE"
+	ValidationEnumEnable                  ValidationEnum = "ENABLE"
+	ValidationEnumDisable                 ValidationEnum = "DISABLE"
+	ValidationEnumUseLocalResourceSetting ValidationEnum = "USE_LOCAL_RESOURCE_SETTING"
 )
 
 func (e *ValidationEnum) UnmarshalJSON(data []byte) error {
@@ -23,6 +24,8 @@ func (e *ValidationEnum) UnmarshalJSON(data []byte) error {
 	case "ENABLE":
 		fallthrough
 	case "DISABLE":
+		fallthrough
+	case "USE_LOCAL_RESOURCE_SETTING":
 		*e = ValidationEnum(s)
 		return nil
 	default:

@@ -5,25 +5,25 @@ package shared
 // AuthorComplete - OK. Article representation
 type AuthorComplete struct {
 	// First Name
-	FirstName *string `json:"first_name,omitempty"`
+	FirstName string `json:"first_name"`
 	// Author full name
-	FullName *string `json:"full_name,omitempty"`
+	FullName string `json:"full_name"`
 	// Group id
-	GroupID *int64 `json:"group_id,omitempty"`
+	GroupID int64 `json:"group_id"`
 	// Author id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Institution id
-	InstitutionID *int64 `json:"institution_id,omitempty"`
+	InstitutionID int64 `json:"institution_id"`
 	// True if author has published items
-	IsActive *bool `json:"is_active,omitempty"`
+	IsActive bool `json:"is_active"`
 	// if 1 then the author has published items
-	IsPublic *int64 `json:"is_public,omitempty"`
+	IsPublic int64 `json:"is_public"`
 	// Job title
-	JobTitle *string `json:"job_title,omitempty"`
+	JobTitle string `json:"job_title"`
 	// Last Name
-	LastName *string `json:"last_name,omitempty"`
+	LastName string `json:"last_name"`
 	// Author Orcid
-	OrcidID *string `json:"orcid_id,omitempty"`
+	OrcidID string `json:"orcid_id"`
 	// Author url name
-	URLName *string `json:"url_name,omitempty"`
+	URLName string `json:"url_name"`
 }

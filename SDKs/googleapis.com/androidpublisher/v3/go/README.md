@@ -449,6 +449,7 @@ func main() {
 ### Purchases
 
 * `AndroidpublisherPurchasesProductsAcknowledge` - Acknowledges a purchase of an inapp item.
+* `AndroidpublisherPurchasesProductsConsume` - Consumes a purchase for an inapp item.
 * `AndroidpublisherPurchasesProductsGet` - Checks the purchase and consumption status of an inapp item.
 * `AndroidpublisherPurchasesSubscriptionsAcknowledge` - Acknowledges a subscription purchase.
 * `AndroidpublisherPurchasesSubscriptionsCancel` - Cancels a user's subscription purchase. The subscription remains valid until its expiration time.

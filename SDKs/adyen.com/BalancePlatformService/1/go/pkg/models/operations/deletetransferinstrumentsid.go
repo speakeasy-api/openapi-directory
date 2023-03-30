@@ -24,10 +24,8 @@ type DeleteTransferInstrumentsIDRequest struct {
 
 type DeleteTransferInstrumentsIDResponse struct {
 	ContentType string
-	StatusCode  int
-	RawResponse *http.Response
 	// Bad Request - a problem reading or understanding the request.
 	ServiceError *shared.ServiceError
-	// OK - the request has succeeded.
-	VoidResponse interface{}
+	StatusCode   int
+	RawResponse  *http.Response
 }

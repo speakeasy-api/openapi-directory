@@ -183,6 +183,9 @@ const (
 	ActionEntityInterfaceEnumScim          ActionEntityInterfaceEnum = "scim"
 	ActionEntityInterfaceEnumOffice        ActionEntityInterfaceEnum = "office"
 	ActionEntityInterfaceEnumMobile        ActionEntityInterfaceEnum = "mobile"
+	ActionEntityInterfaceEnumAs2           ActionEntityInterfaceEnum = "as2"
+	ActionEntityInterfaceEnumInboundEmail  ActionEntityInterfaceEnum = "inbound_email"
+	ActionEntityInterfaceEnumRemote        ActionEntityInterfaceEnum = "remote"
 )
 
 func (e *ActionEntityInterfaceEnum) UnmarshalJSON(data []byte) error {
@@ -214,6 +217,12 @@ func (e *ActionEntityInterfaceEnum) UnmarshalJSON(data []byte) error {
 	case "office":
 		fallthrough
 	case "mobile":
+		fallthrough
+	case "as2":
+		fallthrough
+	case "inbound_email":
+		fallthrough
+	case "remote":
 		*e = ActionEntityInterfaceEnum(s)
 		return nil
 	default:
@@ -242,7 +251,7 @@ type ActionEntity struct {
 	// The source path for this action, if applicable
 	Source *string `json:"source,omitempty"`
 	// Targets
-	Targets []string `json:"targets,omitempty"`
+	Targets []map[string]interface{} `json:"targets,omitempty"`
 	// User ID
 	UserID *int `json:"user_id,omitempty"`
 	// Username

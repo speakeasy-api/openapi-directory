@@ -34,8 +34,16 @@ type SDK struct {
 	APIKeys *apiKeys
 	// Apps - Operations about apps
 	Apps *apps
-	// As2Keys - Operations about as2_keys
-	As2Keys *as2Keys
+	// As2IncomingMessages - Operations about as2_incoming_messages
+	As2IncomingMessages *as2IncomingMessages
+	// As2OutgoingMessages - Operations about as2_outgoing_messages
+	As2OutgoingMessages *as2OutgoingMessages
+	// As2Partners - Operations about as2_partners
+	As2Partners *as2Partners
+	// As2Stations - Operations about as2_stations
+	As2Stations *as2Stations
+	// AutomationRuns - Operations about automation_runs
+	AutomationRuns *automationRuns
 	// Automations - Operations about automations
 	Automations *automations
 	// BandwidthSnapshots - Operations about bandwidth_snapshots
@@ -44,6 +52,8 @@ type SDK struct {
 	Behaviors *behaviors
 	// BundleDownloads - Operations about bundle_downloads
 	BundleDownloads *bundleDownloads
+	// BundleNotifications - Operations about bundle_notifications
+	BundleNotifications *bundleNotifications
 	// BundleRecipients - Operations about bundle_recipients
 	BundleRecipients *bundleRecipients
 	// BundleRegistrations - Operations about bundle_registrations
@@ -106,10 +116,14 @@ type SDK struct {
 	Payments *payments
 	// Permissions - Operations about permissions
 	Permissions *permissions
+	// Priorities - Operations about priorities
+	Priorities *priorities
 	// Projects - Operations about projects
 	Projects *projects
 	// PublicKeys - Operations about public_keys
 	PublicKeys *publicKeys
+	// RemoteBandwidthSnapshots - Operations about remote_bandwidth_snapshots
+	RemoteBandwidthSnapshots *remoteBandwidthSnapshots
 	// RemoteServers - Operations about remote_servers
 	RemoteServers *remoteServers
 	// Requests - Operations about requests
@@ -118,14 +132,14 @@ type SDK struct {
 	Sessions *sessions
 	// SettingsChanges - Operations about settings_changes
 	SettingsChanges *settingsChanges
+	// SftpHostKeys - Operations about sftp_host_keys
+	SftpHostKeys *sftpHostKeys
 	// Site - Operations about sites
 	Site *site
 	// SsoStrategies - Operations about sso_strategies
 	SsoStrategies *ssoStrategies
 	// Styles - Operations about styles
 	Styles *styles
-	// SyncJobs - Operations about sync_jobs
-	SyncJobs *syncJobs
 	// UsageDailySnapshots - Operations about usage_daily_snapshots
 	UsageDailySnapshots *usageDailySnapshots
 	// UsageSnapshots - Operations about usage_snapshots
@@ -255,7 +269,43 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.As2Keys = newAs2Keys(
+	sdk.As2IncomingMessages = newAs2IncomingMessages(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.As2OutgoingMessages = newAs2OutgoingMessages(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.As2Partners = newAs2Partners(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.As2Stations = newAs2Stations(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.AutomationRuns = newAutomationRuns(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -292,6 +342,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.BundleDownloads = newBundleDownloads(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.BundleNotifications = newBundleNotifications(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -579,6 +638,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.Priorities = newPriorities(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.Projects = newProjects(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -589,6 +657,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.PublicKeys = newPublicKeys(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.RemoteBandwidthSnapshots = newRemoteBandwidthSnapshots(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -633,6 +710,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.SftpHostKeys = newSftpHostKeys(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.Site = newSite(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -652,15 +738,6 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.Styles = newStyles(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.SyncJobs = newSyncJobs(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

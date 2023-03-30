@@ -4,15 +4,17 @@ package shared
 
 // SourceServer - Success
 type SourceServer struct {
-	ApplicationID       *string              `json:"applicationID,omitempty"`
-	Arn                 *string              `json:"arn,omitempty"`
-	DataReplicationInfo *DataReplicationInfo `json:"dataReplicationInfo,omitempty"`
-	IsArchived          *bool                `json:"isArchived,omitempty"`
-	LaunchedInstance    *LaunchedInstance    `json:"launchedInstance,omitempty"`
-	LifeCycle           *LifeCycle           `json:"lifeCycle,omitempty"`
-	ReplicationType     *ReplicationTypeEnum `json:"replicationType,omitempty"`
-	SourceProperties    *SourceProperties    `json:"sourceProperties,omitempty"`
-	SourceServerID      *string              `json:"sourceServerID,omitempty"`
-	Tags                map[string]string    `json:"tags,omitempty"`
-	VcenterClientID     *string              `json:"vcenterClientID,omitempty"`
+	ApplicationID          *string              `json:"applicationID,omitempty"`
+	Arn                    *string              `json:"arn,omitempty"`
+	DataReplicationInfo    *DataReplicationInfo `json:"dataReplicationInfo,omitempty"`
+	FqdnForActionFramework *string              `json:"fqdnForActionFramework,omitempty"`
+	IsArchived             *bool                `json:"isArchived,omitempty"`
+	LaunchedInstance       *LaunchedInstance    `json:"launchedInstance,omitempty"`
+	LifeCycle              *LifeCycle           `json:"lifeCycle,omitempty"`
+	ReplicationType        *ReplicationTypeEnum `json:"replicationType,omitempty"`
+	SourceProperties       *SourceProperties    `json:"sourceProperties,omitempty"`
+	SourceServerID         *string              `json:"sourceServerID,omitempty"`
+	Tags                   map[string]string    `json:"tags,omitempty"`
+	UserProvidedID         *string              `json:"userProvidedID,omitempty"`
+	VcenterClientID        *string              `json:"vcenterClientID,omitempty"`
 }

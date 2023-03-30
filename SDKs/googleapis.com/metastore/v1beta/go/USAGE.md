@@ -47,7 +47,7 @@ func main() {
                     Name: "sapiente",
                 },
                 "enim": shared.BackendMetastore{
-                    MetastoreType: "BIGQUERY",
+                    MetastoreType: "DATAPLEX",
                     Name: "voluptatum",
                 },
             },

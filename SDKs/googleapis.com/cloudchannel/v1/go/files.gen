@@ -29,6 +29,7 @@ pkg/models/operations/cloudchannelaccountscustomersentitlementschangeparameters.
 pkg/models/operations/cloudchannelaccountscustomersentitlementschangerenewalsettings.go
 pkg/models/operations/cloudchannelaccountscustomersentitlementscreate.go
 pkg/models/operations/cloudchannelaccountscustomersentitlementslist.go
+pkg/models/operations/cloudchannelaccountscustomersentitlementslistentitlementchanges.go
 pkg/models/operations/cloudchannelaccountscustomersentitlementslookupoffer.go
 pkg/models/operations/cloudchannelaccountscustomersentitlementsstartpaidservice.go
 pkg/models/operations/cloudchannelaccountscustomersentitlementssuspend.go
@@ -96,6 +97,8 @@ pkg/models/shared/googlecloudchannelv1commitmentsettings.go
 pkg/models/shared/googlecloudchannelv1associationinfo.go
 pkg/models/shared/googlecloudchannelv1listentitlementsresponse.go
 pkg/models/shared/googlecloudchannelv1provisionedservice.go
+pkg/models/shared/googlecloudchannelv1listentitlementchangesresponse.go
+pkg/models/shared/googlecloudchannelv1entitlementchange.go
 pkg/models/shared/googlecloudchannelv1offer.go
 pkg/models/shared/googlecloudchannelv1sku.go
 pkg/models/shared/googlecloudchannelv1product.go

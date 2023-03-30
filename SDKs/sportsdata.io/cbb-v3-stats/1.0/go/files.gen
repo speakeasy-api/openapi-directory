@@ -17,6 +17,7 @@ pkg/models/operations/boxscoresbydate.go
 pkg/models/operations/boxscoresbydatedelta.go
 pkg/models/operations/currentseason.go
 pkg/models/operations/gamesbydate.go
+pkg/models/operations/injuredplayers.go
 pkg/models/operations/leaguehierarchy.go
 pkg/models/operations/playerdetailsbyactive.go
 pkg/models/operations/playerdetailsbyplayer.go
@@ -31,6 +32,7 @@ pkg/models/operations/projectedplayergamestatsbydate.go
 pkg/models/operations/projectedplayergamestatsbyplayer.go
 pkg/models/operations/schedules.go
 pkg/models/operations/stadiums.go
+pkg/models/operations/teamgamelogsbyseason.go
 pkg/models/operations/teamgamestatsbydate.go
 pkg/models/operations/teamseasonstats.go
 pkg/models/operations/teams.go
@@ -42,9 +44,9 @@ pkg/models/shared/period.go
 pkg/models/shared/game.go
 pkg/models/shared/stadium.go
 pkg/models/shared/season.go
+pkg/models/shared/player.go
 pkg/models/shared/conference.go
 pkg/models/shared/team.go
-pkg/models/shared/player.go
 pkg/models/shared/playerseason.go
 pkg/models/shared/playergameprojection.go
 pkg/models/shared/teamseason.go

@@ -38,9 +38,9 @@ type AccountEvent struct {
 	// The event.
 	// >Permitted values: `InactivateAccount`, `RefundNotPaidOutTransfers`.
 	// For more information, refer to [Verification checks](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-process).
-	Event AccountEventEventEnum `json:"event"`
+	Event *AccountEventEventEnum `json:"event,omitempty"`
 	// The date on which the event will take place.
-	ExecutionDate time.Time `json:"executionDate"`
+	ExecutionDate *time.Time `json:"executionDate,omitempty"`
 	// The reason why this event has been created.
-	Reason string `json:"reason"`
+	Reason *string `json:"reason,omitempty"`
 }

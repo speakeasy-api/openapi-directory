@@ -23,11 +23,11 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
-// SDK - Portfolio Optimizer is a [Web API](https://en.wikipedia.org/wiki/Web_API) to optimize the composition of investment portfolios (collection of financial assets such as stocks, bonds, ETFs, crypto-currencies) using modern portfolio theory-like algorithms (mean-variance, etc.).
+// SDK - Portfolio Optimizer is a [Web API](https://en.wikipedia.org/wiki/Web_API) to analyze and optimize investment portfolios (collection of financial assets such as stocks, bonds, ETFs, crypto-currencies) using modern portfolio theory algorithms (mean-variance, VaR, etc.).
 //
 // # API General Information
 //
-// Portfolio Optimizer is based on [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) for easy integration, uses [JSON](https://en.wikipedia.org/wiki/JSON) for the exchange of data and uses the two most common [HTTP verbs](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) (`GET`, `POST`) to represent the actions.
+//	Portfolio Optimizer is based on [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) for easy integration, uses [JSON](https://en.wikipedia.org/wiki/JSON) for the exchange of data and uses a standard [HTTP verb](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods) (`POST`) to represent the action(s).
 //
 // Portfolio Optimizer is also as secured as a Web API could be:
 // * [256-bit HTTPS Encryption](https://en.wikipedia.org/wiki/HTTPS)
@@ -40,6 +40,8 @@ func String(s string) *string { return &s }
 //     This header specifies that the data provided in input to the endpoint is in JSON format
 //
 // The following HTTP header(s) are optional when calling Portfolio Optimizer endpoints:
+//   - `Content-Encoding: gzip`
+//     This header indicates that the data provided in input to the endpoint is compressed with gzip.
 //   - `X-API-Key: <private API key>`
 //     This header enables [authenticated users](#auth) to provide their private [API key](#overview--api-key) in order to [benefit from higher API limits](#overview--api-limits)
 //
@@ -63,13 +65,13 @@ func String(s string) *string { return &s }
 // * The API requests are restricted to a subset of all the available endpoints and/or endpoints features
 // * The API requests are limited to 1 request per second for all the anonymous users combined, with concurrent requests rejected
 // * The API requests are limited to 1 second of execution time
-// * The API requests are limited to 20 assets, 100 portfolios, 500 series data points and 5 factors
+// * The API requests are limited to 20 assets, 250 portfolios, 500 series data points and 5 factors
 //
 // For authenticated users with an [API key](#overview--api-key):
 // * The API requests have access to all the available endpoints and endpoints features
 // * The API requests are limited to 10000 requests per 24 hour per API key, with concurrent requests queued
 // * The API requests are limited to 2.5 seconds of execution time
-// * The API requests are limited to 100 assets, 500 portfolios, 2500 series data points and 25 factors
+// * The API requests are limited to 100 assets, 1250 portfolios, 2500 series data points and 25 factors
 //
 // > **Notes:**
 // > * It is possible to further relax the API limits, or to disable the API limits alltogether; please [contact the support](https://portfoliooptimizer.io/contact/) for more details.
@@ -109,16 +111,23 @@ func String(s string) *string { return &s }
 //
 // https://docs.portfoliooptimizer.io/ - External documentation
 type SDK struct {
-	AssetsCorrelationMatrix *assetsCorrelationMatrix
-	AssetsCovarianceMatrix  *assetsCovarianceMatrix
-	AssetsReturns           *assetsReturns
-	AssetsVariance          *assetsVariance
-	AssetsVolatility        *assetsVolatility
-	Factors                 *factors
-	PortfolioAnalysis       *portfolioAnalysis
-	PortfolioConstruction   *portfolioConstruction
-	PortfolioOptimization   *portfolioOptimization
-	PortfolioSimulation     *portfolioSimulation
+	AssetsAnalysis                    *assetsAnalysis
+	AssetsCorrelationMatrix           *assetsCorrelationMatrix
+	AssetsCovarianceMatrix            *assetsCovarianceMatrix
+	AssetsKurtosis                    *assetsKurtosis
+	AssetsPrices                      *assetsPrices
+	AssetsReturns                     *assetsReturns
+	AssetsReturnsSimulation           *assetsReturnsSimulation
+	AssetsSkewness                    *assetsSkewness
+	AssetsVariance                    *assetsVariance
+	AssetsVolatility                  *assetsVolatility
+	Factors                           *factors
+	PortfolioAnalysis                 *portfolioAnalysis
+	PortfolioAnalysisSharpeRatio      *portfolioAnalysisSharpeRatio
+	PortfolioConstruction             *portfolioConstruction
+	PortfolioOptimization             *portfolioOptimization
+	PortfolioOptimizationMeanVariance *portfolioOptimizationMeanVariance
+	PortfolioSimulation               *portfolioSimulation
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -191,6 +200,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
+	sdk.AssetsAnalysis = newAssetsAnalysis(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.AssetsCorrelationMatrix = newAssetsCorrelationMatrix(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -209,7 +227,43 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.AssetsKurtosis = newAssetsKurtosis(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.AssetsPrices = newAssetsPrices(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.AssetsReturns = newAssetsReturns(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.AssetsReturnsSimulation = newAssetsReturnsSimulation(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.AssetsSkewness = newAssetsSkewness(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -254,6 +308,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.PortfolioAnalysisSharpeRatio = newPortfolioAnalysisSharpeRatio(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.PortfolioConstruction = newPortfolioConstruction(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -264,6 +327,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.PortfolioOptimization = newPortfolioOptimization(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.PortfolioOptimizationMeanVariance = newPortfolioOptimizationMeanVariance(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

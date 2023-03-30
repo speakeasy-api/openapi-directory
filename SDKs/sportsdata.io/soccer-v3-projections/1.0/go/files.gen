@@ -12,6 +12,7 @@ pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/dfsslatesbydate.go
+pkg/models/operations/injuredplayersbycompetition.go
 pkg/models/operations/projectedplayergamestatsbycompetitionwdfssalaries.go
 pkg/models/operations/projectedplayergamestatsbydatewdfssalaries.go
 pkg/models/operations/projectedplayergamestatsbyplayerwdfssalaries.go
@@ -21,6 +22,7 @@ pkg/models/shared/dfsslateplayer.go
 pkg/models/shared/dfsslategame.go
 pkg/models/shared/game.go
 pkg/models/shared/playoffaggregatescore.go
+pkg/models/shared/player.go
 pkg/models/shared/playergameprojection.go
 pkg/models/shared/security.go
 USAGE.md

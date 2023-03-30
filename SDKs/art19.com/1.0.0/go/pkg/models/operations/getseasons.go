@@ -9,6 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetSeasonsSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetSeasonsSortEnum string
 
 const (
@@ -64,6 +68,7 @@ type GetSeasonsQueryParams struct {
 
 type GetSeasonsRequest struct {
 	QueryParams GetSeasonsQueryParams
+	Security    GetSeasonsSecurity
 }
 
 // GetSeasons400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

@@ -13,7 +13,7 @@ type StopPointArrivalDeparturesPathParams struct {
 }
 
 type StopPointArrivalDeparturesQueryParams struct {
-	// A comma-separated list of line ids e.g. tfl-rail, london-overground, thameslink
+	// A comma-separated list of line ids e.g. elizabeth, london-overground, thameslink
 	LineIds []string `queryParam:"style=form,explode=true,name=lineIds"`
 }
 

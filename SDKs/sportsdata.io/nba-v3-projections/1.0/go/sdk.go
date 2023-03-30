@@ -14,10 +14,8 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"http://api.sportsdata.io",
-	"https://api.sportsdata.io",
-	"http://azure-api.sportsdata.io",
-	"https://azure-api.sportsdata.io",
+	"http://azure-api.sportsdata.io/v3/nba/projections",
+	"https://azure-api.sportsdata.io/v3/nba/projections",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -104,6 +102,51 @@ func New(opts ...SDKOption) *SDK {
 	return sdk
 }
 
+// DepthCharts - Depth Charts
+// This endpoint provides a depth chart for each NBA team.
+func (s *SDK) DepthCharts(ctx context.Context, request operations.DepthChartsRequest) (*operations.DepthChartsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/DepthCharts", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DepthChartsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.TeamDepthChart
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TeamDepthCharts = out
+		}
+	}
+
+	return res, nil
+}
+
 // DfsSlatesByDate - DFS Slates by Date
 func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesByDateRequest) (*operations.DfsSlatesByDateResponse, error) {
 	baseURL := s._serverURL
@@ -142,6 +185,51 @@ func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesB
 			}
 
 			res.DfsSlates = out
+		}
+	}
+
+	return res, nil
+}
+
+// InjuredPlayers - Injured Players
+// This endpoint provides all currently injured NBA players, along with injury details.
+func (s *SDK) InjuredPlayers(ctx context.Context, request operations.InjuredPlayersRequest) (*operations.InjuredPlayersResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/InjuredPlayers", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.InjuredPlayersResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.Player
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Players = out
 		}
 	}
 
@@ -362,6 +450,51 @@ func (s *SDK) ProjectedPlayerSeasonStatsByTeam(ctx context.Context, request oper
 			}
 
 			res.PlayerSeasonProjections = out
+		}
+	}
+
+	return res, nil
+}
+
+// StartingLineupsByDate - Starting Lineups by Date
+// This endpoint provides the projected & confirmed starting lineups for NBA games on a given date.
+func (s *SDK) StartingLineupsByDate(ctx context.Context, request operations.StartingLineupsByDateRequest) (*operations.StartingLineupsByDateResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/StartingLineupsByDate/{date}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.StartingLineupsByDateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.StartingLineups
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.StartingLineups = out
 		}
 	}
 

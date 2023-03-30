@@ -37,15 +37,15 @@ func (e *GetAccountHolderResponseLegalEntityEnum) UnmarshalJSON(data []byte) err
 // GetAccountHolderResponse - OK - the request has succeeded.
 type GetAccountHolderResponse struct {
 	// The code of the account holder.
-	AccountHolderCode    string               `json:"accountHolderCode"`
-	AccountHolderDetails AccountHolderDetails `json:"accountHolderDetails"`
-	AccountHolderStatus  AccountHolderStatus  `json:"accountHolderStatus"`
+	AccountHolderCode    *string               `json:"accountHolderCode,omitempty"`
+	AccountHolderDetails *AccountHolderDetails `json:"accountHolderDetails,omitempty"`
+	AccountHolderStatus  *AccountHolderStatus  `json:"accountHolderStatus,omitempty"`
 	// A list of the accounts under the account holder.
 	Accounts []Account `json:"accounts,omitempty"`
 	// The description of the account holder.
 	Description *string `json:"description,omitempty"`
 	// The legal entity of the account holder.
-	LegalEntity GetAccountHolderResponseLegalEntityEnum `json:"legalEntity"`
+	LegalEntity *GetAccountHolderResponseLegalEntityEnum `json:"legalEntity,omitempty"`
 	// The three-character [ISO currency code](https://docs.adyen.com/development-resources/currency-codes), with which the prospective account holder primarily deals.
 	PrimaryCurrency *string `json:"primaryCurrency,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
@@ -55,6 +55,6 @@ type GetAccountHolderResponse struct {
 	// Indicates whether the request is processed asynchronously. Depending on the request's platform settings, the following scenarios may be applied:
 	// * **true**: The request is queued and will be executed when the providing service is available in the order in which the requests are received.
 	// * **false**: The processing of the request is immediately attempted; it may result in an error if the providing service is unavailable.
-	SubmittedAsync *bool                 `json:"submittedAsync,omitempty"`
-	Verification   KYCVerificationResult `json:"verification"`
+	SubmittedAsync *bool                  `json:"submittedAsync,omitempty"`
+	Verification   *KYCVerificationResult `json:"verification,omitempty"`
 }

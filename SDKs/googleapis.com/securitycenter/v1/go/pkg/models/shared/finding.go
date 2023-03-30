@@ -141,6 +141,10 @@ type Finding struct {
 	CanonicalName *string `json:"canonicalName,omitempty"`
 	// The additional taxonomy group within findings from a given source. This field is immutable after creation time. Example: "XSS_FLASH_INJECTION"
 	Category *string `json:"category,omitempty"`
+	// The [data profile](https://cloud.google.com/dlp/docs/data-profiles) associated with the finding.
+	CloudDlpDataProfile *CloudDlpDataProfile `json:"cloudDlpDataProfile,omitempty"`
+	// Details about the Cloud Data Loss Prevention (Cloud DLP) [inspection job](https://cloud.google.com/dlp/docs/concepts-job-triggers) that produced the finding.
+	CloudDlpInspection *CloudDlpInspection `json:"cloudDlpInspection,omitempty"`
 	// Contains compliance information for security standards associated to the finding.
 	Compliances []Compliance `json:"compliances,omitempty"`
 	// Contains information about the IP connection associated with the finding.
@@ -177,6 +181,8 @@ type Finding struct {
 	Kubernetes *Kubernetes `json:"kubernetes,omitempty"`
 	// MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
 	MitreAttack *MitreAttack `json:"mitreAttack,omitempty"`
+	// Unique identifier of the module which generated the finding. Example: folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
+	ModuleName *string `json:"moduleName,omitempty"`
 	// Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
 	Mute *FindingMuteEnum `json:"mute,omitempty"`
 	// First known as mute_annotation. Records additional information about the mute operation e.g. mute config that muted the finding, user who muted the finding, etc. Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
@@ -187,6 +193,8 @@ type Finding struct {
 	Name *string `json:"name,omitempty"`
 	// Next steps associate to the finding.
 	NextSteps *string `json:"nextSteps,omitempty"`
+	// Contains information about the org policy constraints associated with the finding.
+	OrgPolicyConstraints []OrgPolicyConstraint `json:"orgPolicyConstraints,omitempty"`
 	// The relative resource name of the source the finding belongs to. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is immutable after creation time. For example: "organizations/{organization_id}/sources/{source_id}"
 	Parent *string `json:"parent,omitempty"`
 	// Output only. The human readable display name of the finding source such as "Event Threat Detection" or "Security Health Analytics".
@@ -215,6 +223,10 @@ type FindingInput struct {
 	CanonicalName *string `json:"canonicalName,omitempty"`
 	// The additional taxonomy group within findings from a given source. This field is immutable after creation time. Example: "XSS_FLASH_INJECTION"
 	Category *string `json:"category,omitempty"`
+	// The [data profile](https://cloud.google.com/dlp/docs/data-profiles) associated with the finding.
+	CloudDlpDataProfile *CloudDlpDataProfile `json:"cloudDlpDataProfile,omitempty"`
+	// Details about the Cloud Data Loss Prevention (Cloud DLP) [inspection job](https://cloud.google.com/dlp/docs/concepts-job-triggers) that produced the finding.
+	CloudDlpInspection *CloudDlpInspection `json:"cloudDlpInspection,omitempty"`
 	// Contains compliance information for security standards associated to the finding.
 	Compliances []Compliance `json:"compliances,omitempty"`
 	// Contains information about the IP connection associated with the finding.
@@ -247,6 +259,8 @@ type FindingInput struct {
 	Kubernetes *Kubernetes `json:"kubernetes,omitempty"`
 	// MITRE ATT&CK tactics and techniques related to this finding. See: https://attack.mitre.org
 	MitreAttack *MitreAttack `json:"mitreAttack,omitempty"`
+	// Unique identifier of the module which generated the finding. Example: folders/598186756061/securityHealthAnalyticsSettings/customModules/56799441161885
+	ModuleName *string `json:"moduleName,omitempty"`
 	// Indicates the mute state of a finding (either muted, unmuted or undefined). Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
 	Mute *FindingMuteEnum `json:"mute,omitempty"`
 	// First known as mute_annotation. Records additional information about the mute operation e.g. mute config that muted the finding, user who muted the finding, etc. Unlike other attributes of a finding, a finding provider shouldn't set the value of mute.
@@ -255,6 +269,8 @@ type FindingInput struct {
 	Name *string `json:"name,omitempty"`
 	// Next steps associate to the finding.
 	NextSteps *string `json:"nextSteps,omitempty"`
+	// Contains information about the org policy constraints associated with the finding.
+	OrgPolicyConstraints []OrgPolicyConstraint `json:"orgPolicyConstraints,omitempty"`
 	// The relative resource name of the source the finding belongs to. See: https://cloud.google.com/apis/design/resource_names#relative_resource_name This field is immutable after creation time. For example: "organizations/{organization_id}/sources/{source_id}"
 	Parent *string `json:"parent,omitempty"`
 	// Represents operating system processes associated with the Finding.

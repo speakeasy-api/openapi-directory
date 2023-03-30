@@ -142,6 +142,8 @@ type AutoCompleteQueryParams struct {
 	City *string `queryParam:"style=form,explode=true,name=city"`
 	// To filter listing on Country in which they are listed
 	Country *shared.CountryEnum `queryParam:"style=form,explode=true,name=country"`
+	// Dealer id to filter the listings.
+	DealerID *string `queryParam:"style=form,explode=true,name=dealer_id"`
 	// To filter listing on their drivetrain
 	Drivetrain *string `queryParam:"style=form,explode=true,name=drivetrain"`
 	// To filter listing on their engine
@@ -150,26 +152,42 @@ type AutoCompleteQueryParams struct {
 	EngineBlock *string `queryParam:"style=form,explode=true,name=engine_block"`
 	// Engine Size to match. Valid filter values are those that our Search facets API returns for unique engine size. You can pass in multiple engine size values comma separated
 	EngineSize *string `queryParam:"style=form,explode=true,name=engine_size"`
+	// A list of dealer ids to exclude from result
+	ExcludeDealerIds *string `queryParam:"style=form,explode=true,name=exclude_dealer_ids"`
+	// A list of sources to exclude from result
+	ExcludeSources *string `queryParam:"style=form,explode=true,name=exclude_sources"`
 	// Exterior color to match. Valid filter values are those that our Search facets API returns for unique exterior colors. You can pass in multiple exterior color values comma separated
 	ExteriorColor *string `queryParam:"style=form,explode=true,name=exterior_color"`
+	// Provide minimum count value for facets
+	FacetMinCount *float64 `queryParam:"style=form,explode=true,name=facet_min_count"`
 	// Field name for which you want auto-completion
 	Field AutoCompleteFieldEnum `queryParam:"style=form,explode=true,name=field"`
 	// To filter listing on their fuel type
 	FuelType *string `queryParam:"style=form,explode=true,name=fuel_type"`
 	// Boolean variable to indicate ignore case of current input
 	IgnoreCase *bool `queryParam:"style=form,explode=true,name=ignore_case"`
+	// A boolean to filter in transit vehicles
+	InTransit *shared.InTransitEnum `queryParam:"style=form,explode=true,name=in_transit"`
 	// Flag to indicate whether to include non vin listing terms in results or not. Default is false to avoid un-normalised terms from non vin listings out of results
 	IncludeNonVinListings *AutoCompleteIncludeNonVinListingsEnum `queryParam:"style=form,explode=true,name=include_non_vin_listings"`
 	// Input entered so far
 	Input string `queryParam:"style=form,explode=true,name=input"`
 	// Interior color to match. Valid filter values are those that our Search facets API returns for unique interior colors. You can pass in multiple interior color values comma separated
 	InteriorColor *string `queryParam:"style=form,explode=true,name=interior_color"`
+	// Inventory count range to filter listings with count of total listings in dealers inventory. Range to be given in the format - min-max e.g. 10-50
+	InventoryCountRange *string `queryParam:"style=form,explode=true,name=inventory_count_range"`
 	// To filter listings on their make
 	Make *string `queryParam:"style=form,explode=true,name=make"`
 	// To filter listings on their model
 	Model *string `queryParam:"style=form,explode=true,name=model"`
+	// Radius around the search location (Unit - Miles)
+	Radius *int `queryParam:"style=form,explode=true,name=radius"`
+	// seller type for autocomplete
+	SellerType *string `queryParam:"style=form,explode=true,name=seller_type"`
 	// Sort the response, either by index or count(default)
 	SortBy *AutoCompleteSortByEnum `queryParam:"style=form,explode=true,name=sort_by"`
+	// To filter listing on their source only for widget requests
+	Source *string `queryParam:"style=form,explode=true,name=source"`
 	// To filter listing on State in which they are listed
 	State *string `queryParam:"style=form,explode=true,name=state"`
 	// Boolean variable to indicate wheather to include term counts as well in response
@@ -182,6 +200,8 @@ type AutoCompleteQueryParams struct {
 	VehicleType *string `queryParam:"style=form,explode=true,name=vehicle_type"`
 	// To filter listing on their year
 	Year *string `queryParam:"style=form,explode=true,name=year"`
+	// To filter listing on ZIP around which they are listed
+	Zip *string `queryParam:"style=form,explode=true,name=zip"`
 }
 
 type AutoCompleteRequest struct {

@@ -7,6 +7,7 @@ type MicrosoftSQLServerSettings struct {
 	BcpPacketSize               *int64               `json:"BcpPacketSize,omitempty"`
 	ControlTablesFileGroup      *string              `json:"ControlTablesFileGroup,omitempty"`
 	DatabaseName                *string              `json:"DatabaseName,omitempty"`
+	ForceLobLookup              *bool                `json:"ForceLobLookup,omitempty"`
 	Password                    *string              `json:"Password,omitempty"`
 	Port                        *int64               `json:"Port,omitempty"`
 	QuerySingleAlwaysOnNode     *bool                `json:"QuerySingleAlwaysOnNode,omitempty"`
@@ -15,6 +16,7 @@ type MicrosoftSQLServerSettings struct {
 	SecretsManagerAccessRoleArn *string              `json:"SecretsManagerAccessRoleArn,omitempty"`
 	SecretsManagerSecretID      *string              `json:"SecretsManagerSecretId,omitempty"`
 	ServerName                  *string              `json:"ServerName,omitempty"`
+	TlogAccessMode              *TlogAccessModeEnum  `json:"TlogAccessMode,omitempty"`
 	TrimSpaceInChar             *bool                `json:"TrimSpaceInChar,omitempty"`
 	UseBcpFullLoad              *bool                `json:"UseBcpFullLoad,omitempty"`
 	UseThirdPartyBackupDevice   *bool                `json:"UseThirdPartyBackupDevice,omitempty"`

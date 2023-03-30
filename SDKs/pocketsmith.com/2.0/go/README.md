@@ -76,6 +76,7 @@ func main() {
 
 ### Budgeting
 
+* `DeleteUsersIDForecastCache` - Delete forecast cache for user
 * `GetUsersIDBudget` - List budget for user
 * `GetUsersIDBudgetSummary` - Get budget summary for user
 * `GetUsersIDTrendAnalysis` - Get trend analysis for user
@@ -93,6 +94,20 @@ func main() {
 * `GetUsersIDCategoryRules` - List category rules in user
 * `PostCategoriesIDCategoryRules` - Create category rule in category
 
+### Currencies
+
+* `GetCurrencies` - List currencies
+* `GetCurrenciesID` - Get currency
+
+### Events
+
+* `DeleteEventsID` - Delete event
+* `GetEventsID` - Get event
+* `GetScenariosIDEvents` - List events in scenario.
+* `GetUsersIDEvents` - List events in user.
+* `PostScenariosIDEvents` - Create event in scenario
+* `PutEventsID` - Update event
+
 ### Institutions
 
 * `DeleteInstitutionsID` - Delete institution
@@ -100,6 +115,18 @@ func main() {
 * `GetUsersIDInstitutions` - List institutions in user
 * `PostUsersIDInstitutions` - Create institution in user
 * `PutInstitutionsID` - Update institution
+
+### Labels
+
+* `GetUsersIDLabels` - List labels in user
+
+### SavedSearches
+
+* `GetUsersIDSavedSearches` - List saved searches in user
+
+### TimeZones
+
+* `GetTimeZones` - List time zones
 
 ### TransactionAccounts
 
@@ -109,7 +136,9 @@ func main() {
 
 ### Transactions
 
+* `DeleteTransactionsID` - Delete transaction
 * `GetAccountsIDTransactions` - List transactions in account
+* `GetCategoriesIDTransactions` - List transactions in categories
 * `GetTransactionAccountsIDTransactions` - List transactions in transaction account
 * `GetTransactionsID` - Get a transaction
 * `GetUsersIDTransactions` - List transactions in user

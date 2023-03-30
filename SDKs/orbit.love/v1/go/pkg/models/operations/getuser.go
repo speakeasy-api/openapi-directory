@@ -8,7 +8,7 @@ import (
 )
 
 type GetUserSecurity struct {
-	Bearer shared.SchemeBearer `security:"scheme,type=apiKey,subtype=header"`
+	Bearer shared.SchemeBearer `security:"scheme,type=http,subtype=bearer"`
 }
 
 type GetUserRequest struct {

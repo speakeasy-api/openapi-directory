@@ -39,6 +39,7 @@ const (
 	SQLExternalSyncSettingErrorTypeEnumBinlogRetentionSetting                     SQLExternalSyncSettingErrorTypeEnum = "BINLOG_RETENTION_SETTING"
 	SQLExternalSyncSettingErrorTypeEnumUnsupportedStorageEngine                   SQLExternalSyncSettingErrorTypeEnum = "UNSUPPORTED_STORAGE_ENGINE"
 	SQLExternalSyncSettingErrorTypeEnumLimitedSupportTables                       SQLExternalSyncSettingErrorTypeEnum = "LIMITED_SUPPORT_TABLES"
+	SQLExternalSyncSettingErrorTypeEnumExistingDataInReplica                      SQLExternalSyncSettingErrorTypeEnum = "EXISTING_DATA_IN_REPLICA"
 )
 
 func (e *SQLExternalSyncSettingErrorTypeEnum) UnmarshalJSON(data []byte) error {
@@ -102,6 +103,8 @@ func (e *SQLExternalSyncSettingErrorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "UNSUPPORTED_STORAGE_ENGINE":
 		fallthrough
 	case "LIMITED_SUPPORT_TABLES":
+		fallthrough
+	case "EXISTING_DATA_IN_REPLICA":
 		*e = SQLExternalSyncSettingErrorTypeEnum(s)
 		return nil
 	default:

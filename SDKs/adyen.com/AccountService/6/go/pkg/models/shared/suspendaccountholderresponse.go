@@ -4,7 +4,7 @@ package shared
 
 // SuspendAccountHolderResponse - OK - the request has succeeded.
 type SuspendAccountHolderResponse struct {
-	AccountHolderStatus AccountHolderStatus `json:"accountHolderStatus"`
+	AccountHolderStatus *AccountHolderStatus `json:"accountHolderStatus,omitempty"`
 	// Contains field validation errors that would prevent requests from being processed.
 	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.

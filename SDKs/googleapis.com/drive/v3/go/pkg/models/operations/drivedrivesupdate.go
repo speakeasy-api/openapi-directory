@@ -30,7 +30,7 @@ type DriveDrivesUpdateQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
-	// Issue the request as a domain administrator; if set to true, then the requester will be granted access if they are an administrator of the domain to which the shared drive belongs.
+	// Issue the request as a domain administrator. If set to true, then the requester is granted access if they're an administrator of the domain to which the shared drive belongs.
 	UseDomainAdminAccess *bool `queryParam:"style=form,explode=true,name=useDomainAdminAccess"`
 	// Deprecated. Please use quotaUser instead.
 	UserIP *string `queryParam:"style=form,explode=true,name=userIp"`

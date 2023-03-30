@@ -32,7 +32,7 @@ func newInventoryTask(defaultClient, securityClient HTTPClient, serverURL, langu
 	}
 }
 
-// CreateInventoryTask - This method creates an inventory-related download task for a specified feed type with optional filter criteria. When using this method, specify the feedType. This method returns the location response header containing the getInventoryTask call URI to retrieve the inventory task you just created. The URL includes the eBay-assigned task ID, which you can use to reference the inventory task. To retrieve the status of the task, use the getInventoryTask method to retrieve a single task ID or the getInventoryTasks method to retrieve multiple task IDs. Note: The scope depends on the feed type. An error message results when an unsupported scope or feed type is specified.Presently, this method supports Active Inventory Report. The ActiveInventoryReport returns a report that contains price and quantity information for all of the active listings for a specific seller. A seller can use this information to maintain their inventory on eBay.
+// CreateInventoryTask - This method creates an inventory-related download task for a specified feed type with optional filter criteria. When using this method, specify the <strong>feedType</strong>. <br/><br/>This method returns the location response header containing the <strong>getInventoryTask</strong> call URI to retrieve the inventory task you just created. The URL includes the eBay-assigned task ID, which you can use to reference the inventory task.<br/><br/>To retrieve the status of the task, use the <strong>getInventoryTask</strong> method to retrieve a single task ID or the <strong>getInventoryTasks</strong> method to retrieve multiple task IDs.<p> <span class="tablenote"><strong>Note:</strong> The scope depends on the feed type. An error message results when an unsupported scope or feed type is specified.</span></p>Presently, this method supports Active Inventory Report. The <strong>ActiveInventoryReport</strong> returns a report that contains price and quantity information for all of the active listings for a specific seller. A seller can use this information to maintain their inventory on eBay.
 func (s *inventoryTask) CreateInventoryTask(ctx context.Context, request operations.CreateInventoryTaskRequest) (*operations.CreateInventoryTaskResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/inventory_task"
@@ -51,8 +51,6 @@ func (s *inventoryTask) CreateInventoryTask(ctx context.Context, request operati
 	}
 
 	req.Header.Set("Content-Type", reqContentType)
-
-	utils.PopulateHeaders(ctx, req, request.Headers)
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
@@ -87,7 +85,7 @@ func (s *inventoryTask) CreateInventoryTask(ctx context.Context, request operati
 	return res, nil
 }
 
-// GetInventoryTask - This method retrieves the task details and status of the specified inventory-related task. The input is task_id.
+// GetInventoryTask - This method retrieves the task details and status of the specified inventory-related task. The input is <strong>task_id</strong>.
 func (s *inventoryTask) GetInventoryTask(ctx context.Context, request operations.GetInventoryTaskRequest) (*operations.GetInventoryTaskResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/inventory_task/{task_id}", request.PathParams, nil)

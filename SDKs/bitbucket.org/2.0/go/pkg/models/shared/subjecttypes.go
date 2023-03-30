@@ -13,31 +13,19 @@ type SubjectTypesRepository struct {
 	Events *SubjectTypesRepositoryLink `json:"events,omitempty"`
 }
 
-// SubjectTypesTeamLink - A link to a resource related to this object.
-type SubjectTypesTeamLink struct {
+// SubjectTypesWorkspaceLink - A link to a resource related to this object.
+type SubjectTypesWorkspaceLink struct {
 	Href *string `json:"href,omitempty"`
 	Name *string `json:"name,omitempty"`
 }
 
-type SubjectTypesTeam struct {
+type SubjectTypesWorkspace struct {
 	// A link to a resource related to this object.
-	Events *SubjectTypesTeamLink `json:"events,omitempty"`
-}
-
-// SubjectTypesUserLink - A link to a resource related to this object.
-type SubjectTypesUserLink struct {
-	Href *string `json:"href,omitempty"`
-	Name *string `json:"name,omitempty"`
-}
-
-type SubjectTypesUser struct {
-	// A link to a resource related to this object.
-	Events *SubjectTypesUserLink `json:"events,omitempty"`
+	Events *SubjectTypesWorkspaceLink `json:"events,omitempty"`
 }
 
 // SubjectTypes - The mapping of resource/subject types pointing to their individual event types.
 type SubjectTypes struct {
 	Repository *SubjectTypesRepository `json:"repository,omitempty"`
-	Team       *SubjectTypesTeam       `json:"team,omitempty"`
-	User       *SubjectTypesUser       `json:"user,omitempty"`
+	Workspace  *SubjectTypesWorkspace  `json:"workspace,omitempty"`
 }

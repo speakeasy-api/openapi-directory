@@ -36,11 +36,11 @@ func main() {
             ProductID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
         },
         QueryParams: operations.GetAuditlogsQueryParams{
-            AuditLogType: "organizationSubscriptionTypeChanged",
+            AuditLogType: "organizationAdminLeft",
             ConfigID: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
             EnvironmentID: "b7392059-2939-46fe-a759-6eb10faaa235",
-            FromUtcDateTime: "2023-02-10T11:11:42.837Z",
-            ToUtcDateTime: "2022-06-28T12:34:45.127Z",
+            FromUtcDateTime: "2023-02-10T22:47:29.995Z",
+            ToUtcDateTime: "2022-06-29T00:10:32.286Z",
         },
     }
 
@@ -66,6 +66,11 @@ func main() {
 * `GetAuditlogs` - List Audit log items for Product
 * `GetDeletedSettings` - List Deleted Settings
 * `GetOrganizationAuditlogs` - List Audit log items for Organization
+
+### CodeReferences
+
+* `PostV1CodeReferences`
+* `PostV1CodeReferencesDeleteReports`
 
 ### Configs
 
@@ -109,6 +114,8 @@ func main() {
 * `AddOrUpdateIntegrationLink` - Add or update Integration link
 * `DeleteIntegrationLink` - Delete Integration link
 * `GetIntegrationLinkDetails` - Get Integration link
+* `JiraAddOrUpdateIntegrationLink`
+* `PostV1JiraConnect`
 
 ### Me
 
@@ -116,6 +123,7 @@ func main() {
 
 ### Members
 
+* `AddMemberToGroup` - Update Member Permissions
 * `DeleteOrganizationMember` - Delete Member from Organization
 * `DeleteProductMember` - Delete Member from Product
 * `GetOrganizationMembers` - List Organization Members
@@ -145,6 +153,14 @@ func main() {
 ### SDKKeys
 
 * `GetSDKKeys` - Get SDK Key
+
+### Segments
+
+* `CreateSegment` - Create Segment
+* `DeleteSegment` - Delete Segment
+* `GetSegment` - Get Segment
+* `GetSegments` - List Segments
+* `UpdateSegment` - Update Segment
 
 ### Tags
 

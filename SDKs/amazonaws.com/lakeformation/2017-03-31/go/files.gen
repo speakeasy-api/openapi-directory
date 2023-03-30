@@ -26,6 +26,7 @@ pkg/models/operations/deregisterresource.go
 pkg/models/operations/describeresource.go
 pkg/models/operations/describetransaction.go
 pkg/models/operations/extendtransaction.go
+pkg/models/operations/getdatacellsfilter.go
 pkg/models/operations/getdatalakesettings.go
 pkg/models/operations/geteffectivepermissionsforpath.go
 pkg/models/operations/getlftag.go
@@ -52,6 +53,7 @@ pkg/models/operations/searchdatabasesbylftags.go
 pkg/models/operations/searchtablesbylftags.go
 pkg/models/operations/startqueryplanning.go
 pkg/models/operations/starttransaction.go
+pkg/models/operations/updatedatacellsfilter.go
 pkg/models/operations/updatelftag.go
 pkg/models/operations/updateresource.go
 pkg/models/operations/updatetableobjects.go
@@ -86,6 +88,8 @@ pkg/models/shared/describeresourceresponse.go
 pkg/models/shared/resourceinfo.go
 pkg/models/shared/describetransactionresponse.go
 pkg/models/shared/transactiondescription.go
+pkg/models/shared/getdatacellsfilterresponse.go
+pkg/models/shared/datacellsfilter.go
 pkg/models/shared/getdatalakesettingsresponse.go
 pkg/models/shared/datalakesettings.go
 pkg/models/shared/principalpermissions.go
@@ -110,7 +114,6 @@ pkg/models/shared/getworkunitresultsresponse.go
 pkg/models/shared/getworkunitsresponse.go
 pkg/models/shared/workunitrange.go
 pkg/models/shared/listdatacellsfilterresponse.go
-pkg/models/shared/datacellsfilter.go
 pkg/models/shared/listlftagsresponse.go
 pkg/models/shared/listpermissionsresponse.go
 pkg/models/shared/listresourcesresponse.go

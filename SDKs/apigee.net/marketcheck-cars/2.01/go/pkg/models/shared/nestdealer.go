@@ -7,14 +7,20 @@ type NestDealer struct {
 	City *string `json:"city,omitempty"`
 	// country of the dealer
 	Country *string `json:"country,omitempty"`
+	// county of the dealer
+	County *string `json:"county,omitempty"`
 	// Type of dealer (franchise/independent)
 	DealerType *string `json:"dealer_type,omitempty"`
+	// dealership_group_name of dealer
+	DealershipGroupName *string `json:"dealership_group_name,omitempty"`
 	// The unique id associated with the dealer in the Marketcheck database
 	ID *int64 `json:"id,omitempty"`
 	// Latutide for the dealer location
 	Latitude *string `json:"latitude,omitempty"`
 	// Longitude for the dealer location
 	Longitude *string `json:"longitude,omitempty"`
+	// msa_code of the dealer
+	MsaCode *string `json:"msa_code,omitempty"`
 	// Name of the dealer
 	Name *string `json:"name,omitempty"`
 	// Contact no of the dealer

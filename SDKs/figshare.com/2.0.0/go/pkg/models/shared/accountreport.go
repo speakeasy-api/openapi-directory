@@ -37,15 +37,15 @@ func (e *AccountReportStatusEnum) UnmarshalJSON(data []byte) error {
 // AccountReport - OK. AccountReport created.
 type AccountReport struct {
 	// The ID of the account which generated this report.
-	AccountID *int64 `json:"account_id,omitempty"`
+	AccountID int64 `json:"account_id"`
 	// Date when the AccountReport was requested
-	CreatedDate *string `json:"created_date,omitempty"`
+	CreatedDate string `json:"created_date"`
 	// The download link for the generated XLSX
-	DownloadURL *string `json:"download_url,omitempty"`
+	DownloadURL string `json:"download_url"`
 	// The group ID that was used to filter the report, if any.
-	GroupID *int64 `json:"group_id,omitempty"`
+	GroupID int64 `json:"group_id"`
 	// A unique ID for the AccountRecord
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Status of the report
-	Status *AccountReportStatusEnum `json:"status,omitempty"`
+	Status AccountReportStatusEnum `json:"status"`
 }

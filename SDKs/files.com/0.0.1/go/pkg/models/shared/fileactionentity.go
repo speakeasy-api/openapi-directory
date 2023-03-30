@@ -4,8 +4,8 @@ package shared
 
 // FileActionEntity - Move file/folder
 type FileActionEntity struct {
-	// If status is enqueued, this is the id of the FileMigration to check for status updates.
+	// If status is pending, this is the id of the FileMigration to check for status updates.
 	FileMigrationID *int `json:"file_migration_id,omitempty"`
-	// Status of file operation. Possible values: completed, enqueued.
+	// Status of file operation.
 	Status *string `json:"status,omitempty"`
 }

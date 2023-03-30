@@ -27,6 +27,7 @@ pkg/models/operations/tpuprojectslocationsoperationslist.go
 pkg/models/operations/tpuprojectslocationsqueuedresourcescreate.go
 pkg/models/operations/tpuprojectslocationsqueuedresourcesdelete.go
 pkg/models/operations/tpuprojectslocationsqueuedresourceslist.go
+pkg/models/operations/tpuprojectslocationsqueuedresourcesreset.go
 pkg/models/operations/tpuprojectslocationsruntimeversionsget.go
 pkg/models/operations/tpuprojectslocationsruntimeversionslist.go
 pkg/models/shared/listacceleratortypesresponse.go

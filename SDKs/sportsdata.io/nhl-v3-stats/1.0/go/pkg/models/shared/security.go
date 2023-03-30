@@ -7,7 +7,7 @@ type SchemeAPIKeyHeader struct {
 }
 
 type SchemeAPIKeyQuery struct {
-	APIKey string `security:"name=subscription-key"`
+	APIKey string `security:"name=key"`
 }
 
 type Security struct {

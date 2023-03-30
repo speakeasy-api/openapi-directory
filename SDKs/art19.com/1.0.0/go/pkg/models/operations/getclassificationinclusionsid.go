@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetClassificationInclusionsIDSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetClassificationInclusionsIDPathParams struct {
 	// The ID of the classification inclusion resource to load.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -14,6 +18,7 @@ type GetClassificationInclusionsIDPathParams struct {
 
 type GetClassificationInclusionsIDRequest struct {
 	PathParams GetClassificationInclusionsIDPathParams
+	Security   GetClassificationInclusionsIDSecurity
 }
 
 // GetClassificationInclusionsID200ApplicationVndAPIPlusJSON - Success

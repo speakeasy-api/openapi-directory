@@ -3,6 +3,8 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -16,9 +18,59 @@ type WebhooksSubscribePathParams struct {
 	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
 }
 
+type WebhooksSubscribeRequestBodyEventTypesEnum string
+
+const (
+	WebhooksSubscribeRequestBodyEventTypesEnumContactCreated      WebhooksSubscribeRequestBodyEventTypesEnum = "contact-created"
+	WebhooksSubscribeRequestBodyEventTypesEnumContactUpdated      WebhooksSubscribeRequestBodyEventTypesEnum = "contact-updated"
+	WebhooksSubscribeRequestBodyEventTypesEnumContactRemoved      WebhooksSubscribeRequestBodyEventTypesEnum = "contact-removed"
+	WebhooksSubscribeRequestBodyEventTypesEnumMessageReceived     WebhooksSubscribeRequestBodyEventTypesEnum = "message-received"
+	WebhooksSubscribeRequestBodyEventTypesEnumMessageSent         WebhooksSubscribeRequestBodyEventTypesEnum = "message-sent"
+	WebhooksSubscribeRequestBodyEventTypesEnumMessageStatus       WebhooksSubscribeRequestBodyEventTypesEnum = "message-status"
+	WebhooksSubscribeRequestBodyEventTypesEnumConversationStarted WebhooksSubscribeRequestBodyEventTypesEnum = "conversation-started"
+	WebhooksSubscribeRequestBodyEventTypesEnumContactOptOut       WebhooksSubscribeRequestBodyEventTypesEnum = "contact-opt-out"
+	WebhooksSubscribeRequestBodyEventTypesEnumContactOptIn        WebhooksSubscribeRequestBodyEventTypesEnum = "contact-opt-in"
+	WebhooksSubscribeRequestBodyEventTypesEnumListOptOut          WebhooksSubscribeRequestBodyEventTypesEnum = "list-opt-out"
+	WebhooksSubscribeRequestBodyEventTypesEnumListOptIn           WebhooksSubscribeRequestBodyEventTypesEnum = "list-opt-in"
+)
+
+func (e *WebhooksSubscribeRequestBodyEventTypesEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "contact-created":
+		fallthrough
+	case "contact-updated":
+		fallthrough
+	case "contact-removed":
+		fallthrough
+	case "message-received":
+		fallthrough
+	case "message-sent":
+		fallthrough
+	case "message-status":
+		fallthrough
+	case "conversation-started":
+		fallthrough
+	case "contact-opt-out":
+		fallthrough
+	case "contact-opt-in":
+		fallthrough
+	case "list-opt-out":
+		fallthrough
+	case "list-opt-in":
+		*e = WebhooksSubscribeRequestBodyEventTypesEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for WebhooksSubscribeRequestBodyEventTypesEnum: %s", s)
+	}
+}
+
 type WebhooksSubscribeRequestBody struct {
-	EventTypes []string `json:"eventTypes,omitempty"`
-	URL        *string  `json:"url,omitempty"`
+	EventTypes []WebhooksSubscribeRequestBodyEventTypesEnum `json:"eventTypes,omitempty"`
+	URL        *string                                      `json:"url,omitempty"`
 }
 
 type WebhooksSubscribeRequest struct {

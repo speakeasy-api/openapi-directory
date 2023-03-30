@@ -21,10 +21,11 @@ type EstimateDetailsVO struct {
 	Project         *ProjectBaseVO `json:"project,omitempty"`
 	ReferenceNumber *string        `json:"reference_number,omitempty"`
 	// Java type: com.noosh.nooshapi.vo.RfeBaseVO
-	Rfe         *RfeBaseVO  `json:"rfe,omitempty"`
-	Status      *string     `json:"status,omitempty"`
-	SubmitDate  *types.Date `json:"submit_date,omitempty"`
-	SubmittedBy *string     `json:"submitted_by,omitempty"`
+	Rfe               *RfeBaseVO  `json:"rfe,omitempty"`
+	Status            *string     `json:"status,omitempty"`
+	SubmitDate        *types.Date `json:"submit_date,omitempty"`
+	SubmittedBy       *string     `json:"submitted_by,omitempty"`
+	SubmittedByUserID *int64      `json:"submitted_by_user_id,omitempty"`
 	// Java type: com.noosh.nooshapi.vo.WorkgroupBaseVO
 	SupplierWorkgroup     *WorkgroupBaseVO `json:"supplier_workgroup,omitempty"`
 	TransactionalCurrency *string          `json:"transactional_currency,omitempty"`

@@ -18,7 +18,7 @@ type DeleteDatalakeAutoEnableHeaders struct {
 }
 
 type DeleteDatalakeAutoEnableRequestBody struct {
-	// Delete Amazon Security Lake with the specified configuration settings to stop ingesting security data for new accounts in Security Lake.
+	// Remove automatic enablement of configuration settings for new member accounts in Security Lake.
 	RemoveFromConfigurationForNewAccounts []shared.AutoEnableNewRegionConfiguration `json:"removeFromConfigurationForNewAccounts"`
 }
 

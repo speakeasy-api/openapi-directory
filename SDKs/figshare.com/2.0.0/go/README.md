@@ -62,7 +62,8 @@ func main() {
 * `ArticleVersionConfidentiality` - Public Article Confidentiality for article version
 * `ArticleVersionDetails` - Article details for version
 * `ArticleVersionEmbargo` - Public Article Embargo for article version
-* `ArticleVersionUpdateThumb` - Article Version Update Thumb
+* `ArticleVersionUpdate` - Update article version
+* `ArticleVersionUpdateThumb` - Update article version thumbnail
 * `ArticleVersions` - List article versions
 * `ArticlesList` - Public Articles
 * `ArticlesSearch` - Public Articles Search
@@ -93,6 +94,7 @@ func main() {
 * `PrivateArticlePublish` - Private Article Publish
 * `PrivateArticleReserveDoi` - Private Article Reserve DOI
 * `PrivateArticleReserveHandle` - Private Article Reserve Handle
+* `PrivateArticleResource` - Private Article Resource
 * `PrivateArticleUpdate` - Update article
 * `PrivateArticleUploadComplete` - Complete Upload
 * `PrivateArticleUploadInitiate` - Initiate Upload
@@ -134,6 +136,7 @@ func main() {
 * `PrivateCollectionPublish` - Private Collection Publish
 * `PrivateCollectionReserveDoi` - Private Collection Reserve DOI
 * `PrivateCollectionReserveHandle` - Private Collection Reserve Handle
+* `PrivateCollectionResource` - Private Collection Resource
 * `PrivateCollectionUpdate` - Update collection
 * `PrivateCollectionsList` - Private Collections List
 * `PrivateCollectionsSearch` - Private Collections Search
@@ -143,6 +146,8 @@ func main() {
 * `AccountInstitutionCuration` - Institution Curation Review
 * `AccountInstitutionCurationComments` - Institution Curation Review Comments
 * `AccountInstitutionCurations` - Institution Curation Reviews
+* `CustomFieldsList` - Private account institution group custom fields
+* `CustomFieldsUpload` - Custom fields values files upload
 * `InstitutionArticles` - Public Licenses
 * `InstitutionHrfeedUpload` - Private Institution HRfeed Upload
 * `PostAccountInstitutionReviewCurationIDComments` - POST Institution Curation Review Comment
@@ -166,6 +171,7 @@ func main() {
 
 * `CategoriesList` - Public Categories
 * `FileDownload` - Public File Download
+* `ItemTypesList` - Item Types
 * `LicensesList` - Public Licenses
 * `PrivateAccount` - Private Account information
 * `PrivateFundingSearch` - Search Funding

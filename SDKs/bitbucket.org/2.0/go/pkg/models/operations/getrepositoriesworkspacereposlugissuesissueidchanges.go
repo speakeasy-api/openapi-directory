@@ -28,10 +28,10 @@ type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesPathParams struct {
 
 type GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesQueryParams struct {
 	// Query string to narrow down the response. See
-	// [filtering and sorting](../../../meta/filtering) for details.
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for details.
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Name of a response property to sort results. See
-	// [filtering and sorting](../../../meta/filtering#query-sort)
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results)
 	// for details.
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`

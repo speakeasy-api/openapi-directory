@@ -68,4 +68,6 @@ type UpdateResolverConfigResponse struct {
 	ThrottlingException interface{}
 	// Success
 	UpdateResolverConfigResponse *shared.UpdateResolverConfigResponse
+	// ValidationException
+	ValidationException interface{}
 }

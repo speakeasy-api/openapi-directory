@@ -63,6 +63,10 @@ func main() {
 * `GetBlockedNumbers` - List blocked numbers
 * `PostBlockedNumbers` - Create a blocked number
 
+### Credits
+
+* `PostCreditTransfer` - Transfer credits to another account
+
 ### Message
 
 * `GetMessages` - Retrieve Messages

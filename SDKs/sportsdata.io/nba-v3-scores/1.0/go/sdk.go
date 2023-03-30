@@ -14,10 +14,8 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"http://api.sportsdata.io",
-	"https://api.sportsdata.io",
-	"http://azure-api.sportsdata.io",
-	"https://azure-api.sportsdata.io",
+	"http://azure-api.sportsdata.io/v3/nba/scores",
+	"https://azure-api.sportsdata.io/v3/nba/scores",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -187,6 +185,51 @@ func (s *SDK) CurrentSeason(ctx context.Context, request operations.CurrentSeaso
 			}
 
 			res.Season = out
+		}
+	}
+
+	return res, nil
+}
+
+// DepthCharts - Depth Charts
+// Returns the full list of NBA Referees.
+func (s *SDK) DepthCharts(ctx context.Context, request operations.DepthChartsRequest) (*operations.DepthChartsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/DepthCharts", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DepthChartsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.TeamDepthChart
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TeamDepthCharts = out
 		}
 	}
 
@@ -501,6 +544,96 @@ func (s *SDK) PlayerDetailsByPlayer(ctx context.Context, request operations.Play
 	return res, nil
 }
 
+// PlayersByTeam - Players by Team
+// This endpoint provides active player details by team.
+func (s *SDK) PlayersByTeam(ctx context.Context, request operations.PlayersByTeamRequest) (*operations.PlayersByTeamResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Players/{team}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PlayersByTeamResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.Player
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Players = out
+		}
+	}
+
+	return res, nil
+}
+
+// Referees - Referees
+// Returns the full list of NBA Referees.
+func (s *SDK) Referees(ctx context.Context, request operations.RefereesRequest) (*operations.RefereesResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/Referees", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RefereesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.Referee
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Referees = out
+		}
+	}
+
+	return res, nil
+}
+
 // Schedules - Schedules
 func (s *SDK) Schedules(ctx context.Context, request operations.SchedulesRequest) (*operations.SchedulesResponse, error) {
 	baseURL := s._serverURL
@@ -627,6 +760,51 @@ func (s *SDK) Standings(ctx context.Context, request operations.StandingsRequest
 			}
 
 			res.Standings = out
+		}
+	}
+
+	return res, nil
+}
+
+// TeamGameLogsBySeason - Team Game Logs By Season
+// Game by game log of total team statistics.
+func (s *SDK) TeamGameLogsBySeason(ctx context.Context, request operations.TeamGameLogsBySeasonRequest) (*operations.TeamGameLogsBySeasonResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.TeamGameLogsBySeasonResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.TeamGame
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TeamGames = out
 		}
 	}
 

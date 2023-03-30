@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetEpisodesIDSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetEpisodesIDPathParams struct {
 	// The ID of the episode resource to load.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -14,6 +18,7 @@ type GetEpisodesIDPathParams struct {
 
 type GetEpisodesIDRequest struct {
 	PathParams GetEpisodesIDPathParams
+	Security   GetEpisodesIDSecurity
 }
 
 // GetEpisodesID200ApplicationVndAPIPlusJSON - Success

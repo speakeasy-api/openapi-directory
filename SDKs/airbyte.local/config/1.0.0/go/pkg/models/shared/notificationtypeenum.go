@@ -10,7 +10,8 @@ import (
 type NotificationTypeEnum string
 
 const (
-	NotificationTypeEnumSlack NotificationTypeEnum = "slack"
+	NotificationTypeEnumSlack      NotificationTypeEnum = "slack"
+	NotificationTypeEnumCustomerio NotificationTypeEnum = "customerio"
 )
 
 func (e *NotificationTypeEnum) UnmarshalJSON(data []byte) error {
@@ -20,6 +21,8 @@ func (e *NotificationTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 	switch s {
 	case "slack":
+		fallthrough
+	case "customerio":
 		*e = NotificationTypeEnum(s)
 		return nil
 	default:

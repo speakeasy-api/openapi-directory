@@ -67,4 +67,8 @@ type SyncResourceResponse struct {
 	ResourceNotFoundException interface{}
 	// Success
 	SyncResourceResponse *shared.SyncResourceResponse
+	// ThrottlingException
+	ThrottlingException interface{}
+	// ValidationException
+	ValidationException interface{}
 }

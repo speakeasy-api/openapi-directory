@@ -22,6 +22,8 @@ const (
 	BlockTypeEnumQuery            BlockTypeEnum = "QUERY"
 	BlockTypeEnumQueryResult      BlockTypeEnum = "QUERY_RESULT"
 	BlockTypeEnumSignature        BlockTypeEnum = "SIGNATURE"
+	BlockTypeEnumTableTitle       BlockTypeEnum = "TABLE_TITLE"
+	BlockTypeEnumTableFooter      BlockTypeEnum = "TABLE_FOOTER"
 )
 
 func (e *BlockTypeEnum) UnmarshalJSON(data []byte) error {
@@ -53,6 +55,10 @@ func (e *BlockTypeEnum) UnmarshalJSON(data []byte) error {
 	case "QUERY_RESULT":
 		fallthrough
 	case "SIGNATURE":
+		fallthrough
+	case "TABLE_TITLE":
+		fallthrough
+	case "TABLE_FOOTER":
 		*e = BlockTypeEnum(s)
 		return nil
 	default:

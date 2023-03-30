@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// App - Defines an AWS Resilience Hub application.
+// App - Defines an Resilience Hub application.
 type App struct {
 	AppArn                            string                         `json:"appArn"`
 	AssessmentSchedule                *AppAssessmentScheduleTypeEnum `json:"assessmentSchedule,omitempty"`

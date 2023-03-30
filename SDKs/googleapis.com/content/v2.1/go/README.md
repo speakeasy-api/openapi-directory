@@ -68,7 +68,7 @@ func main() {
 ### Accounts
 
 * `ContentAccountsAuthinfo` - Returns information about the authenticated user.
-* `ContentAccountsClaimwebsite` - Claims the website of a Merchant Center sub-account.
+* `ContentAccountsClaimwebsite` - Claims the website of a Merchant Center sub-account. Merchant accounts with approved third-party CSSs aren't required to claim a website.
 * `ContentAccountsCredentialsCreate` - Uploads credentials for the Merchant Center account. If credentials already exist for this Merchant Center account and purpose, this method updates them.
 * `ContentAccountsCustombatch` - Retrieves, inserts, updates, and deletes multiple Merchant Center (sub-)accounts in a single request.
 * `ContentAccountsDelete` - Deletes a Merchant Center sub-account.

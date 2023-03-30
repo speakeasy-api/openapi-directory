@@ -99,14 +99,21 @@ type ArticlesListQueryParams struct {
 	ResourceDoi *string `queryParam:"style=form,explode=true,name=resource_doi"`
 }
 
+type ArticlesListHeaders struct {
+	// Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
+	XCursor *string `header:"style=simple,explode=false,name=X-Cursor"`
+}
+
 type ArticlesListRequest struct {
 	QueryParams ArticlesListQueryParams
+	Headers     ArticlesListHeaders
 }
 
 type ArticlesListResponse struct {
 	// OK. An array of articles
 	Articles    []shared.Article
 	ContentType string
+	Headers     map[string][]string
 	StatusCode  int
 	RawResponse *http.Response
 }

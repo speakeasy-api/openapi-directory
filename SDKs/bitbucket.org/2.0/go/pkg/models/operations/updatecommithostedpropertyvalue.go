@@ -21,6 +21,8 @@ type UpdateCommitHostedPropertyValuePathParams struct {
 
 type UpdateCommitHostedPropertyValueRequest struct {
 	PathParams UpdateCommitHostedPropertyValuePathParams
+	// The application property to create or update.
+	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdateCommitHostedPropertyValueResponse struct {

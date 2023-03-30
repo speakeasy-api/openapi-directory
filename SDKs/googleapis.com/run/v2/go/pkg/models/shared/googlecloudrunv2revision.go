@@ -61,7 +61,7 @@ func (e *GoogleCloudRunV2RevisionExecutionEnvironmentEnum) UnmarshalJSON(data []
 	}
 }
 
-// GoogleCloudRunV2RevisionLaunchStageEnum - Set the launch stage to a preview stage on write to allow use of preview features in that stage. On read, describes whether the resource uses preview features. Launch Stages are defined at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
+// GoogleCloudRunV2RevisionLaunchStageEnum - The least stable launch stage needed to create this resource, as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level features are were, this field will be BETA.
 type GoogleCloudRunV2RevisionLaunchStageEnum string
 
 const (
@@ -131,7 +131,7 @@ type GoogleCloudRunV2Revision struct {
 	Generation *string `json:"generation,omitempty"`
 	// KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
 	Labels map[string]string `json:"labels,omitempty"`
-	// Set the launch stage to a preview stage on write to allow use of preview features in that stage. On read, describes whether the resource uses preview features. Launch Stages are defined at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
+	// The least stable launch stage needed to create this resource, as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level features are were, this field will be BETA.
 	LaunchStage *GoogleCloudRunV2RevisionLaunchStageEnum `json:"launchStage,omitempty"`
 	// Output only. The Google Console URI to obtain logs for the Revision.
 	LogURI *string `json:"logUri,omitempty"`
@@ -143,6 +143,8 @@ type GoogleCloudRunV2Revision struct {
 	ObservedGeneration *string `json:"observedGeneration,omitempty"`
 	// Output only. Indicates whether the resource's reconciliation is still in progress. See comments in `Service.reconciling` for additional information on reconciliation process in Cloud Run.
 	Reconciling *bool `json:"reconciling,omitempty"`
+	// Output only. Reserved for future use.
+	SatisfiesPzs *bool `json:"satisfiesPzs,omitempty"`
 	// Settings for revision-level scaling settings.
 	Scaling *GoogleCloudRunV2RevisionScaling `json:"scaling,omitempty"`
 	// Output only. The name of the parent service.

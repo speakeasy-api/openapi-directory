@@ -31,6 +31,102 @@ func newVitals(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
+// PlaydeveloperreportingVitalsErrorsIssuesSearch - Searches all error issues in which reports have been grouped.
+func (s *vitals) PlaydeveloperreportingVitalsErrorsIssuesSearch(ctx context.Context, request operations.PlaydeveloperreportingVitalsErrorsIssuesSearchRequest) (*operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/errorIssues:search", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GooglePlayDeveloperReportingV1beta1SearchErrorIssuesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GooglePlayDeveloperReportingV1beta1SearchErrorIssuesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// PlaydeveloperreportingVitalsErrorsReportsSearch - Searches all error reports received for an app.
+func (s *vitals) PlaydeveloperreportingVitalsErrorsReportsSearch(ctx context.Context, request operations.PlaydeveloperreportingVitalsErrorsReportsSearchRequest) (*operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{parent}/errorReports:search", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GooglePlayDeveloperReportingV1beta1SearchErrorReportsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GooglePlayDeveloperReportingV1beta1SearchErrorReportsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet - Describes the properties of the metric set.
 func (s *vitals) PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet(ctx context.Context, request operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetRequest) (*operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse, error) {
 	baseURL := s.serverURL

@@ -148,7 +148,7 @@ func String(s string) *string { return &s }
 //
 // ## IP whitelisting
 //
-// Access is by default restricted for all IP addresses. You need to explicitly whitelist an IP in your controlpanel.
+// Access is by default restricted for all IP addresses. You need to explicitly whitelist an IP or an IP range in your controlpanel.
 //
 // # Versioning
 //

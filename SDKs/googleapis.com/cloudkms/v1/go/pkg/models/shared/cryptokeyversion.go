@@ -157,6 +157,9 @@ const (
 	CryptoKeyVersionStateEnumDestroyScheduled                 CryptoKeyVersionStateEnum = "DESTROY_SCHEDULED"
 	CryptoKeyVersionStateEnumPendingImport                    CryptoKeyVersionStateEnum = "PENDING_IMPORT"
 	CryptoKeyVersionStateEnumImportFailed                     CryptoKeyVersionStateEnum = "IMPORT_FAILED"
+	CryptoKeyVersionStateEnumGenerationFailed                 CryptoKeyVersionStateEnum = "GENERATION_FAILED"
+	CryptoKeyVersionStateEnumPendingExternalDestruction       CryptoKeyVersionStateEnum = "PENDING_EXTERNAL_DESTRUCTION"
+	CryptoKeyVersionStateEnumExternalDestructionFailed        CryptoKeyVersionStateEnum = "EXTERNAL_DESTRUCTION_FAILED"
 )
 
 func (e *CryptoKeyVersionStateEnum) UnmarshalJSON(data []byte) error {
@@ -180,6 +183,12 @@ func (e *CryptoKeyVersionStateEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING_IMPORT":
 		fallthrough
 	case "IMPORT_FAILED":
+		fallthrough
+	case "GENERATION_FAILED":
+		fallthrough
+	case "PENDING_EXTERNAL_DESTRUCTION":
+		fallthrough
+	case "EXTERNAL_DESTRUCTION_FAILED":
 		*e = CryptoKeyVersionStateEnum(s)
 		return nil
 	default:
@@ -199,10 +208,14 @@ type CryptoKeyVersion struct {
 	DestroyEventTime *string `json:"destroyEventTime,omitempty"`
 	// Output only. The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
 	DestroyTime *string `json:"destroyTime,omitempty"`
+	// Output only. The root cause of the most recent external destruction failure. Only present if state is EXTERNAL_DESTRUCTION_FAILED.
+	ExternalDestructionFailureReason *string `json:"externalDestructionFailureReason,omitempty"`
 	// ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
 	ExternalProtectionLevelOptions *ExternalProtectionLevelOptions `json:"externalProtectionLevelOptions,omitempty"`
 	// Output only. The time this CryptoKeyVersion's key material was generated.
 	GenerateTime *string `json:"generateTime,omitempty"`
+	// Output only. The root cause of the most recent generation failure. Only present if state is GENERATION_FAILED.
+	GenerationFailureReason *string `json:"generationFailureReason,omitempty"`
 	// Output only. The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.
 	ImportFailureReason *string `json:"importFailureReason,omitempty"`
 	// Output only. The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.

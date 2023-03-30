@@ -32,7 +32,7 @@ func newPeppolIdentifiers(defaultClient, securityClient HTTPClient, serverURL, l
 }
 
 // CreatePeppolIdentifier - Create a new PeppolIdentifier
-// Create a new PeppolIdentifier.
+// Create a brand new new PeppolIdentifier. For <<_sg_singapore>>, special rules apply.
 func (s *peppolIdentifiers) CreatePeppolIdentifier(ctx context.Context, request operations.CreatePeppolIdentifierRequest) (*operations.CreatePeppolIdentifierResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/legal_entities/{legal_entity_id}/peppol_identifiers", request.PathParams, nil)

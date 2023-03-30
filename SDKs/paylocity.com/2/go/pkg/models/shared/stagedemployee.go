@@ -373,7 +373,7 @@ type StagedEmployeePrimaryPayRate struct {
 	PayType *string `json:"payType,omitempty"`
 	// Employee base rate frequency used with payType Hourly. Common values are *Hour, Week*. Default is Hour. <br  />Max length: 10
 	RatePer *string `json:"ratePer,omitempty"`
-	// Employee gross salary per pay period used with payType Salary.<br  />Decimal (12,2)
+	// Employee gross salary per pay period used with payType Salary.<br  />Decimal (12,6)
 	Salary *float64 `json:"salary,omitempty"`
 }
 

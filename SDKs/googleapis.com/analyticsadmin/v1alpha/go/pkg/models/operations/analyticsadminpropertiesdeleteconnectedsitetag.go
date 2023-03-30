@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type AnalyticsadminPropertiesDeleteConnectedSiteTagSecurity struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
 type AnalyticsadminPropertiesDeleteConnectedSiteTagQueryParams struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
@@ -35,6 +40,7 @@ type AnalyticsadminPropertiesDeleteConnectedSiteTagQueryParams struct {
 type AnalyticsadminPropertiesDeleteConnectedSiteTagRequest struct {
 	QueryParams AnalyticsadminPropertiesDeleteConnectedSiteTagQueryParams
 	Request     *shared.GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest `request:"mediaType=application/json"`
+	Security    AnalyticsadminPropertiesDeleteConnectedSiteTagSecurity
 }
 
 type AnalyticsadminPropertiesDeleteConnectedSiteTagResponse struct {

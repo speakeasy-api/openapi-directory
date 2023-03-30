@@ -17,6 +17,8 @@ networkactions.go
 networks.go
 placementgroups.go
 pricing.go
+primaryipactions.go
+primaryips.go
 sshkeys.go
 serveractions.go
 servertypes.go
@@ -122,6 +124,15 @@ pkg/models/operations/getplacementgroupsid.go
 pkg/models/operations/postplacementgroups.go
 pkg/models/operations/putplacementgroupsid.go
 pkg/models/operations/getpricing.go
+pkg/models/operations/postprimaryipsidactionsassign.go
+pkg/models/operations/postprimaryipsidactionschangednsptr.go
+pkg/models/operations/postprimaryipsidactionschangeprotection.go
+pkg/models/operations/postprimaryipsidactionsunassign.go
+pkg/models/operations/deleteprimaryipsid.go
+pkg/models/operations/getprimaryips.go
+pkg/models/operations/getprimaryipsid.go
+pkg/models/operations/postprimaryips.go
+pkg/models/operations/putprimaryipsid.go
 pkg/models/operations/deletesshkeysid.go
 pkg/models/operations/getsshkeys.go
 pkg/models/operations/getsshkeysid.go

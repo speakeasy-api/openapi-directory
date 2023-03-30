@@ -8,7 +8,7 @@ import (
 )
 
 type DiscoverSchemaForSourceRequest struct {
-	Request shared.SourceIDRequestBody `request:"mediaType=application/json"`
+	Request shared.SourceDiscoverSchemaRequestBody `request:"mediaType=application/json"`
 }
 
 type DiscoverSchemaForSourceResponse struct {

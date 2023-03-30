@@ -66,14 +66,18 @@ func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWo
 	return res, nil
 }
 
-// GetWorkspacesWorkspaceID - Get a workspace
-func (s *workspaces) GetWorkspacesWorkspaceID(ctx context.Context, request operations.GetWorkspacesWorkspaceIDRequest) (*operations.GetWorkspacesWorkspaceIDResponse, error) {
+// GetWorkspacesWorkspaceSlug - Get a workspace
+func (s *workspaces) GetWorkspacesWorkspaceSlug(ctx context.Context, request operations.GetWorkspacesWorkspaceSlugRequest) (*operations.GetWorkspacesWorkspaceSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_slug}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
@@ -89,7 +93,7 @@ func (s *workspaces) GetWorkspacesWorkspaceID(ctx context.Context, request opera
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspacesWorkspaceIDResponse{
+	res := &operations.GetWorkspacesWorkspaceSlugResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

@@ -20,6 +20,7 @@ const (
 	GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnumShpz    GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnum = "shpz"
 	GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnumGeojson GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnum = "geojson"
 	GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnumGml     GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnum = "gml"
+	GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnumGpkg    GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnum = "gpkg"
 	GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnumWkt     GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnum = "wkt"
 )
 
@@ -44,6 +45,8 @@ func (e *GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEn
 	case "geojson":
 		fallthrough
 	case "gml":
+		fallthrough
+	case "gpkg":
 		fallthrough
 	case "wkt":
 		*e = GetGeomarksGeomarkIDBoundingBoxFileFormatExtensionFileFormatExtensionEnum(s)

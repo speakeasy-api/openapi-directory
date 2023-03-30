@@ -5,17 +5,17 @@ package shared
 // PublicFile - OK. File representation
 type PublicFile struct {
 	// File computed md5
-	ComputedMd5 *string `json:"computed_md5,omitempty"`
+	ComputedMd5 string `json:"computed_md5"`
 	// Url for file download
-	DownloadURL *string `json:"download_url,omitempty"`
+	DownloadURL string `json:"download_url"`
 	// File id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// True if file is hosted somewhere else
-	IsLinkOnly *bool `json:"is_link_only,omitempty"`
+	IsLinkOnly bool `json:"is_link_only"`
 	// File name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// File size
-	Size *int64 `json:"size,omitempty"`
+	Size int64 `json:"size"`
 	// File supplied md5
-	SuppliedMd5 *string `json:"supplied_md5,omitempty"`
+	SuppliedMd5 string `json:"supplied_md5"`
 }

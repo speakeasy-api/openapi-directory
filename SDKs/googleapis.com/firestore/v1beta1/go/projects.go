@@ -409,7 +409,7 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListDocuments(ctx context.
 	return res, nil
 }
 
-// FirestoreProjectsDatabasesDocumentsListen - Listens to changes. This method is only available via the gRPC API (not REST).
+// FirestoreProjectsDatabasesDocumentsListen - Listens to changes. This method is only available via gRPC or WebChannel (not REST).
 func (s *projects) FirestoreProjectsDatabasesDocumentsListen(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListenRequest) (*operations.FirestoreProjectsDatabasesDocumentsListenResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:listen", request.PathParams, nil)
@@ -739,7 +739,7 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRunQuery(ctx context.Conte
 	return res, nil
 }
 
-// FirestoreProjectsDatabasesDocumentsWrite - Streams batches of document updates and deletes, in order. This method is only available via the gRPC API (not REST).
+// FirestoreProjectsDatabasesDocumentsWrite - Streams batches of document updates and deletes, in order. This method is only available via gRPC or WebChannel (not REST).
 func (s *projects) FirestoreProjectsDatabasesDocumentsWrite(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsWriteRequest) (*operations.FirestoreProjectsDatabasesDocumentsWriteResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1beta1/{database}/documents:write", request.PathParams, nil)

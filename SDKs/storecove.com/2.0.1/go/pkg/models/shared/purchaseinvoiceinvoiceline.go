@@ -2,7 +2,7 @@
 
 package shared
 
-// PurchaseInvoiceInvoiceLineVATDetails - The VAT details for the invoice line.
+// PurchaseInvoiceInvoiceLineVATDetails - DEPRECATED - use tax. The VAT details for the invoice line.
 type PurchaseInvoiceInvoiceLineVATDetails struct {
 	// The amount of VAT for the invoice line.
 	Amount *float64 `json:"amount,omitempty"`
@@ -15,18 +15,25 @@ type PurchaseInvoiceInvoiceLineVATDetails struct {
 type PurchaseInvoiceInvoiceLine struct {
 	Accounting *PurchaseInvoiceAccountingDetails `json:"accounting,omitempty"`
 	// DEPRECATED - use allowance_charges.
-	AllowanceCharge  *float64                                    `json:"allowance_charge,omitempty"`
-	AllowanceCharges []PurchaseInvoiceInvoiceLineAllowanceCharge `json:"allowance_charges,omitempty"`
+	AllowanceCharge      *float64                                    `json:"allowance_charge,omitempty"`
+	AllowanceChargeArray []PurchaseInvoiceInvoiceLineAllowanceCharge `json:"allowance_charge_array,omitempty"`
+	// Deprecated.
+	AllowanceCharges []float64 `json:"allowance_charges,omitempty"`
 	// The amount excluding Tax. This is equal to quantity x price_amount + ∑ allowance_charges.
 	AmountExcludingTax *float64 `json:"amount_excluding_tax,omitempty"`
-	// DEPRECTATED - use amount_excluding_tax The amount excluding VAT.
+	// DEPRECATED - use amount_excluding_tax. The amount excluding VAT.
 	AmountExcludingVat *float64 `json:"amount_excluding_vat,omitempty"`
 	// The description for the invoice line.
 	Description *string `json:"description,omitempty"`
-	// The price for one item, excluding VAT.
-	PriceAmount *float64 `json:"price_amount,omitempty"`
-	// The quantity of the item.
-	Quantity *float64 `json:"quantity,omitempty"`
-	// The VAT details for the invoice line.
+	// A short name for the invoice line.
+	Name *string `json:"name,omitempty"`
+	// The end date of the period this invoice line relates to. Format "YYYY-MM-DD".
+	PeriodEnd *string `json:"period_end,omitempty"`
+	// The start date of the period this invoice line relates to. Format "YYYY-MM-DD".
+	PeriodStart *string                          `json:"period_start,omitempty"`
+	Price       *PurchaseInvoiceInvoiceLinePrice `json:"price,omitempty"`
+	Tax         *PurchaseInvoiceTax              `json:"tax,omitempty"`
+	Units       *PurchaseInvoiceInvoiceLineItem  `json:"units,omitempty"`
+	// DEPRECATED - use tax. The VAT details for the invoice line.
 	Vat *PurchaseInvoiceInvoiceLineVATDetails `json:"vat,omitempty"`
 }

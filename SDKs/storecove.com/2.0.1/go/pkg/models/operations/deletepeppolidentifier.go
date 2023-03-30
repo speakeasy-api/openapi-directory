@@ -11,7 +11,7 @@ type DeletePeppolIdentifierPathParams struct {
 	Identifier string `pathParam:"style=simple,explode=false,name=identifier"`
 	// The id of the LegalEntity this PeppolIdentifier belongs to
 	LegalEntityID int64 `pathParam:"style=simple,explode=false,name=legal_entity_id"`
-	// PEPPOL identifier scheme id, e.g. "DE:VAT". For a full list see <<_peppol_participant_identifier_list>>.
+	// PEPPOL identifier scheme id, e.g. "DE:VAT". For a full list see <<_receiver_identifiers_list>>.
 	Scheme string `pathParam:"style=simple,explode=false,name=scheme"`
 	// The superscheme of the identifier. Should always be "iso6523-actorid-upis".
 	Superscheme string `pathParam:"style=simple,explode=false,name=superscheme"`

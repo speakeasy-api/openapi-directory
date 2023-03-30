@@ -27,6 +27,8 @@ type AppengineAppsCreateQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
+	// The project and location in which the application should be created, specified in the format projects/*/locations/*
+	Parent *string `queryParam:"style=form,explode=true,name=parent"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
@@ -39,7 +41,7 @@ type AppengineAppsCreateQueryParams struct {
 
 type AppengineAppsCreateRequest struct {
 	QueryParams AppengineAppsCreateQueryParams
-	Request     *shared.Application `request:"mediaType=application/json"`
+	Request     *shared.ApplicationInput `request:"mediaType=application/json"`
 	Security    AppengineAppsCreateSecurity
 }
 

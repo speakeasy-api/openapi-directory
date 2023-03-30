@@ -13,8 +13,14 @@ type ListHypernymsQueryParams struct {
 	MaxLevel *string `queryParam:"style=form,explode=true,name=maxLevel"`
 }
 
+type ListHypernymsHeaders struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
+}
+
 type ListHypernymsRequest struct {
 	QueryParams ListHypernymsQueryParams
+	Headers     ListHypernymsHeaders
 }
 
 type ListHypernymsResponse struct {
@@ -22,5 +28,5 @@ type ListHypernymsResponse struct {
 	StatusCode  int
 	RawResponse *http.Response
 	// Hypernyms of Darth Vader
-	ListHypernyms200ApplicationJSONArrays [][]float64
+	ListHypernyms200ApplicationJSONArrays [][]interface{}
 }

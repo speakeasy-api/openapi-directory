@@ -48,6 +48,7 @@ const (
 	DropInfoCauseEnumVpcConnectorNotRunning                          DropInfoCauseEnum = "VPC_CONNECTOR_NOT_RUNNING"
 	DropInfoCauseEnumPscConnectionNotAccepted                        DropInfoCauseEnum = "PSC_CONNECTION_NOT_ACCEPTED"
 	DropInfoCauseEnumCloudRunRevisionNotReady                        DropInfoCauseEnum = "CLOUD_RUN_REVISION_NOT_READY"
+	DropInfoCauseEnumDroppedInsidePscServiceProducer                 DropInfoCauseEnum = "DROPPED_INSIDE_PSC_SERVICE_PRODUCER"
 )
 
 func (e *DropInfoCauseEnum) UnmarshalJSON(data []byte) error {
@@ -129,6 +130,8 @@ func (e *DropInfoCauseEnum) UnmarshalJSON(data []byte) error {
 	case "PSC_CONNECTION_NOT_ACCEPTED":
 		fallthrough
 	case "CLOUD_RUN_REVISION_NOT_READY":
+		fallthrough
+	case "DROPPED_INSIDE_PSC_SERVICE_PRODUCER":
 		*e = DropInfoCauseEnum(s)
 		return nil
 	default:

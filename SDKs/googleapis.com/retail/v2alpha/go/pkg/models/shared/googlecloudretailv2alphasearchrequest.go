@@ -69,6 +69,8 @@ func (e *GoogleCloudRetailV2alphaSearchRequestSearchModeEnum) UnmarshalJSON(data
 
 // GoogleCloudRetailV2alphaSearchRequest - Request message for SearchService.Search method.
 type GoogleCloudRetailV2alphaSearchRequest struct {
+	// Represents the banner in request, for projects that combine banners. For example: a retailer can sell products under different banners like retailer-main, retailer-baby, retailer-meds, etc. under one project.
+	Banner *string `json:"banner,omitempty"`
 	// Boost specification to boost certain items.
 	BoostSpec *GoogleCloudRetailV2alphaSearchRequestBoostSpec `json:"boostSpec,omitempty"`
 	// The branch resource name, such as `projects/*/locations/global/catalogs/default_catalog/branches/0`. Use "default_branch" as the branch ID or leave this field empty, to search products under the default branch.

@@ -49,7 +49,7 @@ func (s *series) GetSeries(ctx context.Context, request operations.GetSeriesRequ
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -110,7 +110,7 @@ func (s *series) GetSeriesID(ctx context.Context, request operations.GetSeriesID
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

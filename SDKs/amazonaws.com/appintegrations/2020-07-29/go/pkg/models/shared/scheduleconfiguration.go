@@ -6,5 +6,5 @@ package shared
 type ScheduleConfiguration struct {
 	FirstExecutionFrom *string `json:"FirstExecutionFrom,omitempty"`
 	Object             *string `json:"Object,omitempty"`
-	ScheduleExpression *string `json:"ScheduleExpression,omitempty"`
+	ScheduleExpression string  `json:"ScheduleExpression"`
 }

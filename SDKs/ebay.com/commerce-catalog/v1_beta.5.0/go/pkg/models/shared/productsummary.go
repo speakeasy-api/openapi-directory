@@ -2,9 +2,9 @@
 
 package shared
 
-// ProductSummary - This type contains a summary of a specified product. The product summary includes information about the product's identifiers, product images, aspects, and the getProduct URL for retrieving the product details.
+// ProductSummary - This type contains a summary of a specified product. The product summary includes information about the product's identifiers, product images, aspects, and the <b>getProduct</b> URL for retrieving the product details.
 type ProductSummary struct {
-	// Contains information about additional images associated with this product. For the primary image, see the image container.
+	// Contains information about additional images associated with this product. For the primary image, see the <b>image</b> container.
 	AdditionalImages []Image `json:"additionalImages,omitempty"`
 	// Contains an array of the category aspects and their values that are associated with this product.
 	Aspects []Aspect `json:"aspects,omitempty"`
@@ -14,7 +14,7 @@ type ProductSummary struct {
 	Ean []string `json:"ean,omitempty"`
 	// The eBay product ID of this product.
 	Epid *string `json:"epid,omitempty"`
-	// A list of all GTINs that identify this product. This includes all of the values returned in the ean, isbn, and upc fields.
+	// A list of all GTINs that identify this product. This includes all of the values returned in the <b>ean</b>, <b>isbn</b>, and <b>upc</b> fields.
 	Gtin []string `json:"gtin,omitempty"`
 	// This type contains information about a product image stored in eBay Picture Services (EPS).
 	Image *Image `json:"image,omitempty"`
@@ -22,7 +22,7 @@ type ProductSummary struct {
 	Isbn []string `json:"isbn,omitempty"`
 	// A list of all Manufacturer Product Number (MPN) values that the manufacturer uses to identify this product.
 	Mpn []string `json:"mpn,omitempty"`
-	// The URI of the getProduct call request that retrieves this product's details.
+	// The URI of the <b>getProduct</b> call request that retrieves this product's details.
 	ProductHref *string `json:"productHref,omitempty"`
 	// The URL for this product's eBay product page.
 	ProductWebURL *string `json:"productWebUrl,omitempty"`

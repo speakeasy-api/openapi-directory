@@ -8,8 +8,12 @@ type ArticleProjectCreate struct {
 	Authors []map[string]interface{} `json:"authors,omitempty"`
 	// List of category ids to be associated with the article(e.g [1, 23, 33, 66])
 	Categories []int64 `json:"categories,omitempty"`
+	// List of category source ids to be associated with the article, supersedes the categories property
+	CategoriesBySourceID []string `json:"categories_by_source_id,omitempty"`
 	// List of key, values pairs to be associated with the article
 	CustomFields map[string]interface{} `json:"custom_fields,omitempty"`
+	// List of custom fields values, supersedes custom_fields parameter
+	CustomFieldsList []CustomArticleFieldAdd `json:"custom_fields_list,omitempty"`
 	// <b>One of:</b> <code>figure</code> <code>online resource</code> <code>preprint</code> <code>book</code> <code>conference contribution</code> <code>media</code> <code>dataset</code> <code>poster</code> <code>journal contribution</code> <code>presentation</code> <code>thesis</code> <code>software</code>
 	DefinedType *string `json:"defined_type,omitempty"`
 	// The article description. In a publisher case, usually this is the remote article description

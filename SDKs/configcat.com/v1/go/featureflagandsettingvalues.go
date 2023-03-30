@@ -223,6 +223,11 @@ func (s *featureFlagAndSettingValues) GetSettingValues(ctx context.Context, requ
 //	}
 //
 // ```
+//
+// The `rolloutRules` property describes two types of rules:
+//
+// - **Targeting rules**: When you want to add or update a targenting rule, the `comparator`, `comparisonAttribute`, and `comparisonValue` members are required.
+// - **Segment rules**: When you want to add add or update a segment rule, the `segmentId` which identifies the desired segment and the `segmentComparator` members are required.
 func (s *featureFlagAndSettingValues) ReplaceSettingValue(ctx context.Context, request operations.ReplaceSettingValueRequest) (*operations.ReplaceSettingValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request.PathParams, nil)
@@ -355,6 +360,11 @@ func (s *featureFlagAndSettingValues) ReplaceSettingValue(ctx context.Context, r
 //	}
 //
 // ```
+//
+// The `rolloutRules` property describes two types of rules:
+//
+// - **Targeting rules**: When you want to add or update a targenting rule, the `comparator`, `comparisonAttribute`, and `comparisonValue` members are required.
+// - **Segment rules**: When you want to add add or update a segment rule, the `segmentId` which identifies the desired segment and the `segmentComparator` members are required.
 func (s *featureFlagAndSettingValues) UpdateSettingValue(ctx context.Context, request operations.UpdateSettingValueRequest) (*operations.UpdateSettingValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/environments/{environmentId}/settings/{settingId}/value", request.PathParams, nil)

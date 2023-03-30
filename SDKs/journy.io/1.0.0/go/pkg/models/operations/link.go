@@ -30,7 +30,7 @@ type Link500ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// Link500ApplicationJSON - The error message should specify what cause the error
+// Link500ApplicationJSON - The message specifies what is done
 type Link500ApplicationJSON struct {
 	Message string                     `json:"message"`
 	Meta    Link500ApplicationJSONMeta `json:"meta"`
@@ -41,7 +41,7 @@ type Link429ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// Link429ApplicationJSON - The error message should specify what cause the error
+// Link429ApplicationJSON - The message specifies what is done
 type Link429ApplicationJSON struct {
 	Message string                     `json:"message"`
 	Meta    Link429ApplicationJSONMeta `json:"meta"`
@@ -52,7 +52,7 @@ type Link403ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// Link403ApplicationJSON - The error message should specify what cause the error
+// Link403ApplicationJSON - The message specifies what is done
 type Link403ApplicationJSON struct {
 	Message string                     `json:"message"`
 	Meta    Link403ApplicationJSONMeta `json:"meta"`
@@ -63,7 +63,7 @@ type Link401ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// Link401ApplicationJSON - The error message should specify what cause the error
+// Link401ApplicationJSON - The message specifies what is done
 type Link401ApplicationJSON struct {
 	Message string                     `json:"message"`
 	Meta    Link401ApplicationJSONMeta `json:"meta"`
@@ -89,7 +89,7 @@ type Link400ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// Link400ApplicationJSON - The error message should specify what cause the error
+// Link400ApplicationJSON - The message specifies what is done
 type Link400ApplicationJSON struct {
 	// Map that sums up all received values that seemed incorrect
 	Errors  Link400ApplicationJSONErrors `json:"errors"`
@@ -102,7 +102,7 @@ type Link201ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// Link201ApplicationJSON - The object was created
+// Link201ApplicationJSON - The message specifies what is done
 type Link201ApplicationJSON struct {
 	Message string                     `json:"message"`
 	Meta    Link201ApplicationJSONMeta `json:"meta"`

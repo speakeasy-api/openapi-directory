@@ -10,6 +10,7 @@ import (
 type GetAttributeGroupResponse struct {
 	Arn            *string           `json:"arn,omitempty"`
 	Attributes     *string           `json:"attributes,omitempty"`
+	CreatedBy      *string           `json:"createdBy,omitempty"`
 	CreationTime   *time.Time        `json:"creationTime,omitempty"`
 	Description    *string           `json:"description,omitempty"`
 	ID             *string           `json:"id,omitempty"`

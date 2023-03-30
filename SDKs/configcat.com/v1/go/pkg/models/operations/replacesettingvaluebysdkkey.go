@@ -19,7 +19,7 @@ type ReplaceSettingValueBySdkkeyQueryParams struct {
 
 type ReplaceSettingValueBySdkkeyHeaders struct {
 	// The ConfigCat SDK Key. (https://app.configcat.com/sdkkey)
-	XConfigcatSdkkey string `header:"style=simple,explode=false,name=X-CONFIGCAT-SDKKEY"`
+	XConfigcatSdkkey *string `header:"style=simple,explode=false,name=X-CONFIGCAT-SDKKEY"`
 }
 
 type ReplaceSettingValueBySdkkeyRequest struct {

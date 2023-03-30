@@ -29,7 +29,7 @@ type ListAppInputSourcesRequestBody struct {
 	AppArn string `json:"appArn"`
 	// The AWS Resilience Hub application version.
 	AppVersion string `json:"appVersion"`
-	// Maximum number of input sources to be displayed per AWS Resilience Hub application.
+	// Maximum number of input sources to be displayed per Resilience Hub application.
 	MaxResults *int64 `json:"maxResults,omitempty"`
 	// Null, or the token from a previous call to get the next set of results.
 	NextToken *string `json:"nextToken,omitempty"`

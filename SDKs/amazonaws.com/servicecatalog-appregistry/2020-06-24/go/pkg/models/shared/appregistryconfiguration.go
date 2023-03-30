@@ -2,7 +2,7 @@
 
 package shared
 
-// AppRegistryConfiguration -  Includes all of the Service Catalog AppRegistry settings.
+// AppRegistryConfiguration -  Includes all of the AppRegistry settings.
 type AppRegistryConfiguration struct {
 	TagQueryConfiguration *TagQueryConfiguration `json:"tagQueryConfiguration,omitempty"`
 }

@@ -104,8 +104,9 @@ type DescribeImagesResultImagesBlockDeviceMappings struct {
 type DescribeImagesResultImagesBootModeEnum string
 
 const (
-	DescribeImagesResultImagesBootModeEnumLegacyBios DescribeImagesResultImagesBootModeEnum = "legacy-bios"
-	DescribeImagesResultImagesBootModeEnumUefi       DescribeImagesResultImagesBootModeEnum = "uefi"
+	DescribeImagesResultImagesBootModeEnumLegacyBios    DescribeImagesResultImagesBootModeEnum = "legacy-bios"
+	DescribeImagesResultImagesBootModeEnumUefi          DescribeImagesResultImagesBootModeEnum = "uefi"
+	DescribeImagesResultImagesBootModeEnumUefiPreferred DescribeImagesResultImagesBootModeEnum = "uefi-preferred"
 )
 
 func (e *DescribeImagesResultImagesBootModeEnum) UnmarshalJSON(data []byte) error {
@@ -117,6 +118,8 @@ func (e *DescribeImagesResultImagesBootModeEnum) UnmarshalJSON(data []byte) erro
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
+		fallthrough
+	case "uefi-preferred":
 		*e = DescribeImagesResultImagesBootModeEnum(s)
 		return nil
 	default:

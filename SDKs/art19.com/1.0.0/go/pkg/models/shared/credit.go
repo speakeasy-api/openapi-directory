@@ -8,34 +8,6 @@ import (
 	"time"
 )
 
-// CreditAttributesCreditableTypeEnum - This will be replaced by the relationship `creditable` in a future update.<br/>
-// The type of entitiy this credit is for
-type CreditAttributesCreditableTypeEnum string
-
-const (
-	CreditAttributesCreditableTypeEnumSeries  CreditAttributesCreditableTypeEnum = "Series"
-	CreditAttributesCreditableTypeEnumSeason  CreditAttributesCreditableTypeEnum = "Season"
-	CreditAttributesCreditableTypeEnumEpisode CreditAttributesCreditableTypeEnum = "Episode"
-)
-
-func (e *CreditAttributesCreditableTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "Series":
-		fallthrough
-	case "Season":
-		fallthrough
-	case "Episode":
-		*e = CreditAttributesCreditableTypeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for CreditAttributesCreditableTypeEnum: %s", s)
-	}
-}
-
 // CreditAttributesTypeEnum - The type of credit the linked person has on the referenced entity
 type CreditAttributesTypeEnum string
 
@@ -125,14 +97,6 @@ func (e *CreditAttributesTypeEnum) UnmarshalJSON(data []byte) error {
 
 type CreditAttributes struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
-	// This will be replaced by the relationship `creditable` in a future update.<br/>
-	// The ID of the entity this credit is for
-	//
-	CreditableID *string `json:"creditable_id,omitempty"`
-	// This will be replaced by the relationship `creditable` in a future update.<br/>
-	// The type of entitiy this credit is for
-	//
-	CreditableType *CreditAttributesCreditableTypeEnum `json:"creditable_type,omitempty"`
 	// The order of this credit within all credits of the referenced creditable entity
 	Position *int64 `json:"position,omitempty"`
 	// The type of credit the linked person has on the referenced entity
@@ -140,12 +104,17 @@ type CreditAttributes struct {
 	UpdatedAt *time.Time                `json:"updated_at,omitempty"`
 }
 
+type CreditRelationshipsCreditable struct {
+	Data *ResourceIdentifier `json:"data,omitempty"`
+}
+
 type CreditRelationshipsPerson struct {
 	Data *ResourceIdentifier `json:"data,omitempty"`
 }
 
 type CreditRelationships struct {
-	Person *CreditRelationshipsPerson `json:"person,omitempty"`
+	Creditable *CreditRelationshipsCreditable `json:"creditable,omitempty"`
+	Person     *CreditRelationshipsPerson     `json:"person,omitempty"`
 }
 
 // Credit - A credit links a specific person to a series, season, or episode in a specific role.

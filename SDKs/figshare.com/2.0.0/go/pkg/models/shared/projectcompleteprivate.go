@@ -60,40 +60,44 @@ func (e *ProjectCompletePrivateStorageEnum) UnmarshalJSON(data []byte) error {
 
 // ProjectCompletePrivate - OK. Project representation
 type ProjectCompletePrivate struct {
+	// ID of the account owning the project
+	AccountID int64 `json:"account_id"`
 	// List of project collaborators
-	Collaborators []Collaborator `json:"collaborators,omitempty"`
+	Collaborators []Collaborator `json:"collaborators"`
 	// Date when project was created
-	CreatedDate *string `json:"created_date,omitempty"`
+	CreatedDate string `json:"created_date"`
+	// Collection custom fields
+	CustomFields []CustomArticleField `json:"custom_fields"`
 	// Project description
-	Description *string `json:"description,omitempty"`
+	Description string `json:"description"`
 	// Project public url
-	FigshareURL *string `json:"figshare_url,omitempty"`
+	FigshareURL string `json:"figshare_url"`
 	// Project funding
-	Funding *string `json:"funding,omitempty"`
+	Funding string `json:"funding"`
 	// Full Project funding information
-	FundingList []FundingInformation `json:"funding_list,omitempty"`
+	FundingList []FundingInformation `json:"funding_list"`
 	// Group of project if any
-	GroupID *int64 `json:"group_id,omitempty"`
+	GroupID int64 `json:"group_id"`
 	// Project id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Date when project was last modified
-	ModifiedDate *string `json:"modified_date,omitempty"`
+	ModifiedDate string `json:"modified_date"`
 	// Date when project was published
-	PublishedDate *string `json:"published_date,omitempty"`
+	PublishedDate string `json:"published_date"`
 	// Project quota
-	Quota *int64 `json:"quota,omitempty"`
+	Quota int64 `json:"quota"`
 	// Role inside this project
-	Role *ProjectCompletePrivateRoleEnum `json:"role,omitempty"`
+	Role ProjectCompletePrivateRoleEnum `json:"role"`
 	// Project storage type
-	Storage *ProjectCompletePrivateStorageEnum `json:"storage,omitempty"`
+	Storage ProjectCompletePrivateStorageEnum `json:"storage"`
 	// Project title
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 	// Api endpoint
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 	// Project used quota
-	UsedQuota *int64 `json:"used_quota,omitempty"`
+	UsedQuota int64 `json:"used_quota"`
 	// Project private quota used
-	UsedQuotaPrivate *int64 `json:"used_quota_private,omitempty"`
+	UsedQuotaPrivate int64 `json:"used_quota_private"`
 	// Project public quota used
-	UsedQuotaPublic *int64 `json:"used_quota_public,omitempty"`
+	UsedQuotaPublic int64 `json:"used_quota_public"`
 }

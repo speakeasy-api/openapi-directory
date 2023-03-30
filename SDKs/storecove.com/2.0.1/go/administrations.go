@@ -32,7 +32,7 @@ func newAdministrations(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // CreateAdministration - Create a new Administration
-// Create a new Administration. An Administration is an email destination for purchase invoices.
+// Deprecated. Create a new Administration. An Administration is an email destination for purchase invoices.
 func (s *administrations) CreateAdministration(ctx context.Context, request operations.CreateAdministrationRequest) (*operations.CreateAdministrationResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/legal_entities/{legal_entity_id}/administrations", request.PathParams, nil)
@@ -102,7 +102,7 @@ func (s *administrations) CreateAdministration(ctx context.Context, request oper
 }
 
 // DeleteAdministration - Delete Administration
-// Delete an Administration
+// Deprecated. Delete an Administration
 func (s *administrations) DeleteAdministration(ctx context.Context, request operations.DeleteAdministrationRequest) (*operations.DeleteAdministrationResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/legal_entities/{legal_entity_id}/administrations/{id}", request.PathParams, nil)
@@ -144,7 +144,7 @@ func (s *administrations) DeleteAdministration(ctx context.Context, request oper
 }
 
 // GetAdministration - Get Administration
-// Get an Administration
+// Deprecated. Get an Administration
 func (s *administrations) GetAdministration(ctx context.Context, request operations.GetAdministrationRequest) (*operations.GetAdministrationResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/legal_entities/{legal_entity_id}/administrations/{id}", request.PathParams, nil)
@@ -194,7 +194,7 @@ func (s *administrations) GetAdministration(ctx context.Context, request operati
 }
 
 // UpdateAdministration - Update Administration
-// Update an Administration
+// Deprecated. Update an Administration
 func (s *administrations) UpdateAdministration(ctx context.Context, request operations.UpdateAdministrationRequest) (*operations.UpdateAdministrationResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/legal_entities/{legal_entity_id}/administrations/{id}", request.PathParams, nil)

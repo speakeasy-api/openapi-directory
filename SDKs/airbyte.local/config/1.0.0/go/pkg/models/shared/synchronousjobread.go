@@ -4,11 +4,12 @@ package shared
 
 type SynchronousJobRead struct {
 	// only present if a config id was provided.
-	ConfigID   *string           `json:"configId,omitempty"`
-	ConfigType JobConfigTypeEnum `json:"configType"`
-	CreatedAt  int64             `json:"createdAt"`
-	EndedAt    int64             `json:"endedAt"`
-	ID         string            `json:"id"`
-	Logs       *LogRead          `json:"logs,omitempty"`
-	Succeeded  bool              `json:"succeeded"`
+	ConfigID                      *string           `json:"configId,omitempty"`
+	ConfigType                    JobConfigTypeEnum `json:"configType"`
+	ConnectorConfigurationUpdated *bool             `json:"connectorConfigurationUpdated,omitempty"`
+	CreatedAt                     int64             `json:"createdAt"`
+	EndedAt                       int64             `json:"endedAt"`
+	ID                            string            `json:"id"`
+	Logs                          *LogRead          `json:"logs,omitempty"`
+	Succeeded                     bool              `json:"succeeded"`
 }

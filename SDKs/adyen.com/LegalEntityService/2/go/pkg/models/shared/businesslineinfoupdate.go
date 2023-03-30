@@ -11,13 +11,7 @@ type BusinessLineInfoUpdateInput struct {
 	LegalEntityID *string `json:"legalEntityId,omitempty"`
 	// A list of channels where goods or services are sold.
 	//
-	// Possible values:
-	//
-	// - For point of sale: **pos** and **posMoto**
-	//
-	// - For ecommerce: **eCommerce** and **ecomMoto**
-	//
-	// - For Pay by Link: **payByLink**
+	// Possible values: **pos**, **posMoto**, **eCommerce**, **ecomMoto**, **payByLink**.
 	//
 	// Required only in combination with the `capability` to **receivePayments** or **receiveFromPlatformPayments**.
 	SalesChannels []string       `json:"salesChannels,omitempty"`

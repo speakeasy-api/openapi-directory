@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// InvoiceTypeOfInvoiceEnum - Do not use. This field is available for legacy reasons only. If you want to send a regular invoice (aka UBL type '380'), make sure you have a positive invoice amount. For a credit note (aka UBL type '381'), simply provide a negative invoice amount. If you, in addition to a negative invoice amount, also specify a billingReferences, your invoice will become a corrective invoice (aka UBL type '384'). If your invoice is not sent in the UBL syntax, Storecove will provide the appropriate type for the syntax the invoice is sent in.
+// InvoiceTypeOfInvoiceEnum - DEPRECATED. Do not use. This field is available for legacy reasons only. If you want to send a regular invoice (aka UBL type '380'), make sure you have a positive invoice amount. For a credit note (aka UBL type '381'), simply provide a negative invoice amount. If you, in addition to a negative invoice amount, also specify a billingReferences, your invoice will become a corrective invoice (aka UBL type '384'). If your invoice is not sent in the UBL syntax, Storecove will provide the appropriate type for the syntax the invoice is sent in.
 type InvoiceTypeOfInvoiceEnum string
 
 const (
@@ -103,10 +103,31 @@ func (e *InvoicePaymentMeansCodeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// InvoiceThePaymentTerms - The payment terms of the invoice.
-type InvoiceThePaymentTerms struct {
-	// The note for the payment terms.
-	Note *string `json:"note,omitempty"`
+// InvoiceInvoiceTypeEnum - In auto mode, the choice between invoice or creditnote is made by Storecove based on what is appropriate for the receiver and the receiver country, in combination with the invoice amount sign. If you wish to state a preference, use this field. It is not guaranteed that the preference will be used, since it depends also on the receiver's document capabilities.
+type InvoiceInvoiceTypeEnum string
+
+const (
+	InvoiceInvoiceTypeEnumPreferAutodetect InvoiceInvoiceTypeEnum = "prefer_autodetect"
+	InvoiceInvoiceTypeEnumPreferInvoice    InvoiceInvoiceTypeEnum = "prefer_invoice"
+	InvoiceInvoiceTypeEnumPreferCreditnote InvoiceInvoiceTypeEnum = "prefer_creditnote"
+)
+
+func (e *InvoiceInvoiceTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "prefer_autodetect":
+		fallthrough
+	case "prefer_invoice":
+		fallthrough
+	case "prefer_creditnote":
+		*e = InvoiceInvoiceTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for InvoiceInvoiceTypeEnum: %s", s)
+	}
 }
 
 // InvoiceTaxExemptReasonEnum - DEPRECATED. Use Tax/category and specify this per invoice line. If you do specify this field, it will be applied to all invoice lines and it is an error to specify a Tax/category at the invoice line level. This field holds the reason no tax is present in the invoice. Note that this is an invoice level field and you cannot specify it per invoice line. This field is mandatory unless tax is present in the invoice.
@@ -145,13 +166,12 @@ func (e *InvoiceTaxExemptReasonEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// InvoiceTaxSystemEnum - The tax system used for the invoice. The system 'tax_line_percentages' is preferred, but for historic purposes 'tax_line_amounts is supported and default. Since not all invoice formats that we are required to send support 'tax_line_amounts' we will need to convert the invoice to the 'tax_line_percentags' system if we are forced to send the invoice in that tax system.
+// InvoiceTaxSystemEnum - The tax system used for the invoice. The system 'tax_line_percentages' is preferred, but for historic purposes 'tax_line_amounts' is supported and the default. Since not all invoice formats that we are required to send support 'tax_line_amounts' we will need to convert the invoice to the 'tax_line_percentags' system if we are forced to send the invoice in that tax system. Note that an invoice must always contain tax information, even if that is 0% or an item or sender is exempt or tax is completely outside scope. In that case, use the correct tax categories (see <<_openapi_tax>>)
 type InvoiceTaxSystemEnum string
 
 const (
 	InvoiceTaxSystemEnumTaxLineAmounts     InvoiceTaxSystemEnum = "tax_line_amounts"
 	InvoiceTaxSystemEnumTaxLinePercentages InvoiceTaxSystemEnum = "tax_line_percentages"
-	InvoiceTaxSystemEnumTaxNoTax           InvoiceTaxSystemEnum = "tax_no_tax"
 )
 
 func (e *InvoiceTaxSystemEnum) UnmarshalJSON(data []byte) error {
@@ -163,8 +183,6 @@ func (e *InvoiceTaxSystemEnum) UnmarshalJSON(data []byte) error {
 	case "tax_line_amounts":
 		fallthrough
 	case "tax_line_percentages":
-		fallthrough
-	case "tax_no_tax":
 		*e = InvoiceTaxSystemEnum(s)
 		return nil
 	default:
@@ -172,11 +190,81 @@ func (e *InvoiceTaxSystemEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// Invoice - The invoice to send.  Provide either invoice, or invoiceData, but not both.
+// InvoiceTransactionTypeEnum - The type of transaction. Currently used only for India.
+type InvoiceTransactionTypeEnum string
+
+const (
+	InvoiceTransactionTypeEnumB2b    InvoiceTransactionTypeEnum = "b2b"
+	InvoiceTransactionTypeEnumSezwp  InvoiceTransactionTypeEnum = "sezwp"
+	InvoiceTransactionTypeEnumSezwop InvoiceTransactionTypeEnum = "sezwop"
+	InvoiceTransactionTypeEnumExpwp  InvoiceTransactionTypeEnum = "expwp"
+	InvoiceTransactionTypeEnumExpwop InvoiceTransactionTypeEnum = "expwop"
+	InvoiceTransactionTypeEnumDexp   InvoiceTransactionTypeEnum = "dexp"
+)
+
+func (e *InvoiceTransactionTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "b2b":
+		fallthrough
+	case "sezwp":
+		fallthrough
+	case "sezwop":
+		fallthrough
+	case "expwp":
+		fallthrough
+	case "expwop":
+		fallthrough
+	case "dexp":
+		*e = InvoiceTransactionTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for InvoiceTransactionTypeEnum: %s", s)
+	}
+}
+
+// InvoiceX2yEnum - The type of entities the document is sent from/to: b2b (business-to-business), b2g (business-to-government) or b2c (business-to-consumer). This field does not have a default, but it in mose cases it will be treated as b2b. Only when you explicitly specify b2g or b2c OR when it is clear from the context will a different value be used. For instance, when we see the document is being routed to DE:LWID or NL:OINO number, this tells us it is b2g. But in many cases we are unable to determine this and so it is best to always specify this field. Note that b2b_sez is for use inside India only.
+type InvoiceX2yEnum string
+
+const (
+	InvoiceX2yEnumB2b    InvoiceX2yEnum = "b2b"
+	InvoiceX2yEnumB2g    InvoiceX2yEnum = "b2g"
+	InvoiceX2yEnumB2c    InvoiceX2yEnum = "b2c"
+	InvoiceX2yEnumB2bSez InvoiceX2yEnum = "b2b_sez"
+)
+
+func (e *InvoiceX2yEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "b2b":
+		fallthrough
+	case "b2g":
+		fallthrough
+	case "b2c":
+		fallthrough
+	case "b2b_sez":
+		*e = InvoiceX2yEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for InvoiceX2yEnum: %s", s)
+	}
+}
+
+// Invoice - The invoice to send. Provide either invoice, or invoiceData, but not both.
 type Invoice struct {
 	// The buyer's accounting cost centre for this invoice, expressed as text.
 	AccountingCost *string `json:"accountingCost,omitempty"`
-	// The customer receiving the invoice.
+	// The total amount of tax in the accounting currency. If included, must be non-zero.
+	AccountingCurrencyTaxAmount *float64 `json:"accountingCurrencyTaxAmount,omitempty"`
+	// The ISO 4217 currency code.
+	AccountingCurrencyTaxAmountCurrency *CurrencyCodeEnum `json:"accountingCurrencyTaxAmountCurrency,omitempty"`
+	// The customer receiving the document.
 	AccountingCustomerParty AccountingCustomerParty `json:"accountingCustomerParty"`
 	// The party sending the invoice. Most data for the AccountingSupplierParty is taken from the Storecove database, where your sender identity resides and has been validated. However, we provide a limited number of fields here that you can specify on an invoice-by-invoice basis.
 	AccountingSupplierParty *AccountingSupplierParty `json:"accountingSupplierParty,omitempty"`
@@ -184,13 +272,15 @@ type Invoice struct {
 	AllowanceCharges []AllowanceCharge `json:"allowanceCharges,omitempty"`
 	// amountIncludingVat is important because of rounding differences. In many invoices, the sum of the line item amounts excluding VAT and the VAT amounts is not equal to first summing the line items without VAT, and then applying VAT. The difference is automatically calculated and included in the electronic invoice, so the receiving accounting package can process the electronic invoice without problems.
 	AmountIncludingVat float64 `json:"amountIncludingVat"`
-	// A reference to a commercial invoice or corrective invoice of which the current invoice is a correction. This field is mandatory when sending invoiceType 384.
+	// An array of attachments. You may provide up to 10 attchments, but the total size must not exceed 10MB after Base64 encoding.
+	Attachments []Attachment `json:"attachments,omitempty"`
+	// DEPRECATED. Use a reference object with a documentType 'billing'. A reference to a commercial invoice or corrective invoice of which the current invoice is a correction. This field is mandatory when sending invoiceType 384.
 	BillingReference *string `json:"billingReference,omitempty"`
-	// A reference provided by the buyer used for internal routing of the document.
+	// DEPRECATED. Use a reference object with a documentType 'buyer_reference'. A reference provided by the buyer used for internal routing of the document.
 	BuyerReference *string `json:"buyerReference,omitempty"`
 	// Whether or not to process the invoice in consumer tax mode. In this mode, the VAT identifier of the sender will not be the default VAT identifier, but the one that matches with the country of the receiving consumer, if that additional VAT identifier for that country is available. These additional VAT identifiers need to be added to the sending LegalEntity by Storecove, so if you need to send invoices in this mode, please contact us.
 	ConsumerTaxMode *bool `json:"consumerTaxMode,omitempty"`
-	// A reference to a contract or framework agreement that this invoice relates to.
+	// DEPRECATED. Use a reference object with a documentType 'contract'. A reference to a contract or framework agreement that this invoice relates to.
 	ContractDocumentReference *string   `json:"contractDocumentReference,omitempty"`
 	Delivery                  *Delivery `json:"delivery,omitempty"`
 	// The ISO 4217 currency code.
@@ -203,13 +293,15 @@ type Invoice struct {
 	InvoiceNumber string `json:"invoiceNumber"`
 	// The period (or specific date) to which the invoice applies. Format: yyyy-mm-dd - yyyy-mm-dd.
 	InvoicePeriod *string `json:"invoicePeriod,omitempty"`
-	// Do not use. This field is available for legacy reasons only. If you want to send a regular invoice (aka UBL type '380'), make sure you have a positive invoice amount. For a credit note (aka UBL type '381'), simply provide a negative invoice amount. If you, in addition to a negative invoice amount, also specify a billingReferences, your invoice will become a corrective invoice (aka UBL type '384'). If your invoice is not sent in the UBL syntax, Storecove will provide the appropriate type for the syntax the invoice is sent in.
+	// DEPRECATED. Do not use. This field is available for legacy reasons only. If you want to send a regular invoice (aka UBL type '380'), make sure you have a positive invoice amount. For a credit note (aka UBL type '381'), simply provide a negative invoice amount. If you, in addition to a negative invoice amount, also specify a billingReferences, your invoice will become a corrective invoice (aka UBL type '384'). If your invoice is not sent in the UBL syntax, Storecove will provide the appropriate type for the syntax the invoice is sent in.
 	InvoiceType *InvoiceTypeOfInvoiceEnum `json:"invoiceType,omitempty"`
 	// Format: yyyy-mm-dd.
 	IssueDate string `json:"issueDate"`
+	// An array reasons for issuing the invoice.
+	IssueReasons []string `json:"issueReasons,omitempty"`
 	// A note to add to the invoice
 	Note *string `json:"note,omitempty"`
-	// A reference to an order for this invoice, assigned by the buyer. Note that this often is a key field, since many receivers of invoices will use this field to automatically match the invoice to an order they placed. Many receivers refuse invoices that cannot be automatically matched, in particular government agencies. So it is highly recommended to fill this field whenever possible.
+	// DEPRECATED. Use a reference object with a documentType 'purchase_order'. A reference to an order for this invoice, assigned by the buyer. Note that this often is a key field, since many receivers of invoices will use this field to automatically match the invoice to an order they placed. Many receivers refuse invoices that cannot be automatically matched, in particular government agencies. So it is highly recommended to fill this field whenever possible.
 	OrderReference *string `json:"orderReference,omitempty"`
 	// An array of payment means (ways to pay the invoice).
 	PaymentMeansArray []PaymentMeans `json:"paymentMeansArray,omitempty"`
@@ -221,24 +313,36 @@ type Invoice struct {
 	PaymentMeansIban *string `json:"paymentMeansIban,omitempty"`
 	// DEPRECATED. Use the paymentId in the individual PaymentMeans object. The payment id that you will use to match the payment against the invoice.
 	PaymentMeansPaymentID *string `json:"paymentMeansPaymentId,omitempty"`
-	// The payment terms of the invoice.
-	PaymentTerms *InvoiceThePaymentTerms `json:"paymentTerms,omitempty"`
+	// The payment terms of the document.
+	PaymentTerms *PaymentTerms `json:"paymentTerms,omitempty"`
+	// In auto mode, the choice between invoice or creditnote is made by Storecove based on what is appropriate for the receiver and the receiver country, in combination with the invoice amount sign. If you wish to state a preference, use this field. It is not guaranteed that the preference will be used, since it depends also on the receiver's document capabilities.
+	PreferredInvoiceType *InvoiceInvoiceTypeEnum `json:"preferredInvoiceType,omitempty"`
 	// The amount already paid.
 	PrepaidAmount *float64 `json:"prepaidAmount,omitempty"`
-	// Information about the project this invoice relates to.
+	// DEPRECATED. Information about the project this invoice relates to.
 	ProjectReference *string `json:"projectReference,omitempty"`
-	// A reference to an order for this invoice, assigned by the seller.
+	// An array of references to other documents. Note that many syntaxes do not support multiple references of the same type in which case they will be concatenated with ','. Also, not all syntaxes support all documentTypes.
+	References []Reference `json:"references,omitempty"`
+	// DEPRECATED. Use a reference object with a documentType 'sales_order'. A reference to an order for this invoice, assigned by the seller.
 	SalesOrderID *string `json:"salesOrderId,omitempty"`
+	// In self billing mode, the AccountingCustomerParty and the AccountingSupplierParty are be switched. Such an invoice can only be sent via email. Also, your account will need to allow the use of this mode, so before trying to use this please first contact Storecove.
+	SelfBillingMode *bool `json:"selfBillingMode,omitempty"`
 	// DEPRECATED. Use Tax/category and specify this per invoice line. If you do specify this field, it will be applied to all invoice lines and it is an error to specify a Tax/category at the invoice line level. This field holds the reason no tax is present in the invoice. Note that this is an invoice level field and you cannot specify it per invoice line. This field is mandatory unless tax is present in the invoice.
 	TaxExemptReason *InvoiceTaxExemptReasonEnum `json:"taxExemptReason,omitempty"`
 	// The tax date is the date on which the supply of goods or of services was made or completed or the date on which the payment on account was made insofar as that date can be determined and differs from the date of the issue of the invoice. EU 2006-112 Article 226 Point 7. Note: For the Dutch TAX authorities the tac date should be the same as the issue date.
 	TaxPointDate *string `json:"taxPointDate,omitempty"`
 	// An array of tax subtotals. This element is mandatory for taxSystem 'tax_line_percentages'.
 	TaxSubtotals []TaxSubtotal `json:"taxSubtotals,omitempty"`
-	// The tax system used for the invoice. The system 'tax_line_percentages' is preferred, but for historic purposes 'tax_line_amounts is supported and default. Since not all invoice formats that we are required to send support 'tax_line_amounts' we will need to convert the invoice to the 'tax_line_percentags' system if we are forced to send the invoice in that tax system.
+	// The tax system used for the invoice. The system 'tax_line_percentages' is preferred, but for historic purposes 'tax_line_amounts' is supported and the default. Since not all invoice formats that we are required to send support 'tax_line_amounts' we will need to convert the invoice to the 'tax_line_percentags' system if we are forced to send the invoice in that tax system. Note that an invoice must always contain tax information, even if that is 0% or an item or sender is exempt or tax is completely outside scope. In that case, use the correct tax categories (see <<_openapi_tax>>)
 	TaxSystem *InvoiceTaxSystemEnum `json:"taxSystem,omitempty"`
+	// An array of taxes, duties and fees for this invoice. At this moment, the only invoice level tax allowed is the Italian '€2 bollo virtuale'
+	TaxesDutiesFees []Tax `json:"taxesDutiesFees,omitempty"`
+	// The type of transaction. Currently used only for India.
+	TransactionType *InvoiceTransactionTypeEnum `json:"transactionType,omitempty"`
 	// An array of ubl extensions.
 	UblExtensions []string `json:"ublExtensions,omitempty"`
-	// DEPRECTATED. Use taxExemptReason.
+	// DEPRECATED. Use taxExemptReason.
 	VatReverseCharge *bool `json:"vatReverseCharge,omitempty"`
+	// The type of entities the document is sent from/to: b2b (business-to-business), b2g (business-to-government) or b2c (business-to-consumer). This field does not have a default, but it in mose cases it will be treated as b2b. Only when you explicitly specify b2g or b2c OR when it is clear from the context will a different value be used. For instance, when we see the document is being routed to DE:LWID or NL:OINO number, this tells us it is b2g. But in many cases we are unable to determine this and so it is best to always specify this field. Note that b2b_sez is for use inside India only.
+	X2y *InvoiceX2yEnum `json:"x2y,omitempty"`
 }

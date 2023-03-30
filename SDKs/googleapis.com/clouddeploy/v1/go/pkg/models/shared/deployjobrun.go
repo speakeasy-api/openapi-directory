@@ -11,11 +11,12 @@ import (
 type DeployJobRunFailureCauseEnum string
 
 const (
-	DeployJobRunFailureCauseEnumFailureCauseUnspecified DeployJobRunFailureCauseEnum = "FAILURE_CAUSE_UNSPECIFIED"
-	DeployJobRunFailureCauseEnumCloudBuildUnavailable   DeployJobRunFailureCauseEnum = "CLOUD_BUILD_UNAVAILABLE"
-	DeployJobRunFailureCauseEnumExecutionFailed         DeployJobRunFailureCauseEnum = "EXECUTION_FAILED"
-	DeployJobRunFailureCauseEnumDeadlineExceeded        DeployJobRunFailureCauseEnum = "DEADLINE_EXCEEDED"
-	DeployJobRunFailureCauseEnumCloudBuildRequestFailed DeployJobRunFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
+	DeployJobRunFailureCauseEnumFailureCauseUnspecified   DeployJobRunFailureCauseEnum = "FAILURE_CAUSE_UNSPECIFIED"
+	DeployJobRunFailureCauseEnumCloudBuildUnavailable     DeployJobRunFailureCauseEnum = "CLOUD_BUILD_UNAVAILABLE"
+	DeployJobRunFailureCauseEnumExecutionFailed           DeployJobRunFailureCauseEnum = "EXECUTION_FAILED"
+	DeployJobRunFailureCauseEnumDeadlineExceeded          DeployJobRunFailureCauseEnum = "DEADLINE_EXCEEDED"
+	DeployJobRunFailureCauseEnumMissingResourcesForCanary DeployJobRunFailureCauseEnum = "MISSING_RESOURCES_FOR_CANARY"
+	DeployJobRunFailureCauseEnumCloudBuildRequestFailed   DeployJobRunFailureCauseEnum = "CLOUD_BUILD_REQUEST_FAILED"
 )
 
 func (e *DeployJobRunFailureCauseEnum) UnmarshalJSON(data []byte) error {
@@ -31,6 +32,8 @@ func (e *DeployJobRunFailureCauseEnum) UnmarshalJSON(data []byte) error {
 	case "EXECUTION_FAILED":
 		fallthrough
 	case "DEADLINE_EXCEEDED":
+		fallthrough
+	case "MISSING_RESOURCES_FOR_CANARY":
 		fallthrough
 	case "CLOUD_BUILD_REQUEST_FAILED":
 		*e = DeployJobRunFailureCauseEnum(s)

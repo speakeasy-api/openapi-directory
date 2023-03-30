@@ -2,7 +2,43 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// BankAccountAccountTypeEnum - The bank account type.
+//
+// Possible values: **checking** only.
+type BankAccountAccountTypeEnum string
+
+const (
+	BankAccountAccountTypeEnumChecking BankAccountAccountTypeEnum = "checking"
+)
+
+func (e *BankAccountAccountTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "checking":
+		*e = BankAccountAccountTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for BankAccountAccountTypeEnum: %s", s)
+	}
+}
+
 type BankAccount struct {
+	// The bank account number, without separators or whitespace.
+	AccountNumber *string `json:"accountNumber,omitempty"`
+	// The bank account type.
+	//
+	// Possible values: **checking** only.
+	AccountType *BankAccountAccountTypeEnum `json:"accountType,omitempty"`
 	// The [International Bank Account Number](https://en.wikipedia.org/wiki/International_Bank_Account_Number) (IBAN).
 	Iban string `json:"iban"`
+	// The 9-digit [routing number](https://en.wikipedia.org/wiki/ABA_routing_transit_number), without separators or whitespace.
+	RoutingNumber *string `json:"routingNumber,omitempty"`
 }

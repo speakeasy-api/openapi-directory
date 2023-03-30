@@ -7,6 +7,10 @@ type UpdateMerchantUserRequest struct {
 	AccountGroups []string `json:"accountGroups,omitempty"`
 	// Sets the status of the user to active (**true**) or inactive (**false**).
 	Active *bool `json:"active,omitempty"`
+	// Set of authn apps to add to this user
+	AuthnAppsToAdd []string `json:"authnAppsToAdd,omitempty"`
+	// Set of authn apps to remove from this user
+	AuthnAppsToRemove []string `json:"authnAppsToRemove,omitempty"`
 	// The email address of the user.
 	Email *string `json:"email,omitempty"`
 	Name  *Name2  `json:"name,omitempty"`

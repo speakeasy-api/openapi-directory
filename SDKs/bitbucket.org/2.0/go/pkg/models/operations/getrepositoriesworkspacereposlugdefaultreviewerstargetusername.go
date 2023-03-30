@@ -37,6 +37,8 @@ type GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse stru
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// Unexpected error.
+	// The specified user is a default reviewer
+	Account map[string]interface{}
+	// If the authenticated user does not have access to check if the specified user is a default reviewer
 	Error map[string]interface{}
 }

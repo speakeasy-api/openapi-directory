@@ -16,13 +16,22 @@ type ContinuousProject struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	ID        *int64     `json:"id,omitempty"`
 	IsEnabled *bool      `json:"is_enabled,omitempty"`
+	// the date-time notation as defined by RFC 3339, section 5.6, for example, 2017-07-21T17:32:28Z
+	LastActivityAt *time.Time              `json:"last_activity_at,omitempty"`
+	Links          *ContinuousProjectLinks `json:"links,omitempty"`
 	// Immediately apply MT on translation requests if they are missing from TM.
-	MtEnabled *bool   `json:"mt_enabled,omitempty"`
-	Name      *string `json:"name,omitempty"`
+	MtEnabled *bool `json:"mt_enabled,omitempty"`
+	// One of "MOTAWORD", "GOOGLE", "AMAZON", "MS". Default is "MOTAWORD".
+	MtEngine *string `json:"mt_engine,omitempty"`
+	Name     *string `json:"name,omitempty"`
 	// Get an instant quote for translation requests that are applied MT.
-	PosteditEnabled *bool    `json:"postedit_enabled,omitempty"`
-	SourceLanguage  *string  `json:"source_language,omitempty"`
-	TargetLanguages []string `json:"target_languages,omitempty"`
+	PosteditEnabled *bool   `json:"postedit_enabled,omitempty"`
+	SourceLanguage  *string `json:"source_language,omitempty"`
+	// One of "a => ACTIVE", "i => INACTIVE", "d => DELETED", "c => SCHEDULED CANCELLATION", "p => SCHEDULED CHANGE"
+	Status          *string       `json:"status,omitempty"`
+	Subscription    *Subscription `json:"subscription,omitempty"`
+	TargetLanguages []string      `json:"target_languages,omitempty"`
 	// Continuous project type. We currently have only 2 types, NULL and "active".
-	Type *string `json:"type,omitempty"`
+	Type      *string `json:"type,omitempty"`
+	WordCount *int64  `json:"word_count,omitempty"`
 }

@@ -36,7 +36,7 @@ type FirestoreProjectsDatabasesCreateQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
-	// Required. The ID to use for the database, which will become the final component of the database's resource name. This value should be 4-63 characters. Valid characters are /a-z-/ with first character a letter and the last a letter or a number. Must not be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also valid.
+	// Required. The ID to use for the database, which will become the final component of the database's resource name. The value must be set to "(default)".
 	DatabaseID *string `queryParam:"style=form,explode=true,name=databaseId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`

@@ -72,6 +72,16 @@ func (s *users) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
 
 			res.User = out
 		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
 	}
 
 	return res, nil
@@ -117,6 +127,8 @@ func (s *users) GetUsersID(ctx context.Context, request operations.GetUsersIDReq
 
 			res.User = out
 		}
+	case httpRes.StatusCode == 403:
+		fallthrough
 	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):

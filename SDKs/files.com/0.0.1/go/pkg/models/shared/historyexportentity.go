@@ -24,7 +24,7 @@ type HistoryExportEntity struct {
 	QueryFileID *string `json:"query_file_id,omitempty"`
 	// Return results that are file actions related to files or folders inside this folder path.
 	QueryFolder *string `json:"query_folder,omitempty"`
-	// Filter results by this this interface type. Valid values: `web`, `ftp`, `robot`, `jsapi`, `webdesktopapi`, `sftp`, `dav`, `desktop`, `restapi`, `scim`, `office`, `mobile`
+	// Filter results by this this interface type. Valid values: `web`, `ftp`, `robot`, `jsapi`, `webdesktopapi`, `sftp`, `dav`, `desktop`, `restapi`, `scim`, `office`, `mobile`, `as2`, `inbound_email`, `remote`
 	QueryInterface *string `json:"query_interface,omitempty"`
 	// Filter results by this IP address.
 	QueryIP *string `json:"query_ip,omitempty"`

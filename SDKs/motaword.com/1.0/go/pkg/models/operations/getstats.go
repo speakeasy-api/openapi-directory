@@ -11,7 +11,7 @@ type GetStatsResponse struct {
 	ContentType string
 	// UserNotFound
 	Error *shared.Error
-	// User stats for client and vendors
+	// Client and vendor statistics for your account
 	Stats       *shared.Stats
 	StatusCode  int
 	RawResponse *http.Response

@@ -2,18 +2,30 @@
 
 package shared
 
+import (
+	"time"
+)
+
 // BundleRegistrationEntity - List Bundle Registrations
 type BundleRegistrationEntity struct {
+	// Bundle URL code
+	BundleCode *string `json:"bundle_code,omitempty"`
+	// Id of associated bundle
+	BundleID *int `json:"bundle_id,omitempty"`
+	// Id of associated bundle recipient
+	BundleRecipientID *int `json:"bundle_recipient_id,omitempty"`
 	// Clickwrap text that was shown to the registrant
 	ClickwrapBody *string `json:"clickwrap_body,omitempty"`
 	// Registration cookie code
 	Code *string `json:"code,omitempty"`
 	// Registrant company name
 	Company *string `json:"company,omitempty"`
+	// Registration creation date/time
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Registrant email address
 	Email *string `json:"email,omitempty"`
 	// Data for form field set with form field ids as keys and user data as values
-	FormFieldData *string `json:"form_field_data,omitempty"`
+	FormFieldData map[string]interface{} `json:"form_field_data,omitempty"`
 	// Id of associated form field set
 	FormFieldSetID *int `json:"form_field_set_id,omitempty"`
 	// InboxRegistration cookie code, if there is an associated InboxRegistration

@@ -131,10 +131,11 @@ func (s *firewallActions) GetFirewallsIDActionsActionID(ctx context.Context, req
 //
 // #### Call specific error codes
 //
-// | Code                        | Description                                             |
-// |-----------------------------|---------------------------------------------------------|
-// | `firewall_already_applied`  | Firewall was already applied on resource                |
-// | `incompatible_network_type` | The Network type is incompatible for the given resource |
+// | Code                          | Description                                                   |
+// |-------------------------------|---------------------------------------------------------------|
+// | `firewall_already_applied`    | Firewall was already applied on resource                      |
+// | `incompatible_network_type`   | The Network type is incompatible for the given resource       |
+// | `firewall_resource_not_found` | The resource the Firewall should be attached to was not found |
 func (s *firewallActions) PostFirewallsIDActionsApplyToResources(ctx context.Context, request operations.PostFirewallsIDActionsApplyToResourcesRequest) (*operations.PostFirewallsIDActionsApplyToResourcesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/apply_to_resources", request.PathParams, nil)
@@ -192,9 +193,11 @@ func (s *firewallActions) PostFirewallsIDActionsApplyToResources(ctx context.Con
 //
 // #### Call specific error codes
 //
-// | Code                       | Description                                    |
-// |----------------------------|------------------------------------------------|
-// | `firewall_already_removed` | Firewall was already removed from the resource |
+// | Code                                  | Description                                                            |
+// |---------------------------------------|------------------------------------------------------------------------|
+// | `firewall_already_removed`            | Firewall was already removed from the resource                         |
+// | `firewall_resource_not_found`         | The resource the Firewall should be attached to was not found          |
+// | `firewall_managed_by_label_selector`  | Firewall was applied via label selector and cannot be removed manually |
 func (s *firewallActions) PostFirewallsIDActionsRemoveFromResources(ctx context.Context, request operations.PostFirewallsIDActionsRemoveFromResourcesRequest) (*operations.PostFirewallsIDActionsRemoveFromResourcesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/remove_from_resources", request.PathParams, nil)
@@ -249,6 +252,13 @@ func (s *firewallActions) PostFirewallsIDActionsRemoveFromResources(ctx context.
 // Sets the rules of a Firewall.
 //
 // All existing rules will be overwritten. Pass an empty `rules` array to remove all rules.
+// The maximum amount of rules that can be defined is 50.
+//
+// #### Call specific error codes
+//
+// | Code                          | Description                                                   |
+// |-------------------------------|---------------------------------------------------------------|
+// | `firewall_resource_not_found` | The resource the Firewall should be attached to was not found |
 func (s *firewallActions) PostFirewallsIDActionsSetRules(ctx context.Context, request operations.PostFirewallsIDActionsSetRulesRequest) (*operations.PostFirewallsIDActionsSetRulesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}/actions/set_rules", request.PathParams, nil)

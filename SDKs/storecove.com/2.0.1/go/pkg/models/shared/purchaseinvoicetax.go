@@ -2,18 +2,133 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum - The tax category.
+type PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum string
+
+const (
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumStandard              PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "standard"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumZeroRated             PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "zero_rated"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumReverseCharge         PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "reverse_charge"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumIntraCommunity        PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "intra_community"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumExempt                PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "exempt"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumExport                PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "export"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumOutsideScope          PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "outside_scope"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumRegulation33Exempt    PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "regulation33_exempt"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumNonregulation33Exempt PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "nonregulation33_exempt"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumDeemedSupply          PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "deemed_supply"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumSrcaS                 PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "srca_s"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumSrcaC                 PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "srca_c"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumNotRegistered         PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "not_registered"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumIgst                  PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "igst"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumCgst                  PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "cgst"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumSgst                  PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "sgst"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumCess                  PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "cess"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumStateCess             PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "state_cess"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumSrovr                 PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "srovr"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumSrovrRs               PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "srovr_rs"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumSrovrLvg              PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "srovr_lvg"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnumSrlvg                 PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum = "srlvg"
+)
+
+func (e *PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "standard":
+		fallthrough
+	case "zero_rated":
+		fallthrough
+	case "reverse_charge":
+		fallthrough
+	case "intra_community":
+		fallthrough
+	case "exempt":
+		fallthrough
+	case "export":
+		fallthrough
+	case "outside_scope":
+		fallthrough
+	case "regulation33_exempt":
+		fallthrough
+	case "nonregulation33_exempt":
+		fallthrough
+	case "deemed_supply":
+		fallthrough
+	case "srca_s":
+		fallthrough
+	case "srca_c":
+		fallthrough
+	case "not_registered":
+		fallthrough
+	case "igst":
+		fallthrough
+	case "cgst":
+		fallthrough
+	case "sgst":
+		fallthrough
+	case "cess":
+		fallthrough
+	case "state_cess":
+		fallthrough
+	case "srovr":
+		fallthrough
+	case "srovr_rs":
+		fallthrough
+	case "srovr_lvg":
+		fallthrough
+	case "srlvg":
+		*e = PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum: %s", s)
+	}
+}
+
+// PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnum - The tax type.
+type PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnum string
+
+const (
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnumVat PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnum = "VAT"
+	PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnumGst PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnum = "GST"
+)
+
+func (e *PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "VAT":
+		fallthrough
+	case "GST":
+		*e = PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnum: %s", s)
+	}
+}
+
 // PurchaseInvoiceTaxPurchaseInvoiceTaxElement - The tax element.
 type PurchaseInvoiceTaxPurchaseInvoiceTaxElement struct {
-	// The tax country.
-	Amount *string `json:"amount,omitempty"`
+	// The tax amount.
+	Amount *float64 `json:"amount,omitempty"`
 	// The tax category.
-	Category *string `json:"category,omitempty"`
-	// The tax category code.
+	Category *PurchaseInvoiceTaxPurchaseInvoiceTaxElementCategoryEnum `json:"category,omitempty"`
+	// Deprecated. The tax category code.
 	CategoryCode *string `json:"category_code,omitempty"`
+	// The tax country.
+	Country *string `json:"country,omitempty"`
 	// The tax percentage.
 	Percentage *float64 `json:"percentage,omitempty"`
 	// The tax type.
-	Type *string `json:"type,omitempty"`
+	Type *PurchaseInvoiceTaxPurchaseInvoiceTaxElementTypeEnum `json:"type,omitempty"`
 }
 
 type PurchaseInvoiceTax struct {

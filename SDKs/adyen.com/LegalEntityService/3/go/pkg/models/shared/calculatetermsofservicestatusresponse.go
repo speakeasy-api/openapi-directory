@@ -12,8 +12,10 @@ type CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum string
 const (
 	CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnumAdyenAccount              CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum = "adyenAccount"
 	CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnumAdyenCapital              CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum = "adyenCapital"
+	CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnumAdyenCard                 CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum = "adyenCard"
 	CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnumAdyenForPlatformsAdvanced CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum = "adyenForPlatformsAdvanced"
 	CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnumAdyenForPlatformsManage   CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum = "adyenForPlatformsManage"
+	CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnumAdyenFranchisee           CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum = "adyenFranchisee"
 	CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnumAdyenIssuing              CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum = "adyenIssuing"
 )
 
@@ -27,9 +29,13 @@ func (e *CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum) Unmarshal
 		fallthrough
 	case "adyenCapital":
 		fallthrough
+	case "adyenCard":
+		fallthrough
 	case "adyenForPlatformsAdvanced":
 		fallthrough
 	case "adyenForPlatformsManage":
+		fallthrough
+	case "adyenFranchisee":
 		fallthrough
 	case "adyenIssuing":
 		*e = CalculateTermsOfServiceStatusResponseTermsOfServiceTypesEnum(s)

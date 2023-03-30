@@ -14,6 +14,7 @@ type OracleSettings struct {
 	AsmServer                              *string                  `json:"AsmServer,omitempty"`
 	AsmUser                                *string                  `json:"AsmUser,omitempty"`
 	CharLengthSemantics                    *CharLengthSemanticsEnum `json:"CharLengthSemantics,omitempty"`
+	ConvertTimestampWithZoneToUTC          *bool                    `json:"ConvertTimestampWithZoneToUTC,omitempty"`
 	DatabaseName                           *string                  `json:"DatabaseName,omitempty"`
 	DirectPathNoLog                        *bool                    `json:"DirectPathNoLog,omitempty"`
 	DirectPathParallelLoad                 *bool                    `json:"DirectPathParallelLoad,omitempty"`

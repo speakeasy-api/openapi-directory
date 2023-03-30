@@ -410,9 +410,9 @@ func (s *SDK) QuantmetricsTier2(ctx context.Context, request operations.Quantmet
 	return res, nil
 }
 
-// ResistanceAndSupport - Resistance & Support
+// ResistanceSupport - Resistance & Support
 // Resistance & Support
-func (s *SDK) ResistanceAndSupport(ctx context.Context, request operations.ResistanceAndSupportRequest) (*operations.ResistanceAndSupportResponse, error) {
+func (s *SDK) ResistanceSupport(ctx context.Context, request operations.ResistanceSupportRequest) (*operations.ResistanceSupportResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/resistance-support"
 
@@ -438,7 +438,7 @@ func (s *SDK) ResistanceAndSupport(ctx context.Context, request operations.Resis
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.ResistanceAndSupportResponse{
+	res := &operations.ResistanceSupportResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

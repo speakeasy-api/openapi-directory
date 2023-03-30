@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetSeasonsIDSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetSeasonsIDPathParams struct {
 	// The ID of the season resource to load.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -14,6 +18,7 @@ type GetSeasonsIDPathParams struct {
 
 type GetSeasonsIDRequest struct {
 	PathParams GetSeasonsIDPathParams
+	Security   GetSeasonsIDSecurity
 }
 
 // GetSeasonsID200ApplicationVndAPIPlusJSON - Success

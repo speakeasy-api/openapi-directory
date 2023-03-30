@@ -4,5 +4,5 @@ package shared
 
 // WebBackendConnectionReadList - Successful operation
 type WebBackendConnectionReadList struct {
-	Connections []WebBackendConnectionRead `json:"connections"`
+	Connections []WebBackendConnectionListItem `json:"connections"`
 }

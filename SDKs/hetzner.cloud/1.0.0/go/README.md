@@ -192,6 +192,21 @@ func main() {
 
 * `GetPricing` - Get all prices
 
+### PrimaryIPActions
+
+* `PostPrimaryIpsIDActionsAssign` - Assign a Primary IP to a resource
+* `PostPrimaryIpsIDActionsChangeDNSPtr` - Change reverse DNS entry for a Primary IP
+* `PostPrimaryIpsIDActionsChangeProtection` - Change Primary IP Protection
+* `PostPrimaryIpsIDActionsUnassign` - Unassign a Primary IP from a resource
+
+### PrimaryIPs
+
+* `DeletePrimaryIpsID` - Delete a Primary IP
+* `GetPrimaryIps` - Get all Primary IPs
+* `GetPrimaryIpsID` - Get a Primary IP
+* `PostPrimaryIps` - Create a Primary IP
+* `PutPrimaryIpsID` - Update a Primary IP
+
 ### SSHKeys
 
 * `DeleteSSHKeysID` - Delete an SSH key

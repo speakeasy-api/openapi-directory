@@ -40,7 +40,7 @@ func String(s string) *string { return &s }
 // * Link to some other Open Source work you have already done (if you have done so)
 //
 // ## Getting Started
-// To get started using the API you first need an API token. Sign in into the [Hetzner Cloud Console](https://console.hetzner.cloud/) choose a Project, go to `Access` → `Tokens`, and create a new token. Make sure to copy the token because it won’t be shown to you again. A token is bound to a Project, to interact with the API of another Project you have to create a new token inside the Project. Let’s say your new token is `jEheVytlAoFl7F8MqUQ7jAo2hOXASztX`.
+// To get started using the API you first need an API token. Sign in into the [Hetzner Cloud Console](https://console.hetzner.cloud/) choose a Project, go to `Security` → `API Tokens`, and generate a new token. Make sure to copy the token because it won’t be shown to you again. A token is bound to a Project, to interact with the API of another Project you have to create a new token inside the Project. Let’s say your new token is `jEheVytlAoFl7F8MqUQ7jAo2hOXASztX`.
 //
 // You’re now ready to do your first request against the API. To get a list of all Servers in your Project, issue the example request on the right side using [curl](https://curl.haxx.se/).
 //
@@ -76,7 +76,7 @@ func String(s string) *string { return &s }
 // ## Authentication
 // All requests to the Hetzner Cloud API must be authenticated via a API token. Include your secret API token in every request you send to the API with the `Authorization` HTTP header.
 //
-// To create a new API token for your Project, switch into the [Hetzner Cloud Console](https://console.hetzner.cloud/) choose a Project, go to `Access` → `Security`, and create a new token.
+// To create a new API token for your Project, switch into the [Hetzner Cloud Console](https://console.hetzner.cloud/) choose a Project, go to `Security` → `API Tokens`, and generate a new token.
 //
 // **Example Authorization header**
 // ```html
@@ -133,6 +133,7 @@ func String(s string) *string { return &s }
 // | `conflict`                | The resource has changed during the request, please retry                        |
 // | `unsupported_error`       | The corresponding resource does not support the Action                           |
 // | `token_readonly`          | The token is only allowed to perform GET requests                                |
+// | `unavailable`             | A service or product is currently not available                                  |
 //
 // **invalid_input**
 // ```json
@@ -193,7 +194,7 @@ func String(s string) *string { return &s }
 // ```
 //
 // ## Labels
-// Labels are `key/value` pairs that can be attached to Servers, Floating IPs, Volumes, SSH keys and Images.
+// Labels are `key/value` pairs that can be attached to all resources.
 //
 // Valid label keys have two segments: an optional prefix and name, separated by a slash (`/`). The name segment is required and must be a string of 63 characters or less, beginning and ending with an alphanumeric character (`[a-z0-9A-Z]`) with dashes (`-`), underscores (`_`), dots (`.`), and alphanumerics between. The prefix is optional. If specified, the prefix must be a DNS subdomain: a series of DNS labels separated by dots (`.`), not longer than 253 characters in total, followed by a slash (`/`).
 //
@@ -295,12 +296,27 @@ func String(s string) *string { return &s }
 // ## Server Metadata
 // Your Server can discover metadata about itself by doing a HTTP request to specific URLs. The following data is available:
 //
-// | Data             | Format | Contents                                                     |
-// |------------------|--------|--------------------------------------------------------------|
-// | hostname         | text   | Name of the Server as set in the api                         |
-// | instance-id      | number | ID of the server                                             |
-// | public-ipv4      | text   | Primary public IPv4 address                                  |
-// | private-networks | yaml   | Details about the private networks the Server is attached to |
+// | Data              | Format | Contents                                                     |
+// |-------------------|--------|--------------------------------------------------------------|
+// | hostname          | text   | Name of the Server as set in the api                         |
+// | instance-id       | number | ID of the server                                             |
+// | public-ipv4       | text   | Primary public IPv4 address                                  |
+// | private-networks  | yaml   | Details about the private networks the Server is attached to |
+// | availability-zone | text   | Name of the availability zone that Server runs in            |
+// | region            | text   | Network zone, e.g. eu-central                                |
+//
+// **Example: Summary**
+// ```bash
+// $ curl http://169.254.169.254/hetzner/v1/metadata
+// ```
+//
+// ```yaml
+// availability-zone: hel1-dc2
+// hostname: my-server
+// instance-id: 42
+// public-ipv4: 1.2.3.4
+// region: eu-central
+// ```
 //
 // **Example: Hostname**
 // ```bash
@@ -347,6 +363,18 @@ func String(s string) *string { return &s }
 //
 // ```
 //
+// **Example: Availability Zone**
+// ```bash
+// $ curl http://169.254.169.254/hetzner/v1/metadata/availability-zone
+// hel1-dc2
+// ```
+//
+// **Example: Region**
+// ```bash
+// $ curl http://169.254.169.254/hetzner/v1/metadata/region
+// eu-central
+// ```
+//
 // ## Sorting
 // Some responses which return multiple items support sorting. If they do support sorting the documentation states which fields can be used for sorting. You specify sorting with the `sort` query string parameter. You can sort by multiple fields. You can set the sort direction by appending `:asc` or `:desc` to the field name. By default, ascending sorting is used.
 //
@@ -357,20 +385,17 @@ func String(s string) *string { return &s }
 // https://api.hetzner.cloud/v1/actions?sort=status:desc
 // https://api.hetzner.cloud/v1/actions?sort=status:asc&sort=command:desc
 // ```
-//
-// ## Changelog
-// You can find our changelog on our [Developer Hub](https://developers.hetzner.com/cloud/changelog/?id=backend).
 type SDK struct {
 	// Actions - Actions show the results and progress of asynchronous requests to the API.
 	Actions            *actions
 	CertificateActions *certificateActions
 	// Certificates - TLS/SSL Certificates prove the identity of a Server and are used to encrypt client traffic.
 	Certificates *certificates
-	// Datacenters - Each Datacenter represents a physical entity where virtual machines are hosted. Note that Datacenters are **not** guaranteed to be entirely independent failure domains.
+	// Datacenters - Each Datacenter represents a *virtual* Datacenter which is made up of possible many physical Datacenters where Servers are hosted.
 	//
-	// Datacenters in the same Location are connected by very low latency links.
+	// Datacenter names are composed from their Location and virtual Datacenter number, for example `fsn1-dc14` means virtual Datacenter `14` in Location `fsn1`.
 	//
-	// Datacenter names are made up of their Location and Datacenter number, for example `fsn1-dc8` means Datacenter `8` in Location `fsn1`.
+	// Right now there is only one Datacenter for each Location. The Datacenter numbers for `fsn`, `nbg` and `hel` are arbitrarily set to `14`, `3` and `2` for historic reasons and do not represent real physical Hetzner datacenters.
 	//
 	Datacenters     *datacenters
 	FirewallActions *firewallActions
@@ -454,7 +479,12 @@ type SDK struct {
 	// Subnets of type `vswitch` must set a `vswitch_id` which is the ID of the existing vSwitch in Hetzner Robot that should be coupled.
 	//
 	// ### Network Zones
-	// Network Zones are groups of Locations which have special high-speed network connections between them. The [Location object](https://docs.hetzner.cloud/#locations-get-a-location) contains the `network_zone` property each Location belongs to. Currently only one Network zone exists and is called `eu-central`. It spans the `nbg1`, `fsn1` and `hel1` Locations.
+	// Network Zones are groups of Locations which have special high-speed network connections between them. The [Location object](https://docs.hetzner.cloud/#locations-get-a-location) contains the `network_zone` property each Location belongs to. Currently these network zones exist:
+	//
+	// |Network Zone|Contains Locations|
+	// |------------|------------------|
+	// |eu-central  | nbg1, fsn1, hel1 |
+	// |us-east     | ash              |
 	//
 	// ### IP address management
 	// When a cloud Server is attached to a network without the user specifying an IP it automatically gets an IP address assigned from a subnet of type `server` in the same network zone. If you specify the optional `ip` parameter when attaching then we will try to assign that IP. Keep in mind that the Server’s location must be covered by the Subnet’s Network Zone if you specify an IP, or that at least one Subnet with the zone covering Server’s location must exist.
@@ -481,7 +511,21 @@ type SDK struct {
 	//
 	PlacementGroups *placementGroups
 	// Pricing - Returns prices for resources.
-	Pricing *pricing
+	Pricing          *pricing
+	PrimaryIPActions *primaryIPActions
+	// PrimaryIPs - Primary IPs help you to create more flexible networking setups. You can assign at most one Primary IP of type `ipv4` and one of type `ipv6` per Server. This Server then uses these IPs.
+	//
+	// You can only unassign a Primary IP from a Server when it's powered off. This Primary IP can then be assigned to a different powered off Server, or you can keep it around for later use.
+	//
+	// Primary IPs are bound to a specific Datacenter. You can not assign a Primary IP from one Datacenter to a Server in a different Datacenter. If you need this capability use Floating IPs instead.
+	//
+	// If your Server's operating system supports cloud-init there is no further configuration needed to make Primary IPs work.
+	//
+	// Primary IPs of type `ipv4` use a single IPv4 address as their `ip` property. Primary IPs of type `ipv6` use a /64 network such as `fc00::/64` as their `ip` property. Any IP address within that network can be used on your host.
+	//
+	// Primary IPs are billed on an hourly basis.
+	//
+	PrimaryIPs *primaryIPs
 	// SSHKeys - SSH keys are public keys you provide to the cloud system. They can be injected into Servers at creation time. We highly recommend that you use keys instead of passwords to manage your Servers.
 	SSHKeys       *sshKeys
 	ServerActions *serverActions
@@ -724,6 +768,24 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.Pricing = newPricing(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.PrimaryIPActions = newPrimaryIPActions(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.PrimaryIPs = newPrimaryIPs(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

@@ -629,6 +629,25 @@ const (
 	InstanceTypeEnumR6idn16xlarge   InstanceTypeEnum = "r6idn.16xlarge"
 	InstanceTypeEnumR6idn24xlarge   InstanceTypeEnum = "r6idn.24xlarge"
 	InstanceTypeEnumR6idn32xlarge   InstanceTypeEnum = "r6idn.32xlarge"
+	InstanceTypeEnumC7gMetal        InstanceTypeEnum = "c7g.metal"
+	InstanceTypeEnumM7gMedium       InstanceTypeEnum = "m7g.medium"
+	InstanceTypeEnumM7gLarge        InstanceTypeEnum = "m7g.large"
+	InstanceTypeEnumM7gXlarge       InstanceTypeEnum = "m7g.xlarge"
+	InstanceTypeEnumM7g2xlarge      InstanceTypeEnum = "m7g.2xlarge"
+	InstanceTypeEnumM7g4xlarge      InstanceTypeEnum = "m7g.4xlarge"
+	InstanceTypeEnumM7g8xlarge      InstanceTypeEnum = "m7g.8xlarge"
+	InstanceTypeEnumM7g12xlarge     InstanceTypeEnum = "m7g.12xlarge"
+	InstanceTypeEnumM7g16xlarge     InstanceTypeEnum = "m7g.16xlarge"
+	InstanceTypeEnumM7gMetal        InstanceTypeEnum = "m7g.metal"
+	InstanceTypeEnumR7gMedium       InstanceTypeEnum = "r7g.medium"
+	InstanceTypeEnumR7gLarge        InstanceTypeEnum = "r7g.large"
+	InstanceTypeEnumR7gXlarge       InstanceTypeEnum = "r7g.xlarge"
+	InstanceTypeEnumR7g2xlarge      InstanceTypeEnum = "r7g.2xlarge"
+	InstanceTypeEnumR7g4xlarge      InstanceTypeEnum = "r7g.4xlarge"
+	InstanceTypeEnumR7g8xlarge      InstanceTypeEnum = "r7g.8xlarge"
+	InstanceTypeEnumR7g12xlarge     InstanceTypeEnum = "r7g.12xlarge"
+	InstanceTypeEnumR7g16xlarge     InstanceTypeEnum = "r7g.16xlarge"
+	InstanceTypeEnumR7gMetal        InstanceTypeEnum = "r7g.metal"
 )
 
 func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -1874,6 +1893,44 @@ func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = InstanceTypeEnum(s)
 		return nil
 	default:

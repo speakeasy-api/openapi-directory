@@ -36,8 +36,7 @@ type RemoveMembersForPortfolioRequest struct {
 
 // RemoveMembersForPortfolio200ApplicationJSON - Successfully removed the members from the portfolio.
 type RemoveMembersForPortfolio200ApplicationJSON struct {
-	// An empty object. Some endpoints do not return an object on success. The success is conveyed through a 2-- status code and returning an empty object.
-	Data map[string]interface{} `json:"data,omitempty"`
+	Data *shared.PortfolioResponse `json:"data,omitempty"`
 }
 
 type RemoveMembersForPortfolioResponse struct {

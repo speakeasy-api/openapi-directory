@@ -23,14 +23,19 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
-// SDK - The public PocketSmith API
+// SDK - The PocketSmith API
 type SDK struct {
 	Accounts            *accounts
 	Attachments         *attachments
 	Budgeting           *budgeting
 	Categories          *categories
 	CategoryRules       *categoryRules
+	Currencies          *currencies
+	Events              *events
 	Institutions        *institutions
+	Labels              *labels
+	SavedSearches       *savedSearches
+	TimeZones           *timeZones
 	TransactionAccounts *transactionAccounts
 	Transactions        *transactions
 	Users               *users
@@ -151,7 +156,52 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.Currencies = newCurrencies(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Events = newEvents(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.Institutions = newInstitutions(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Labels = newLabels(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.SavedSearches = newSavedSearches(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.TimeZones = newTimeZones(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

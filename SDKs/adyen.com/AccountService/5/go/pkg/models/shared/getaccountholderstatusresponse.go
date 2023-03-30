@@ -5,8 +5,8 @@ package shared
 // GetAccountHolderStatusResponse - OK - the request has succeeded.
 type GetAccountHolderStatusResponse struct {
 	// The code of the Account Holder.
-	AccountHolderCode   string              `json:"accountHolderCode"`
-	AccountHolderStatus AccountHolderStatus `json:"accountHolderStatus"`
+	AccountHolderCode   *string              `json:"accountHolderCode,omitempty"`
+	AccountHolderStatus *AccountHolderStatus `json:"accountHolderStatus,omitempty"`
 	// Contains field validation errors that would prevent requests from being processed.
 	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.

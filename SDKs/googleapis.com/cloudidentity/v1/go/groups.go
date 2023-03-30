@@ -485,6 +485,54 @@ func (s *groups) CloudidentityGroupsMembershipsModifyMembershipRoles(ctx context
 	return res, nil
 }
 
+// CloudidentityGroupsMembershipsSearchDirectGroups - Searches direct groups of a member.
+func (s *groups) CloudidentityGroupsMembershipsSearchDirectGroups(ctx context.Context, request operations.CloudidentityGroupsMembershipsSearchDirectGroupsRequest) (*operations.CloudidentityGroupsMembershipsSearchDirectGroupsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/memberships:searchDirectGroups", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CloudidentityGroupsMembershipsSearchDirectGroupsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SearchDirectGroupsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SearchDirectGroupsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // CloudidentityGroupsMembershipsSearchTransitiveGroups - Search transitive groups of a member. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. If the account of the member is not one of these, a 403 (PERMISSION_DENIED) HTTP status code will be returned. A transitive group is any group that has a direct or indirect membership to the member. Actor must have view permissions all transitive groups.
 func (s *groups) CloudidentityGroupsMembershipsSearchTransitiveGroups(ctx context.Context, request operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest) (*operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse, error) {
 	baseURL := s.serverURL

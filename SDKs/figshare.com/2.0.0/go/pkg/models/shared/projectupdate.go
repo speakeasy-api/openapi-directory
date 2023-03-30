@@ -4,6 +4,10 @@ package shared
 
 // ProjectUpdate - Project description
 type ProjectUpdate struct {
+	// List of key, values pairs to be associated with the project
+	CustomFields map[string]interface{} `json:"custom_fields,omitempty"`
+	// List of custom fields values, supersedes custom_fields parameter
+	CustomFieldsList []CustomArticleFieldAdd `json:"custom_fields_list,omitempty"`
 	// Project description
 	Description *string `json:"description,omitempty"`
 	// Grant number or organization(s) that funded this project. Up to 2000 characters permitted.

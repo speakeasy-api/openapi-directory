@@ -8,7 +8,7 @@ import (
 )
 
 type ListSyncResourcesPathParams struct {
-	// <p>The sync soucre.</p> <note> <p>Currently the only supported syncSoucre is <code>SITEWISE </code>.</p> </note>
+	// <p>The sync source.</p> <note> <p>Currently the only supported syncSource is <code>SITEWISE </code>.</p> </note>
 	SyncSource string `pathParam:"style=simple,explode=false,name=syncSource"`
 	// The ID of the workspace that contains the sync job.
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
@@ -32,7 +32,7 @@ type ListSyncResourcesHeaders struct {
 }
 
 type ListSyncResourcesRequestBody struct {
-	// A list of objects that filter the request.
+	// <p>A list of objects that filter the request.</p> <p>The following filter combinations are supported:</p> <ul> <li> <p>Filter with state</p> </li> <li> <p>Filter with ResourceType and ResourceId</p> </li> <li> <p>Filter with ResourceType and ExternalId</p> </li> </ul>
 	Filters []shared.SyncResourceFilter `json:"filters,omitempty"`
 	// <p>The maximum number of results to return at one time. The default is 50.</p> <p>Valid Range: Minimum value of 0. Maximum value of 200.</p>
 	MaxResults *int64 `json:"maxResults,omitempty"`

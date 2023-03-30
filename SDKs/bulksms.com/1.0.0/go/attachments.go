@@ -33,13 +33,15 @@ func newAttachments(defaultClient, securityClient HTTPClient, serverURL, languag
 }
 
 // PostRmmPreSignAttachment - Upload an attachment via a signed URL
-// You can send any URL as part of your SMS text.  When the recipient taps on the URL, the file to which the URL points will be downloaded and opened on the mobile device.  This handy feature is supported by most modern mobile devices.
+// When composing an SMS, you can add SMS attachments by adding a URL to your text. When the recipient clicks on the URL, the attached file will be downloaded and opened on their mobile device.
 //
-// The best way to send an attachment is to store the file on a web server you own and use that URL in the SMS text.  Your customer will then see a URL that she will recognise as belonging to you.  This is the most flexible and the simplest solution.
+// The best way to do this is to store the file on a web server you own and use that URL in the SMS text. This URL will be easily recognisable to your message recipient and ties your message back to your brand or company.
 //
-// However, if it is not possible to use your web server, you can use BulkSMS storage to keep the files that you want to attach to your SMS message.  Please note that these files will be deleted after 30 days.
+// If that’s not possible, you can use BulkSMS storage to keep the files that you want to attach to your SMS. These files will be deleted after 30 days as per our fair use policy.
 //
-// The process to use the BulkSMS storage requires you to take three steps:
+// We recommend you keep this file size below 20 MB, as larger files may be deleted without warning.
+//
+// To use the BulkSMS storage, follow these three steps:
 //
 // **Step 1**: Use your BulkSMS credentials (or your API Token) to request a pre-signed URL.  This is what this `pre-sign-attachment` method is for.  It returns a PreSignInfo object that you will use in the other two steps.
 //

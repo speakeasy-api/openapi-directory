@@ -14,8 +14,10 @@ type PostExternalEventsRequestBodyStatusEnum string
 
 const (
 	PostExternalEventsRequestBodyStatusEnumSuccess        PostExternalEventsRequestBodyStatusEnum = "success"
-	PostExternalEventsRequestBodyStatusEnumError          PostExternalEventsRequestBodyStatusEnum = "error"
+	PostExternalEventsRequestBodyStatusEnumFailure        PostExternalEventsRequestBodyStatusEnum = "failure"
 	PostExternalEventsRequestBodyStatusEnumPartialFailure PostExternalEventsRequestBodyStatusEnum = "partial_failure"
+	PostExternalEventsRequestBodyStatusEnumInProgress     PostExternalEventsRequestBodyStatusEnum = "in_progress"
+	PostExternalEventsRequestBodyStatusEnumSkipped        PostExternalEventsRequestBodyStatusEnum = "skipped"
 )
 
 func (e *PostExternalEventsRequestBodyStatusEnum) UnmarshalJSON(data []byte) error {
@@ -26,9 +28,13 @@ func (e *PostExternalEventsRequestBodyStatusEnum) UnmarshalJSON(data []byte) err
 	switch s {
 	case "success":
 		fallthrough
-	case "error":
+	case "failure":
 		fallthrough
 	case "partial_failure":
+		fallthrough
+	case "in_progress":
+		fallthrough
+	case "skipped":
 		*e = PostExternalEventsRequestBodyStatusEnum(s)
 		return nil
 	default:

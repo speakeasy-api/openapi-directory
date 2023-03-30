@@ -132,7 +132,7 @@ type GetCandidateCandidateIDFilingsQueryParams struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -233,6 +233,9 @@ type GetCandidateCandidateIDFilingsQueryParams struct {
 	// Primary, general or special election indicator.
 	//
 	PrimaryGeneralIndicator []string `queryParam:"style=form,explode=true,name=primary_general_indicator"`
+	// Keyword search for filer name or ID
+	//
+	QFiler []string `queryParam:"style=form,explode=true,name=q_filer"`
 	// Name of report where the underlying data comes from:
 	//     - 10D Pre-Election
 	//     - 10G Pre-General
@@ -303,7 +306,8 @@ type GetCandidateCandidateIDFilingsQueryParams struct {
 	//     - 9 From Multi Candidate Status
 	//
 	RequestType []string `queryParam:"style=form,explode=true,name=request_type"`
-	// Provide a field to sort by. Use - for descending order.
+	// Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
+	//
 	Sort []string `queryParam:"style=form,explode=true,name=sort"`
 	// Hide null values on sorted column(s).
 	SortHideNull *bool `queryParam:"style=form,explode=true,name=sort_hide_null"`

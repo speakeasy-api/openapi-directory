@@ -2,11 +2,22 @@
 
 package shared
 
+// GoogleCloudRecaptchaenterpriseV1Event - The event being assessed.
 type GoogleCloudRecaptchaenterpriseV1Event struct {
 	// Optional. The expected action for this type of event. This should be the same action provided at token generation time on client-side platforms already integrated with recaptcha enterprise.
 	ExpectedAction *string `json:"expectedAction,omitempty"`
+	// Optional. Flag for a reCAPTCHA express request for an assessment without a token. If enabled, `site_key` must reference a SCORE key with WAF feature set to EXPRESS.
+	Express *bool `json:"express,omitempty"`
+	// Optional. Flag for enabling firewall policy config assessment. If this flag is enabled, the firewall policy will be evaluated and a suggested firewall action will be returned in the response.
+	FirewallPolicyEvaluation *bool `json:"firewallPolicyEvaluation,omitempty"`
 	// Optional. Unique stable hashed user identifier for the request. The identifier must be hashed using hmac-sha256 with stable secret.
 	HashedAccountID *string `json:"hashedAccountId,omitempty"`
+	// Optional. HTTP header information about the request.
+	Headers []string `json:"headers,omitempty"`
+	// Optional. Optional JA3 fingerprint for SSL clients.
+	Ja3 *string `json:"ja3,omitempty"`
+	// Optional. The URI resource the user requested that triggered an assessment.
+	RequestedURI *string `json:"requestedUri,omitempty"`
 	// Optional. The site key that was used to invoke reCAPTCHA Enterprise on your site and generate the token.
 	SiteKey *string `json:"siteKey,omitempty"`
 	// Optional. The user response token provided by the reCAPTCHA Enterprise client-side integration on your site.
@@ -17,4 +28,6 @@ type GoogleCloudRecaptchaenterpriseV1Event struct {
 	UserAgent *string `json:"userAgent,omitempty"`
 	// Optional. The IP address in the request from the user's device related to this event.
 	UserIPAddress *string `json:"userIpAddress,omitempty"`
+	// Optional. Flag for running WAF token assessment. If enabled, the token must be specified, and have been created by a WAF-enabled key.
+	WafTokenAssessment *bool `json:"wafTokenAssessment,omitempty"`
 }

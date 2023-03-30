@@ -4,8 +4,10 @@ package shared
 
 // PublicIPAddressEntity - List all possible public IP addresses
 type PublicIPAddressEntity struct {
+	FtpEnabled *bool `json:"ftp_enabled,omitempty"`
 	// The public IP address.
 	IPAddress *string `json:"ip_address,omitempty"`
 	// The name of the frontend server.
-	ServerName *string `json:"server_name,omitempty"`
+	ServerName  *string `json:"server_name,omitempty"`
+	SftpEnabled *bool   `json:"sftp_enabled,omitempty"`
 }

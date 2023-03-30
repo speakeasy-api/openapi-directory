@@ -13,18 +13,16 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUUIDStepsStepUUIDLogsLogUUIDRequest{
-        PathParams: operations.GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUUIDStepsStepUUIDLogsLogUUIDPathParams{
-            LogUUID: "unde",
-            PipelineUUID: "deserunt",
-            RepoSlug: "porro",
-            StepUUID: "nulla",
-            Workspace: "id",
+    req := operations.DeleteAddonRequest{
+        Security: operations.DeleteAddonSecurity{
+            APIKey: &shared.SchemeAPIKey{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
         },
     }
 
     ctx := context.Background()
-    res, err := s.GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUUIDStepsStepUUIDLogsLogUUID(ctx, req)
+    res, err := s.Addon.DeleteAddon(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

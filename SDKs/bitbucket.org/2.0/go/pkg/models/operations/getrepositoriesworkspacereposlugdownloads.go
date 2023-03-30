@@ -33,6 +33,6 @@ type GetRepositoriesWorkspaceRepoSlugDownloadsResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// Unexpected error.
+	// User is not authorized to read from the repository.
 	Error map[string]interface{}
 }

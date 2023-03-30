@@ -3,6 +3,6 @@
 package shared
 
 type ScheduleBByRecipientPage struct {
-	Pagination *OffsetInfo            `json:"pagination,omitempty"`
+	Pagination *SeekInfo              `json:"pagination,omitempty"`
 	Results    []ScheduleBByRecipient `json:"results,omitempty"`
 }

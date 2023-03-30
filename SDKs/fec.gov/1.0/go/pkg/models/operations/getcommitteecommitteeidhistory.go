@@ -90,8 +90,8 @@ type GetCommitteeCommitteeIDHistoryRequest struct {
 }
 
 type GetCommitteeCommitteeIDHistoryResponse struct {
-	CommitteeHistoryPage *shared.CommitteeHistoryPage
-	ContentType          string
-	StatusCode           int
-	RawResponse          *http.Response
+	CommitteeHistoryProfilePage *shared.CommitteeHistoryProfilePage
+	ContentType                 string
+	StatusCode                  int
+	RawResponse                 *http.Response
 }

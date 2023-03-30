@@ -7,6 +7,39 @@ import (
 	"fmt"
 )
 
+// GoalMetricRequestProgressSourceEnum - This field defines how the progress value of a goal metric is being calculated. A goal's progress can be provided manually by the user, calculated automatically from contributing subgoals or projects, or managed by an integration with an external data source, such as Salesforce.
+type GoalMetricRequestProgressSourceEnum string
+
+const (
+	GoalMetricRequestProgressSourceEnumManual                     GoalMetricRequestProgressSourceEnum = "manual"
+	GoalMetricRequestProgressSourceEnumSubgoalProgress            GoalMetricRequestProgressSourceEnum = "subgoal_progress"
+	GoalMetricRequestProgressSourceEnumProjectTaskCompletion      GoalMetricRequestProgressSourceEnum = "project_task_completion"
+	GoalMetricRequestProgressSourceEnumProjectMilestoneCompletion GoalMetricRequestProgressSourceEnum = "project_milestone_completion"
+	GoalMetricRequestProgressSourceEnumExternal                   GoalMetricRequestProgressSourceEnum = "external"
+)
+
+func (e *GoalMetricRequestProgressSourceEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "manual":
+		fallthrough
+	case "subgoal_progress":
+		fallthrough
+	case "project_task_completion":
+		fallthrough
+	case "project_milestone_completion":
+		fallthrough
+	case "external":
+		*e = GoalMetricRequestProgressSourceEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GoalMetricRequestProgressSourceEnum: %s", s)
+	}
+}
+
 // GoalMetricRequestUnitEnum - A supported unit of measure for the goal metric, or none.
 type GoalMetricRequestUnitEnum string
 
@@ -36,18 +69,18 @@ func (e *GoalMetricRequestUnitEnum) UnmarshalJSON(data []byte) error {
 
 // GoalMetricRequestInput - A generic Asana Resource, containing a globally unique identifier.
 type GoalMetricRequestInput struct {
-	// ISO 4217 currency code to format this custom field. This will be null if the `format` is not `currency`.
+	// ISO 4217 currency code to format this custom field. This will be null if the `unit` is not `currency`.
 	CurrencyCode *string `json:"currency_code,omitempty"`
-	// *Conditional*. This string is the current value of a goal metric of type string.
-	CurrentDisplayValue *string `json:"current_display_value,omitempty"`
-	// *Conditional*. This number is the current value of a goal metric of type number.
+	// This number is the current value of a goal metric of type number.
 	CurrentNumberValue *float64 `json:"current_number_value,omitempty"`
-	// *Conditional*. This number is the start value of a goal metric of type number.
+	// This number is the start value of a goal metric of type number.
 	InitialNumberValue *float64 `json:"initial_number_value,omitempty"`
-	// Only relevant for goal metrics of type ‘Number’. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.
+	// *Conditional*. Only relevant for goal metrics of type ‘Number’. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.
 	// For percentage format, this may be unintuitive, as a value of 0.25 has a precision of 0, while a value of 0.251 has a precision of 1. This is due to 0.25 being displayed as 25%.
 	Precision *int64 `json:"precision,omitempty"`
-	// *Conditional*. This number is the end value of a goal metric of type number.
+	// This field defines how the progress value of a goal metric is being calculated. A goal's progress can be provided manually by the user, calculated automatically from contributing subgoals or projects, or managed by an integration with an external data source, such as Salesforce.
+	ProgressSource *GoalMetricRequestProgressSourceEnum `json:"progress_source,omitempty"`
+	// This number is the end value of a goal metric of type number. This number cannot equal `initial_number_value`.
 	TargetNumberValue *float64 `json:"target_number_value,omitempty"`
 	// A supported unit of measure for the goal metric, or none.
 	Unit *GoalMetricRequestUnitEnum `json:"unit,omitempty"`

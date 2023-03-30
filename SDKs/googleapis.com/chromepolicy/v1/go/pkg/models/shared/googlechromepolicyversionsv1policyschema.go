@@ -50,7 +50,6 @@ type GoogleChromePolicyVersionsV1PolicySchema struct {
 	// Output only. Special notice messages related to setting certain values in certain fields in the schema.
 	Notices            []GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription `json:"notices,omitempty"`
 	PolicyAPILifecycle *ChromeCrosDpanelAutosettingsProtoPolicyAPILifecycle        `json:"policyApiLifecycle,omitempty"`
-	PolicyAPILifeycle  *ChromeCrosDpanelAutosettingsProtoPolicyAPILifecycle        `json:"policyApiLifeycle,omitempty"`
 	// Output only. Description about the policy schema for user consumption.
 	PolicyDescription *string `json:"policyDescription,omitempty"`
 	// Output only. The fully qualified name of the policy schema. This value is used to fill the field `policy_schema` in PolicyValue when calling BatchInheritOrgUnitPolicies BatchModifyOrgUnitPolicies BatchModifyGroupPolicies or BatchDeleteGroupPolicies.

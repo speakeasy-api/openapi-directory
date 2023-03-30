@@ -4,7 +4,6 @@ package sdk
 
 import (
 	"net/http"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"time"
 )
@@ -32,11 +31,11 @@ type SDK struct {
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
 	_securityClient HTTPClient
-	_security       *shared.Security
-	_serverURL      string
-	_language       string
-	_sdkVersion     string
-	_genVersion     string
+
+	_serverURL  string
+	_language   string
+	_sdkVersion string
+	_genVersion string
 }
 
 type SDKOption func(*SDK)
@@ -66,13 +65,6 @@ func WithClient(client HTTPClient) SDKOption {
 	}
 }
 
-// WithSecurity configures the SDK to use the provided security details
-func WithSecurity(security shared.Security) SDKOption {
-	return func(sdk *SDK) {
-		sdk._security = &security
-	}
-}
-
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
@@ -89,11 +81,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._defaultClient = &http.Client{Timeout: 60 * time.Second}
 	}
 	if sdk._securityClient == nil {
-		if sdk._security != nil {
-			sdk._securityClient = utils.ConfigureSecurityClient(sdk._defaultClient, sdk._security)
-		} else {
-			sdk._securityClient = sdk._defaultClient
-		}
+		sdk._securityClient = sdk._defaultClient
 	}
 
 	if sdk._serverURL == "" {

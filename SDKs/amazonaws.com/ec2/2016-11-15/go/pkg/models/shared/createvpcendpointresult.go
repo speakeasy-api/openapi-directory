@@ -46,7 +46,8 @@ func (e *CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum) Unmars
 
 // CreateVpcEndpointResultVpcEndpointDNSOptions - The DNS options for the endpoint.
 type CreateVpcEndpointResultVpcEndpointDNSOptions struct {
-	DNSRecordIPType *CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum
+	DNSRecordIPType                          *CreateVpcEndpointResultVpcEndpointDNSOptionsDNSRecordIPTypeEnum
+	PrivateDNSOnlyForInboundResolverEndpoint *bool
 }
 
 // CreateVpcEndpointResultVpcEndpointGroups - Describes a security group.

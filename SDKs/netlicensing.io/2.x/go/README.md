@@ -42,7 +42,7 @@ func main() {
             Parentfeature: "vero",
             Price: 5448.83,
             Quantity: "nulla",
-            StartDate: "2022-10-25T21:32:03.292Z",
+            StartDate: "2022-10-26T09:34:32.189Z",
             TimeVolume: "fuga",
             TimeVolumePeriod: "facilis",
             UsedQuantity: "eum",

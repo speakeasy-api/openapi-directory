@@ -9,6 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetClassificationsSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetClassificationsSortEnum string
 
 const (
@@ -104,6 +108,7 @@ type GetClassificationsQueryParams struct {
 
 type GetClassificationsRequest struct {
 	QueryParams GetClassificationsQueryParams
+	Security    GetClassificationsSecurity
 }
 
 // GetClassifications400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.
@@ -135,7 +140,7 @@ type GetClassifications400ApplicationVndAPIPlusJSONErrors struct {
 // GetClassifications400ApplicationVndAPIPlusJSON - Bad Request
 //
 // Parameters requiring a specific format must adhere to that format.
-// Pagination must have a positive page number and a page size no larger than 100. Filtering by type for AudienceSegment and AudienceTag is no longer supported.
+// Pagination must have a positive page number and a page size no larger than 100. Filtering by type for AudienceSegment, AudienceTag, ListeningPlatform, and UserDevice is no longer supported.
 type GetClassifications400ApplicationVndAPIPlusJSON struct {
 	// An error object describing the problem. Please check out the
 	// [JSON:API Error document reference](https://jsonapi.org/format/#error-objects) for a full
@@ -160,7 +165,7 @@ type GetClassificationsResponse struct {
 	// Bad Request
 	//
 	// Parameters requiring a specific format must adhere to that format.
-	// Pagination must have a positive page number and a page size no larger than 100. Filtering by type for AudienceSegment and AudienceTag is no longer supported.
+	// Pagination must have a positive page number and a page size no larger than 100. Filtering by type for AudienceSegment, AudienceTag, ListeningPlatform, and UserDevice is no longer supported.
 	//
 	GetClassifications400ApplicationVndAPIPlusJSONObject *GetClassifications400ApplicationVndAPIPlusJSON
 }

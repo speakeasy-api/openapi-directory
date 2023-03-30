@@ -33,7 +33,7 @@ func newTokens(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
-func (s *tokens) PostOauthV1TokenCreateToken(ctx context.Context, request operations.PostOauthV1TokenCreateTokenRequest) (*operations.PostOauthV1TokenCreateTokenResponse, error) {
+func (s *tokens) PostOauthV1TokenCreate(ctx context.Context, request operations.PostOauthV1TokenCreateRequest) (*operations.PostOauthV1TokenCreateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/oauth/v1/token"
 
@@ -62,7 +62,7 @@ func (s *tokens) PostOauthV1TokenCreateToken(ctx context.Context, request operat
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostOauthV1TokenCreateTokenResponse{
+	res := &operations.PostOauthV1TokenCreateResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

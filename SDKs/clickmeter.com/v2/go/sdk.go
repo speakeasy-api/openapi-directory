@@ -34,7 +34,6 @@ type SDK struct {
 	Groups      *groups
 	Hits        *hits
 	Me          *me
-	Reports     *reports
 	Retargeting *retargeting
 	Tags        *tags
 
@@ -182,15 +181,6 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.Me = newMe(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.Reports = newReports(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

@@ -271,6 +271,7 @@ pkg/models/operations/harvestaccount.go
 pkg/models/operations/harvestorderv3.go
 pkg/models/operations/headorderv3.go
 pkg/models/operations/setmerchantorderinfov3.go
+pkg/models/operations/generatebatchorderinvoice.go
 pkg/models/operations/generateorderinvoice.go
 pkg/models/operations/getorderinvoicepdf.go
 pkg/models/operations/getorderinvoicepreview.go
@@ -870,6 +871,10 @@ pkg/models/shared/paginationresultlinks.go
 pkg/models/shared/orderwithlinks.go
 pkg/models/shared/orderlistlightwithlinks.go
 pkg/models/shared/orderheaderwithlinks.go
+pkg/models/shared/generateorderinvoiceresponse.go
+pkg/models/shared/generatebatchorderinvoiceerrorresponseitem.go
+pkg/models/shared/generatebatchorderinvoiceerrorresponseitemdetail.go
+pkg/models/shared/generatebatchorderinvoicerequestitem.go
 pkg/models/shared/generateorderinvoicerequest.go
 pkg/models/shared/getorderinvoicepdffromhtmlinvoiceurlrequest.go
 pkg/models/shared/previeworderinvoiceresponse.go

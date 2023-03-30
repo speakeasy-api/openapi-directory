@@ -154,7 +154,8 @@ type GetOperationsLogQueryParams struct {
 	//     year from the receipt date.
 	//
 	ReportYear []int `queryParam:"style=form,explode=true,name=report_year"`
-	// Provide a field to sort by. Use - for descending order.
+	// Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
+	//
 	Sort []string `queryParam:"style=form,explode=true,name=sort"`
 	// Hide null values on sorted column(s).
 	SortHideNull *bool `queryParam:"style=form,explode=true,name=sort_hide_null"`

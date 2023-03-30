@@ -35,6 +35,6 @@ type GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommitsResponse st
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// Unexpected error.
+	// If the authenticated user does not have access to the pull request.
 	Error map[string]interface{}
 }

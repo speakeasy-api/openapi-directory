@@ -17,6 +17,12 @@ type CreateDataIntegrationHeaders struct {
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
+// CreateDataIntegrationRequestBodyFileConfiguration - The configuration for what files should be pulled from the source.
+type CreateDataIntegrationRequestBodyFileConfiguration struct {
+	Filters map[string][]string `json:"Filters,omitempty"`
+	Folders []string            `json:"Folders,omitempty"`
+}
+
 // CreateDataIntegrationRequestBodyScheduleConfig - The name of the data and how often it should be pulled from the source.
 type CreateDataIntegrationRequestBodyScheduleConfig struct {
 	FirstExecutionFrom *string `json:"FirstExecutionFrom,omitempty"`
@@ -25,19 +31,23 @@ type CreateDataIntegrationRequestBodyScheduleConfig struct {
 }
 
 type CreateDataIntegrationRequestBody struct {
-	// A unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
+	// A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with idempotent APIs</a>.
 	ClientToken *string `json:"ClientToken,omitempty"`
 	// A description of the DataIntegration.
 	Description *string `json:"Description,omitempty"`
+	// The configuration for what files should be pulled from the source.
+	FileConfiguration *CreateDataIntegrationRequestBodyFileConfiguration `json:"FileConfiguration,omitempty"`
 	// The KMS key for the DataIntegration.
-	KmsKey *string `json:"KmsKey,omitempty"`
+	KmsKey string `json:"KmsKey"`
 	// The name of the DataIntegration.
 	Name string `json:"Name"`
+	// The configuration for what data should be pulled from the source.
+	ObjectConfiguration map[string]map[string][]string `json:"ObjectConfiguration,omitempty"`
 	// The name of the data and how often it should be pulled from the source.
-	ScheduleConfig *CreateDataIntegrationRequestBodyScheduleConfig `json:"ScheduleConfig,omitempty"`
+	ScheduleConfig CreateDataIntegrationRequestBodyScheduleConfig `json:"ScheduleConfig"`
 	// The URI of the data source.
-	SourceURI *string `json:"SourceURI,omitempty"`
-	// One or more tags.
+	SourceURI string `json:"SourceURI"`
+	// The tags used to organize, track, or control access for this resource. For example, { "tags": {"key1":"value1", "key2":"value2"} }.
 	Tags map[string]string `json:"Tags,omitempty"`
 }
 

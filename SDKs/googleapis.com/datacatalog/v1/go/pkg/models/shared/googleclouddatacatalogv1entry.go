@@ -16,6 +16,8 @@ const (
 	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumCloudPubsub                 GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "CLOUD_PUBSUB"
 	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumDataprocMetastore           GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "DATAPROC_METASTORE"
 	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumDataplex                    GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "DATAPLEX"
+	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumCloudSpanner                GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "CLOUD_SPANNER"
+	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumCloudBigtable               GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "CLOUD_BIGTABLE"
 	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumCloudSQL                    GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "CLOUD_SQL"
 	GoogleCloudDatacatalogV1EntryIntegratedSystemEnumLooker                      GoogleCloudDatacatalogV1EntryIntegratedSystemEnum = "LOOKER"
 )
@@ -35,6 +37,10 @@ func (e *GoogleCloudDatacatalogV1EntryIntegratedSystemEnum) UnmarshalJSON(data [
 	case "DATAPROC_METASTORE":
 		fallthrough
 	case "DATAPLEX":
+		fallthrough
+	case "CLOUD_SPANNER":
+		fallthrough
+	case "CLOUD_BIGTABLE":
 		fallthrough
 	case "CLOUD_SQL":
 		fallthrough
@@ -120,6 +126,8 @@ type GoogleCloudDatacatalogV1Entry struct {
 	BigqueryTableSpec *GoogleCloudDatacatalogV1BigQueryTableSpec `json:"bigqueryTableSpec,omitempty"`
 	// Business Context of the entry.
 	BusinessContext *GoogleCloudDatacatalogV1BusinessContext `json:"businessContext,omitempty"`
+	// Specification that applies to all entries that are part of `CLOUD_BIGTABLE` system (user_specified_type)
+	CloudBigtableSystemSpec *GoogleCloudDatacatalogV1CloudBigtableSystemSpec `json:"cloudBigtableSystemSpec,omitempty"`
 	// Physical location of an entry.
 	DataSource *GoogleCloudDatacatalogV1DataSource `json:"dataSource,omitempty"`
 	// Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type. Only one of internal specs can be set at the time, and cannot be changed later.
@@ -152,6 +160,8 @@ type GoogleCloudDatacatalogV1Entry struct {
 	RoutineSpec *GoogleCloudDatacatalogV1RoutineSpec `json:"routineSpec,omitempty"`
 	// Represents a schema, for example, a BigQuery, GoogleSQL, or Avro schema.
 	Schema *GoogleCloudDatacatalogV1Schema `json:"schema,omitempty"`
+	// Specification that applies to a Service resource. Valid only for entries with the `SERVICE` type.
+	ServiceSpec *GoogleCloudDatacatalogV1ServiceSpec `json:"serviceSpec,omitempty"`
 	// Timestamps associated with this resource in a particular system.
 	SourceSystemTimestamps *GoogleCloudDatacatalogV1SystemTimestamps `json:"sourceSystemTimestamps,omitempty"`
 	// Specification that applies to entries that are part `SQL_DATABASE` system (user_specified_type)
@@ -170,6 +180,8 @@ type GoogleCloudDatacatalogV1Entry struct {
 type GoogleCloudDatacatalogV1EntryInput struct {
 	// Business Context of the entry.
 	BusinessContext *GoogleCloudDatacatalogV1BusinessContext `json:"businessContext,omitempty"`
+	// Specification that applies to all entries that are part of `CLOUD_BIGTABLE` system (user_specified_type)
+	CloudBigtableSystemSpec *GoogleCloudDatacatalogV1CloudBigtableSystemSpec `json:"cloudBigtableSystemSpec,omitempty"`
 	// Physical location of an entry.
 	DataSource *GoogleCloudDatacatalogV1DataSourceInput `json:"dataSource,omitempty"`
 	// Specification that applies to a data source connection. Valid only for entries with the `DATA_SOURCE_CONNECTION` type. Only one of internal specs can be set at the time, and cannot be changed later.
@@ -198,6 +210,8 @@ type GoogleCloudDatacatalogV1EntryInput struct {
 	RoutineSpec *GoogleCloudDatacatalogV1RoutineSpec `json:"routineSpec,omitempty"`
 	// Represents a schema, for example, a BigQuery, GoogleSQL, or Avro schema.
 	Schema *GoogleCloudDatacatalogV1Schema `json:"schema,omitempty"`
+	// Specification that applies to a Service resource. Valid only for entries with the `SERVICE` type.
+	ServiceSpec *GoogleCloudDatacatalogV1ServiceSpec `json:"serviceSpec,omitempty"`
 	// Timestamps associated with this resource in a particular system.
 	SourceSystemTimestamps *GoogleCloudDatacatalogV1SystemTimestampsInput `json:"sourceSystemTimestamps,omitempty"`
 	// Specification that applies to entries that are part `SQL_DATABASE` system (user_specified_type)

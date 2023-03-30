@@ -28,6 +28,8 @@ type PrivateArticleUpdateResponse struct {
 	// Forbidden
 	ErrorMessage *shared.ErrorMessage
 	Headers      map[string][]string
-	StatusCode   int
-	RawResponse  *http.Response
+	// Reset Content
+	LocationWarningsUpdate *shared.LocationWarningsUpdate
+	StatusCode             int
+	RawResponse            *http.Response
 }

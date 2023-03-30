@@ -8,7 +8,7 @@ import (
 )
 
 type DeleteApplicationPathParams struct {
-	// The name or ID of the application.
+	//  The name, ID, or ARN of the application.
 	Application string `pathParam:"style=simple,explode=false,name=application"`
 }
 

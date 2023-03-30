@@ -10,6 +10,8 @@ type GoogleCloudIntegrationsV1alphaCloudKmsConfig struct {
 	KeyVersion *string `json:"keyVersion,omitempty"`
 	// Required. Location name of the key ring, e.g. "us-west1".
 	KmsLocation *string `json:"kmsLocation,omitempty"`
+	// Optional. The gcp project id of the project where the kms key stored. If empty, the kms key is stored at the same project as customer's project and ecrypted with CMEK, otherwise, the kms key is stored in the tenant project and encrypted with GMEK
+	KmsProjectID *string `json:"kmsProjectId,omitempty"`
 	// Required. A key ring organizes keys in a specific Google Cloud location and allows you to manage access control on groups of keys. A key ring's name does not need to be unique across a Google Cloud project, but must be unique within a given location.
 	KmsRing *string `json:"kmsRing,omitempty"`
 }

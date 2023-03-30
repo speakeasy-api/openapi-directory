@@ -8,7 +8,7 @@ import (
 )
 
 type GetDestinationDefinitionSpecificationRequest struct {
-	Request shared.DestinationDefinitionIDRequestBody `request:"mediaType=application/json"`
+	Request shared.DestinationDefinitionIDWithWorkspaceID `request:"mediaType=application/json"`
 }
 
 type GetDestinationDefinitionSpecificationResponse struct {

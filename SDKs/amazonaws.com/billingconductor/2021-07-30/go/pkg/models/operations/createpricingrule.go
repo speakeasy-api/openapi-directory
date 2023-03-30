@@ -28,6 +28,7 @@ const (
 	CreatePricingRuleRequestBodyScopeEnumGlobal        CreatePricingRuleRequestBodyScopeEnum = "GLOBAL"
 	CreatePricingRuleRequestBodyScopeEnumService       CreatePricingRuleRequestBodyScopeEnum = "SERVICE"
 	CreatePricingRuleRequestBodyScopeEnumBillingEntity CreatePricingRuleRequestBodyScopeEnum = "BILLING_ENTITY"
+	CreatePricingRuleRequestBodyScopeEnumSku           CreatePricingRuleRequestBodyScopeEnum = "SKU"
 )
 
 func (e *CreatePricingRuleRequestBodyScopeEnum) UnmarshalJSON(data []byte) error {
@@ -41,6 +42,8 @@ func (e *CreatePricingRuleRequestBodyScopeEnum) UnmarshalJSON(data []byte) error
 	case "SERVICE":
 		fallthrough
 	case "BILLING_ENTITY":
+		fallthrough
+	case "SKU":
 		*e = CreatePricingRuleRequestBodyScopeEnum(s)
 		return nil
 	default:

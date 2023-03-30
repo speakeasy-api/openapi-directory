@@ -75,8 +75,18 @@ type NotificationEntity struct {
 	GroupName *string `json:"group_name,omitempty"`
 	// Notification ID
 	ID *int `json:"id,omitempty"`
-	// Triggers notification when moving or copying files to this path
+	// Custom message to include in notification emails.
+	Message *string `json:"message,omitempty"`
+	// Triggers notification when copying files to this path
 	NotifyOnCopy *bool `json:"notify_on_copy,omitempty"`
+	// Triggers notification when deleting files from this path
+	NotifyOnDelete *bool `json:"notify_on_delete,omitempty"`
+	// Triggers notification when downloading files from this path
+	NotifyOnDownload *bool `json:"notify_on_download,omitempty"`
+	// Triggers notification when moving files to this path
+	NotifyOnMove *bool `json:"notify_on_move,omitempty"`
+	// Triggers notification when uploading new files to this path
+	NotifyOnUpload *bool `json:"notify_on_upload,omitempty"`
 	// Trigger notification on notification user actions?
 	NotifyUserActions *bool `json:"notify_user_actions,omitempty"`
 	// Folder path to notify on
@@ -87,6 +97,14 @@ type NotificationEntity struct {
 	SendInterval *NotificationEntitySendIntervalEnum `json:"send_interval,omitempty"`
 	// If true, it means that the recipient at this user's email address has manually unsubscribed from all emails, or had their email "hard bounce", which means that we are unable to send mail to this user's current email address. Notifications will resume if the user changes their email address.
 	SuppressedEmail *bool `json:"suppressed_email,omitempty"`
+	// Notify when actions are performed by a share recipient?
+	TriggerByShareRecipients *bool `json:"trigger_by_share_recipients,omitempty"`
+	// Array of filenames (possibly with wildcards) to match for action path
+	TriggeringFilenames []string `json:"triggering_filenames,omitempty"`
+	// Only notify on actions made by a member of one of the specified groups
+	TriggeringGroupIds []int `json:"triggering_group_ids,omitempty"`
+	// Only notify on actions made one of the specified users
+	TriggeringUserIds []int `json:"triggering_user_ids,omitempty"`
 	// Is the user unsubscribed from this notification?
 	Unsubscribed *bool `json:"unsubscribed,omitempty"`
 	// The reason that the user unsubscribed

@@ -30,26 +30,28 @@ func main() {
         }),
     )
 
-    req := operations.CreateAdministrationRequest{
-        PathParams: operations.CreateAdministrationPathParams{
+    req := operations.CreateAdditionalTaxIdentifierRequest{
+        PathParams: operations.CreateAdditionalTaxIdentifierPathParams{
             LegalEntityID: 548814,
         },
-        Request: shared.AdministrationCreate{
-            Email: "Michale_Sporer@yahoo.com",
-            LegalEntityID: 544883,
-            PackageVersion: "peppol_bis_v3",
-            Packaging: "ubl",
-            SenderEmailIdentityID: 623564,
+        Request: shared.AdditionalTaxIdentifierCreate{
+            Country: "Montenegro",
+            County: "porro",
+            Identifier: "nulla",
+            Scheme: "id",
+            Superscheme: "vero",
+            ThirdPartyPassword: "perspiciatis",
+            ThirdPartyUsername: "nulla",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Administrations.CreateAdministration(ctx, req)
+    res, err := s.AdditionalTaxIdentifiers.CreateAdditionalTaxIdentifier(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.Administration != nil {
+    if res.AdditionalTaxIdentifier != nil {
         // handle response
     }
 }
@@ -60,6 +62,13 @@ func main() {
 ## SDK Available Operations
 
 
+### AdditionalTaxIdentifiers
+
+* `CreateAdditionalTaxIdentifier` - Create a new AdditionalTaxIdentifier
+* `DeleteAdditionalTaxIdentifier` - Delete AdditionalTaxIdentifier
+* `GetAdditionalTaxIdentifier` - Get AdditionalTaxIdentifier
+* `UpdateAdditionalTaxIdentifier` - Update AdditionalTaxIdentifier
+
 ### Administrations
 
 * `CreateAdministration` - Create a new Administration
@@ -69,17 +78,20 @@ func main() {
 
 ### Discovery
 
+* `DiscoveryExists` - Discover Network Participant Existence
+* `DiscoveryIdentifiers` - Discover Country Identifiers ** EXPERIMENTAL
 * `DiscoveryReceives` - Disover Network Participant
 
 ### DocumentSubmissions
 
-* `CreateDocumentSubmission` - *** NOTE: Experimental. Only to be used for sending Invoice Response documents. *** Submit a new document.
+* `CreateDocumentSubmission` - Submit a new document.
+* `ShowDocumentSubmissionEvidence` - Get DocumentSubmission Evidence
 
 ### InvoiceSubmissions
 
 * `CreateInvoiceSubmission` - Submit a new invoice
-* `PreflightInvoiceRecipient` - Preflight an invoice recipient
-* `ShowInvoiceSubmissionEvidence` - Get InvoiceSubmission Evidence
+* `PreflightInvoiceRecipient` - DEPRECATED. Preflight an invoice recipient
+* `ShowInvoiceSubmissionEvidence` - DEPRECATED. Get InvoiceSubmission Evidence
 
 ### LegalEntities
 
@@ -96,8 +108,14 @@ func main() {
 ### PurchaseInvoices
 
 * `GetInvoiceJSON` - Get Purchase invoice data as JSON
-* `GetInvoiceUbl` - Get Purchase invoice data as JSON with a Base64-encoded SI-1.2 UBL string
+* `GetInvoiceUbl` - Get Purchase invoice data in a selectable format
 * `GetInvoiceUblVersioned` - Get Purchase invoice data as JSON with a Base64-encoded UBL string in the specified version
+
+### ReceivedDocuments
+
+* `CreateReceivedDocument` - Create a new received document
+* `GetReceivedDocument` - Get a new ReceivedDocument
+* `ReceiveDocumenht` - Receive a new Document
 
 ### WebhookInstances
 

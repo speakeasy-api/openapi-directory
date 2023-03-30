@@ -10,6 +10,10 @@ type Dealer struct {
 	Country *string `json:"country,omitempty"`
 	// Datasource of the dealer
 	DataSource *string `json:"data_source,omitempty"`
+	// Type of dealer (franchise/independent)
+	DealerType *string `json:"dealer_type,omitempty"`
+	// Dealership group name of dealer
+	DealershipGroupName *string `json:"dealership_group_name,omitempty"`
 	// Distance of dealer from given location
 	Distance *float64 `json:"distance,omitempty"`
 	// The unique id associated with the dealer in the Marketcheck database
@@ -18,6 +22,8 @@ type Dealer struct {
 	InventoryURL *string `json:"inventory_url,omitempty"`
 	// Latutide for the dealer location
 	Latitude *string `json:"latitude,omitempty"`
+	// Listing count of the dealer
+	ListingCount *int64 `json:"listing_count,omitempty"`
 	// location_ll for the dealer location
 	LocationLl *string `json:"location_ll,omitempty"`
 	// Longitude for the dealer location

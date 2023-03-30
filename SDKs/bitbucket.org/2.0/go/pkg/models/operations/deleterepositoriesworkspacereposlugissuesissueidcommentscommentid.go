@@ -30,9 +30,7 @@ type DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDPathParams
 
 type DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest struct {
 	PathParams DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDPathParams
-	// The updated comment.
-	Request  map[string]interface{} `request:"mediaType=application/json"`
-	Security DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity
+	Security   DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDSecurity
 }
 
 type DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse struct {

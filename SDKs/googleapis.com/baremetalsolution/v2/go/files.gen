@@ -18,7 +18,6 @@ pkg/models/operations/baremetalsolutionprojectslocationsinstancesdetachlun.go
 pkg/models/operations/baremetalsolutionprojectslocationsinstancesdisableinteractiveserialconsole.go
 pkg/models/operations/baremetalsolutionprojectslocationsinstancesenableinteractiveserialconsole.go
 pkg/models/operations/baremetalsolutionprojectslocationsinstanceslist.go
-pkg/models/operations/baremetalsolutionprojectslocationsinstancesrename.go
 pkg/models/operations/baremetalsolutionprojectslocationsinstancesreset.go
 pkg/models/operations/baremetalsolutionprojectslocationsinstancesstart.go
 pkg/models/operations/baremetalsolutionprojectslocationsinstancesstop.go
@@ -36,6 +35,7 @@ pkg/models/operations/baremetalsolutionprojectslocationsvolumeslist.go
 pkg/models/operations/baremetalsolutionprojectslocationsvolumeslunsevict.go
 pkg/models/operations/baremetalsolutionprojectslocationsvolumeslunslist.go
 pkg/models/operations/baremetalsolutionprojectslocationsvolumespatch.go
+pkg/models/operations/baremetalsolutionprojectslocationsvolumesrename.go
 pkg/models/operations/baremetalsolutionprojectslocationsvolumesresize.go
 pkg/models/operations/baremetalsolutionprojectslocationsvolumessnapshotscreate.go
 pkg/models/operations/baremetalsolutionprojectslocationsvolumessnapshotsdelete.go
@@ -65,7 +65,6 @@ pkg/models/shared/vlanattachment.go
 pkg/models/shared/qospolicy.go
 pkg/models/shared/networkaddressreservation.go
 pkg/models/shared/networkmountpoint.go
-pkg/models/shared/renameinstancerequest.go
 pkg/models/shared/listlocationsresponse.go
 pkg/models/shared/location.go
 pkg/models/shared/listnetworksresponse.go
@@ -91,6 +90,7 @@ pkg/models/shared/sshkey.go
 pkg/models/shared/listsshkeysresponse.go
 pkg/models/shared/listvolumesresponse.go
 pkg/models/shared/listlunsresponse.go
+pkg/models/shared/renamevolumerequest.go
 pkg/models/shared/resizevolumerequest.go
 pkg/models/shared/volumesnapshot.go
 pkg/models/shared/listvolumesnapshotsresponse.go

@@ -13,18 +13,29 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.GetV1CategoryListOutputFormatRequest{
-        PathParams: operations.GetV1CategoryListOutputFormatPathParams{
+    req := operations.TransportationIncentivesLawsAllRequest{
+        PathParams: operations.TransportationIncentivesLawsAllPathParams{
             OutputFormat: "xml",
         },
-        QueryParams: operations.GetV1CategoryListOutputFormatQueryParams{
+        QueryParams: operations.TransportationIncentivesLawsAllQueryParams{
             APIKey: "deserunt",
-            Type: "regulation",
+            Expired: false,
+            IncentiveType: "porro",
+            Jurisdiction: "nulla",
+            Keyword: "id",
+            LawType: "vero",
+            Limit: 544883,
+            Local: false,
+            Poc: false,
+            Recent: false,
+            RegulationType: "nulla",
+            Technology: "nihil",
+            UserType: "fuga",
         },
     }
 
     ctx := context.Background()
-    res, err := s.GetV1CategoryListOutputFormat(ctx, req)
+    res, err := s.TransportationIncentivesLawsAll(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

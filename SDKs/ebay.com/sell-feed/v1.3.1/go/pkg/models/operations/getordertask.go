@@ -12,7 +12,7 @@ type GetOrderTaskSecurity struct {
 }
 
 type GetOrderTaskPathParams struct {
-	// The ID of the task. This ID is generated when the task was created by the createOrderTask method.
+	// The ID of the task. This ID is generated when the task was created by the <b> createOrderTask</b> method.
 	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 

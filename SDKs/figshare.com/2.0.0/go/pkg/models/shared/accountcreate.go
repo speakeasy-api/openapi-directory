@@ -7,7 +7,7 @@ type AccountCreate struct {
 	// Email of account
 	Email string `json:"email"`
 	// First Name
-	FirstName *string `json:"first_name,omitempty"`
+	FirstName string `json:"first_name"`
 	// Not applicable to regular users. This field is reserved to institutions/publishers with access to assign to specific groups
 	GroupID *int64 `json:"group_id,omitempty"`
 	// Institution user id
@@ -15,7 +15,7 @@ type AccountCreate struct {
 	// Is account active
 	IsActive *bool `json:"is_active,omitempty"`
 	// Last Name
-	LastName string `json:"last_name"`
+	LastName *string `json:"last_name,omitempty"`
 	// Account quota
 	Quota *int64 `json:"quota,omitempty"`
 	// Symplectic user id

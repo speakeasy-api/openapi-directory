@@ -7,10 +7,11 @@ import (
 )
 
 type UserClientCorporate struct {
-	Email *string `json:"email,omitempty"`
-	ID    *int64  `json:"id,omitempty"`
-	Logo  *string `json:"logo,omitempty"`
-	Name  *string `json:"name,omitempty"`
+	Email       *string `json:"email,omitempty"`
+	ID          *int64  `json:"id,omitempty"`
+	Logo        *string `json:"logo,omitempty"`
+	Name        *string `json:"name,omitempty"`
+	PhoneNumber *string `json:"phone_number,omitempty"`
 }
 
 type UserClient struct {
@@ -21,15 +22,19 @@ type UserClient struct {
 
 type UserVendor struct {
 	CanWorkManualFiles *bool          `json:"can_work_manual_files,omitempty"`
+	EmailOpenRate      *float32       `json:"email_open_rate,omitempty"`
 	IsFrozen           *bool          `json:"is_frozen,omitempty"`
 	IsProofreader      *bool          `json:"is_proofreader,omitempty"`
 	LanguagePairs      []LanguagePair `json:"language_pairs,omitempty"`
 	// Native language of user
-	NativeLanguage *string  `json:"native_language,omitempty"`
-	PaypalEmail    *string  `json:"paypal_email,omitempty"`
-	Require1099    *bool    `json:"require_1099,omitempty"`
-	Tags           []string `json:"tags,omitempty"`
-	TmsUserName    *string  `json:"tms_user_name,omitempty"`
+	NativeLanguage *string        `json:"native_language,omitempty"`
+	PamTqs         *float32       `json:"pam_tqs,omitempty"`
+	PaypalEmail    *string        `json:"paypal_email,omitempty"`
+	ProfileSurvey  *ProfileSurvey `json:"profile_survey,omitempty"`
+	Require1099    *bool          `json:"require_1099,omitempty"`
+	Tags           []string       `json:"tags,omitempty"`
+	TmsUserName    *string        `json:"tms_user_name,omitempty"`
+	VendorType     *string        `json:"vendor_type,omitempty"`
 }
 
 // User - Created or updated user

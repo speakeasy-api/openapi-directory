@@ -36,6 +36,7 @@ pkg/models/shared/metrickeydatapoints.go
 pkg/models/shared/responseresourcemetrickey.go
 pkg/models/shared/datapoint.go
 pkg/models/shared/getresourcemetricsrequest.go
+pkg/models/shared/periodalignmentenum.go
 pkg/models/shared/metricquery.go
 pkg/models/shared/listavailableresourcedimensionsresponse.go
 pkg/models/shared/metricdimensiongroups.go

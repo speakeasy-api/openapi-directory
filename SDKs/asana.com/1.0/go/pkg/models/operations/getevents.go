@@ -29,7 +29,9 @@ type GetEventsRequest struct {
 // GetEvents200ApplicationJSON - The full record for all events that have occurred since the sync token was created.
 type GetEvents200ApplicationJSON struct {
 	Data []shared.EventResponse `json:"data,omitempty"`
-	// A sync token to be used with the next call to the events endpoint.
+	// Indicates whether there are more events to pull.
+	HasMore *bool `json:"has_more,omitempty"`
+	// A sync token to be used with the next call to the /events endpoint.
 	Sync *string `json:"sync,omitempty"`
 }
 

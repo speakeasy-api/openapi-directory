@@ -48,6 +48,7 @@ const (
 	OperationOperationTypeEnumStartExternalSync           OperationOperationTypeEnum = "START_EXTERNAL_SYNC"
 	OperationOperationTypeEnumLogCleanup                  OperationOperationTypeEnum = "LOG_CLEANUP"
 	OperationOperationTypeEnumAutoRestart                 OperationOperationTypeEnum = "AUTO_RESTART"
+	OperationOperationTypeEnumReencrypt                   OperationOperationTypeEnum = "REENCRYPT"
 )
 
 func (e *OperationOperationTypeEnum) UnmarshalJSON(data []byte) error {
@@ -129,6 +130,8 @@ func (e *OperationOperationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "LOG_CLEANUP":
 		fallthrough
 	case "AUTO_RESTART":
+		fallthrough
+	case "REENCRYPT":
 		*e = OperationOperationTypeEnum(s)
 		return nil
 	default:

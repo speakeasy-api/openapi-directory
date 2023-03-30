@@ -35,7 +35,8 @@ func newPipelines(defaultClient, securityClient HTTPClient, serverURL, language,
 	}
 }
 
-// CreateDeploymentVariable - Create a deployment environment level variable.
+// CreateDeploymentVariable - Create a variable for an environment
+// Create a deployment environment level variable.
 func (s *pipelines) CreateDeploymentVariable(ctx context.Context, request operations.CreateDeploymentVariableRequest) (*operations.CreateDeploymentVariableResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request.PathParams, nil)
@@ -54,10 +55,6 @@ func (s *pipelines) CreateDeploymentVariable(ctx context.Context, request operat
 	}
 
 	req.Header.Set("Content-Type", reqContentType)
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
 
 	client := s.defaultClient
 
@@ -107,7 +104,8 @@ func (s *pipelines) CreateDeploymentVariable(ctx context.Context, request operat
 	return res, nil
 }
 
-// CreatePipelineForRepository - Endpoint to create and initiate a pipeline.
+// CreatePipelineForRepository - Run a pipeline
+// Endpoint to create and initiate a pipeline.
 // There are a couple of different options to initiate a pipeline, where the payload of the request will determine which type of pipeline will be instantiated.
 // # Trigger a Pipeline for a branch
 // One way to trigger pipelines is by specifying the branch for which you want to trigger a pipeline.
@@ -356,7 +354,8 @@ func (s *pipelines) CreatePipelineForRepository(ctx context.Context, request ope
 	return res, nil
 }
 
-// CreatePipelineVariableForTeam - Create an account level variable.
+// CreatePipelineVariableForTeam - Create a variable for a user
+// Create an account level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) CreatePipelineVariableForTeam(ctx context.Context, request operations.CreatePipelineVariableForTeamRequest) (*operations.CreatePipelineVariableForTeamResponse, error) {
 	baseURL := s.serverURL
@@ -373,10 +372,6 @@ func (s *pipelines) CreatePipelineVariableForTeam(ctx context.Context, request o
 	}
 
 	req.Header.Set("Content-Type", reqContentType)
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
 
 	client := s.defaultClient
 
@@ -426,7 +421,8 @@ func (s *pipelines) CreatePipelineVariableForTeam(ctx context.Context, request o
 	return res, nil
 }
 
-// CreatePipelineVariableForUser - Create a user level variable.
+// CreatePipelineVariableForUser - Create a variable for a user
+// Create a user level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) CreatePipelineVariableForUser(ctx context.Context, request operations.CreatePipelineVariableForUserRequest) (*operations.CreatePipelineVariableForUserResponse, error) {
 	baseURL := s.serverURL
@@ -492,7 +488,8 @@ func (s *pipelines) CreatePipelineVariableForUser(ctx context.Context, request o
 	return res, nil
 }
 
-// CreatePipelineVariableForWorkspace - Create a workspace level variable.
+// CreatePipelineVariableForWorkspace - Create a variable for a workspace
+// Create a workspace level variable.
 func (s *pipelines) CreatePipelineVariableForWorkspace(ctx context.Context, request operations.CreatePipelineVariableForWorkspaceRequest) (*operations.CreatePipelineVariableForWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables", request.PathParams, nil)
@@ -557,7 +554,8 @@ func (s *pipelines) CreatePipelineVariableForWorkspace(ctx context.Context, requ
 	return res, nil
 }
 
-// CreateRepositoryPipelineKnownHost - Create a repository level known host.
+// CreateRepositoryPipelineKnownHost - Create a known host
+// Create a repository level known host.
 func (s *pipelines) CreateRepositoryPipelineKnownHost(ctx context.Context, request operations.CreateRepositoryPipelineKnownHostRequest) (*operations.CreateRepositoryPipelineKnownHostResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request.PathParams, nil)
@@ -625,7 +623,8 @@ func (s *pipelines) CreateRepositoryPipelineKnownHost(ctx context.Context, reque
 	return res, nil
 }
 
-// CreateRepositoryPipelineSchedule - Create a schedule for the given repository.
+// CreateRepositoryPipelineSchedule - Create a schedule
+// Create a schedule for the given repository.
 func (s *pipelines) CreateRepositoryPipelineSchedule(ctx context.Context, request operations.CreateRepositoryPipelineScheduleRequest) (*operations.CreateRepositoryPipelineScheduleResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request.PathParams, nil)
@@ -693,7 +692,8 @@ func (s *pipelines) CreateRepositoryPipelineSchedule(ctx context.Context, reques
 	return res, nil
 }
 
-// CreateRepositoryPipelineVariable - Create a repository level variable.
+// CreateRepositoryPipelineVariable - Create a variable for a repository
+// Create a repository level variable.
 func (s *pipelines) CreateRepositoryPipelineVariable(ctx context.Context, request operations.CreateRepositoryPipelineVariableRequest) (*operations.CreateRepositoryPipelineVariableResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request.PathParams, nil)
@@ -761,7 +761,8 @@ func (s *pipelines) CreateRepositoryPipelineVariable(ctx context.Context, reques
 	return res, nil
 }
 
-// DeleteDeploymentVariable - Delete a deployment environment level variable.
+// DeleteDeploymentVariable - Delete a variable for an environment
+// Delete a deployment environment level variable.
 func (s *pipelines) DeleteDeploymentVariable(ctx context.Context, request operations.DeleteDeploymentVariableRequest) (*operations.DeleteDeploymentVariableResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request.PathParams, nil)
@@ -806,7 +807,8 @@ func (s *pipelines) DeleteDeploymentVariable(ctx context.Context, request operat
 	return res, nil
 }
 
-// DeletePipelineVariableForTeam - Delete a team level variable.
+// DeletePipelineVariableForTeam - Delete a variable for a team
+// Delete a team level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) DeletePipelineVariableForTeam(ctx context.Context, request operations.DeletePipelineVariableForTeamRequest) (*operations.DeletePipelineVariableForTeamResponse, error) {
 	baseURL := s.serverURL
@@ -852,7 +854,8 @@ func (s *pipelines) DeletePipelineVariableForTeam(ctx context.Context, request o
 	return res, nil
 }
 
-// DeletePipelineVariableForUser - Delete an account level variable.
+// DeletePipelineVariableForUser - Delete a variable for a user
+// Delete an account level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) DeletePipelineVariableForUser(ctx context.Context, request operations.DeletePipelineVariableForUserRequest) (*operations.DeletePipelineVariableForUserResponse, error) {
 	baseURL := s.serverURL
@@ -898,7 +901,8 @@ func (s *pipelines) DeletePipelineVariableForUser(ctx context.Context, request o
 	return res, nil
 }
 
-// DeletePipelineVariableForWorkspace - Delete a workspace level variable.
+// DeletePipelineVariableForWorkspace - Delete a variable for a workspace
+// Delete a workspace level variable.
 func (s *pipelines) DeletePipelineVariableForWorkspace(ctx context.Context, request operations.DeletePipelineVariableForWorkspaceRequest) (*operations.DeletePipelineVariableForWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request.PathParams, nil)
@@ -943,7 +947,8 @@ func (s *pipelines) DeletePipelineVariableForWorkspace(ctx context.Context, requ
 	return res, nil
 }
 
-// DeleteRepositoryPipelineCache - Delete a repository cache.
+// DeleteRepositoryPipelineCache - Delete a cache
+// Delete a repository cache.
 func (s *pipelines) DeleteRepositoryPipelineCache(ctx context.Context, request operations.DeleteRepositoryPipelineCacheRequest) (*operations.DeleteRepositoryPipelineCacheResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}", request.PathParams, nil)
@@ -988,7 +993,58 @@ func (s *pipelines) DeleteRepositoryPipelineCache(ctx context.Context, request o
 	return res, nil
 }
 
-// DeleteRepositoryPipelineKeyPair - Delete the repository SSH key pair.
+// DeleteRepositoryPipelineCaches - Delete caches
+// Delete repository cache versions by name.
+func (s *pipelines) DeleteRepositoryPipelineCaches(ctx context.Context, request operations.DeleteRepositoryPipelineCachesRequest) (*operations.DeleteRepositoryPipelineCachesResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteRepositoryPipelineCachesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteRepositoryPipelineKeyPair - Delete SSH key pair
+// Delete the repository SSH key pair.
 func (s *pipelines) DeleteRepositoryPipelineKeyPair(ctx context.Context, request operations.DeleteRepositoryPipelineKeyPairRequest) (*operations.DeleteRepositoryPipelineKeyPairResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request.PathParams, nil)
@@ -1033,7 +1089,8 @@ func (s *pipelines) DeleteRepositoryPipelineKeyPair(ctx context.Context, request
 	return res, nil
 }
 
-// DeleteRepositoryPipelineKnownHost - Delete a repository level known host.
+// DeleteRepositoryPipelineKnownHost - Delete a known host
+// Delete a repository level known host.
 func (s *pipelines) DeleteRepositoryPipelineKnownHost(ctx context.Context, request operations.DeleteRepositoryPipelineKnownHostRequest) (*operations.DeleteRepositoryPipelineKnownHostResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request.PathParams, nil)
@@ -1078,7 +1135,8 @@ func (s *pipelines) DeleteRepositoryPipelineKnownHost(ctx context.Context, reque
 	return res, nil
 }
 
-// DeleteRepositoryPipelineSchedule - Delete a schedule.
+// DeleteRepositoryPipelineSchedule - Delete a schedule
+// Delete a schedule.
 func (s *pipelines) DeleteRepositoryPipelineSchedule(ctx context.Context, request operations.DeleteRepositoryPipelineScheduleRequest) (*operations.DeleteRepositoryPipelineScheduleResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request.PathParams, nil)
@@ -1123,7 +1181,8 @@ func (s *pipelines) DeleteRepositoryPipelineSchedule(ctx context.Context, reques
 	return res, nil
 }
 
-// DeleteRepositoryPipelineVariable - Delete a repository level variable.
+// DeleteRepositoryPipelineVariable - Delete a variable for a repository
+// Delete a repository level variable.
 func (s *pipelines) DeleteRepositoryPipelineVariable(ctx context.Context, request operations.DeleteRepositoryPipelineVariableRequest) (*operations.DeleteRepositoryPipelineVariableResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request.PathParams, nil)
@@ -1168,7 +1227,8 @@ func (s *pipelines) DeleteRepositoryPipelineVariable(ctx context.Context, reques
 	return res, nil
 }
 
-// GetDeploymentVariables - Find deployment environment level variables.
+// GetDeploymentVariables - List variables for an environment
+// Find deployment environment level variables.
 func (s *pipelines) GetDeploymentVariables(ctx context.Context, request operations.GetDeploymentVariablesRequest) (*operations.GetDeploymentVariablesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables", request.PathParams, nil)
@@ -1212,7 +1272,148 @@ func (s *pipelines) GetDeploymentVariables(ctx context.Context, request operatio
 	return res, nil
 }
 
-// GetPipelineForRepository - Retrieve a specified pipeline
+// GetOIDCConfiguration - Get OpenID configuration for OIDC in Pipelines
+// This is part of OpenID Connect for Pipelines, see https://support.atlassian.com/bitbucket-cloud/docs/integrate-pipelines-with-resource-servers-using-oidc/
+func (s *pipelines) GetOIDCConfiguration(ctx context.Context, request operations.GetOIDCConfigurationRequest) (*operations.GetOIDCConfigurationResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/identity/oidc/.well-known/openid-configuration", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetOIDCConfigurationResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetOIDCKeys - Get keys for OIDC in Pipelines
+// This is part of OpenID Connect for Pipelines, see https://support.atlassian.com/bitbucket-cloud/docs/integrate-pipelines-with-resource-servers-using-oidc/
+func (s *pipelines) GetOIDCKeys(ctx context.Context, request operations.GetOIDCKeysRequest) (*operations.GetOIDCKeysResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/identity/oidc/keys.json", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetOIDCKeysResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetPipelineContainerLog - Get the logs for the build container or a service container for a given step of a pipeline.
+// Retrieve the log file for a build container or service container.
+//
+// This endpoint supports (and encourages!) the use of [HTTP Range requests](https://tools.ietf.org/html/rfc7233) to deal with potentially very large log files.
+func (s *pipelines) GetPipelineContainerLog(ctx context.Context, request operations.GetPipelineContainerLogRequest) (*operations.GetPipelineContainerLogResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/logs/{log_uuid}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetPipelineContainerLogResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/octet-stream`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetPipelineForRepository - Get a pipeline
+// Retrieve a specified pipeline
 func (s *pipelines) GetPipelineForRepository(ctx context.Context, request operations.GetPipelineForRepositoryRequest) (*operations.GetPipelineForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}", request.PathParams, nil)
@@ -1266,7 +1467,8 @@ func (s *pipelines) GetPipelineForRepository(ctx context.Context, request operat
 	return res, nil
 }
 
-// GetPipelineStepForRepository - Retrieve a given step of a pipeline.
+// GetPipelineStepForRepository - Get a step of a pipeline
+// Retrieve a given step of a pipeline.
 func (s *pipelines) GetPipelineStepForRepository(ctx context.Context, request operations.GetPipelineStepForRepositoryRequest) (*operations.GetPipelineStepForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}", request.PathParams, nil)
@@ -1320,7 +1522,8 @@ func (s *pipelines) GetPipelineStepForRepository(ctx context.Context, request op
 	return res, nil
 }
 
-// GetPipelineStepLogForRepository - Retrieve the log file for a given step of a pipeline.
+// GetPipelineStepLogForRepository - Get log file for a step
+// Retrieve the log file for a given step of a pipeline.
 //
 // This endpoint supports (and encourages!) the use of [HTTP Range requests](https://tools.ietf.org/html/rfc7233) to deal with potentially very large log files.
 func (s *pipelines) GetPipelineStepLogForRepository(ctx context.Context, request operations.GetPipelineStepLogForRepositoryRequest) (*operations.GetPipelineStepLogForRepositoryResponse, error) {
@@ -1371,7 +1574,8 @@ func (s *pipelines) GetPipelineStepLogForRepository(ctx context.Context, request
 	return res, nil
 }
 
-// GetPipelineStepsForRepository - Find steps for the given pipeline.
+// GetPipelineStepsForRepository - List steps for a pipeline
+// Find steps for the given pipeline.
 func (s *pipelines) GetPipelineStepsForRepository(ctx context.Context, request operations.GetPipelineStepsForRepositoryRequest) (*operations.GetPipelineStepsForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/", request.PathParams, nil)
@@ -1415,7 +1619,143 @@ func (s *pipelines) GetPipelineStepsForRepository(ctx context.Context, request o
 	return res, nil
 }
 
-// GetPipelineVariableForTeam - Retrieve a team level variable.
+// GetPipelineTestReportTestCaseReasons - Get test case reasons (output) for a given test case in a step of a pipeline.
+func (s *pipelines) GetPipelineTestReportTestCaseReasons(ctx context.Context, request operations.GetPipelineTestReportTestCaseReasonsRequest) (*operations.GetPipelineTestReportTestCaseReasonsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases/{test_case_uuid}/test_case_reasons", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetPipelineTestReportTestCaseReasonsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetPipelineTestReportTestCases - Get test cases for a given step of a pipeline.
+func (s *pipelines) GetPipelineTestReportTestCases(ctx context.Context, request operations.GetPipelineTestReportTestCasesRequest) (*operations.GetPipelineTestReportTestCasesResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports/test_cases", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetPipelineTestReportTestCasesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetPipelineTestReports - Get a summary of test reports for a given step of a pipeline.
+func (s *pipelines) GetPipelineTestReports(ctx context.Context, request operations.GetPipelineTestReportsRequest) (*operations.GetPipelineTestReportsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/steps/{step_uuid}/test_reports", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetPipelineTestReportsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetPipelineVariableForTeam - Get a variable for a team
+// Retrieve a team level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) GetPipelineVariableForTeam(ctx context.Context, request operations.GetPipelineVariableForTeamRequest) (*operations.GetPipelineVariableForTeamResponse, error) {
 	baseURL := s.serverURL
@@ -1470,7 +1810,8 @@ func (s *pipelines) GetPipelineVariableForTeam(ctx context.Context, request oper
 	return res, nil
 }
 
-// GetPipelineVariableForUser - Retrieve a user level variable.
+// GetPipelineVariableForUser - Get a variable for a user
+// Retrieve a user level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) GetPipelineVariableForUser(ctx context.Context, request operations.GetPipelineVariableForUserRequest) (*operations.GetPipelineVariableForUserResponse, error) {
 	baseURL := s.serverURL
@@ -1525,7 +1866,8 @@ func (s *pipelines) GetPipelineVariableForUser(ctx context.Context, request oper
 	return res, nil
 }
 
-// GetPipelineVariableForWorkspace - Retrieve a workspace level variable.
+// GetPipelineVariableForWorkspace - Get variable for a workspace
+// Retrieve a workspace level variable.
 func (s *pipelines) GetPipelineVariableForWorkspace(ctx context.Context, request operations.GetPipelineVariableForWorkspaceRequest) (*operations.GetPipelineVariableForWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request.PathParams, nil)
@@ -1579,7 +1921,8 @@ func (s *pipelines) GetPipelineVariableForWorkspace(ctx context.Context, request
 	return res, nil
 }
 
-// GetPipelineVariablesForTeam - Find account level variables.
+// GetPipelineVariablesForTeam - List variables for an account
+// Find account level variables.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) GetPipelineVariablesForTeam(ctx context.Context, request operations.GetPipelineVariablesForTeamRequest) (*operations.GetPipelineVariablesForTeamResponse, error) {
 	baseURL := s.serverURL
@@ -1588,10 +1931,6 @@ func (s *pipelines) GetPipelineVariablesForTeam(ctx context.Context, request ope
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
 	client := s.defaultClient
@@ -1628,7 +1967,8 @@ func (s *pipelines) GetPipelineVariablesForTeam(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetPipelineVariablesForUser - Find user level variables.
+// GetPipelineVariablesForUser - List variables for a user
+// Find user level variables.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) GetPipelineVariablesForUser(ctx context.Context, request operations.GetPipelineVariablesForUserRequest) (*operations.GetPipelineVariablesForUserResponse, error) {
 	baseURL := s.serverURL
@@ -1673,7 +2013,8 @@ func (s *pipelines) GetPipelineVariablesForUser(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetPipelineVariablesForWorkspace - Find workspace level variables.
+// GetPipelineVariablesForWorkspace - List variables for a workspace
+// Find workspace level variables.
 func (s *pipelines) GetPipelineVariablesForWorkspace(ctx context.Context, request operations.GetPipelineVariablesForWorkspaceRequest) (*operations.GetPipelineVariablesForWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables", request.PathParams, nil)
@@ -1717,7 +2058,8 @@ func (s *pipelines) GetPipelineVariablesForWorkspace(ctx context.Context, reques
 	return res, nil
 }
 
-// GetPipelinesForRepository - Find pipelines
+// GetPipelinesForRepository - List pipelines
+// Find pipelines
 func (s *pipelines) GetPipelinesForRepository(ctx context.Context, request operations.GetPipelinesForRepositoryRequest) (*operations.GetPipelinesForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/", request.PathParams, nil)
@@ -1761,7 +2103,8 @@ func (s *pipelines) GetPipelinesForRepository(ctx context.Context, request opera
 	return res, nil
 }
 
-// GetRepositoryPipelineCacheContentURI - Retrieve the URI of the content of the specified cache.
+// GetRepositoryPipelineCacheContentURI - Get cache content URI
+// Retrieve the URI of the content of the specified cache.
 func (s *pipelines) GetRepositoryPipelineCacheContentURI(ctx context.Context, request operations.GetRepositoryPipelineCacheContentURIRequest) (*operations.GetRepositoryPipelineCacheContentURIResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/{cache_uuid}/content-uri", request.PathParams, nil)
@@ -1815,7 +2158,8 @@ func (s *pipelines) GetRepositoryPipelineCacheContentURI(ctx context.Context, re
 	return res, nil
 }
 
-// GetRepositoryPipelineCaches - Retrieve the repository pipelines caches.
+// GetRepositoryPipelineCaches - List caches
+// Retrieve the repository pipelines caches.
 func (s *pipelines) GetRepositoryPipelineCaches(ctx context.Context, request operations.GetRepositoryPipelineCachesRequest) (*operations.GetRepositoryPipelineCachesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines-config/caches/", request.PathParams, nil)
@@ -1869,7 +2213,8 @@ func (s *pipelines) GetRepositoryPipelineCaches(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetRepositoryPipelineConfig - Retrieve the repository pipelines configuration.
+// GetRepositoryPipelineConfig - Get configuration
+// Retrieve the repository pipelines configuration.
 func (s *pipelines) GetRepositoryPipelineConfig(ctx context.Context, request operations.GetRepositoryPipelineConfigRequest) (*operations.GetRepositoryPipelineConfigResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config", request.PathParams, nil)
@@ -1913,7 +2258,8 @@ func (s *pipelines) GetRepositoryPipelineConfig(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetRepositoryPipelineKnownHost - Retrieve a repository level known host.
+// GetRepositoryPipelineKnownHost - Get a known host
+// Retrieve a repository level known host.
 func (s *pipelines) GetRepositoryPipelineKnownHost(ctx context.Context, request operations.GetRepositoryPipelineKnownHostRequest) (*operations.GetRepositoryPipelineKnownHostResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request.PathParams, nil)
@@ -1967,7 +2313,8 @@ func (s *pipelines) GetRepositoryPipelineKnownHost(ctx context.Context, request 
 	return res, nil
 }
 
-// GetRepositoryPipelineKnownHosts - Find repository level known hosts.
+// GetRepositoryPipelineKnownHosts - List known hosts
+// Find repository level known hosts.
 func (s *pipelines) GetRepositoryPipelineKnownHosts(ctx context.Context, request operations.GetRepositoryPipelineKnownHostsRequest) (*operations.GetRepositoryPipelineKnownHostsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/", request.PathParams, nil)
@@ -2011,7 +2358,8 @@ func (s *pipelines) GetRepositoryPipelineKnownHosts(ctx context.Context, request
 	return res, nil
 }
 
-// GetRepositoryPipelineSchedule - Retrieve a schedule by its UUID.
+// GetRepositoryPipelineSchedule - Get a schedule
+// Retrieve a schedule by its UUID.
 func (s *pipelines) GetRepositoryPipelineSchedule(ctx context.Context, request operations.GetRepositoryPipelineScheduleRequest) (*operations.GetRepositoryPipelineScheduleResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request.PathParams, nil)
@@ -2065,7 +2413,8 @@ func (s *pipelines) GetRepositoryPipelineSchedule(ctx context.Context, request o
 	return res, nil
 }
 
-// GetRepositoryPipelineScheduleExecutions - Retrieve the executions of a given schedule.
+// GetRepositoryPipelineScheduleExecutions - List executions of a schedule
+// Retrieve the executions of a given schedule.
 func (s *pipelines) GetRepositoryPipelineScheduleExecutions(ctx context.Context, request operations.GetRepositoryPipelineScheduleExecutionsRequest) (*operations.GetRepositoryPipelineScheduleExecutionsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}/executions/", request.PathParams, nil)
@@ -2119,7 +2468,8 @@ func (s *pipelines) GetRepositoryPipelineScheduleExecutions(ctx context.Context,
 	return res, nil
 }
 
-// GetRepositoryPipelineSchedules - Retrieve the configured schedules for the given repository.
+// GetRepositoryPipelineSchedules - List schedules
+// Retrieve the configured schedules for the given repository.
 func (s *pipelines) GetRepositoryPipelineSchedules(ctx context.Context, request operations.GetRepositoryPipelineSchedulesRequest) (*operations.GetRepositoryPipelineSchedulesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/", request.PathParams, nil)
@@ -2173,7 +2523,8 @@ func (s *pipelines) GetRepositoryPipelineSchedules(ctx context.Context, request 
 	return res, nil
 }
 
-// GetRepositoryPipelineSSHKeyPair - Retrieve the repository SSH key pair excluding the SSH private key. The private key is a write only field and will never be exposed in the logs or the REST API.
+// GetRepositoryPipelineSSHKeyPair - Get SSH key pair
+// Retrieve the repository SSH key pair excluding the SSH private key. The private key is a write only field and will never be exposed in the logs or the REST API.
 func (s *pipelines) GetRepositoryPipelineSSHKeyPair(ctx context.Context, request operations.GetRepositoryPipelineSSHKeyPairRequest) (*operations.GetRepositoryPipelineSSHKeyPairResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request.PathParams, nil)
@@ -2227,7 +2578,8 @@ func (s *pipelines) GetRepositoryPipelineSSHKeyPair(ctx context.Context, request
 	return res, nil
 }
 
-// GetRepositoryPipelineVariable - Retrieve a repository level variable.
+// GetRepositoryPipelineVariable - Get a variable for a repository
+// Retrieve a repository level variable.
 func (s *pipelines) GetRepositoryPipelineVariable(ctx context.Context, request operations.GetRepositoryPipelineVariableRequest) (*operations.GetRepositoryPipelineVariableResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request.PathParams, nil)
@@ -2281,7 +2633,8 @@ func (s *pipelines) GetRepositoryPipelineVariable(ctx context.Context, request o
 	return res, nil
 }
 
-// GetRepositoryPipelineVariables - Find repository level variables.
+// GetRepositoryPipelineVariables - List variables for a repository
+// Find repository level variables.
 func (s *pipelines) GetRepositoryPipelineVariables(ctx context.Context, request operations.GetRepositoryPipelineVariablesRequest) (*operations.GetRepositoryPipelineVariablesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/", request.PathParams, nil)
@@ -2325,7 +2678,8 @@ func (s *pipelines) GetRepositoryPipelineVariables(ctx context.Context, request 
 	return res, nil
 }
 
-// StopPipeline - Signal the stop of a pipeline and all of its steps that not have completed yet.
+// StopPipeline - Stop a pipeline
+// Signal the stop of a pipeline and all of its steps that not have completed yet.
 func (s *pipelines) StopPipeline(ctx context.Context, request operations.StopPipelineRequest) (*operations.StopPipelineResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines/{pipeline_uuid}/stopPipeline", request.PathParams, nil)
@@ -2372,7 +2726,8 @@ func (s *pipelines) StopPipeline(ctx context.Context, request operations.StopPip
 	return res, nil
 }
 
-// UpdateDeploymentVariable - Update a deployment environment level variable.
+// UpdateDeploymentVariable - Update a variable for an environment
+// Update a deployment environment level variable.
 func (s *pipelines) UpdateDeploymentVariable(ctx context.Context, request operations.UpdateDeploymentVariableRequest) (*operations.UpdateDeploymentVariableResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments_config/environments/{environment_uuid}/variables/{variable_uuid}", request.PathParams, nil)
@@ -2436,7 +2791,8 @@ func (s *pipelines) UpdateDeploymentVariable(ctx context.Context, request operat
 	return res, nil
 }
 
-// UpdatePipelineVariableForTeam - Update a team level variable.
+// UpdatePipelineVariableForTeam - Update a variable for a team
+// Update a team level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) UpdatePipelineVariableForTeam(ctx context.Context, request operations.UpdatePipelineVariableForTeamRequest) (*operations.UpdatePipelineVariableForTeamResponse, error) {
 	baseURL := s.serverURL
@@ -2501,7 +2857,8 @@ func (s *pipelines) UpdatePipelineVariableForTeam(ctx context.Context, request o
 	return res, nil
 }
 
-// UpdatePipelineVariableForUser - Update a user level variable.
+// UpdatePipelineVariableForUser - Update a variable for a user
+// Update a user level variable.
 // This endpoint has been deprecated, and you should use the new workspaces endpoint. For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).
 func (s *pipelines) UpdatePipelineVariableForUser(ctx context.Context, request operations.UpdatePipelineVariableForUserRequest) (*operations.UpdatePipelineVariableForUserResponse, error) {
 	baseURL := s.serverURL
@@ -2566,7 +2923,8 @@ func (s *pipelines) UpdatePipelineVariableForUser(ctx context.Context, request o
 	return res, nil
 }
 
-// UpdatePipelineVariableForWorkspace - Update a workspace level variable.
+// UpdatePipelineVariableForWorkspace - Update variable for a workspace
+// Update a workspace level variable.
 func (s *pipelines) UpdatePipelineVariableForWorkspace(ctx context.Context, request operations.UpdatePipelineVariableForWorkspaceRequest) (*operations.UpdatePipelineVariableForWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/pipelines-config/variables/{variable_uuid}", request.PathParams, nil)
@@ -2630,7 +2988,8 @@ func (s *pipelines) UpdatePipelineVariableForWorkspace(ctx context.Context, requ
 	return res, nil
 }
 
-// UpdateRepositoryBuildNumber - Update the next build number that should be assigned to a pipeline. The next build number that will be configured has to be strictly higher than the current latest build number for this repository.
+// UpdateRepositoryBuildNumber - Update the next build number
+// Update the next build number that should be assigned to a pipeline. The next build number that will be configured has to be strictly higher than the current latest build number for this repository.
 func (s *pipelines) UpdateRepositoryBuildNumber(ctx context.Context, request operations.UpdateRepositoryBuildNumberRequest) (*operations.UpdateRepositoryBuildNumberResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/build_number", request.PathParams, nil)
@@ -2696,7 +3055,8 @@ func (s *pipelines) UpdateRepositoryBuildNumber(ctx context.Context, request ope
 	return res, nil
 }
 
-// UpdateRepositoryPipelineConfig - Update the pipelines configuration for a repository.
+// UpdateRepositoryPipelineConfig - Update configuration
+// Update the pipelines configuration for a repository.
 func (s *pipelines) UpdateRepositoryPipelineConfig(ctx context.Context, request operations.UpdateRepositoryPipelineConfigRequest) (*operations.UpdateRepositoryPipelineConfigResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config", request.PathParams, nil)
@@ -2750,7 +3110,8 @@ func (s *pipelines) UpdateRepositoryPipelineConfig(ctx context.Context, request 
 	return res, nil
 }
 
-// UpdateRepositoryPipelineKeyPair - Create or update the repository SSH key pair. The private key will be set as a default SSH identity in your build container.
+// UpdateRepositoryPipelineKeyPair - Update SSH key pair
+// Create or update the repository SSH key pair. The private key will be set as a default SSH identity in your build container.
 func (s *pipelines) UpdateRepositoryPipelineKeyPair(ctx context.Context, request operations.UpdateRepositoryPipelineKeyPairRequest) (*operations.UpdateRepositoryPipelineKeyPairResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/key_pair", request.PathParams, nil)
@@ -2814,7 +3175,8 @@ func (s *pipelines) UpdateRepositoryPipelineKeyPair(ctx context.Context, request
 	return res, nil
 }
 
-// UpdateRepositoryPipelineKnownHost - Update a repository level known host.
+// UpdateRepositoryPipelineKnownHost - Update a known host
+// Update a repository level known host.
 func (s *pipelines) UpdateRepositoryPipelineKnownHost(ctx context.Context, request operations.UpdateRepositoryPipelineKnownHostRequest) (*operations.UpdateRepositoryPipelineKnownHostResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/ssh/known_hosts/{known_host_uuid}", request.PathParams, nil)
@@ -2878,7 +3240,8 @@ func (s *pipelines) UpdateRepositoryPipelineKnownHost(ctx context.Context, reque
 	return res, nil
 }
 
-// UpdateRepositoryPipelineSchedule - Update a schedule.
+// UpdateRepositoryPipelineSchedule - Update a schedule
+// Update a schedule.
 func (s *pipelines) UpdateRepositoryPipelineSchedule(ctx context.Context, request operations.UpdateRepositoryPipelineScheduleRequest) (*operations.UpdateRepositoryPipelineScheduleResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/schedules/{schedule_uuid}", request.PathParams, nil)
@@ -2942,7 +3305,8 @@ func (s *pipelines) UpdateRepositoryPipelineSchedule(ctx context.Context, reques
 	return res, nil
 }
 
-// UpdateRepositoryPipelineVariable - Update a repository level variable.
+// UpdateRepositoryPipelineVariable - Update a variable for a repository
+// Update a repository level variable.
 func (s *pipelines) UpdateRepositoryPipelineVariable(ctx context.Context, request operations.UpdateRepositoryPipelineVariableRequest) (*operations.UpdateRepositoryPipelineVariableResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pipelines_config/variables/{variable_uuid}", request.PathParams, nil)

@@ -10,6 +10,7 @@ import (
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
+	"strings"
 )
 
 type currencies struct {
@@ -32,14 +33,14 @@ func newCurrencies(defaultClient, securityClient HTTPClient, serverURL, language
 	}
 }
 
-// GetAPIVVersionCurrenciesHistory - Get historical prices for requested currency pairs
+// CurrenciesHistoryGET - Get historical prices for requested currency pairs
 // Historical OHLC data for the specified period and interval size
 //
 // The combination of the interval parameter and start and end dates can result in results
 // being truncated to conform to result size limits. See comments on interval parameter for details on valid interval values.
-func (s *currencies) GetAPIVVersionCurrenciesHistory(ctx context.Context, request operations.GetAPIVVersionCurrenciesHistoryRequest) (*operations.GetAPIVVersionCurrenciesHistoryResponse, error) {
+func (s *currencies) CurrenciesHistoryGET(ctx context.Context, request operations.CurrenciesHistoryGETRequest) (*operations.CurrenciesHistoryGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Currencies/history", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Currencies/history"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -50,7 +51,7 @@ func (s *currencies) GetAPIVVersionCurrenciesHistory(ctx context.Context, reques
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -63,7 +64,7 @@ func (s *currencies) GetAPIVVersionCurrenciesHistory(ctx context.Context, reques
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionCurrenciesHistoryResponse{
+	res := &operations.CurrenciesHistoryGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -89,108 +90,16 @@ func (s *currencies) GetAPIVVersionCurrenciesHistory(ctx context.Context, reques
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionCurrenciesHistorySupported - Get list of currency pairs supported by the history endpoint
-// Only the currency pairs in the direction noted can be used with the history endpoint.
-// For example: USD/CAD is not the same as CAD/USD
-func (s *currencies) GetAPIVVersionCurrenciesHistorySupported(ctx context.Context, request operations.GetAPIVVersionCurrenciesHistorySupportedRequest) (*operations.GetAPIVVersionCurrenciesHistorySupportedResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Currencies/history/supported", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := s.defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIVVersionCurrenciesHistorySupportedResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []string
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GetAPIVVersionCurrenciesHistorySupported200ApplicationJSONStrings = out
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetAPIVVersionCurrenciesRate - Get latest mid rate for requested currency pairs
+// CurrenciesRateGET - Get latest mid rate for requested currency pairs
 // Current Mid Rate
-func (s *currencies) GetAPIVVersionCurrenciesRate(ctx context.Context, request operations.GetAPIVVersionCurrenciesRateRequest) (*operations.GetAPIVVersionCurrenciesRateResponse, error) {
+func (s *currencies) CurrenciesRateGET(ctx context.Context, request operations.CurrenciesRateGETRequest) (*operations.CurrenciesRateGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Currencies/rate", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Currencies/rate"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -201,7 +110,7 @@ func (s *currencies) GetAPIVVersionCurrenciesRate(ctx context.Context, request o
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -214,7 +123,7 @@ func (s *currencies) GetAPIVVersionCurrenciesRate(ctx context.Context, request o
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionCurrenciesRateResponse{
+	res := &operations.CurrenciesRateGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -240,108 +149,16 @@ func (s *currencies) GetAPIVVersionCurrenciesRate(ctx context.Context, request o
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionCurrenciesRateSupported - Get list of currencies supported by the rate endpoint
-// Any of the currencies in this list can be paired with any other currency in this list when supplied to the Rate endpoint.
-// For example: USD/CAD,CAD/USD,USD/EUR,EUR/CAD
-func (s *currencies) GetAPIVVersionCurrenciesRateSupported(ctx context.Context, request operations.GetAPIVVersionCurrenciesRateSupportedRequest) (*operations.GetAPIVVersionCurrenciesRateSupportedResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Currencies/rate/supported", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := s.defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetAPIVVersionCurrenciesRateSupportedResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out []string
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GetAPIVVersionCurrenciesRateSupported200ApplicationJSONStrings = out
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	case httpRes.StatusCode == 400:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetAPIVVersionCurrenciesSummary - Get latest Summary for requested currency pairs
+// CurrenciesSummaryGET - Get latest Summary for requested currency pairs
 // Current and daily summary information combined into a single quote
-func (s *currencies) GetAPIVVersionCurrenciesSummary(ctx context.Context, request operations.GetAPIVVersionCurrenciesSummaryRequest) (*operations.GetAPIVVersionCurrenciesSummaryResponse, error) {
+func (s *currencies) CurrenciesSummaryGET(ctx context.Context, request operations.CurrenciesSummaryGETRequest) (*operations.CurrenciesSummaryGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Currencies/summary", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Currencies/summary"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -352,7 +169,7 @@ func (s *currencies) GetAPIVVersionCurrenciesSummary(ctx context.Context, reques
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -365,7 +182,7 @@ func (s *currencies) GetAPIVVersionCurrenciesSummary(ctx context.Context, reques
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionCurrenciesSummaryResponse{
+	res := &operations.CurrenciesSummaryGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -391,33 +208,17 @@ func (s *currencies) GetAPIVVersionCurrenciesSummary(ctx context.Context, reques
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
-		switch {
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ProblemDetails = out
-		}
 	}
 
 	return res, nil
 }
 
-// GetAPIVVersionCurrenciesSummarySupported - Get list of currency pairs supported by the Summary endpoint
-// Only the currency pairs in the direction noted can be used with the Summary endpoint.
+// CurrenciesSupportedCurrenciesHistoryGET - Get list of currency pairs supported by the history endpoint
+// Only the currency pairs in the direction noted can be used with the history endpoint.
 // For example: USD/CAD is not the same as CAD/USD
-func (s *currencies) GetAPIVVersionCurrenciesSummarySupported(ctx context.Context, request operations.GetAPIVVersionCurrenciesSummarySupportedRequest) (*operations.GetAPIVVersionCurrenciesSummarySupportedResponse, error) {
+func (s *currencies) CurrenciesSupportedCurrenciesHistoryGET(ctx context.Context, request operations.CurrenciesSupportedCurrenciesHistoryGETRequest) (*operations.CurrenciesSupportedCurrenciesHistoryGETResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/api/v{version}/Currencies/summary/supported", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Currencies/history/supported"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -428,7 +229,7 @@ func (s *currencies) GetAPIVVersionCurrenciesSummarySupported(ctx context.Contex
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -441,7 +242,7 @@ func (s *currencies) GetAPIVVersionCurrenciesSummarySupported(ctx context.Contex
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAPIVVersionCurrenciesSummarySupportedResponse{
+	res := &operations.CurrenciesSupportedCurrenciesHistoryGETResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -455,7 +256,7 @@ func (s *currencies) GetAPIVVersionCurrenciesSummarySupported(ctx context.Contex
 				return nil, err
 			}
 
-			res.GetAPIVVersionCurrenciesSummarySupported200ApplicationJSONStrings = out
+			res.CurrenciesSupportedCurrenciesHistoryGET200ApplicationJSONStrings = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -467,7 +268,55 @@ func (s *currencies) GetAPIVVersionCurrenciesSummarySupported(ctx context.Contex
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
+	}
+
+	return res, nil
+}
+
+// CurrenciesSupportedCurrenciesRateGET - Get list of currencies supported by the rate endpoint
+// Any of the currencies in this list can be paired with any other currency in this list when supplied to the Rate endpoint.
+// For example: USD/CAD,CAD/USD,USD/EUR,EUR/CAD
+func (s *currencies) CurrenciesSupportedCurrenciesRateGET(ctx context.Context, request operations.CurrenciesSupportedCurrenciesRateGETRequest) (*operations.CurrenciesSupportedCurrenciesRateGETResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Currencies/rate/supported"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CurrenciesSupportedCurrenciesRateGETResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
 		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []string
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CurrenciesSupportedCurrenciesRateGET200ApplicationJSONStrings = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -475,14 +324,70 @@ func (s *currencies) GetAPIVVersionCurrenciesSummarySupported(ctx context.Contex
 			}
 
 			res.Body = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+	}
+
+	return res, nil
+}
+
+// CurrenciesSupportedCurrenciesSummaryGET - Get list of currency pairs supported by the Summary endpoint
+// Only the currency pairs in the direction noted can be used with the Summary endpoint.
+// For example: USD/CAD is not the same as CAD/USD
+func (s *currencies) CurrenciesSupportedCurrenciesSummaryGET(ctx context.Context, request operations.CurrenciesSupportedCurrenciesSummaryGETRequest) (*operations.CurrenciesSupportedCurrenciesSummaryGETResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/api/v1/Currencies/summary/supported"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CurrenciesSupportedCurrenciesSummaryGETResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ProblemDetails
+			var out []string
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.ProblemDetails = out
+			res.CurrenciesSupportedCurrenciesSummaryGET200ApplicationJSONStrings = out
+		case utils.MatchContentType(contentType, `application/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
 		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
 	}
 
 	return res, nil

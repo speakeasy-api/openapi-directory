@@ -3,6 +3,7 @@
 package shared
 
 type PagingMetaPaging struct {
+	Count      *int64           `json:"count,omitempty"`
 	Links      *PagingLinksMeta `json:"links,omitempty"`
 	Page       *int64           `json:"page,omitempty"`
 	PerPage    *int64           `json:"per_page,omitempty"`

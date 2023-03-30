@@ -4,9 +4,10 @@ package shared
 
 // PeppolIdentifier - Success
 type PeppolIdentifier struct {
+	Corppass *CorpPass `json:"corppass,omitempty"`
 	// The identifier.
 	Identifier *string `json:"identifier,omitempty"`
-	// The scheme of the identifier. See <<_peppol_participant_identifier_list>> for a list.
+	// The scheme of the identifier. See <<_receiver_identifiers_list>> for a list.
 	Scheme *string `json:"scheme,omitempty"`
 	// The superscheme of the identifier. Should always be "iso6523-actorid-upis".
 	Superscheme *string `json:"superscheme,omitempty"`

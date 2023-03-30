@@ -27,6 +27,9 @@ type GetEfileReportsHouseSenateQueryParams struct {
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results returned per page. Defaults to 20.
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
+	// Keyword search for filer name or ID
+	//
+	QFiler []string `queryParam:"style=form,explode=true,name=q_filer"`
 	// Provide a field to sort by. Use `-` for descending order.
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`

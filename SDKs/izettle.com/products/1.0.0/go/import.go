@@ -31,7 +31,7 @@ func newImport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
-// GetLatestImportStatus - Gets status for latest import
+// GetLatestImportStatus - Get status for latest import
 func (s *importT) GetLatestImportStatus(ctx context.Context, request operations.GetLatestImportStatusRequest) (*operations.GetLatestImportStatusResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status", request.PathParams, nil)
@@ -76,7 +76,7 @@ func (s *importT) GetLatestImportStatus(ctx context.Context, request operations.
 	return res, nil
 }
 
-// GetStatusByUUID - Gets status for an import
+// GetStatusByUUID - Get status for an import
 func (s *importT) GetStatusByUUID(ctx context.Context, request operations.GetStatusByUUIDRequest) (*operations.GetStatusByUUIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/status/{importUuid}", request.PathParams, nil)
@@ -121,7 +121,7 @@ func (s *importT) GetStatusByUUID(ctx context.Context, request operations.GetSta
 	return res, nil
 }
 
-// ImportLibraryV2 - Bulk import library items
+// ImportLibraryV2 - Import library items
 func (s *importT) ImportLibraryV2(ctx context.Context, request operations.ImportLibraryV2Request) (*operations.ImportLibraryV2Response, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/import/v2", request.PathParams, nil)

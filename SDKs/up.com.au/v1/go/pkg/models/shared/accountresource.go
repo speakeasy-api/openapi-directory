@@ -20,6 +20,9 @@ type AccountResourceAttributes struct {
 	// The name associated with the account in the Up application.
 	//
 	DisplayName string `json:"displayName"`
+	// The ownership structure for this account.
+	//
+	OwnershipType OwnershipTypeEnumEnum `json:"ownershipType"`
 }
 
 type AccountResourceLinks struct {

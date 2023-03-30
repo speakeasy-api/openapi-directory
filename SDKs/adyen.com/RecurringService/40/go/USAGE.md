@@ -37,7 +37,7 @@ func main() {
                         SingleUse: false,
                     },
                     ResultKey: "nihil",
-                    ValidTillDate: "2022-08-13T22:05:05.069Z",
+                    ValidTillDate: "2022-08-14T09:24:44.576Z",
                 },
                 shared.Permit{
                     PartnerID: "facilis",
@@ -54,7 +54,7 @@ func main() {
                         SingleUse: false,
                     },
                     ResultKey: "sapiente",
-                    ValidTillDate: "2022-12-20T00:02:00.545Z",
+                    ValidTillDate: "2022-12-20T11:21:40.052Z",
                 },
                 shared.Permit{
                     PartnerID: "eum",
@@ -71,7 +71,7 @@ func main() {
                         SingleUse: false,
                     },
                     ResultKey: "similique",
-                    ValidTillDate: "2022-11-06T03:42:28.333Z",
+                    ValidTillDate: "2022-11-06T15:02:07.840Z",
                 },
             },
             RecurringDetailReference: "molestiae",

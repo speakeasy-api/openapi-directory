@@ -25,6 +25,8 @@ func String(s string) *string { return &s }
 // https://developers.google.com/drive/labels
 type SDK struct {
 	Labels *labels
+	Limits *limits
+	Users  *users
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -87,6 +89,24 @@ func New(opts ...SDKOption) *SDK {
 	}
 
 	sdk.Labels = newLabels(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Limits = newLimits(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Users = newUsers(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

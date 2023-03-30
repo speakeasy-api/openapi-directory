@@ -12,6 +12,7 @@ email.go
 ownertypegroups.go
 ownertypes.go
 payments.go
+producttypes.go
 products.go
 purchases.go
 quote.go
@@ -86,6 +87,7 @@ pkg/models/operations/paymentspost.go
 pkg/models/operations/paymentsprocessbatch.go
 pkg/models/operations/paymentsput.go
 pkg/models/operations/getv1paymentsid.go
+pkg/models/operations/producttypesget.go
 pkg/models/operations/productsdelete.go
 pkg/models/operations/productsget.go
 pkg/models/operations/productspost.go

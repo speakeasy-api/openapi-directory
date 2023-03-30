@@ -12,14 +12,9 @@ type CancelProjectPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
-type CancelProjectRequestBody struct {
-	// Cancellation reason
-	Reason *string `multipartForm:"name=reason"`
-}
-
 type CancelProjectRequest struct {
 	PathParams CancelProjectPathParams
-	Request    *CancelProjectRequestBody `request:"mediaType=multipart/form-data"`
+	Request    *shared.CancelProjectRequest `request:"mediaType=application/json"`
 }
 
 type CancelProjectResponse struct {

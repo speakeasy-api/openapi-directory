@@ -414,7 +414,7 @@ func (s *nodes) NodesCitationRead(ctx context.Context, request operations.NodesC
 // To create a comment on the node overview page, the target `type` would be "nodes" and the target `id` would be the node `id`.
 //
 // To reply to a comment on this node, the target `type` would be "comments" and the target `id` would be the `id` of the comment to reply to.
-// ####Required
+// #### Required
 // A relationship object with a `data` key, containing the target (`comments` or `nodes`) type and a target `id` is required.
 // In addition, the `content` attribute describing the relationship between the node and the comment is required.
 // #### Returns
@@ -913,9 +913,9 @@ func (s *nodes) NodesDelete(ctx context.Context, request operations.NodesDeleteR
 	return res, nil
 }
 
-// NodesDraftRegistrationsCreate - Create a draft registration
+// NodesDraftRegistrationsCreate - Create a draft registration based on your current project Node.
 // Initiate a draft registration of the current node.
-// Draft registrations contain the supplemental registration questions that accompany a registration. A registration is a frozen version of the project that can never be edited or deleted, but can be withdrawn.
+// Draft Registrations contain Registration questions that will become part of the Registration. A Registration is a frozen version of the project that can never be deleted, but can be withdrawn and have it's metadata edited.
 //
 // Your original project remains editable but will now have the draft registration linked to it.
 // #### Permissions
@@ -923,7 +923,7 @@ func (s *nodes) NodesDelete(ctx context.Context, request operations.NodesDeleteR
 // #### Required
 // Required fields for creating a draft registration include:
 //
-// &nbsp;&nbsp;&nbsp;&nbsp`registration_supplement`
+// &nbsp;&nbsp;&nbsp;&nbsp;`schema_id`
 // #### Returns
 // Returns a JSON object with a `data` key containing the representation of the created draft registration, if the request is successful.
 //
@@ -1017,7 +1017,7 @@ func (s *nodes) NodesDraftRegistrationsDelete(ctx context.Context, request opera
 // NodesDraftRegistrationsList - List all draft registrations
 // A paginated list of all of the draft registrations of a given node.
 //
-// Draft registrations contain the supplemental registration questions that accompany a registration. A registration is a frozen version of the project that can never be edited or deleted, but can be withdrawn.
+// Draft Registrations contain Registration questions that will become part of the Registration. A Registration is a frozen version of the project that can never be deleted, but can be withdrawn and have it's metadata edited.
 //
 // Your original project remains editable but will now have the draft registration linked to it.
 // #### Permissions
@@ -1074,7 +1074,7 @@ func (s *nodes) NodesDraftRegistrationsList(ctx context.Context, request operati
 // NodesDraftRegistrationsPartialUpdate - Update a draft registration
 // Updates a draft registration by setting the values of the attributes specified in the request body. Any unspecified attributes will be left unchanged.
 //
-// Draft registrations contain the supplemental registration questions that accompany a registration. Answer the questions in the draft registration supplement by sending update requests until you are ready to submit the draft.
+// Draft Registrations contain Registration questions that will become part of the Registration. Answer the questions in the draft registration supplement by sending update requests until you are ready to submit the draft.
 //
 // The registration supplement of a draft registration cannot be updated after the draft has been created.
 //
@@ -1131,60 +1131,6 @@ func (s *nodes) NodesDraftRegistrationsPartialUpdate(ctx context.Context, reques
 	return res, nil
 }
 
-// NodesDraftRegistrationsRead - Retrieve a draft registration
-// Retrieve the details of a given draft registration.
-// Draft registrations contain the supplemental registration questions that accompany a registration. A registration is a frozen version of the project that can never be edited or deleted, but can be withdrawn.
-//
-// Your original project remains editable but will now have the draft registration linked to it.
-// #### Permissions
-// Only project administrators may view draft registrations.
-// #### Returns
-// Returns a JSON object with a `data` key containing the representation of the requested draft registration, if the request is successful.
-//
-// If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-func (s *nodes) NodesDraftRegistrationsRead(ctx context.Context, request operations.NodesDraftRegistrationsReadRequest) (*operations.NodesDraftRegistrationsReadResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/nodes/{node_id}/draft_registrations/{draft_id}/", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := s.defaultClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.NodesDraftRegistrationsReadResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `*/*`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		}
-	}
-
-	return res, nil
-}
-
 // NodesFilesList - List all node files
 // List of all the files/folders that are attached to your project for a given storage provider.
 // #### Returns
@@ -1200,7 +1146,7 @@ func (s *nodes) NodesDraftRegistrationsRead(ctx context.Context, request operati
 //
 // Node files may be filtered by `id`, `name`, `node`, `kind`, `path`, `provider`, `size`, and `last_touched`.
 //
-// ###Waterbutler API actions
+// ### Waterbutler API actions
 //
 // Files can be modified through the Waterbutler API routes found in `links` (`new_folder`, `move`, `upload`, `download`, and `delete`).
 //

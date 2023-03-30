@@ -68,7 +68,7 @@ type SDK struct {
 	//
 	//  The committee endpoints primarily use data from FEC registration Form 1 and Form 2.
 	Committee *committee
-	// CommunicationCost - Reports of communication costs by corporations and membership organizations from the FEC [F7 forms](http://www.fec.gov/pdf/forms/fecform7.pdf).
+	// CommunicationCost - Reports of communication costs by corporations and membership organizations from the FEC [F7 forms](https://www.fec.gov/pdf/forms/fecform7.pdf).
 	CommunicationCost *communicationCost
 	// Dates - Reporting deadlines, election dates FEC meetings, events etc.
 	Dates *dates
@@ -100,7 +100,7 @@ type SDK struct {
 	//
 	//  Information is made available on the API as soon as it's processed. Keep in mind, complex paper filings take longer to process.
 	//
-	//  The financial endpoints use data from FEC [form 5](http://www.fec.gov/pdf/forms/fecfrm5.pdf), for independent expenditors; or the summary and detailed summary pages of the FEC [Form 3](http://www.fec.gov/pdf/forms/fecfrm3.pdf), for House and Senate committees; [Form 3X](http://www.fec.gov/pdf/forms/fecfrm3x.pdf), for PACs and parties; and [Form 3P](http://www.fec.gov/pdf/forms/fecfrm3p.pdf), for presidential committees.
+	//  The financial endpoints use data from FEC [form 5](https://www.fec.gov/pdf/forms/fecfrm5.pdf), for independent expenditors; or the summary and detailed summary pages of the FEC [Form 3](https://www.fec.gov/pdf/forms/fecfrm3.pdf), for House and Senate committees; [Form 3X](https://www.fec.gov/pdf/forms/fecfrm3x.pdf), for PACs and parties; and [Form 3P](https://www.fec.gov/pdf/forms/fecfrm3p.pdf), for presidential committees.
 	Financial *financial
 	// IndependentExpenditures - Schedule E covers the line item expenditures for independent expenditures. For example, if a super PAC bought ads on TV to oppose a federal candidate, each ad purchase would be recorded here with the expenditure amount, name and id of the candidate, and whether the ad supported or opposed the candidate.
 	//

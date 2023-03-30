@@ -12,7 +12,7 @@ type AccountHolderTransactionListRequestTransactionStatusesEnum string
 const (
 	AccountHolderTransactionListRequestTransactionStatusesEnumBalanceNotPaidOutTransfer            AccountHolderTransactionListRequestTransactionStatusesEnum = "BalanceNotPaidOutTransfer"
 	AccountHolderTransactionListRequestTransactionStatusesEnumBalancePlatformSweep                 AccountHolderTransactionListRequestTransactionStatusesEnum = "BalancePlatformSweep"
-	AccountHolderTransactionListRequestTransactionStatusesEnumBalancePlatfromSweepReturned         AccountHolderTransactionListRequestTransactionStatusesEnum = "BalancePlatfromSweepReturned"
+	AccountHolderTransactionListRequestTransactionStatusesEnumBalancePlatformSweepReturned         AccountHolderTransactionListRequestTransactionStatusesEnum = "BalancePlatformSweepReturned"
 	AccountHolderTransactionListRequestTransactionStatusesEnumChargeback                           AccountHolderTransactionListRequestTransactionStatusesEnum = "Chargeback"
 	AccountHolderTransactionListRequestTransactionStatusesEnumChargebackCorrection                 AccountHolderTransactionListRequestTransactionStatusesEnum = "ChargebackCorrection"
 	AccountHolderTransactionListRequestTransactionStatusesEnumChargebackCorrectionReceived         AccountHolderTransactionListRequestTransactionStatusesEnum = "ChargebackCorrectionReceived"
@@ -67,7 +67,7 @@ func (e *AccountHolderTransactionListRequestTransactionStatusesEnum) UnmarshalJS
 		fallthrough
 	case "BalancePlatformSweep":
 		fallthrough
-	case "BalancePlatfromSweepReturned":
+	case "BalancePlatformSweepReturned":
 		fallthrough
 	case "Chargeback":
 		fallthrough

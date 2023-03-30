@@ -83,6 +83,7 @@ pkg/models/shared/tag.go
 pkg/models/shared/associateresolverendpointipaddressresponse.go
 pkg/models/shared/resolverendpoint.go
 pkg/models/shared/resolverendpointstatusenum.go
+pkg/models/shared/resolverendpointtypeenum.go
 pkg/models/shared/resolverendpointdirectionenum.go
 pkg/models/shared/associateresolverendpointipaddressrequest.go
 pkg/models/shared/ipaddressupdate.go
@@ -241,6 +242,7 @@ pkg/models/shared/updateresolverdnssecconfigrequest.go
 pkg/models/shared/validationenum.go
 pkg/models/shared/updateresolverendpointresponse.go
 pkg/models/shared/updateresolverendpointrequest.go
+pkg/models/shared/updateipaddress.go
 pkg/models/shared/updateresolverruleresponse.go
 pkg/models/shared/updateresolverrulerequest.go
 pkg/models/shared/resolverruleconfig.go

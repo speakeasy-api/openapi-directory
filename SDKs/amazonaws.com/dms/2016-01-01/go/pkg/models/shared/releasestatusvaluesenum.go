@@ -11,6 +11,7 @@ type ReleaseStatusValuesEnum string
 
 const (
 	ReleaseStatusValuesEnumBeta ReleaseStatusValuesEnum = "beta"
+	ReleaseStatusValuesEnumProd ReleaseStatusValuesEnum = "prod"
 )
 
 func (e *ReleaseStatusValuesEnum) UnmarshalJSON(data []byte) error {
@@ -20,6 +21,8 @@ func (e *ReleaseStatusValuesEnum) UnmarshalJSON(data []byte) error {
 	}
 	switch s {
 	case "beta":
+		fallthrough
+	case "prod":
 		*e = ReleaseStatusValuesEnum(s)
 		return nil
 	default:

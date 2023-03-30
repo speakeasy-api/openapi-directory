@@ -44,6 +44,8 @@ type GoogleAppsDriveLabelsV2betaLabel struct {
 	CreateTime *string `json:"createTime,omitempty"`
 	// Information about a user.
 	Creator *GoogleAppsDriveLabelsV2betaUserInfo `json:"creator,omitempty"`
+	// Output only. The customer this label belongs to. For example: "customers/123abc789."
+	Customer *string `json:"customer,omitempty"`
 	// Output only. The time this label was disabled. This value has no meaning when the label is not disabled.
 	DisableTime *string `json:"disableTime,omitempty"`
 	// Information about a user.

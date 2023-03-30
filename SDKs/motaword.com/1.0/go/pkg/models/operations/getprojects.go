@@ -39,6 +39,29 @@ func (e *GetProjectsOrderByEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type GetProjectsWithEnum string
+
+const (
+	GetProjectsWithEnumClient GetProjectsWithEnum = "client"
+	GetProjectsWithEnumVendor GetProjectsWithEnum = "vendor"
+)
+
+func (e *GetProjectsWithEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "client":
+		fallthrough
+	case "vendor":
+		*e = GetProjectsWithEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetProjectsWithEnum: %s", s)
+	}
+}
+
 type GetProjectsQueryParams struct {
 	OrderBy   *GetProjectsOrderByEnum   `queryParam:"style=form,explode=true,name=order_by"`
 	OrderType *shared.ListOrderTypeEnum `queryParam:"style=form,explode=true,name=order_type"`
@@ -46,6 +69,8 @@ type GetProjectsQueryParams struct {
 	PerPage   *int64                    `queryParam:"style=form,explode=true,name=per_page"`
 	// Filter projects by status. Accepts multiple statuses. Possible values 'pending', 'started', 'completed'
 	Status []shared.ProjectStatusEnum `queryParam:"style=form,explode=true,name=status[]"`
+	// Include detailed information. Possible values 'client', 'vendor'
+	With []GetProjectsWithEnum `queryParam:"style=form,explode=true,name=with[]"`
 	// deprecated. use `status[]` param.
 	WithCompleted *bool `queryParam:"style=form,explode=true,name=with_completed"`
 	// deprecated. use `status[]` param.

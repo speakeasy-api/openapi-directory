@@ -204,7 +204,8 @@ type GetSchedulesScheduleASubIDQueryParams struct {
 	ContributorType []GetSchedulesScheduleASubIDContributorTypeEnum `queryParam:"style=form,explode=true,name=contributor_type"`
 	// Zip code of contributor
 	ContributorZip []string `queryParam:"style=form,explode=true,name=contributor_zip"`
-	// The image number of the page where the schedule item is reported
+	// An unique identifier for each page where the electronic or paper filing is reported.
+	//
 	ImageNumber []string `queryParam:"style=form,explode=true,name=image_number"`
 	// Restrict to non-earmarked individual contributions where memo code is true. Filtering individuals is useful to make sure contributions are not double reported and in creating breakdowns of the amount of money coming from individuals.
 	IsIndividual *bool `queryParam:"style=form,explode=true,name=is_individual"`
@@ -219,15 +220,17 @@ type GetSchedulesScheduleASubIDQueryParams struct {
 	// Filter for all amounts less than a value.
 	MaxAmount *string `queryParam:"style=form,explode=true,name=max_amount"`
 	// Maximum date
-	MaxDate        *types.Date `queryParam:"style=form,explode=true,name=max_date"`
-	MaxImageNumber *string     `queryParam:"style=form,explode=true,name=max_image_number"`
+	MaxDate *types.Date `queryParam:"style=form,explode=true,name=max_date"`
+	// Maxium image number of the page where the schedule item is reported
+	MaxImageNumber *string `queryParam:"style=form,explode=true,name=max_image_number"`
 	// Maximum load date
 	MaxLoadDate *types.Date `queryParam:"style=form,explode=true,name=max_load_date"`
 	// Filter for all amounts greater than a value.
 	MinAmount *string `queryParam:"style=form,explode=true,name=min_amount"`
 	// Minimum date
-	MinDate        *types.Date `queryParam:"style=form,explode=true,name=min_date"`
-	MinImageNumber *string     `queryParam:"style=form,explode=true,name=min_image_number"`
+	MinDate *types.Date `queryParam:"style=form,explode=true,name=min_date"`
+	// Minium image number of the page where the schedule item is reported
+	MinImageNumber *string `queryParam:"style=form,explode=true,name=min_image_number"`
 	// Minimum load date
 	MinLoadDate *types.Date `queryParam:"style=form,explode=true,name=min_load_date"`
 	// The number of results returned per page. Defaults to 20.
@@ -255,7 +258,7 @@ type GetSchedulesScheduleASubIDQueryParams struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential

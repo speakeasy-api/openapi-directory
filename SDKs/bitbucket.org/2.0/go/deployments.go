@@ -36,7 +36,8 @@ func newDeployments(defaultClient, securityClient HTTPClient, serverURL, languag
 	}
 }
 
-// CreateEnvironment - Create an environment.
+// CreateEnvironment - Create an environment
+// Create an environment.
 func (s *deployments) CreateEnvironment(ctx context.Context, request operations.CreateEnvironmentRequest) (*operations.CreateEnvironmentResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/", request.PathParams, nil)
@@ -105,6 +106,7 @@ func (s *deployments) CreateEnvironment(ctx context.Context, request operations.
 }
 
 // DeleteEnvironmentForRepository - Delete an environment
+// Delete an environment
 func (s *deployments) DeleteEnvironmentForRepository(ctx context.Context, request operations.DeleteEnvironmentForRepositoryRequest) (*operations.DeleteEnvironmentForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request.PathParams, nil)
@@ -149,7 +151,8 @@ func (s *deployments) DeleteEnvironmentForRepository(ctx context.Context, reques
 	return res, nil
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyID - This deletes a deploy key from a repository.
+// DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyID - Delete a repository deploy key
+// This deletes a deploy key from a repository.
 //
 // Example:
 // ```
@@ -203,7 +206,63 @@ func (s *deployments) DeleteRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx con
 	return res, nil
 }
 
-// GetDeploymentForRepository - Retrieve a deployment
+// DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID - Delete a deploy key from a project
+// This deletes a deploy key from a project.
+//
+// Example:
+// ```
+// $ curl -XDELETE \
+// -H "Authorization <auth header>" \
+// https://api.bitbucket.org/2.0/workspaces/jzeng/projects/JZ/deploy-keys/1234
+// ```
+func (s *deployments) DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID(ctx context.Context, request operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDRequest) (*operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetDeploymentForRepository - Get a deployment
+// Retrieve a deployment
 func (s *deployments) GetDeploymentForRepository(ctx context.Context, request operations.GetDeploymentForRepositoryRequest) (*operations.GetDeploymentForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments/{deployment_uuid}", request.PathParams, nil)
@@ -257,7 +316,8 @@ func (s *deployments) GetDeploymentForRepository(ctx context.Context, request op
 	return res, nil
 }
 
-// GetDeploymentsForRepository - Find deployments
+// GetDeploymentsForRepository - List deployments
+// Find deployments
 func (s *deployments) GetDeploymentsForRepository(ctx context.Context, request operations.GetDeploymentsForRepositoryRequest) (*operations.GetDeploymentsForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/deployments/", request.PathParams, nil)
@@ -301,7 +361,8 @@ func (s *deployments) GetDeploymentsForRepository(ctx context.Context, request o
 	return res, nil
 }
 
-// GetEnvironmentForRepository - Retrieve an environment
+// GetEnvironmentForRepository - Get an environment
+// Retrieve an environment
 func (s *deployments) GetEnvironmentForRepository(ctx context.Context, request operations.GetEnvironmentForRepositoryRequest) (*operations.GetEnvironmentForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}", request.PathParams, nil)
@@ -355,7 +416,8 @@ func (s *deployments) GetEnvironmentForRepository(ctx context.Context, request o
 	return res, nil
 }
 
-// GetEnvironmentsForRepository - Find environments
+// GetEnvironmentsForRepository - List environments
+// Find environments
 func (s *deployments) GetEnvironmentsForRepository(ctx context.Context, request operations.GetEnvironmentsForRepositoryRequest) (*operations.GetEnvironmentsForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/", request.PathParams, nil)
@@ -399,7 +461,8 @@ func (s *deployments) GetEnvironmentsForRepository(ctx context.Context, request 
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugDeployKeys - Returns all deploy-keys belonging to a repository.
+// GetRepositoriesWorkspaceRepoSlugDeployKeys - List repository deploy keys
+// Returns all deploy-keys belonging to a repository.
 //
 // Example:
 // ```
@@ -491,7 +554,8 @@ func (s *deployments) GetRepositoriesWorkspaceRepoSlugDeployKeys(ctx context.Con
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugDeployKeysKeyID - Returns the deploy key belonging to a specific key.
+// GetRepositoriesWorkspaceRepoSlugDeployKeysKeyID - Get a repository deploy key
+// Returns the deploy key belonging to a specific key.
 //
 // Example:
 // ```
@@ -576,7 +640,204 @@ func (s *deployments) GetRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx contex
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugDeployKeys - Create a new deploy key in a repository. Note: If authenticating a deploy key
+// GetWorkspacesWorkspaceProjectsProjectKeyDeployKeys - List project deploy keys
+// Returns all deploy keys belonging to a project.
+//
+// Example:
+// ```
+// $ curl -H "Authorization <auth header>" \
+// https://api.bitbucket.org/2.0/workspaces/standard/projects/TEST_PROJECT/deploy-keys
+//
+// Output:
+//
+//	{
+//	    "pagelen":10,
+//	    "values":[
+//	        {
+//	            "comment":"thakseth@C02W454JHTD8",
+//	            "last_used":null,
+//	            "links":{
+//	                "self":{
+//	                    "href":"https://api.bitbucket.org/2.0/workspaces/standard/projects/TEST_PROJECT/deploy-keys/1234"
+//	                }
+//	            },
+//	            "label":"test",
+//	            "project":{
+//	                "links":{
+//	                    "self":{
+//	                        "href":"https://api.bitbucket.org/2.0/workspaces/standard/projects/TEST_PROJECT"
+//	                    }
+//	                },
+//	                "type":"project",
+//	                "name":"cooperative standard",
+//	                "key":"TEST_PROJECT",
+//	                "uuid":"{3b3e510b-7f2b-414d-a2b7-76c4e405c1c0}"
+//	            },
+//	            "created_on":"2021-07-28T21:20:19.491721+00:00",
+//	            "key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX5yfMOEw6HG9jKTYTisbmDTJ4MCUTSVGr5e4OWvY3UuI2A6F8SdzQqa2f5BABA/4g5Sk5awJrYHlNu3EzV1V2I44tR3A4fnZAG71ZKyDPi1wvdO7UYmFgxV/Vd18H9QZFFjICGDM7W0PT2mI0kON/jN3qNWi+GiB/xgaeQKSqynysdysDp8lnnI/8Sh3ikURP9UP83ShRCpAXszOUNaa+UUlcYQYBDLIGowsg51c4PCkC3DNhAMxppkNRKoSOWwyl+oRVXHSDylkiJSBHW3HH4Q6WHieD54kGrjbhWBKdnnxKX7QAAZBDseY+t01N36m6/ljvXSUEcBWtHxBYye0r",
+//	            "type":"project_deploy_key",
+//	            "id":1234
+//	        }
+//	    ],
+//	    "page":1,
+//	    "size":1
+//	}
+//
+// ```
+func (s *deployments) GetWorkspacesWorkspaceProjectsProjectKeyDeployKeys(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedProjectDeployKeys
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedProjectDeployKeys = out
+		}
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID - Get a project deploy key
+// Returns the deploy key belonging to a specific key ID.
+//
+// Example:
+// ```
+// $ curl -H "Authorization <auth header>" \
+// https://api.bitbucket.org/2.0/workspaces/standard/projects/TEST_PROJECT/deploy-keys/1234
+//
+// Output:
+//
+//	{
+//	    "pagelen":10,
+//	    "values":[
+//	        {
+//	            "comment":"thakseth@C02W454JHTD8",
+//	            "last_used":null,
+//	            "links":{
+//	                "self":{
+//	                    "href":"https://api.bitbucket.org/2.0/workspaces/standard/projects/TEST_PROJECT/deploy-keys/1234"
+//	                }
+//	            },
+//	            "label":"test",
+//	            "project":{
+//	                "links":{
+//	                    "self":{
+//	                        "href":"https://api.bitbucket.org/2.0/workspaces/standard/projects/TEST_PROJECT"
+//	                    }
+//	                },
+//	                "type":"project",
+//	                "name":"cooperative standard",
+//	                "key":"TEST_PROJECT",
+//	                "uuid":"{3b3e510b-7f2b-414d-a2b7-76c4e405c1c0}"
+//	            },
+//	            "created_on":"2021-07-28T21:20:19.491721+00:00",
+//	            "key":"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX5yfMOEw6HG9jKTYTisbmDTJ4MCUTSVGr5e4OWvY3UuI2A6F8SdzQqa2f5BABA/4g5Sk5awJrYHlNu3EzV1V2I44tR3A4fnZAG71ZKyDPi1wvdO7UYmFgxV/Vd18H9QZFFjICGDM7W0PT2mI0kON/jN3qNWi+GiB/xgaeQKSqynysdysDp8lnnI/8Sh3ikURP9UP83ShRCpAXszOUNaa+UUlcYQYBDLIGowsg51c4PCkC3DNhAMxppkNRKoSOWwyl+oRVXHSDylkiJSBHW3HH4Q6WHieD54kGrjbhWBKdnnxKX7QAAZBDseY+t01N36m6/ljvXSUEcBWtHxBYye0r",
+//	            "type":"project_deploy_key",
+//	            "id":1234
+//	        }
+//	    ],
+//	}
+//
+// ```
+func (s *deployments) GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyID(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys/{key_id}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysKeyIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProjectDeployKey = out
+		}
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostRepositoriesWorkspaceRepoSlugDeployKeys - Add a repository deploy key
+// Create a new deploy key in a repository. Note: If authenticating a deploy key
 // with an OAuth consumer, any changes to the OAuth consumer will subsequently
 // invalidate the deploy key.
 //
@@ -672,7 +933,101 @@ func (s *deployments) PostRepositoriesWorkspaceRepoSlugDeployKeys(ctx context.Co
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugDeployKeysKeyID - Create a new deploy key in a repository.
+// PostWorkspacesWorkspaceProjectsProjectKeyDeployKeys - Create a project deploy key
+// Create a new deploy key in a project.
+//
+// Example:
+// ```
+// $ curl -XPOST \
+// -H "Authorization <auth header>" \
+// -H "Content-type: application/json" \
+// https://api.bitbucket.org/2.0/workspaces/jzeng/projects/JZ/deploy-keys/ -d \
+//
+//	'{
+//	    "key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAK/b1cHHDr/TEV1JGQl+WjCwStKG6Bhrv0rFpEsYlyTBm1fzN0VOJJYn4ZOPCPJwqse6fGbXntEs+BbXiptR+++HycVgl65TMR0b5ul5AgwrVdZdT7qjCOCgaSV74/9xlHDK8oqgGnfA7ZoBBU+qpVyaloSjBdJfLtPY/xqj4yHnXKYzrtn/uFc4Kp9Tb7PUg9Io3qohSTGJGVHnsVblq/rToJG7L5xIo0OxK0SJSQ5vuId93ZuFZrCNMXj8JDHZeSEtjJzpRCBEXHxpOPhAcbm4MzULgkFHhAVgp4JbkrT99/wpvZ7r9AdkTg7HGqL3rlaDrEcWfL7Lu6TnhBdq5 mleu@C02W454JHTD8",
+//	    "label": "mydeploykey"
+//	}'
+//
+// Output:
+//
+//	{
+//	    "comment": "mleu@C02W454JHTD8",
+//	    "last_used": null,
+//	    "links": {
+//	        "self": {
+//	            "href": "https://api.bitbucket.org/2.0/workspaces/testadfsa/projects/ASDF/deploy-keys/5/"
+//	        }
+//	    },
+//	    "label": "myprojectkey",
+//	    "project": {
+//	        ...
+//	    },
+//	    "created_on": "2021-08-10T05:28:00.570859+00:00",
+//	    "key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDAK/b1cHHDr/TEV1JGQl+WjCwStKG6Bhrv0rFpEsYlyTBm1fzN0VOJJYn4ZOPCPJwqse6fGbXntEs+BbXiptR+++HycVgl65TMR0b5ul5AgwrVdZdT7qjCOCgaSV74/9xlHDK8oqgGnfA7ZoBBU+qpVyaloSjBdJfLtPY/xqj4yHnXKYzrtn/uFc4Kp9Tb7PUg9Io3qohSTGJGVHnsVblq/rToJG7L5xIo0OxK0SJSQ5vuId93ZuFZrCNMXj8JDHZeSEtjJzpRCBEXHxpOPhAcbm4MzULgkFHhAVgp4JbkrT99/wpvZ7r9AdkTg7HGqL3rlaDrEcWfL7Lu6TnhBdq5",
+//	    "type": "project_deploy_key",
+//	    "id": 5
+//	}
+//
+// ```
+func (s *deployments) PostWorkspacesWorkspaceProjectsProjectKeyDeployKeys(ctx context.Context, request operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysRequest) (*operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/deploy-keys", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProjectDeployKey = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutRepositoriesWorkspaceRepoSlugDeployKeysKeyID - Update a repository deploy key
+// Create a new deploy key in a repository.
 //
 // The same key needs to be passed in but the comment and label can change.
 //
@@ -769,6 +1124,7 @@ func (s *deployments) PutRepositoriesWorkspaceRepoSlugDeployKeysKeyID(ctx contex
 }
 
 // UpdateEnvironmentForRepository - Update an environment
+// Update an environment
 func (s *deployments) UpdateEnvironmentForRepository(ctx context.Context, request operations.UpdateEnvironmentForRepositoryRequest) (*operations.UpdateEnvironmentForRepositoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/environments/{environment_uuid}/changes/", request.PathParams, nil)

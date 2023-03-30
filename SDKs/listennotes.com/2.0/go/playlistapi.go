@@ -12,6 +12,7 @@ import (
 	"strings"
 )
 
+// playlistAPI - Endpoints to fetch Listen Later playlists data
 type playlistAPI struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient

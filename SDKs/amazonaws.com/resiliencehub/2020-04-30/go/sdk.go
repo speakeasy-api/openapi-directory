@@ -33,7 +33,7 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
-// SDK - AWS Resilience Hub helps you proactively prepare and protect your Amazon Web Services applications from disruptions. Resilience Hub offers continuous resiliency assessment and validation that integrates into your software development lifecycle. This enables you to uncover resiliency weaknesses, ensure recovery time objective (RTO) and recovery point objective (RPO) targets for your applications are met, and resolve issues before they are released into production.
+// SDK - Resilience Hub helps you proactively prepare and protect your Amazon Web Services applications from disruptions. It offers continual resiliency assessment and validation that integrates into your software development lifecycle. This enables you to uncover resiliency weaknesses, ensure recovery time objective (RTO) and recovery point objective (RPO) targets for your applications are met, and resolve issues before they are released into production.
 // https://docs.aws.amazon.com/resiliencehub/ - Amazon Web Services documentation
 type SDK struct {
 
@@ -227,7 +227,7 @@ func (s *SDK) AddDraftAppVersionResourceMappings(ctx context.Context, request op
 	return res, nil
 }
 
-// CreateApp - <p>Creates an AWS Resilience Hub application. An AWS Resilience Hub application is a collection of Amazon Web Services resources structured to prevent and recover Amazon Web Services application disruptions. To describe a AWS Resilience Hub application, you provide an application name, resources from one or more–up to five–CloudFormation stacks, and an appropriate resiliency policy.</p> <p>After you create an AWS Resilience Hub application, you publish it so that you can run a resiliency assessment on it. You can then use recommendations from the assessment to improve resiliency by running another assessment, comparing results, and then iterating the process until you achieve your goals for recovery time objective (RTO) and recovery point objective (RPO).</p>
+// CreateApp - <p>Creates an Resilience Hub application. An Resilience Hub application is a collection of Amazon Web Services resources structured to prevent and recover Amazon Web Services application disruptions. To describe a Resilience Hub application, you provide an application name, resources from one or more–up to five–CloudFormation stacks, and an appropriate resiliency policy.</p> <p>After you create an Resilience Hub application, you publish it so that you can run a resiliency assessment on it. You can then use recommendations from the assessment to improve resiliency by running another assessment, comparing results, and then iterating the process until you achieve your goals for recovery time objective (RTO) and recovery point objective (RPO).</p>
 func (s *SDK) CreateApp(ctx context.Context, request operations.CreateAppRequest) (*operations.CreateAppResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/create-app"
@@ -353,7 +353,7 @@ func (s *SDK) CreateApp(ctx context.Context, request operations.CreateAppRequest
 	return res, nil
 }
 
-// CreateAppVersionAppComponent - <p>Creates a new Application Component in the AWS Resilience Hub application.</p> <note> <p>This API updates the AWS Resilience Hub application draft version. To use this Application Component for running assessments, you must publish the AWS Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </note>
+// CreateAppVersionAppComponent - <p>Creates a new Application Component in the Resilience Hub application.</p> <note> <p>This API updates the Resilience Hub application draft version. To use this Application Component for running assessments, you must publish the Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </note>
 func (s *SDK) CreateAppVersionAppComponent(ctx context.Context, request operations.CreateAppVersionAppComponentRequest) (*operations.CreateAppVersionAppComponentResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/create-app-version-app-component"
@@ -479,7 +479,7 @@ func (s *SDK) CreateAppVersionAppComponent(ctx context.Context, request operatio
 	return res, nil
 }
 
-// CreateAppVersionResource - <p>Adds a resource to the AWS Resilience Hub applicationand assigns it to the specified Application Components. If you specify a new Application Component, AWS Resilience Hub will automatically create the Application Component.</p> <note> <ul> <li> <p>This action has no effect outside AWS Resilience Hub.</p> </li> <li> <p>This API updates the AWS Resilience Hub application draft version. To use this resource for running resiliency assessments, you must publish the AWS Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </li> <li> <p>To update application version with new <code>physicalResourceID</code>, you must call <code>ResolveAppVersionResources</code> API.</p> </li> </ul> </note>
+// CreateAppVersionResource - <p>Adds a resource to the Resilience Hub application and assigns it to the specified Application Components. If you specify a new Application Component, Resilience Hub will automatically create the Application Component.</p> <note> <ul> <li> <p>This action has no effect outside Resilience Hub.</p> </li> <li> <p>This API updates the Resilience Hub application draft version. To use this resource for running resiliency assessments, you must publish the Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </li> <li> <p>To update application version with new <code>physicalResourceID</code>, you must call <code>ResolveAppVersionResources</code> API.</p> </li> </ul> </note>
 func (s *SDK) CreateAppVersionResource(ctx context.Context, request operations.CreateAppVersionResourceRequest) (*operations.CreateAppVersionResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/create-app-version-resource"
@@ -605,7 +605,7 @@ func (s *SDK) CreateAppVersionResource(ctx context.Context, request operations.C
 	return res, nil
 }
 
-// CreateRecommendationTemplate - Creates a new recommendation template for the AWS Resilience Hub application.
+// CreateRecommendationTemplate - Creates a new recommendation template for the Resilience Hub application.
 func (s *SDK) CreateRecommendationTemplate(ctx context.Context, request operations.CreateRecommendationTemplateRequest) (*operations.CreateRecommendationTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/create-recommendation-template"
@@ -847,7 +847,7 @@ func (s *SDK) CreateResiliencyPolicy(ctx context.Context, request operations.Cre
 	return res, nil
 }
 
-// DeleteApp - Deletes an AWS Resilience Hub application. This is a destructive action that can't be undone.
+// DeleteApp - Deletes an Resilience Hub application. This is a destructive action that can't be undone.
 func (s *SDK) DeleteApp(ctx context.Context, request operations.DeleteAppRequest) (*operations.DeleteAppResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/delete-app"
@@ -953,7 +953,7 @@ func (s *SDK) DeleteApp(ctx context.Context, request operations.DeleteAppRequest
 	return res, nil
 }
 
-// DeleteAppAssessment - Deletes an AWS Resilience Hub application assessment. This is a destructive action that can't be undone.
+// DeleteAppAssessment - Deletes an Resilience Hub application assessment. This is a destructive action that can't be undone.
 func (s *SDK) DeleteAppAssessment(ctx context.Context, request operations.DeleteAppAssessmentRequest) (*operations.DeleteAppAssessmentResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/delete-app-assessment"
@@ -1069,7 +1069,7 @@ func (s *SDK) DeleteAppAssessment(ctx context.Context, request operations.Delete
 	return res, nil
 }
 
-// DeleteAppInputSource - Deletes the input source and all of its imported resources from the AWS Resilience Hub application.
+// DeleteAppInputSource - Deletes the input source and all of its imported resources from the Resilience Hub application.
 func (s *SDK) DeleteAppInputSource(ctx context.Context, request operations.DeleteAppInputSourceRequest) (*operations.DeleteAppInputSourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/delete-app-input-source"
@@ -1185,7 +1185,7 @@ func (s *SDK) DeleteAppInputSource(ctx context.Context, request operations.Delet
 	return res, nil
 }
 
-// DeleteAppVersionAppComponent - <p>Deletes an Application Component from the AWS Resilience Hub application.</p> <note> <ul> <li> <p>This API updates the AWS Resilience Hub application draft version. To use this Application Component for running assessments, you must publish the AWS Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </li> <li> <p>You will not be able to delete an Application Component if it has resources associated with it.</p> </li> </ul> </note>
+// DeleteAppVersionAppComponent - <p>Deletes an Application Component from the Resilience Hub application.</p> <note> <ul> <li> <p>This API updates the Resilience Hub application draft version. To use this Application Component for running assessments, you must publish the Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </li> <li> <p>You will not be able to delete an Application Component if it has resources associated with it.</p> </li> </ul> </note>
 func (s *SDK) DeleteAppVersionAppComponent(ctx context.Context, request operations.DeleteAppVersionAppComponentRequest) (*operations.DeleteAppVersionAppComponentResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/delete-app-version-app-component"
@@ -1301,7 +1301,7 @@ func (s *SDK) DeleteAppVersionAppComponent(ctx context.Context, request operatio
 	return res, nil
 }
 
-// DeleteAppVersionResource - <p>Deletes a resource from the AWS Resilience Hub application.</p> <note> <ul> <li> <p>You can only delete a manually added resource. To exclude non-manually added resources, use the <code>UpdateAppVersionResource</code> API.</p> </li> <li> <p>This action has no effect outside AWS Resilience Hub.</p> </li> <li> <p>This API updates the AWS Resilience Hub application draft version. To use this resource for running resiliency assessments, you must publish the AWS Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </li> </ul> </note>
+// DeleteAppVersionResource - <p>Deletes a resource from the Resilience Hub application.</p> <note> <ul> <li> <p>You can only delete a manually added resource. To exclude non-manually added resources, use the <code>UpdateAppVersionResource</code> API.</p> </li> <li> <p>This action has no effect outside Resilience Hub.</p> </li> <li> <p>This API updates the Resilience Hub application draft version. To use this resource for running resiliency assessments, you must publish the Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </li> </ul> </note>
 func (s *SDK) DeleteAppVersionResource(ctx context.Context, request operations.DeleteAppVersionResourceRequest) (*operations.DeleteAppVersionResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/delete-app-version-resource"
@@ -1639,7 +1639,7 @@ func (s *SDK) DeleteResiliencyPolicy(ctx context.Context, request operations.Del
 	return res, nil
 }
 
-// DescribeApp - Describes an AWS Resilience Hub application.
+// DescribeApp - Describes an Resilience Hub application.
 func (s *SDK) DescribeApp(ctx context.Context, request operations.DescribeAppRequest) (*operations.DescribeAppResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describe-app"
@@ -1745,7 +1745,7 @@ func (s *SDK) DescribeApp(ctx context.Context, request operations.DescribeAppReq
 	return res, nil
 }
 
-// DescribeAppAssessment - Describes an assessment for an AWS Resilience Hub application.
+// DescribeAppAssessment - Describes an assessment for an Resilience Hub application.
 func (s *SDK) DescribeAppAssessment(ctx context.Context, request operations.DescribeAppAssessmentRequest) (*operations.DescribeAppAssessmentResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describe-app-assessment"
@@ -1851,7 +1851,7 @@ func (s *SDK) DescribeAppAssessment(ctx context.Context, request operations.Desc
 	return res, nil
 }
 
-// DescribeAppVersion - Describes the AWS Resilience Hub application version.
+// DescribeAppVersion - Describes the Resilience Hub application version.
 func (s *SDK) DescribeAppVersion(ctx context.Context, request operations.DescribeAppVersionRequest) (*operations.DescribeAppVersionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describe-app-version"
@@ -1957,7 +1957,7 @@ func (s *SDK) DescribeAppVersion(ctx context.Context, request operations.Describ
 	return res, nil
 }
 
-// DescribeAppVersionAppComponent - Describes an Application Component in the AWS Resilience Hub application.
+// DescribeAppVersionAppComponent - Describes an Application Component in the Resilience Hub application.
 func (s *SDK) DescribeAppVersionAppComponent(ctx context.Context, request operations.DescribeAppVersionAppComponentRequest) (*operations.DescribeAppVersionAppComponentResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describe-app-version-app-component"
@@ -2073,7 +2073,7 @@ func (s *SDK) DescribeAppVersionAppComponent(ctx context.Context, request operat
 	return res, nil
 }
 
-// DescribeAppVersionResource - <p>Describes a resource of the AWS Resilience Hub application.</p> <note> <p>This API accepts only one of the following parameters to descibe the resource:</p> <ul> <li> <p> <code>resourceName</code> </p> </li> <li> <p> <code>logicalResourceId</code> </p> </li> <li> <p> <code>physicalResourceId</code> (Along with <code>physicalResourceId</code>, you can also provide <code>awsAccountId</code>, and <code>awsRegion</code>)</p> </li> </ul> </note>
+// DescribeAppVersionResource - <p>Describes a resource of the Resilience Hub application.</p> <note> <p>This API accepts only one of the following parameters to descibe the resource:</p> <ul> <li> <p> <code>resourceName</code> </p> </li> <li> <p> <code>logicalResourceId</code> </p> </li> <li> <p> <code>physicalResourceId</code> (Along with <code>physicalResourceId</code>, you can also provide <code>awsAccountId</code>, and <code>awsRegion</code>)</p> </li> </ul> </note>
 func (s *SDK) DescribeAppVersionResource(ctx context.Context, request operations.DescribeAppVersionResourceRequest) (*operations.DescribeAppVersionResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describe-app-version-resource"
@@ -2295,7 +2295,7 @@ func (s *SDK) DescribeAppVersionResourcesResolutionStatus(ctx context.Context, r
 	return res, nil
 }
 
-// DescribeAppVersionTemplate - Describes details about an AWS Resilience Hub application.
+// DescribeAppVersionTemplate - Describes details about an Resilience Hub application.
 func (s *SDK) DescribeAppVersionTemplate(ctx context.Context, request operations.DescribeAppVersionTemplateRequest) (*operations.DescribeAppVersionTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describe-app-version-template"
@@ -2507,7 +2507,7 @@ func (s *SDK) DescribeDraftAppVersionResourcesImportStatus(ctx context.Context, 
 	return res, nil
 }
 
-// DescribeResiliencyPolicy - Describes a specified resiliency policy for an AWS Resilience Hub application. The returned policy object includes creation time, data location constraints, the Amazon Resource Name (ARN) for the policy, tags, tier, and more.
+// DescribeResiliencyPolicy - Describes a specified resiliency policy for an Resilience Hub application. The returned policy object includes creation time, data location constraints, the Amazon Resource Name (ARN) for the policy, tags, tier, and more.
 func (s *SDK) DescribeResiliencyPolicy(ctx context.Context, request operations.DescribeResiliencyPolicyRequest) (*operations.DescribeResiliencyPolicyResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/describe-resiliency-policy"
@@ -2613,7 +2613,7 @@ func (s *SDK) DescribeResiliencyPolicy(ctx context.Context, request operations.D
 	return res, nil
 }
 
-// ImportResourcesToDraftAppVersion - Imports resources to AWS Resilience Hub application draft version from different input sources. For more information about the input sources supported by AWS Resilience Hub, see <a href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/discover-structure.html">Discover the structure and describe your Resilience Hub application</a>.
+// ImportResourcesToDraftAppVersion - Imports resources to Resilience Hub application draft version from different input sources. For more information about the input sources supported by Resilience Hub, see <a href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/discover-structure.html">Discover the structure and describe your Resilience Hub application</a>.
 func (s *SDK) ImportResourcesToDraftAppVersion(ctx context.Context, request operations.ImportResourcesToDraftAppVersionRequest) (*operations.ImportResourcesToDraftAppVersionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/import-resources-to-draft-app-version"
@@ -2729,7 +2729,7 @@ func (s *SDK) ImportResourcesToDraftAppVersion(ctx context.Context, request oper
 	return res, nil
 }
 
-// ListAlarmRecommendations - Lists the alarm recommendations for an AWS Resilience Hub application.
+// ListAlarmRecommendations - Lists the alarm recommendations for an Resilience Hub application.
 func (s *SDK) ListAlarmRecommendations(ctx context.Context, request operations.ListAlarmRecommendationsRequest) (*operations.ListAlarmRecommendationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-alarm-recommendations"
@@ -2839,7 +2839,7 @@ func (s *SDK) ListAlarmRecommendations(ctx context.Context, request operations.L
 	return res, nil
 }
 
-// ListAppAssessments - Lists the assessments for an AWS Resilience Hub application. You can use request parameters to refine the results for the response object.
+// ListAppAssessments - Lists the assessments for an Resilience Hub application. You can use request parameters to refine the results for the response object.
 func (s *SDK) ListAppAssessments(ctx context.Context, request operations.ListAppAssessmentsRequest) (*operations.ListAppAssessmentsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-app-assessments"
@@ -2939,7 +2939,7 @@ func (s *SDK) ListAppAssessments(ctx context.Context, request operations.ListApp
 	return res, nil
 }
 
-// ListAppComponentCompliances - Lists the compliances for an AWS Resilience Hub Application Component.
+// ListAppComponentCompliances - Lists the compliances for an Resilience Hub Application Component.
 func (s *SDK) ListAppComponentCompliances(ctx context.Context, request operations.ListAppComponentCompliancesRequest) (*operations.ListAppComponentCompliancesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-app-component-compliances"
@@ -3049,7 +3049,7 @@ func (s *SDK) ListAppComponentCompliances(ctx context.Context, request operation
 	return res, nil
 }
 
-// ListAppComponentRecommendations - Lists the recommendations for an AWS Resilience Hub Application Component.
+// ListAppComponentRecommendations - Lists the recommendations for an Resilience Hub Application Component.
 func (s *SDK) ListAppComponentRecommendations(ctx context.Context, request operations.ListAppComponentRecommendationsRequest) (*operations.ListAppComponentRecommendationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-app-component-recommendations"
@@ -3159,7 +3159,7 @@ func (s *SDK) ListAppComponentRecommendations(ctx context.Context, request opera
 	return res, nil
 }
 
-// ListAppInputSources - Lists all the input sources of the AWS Resilience Hub application. For more information about the input sources supported by AWS Resilience Hub, see <a href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/discover-structure.html">Discover the structure and describe your Resilience Hub application</a>.
+// ListAppInputSources - Lists all the input sources of the Resilience Hub application. For more information about the input sources supported by Resilience Hub, see <a href="https://docs.aws.amazon.com/resilience-hub/latest/userguide/discover-structure.html">Discover the structure and describe your Resilience Hub application</a>.
 func (s *SDK) ListAppInputSources(ctx context.Context, request operations.ListAppInputSourcesRequest) (*operations.ListAppInputSourcesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-app-input-sources"
@@ -3269,7 +3269,7 @@ func (s *SDK) ListAppInputSources(ctx context.Context, request operations.ListAp
 	return res, nil
 }
 
-// ListAppVersionAppComponents - Lists all the Application Components in the AWS Resilience Hub application.
+// ListAppVersionAppComponents - Lists all the Application Components in the Resilience Hub application.
 func (s *SDK) ListAppVersionAppComponents(ctx context.Context, request operations.ListAppVersionAppComponentsRequest) (*operations.ListAppVersionAppComponentsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-app-version-app-components"
@@ -3499,7 +3499,7 @@ func (s *SDK) ListAppVersionResourceMappings(ctx context.Context, request operat
 	return res, nil
 }
 
-// ListAppVersionResources - Lists all the resources in an AWS Resilience Hub application.
+// ListAppVersionResources - Lists all the resources in an Resilience Hub application.
 func (s *SDK) ListAppVersionResources(ctx context.Context, request operations.ListAppVersionResourcesRequest) (*operations.ListAppVersionResourcesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-app-version-resources"
@@ -3619,7 +3619,7 @@ func (s *SDK) ListAppVersionResources(ctx context.Context, request operations.Li
 	return res, nil
 }
 
-// ListAppVersions - Lists the different versions for the AWS Resilience Hub applications.
+// ListAppVersions - Lists the different versions for the Resilience Hub applications.
 func (s *SDK) ListAppVersions(ctx context.Context, request operations.ListAppVersionsRequest) (*operations.ListAppVersionsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-app-versions"
@@ -3719,7 +3719,7 @@ func (s *SDK) ListAppVersions(ctx context.Context, request operations.ListAppVer
 	return res, nil
 }
 
-// ListApps - <p>Lists your AWS Resilience Hub applications.</p> <note> <p>You can filter applications using only one filter at a time or without using any filter. If you try to filter applications using multiple filters, you will get the following error:</p> <p> <code>An error occurred (ValidationException) when calling the ListApps operation: Only one filter is supported for this operation.</code> </p> </note>
+// ListApps - <p>Lists your Resilience Hub applications.</p> <note> <p>You can filter applications using only one filter at a time or without using any filter. If you try to filter applications using multiple filters, you will get the following error:</p> <p> <code>An error occurred (ValidationException) when calling the ListApps operation: Only one filter is supported for this operation.</code> </p> </note>
 func (s *SDK) ListApps(ctx context.Context, request operations.ListAppsRequest) (*operations.ListAppsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-apps"
@@ -3809,7 +3809,7 @@ func (s *SDK) ListApps(ctx context.Context, request operations.ListAppsRequest) 
 	return res, nil
 }
 
-// ListRecommendationTemplates - Lists the recommendation templates for the AWS Resilience Hub applications.
+// ListRecommendationTemplates - Lists the recommendation templates for the Resilience Hub applications.
 func (s *SDK) ListRecommendationTemplates(ctx context.Context, request operations.ListRecommendationTemplatesRequest) (*operations.ListRecommendationTemplatesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-recommendation-templates#assessmentArn"
@@ -3899,7 +3899,7 @@ func (s *SDK) ListRecommendationTemplates(ctx context.Context, request operation
 	return res, nil
 }
 
-// ListResiliencyPolicies - Lists the resiliency policies for the AWS Resilience Hub applications.
+// ListResiliencyPolicies - Lists the resiliency policies for the Resilience Hub applications.
 func (s *SDK) ListResiliencyPolicies(ctx context.Context, request operations.ListResiliencyPoliciesRequest) (*operations.ListResiliencyPoliciesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-resiliency-policies"
@@ -3999,7 +3999,7 @@ func (s *SDK) ListResiliencyPolicies(ctx context.Context, request operations.Lis
 	return res, nil
 }
 
-// ListSopRecommendations - Lists the standard operating procedure (SOP) recommendations for the AWS Resilience Hub applications.
+// ListSopRecommendations - Lists the standard operating procedure (SOP) recommendations for the Resilience Hub applications.
 func (s *SDK) ListSopRecommendations(ctx context.Context, request operations.ListSopRecommendationsRequest) (*operations.ListSopRecommendationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-sop-recommendations"
@@ -4119,7 +4119,7 @@ func (s *SDK) ListSopRecommendations(ctx context.Context, request operations.Lis
 	return res, nil
 }
 
-// ListSuggestedResiliencyPolicies - Lists the suggested resiliency policies for the AWS Resilience Hub applications.
+// ListSuggestedResiliencyPolicies - Lists the suggested resiliency policies for the Resilience Hub applications.
 func (s *SDK) ListSuggestedResiliencyPolicies(ctx context.Context, request operations.ListSuggestedResiliencyPoliciesRequest) (*operations.ListSuggestedResiliencyPoliciesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-suggested-resiliency-policies"
@@ -4219,7 +4219,7 @@ func (s *SDK) ListSuggestedResiliencyPolicies(ctx context.Context, request opera
 	return res, nil
 }
 
-// ListTagsForResource - Lists the tags for your resources in your AWS Resilience Hub applications.
+// ListTagsForResource - Lists the tags for your resources in your Resilience Hub applications.
 func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTagsForResourceRequest) (*operations.ListTagsForResourceResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/tags/{resourceArn}", request.PathParams, nil)
@@ -4315,7 +4315,7 @@ func (s *SDK) ListTagsForResource(ctx context.Context, request operations.ListTa
 	return res, nil
 }
 
-// ListTestRecommendations - Lists the test recommendations for the AWS Resilience Hub application.
+// ListTestRecommendations - Lists the test recommendations for the Resilience Hub application.
 func (s *SDK) ListTestRecommendations(ctx context.Context, request operations.ListTestRecommendationsRequest) (*operations.ListTestRecommendationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-test-recommendations"
@@ -4435,7 +4435,7 @@ func (s *SDK) ListTestRecommendations(ctx context.Context, request operations.Li
 	return res, nil
 }
 
-// ListUnsupportedAppVersionResources - Lists the resources that are not currently supported in AWS Resilience Hub. An unsupported resource is a resource that exists in the object that was used to create an app, but is not supported by AWS Resilience Hub.
+// ListUnsupportedAppVersionResources - Lists the resources that are not currently supported in Resilience Hub. An unsupported resource is a resource that exists in the object that was used to create an app, but is not supported by Resilience Hub.
 func (s *SDK) ListUnsupportedAppVersionResources(ctx context.Context, request operations.ListUnsupportedAppVersionResourcesRequest) (*operations.ListUnsupportedAppVersionResourcesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/list-unsupported-app-version-resources"
@@ -4555,7 +4555,7 @@ func (s *SDK) ListUnsupportedAppVersionResources(ctx context.Context, request op
 	return res, nil
 }
 
-// PublishAppVersion - Publishes a new version of a specific AWS Resilience Hub application.
+// PublishAppVersion - Publishes a new version of a specific Resilience Hub application.
 func (s *SDK) PublishAppVersion(ctx context.Context, request operations.PublishAppVersionRequest) (*operations.PublishAppVersionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/publish-app-version"
@@ -4671,7 +4671,7 @@ func (s *SDK) PublishAppVersion(ctx context.Context, request operations.PublishA
 	return res, nil
 }
 
-// PutDraftAppVersionTemplate - Adds or updates the app template for an AWS Resilience Hub application draft version.
+// PutDraftAppVersionTemplate - Adds or updates the app template for an Resilience Hub application draft version.
 func (s *SDK) PutDraftAppVersionTemplate(ctx context.Context, request operations.PutDraftAppVersionTemplateRequest) (*operations.PutDraftAppVersionTemplateResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/put-draft-app-version-template"
@@ -5467,7 +5467,7 @@ func (s *SDK) UpdateApp(ctx context.Context, request operations.UpdateAppRequest
 	return res, nil
 }
 
-// UpdateAppVersion - <p>Updates the AWS Resilience Hub application version.</p> <note> <p>This API updates the AWS Resilience Hub application draft version. To use this information for running resiliency assessments, you must publish the AWS Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </note>
+// UpdateAppVersion - <p>Updates the Resilience Hub application version.</p> <note> <p>This API updates the Resilience Hub application draft version. To use this information for running resiliency assessments, you must publish the Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </note>
 func (s *SDK) UpdateAppVersion(ctx context.Context, request operations.UpdateAppVersionRequest) (*operations.UpdateAppVersionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/update-app-version"
@@ -5583,7 +5583,7 @@ func (s *SDK) UpdateAppVersion(ctx context.Context, request operations.UpdateApp
 	return res, nil
 }
 
-// UpdateAppVersionAppComponent - <p>Updates an existing Application Component in the AWS Resilience Hub application.</p> <note> <p>This API updates the AWS Resilience Hub application draft version. To use this Application Component for running assessments, you must publish the AWS Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </note>
+// UpdateAppVersionAppComponent - <p>Updates an existing Application Component in the Resilience Hub application.</p> <note> <p>This API updates the Resilience Hub application draft version. To use this Application Component for running assessments, you must publish the Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </note>
 func (s *SDK) UpdateAppVersionAppComponent(ctx context.Context, request operations.UpdateAppVersionAppComponentRequest) (*operations.UpdateAppVersionAppComponentResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/update-app-version-app-component"
@@ -5699,7 +5699,7 @@ func (s *SDK) UpdateAppVersionAppComponent(ctx context.Context, request operatio
 	return res, nil
 }
 
-// UpdateAppVersionResource - <p>Updates the resource details in the AWS Resilience Hub application.</p> <note> <ul> <li> <p>This action has no effect outside AWS Resilience Hub.</p> </li> <li> <p>This API updates the AWS Resilience Hub application draft version. To use this resource for running resiliency assessments, you must publish the AWS Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </li> <li> <p>To update application version with new <code>physicalResourceID</code>, you must call <code>ResolveAppVersionResources</code> API.</p> </li> </ul> </note>
+// UpdateAppVersionResource - <p>Updates the resource details in the Resilience Hub application.</p> <note> <ul> <li> <p>This action has no effect outside Resilience Hub.</p> </li> <li> <p>This API updates the Resilience Hub application draft version. To use this resource for running resiliency assessments, you must publish the Resilience Hub application using the <code>PublishAppVersion</code> API.</p> </li> <li> <p>To update application version with new <code>physicalResourceID</code>, you must call <code>ResolveAppVersionResources</code> API.</p> </li> </ul> </note>
 func (s *SDK) UpdateAppVersionResource(ctx context.Context, request operations.UpdateAppVersionResourceRequest) (*operations.UpdateAppVersionResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/update-app-version-resource"

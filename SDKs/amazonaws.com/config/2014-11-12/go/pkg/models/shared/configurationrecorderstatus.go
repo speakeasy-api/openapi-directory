@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// ConfigurationRecorderStatus - The current status of the configuration recorder.
+// ConfigurationRecorderStatus - <p>The current status of the configuration recorder.</p> <note> <p>For a detailed status of recording events over time, add your Config events to CloudWatch metrics and use CloudWatch metrics.</p> </note>
 type ConfigurationRecorderStatus struct {
 	LastErrorCode        *string             `json:"lastErrorCode,omitempty"`
 	LastErrorMessage     *string             `json:"lastErrorMessage,omitempty"`

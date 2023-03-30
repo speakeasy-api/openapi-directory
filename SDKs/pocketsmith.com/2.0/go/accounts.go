@@ -302,6 +302,8 @@ func (s *accounts) PostUsersIDAccounts(ctx context.Context, request operations.P
 	case httpRes.StatusCode == 403:
 		fallthrough
 	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 422:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.Error

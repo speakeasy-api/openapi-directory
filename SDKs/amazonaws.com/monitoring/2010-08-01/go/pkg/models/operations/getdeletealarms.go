@@ -52,7 +52,7 @@ func (e *GETDeleteAlarmsVersionEnum) UnmarshalJSON(data []byte) error {
 
 type GETDeleteAlarmsQueryParams struct {
 	Action GETDeleteAlarmsActionEnum `queryParam:"style=form,explode=true,name=Action"`
-	// The alarms to be deleted.
+	// The alarms to be deleted. Do not enclose the alarm names in quote marks.
 	AlarmNames []string                   `queryParam:"style=form,explode=true,name=AlarmNames"`
 	Version    GETDeleteAlarmsVersionEnum `queryParam:"style=form,explode=true,name=Version"`
 }

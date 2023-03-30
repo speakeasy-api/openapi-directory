@@ -8,7 +8,8 @@ import (
 
 // CreateAccessTokenResponse - Success
 type CreateAccessTokenResponse struct {
-	ExpiresTime *time.Time `json:"expiresTime,omitempty"`
-	Name        *string    `json:"name,omitempty"`
-	Secret      string     `json:"secret"`
+	AccessTokenID string    `json:"accessTokenId"`
+	ExpiresTime   time.Time `json:"expiresTime"`
+	Name          string    `json:"name"`
+	Secret        string    `json:"secret"`
 }

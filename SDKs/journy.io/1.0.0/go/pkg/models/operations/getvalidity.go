@@ -11,7 +11,7 @@ type GetValidity500ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetValidity500ApplicationJSON - The error message should specify what cause the error
+// GetValidity500ApplicationJSON - The message specifies what is done
 type GetValidity500ApplicationJSON struct {
 	Message string                            `json:"message"`
 	Meta    GetValidity500ApplicationJSONMeta `json:"meta"`
@@ -22,7 +22,7 @@ type GetValidity429ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetValidity429ApplicationJSON - The error message should specify what cause the error
+// GetValidity429ApplicationJSON - The message specifies what is done
 type GetValidity429ApplicationJSON struct {
 	Message string                            `json:"message"`
 	Meta    GetValidity429ApplicationJSONMeta `json:"meta"`
@@ -33,7 +33,7 @@ type GetValidity403ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetValidity403ApplicationJSON - The error message should specify what cause the error
+// GetValidity403ApplicationJSON - The message specifies what is done
 type GetValidity403ApplicationJSON struct {
 	Message string                            `json:"message"`
 	Meta    GetValidity403ApplicationJSONMeta `json:"meta"`
@@ -44,7 +44,7 @@ type GetValidity401ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetValidity401ApplicationJSON - The error message should specify what cause the error
+// GetValidity401ApplicationJSON - The message specifies what is done
 type GetValidity401ApplicationJSON struct {
 	Message string                            `json:"message"`
 	Meta    GetValidity401ApplicationJSONMeta `json:"meta"`

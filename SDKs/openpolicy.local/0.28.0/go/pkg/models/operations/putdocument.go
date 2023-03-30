@@ -20,6 +20,8 @@ type PutDocumentHeaders struct {
 type PutDocumentRequest struct {
 	PathParams PutDocumentPathParams
 	Headers    PutDocumentHeaders
+	// The JSON document to write to the specified path.
+	Request interface{} `request:"mediaType=application/json"`
 }
 
 type PutDocumentResponse struct {

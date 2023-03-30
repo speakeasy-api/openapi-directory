@@ -53,6 +53,7 @@ type Invoice struct {
 	EstimationID          *int                       `json:"EstimationId,omitempty"`
 	ID                    *int                       `json:"Id,omitempty"`
 	InvoiceCategoryID     *int                       `json:"InvoiceCategoryId,omitempty"`
+	IsDigitallySigned     *bool                      `json:"IsDigitallySigned,omitempty"`
 	IssuedOn              *time.Time                 `json:"IssuedOn,omitempty"`
 	Items                 []InvoiceItem              `json:"Items,omitempty"`
 	Notes                 *string                    `json:"Notes,omitempty"`

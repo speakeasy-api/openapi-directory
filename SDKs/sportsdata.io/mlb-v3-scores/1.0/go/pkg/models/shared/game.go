@@ -23,6 +23,7 @@ type Game struct {
 	CurrentPitcherID             *int64   `json:"CurrentPitcherID,omitempty"`
 	CurrentPitchingTeamID        *int64   `json:"CurrentPitchingTeamID,omitempty"`
 	DateTime                     *string  `json:"DateTime,omitempty"`
+	DateTimeUTC                  *string  `json:"DateTimeUTC,omitempty"`
 	Day                          *string  `json:"Day,omitempty"`
 	DueUpHitterId1               *int64   `json:"DueUpHitterID1,omitempty"`
 	DueUpHitterId2               *int64   `json:"DueUpHitterID2,omitempty"`
@@ -72,6 +73,7 @@ type Game struct {
 	SavingPitcherID              *int64   `json:"SavingPitcherID,omitempty"`
 	Season                       *int64   `json:"Season,omitempty"`
 	SeasonType                   *int64   `json:"SeasonType,omitempty"`
+	SeriesInfo                   *Series  `json:"SeriesInfo,omitempty"`
 	StadiumID                    *int64   `json:"StadiumID,omitempty"`
 	Status                       *string  `json:"Status,omitempty"`
 	Strikes                      *int64   `json:"Strikes,omitempty"`

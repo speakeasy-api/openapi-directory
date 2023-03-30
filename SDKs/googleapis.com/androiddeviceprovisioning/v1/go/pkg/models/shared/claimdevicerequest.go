@@ -48,6 +48,6 @@ type ClaimDeviceRequest struct {
 	PreProvisioningToken *string `json:"preProvisioningToken,omitempty"`
 	// Required. The section type of the device's provisioning record.
 	SectionType *ClaimDeviceRequestSectionTypeEnum `json:"sectionType,omitempty"`
-	// Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK. The unique identifier of the SimLock profile (go/simlock/profiles).
+	// Optional. Must and can only be set when DeviceProvisioningSectionType is SECTION_TYPE_SIM_LOCK. The unique identifier of the SimLock profile.
 	SimlockProfileID *string `json:"simlockProfileId,omitempty"`
 }

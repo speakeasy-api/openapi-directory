@@ -89,7 +89,7 @@ func (e *GetTruckRouteOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-// GetTruckRouteOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#outputSRS target="_blank">outputSRS</a>
+// GetTruckRouteOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetTruckRouteOutputFormatOutputSrsEnum string
 
 const (
@@ -142,14 +142,18 @@ type GetTruckRouteOutputFormatQueryParams struct {
 	Disable *string `queryParam:"style=form,explode=true,name=disable"`
 	// distance unit of measure (e.g., km, mi). Default is km.
 	DistanceUnit *GetTruckRouteOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetTruckRouteOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
-	// A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#points target='_blank'>points</a>
+	// A comma-separated list of values to identify sections of the route that correspond to truck route sections and non-truck route sections, ferry sections and non-ferry sections, and locality names.  The response includes a partitions attribute, which is an array of objects, each of which has an index (into the route coordinate array) and a value for each of the attributes requested in the partition parameter. Any or all of the following values can be used. <br><br>Partition values:<br> isTruckRoute – Distinguish between truck route sections and non-truck route sections <br> isFerry – Distinguish between ferry sections and non-ferry sections <br> locality – Include the locality name for the route partition
+	Partition *string `queryParam:"style=form,explode=true,name=partition"`
+	// A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#points target='_blank'>points</a>
 	Points string `queryParam:"style=form,explode=true,name=points"`
 	// If true, route ends at start point. Default is false.
 	RoundTrip *bool `queryParam:"style=form,explode=true,name=roundTrip"`
 	// Route description (e.g., Shortest route from 1002 Johnson St, Victoria to 1105 Royal Ave,New Westminster)
 	RouteDescription *string `queryParam:"style=form,explode=true,name=routeDescription"`
+	// The truck route multiplier value is used to multiply the cost of using roads that are not truck routes.
+	TruckRouteMultiplier *int64 `queryParam:"style=form,explode=true,name=truckRouteMultiplier"`
 }
 
 type GetTruckRouteOutputFormatRequest struct {

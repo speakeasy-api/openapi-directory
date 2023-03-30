@@ -98,6 +98,7 @@ const (
 	PostGeomarksCopyResultFormatEnumShpz    PostGeomarksCopyResultFormatEnum = "shpz"
 	PostGeomarksCopyResultFormatEnumGeojson PostGeomarksCopyResultFormatEnum = "geojson"
 	PostGeomarksCopyResultFormatEnumGml     PostGeomarksCopyResultFormatEnum = "gml"
+	PostGeomarksCopyResultFormatEnumGpkg    PostGeomarksCopyResultFormatEnum = "gpkg"
 	PostGeomarksCopyResultFormatEnumWkt     PostGeomarksCopyResultFormatEnum = "wkt"
 )
 
@@ -122,6 +123,8 @@ func (e *PostGeomarksCopyResultFormatEnum) UnmarshalJSON(data []byte) error {
 	case "geojson":
 		fallthrough
 	case "gml":
+		fallthrough
+	case "gpkg":
 		fallthrough
 	case "wkt":
 		*e = PostGeomarksCopyResultFormatEnum(s)

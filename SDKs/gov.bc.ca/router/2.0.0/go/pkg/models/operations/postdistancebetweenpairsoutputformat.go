@@ -86,7 +86,7 @@ func (e *PostDistanceBetweenPairsOutputFormatDistanceUnitEnum) UnmarshalJSON(dat
 	}
 }
 
-// PostDistanceBetweenPairsOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#outputSRS target="_blank">outputSRS</a>
+// PostDistanceBetweenPairsOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type PostDistanceBetweenPairsOutputFormatOutputSrsEnum string
 
 const (
@@ -135,19 +135,19 @@ type PostDistanceBetweenPairsOutputFormatQueryParams struct {
 	Criteria *PostDistanceBetweenPairsOutputFormatCriteriaEnum `queryParam:"style=form,explode=true,name=criteria"`
 	// departure date and time in internet timestamp notation as defined in RFC 3339, section 5.6 (e.g., 2019-02-28T11:36:00-08:00);<br> Ignored if time-dependency modules are disabled
 	Departure *time.Time `queryParam:"style=form,explode=true,name=departure"`
-	// A comma-separated list of time-related modules to disable (e.g., sc,tf,ev,td).<br>Module names include:<br> sc – ferry schedules; disabled by default; disabled by default and only suitable for demos<br>tf – historic traffic congestion; disabled by default and only suitable for demos<br>ev – road events; disabled by default and only suitable for demos<br>td – time-dependency; disabling this disables sc, tf, and ev modules<br>tr – turn restrictions; if td is disabled, time-dependent turn restrictions are ignored<br>tc - turn costs (e.g., left turns take longer than right turns)
+	// A comma-separated list of time-related modules to disable (e.g., sc,tf,ev,td).<br><br>Module names include:<br> sc – ferry schedules; disabled by default; disabled by default and only suitable for demos<br>tf – historic traffic congestion; disabled by default and only suitable for demos<br>ev – road events; disabled by default and only suitable for demos<br>td – time-dependency; disabling this disables sc, tf, and ev modules<br>tr – turn restrictions; if td is disabled, time-dependent turn restrictions are ignored<br>tc - turn costs (e.g., left turns take longer than right turns)
 	Disable *string `queryParam:"style=form,explode=true,name=disable"`
 	// distance unit of measure (e.g., km, mi). Default is km.
 	DistanceUnit *PostDistanceBetweenPairsOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
-	// A comma-separated list of origin points.  See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#fromPoints target='_blank'>fromPoints</a>
+	// A comma-separated list of origin points.  See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#fromPoints target='_blank'>fromPoints</a>
 	FromPoints string `queryParam:"style=form,explode=true,name=fromPoints"`
 	// The maximum number of pairs to return for each toPoint.  Pairs are ordered by distance/time from fromPoint. For example, given 1 fromPoint, and 10 toPoints, and maxPairs=1 , return the nearest toPoint to the fromPoint. Given 3 fromPoints and 10 toPoints, maxPairs=3 means return the 3 nearest toPoints to each fromPoint.
 	MaxPairs *int64 `queryParam:"style=form,explode=true,name=maxPairs"`
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *PostDistanceBetweenPairsOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// Route description (e.g., Shortest route from 1002 Johnson St, Victoria to 1105 Royal Ave,New Westminster)
 	RouteDescription *string `queryParam:"style=form,explode=true,name=routeDescription"`
-	// A comma-separated list of destination points. See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#toPoints target='_blank'>toPoints</a>
+	// A comma-separated list of destination points. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#toPoints target='_blank'>toPoints</a>
 	ToPoints string `queryParam:"style=form,explode=true,name=toPoints"`
 }
 

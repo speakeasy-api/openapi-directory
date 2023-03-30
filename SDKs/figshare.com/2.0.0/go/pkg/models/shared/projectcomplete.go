@@ -5,21 +5,21 @@ package shared
 // ProjectComplete - OK. Project representation
 type ProjectComplete struct {
 	// List of project collaborators
-	Collaborators []Collaborator `json:"collaborators,omitempty"`
+	Collaborators []Collaborator `json:"collaborators"`
 	// Project description
-	Description *string `json:"description,omitempty"`
+	Description string `json:"description"`
 	// Project public url
-	FigshareURL *string `json:"figshare_url,omitempty"`
+	FigshareURL string `json:"figshare_url"`
 	// Project funding
-	Funding *string `json:"funding,omitempty"`
+	Funding string `json:"funding"`
 	// Full Project funding information
-	FundingList []FundingInformation `json:"funding_list,omitempty"`
+	FundingList []FundingInformation `json:"funding_list"`
 	// Project id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Date when project was published
-	PublishedDate *string `json:"published_date,omitempty"`
+	PublishedDate string `json:"published_date"`
 	// Project title
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 	// Api endpoint
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 }

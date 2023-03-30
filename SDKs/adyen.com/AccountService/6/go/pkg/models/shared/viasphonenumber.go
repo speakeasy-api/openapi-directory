@@ -41,10 +41,10 @@ func (e *ViasPhoneNumberPhoneTypeEnum) UnmarshalJSON(data []byte) error {
 type ViasPhoneNumber struct {
 	// The two-character country code of the phone number.
 	// >The permitted country codes are defined in ISO-3166-1 alpha-2 (e.g. 'NL').
-	PhoneCountryCode string `json:"phoneCountryCode"`
+	PhoneCountryCode *string `json:"phoneCountryCode,omitempty"`
 	// The phone number.
 	// >The inclusion of the phone number country code is not necessary.
-	PhoneNumber string `json:"phoneNumber"`
+	PhoneNumber *string `json:"phoneNumber,omitempty"`
 	// The type of the phone number.
 	// >The following values are permitted: `Landline`, `Mobile`, `SIP`, `Fax`.
 	PhoneType *ViasPhoneNumberPhoneTypeEnum `json:"phoneType,omitempty"`

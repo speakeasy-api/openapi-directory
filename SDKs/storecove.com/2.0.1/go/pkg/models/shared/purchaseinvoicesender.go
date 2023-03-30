@@ -4,6 +4,8 @@ package shared
 
 type PurchaseInvoiceSender struct {
 	BillingContact *PurchaseInvoiceSenderBillingContact `json:"billing_contact,omitempty"`
+	// The building number. Used in SA.
+	BuildingNumber *string `json:"building_number,omitempty"`
 	// The city.
 	City *string `json:"city,omitempty"`
 	// The country.
@@ -14,13 +16,19 @@ type PurchaseInvoiceSender struct {
 	Department *string `json:"department,omitempty"`
 	// The array of identifiers for this sender.
 	Identifiers []PeppolIdentifier `json:"identifiers,omitempty"`
+	// The legal name of the party who sent the invoice.
+	LegalName *string `json:"legal_name,omitempty"`
 	// The address
 	Line1 *string `json:"line1,omitempty"`
 	// The address, line 2
 	Line2 *string `json:"line2,omitempty"`
+	// The neighborhood. Used in SA.
+	Neighborhood *string `json:"neighborhood,omitempty"`
 	// The party who sent the invoice.
 	PartyName         *string           `json:"party_name,omitempty"`
 	PeppolIdentifiers *PeppolIdentifier `json:"peppol_identifiers,omitempty"`
+	// The secondary number. Used in SA.
+	SecondaryNumber *string `json:"secondary_number,omitempty"`
 	// The zip code.
 	Zip *string `json:"zip,omitempty"`
 }

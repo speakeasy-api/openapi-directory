@@ -32,9 +32,9 @@ func newAssetsCorrelationMatrix(defaultClient, securityClient HTTPClient, server
 }
 
 // PostAssetsCorrelationMatrix - Correlation Matrix
-// Compute the Pearson correlation matrix of assets from either:
-// * The assets returns
-// * The assets covariance matrix
+// Compute the Pearson asset correlation matrix from either:
+// * The asset returns
+// * The asset covariance matrix
 //
 // References
 // * [Wikipedia, Correlation and Dependence](https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_matrices)
@@ -91,8 +91,310 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrix(ctx context.Contex
 	return res, nil
 }
 
+// PostAssetsCorrelationMatrixBounds - Correlation Matrix Bounds
+// Compute the lower bounds and the upper bounds of an asset correlation matrix associated to a given group of assets.
+//
+//	References
+//	* [Kawee Numpacharoen & Kornkanok Bunwong (2013) Boundaries of Correlation Adjustment with Applications to Financial Risk Management, Applied Mathematical Finance, 20:4, 403-414](http://dx.doi.org/10.1080/1350486X.2012.723517).
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixBounds(ctx context.Context, request operations.PostAssetsCorrelationMatrixBoundsRequest) (*operations.PostAssetsCorrelationMatrixBoundsResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/bounds"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostAssetsCorrelationMatrixBoundsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostAssetsCorrelationMatrixBounds200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostAssetsCorrelationMatrixBounds200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostAssetsCorrelationMatrixDenoised - Denoised Correlation Matrix
+// Compute a denoised asset correlation matrix, using one of the following methods:
+//
+//   - The eigenvalues clipping method, described in the first reference, which is based on random matrix theory
+//
+//     References
+//
+//   - [Laurent Laloux, Pierre Cizeau, Jean-Philippe Bouchaud, and Marc Potters, Noise Dressing of Financial Correlation Matrices, Phys. Rev. Lett. 83, 1467](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.83.1467)
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixDenoised(ctx context.Context, request operations.PostAssetsCorrelationMatrixDenoisedRequest) (*operations.PostAssetsCorrelationMatrixDenoisedResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/denoised"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostAssetsCorrelationMatrixDenoisedResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostAssetsCorrelationMatrixDenoised200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostAssetsCorrelationMatrixDenoised200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostAssetsCorrelationMatrixDistance - Correlation Matrix Distance
+// Compute the distance between an asset correlation matrix and a reference correlation matrix, using one of the following distance metrics:
+// * Euclidean distance (default), which is the distance induced by [the Frobenius norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm)
+// * Correlation matrix distance, defined in the first reference, which corresponds to [the cosine distance](https://en.wikipedia.org/wiki/Cosine_similarity) between the two vectorized asset correlation matrices
+// * Bures distance, defined in the second reference
+//
+//	References
+//	* [M. Herdin, N. Czink, H. Ozcelik and E. Bonek, Correlation matrix distance, a meaningful measure for evaluation of non-stationary MIMO channels, 2005 IEEE 61st Vehicular Technology Conference, 2005, pp. 136-140 Vol. 1](https://ieeexplore.ieee.org/document/1543265)
+//	* [Rajendra Bhatia, Tanvi Jain, Yongdo Lim, On the Bures–Wasserstein distance between positive definite matrices, Expositiones Mathematicae, Volume 37, Issue 2, 2019](https://www.sciencedirect.com/science/article/pii/S0723086918300021)
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixDistance(ctx context.Context, request operations.PostAssetsCorrelationMatrixDistanceRequest) (*operations.PostAssetsCorrelationMatrixDistanceResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/distance"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostAssetsCorrelationMatrixDistanceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostAssetsCorrelationMatrixDistance200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostAssetsCorrelationMatrixDistance200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostAssetsCorrelationMatrixEffectiveRank - Correlation Matrix Effective Rank
+// Compute the effective rank of an asset correlation matrix.
+//
+// References
+// * [Olivier Roy and Martin Vetterli, The effective rank: A measure of effective dimensionality, 15th European Signal Processing Conference, 2007](https://ieeexplore.ieee.org/document/7098875)
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixEffectiveRank(ctx context.Context, request operations.PostAssetsCorrelationMatrixEffectiveRankRequest) (*operations.PostAssetsCorrelationMatrixEffectiveRankResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/effective-rank"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostAssetsCorrelationMatrixEffectiveRankResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostAssetsCorrelationMatrixEffectiveRank200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostAssetsCorrelationMatrixEffectiveRank200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostAssetsCorrelationMatrixInformativeness - Correlation Matrix Informativeness
+// Compute the informativeness of an asset correlation matrix, using one of the following distance metrics:
+// * Euclidean distance (default), which is the distance induced by [the Frobenius norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm)
+// * Correlation matrix distance, defined in the second reference, which corresponds to [the cosine distance](https://en.wikipedia.org/wiki/Cosine_similarity) between the two vectorized asset correlation matrices
+// * Bures distance, defined in the third reference
+//
+//	References
+//	* [Austin J. Brockmeier and Tingting Mu and Sophia Ananiadou and John Y. Goulermas, Quantifying the Informativeness of Similarity Measurements, Journal of Machine Learning Research, 2017](http://jmlr.org/papers/v18/16-296.html)
+//	* [M. Herdin, N. Czink, H. Ozcelik and E. Bonek, Correlation matrix distance, a meaningful measure for evaluation of non-stationary MIMO channels, 2005 IEEE 61st Vehicular Technology Conference, 2005, pp. 136-140 Vol. 1](https://ieeexplore.ieee.org/document/1543265)
+//	* [Rajendra Bhatia, Tanvi Jain, Yongdo Lim, On the Bures–Wasserstein distance between positive definite matrices, Expositiones Mathematicae, Volume 37, Issue 2, 2019](https://www.sciencedirect.com/science/article/pii/S0723086918300021)
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixInformativeness(ctx context.Context, request operations.PostAssetsCorrelationMatrixInformativenessRequest) (*operations.PostAssetsCorrelationMatrixInformativenessResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/informativeness"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostAssetsCorrelationMatrixInformativenessResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostAssetsCorrelationMatrixInformativeness200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostAssetsCorrelationMatrixInformativeness200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // PostAssetsCorrelationMatrixNearest - Nearest Correlation Matrix
-// Compute the _closest_ correlation matrix to an approximate assets correlation matrix, optionally keeping a selected number of correlations fixed, _closest_ being defined in terms of [the Frobenius norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm).
+// Compute the _closest_ - in terms of [the Frobenius norm](https://en.wikipedia.org/wiki/Matrix_norm#Frobenius_norm) - asset correlation matrix to an approximate asset correlation matrix, optionally keeping a selected number of correlations fixed.
 //
 // References
 // * [Nicholas J. Higham, Computing the Nearest Correlation Matrix—A Problem from Finance, IMA J. Numer. Anal. 22, 329–343, 2002.](http://www.maths.manchester.ac.uk/~higham/narep/narep369.pdf)
@@ -149,15 +451,78 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixNearest(ctx context
 	return res, nil
 }
 
-// PostAssetsCorrelationMatrixShrinkage - Correlation Matrix Shrinkage
-// Compute a correlation matrix as a weighted average of an assets correlation matrix and a target correlation matrix, the target correlation matrix being either:
-// * An equicorrelation matrix made of 1
-// * An equicorrelation matrix made of 0
-// * An equicorrelation matrix made of -1/(n-1), with n the number of assets
-// * A provided correlation matrix
+// PostAssetsCorrelationMatrixRandom - Random Correlation Matrix
+// Generate an asset correlation matrix uniformly at random over the space of positive definite correlation matrices.
 //
 // References
-// * [Steiner, Andreas, Manipulating Valid Correlation Matrices](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1878165)
+// * [Joe, H., Generating random correlation matrices based on partial correlations. Journal of Multivariate Analysis, 2006, 97, 2177-2189](https://www.sciencedirect.com/science/article/pii/S0047259X05000886)
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixRandom(ctx context.Context, request operations.PostAssetsCorrelationMatrixRandomRequest) (*operations.PostAssetsCorrelationMatrixRandomResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/random"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostAssetsCorrelationMatrixRandomResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostAssetsCorrelationMatrixRandom200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostAssetsCorrelationMatrixRandom200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostAssetsCorrelationMatrixShrinkage - Correlation Matrix Shrinkage
+// Compute an asset correlation matrix as a convex linear combination of an asset correlation matrix and a target correlation matrix, the target correlation matrix being either:
+//
+//   - An equicorrelation matrix made of 1
+//
+//   - An equicorrelation matrix made of 0
+//
+//   - An equicorrelation matrix made of -1/(n-1), with n the number of assets
+//
+//   - A provided correlation matrix
+//
+//     References
+//
+//   - [Steiner, Andreas, Manipulating Valid Correlation Matrices](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1878165)
 func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixShrinkage(ctx context.Context, request operations.PostAssetsCorrelationMatrixShrinkageRequest) (*operations.PostAssetsCorrelationMatrixShrinkageResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/shrinkage"
@@ -211,8 +576,68 @@ func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixShrinkage(ctx conte
 	return res, nil
 }
 
+// PostAssetsCorrelationMatrixTheoryImplied - Theory-Implied Correlation Matrix
+// Compute the theory-implied asset correlation matrix associated with:
+// * A hierarchical classification of a universe of assets
+// * An asset correlation matrix
+//
+// References
+// * [Lopez de Prado, Marcos Estimation of Theory-Implied Correlation Matrices (November 9, 2019)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3484152)
+func (s *assetsCorrelationMatrix) PostAssetsCorrelationMatrixTheoryImplied(ctx context.Context, request operations.PostAssetsCorrelationMatrixTheoryImpliedRequest) (*operations.PostAssetsCorrelationMatrixTheoryImpliedResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/assets/correlation/matrix/theory-implied"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostAssetsCorrelationMatrixTheoryImpliedResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostAssetsCorrelationMatrixTheoryImplied200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostAssetsCorrelationMatrixTheoryImplied200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // PostAssetsCorrelationMatrixValidation - Correlation Matrix Validation
-// Validate whether a matrix is a correlation matrix.
+// Validate whether a matrix is an asset correlation matrix.
 //
 // References
 // * [Wikipedia, Correlation and Dependence](https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_matrices)

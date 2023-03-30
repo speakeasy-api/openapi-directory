@@ -52,8 +52,10 @@ type ExternalEventEntityStatusEnum string
 
 const (
 	ExternalEventEntityStatusEnumSuccess        ExternalEventEntityStatusEnum = "success"
-	ExternalEventEntityStatusEnumError          ExternalEventEntityStatusEnum = "error"
+	ExternalEventEntityStatusEnumFailure        ExternalEventEntityStatusEnum = "failure"
 	ExternalEventEntityStatusEnumPartialFailure ExternalEventEntityStatusEnum = "partial_failure"
+	ExternalEventEntityStatusEnumInProgress     ExternalEventEntityStatusEnum = "in_progress"
+	ExternalEventEntityStatusEnumSkipped        ExternalEventEntityStatusEnum = "skipped"
 )
 
 func (e *ExternalEventEntityStatusEnum) UnmarshalJSON(data []byte) error {
@@ -64,9 +66,13 @@ func (e *ExternalEventEntityStatusEnum) UnmarshalJSON(data []byte) error {
 	switch s {
 	case "success":
 		fallthrough
-	case "error":
+	case "failure":
 		fallthrough
 	case "partial_failure":
+		fallthrough
+	case "in_progress":
+		fallthrough
+	case "skipped":
 		*e = ExternalEventEntityStatusEnum(s)
 		return nil
 	default:

@@ -11,11 +11,11 @@ import (
 	"strings"
 )
 
-// datacenters - Each Datacenter represents a physical entity where virtual machines are hosted. Note that Datacenters are **not** guaranteed to be entirely independent failure domains.
+// datacenters - Each Datacenter represents a *virtual* Datacenter which is made up of possible many physical Datacenters where Servers are hosted.
 //
-// Datacenters in the same Location are connected by very low latency links.
+// Datacenter names are composed from their Location and virtual Datacenter number, for example `fsn1-dc14` means virtual Datacenter `14` in Location `fsn1`.
 //
-// Datacenter names are made up of their Location and Datacenter number, for example `fsn1-dc8` means Datacenter `8` in Location `fsn1`.
+// Right now there is only one Datacenter for each Location. The Datacenter numbers for `fsn`, `nbg` and `hel` are arbitrarily set to `14`, `3` and `2` for historic reasons and do not represent real physical Hetzner datacenters.
 type datacenters struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient

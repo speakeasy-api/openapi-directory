@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-// events - Endpoints for adding events
+// events - Endpoints for listing events.
 type events struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -32,8 +32,117 @@ func newEvents(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
-// TrackJourneyEvent - Push event
-// Endpoint used to push an event for a user or an account.
+// GetEvents - Get events
+// Endpoint to list events.
+func (s *events) GetEvents(ctx context.Context) (*operations.GetEventsResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/events"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetEventsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.GetEvents200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetEvents200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.GetEvents400ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetEvents400ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 401:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.GetEvents401ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetEvents401ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 403:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.GetEvents403ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetEvents403ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.GetEvents429ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetEvents429ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 500:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.GetEvents500ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetEvents500ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// TrackJourneyEvent - Track event
+// Endpoint used to track an event for a user or an account.
+//
+// This endpoint is moved to [Track](#operation/trackEvent).
 func (s *events) TrackJourneyEvent(ctx context.Context, request operations.TrackJourneyEventRequest) (*operations.TrackJourneyEventResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/events"

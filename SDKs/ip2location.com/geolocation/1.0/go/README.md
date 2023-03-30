@@ -33,9 +33,9 @@ func main() {
             },
             Format: "xml",
             IP: "8.8.8.8",
-            Key: "demo",
-            Lang: "tr",
-            Package: "WS14",
+            Key: "vero",
+            Lang: "ja",
+            Package: "WS22",
         },
     }
 

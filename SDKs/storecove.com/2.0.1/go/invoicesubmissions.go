@@ -33,7 +33,7 @@ func newInvoiceSubmissions(defaultClient, securityClient HTTPClient, serverURL, 
 }
 
 // CreateInvoiceSubmission - Submit a new invoice
-// Submit an invoice for delivery.
+// DEPRECATED. Use the new /document_submissions endpoint. Submit an invoice for delivery.
 func (s *invoiceSubmissions) CreateInvoiceSubmission(ctx context.Context, request operations.CreateInvoiceSubmissionRequest) (*operations.CreateInvoiceSubmissionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invoice_submissions"
@@ -100,8 +100,8 @@ func (s *invoiceSubmissions) CreateInvoiceSubmission(ctx context.Context, reques
 	return res, nil
 }
 
-// PreflightInvoiceRecipient - Preflight an invoice recipient
-// Check whether Storecove can deliver an invoice for a list of ids.
+// PreflightInvoiceRecipient - DEPRECATED. Preflight an invoice recipient
+// Deprecated. Use the new /discovery endpoint. Check whether Storecove can deliver an invoice for a list of ids.
 func (s *invoiceSubmissions) PreflightInvoiceRecipient(ctx context.Context, request operations.PreflightInvoiceRecipientRequest) (*operations.PreflightInvoiceRecipientResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invoice_submissions/preflight"
@@ -168,8 +168,8 @@ func (s *invoiceSubmissions) PreflightInvoiceRecipient(ctx context.Context, requ
 	return res, nil
 }
 
-// ShowInvoiceSubmissionEvidence - Get InvoiceSubmission Evidence
-// Get evidence for an InvoiceSubmission by GUID with corresponding status
+// ShowInvoiceSubmissionEvidence - DEPRECATED. Get InvoiceSubmission Evidence
+// Deprecated. Use the new /document_submissions/{guid}/evidence endpoint. Get evidence for an InvoiceSubmission by GUID with corresponding status
 func (s *invoiceSubmissions) ShowInvoiceSubmissionEvidence(ctx context.Context, request operations.ShowInvoiceSubmissionEvidenceRequest) (*operations.ShowInvoiceSubmissionEvidenceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/invoice_submissions/{guid}/evidence", request.PathParams, nil)

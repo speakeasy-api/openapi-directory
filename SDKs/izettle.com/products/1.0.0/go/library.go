@@ -31,7 +31,7 @@ func newLibrary(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-// GetLibrary - Retrieves the entire library
+// GetLibrary - Retrieve the entire library
 // Will return the entire library for the authenticated user. If size of the library exceeds server preferences (normally 500) or the value of the optional limit parameter, the result will be paginated. Paginated responses return a Link header, indicating the next URI to fetch. The resulting header value will look something like:
 //
 // <https://products.izettle.com/organizations/self/library?limit=X&offset=Y>; rel="next"

@@ -13,6 +13,7 @@ type PostgreSQLSettings struct {
 	HeartbeatEnable             *bool                `json:"HeartbeatEnable,omitempty"`
 	HeartbeatFrequency          *int64               `json:"HeartbeatFrequency,omitempty"`
 	HeartbeatSchema             *string              `json:"HeartbeatSchema,omitempty"`
+	MapBooleanAsBoolean         *bool                `json:"MapBooleanAsBoolean,omitempty"`
 	MaxFileSize                 *int64               `json:"MaxFileSize,omitempty"`
 	Password                    *string              `json:"Password,omitempty"`
 	PluginName                  *PluginNameValueEnum `json:"PluginName,omitempty"`

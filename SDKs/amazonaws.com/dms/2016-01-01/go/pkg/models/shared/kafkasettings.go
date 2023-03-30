@@ -14,6 +14,7 @@ type KafkaSettings struct {
 	MessageMaxBytes             *int64                     `json:"MessageMaxBytes,omitempty"`
 	NoHexPrefix                 *bool                      `json:"NoHexPrefix,omitempty"`
 	PartitionIncludeSchemaTable *bool                      `json:"PartitionIncludeSchemaTable,omitempty"`
+	SaslMechanism               *KafkaSaslMechanismEnum    `json:"SaslMechanism,omitempty"`
 	SaslPassword                *string                    `json:"SaslPassword,omitempty"`
 	SaslUsername                *string                    `json:"SaslUsername,omitempty"`
 	SecurityProtocol            *KafkaSecurityProtocolEnum `json:"SecurityProtocol,omitempty"`

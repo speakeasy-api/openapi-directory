@@ -1208,6 +1208,25 @@ const (
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR6idn16xlarge   CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r6idn.16xlarge"
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR6idn24xlarge   CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r6idn.24xlarge"
 	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR6idn32xlarge   CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r6idn.32xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumC7gMetal        CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "c7g.metal"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM7gMedium       CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m7g.medium"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM7gLarge        CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m7g.large"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM7gXlarge       CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m7g.xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM7g2xlarge      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m7g.2xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM7g4xlarge      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m7g.4xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM7g8xlarge      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m7g.8xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM7g12xlarge     CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m7g.12xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM7g16xlarge     CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m7g.16xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumM7gMetal        CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "m7g.metal"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7gMedium       CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.medium"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7gLarge        CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.large"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7gXlarge       CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7g2xlarge      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.2xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7g4xlarge      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.4xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7g8xlarge      CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.8xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7g12xlarge     CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.12xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7g16xlarge     CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.16xlarge"
+	CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnumR7gMetal        CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -2453,6 +2472,44 @@ func (e *CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDat
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataInstanceTypeEnum(s)
 		return nil
 	default:

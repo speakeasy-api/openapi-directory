@@ -24,8 +24,9 @@ type ListAccountAssociationsHeaders struct {
 
 // ListAccountAssociationsRequestBodyFilters - <p>The filter on the account ID of the linked account, or any of the following:</p> <p> <code>MONITORED</code>: linked accounts that are associated to billing groups.</p> <p> <code>UNMONITORED</code>: linked accounts that are not associated to billing groups.</p> <p> <code>Billing Group Arn</code>: linked accounts that are associated to the provided Billing Group Arn. </p>
 type ListAccountAssociationsRequestBodyFilters struct {
-	AccountID   *string `json:"AccountId,omitempty"`
-	Association *string `json:"Association,omitempty"`
+	AccountID   *string  `json:"AccountId,omitempty"`
+	AccountIds  []string `json:"AccountIds,omitempty"`
+	Association *string  `json:"Association,omitempty"`
 }
 
 type ListAccountAssociationsRequestBody struct {

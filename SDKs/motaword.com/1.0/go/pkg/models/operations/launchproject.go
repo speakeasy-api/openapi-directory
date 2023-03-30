@@ -3,8 +3,6 @@
 package operations
 
 import (
-	"encoding/json"
-	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -14,57 +12,9 @@ type LaunchProjectPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
-// LaunchProjectRequestBodyPaymentMethodEnum - Optional. Determines which method to use for payment. `client`, `app`, `corporate_card` methods require a credit card ID. `credit` method requires Stripe token and bin. `corporate` method follows corporate account policy automatically, either follows invoicing flow or automatically charges corporate's primary card.
-type LaunchProjectRequestBodyPaymentMethodEnum string
-
-const (
-	LaunchProjectRequestBodyPaymentMethodEnumCorporate     LaunchProjectRequestBodyPaymentMethodEnum = "corporate"
-	LaunchProjectRequestBodyPaymentMethodEnumClient        LaunchProjectRequestBodyPaymentMethodEnum = "client"
-	LaunchProjectRequestBodyPaymentMethodEnumApp           LaunchProjectRequestBodyPaymentMethodEnum = "app"
-	LaunchProjectRequestBodyPaymentMethodEnumCredit        LaunchProjectRequestBodyPaymentMethodEnum = "credit"
-	LaunchProjectRequestBodyPaymentMethodEnumCorporateCard LaunchProjectRequestBodyPaymentMethodEnum = "corporate_card"
-)
-
-func (e *LaunchProjectRequestBodyPaymentMethodEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "corporate":
-		fallthrough
-	case "client":
-		fallthrough
-	case "app":
-		fallthrough
-	case "credit":
-		fallthrough
-	case "corporate_card":
-		*e = LaunchProjectRequestBodyPaymentMethodEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for LaunchProjectRequestBodyPaymentMethodEnum: %s", s)
-	}
-}
-
-type LaunchProjectRequestBody struct {
-	// Last 4 digits of the credit card you are using one-time. This parameter is only required when stripe_token is provided.
-	Bin *string `multipartForm:"name=bin"`
-	// Optional with corporate accounts. Not available for others.
-	BudgetCode *string `multipartForm:"name=budget_code"`
-	// Optional. `client`, `app`, `corporate_card` methods require a credit card ID. `credit` method requires Stripe token and bin.
-	CardID *int64 `multipartForm:"name=card_id"`
-	// Optional. `corporate` payment method requires this.s
-	PaymentCode *string `multipartForm:"name=payment_code"`
-	// Optional. Determines which method to use for payment. `client`, `app`, `corporate_card` methods require a credit card ID. `credit` method requires Stripe token and bin. `corporate` method follows corporate account policy automatically, either follows invoicing flow or automatically charges corporate's primary card.
-	PaymentMethod *LaunchProjectRequestBodyPaymentMethodEnum `multipartForm:"name=payment_method"`
-	// This is required if you are using a one-time credit card. This is the token generted from frontend via Stripe SDK. If you are using a one-time card with `stripe_token`, you must also provide `bin`, last 4 digits of the card.
-	StripeToken *string `multipartForm:"name=stripe_token"`
-}
-
 type LaunchProjectRequest struct {
 	PathParams LaunchProjectPathParams
-	Request    *LaunchProjectRequestBody `request:"mediaType=multipart/form-data"`
+	Request    *shared.ProjectPayment `request:"mediaType=application/json"`
 }
 
 type LaunchProjectResponse struct {

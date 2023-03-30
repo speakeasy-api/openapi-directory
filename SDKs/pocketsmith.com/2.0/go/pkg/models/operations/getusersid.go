@@ -18,7 +18,7 @@ type GetUsersIDRequest struct {
 
 type GetUsersIDResponse struct {
 	ContentType string
-	// Not Found
+	// Not Allowed
 	Error       *shared.Error
 	StatusCode  int
 	RawResponse *http.Response

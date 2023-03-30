@@ -16,6 +16,9 @@ const (
 	RelationshipTypeEnumMergedCell      RelationshipTypeEnum = "MERGED_CELL"
 	RelationshipTypeEnumTitle           RelationshipTypeEnum = "TITLE"
 	RelationshipTypeEnumAnswer          RelationshipTypeEnum = "ANSWER"
+	RelationshipTypeEnumTable           RelationshipTypeEnum = "TABLE"
+	RelationshipTypeEnumTableTitle      RelationshipTypeEnum = "TABLE_TITLE"
+	RelationshipTypeEnumTableFooter     RelationshipTypeEnum = "TABLE_FOOTER"
 )
 
 func (e *RelationshipTypeEnum) UnmarshalJSON(data []byte) error {
@@ -35,6 +38,12 @@ func (e *RelationshipTypeEnum) UnmarshalJSON(data []byte) error {
 	case "TITLE":
 		fallthrough
 	case "ANSWER":
+		fallthrough
+	case "TABLE":
+		fallthrough
+	case "TABLE_TITLE":
+		fallthrough
+	case "TABLE_FOOTER":
 		*e = RelationshipTypeEnum(s)
 		return nil
 	default:

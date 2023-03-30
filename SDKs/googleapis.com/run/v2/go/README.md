@@ -676,7 +676,7 @@ func main() {
                 },
             },
             TerminalCondition: &shared.GoogleCloudRunV2Condition{
-                ExecutionReason: "NON_ZERO_EXIT_CODE",
+                ExecutionReason: "CANCELLED",
                 LastTransitionTime: "soluta",
                 Message: "sed",
                 Reason: "IMMEDIATE_RETRY",
@@ -712,7 +712,7 @@ func main() {
 * `RunProjectsLocationsJobsExecutionsTasksList` - Lists Tasks from an Execution of a Job.
 * `RunProjectsLocationsJobsList` - Lists Jobs.
 * `RunProjectsLocationsJobsRun` - Triggers creation of a new Execution of this Job.
-* `RunProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `RunProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `RunProjectsLocationsOperationsWait` - Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
 * `RunProjectsLocationsServicesCreate` - Creates a new Service in a given project and location.
 * `RunProjectsLocationsServicesGetIamPolicy` - Gets the IAM Access Control policy currently in effect for the given Cloud Run Service. This result does not include any inherited policies.

@@ -35,7 +35,7 @@ func newContacts(defaultClient, securityClient HTTPClient, serverURL, language, 
 // ContactsCreateJSON - Create contact
 func (s *contacts) ContactsCreateJSON(ctx context.Context, request operations.ContactsCreateJSONRequest) (*operations.ContactsCreateJSONResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -90,7 +90,7 @@ func (s *contacts) ContactsCreateJSON(ctx context.Context, request operations.Co
 // ContactsCreateString - Create contact
 func (s *contacts) ContactsCreateString(ctx context.Context, request operations.ContactsCreateStringRequest) (*operations.ContactsCreateStringResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "string")
 	if err != nil {
@@ -145,7 +145,7 @@ func (s *contacts) ContactsCreateString(ctx context.Context, request operations.
 // ContactsFetch - Fetch contact by ID
 func (s *contacts) ContactsFetch(ctx context.Context, request operations.ContactsFetchRequest) (*operations.ContactsFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/contacts/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts/{contactId}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -189,7 +189,7 @@ func (s *contacts) ContactsFetch(ctx context.Context, request operations.Contact
 // ContactsFetchAll - Fetch contacts
 func (s *contacts) ContactsFetchAll(ctx context.Context, request operations.ContactsFetchAllRequest) (*operations.ContactsFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/contacts", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -249,7 +249,7 @@ func (s *contacts) ContactsFetchAll(ctx context.Context, request operations.Cont
 // ContactsRemove - Deletes a contact
 func (s *contacts) ContactsRemove(ctx context.Context, request operations.ContactsRemoveRequest) (*operations.ContactsRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/contacts/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts/{contactId}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -293,7 +293,7 @@ func (s *contacts) ContactsRemove(ctx context.Context, request operations.Contac
 // ContactsUpdate - Updates a contact
 func (s *contacts) ContactsUpdate(ctx context.Context, request operations.ContactsUpdateRequest) (*operations.ContactsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/contacts/{contactId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/contacts/{contactId}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

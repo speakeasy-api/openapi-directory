@@ -13,21 +13,21 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDRequest{
-        Security: operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDSecurity{
+    req := operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDRequest{
+        Security: operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDSecurity{
             Bearer: shared.SchemeBearer{
-                APIKey: "YOUR_API_KEY_HERE",
+                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
             },
         },
-        PathParams: operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDPathParams{
+        PathParams: operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDPathParams{
             ID: "unde",
-            MemberID: "deserunt",
-            WorkspaceID: "porro",
+            MemberSlug: "deserunt",
+            WorkspaceSlug: "porro",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Activities.DeleteWorkspaceIDMembersMemberIDActivitiesID(ctx, req)
+    res, err := s.Activities.DeleteWorkspaceSlugMembersMemberSlugActivitiesID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

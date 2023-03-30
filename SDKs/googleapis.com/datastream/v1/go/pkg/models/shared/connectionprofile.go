@@ -26,7 +26,7 @@ type ConnectionProfile struct {
 	PostgresqlProfile *PostgresqlProfile `json:"postgresqlProfile,omitempty"`
 	// Private Connectivity
 	PrivateConnectivity *PrivateConnectivity `json:"privateConnectivity,omitempty"`
-	// Static IP address connectivity.
+	// Static IP address connectivity. Used when the source database is configured to allow incoming connections from the Datastream public IP addresses for the region specified in the connection profile.
 	StaticServiceIPConnectivity map[string]interface{} `json:"staticServiceIpConnectivity,omitempty"`
 	// Output only. The update time of the resource.
 	UpdateTime *string `json:"updateTime,omitempty"`
@@ -52,6 +52,6 @@ type ConnectionProfileInput struct {
 	PostgresqlProfile *PostgresqlProfile `json:"postgresqlProfile,omitempty"`
 	// Private Connectivity
 	PrivateConnectivity *PrivateConnectivity `json:"privateConnectivity,omitempty"`
-	// Static IP address connectivity.
+	// Static IP address connectivity. Used when the source database is configured to allow incoming connections from the Datastream public IP addresses for the region specified in the connection profile.
 	StaticServiceIPConnectivity map[string]interface{} `json:"staticServiceIpConnectivity,omitempty"`
 }

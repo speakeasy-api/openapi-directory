@@ -2,7 +2,7 @@
 
 package shared
 
-// EnumOption - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 50.
+// EnumOption - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.
 //
 // You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
 //
@@ -26,7 +26,7 @@ type EnumOption struct {
 	ResourceType *string `json:"resource_type,omitempty"`
 }
 
-// EnumOptionInput - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 50.
+// EnumOptionInput - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.
 //
 // You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
 //

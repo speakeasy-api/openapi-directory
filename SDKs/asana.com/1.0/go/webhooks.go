@@ -12,92 +12,9 @@ import (
 	"strings"
 )
 
-// webhooks - *Note: Recently, some users have seen intermittent delays with webhook event distributions. We are in the process of transferring the webhooks system to a more reliable infrastructure while also iteratively improving the current system. As such, for the time being we advise against using webhooks for functionality beyond logging (e.g., syncing state with real-time notification data).*
-// *If you experience latency issues, we recommend using webhooks in conjunction with fetching the resource periodically (e.g. [GET a task](https://developers.asana.com/docs/get-a-task)).  More details and ongoing updates can be found in [this post](https://forum.asana.com/t/upcoming-improvements-to-our-webhooks-system/126570) in the developer forum.*
-// Webhooks allow an application to be notified of changes in Asana.
+// webhooks - Webhooks allow you to subscribe to notifications about events that occur on Asana resources (e.g., tasks, projects, stories, etc.).
 //
-// This is similar to our [Events](/docs/asana-events) resource, but webhooks "push" events via HTTP `POST` rather than expecting integrations to repeatedly "poll" for them. For services that are already accessible on the Internet this is often more convenient and efficient.
-//
-// However, webhooks _require_ a server to be accessible over the internet at all times to receive the event. For most simple integrations, Events provide much of the same benefits while using a significantly simpler implementation which does not require maintaining an internet-accessible server.
-//
-// #### The webhook "handshake"
-// In order to ensure that the receiving server is available to receive incoming events from a webhook Asana will `POST` to the requested target endpoint during the webhook creation request. In other words, the outgoing webhook creation request will wait to return until another full `POST` request from Asana's servers to the target has been completed, *then* the webhook creation request can return with a successful response.
-//
-// *Note: this means that your server must be able to handle being blocked on the outgoing create request while still being able to receive and handle an incoming request. A common reason that webhook handshakes fail is that servers are not able to asynchronously handle the handshake request.*
-//
-// Included in the webhook handshake is a HTTP header called `X-Hook-Secret`.  To successfully complete the handshake the receiving server should echo back the same header with the same value and a `200 OK` or `204 No Content` response code.
-//
-// The purpose of this header is to provide a shared secret that both Asana and the receiving server both store--this is the only time it will be transmitted. In future webhook events Asana will use this key to compute a signature over the webhook callback request's body which can be used to verify that the incoming request was genuine (details below). We strongly recommend that you take advantage of this security feature and reject webhooks that have an invalid signature.
-//
-// #### Receiving Events
-//
-// Because multiple events often happen in short succession, a webhook payload is designed to be able to transmit multiple events at once. The schema of these events is described in [Event](/docs/tocS_Event).
-//
-// The HTTP POST that the target receives contains:
-//
-//   - An `X-Hook-Signature` header, which allows verifying that the payload
-//     is genuine.  The signature is a SHA256 HMAC signature computed on the
-//     request body using the shared secret transmitted during the handshake.
-//     Verification is **strongly recommended**, as it would otherwise be
-//     possible for an attacker to POST a malicious payload to the same
-//     endpoint.
-//   - A JSON body with a single key, `events`, containing an array of the
-//     events that have occurred since the last webhook delivery. (Note that this
-//     list may be empty, as periodically we send a "heartbeat" webhook to
-//     verify that the endpoint is still available.)
-//
-// Note that events are "skinny" and contain only some basic details of the change, not the whole resource. We expect integrations to make additional calls to the API to retrieve the latest state from Asana.
-//
-// #### Filtering
-// Webhook events will "propagate up" from contained objects through to parent objects--for instance, changes to comments will be sent to webhooks on the parent task and to ones on the task's projects. In this way a webhook on a project will be notified of all changes that occur in all of its tasks, subtasks of those tasks, and comments on those tasks and subtasks.
-//
-// This can be a lot of data, some of which might not be relevant to a particular integration, so Asana's webhooks have a filtering feature which allows integrations to specify only the types of changes that they care about. By specifying the list of [WebhookFilter](/docs/tocS_WebhookFilter)s on webhook creation an integration can select just the subset of events it wants to receive.  When filters are specified on the webhook events will only be delivered if they pass any of the filters specified when creating the webhook.
-//
-// To reduce the volume of data to transfer, webhooks created on teams, portfolios, and workspaces *must* specify filters. In addition, the set of event filters that can be placed on a team-level or workspace-level webhook is more limited than filters for webhooks that are created on lower-level resources:
-//
-//   - Webhook events from tasks, subtasks, and stories won't be propagated
-//     to these higher-level webhooks, so all changes on these resources are
-//     automatically filtered out.
-//   - Webhook events from `project` resources can be filtered for these
-//     `action`s: `added`, `removed`, `deleted`, `undeleted`, and `changed`.
-//   - Webhook events from `team_membership` resources can be filtered to
-//     `action`s `added` and `removed`.
-//   - Webhook events from `workspace_membership` resources can be filtered
-//     to `added` and `removed`.
-//
-// #### Error Handling and Retry
-//
-// If we attempt to send a webhook payload and we receive an error status code, or the request times out, we will retry delivery with exponential backoff. In general, if your servers are not available for an hour, you can expect it to take no longer than approximately an hour after they come back before the paused delivery resumes. However, if we are unable to deliver a message for 24 hours the webhook will be deactivated.
-// #### Webhook Heartbeat Events
-// Webhooks keep track of the last time that delivery succeeded, and this time is updated with each success. To help facilitate this, webhooks have a “heartbeat” that will deliver an empty payload at the initial handshake, and then every eight hours. This way, even if there is no activity on the resource, the last success time (i.e `last_success_at`) will still be updated continuously.
-// #### Resources and Actions
-// This is not an exhaustive list, but should cover the most common use cases.
-//
-//   - Attachment - deleted, undeleted
-//   - Portfolio - added, deleted, removed
-//   - Project - added, changed, deleted, removed, undeleted
-//   - Project Membership - added, removed
-//   - Section - added, changed, deleted, undeleted
-//   - Story - added, removed, undeleted
-//   - Tag - added, changed, deleted, undeleted
-//   - Task - added, changed, deleted, removed, undeleted
-//   - Team - added, changed, deleted
-//   - Team Membership - added, removed
-//   - Workspace - added, removed, changed
-//   - Workspace Memberships - added, removed
-//
-// #### Webhook Limits
-//
-// Webhooks have two different limits
-//
-//   - 1k limit per resource in Asana. (If 10 apps each have 100 webhooks
-//     watching the same resource, no more webhooks can be placed on the
-//     webhook. `/events` streams count towards this limit)
-//   - 10k per user-app (An app can have 10k webhooks for EACH user)
-//
-// #### Example Integration: Webhook Inspector
-// The [Webhook Inspector](https://github.com/Asana/devrel-examples/tree/master/python/webhooks) is a Python script that demonstrates the features of Asana webhooks, including how to both properly set them up and receive them. By using this script, you can create a webhook and log the contents of incoming notifications to your console.
-// To use this demo, be sure to generate a new [personal access token](https://developers.asana.com/docs/personal-access-token), then follow the instructions in README.
+// For a more detailed explanation of webhooks see the [overview of webhooks](/docs/overview-of-webhooks).
 type webhooks struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -430,6 +347,83 @@ func (s *webhooks) GetWebhooks(ctx context.Context, request operations.GetWebhoo
 			}
 
 			res.GetWebhooks200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ErrorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateWebhook - Update a webhook
+// An existing webhook's filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook's previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.
+func (s *webhooks) UpdateWebhook(ctx context.Context, request operations.UpdateWebhookRequest) (*operations.UpdateWebhookResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/webhooks/{webhook_gid}", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateWebhookResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.UpdateWebhook200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UpdateWebhook200ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough

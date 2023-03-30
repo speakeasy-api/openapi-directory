@@ -25,6 +25,7 @@ pkg/models/shared/runtimeerror.go
 pkg/models/shared/i18n.go
 pkg/models/shared/rendererformattedstrings.go
 pkg/models/shared/environment.go
+pkg/models/shared/lhrentity.go
 pkg/models/shared/configsettings.go
 pkg/models/shared/categorygroupv5.go
 pkg/models/shared/categories.go

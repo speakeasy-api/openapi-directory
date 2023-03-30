@@ -4,20 +4,20 @@ package shared
 
 // FormDataContentDisposition - The metadata for the file.
 type FormDataContentDisposition struct {
-	// The file creation date. Format: UTC yyyy-MM-ddThh:mm:ss.SSSZ For example: Created on September 8, 2019 2019-09-08T00:00:00.000Z
+	// The file creation date. <br /><br /><b> Format: </b> UTC <code>yyyy-MM-ddThh:mm:ss.SSSZ</code><p><b>For example:</b><p>Created on September 8, 2019</p><p><code>2019-09-08T00:00:00.000Z</code></p>
 	CreationDate *string `multipartForm:"name=creationDate"`
 	// The name of the file including its extension (for example, xml or csv) to be uploaded.
 	FileName *string `multipartForm:"name=fileName"`
-	// The file modified date. Format: UTC yyyy-MM-ddThh:mm:ss.SSSZ For example: Created on September 9, 2019 2019-09-09T00:00:00.000Z
+	// The file modified date. <br /><br /><b> Format: </b> UTC <code>yyyy-MM-ddThh:mm:ss.SSSZ</code><p><b>For example:</b><p>Created on September 9, 2019</p><p><code>2019-09-09T00:00:00.000Z</code></p>
 	ModificationDate *string `multipartForm:"name=modificationDate"`
-	// A content identifier. The only presently supported name is file.
+	// A content identifier. The only presently supported name is <code>file</code>.
 	Name *string `multipartForm:"name=name"`
 	// The parameters you want associated with the file.
 	Parameters map[string]string `multipartForm:"name=parameters,json"`
-	// The date you read the file. Format: UTC yyyy-MM-ddThh:mm:ss.SSSZ For example: Created on September 10, 2019 2019-09-10T00:00:00.000Z
+	// The date you read the file. <br /><br /><b> Format: </b> UTC <code>yyyy-MM-ddThh:mm:ss.SSSZ</code><p><b>For example:</b><p>Created on September 10, 2019</p><p><code>2019-09-10T00:00:00.000Z</code></p>
 	ReadDate *string `multipartForm:"name=readDate"`
 	// The size of the file.
 	Size *int `multipartForm:"name=size"`
-	// The file type. The only presently supported type is form-data.
+	// The file type. The only presently supported type is <code>form-data</code>.
 	Type *string `multipartForm:"name=type"`
 }

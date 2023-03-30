@@ -59,6 +59,7 @@ const (
 	EstimationActivityAPIModelTypeEnumEstimationRejected         EstimationActivityAPIModelTypeEnum = "EstimationRejected"
 	EstimationActivityAPIModelTypeEnumEstimationUpdated          EstimationActivityAPIModelTypeEnum = "EstimationUpdated"
 	EstimationActivityAPIModelTypeEnumEstimationDownloadedAsPdf  EstimationActivityAPIModelTypeEnum = "EstimationDownloadedAsPdf"
+	EstimationActivityAPIModelTypeEnumInvoiceDigitallySigned     EstimationActivityAPIModelTypeEnum = "InvoiceDigitallySigned"
 )
 
 func (e *EstimationActivityAPIModelTypeEnum) UnmarshalJSON(data []byte) error {
@@ -162,6 +163,8 @@ func (e *EstimationActivityAPIModelTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EstimationUpdated":
 		fallthrough
 	case "EstimationDownloadedAsPdf":
+		fallthrough
+	case "InvoiceDigitallySigned":
 		*e = EstimationActivityAPIModelTypeEnum(s)
 		return nil
 	default:

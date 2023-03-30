@@ -32,7 +32,8 @@ func (e *GETModifyVpcEndpointActionEnum) UnmarshalJSON(data []byte) error {
 
 // GETModifyVpcEndpointDNSOptions - Describes the DNS options for an endpoint.
 type GETModifyVpcEndpointDNSOptions struct {
-	DNSRecordIPType *shared.DNSRecordIPTypeEnum `queryParam:"name=DnsRecordIpType"`
+	DNSRecordIPType                          *shared.DNSRecordIPTypeEnum `queryParam:"name=DnsRecordIpType"`
+	PrivateDNSOnlyForInboundResolverEndpoint *bool                       `queryParam:"name=PrivateDnsOnlyForInboundResolverEndpoint"`
 }
 
 // GETModifyVpcEndpointIPAddressTypeEnum - The IP address type for the endpoint.

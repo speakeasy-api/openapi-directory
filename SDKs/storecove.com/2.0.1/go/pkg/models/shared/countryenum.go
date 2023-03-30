@@ -255,6 +255,7 @@ const (
 	CountryEnumVu CountryEnum = "VU"
 	CountryEnumWf CountryEnum = "WF"
 	CountryEnumWs CountryEnum = "WS"
+	CountryEnumXi CountryEnum = "XI"
 	CountryEnumYe CountryEnum = "YE"
 	CountryEnumYt CountryEnum = "YT"
 	CountryEnumZa CountryEnum = "ZA"
@@ -755,6 +756,8 @@ func (e *CountryEnum) UnmarshalJSON(data []byte) error {
 	case "WF":
 		fallthrough
 	case "WS":
+		fallthrough
+	case "XI":
 		fallthrough
 	case "YE":
 		fallthrough

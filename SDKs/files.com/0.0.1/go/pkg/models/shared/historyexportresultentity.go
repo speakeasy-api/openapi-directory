@@ -8,6 +8,8 @@ type HistoryExportResultEntity struct {
 	Action *string `json:"action,omitempty"`
 	// When the action happened
 	CreatedAt *int `json:"created_at,omitempty"`
+	// When the action happened, in ISO8601 format.
+	CreatedAtIso8601 *int `json:"created_at_iso8601,omitempty"`
 	// File moved to this destination folder
 	Destination *string `json:"destination,omitempty"`
 	// The type of login failure, if applicable.  Valid values: `expired_trial`, `account_overdue`, `locked_out`, `ip_mismatch`, `password_mismatch`, `site_mismatch`, `username_not_found`, `none`, `no_ftp_permission`, `no_web_permission`, `no_directory`, `errno_enoent`, `no_sftp_permission`, `no_dav_permission`, `no_restapi_permission`, `key_mismatch`, `region_mismatch`, `expired_access`, `desktop_ip_mismatch`, `desktop_api_key_not_used_quickly_enough`, `disabled`, `country_mismatch`
@@ -18,7 +20,7 @@ type HistoryExportResultEntity struct {
 	Folder *string `json:"folder,omitempty"`
 	// Action ID
 	ID *int `json:"id,omitempty"`
-	// Inteface through which the action was taken. Valid values: `web`, `ftp`, `robot`, `jsapi`, `webdesktopapi`, `sftp`, `dav`, `desktop`, `restapi`, `scim`, `office`, `mobile`
+	// Inteface through which the action was taken. Valid values: `web`, `ftp`, `robot`, `jsapi`, `webdesktopapi`, `sftp`, `dav`, `desktop`, `restapi`, `scim`, `office`, `mobile`, `as2`, `inbound_email`, `remote`
 	Interface *string `json:"interface,omitempty"`
 	// Client IP that performed the action
 	IP *string `json:"ip,omitempty"`

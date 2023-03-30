@@ -78,12 +78,12 @@ func (s *permissionGroups) CreatePermissionGroup(ctx context.Context, request op
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/hal+json`):
-			var out *shared.PermissionGroupModel
+			var out *shared.PermissionGroupModelHaljson
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PermissionGroupModel = out
+			res.PermissionGroupModelHaljson = out
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.PermissionGroupModel
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
@@ -182,12 +182,12 @@ func (s *permissionGroups) GetPermissionGroup(ctx context.Context, request opera
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/hal+json`):
-			var out *shared.PermissionGroupModel
+			var out *shared.PermissionGroupModelHaljson
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PermissionGroupModel = out
+			res.PermissionGroupModelHaljson = out
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.PermissionGroupModel
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
@@ -242,12 +242,12 @@ func (s *permissionGroups) GetPermissionGroups(ctx context.Context, request oper
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/hal+json`):
-			var out []shared.PermissionGroupModel
+			var out []shared.PermissionGroupModelHaljson
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PermissionGroupModels = out
+			res.PermissionGroupModelHaljsons = out
 		case utils.MatchContentType(contentType, `application/json`):
 			var out []shared.PermissionGroupModel
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
@@ -311,12 +311,12 @@ func (s *permissionGroups) UpdatePermissionGroup(ctx context.Context, request op
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/hal+json`):
-			var out *shared.PermissionGroupModel
+			var out *shared.PermissionGroupModelHaljson
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PermissionGroupModel = out
+			res.PermissionGroupModelHaljson = out
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *shared.PermissionGroupModel
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {

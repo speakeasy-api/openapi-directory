@@ -14,6 +14,8 @@ pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/playdeveloperreportinganomalieslist.go
+pkg/models/operations/playdeveloperreportingvitalserrorsissuessearch.go
+pkg/models/operations/playdeveloperreportingvitalserrorsreportssearch.go
 pkg/models/operations/playdeveloperreportingvitalsstuckbackgroundwakelockrateget.go
 pkg/models/operations/playdeveloperreportingvitalsstuckbackgroundwakelockratequery.go
 pkg/models/shared/googleplaydeveloperreportingv1beta1listanomaliesresponse.go
@@ -22,11 +24,16 @@ pkg/models/shared/googleplaydeveloperreportingv1beta1timelinespec.go
 pkg/models/shared/googletypedatetime.go
 pkg/models/shared/googletypetimezone.go
 pkg/models/shared/googleplaydeveloperreportingv1beta1metricvalue.go
+pkg/models/shared/googleplaydeveloperreportingv1beta1decimalconfidenceinterval.go
 pkg/models/shared/googletypedecimal.go
 pkg/models/shared/googleplaydeveloperreportingv1beta1dimensionvalue.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/security.go
+pkg/models/shared/googleplaydeveloperreportingv1beta1searcherrorissuesresponse.go
+pkg/models/shared/googleplaydeveloperreportingv1beta1errorissue.go
+pkg/models/shared/googleplaydeveloperreportingv1beta1searcherrorreportsresponse.go
+pkg/models/shared/googleplaydeveloperreportingv1beta1errorreport.go
 pkg/models/shared/googleplaydeveloperreportingv1beta1stuckbackgroundwakelockratemetricset.go
 pkg/models/shared/googleplaydeveloperreportingv1beta1freshnessinfo.go
 pkg/models/shared/googleplaydeveloperreportingv1beta1freshnessinfofreshness.go

@@ -4,6 +4,8 @@ package shared
 
 // SourceDefinitionSpecificationRead - Successful operation
 type SourceDefinitionSpecificationRead struct {
+	AdvancedAuth      *AdvancedAuth            `json:"advancedAuth,omitempty"`
+	AuthSpecification *SourceAuthSpecification `json:"authSpecification,omitempty"`
 	// The specification for what values are required to configure the sourceDefinition.
 	ConnectionSpecification map[string]interface{} `json:"connectionSpecification,omitempty"`
 	DocumentationURL        *string                `json:"documentationUrl,omitempty"`

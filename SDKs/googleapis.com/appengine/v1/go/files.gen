@@ -51,6 +51,7 @@ pkg/models/operations/appengineappsservicesversionsinstancesget.go
 pkg/models/operations/appengineappsservicesversionsinstanceslist.go
 pkg/models/operations/appengineappsservicesversionslist.go
 pkg/models/operations/appengineappsservicesversionspatch.go
+pkg/models/operations/appengineprojectslocationsapplicationscreate.go
 pkg/models/operations/appengineprojectslocationsapplicationsget.go
 pkg/models/shared/authorizedcertificate.go
 pkg/models/shared/managedcertificate.go

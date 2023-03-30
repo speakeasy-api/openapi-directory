@@ -7,12 +7,14 @@ import (
 	"fmt"
 )
 
-// ReservationEditionEnum - Do not use.
+// ReservationEditionEnum - Edition of the reservation.
 type ReservationEditionEnum string
 
 const (
 	ReservationEditionEnumEditionUnspecified ReservationEditionEnum = "EDITION_UNSPECIFIED"
+	ReservationEditionEnumStandard           ReservationEditionEnum = "STANDARD"
 	ReservationEditionEnumEnterprise         ReservationEditionEnum = "ENTERPRISE"
+	ReservationEditionEnumEnterprisePlus     ReservationEditionEnum = "ENTERPRISE_PLUS"
 )
 
 func (e *ReservationEditionEnum) UnmarshalJSON(data []byte) error {
@@ -23,7 +25,11 @@ func (e *ReservationEditionEnum) UnmarshalJSON(data []byte) error {
 	switch s {
 	case "EDITION_UNSPECIFIED":
 		fallthrough
+	case "STANDARD":
+		fallthrough
 	case "ENTERPRISE":
+		fallthrough
+	case "ENTERPRISE_PLUS":
 		*e = ReservationEditionEnum(s)
 		return nil
 	default:
@@ -39,11 +45,11 @@ type Reservation struct {
 	Concurrency *string `json:"concurrency,omitempty"`
 	// Output only. Creation time of the reservation.
 	CreationTime *string `json:"creationTime,omitempty"`
-	// Do not use.
+	// Edition of the reservation.
 	Edition *ReservationEditionEnum `json:"edition,omitempty"`
 	// If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
 	IgnoreIdleSlots *bool `json:"ignoreIdleSlots,omitempty"`
-	// Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.
+	// Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region. NOTE: this is a preview feature. Project must be allow-listed in order to set this field.
 	MultiRegionAuxiliary *bool `json:"multiRegionAuxiliary,omitempty"`
 	// The resource name of the reservation, e.g., `projects/*/locations/*/reservations/team1-prod`. The reservation_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
 	Name *string `json:"name,omitempty"`
@@ -59,11 +65,11 @@ type ReservationInput struct {
 	Autoscale *AutoscaleInput `json:"autoscale,omitempty"`
 	// Job concurrency target which sets a soft upper bound on the number of jobs that can run concurrently in this reservation. This is a soft target due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency target will be automatically computed by the system. NOTE: this field is exposed as `target_job_concurrency` in the Information Schema, DDL and BQ CLI.
 	Concurrency *string `json:"concurrency,omitempty"`
-	// Do not use.
+	// Edition of the reservation.
 	Edition *ReservationEditionEnum `json:"edition,omitempty"`
 	// If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.
 	IgnoreIdleSlots *bool `json:"ignoreIdleSlots,omitempty"`
-	// Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.
+	// Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region. NOTE: this is a preview feature. Project must be allow-listed in order to set this field.
 	MultiRegionAuxiliary *bool `json:"multiRegionAuxiliary,omitempty"`
 	// The resource name of the reservation, e.g., `projects/*/locations/*/reservations/team1-prod`. The reservation_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
 	Name *string `json:"name,omitempty"`

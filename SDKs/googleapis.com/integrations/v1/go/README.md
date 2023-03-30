@@ -85,6 +85,7 @@ func main() {
 * `IntegrationsProjectsLocationsAppsScriptProjectsLink` - Links a existing Apps Script project.
 * `IntegrationsProjectsLocationsClientsDeprovision` - Perform the deprovisioning steps to disable a user GCP project to use IP and purge all related data in a wipeout-compliant way.
 * `IntegrationsProjectsLocationsClientsProvision` - Perform the provisioning steps to enable a user GCP project to use IP. If GCP project already registered on IP end via Apigee Integration, provisioning will fail.
+* `IntegrationsProjectsLocationsClientsSwitch` - Update client from GMEK to CMEK
 * `IntegrationsProjectsLocationsConnectionsList` - Lists Connections in a given project and location.
 * `IntegrationsProjectsLocationsConnectionsRuntimeActionSchemasList` - Lists the JSON schemas for the inputs and outputs of actions, filtered by action name.
 * `IntegrationsProjectsLocationsConnectionsRuntimeEntitySchemasList` - Lists the JSON schemas for the properties of runtime entities, filtered by entity name.

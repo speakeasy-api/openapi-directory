@@ -2,7 +2,7 @@
 
 package shared
 
-// DeviceTierConfig - LINT.IfChange Configuration describing device targeting criteria for the content of an app.
+// DeviceTierConfig - Configuration describing device targeting criteria for the content of an app.
 type DeviceTierConfig struct {
 	// Definition of device groups for the app.
 	DeviceGroups []DeviceGroup `json:"deviceGroups,omitempty"`
@@ -14,7 +14,7 @@ type DeviceTierConfig struct {
 	UserCountrySets []UserCountrySet `json:"userCountrySets,omitempty"`
 }
 
-// DeviceTierConfigInput - LINT.IfChange Configuration describing device targeting criteria for the content of an app.
+// DeviceTierConfigInput - Configuration describing device targeting criteria for the content of an app.
 type DeviceTierConfigInput struct {
 	// Definition of device groups for the app.
 	DeviceGroups []DeviceGroup `json:"deviceGroups,omitempty"`

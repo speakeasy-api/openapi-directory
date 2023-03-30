@@ -2,7 +2,7 @@
 
 package shared
 
-// InferenceRecommendationsJobStep - A returned array object for the <code>Steps</code> response field in the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_InferenceRecommendationsJobStep.html">ListInferenceRecommendationsJobSteps</a> API command.
+// InferenceRecommendationsJobStep - A returned array object for the <code>Steps</code> response field in the <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListInferenceRecommendationsJobSteps.html">ListInferenceRecommendationsJobSteps</a> API command.
 type InferenceRecommendationsJobStep struct {
 	InferenceBenchmark *RecommendationJobInferenceBenchmark `json:"InferenceBenchmark,omitempty"`
 	JobName            string                               `json:"JobName"`

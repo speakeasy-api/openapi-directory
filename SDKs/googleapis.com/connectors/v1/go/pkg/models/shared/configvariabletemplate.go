@@ -83,6 +83,8 @@ type ConfigVariableTemplate struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	// Enum options. To be populated if `ValueType` is `ENUM`
 	EnumOptions []EnumOption `json:"enumOptions,omitempty"`
+	// Indicates if current template is part of advanced settings
+	IsAdvanced *bool `json:"isAdvanced,omitempty"`
 	// Key of the config variable.
 	Key *string `json:"key,omitempty"`
 	// Flag represents that this `ConfigVariable` must be provided for a connection.

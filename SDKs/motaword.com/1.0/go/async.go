@@ -33,8 +33,8 @@ func newAsync(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 	}
 }
 
-// DownloadAsync - Download async request files
-// Download async request files
+// DownloadAsync - Download result of an async operation
+// Download the result of an async operation that you have requested in other endpoints.
 func (s *async) DownloadAsync(ctx context.Context, request operations.DownloadAsyncRequest) (*operations.DownloadAsyncResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/async/download"

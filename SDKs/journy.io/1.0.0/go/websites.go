@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-// websites - Endpoints for managing websites
+// websites - Endpoints for managing websites.
 type websites struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient

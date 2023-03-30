@@ -24,21 +24,21 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDRequest{
-        Security: operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDSecurity{
+    req := operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDRequest{
+        Security: operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDSecurity{
             Bearer: shared.SchemeBearer{
-                APIKey: "YOUR_API_KEY_HERE",
+                Authorization: "Bearer YOUR_BEARER_TOKEN_HERE",
             },
         },
-        PathParams: operations.DeleteWorkspaceIDMembersMemberIDActivitiesIDPathParams{
+        PathParams: operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIDPathParams{
             ID: "unde",
-            MemberID: "deserunt",
-            WorkspaceID: "porro",
+            MemberSlug: "deserunt",
+            WorkspaceSlug: "porro",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Activities.DeleteWorkspaceIDMembersMemberIDActivitiesID(ctx, req)
+    res, err := s.Activities.DeleteWorkspaceSlugMembersMemberSlugActivitiesID(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -56,47 +56,63 @@ func main() {
 
 ### Activities
 
-* `DeleteWorkspaceIDMembersMemberIDActivitiesID` - Delete a post activity
-* `GetWorkspaceIDActivities` - List activities for a workspace
-* `GetWorkspaceIDActivitiesID` - Get an activity in the workspace
-* `GetWorkspaceIDMembersMemberIDActivities` - List activities for a member
-* `PostWorkspaceIDActivities` - Create a Custom or a Content activity for a new or existing member
-* `PostWorkspaceIDMembersMemberIDActivities` - Create a Custom or a Content activity for a member
-* `PutWorkspaceIDMembersMemberIDActivitiesID` - Update a custom activity for a member
+* `DeleteWorkspaceSlugMembersMemberSlugActivitiesID` - Delete a post activity
+* `GetWorkspaceSlugActivities` - List activities for a workspace
+* `GetWorkspaceSlugActivitiesID` - Get an activity in the workspace
+* `GetWorkspaceSlugMembersMemberSlugActivities` - List activities for a member
+* `GetWorkspaceSlugOrganizationsOrganizationIDActivities` - List member activities in an organization
+* `PostWorkspaceSlugActivities` - Create a Custom or a Content activity for a new or existing member
+* `PostWorkspaceSlugMembersMemberSlugActivities` - Create a Custom or a Content activity for a member
+* `PutWorkspaceSlugMembersMemberSlugActivitiesID` - Update a custom activity for a member
 
 ### ActivityTypes
 
-* `GetWorkspaceIDActivityTypes` - List all activity types for a workspace
+* `GetWorkspaceSlugActivityTypes` - List all activity types for a workspace
 
 ### Members
 
-* `DeleteWorkspaceIDMembersID` - Delete a member
-* `DeleteWorkspaceIDMembersMemberIDIdentities` - Remove identity from a member
-* `GetWorkspaceIDMembers` - List members in a workspace
-* `GetWorkspaceIDMembersFind` - Find a member by an identity
-* `GetWorkspaceIDMembersID` - Get a member
-* `PostWorkspaceIDMembers` - Create or update a member
-* `PostWorkspaceIDMembersMemberIDIdentities` - Add identity to a member
-* `PutWorkspaceIDMembersID` - Update a member
+* `DeleteWorkspaceSlugMembersMemberSlug` - Delete a member
+* `DeleteWorkspaceSlugMembersMemberSlugIdentities` - Remove identity from a member
+* `GetWorkspaceSlugMembers` - List members in a workspace
+* `GetWorkspaceSlugMembersFind` - Find a member by an identity
+* `GetWorkspaceSlugMembersMemberSlug` - Get a member
+* `GetWorkspaceSlugOrganizationsOrganizationIDMembers` - List members in an organization
+* `PostWorkspaceSlugMembers` - Create or update a member
+* `PostWorkspaceSlugMembersMemberSlugIdentities` - Add identity to a member
+* `PutWorkspaceSlugMembersMemberSlug` - Update a member
 
 ### Notes
 
-* `GetWorkspaceIDMembersMemberIDNotes` - Get the member's notes
-* `PostWorkspaceIDMembersMemberIDNotes` - Create a note
-* `PutWorkspaceIDMembersMemberIDNotesID` - Update a note
+* `GetWorkspaceSlugMembersMemberSlugNotes` - Get the member's notes
+* `PostWorkspaceSlugMembersMemberSlugNotes` - Create a note
+* `PutWorkspaceSlugMembersMemberSlugNotesID` - Update a note
+
+### Organizations
+
+* `GetWorkspaceSlugOrganizations` - List organizations in a workspace
+* `GetWorkspaceSlugOrganizationsOrganizationID` - Get an organization
+* `PutWorkspaceSlugOrganizationsOrganizationID` - Update an organization
 
 ### Reports
 
-* `GetWorkspaceIDReports` - Get a workspace stats
+* `GetWorkspaceSlugReports` - Get a workspace stats
 
 ### Users
 
 * `GetUser` - Get info about the current user
 
+### Webhooks
+
+* `DeleteWorkspaceSlugWebhooksID` - Delete a webhook
+* `GetWorkspaceSlugWebhooks` - List webhooks in a workspace
+* `GetWorkspaceSlugWebhooksID` - Get a webhook
+* `PostWorkspaceSlugWebhooks` - Create a webhook
+* `PutWorkspaceSlugWebhooksID` - Update a webhook
+
 ### Workspaces
 
 * `GetWorkspaces` - Get all workspaces for the current user
-* `GetWorkspacesWorkspaceID` - Get a workspace
+* `GetWorkspacesWorkspaceSlug` - Get a workspace
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

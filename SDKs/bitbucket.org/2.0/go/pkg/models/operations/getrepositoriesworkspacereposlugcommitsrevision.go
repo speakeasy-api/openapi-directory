@@ -18,7 +18,7 @@ type GetRepositoriesWorkspaceRepoSlugCommitsRevisionPathParams struct {
 	// surrounded by curly-braces, for example: `{repository UUID}`.
 	//
 	RepoSlug string `pathParam:"style=simple,explode=false,name=repo_slug"`
-	// The commit's SHA1.
+	// A commit SHA1 or ref name.
 	Revision string `pathParam:"style=simple,explode=false,name=revision"`
 	// This can either be the workspace ID (slug) or the workspace UUID
 	// surrounded by curly-braces, for example: `{workspace UUID}`.

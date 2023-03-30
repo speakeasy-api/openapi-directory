@@ -9,16 +9,18 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-// GetInvoiceUblVersionedPackageVersionEnum - The version of the ubl package.
+// GetInvoiceUblVersionedPackageVersionEnum - The version of the package.
 type GetInvoiceUblVersionedPackageVersionEnum string
 
 const (
-	GetInvoiceUblVersionedPackageVersionEnumOriginal GetInvoiceUblVersionedPackageVersionEnum = "original"
 	GetInvoiceUblVersionedPackageVersionEnumSi11     GetInvoiceUblVersionedPackageVersionEnum = "si11"
 	GetInvoiceUblVersionedPackageVersionEnumSi12     GetInvoiceUblVersionedPackageVersionEnum = "si12"
 	GetInvoiceUblVersionedPackageVersionEnumSi20     GetInvoiceUblVersionedPackageVersionEnum = "si20"
 	GetInvoiceUblVersionedPackageVersionEnumAunz     GetInvoiceUblVersionedPackageVersionEnum = "aunz"
 	GetInvoiceUblVersionedPackageVersionEnumSg       GetInvoiceUblVersionedPackageVersionEnum = "sg"
+	GetInvoiceUblVersionedPackageVersionEnumJp       GetInvoiceUblVersionedPackageVersionEnum = "jp"
+	GetInvoiceUblVersionedPackageVersionEnumEn16931  GetInvoiceUblVersionedPackageVersionEnum = "en16931"
+	GetInvoiceUblVersionedPackageVersionEnumOriginal GetInvoiceUblVersionedPackageVersionEnum = "original"
 )
 
 func (e *GetInvoiceUblVersionedPackageVersionEnum) UnmarshalJSON(data []byte) error {
@@ -27,8 +29,6 @@ func (e *GetInvoiceUblVersionedPackageVersionEnum) UnmarshalJSON(data []byte) er
 		return err
 	}
 	switch s {
-	case "original":
-		fallthrough
 	case "si11":
 		fallthrough
 	case "si12":
@@ -38,6 +38,12 @@ func (e *GetInvoiceUblVersionedPackageVersionEnum) UnmarshalJSON(data []byte) er
 	case "aunz":
 		fallthrough
 	case "sg":
+		fallthrough
+	case "jp":
+		fallthrough
+	case "en16931":
+		fallthrough
+	case "original":
 		*e = GetInvoiceUblVersionedPackageVersionEnum(s)
 		return nil
 	default:
@@ -45,7 +51,7 @@ func (e *GetInvoiceUblVersionedPackageVersionEnum) UnmarshalJSON(data []byte) er
 	}
 }
 
-// GetInvoiceUblVersionedPackagingEnum - How to package the purchase invoice. Use "ubl"
+// GetInvoiceUblVersionedPackagingEnum - How to package the purchase invoice.
 type GetInvoiceUblVersionedPackagingEnum string
 
 const (
@@ -69,9 +75,9 @@ func (e *GetInvoiceUblVersionedPackagingEnum) UnmarshalJSON(data []byte) error {
 type GetInvoiceUblVersionedPathParams struct {
 	// purchase invoice guid
 	GUID string `pathParam:"style=simple,explode=false,name=guid"`
-	// The version of the ubl package.
+	// The version of the package.
 	PackageVersion GetInvoiceUblVersionedPackageVersionEnum `pathParam:"style=simple,explode=false,name=package_version"`
-	// How to package the purchase invoice. Use "ubl"
+	// How to package the purchase invoice.
 	Packaging GetInvoiceUblVersionedPackagingEnum `pathParam:"style=simple,explode=false,name=packaging"`
 }
 

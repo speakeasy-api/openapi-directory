@@ -12,16 +12,9 @@ type SubmitProjectReportsPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
-type SubmitProjectReportsRequestBody struct {
-	// Activity Type
-	ActivityType *string `multipartForm:"name=activity_type"`
-	// Report Message
-	Message *string `multipartForm:"name=message"`
-}
-
 type SubmitProjectReportsRequest struct {
 	PathParams SubmitProjectReportsPathParams
-	Request    *SubmitProjectReportsRequestBody `request:"mediaType=multipart/form-data"`
+	Request    *shared.ReportContent `request:"mediaType=application/json"`
 }
 
 type SubmitProjectReportsResponse struct {

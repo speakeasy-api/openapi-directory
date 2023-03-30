@@ -33,7 +33,7 @@ func newStopPoint(defaultClient, securityClient HTTPClient, serverURL, language,
 	}
 }
 
-// StopPointArrivalDepartures - Gets the list of arrival and departure predictions for the given stop point id (overground, tfl rail and thameslink only)
+// StopPointArrivalDepartures - Gets the list of arrival and departure predictions for the given stop point id (overground, Elizabeth line and thameslink only)
 func (s *stopPoint) StopPointArrivalDepartures(ctx context.Context, request operations.StopPointArrivalDeparturesRequest) (*operations.StopPointArrivalDeparturesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/StopPoint/{id}/ArrivalDepartures", request.PathParams, nil)

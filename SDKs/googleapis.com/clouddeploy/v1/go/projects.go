@@ -292,6 +292,61 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesList(ctx
 	return res, nil
 }
 
+// ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvance - Advances a Rollout in a given project and location.
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvance(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:advance", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsAdvanceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AdvanceRolloutResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprove - Approves a Rollout.
 func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApprove(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsApproveResponse, error) {
 	baseURL := s.serverURL
@@ -402,6 +457,61 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 	return res, nil
 }
 
+// ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJob - Ignores the specified Job in a Rollout.
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJob(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{rollout}:ignoreJob", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsIgnoreJobResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.IgnoreJobResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsList - Lists JobRuns in a given project and location.
 func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsList(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsListResponse, error) {
 	baseURL := s.serverURL
@@ -444,6 +554,61 @@ func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRollouts
 			}
 
 			res.ListJobRunsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminate - Terminates a Job Run in a given project and location.
+func (s *projects) ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminate(ctx context.Context, request operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateRequest) (*operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}:terminate", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ClouddeployProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRunsTerminateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TerminateJobRunResponse = out
 		}
 	}
 
@@ -656,7 +821,7 @@ func (s *projects) ClouddeployProjectsLocationsOperationsCancel(ctx context.Cont
 	return res, nil
 }
 
-// ClouddeployProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+// ClouddeployProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) ClouddeployProjectsLocationsOperationsList(ctx context.Context, request operations.ClouddeployProjectsLocationsOperationsListRequest) (*operations.ClouddeployProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)

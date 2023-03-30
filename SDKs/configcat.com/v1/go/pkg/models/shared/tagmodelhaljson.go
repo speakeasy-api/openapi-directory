@@ -22,15 +22,19 @@ type TagModelHaljsonEmbeddedProductLinks struct {
 	Environments     *string `json:"environments,omitempty"`
 	Members          *string `json:"members,omitempty"`
 	PermissionGroups *string `json:"permission-groups,omitempty"`
+	Segments         *string `json:"segments,omitempty"`
 	Self             *string `json:"self,omitempty"`
 	Tags             *string `json:"tags,omitempty"`
 }
 
 type TagModelHaljsonEmbeddedProduct struct {
-	Embedded  *TagModelHaljsonEmbeddedProductEmbedded `json:"_embedded,omitempty"`
-	Links     *TagModelHaljsonEmbeddedProductLinks    `json:"_links,omitempty"`
-	Name      *string                                 `json:"name,omitempty"`
-	ProductID *string                                 `json:"productId,omitempty"`
+	Embedded       *TagModelHaljsonEmbeddedProductEmbedded `json:"_embedded,omitempty"`
+	Links          *TagModelHaljsonEmbeddedProductLinks    `json:"_links,omitempty"`
+	Description    *string                                 `json:"description,omitempty"`
+	Name           *string                                 `json:"name,omitempty"`
+	Order          *int                                    `json:"order,omitempty"`
+	ProductID      *string                                 `json:"productId,omitempty"`
+	ReasonRequired *bool                                   `json:"reasonRequired,omitempty"`
 }
 
 type TagModelHaljsonEmbedded struct {

@@ -14,10 +14,8 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"http://api.sportsdata.io",
-	"https://api.sportsdata.io",
-	"http://azure-api.sportsdata.io",
-	"https://azure-api.sportsdata.io",
+	"http://azure-api.sportsdata.io/v3/nfl/projections",
+	"https://azure-api.sportsdata.io/v3/nfl/projections",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -103,6 +101,51 @@ func New(opts ...SDKOption) *SDK {
 	}
 
 	return sdk
+}
+
+// DfsSlateOwnershipProjectionsBySlateid - DFS Slate Ownership Projections by SlateID
+// Slate Ownership Projections for a specific slate. Projections are for GPP format ownership. Will return an empty list if the slate is not yet projected or not a slate we have projections for.
+func (s *SDK) DfsSlateOwnershipProjectionsBySlateid(ctx context.Context, request operations.DfsSlateOwnershipProjectionsBySlateidRequest) (*operations.DfsSlateOwnershipProjectionsBySlateidResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/DfsSlateOwnershipProjectionsBySlateID/{slateId}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DfsSlateOwnershipProjectionsBySlateidResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DfsSlateWithOwnershipProjection
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DfsSlateWithOwnershipProjection = out
+		}
+	}
+
+	return res, nil
 }
 
 // DfsSlatesByDate - DFS Slates by Date
@@ -325,6 +368,51 @@ func (s *SDK) IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(ctx c
 	return res, nil
 }
 
+// InjuredPlayers - Injured Players
+// This endpoint provides all currently injured NFL players, along with injury details.
+func (s *SDK) InjuredPlayers(ctx context.Context, request operations.InjuredPlayersRequest) (*operations.InjuredPlayersResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/InjuredPlayers", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.InjuredPlayersResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.Player
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Players = out
+		}
+	}
+
+	return res, nil
+}
+
 // ProjectedFantasyDefenseGameStatsWDfsSalaries - Projected Fantasy Defense Game Stats (w/ DFS Salaries)
 func (s *SDK) ProjectedFantasyDefenseGameStatsWDfsSalaries(ctx context.Context, request operations.ProjectedFantasyDefenseGameStatsWDfsSalariesRequest) (*operations.ProjectedFantasyDefenseGameStatsWDfsSalariesResponse, error) {
 	baseURL := s._serverURL
@@ -369,8 +457,8 @@ func (s *SDK) ProjectedFantasyDefenseGameStatsWDfsSalaries(ctx context.Context, 
 	return res, nil
 }
 
-// ProjectedFantasyDefenseSeasonStatsWByeWeekAdp - Projected Fantasy Defense Season Stats (w/ Bye Week, ADP)
-func (s *SDK) ProjectedFantasyDefenseSeasonStatsWByeWeekAdp(ctx context.Context, request operations.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpRequest) (*operations.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse, error) {
+// ProjectedFantasyDefenseSeasonStatsWAdp - Projected Fantasy Defense Season Stats (w/ ADP)
+func (s *SDK) ProjectedFantasyDefenseSeasonStatsWAdp(ctx context.Context, request operations.ProjectedFantasyDefenseSeasonStatsWAdpRequest) (*operations.ProjectedFantasyDefenseSeasonStatsWAdpResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/{format}/FantasyDefenseProjectionsBySeason/{season}", request.PathParams, nil)
 
@@ -392,7 +480,7 @@ func (s *SDK) ProjectedFantasyDefenseSeasonStatsWByeWeekAdp(ctx context.Context,
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.ProjectedFantasyDefenseSeasonStatsWByeWeekAdpResponse{
+	res := &operations.ProjectedFantasyDefenseSeasonStatsWAdpResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -545,8 +633,8 @@ func (s *SDK) ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(ctx cont
 	return res, nil
 }
 
-// ProjectedPlayerSeasonStatsByPlayerWByeWeekAdp - Projected Player Season Stats by Player (w/ Bye Week, ADP)
-func (s *SDK) ProjectedPlayerSeasonStatsByPlayerWByeWeekAdp(ctx context.Context, request operations.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpRequest) (*operations.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse, error) {
+// ProjectedPlayerSeasonStatsByPlayerWAdp - Projected Player Season Stats by Player (w/ ADP)
+func (s *SDK) ProjectedPlayerSeasonStatsByPlayerWAdp(ctx context.Context, request operations.ProjectedPlayerSeasonStatsByPlayerWAdpRequest) (*operations.ProjectedPlayerSeasonStatsByPlayerWAdpResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonProjectionStatsByPlayerID/{season}/{playerid}", request.PathParams, nil)
 
@@ -568,7 +656,7 @@ func (s *SDK) ProjectedPlayerSeasonStatsByPlayerWByeWeekAdp(ctx context.Context,
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.ProjectedPlayerSeasonStatsByPlayerWByeWeekAdpResponse{
+	res := &operations.ProjectedPlayerSeasonStatsByPlayerWAdpResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -589,8 +677,8 @@ func (s *SDK) ProjectedPlayerSeasonStatsByPlayerWByeWeekAdp(ctx context.Context,
 	return res, nil
 }
 
-// ProjectedPlayerSeasonStatsByTeamWByeWeekAdp - Projected Player Season Stats by Team (w/ Bye Week, ADP)
-func (s *SDK) ProjectedPlayerSeasonStatsByTeamWByeWeekAdp(ctx context.Context, request operations.ProjectedPlayerSeasonStatsByTeamWByeWeekAdpRequest) (*operations.ProjectedPlayerSeasonStatsByTeamWByeWeekAdpResponse, error) {
+// ProjectedPlayerSeasonStatsByTeamWAdp - Projected Player Season Stats by Team (w/ ADP)
+func (s *SDK) ProjectedPlayerSeasonStatsByTeamWAdp(ctx context.Context, request operations.ProjectedPlayerSeasonStatsByTeamWAdpRequest) (*operations.ProjectedPlayerSeasonStatsByTeamWAdpResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonProjectionStatsByTeam/{season}/{team}", request.PathParams, nil)
 
@@ -612,7 +700,7 @@ func (s *SDK) ProjectedPlayerSeasonStatsByTeamWByeWeekAdp(ctx context.Context, r
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.ProjectedPlayerSeasonStatsByTeamWByeWeekAdpResponse{
+	res := &operations.ProjectedPlayerSeasonStatsByTeamWAdpResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -633,8 +721,8 @@ func (s *SDK) ProjectedPlayerSeasonStatsByTeamWByeWeekAdp(ctx context.Context, r
 	return res, nil
 }
 
-// ProjectedPlayerSeasonStatsWByeWeekAdp - Projected Player Season Stats (w/ Bye Week, ADP)
-func (s *SDK) ProjectedPlayerSeasonStatsWByeWeekAdp(ctx context.Context, request operations.ProjectedPlayerSeasonStatsWByeWeekAdpRequest) (*operations.ProjectedPlayerSeasonStatsWByeWeekAdpResponse, error) {
+// ProjectedPlayerSeasonStatsWAdp - Projected Player Season Stats (w/ ADP)
+func (s *SDK) ProjectedPlayerSeasonStatsWAdp(ctx context.Context, request operations.ProjectedPlayerSeasonStatsWAdpRequest) (*operations.ProjectedPlayerSeasonStatsWAdpResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/{format}/PlayerSeasonProjectionStats/{season}", request.PathParams, nil)
 
@@ -656,7 +744,7 @@ func (s *SDK) ProjectedPlayerSeasonStatsWByeWeekAdp(ctx context.Context, request
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.ProjectedPlayerSeasonStatsWByeWeekAdpResponse{
+	res := &operations.ProjectedPlayerSeasonStatsWAdpResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -671,6 +759,51 @@ func (s *SDK) ProjectedPlayerSeasonStatsWByeWeekAdp(ctx context.Context, request
 			}
 
 			res.PlayerSeasonProjections = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpcomingDfsSlateOwnershipProjections - Upcoming DFS Slate Ownership Projections
+// Grabs DFS Slates which have not yet started for which we have DFS Ownership projections.
+func (s *SDK) UpcomingDfsSlateOwnershipProjections(ctx context.Context, request operations.UpcomingDfsSlateOwnershipProjectionsRequest) (*operations.UpcomingDfsSlateOwnershipProjectionsResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/UpcomingDfsSlateOwnershipProjections", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpcomingDfsSlateOwnershipProjectionsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.DfsSlateWithOwnershipProjection
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DfsSlateWithOwnershipProjections = out
 		}
 	}
 

@@ -5,4 +5,6 @@ package shared
 type ListingNestMedia struct {
 	// A list of photo urls for the car
 	PhotoLinks []string `json:"photo_links,omitempty"`
+	// A list of cached photo urls for the car
+	PhotoLinksCached []string `json:"photo_links_cached,omitempty"`
 }

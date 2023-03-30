@@ -81,6 +81,7 @@ pkg/models/shared/servicemeshdataplanemanagement.go
 pkg/models/shared/servicemeshstatusdetails.go
 pkg/models/shared/servicemeshcontrolplanemanagement.go
 pkg/models/shared/policycontrollermembershipstate.go
+pkg/models/shared/policycontrollerpolicycontentstate.go
 pkg/models/shared/policycontrolleronclusterstate.go
 pkg/models/shared/meteringmembershipstate.go
 pkg/models/shared/identityservicemembershipstate.go

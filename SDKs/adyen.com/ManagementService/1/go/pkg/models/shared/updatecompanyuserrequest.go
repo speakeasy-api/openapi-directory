@@ -9,6 +9,10 @@ type UpdateCompanyUserRequest struct {
 	Active *bool `json:"active,omitempty"`
 	// The list of [merchant accounts](https://docs.adyen.com/account/account-structure#merchant-accounts) to associate the user with.
 	AssociatedMerchantAccounts []string `json:"associatedMerchantAccounts,omitempty"`
+	// Set of authn apps to add to this user
+	AuthnAppsToAdd []string `json:"authnAppsToAdd,omitempty"`
+	// Set of authn apps to remove from this user
+	AuthnAppsToRemove []string `json:"authnAppsToRemove,omitempty"`
 	// The email address of the user.
 	Email *string `json:"email,omitempty"`
 	Name  *Name2  `json:"name,omitempty"`

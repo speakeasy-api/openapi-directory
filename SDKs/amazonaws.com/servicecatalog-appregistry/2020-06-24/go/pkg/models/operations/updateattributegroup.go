@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateAttributeGroupPathParams struct {
-	// The name or ID of the attribute group that holds the attributes to describe the application.
+	//  The name, ID, or ARN of the attribute group that holds the attributes to describe the application.
 	AttributeGroup string `pathParam:"style=simple,explode=false,name=attributeGroup"`
 }
 

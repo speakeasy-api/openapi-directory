@@ -17,9 +17,11 @@ type PlayerSeason struct {
 	EarnedRunAverage                    *float64 `json:"EarnedRunAverage,omitempty"`
 	Errors                              *float64 `json:"Errors,omitempty"`
 	FantasyPoints                       *float64 `json:"FantasyPoints,omitempty"`
+	FantasyPointsBatting                *float64 `json:"FantasyPointsBatting,omitempty"`
 	FantasyPointsDraftKings             *float64 `json:"FantasyPointsDraftKings,omitempty"`
 	FantasyPointsFanDuel                *float64 `json:"FantasyPointsFanDuel,omitempty"`
 	FantasyPointsFantasyDraft           *float64 `json:"FantasyPointsFantasyDraft,omitempty"`
+	FantasyPointsPitching               *float64 `json:"FantasyPointsPitching,omitempty"`
 	FantasyPointsYahoo                  *float64 `json:"FantasyPointsYahoo,omitempty"`
 	FieldingIndependentPitching         *float64 `json:"FieldingIndependentPitching,omitempty"`
 	FlyOuts                             *float64 `json:"FlyOuts,omitempty"`

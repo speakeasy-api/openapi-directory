@@ -9,7 +9,7 @@ import (
 )
 
 type GetTasksQueryParams struct {
-	// The assignee to filter tasks on.
+	// The assignee to filter tasks on. If searching for unassigned tasks, assignee.any = null can be specified.
 	// *Note: If you specify `assignee`, you must also specify the `workspace` to filter on.*
 	Assignee *string `queryParam:"style=form,explode=true,name=assignee"`
 	// Only return tasks that are either incomplete or that have been completed since this time.

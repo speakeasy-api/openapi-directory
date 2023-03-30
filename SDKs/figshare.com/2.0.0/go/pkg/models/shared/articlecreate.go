@@ -8,8 +8,12 @@ type ArticleCreate struct {
 	Authors []map[string]interface{} `json:"authors,omitempty"`
 	// List of category ids to be associated with the article(e.g [1, 23, 33, 66])
 	Categories []int64 `json:"categories,omitempty"`
+	// List of category source ids to be associated with the article, supersedes the categories property
+	CategoriesBySourceID []string `json:"categories_by_source_id,omitempty"`
 	// List of key, values pairs to be associated with the article
 	CustomFields map[string]interface{} `json:"custom_fields,omitempty"`
+	// List of custom fields values, supersedes custom_fields parameter
+	CustomFieldsList []CustomArticleFieldAdd `json:"custom_fields_list,omitempty"`
 	// <b>One of:</b> <code>figure</code> <code>online resource</code> <code>preprint</code> <code>book</code> <code>conference contribution</code> <code>media</code> <code>dataset</code> <code>poster</code> <code>journal contribution</code> <code>presentation</code> <code>thesis</code> <code>software</code>
 	DefinedType *string `json:"defined_type,omitempty"`
 	// The article description. In a publisher case, usually this is the remote article description
@@ -24,10 +28,14 @@ type ArticleCreate struct {
 	GroupID *int64 `json:"group_id,omitempty"`
 	// Not applicable for regular users. In an institutional case, make sure your group supports setting Handles. This setting is applied by figshare via opening a ticket through our support/helpdesk system.
 	Handle *string `json:"handle,omitempty"`
+	// True if article has no files
+	IsMetadataRecord *bool `json:"is_metadata_record,omitempty"`
 	// List of tags to be associated with the article. Tags can be used instead
 	Keywords []string `json:"keywords,omitempty"`
 	// License id for this article.
 	License *int64 `json:"license,omitempty"`
+	// Article metadata reason
+	MetadataReason *string `json:"metadata_reason,omitempty"`
 	// List of links to be associated with the article (e.g ["http://link1", "http://link2", "http://link3"])
 	References []string `json:"references,omitempty"`
 	// Not applicable to regular users. In a publisher case, this is the publisher article DOI.

@@ -169,8 +169,6 @@ func (e *GetServersID200ApplicationJSONServerImageTypeEnum) UnmarshalJSON(data [
 type GetServersID200ApplicationJSONServerImage struct {
 	// ID of Server the Image is bound to. Only set for Images of type `backup`.
 	BoundTo int64 `json:"bound_to"`
-	// Build ID of the Image
-	BuildID *string `json:"build_id,omitempty"`
 	// Point in time when the Resource was created (in ISO-8601 format)
 	Created string `json:"created"`
 	// Information about the Server the Image was created from
@@ -331,6 +329,8 @@ type GetServersID200ApplicationJSONServerPublicNetIpv4 struct {
 	Blocked bool `json:"blocked"`
 	// Reverse DNS PTR entry for the IPv4 addresses of this Server
 	DNSPtr string `json:"dns_ptr"`
+	// ID of the Resource
+	ID *int64 `json:"id,omitempty"`
 	// IP address (v4) of this Server
 	IP string `json:"ip"`
 }
@@ -348,7 +348,9 @@ type GetServersID200ApplicationJSONServerPublicNetIpv6 struct {
 	Blocked bool `json:"blocked"`
 	// Reverse DNS PTR entries for the IPv6 addresses of this Server, `null` by default
 	DNSPtr []GetServersID200ApplicationJSONServerPublicNetIpv6DNSPtr `json:"dns_ptr"`
-	// IP address (v4) of this Server
+	// ID of the Resource
+	ID *int64 `json:"id,omitempty"`
+	// IP address (v6) of this Server
 	IP string `json:"ip"`
 }
 
@@ -527,7 +529,7 @@ type GetServersID200ApplicationJSONServer struct {
 	LoadBalancers []int64           `json:"load_balancers,omitempty"`
 	// True if Server has been locked and is not available to user
 	Locked bool `json:"locked"`
-	// Name of the Resource. Must be unique per Project.
+	// Name of the Server (must be unique per Project and a valid hostname as per RFC 1123)
 	Name string `json:"name"`
 	// Outbound Traffic for the current billing period in bytes
 	OutgoingTraffic float64                                                     `json:"outgoing_traffic"`

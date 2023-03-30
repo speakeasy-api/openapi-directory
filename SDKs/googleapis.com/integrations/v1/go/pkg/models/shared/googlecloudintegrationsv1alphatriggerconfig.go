@@ -81,12 +81,14 @@ type GoogleCloudIntegrationsV1alphaTriggerConfig struct {
 	CloudSchedulerConfig *GoogleCloudIntegrationsV1alphaCloudSchedulerConfig `json:"cloudSchedulerConfig,omitempty"`
 	// Optional. User-provided description intended to give additional business context about the task.
 	Description *string `json:"description,omitempty"`
-	// Optional. Optional Error catcher config id of the error catch flow which will be executed when execution error happens in the task
-	ErrorCatcherConfigID *string `json:"errorCatcherConfigId,omitempty"`
+	// Optional. Optional Error catcher id of the error catch flow which will be executed when execution error happens in the task
+	ErrorCatcherID *string `json:"errorCatcherId,omitempty"`
 	// Optional. The user created label for a particular trigger.
 	Label *string `json:"label,omitempty"`
 	// Optional. Dictates how next tasks will be executed.
 	NextTasksExecutionPolicy *GoogleCloudIntegrationsV1alphaTriggerConfigNextTasksExecutionPolicyEnum `json:"nextTasksExecutionPolicy,omitempty"`
+	// Configuration detail of coordinate, it used for UI
+	Position *GoogleCloudIntegrationsV1alphaCoordinate `json:"position,omitempty"`
 	// Optional. Configurable properties of the trigger, not to be confused with integration parameters. E.g. "name" is a property for API triggers and "subscription" is a property for Pub/sub triggers.
 	Properties map[string]string `json:"properties,omitempty"`
 	// Optional. Set of tasks numbers from where the integration execution is started by this trigger. If this is empty, then integration is executed with default start tasks. In the list of start tasks, none of two tasks can have direct ancestor-descendant relationships (i.e. in a same integration execution graph).

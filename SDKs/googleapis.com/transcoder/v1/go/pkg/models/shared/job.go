@@ -62,7 +62,7 @@ type Job struct {
 	StartTime *string `json:"startTime,omitempty"`
 	// Output only. The current state of the job.
 	State *JobStateEnum `json:"state,omitempty"`
-	// Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined JobTemplate: `{job_template_id}`
+	// Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`, which is the only supported preset. User defined JobTemplate: `{job_template_id}`
 	TemplateID *string `json:"templateId,omitempty"`
 	// Job time to live value in days, which will be effective after job completion. Job should be deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
 	TTLAfterCompletionDays *int `json:"ttlAfterCompletionDays,omitempty"`
@@ -82,7 +82,7 @@ type JobInput struct {
 	Name *string `json:"name,omitempty"`
 	// Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`. See [Supported input and output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats).
 	OutputURI *string `json:"outputUri,omitempty"`
-	// Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined JobTemplate: `{job_template_id}`
+	// Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`, which is the only supported preset. User defined JobTemplate: `{job_template_id}`
 	TemplateID *string `json:"templateId,omitempty"`
 	// Job time to live value in days, which will be effective after job completion. Job should be deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
 	TTLAfterCompletionDays *int `json:"ttlAfterCompletionDays,omitempty"`

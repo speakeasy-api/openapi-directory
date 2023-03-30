@@ -80,7 +80,7 @@ func (s *accounts) ContentAccountsAuthinfo(ctx context.Context, request operatio
 	return res, nil
 }
 
-// ContentAccountsClaimwebsite - Claims the website of a Merchant Center sub-account.
+// ContentAccountsClaimwebsite - Claims the website of a Merchant Center sub-account. Merchant accounts with approved third-party CSSs aren't required to claim a website.
 func (s *accounts) ContentAccountsClaimwebsite(ctx context.Context, request operations.ContentAccountsClaimwebsiteRequest) (*operations.ContentAccountsClaimwebsiteResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/{merchantId}/accounts/{accountId}/claimwebsite", request.PathParams, nil)

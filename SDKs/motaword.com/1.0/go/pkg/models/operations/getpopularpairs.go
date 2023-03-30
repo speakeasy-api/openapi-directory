@@ -11,7 +11,7 @@ type GetPopularPairsResponse struct {
 	ContentType string
 	// UserNotFound
 	Error *shared.Error
-	// User's most ordered language pairs
+	// Your most ordered language pairs
 	PopularLanguagePairs *shared.PopularLanguagePairs
 	StatusCode           int
 	RawResponse          *http.Response

@@ -32,7 +32,7 @@ func newAccessTokens(defaultClient, securityClient HTTPClient, serverURL, langua
 	}
 }
 
-func (s *accessTokens) GetOauthV1AccessTokensTokenGetAccessToken(ctx context.Context, request operations.GetOauthV1AccessTokensTokenGetAccessTokenRequest) (*operations.GetOauthV1AccessTokensTokenGetAccessTokenResponse, error) {
+func (s *accessTokens) GetOauthV1AccessTokensTokenGet(ctx context.Context, request operations.GetOauthV1AccessTokensTokenGetRequest) (*operations.GetOauthV1AccessTokensTokenGetResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/oauth/v1/access-tokens/{token}", request.PathParams, nil)
 
@@ -54,7 +54,7 @@ func (s *accessTokens) GetOauthV1AccessTokensTokenGetAccessToken(ctx context.Con
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetOauthV1AccessTokensTokenGetAccessTokenResponse{
+	res := &operations.GetOauthV1AccessTokensTokenGetResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

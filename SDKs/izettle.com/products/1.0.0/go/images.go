@@ -31,7 +31,7 @@ func newImages(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
-// GetAllImageUrls - Retrieves all library item images
+// GetAllImageUrls - Retrieve all library item images
 // Retrieves all library items images used by the organization, sorted by updated date
 func (s *images) GetAllImageUrls(ctx context.Context, request operations.GetAllImageUrlsRequest) (*operations.GetAllImageUrlsResponse, error) {
 	baseURL := s.serverURL

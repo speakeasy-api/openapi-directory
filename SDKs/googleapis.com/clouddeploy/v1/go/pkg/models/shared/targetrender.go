@@ -73,6 +73,8 @@ type TargetRender struct {
 	FailureCause *TargetRenderFailureCauseEnum `json:"failureCause,omitempty"`
 	// Output only. Additional information about the render failure, if available.
 	FailureMessage *string `json:"failureMessage,omitempty"`
+	// RenderMetadata includes information associated with a `Release` render.
+	Metadata *RenderMetadata `json:"metadata,omitempty"`
 	// Output only. The resource name of the Cloud Build `Build` object that is used to render the manifest for this target. Format is `projects/{project}/locations/{location}/builds/{build}`.
 	RenderingBuild *string `json:"renderingBuild,omitempty"`
 	// Output only. Current state of the render operation for this Target.

@@ -86,8 +86,8 @@ func (s *projectWebhooks) DeleteProjectWebhook(ctx context.Context, request oper
 	return res, nil
 }
 
-// GetProjectWebhooks - Get project information (includes callback_url for webhook)
-// Get project information (includes callback_url for webhook). Currently projects can have only 1 webhook registered.
+// GetProjectWebhooks - View project webhooks
+// This endpoint returns Project entity which contains `callback_url` field for webhook URL. Currently projects can have only 1 webhook registered.
 func (s *projectWebhooks) GetProjectWebhooks(ctx context.Context, request operations.GetProjectWebhooksRequest) (*operations.GetProjectWebhooksResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/webhooks", request.PathParams, nil)
@@ -141,7 +141,7 @@ func (s *projectWebhooks) GetProjectWebhooks(ctx context.Context, request operat
 	return res, nil
 }
 
-// PostProjectWebhook - Update project webhook URL
+// PostProjectWebhook - Update project webhook
 // Update project webhook URL
 func (s *projectWebhooks) PostProjectWebhook(ctx context.Context, request operations.PostProjectWebhookRequest) (*operations.PostProjectWebhookResponse, error) {
 	baseURL := s.serverURL
@@ -203,7 +203,7 @@ func (s *projectWebhooks) PostProjectWebhook(ctx context.Context, request operat
 	return res, nil
 }
 
-// UpdateProjectWebhook - Update project webhook URL
+// UpdateProjectWebhook - Update project webhook
 // Update project webhook URL
 func (s *projectWebhooks) UpdateProjectWebhook(ctx context.Context, request operations.UpdateProjectWebhookRequest) (*operations.UpdateProjectWebhookResponse, error) {
 	baseURL := s.serverURL

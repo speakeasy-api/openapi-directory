@@ -62,5 +62,5 @@ type PayoutScheduleResponse struct {
 	NextScheduledPayout *time.Time `json:"nextScheduledPayout,omitempty"`
 	// The payout schedule of the account.
 	// Permitted values: `DEFAULT`, `DAILY`, `DAILY_US`, `DAILY_EU`, `DAILY_AU`, `DAILY_SG`, `WEEKLY`, `WEEKLY_ON_TUE_FRI_MIDNIGHT`, `BIWEEKLY_ON_1ST_AND_15TH_AT_MIDNIGHT`, `MONTHLY`, `HOLD`.
-	Schedule PayoutScheduleResponseScheduleEnum `json:"schedule"`
+	Schedule *PayoutScheduleResponseScheduleEnum `json:"schedule,omitempty"`
 }

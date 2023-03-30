@@ -13,6 +13,11 @@ type PostFloatingIpsIDActionsAssignPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
+// PostFloatingIpsIDActionsAssignAssignFloatingIPRequest - #### Call specific error codes
+//
+// | Code                          | Description                                                   |
+// |------------------------------ |-------------------------------------------------------------- |
+// | `floating_ip_assigned`        | The floating IP is already assigned                           |
 type PostFloatingIpsIDActionsAssignAssignFloatingIPRequest struct {
 	// ID of the Server the Floating IP shall be assigned to
 	Server int64 `json:"server"`

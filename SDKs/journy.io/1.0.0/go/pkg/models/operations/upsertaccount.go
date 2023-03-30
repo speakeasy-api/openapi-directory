@@ -14,26 +14,10 @@ type UpsertAccountRequestBodyIdentification struct {
 	Domain *string `json:"domain,omitempty"`
 }
 
-// UpsertAccountRequestBodyMembersIdentification - User identification requires a userId, email or both
-type UpsertAccountRequestBodyMembersIdentification struct {
-	// Email address of the user
-	Email *string `json:"email,omitempty"`
-	// Unique identifier for the user in your database
-	UserID *string `json:"userId,omitempty"`
-}
-
-// UpsertAccountRequestBodyMembers - Identification requires an accountId, domain or both
-type UpsertAccountRequestBodyMembers struct {
-	// User identification requires a userId, email or both
-	Identification UpsertAccountRequestBodyMembersIdentification `json:"identification"`
-}
-
 // UpsertAccountRequestBody - Update properties and/or members of an account
 type UpsertAccountRequestBody struct {
 	// Account identification requires an accountId, domain or both
 	Identification UpsertAccountRequestBodyIdentification `json:"identification"`
-	// The users that are member of this account
-	Members []UpsertAccountRequestBodyMembers `json:"members,omitempty"`
 	// The properties being set, possible values are strings, booleans, numbers and datetimes (ISO 8601)
 	Properties map[string]interface{} `json:"properties,omitempty"`
 }
@@ -47,7 +31,7 @@ type UpsertAccount500ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertAccount500ApplicationJSON - The error message should specify what cause the error
+// UpsertAccount500ApplicationJSON - The message specifies what is done
 type UpsertAccount500ApplicationJSON struct {
 	Message string                              `json:"message"`
 	Meta    UpsertAccount500ApplicationJSONMeta `json:"meta"`
@@ -58,10 +42,21 @@ type UpsertAccount429ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertAccount429ApplicationJSON - The error message should specify what cause the error
+// UpsertAccount429ApplicationJSON - The message specifies what is done
 type UpsertAccount429ApplicationJSON struct {
 	Message string                              `json:"message"`
 	Meta    UpsertAccount429ApplicationJSONMeta `json:"meta"`
+}
+
+type UpsertAccount403ApplicationJSONMeta struct {
+	RequestID string  `json:"requestId"`
+	Status    float64 `json:"status"`
+}
+
+// UpsertAccount403ApplicationJSON - The message specifies what is done
+type UpsertAccount403ApplicationJSON struct {
+	Message string                              `json:"message"`
+	Meta    UpsertAccount403ApplicationJSONMeta `json:"meta"`
 }
 
 type UpsertAccount401ApplicationJSONMeta struct {
@@ -69,7 +64,7 @@ type UpsertAccount401ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertAccount401ApplicationJSON - The error message should specify what cause the error
+// UpsertAccount401ApplicationJSON - The message specifies what is done
 type UpsertAccount401ApplicationJSON struct {
 	Message string                              `json:"message"`
 	Meta    UpsertAccount401ApplicationJSONMeta `json:"meta"`
@@ -95,7 +90,7 @@ type UpsertAccount400ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertAccount400ApplicationJSON - The error message should specify what cause the error
+// UpsertAccount400ApplicationJSON - The message specifies what is done
 type UpsertAccount400ApplicationJSON struct {
 	// Map that sums up all received values that seemed incorrect
 	Errors  UpsertAccount400ApplicationJSONErrors `json:"errors"`
@@ -108,10 +103,12 @@ type UpsertAccount201ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// UpsertAccount201ApplicationJSON - The object was created
+// UpsertAccount201ApplicationJSON - Specifies if any warnings occurred when validating the properties
 type UpsertAccount201ApplicationJSON struct {
 	Message string                              `json:"message"`
 	Meta    UpsertAccount201ApplicationJSONMeta `json:"meta"`
+	// If validation fails, specifies the property name and error message
+	Rejected map[string]string `json:"rejected,omitempty"`
 }
 
 type UpsertAccountResponse struct {
@@ -119,12 +116,14 @@ type UpsertAccountResponse struct {
 	Headers     map[string][]string
 	StatusCode  int
 	RawResponse *http.Response
-	// Object was created
+	// Account will be created
 	UpsertAccount201ApplicationJSONObject *UpsertAccount201ApplicationJSON
 	// Bad request, some fields or parameters are incorrect
 	UpsertAccount400ApplicationJSONObject *UpsertAccount400ApplicationJSON
 	// No API Key was provided or the key is not authorised to perform the action
 	UpsertAccount401ApplicationJSONObject *UpsertAccount401ApplicationJSON
+	// The API Key provided is currently not enabled
+	UpsertAccount403ApplicationJSONObject *UpsertAccount403ApplicationJSON
 	// Too many API requests were send
 	UpsertAccount429ApplicationJSONObject *UpsertAccount429ApplicationJSON
 	// An unexpected error occurred

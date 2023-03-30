@@ -44,6 +44,8 @@ type CloudchannelAccountsOffersListQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// Optional. A boolean flag that determines if a response returns future offers 30 days from now. If the show_future_offers is true, the response will only contain offers that are scheduled to be available 30 days from now.
+	ShowFutureOffers *bool `queryParam:"style=form,explode=true,name=showFutureOffers"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").

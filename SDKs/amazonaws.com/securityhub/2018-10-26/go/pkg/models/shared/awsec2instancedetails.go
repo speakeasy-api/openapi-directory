@@ -11,6 +11,7 @@ type AwsEc2InstanceDetails struct {
 	KeyName               *string                                  `json:"KeyName,omitempty"`
 	LaunchedAt            *string                                  `json:"LaunchedAt,omitempty"`
 	MetadataOptions       *AwsEc2InstanceMetadataOptions           `json:"MetadataOptions,omitempty"`
+	Monitoring            *AwsEc2InstanceMonitoringDetails         `json:"Monitoring,omitempty"`
 	NetworkInterfaces     []AwsEc2InstanceNetworkInterfacesDetails `json:"NetworkInterfaces,omitempty"`
 	SubnetID              *string                                  `json:"SubnetId,omitempty"`
 	Type                  *string                                  `json:"Type,omitempty"`

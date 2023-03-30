@@ -7,12 +7,14 @@ import (
 	"fmt"
 )
 
-// CapacityCommitmentEditionEnum - Do not use.
+// CapacityCommitmentEditionEnum - Edition of the capacity commitment.
 type CapacityCommitmentEditionEnum string
 
 const (
 	CapacityCommitmentEditionEnumEditionUnspecified CapacityCommitmentEditionEnum = "EDITION_UNSPECIFIED"
+	CapacityCommitmentEditionEnumStandard           CapacityCommitmentEditionEnum = "STANDARD"
 	CapacityCommitmentEditionEnumEnterprise         CapacityCommitmentEditionEnum = "ENTERPRISE"
+	CapacityCommitmentEditionEnumEnterprisePlus     CapacityCommitmentEditionEnum = "ENTERPRISE_PLUS"
 )
 
 func (e *CapacityCommitmentEditionEnum) UnmarshalJSON(data []byte) error {
@@ -23,7 +25,11 @@ func (e *CapacityCommitmentEditionEnum) UnmarshalJSON(data []byte) error {
 	switch s {
 	case "EDITION_UNSPECIFIED":
 		fallthrough
+	case "STANDARD":
+		fallthrough
 	case "ENTERPRISE":
+		fallthrough
+	case "ENTERPRISE_PLUS":
 		*e = CapacityCommitmentEditionEnum(s)
 		return nil
 	default:
@@ -37,9 +43,13 @@ type CapacityCommitmentPlanEnum string
 const (
 	CapacityCommitmentPlanEnumCommitmentPlanUnspecified CapacityCommitmentPlanEnum = "COMMITMENT_PLAN_UNSPECIFIED"
 	CapacityCommitmentPlanEnumFlex                      CapacityCommitmentPlanEnum = "FLEX"
+	CapacityCommitmentPlanEnumFlexFlatRate              CapacityCommitmentPlanEnum = "FLEX_FLAT_RATE"
 	CapacityCommitmentPlanEnumTrial                     CapacityCommitmentPlanEnum = "TRIAL"
 	CapacityCommitmentPlanEnumMonthly                   CapacityCommitmentPlanEnum = "MONTHLY"
+	CapacityCommitmentPlanEnumMonthlyFlatRate           CapacityCommitmentPlanEnum = "MONTHLY_FLAT_RATE"
 	CapacityCommitmentPlanEnumAnnual                    CapacityCommitmentPlanEnum = "ANNUAL"
+	CapacityCommitmentPlanEnumAnnualFlatRate            CapacityCommitmentPlanEnum = "ANNUAL_FLAT_RATE"
+	CapacityCommitmentPlanEnumThreeYear                 CapacityCommitmentPlanEnum = "THREE_YEAR"
 	CapacityCommitmentPlanEnumNone                      CapacityCommitmentPlanEnum = "NONE"
 )
 
@@ -53,11 +63,19 @@ func (e *CapacityCommitmentPlanEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "FLEX":
 		fallthrough
+	case "FLEX_FLAT_RATE":
+		fallthrough
 	case "TRIAL":
 		fallthrough
 	case "MONTHLY":
 		fallthrough
+	case "MONTHLY_FLAT_RATE":
+		fallthrough
 	case "ANNUAL":
+		fallthrough
+	case "ANNUAL_FLAT_RATE":
+		fallthrough
+	case "THREE_YEAR":
 		fallthrough
 	case "NONE":
 		*e = CapacityCommitmentPlanEnum(s)
@@ -73,9 +91,13 @@ type CapacityCommitmentRenewalPlanEnum string
 const (
 	CapacityCommitmentRenewalPlanEnumCommitmentPlanUnspecified CapacityCommitmentRenewalPlanEnum = "COMMITMENT_PLAN_UNSPECIFIED"
 	CapacityCommitmentRenewalPlanEnumFlex                      CapacityCommitmentRenewalPlanEnum = "FLEX"
+	CapacityCommitmentRenewalPlanEnumFlexFlatRate              CapacityCommitmentRenewalPlanEnum = "FLEX_FLAT_RATE"
 	CapacityCommitmentRenewalPlanEnumTrial                     CapacityCommitmentRenewalPlanEnum = "TRIAL"
 	CapacityCommitmentRenewalPlanEnumMonthly                   CapacityCommitmentRenewalPlanEnum = "MONTHLY"
+	CapacityCommitmentRenewalPlanEnumMonthlyFlatRate           CapacityCommitmentRenewalPlanEnum = "MONTHLY_FLAT_RATE"
 	CapacityCommitmentRenewalPlanEnumAnnual                    CapacityCommitmentRenewalPlanEnum = "ANNUAL"
+	CapacityCommitmentRenewalPlanEnumAnnualFlatRate            CapacityCommitmentRenewalPlanEnum = "ANNUAL_FLAT_RATE"
+	CapacityCommitmentRenewalPlanEnumThreeYear                 CapacityCommitmentRenewalPlanEnum = "THREE_YEAR"
 	CapacityCommitmentRenewalPlanEnumNone                      CapacityCommitmentRenewalPlanEnum = "NONE"
 )
 
@@ -89,11 +111,19 @@ func (e *CapacityCommitmentRenewalPlanEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "FLEX":
 		fallthrough
+	case "FLEX_FLAT_RATE":
+		fallthrough
 	case "TRIAL":
 		fallthrough
 	case "MONTHLY":
 		fallthrough
+	case "MONTHLY_FLAT_RATE":
+		fallthrough
 	case "ANNUAL":
+		fallthrough
+	case "ANNUAL_FLAT_RATE":
+		fallthrough
+	case "THREE_YEAR":
 		fallthrough
 	case "NONE":
 		*e = CapacityCommitmentRenewalPlanEnum(s)
@@ -139,11 +169,11 @@ type CapacityCommitment struct {
 	CommitmentEndTime *string `json:"commitmentEndTime,omitempty"`
 	// Output only. The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
 	CommitmentStartTime *string `json:"commitmentStartTime,omitempty"`
-	// Do not use.
+	// Edition of the capacity commitment.
 	Edition *CapacityCommitmentEditionEnum `json:"edition,omitempty"`
 	// The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).
 	FailureStatus *Status `json:"failureStatus,omitempty"`
-	// Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization's default region.
+	// Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization's default region. NOTE: this is a preview feature. Project must be allow-listed in order to set this field.
 	MultiRegionAuxiliary *bool `json:"multiRegionAuxiliary,omitempty"`
 	// Output only. The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123` The commitment_id must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters.
 	Name *string `json:"name,omitempty"`
@@ -159,11 +189,11 @@ type CapacityCommitment struct {
 
 // CapacityCommitmentInput - Capacity commitment is a way to purchase compute capacity for BigQuery jobs (in the form of slots) with some committed period of usage. Annual commitments renew by default. Commitments can be removed after their commitment end time passes. In order to remove annual commitment, its plan needs to be changed to monthly or flex first. A capacity commitment resource exists as a child resource of the admin project.
 type CapacityCommitmentInput struct {
-	// Do not use.
+	// Edition of the capacity commitment.
 	Edition *CapacityCommitmentEditionEnum `json:"edition,omitempty"`
 	// The `Status` type defines a logical error model that is suitable for different programming environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). Each `Status` message contains three pieces of data: error code, error message, and error details. You can find out more about this error model and how to work with it in the [API Design Guide](https://cloud.google.com/apis/design/errors).
 	FailureStatus *Status `json:"failureStatus,omitempty"`
-	// Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization's default region.
+	// Applicable only for commitments located within one of the BigQuery multi-regions (US or EU). If set to true, this commitment is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this commitment is placed in the organization's default region. NOTE: this is a preview feature. Project must be allow-listed in order to set this field.
 	MultiRegionAuxiliary *bool `json:"multiRegionAuxiliary,omitempty"`
 	// Capacity commitment commitment plan.
 	Plan *CapacityCommitmentPlanEnum `json:"plan,omitempty"`

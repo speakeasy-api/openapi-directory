@@ -3,8 +3,11 @@
 package shared
 
 type TotalByOffice struct {
-	ElectionYear       *int     `json:"election_year,omitempty"`
-	Office             *string  `json:"office,omitempty"`
-	TotalDisbursements *float64 `json:"total_disbursements,omitempty"`
-	TotalReceipts      *float64 `json:"total_receipts,omitempty"`
+	ElectionYear                               *int     `json:"election_year,omitempty"`
+	Office                                     *string  `json:"office,omitempty"`
+	TotalDisbursements                         *float64 `json:"total_disbursements,omitempty"`
+	TotalIndividualItemizedContributions       *float64 `json:"total_individual_itemized_contributions,omitempty"`
+	TotalOtherPoliticalCommitteeContributions  *float64 `json:"total_other_political_committee_contributions,omitempty"`
+	TotalReceipts                              *float64 `json:"total_receipts,omitempty"`
+	TotalTransfersFromOtherAuthorizedCommittee *float64 `json:"total_transfers_from_other_authorized_committee,omitempty"`
 }

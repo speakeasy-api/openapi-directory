@@ -3,6 +3,7 @@
 package shared
 
 type Race struct {
+	ActualLaps          *int64  `json:"ActualLaps,omitempty"`
 	Broadcast           *string `json:"Broadcast,omitempty"`
 	Canceled            *bool   `json:"Canceled,omitempty"`
 	Created             *string `json:"Created,omitempty"`
@@ -15,6 +16,7 @@ type Race struct {
 	RaceID              *int64  `json:"RaceID,omitempty"`
 	RescheduledDateTime *string `json:"RescheduledDateTime,omitempty"`
 	RescheduledDay      *string `json:"RescheduledDay,omitempty"`
+	ScheduledLaps       *int64  `json:"ScheduledLaps,omitempty"`
 	Season              *int64  `json:"Season,omitempty"`
 	SeriesID            *int64  `json:"SeriesID,omitempty"`
 	SeriesName          *string `json:"SeriesName,omitempty"`

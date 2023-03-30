@@ -17,9 +17,8 @@ type PostServersIDActionsEnableRescuePathParams struct {
 type PostServersIDActionsEnableRescueRequestBodyTypeEnum string
 
 const (
-	PostServersIDActionsEnableRescueRequestBodyTypeEnumLinux64   PostServersIDActionsEnableRescueRequestBodyTypeEnum = "linux64"
-	PostServersIDActionsEnableRescueRequestBodyTypeEnumLinux32   PostServersIDActionsEnableRescueRequestBodyTypeEnum = "linux32"
-	PostServersIDActionsEnableRescueRequestBodyTypeEnumFreebsd64 PostServersIDActionsEnableRescueRequestBodyTypeEnum = "freebsd64"
+	PostServersIDActionsEnableRescueRequestBodyTypeEnumLinux64 PostServersIDActionsEnableRescueRequestBodyTypeEnum = "linux64"
+	PostServersIDActionsEnableRescueRequestBodyTypeEnumLinux32 PostServersIDActionsEnableRescueRequestBodyTypeEnum = "linux32"
 )
 
 func (e *PostServersIDActionsEnableRescueRequestBodyTypeEnum) UnmarshalJSON(data []byte) error {
@@ -31,8 +30,6 @@ func (e *PostServersIDActionsEnableRescueRequestBodyTypeEnum) UnmarshalJSON(data
 	case "linux64":
 		fallthrough
 	case "linux32":
-		fallthrough
-	case "freebsd64":
 		*e = PostServersIDActionsEnableRescueRequestBodyTypeEnum(s)
 		return nil
 	default:
@@ -41,7 +38,7 @@ func (e *PostServersIDActionsEnableRescueRequestBodyTypeEnum) UnmarshalJSON(data
 }
 
 type PostServersIDActionsEnableRescueRequestBody struct {
-	// Array of SSH key IDs which should be injected into the rescue system. Only available for types: `linux64` and `linux32`.
+	// Array of SSH key IDs which should be injected into the rescue system.
 	SSHKeys []int64 `json:"ssh_keys,omitempty"`
 	// Type of rescue system to boot (default: `linux64`)
 	Type *PostServersIDActionsEnableRescueRequestBodyTypeEnum `json:"type,omitempty"`

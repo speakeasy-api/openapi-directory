@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// GoogleCloudRunV2ExecutionLaunchStageEnum - Set the launch stage to a preview stage on write to allow use of preview features in that stage. On read, describes whether the resource uses preview features. Launch Stages are defined at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
+// GoogleCloudRunV2ExecutionLaunchStageEnum - The least stable launch stage needed to create this resource, as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level features are were, this field will be BETA.
 type GoogleCloudRunV2ExecutionLaunchStageEnum string
 
 const (
@@ -75,7 +75,7 @@ type GoogleCloudRunV2Execution struct {
 	Job *string `json:"job,omitempty"`
 	// KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels
 	Labels map[string]string `json:"labels,omitempty"`
-	// Set the launch stage to a preview stage on write to allow use of preview features in that stage. On read, describes whether the resource uses preview features. Launch Stages are defined at [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages).
+	// The least stable launch stage needed to create this resource, as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. Note that this value might not be what was used as input. For example, if ALPHA was provided as input in the parent resource, but only BETA and GA-level features are were, this field will be BETA.
 	LaunchStage *GoogleCloudRunV2ExecutionLaunchStageEnum `json:"launchStage,omitempty"`
 	// Output only. URI where logs for this execution can be found in Cloud Console.
 	LogURI *string `json:"logUri,omitempty"`
@@ -91,6 +91,8 @@ type GoogleCloudRunV2Execution struct {
 	RetriedCount *int `json:"retriedCount,omitempty"`
 	// Output only. The number of actively running tasks.
 	RunningCount *int `json:"runningCount,omitempty"`
+	// Output only. Reserved for future use.
+	SatisfiesPzs *bool `json:"satisfiesPzs,omitempty"`
 	// Output only. Represents time when the execution started to run. It is not guaranteed to be set in happens-before order across separate operations.
 	StartTime *string `json:"startTime,omitempty"`
 	// Output only. The number of tasks which reached phase Succeeded.

@@ -34,6 +34,7 @@ func (e *CapabilityProblemEntityRecursiveTypeEnum) UnmarshalJSON(data []byte) er
 }
 
 type CapabilityProblemEntityRecursive struct {
-	ID   *string                                   `json:"id,omitempty"`
-	Type *CapabilityProblemEntityRecursiveTypeEnum `json:"type,omitempty"`
+	Documents []string                                  `json:"documents,omitempty"`
+	ID        *string                                   `json:"id,omitempty"`
+	Type      *CapabilityProblemEntityRecursiveTypeEnum `json:"type,omitempty"`
 }

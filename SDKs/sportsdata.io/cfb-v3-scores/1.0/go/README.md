@@ -62,11 +62,13 @@ func main() {
 * `CurrentWeek` - Current Week
 * `GamesByDate` - Games by Date
 * `GamesByWeek` - Games by Week
+* `InjuredPlayers` - Injured Players
 * `PlayerDetailsByActive` - Player Details By Active
 * `PlayerDetailsByPlayer` - Player Details By Player
 * `PlayerDetailsByTeam` - Player Details by Team
 * `Schedules` - Schedules
 * `Stadiums` - Stadiums
+* `TeamGameLogsBySeason` - Team Game Logs By Season
 * `TeamGameStatsByWeek` - Team Game Stats by Week
 * `TeamSeasonStatsStandings` - Team Season Stats & Standings
 * `Teams` - Teams

@@ -56,7 +56,7 @@ func main() {
 
 ### Collections
 
-* `CollectionsAddMetadata` - Add Metadata or Subjects to a Entitiy in a Collection
+* `CollectionsAddMetadata` - Add Metadata or Subjects to a Entity in a Collection
 * `CollectionsCollectedMetadata` - Retrieve subject data for a specific piece of metadata info for a collection
 * `CollectionsCreate` - Create a Collection
 * `CollectionsDelete` - Delete a Collection
@@ -84,6 +84,20 @@ func main() {
 * `CommentsPut` - Update a comment
 * `CommentsRead` - Retrieve a comment
 
+### DraftRegistrations
+
+* `DeleteDraftRegistrationsDraftID` - Delete a draft registration
+* `DraftRegistrationContributorsCreate` - Add a contributor to a Draft Registration
+* `DraftRegistrationContributorsList` - Retreive a list Contributors from a Draft Registration
+* `DraftRegistrationsCreate` - Create a Draft Registration
+* `DraftRegistrationsRead` - Retrieve a list of Draft Registrations
+* `GetDraftRegistrationsDraftID` - Retrieve a Draft Registration
+* `GetDraftRegistrationsDraftIDContributorsUserID` - Retreive a Contributor from a Draft Registration
+* `GetDraftRegistrationsDraftIDInstitutions` - Retrieve Institutions afilliated with a Draft Registration
+* `NodesDraftRegistrationsRead` - Retrieve a Draft Registration
+* `NodesDraftRegistrationsSubjects` - Retrieve Subjects associated with a Draft Registration
+* `PatchDraftRegistrationsDraftID` - Update a Draft Registration
+
 ### Files
 
 * `FilesDetail` - Retrieve a file
@@ -109,11 +123,6 @@ func main() {
 * `LogsActions` - Actions
 * `LogsRead` - Retrieve a log
 
-### Metaschemas
-
-* `MetaschemasList` - List all metaschemas
-* `MetaschemasRead` - Retrieve a metaschema
-
 ### Nodes
 
 * `NodesAddonRead` - Retrieve an addon
@@ -132,11 +141,10 @@ func main() {
 * `NodesContributorsRead` - Retrieve a contributor
 * `NodesCreate` - Create a node
 * `NodesDelete` - Delete a node
-* `NodesDraftRegistrationsCreate` - Create a draft registration
+* `NodesDraftRegistrationsCreate` - Create a draft registration based on your current project Node.
 * `NodesDraftRegistrationsDelete` - Delete a draft registration
 * `NodesDraftRegistrationsList` - List all draft registrations
 * `NodesDraftRegistrationsPartialUpdate` - Update a draft registration
-* `NodesDraftRegistrationsRead` - Retrieve a draft registration
 * `NodesFilesList` - List all node files
 * `NodesFilesRead` - Retrieve a file
 * `NodesForksCreate` - Create a fork of this node
@@ -167,12 +175,26 @@ func main() {
 
 ### Preprints
 
+* `PreprintsBibliographicContributorsList` - List all Bibliographic Contributors
 * `PreprintsCitationList` - Retrieve citation details
 * `PreprintsCitationRead` - Retrieve a styled citation
+* `PreprintsContributorRead` - Retrieve a contributor
+* `PreprintsContributorsCreate` - Create a Contributor
+* `PreprintsContributorsList` - List all Contributors for a Preprint
 * `PreprintsCreate` - Create a preprint
 * `PreprintsList` - List all preprints
 * `PreprintsPartialUpdate` - Update a preprint
 * `PreprintsRead` - Retrieve a preprint
+
+### RegistrationSchemaBlocks
+
+* `GetSchemaResponsesSchemaResponseIDSchemaBlocksSchemaResponseBlockID` - Retrieve a Registration Schema Block
+* `SchemaResponseBlocksRead` - Retrieve a list of Registration Schema Blocks for a Schema Response
+
+### RegistrationSchemas
+
+* `RegistrationSchemaRead` - Retrieve a Registration Schema
+* `RegistrationSchemasList` - Retrieve a list of Registration Schemas
 
 ### Registrations
 
@@ -197,6 +219,20 @@ func main() {
 * `RegistrationsViewOnlyLinksList` - List all view only links
 * `RegistrationsViewOnlyLinksRead` - Retrieve a view only link
 * `RegistrationsWikisList` - List all wikis
+
+### SchemaResponseActions
+
+* `GetSchemaResponsesSchemaResponseIDActionsSchemaResponseActionID` - A Schema Response Action from a Schema Response
+* `PostSchemaResponsesSchemaResponseIDActions` - Create a new Schema Response Action
+* `SchemaResponseActionRead` - Retrieve a list of Schema Response Actions for a Schema Response
+
+### SchemaResponses
+
+* `SchemaResponseDelete` - Delete a Incomplete Schema Response
+* `SchemaResponsePatch` - Update a Registration's Schema Response
+* `SchemaResponsePpost` - Create a new Schema Response
+* `SchemaResponsesList` - List all Schema Responses
+* `SchemaResponsesRead` - Retrieve a Schema Response
 
 ### Taxonomies
 

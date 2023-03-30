@@ -47,6 +47,8 @@ type CertificateReissue struct {
 	Csr *string `json:"csr,omitempty"`
 	// In hours, time to delay revoking existing certificate after issuance of new certificate. If revokeExistingCertOnIssuance is enabled, this value will be ignored
 	DelayExistingRevoke *int64 `json:"delayExistingRevoke,omitempty"`
+	// Optional field. Domain verification will be required for each domain listed here. Specify a value of * to indicate that all domains associated with the request should have their domain information reverified.
+	ForceDomainRevetting []string `json:"forceDomainRevetting,omitempty"`
 	// Root Type. Depending on certificate expiration date, SHA_1 not be allowed. Will default to SHA_2 if expiration date exceeds sha1 allowed date
 	RootType *CertificateReissueRootTypeEnum `json:"rootType,omitempty"`
 	// Only used for UCC products. An array of subject alternative names to include in certificate.

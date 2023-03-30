@@ -1,0 +1,38 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "context"
+    "log"
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+
+    req := operations.CreateANewQuestionRequest{
+        Request: &operations.CreateANewQuestionRequestBody{
+            Choices: []string{
+                "deserunt",
+                "porro",
+                "nulla",
+            },
+            Question: "id",
+        },
+    }
+
+    ctx := context.Background()
+    res, err := s.CreateANewQuestion(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.StatusCode == http.StatusOK {
+        // handle response
+    }
+}
+```
+<!-- End SDK Example Usage -->

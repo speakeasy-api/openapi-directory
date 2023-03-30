@@ -8,8 +8,12 @@ type BehaviorEntity struct {
 	AttachmentURL *string `json:"attachment_url,omitempty"`
 	// Behavior type.
 	Behavior *string `json:"behavior,omitempty"`
+	// Description for this behavior.
+	Description *string `json:"description,omitempty"`
 	// Folder behavior ID
 	ID *int `json:"id,omitempty"`
+	// Name for this behavior.
+	Name *string `json:"name,omitempty"`
 	// Folder path
 	Path *string `json:"path,omitempty"`
 	// Settings for this behavior.  See the section above for an example value to provide here.  Formatting is different for each Behavior type.  May be sent as nested JSON or a single JSON-encoded string.  If using XML encoding for the API call, this data must be sent as a JSON-encoded string.

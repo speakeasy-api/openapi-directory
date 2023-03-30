@@ -44,20 +44,23 @@ type GetCommunicationCostsQueryParams struct {
 	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
 	//
 	CommitteeID []string `queryParam:"style=form,explode=true,name=committee_id"`
-	// The image number of the page where the schedule item is reported
+	// An unique identifier for each page where the electronic or paper filing is reported.
+	//
 	ImageNumber []string `queryParam:"style=form,explode=true,name=image_number"`
 	// Filter for form and line number using the following format: `FORM-LINENUMBER`.  For example an argument such as `F3X-16` would filter down to all entries from form `F3X` line number `16`.
 	LineNumber *string `queryParam:"style=form,explode=true,name=line_number"`
 	// Filter for all amounts less than a value.
 	MaxAmount *string `queryParam:"style=form,explode=true,name=max_amount"`
 	// Maximum date
-	MaxDate        *types.Date `queryParam:"style=form,explode=true,name=max_date"`
-	MaxImageNumber *string     `queryParam:"style=form,explode=true,name=max_image_number"`
+	MaxDate *types.Date `queryParam:"style=form,explode=true,name=max_date"`
+	// Maxium image number of the page where the schedule item is reported
+	MaxImageNumber *string `queryParam:"style=form,explode=true,name=max_image_number"`
 	// Filter for all amounts greater than a value.
 	MinAmount *string `queryParam:"style=form,explode=true,name=min_amount"`
 	// Minimum date
-	MinDate        *types.Date `queryParam:"style=form,explode=true,name=min_date"`
-	MinImageNumber *string     `queryParam:"style=form,explode=true,name=min_image_number"`
+	MinDate *types.Date `queryParam:"style=form,explode=true,name=min_date"`
+	// Minium image number of the page where the schedule item is reported
+	MinImageNumber *string `queryParam:"style=form,explode=true,name=min_image_number"`
 	// For paginating through results, starting at page 1
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results returned per page. Defaults to 20.

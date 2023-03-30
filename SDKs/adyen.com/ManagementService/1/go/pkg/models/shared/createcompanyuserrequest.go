@@ -7,6 +7,8 @@ type CreateCompanyUserRequest struct {
 	AccountGroups []string `json:"accountGroups,omitempty"`
 	// The list of [merchant accounts](https://docs.adyen.com/account/account-structure#merchant-accounts) associated with this user.
 	AssociatedMerchantAccounts []string `json:"associatedMerchantAccounts,omitempty"`
+	// Set of authn apps to add to this user
+	AuthnApps []string `json:"authnApps,omitempty"`
 	// The email address of the user.
 	Email string `json:"email"`
 	Name  Name   `json:"name"`

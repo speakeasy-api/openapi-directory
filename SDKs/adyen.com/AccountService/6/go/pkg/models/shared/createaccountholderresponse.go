@@ -45,22 +45,22 @@ type CreateAccountHolderResponse struct {
 	// The code of a new account created for the account holder.
 	AccountCode *string `json:"accountCode,omitempty"`
 	// The code of the new account holder.
-	AccountHolderCode    string               `json:"accountHolderCode"`
-	AccountHolderDetails AccountHolderDetails `json:"accountHolderDetails"`
-	AccountHolderStatus  AccountHolderStatus  `json:"accountHolderStatus"`
+	AccountHolderCode    *string               `json:"accountHolderCode,omitempty"`
+	AccountHolderDetails *AccountHolderDetails `json:"accountHolderDetails,omitempty"`
+	AccountHolderStatus  *AccountHolderStatus  `json:"accountHolderStatus,omitempty"`
 	// The description of the new account holder.
 	Description *string `json:"description,omitempty"`
 	// A list of fields that caused the `/createAccountHolder` request to fail.
 	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
 	// The type of legal entity of the new account holder.
-	LegalEntity CreateAccountHolderResponseLegalEntityEnum `json:"legalEntity"`
+	LegalEntity *CreateAccountHolderResponseLegalEntityEnum `json:"legalEntity,omitempty"`
 	// The three-character [ISO currency code](https://docs.adyen.com/development-resources/currency-codes), with which the prospective account holder primarily deals.
 	PrimaryCurrency *string `json:"primaryCurrency,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
 	// The result code.
-	ResultCode   *string               `json:"resultCode,omitempty"`
-	Verification KYCVerificationResult `json:"verification"`
+	ResultCode   *string                `json:"resultCode,omitempty"`
+	Verification *KYCVerificationResult `json:"verification,omitempty"`
 	// The identifier of the profile that applies to this entity.
 	VerificationProfile *string `json:"verificationProfile,omitempty"`
 }

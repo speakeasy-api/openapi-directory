@@ -90,7 +90,7 @@ func (e *EnterpriseCrmFrontendsEventbusProtoTriggerConfigTriggerTypeEnum) Unmars
 	}
 }
 
-// EnterpriseCrmFrontendsEventbusProtoTriggerConfig - Configuration detail of a trigger. Next available id: 18
+// EnterpriseCrmFrontendsEventbusProtoTriggerConfig - Configuration detail of a trigger. Next available id: 19
 type EnterpriseCrmFrontendsEventbusProtoTriggerConfig struct {
 	// An alert threshold configuration for the [trigger + client + workflow] tuple. If these values are not specified in the trigger config, default values will be populated by the system. Note that there must be exactly one alert threshold configured per [client + trigger + workflow] when published.
 	AlertConfig []EnterpriseCrmEventbusProtoWorkflowAlertConfig `json:"alertConfig,omitempty"`
@@ -100,8 +100,8 @@ type EnterpriseCrmFrontendsEventbusProtoTriggerConfig struct {
 	Description *string `json:"description,omitempty"`
 	// Required. The list of client ids which are enabled to execute the workflow using this trigger. In other words, these clients have the workflow execution privledges for this trigger. For API trigger, the client id in the incoming request is validated against the list of enabled clients. For non-API triggers, one workflow execution is triggered on behalf of each enabled client.
 	EnabledClients []string `json:"enabledClients,omitempty"`
-	// Optional Error catcher config id of the error catch flow which will be executed when execution error happens in the task
-	ErrorCatcherConfigID *string `json:"errorCatcherConfigId,omitempty"`
+	// Optional Error catcher id of the error catch flow which will be executed when execution error happens in the task
+	ErrorCatcherID *string `json:"errorCatcherId,omitempty"`
 	// The user created label for a particular trigger.
 	Label *string `json:"label,omitempty"`
 	// Dictates how next tasks will be executed.

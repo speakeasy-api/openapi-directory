@@ -2,7 +2,7 @@
 
 package shared
 
-// ClientStringStats - User stats for client and vendors
+// ClientStringStats - Translation statistics for your account
 type ClientStringStats struct {
 	LanguageCounts           []LanguageStringStat `json:"language_counts,omitempty"`
 	TotalProjectStringsCount *int64               `json:"total_project_strings_count,omitempty"`

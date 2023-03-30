@@ -60,7 +60,7 @@ func (e *CertificateMapEntryStateEnum) UnmarshalJSON(data []byte) error {
 
 // CertificateMapEntry - Defines a certificate map entry.
 type CertificateMapEntry struct {
-	// A set of Certificates defines for the given `hostname`. There can be defined up to fifteen certificates in each Certificate Map Entry. Each certificate must match pattern `projects/*/locations/*/certificates/*`.
+	// A set of Certificates defines for the given `hostname`. There can be defined up to four certificates in each Certificate Map Entry. Each certificate must match pattern `projects/*/locations/*/certificates/*`.
 	Certificates []string `json:"certificates,omitempty"`
 	// Output only. The creation timestamp of a Certificate Map Entry.
 	CreateTime *string `json:"createTime,omitempty"`
@@ -82,7 +82,7 @@ type CertificateMapEntry struct {
 
 // CertificateMapEntryInput - Defines a certificate map entry.
 type CertificateMapEntryInput struct {
-	// A set of Certificates defines for the given `hostname`. There can be defined up to fifteen certificates in each Certificate Map Entry. Each certificate must match pattern `projects/*/locations/*/certificates/*`.
+	// A set of Certificates defines for the given `hostname`. There can be defined up to four certificates in each Certificate Map Entry. Each certificate must match pattern `projects/*/locations/*/certificates/*`.
 	Certificates []string `json:"certificates,omitempty"`
 	// One or more paragraphs of text description of a certificate map entry.
 	Description *string `json:"description,omitempty"`

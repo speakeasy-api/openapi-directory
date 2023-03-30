@@ -76,7 +76,6 @@ func main() {
 * `BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole` - Disable the interactive serial console feature on an instance.
 * `BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole` - Enable the interactive serial console feature on an instance.
 * `BaremetalsolutionProjectsLocationsInstancesList` - List servers in a given project and location.
-* `BaremetalsolutionProjectsLocationsInstancesRename` - RenameInstance sets a new name for an instance.
 * `BaremetalsolutionProjectsLocationsInstancesReset` - Perform an ungraceful, hard reset on a server. Equivalent to shutting the power off and then turning it back on.
 * `BaremetalsolutionProjectsLocationsInstancesStart` - Starts a server that was shutdown.
 * `BaremetalsolutionProjectsLocationsInstancesStop` - Stop a running server.
@@ -94,6 +93,7 @@ func main() {
 * `BaremetalsolutionProjectsLocationsVolumesLunsEvict` - Skips lun's cooloff and deletes it now. Lun must be in cooloff state.
 * `BaremetalsolutionProjectsLocationsVolumesLunsList` - List storage volume luns for given storage volume.
 * `BaremetalsolutionProjectsLocationsVolumesPatch` - Update details of a single storage volume.
+* `BaremetalsolutionProjectsLocationsVolumesRename` - RenameVolume sets a new name for a volume. Use with caution, previous names become immediately invalidated.
 * `BaremetalsolutionProjectsLocationsVolumesResize` - Emergency Volume resize.
 * `BaremetalsolutionProjectsLocationsVolumesSnapshotsCreate` - Takes a snapshot of a boot volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
 * `BaremetalsolutionProjectsLocationsVolumesSnapshotsDelete` - Deletes a volume snapshot. Returns INVALID_ARGUMENT if called for a non-boot volume.

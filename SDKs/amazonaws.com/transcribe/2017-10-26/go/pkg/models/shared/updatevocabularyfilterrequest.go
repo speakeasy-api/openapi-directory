@@ -3,6 +3,7 @@
 package shared
 
 type UpdateVocabularyFilterRequest struct {
+	DataAccessRoleArn       *string  `json:"DataAccessRoleArn,omitempty"`
 	VocabularyFilterFileURI *string  `json:"VocabularyFilterFileUri,omitempty"`
 	VocabularyFilterName    string   `json:"VocabularyFilterName"`
 	Words                   []string `json:"Words,omitempty"`

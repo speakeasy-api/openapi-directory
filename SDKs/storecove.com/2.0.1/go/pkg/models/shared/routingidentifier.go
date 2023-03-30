@@ -6,6 +6,6 @@ package shared
 type RoutingIdentifier struct {
 	// The actual identifier.
 	ID *string `json:"id,omitempty"`
-	// The scheme of the identifier. See <<_peppol_participant_identifier_list>> for a list.
+	// The scheme of the identifier. See <<_receiver_identifiers_list>> for a list.
 	Scheme *string `json:"scheme,omitempty"`
 }

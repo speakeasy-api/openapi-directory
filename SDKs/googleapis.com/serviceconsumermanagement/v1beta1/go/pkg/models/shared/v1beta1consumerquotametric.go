@@ -12,7 +12,7 @@ type V1Beta1ConsumerQuotaMetric struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	// The name of the metric. An example name would be: `compute.googleapis.com/cpus`
 	Metric *string `json:"metric,omitempty"`
-	// The resource name of the quota settings on this metric for this consumer. An example name would be: `services/serviceconsumermanagement.googleapis.com/projects/123/quota/metrics/compute.googleapis.com%2Fcpus The resource name is intended to be opaque and should not be parsed for its component strings, since its representation could change in the future.
+	// The resource name of the quota settings on this metric for this consumer. An example name would be: `services/serviceconsumermanagement.googleapis.com/projects/123/consumerQuotaMetrics/compute.googleapis.com%2Fcpus` The resource name is intended to be opaque and should not be parsed for its component strings, since its representation could change in the future.
 	Name *string `json:"name,omitempty"`
 	// The units in which the metric value is reported.
 	Unit *string `json:"unit,omitempty"`

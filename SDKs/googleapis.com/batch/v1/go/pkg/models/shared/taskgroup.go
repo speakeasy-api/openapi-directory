@@ -6,13 +6,13 @@ package shared
 type TaskGroup struct {
 	// Output only. TaskGroup name. The system generates this field based on parent Job name. For example: "projects/123456/locations/us-west1/jobs/job01/taskGroups/group01".
 	Name *string `json:"name,omitempty"`
-	// Max number of tasks that can run in parallel. Default to min(task_count, 1000).
+	// Max number of tasks that can run in parallel. Default to min(task_count, 1000). Field parallelism must be 1 if the scheduling_policy is IN_ORDER.
 	Parallelism *string `json:"parallelism,omitempty"`
 	// When true, Batch will configure SSH to allow passwordless login between VMs running the Batch tasks in the same TaskGroup.
 	PermissiveSSH *bool `json:"permissiveSsh,omitempty"`
 	// When true, Batch will populate a file with a list of all VMs assigned to the TaskGroup and set the BATCH_HOSTS_FILE environment variable to the path of that file. Defaults to false.
 	RequireHostsFile *bool `json:"requireHostsFile,omitempty"`
-	// Number of Tasks in the TaskGroup. default is 1
+	// Number of Tasks in the TaskGroup. Default is 1.
 	TaskCount *string `json:"taskCount,omitempty"`
 	// Max number of tasks that can be run on a VM at the same time. If not specified, the system will decide a value based on available compute resources on a VM and task requirements.
 	TaskCountPerNode *string `json:"taskCountPerNode,omitempty"`
@@ -24,13 +24,13 @@ type TaskGroup struct {
 
 // TaskGroupInput - A TaskGroup contains one or multiple Tasks that share the same Runnable but with different runtime parameters.
 type TaskGroupInput struct {
-	// Max number of tasks that can run in parallel. Default to min(task_count, 1000).
+	// Max number of tasks that can run in parallel. Default to min(task_count, 1000). Field parallelism must be 1 if the scheduling_policy is IN_ORDER.
 	Parallelism *string `json:"parallelism,omitempty"`
 	// When true, Batch will configure SSH to allow passwordless login between VMs running the Batch tasks in the same TaskGroup.
 	PermissiveSSH *bool `json:"permissiveSsh,omitempty"`
 	// When true, Batch will populate a file with a list of all VMs assigned to the TaskGroup and set the BATCH_HOSTS_FILE environment variable to the path of that file. Defaults to false.
 	RequireHostsFile *bool `json:"requireHostsFile,omitempty"`
-	// Number of Tasks in the TaskGroup. default is 1
+	// Number of Tasks in the TaskGroup. Default is 1.
 	TaskCount *string `json:"taskCount,omitempty"`
 	// Max number of tasks that can be run on a VM at the same time. If not specified, the system will decide a value based on available compute resources on a VM and task requirements.
 	TaskCountPerNode *string `json:"taskCountPerNode,omitempty"`

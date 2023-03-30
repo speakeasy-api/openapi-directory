@@ -4,5 +4,5 @@ package shared
 
 type ConfidentialityCreator struct {
 	// Reason for confidentiality
-	Reason *string `json:"reason,omitempty"`
+	Reason string `json:"reason"`
 }

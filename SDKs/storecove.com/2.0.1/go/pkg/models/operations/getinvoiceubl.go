@@ -9,12 +9,13 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-// GetInvoiceUblPackagingEnum - How to package the purchase invoice. Use "json" or "ubl"
+// GetInvoiceUblPackagingEnum - How to package the purchase invoice.
 type GetInvoiceUblPackagingEnum string
 
 const (
-	GetInvoiceUblPackagingEnumJSON GetInvoiceUblPackagingEnum = "json"
-	GetInvoiceUblPackagingEnumUbl  GetInvoiceUblPackagingEnum = "ubl"
+	GetInvoiceUblPackagingEnumJSON     GetInvoiceUblPackagingEnum = "json"
+	GetInvoiceUblPackagingEnumUbl      GetInvoiceUblPackagingEnum = "ubl"
+	GetInvoiceUblPackagingEnumOriginal GetInvoiceUblPackagingEnum = "original"
 )
 
 func (e *GetInvoiceUblPackagingEnum) UnmarshalJSON(data []byte) error {
@@ -26,6 +27,8 @@ func (e *GetInvoiceUblPackagingEnum) UnmarshalJSON(data []byte) error {
 	case "json":
 		fallthrough
 	case "ubl":
+		fallthrough
+	case "original":
 		*e = GetInvoiceUblPackagingEnum(s)
 		return nil
 	default:
@@ -36,12 +39,20 @@ func (e *GetInvoiceUblPackagingEnum) UnmarshalJSON(data []byte) error {
 type GetInvoiceUblPathParams struct {
 	// purchase invoice guid
 	GUID string `pathParam:"style=simple,explode=false,name=guid"`
-	// How to package the purchase invoice. Use "json" or "ubl"
+	// How to package the purchase invoice.
 	Packaging GetInvoiceUblPackagingEnum `pathParam:"style=simple,explode=false,name=packaging"`
 }
 
+type GetInvoiceUblQueryParams struct {
+	// The PaymentMeans version. The default (and deprecated) version 1.0 will give BankPaymentMean, DirectDebitPaymentMean, CardPaymentMean, NppPaymentMean, SeBankGiroPaymentMean, SePlusGiroPaymentMean, SgCardPaymentMean, SgGiroPaymentMean, SgPaynowPaymentMean.
+	//
+	// Version 2.0 deprecates BankPaymentMean (now CreditTransferPaymentMean), CardPaymentMean (now CreditCardPaymentMean), NppPaymentMean (now AunzNppPayidPaymentMean), SeBankGiroPaymentMean (now SeBankgiroPaymentMean  -- note the lower 'g' in 'bankgiro'). It also adds OnlinePaymentServicePaymentMean, StandingAgreementPaymentMean, AunzNppPaytoPaymentMean, AunzBpayPaymentMean, AunzPostbillpayPaymentMean, AunzUriPaymentMean.
+	Pmv *string `queryParam:"style=form,explode=true,name=pmv"`
+}
+
 type GetInvoiceUblRequest struct {
-	PathParams GetInvoiceUblPathParams
+	PathParams  GetInvoiceUblPathParams
+	QueryParams GetInvoiceUblQueryParams
 }
 
 type GetInvoiceUblResponse struct {

@@ -6,14 +6,12 @@ import (
 	"time"
 )
 
-// VirtualTariffsOfFolder - Container class for a Virtual Tariff
+// VirtualTariffsOfFolder - OK
 type VirtualTariffsOfFolder struct {
 	// The DateTime (UTC) of this virtual tarfifs
-	Date *time.Time `json:"Date,omitempty"`
-	// The ID of the Folder
-	FolderID *string `json:"FolderId,omitempty"`
+	Date     *time.Time `json:"Date,omitempty"`
+	FolderID *string    `json:"FolderId,omitempty"`
 	// The name of this folder
-	Name *string `json:"Name,omitempty"`
-	// The Name of the Virtual Tariff
+	Name           *string         `json:"Name,omitempty"`
 	VirtualTariffs []VirtualTariff `json:"VirtualTariffs,omitempty"`
 }

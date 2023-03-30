@@ -12,20 +12,9 @@ type UpdateProjectPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
-type UpdateProjectRequestBody struct {
-	// Optional. If you provide a callback URL, we will send POST callbacks when the status of the current project is changed. Possible status changes are, 'translated', 'proofread', 'completed'.
-	CallbackURL *string `multipartForm:"name=callback_url"`
-	// Coupon code to redeem
-	CouponCode *string `multipartForm:"name=coupon_code"`
-	// Optional. This is a consistent custom data parameter that will be given to you in the response across every request of this project model. Values should be provided like this, custom[my_key] = my_value. If you previously provided one, it will be replaced.
-	Custom          []string `multipartForm:"name=custom"`
-	SourceLanguage  *string  `multipartForm:"name=source_language"`
-	TargetLanguages []string `multipartForm:"name=target_languages[]"`
-}
-
 type UpdateProjectRequest struct {
 	PathParams UpdateProjectPathParams
-	Request    *UpdateProjectRequestBody `request:"mediaType=multipart/form-data"`
+	Request    *shared.ProjectUpdate `request:"mediaType=application/json"`
 }
 
 type UpdateProjectResponse struct {

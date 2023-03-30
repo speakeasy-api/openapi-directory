@@ -93,6 +93,10 @@ func main() {
 * `GetReplicationConfiguration` - Lists all ReplicationConfigurations, filtered by Source Server ID.
 * `InitializeService` - Initialize Application Migration Service.
 * `ListApplications` - Retrieves all applications or multiple applications by ID.
+* `ListExportErrors` - List export errors.
+* `ListExports` - List exports.
+* `ListImportErrors` - List import errors.
+* `ListImports` - List imports.
 * `ListSourceServerActions` - List source server post migration custom actions.
 * `ListTagsForResource` - List all tags for your Application Migration Service resources.
 * `ListTemplateActions` - List template post migration custom actions.
@@ -104,6 +108,8 @@ func main() {
 * `RemoveTemplateAction` - Remove template post migration custom action.
 * `RetryDataReplication` - Causes the data replication initiation sequence to begin immediately upon next Handshake for specified SourceServer IDs, regardless of when the previous initiation started. This command will not work if the SourceServer is not stalled or is in a DISCONNECTED or STOPPED state.
 * `StartCutover` - Launches a Cutover Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property is StartCutover and changes the SourceServer.lifeCycle.state property to CUTTING_OVER.
+* `StartExport` - Start export.
+* `StartImport` - Start import.
 * `StartReplication` - Starts replication for SNAPSHOT_SHIPPING agents.
 * `StartTest` - Launches a Test Instance for specific Source Servers. This command starts a LAUNCH job whose initiatedBy property is StartTest and changes the SourceServer.lifeCycle.state property to TESTING.
 * `TagResource` - Adds or overwrites only the specified tags for the specified Application Migration Service resource or resources. When you specify an existing tag key, the value is overwritten with the new value. Each resource can have a maximum of 50 tags. Each tag consists of a key and optional value.

@@ -34,14 +34,13 @@ func newSource(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
-// GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath - Returns a paginated list of commits that modified the specified file.
+// GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath - List commits that modified a file
+// Returns a paginated list of commits that modified the specified file.
 //
 // Commits are returned in reverse chronological order. This is roughly
 // equivalent to the following commands:
 //
 //	$ git log --follow --date-order <sha> <path>
-//
-//	$ hg log --follow <path>
 //
 // By default, Bitbucket will follow renames and the path name in the
 // returned entries reflects that. This can be turned off using the
@@ -49,7 +48,7 @@ func newSource(defaultClient, securityClient HTTPClient, serverURL, language, sd
 //
 // Results are returned in descending chronological order by default, and
 // like most endpoints you can
-// [filter and sort](../../../../../../meta/filtering) the response to
+// [filter and sort](/cloud/bitbucket/rest/intro/#filtering) the response to
 // only provide exactly the data you want.
 //
 // For example, if you wanted to find commits made before 2011-05-18
@@ -145,7 +144,8 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx conte
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugSrc - This endpoint redirects the client to the directory listing of the
+// GetRepositoriesWorkspaceRepoSlugSrc - Get the root directory of the main branch
+// This endpoint redirects the client to the directory listing of the
 // root directory on the main branch.
 //
 // This is equivalent to directly hitting
@@ -210,10 +210,11 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, reques
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugSrcCommitPath - This endpoints is used to retrieve the contents of a single file,
+// GetRepositoriesWorkspaceRepoSlugSrcCommitPath - Get file or directory contents
+// This endpoints is used to retrieve the contents of a single file,
 // or the contents of a directory at a specified revision.
 //
-// ## Raw file contents
+// #### Raw file contents
 //
 // When `path` points to a file, this endpoint returns the raw contents.
 // The response's Content-Type is derived from the filename
@@ -232,7 +233,7 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, reques
 // returns the same ETag, regardless on the directory it lives in, or the
 // commit it is on.
 //
-// ## File meta data
+// #### File meta data
 //
 // When the request for a file path includes the query parameter
 // `?format=meta`, instead of returning the file's raw contents, Bitbucket
@@ -285,7 +286,7 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, reques
 // used to check for the existence of a file, or a file's size without
 // incurring the overhead of receiving its full contents.
 //
-// ## Directory listings
+// #### Directory listings
 //
 // When `path` points to a directory instead of a file, the response is a
 // paginated list of directory and file objects in the same order as the
@@ -399,7 +400,7 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, reques
 //
 // ```
 //
-// ## Querying, filtering and sorting
+// #### Querying, filtering and sorting
 //
 // Like most API endpoints, this API supports the Bitbucket
 // querying/filtering syntax and so you could filter a directory listing
@@ -416,7 +417,7 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, reques
 //
 // `.../src/eefd5ef/?sort=-size`
 //
-// See [filtering and sorting](../../../../../../meta/filtering) for more
+// See [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
 // details.
 func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest) (*operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse, error) {
 	baseURL := s.serverURL
@@ -477,7 +478,8 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Conte
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugSrc - This endpoint is used to create new commits in the repository by
+// PostRepositoriesWorkspaceRepoSlugSrc - Create a commit by uploading a file
+// This endpoint is used to create new commits in the repository by
 // uploading files.
 //
 // To add a new file to a repository:
@@ -509,7 +511,7 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Conte
 // This endpoint accepts `multipart/form-data` (as in the examples above),
 // as well as `application/x-www-form-urlencoded`.
 //
-// ## multipart/form-data
+// #### multipart/form-data
 //
 // A `multipart/form-data` post contains a series of "form fields" that
 // identify both the individual files that are being uploaded, as well as
@@ -531,7 +533,7 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Conte
 // `Content-Disposition` header will contain the `filename` parameter to
 // distinguish between a file named "message" and the commit message field.
 //
-// ## application/x-www-form-urlencoded
+// #### application/x-www-form-urlencoded
 //
 // It is also possible to upload new files using a simple
 // `application/x-www-form-urlencoded` POST. This can be convenient when
@@ -556,7 +558,7 @@ func (s *source) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Conte
 // a meta data parameter, then it is interpreted as meta data, not as a
 // file.
 //
-// ## Executables and links
+// #### Executables and links
 //
 // While this API aims to facilitate the most common use cases, it is
 // possible to perform some more advanced operations like creating a new

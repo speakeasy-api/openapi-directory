@@ -9,27 +9,37 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-// GetBestPodcastsSafeModeEnum - Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
-type GetBestPodcastsSafeModeEnum string
+// GetBestPodcastsSortEnum - How do you want to sort these podcasts?
+// If you'd like to sort by popularity, please use **listen_score**.
+type GetBestPodcastsSortEnum string
 
 const (
-	GetBestPodcastsSafeModeEnumZero GetBestPodcastsSafeModeEnum = "0"
-	GetBestPodcastsSafeModeEnumOne  GetBestPodcastsSafeModeEnum = "1"
+	GetBestPodcastsSortEnumRecentAddedFirst     GetBestPodcastsSortEnum = "recent_added_first"
+	GetBestPodcastsSortEnumOldestAddedFirst     GetBestPodcastsSortEnum = "oldest_added_first"
+	GetBestPodcastsSortEnumRecentPublishedFirst GetBestPodcastsSortEnum = "recent_published_first"
+	GetBestPodcastsSortEnumOldestPublishedFirst GetBestPodcastsSortEnum = "oldest_published_first"
+	GetBestPodcastsSortEnumListenScore          GetBestPodcastsSortEnum = "listen_score"
 )
 
-func (e *GetBestPodcastsSafeModeEnum) UnmarshalJSON(data []byte) error {
+func (e *GetBestPodcastsSortEnum) UnmarshalJSON(data []byte) error {
 	var s string
 	if err := json.Unmarshal(data, &s); err != nil {
 		return err
 	}
 	switch s {
-	case "0":
+	case "recent_added_first":
 		fallthrough
-	case "1":
-		*e = GetBestPodcastsSafeModeEnum(s)
+	case "oldest_added_first":
+		fallthrough
+	case "recent_published_first":
+		fallthrough
+	case "oldest_published_first":
+		fallthrough
+	case "listen_score":
+		*e = GetBestPodcastsSortEnum(s)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GetBestPodcastsSafeModeEnum: %s", s)
+		return fmt.Errorf("invalid value for GetBestPodcastsSortEnum: %s", s)
 	}
 }
 
@@ -60,7 +70,11 @@ type GetBestPodcastsQueryParams struct {
 	//
 	Region *string `queryParam:"style=form,explode=true,name=region"`
 	// Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
-	SafeMode *GetBestPodcastsSafeModeEnum `queryParam:"style=form,explode=true,name=safe_mode"`
+	SafeMode *shared.SafeModeParamEnum `queryParam:"style=form,explode=true,name=safe_mode"`
+	// How do you want to sort these podcasts?
+	// If you'd like to sort by popularity, please use **listen_score**.
+	//
+	Sort *GetBestPodcastsSortEnum `queryParam:"style=form,explode=true,name=sort"`
 }
 
 type GetBestPodcastsHeaders struct {

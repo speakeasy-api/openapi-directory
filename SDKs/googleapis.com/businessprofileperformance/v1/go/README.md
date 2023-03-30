@@ -24,44 +24,44 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest{
-        PathParams: operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesPathParams{
-            Name: "unde",
+    req := operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesRequest{
+        PathParams: operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesPathParams{
+            Location: "unde",
         },
-        QueryParams: operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesQueryParams{
+        QueryParams: operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesQueryParams{
             DollarXgafv: "2",
             AccessToken: "porro",
             Alt: "proto",
             Callback: "id",
-            DailyMetric: "BUSINESS_FOOD_ORDERS",
-            DailyRangeEndDateDay: 544883,
-            DailyRangeEndDateMonth: 847252,
-            DailyRangeEndDateYear: 423655,
-            DailyRangeStartDateDay: 623564,
-            DailyRangeStartDateMonth: 645894,
-            DailyRangeStartDateYear: 384382,
-            DailySubEntityTypeDayOfWeek: "WEDNESDAY",
-            DailySubEntityTypeTimeOfDayHours: 297534,
-            DailySubEntityTypeTimeOfDayMinutes: 891773,
-            DailySubEntityTypeTimeOfDayNanos: 56713,
-            DailySubEntityTypeTimeOfDaySeconds: 963663,
-            Fields: "enim",
-            Key: "eum",
-            OauthToken: "voluptatum",
+            DailyMetrics: []BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum{
+                "BUSINESS_DIRECTION_REQUESTS",
+                "BUSINESS_FOOD_ORDERS",
+                "BUSINESS_CONVERSATIONS",
+                "CALL_CLICKS",
+            },
+            DailyRangeEndDateDay: 645894,
+            DailyRangeEndDateMonth: 384382,
+            DailyRangeEndDateYear: 437587,
+            DailyRangeStartDateDay: 297534,
+            DailyRangeStartDateMonth: 891773,
+            DailyRangeStartDateYear: 56713,
+            Fields: "sapiente",
+            Key: "enim",
+            OauthToken: "eum",
             PrettyPrint: false,
-            QuotaUser: "autem",
-            UploadType: "vel",
-            UploadProtocol: "non",
+            QuotaUser: "voluptatum",
+            UploadType: "autem",
+            UploadProtocol: "vel",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Locations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeries(ctx, req)
+    res, err := s.Locations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeries(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.GetDailyMetricsTimeSeriesResponse != nil {
+    if res.FetchMultiDailyMetricsTimeSeriesResponse != nil {
         // handle response
     }
 }
@@ -74,6 +74,7 @@ func main() {
 
 ### Locations
 
+* `BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeries` -  Returns the values for each date from a given time range and optionally the sub entity type, where applicable, that are associated with the specific daily metrics. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locations/12345:fetchMultiDailyMetricsTimeSeries?dailyMetrics=WEBSITE_CLICKS&dailyMetrics=CALL_CLICKS&daily_range.start_date.year=2022&daily_range.start_date.month=1&daily_range.start_date.day=1&daily_range.end_date.year=2022&daily_range.end_date.month=3&daily_range.end_date.day=31`
 * `BusinessprofileperformanceLocationsGetDailyMetricsTimeSeries` -  Returns the values for each date from a given time range that are associated with the specific daily metric. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locations/12345:getDailyMetricsTimeSeries?dailyMetric=WEBSITE_CLICKS&daily_range.start_date.year=2022&daily_range.start_date.month=1&daily_range.start_date.day=1&daily_range.end_date.year=2022&daily_range.end_date.month=3&daily_range.end_date.day=31`
 * `BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyList` - Returns the search keywords used to find a business in search or maps. Each search keyword is accompanied by impressions which are aggregated on a monthly basis. Example request: `GET https://businessprofileperformance.googleapis.com/v1/locations/12345/searchkeywords/impressions/monthly?monthly_range.start_month.year=2022&monthly_range.start_month.month=1&monthly_range.end_month.year=2022&monthly_range.end_month.month=3`
 <!-- End SDK Available Operations -->

@@ -13,7 +13,7 @@ type AnalyticsadminPropertiesAccessBindingsBatchUpdateSecurity struct {
 }
 
 type AnalyticsadminPropertiesAccessBindingsBatchUpdatePathParams struct {
-	// Required. The account or property that owns the access bindings. The parent field in the UpdateAccessBindingRequest messages must either be empty or match this field. Formats: - accounts/{account} - properties/{property}
+	// Required. The account or property that owns the access bindings. The parent of all provided AccessBinding in UpdateAccessBindingRequest messages must match this field. Formats: - accounts/{account} - properties/{property}
 	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 

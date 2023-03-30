@@ -260,7 +260,7 @@ func (s *categories) PostUsersIDCategories(ctx context.Context, request operatio
 }
 
 // PutCategoriesID - Update category
-// Updates the title, colour or parent of the category.
+// Updates a category by its ID.
 func (s *categories) PutCategoriesID(ctx context.Context, request operations.PutCategoriesIDRequest) (*operations.PutCategoriesIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/categories/{id}", request.PathParams, nil)

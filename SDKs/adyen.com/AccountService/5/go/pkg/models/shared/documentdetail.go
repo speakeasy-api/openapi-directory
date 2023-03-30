@@ -76,7 +76,7 @@ func (e *DocumentDetailDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 
 type DocumentDetail struct {
 	// The code of account holder, to which the document applies.
-	AccountHolderCode string `json:"accountHolderCode"`
+	AccountHolderCode *string `json:"accountHolderCode,omitempty"`
 	// The Adyen-generated [`bankAccountUUID`](https://docs.adyen.com/api-explorer/#/Account/latest/post/createAccountHolder__resParam_accountHolderDetails-bankAccountDetails-bankAccountUUID) to which the document must be linked. Refer to [Bank account check](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-checks/bank-account-check#uploading-a-bank-statement) for details on when a document should be submitted.
 	// >Required if the `documentType` is **BANK_STATEMENT**, where a document is being submitted in order to verify a bank account.
 	//
@@ -97,7 +97,7 @@ type DocumentDetail struct {
 	//
 	DocumentType DocumentDetailDocumentTypeEnum `json:"documentType"`
 	// Filename of the document.
-	Filename string `json:"filename"`
+	Filename *string `json:"filename,omitempty"`
 	// The Adyen-generated [`shareholderCode`](https://docs.adyen.com/api-explorer/#/Account/latest/post/createAccountHolder__resParam_accountHolderDetails-businessDetails-shareholders-shareholderCode) to which the document must be linked. Refer to [Verification checks](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-checks) for details on when a document should be submitted.
 	// >Required if the account holder has a `legalEntity` of type **Business** and the `documentType` is either **PASSPORT**, **ID_CARD_FRONT**, **ID_CARD_BACK**, **DRIVING_LICENCE_FRONT**, or **DRIVING_LICENCE_BACK**.
 	ShareholderCode *string `json:"shareholderCode,omitempty"`

@@ -18,7 +18,7 @@ type GoogleCloudDataplexV1DataAttributeBinding struct {
 	Labels map[string]string `json:"labels,omitempty"`
 	// Output only. The relative resource name of the Data Attribute Binding, of the form: projects/{project_number}/locations/{location}/dataAttributeBindings/{data_attribute_binding_id}
 	Name *string `json:"name,omitempty"`
-	// Optional. The list of paths for items within the associated resource (eg. columns within a table) along with attribute bindings.
+	// Optional. The list of paths for items within the associated resource (eg. columns and partitions within a table) along with attribute bindings.
 	Paths []GoogleCloudDataplexV1DataAttributeBindingPath `json:"paths,omitempty"`
 	// Optional. Immutable. The resource name of the resource that is associated to attributes. Presently, only entity resource is supported in the form: projects/{project}/locations/{location}/lakes/{lake}/zones/{zone}/entities/{entity_id} Must belong in the same project and region as the attribute binding, and there can only exist one active binding for a resource.
 	Resource *string `json:"resource,omitempty"`
@@ -40,7 +40,7 @@ type GoogleCloudDataplexV1DataAttributeBindingInput struct {
 	Etag *string `json:"etag,omitempty"`
 	// Optional. User-defined labels for the DataAttributeBinding.
 	Labels map[string]string `json:"labels,omitempty"`
-	// Optional. The list of paths for items within the associated resource (eg. columns within a table) along with attribute bindings.
+	// Optional. The list of paths for items within the associated resource (eg. columns and partitions within a table) along with attribute bindings.
 	Paths []GoogleCloudDataplexV1DataAttributeBindingPath `json:"paths,omitempty"`
 	// Optional. Immutable. The resource name of the resource that is associated to attributes. Presently, only entity resource is supported in the form: projects/{project}/locations/{location}/lakes/{lake}/zones/{zone}/entities/{entity_id} Must belong in the same project and region as the attribute binding, and there can only exist one active binding for a resource.
 	Resource *string `json:"resource,omitempty"`

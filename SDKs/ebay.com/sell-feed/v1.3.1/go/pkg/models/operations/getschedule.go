@@ -12,7 +12,7 @@ type GetScheduleSecurity struct {
 }
 
 type GetSchedulePathParams struct {
-	// The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the createSchedule method.
+	// The ID of the schedule for which to retrieve the details. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
 	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
 }
 

@@ -111,7 +111,8 @@ func (e *ProjectRequestCurrentStatusColorEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-// ProjectRequestCurrentStatusInput - A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: "green" for projects that are on track, "yellow" for projects at risk, and "red" for projects that are behind.
+// ProjectRequestCurrentStatusInput - *Deprecated: new integrations should prefer the `status_update` resource.*
+// A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: "green" for projects that are on track, "yellow" for projects at risk, and "red" for projects that are behind.
 type ProjectRequestCurrentStatusInput struct {
 	Author *UserCompactInput `json:"author,omitempty"`
 	// The color associated with the status update.
@@ -122,6 +123,12 @@ type ProjectRequestCurrentStatusInput struct {
 	// The text content of the status update.
 	Text string `json:"text"`
 	// The title of the project status update.
+	Title *string `json:"title,omitempty"`
+}
+
+// ProjectRequestCurrentStatusUpdateInput - A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent's followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the project.
+type ProjectRequestCurrentStatusUpdateInput struct {
+	// The title of the status update.
 	Title *string `json:"title,omitempty"`
 }
 
@@ -166,21 +173,24 @@ type ProjectRequestInput struct {
 	// True if the project is archived, false if not. Archived projects do not show in the UI by default and may be treated differently for queries.
 	Archived *bool `json:"archived,omitempty"`
 	// Color of the project.
-	Color         *ProjectRequestColorEnum          `json:"color,omitempty"`
+	Color *ProjectRequestColorEnum `json:"color,omitempty"`
+	// *Deprecated: new integrations should prefer the `current_status_update` resource.*
 	CurrentStatus *ProjectRequestCurrentStatusInput `json:"current_status,omitempty"`
-	// An object where each key is a Custom Field gid and each value is an enum gid, string, or number.
+	// The latest `status_update` posted to this project.
+	CurrentStatusUpdate *ProjectRequestCurrentStatusUpdateInput `json:"current_status_update,omitempty"`
+	// An object where each key is a Custom Field GID and each value is an enum GID, string, number, or object.
 	CustomFields map[string]string `json:"custom_fields,omitempty"`
 	// The default view (list, board, calendar, or timeline) of a project.
 	DefaultView *ProjectRequestDefaultViewEnum `json:"default_view,omitempty"`
-	// *Deprecated: new integrations should prefer the due_on field.*
+	// *Deprecated: new integrations should prefer the `due_on` field.*
 	DueDate *time.Time `json:"due_date,omitempty"`
 	// The day on which this project is due. This takes a date with format YYYY-MM-DD.
 	DueOn *time.Time `json:"due_on,omitempty"`
-	// *Create-only*. Comma separated string of users. Followers are a subset of members who receive all notifications for a project, the default notification setting when adding members to a project in-product.
+	// *Create-only*. Comma separated string of users. Followers are a subset of members who have opted in to receive "tasks added" notifications for a project.
 	Followers *string `json:"followers,omitempty"`
 	// [Opt In](/docs/input-output-options). The notes of the project with formatting as HTML.
 	HTMLNotes *string `json:"html_notes,omitempty"`
-	// [Opt In](/docs/input-output-options). Determines if the project is a template.
+	// [Opt In](/docs/input-output-options). *Deprecated - please use a project template endpoint instead (more in [this forum post](https://forum.asana.com/t/a-new-api-for-project-templates/156432)).* Determines if the project is a template.
 	IsTemplate *bool `json:"is_template,omitempty"`
 	// Name of the project. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.
 	Name *string `json:"name,omitempty"`
@@ -188,11 +198,11 @@ type ProjectRequestInput struct {
 	Notes *string `json:"notes,omitempty"`
 	// The current owner of the project, may be null.
 	Owner *string `json:"owner,omitempty"`
-	// True if the project is public to the organization. If false, do not share this project with other users in this organization without explicitly checking to see if they have access.
+	// True if the project is public to its team.
 	Public *bool `json:"public,omitempty"`
-	// The day on which work for this project begins, or null if the project has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, start_on and due_on cannot be the same date.*
+	// The day on which work for this project begins, or null if the project has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*
 	StartOn *types.Date `json:"start_on,omitempty"`
-	// *Create-only*. The team that this project is shared with. This field only exists for projects in organizations.
+	// The team that this project is shared with.
 	Team      *string                       `json:"team,omitempty"`
 	Workspace *ProjectRequestWorkspaceInput `json:"workspace,omitempty"`
 }

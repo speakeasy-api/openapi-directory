@@ -89,7 +89,7 @@ func (e *GetRouteOutputFormatDistanceUnitEnum) UnmarshalJSON(data []byte) error 
 	}
 }
 
-// GetRouteOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#outputSRS target="_blank">outputSRS</a>
+// GetRouteOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetRouteOutputFormatOutputSrsEnum string
 
 const (
@@ -142,9 +142,9 @@ type GetRouteOutputFormatQueryParams struct {
 	Disable *string `queryParam:"style=form,explode=true,name=disable"`
 	// distance unit of measure (e.g., km, mi). Default is km.
 	DistanceUnit *GetRouteOutputFormatDistanceUnitEnum `queryParam:"style=form,explode=true,name=distanceUnit"`
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetRouteOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
-	// A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/api-specs/blob/master/router/glossary.md#points target='_blank'>points</a>
+	// A list of any number of route points in start to end order. See <a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#points target='_blank'>points</a>
 	Points string `queryParam:"style=form,explode=true,name=points"`
 	// If true, route ends at start point. Default is false.
 	RoundTrip *bool `queryParam:"style=form,explode=true,name=roundTrip"`

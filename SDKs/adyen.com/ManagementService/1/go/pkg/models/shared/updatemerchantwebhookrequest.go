@@ -14,9 +14,9 @@ import (
 type UpdateMerchantWebhookRequestCommunicationFormatEnum string
 
 const (
-	UpdateMerchantWebhookRequestCommunicationFormatEnumHTTP UpdateMerchantWebhookRequestCommunicationFormatEnum = "HTTP"
-	UpdateMerchantWebhookRequestCommunicationFormatEnumJSON UpdateMerchantWebhookRequestCommunicationFormatEnum = "JSON"
-	UpdateMerchantWebhookRequestCommunicationFormatEnumSoap UpdateMerchantWebhookRequestCommunicationFormatEnum = "SOAP"
+	UpdateMerchantWebhookRequestCommunicationFormatEnumHTTP UpdateMerchantWebhookRequestCommunicationFormatEnum = "http"
+	UpdateMerchantWebhookRequestCommunicationFormatEnumJSON UpdateMerchantWebhookRequestCommunicationFormatEnum = "json"
+	UpdateMerchantWebhookRequestCommunicationFormatEnumSoap UpdateMerchantWebhookRequestCommunicationFormatEnum = "soap"
 )
 
 func (e *UpdateMerchantWebhookRequestCommunicationFormatEnum) UnmarshalJSON(data []byte) error {
@@ -25,11 +25,11 @@ func (e *UpdateMerchantWebhookRequestCommunicationFormatEnum) UnmarshalJSON(data
 		return err
 	}
 	switch s {
-	case "HTTP":
+	case "http":
 		fallthrough
-	case "JSON":
+	case "json":
 		fallthrough
-	case "SOAP":
+	case "soap":
 		*e = UpdateMerchantWebhookRequestCommunicationFormatEnum(s)
 		return nil
 	default:
@@ -74,16 +74,14 @@ func (e *UpdateMerchantWebhookRequestNetworkTypeEnum) UnmarshalJSON(data []byte)
 type UpdateMerchantWebhookRequestSslVersionEnum string
 
 const (
-	UpdateMerchantWebhookRequestSslVersionEnumHTTP                 UpdateMerchantWebhookRequestSslVersionEnum = "HTTP"
-	UpdateMerchantWebhookRequestSslVersionEnumSsl                  UpdateMerchantWebhookRequestSslVersionEnum = "SSL"
-	UpdateMerchantWebhookRequestSslVersionEnumSslv3                UpdateMerchantWebhookRequestSslVersionEnum = "SSLV3"
-	UpdateMerchantWebhookRequestSslVersionEnumSslInsecureCiphers   UpdateMerchantWebhookRequestSslVersionEnum = "SSL_INSECURE_CIPHERS"
-	UpdateMerchantWebhookRequestSslVersionEnumTLS                  UpdateMerchantWebhookRequestSslVersionEnum = "TLS"
-	UpdateMerchantWebhookRequestSslVersionEnumTlsv1                UpdateMerchantWebhookRequestSslVersionEnum = "TLSV1"
-	UpdateMerchantWebhookRequestSslVersionEnumTlsv11               UpdateMerchantWebhookRequestSslVersionEnum = "TLSV1_1"
-	UpdateMerchantWebhookRequestSslVersionEnumTlsv12               UpdateMerchantWebhookRequestSslVersionEnum = "TLSV1_2"
-	UpdateMerchantWebhookRequestSslVersionEnumTlsv13               UpdateMerchantWebhookRequestSslVersionEnum = "TLSV1_3"
-	UpdateMerchantWebhookRequestSslVersionEnumTlsv1InsecureCiphers UpdateMerchantWebhookRequestSslVersionEnum = "TLSV1_INSECURE_CIPHERS"
+	UpdateMerchantWebhookRequestSslVersionEnumHTTP   UpdateMerchantWebhookRequestSslVersionEnum = "HTTP"
+	UpdateMerchantWebhookRequestSslVersionEnumSsl    UpdateMerchantWebhookRequestSslVersionEnum = "SSL"
+	UpdateMerchantWebhookRequestSslVersionEnumSsLv3  UpdateMerchantWebhookRequestSslVersionEnum = "SSLv3"
+	UpdateMerchantWebhookRequestSslVersionEnumTLS    UpdateMerchantWebhookRequestSslVersionEnum = "TLS"
+	UpdateMerchantWebhookRequestSslVersionEnumTlSv1  UpdateMerchantWebhookRequestSslVersionEnum = "TLSv1"
+	UpdateMerchantWebhookRequestSslVersionEnumTlSv11 UpdateMerchantWebhookRequestSslVersionEnum = "TLSv1.1"
+	UpdateMerchantWebhookRequestSslVersionEnumTlSv12 UpdateMerchantWebhookRequestSslVersionEnum = "TLSv1.2"
+	UpdateMerchantWebhookRequestSslVersionEnumTlSv13 UpdateMerchantWebhookRequestSslVersionEnum = "TLSv1.3"
 )
 
 func (e *UpdateMerchantWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) error {
@@ -96,21 +94,17 @@ func (e *UpdateMerchantWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) 
 		fallthrough
 	case "SSL":
 		fallthrough
-	case "SSLV3":
-		fallthrough
-	case "SSL_INSECURE_CIPHERS":
+	case "SSLv3":
 		fallthrough
 	case "TLS":
 		fallthrough
-	case "TLSV1":
+	case "TLSv1":
 		fallthrough
-	case "TLSV1_1":
+	case "TLSv1.1":
 		fallthrough
-	case "TLSV1_2":
+	case "TLSv1.2":
 		fallthrough
-	case "TLSV1_3":
-		fallthrough
-	case "TLSV1_INSECURE_CIPHERS":
+	case "TLSv1.3":
 		*e = UpdateMerchantWebhookRequestSslVersionEnum(s)
 		return nil
 	default:
@@ -126,13 +120,13 @@ type UpdateMerchantWebhookRequest struct {
 	// Indicates if untrusted SSL certificates are accepted. Default value: **false**.
 	AcceptsUntrustedRootCertificate *bool `json:"acceptsUntrustedRootCertificate,omitempty"`
 	// Indicates if the webhook configuration is active. The field must be **true** for us to send webhooks about events related an account.
-	Active             bool                `json:"active"`
+	Active             *bool               `json:"active,omitempty"`
 	AdditionalSettings *AdditionalSettings `json:"additionalSettings,omitempty"`
 	// Format or protocol for receiving webhooks. Possible values:
 	// * **soap**
 	// * **http**
 	// * **json**
-	CommunicationFormat UpdateMerchantWebhookRequestCommunicationFormatEnum `json:"communicationFormat"`
+	CommunicationFormat *UpdateMerchantWebhookRequestCommunicationFormatEnum `json:"communicationFormat,omitempty"`
 	// Your description for this webhook configuration.
 	Description *string `json:"description,omitempty"`
 	// Network type for Terminal API notification webhooks. Possible values:
@@ -155,7 +149,7 @@ type UpdateMerchantWebhookRequest struct {
 	// If not specified, the webhook will use `sslVersion`: **TLSv1.2**.
 	SslVersion *UpdateMerchantWebhookRequestSslVersionEnum `json:"sslVersion,omitempty"`
 	// Public URL where webhooks will be sent, for example **https://www.domain.com/webhook-endpoint**.
-	URL string `json:"url"`
+	URL *string `json:"url,omitempty"`
 	// Username to access the webhook URL.
 	Username *string `json:"username,omitempty"`
 }

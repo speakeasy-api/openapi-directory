@@ -10,4 +10,6 @@ type GoogleCloudIdentitytoolkitV2StartMfaEnrollmentRequest struct {
 	PhoneEnrollmentInfo *GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo `json:"phoneEnrollmentInfo,omitempty"`
 	// The ID of the Identity Platform tenant that the user enrolling MFA belongs to. If not set, the user belongs to the default Identity Platform project.
 	TenantID *string `json:"tenantId,omitempty"`
+	// Mfa request info specific to TOTP auth for StartMfa.
+	TotpEnrollmentInfo map[string]interface{} `json:"totpEnrollmentInfo,omitempty"`
 }

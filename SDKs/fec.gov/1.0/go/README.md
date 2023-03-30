@@ -185,11 +185,13 @@ stays the same. If the same person runs for multiple offices — for example, a 
 candidate runs for a Senate office — that candidate will get a unique ID for each office.
 
 The candidate endpoints primarily use data from FEC registration
-[Form 1](http://www.fec.gov/pdf/forms/fecfrm1.pdf) for committee information and
-[Form 2](http://www.fec.gov/pdf/forms/fecfrm2.pdf) for candidate information.
+[Form 1](https://www.fec.gov/pdf/forms/fecfrm1.pdf) for committee information and
+[Form 2](https://www.fec.gov/pdf/forms/fecfrm2.pdf) for candidate information.
 
 * `GetCandidatesTotals` - 
 Aggregated candidate receipts and disbursements grouped by cycle.
+
+* `GetCandidatesTotalsAggregates` -  Candidate total receipts and disbursements aggregated by `aggregate_by`.
 
 * `GetCandidatesTotalsByOffice` -  Aggregated candidate receipts and disbursements grouped by office by cycle.
 

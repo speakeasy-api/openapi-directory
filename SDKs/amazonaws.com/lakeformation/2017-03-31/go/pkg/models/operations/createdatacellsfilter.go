@@ -26,6 +26,7 @@ type CreateDataCellsFilterRequestBodyTableData struct {
 	RowFilter      *shared.RowFilter      `json:"RowFilter,omitempty"`
 	TableCatalogID *string                `json:"TableCatalogId,omitempty"`
 	TableName      *string                `json:"TableName,omitempty"`
+	VersionID      *string                `json:"VersionId,omitempty"`
 }
 
 type CreateDataCellsFilterRequestBody struct {

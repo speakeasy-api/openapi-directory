@@ -11,23 +11,8 @@ type GetAccessTokenSecurity struct {
 	BasicAuth shared.SchemeBasicAuth `security:"scheme,type=http,subtype=basic"`
 }
 
-type GetAccessTokenRequestBody struct {
-	// OAuth2 grant type. Supports 'client_credentials', 'password' or 'refresh_token', 'user_id' available.
-	GrantType string `multipartForm:"name=grant_type"`
-	// MW Account password (to be used in password grant type)
-	Password *string `multipartForm:"name=password"`
-	// Refresh token value for refresh token flow.
-	RefreshToken *string `multipartForm:"name=refresh_token"`
-	// Authorization scope. Use 'privileged' for private endpoints.
-	Scope string `multipartForm:"name=scope"`
-	// Value for user_id grant type flow.
-	UserID *int64 `multipartForm:"name=user_id"`
-	// MW Account email (to be used in password grant type)
-	Username *string `multipartForm:"name=username"`
-}
-
 type GetAccessTokenRequest struct {
-	Request  *GetAccessTokenRequestBody `request:"mediaType=multipart/form-data"`
+	Request  *shared.TokenRequest `request:"mediaType=application/json"`
 	Security GetAccessTokenSecurity
 }
 

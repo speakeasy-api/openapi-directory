@@ -63,6 +63,9 @@ func newTypeahead(defaultClient, securityClient HTTPClient, serverURL, language,
 // Resources with type `task` are returned with priority placed on tasks
 // the user is following, but no guarantee on the order of those tasks.
 //
+// Resources with type `project_template` are returned with priority
+// placed on favorited project templates.
+//
 // Leaving the `query` string empty or omitted will give you results, still
 // following the resource ordering above. This could be used to list users or
 // projects that are relevant for the requesting user's api token.

@@ -40,9 +40,9 @@ func newFirewalls(defaultClient, securityClient HTTPClient, serverURL, language,
 //
 // #### Call specific error codes
 //
-// | Code              | Description                               |
-// |-------------------|-------------------------------------------|
-// | `resource_in_use` | Firewall must not be in use to be deleted |
+// | Code                 | Description                               |
+// |--------------------- |-------------------------------------------|
+// | `resource_in_use`    | Firewall must not be in use to be deleted |
 func (s *firewalls) DeleteFirewallsID(ctx context.Context, request operations.DeleteFirewallsIDRequest) (*operations.DeleteFirewallsIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firewalls/{id}", request.PathParams, nil)
@@ -176,10 +176,11 @@ func (s *firewalls) GetFirewallsID(ctx context.Context, request operations.GetFi
 //
 // #### Call specific error codes
 //
-// | Code                        | Description                                             |
-// |-----------------------------|---------------------------------------------------------|
-// | `server_already_added`      | Server added more than one time to resource             |
-// | `incompatible_network_type` | The Network type is incompatible for the given resource |
+// | Code                          | Description                                                   |
+// |------------------------------ |-------------------------------------------------------------- |
+// | `server_already_added`        | Server added more than one time to resource                   |
+// | `incompatible_network_type`   | The Network type is incompatible for the given resource       |
+// | `firewall_resource_not_found` | The resource the Firewall should be attached to was not found |
 func (s *firewalls) PostFirewalls(ctx context.Context, request operations.PostFirewallsRequest) (*operations.PostFirewallsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/firewalls"

@@ -4,8 +4,7 @@ package shared
 
 // DeleteAppVersionAppComponentResponse - Success
 type DeleteAppVersionAppComponentResponse struct {
-	AppArn string `json:"appArn"`
-	// Defines an Application Component.
+	AppArn       string        `json:"appArn"`
 	AppComponent *AppComponent `json:"appComponent,omitempty"`
 	AppVersion   string        `json:"appVersion"`
 }

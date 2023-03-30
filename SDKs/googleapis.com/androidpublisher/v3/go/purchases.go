@@ -77,6 +77,45 @@ func (s *purchases) AndroidpublisherPurchasesProductsAcknowledge(ctx context.Con
 	return res, nil
 }
 
+// AndroidpublisherPurchasesProductsConsume - Consumes a purchase for an inapp item.
+func (s *purchases) AndroidpublisherPurchasesProductsConsume(ctx context.Context, request operations.AndroidpublisherPurchasesProductsConsumeRequest) (*operations.AndroidpublisherPurchasesProductsConsumeResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/androidpublisher/v3/applications/{packageName}/purchases/products/{productId}/tokens/{token}:consume", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AndroidpublisherPurchasesProductsConsumeResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	}
+
+	return res, nil
+}
+
 // AndroidpublisherPurchasesProductsGet - Checks the purchase and consumption status of an inapp item.
 func (s *purchases) AndroidpublisherPurchasesProductsGet(ctx context.Context, request operations.AndroidpublisherPurchasesProductsGetRequest) (*operations.AndroidpublisherPurchasesProductsGetResponse, error) {
 	baseURL := s.serverURL

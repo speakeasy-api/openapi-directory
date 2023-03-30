@@ -33,9 +33,9 @@ func main() {
         QueryParams: operations.GetCmsV3DomainsGetPageQueryParams{
             After: "unde",
             Archived: false,
-            CreatedAfter: "2022-08-25T03:25:07.102Z",
-            CreatedAt: "2022-07-11T11:40:43.233Z",
-            CreatedBefore: "2022-05-25T08:58:10.670Z",
+            CreatedAfter: "2022-08-25T15:24:16.356Z",
+            CreatedAt: "2022-07-11T23:39:52.487Z",
+            CreatedBefore: "2022-05-25T20:57:19.924Z",
             Limit: 602763,
             Sort: []string{
                 "perspiciatis",
@@ -43,9 +43,9 @@ func main() {
                 "nihil",
                 "fuga",
             },
-            UpdatedAfter: "2022-08-05T18:42:18.164Z",
-            UpdatedAt: "2022-11-09T05:33:13.166Z",
-            UpdatedBefore: "2022-10-20T19:28:24.516Z",
+            UpdatedAfter: "2022-08-06T06:41:27.418Z",
+            UpdatedAt: "2022-11-09T17:32:22.420Z",
+            UpdatedBefore: "2022-10-21T07:27:33.770Z",
         },
     }
 

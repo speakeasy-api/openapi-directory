@@ -17,6 +17,12 @@ type DeleteAppInputSourceHeaders struct {
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
+// DeleteAppInputSourceRequestBodyEksSourceClusterNamespace - The input source of the namespace that is located on your Amazon Elastic Kubernetes Service cluster.
+type DeleteAppInputSourceRequestBodyEksSourceClusterNamespace struct {
+	EksClusterArn *string `json:"eksClusterArn,omitempty"`
+	Namespace     *string `json:"namespace,omitempty"`
+}
+
 // DeleteAppInputSourceRequestBodyTerraformSource -  The Terraform s3 state file you need to import.
 type DeleteAppInputSourceRequestBodyTerraformSource struct {
 	S3StateFileURL *string `json:"s3StateFileUrl,omitempty"`
@@ -27,7 +33,9 @@ type DeleteAppInputSourceRequestBody struct {
 	AppArn string `json:"appArn"`
 	// Used for an idempotency token. A client token is a unique, case-sensitive string of up to 64 ASCII characters. You should not reuse the same client token for other API requests.
 	ClientToken *string `json:"clientToken,omitempty"`
-	// The Amazon Resource Name (ARN) of the imported resource you want to remove from the AWS Resilience Hub application. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
+	// The input source of the namespace that is located on your Amazon Elastic Kubernetes Service cluster.
+	EksSourceClusterNamespace *DeleteAppInputSourceRequestBodyEksSourceClusterNamespace `json:"eksSourceClusterNamespace,omitempty"`
+	// The Amazon Resource Name (ARN) of the imported resource you want to remove from the Resilience Hub application. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
 	SourceArn *string `json:"sourceArn,omitempty"`
 	//  The Terraform s3 state file you need to import.
 	TerraformSource *DeleteAppInputSourceRequestBodyTerraformSource `json:"terraformSource,omitempty"`

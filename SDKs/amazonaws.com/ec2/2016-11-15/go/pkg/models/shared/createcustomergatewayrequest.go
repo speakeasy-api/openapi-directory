@@ -294,7 +294,7 @@ type CreateCustomerGatewayRequestTagSpecifications struct {
 
 // CreateCustomerGatewayRequest - Contains the parameters for CreateCustomerGateway.
 type CreateCustomerGatewayRequest struct {
-	BgpAsn            int64
+	BgpAsn            *int64
 	CertificateArn    *string
 	DeviceName        *string
 	DryRun            *bool

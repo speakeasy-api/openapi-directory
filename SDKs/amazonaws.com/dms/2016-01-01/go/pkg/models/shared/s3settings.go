@@ -31,6 +31,7 @@ type S3Settings struct {
 	EncryptionMode                       *EncryptionModeValueEnum         `json:"EncryptionMode,omitempty"`
 	ExpectedBucketOwner                  *string                          `json:"ExpectedBucketOwner,omitempty"`
 	ExternalTableDefinition              *string                          `json:"ExternalTableDefinition,omitempty"`
+	GlueCatalogGeneration                *bool                            `json:"GlueCatalogGeneration,omitempty"`
 	IgnoreHeaderRows                     *int64                           `json:"IgnoreHeaderRows,omitempty"`
 	IncludeOpForFullLoad                 *bool                            `json:"IncludeOpForFullLoad,omitempty"`
 	MaxFileSize                          *int64                           `json:"MaxFileSize,omitempty"`

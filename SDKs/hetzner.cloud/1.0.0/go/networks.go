@@ -36,7 +36,12 @@ import (
 // Subnets of type `vswitch` must set a `vswitch_id` which is the ID of the existing vSwitch in Hetzner Robot that should be coupled.
 //
 // ### Network Zones
-// Network Zones are groups of Locations which have special high-speed network connections between them. The [Location object](https://docs.hetzner.cloud/#locations-get-a-location) contains the `network_zone` property each Location belongs to. Currently only one Network zone exists and is called `eu-central`. It spans the `nbg1`, `fsn1` and `hel1` Locations.
+// Network Zones are groups of Locations which have special high-speed network connections between them. The [Location object](https://docs.hetzner.cloud/#locations-get-a-location) contains the `network_zone` property each Location belongs to. Currently these network zones exist:
+//
+// |Network Zone|Contains Locations|
+// |------------|------------------|
+// |eu-central  | nbg1, fsn1, hel1 |
+// |us-east     | ash              |
 //
 // ### IP address management
 // When a cloud Server is attached to a network without the user specifying an IP it automatically gets an IP address assigned from a subnet of type `server` in the same network zone. If you specify the optional `ip` parameter when attaching then we will try to assign that IP. Keep in mind that the Server’s location must be covered by the Subnet’s Network Zone if you specify an IP, or that at least one Subnet with the zone covering Server’s location must exist.

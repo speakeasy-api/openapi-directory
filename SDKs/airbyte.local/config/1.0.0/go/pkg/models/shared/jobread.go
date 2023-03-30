@@ -7,6 +7,9 @@ type JobRead struct {
 	ConfigType JobConfigTypeEnum `json:"configType"`
 	CreatedAt  int64             `json:"createdAt"`
 	ID         int64             `json:"id"`
-	Status     JobStatusEnum     `json:"status"`
-	UpdatedAt  int64             `json:"updatedAt"`
+	// contains information about how a reset was configured. only populated if the job was a reset.
+	ResetConfig *ResetConfig  `json:"resetConfig,omitempty"`
+	StartedAt   *int64        `json:"startedAt,omitempty"`
+	Status      JobStatusEnum `json:"status"`
+	UpdatedAt   int64         `json:"updatedAt"`
 }

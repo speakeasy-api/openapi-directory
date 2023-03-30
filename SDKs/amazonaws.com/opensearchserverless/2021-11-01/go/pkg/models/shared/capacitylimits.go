@@ -2,7 +2,7 @@
 
 package shared
 
-// CapacityLimits - The maximum capacity limits for all OpenSearch Serverless collections, in OpenSearch Compute Units (OCUs). These limits are used to scale your collections based on the current workload. For more information, see <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-overview.html#serverless-scaling">Autoscaling</a>.
+// CapacityLimits - The maximum capacity limits for all OpenSearch Serverless collections, in OpenSearch Compute Units (OCUs). These limits are used to scale your collections based on the current workload. For more information, see <a href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-scaling.html">Managing capacity limits for Amazon OpenSearch Serverless</a>.
 type CapacityLimits struct {
 	MaxIndexingCapacityInOCU *int64 `json:"maxIndexingCapacityInOCU,omitempty"`
 	MaxSearchCapacityInOCU   *int64 `json:"maxSearchCapacityInOCU,omitempty"`

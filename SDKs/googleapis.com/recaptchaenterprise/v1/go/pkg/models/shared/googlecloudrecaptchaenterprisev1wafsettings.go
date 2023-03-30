@@ -15,6 +15,7 @@ const (
 	GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnumChallengePage         GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum = "CHALLENGE_PAGE"
 	GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnumSessionToken          GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum = "SESSION_TOKEN"
 	GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnumActionToken           GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum = "ACTION_TOKEN"
+	GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnumExpress               GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum = "EXPRESS"
 )
 
 func (e *GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum) UnmarshalJSON(data []byte) error {
@@ -30,6 +31,8 @@ func (e *GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum) UnmarshalJSO
 	case "SESSION_TOKEN":
 		fallthrough
 	case "ACTION_TOKEN":
+		fallthrough
+	case "EXPRESS":
 		*e = GoogleCloudRecaptchaenterpriseV1WafSettingsWafFeatureEnum(s)
 		return nil
 	default:

@@ -37,7 +37,7 @@ func (e *GoogleCloudDialogflowCxV3beta1DeploymentStateEnum) UnmarshalJSON(data [
 	}
 }
 
-// GoogleCloudDialogflowCxV3beta1Deployment - Represents an deployment in an environment. A deployment happens when a flow version configured to be active in the environment. You can configure running pre-deployment steps, e.g. running validation test cases, experiment auto-rollout, etc.
+// GoogleCloudDialogflowCxV3beta1Deployment - Represents a deployment in an environment. A deployment happens when a flow version configured to be active in the environment. You can configure running pre-deployment steps, e.g. running validation test cases, experiment auto-rollout, etc.
 type GoogleCloudDialogflowCxV3beta1Deployment struct {
 	// End time of this deployment.
 	EndTime *string `json:"endTime,omitempty"`

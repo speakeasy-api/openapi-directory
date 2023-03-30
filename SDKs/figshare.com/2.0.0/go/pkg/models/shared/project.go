@@ -4,11 +4,11 @@ package shared
 
 type Project struct {
 	// Project id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Date when project was published
-	PublishedDate *string `json:"published_date,omitempty"`
+	PublishedDate string `json:"published_date"`
 	// Project title
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 	// Api endpoint
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 }

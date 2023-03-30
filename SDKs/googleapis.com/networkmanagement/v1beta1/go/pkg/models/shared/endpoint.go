@@ -34,6 +34,118 @@ func (e *EndpointNetworkTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// EndpointInput - Source or destination of the Connectivity Test.
+type EndpointInput struct {
+	// Wrapper for app engine service version attributes.
+	AppEngineVersion *AppEngineVersionEndpoint `json:"appEngineVersion,omitempty"`
+	// Wrapper for Cloud Function attributes.
+	CloudFunction *CloudFunctionEndpoint `json:"cloudFunction,omitempty"`
+	// Wrapper for Cloud Run revision attributes.
+	CloudRunRevision *CloudRunRevisionEndpoint `json:"cloudRunRevision,omitempty"`
+	// A [Cloud SQL](https://cloud.google.com/sql) instance URI.
+	CloudSQLInstance *string `json:"cloudSqlInstance,omitempty"`
+	// Forwarding rule URI. Forwarding rules are frontends for load balancers, PSC endpoints and Protocol Forwarding. Format: projects/{project}/global/forwardingRules/{id} or projects/{project}/regions/{region}/forwardingRules/{id}
+	ForwardingRule *string `json:"forwardingRule,omitempty"`
+	// A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
+	GkeMasterCluster *string `json:"gkeMasterCluster,omitempty"`
+	// A Compute Engine instance URI.
+	Instance *string `json:"instance,omitempty"`
+	// The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
+	IPAddress *string `json:"ipAddress,omitempty"`
+	// A Compute Engine network URI.
+	Network *string `json:"network,omitempty"`
+	// Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.
+	NetworkType *EndpointNetworkTypeEnum `json:"networkType,omitempty"`
+	// The IP protocol port of the endpoint. Only applicable when protocol is TCP or UDP.
+	Port *int `json:"port,omitempty"`
+	// Project ID where the endpoint is located. The Project ID can be derived from the URI if you provide a VM instance or network URI. The following are two cases where you must provide the project ID: 1. Only the IP address is specified, and the IP address is within a GCP project. 2. When you are using Shared VPC and the IP address that you provide is from the service project. In this case, the network that the IP address resides in is defined in the host project.
+	ProjectID *string `json:"projectId,omitempty"`
+}
+
+// EndpointForwardingRuleTargetEnum - Output only. Specifies the type of the target of the forwarding rule.
+type EndpointForwardingRuleTargetEnum string
+
+const (
+	EndpointForwardingRuleTargetEnumForwardingRuleTargetUnspecified EndpointForwardingRuleTargetEnum = "FORWARDING_RULE_TARGET_UNSPECIFIED"
+	EndpointForwardingRuleTargetEnumInstance                        EndpointForwardingRuleTargetEnum = "INSTANCE"
+	EndpointForwardingRuleTargetEnumLoadBalancer                    EndpointForwardingRuleTargetEnum = "LOAD_BALANCER"
+	EndpointForwardingRuleTargetEnumVpnGateway                      EndpointForwardingRuleTargetEnum = "VPN_GATEWAY"
+	EndpointForwardingRuleTargetEnumPsc                             EndpointForwardingRuleTargetEnum = "PSC"
+)
+
+func (e *EndpointForwardingRuleTargetEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "FORWARDING_RULE_TARGET_UNSPECIFIED":
+		fallthrough
+	case "INSTANCE":
+		fallthrough
+	case "LOAD_BALANCER":
+		fallthrough
+	case "VPN_GATEWAY":
+		fallthrough
+	case "PSC":
+		*e = EndpointForwardingRuleTargetEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for EndpointForwardingRuleTargetEnum: %s", s)
+	}
+}
+
+// EndpointLoadBalancerTypeEnum - Output only. Type of the load balancer the forwarding rule points to.
+type EndpointLoadBalancerTypeEnum string
+
+const (
+	EndpointLoadBalancerTypeEnumLoadBalancerTypeUnspecified  EndpointLoadBalancerTypeEnum = "LOAD_BALANCER_TYPE_UNSPECIFIED"
+	EndpointLoadBalancerTypeEnumHTTPSAdvancedLoadBalancer    EndpointLoadBalancerTypeEnum = "HTTPS_ADVANCED_LOAD_BALANCER"
+	EndpointLoadBalancerTypeEnumHTTPSLoadBalancer            EndpointLoadBalancerTypeEnum = "HTTPS_LOAD_BALANCER"
+	EndpointLoadBalancerTypeEnumRegionalHTTPSLoadBalancer    EndpointLoadBalancerTypeEnum = "REGIONAL_HTTPS_LOAD_BALANCER"
+	EndpointLoadBalancerTypeEnumInternalHTTPSLoadBalancer    EndpointLoadBalancerTypeEnum = "INTERNAL_HTTPS_LOAD_BALANCER"
+	EndpointLoadBalancerTypeEnumSslProxyLoadBalancer         EndpointLoadBalancerTypeEnum = "SSL_PROXY_LOAD_BALANCER"
+	EndpointLoadBalancerTypeEnumTCPProxyLoadBalancer         EndpointLoadBalancerTypeEnum = "TCP_PROXY_LOAD_BALANCER"
+	EndpointLoadBalancerTypeEnumInternalTCPProxyLoadBalancer EndpointLoadBalancerTypeEnum = "INTERNAL_TCP_PROXY_LOAD_BALANCER"
+	EndpointLoadBalancerTypeEnumNetworkLoadBalancer          EndpointLoadBalancerTypeEnum = "NETWORK_LOAD_BALANCER"
+	EndpointLoadBalancerTypeEnumLegacyNetworkLoadBalancer    EndpointLoadBalancerTypeEnum = "LEGACY_NETWORK_LOAD_BALANCER"
+	EndpointLoadBalancerTypeEnumTCPUDPInternalLoadBalancer   EndpointLoadBalancerTypeEnum = "TCP_UDP_INTERNAL_LOAD_BALANCER"
+)
+
+func (e *EndpointLoadBalancerTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "LOAD_BALANCER_TYPE_UNSPECIFIED":
+		fallthrough
+	case "HTTPS_ADVANCED_LOAD_BALANCER":
+		fallthrough
+	case "HTTPS_LOAD_BALANCER":
+		fallthrough
+	case "REGIONAL_HTTPS_LOAD_BALANCER":
+		fallthrough
+	case "INTERNAL_HTTPS_LOAD_BALANCER":
+		fallthrough
+	case "SSL_PROXY_LOAD_BALANCER":
+		fallthrough
+	case "TCP_PROXY_LOAD_BALANCER":
+		fallthrough
+	case "INTERNAL_TCP_PROXY_LOAD_BALANCER":
+		fallthrough
+	case "NETWORK_LOAD_BALANCER":
+		fallthrough
+	case "LEGACY_NETWORK_LOAD_BALANCER":
+		fallthrough
+	case "TCP_UDP_INTERNAL_LOAD_BALANCER":
+		*e = EndpointLoadBalancerTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for EndpointLoadBalancerTypeEnum: %s", s)
+	}
+}
+
 // Endpoint - Source or destination of the Connectivity Test.
 type Endpoint struct {
 	// Wrapper for app engine service version attributes.
@@ -44,12 +156,20 @@ type Endpoint struct {
 	CloudRunRevision *CloudRunRevisionEndpoint `json:"cloudRunRevision,omitempty"`
 	// A [Cloud SQL](https://cloud.google.com/sql) instance URI.
 	CloudSQLInstance *string `json:"cloudSqlInstance,omitempty"`
+	// Forwarding rule URI. Forwarding rules are frontends for load balancers, PSC endpoints and Protocol Forwarding. Format: projects/{project}/global/forwardingRules/{id} or projects/{project}/regions/{region}/forwardingRules/{id}
+	ForwardingRule *string `json:"forwardingRule,omitempty"`
+	// Output only. Specifies the type of the target of the forwarding rule.
+	ForwardingRuleTarget *EndpointForwardingRuleTargetEnum `json:"forwardingRuleTarget,omitempty"`
 	// A cluster URI for [Google Kubernetes Engine master](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-architecture).
 	GkeMasterCluster *string `json:"gkeMasterCluster,omitempty"`
 	// A Compute Engine instance URI.
 	Instance *string `json:"instance,omitempty"`
 	// The IP address of the endpoint, which can be an external or internal IP. An IPv6 address is only allowed when the test's destination is a [global load balancer VIP](https://cloud.google.com/load-balancing/docs/load-balancing-overview).
 	IPAddress *string `json:"ipAddress,omitempty"`
+	// Output only. ID of the load balancer the forwarding rule points to. Empty for forwarding rules not related to load balancers.
+	LoadBalancerID *string `json:"loadBalancerId,omitempty"`
+	// Output only. Type of the load balancer the forwarding rule points to.
+	LoadBalancerType *EndpointLoadBalancerTypeEnum `json:"loadBalancerType,omitempty"`
 	// A Compute Engine network URI.
 	Network *string `json:"network,omitempty"`
 	// Type of the network where the endpoint is located. Applicable only to source endpoint, as destination network type can be inferred from the source.

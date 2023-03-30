@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-// users - Endpoints for creating or updating users
+// users - Endpoints for creating, deleting or updating users.
 type users struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -32,8 +32,143 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 	}
 }
 
+// DeleteUser - Delete user
+// Endpoint to delete a user.
+func (s *users) DeleteUser(ctx context.Context, request operations.DeleteUserRequest) (*operations.DeleteUserResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/users"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteUserResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 202:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteUser202ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteUser202ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteUser400ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteUser400ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 401:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteUser401ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteUser401ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 403:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteUser403ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteUser403ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteUser429ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteUser429ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 500:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteUser500ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteUser500ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // Link - Link web activity to user
-// Endpoint used to link web activity to a user.
+// 💡 You don't need to use this endpoint if you use our JavaScript snippet in your application.
+//
+// This endpoint is used to link web activity to a user in your application. This will help you discover which channels and campaigns work best.
+//
+// When our JavaScript snippet is embedded on your website, blog or landing pages, a cookie named "__journey" will be set.
+//
+// This will only work if your website and application are under the same top level domain.
+//
+// Website, blog or landing pages
+// * www.my-domain.tld
+// * blog.my-domain.tld
+// * landing-page.my-domain.tld
+//
+// Application
+// * app.my-domain.tld
+//
+// The cookie on my-domain.tld will also be send to your app domain.
+//
+// You should call this endpoint after the user succesfully logged in (so that you know the user's ID). Use the value of the cookie as device ID.
 func (s *users) Link(ctx context.Context, request operations.LinkRequest) (*operations.LinkResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/link"

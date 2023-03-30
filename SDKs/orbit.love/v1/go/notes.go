@@ -30,10 +30,10 @@ func newNotes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 	}
 }
 
-// GetWorkspaceIDMembersMemberIDNotes - Get the member's notes
-func (s *notes) GetWorkspaceIDMembersMemberIDNotes(ctx context.Context, request operations.GetWorkspaceIDMembersMemberIDNotesRequest) (*operations.GetWorkspaceIDMembersMemberIDNotesResponse, error) {
+// GetWorkspaceSlugMembersMemberSlugNotes - Get the member's notes
+func (s *notes) GetWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, request operations.GetWorkspaceSlugMembersMemberSlugNotesRequest) (*operations.GetWorkspaceSlugMembersMemberSlugNotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{member_id}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -57,7 +57,7 @@ func (s *notes) GetWorkspaceIDMembersMemberIDNotes(ctx context.Context, request 
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspaceIDMembersMemberIDNotesResponse{
+	res := &operations.GetWorkspaceSlugMembersMemberSlugNotesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -69,10 +69,10 @@ func (s *notes) GetWorkspaceIDMembersMemberIDNotes(ctx context.Context, request 
 	return res, nil
 }
 
-// PostWorkspaceIDMembersMemberIDNotes - Create a note
-func (s *notes) PostWorkspaceIDMembersMemberIDNotes(ctx context.Context, request operations.PostWorkspaceIDMembersMemberIDNotesRequest) (*operations.PostWorkspaceIDMembersMemberIDNotesResponse, error) {
+// PostWorkspaceSlugMembersMemberSlugNotes - Create a note
+func (s *notes) PostWorkspaceSlugMembersMemberSlugNotes(ctx context.Context, request operations.PostWorkspaceSlugMembersMemberSlugNotesRequest) (*operations.PostWorkspaceSlugMembersMemberSlugNotesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{member_id}/notes", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -99,22 +99,24 @@ func (s *notes) PostWorkspaceIDMembersMemberIDNotes(ctx context.Context, request
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostWorkspaceIDMembersMemberIDNotesResponse{
+	res := &operations.PostWorkspaceSlugMembersMemberSlugNotesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 201:
+		fallthrough
+	case httpRes.StatusCode == 403:
 	}
 
 	return res, nil
 }
 
-// PutWorkspaceIDMembersMemberIDNotesID - Update a note
-func (s *notes) PutWorkspaceIDMembersMemberIDNotesID(ctx context.Context, request operations.PutWorkspaceIDMembersMemberIDNotesIDRequest) (*operations.PutWorkspaceIDMembersMemberIDNotesIDResponse, error) {
+// PutWorkspaceSlugMembersMemberSlugNotesID - Update a note
+func (s *notes) PutWorkspaceSlugMembersMemberSlugNotesID(ctx context.Context, request operations.PutWorkspaceSlugMembersMemberSlugNotesIDRequest) (*operations.PutWorkspaceSlugMembersMemberSlugNotesIDResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{member_id}/notes/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/notes/{id}", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -141,7 +143,7 @@ func (s *notes) PutWorkspaceIDMembersMemberIDNotesID(ctx context.Context, reques
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PutWorkspaceIDMembersMemberIDNotesIDResponse{
+	res := &operations.PutWorkspaceSlugMembersMemberSlugNotesIDResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

@@ -2,55 +2,11 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
-// SaveAccountTypeEnum - The account type
-type SaveAccountTypeEnum string
-
-const (
-	SaveAccountTypeEnumChecking       SaveAccountTypeEnum = "checking"
-	SaveAccountTypeEnumSavings        SaveAccountTypeEnum = "savings"
-	SaveAccountTypeEnumCreditCard     SaveAccountTypeEnum = "creditCard"
-	SaveAccountTypeEnumCash           SaveAccountTypeEnum = "cash"
-	SaveAccountTypeEnumLineOfCredit   SaveAccountTypeEnum = "lineOfCredit"
-	SaveAccountTypeEnumOtherAsset     SaveAccountTypeEnum = "otherAsset"
-	SaveAccountTypeEnumOtherLiability SaveAccountTypeEnum = "otherLiability"
-)
-
-func (e *SaveAccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "checking":
-		fallthrough
-	case "savings":
-		fallthrough
-	case "creditCard":
-		fallthrough
-	case "cash":
-		fallthrough
-	case "lineOfCredit":
-		fallthrough
-	case "otherAsset":
-		fallthrough
-	case "otherLiability":
-		*e = SaveAccountTypeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for SaveAccountTypeEnum: %s", s)
-	}
-}
-
 type SaveAccount struct {
 	// The current balance of the account in milliunits format
 	Balance int64 `json:"balance"`
 	// The name of the account
 	Name string `json:"name"`
-	// The account type
-	Type SaveAccountTypeEnum `json:"type"`
+	// The type of account
+	Type AccountTypeEnum `json:"type"`
 }

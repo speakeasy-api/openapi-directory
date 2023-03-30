@@ -21,8 +21,8 @@ type GetUserResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
+	// The current user.
+	Account map[string]interface{}
 	// When the request wasn't authenticated.
 	Error map[string]interface{}
-	// The current user.
-	User map[string]interface{}
 }

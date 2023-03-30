@@ -214,7 +214,7 @@ type GetCommitteesQueryParams struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -252,10 +252,14 @@ type GetCommitteesQueryParams struct {
 	//          - W Waived
 	//
 	FilingFrequency []GetCommitteesFilingFrequencyEnum `queryParam:"style=form,explode=true,name=filing_frequency"`
+	// Filter for committees whose first Form 1 was received on or before this date.
+	MaxFirstF1Date *types.Date `queryParam:"style=form,explode=true,name=max_first_f1_date"`
 	// Filter for committees whose first filing was received on or before this date.
 	MaxFirstFileDate *types.Date `queryParam:"style=form,explode=true,name=max_first_file_date"`
 	// Filter for committees whose latest Form 1 was received on or before this date.
 	MaxLastF1Date *types.Date `queryParam:"style=form,explode=true,name=max_last_f1_date"`
+	// Filter for committees whose first Form 1 was received on or after this date.
+	MinFirstF1Date *types.Date `queryParam:"style=form,explode=true,name=min_first_f1_date"`
 	// Filter for committees whose first filing was received on or after this date.
 	MinFirstFileDate *types.Date `queryParam:"style=form,explode=true,name=min_first_file_date"`
 	// Filter for committees whose latest Form 1 was received on or after this date.

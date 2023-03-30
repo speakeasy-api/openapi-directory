@@ -12,18 +12,9 @@ type CreateProjectDocumentPathParams struct {
 	ProjectID int64 `pathParam:"style=simple,explode=false,name=projectId"`
 }
 
-type CreateProjectDocumentRequestBody struct {
-	// You can add as many files as you want in documents[] parameter.
-	Documents [][]byte `multipartForm:"name=documents[],json"`
-	// JSON string. If your documents have a scheme, as in cases of CSV files, use the same array index keys for `schemes` parameter to specify their schemes. See `Document Schemes` title in the API documentation.
-	Schemes *string `multipartForm:"name=schemes[]"`
-	// When provided, we will download the files from these URLs, in addition to files provded in `documents` parameter and then save as source documents
-	SourceLinks []shared.LinkedSourceDocument `multipartForm:"name=source-links[],json"`
-}
-
 type CreateProjectDocumentRequest struct {
 	PathParams CreateProjectDocumentPathParams
-	Request    *CreateProjectDocumentRequestBody `request:"mediaType=multipart/form-data"`
+	Request    *shared.DocumentUpdates `request:"mediaType=application/json"`
 }
 
 type CreateProjectDocumentResponse struct {

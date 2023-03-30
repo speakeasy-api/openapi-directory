@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// LanguageModel - Provides information about a custom language model, including the base model name, when the model was created, the location of the files used to train the model, when the model was last modified, the name you chose for the model, its language, its processing state, and if there is an upgrade available for the base model.
+// LanguageModel - <p>Provides information about a custom language model, including:</p> <ul> <li> <p>The base model name</p> </li> <li> <p>When the model was created</p> </li> <li> <p>The location of the files used to train the model</p> </li> <li> <p>When the model was last modified</p> </li> <li> <p>The name you chose for the model</p> </li> <li> <p>The model's language</p> </li> <li> <p>The model's processing state</p> </li> <li> <p>Any available upgrades for the base model</p> </li> </ul>
 type LanguageModel struct {
 	BaseModelName       *BaseModelNameEnum   `json:"BaseModelName,omitempty"`
 	CreateTime          *time.Time           `json:"CreateTime,omitempty"`

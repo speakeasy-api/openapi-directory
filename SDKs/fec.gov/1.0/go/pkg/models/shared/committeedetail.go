@@ -6,6 +6,14 @@ import (
 	"openapi/pkg/types"
 )
 
+type CommitteeDetailJfcCommittee struct {
+	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+	//
+	JointCommitteeID *string `json:"joint_committee_id,omitempty"`
+	// The name of the committee. If a committee changes its name,     the most recent name will be shown. Committee names are not unique. Use committee_id     for looking up records.
+	JointCommitteeName *string `json:"joint_committee_name,omitempty"`
+}
+
 type CommitteeDetail struct {
 	// Affiliated committee or connected organization
 	//
@@ -25,7 +33,7 @@ type CommitteeDetail struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -44,7 +52,7 @@ type CommitteeDetail struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -136,6 +144,8 @@ type CommitteeDetail struct {
 	//          - W Waived
 	//
 	FilingFrequency *string `json:"filing_frequency,omitempty"`
+	// The day the FEC received the committee's first Form 1
+	FirstF1Date *types.Date `json:"first_f1_date,omitempty"`
 	// The day the FEC received the committee's first filing. This is usually a Form 1 committee registration.
 	FirstFileDate *types.Date `json:"first_file_date,omitempty"`
 	// The form where the underlying data comes from, for example, Form 1 would appear as F1:
@@ -156,7 +166,10 @@ type CommitteeDetail struct {
 	//     - F99  Miscellaneous Text
 	//     - FRQ  Request for Additional Information
 	//
-	FormType *string `json:"form_type,omitempty"`
+	FormType     *string                       `json:"form_type,omitempty"`
+	JfcCommittee []CommitteeDetailJfcCommittee `json:"jfc_committee,omitempty"`
+	// The day the FEC received the committee's most recent Form 1
+	LastF1Date *types.Date `json:"last_f1_date,omitempty"`
 	// The day the FEC received the committee's most recent filing
 	LastFileDate *types.Date `json:"last_file_date,omitempty"`
 	// Indicates if the committee is a leadership PAC

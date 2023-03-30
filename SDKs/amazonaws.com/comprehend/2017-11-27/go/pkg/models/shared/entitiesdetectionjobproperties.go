@@ -11,6 +11,7 @@ type EntitiesDetectionJobProperties struct {
 	DataAccessRoleArn   *string           `json:"DataAccessRoleArn,omitempty"`
 	EndTime             *time.Time        `json:"EndTime,omitempty"`
 	EntityRecognizerArn *string           `json:"EntityRecognizerArn,omitempty"`
+	FlywheelArn         *string           `json:"FlywheelArn,omitempty"`
 	InputDataConfig     *InputDataConfig  `json:"InputDataConfig,omitempty"`
 	JobArn              *string           `json:"JobArn,omitempty"`
 	JobID               *string           `json:"JobId,omitempty"`

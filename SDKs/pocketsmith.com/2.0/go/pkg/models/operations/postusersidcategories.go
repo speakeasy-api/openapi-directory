@@ -3,6 +3,8 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -12,11 +14,46 @@ type PostUsersIDCategoriesPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
+// PostUsersIDCategoriesRequestBodyRefundBehaviourEnum - Set the refund behaviour of the category.
+type PostUsersIDCategoriesRequestBodyRefundBehaviourEnum string
+
+const (
+	PostUsersIDCategoriesRequestBodyRefundBehaviourEnumDebitsAreDeductions PostUsersIDCategoriesRequestBodyRefundBehaviourEnum = "debits_are_deductions"
+	PostUsersIDCategoriesRequestBodyRefundBehaviourEnumCreditsAreRefunds   PostUsersIDCategoriesRequestBodyRefundBehaviourEnum = "credits_are_refunds"
+	PostUsersIDCategoriesRequestBodyRefundBehaviourEnumNull                PostUsersIDCategoriesRequestBodyRefundBehaviourEnum = "null"
+)
+
+func (e *PostUsersIDCategoriesRequestBodyRefundBehaviourEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "debits_are_deductions":
+		fallthrough
+	case "credits_are_refunds":
+		fallthrough
+	case "null":
+		*e = PostUsersIDCategoriesRequestBodyRefundBehaviourEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostUsersIDCategoriesRequestBodyRefundBehaviourEnum: %s", s)
+	}
+}
+
 type PostUsersIDCategoriesRequestBody struct {
 	// A CSS-style hex colour for the category.
 	Colour *string `json:"colour,omitempty"`
+	// Set the category as a bill category.
+	IsBill *bool `json:"is_bill,omitempty"`
+	// Set the category as a transfer category.
+	IsTransfer *bool `json:"is_transfer,omitempty"`
 	// The unique identifier of a category to be the parent of this category.
 	ParentID *int64 `json:"parent_id,omitempty"`
+	// Set the refund behaviour of the category.
+	RefundBehaviour *PostUsersIDCategoriesRequestBodyRefundBehaviourEnum `json:"refund_behaviour,omitempty"`
+	// Set the category to be rolled up into its parent category.
+	RollUp *bool `json:"roll_up,omitempty"`
 	// A title for the category.
 	Title string `json:"title"`
 }

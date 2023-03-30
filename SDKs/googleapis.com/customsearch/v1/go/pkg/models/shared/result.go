@@ -4,7 +4,7 @@ package shared
 
 // ResultImage - Image belonging to a custom search result.
 type ResultImage struct {
-	// The size of the image, in pixels.
+	// The size of the image, in bytes.
 	ByteSize *int `json:"byteSize,omitempty"`
 	// A URL pointing to the webpage hosting the image.
 	ContextLink *string `json:"contextLink,omitempty"`

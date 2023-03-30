@@ -5,6 +5,7 @@ package sdk
 import (
 	"context"
 	"fmt"
+	"io"
 	"net/http"
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
@@ -33,7 +34,7 @@ func newStatic(defaultClient, securityClient HTTPClient, serverURL, language, sd
 }
 
 // GetEndpoints - Available endpoints
-// The root endpoint will provide you a JSON Swagger definition.
+// The root endpoint will provide you with an OpenAPI definition of MotaWord API.
 func (s *static) GetEndpoints(ctx context.Context) (*operations.GetEndpointsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"
@@ -87,7 +88,7 @@ func (s *static) GetEndpoints(ctx context.Context) (*operations.GetEndpointsResp
 	return res, nil
 }
 
-// GetFormats - Get a list of supported formats
+// GetFormats - List of supported file formats
 // Get a list of supported formats for documents, style guides and extensions.
 func (s *static) GetFormats(ctx context.Context) (*operations.GetFormatsResponse, error) {
 	baseURL := s.serverURL
@@ -132,7 +133,7 @@ func (s *static) GetFormats(ctx context.Context) (*operations.GetFormatsResponse
 	return res, nil
 }
 
-// GetLanguages - Get a list of supported languages
+// GetLanguages - List of supported languages
 // Get a list of supported languages
 func (s *static) GetLanguages(ctx context.Context) (*operations.GetLanguagesResponse, error) {
 	baseURL := s.serverURL
@@ -177,9 +178,9 @@ func (s *static) GetLanguages(ctx context.Context) (*operations.GetLanguagesResp
 	return res, nil
 }
 
-// GetSwaggerJSON - Get Swagger JSON
-// Get Swagger JSON
-func (s *static) GetSwaggerJSON(ctx context.Context) (*operations.GetSwaggerJSONResponse, error) {
+// GetSwaggerYaml - OpenAPI YAML representation of our API
+// Get Swagger YAML
+func (s *static) GetSwaggerYaml(ctx context.Context) (*operations.GetSwaggerYamlResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/swagger"
 
@@ -201,7 +202,7 @@ func (s *static) GetSwaggerJSON(ctx context.Context) (*operations.GetSwaggerJSON
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetSwaggerJSONResponse{
+	res := &operations.GetSwaggerYamlResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -209,13 +210,14 @@ func (s *static) GetSwaggerJSON(ctx context.Context) (*operations.GetSwaggerJSON
 	switch {
 	case httpRes.StatusCode == 200:
 		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
+		case utils.MatchContentType(contentType, `text/yaml`):
+			data, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
 			}
 
-			res.GetSwaggerJSON200ApplicationJSONObject = out
+			out := string(data)
+			res.GetSwaggerYaml200TextYamlString = &out
 		}
 	}
 

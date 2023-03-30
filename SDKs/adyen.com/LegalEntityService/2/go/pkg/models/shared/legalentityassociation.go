@@ -9,15 +9,18 @@ import (
 
 // LegalEntityAssociationTypeEnum - Defines the relationship of the legal entity to the current legal entity.
 //
-// For example, **uboThroughOwnership**, **uboThroughControl**, **signatory**, or **soleProprietorship**.
+// Possible values for organizations: **uboThroughOwnership**, **uboThroughControl**, **signatory**, or **ultimateParentCompany**.
+//
+// Possible values for sole proprietorships: **soleProprietorship**.
 type LegalEntityAssociationTypeEnum string
 
 const (
-	LegalEntityAssociationTypeEnumPciSignatory        LegalEntityAssociationTypeEnum = "pciSignatory"
-	LegalEntityAssociationTypeEnumSignatory           LegalEntityAssociationTypeEnum = "signatory"
-	LegalEntityAssociationTypeEnumSoleProprietorship  LegalEntityAssociationTypeEnum = "soleProprietorship"
-	LegalEntityAssociationTypeEnumUboThroughControl   LegalEntityAssociationTypeEnum = "uboThroughControl"
-	LegalEntityAssociationTypeEnumUboThroughOwnership LegalEntityAssociationTypeEnum = "uboThroughOwnership"
+	LegalEntityAssociationTypeEnumPciSignatory          LegalEntityAssociationTypeEnum = "pciSignatory"
+	LegalEntityAssociationTypeEnumSignatory             LegalEntityAssociationTypeEnum = "signatory"
+	LegalEntityAssociationTypeEnumSoleProprietorship    LegalEntityAssociationTypeEnum = "soleProprietorship"
+	LegalEntityAssociationTypeEnumUboThroughControl     LegalEntityAssociationTypeEnum = "uboThroughControl"
+	LegalEntityAssociationTypeEnumUboThroughOwnership   LegalEntityAssociationTypeEnum = "uboThroughOwnership"
+	LegalEntityAssociationTypeEnumUltimateParentCompany LegalEntityAssociationTypeEnum = "ultimateParentCompany"
 )
 
 func (e *LegalEntityAssociationTypeEnum) UnmarshalJSON(data []byte) error {
@@ -35,6 +38,8 @@ func (e *LegalEntityAssociationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "uboThroughControl":
 		fallthrough
 	case "uboThroughOwnership":
+		fallthrough
+	case "ultimateParentCompany":
 		*e = LegalEntityAssociationTypeEnum(s)
 		return nil
 	default:
@@ -45,11 +50,13 @@ func (e *LegalEntityAssociationTypeEnum) UnmarshalJSON(data []byte) error {
 type LegalEntityAssociationInput struct {
 	// The individual's job title if the `type` is **uboThroughControl** or **signatory**.
 	JobTitle *string `json:"jobTitle,omitempty"`
-	// The unique identifier of the associated [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities__resParam_id).
+	// The unique identifier of the associated [legal entity](https://docs.adyen.com/api-explorer/legalentity/latest/post/legalEntities#responses-200-id).
 	LegalEntityID string `json:"legalEntityId"`
 	// Defines the relationship of the legal entity to the current legal entity.
 	//
-	// For example, **uboThroughOwnership**, **uboThroughControl**, **signatory**, or **soleProprietorship**.
+	// Possible values for organizations: **uboThroughOwnership**, **uboThroughControl**, **signatory**, or **ultimateParentCompany**.
+	//
+	// Possible values for sole proprietorships: **soleProprietorship**.
 	Type LegalEntityAssociationTypeEnum `json:"type"`
 }
 
@@ -62,9 +69,9 @@ type LegalEntityAssociation struct {
 	EntityType *string `json:"entityType,omitempty"`
 	// The individual's job title if the `type` is **uboThroughControl** or **signatory**.
 	JobTitle *string `json:"jobTitle,omitempty"`
-	// The unique identifier of the associated [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities__resParam_id).
+	// The unique identifier of the associated [legal entity](https://docs.adyen.com/api-explorer/legalentity/latest/post/legalEntities#responses-200-id).
 	LegalEntityID string `json:"legalEntityId"`
-	// The name of the associated [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities__resParam_id).
+	// The name of the associated [legal entity](https://docs.adyen.com/api-explorer/legalentity/latest/post/legalEntities#responses-200-id).
 	//
 	// - For **individual**, `name.firstName` and `name.lastName`.
 	// - For **organization**, `legalName`.
@@ -72,6 +79,8 @@ type LegalEntityAssociation struct {
 	Name *string `json:"name,omitempty"`
 	// Defines the relationship of the legal entity to the current legal entity.
 	//
-	// For example, **uboThroughOwnership**, **uboThroughControl**, **signatory**, or **soleProprietorship**.
+	// Possible values for organizations: **uboThroughOwnership**, **uboThroughControl**, **signatory**, or **ultimateParentCompany**.
+	//
+	// Possible values for sole proprietorships: **soleProprietorship**.
 	Type LegalEntityAssociationTypeEnum `json:"type"`
 }

@@ -14,11 +14,31 @@ func main() {
     s := sdk.New()
 
     req := operations.AddUserToAccountRequest{
-        PathParams: operations.AddUserToAccountPathParams{
-            AccountID: "unde",
-        },
         Request: operations.AddUserToAccountRequestBody{
-            UserID: "deserunt",
+            Account: operations.AddUserToAccountRequestBodyAccount{
+                AccountID: "unde",
+                Domain: "deserunt",
+            },
+            Users: []AddUserToAccountRequestBodyUsers{
+                operations.AddUserToAccountRequestBodyUsers{
+                    Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
+                        Email: "Leatha_Stiedemann@hotmail.com",
+                        UserID: "nihil",
+                    },
+                },
+                operations.AddUserToAccountRequestBodyUsers{
+                    Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
+                        Email: "Luna.Hoppe@yahoo.com",
+                        UserID: "saepe",
+                    },
+                },
+                operations.AddUserToAccountRequestBodyUsers{
+                    Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
+                        Email: "Vincenzo.Goldner@gmail.com",
+                        UserID: "autem",
+                    },
+                },
+            },
         },
     }
 

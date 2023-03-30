@@ -14,9 +14,9 @@ import (
 
 // tasks - The task is the basic object around which many operations in Asana are centered. In the Asana application, multiple tasks populate the middle pane according to some view parameters, and the set of selected tasks determines the more detailed information presented in the details pane.
 //
-// Sections are unique in that they will be included in the *memberships* field of task objects returned in the API when the task is within a section. They can also be used to manipulate the ordering of a task within a project.
+// Sections are unique in that they will be included in the `memberships` field of task objects returned in the API when the task is within a section. They can also be used to manipulate the ordering of a task within a project.
 //
-// [Queries](/docs/get-a-set-of-tasks) return a compact representation of each object which is typically the id and name fields. Interested in a specific set of fields or all of the fields? Use [field selectors](/docs/input-output-options) to manipulate what data is included in a response.
+// [Queries](/docs/get-multiple-tasks) return a [compact representation of each task object](/docs/task-compact). To retrieve *all* fields or *specific set* of the fields, use [field selectors](/docs/input-output-options) to manipulate what data is included in a response.
 type tasks struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -38,7 +38,7 @@ func newTasks(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 }
 
 // AddDependenciesForTask - Set dependencies for a task
-// Marks a set of tasks as dependencies of this task, if they are not already dependencies. *A task can have at most 15 dependencies*.
+// Marks a set of tasks as dependencies of this task, if they are not already dependencies. *A task can have at most 30 dependents and dependencies combined*.
 func (s *tasks) AddDependenciesForTask(ctx context.Context, request operations.AddDependenciesForTaskRequest) (*operations.AddDependenciesForTaskResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addDependencies", request.PathParams, nil)
@@ -117,7 +117,7 @@ func (s *tasks) AddDependenciesForTask(ctx context.Context, request operations.A
 }
 
 // AddDependentsForTask - Set dependents for a task
-// Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents*.
+// Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents and dependencies combined*.
 func (s *tasks) AddDependentsForTask(ctx context.Context, request operations.AddDependentsForTaskRequest) (*operations.AddDependentsForTaskResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/addDependents", request.PathParams, nil)
@@ -1782,7 +1782,7 @@ func (s *tasks) RemoveTagForTask(ctx context.Context, request operations.RemoveT
 //
 // For example, if the gid of the custom field is 12345, these query parameter to find tasks where it is set would be `custom_fields.12345.is_set=true`. To match an exact value for an enum custom field, use the gid of the desired enum option and not the name of the enum option: `custom_fields.12345.value=67890`.
 //
-// Searching for multiple exact matches of a custom field is not supported.
+// **Not Supported**: searching for multiple exact matches of a custom field, searching for multi-enum custom field
 //
 // *Note: If you specify `projects.any` and `sections.any`, you will receive tasks for the project **and** tasks for the section. If you're looking for only tasks in a section, omit the `projects.any` from the request.*
 func (s *tasks) SearchTasksForWorkspace(ctx context.Context, request operations.SearchTasksForWorkspaceRequest) (*operations.SearchTasksForWorkspaceResponse, error) {

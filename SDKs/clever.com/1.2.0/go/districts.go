@@ -198,7 +198,7 @@ func (s *districts) GetDistrictStatus(ctx context.Context, request operations.Ge
 	return res, nil
 }
 
-// GetDistricts - Returns a list of districts
+// GetDistricts - Returns a list of districts. In practice this will only return the one district associated with the bearer token
 func (s *districts) GetDistricts(ctx context.Context) (*operations.GetDistrictsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/districts"

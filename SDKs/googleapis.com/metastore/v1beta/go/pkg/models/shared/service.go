@@ -162,6 +162,8 @@ type Service struct {
 	Port *int `json:"port,omitempty"`
 	// Immutable. The release channel of the service. If unspecified, defaults to STABLE.
 	ReleaseChannel *ServiceReleaseChannelEnum `json:"releaseChannel,omitempty"`
+	// Represents the scaling configuration of a metastore service.
+	ScalingConfig *ScalingConfig `json:"scalingConfig,omitempty"`
 	// Output only. The current state of the metastore service.
 	State *ServiceStateEnum `json:"state,omitempty"`
 	// Output only. Additional information about the current state of the metastore service, if available.
@@ -200,6 +202,8 @@ type ServiceInput struct {
 	Port *int `json:"port,omitempty"`
 	// Immutable. The release channel of the service. If unspecified, defaults to STABLE.
 	ReleaseChannel *ServiceReleaseChannelEnum `json:"releaseChannel,omitempty"`
+	// Represents the scaling configuration of a metastore service.
+	ScalingConfig *ScalingConfig `json:"scalingConfig,omitempty"`
 	// Telemetry Configuration for the Dataproc Metastore service.
 	TelemetryConfig *TelemetryConfig `json:"telemetryConfig,omitempty"`
 	// The tier of the service.

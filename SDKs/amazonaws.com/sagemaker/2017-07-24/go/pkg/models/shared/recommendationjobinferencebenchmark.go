@@ -6,7 +6,9 @@ package shared
 type RecommendationJobInferenceBenchmark struct {
 	// The endpoint configuration made by Inference Recommender during a recommendation job.
 	EndpointConfiguration *EndpointOutputConfiguration `json:"EndpointConfiguration,omitempty"`
-	FailureReason         *string                      `json:"FailureReason,omitempty"`
+	// The metrics for an existing endpoint compared in an Inference Recommender job.
+	EndpointMetrics *InferenceMetrics `json:"EndpointMetrics,omitempty"`
+	FailureReason   *string           `json:"FailureReason,omitempty"`
 	// The metrics of recommendations.
 	Metrics *RecommendationMetrics `json:"Metrics,omitempty"`
 	// Defines the model configuration. Includes the specification name and environment parameters.

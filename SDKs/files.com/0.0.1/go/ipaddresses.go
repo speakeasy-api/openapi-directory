@@ -101,6 +101,74 @@ func (s *ipAddresses) GetIPAddresses(ctx context.Context, request operations.Get
 	return res, nil
 }
 
+// GetIPAddressesExavaultReserved - List all possible public ExaVault IP addresses
+// List all possible public ExaVault IP addresses
+func (s *ipAddresses) GetIPAddressesExavaultReserved(ctx context.Context, request operations.GetIPAddressesExavaultReservedRequest) (*operations.GetIPAddressesExavaultReservedResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/ip_addresses/exavault-reserved"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetIPAddressesExavaultReservedResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.PublicIPAddressEntity
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PublicIPAddressEntities = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		fallthrough
+	case httpRes.StatusCode == 409:
+		fallthrough
+	case httpRes.StatusCode == 412:
+		fallthrough
+	case httpRes.StatusCode == 422:
+		fallthrough
+	case httpRes.StatusCode == 423:
+		fallthrough
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
 // GetIPAddressesReserved - List all possible public IP addresses
 // List all possible public IP addresses
 func (s *ipAddresses) GetIPAddressesReserved(ctx context.Context, request operations.GetIPAddressesReservedRequest) (*operations.GetIPAddressesReservedResponse, error) {

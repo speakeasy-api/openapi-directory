@@ -58,6 +58,7 @@ const (
 	ActivityTypeEnumEstimationRejected         ActivityTypeEnum = "EstimationRejected"
 	ActivityTypeEnumEstimationUpdated          ActivityTypeEnum = "EstimationUpdated"
 	ActivityTypeEnumEstimationDownloadedAsPdf  ActivityTypeEnum = "EstimationDownloadedAsPdf"
+	ActivityTypeEnumInvoiceDigitallySigned     ActivityTypeEnum = "InvoiceDigitallySigned"
 )
 
 func (e *ActivityTypeEnum) UnmarshalJSON(data []byte) error {
@@ -161,6 +162,8 @@ func (e *ActivityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "EstimationUpdated":
 		fallthrough
 	case "EstimationDownloadedAsPdf":
+		fallthrough
+	case "InvoiceDigitallySigned":
 		*e = ActivityTypeEnum(s)
 		return nil
 	default:

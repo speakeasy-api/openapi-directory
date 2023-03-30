@@ -2,12 +2,10 @@
 
 package shared
 
-// AccountingCustomerParty - The customer receiving the invoice.
+// AccountingCustomerParty - The customer receiving the document.
 type AccountingCustomerParty struct {
-	// The account id you assigned to the customer.
-	AccountID *string `json:"accountId,omitempty"`
 	// A party that can receive or send invoices
-	Party Party `json:"party"`
+	Party ReceiverParty `json:"party"`
 	// A list of legal and tax identifiers for this customer.
 	PublicIdentifiers []PublicIdentifier `json:"publicIdentifiers,omitempty"`
 }

@@ -98,7 +98,7 @@ type StoreDetail struct {
 	//  * Length: Between 3 to 128 characters
 	//
 	// * The following characters are *not* supported: **:;}{$#@!|<>%^*+=\\**
-	StoreReference string `json:"storeReference"`
+	StoreReference *string `json:"storeReference,omitempty"`
 	// The account holder's `accountCode` where the split amount will be sent. Required when you provide the `splitConfigurationUUID`.
 	VirtualAccount *string `json:"virtualAccount,omitempty"`
 	// URL of the ecommerce store.

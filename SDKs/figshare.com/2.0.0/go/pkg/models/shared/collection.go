@@ -4,16 +4,16 @@ package shared
 
 type Collection struct {
 	// Collection DOI
-	Doi *string `json:"doi,omitempty"`
+	Doi string `json:"doi"`
 	// Collection Handle
-	Handle *string `json:"handle,omitempty"`
+	Handle string `json:"handle"`
 	// Collection id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Date when collection was published
-	PublishedDate *string   `json:"published_date,omitempty"`
-	Timeline      *Timeline `json:"timeline,omitempty"`
+	PublishedDate string   `json:"published_date"`
+	Timeline      Timeline `json:"timeline"`
 	// Collection title
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 	// Api endpoint
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 }

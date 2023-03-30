@@ -9,6 +9,8 @@ import (
 
 type GetMeResponse struct {
 	ContentType string
+	// Not Allowed
+	Error       *shared.Error
 	StatusCode  int
 	RawResponse *http.Response
 	// Success

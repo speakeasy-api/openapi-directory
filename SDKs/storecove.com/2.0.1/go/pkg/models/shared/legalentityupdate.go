@@ -13,6 +13,9 @@ type LegalEntityUpdateDocumentTypeEnum string
 const (
 	LegalEntityUpdateDocumentTypeEnumInvoice         LegalEntityUpdateDocumentTypeEnum = "invoice"
 	LegalEntityUpdateDocumentTypeEnumInvoiceResponse LegalEntityUpdateDocumentTypeEnum = "invoice_response"
+	LegalEntityUpdateDocumentTypeEnumOrder           LegalEntityUpdateDocumentTypeEnum = "order"
+	LegalEntityUpdateDocumentTypeEnumOrdering        LegalEntityUpdateDocumentTypeEnum = "ordering"
+	LegalEntityUpdateDocumentTypeEnumOrderResponse   LegalEntityUpdateDocumentTypeEnum = "order_response"
 )
 
 func (e *LegalEntityUpdateDocumentTypeEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +27,12 @@ func (e *LegalEntityUpdateDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "invoice":
 		fallthrough
 	case "invoice_response":
+		fallthrough
+	case "order":
+		fallthrough
+	case "ordering":
+		fallthrough
+	case "order_response":
 		*e = LegalEntityUpdateDocumentTypeEnum(s)
 		return nil
 	default:
@@ -51,8 +60,15 @@ type LegalEntityUpdate struct {
 	PartyName *string `json:"party_name,omitempty"`
 	// Whether or not this LegalEntity is public. Public means it will be listed in the PEPPOL directory at https://directory.peppol.eu/ which is normally what you want. If you have a good reason to not want the LegalEntity listed, provide false. This property is ignored when for country SG, where it is always true.
 	Public *bool `json:"public,omitempty"`
+	Rea    *Rea  `json:"rea,omitempty"`
+	// DEPRECATED. Use the <<_openapi_receiveddocuments_resource>> endpoint. The email address of the Smart Inbox for this LegalEntity.
+	SmartInbox *string `json:"smart_inbox,omitempty"`
 	// The id of the tenant, to be used in case of multi-tenant solutions. This property will included in webhook events.
 	TenantID *string `json:"tenant_id,omitempty"`
+	// The password to use to authenticate to a system through which to send the document, or to obtain tax authority approval to send it. This field is currently relevant only for India and mandatory when creating an IN LegalEntity.
+	ThirdPartyPassword *string `json:"third_party_password,omitempty"`
+	// The username to use to authenticate to a system through which to send the document, or to obtain tax authority approval to send it. This field is currently relevant only for India and mandatory when creating an IN LegalEntity.
+	ThirdPartyUsername *string `json:"third_party_username,omitempty"`
 	// The zipcode.
 	Zip *string `json:"zip,omitempty"`
 }

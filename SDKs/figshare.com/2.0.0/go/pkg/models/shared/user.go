@@ -5,21 +5,21 @@ package shared
 // User - OK. User representation
 type User struct {
 	// First Name
-	FirstName *string `json:"first_name,omitempty"`
+	FirstName string `json:"first_name"`
 	// User id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Account activity status
-	IsActive *bool `json:"is_active,omitempty"`
+	IsActive bool `json:"is_active"`
 	// Account public status
-	IsPublic *bool `json:"is_public,omitempty"`
+	IsPublic bool `json:"is_public"`
 	// User Job title
-	JobTitle *string `json:"job_title,omitempty"`
+	JobTitle string `json:"job_title"`
 	// Last Name
-	LastName *string `json:"last_name,omitempty"`
+	LastName string `json:"last_name"`
 	// Full Name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// Orcid associated to this User
-	OrcidID *string `json:"orcid_id,omitempty"`
+	OrcidID string `json:"orcid_id"`
 	// Name that appears in website url
-	URLName *string `json:"url_name,omitempty"`
+	URLName string `json:"url_name"`
 }

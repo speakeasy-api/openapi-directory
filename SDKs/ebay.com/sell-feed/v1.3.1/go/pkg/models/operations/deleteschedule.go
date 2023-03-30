@@ -12,7 +12,7 @@ type DeleteScheduleSecurity struct {
 }
 
 type DeleteSchedulePathParams struct {
-	// The schedule_id of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the getSchedules method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete.
+	// The <strong>schedule_id</strong> of the schedule to delete. This ID was generated when the task was created. If you do not know the schedule_id, use the <strong>getSchedules</strong> method to return all schedules based on a specified feed_type and find the schedule_id of the schedule to delete.
 	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
 }
 

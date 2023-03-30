@@ -21,7 +21,6 @@ pkg/models/operations/webriskprojectsoperationsdelete.go
 pkg/models/operations/webriskprojectsoperationsget.go
 pkg/models/operations/webriskprojectsoperationslist.go
 pkg/models/operations/webriskprojectssubmissionscreate.go
-pkg/models/operations/webriskprojectsurissubmit.go
 pkg/models/operations/webriskthreatlistscomputediff.go
 pkg/models/operations/webriskurissearch.go
 pkg/models/shared/googlecloudwebriskv1searchhashesresponse.go
@@ -33,7 +32,6 @@ pkg/models/shared/googlelongrunningoperation.go
 pkg/models/shared/googlerpcstatus.go
 pkg/models/shared/googlelongrunninglistoperationsresponse.go
 pkg/models/shared/googlecloudwebriskv1submission.go
-pkg/models/shared/googlecloudwebriskv1submiturirequest.go
 pkg/models/shared/googlecloudwebriskv1computethreatlistdiffresponse.go
 pkg/models/shared/googlecloudwebriskv1threatentryremovals.go
 pkg/models/shared/googlecloudwebriskv1ricedeltaencoding.go

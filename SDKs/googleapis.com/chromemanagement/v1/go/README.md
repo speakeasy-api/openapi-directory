@@ -83,7 +83,7 @@ func main() {
 * `ChromemanagementCustomersReportsCountInstalledApps` - Generate report of app installations.
 * `ChromemanagementCustomersReportsCountPrintJobsByPrinter` - Get a summary of printing done by each printer.
 * `ChromemanagementCustomersReportsCountPrintJobsByUser` - Get a summary of printing done by each user.
-* `ChromemanagementCustomersReportsFindInstalledAppDevices` - Generate report of devices that have a specified app installed.
+* `ChromemanagementCustomersReportsFindInstalledAppDevices` - Generate report of managed Chrome browser devices that have a specified app installed.
 * `ChromemanagementCustomersTelemetryDevicesList` - List all telemetry devices.
 * `ChromemanagementCustomersTelemetryEventsList` - List telemetry events.
 * `ChromemanagementCustomersTelemetryUsersGet` - Get telemetry user.

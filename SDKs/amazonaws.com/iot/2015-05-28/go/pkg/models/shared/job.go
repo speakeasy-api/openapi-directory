@@ -26,6 +26,7 @@ type Job struct {
 	NamespaceID                *string                     `json:"namespaceId,omitempty"`
 	PresignedURLConfig         *PresignedURLConfig         `json:"presignedUrlConfig,omitempty"`
 	ReasonCode                 *string                     `json:"reasonCode,omitempty"`
+	ScheduledJobRollouts       []ScheduledJobRollout       `json:"scheduledJobRollouts,omitempty"`
 	SchedulingConfig           *SchedulingConfig           `json:"schedulingConfig,omitempty"`
 	Status                     *JobStatusEnum              `json:"status,omitempty"`
 	TargetSelection            *TargetSelectionEnum        `json:"targetSelection,omitempty"`

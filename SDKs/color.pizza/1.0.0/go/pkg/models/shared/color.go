@@ -20,18 +20,17 @@ type ColorRgb struct {
 	R *int64 `json:"r,omitempty"`
 }
 
-type ColorSwatchImg struct {
-	Svg      *string `json:"svg,omitempty"`
-	SvgNamed *string `json:"svgNamed,omitempty"`
-}
-
 type Color struct {
-	Hex           *string         `json:"hex,omitempty"`
-	Hsl           *ColorHsl       `json:"hsl,omitempty"`
-	Lab           *ColorLab       `json:"lab,omitempty"`
-	Luminance     *float64        `json:"luminance,omitempty"`
-	LuminanceWCAG *float64        `json:"luminanceWCAG,omitempty"`
-	Name          *string         `json:"name,omitempty"`
-	Rgb           *ColorRgb       `json:"rgb,omitempty"`
-	SwatchImg     *ColorSwatchImg `json:"swatchImg,omitempty"`
+	Distance      *float64               `json:"distance,omitempty"`
+	Hex           *string                `json:"hex,omitempty"`
+	Hsl           *ColorHsl              `json:"hsl,omitempty"`
+	Lab           *ColorLab              `json:"lab,omitempty"`
+	Luminance     *float64               `json:"luminance,omitempty"`
+	LuminanceWCAG *float64               `json:"luminanceWCAG,omitempty"`
+	Name          *string                `json:"name,omitempty"`
+	RequestedHex  *string                `json:"requestedHex,omitempty"`
+	Rgb           *ColorRgb              `json:"rgb,omitempty"`
+	Svg           *string                `json:"svg,omitempty"`
+	SvgNamed      *string                `json:"svgNamed,omitempty"`
+	SwatchImg     map[string]interface{} `json:"swatchImg,omitempty"`
 }

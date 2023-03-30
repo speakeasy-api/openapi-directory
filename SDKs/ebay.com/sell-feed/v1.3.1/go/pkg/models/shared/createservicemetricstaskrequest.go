@@ -4,10 +4,10 @@ package shared
 
 // CreateServiceMetricsTaskRequest - The type that defines the fields for the Customer Service Metric reports generated with the Feed API.
 type CreateServiceMetricsTaskRequest struct {
-	// The feedType specified for the task. The report lists the transaction details that contribute to the service metrics evaluation. Supported types include: CUSTOMER_SERVICE_METRICS_REPORT
+	// The <strong>feedType</strong> specified for the task. The report lists the transaction details that contribute to the service metrics evaluation. Supported types include:<p><code>CUSTOMER_SERVICE_METRICS_REPORT</code></p>
 	FeedType *string `json:"feedType,omitempty"`
-	// A complex data type that filters data for report creation. See CustomerServiceMetricsFilterCriteria for fields and descriptions.
+	// A complex data type that filters data for report creation. See <strong>CustomerServiceMetricsFilterCriteria</strong> for fields and descriptions.
 	FilterCriteria *CustomerServiceMetricsFilterCriteria `json:"filterCriteria,omitempty"`
-	// The version number of the file format. Valid value: 1.0
+	// The version number of the file format. <p><b>Valid value: </b><code>1.0</code><p>
 	SchemaVersion *string `json:"schemaVersion,omitempty"`
 }

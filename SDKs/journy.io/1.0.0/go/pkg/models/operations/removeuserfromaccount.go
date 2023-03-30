@@ -6,20 +6,36 @@ import (
 	"net/http"
 )
 
-type RemoveUserFromAccountPathParams struct {
+// RemoveUserFromAccountRequestBodyAccount - Account identification requires an accountId, domain or both
+type RemoveUserFromAccountRequestBodyAccount struct {
 	// Unique identifier for the account in your database
-	AccountID string `pathParam:"style=simple,explode=false,name=accountId"`
+	AccountID *string `json:"accountId,omitempty"`
+	// The domain associated with the account (e.g. acme-inc.com)
+	Domain *string `json:"domain,omitempty"`
 }
 
-// RemoveUserFromAccountRequestBody - The user being added/removed from the account
-type RemoveUserFromAccountRequestBody struct {
+// RemoveUserFromAccountRequestBodyUsersIdentification - User identification requires a userId, email or both
+type RemoveUserFromAccountRequestBodyUsersIdentification struct {
+	// Email address of the user
+	Email *string `json:"email,omitempty"`
 	// Unique identifier for the user in your database
-	UserID string `json:"userId"`
+	UserID *string `json:"userId,omitempty"`
+}
+
+type RemoveUserFromAccountRequestBodyUsers struct {
+	// User identification requires a userId, email or both
+	Identification RemoveUserFromAccountRequestBodyUsersIdentification `json:"identification"`
+}
+
+// RemoveUserFromAccountRequestBody - The identification for user and account
+type RemoveUserFromAccountRequestBody struct {
+	// Account identification requires an accountId, domain or both
+	Account RemoveUserFromAccountRequestBodyAccount `json:"account"`
+	Users   []RemoveUserFromAccountRequestBodyUsers `json:"users"`
 }
 
 type RemoveUserFromAccountRequest struct {
-	PathParams RemoveUserFromAccountPathParams
-	Request    RemoveUserFromAccountRequestBody `request:"mediaType=application/json"`
+	Request RemoveUserFromAccountRequestBody `request:"mediaType=application/json"`
 }
 
 type RemoveUserFromAccount500ApplicationJSONMeta struct {
@@ -27,7 +43,7 @@ type RemoveUserFromAccount500ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// RemoveUserFromAccount500ApplicationJSON - The error message should specify what cause the error
+// RemoveUserFromAccount500ApplicationJSON - The message specifies what is done
 type RemoveUserFromAccount500ApplicationJSON struct {
 	Message string                                      `json:"message"`
 	Meta    RemoveUserFromAccount500ApplicationJSONMeta `json:"meta"`
@@ -38,21 +54,10 @@ type RemoveUserFromAccount429ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// RemoveUserFromAccount429ApplicationJSON - The error message should specify what cause the error
+// RemoveUserFromAccount429ApplicationJSON - The message specifies what is done
 type RemoveUserFromAccount429ApplicationJSON struct {
 	Message string                                      `json:"message"`
 	Meta    RemoveUserFromAccount429ApplicationJSONMeta `json:"meta"`
-}
-
-type RemoveUserFromAccount403ApplicationJSONMeta struct {
-	RequestID string  `json:"requestId"`
-	Status    float64 `json:"status"`
-}
-
-// RemoveUserFromAccount403ApplicationJSON - The error message should specify what cause the error
-type RemoveUserFromAccount403ApplicationJSON struct {
-	Message string                                      `json:"message"`
-	Meta    RemoveUserFromAccount403ApplicationJSONMeta `json:"meta"`
 }
 
 type RemoveUserFromAccount401ApplicationJSONMeta struct {
@@ -60,7 +65,7 @@ type RemoveUserFromAccount401ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// RemoveUserFromAccount401ApplicationJSON - The error message should specify what cause the error
+// RemoveUserFromAccount401ApplicationJSON - The message specifies what is done
 type RemoveUserFromAccount401ApplicationJSON struct {
 	Message string                                      `json:"message"`
 	Meta    RemoveUserFromAccount401ApplicationJSONMeta `json:"meta"`
@@ -86,7 +91,7 @@ type RemoveUserFromAccount400ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// RemoveUserFromAccount400ApplicationJSON - The error message should specify what cause the error
+// RemoveUserFromAccount400ApplicationJSON - The message specifies what is done
 type RemoveUserFromAccount400ApplicationJSON struct {
 	// Map that sums up all received values that seemed incorrect
 	Errors  RemoveUserFromAccount400ApplicationJSONErrors `json:"errors"`
@@ -94,15 +99,15 @@ type RemoveUserFromAccount400ApplicationJSON struct {
 	Meta    RemoveUserFromAccount400ApplicationJSONMeta   `json:"meta"`
 }
 
-type RemoveUserFromAccount201ApplicationJSONMeta struct {
+type RemoveUserFromAccount204ApplicationJSONMeta struct {
 	RequestID string  `json:"requestId"`
 	Status    float64 `json:"status"`
 }
 
-// RemoveUserFromAccount201ApplicationJSON - The object was created
-type RemoveUserFromAccount201ApplicationJSON struct {
+// RemoveUserFromAccount204ApplicationJSON - The message specifies what is done
+type RemoveUserFromAccount204ApplicationJSON struct {
 	Message string                                      `json:"message"`
-	Meta    RemoveUserFromAccount201ApplicationJSONMeta `json:"meta"`
+	Meta    RemoveUserFromAccount204ApplicationJSONMeta `json:"meta"`
 }
 
 type RemoveUserFromAccountResponse struct {
@@ -110,14 +115,12 @@ type RemoveUserFromAccountResponse struct {
 	Headers     map[string][]string
 	StatusCode  int
 	RawResponse *http.Response
-	// Object was created
-	RemoveUserFromAccount201ApplicationJSONObject *RemoveUserFromAccount201ApplicationJSON
+	// No content
+	RemoveUserFromAccount204ApplicationJSONObject *RemoveUserFromAccount204ApplicationJSON
 	// Bad request, some fields or parameters are incorrect
 	RemoveUserFromAccount400ApplicationJSONObject *RemoveUserFromAccount400ApplicationJSON
 	// No API Key was provided or the key is not authorised to perform the action
 	RemoveUserFromAccount401ApplicationJSONObject *RemoveUserFromAccount401ApplicationJSON
-	// The API Key provided is currently not enabled
-	RemoveUserFromAccount403ApplicationJSONObject *RemoveUserFromAccount403ApplicationJSON
 	// Too many API requests were send
 	RemoveUserFromAccount429ApplicationJSONObject *RemoveUserFromAccount429ApplicationJSON
 	// An unexpected error occurred

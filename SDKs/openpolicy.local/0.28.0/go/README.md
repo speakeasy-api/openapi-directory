@@ -59,6 +59,10 @@ func main() {
 
 * `PostCompile` - Compile
 
+### ConfigAPI
+
+* `GetConfig` - Get configurations
+
 ### DataAPI
 
 * `DeleteDocument` - Delete a document

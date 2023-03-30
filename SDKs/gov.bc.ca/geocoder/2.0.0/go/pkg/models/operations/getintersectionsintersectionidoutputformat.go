@@ -8,7 +8,9 @@ import (
 	"net/http"
 )
 
-// GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+// GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+//
+// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 type GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum string
 
 const (
@@ -50,11 +52,13 @@ func (e *GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum) UnmarshalJS
 type GetIntersectionsIntersectionIDOutputFormatPathParams struct {
 	// A unique intersection identifier
 	IntersectionID string `pathParam:"style=simple,explode=false,name=intersectionID"`
-	// Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 	OutputFormat GetIntersectionsIntersectionIDOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 }
 
-// GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+// GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum string
 
 const (
@@ -97,7 +101,7 @@ func (e *GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum) UnmarshalJSON(
 }
 
 type GetIntersectionsIntersectionIDOutputFormatQueryParams struct {
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetIntersectionsIntersectionIDOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 }
 

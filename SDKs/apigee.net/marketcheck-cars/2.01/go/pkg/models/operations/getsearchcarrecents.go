@@ -8,6 +8,8 @@ import (
 )
 
 type GetSearchCarRecentsQueryParams struct {
+	// date range to filter listings that were active within given date range. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+	ActiveInventoryDateRange *string `queryParam:"style=form,explode=true,name=active_inventory_date_range"`
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
 	// Flag on whether to include api_key in response API urls (if any)
@@ -62,8 +64,14 @@ type GetSearchCarRecentsQueryParams struct {
 	EngineBlock *string `queryParam:"style=form,explode=true,name=engine_block"`
 	// Engine Size to match. Valid filter values are those that our Search facets API returns for unique engine size. You can pass in multiple engine size values comma separated
 	EngineSize *string `queryParam:"style=form,explode=true,name=engine_size"`
+	// Engine size range to filter listings with engine size in the given range. Range to be given in the format - min-max e.g. 1.0-2
+	EngineSizeRange *string `queryParam:"style=form,explode=true,name=engine_size_range"`
 	// Boolean param to exclude certified cars from search results
 	ExcludeCertified *bool `queryParam:"style=form,explode=true,name=exclude_certified"`
+	// A list of dealer ids to exclude from result
+	ExcludeDealerIds *string `queryParam:"style=form,explode=true,name=exclude_dealer_ids"`
+	// A list of sources to exclude from result
+	ExcludeSources *string `queryParam:"style=form,explode=true,name=exclude_sources"`
 	// Boolean falg to either fetch only the expired listings or active ones
 	Expired *shared.ExpiredEnum `queryParam:"style=form,explode=true,name=expired"`
 	// Exterior color to match. Valid filter values are those that our Search facets API returns for unique exterior colors. You can pass in multiple exterior color values comma separated
@@ -98,6 +106,8 @@ type GetSearchCarRecentsQueryParams struct {
 	FuelType *string `queryParam:"style=form,explode=true,name=fuel_type"`
 	// Highway mileage range to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
 	HighwayMpgRange *string `queryParam:"style=form,explode=true,name=highway_mpg_range"`
+	// A boolean to filter in transit vehicles
+	InTransit *shared.InTransitEnum `queryParam:"style=form,explode=true,name=in_transit"`
 	// Boolean param to search for listings that include finance options in them
 	IncludeFinance *bool `queryParam:"style=form,explode=true,name=include_finance"`
 	// Boolean param to search for listings that include leasing options in them
@@ -140,8 +150,12 @@ type GetSearchCarRecentsQueryParams struct {
 	Owned *bool `queryParam:"style=form,explode=true,name=owned"`
 	// A boolean indicating whether to include only those listings that have photo_links in search results, And discard those that don't have them
 	PhotoLinks *bool `queryParam:"style=form,explode=true,name=photo_links"`
+	// A boolean indicating whether to include only those listings that have photo_links_cached in search results, And discard those that don't have them
+	PhotoLinksCached *bool `queryParam:"style=form,explode=true,name=photo_links_cached"`
 	// If plot has value true results in around 25k coordinates with limited fields to plot respective graph
 	Plot *bool `queryParam:"style=form,explode=true,name=plot"`
+	// Price change range to filter listings with price change within given price_change_range. Range to be given in the format - min-max e.g. 10-500
+	PriceChangeRange *string `queryParam:"style=form,explode=true,name=price_change_range"`
 	// Price range to filter listings with the price in the range given. Range to be given in the format - min-max e.g. 1000-5000
 	PriceRange *string `queryParam:"style=form,explode=true,name=price_range"`
 	// Radius around the search location (Unit - Miles)
@@ -150,6 +164,8 @@ type GetSearchCarRecentsQueryParams struct {
 	RangeFacets *string `queryParam:"style=form,explode=true,name=range_facets"`
 	// Number of results to return. Default is 10. Max is 50
 	Rows *int `queryParam:"style=form,explode=true,name=rows"`
+	// To filter on vehicle seating capacity
+	SeatingCapacity *string `queryParam:"style=form,explode=true,name=seating_capacity"`
 	// sold parameter to fetch only sold listings
 	Sold *bool `queryParam:"style=form,explode=true,name=sold"`
 	// Sort by field. Default sort field is distance from the given point
@@ -184,6 +200,8 @@ type GetSearchCarRecentsQueryParams struct {
 	Vins *string `queryParam:"style=form,explode=true,name=vins"`
 	// To filter listing on their year
 	Year *string `queryParam:"style=form,explode=true,name=year"`
+	// Year range to filter listings with the year in the range given. Range to be given in the format - min-max e.g. 2019-2021
+	YearRange *string `queryParam:"style=form,explode=true,name=year_range"`
 	// Comma separated list of Year, Make, Model, Trim combinations. Each combination needs to have the year,make,model, trim values separated by a pipe '|' character in the form year|make|model|trim. e.g. 2010|Audi|A5,2014|Nissan|Sentra|S 6MT,|Honda|City|   You could just provide strings of the form - 'year|make||' or 'year|make|model' or '|make|model|' combinations. Individual year / make / model filters provied with the API calls will take precedence over the Year, Make, Model, Trim combinations. The Make, Model, Trim values must be valid values as per the Marketcheck Vin Decoder. If you are using a separate vin decoder then look at using the 'vins' or 'taxonomy_vins' parameter to the search api instead the year|make|model|trim combinations.
 	Ymmt *string `queryParam:"style=form,explode=true,name=ymmt"`
 	// To filter listing on ZIP around which they are listed

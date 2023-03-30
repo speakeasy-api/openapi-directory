@@ -4,15 +4,15 @@ package shared
 
 type FundingInformation struct {
 	// Funder's name
-	FunderName *string `json:"funder_name,omitempty"`
+	FunderName string `json:"funder_name"`
 	// The grant code
-	GrantCode *string `json:"grant_code,omitempty"`
+	GrantCode string `json:"grant_code"`
 	// Funding id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Return whether the grant has been introduced manually
-	IsUserDefined *bool `json:"is_user_defined,omitempty"`
+	IsUserDefined bool `json:"is_user_defined"`
 	// The funding name
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 	// The grant url
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 }

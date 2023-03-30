@@ -5,6 +5,8 @@ package shared
 type Period struct {
 	// The sum of all actuals (transactions) in the period.
 	ActualAmount *float64 `json:"actual_amount,omitempty"`
+	// The currency of the period.
+	CurrencyCode *string `json:"currency_code,omitempty"`
 	// Whether this period is current, such that the current date (in the user's time zone) falls within the date range.
 	Current *bool `json:"current,omitempty"`
 	// The end date of the period.
@@ -18,7 +20,7 @@ type Period struct {
 	// The percentage of the budget that has been used in the period.
 	PercentageUsed *float64 `json:"percentage_used,omitempty"`
 	// This attribute tracks the amount that has been refunded or deducted to the actual amount. When a category is set to "always expense", any credit transactions are treated as refunds and when set to "always income", any debit transactions are treated as deductions.
-	RefundAmound *float64 `json:"refund_amound,omitempty"`
+	RefundAmount *float64 `json:"refund_amount,omitempty"`
 	// The start date of the period.
 	StartDate *string `json:"start_date,omitempty"`
 	// Whether the budget has not been exceeded in the period.

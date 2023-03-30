@@ -9,6 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetPeopleSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetPeopleSortEnum string
 
 const (
@@ -62,6 +66,7 @@ type GetPeopleQueryParams struct {
 
 type GetPeopleRequest struct {
 	QueryParams GetPeopleQueryParams
+	Security    GetPeopleSecurity
 }
 
 // GetPeople400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

@@ -141,6 +141,109 @@ func (s *projects) RecaptchaenterpriseProjectsAssessmentsCreate(ctx context.Cont
 	return res, nil
 }
 
+// RecaptchaenterpriseProjectsFirewallpoliciesCreate - Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA Enterprise actions can be executed. A project may have a maximum of 1000 policies.
+func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateRequest) (*operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudRecaptchaenterpriseV1FirewallPolicy
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudRecaptchaenterpriseV1FirewallPolicy = out
+		}
+	}
+
+	return res, nil
+}
+
+// RecaptchaenterpriseProjectsFirewallpoliciesList - Returns the list of all firewall policies that belong to a project.
+func (s *projects) RecaptchaenterpriseProjectsFirewallpoliciesList(ctx context.Context, request operations.RecaptchaenterpriseProjectsFirewallpoliciesListRequest) (*operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/firewallpolicies", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // RecaptchaenterpriseProjectsKeysCreate - Creates a new reCAPTCHA Enterprise key.
 func (s *projects) RecaptchaenterpriseProjectsKeysCreate(ctx context.Context, request operations.RecaptchaenterpriseProjectsKeysCreateRequest) (*operations.RecaptchaenterpriseProjectsKeysCreateResponse, error) {
 	baseURL := s.serverURL

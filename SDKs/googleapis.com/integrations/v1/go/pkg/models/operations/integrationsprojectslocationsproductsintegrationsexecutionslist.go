@@ -28,7 +28,7 @@ type IntegrationsProjectsLocationsProductsIntegrationsExecutionsListQueryParams 
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-	// Optional. Standard filter field, we support filtering on all fields in EventExecutionParamIndexes table. All fields support for EQUALS, in additional: CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterKey, ParameterValue, ParameterType support for HAS For example: "parameter_value" HAS \"parameter1\" Also supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND event_execution_state=\"FAILED\"
+	// Optional. Standard filter field, we support filtering on following fields: workflow_name: the name of the integration. CreateTimestamp: the execution created time. event_execution_state: the state of the executions. execution_id: the id of the execution. trigger_id: the id of the trigger. parameter_type: the type of the parameters involved in the execution. All fields support for EQUALS, in additional: CreateTimestamp support for LESS_THAN, GREATER_THAN ParameterType support for HAS For example: "parameter_type" HAS \"string\" Also supports operators like AND, OR, NOT For example, trigger_id=\"id1\" AND workflow_name=\"testWorkflow\"
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// Optional user-provided custom filter.
 	FilterParamsCustomFilter *string `queryParam:"style=form,explode=true,name=filterParams.customFilter"`

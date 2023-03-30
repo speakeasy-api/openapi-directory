@@ -81,13 +81,34 @@ func main() {
 
 * `GetApps` - List Apps
 
-### As2Keys
+### As2IncomingMessages
 
-* `DeleteAs2KeysID` - Delete As2 Key
-* `GetAs2Keys` - List As2 Keys
-* `GetAs2KeysID` - Show As2 Key
-* `PatchAs2KeysID` - Update As2 Key
-* `PostAs2Keys` - Create As2 Key
+* `GetAs2IncomingMessages` - List As2 Incoming Messages
+
+### As2OutgoingMessages
+
+* `GetAs2OutgoingMessages` - List As2 Outgoing Messages
+
+### As2Partners
+
+* `DeleteAs2PartnersID` - Delete As2 Partner
+* `GetAs2Partners` - List As2 Partners
+* `GetAs2PartnersID` - Show As2 Partner
+* `PatchAs2PartnersID` - Update As2 Partner
+* `PostAs2Partners` - Create As2 Partner
+
+### As2Stations
+
+* `DeleteAs2StationsID` - Delete As2 Station
+* `GetAs2Stations` - List As2 Stations
+* `GetAs2StationsID` - Show As2 Station
+* `PatchAs2StationsID` - Update As2 Station
+* `PostAs2Stations` - Create As2 Station
+
+### AutomationRuns
+
+* `GetAutomationRuns` - List Automation Runs
+* `GetAutomationRunsID` - Show Automation Run
 
 ### Automations
 
@@ -114,6 +135,14 @@ func main() {
 ### BundleDownloads
 
 * `GetBundleDownloads` - List Bundle Downloads
+
+### BundleNotifications
+
+* `DeleteBundleNotificationsID` - Delete Bundle Notification
+* `GetBundleNotifications` - List Bundle Notifications
+* `GetBundleNotificationsID` - Show Bundle Notification
+* `PatchBundleNotificationsID` - Update Bundle Notification
+* `PostBundleNotifications` - Create Bundle Notification
 
 ### BundleRecipients
 
@@ -155,7 +184,7 @@ func main() {
 
 * `FileActionBeginUpload` - Begin file upload
 * `FileActionCopy` - Copy file/folder
-* `FileActionMetadata` - Return metadata for file/folder
+* `FileActionFind` - Find file/folder by path
 * `FileActionMove` - Move file/folder
 
 ### FileCommentReactions
@@ -252,6 +281,7 @@ func main() {
 ### IPAddresses
 
 * `GetIPAddresses` - List IP Addresses associated with the current site
+* `GetIPAddressesExavaultReserved` - List all possible public ExaVault IP addresses
 * `GetIPAddressesReserved` - List all possible public IP addresses
 
 ### Locks
@@ -309,6 +339,10 @@ func main() {
 * `GetPermissions` - List Permissions
 * `PostPermissions` - Create Permission
 
+### Priorities
+
+* `GetPriorities` - List Priorities
+
 ### Projects
 
 * `DeleteProjectsID` - Delete Project
@@ -325,13 +359,19 @@ func main() {
 * `PatchPublicKeysID` - Update Public Key
 * `PostPublicKeys` - Create Public Key
 
+### RemoteBandwidthSnapshots
+
+* `GetRemoteBandwidthSnapshots` - List Remote Bandwidth Snapshots
+
 ### RemoteServers
 
 * `DeleteRemoteServersID` - Delete Remote Server
 * `GetRemoteServers` - List Remote Servers
 * `GetRemoteServersID` - Show Remote Server
+* `GetRemoteServersIDConfigurationFile` - Download configuration file (required for some Remote Server integrations, such as the Files.com Agent)
 * `PatchRemoteServersID` - Update Remote Server
 * `PostRemoteServers` - Create Remote Server
+* `PostRemoteServersIDConfigurationFile` - Post local changes, check in, and download configuration file (used by some Remote Server integrations, such as the Files.com Agent)
 
 ### Requests
 
@@ -349,6 +389,14 @@ func main() {
 
 * `GetSettingsChanges` - List Settings Changes
 
+### SftpHostKeys
+
+* `DeleteSftpHostKeysID` - Delete Sftp Host Key
+* `GetSftpHostKeys` - List Sftp Host Keys
+* `GetSftpHostKeysID` - Show Sftp Host Key
+* `PatchSftpHostKeysID` - Update Sftp Host Key
+* `PostSftpHostKeys` - Create Sftp Host Key
+
 ### Site
 
 * `GetSite` - Show site settings
@@ -364,16 +412,13 @@ func main() {
 
 * `GetSsoStrategies` - List Sso Strategies
 * `GetSsoStrategiesID` - Show Sso Strategy
+* `PostSsoStrategiesIDSync` - Synchronize provisioning data with the SSO remote server.
 
 ### Styles
 
 * `DeleteStylesPath` - Delete Style
 * `GetStylesPath` - Show Style
 * `PatchStylesPath` - Update Style
-
-### SyncJobs
-
-* `GetSyncJobs` - List Sync Jobs
 
 ### UsageDailySnapshots
 
@@ -386,12 +431,10 @@ func main() {
 ### User
 
 * `GetUserAPIKeys` - List Api Keys
-* `GetUserAs2Keys` - List As2 Keys
 * `GetUserGroups` - List Group Users
 * `GetUserPublicKeys` - List Public Keys
 * `PatchUser` - Update User
 * `PostUserAPIKeys` - Create Api Key
-* `PostUserAs2Keys` - Create As2 Key
 * `PostUserPublicKeys` - Create Public Key
 
 ### UserCipherUses
@@ -411,7 +454,6 @@ func main() {
 * `GetUsers` - List Users
 * `GetUsersID` - Show User
 * `GetUsersUserIDAPIKeys` - List Api Keys
-* `GetUsersUserIDAs2Keys` - List As2 Keys
 * `GetUsersUserIDCipherUses` - List User Cipher Uses
 * `GetUsersUserIDGroups` - List Group Users
 * `GetUsersUserIDPermissions` - List Permissions
@@ -422,7 +464,6 @@ func main() {
 * `PostUsersIDResendWelcomeEmail` - Resend user welcome email
 * `PostUsersIDUnlock` - Unlock user who has been locked out due to failed logins.
 * `PostUsersUserIDAPIKeys` - Create Api Key
-* `PostUsersUserIDAs2Keys` - Create As2 Key
 * `PostUsersUserIDPublicKeys` - Create Public Key
 
 ### WebhookTests

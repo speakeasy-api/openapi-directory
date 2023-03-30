@@ -34,11 +34,11 @@ func main() {
         PathParams: operations.CreateAccountPathParams{
             BudgetID: "unde",
         },
-        Request: shared.SaveAccountWrapper{
+        Request: shared.PostAccountWrapper{
             Account: shared.SaveAccount{
                 Balance: 592845,
                 Name: "porro",
-                Type: "otherAsset",
+                Type: "personalLoan",
             },
         },
     }
@@ -107,6 +107,7 @@ func main() {
 ### Transactions
 
 * `CreateTransaction` - Create a single transaction or multiple transactions
+* `DeleteTransaction` - Deletes an existing transaction
 * `GetTransactionByID` - Single transaction
 * `GetTransactions` - List transactions
 * `GetTransactionsByAccount` - List account transactions

@@ -3,8 +3,10 @@
 package shared
 
 type Activity struct {
-	// The type of activity - what action was done by the member
+	// The type of activity - what action was done by the member. This is a legacy field, use activity_type_key instead.
 	ActivityType *string `json:"activity_type,omitempty"`
+	// The key for a custom activity type for the workspace. Will create a new activity type if it does not exist.
+	ActivityTypeKey *string `json:"activity_type_key,omitempty"`
 	// A description of the activity; displayed in the timeline
 	Description *string `json:"description,omitempty"`
 	// Supply a key that must be unique or leave blank to have one generated.
@@ -15,8 +17,8 @@ type Activity struct {
 	LinkText *string `json:"link_text,omitempty"`
 	// The date and time the activity occurred; defaults to now
 	OccurredAt *string `json:"occurred_at,omitempty"`
-	// [EXPERIMENTAL] Capture facets of the activity to group by later e.g. locations or channels; replaces existing value
-	Tags []string `json:"tags,omitempty"`
+	// Key-value pairs to provide contextual metadata about an activity.
+	Properties map[string]interface{} `json:"properties,omitempty"`
 	// A title for the activity; displayed in the timeline
 	Title string `json:"title"`
 	// A custom weight to be used in filters and reports; defaults to 1.

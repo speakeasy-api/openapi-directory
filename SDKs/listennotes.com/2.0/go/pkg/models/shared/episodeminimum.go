@@ -11,7 +11,7 @@ type EpisodeMinimum struct {
 	Description *string `json:"description,omitempty"`
 	// Whether this podcast contains explicit language.
 	ExplicitContent *bool `json:"explicit_content,omitempty"`
-	// Episode id.
+	// Episode id, which can be used to further fetch detailed episode metadata via `GET /episodes/{id}`.
 	ID *string `json:"id,omitempty"`
 	// Image url for this podcast's artwork. If you are using PRO/ENTERPRISE plan, then it's
 	// a high resolution image (1400x1400). If you are using FREE plan, then it's the same as **thumbnail**,

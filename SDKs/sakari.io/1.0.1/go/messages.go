@@ -36,7 +36,7 @@ func newMessages(defaultClient, securityClient HTTPClient, serverURL, language, 
 // Returns a single messag
 func (s *messages) MessagesFetch(ctx context.Context, request operations.MessagesFetchRequest) (*operations.MessagesFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/messages/{messageId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/messages/{messageId}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -80,7 +80,7 @@ func (s *messages) MessagesFetch(ctx context.Context, request operations.Message
 // MessagesFetchAll - Fetch messages
 func (s *messages) MessagesFetchAll(ctx context.Context, request operations.MessagesFetchAllRequest) (*operations.MessagesFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/messages", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -128,7 +128,7 @@ func (s *messages) MessagesFetchAll(ctx context.Context, request operations.Mess
 // MessagesSend - Send Messages
 func (s *messages) MessagesSend(ctx context.Context, request operations.MessagesSendRequest) (*operations.MessagesSendResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/messages", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/messages", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {

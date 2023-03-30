@@ -5,35 +5,35 @@ package shared
 // Account - OK. Account representation
 type Account struct {
 	// Account activity status
-	Active *int64 `json:"active,omitempty"`
+	Active int64 `json:"active"`
 	// Date when account was created
-	CreatedDate *string `json:"created_date,omitempty"`
+	CreatedDate string `json:"created_date"`
 	// User email
-	Email *string `json:"email,omitempty"`
+	Email string `json:"email"`
 	// First Name
-	FirstName *string `json:"first_name,omitempty"`
+	FirstName string `json:"first_name"`
 	// Account group id
-	GroupID *int64 `json:"group_id,omitempty"`
+	GroupID int64 `json:"group_id"`
 	// Account id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Account institution
-	InstitutionID *int64 `json:"institution_id,omitempty"`
+	InstitutionID int64 `json:"institution_id"`
 	// Account institution user id
-	InstitutionUserID *string `json:"institution_user_id,omitempty"`
+	InstitutionUserID string `json:"institution_user_id"`
 	// Last Name
-	LastName *string `json:"last_name,omitempty"`
+	LastName string `json:"last_name"`
 	// Maximum upload size for account
-	MaximumFileSize *int64 `json:"maximum_file_size,omitempty"`
+	MaximumFileSize int64 `json:"maximum_file_size"`
 	// Date of last account modification
-	ModifiedDate *string `json:"modified_date,omitempty"`
+	ModifiedDate string `json:"modified_date"`
 	// True if a quota request is pending
-	PendingQuotaRequest *bool `json:"pending_quota_request,omitempty"`
+	PendingQuotaRequest bool `json:"pending_quota_request"`
 	// Account quota
-	Quota *int64 `json:"quota,omitempty"`
+	Quota int64 `json:"quota"`
 	// Account total used quota
-	UsedQuota *int64 `json:"used_quota,omitempty"`
+	UsedQuota int64 `json:"used_quota"`
 	// Account used private quota
-	UsedQuotaPrivate *int64 `json:"used_quota_private,omitempty"`
+	UsedQuotaPrivate int64 `json:"used_quota_private"`
 	// Account public used quota
-	UsedQuotaPublic *int64 `json:"used_quota_public,omitempty"`
+	UsedQuotaPublic int64 `json:"used_quota_public"`
 }

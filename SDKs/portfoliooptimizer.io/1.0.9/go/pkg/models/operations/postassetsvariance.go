@@ -26,7 +26,7 @@ type PostAssetsVarianceRequestBody2 struct {
 }
 
 type PostAssetsVarianceRequestBody1Assets struct {
-	// assetReturns[t] is the return of the asset at the time t, in percentage
+	// assetReturns[t] is the return of the asset at the time t
 	AssetReturns []float64 `json:"assetReturns"`
 }
 

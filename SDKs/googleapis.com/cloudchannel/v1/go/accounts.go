@@ -86,7 +86,7 @@ func (s *accounts) CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricin
 	return res, nil
 }
 
-// CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsList - Lists information about how a Reseller modifies their bill before sending it to a ChannelPartner. Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account being queried are different. * NOT_FOUND: The ChannelPartnerRepricingConfig specified does not exist or is not associated with the given account. * INTERNAL: Any non-user error related to technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If successful, the ChannelPartnerRepricingConfig resources. The data for each resource is displayed in the ascending order of: * channel partner ID * RepricingConfig.effective_invoice_month * ChannelPartnerRepricingConfig.update_time If unsuccessful, returns an error.
+// CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsList - Lists information about how a Reseller modifies their bill before sending it to a ChannelPartner. Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account being queried are different. * NOT_FOUND: The ChannelPartnerRepricingConfig specified does not exist or is not associated with the given account. * INTERNAL: Any non-user error related to technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If successful, the ChannelPartnerRepricingConfig resources. The data for each resource is displayed in the ascending order of: * Channel Partner ID * RepricingConfig.effective_invoice_month * ChannelPartnerRepricingConfig.update_time If unsuccessful, returns an error.
 func (s *accounts) CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsList(ctx context.Context, request operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListRequest) (*operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsListResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/channelPartnerRepricingConfigs", request.PathParams, nil)
@@ -402,7 +402,7 @@ func (s *accounts) CloudchannelAccountsCustomersCustomerRepricingConfigsCreate(c
 	return res, nil
 }
 
-// CloudchannelAccountsCustomersCustomerRepricingConfigsList - Lists information about how a Reseller modifies their bill before sending it to a Customer. Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account being queried are different. * NOT_FOUND: The CustomerRepricingConfig specified does not exist or is not associated with the given account. * INTERNAL: Any non-user error related to technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If successful, the CustomerRepricingConfig resources. The data for each resource is displayed in the ascending order of: * customer ID * RepricingConfig.EntitlementGranularity.entitlement * RepricingConfig.effective_invoice_month * CustomerRepricingConfig.update_time If unsuccessful, returns an error.
+// CloudchannelAccountsCustomersCustomerRepricingConfigsList - Lists information about how a Reseller modifies their bill before sending it to a Customer. Possible Error Codes: * PERMISSION_DENIED: If the account making the request and the account being queried are different. * NOT_FOUND: The CustomerRepricingConfig specified does not exist or is not associated with the given account. * INTERNAL: Any non-user error related to technical issues in the backend. In this case, contact Cloud Channel support. Return Value: If successful, the CustomerRepricingConfig resources. The data for each resource is displayed in the ascending order of: * Customer ID * RepricingConfig.EntitlementGranularity.entitlement * RepricingConfig.effective_invoice_month * CustomerRepricingConfig.update_time If unsuccessful, returns an error.
 func (s *accounts) CloudchannelAccountsCustomersCustomerRepricingConfigsList(ctx context.Context, request operations.CloudchannelAccountsCustomersCustomerRepricingConfigsListRequest) (*operations.CloudchannelAccountsCustomersCustomerRepricingConfigsListResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}/customerRepricingConfigs", request.PathParams, nil)
@@ -822,6 +822,54 @@ func (s *accounts) CloudchannelAccountsCustomersEntitlementsList(ctx context.Con
 			}
 
 			res.GoogleCloudChannelV1ListEntitlementsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// CloudchannelAccountsCustomersEntitlementsListEntitlementChanges - List entitlement history. Possible error codes: * PERMISSION_DENIED: The reseller account making the request and the provided reseller account are different. * INVALID_ARGUMENT: Missing or invalid required fields in the request. * NOT_FOUND: The parent resource doesn't exist. Usually the result of an invalid name parameter. * INTERNAL: Any non-user error related to a technical issue in the backend. In this case, contact CloudChannel support. * UNKNOWN: Any non-user error related to a technical issue in the backend. In this case, contact Cloud Channel support. Return value: List of EntitlementChanges.
+func (s *accounts) CloudchannelAccountsCustomersEntitlementsListEntitlementChanges(ctx context.Context, request operations.CloudchannelAccountsCustomersEntitlementsListEntitlementChangesRequest) (*operations.CloudchannelAccountsCustomersEntitlementsListEntitlementChangesResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/{parent}:listEntitlementChanges", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CloudchannelAccountsCustomersEntitlementsListEntitlementChangesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleCloudChannelV1ListEntitlementChangesResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleCloudChannelV1ListEntitlementChangesResponse = out
 		}
 	}
 

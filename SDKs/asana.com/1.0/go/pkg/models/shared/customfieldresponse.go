@@ -7,6 +7,432 @@ import (
 	"fmt"
 )
 
+// CustomFieldResponseAsanaCreatedFieldEnum - *Conditional*. A unique identifier to associate this field with the template source of truth.
+type CustomFieldResponseAsanaCreatedFieldEnum string
+
+const (
+	CustomFieldResponseAsanaCreatedFieldEnumAVRequirements             CustomFieldResponseAsanaCreatedFieldEnum = "a_v_requirements"
+	CustomFieldResponseAsanaCreatedFieldEnumAccountName                CustomFieldResponseAsanaCreatedFieldEnum = "account_name"
+	CustomFieldResponseAsanaCreatedFieldEnumActionable                 CustomFieldResponseAsanaCreatedFieldEnum = "actionable"
+	CustomFieldResponseAsanaCreatedFieldEnumAlignShippingLink          CustomFieldResponseAsanaCreatedFieldEnum = "align_shipping_link"
+	CustomFieldResponseAsanaCreatedFieldEnumAlignStatus                CustomFieldResponseAsanaCreatedFieldEnum = "align_status"
+	CustomFieldResponseAsanaCreatedFieldEnumAllottedTime               CustomFieldResponseAsanaCreatedFieldEnum = "allotted_time"
+	CustomFieldResponseAsanaCreatedFieldEnumAppointment                CustomFieldResponseAsanaCreatedFieldEnum = "appointment"
+	CustomFieldResponseAsanaCreatedFieldEnumApprovalStage              CustomFieldResponseAsanaCreatedFieldEnum = "approval_stage"
+	CustomFieldResponseAsanaCreatedFieldEnumApproved                   CustomFieldResponseAsanaCreatedFieldEnum = "approved"
+	CustomFieldResponseAsanaCreatedFieldEnumArticleSeries              CustomFieldResponseAsanaCreatedFieldEnum = "article_series"
+	CustomFieldResponseAsanaCreatedFieldEnumBoardCommittee             CustomFieldResponseAsanaCreatedFieldEnum = "board_committee"
+	CustomFieldResponseAsanaCreatedFieldEnumBrowser                    CustomFieldResponseAsanaCreatedFieldEnum = "browser"
+	CustomFieldResponseAsanaCreatedFieldEnumCampaignAudience           CustomFieldResponseAsanaCreatedFieldEnum = "campaign_audience"
+	CustomFieldResponseAsanaCreatedFieldEnumCampaignProjectStatus      CustomFieldResponseAsanaCreatedFieldEnum = "campaign_project_status"
+	CustomFieldResponseAsanaCreatedFieldEnumCampaignRegions            CustomFieldResponseAsanaCreatedFieldEnum = "campaign_regions"
+	CustomFieldResponseAsanaCreatedFieldEnumChannelPrimary             CustomFieldResponseAsanaCreatedFieldEnum = "channel_primary"
+	CustomFieldResponseAsanaCreatedFieldEnumClientTopicType            CustomFieldResponseAsanaCreatedFieldEnum = "client_topic_type"
+	CustomFieldResponseAsanaCreatedFieldEnumCompleteBy                 CustomFieldResponseAsanaCreatedFieldEnum = "complete_by"
+	CustomFieldResponseAsanaCreatedFieldEnumContact                    CustomFieldResponseAsanaCreatedFieldEnum = "contact"
+	CustomFieldResponseAsanaCreatedFieldEnumContactEmailAddress        CustomFieldResponseAsanaCreatedFieldEnum = "contact_email_address"
+	CustomFieldResponseAsanaCreatedFieldEnumContentChannels            CustomFieldResponseAsanaCreatedFieldEnum = "content_channels"
+	CustomFieldResponseAsanaCreatedFieldEnumContentChannelsNeeded      CustomFieldResponseAsanaCreatedFieldEnum = "content_channels_needed"
+	CustomFieldResponseAsanaCreatedFieldEnumContentStage               CustomFieldResponseAsanaCreatedFieldEnum = "content_stage"
+	CustomFieldResponseAsanaCreatedFieldEnumContentType                CustomFieldResponseAsanaCreatedFieldEnum = "content_type"
+	CustomFieldResponseAsanaCreatedFieldEnumContract                   CustomFieldResponseAsanaCreatedFieldEnum = "contract"
+	CustomFieldResponseAsanaCreatedFieldEnumContractStatus             CustomFieldResponseAsanaCreatedFieldEnum = "contract_status"
+	CustomFieldResponseAsanaCreatedFieldEnumCost                       CustomFieldResponseAsanaCreatedFieldEnum = "cost"
+	CustomFieldResponseAsanaCreatedFieldEnumCreationStage              CustomFieldResponseAsanaCreatedFieldEnum = "creation_stage"
+	CustomFieldResponseAsanaCreatedFieldEnumCreativeChannel            CustomFieldResponseAsanaCreatedFieldEnum = "creative_channel"
+	CustomFieldResponseAsanaCreatedFieldEnumCreativeNeeded             CustomFieldResponseAsanaCreatedFieldEnum = "creative_needed"
+	CustomFieldResponseAsanaCreatedFieldEnumCreativeNeeds              CustomFieldResponseAsanaCreatedFieldEnum = "creative_needs"
+	CustomFieldResponseAsanaCreatedFieldEnumDataSensitivity            CustomFieldResponseAsanaCreatedFieldEnum = "data_sensitivity"
+	CustomFieldResponseAsanaCreatedFieldEnumDealSize                   CustomFieldResponseAsanaCreatedFieldEnum = "deal_size"
+	CustomFieldResponseAsanaCreatedFieldEnumDeliveryAppt               CustomFieldResponseAsanaCreatedFieldEnum = "delivery_appt"
+	CustomFieldResponseAsanaCreatedFieldEnumDeliveryApptDate           CustomFieldResponseAsanaCreatedFieldEnum = "delivery_appt_date"
+	CustomFieldResponseAsanaCreatedFieldEnumDepartment                 CustomFieldResponseAsanaCreatedFieldEnum = "department"
+	CustomFieldResponseAsanaCreatedFieldEnumDepartmentResponsible      CustomFieldResponseAsanaCreatedFieldEnum = "department_responsible"
+	CustomFieldResponseAsanaCreatedFieldEnumDesignRequestNeeded        CustomFieldResponseAsanaCreatedFieldEnum = "design_request_needed"
+	CustomFieldResponseAsanaCreatedFieldEnumDesignRequestType          CustomFieldResponseAsanaCreatedFieldEnum = "design_request_type"
+	CustomFieldResponseAsanaCreatedFieldEnumDiscussionCategory         CustomFieldResponseAsanaCreatedFieldEnum = "discussion_category"
+	CustomFieldResponseAsanaCreatedFieldEnumDoThisTask                 CustomFieldResponseAsanaCreatedFieldEnum = "do_this_task"
+	CustomFieldResponseAsanaCreatedFieldEnumEditorialContentStatus     CustomFieldResponseAsanaCreatedFieldEnum = "editorial_content_status"
+	CustomFieldResponseAsanaCreatedFieldEnumEditorialContentTag        CustomFieldResponseAsanaCreatedFieldEnum = "editorial_content_tag"
+	CustomFieldResponseAsanaCreatedFieldEnumEditorialContentType       CustomFieldResponseAsanaCreatedFieldEnum = "editorial_content_type"
+	CustomFieldResponseAsanaCreatedFieldEnumEffort                     CustomFieldResponseAsanaCreatedFieldEnum = "effort"
+	CustomFieldResponseAsanaCreatedFieldEnumEffortLevel                CustomFieldResponseAsanaCreatedFieldEnum = "effort_level"
+	CustomFieldResponseAsanaCreatedFieldEnumEstCompletionDate          CustomFieldResponseAsanaCreatedFieldEnum = "est_completion_date"
+	CustomFieldResponseAsanaCreatedFieldEnumEstimatedTime              CustomFieldResponseAsanaCreatedFieldEnum = "estimated_time"
+	CustomFieldResponseAsanaCreatedFieldEnumEstimatedValue             CustomFieldResponseAsanaCreatedFieldEnum = "estimated_value"
+	CustomFieldResponseAsanaCreatedFieldEnumExpectedCost               CustomFieldResponseAsanaCreatedFieldEnum = "expected_cost"
+	CustomFieldResponseAsanaCreatedFieldEnumExternalStepsNeeded        CustomFieldResponseAsanaCreatedFieldEnum = "external_steps_needed"
+	CustomFieldResponseAsanaCreatedFieldEnumFavoriteIdea               CustomFieldResponseAsanaCreatedFieldEnum = "favorite_idea"
+	CustomFieldResponseAsanaCreatedFieldEnumFeedbackType               CustomFieldResponseAsanaCreatedFieldEnum = "feedback_type"
+	CustomFieldResponseAsanaCreatedFieldEnumFinancial                  CustomFieldResponseAsanaCreatedFieldEnum = "financial"
+	CustomFieldResponseAsanaCreatedFieldEnumFundingAmount              CustomFieldResponseAsanaCreatedFieldEnum = "funding_amount"
+	CustomFieldResponseAsanaCreatedFieldEnumGrantApplicationProcess    CustomFieldResponseAsanaCreatedFieldEnum = "grant_application_process"
+	CustomFieldResponseAsanaCreatedFieldEnumHiringCandidateStatus      CustomFieldResponseAsanaCreatedFieldEnum = "hiring_candidate_status"
+	CustomFieldResponseAsanaCreatedFieldEnumIdeaStatus                 CustomFieldResponseAsanaCreatedFieldEnum = "idea_status"
+	CustomFieldResponseAsanaCreatedFieldEnumIdsLink                    CustomFieldResponseAsanaCreatedFieldEnum = "ids_link"
+	CustomFieldResponseAsanaCreatedFieldEnumIdsPatientLink             CustomFieldResponseAsanaCreatedFieldEnum = "ids_patient_link"
+	CustomFieldResponseAsanaCreatedFieldEnumImplementationStage        CustomFieldResponseAsanaCreatedFieldEnum = "implementation_stage"
+	CustomFieldResponseAsanaCreatedFieldEnumInsurance                  CustomFieldResponseAsanaCreatedFieldEnum = "insurance"
+	CustomFieldResponseAsanaCreatedFieldEnumInterviewArea              CustomFieldResponseAsanaCreatedFieldEnum = "interview_area"
+	CustomFieldResponseAsanaCreatedFieldEnumInterviewQuestionScore     CustomFieldResponseAsanaCreatedFieldEnum = "interview_question_score"
+	CustomFieldResponseAsanaCreatedFieldEnumIteroScanLink              CustomFieldResponseAsanaCreatedFieldEnum = "itero_scan_link"
+	CustomFieldResponseAsanaCreatedFieldEnumJobSAppliedTo              CustomFieldResponseAsanaCreatedFieldEnum = "job_s_applied_to"
+	CustomFieldResponseAsanaCreatedFieldEnumLab                        CustomFieldResponseAsanaCreatedFieldEnum = "lab"
+	CustomFieldResponseAsanaCreatedFieldEnumLaunchStatus               CustomFieldResponseAsanaCreatedFieldEnum = "launch_status"
+	CustomFieldResponseAsanaCreatedFieldEnumLeadStatus                 CustomFieldResponseAsanaCreatedFieldEnum = "lead_status"
+	CustomFieldResponseAsanaCreatedFieldEnumLocalizationLanguage       CustomFieldResponseAsanaCreatedFieldEnum = "localization_language"
+	CustomFieldResponseAsanaCreatedFieldEnumLocalizationMarketTeam     CustomFieldResponseAsanaCreatedFieldEnum = "localization_market_team"
+	CustomFieldResponseAsanaCreatedFieldEnumLocalizationStatus         CustomFieldResponseAsanaCreatedFieldEnum = "localization_status"
+	CustomFieldResponseAsanaCreatedFieldEnumMeetingMinutes             CustomFieldResponseAsanaCreatedFieldEnum = "meeting_minutes"
+	CustomFieldResponseAsanaCreatedFieldEnumMeetingNeeded              CustomFieldResponseAsanaCreatedFieldEnum = "meeting_needed"
+	CustomFieldResponseAsanaCreatedFieldEnumMinutes                    CustomFieldResponseAsanaCreatedFieldEnum = "minutes"
+	CustomFieldResponseAsanaCreatedFieldEnumMrr                        CustomFieldResponseAsanaCreatedFieldEnum = "mrr"
+	CustomFieldResponseAsanaCreatedFieldEnumMustLocalize               CustomFieldResponseAsanaCreatedFieldEnum = "must_localize"
+	CustomFieldResponseAsanaCreatedFieldEnumNameOfFoundation           CustomFieldResponseAsanaCreatedFieldEnum = "name_of_foundation"
+	CustomFieldResponseAsanaCreatedFieldEnumNeedToFollowUp             CustomFieldResponseAsanaCreatedFieldEnum = "need_to_follow_up"
+	CustomFieldResponseAsanaCreatedFieldEnumNextAppointment            CustomFieldResponseAsanaCreatedFieldEnum = "next_appointment"
+	CustomFieldResponseAsanaCreatedFieldEnumNextStepsSales             CustomFieldResponseAsanaCreatedFieldEnum = "next_steps_sales"
+	CustomFieldResponseAsanaCreatedFieldEnumNumPeople                  CustomFieldResponseAsanaCreatedFieldEnum = "num_people"
+	CustomFieldResponseAsanaCreatedFieldEnumNumberOfUserReports        CustomFieldResponseAsanaCreatedFieldEnum = "number_of_user_reports"
+	CustomFieldResponseAsanaCreatedFieldEnumOfficeLocation             CustomFieldResponseAsanaCreatedFieldEnum = "office_location"
+	CustomFieldResponseAsanaCreatedFieldEnumOnboardingActivity         CustomFieldResponseAsanaCreatedFieldEnum = "onboarding_activity"
+	CustomFieldResponseAsanaCreatedFieldEnumOwner                      CustomFieldResponseAsanaCreatedFieldEnum = "owner"
+	CustomFieldResponseAsanaCreatedFieldEnumParticipantsNeeded         CustomFieldResponseAsanaCreatedFieldEnum = "participants_needed"
+	CustomFieldResponseAsanaCreatedFieldEnumPatientDateOfBirth         CustomFieldResponseAsanaCreatedFieldEnum = "patient_date_of_birth"
+	CustomFieldResponseAsanaCreatedFieldEnumPatientEmail               CustomFieldResponseAsanaCreatedFieldEnum = "patient_email"
+	CustomFieldResponseAsanaCreatedFieldEnumPatientPhone               CustomFieldResponseAsanaCreatedFieldEnum = "patient_phone"
+	CustomFieldResponseAsanaCreatedFieldEnumPatientStatus              CustomFieldResponseAsanaCreatedFieldEnum = "patient_status"
+	CustomFieldResponseAsanaCreatedFieldEnumPhoneNumber                CustomFieldResponseAsanaCreatedFieldEnum = "phone_number"
+	CustomFieldResponseAsanaCreatedFieldEnumPlanningCategory           CustomFieldResponseAsanaCreatedFieldEnum = "planning_category"
+	CustomFieldResponseAsanaCreatedFieldEnumPointOfContact             CustomFieldResponseAsanaCreatedFieldEnum = "point_of_contact"
+	CustomFieldResponseAsanaCreatedFieldEnumPosition                   CustomFieldResponseAsanaCreatedFieldEnum = "position"
+	CustomFieldResponseAsanaCreatedFieldEnumPostFormat                 CustomFieldResponseAsanaCreatedFieldEnum = "post_format"
+	CustomFieldResponseAsanaCreatedFieldEnumPrescription               CustomFieldResponseAsanaCreatedFieldEnum = "prescription"
+	CustomFieldResponseAsanaCreatedFieldEnumPriority                   CustomFieldResponseAsanaCreatedFieldEnum = "priority"
+	CustomFieldResponseAsanaCreatedFieldEnumPriorityLevel              CustomFieldResponseAsanaCreatedFieldEnum = "priority_level"
+	CustomFieldResponseAsanaCreatedFieldEnumProduct                    CustomFieldResponseAsanaCreatedFieldEnum = "product"
+	CustomFieldResponseAsanaCreatedFieldEnumProductStage               CustomFieldResponseAsanaCreatedFieldEnum = "product_stage"
+	CustomFieldResponseAsanaCreatedFieldEnumProgress                   CustomFieldResponseAsanaCreatedFieldEnum = "progress"
+	CustomFieldResponseAsanaCreatedFieldEnumProjectSize                CustomFieldResponseAsanaCreatedFieldEnum = "project_size"
+	CustomFieldResponseAsanaCreatedFieldEnumProjectStatus              CustomFieldResponseAsanaCreatedFieldEnum = "project_status"
+	CustomFieldResponseAsanaCreatedFieldEnumProposedBudget             CustomFieldResponseAsanaCreatedFieldEnum = "proposed_budget"
+	CustomFieldResponseAsanaCreatedFieldEnumPublishStatus              CustomFieldResponseAsanaCreatedFieldEnum = "publish_status"
+	CustomFieldResponseAsanaCreatedFieldEnumReasonForScan              CustomFieldResponseAsanaCreatedFieldEnum = "reason_for_scan"
+	CustomFieldResponseAsanaCreatedFieldEnumReferral                   CustomFieldResponseAsanaCreatedFieldEnum = "referral"
+	CustomFieldResponseAsanaCreatedFieldEnumRequestType                CustomFieldResponseAsanaCreatedFieldEnum = "request_type"
+	CustomFieldResponseAsanaCreatedFieldEnumResearchStatus             CustomFieldResponseAsanaCreatedFieldEnum = "research_status"
+	CustomFieldResponseAsanaCreatedFieldEnumResponsibleDepartment      CustomFieldResponseAsanaCreatedFieldEnum = "responsible_department"
+	CustomFieldResponseAsanaCreatedFieldEnumResponsibleTeam            CustomFieldResponseAsanaCreatedFieldEnum = "responsible_team"
+	CustomFieldResponseAsanaCreatedFieldEnumRiskAssessmentStatus       CustomFieldResponseAsanaCreatedFieldEnum = "risk_assessment_status"
+	CustomFieldResponseAsanaCreatedFieldEnumRoomName                   CustomFieldResponseAsanaCreatedFieldEnum = "room_name"
+	CustomFieldResponseAsanaCreatedFieldEnumSalesCounterpart           CustomFieldResponseAsanaCreatedFieldEnum = "sales_counterpart"
+	CustomFieldResponseAsanaCreatedFieldEnumSentiment                  CustomFieldResponseAsanaCreatedFieldEnum = "sentiment"
+	CustomFieldResponseAsanaCreatedFieldEnumShippingLink               CustomFieldResponseAsanaCreatedFieldEnum = "shipping_link"
+	CustomFieldResponseAsanaCreatedFieldEnumSocialChannels             CustomFieldResponseAsanaCreatedFieldEnum = "social_channels"
+	CustomFieldResponseAsanaCreatedFieldEnumStage                      CustomFieldResponseAsanaCreatedFieldEnum = "stage"
+	CustomFieldResponseAsanaCreatedFieldEnumStatus                     CustomFieldResponseAsanaCreatedFieldEnum = "status"
+	CustomFieldResponseAsanaCreatedFieldEnumStatusDesign               CustomFieldResponseAsanaCreatedFieldEnum = "status_design"
+	CustomFieldResponseAsanaCreatedFieldEnumStatusOfInitiative         CustomFieldResponseAsanaCreatedFieldEnum = "status_of_initiative"
+	CustomFieldResponseAsanaCreatedFieldEnumSystemSetup                CustomFieldResponseAsanaCreatedFieldEnum = "system_setup"
+	CustomFieldResponseAsanaCreatedFieldEnumTaskProgress               CustomFieldResponseAsanaCreatedFieldEnum = "task_progress"
+	CustomFieldResponseAsanaCreatedFieldEnumTeam                       CustomFieldResponseAsanaCreatedFieldEnum = "team"
+	CustomFieldResponseAsanaCreatedFieldEnumTeamMarketing              CustomFieldResponseAsanaCreatedFieldEnum = "team_marketing"
+	CustomFieldResponseAsanaCreatedFieldEnumTeamResponsible            CustomFieldResponseAsanaCreatedFieldEnum = "team_responsible"
+	CustomFieldResponseAsanaCreatedFieldEnumTimeItTakesToCompleteTasks CustomFieldResponseAsanaCreatedFieldEnum = "time_it_takes_to_complete_tasks"
+	CustomFieldResponseAsanaCreatedFieldEnumTimeframe                  CustomFieldResponseAsanaCreatedFieldEnum = "timeframe"
+	CustomFieldResponseAsanaCreatedFieldEnumTreatmentType              CustomFieldResponseAsanaCreatedFieldEnum = "treatment_type"
+	CustomFieldResponseAsanaCreatedFieldEnumTypeWorkRequestsIt         CustomFieldResponseAsanaCreatedFieldEnum = "type_work_requests_it"
+	CustomFieldResponseAsanaCreatedFieldEnumUseAgency                  CustomFieldResponseAsanaCreatedFieldEnum = "use_agency"
+	CustomFieldResponseAsanaCreatedFieldEnumUserName                   CustomFieldResponseAsanaCreatedFieldEnum = "user_name"
+	CustomFieldResponseAsanaCreatedFieldEnumVendorCategory             CustomFieldResponseAsanaCreatedFieldEnum = "vendor_category"
+	CustomFieldResponseAsanaCreatedFieldEnumVendorType                 CustomFieldResponseAsanaCreatedFieldEnum = "vendor_type"
+	CustomFieldResponseAsanaCreatedFieldEnumWordCount                  CustomFieldResponseAsanaCreatedFieldEnum = "word_count"
+)
+
+func (e *CustomFieldResponseAsanaCreatedFieldEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "a_v_requirements":
+		fallthrough
+	case "account_name":
+		fallthrough
+	case "actionable":
+		fallthrough
+	case "align_shipping_link":
+		fallthrough
+	case "align_status":
+		fallthrough
+	case "allotted_time":
+		fallthrough
+	case "appointment":
+		fallthrough
+	case "approval_stage":
+		fallthrough
+	case "approved":
+		fallthrough
+	case "article_series":
+		fallthrough
+	case "board_committee":
+		fallthrough
+	case "browser":
+		fallthrough
+	case "campaign_audience":
+		fallthrough
+	case "campaign_project_status":
+		fallthrough
+	case "campaign_regions":
+		fallthrough
+	case "channel_primary":
+		fallthrough
+	case "client_topic_type":
+		fallthrough
+	case "complete_by":
+		fallthrough
+	case "contact":
+		fallthrough
+	case "contact_email_address":
+		fallthrough
+	case "content_channels":
+		fallthrough
+	case "content_channels_needed":
+		fallthrough
+	case "content_stage":
+		fallthrough
+	case "content_type":
+		fallthrough
+	case "contract":
+		fallthrough
+	case "contract_status":
+		fallthrough
+	case "cost":
+		fallthrough
+	case "creation_stage":
+		fallthrough
+	case "creative_channel":
+		fallthrough
+	case "creative_needed":
+		fallthrough
+	case "creative_needs":
+		fallthrough
+	case "data_sensitivity":
+		fallthrough
+	case "deal_size":
+		fallthrough
+	case "delivery_appt":
+		fallthrough
+	case "delivery_appt_date":
+		fallthrough
+	case "department":
+		fallthrough
+	case "department_responsible":
+		fallthrough
+	case "design_request_needed":
+		fallthrough
+	case "design_request_type":
+		fallthrough
+	case "discussion_category":
+		fallthrough
+	case "do_this_task":
+		fallthrough
+	case "editorial_content_status":
+		fallthrough
+	case "editorial_content_tag":
+		fallthrough
+	case "editorial_content_type":
+		fallthrough
+	case "effort":
+		fallthrough
+	case "effort_level":
+		fallthrough
+	case "est_completion_date":
+		fallthrough
+	case "estimated_time":
+		fallthrough
+	case "estimated_value":
+		fallthrough
+	case "expected_cost":
+		fallthrough
+	case "external_steps_needed":
+		fallthrough
+	case "favorite_idea":
+		fallthrough
+	case "feedback_type":
+		fallthrough
+	case "financial":
+		fallthrough
+	case "funding_amount":
+		fallthrough
+	case "grant_application_process":
+		fallthrough
+	case "hiring_candidate_status":
+		fallthrough
+	case "idea_status":
+		fallthrough
+	case "ids_link":
+		fallthrough
+	case "ids_patient_link":
+		fallthrough
+	case "implementation_stage":
+		fallthrough
+	case "insurance":
+		fallthrough
+	case "interview_area":
+		fallthrough
+	case "interview_question_score":
+		fallthrough
+	case "itero_scan_link":
+		fallthrough
+	case "job_s_applied_to":
+		fallthrough
+	case "lab":
+		fallthrough
+	case "launch_status":
+		fallthrough
+	case "lead_status":
+		fallthrough
+	case "localization_language":
+		fallthrough
+	case "localization_market_team":
+		fallthrough
+	case "localization_status":
+		fallthrough
+	case "meeting_minutes":
+		fallthrough
+	case "meeting_needed":
+		fallthrough
+	case "minutes":
+		fallthrough
+	case "mrr":
+		fallthrough
+	case "must_localize":
+		fallthrough
+	case "name_of_foundation":
+		fallthrough
+	case "need_to_follow_up":
+		fallthrough
+	case "next_appointment":
+		fallthrough
+	case "next_steps_sales":
+		fallthrough
+	case "num_people":
+		fallthrough
+	case "number_of_user_reports":
+		fallthrough
+	case "office_location":
+		fallthrough
+	case "onboarding_activity":
+		fallthrough
+	case "owner":
+		fallthrough
+	case "participants_needed":
+		fallthrough
+	case "patient_date_of_birth":
+		fallthrough
+	case "patient_email":
+		fallthrough
+	case "patient_phone":
+		fallthrough
+	case "patient_status":
+		fallthrough
+	case "phone_number":
+		fallthrough
+	case "planning_category":
+		fallthrough
+	case "point_of_contact":
+		fallthrough
+	case "position":
+		fallthrough
+	case "post_format":
+		fallthrough
+	case "prescription":
+		fallthrough
+	case "priority":
+		fallthrough
+	case "priority_level":
+		fallthrough
+	case "product":
+		fallthrough
+	case "product_stage":
+		fallthrough
+	case "progress":
+		fallthrough
+	case "project_size":
+		fallthrough
+	case "project_status":
+		fallthrough
+	case "proposed_budget":
+		fallthrough
+	case "publish_status":
+		fallthrough
+	case "reason_for_scan":
+		fallthrough
+	case "referral":
+		fallthrough
+	case "request_type":
+		fallthrough
+	case "research_status":
+		fallthrough
+	case "responsible_department":
+		fallthrough
+	case "responsible_team":
+		fallthrough
+	case "risk_assessment_status":
+		fallthrough
+	case "room_name":
+		fallthrough
+	case "sales_counterpart":
+		fallthrough
+	case "sentiment":
+		fallthrough
+	case "shipping_link":
+		fallthrough
+	case "social_channels":
+		fallthrough
+	case "stage":
+		fallthrough
+	case "status":
+		fallthrough
+	case "status_design":
+		fallthrough
+	case "status_of_initiative":
+		fallthrough
+	case "system_setup":
+		fallthrough
+	case "task_progress":
+		fallthrough
+	case "team":
+		fallthrough
+	case "team_marketing":
+		fallthrough
+	case "team_responsible":
+		fallthrough
+	case "time_it_takes_to_complete_tasks":
+		fallthrough
+	case "timeframe":
+		fallthrough
+	case "treatment_type":
+		fallthrough
+	case "type_work_requests_it":
+		fallthrough
+	case "use_agency":
+		fallthrough
+	case "user_name":
+		fallthrough
+	case "vendor_category":
+		fallthrough
+	case "vendor_type":
+		fallthrough
+	case "word_count":
+		*e = CustomFieldResponseAsanaCreatedFieldEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CustomFieldResponseAsanaCreatedFieldEnum: %s", s)
+	}
+}
+
 // CustomFieldResponseCustomLabelPositionEnum - Only relevant for custom fields with `custom` format. This depicts where to place the custom label. This will be null if the `format` is not `custom`.
 type CustomFieldResponseCustomLabelPositionEnum string
 
@@ -31,7 +457,15 @@ func (e *CustomFieldResponseCustomLabelPositionEnum) UnmarshalJSON(data []byte) 
 	}
 }
 
-// CustomFieldResponseEnumValue - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 50.
+// CustomFieldResponseDateValue - *Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.
+type CustomFieldResponseDateValue struct {
+	// A string representing the date in YYYY-MM-DD format.
+	Date *string `json:"date,omitempty"`
+	// A string representing the date in ISO 8601 format. If no time value is selected, the value of `date-time` will be `null`.
+	DateTime *string `json:"date_time,omitempty"`
+}
+
+// CustomFieldResponseEnumValue - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.
 //
 // You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
 //
@@ -96,6 +530,8 @@ const (
 	CustomFieldResponseResourceSubtypeEnumEnum      CustomFieldResponseResourceSubtypeEnum = "enum"
 	CustomFieldResponseResourceSubtypeEnumMultiEnum CustomFieldResponseResourceSubtypeEnum = "multi_enum"
 	CustomFieldResponseResourceSubtypeEnumNumber    CustomFieldResponseResourceSubtypeEnum = "number"
+	CustomFieldResponseResourceSubtypeEnumDate      CustomFieldResponseResourceSubtypeEnum = "date"
+	CustomFieldResponseResourceSubtypeEnumPeople    CustomFieldResponseResourceSubtypeEnum = "people"
 )
 
 func (e *CustomFieldResponseResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
@@ -111,6 +547,10 @@ func (e *CustomFieldResponseResourceSubtypeEnum) UnmarshalJSON(data []byte) erro
 	case "multi_enum":
 		fallthrough
 	case "number":
+		fallthrough
+	case "date":
+		fallthrough
+	case "people":
 		*e = CustomFieldResponseResourceSubtypeEnum(s)
 		return nil
 	default:
@@ -152,13 +592,17 @@ func (e *CustomFieldResponseTypeEnum) UnmarshalJSON(data []byte) error {
 //
 // Users in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.
 type CustomFieldResponse struct {
-	CreatedBy *UserCompact `json:"created_by,omitempty"`
+	// *Conditional*. A unique identifier to associate this field with the template source of truth.
+	AsanaCreatedField *CustomFieldResponseAsanaCreatedFieldEnum `json:"asana_created_field,omitempty"`
+	CreatedBy         *UserCompact                              `json:"created_by,omitempty"`
 	// ISO 4217 currency code to format this custom field. This will be null if the `format` is not `currency`.
 	CurrencyCode *string `json:"currency_code,omitempty"`
 	// This is the string that appears next to the custom field value. This will be null if the `format` is not `custom`.
 	CustomLabel *string `json:"custom_label,omitempty"`
 	// Only relevant for custom fields with `custom` format. This depicts where to place the custom label. This will be null if the `format` is not `custom`.
 	CustomLabelPosition *CustomFieldResponseCustomLabelPositionEnum `json:"custom_label_position,omitempty"`
+	// *Conditional*. Only relevant for custom fields of type `date`. This object reflects the chosen date (and optionally, time) value of a `date` custom field. If no date is selected, the value of `date_value` will be `null`.
+	DateValue *CustomFieldResponseDateValue `json:"date_value,omitempty"`
 	// [Opt In](/docs/input-output-options). The description of the custom field.
 	Description *string `json:"description,omitempty"`
 	// A string representation for the value of the custom field. Integrations that don't require the underlying type should use this field to read values. Using this field will future-proof an app against new custom field types.
@@ -176,12 +620,14 @@ type CustomFieldResponse struct {
 	HasNotificationsEnabled *bool `json:"has_notifications_enabled,omitempty"`
 	// This flag describes whether this custom field is available to every container in the workspace. Before project-specific custom fields, this field was always true.
 	IsGlobalToWorkspace *bool `json:"is_global_to_workspace,omitempty"`
-	// *Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a multi_enum custom field.
+	// *Conditional*. Only relevant for custom fields of type `multi_enum`. This object is the chosen values of a `multi_enum` custom field.
 	MultiEnumValues []EnumOption `json:"multi_enum_values,omitempty"`
 	// The name of the custom field.
 	Name *string `json:"name,omitempty"`
-	// *Conditional*. This number is the value of a number custom field.
+	// *Conditional*. This number is the value of a `number` custom field.
 	NumberValue *float64 `json:"number_value,omitempty"`
+	// *Conditional*. Only relevant for custom fields of type `people`. This array of [compact user](/docs/user-compact) objects reflects the values of a `people` custom field.
+	PeopleValue []UserCompact `json:"people_value,omitempty"`
 	// Only relevant for custom fields of type ‘Number’. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.
 	// For percentage format, this may be unintuitive, as a value of 0.25 has a precision of 0, while a value of 0.251 has a precision of 1. This is due to 0.25 being displayed as 25%.
 	// The identifier format will always have a precision of 0.
@@ -191,7 +637,7 @@ type CustomFieldResponse struct {
 	ResourceSubtype *CustomFieldResponseResourceSubtypeEnum `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
-	// *Conditional*. This string is the value of a text custom field.
+	// *Conditional*. This string is the value of a `text` custom field.
 	TextValue *string `json:"text_value,omitempty"`
 	// *Deprecated: new integrations should prefer the resource_subtype field.* The type of the custom field. Must be one of the given values.
 	//

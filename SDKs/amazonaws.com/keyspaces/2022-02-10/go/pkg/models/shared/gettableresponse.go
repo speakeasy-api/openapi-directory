@@ -9,6 +9,7 @@ import (
 // GetTableResponse - Success
 type GetTableResponse struct {
 	CapacitySpecification   *CapacitySpecificationSummary `json:"capacitySpecification,omitempty"`
+	ClientSideTimestamps    *ClientSideTimestamps         `json:"clientSideTimestamps,omitempty"`
 	Comment                 *Comment                      `json:"comment,omitempty"`
 	CreationTimestamp       *time.Time                    `json:"creationTimestamp,omitempty"`
 	DefaultTimeToLive       *int64                        `json:"defaultTimeToLive,omitempty"`

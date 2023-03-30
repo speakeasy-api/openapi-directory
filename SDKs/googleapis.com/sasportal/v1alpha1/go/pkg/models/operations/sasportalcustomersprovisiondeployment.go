@@ -7,9 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SasportalCustomersProvisionDeploymentSecurity struct {
+type SasportalCustomersProvisionDeploymentSecurityOption1 struct {
 	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
 	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type SasportalCustomersProvisionDeploymentSecurityOption2 struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type SasportalCustomersProvisionDeploymentSecurity struct {
+	Option1 *SasportalCustomersProvisionDeploymentSecurityOption1 `security:"option"`
+	Option2 *SasportalCustomersProvisionDeploymentSecurityOption2 `security:"option"`
 }
 
 type SasportalCustomersProvisionDeploymentQueryParams struct {
@@ -39,7 +49,7 @@ type SasportalCustomersProvisionDeploymentQueryParams struct {
 
 type SasportalCustomersProvisionDeploymentRequest struct {
 	QueryParams SasportalCustomersProvisionDeploymentQueryParams
-	Request     map[string]interface{} `request:"mediaType=application/json"`
+	Request     *shared.SasPortalProvisionDeploymentRequest `request:"mediaType=application/json"`
 	Security    SasportalCustomersProvisionDeploymentSecurity
 }
 

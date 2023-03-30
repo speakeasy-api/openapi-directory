@@ -2,7 +2,7 @@
 
 package shared
 
-// ProjectList - Project list
+// ProjectList - Newly created project
 type ProjectList struct {
 	Meta     *PagingMeta `json:"meta,omitempty"`
 	Projects []Project   `json:"projects,omitempty"`

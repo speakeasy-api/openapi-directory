@@ -33,13 +33,13 @@ func newGlossary(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// CreateGlossary - Upload a new glossary
-// Upload a new glossary
-func (s *glossary) CreateGlossary(ctx context.Context, request operations.CreateGlossaryRequest) (*operations.CreateGlossaryResponse, error) {
+// CreateGlossaryJSON - Upload a glossary file
+// Upload a new glossary file to your project to be used during translation. Glossaries can be CSV or TBX files.
+func (s *glossary) CreateGlossaryJSON(ctx context.Context, request operations.CreateGlossaryJSONRequest) (*operations.CreateGlossaryJSONResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -64,7 +64,7 @@ func (s *glossary) CreateGlossary(ctx context.Context, request operations.Create
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.CreateGlossaryResponse{
+	res := &operations.CreateGlossaryJSONResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -103,8 +103,78 @@ func (s *glossary) CreateGlossary(ctx context.Context, request operations.Create
 	return res, nil
 }
 
-// DeleteGlossary - Delete the glossary
-// Delete the glossary
+// CreateGlossaryMultipart - Upload a glossary file
+// Upload a new glossary file to your project to be used during translation. Glossaries can be CSV or TBX files.
+func (s *glossary) CreateGlossaryMultipart(ctx context.Context, request operations.CreateGlossaryMultipartRequest) (*operations.CreateGlossaryMultipartResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateGlossaryMultipartResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Glossary
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Glossary = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		fallthrough
+	case httpRes.StatusCode == 406:
+		fallthrough
+	case httpRes.StatusCode == 409:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteGlossary - Delete a glossary
+// Delete the existing glossary from the project.
 func (s *glossary) DeleteGlossary(ctx context.Context, request operations.DeleteGlossaryRequest) (*operations.DeleteGlossaryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request.PathParams, nil)
@@ -160,8 +230,8 @@ func (s *glossary) DeleteGlossary(ctx context.Context, request operations.Delete
 	return res, nil
 }
 
-// DownloadGlobalGlossary - Download the global glossary.
-// Download your corporate account's global glossary. This endpoint is available only for corporate account customers.
+// DownloadGlobalGlossary - Download account glossary.
+// Download your corporate account's global glossary. This endpoint is available only for corporate account customers. This glossary will be automatically attached to each new project under your account.
 func (s *glossary) DownloadGlobalGlossary(ctx context.Context) (*operations.DownloadGlobalGlossaryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/glossary"
@@ -217,7 +287,7 @@ func (s *glossary) DownloadGlobalGlossary(ctx context.Context) (*operations.Down
 }
 
 // DownloadGlossary - Download a glossary
-// Download a glossary
+// Download a previously uploaded glossary file.
 func (s *glossary) DownloadGlossary(ctx context.Context, request operations.DownloadGlossaryRequest) (*operations.DownloadGlossaryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}/download", request.PathParams, nil)
@@ -272,8 +342,8 @@ func (s *glossary) DownloadGlossary(ctx context.Context, request operations.Down
 	return res, nil
 }
 
-// GetGlossaries - Get a list of glossaries
-// Get a list of glossaries
+// GetGlossaries - View glossaries
+// View a list of glossaries previously uploaded to the project.
 func (s *glossary) GetGlossaries(ctx context.Context, request operations.GetGlossariesRequest) (*operations.GetGlossariesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries", request.PathParams, nil)
@@ -327,8 +397,8 @@ func (s *glossary) GetGlossaries(ctx context.Context, request operations.GetGlos
 	return res, nil
 }
 
-// GetGlossary - Get single glossary
-// Get single glossary
+// GetGlossary - View a glossary
+// View the details of a glossary file uploaded to a project.
 func (s *glossary) GetGlossary(ctx context.Context, request operations.GetGlossaryRequest) (*operations.GetGlossaryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request.PathParams, nil)
@@ -382,13 +452,13 @@ func (s *glossary) GetGlossary(ctx context.Context, request operations.GetGlossa
 	return res, nil
 }
 
-// UpdateGlobalGlossary - Create or update the global glossary.
-// Update your corporate account's global glossary. This endpoint is available only for corporate account customers.
-func (s *glossary) UpdateGlobalGlossary(ctx context.Context, request operations.UpdateGlobalGlossaryRequest) (*operations.UpdateGlobalGlossaryResponse, error) {
+// UpdateGlobalGlossaryJSON - Create or update the account glossary
+// Update your corporate account's global glossary. This endpoint is available only for corporate account customers. This glossary will be automatically attached to each new project under your account.
+func (s *glossary) UpdateGlobalGlossaryJSON(ctx context.Context, request operations.UpdateGlobalGlossaryJSONRequest) (*operations.UpdateGlobalGlossaryJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/glossary"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -413,7 +483,7 @@ func (s *glossary) UpdateGlobalGlossary(ctx context.Context, request operations.
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.UpdateGlobalGlossaryResponse{
+	res := &operations.UpdateGlobalGlossaryJSONResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -446,9 +516,141 @@ func (s *glossary) UpdateGlobalGlossary(ctx context.Context, request operations.
 	return res, nil
 }
 
-// UpdateGlossary - Update the glossary.
-// Update the glossary. File name and contents will replaced with the new one.
-func (s *glossary) UpdateGlossary(ctx context.Context, request operations.UpdateGlossaryRequest) (*operations.UpdateGlossaryResponse, error) {
+// UpdateGlobalGlossaryMultipart - Create or update the account glossary
+// Update your corporate account's global glossary. This endpoint is available only for corporate account customers. This glossary will be automatically attached to each new project under your account.
+func (s *glossary) UpdateGlobalGlossaryMultipart(ctx context.Context, request operations.UpdateGlobalGlossaryMultipartRequest) (*operations.UpdateGlobalGlossaryMultipartResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/glossary"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateGlobalGlossaryMultipartResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.OperationStatus
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.OperationStatus = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateGlossaryJSON - Update a glossary
+// Update the existing glossary file in the project. Public users are allowed to have only 1 glossary per project and file name and contents will replaced with the new glossary file that you are uploading via this endpoint.
+func (s *glossary) UpdateGlossaryJSON(ctx context.Context, request operations.UpdateGlossaryJSONRequest) (*operations.UpdateGlossaryJSONResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateGlossaryJSONResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Glossary
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Glossary = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		fallthrough
+	case httpRes.StatusCode == 409:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateGlossaryMultipart - Update a glossary
+// Update the existing glossary file in the project. Public users are allowed to have only 1 glossary per project and file name and contents will replaced with the new glossary file that you are uploading via this endpoint.
+func (s *glossary) UpdateGlossaryMultipart(ctx context.Context, request operations.UpdateGlossaryMultipartRequest) (*operations.UpdateGlossaryMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/glossaries/{glossaryId}", request.PathParams, nil)
 
@@ -477,7 +679,7 @@ func (s *glossary) UpdateGlossary(ctx context.Context, request operations.Update
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.UpdateGlossaryResponse{
+	res := &operations.UpdateGlossaryMultipartResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

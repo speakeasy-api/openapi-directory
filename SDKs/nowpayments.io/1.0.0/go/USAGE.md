@@ -13,21 +13,23 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.ThreeGetEstimatedPriceRequest{
-        QueryParams: operations.ThreeGetEstimatedPriceQueryParams{
-            Amount: "3999.5000",
-            CurrencyFrom: "usd",
-            CurrencyTo: "btc",
+    req := operations.GetAllTransfersRequest{
+        QueryParams: operations.GetAllTransfersQueryParams{
+            ID: "111",
+            Limit: "10",
+            Offset: "0",
+            Order: "ASC",
+            Status: "CREATED",
         },
     }
 
     ctx := context.Background()
-    res, err := s.ThreeGetEstimatedPrice(ctx, req)
+    res, err := s.BillingSubPartnerAPI.GetAllTransfers(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.ThreeGetEstimatedPrice200ApplicationJSONObject != nil {
+    if res.GetAllTransfers200ApplicationJSONObject != nil {
         // handle response
     }
 }

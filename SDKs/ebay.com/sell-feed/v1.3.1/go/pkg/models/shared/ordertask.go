@@ -2,9 +2,9 @@
 
 package shared
 
-// OrderTask - The type that defines the fields for the getOrderTask response.
+// OrderTask - The type that defines the fields for the <b> getOrderTask</b> response.
 type OrderTask struct {
-	// The timestamp when the task went into the COMPLETED or COMPLETED_WITH_ERROR state. This state means that eBay has compiled the report for the seller based on the seller&rsquo;s filter criteria, and the seller can run a getResultFile call to download the report.
+	// The timestamp when the task went into the <code>COMPLETED</code> or <code>COMPLETED_WITH_ERROR</code> state. This state means that eBay has compiled the report for the seller based on the seller’s filter criteria, and the seller can run a <strong>getResultFile</strong> call to download the report.
 	CompletionDate *string `json:"completionDate,omitempty"`
 	// The date the task was created.
 	CreationDate *string `json:"creationDate,omitempty"`
@@ -16,7 +16,7 @@ type OrderTask struct {
 	FilterCriteria *OrderFilterCriteria `json:"filterCriteria,omitempty"`
 	// The schema version number associated with the create task.
 	SchemaVersion *string `json:"schemaVersion,omitempty"`
-	// The enumeration value that indicates the state of the task that was submitted in the request. See FeedStatusEnum for information. The values COMPLETED and COMPLETED_WITH_ERROR indicate the Order Report file is ready to download. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:FeedStatusEnum'>eBay API documentation</a>
+	// The enumeration value that indicates the state of the task that was submitted in the request. See <strong>FeedStatusEnum</strong> for information. <p>The values <code>COMPLETED </code>and<code> COMPLETED_WITH_ERROR</code> indicate the Order Report file is ready to download.</p> For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:FeedStatusEnum'>eBay API documentation</a>
 	Status *string `json:"status,omitempty"`
 	// The ID of the task that was submitted in the request.
 	TaskID *string `json:"taskId,omitempty"`

@@ -5,4 +5,5 @@ package shared
 // EksPodPropertiesOverride - An object that contains overrides for the Kubernetes pod properties of a job.
 type EksPodPropertiesOverride struct {
 	Containers []EksContainerOverride `json:"containers,omitempty"`
+	Metadata   *EksMetadata           `json:"metadata,omitempty"`
 }

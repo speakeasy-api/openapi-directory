@@ -2,47 +2,8 @@
 
 package shared
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
-type GoogleCloudWebriskV1SubmissionThreatTypesEnum string
-
-const (
-	GoogleCloudWebriskV1SubmissionThreatTypesEnumThreatTypeUnspecified             GoogleCloudWebriskV1SubmissionThreatTypesEnum = "THREAT_TYPE_UNSPECIFIED"
-	GoogleCloudWebriskV1SubmissionThreatTypesEnumMalware                           GoogleCloudWebriskV1SubmissionThreatTypesEnum = "MALWARE"
-	GoogleCloudWebriskV1SubmissionThreatTypesEnumSocialEngineering                 GoogleCloudWebriskV1SubmissionThreatTypesEnum = "SOCIAL_ENGINEERING"
-	GoogleCloudWebriskV1SubmissionThreatTypesEnumUnwantedSoftware                  GoogleCloudWebriskV1SubmissionThreatTypesEnum = "UNWANTED_SOFTWARE"
-	GoogleCloudWebriskV1SubmissionThreatTypesEnumSocialEngineeringExtendedCoverage GoogleCloudWebriskV1SubmissionThreatTypesEnum = "SOCIAL_ENGINEERING_EXTENDED_COVERAGE"
-)
-
-func (e *GoogleCloudWebriskV1SubmissionThreatTypesEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "THREAT_TYPE_UNSPECIFIED":
-		fallthrough
-	case "MALWARE":
-		fallthrough
-	case "SOCIAL_ENGINEERING":
-		fallthrough
-	case "UNWANTED_SOFTWARE":
-		fallthrough
-	case "SOCIAL_ENGINEERING_EXTENDED_COVERAGE":
-		*e = GoogleCloudWebriskV1SubmissionThreatTypesEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GoogleCloudWebriskV1SubmissionThreatTypesEnum: %s", s)
-	}
-}
-
 // GoogleCloudWebriskV1Submission - Wraps a URI that might be displaying malicious content.
 type GoogleCloudWebriskV1Submission struct {
-	// ThreatTypes found to be associated with the submitted URI after reviewing it. This might be empty if the URI was not added to any list.
-	ThreatTypes []GoogleCloudWebriskV1SubmissionThreatTypesEnum `json:"threatTypes,omitempty"`
 	// Required. The URI that is being reported for malicious content to be analyzed.
 	URI *string `json:"uri,omitempty"`
 }

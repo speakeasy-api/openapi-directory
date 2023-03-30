@@ -12,7 +12,7 @@ type EpisodeSimple struct {
 	Description *string `json:"description,omitempty"`
 	// Whether this podcast contains explicit language.
 	ExplicitContent *bool `json:"explicit_content,omitempty"`
-	// Episode id.
+	// Episode id, which can be used to further fetch detailed episode metadata via `GET /episodes/{id}`.
 	ID *string `json:"id,omitempty"`
 	// Image url for this episode.
 	// If an episode doesn't have its own image, then this field would be the url of the podcast artwork image.

@@ -3,6 +3,8 @@
 package shared
 
 type URL struct {
+	// Indicates if the message sent to this URL should be encrypted.
+	Encrypted *bool `json:"encrypted,omitempty"`
 	// The password for authentication of the notifications.
 	Password *string `json:"password,omitempty"`
 	// The URL in the format: http(s)://domain.com.

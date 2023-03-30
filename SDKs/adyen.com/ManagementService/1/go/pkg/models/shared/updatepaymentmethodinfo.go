@@ -12,4 +12,6 @@ type UpdatePaymentMethodInfo struct {
 	// Indicates whether the payment method is enabled (**true**) or disabled (**false**).
 	Enabled          *bool             `json:"enabled,omitempty"`
 	ShopperStatement *ShopperStatement `json:"shopperStatement,omitempty"`
+	// The list of stores for this payment method
+	StoreIds []string `json:"storeIds,omitempty"`
 }

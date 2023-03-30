@@ -36,7 +36,7 @@ type AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchQueryParams stru
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
-	// Required. Only the fields specified in this mask are updated. Because name and group_key cannot be changed, update_mask is required and must always be: update_mask { paths: "access_levels" }
+	// Required. Only the fields specified in this mask are updated. Because name and group_key cannot be changed, update_mask is required and may only contain the following fields: `access_levels`, `dry_run_access_levels`. update_mask { paths: "access_levels" }
 	UpdateMask *string `queryParam:"style=form,explode=true,name=updateMask"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`

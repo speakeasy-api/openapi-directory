@@ -82,7 +82,7 @@ func (s *image) GetImages(ctx context.Context, request operations.GetImagesReque
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -180,7 +180,7 @@ func (s *image) GetImagesID(ctx context.Context, request operations.GetImagesIDR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
-	client := s.securityClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

@@ -32,7 +32,7 @@ func newTaxes(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 	}
 }
 
-// CreateTaxRates - Creates new tax rates
+// CreateTaxRates - Create new tax rates
 func (s *taxes) CreateTaxRates(ctx context.Context, request operations.CreateTaxRatesRequest) (*operations.CreateTaxRatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes"
@@ -97,7 +97,7 @@ func (s *taxes) CreateTaxRates(ctx context.Context, request operations.CreateTax
 	return res, nil
 }
 
-// DeleteTaxRate - Deletes a single tax rate
+// DeleteTaxRate - Delete a single tax rate
 func (s *taxes) DeleteTaxRate(ctx context.Context, request operations.DeleteTaxRateRequest) (*operations.DeleteTaxRateResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request.PathParams, nil)
@@ -136,7 +136,7 @@ func (s *taxes) DeleteTaxRate(ctx context.Context, request operations.DeleteTaxR
 	return res, nil
 }
 
-// GetProductCountForAllTaxes - Gets all tax rates and a count of products associated with each
+// GetProductCountForAllTaxes - Get all tax rates and a count of products associated with each
 func (s *taxes) GetProductCountForAllTaxes(ctx context.Context, request operations.GetProductCountForAllTaxesRequest) (*operations.GetProductCountForAllTaxesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes/count"
@@ -181,7 +181,7 @@ func (s *taxes) GetProductCountForAllTaxes(ctx context.Context, request operatio
 	return res, nil
 }
 
-// GetTaxRate - Gets a single tax rate
+// GetTaxRate - Get a single tax rate
 func (s *taxes) GetTaxRate(ctx context.Context, request operations.GetTaxRateRequest) (*operations.GetTaxRateResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request.PathParams, nil)
@@ -228,7 +228,7 @@ func (s *taxes) GetTaxRate(ctx context.Context, request operations.GetTaxRateReq
 	return res, nil
 }
 
-// GetTaxRates - Gets all tax rates available
+// GetTaxRates - Get all available tax rates
 func (s *taxes) GetTaxRates(ctx context.Context, request operations.GetTaxRatesRequest) (*operations.GetTaxRatesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes"
@@ -273,7 +273,7 @@ func (s *taxes) GetTaxRates(ctx context.Context, request operations.GetTaxRatesR
 	return res, nil
 }
 
-// GetTaxSettings - Gets the organization tax settings
+// GetTaxSettings - Get the organization tax settings
 func (s *taxes) GetTaxSettings(ctx context.Context, request operations.GetTaxSettingsRequest) (*operations.GetTaxSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes/settings"
@@ -318,7 +318,7 @@ func (s *taxes) GetTaxSettings(ctx context.Context, request operations.GetTaxSet
 	return res, nil
 }
 
-// SetTaxationMode - Updates the organization tax settings
+// SetTaxationMode - Update the organization tax settings
 func (s *taxes) SetTaxationMode(ctx context.Context, request operations.SetTaxationModeRequest) (*operations.SetTaxationModeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/taxes/settings"
@@ -383,7 +383,7 @@ func (s *taxes) SetTaxationMode(ctx context.Context, request operations.SetTaxat
 	return res, nil
 }
 
-// UpdateTaxRate - Updates a single tax rate
+// UpdateTaxRate - Update a single tax rate
 func (s *taxes) UpdateTaxRate(ctx context.Context, request operations.UpdateTaxRateRequest) (*operations.UpdateTaxRateResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/taxes/{taxRateUuid}", request.PathParams, nil)

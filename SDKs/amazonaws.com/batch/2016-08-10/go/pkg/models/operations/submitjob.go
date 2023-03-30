@@ -63,7 +63,7 @@ type SubmitJobRequestBody struct {
 	DependsOn []shared.JobDependency `json:"dependsOn,omitempty"`
 	// An object that contains overrides for the Kubernetes resources of a job.
 	EksPropertiesOverride *SubmitJobRequestBodyEksPropertiesOverride `json:"eksPropertiesOverride,omitempty"`
-	// The job definition used by this job. This value can be one of <code>name</code>, <code>name:revision</code>, or the Amazon Resource Name (ARN) for the job definition. If <code>name</code> is specified without a revision then the latest active revision is used.
+	// <p>The job definition used by this job. This value can be one of <code>definition-name</code>, <code>definition-name:revision</code>, or the Amazon Resource Name (ARN) for the job definition, with or without the revision (<code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i>:<i>revision</i> </code>, or <code>arn:aws:batch:<i>region</i>:<i>account</i>:job-definition/<i>definition-name</i> </code>).</p> <p>If the revision is not specified, then the latest active revision is used.</p>
 	JobDefinition string `json:"jobDefinition"`
 	// The name of the job. It can be up to 128 letters long. The first character must be alphanumeric, can contain uppercase and lowercase letters, numbers, hyphens (-), and underscores (_).
 	JobName string `json:"jobName"`

@@ -5,8 +5,9 @@ package shared
 // AirbyteStream - the immutable schema defined by the source
 type AirbyteStream struct {
 	// Path to the field that will be used to determine if a record is new or modified since the last sync. If not provided by the source, the end user will have to specify the comparable themselves.
-	DefaultCursorField []string               `json:"defaultCursorField,omitempty"`
-	JSONSchema         map[string]interface{} `json:"jsonSchema,omitempty"`
+	DefaultCursorField []string `json:"defaultCursorField,omitempty"`
+	// Stream schema using Json Schema specs.
+	JSONSchema map[string]interface{} `json:"jsonSchema,omitempty"`
 	// Stream's name.
 	Name string `json:"name"`
 	// Optional Source-defined namespace. Airbyte streams from the same sources should have the same namespace. Currently only used by JDBC destinations to determine what schema to write to.

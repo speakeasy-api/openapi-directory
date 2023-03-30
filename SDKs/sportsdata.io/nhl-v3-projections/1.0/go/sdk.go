@@ -14,10 +14,8 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"http://api.sportsdata.io",
-	"https://api.sportsdata.io",
-	"http://azure-api.sportsdata.io",
-	"https://azure-api.sportsdata.io",
+	"http://azure-api.sportsdata.io/v3/nhl/projections",
+	"https://azure-api.sportsdata.io/v3/nhl/projections",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -148,6 +146,51 @@ func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesB
 	return res, nil
 }
 
+// InjuredPlayers - Injured Players
+// This endpoint provides all currently injured NHL players, along with injury details.
+func (s *SDK) InjuredPlayers(ctx context.Context, request operations.InjuredPlayersRequest) (*operations.InjuredPlayersResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/InjuredPlayers", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.InjuredPlayersResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.Player
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Players = out
+		}
+	}
+
+	return res, nil
+}
+
 // ProjectedPlayerGameStatsByDateWInjuriesDfsSalaries - Projected Player Game Stats by Date (w/ Injuries, DFS Salaries)
 func (s *SDK) ProjectedPlayerGameStatsByDateWInjuriesDfsSalaries(ctx context.Context, request operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesRequest) (*operations.ProjectedPlayerGameStatsByDateWInjuriesDfsSalariesResponse, error) {
 	baseURL := s._serverURL
@@ -230,6 +273,51 @@ func (s *SDK) ProjectedPlayerGameStatsByPlayerWInjuriesDfsSalaries(ctx context.C
 			}
 
 			res.PlayerGameProjection = out
+		}
+	}
+
+	return res, nil
+}
+
+// StartingGoaltendersByDate - Starting Goaltenders by Date
+// This endpoint provides the projected & confirmed starting goaltenders for NHL games on a given date.
+func (s *SDK) StartingGoaltendersByDate(ctx context.Context, request operations.StartingGoaltendersByDateRequest) (*operations.StartingGoaltendersByDateResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/StartingGoaltendersByDate/{date}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.StartingGoaltendersByDateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.StartingGoaltenders
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.StartingGoaltenders = out
 		}
 	}
 

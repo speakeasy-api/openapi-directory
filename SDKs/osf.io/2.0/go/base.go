@@ -10,6 +10,7 @@ import (
 	"strings"
 )
 
+// base - This is the "home page" of the API you can get important autentication information for the user making the request and get links to other resources.
 type base struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -31,14 +32,12 @@ func newBase(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 }
 
 // BaseRead - Root
-// Welcome to the Open Science Framework API. With this API you can access users, projects, components, logs, and files from the [Open Science Framework](https://osf.io/). The Open Science Framework (OSF) is a free, open-source service maintained by the [Center for Open Science](http://cos.io/).
-//
 // #### Returns
 // A JSON object with `meta` and `links` keys.
 //
 // The `meta` key contains information such as a welcome message from the API, the specified version of the request, and the full representation of the current user, if authentication credentials were provided in the request.
 //
-// The `links` key contains links to the following entity collections: [addons](#tag/Addons), [collections](), [institutions](#tag/Institutions), [licenses](#tag/Licenses), [metaschemas](#tag/Metaschemas), [nodes](#tag/Nodes), [registrations](#tag/Registrations), [users](#tag/Users)
+// The `links` key contains links to the following entity collections: [addons](#tag/Addons), [collections](), [institutions](#tag/Institutions), [licenses](#tag/Licenses), [registration schemas](#tag/Registration Schemas), [nodes](#tag/Nodes), [registrations](#tag/Registrations), [users](#tag/Users)
 func (s *base) BaseRead(ctx context.Context) (*operations.BaseReadResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/"

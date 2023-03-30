@@ -8,8 +8,8 @@ import (
 )
 
 type SearchAccountPathParams struct {
-	// The account to search in; either the username or the UUID in curly braces
-	Username string `pathParam:"style=simple,explode=false,name=username"`
+	// Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
+	SelectedUser string `pathParam:"style=simple,explode=false,name=selected_user"`
 }
 
 type SearchAccountQueryParams struct {

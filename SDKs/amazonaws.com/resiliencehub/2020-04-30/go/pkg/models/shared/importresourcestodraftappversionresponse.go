@@ -6,6 +6,7 @@ package shared
 type ImportResourcesToDraftAppVersionResponse struct {
 	AppArn           string                       `json:"appArn"`
 	AppVersion       string                       `json:"appVersion"`
+	EksSources       []EksSource                  `json:"eksSources,omitempty"`
 	SourceArns       []string                     `json:"sourceArns,omitempty"`
 	Status           ResourceImportStatusTypeEnum `json:"status"`
 	TerraformSources []TerraformSource            `json:"terraformSources,omitempty"`

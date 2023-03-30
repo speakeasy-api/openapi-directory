@@ -13,6 +13,9 @@ type GetTasksForProjectPathParams struct {
 }
 
 type GetTasksForProjectQueryParams struct {
+	// Only return tasks that are either incomplete or that have been completed since this time. Accepts a date-time string or the keyword *now*.
+	//
+	CompletedSince *string `queryParam:"style=form,explode=true,name=completed_since"`
 	// Results per page.
 	// The number of objects to return per page. The value must be between 1 and 100.
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`

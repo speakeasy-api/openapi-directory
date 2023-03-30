@@ -31,6 +31,8 @@ type UpdateSceneRequestBody struct {
 	ContentLocation *string `json:"contentLocation,omitempty"`
 	// The description of this scene.
 	Description *string `json:"description,omitempty"`
+	// The scene metadata.
+	SceneMetadata map[string]string `json:"sceneMetadata,omitempty"`
 }
 
 type UpdateSceneRequest struct {

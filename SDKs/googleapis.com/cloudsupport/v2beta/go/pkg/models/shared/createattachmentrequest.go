@@ -5,5 +5,5 @@ package shared
 // CreateAttachmentRequestInput - The request message for the CreateAttachment endpoint.
 type CreateAttachmentRequestInput struct {
 	// Represents a file attached to a support case.
-	Attachment *AttachmentInput `json:"attachment,omitempty"`
+	Attachment *AttachmentInput
 }

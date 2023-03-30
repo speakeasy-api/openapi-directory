@@ -12,7 +12,7 @@ type GetLatestResultFileSecurity struct {
 }
 
 type GetLatestResultFilePathParams struct {
-	// The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the createSchedule method.
+	// The ID of the schedule for which to retrieve the latest result file. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
 	ScheduleID string `pathParam:"style=simple,explode=false,name=schedule_id"`
 }
 

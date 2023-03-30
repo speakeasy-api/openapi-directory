@@ -4,6 +4,6 @@ package shared
 
 // QueryOverride - QueryOverride. Query message defines query override for HTTP targets.
 type QueryOverride struct {
-	// The query parameters (e.g., qparam1=123&qparam2=456). Default is Empty string.
+	// The query parameters (e.g., qparam1=123&qparam2=456). Default is an empty string.
 	QueryParams *string `json:"queryParams,omitempty"`
 }

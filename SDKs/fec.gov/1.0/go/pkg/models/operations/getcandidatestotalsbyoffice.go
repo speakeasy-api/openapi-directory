@@ -43,6 +43,9 @@ type GetCandidatesTotalsByOfficeQueryParams struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// `True` indicates that full election period of a candidate.
+	// `False` indicates that two year election cycle.
+	ElectionFull *bool `queryParam:"style=form,explode=true,name=election_full"`
 	// Filter records to only those that were applicable to a given
 	// two-year period.The cycle begins with an odd year and is named
 	// for its ending, even year.
@@ -53,6 +56,20 @@ type GetCandidatesTotalsByOfficeQueryParams struct {
 	// specified, only inactive candidates are returned.
 	//
 	IsActiveCandidate *bool `queryParam:"style=form,explode=true,name=is_active_candidate"`
+	// Filter records to only those that are applicable to a given two-year
+	// period. This cycle follows the traditional House election cycle and
+	// subdivides the presidential and Senate elections into comparable
+	// two-year blocks. The cycle begins with an odd year and is named for its
+	// ending, even year.
+	//
+	MaxElectionCycle *int `queryParam:"style=form,explode=true,name=max_election_cycle"`
+	// Filter records to only those that are applicable to a given two-year
+	// period. This cycle follows the traditional House election cycle and
+	// subdivides the presidential and Senate elections into comparable
+	// two-year blocks. The cycle begins with an odd year and is named for its
+	// ending, even year.
+	//
+	MinElectionCycle *int `queryParam:"style=form,explode=true,name=min_election_cycle"`
 	// Federal office candidate runs for: H, S or P
 	Office *GetCandidatesTotalsByOfficeOfficeEnum `queryParam:"style=form,explode=true,name=office"`
 	// For paginating through results, starting at page 1

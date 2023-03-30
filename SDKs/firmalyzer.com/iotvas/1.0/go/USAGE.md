@@ -13,8 +13,8 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.DetectDeviceDetectPostRequest{
-        Security: operations.DetectDeviceDetectPostSecurity{
+    req := operations.DetectDeviceRequest{
+        Security: operations.DetectDeviceSecurity{
             APIKeyHeader: shared.SchemeAPIKeyHeader{
                 APIKey: "YOUR_API_KEY_HERE",
             },
@@ -33,7 +33,7 @@ func main() {
     }
 
     ctx := context.Background()
-    res, err := s.Device.DetectDeviceDetectPost(ctx, req)
+    res, err := s.Device.DetectDevice(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

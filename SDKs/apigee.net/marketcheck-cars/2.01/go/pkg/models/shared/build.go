@@ -12,6 +12,8 @@ type Build struct {
 	BodyType *string `json:"body_type,omitempty"`
 	// City miles of the car
 	CityMiles *string `json:"city_miles,omitempty"`
+	// City Mileage in MPG
+	CityMpg *int64 `json:"city_mpg,omitempty"`
 	// No of cylinders of the car
 	Cylinders *int64 `json:"cylinders,omitempty"`
 	// No of doors of the car
@@ -32,6 +34,8 @@ type Build struct {
 	FuelType *string `json:"fuel_type,omitempty"`
 	// Highway miles of the car
 	HighwayMiles *string `json:"highway_miles,omitempty"`
+	// Highway Mileage in MPG
+	HighwayMpg *int64 `json:"highway_mpg,omitempty"`
 	// Made in of the car
 	MadeIn *string `json:"made_in,omitempty"`
 	// Car Make
@@ -46,6 +50,8 @@ type Build struct {
 	OverallLength *string `json:"overall_length,omitempty"`
 	// Overall width of the car
 	OverallWidth *string `json:"overall_width,omitempty"`
+	// powertrain_type of the car
+	PowertrainType *string `json:"powertrain_type,omitempty"`
 	// Short trim of the car
 	ShortTrim *string `json:"short_trim,omitempty"`
 	// Std seating of the car

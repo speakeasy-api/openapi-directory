@@ -10,10 +10,14 @@ import (
 type FileEntity struct {
 	// File CRC32 checksum. This is sometimes delayed, so if you get a blank response, wait and try again.
 	Crc32 *string `json:"crc32,omitempty"`
+	// File created date/time
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// File/Folder display name
 	DisplayName *string `json:"display_name,omitempty"`
 	// Link to download file. Provided only in response to a download request.
 	DownloadURI *string `json:"download_uri,omitempty"`
+	// Is this folder locked and unable to be modified?
+	IsLocked *bool `json:"is_locked,omitempty"`
 	// File MD5 checksum. This is sometimes delayed, so if you get a blank response, wait and try again.
 	Md5 *string `json:"md5,omitempty"`
 	// MIME Type.  This is determined by the filename extension and is not stored separately internally.
@@ -22,7 +26,7 @@ type FileEntity struct {
 	Mtime *time.Time `json:"mtime,omitempty"`
 	// File/Folder path
 	Path *string `json:"path,omitempty"`
-	// A short string representing the current user's permissions.  Can be `r`,`w`,`p`, or any combination
+	// A short string representing the current user's permissions.  Can be `r`,`w`,`d`, `l` or any combination
 	Permissions *string        `json:"permissions,omitempty"`
 	Preview     *PreviewEntity `json:"preview,omitempty"`
 	// File preview ID

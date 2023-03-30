@@ -8,6 +8,6 @@ type FileCommentEntity struct {
 	Body *string `json:"body,omitempty"`
 	// File Comment ID
 	ID *int `json:"id,omitempty"`
-	// Create File Comment Reaction
-	Reactions *FileCommentReactionEntity `json:"reactions,omitempty"`
+	// Reactions to this comment.
+	Reactions []FileCommentReactionEntity `json:"reactions,omitempty"`
 }

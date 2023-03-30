@@ -6,19 +6,19 @@ package shared
 type Shipment struct {
 	// This type defines a shipment cancellation by the date and time the cancellation request was made and the current status of the request.
 	Cancellation *ShipmentCancellation `json:"cancellation,omitempty"`
-	// The date and time the shipment was created, formatted as an ISO 8601 string, which is based on the 24-hour Coordinated Universal Time (UTC) clock. Format: [YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[SSS]Z Example: 2018-08-20T07:09:00.000Z
+	// The date and time the shipment was created, formatted as an <a href="https://www.iso.org/iso-8601-date-and-time-format.html" title="https://www.iso.org" target="_blank">ISO 8601</a> string, which is based on the 24-hour Coordinated Universal Time (UTC) clock.  <br><br><b>Format:</b> <code>[YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[SSS]Z</code> <br><b>Example:</b> <code>2018-08-20T07:09:00.000Z</code>
 	CreationDate *string `json:"creationDate,omitempty"`
 	// If supported by the selected shipping carrier, this field can contain optional seller text to be printed on the shipping label.
 	LabelCustomMessage *string `json:"labelCustomMessage,omitempty"`
-	// The direct URL the seller can use to download an image of the shipping label. By default, the file format is PDF. See downloadLabelFile for requesting different response file formats.
+	// The direct URL the seller can use to download an image of the shipping label. By default, the file format is PDF. See <a href="/api-docs/sell/logistics/resources/shipment/methods/downloadLabelFile">downloadLabelFile</a> for requesting different response file formats.
 	LabelDownloadURL *string `json:"labelDownloadUrl,omitempty"`
-	// The seller's desired label size. The support for multi-sized labels is shipping-carrier specific and if the size requested in the creaateFromShippingQuote call matches a size the carrier supports, the value will be represented here in the shipment. Currently, the only valid value is: 4&quot;x6&quot;
+	// The seller's desired label size. The support for multi-sized labels is shipping-carrier specific and if the size requested in the <b>creaateFromShippingQuote</b> call matches a size the carrier supports, the value will be represented here in the shipment. <br><br>Currently, the only valid value is: <code>4"x6"</code>
 	LabelSize *string `json:"labelSize,omitempty"`
 	// This list value is optionally assigned by the seller. When present, each element in the returned list contains seller-assigned information about an order (such as an order number). Because a package can contain all or part of one or more orders, this field provides a way for sellers to identify the packages that contain specific orders.
 	Orders []Order `json:"orders,omitempty"`
 	// This complex type specifies the dimensions and weight of a package.
 	PackageSpecification *PackageSpecification `json:"packageSpecification,omitempty"`
-	// The &quot;rate&quot; that has been selected and purchased for the shipment, as referenced by the rateId value.
+	// The "rate" that has been selected and purchased for the shipment, as referenced by the <b>rateId</b> value.
 	Rate *PurchasedRate `json:"rate,omitempty"`
 	// This complex type contains contact information for an individual buyer or seller.
 	ReturnTo *Contact `json:"returnTo,omitempty"`
@@ -26,7 +26,7 @@ type Shipment struct {
 	ShipFrom *Contact `json:"shipFrom,omitempty"`
 	// This complex type contains contact information for an individual buyer or seller.
 	ShipTo *Contact `json:"shipTo,omitempty"`
-	// The unique eBay-assigned ID for the shipment. The ID is generated when the shipment is created by a call to createFromShippingQuote.
+	// The unique eBay-assigned ID for the shipment. The ID is generated when the shipment is created by a call to <b>createFromShippingQuote</b>.
 	ShipmentID *string `json:"shipmentId,omitempty"`
 	// A unique carrier-assigned ID string that can be used to track the shipment.
 	ShipmentTrackingNumber *string `json:"shipmentTrackingNumber,omitempty"`

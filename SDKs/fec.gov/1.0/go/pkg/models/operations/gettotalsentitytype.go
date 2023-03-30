@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
+	"openapi/pkg/types"
 )
 
 // GetTotalsEntityTypeEntityTypeEnum - Committee groupings based on FEC filing form.                 Choose one of: `presidential`, `pac`, `party`, `pac-party`,                 `house-senate`, or `ie-only`
@@ -147,7 +148,7 @@ type GetTotalsEntityTypeQueryParams struct {
 	CommitteeDesignation []string `queryParam:"style=form,explode=true,name=committee_designation"`
 	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
 	//
-	CommitteeID *string `queryParam:"style=form,explode=true,name=committee_id"`
+	CommitteeID []string `queryParam:"style=form,explode=true,name=committee_id"`
 	// US state or territory
 	CommitteeState []string `queryParam:"style=form,explode=true,name=committee_state"`
 	// The one-letter type code of the organization:
@@ -155,7 +156,7 @@ type GetTotalsEntityTypeQueryParams struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -187,6 +188,8 @@ type GetTotalsEntityTypeQueryParams struct {
 	// Filter for all amounts less than a value.
 	//
 	MaxDisbursements *string `queryParam:"style=form,explode=true,name=max_disbursements"`
+	// Filter for committees whose first Form 1 was received on or before this date.
+	MaxFirstF1Date *types.Date `queryParam:"style=form,explode=true,name=max_first_f1_date"`
 	// Filter for all amounts less than a value.
 	//
 	MaxLastCashOnHandEndPeriod *string `queryParam:"style=form,explode=true,name=max_last_cash_on_hand_end_period"`
@@ -199,6 +202,8 @@ type GetTotalsEntityTypeQueryParams struct {
 	// Filter for all amounts greater than a value.
 	//
 	MinDisbursements *string `queryParam:"style=form,explode=true,name=min_disbursements"`
+	// Filter for committees whose first Form 1 was received on or after this date.
+	MinFirstF1Date *types.Date `queryParam:"style=form,explode=true,name=min_first_f1_date"`
 	// Filter for all amounts greater than a value.
 	//
 	MinLastCashOnHandEndPeriod *string `queryParam:"style=form,explode=true,name=min_last_cash_on_hand_end_period"`

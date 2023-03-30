@@ -1584,7 +1584,7 @@ func (s *SDK) UpdateLoggingConfiguration(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.AccessDeniedException = out
+			res.ConflictException = out
 		}
 	case httpRes.StatusCode == 481:
 		switch {
@@ -1594,7 +1594,7 @@ func (s *SDK) UpdateLoggingConfiguration(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.ResourceNotFoundException = out
+			res.AccessDeniedException = out
 		}
 	case httpRes.StatusCode == 482:
 		switch {
@@ -1604,9 +1604,19 @@ func (s *SDK) UpdateLoggingConfiguration(ctx context.Context, request operations
 				return nil, err
 			}
 
-			res.PendingVerification = out
+			res.ResourceNotFoundException = out
 		}
 	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PendingVerification = out
+		}
+	case httpRes.StatusCode == 484:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out interface{}

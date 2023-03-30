@@ -9,7 +9,7 @@ import (
 
 // TransferInstrumentTypeEnum - The type of transfer instrument.
 //
-// Possible values: **bankAccount**, **recurringDetail**.
+// Possible value: **bankAccount**.
 type TransferInstrumentTypeEnum string
 
 const (
@@ -35,16 +35,15 @@ func (e *TransferInstrumentTypeEnum) UnmarshalJSON(data []byte) error {
 
 // TransferInstrument - OK - the request has succeeded.
 type TransferInstrument struct {
-	BankAccount interface{} `json:"bankAccount,omitempty"`
+	BankAccount BankAccountInfo `json:"bankAccount"`
 	// List of documents uploaded for the transfer instrument.
 	Documents []EntityReference `json:"documents,omitempty"`
 	// The unique identifier of the transfer instrument.
 	ID string `json:"id"`
 	// The unique identifier of the [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities__resParam_id) that owns the transfer instrument.
-	LegalEntityID   string           `json:"legalEntityId"`
-	RecurringDetail *RecurringDetail `json:"recurringDetail,omitempty"`
+	LegalEntityID string `json:"legalEntityId"`
 	// The type of transfer instrument.
 	//
-	// Possible values: **bankAccount**, **recurringDetail**.
+	// Possible value: **bankAccount**.
 	Type TransferInstrumentTypeEnum `json:"type"`
 }

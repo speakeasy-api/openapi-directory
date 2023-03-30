@@ -74,7 +74,7 @@ func main() {
 ### Projects
 
 * `WorkflowsProjectsLocationsList` - Lists information about the supported locations for this service.
-* `WorkflowsProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `WorkflowsProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `WorkflowsProjectsLocationsWorkflowsCreate` - Creates a new workflow. If a workflow with the specified name already exists in the specified project and location, the long running operation will return ALREADY_EXISTS error.
 * `WorkflowsProjectsLocationsWorkflowsDelete` - Deletes a workflow with the specified name. This method also cancels and deletes all running executions of the workflow.
 * `WorkflowsProjectsLocationsWorkflowsGet` - Gets details of a single Workflow.

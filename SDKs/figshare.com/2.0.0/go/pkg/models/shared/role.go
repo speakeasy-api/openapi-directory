@@ -4,11 +4,11 @@ package shared
 
 type Role struct {
 	// Role category
-	Category *string `json:"category,omitempty"`
+	Category string `json:"category"`
 	// Role description
-	Description *string `json:"description,omitempty"`
+	Description string `json:"description"`
 	// Role id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Role name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 }

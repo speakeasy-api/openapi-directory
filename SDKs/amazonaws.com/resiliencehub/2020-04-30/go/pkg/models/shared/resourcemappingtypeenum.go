@@ -15,6 +15,7 @@ const (
 	ResourceMappingTypeEnumAppRegistryApp ResourceMappingTypeEnum = "AppRegistryApp"
 	ResourceMappingTypeEnumResourceGroup  ResourceMappingTypeEnum = "ResourceGroup"
 	ResourceMappingTypeEnumTerraform      ResourceMappingTypeEnum = "Terraform"
+	ResourceMappingTypeEnumEks            ResourceMappingTypeEnum = "EKS"
 )
 
 func (e *ResourceMappingTypeEnum) UnmarshalJSON(data []byte) error {
@@ -32,6 +33,8 @@ func (e *ResourceMappingTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ResourceGroup":
 		fallthrough
 	case "Terraform":
+		fallthrough
+	case "EKS":
 		*e = ResourceMappingTypeEnum(s)
 		return nil
 	default:

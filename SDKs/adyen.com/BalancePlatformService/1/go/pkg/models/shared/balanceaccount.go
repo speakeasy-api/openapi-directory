@@ -62,6 +62,6 @@ type BalanceAccount struct {
 	// The key must be a three-character [ISO currency code](https://docs.adyen.com/development-resources/currency-codes) in uppercase. For example, **EUR**. The value must be an object containing the sweep configuration.
 	SweepConfigurations map[string]SweepConfiguration `json:"sweepConfigurations,omitempty"`
 	// The [time zone](https://www.iana.org/time-zones) of the balance account. For example, **Europe/Amsterdam**.
-	// If not set, the time zone of the account holder will be used. For possible values, see the [list of time zone codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+	// Defaults to the time zone of the account holder if no time zone is set. For possible values, see the [list of time zone codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 	TimeZone *string `json:"timeZone,omitempty"`
 }

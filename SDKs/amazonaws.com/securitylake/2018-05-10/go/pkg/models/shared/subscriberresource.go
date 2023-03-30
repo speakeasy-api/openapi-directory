@@ -12,6 +12,8 @@ type SubscriberResource struct {
 	AccountID             string                  `json:"accountId"`
 	CreatedAt             *time.Time              `json:"createdAt,omitempty"`
 	ExternalID            *string                 `json:"externalId,omitempty"`
+	ResourceShareArn      *string                 `json:"resourceShareArn,omitempty"`
+	ResourceShareName     *string                 `json:"resourceShareName,omitempty"`
 	RoleArn               *string                 `json:"roleArn,omitempty"`
 	S3BucketArn           *string                 `json:"s3BucketArn,omitempty"`
 	SnsArn                *string                 `json:"snsArn,omitempty"`

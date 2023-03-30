@@ -4,11 +4,11 @@ package shared
 
 type ProjectCollaborator struct {
 	// Collaborator name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// Collaborator role
-	RoleName *string `json:"role_name,omitempty"`
+	RoleName string `json:"role_name"`
 	// Status of collaborator invitation
-	Status *string `json:"status,omitempty"`
+	Status string `json:"status"`
 	// Collaborator id
-	UserID *int64 `json:"user_id,omitempty"`
+	UserID int64 `json:"user_id"`
 }

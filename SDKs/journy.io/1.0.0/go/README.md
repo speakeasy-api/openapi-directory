@@ -25,11 +25,31 @@ func main() {
     s := sdk.New()
 
     req := operations.AddUserToAccountRequest{
-        PathParams: operations.AddUserToAccountPathParams{
-            AccountID: "unde",
-        },
         Request: operations.AddUserToAccountRequestBody{
-            UserID: "deserunt",
+            Account: operations.AddUserToAccountRequestBodyAccount{
+                AccountID: "unde",
+                Domain: "deserunt",
+            },
+            Users: []AddUserToAccountRequestBodyUsers{
+                operations.AddUserToAccountRequestBodyUsers{
+                    Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
+                        Email: "Leatha_Stiedemann@hotmail.com",
+                        UserID: "nihil",
+                    },
+                },
+                operations.AddUserToAccountRequestBodyUsers{
+                    Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
+                        Email: "Luna.Hoppe@yahoo.com",
+                        UserID: "saepe",
+                    },
+                },
+                operations.AddUserToAccountRequestBodyUsers{
+                    Identification: operations.AddUserToAccountRequestBodyUsersIdentification{
+                        Email: "Vincenzo.Goldner@gmail.com",
+                        UserID: "autem",
+                    },
+                },
+            },
         },
     }
 
@@ -52,16 +72,33 @@ func main() {
 
 ### Accounts
 
-* `AddUserToAccount` - Add user to account
+* `AddUserToAccount` - Add users to an account
+* `DeleteAccount` - Delete account
 * `RemoveUserFromAccount` - Remove user from account
 * `UpsertAccount` - Create or update account
 
 ### Events
 
-* `TrackJourneyEvent` - Push event
+* `GetEvents` - Get events
+* `TrackJourneyEvent` - Track event
+
+### Properties
+
+* `GetAccountProperties` - Get account properties
+* `GetUserProperties` - Get user properties
+
+### Segments
+
+* `GetAccountSegments` - Get account segments
+* `GetUserSegments` - Get user segments
+
+### Track
+
+* `TrackEvent` - Track event
 
 ### Users
 
+* `DeleteUser` - Delete user
 * `Link` - Link web activity to user
 * `UpsertUser` - Create or update user
 

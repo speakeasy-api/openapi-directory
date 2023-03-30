@@ -17,8 +17,9 @@ type GetPermissionGroupsRequest struct {
 }
 
 type GetPermissionGroupsResponse struct {
-	ContentType           string
-	PermissionGroupModels []shared.PermissionGroupModel
-	StatusCode            int
-	RawResponse           *http.Response
+	ContentType                  string
+	PermissionGroupModelHaljsons []shared.PermissionGroupModelHaljson
+	PermissionGroupModels        []shared.PermissionGroupModel
+	StatusCode                   int
+	RawResponse                  *http.Response
 }

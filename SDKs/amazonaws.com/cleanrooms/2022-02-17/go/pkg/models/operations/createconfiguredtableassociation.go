@@ -31,6 +31,8 @@ type CreateConfiguredTableAssociationRequestBody struct {
 	Name string `json:"name"`
 	// The service will assume this role to access catalog metadata and query the table.
 	RoleArn string `json:"roleArn"`
+	// Map of tags assigned to a resource
+	Tags map[string]string `json:"tags,omitempty"`
 }
 
 type CreateConfiguredTableAssociationRequest struct {

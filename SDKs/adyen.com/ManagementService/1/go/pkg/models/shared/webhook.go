@@ -14,9 +14,9 @@ import (
 type WebhookCommunicationFormatEnum string
 
 const (
-	WebhookCommunicationFormatEnumHTTP WebhookCommunicationFormatEnum = "HTTP"
-	WebhookCommunicationFormatEnumJSON WebhookCommunicationFormatEnum = "JSON"
-	WebhookCommunicationFormatEnumSoap WebhookCommunicationFormatEnum = "SOAP"
+	WebhookCommunicationFormatEnumHTTP WebhookCommunicationFormatEnum = "http"
+	WebhookCommunicationFormatEnumJSON WebhookCommunicationFormatEnum = "json"
+	WebhookCommunicationFormatEnumSoap WebhookCommunicationFormatEnum = "soap"
 )
 
 func (e *WebhookCommunicationFormatEnum) UnmarshalJSON(data []byte) error {
@@ -25,11 +25,11 @@ func (e *WebhookCommunicationFormatEnum) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch s {
-	case "HTTP":
+	case "http":
 		fallthrough
-	case "JSON":
+	case "json":
 		fallthrough
-	case "SOAP":
+	case "soap":
 		*e = WebhookCommunicationFormatEnum(s)
 		return nil
 	default:
@@ -44,9 +44,9 @@ func (e *WebhookCommunicationFormatEnum) UnmarshalJSON(data []byte) error {
 type WebhookFilterMerchantAccountTypeEnum string
 
 const (
-	WebhookFilterMerchantAccountTypeEnumExcludeList WebhookFilterMerchantAccountTypeEnum = "EXCLUDE_LIST"
-	WebhookFilterMerchantAccountTypeEnumIncludeAll  WebhookFilterMerchantAccountTypeEnum = "INCLUDE_ALL"
-	WebhookFilterMerchantAccountTypeEnumIncludeList WebhookFilterMerchantAccountTypeEnum = "INCLUDE_LIST"
+	WebhookFilterMerchantAccountTypeEnumAllAccounts     WebhookFilterMerchantAccountTypeEnum = "allAccounts"
+	WebhookFilterMerchantAccountTypeEnumExcludeAccounts WebhookFilterMerchantAccountTypeEnum = "excludeAccounts"
+	WebhookFilterMerchantAccountTypeEnumIncludeAccounts WebhookFilterMerchantAccountTypeEnum = "includeAccounts"
 )
 
 func (e *WebhookFilterMerchantAccountTypeEnum) UnmarshalJSON(data []byte) error {
@@ -55,11 +55,11 @@ func (e *WebhookFilterMerchantAccountTypeEnum) UnmarshalJSON(data []byte) error 
 		return err
 	}
 	switch s {
-	case "EXCLUDE_LIST":
+	case "allAccounts":
 		fallthrough
-	case "INCLUDE_ALL":
+	case "excludeAccounts":
 		fallthrough
-	case "INCLUDE_LIST":
+	case "includeAccounts":
 		*e = WebhookFilterMerchantAccountTypeEnum(s)
 		return nil
 	default:
@@ -100,16 +100,14 @@ func (e *WebhookNetworkTypeEnum) UnmarshalJSON(data []byte) error {
 type WebhookSslVersionEnum string
 
 const (
-	WebhookSslVersionEnumHTTP                 WebhookSslVersionEnum = "HTTP"
-	WebhookSslVersionEnumSsl                  WebhookSslVersionEnum = "SSL"
-	WebhookSslVersionEnumSslv3                WebhookSslVersionEnum = "SSLV3"
-	WebhookSslVersionEnumSslInsecureCiphers   WebhookSslVersionEnum = "SSL_INSECURE_CIPHERS"
-	WebhookSslVersionEnumTLS                  WebhookSslVersionEnum = "TLS"
-	WebhookSslVersionEnumTlsv1                WebhookSslVersionEnum = "TLSV1"
-	WebhookSslVersionEnumTlsv11               WebhookSslVersionEnum = "TLSV1_1"
-	WebhookSslVersionEnumTlsv12               WebhookSslVersionEnum = "TLSV1_2"
-	WebhookSslVersionEnumTlsv13               WebhookSslVersionEnum = "TLSV1_3"
-	WebhookSslVersionEnumTlsv1InsecureCiphers WebhookSslVersionEnum = "TLSV1_INSECURE_CIPHERS"
+	WebhookSslVersionEnumHTTP   WebhookSslVersionEnum = "HTTP"
+	WebhookSslVersionEnumSsl    WebhookSslVersionEnum = "SSL"
+	WebhookSslVersionEnumSsLv3  WebhookSslVersionEnum = "SSLv3"
+	WebhookSslVersionEnumTLS    WebhookSslVersionEnum = "TLS"
+	WebhookSslVersionEnumTlSv1  WebhookSslVersionEnum = "TLSv1"
+	WebhookSslVersionEnumTlSv11 WebhookSslVersionEnum = "TLSv1.1"
+	WebhookSslVersionEnumTlSv12 WebhookSslVersionEnum = "TLSv1.2"
+	WebhookSslVersionEnumTlSv13 WebhookSslVersionEnum = "TLSv1.3"
 )
 
 func (e *WebhookSslVersionEnum) UnmarshalJSON(data []byte) error {
@@ -122,21 +120,17 @@ func (e *WebhookSslVersionEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "SSL":
 		fallthrough
-	case "SSLV3":
-		fallthrough
-	case "SSL_INSECURE_CIPHERS":
+	case "SSLv3":
 		fallthrough
 	case "TLS":
 		fallthrough
-	case "TLSV1":
+	case "TLSv1":
 		fallthrough
-	case "TLSV1_1":
+	case "TLSv1.1":
 		fallthrough
-	case "TLSV1_2":
+	case "TLSv1.2":
 		fallthrough
-	case "TLSV1_3":
-		fallthrough
-	case "TLSV1_INSECURE_CIPHERS":
+	case "TLSv1.3":
 		*e = WebhookSslVersionEnum(s)
 		return nil
 	default:

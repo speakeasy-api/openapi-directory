@@ -17,6 +17,7 @@ const (
 	PhaseStateEnumSucceeded        PhaseStateEnum = "SUCCEEDED"
 	PhaseStateEnumFailed           PhaseStateEnum = "FAILED"
 	PhaseStateEnumAborted          PhaseStateEnum = "ABORTED"
+	PhaseStateEnumSkipped          PhaseStateEnum = "SKIPPED"
 )
 
 func (e *PhaseStateEnum) UnmarshalJSON(data []byte) error {
@@ -36,6 +37,8 @@ func (e *PhaseStateEnum) UnmarshalJSON(data []byte) error {
 	case "FAILED":
 		fallthrough
 	case "ABORTED":
+		fallthrough
+	case "SKIPPED":
 		*e = PhaseStateEnum(s)
 		return nil
 	default:
@@ -45,10 +48,14 @@ func (e *PhaseStateEnum) UnmarshalJSON(data []byte) error {
 
 // Phase - Phase represents a collection of jobs that are logically grouped together for a `Rollout`.
 type Phase struct {
+	// ChildRollouts job composition
+	ChildRolloutJobs *ChildRolloutJobs `json:"childRolloutJobs,omitempty"`
 	// Deployment job composition.
 	DeploymentJobs *DeploymentJobs `json:"deploymentJobs,omitempty"`
 	// Output only. The ID of the Phase.
 	ID *string `json:"id,omitempty"`
+	// Output only. Additional information on why the Phase was skipped, if available.
+	SkipMessage *string `json:"skipMessage,omitempty"`
 	// Output only. Current state of the Phase.
 	State *PhaseStateEnum `json:"state,omitempty"`
 }

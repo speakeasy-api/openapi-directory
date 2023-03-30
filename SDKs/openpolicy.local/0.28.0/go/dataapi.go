@@ -393,10 +393,20 @@ func (s *dataAPI) PutDocument(ctx context.Context, request operations.PutDocumen
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/data/{path}", request.PathParams, nil)
 
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+
+	req.Header.Set("Content-Type", reqContentType)
 
 	utils.PopulateHeaders(ctx, req, request.Headers)
 

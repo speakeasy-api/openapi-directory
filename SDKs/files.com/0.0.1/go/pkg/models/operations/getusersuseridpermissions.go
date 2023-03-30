@@ -13,19 +13,19 @@ type GetUsersUserIDPermissionsPathParams struct {
 }
 
 type GetUsersUserIDPermissionsQueryParams struct {
-	// Used for pagination.  Send a cursor value to resume an existing list from the point at which you left off.  Get a cursor from an existing list via the X-Files-Cursor-Next header.
+	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
-	// If set, return records where the specifiied field is equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`.
+	// If set, return records where the specified field is equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
 	Filter map[string]interface{} `queryParam:"style=form,explode=true,name=filter"`
-	// If set, return records where the specifiied field is greater than the supplied value. Valid fields are `group_id`, `user_id` or `path`.
+	// If set, return records where the specified field is greater than the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
 	FilterGt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gt"`
-	// If set, return records where the specifiied field is greater than or equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`.
+	// If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
 	FilterGteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gteq"`
-	// If set, return records where the specifiied field is equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`.
+	// If set, return records where the specified field is equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
 	FilterLike map[string]interface{} `queryParam:"style=form,explode=true,name=filter_like"`
-	// If set, return records where the specifiied field is less than the supplied value. Valid fields are `group_id`, `user_id` or `path`.
+	// If set, return records where the specified field is less than the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
 	FilterLt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lt"`
-	// If set, return records where the specifiied field is less than or equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`.
+	// If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `group_id`, `user_id` or `path`. Valid field combinations are `[ group_id, path ]` and `[ user_id, path ]`.
 	FilterLteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lteq"`
 	// DEPRECATED: Group ID.  If provided, will scope permissions to this group. Use `filter[group_id]` instead.`
 	GroupID *string `queryParam:"style=form,explode=true,name=group_id"`
@@ -35,7 +35,7 @@ type GetUsersUserIDPermissionsQueryParams struct {
 	Path *string `queryParam:"style=form,explode=true,name=path"`
 	// Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
-	// If set, sort records by the specified field in either 'asc' or 'desc' direction (e.g. sort_by[last_login_at]=desc). Valid fields are `group_id`, `path`, `user_id` or `permission`.
+	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[group_id]=desc`). Valid fields are `group_id`, `path`, `user_id` or `permission`.
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
 }
 

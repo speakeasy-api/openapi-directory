@@ -56,6 +56,7 @@ func main() {
 
 * `AreGamesInProgress` - Are Games In Progress
 * `ByeWeeks` - Bye Weeks
+* `DepthCharts` - Depth Charts
 * `GameStatsBySeasonDeprecatedUseTeamGameStatsInstead` - Game Stats by Season (Deprecated, use Team Game Stats instead)
 * `GameStatsByWeekDeprecatedUseTeamGameStatsInstead` - Game Stats by Week (Deprecated, use Team Game Stats instead)
 * `News` - News
@@ -78,6 +79,7 @@ func main() {
 * `SeasonUpcoming` - Season Upcoming
 * `Stadiums` - Stadiums
 * `Standings` - Standings
+* `TeamGameLogsBySeason` - Team Game Logs By Season
 * `TeamGameStats` - Team Game Stats
 * `TeamSeasonStats` - Team Season Stats
 * `TeamsActive` - Teams (Active)

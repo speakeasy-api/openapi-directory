@@ -22,6 +22,8 @@ type FileActionBeginUploadRequestBody struct {
 	Ref   *string `multipartForm:"name=ref"`
 	// File byte offset to restart from.
 	Restart *int `multipartForm:"name=restart"`
+	// Total bytes of file being uploaded (include bytes being retained if appending/restarting).
+	Size *int `multipartForm:"name=size"`
 	// Allow file rename instead of overwrite?
 	WithRename *bool `multipartForm:"name=with_rename"`
 }

@@ -73,6 +73,7 @@ type PlayerGameProjection struct {
 	StatID                      *int64   `json:"StatId,omitempty"`
 	Suspension                  *bool    `json:"Suspension,omitempty"`
 	SuspensionReason            *string  `json:"SuspensionReason,omitempty"`
+	Tackles                     *float64 `json:"Tackles,omitempty"`
 	TacklesWon                  *float64 `json:"TacklesWon,omitempty"`
 	Team                        *string  `json:"Team,omitempty"`
 	TeamID                      *int64   `json:"TeamId,omitempty"`

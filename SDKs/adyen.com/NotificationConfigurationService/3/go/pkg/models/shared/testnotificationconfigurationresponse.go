@@ -26,6 +26,7 @@ const (
 	TestNotificationConfigurationResponseEventTypesEnumBeneficiarySetup               TestNotificationConfigurationResponseEventTypesEnum = "BENEFICIARY_SETUP"
 	TestNotificationConfigurationResponseEventTypesEnumCompensateNegativeBalance      TestNotificationConfigurationResponseEventTypesEnum = "COMPENSATE_NEGATIVE_BALANCE"
 	TestNotificationConfigurationResponseEventTypesEnumDirectDebitInitiated           TestNotificationConfigurationResponseEventTypesEnum = "DIRECT_DEBIT_INITIATED"
+	TestNotificationConfigurationResponseEventTypesEnumFundsMigrated                  TestNotificationConfigurationResponseEventTypesEnum = "FUNDS_MIGRATED"
 	TestNotificationConfigurationResponseEventTypesEnumPaymentFailure                 TestNotificationConfigurationResponseEventTypesEnum = "PAYMENT_FAILURE"
 	TestNotificationConfigurationResponseEventTypesEnumPendingCredit                  TestNotificationConfigurationResponseEventTypesEnum = "PENDING_CREDIT"
 	TestNotificationConfigurationResponseEventTypesEnumRefundFundsTransfer            TestNotificationConfigurationResponseEventTypesEnum = "REFUND_FUNDS_TRANSFER"
@@ -74,6 +75,8 @@ func (e *TestNotificationConfigurationResponseEventTypesEnum) UnmarshalJSON(data
 		fallthrough
 	case "DIRECT_DEBIT_INITIATED":
 		fallthrough
+	case "FUNDS_MIGRATED":
+		fallthrough
 	case "PAYMENT_FAILURE":
 		fallthrough
 	case "PENDING_CREDIT":
@@ -102,13 +105,13 @@ type TestNotificationConfigurationResponse struct {
 	ErrorMessages []string `json:"errorMessages,omitempty"`
 	// The event types that were tested.
 	// >Permitted values: `ACCOUNT_HOLDER_CREATED`, `ACCOUNT_CREATED`, `ACCOUNT_UPDATED`, `ACCOUNT_HOLDER_UPDATED`, `ACCOUNT_HOLDER_STATUS_CHANGE`, `ACCOUNT_HOLDER_STORE_STATUS_CHANGE` `ACCOUNT_HOLDER_VERIFICATION`, `ACCOUNT_HOLDER_LIMIT_REACHED`, `ACCOUNT_HOLDER_PAYOUT`, `PAYMENT_FAILURE`, `SCHEDULED_REFUNDS`, `REPORT_AVAILABLE`, `TRANSFER_FUNDS`, `BENEFICIARY_SETUP`, `COMPENSATE_NEGATIVE_BALANCE`.
-	EventTypes []TestNotificationConfigurationResponseEventTypesEnum `json:"eventTypes"`
+	EventTypes []TestNotificationConfigurationResponseEventTypesEnum `json:"eventTypes,omitempty"`
 	// The notification message and related response messages.
-	ExchangeMessages []ExchangeMessage `json:"exchangeMessages"`
+	ExchangeMessages []ExchangeMessage `json:"exchangeMessages,omitempty"`
 	// The ID of the notification subscription configuration.
 	NotificationID int64 `json:"notificationId"`
 	// A list of messages describing the testing steps.
-	OkMessages []string `json:"okMessages"`
+	OkMessages []string `json:"okMessages,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
 	// The result code.

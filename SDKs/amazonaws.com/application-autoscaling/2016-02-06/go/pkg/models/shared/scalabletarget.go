@@ -14,7 +14,7 @@ type ScalableTarget struct {
 	ResourceID        string                `json:"ResourceId"`
 	RoleARN           string                `json:"RoleARN"`
 	ScalableDimension ScalableDimensionEnum `json:"ScalableDimension"`
+	ScalableTargetARN *string               `json:"ScalableTargetARN,omitempty"`
 	ServiceNamespace  ServiceNamespaceEnum  `json:"ServiceNamespace"`
-	// Specifies whether the scaling activities for a scalable target are in a suspended state.
-	SuspendedState *SuspendedState `json:"SuspendedState,omitempty"`
+	SuspendedState    *SuspendedState       `json:"SuspendedState,omitempty"`
 }

@@ -15,14 +15,8 @@ type CreateDeploymentVariablePathParams struct {
 	Workspace string `pathParam:"style=simple,explode=false,name=workspace"`
 }
 
-type CreateDeploymentVariableQueryParams struct {
-	// The UUID of the variable to update.
-	VariableUUID string `queryParam:"style=form,explode=true,name=variable_uuid"`
-}
-
 type CreateDeploymentVariableRequest struct {
-	PathParams  CreateDeploymentVariablePathParams
-	QueryParams CreateDeploymentVariableQueryParams
+	PathParams CreateDeploymentVariablePathParams
 	// The variable to create
 	Request map[string]interface{} `request:"mediaType=application/json"`
 }

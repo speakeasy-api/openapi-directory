@@ -7,9 +7,9 @@ type CreateAccountHolderResponse struct {
 	// The code of a new account created for the account holder.
 	AccountCode *string `json:"accountCode,omitempty"`
 	// The code of the new account holder.
-	AccountHolderCode    string               `json:"accountHolderCode"`
-	AccountHolderDetails AccountHolderDetails `json:"accountHolderDetails"`
-	AccountHolderStatus  AccountHolderStatus  `json:"accountHolderStatus"`
+	AccountHolderCode    *string               `json:"accountHolderCode,omitempty"`
+	AccountHolderDetails *AccountHolderDetails `json:"accountHolderDetails,omitempty"`
+	AccountHolderStatus  *AccountHolderStatus  `json:"accountHolderStatus,omitempty"`
 	// A list of fields that caused the `/createAccountHolder` request to fail.
 	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
@@ -19,6 +19,6 @@ type CreateAccountHolderResponse struct {
 	// Indicates whether the request is processed asynchronously. Depending on the request's platform settings, the following scenarios may be applied:
 	// * **true**: The request is queued and will be executed when the providing service is available in the order in which the requests are received.
 	// * **false**: The processing of the request is immediately attempted; it may result in an error if the providing service is unavailable.
-	SubmittedAsync *bool                 `json:"submittedAsync,omitempty"`
-	Verification   KYCVerificationResult `json:"verification"`
+	SubmittedAsync *bool                  `json:"submittedAsync,omitempty"`
+	Verification   *KYCVerificationResult `json:"verification,omitempty"`
 }

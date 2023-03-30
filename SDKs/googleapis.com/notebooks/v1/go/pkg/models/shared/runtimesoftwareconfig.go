@@ -50,6 +50,8 @@ type RuntimeSoftwareConfigInput struct {
 	InstallGpuDriver *bool `json:"installGpuDriver,omitempty"`
 	// Optional. Use a list of container images to use as Kernels in the notebook instance.
 	Kernels []ContainerImage `json:"kernels,omitempty"`
+	// Bool indicating whether mixer client should be disabled. Default: False
+	MixerDisabled *bool `json:"mixerDisabled,omitempty"`
 	// Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
 	NotebookUpgradeSchedule *string `json:"notebookUpgradeSchedule,omitempty"`
 	// Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).
@@ -74,6 +76,8 @@ type RuntimeSoftwareConfig struct {
 	InstallGpuDriver *bool `json:"installGpuDriver,omitempty"`
 	// Optional. Use a list of container images to use as Kernels in the notebook instance.
 	Kernels []ContainerImage `json:"kernels,omitempty"`
+	// Bool indicating whether mixer client should be disabled. Default: False
+	MixerDisabled *bool `json:"mixerDisabled,omitempty"`
 	// Cron expression in UTC timezone, used to schedule instance auto upgrade. Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
 	NotebookUpgradeSchedule *string `json:"notebookUpgradeSchedule,omitempty"`
 	// Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path (`gs://path-to-file/file-name`).

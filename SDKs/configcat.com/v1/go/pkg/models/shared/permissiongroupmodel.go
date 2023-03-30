@@ -7,10 +7,12 @@ type PermissionGroupModel struct {
 	AccessType                   *AccessTypeEnum            `json:"accessType,omitempty"`
 	CanCreateOrUpdateConfig      *bool                      `json:"canCreateOrUpdateConfig,omitempty"`
 	CanCreateOrUpdateEnvironment *bool                      `json:"canCreateOrUpdateEnvironment,omitempty"`
+	CanCreateOrUpdateSegments    *bool                      `json:"canCreateOrUpdateSegments,omitempty"`
 	CanCreateOrUpdateSetting     *bool                      `json:"canCreateOrUpdateSetting,omitempty"`
 	CanCreateOrUpdateTag         *bool                      `json:"canCreateOrUpdateTag,omitempty"`
 	CanDeleteConfig              *bool                      `json:"canDeleteConfig,omitempty"`
 	CanDeleteEnvironment         *bool                      `json:"canDeleteEnvironment,omitempty"`
+	CanDeleteSegments            *bool                      `json:"canDeleteSegments,omitempty"`
 	CanDeleteSetting             *bool                      `json:"canDeleteSetting,omitempty"`
 	CanDeleteTag                 *bool                      `json:"canDeleteTag,omitempty"`
 	CanManageIntegrations        *bool                      `json:"canManageIntegrations,omitempty"`
@@ -20,9 +22,12 @@ type PermissionGroupModel struct {
 	CanRotateSDKKey              *bool                      `json:"canRotateSdkKey,omitempty"`
 	CanTagSetting                *bool                      `json:"canTagSetting,omitempty"`
 	CanUseExportImport           *bool                      `json:"canUseExportImport,omitempty"`
+	CanViewProductAuditLog       *bool                      `json:"canViewProductAuditLog,omitempty"`
+	CanViewProductStatistics     *bool                      `json:"canViewProductStatistics,omitempty"`
 	CanViewSDKKey                *bool                      `json:"canViewSdkKey,omitempty"`
 	EnvironmentAccesses          []EnvironmentAccessModel   `json:"environmentAccesses,omitempty"`
 	Name                         *string                    `json:"name,omitempty"`
 	NewEnvironmentAccessType     *EnvironmentAccessTypeEnum `json:"newEnvironmentAccessType,omitempty"`
 	PermissionGroupID            *int64                     `json:"permissionGroupId,omitempty"`
+	Product                      *ProductModel              `json:"product,omitempty"`
 }

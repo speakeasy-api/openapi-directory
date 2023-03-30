@@ -31,7 +31,7 @@ type Committee struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -50,7 +50,7 @@ type Committee struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -97,6 +97,8 @@ type Committee struct {
 	//          - W Waived
 	//
 	FilingFrequency *string `json:"filing_frequency,omitempty"`
+	// The day the FEC received the committee's first Form 1
+	FirstF1Date *types.Date `json:"first_f1_date,omitempty"`
 	// The day the FEC received the committee's first filing. This is usually a Form 1 committee registration.
 	FirstFileDate *types.Date `json:"first_file_date,omitempty"`
 	// The day the FEC received the committee's most recent Form 1

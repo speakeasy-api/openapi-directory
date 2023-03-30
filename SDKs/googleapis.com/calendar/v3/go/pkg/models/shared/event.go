@@ -106,6 +106,7 @@ type Event struct {
 	// - "default" - A regular event or not further specified.
 	// - "outOfOffice" - An out-of-office event.
 	// - "focusTime" - A focus-time event.
+	// - "workingLocation" - A working location event.
 	EventType *string `json:"eventType,omitempty"`
 	// Extended properties of the event.
 	ExtendedProperties *EventExtendedProperties `json:"extendedProperties,omitempty"`
@@ -177,5 +178,6 @@ type Event struct {
 	// - "public" - The event is public and event details are visible to all readers of the calendar.
 	// - "private" - The event is private and only event attendees may view event details.
 	// - "confidential" - The event is private. This value is provided for compatibility reasons.
-	Visibility *string `json:"visibility,omitempty"`
+	Visibility                *string                         `json:"visibility,omitempty"`
+	WorkingLocationProperties *EventWorkingLocationProperties `json:"workingLocationProperties,omitempty"`
 }

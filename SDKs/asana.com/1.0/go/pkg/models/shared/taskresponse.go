@@ -104,12 +104,46 @@ type TaskResponseMemberships struct {
 	Section *SectionCompact `json:"section,omitempty"`
 }
 
+// TaskResponseParentResourceSubtypeEnum - The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+// The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.
+type TaskResponseParentResourceSubtypeEnum string
+
+const (
+	TaskResponseParentResourceSubtypeEnumDefaultTask TaskResponseParentResourceSubtypeEnum = "default_task"
+	TaskResponseParentResourceSubtypeEnumMilestone   TaskResponseParentResourceSubtypeEnum = "milestone"
+	TaskResponseParentResourceSubtypeEnumSection     TaskResponseParentResourceSubtypeEnum = "section"
+	TaskResponseParentResourceSubtypeEnumApproval    TaskResponseParentResourceSubtypeEnum = "approval"
+)
+
+func (e *TaskResponseParentResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "default_task":
+		fallthrough
+	case "milestone":
+		fallthrough
+	case "section":
+		fallthrough
+	case "approval":
+		*e = TaskResponseParentResourceSubtypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for TaskResponseParentResourceSubtypeEnum: %s", s)
+	}
+}
+
 // TaskResponseParent - The *task* is the basic object around which many operations in Asana are centered.
 type TaskResponseParent struct {
 	// Globally unique identifier of the resource, as a string.
 	Gid *string `json:"gid,omitempty"`
 	// The name of the task.
 	Name *string `json:"name,omitempty"`
+	// The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+	// The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.
+	ResourceSubtype *TaskResponseParentResourceSubtypeEnum `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
 }
@@ -157,6 +191,8 @@ type TaskResponseWorkspace struct {
 
 // TaskResponse - The *task* is the basic object around which many operations in Asana are centered.
 type TaskResponse struct {
+	// This value represents the sum of all the Time Tracking entries in the Actual Time field on a given Task. It is represented as a nullable long value.
+	ActualTimeMinutes *float64 `json:"actual_time_minutes,omitempty"`
 	// *Conditional* Reflects the approval status of this task. This field is kept in sync with `completed`, meaning `pending` translates to false while `approved`, `rejected`, and `changes_requested` translate to true. If you set completed to true, this field will be set to `approved`.
 	ApprovalStatus  *TaskResponseApprovalStatusEnum `json:"approval_status,omitempty"`
 	Assignee        *TaskResponseAssignee           `json:"assignee,omitempty"`
@@ -178,7 +214,7 @@ type TaskResponse struct {
 	Dependents []AsanaResource `json:"dependents,omitempty"`
 	// The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with `due_on`.
 	DueAt *types.Date `json:"due_at,omitempty"`
-	// The localized date on which this task is due, or null if the task has no due date. This takes a date with `YYYY-MM-DD` format and should not be used together with due_at.
+	// The localized date on which this task is due, or null if the task has no due date. This takes a date with `YYYY-MM-DD` format and should not be used together with `due_at`.
 	DueOn *types.Date `json:"due_on,omitempty"`
 	// *OAuth Required*. *Conditional*. This field is returned only if external values are set or included by using [Opt In] (/docs/input-output-options).
 	// The external field allows you to store app-specific metadata on tasks, including a gid that can be used to retrieve tasks and a data blob that can store app-specific character strings. Note that you will need to authenticate with Oauth to access or modify this data. Once an external gid is set, you can use the notation `external:custom_gid` to reference your object anywhere in the API where you may use the original object gid. See the page on Custom External Data for more details.
@@ -228,7 +264,10 @@ type TaskResponse struct {
 	ResourceSubtype *TaskResponseResourceSubtypeEnum `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
-	// The day on which work begins for the task , or null if the task has no start date. This takes a date with `YYYY-MM-DD` format.
+	// Date and time on which work begins for the task, or null if the task has no start time. This takes an ISO 8601 date string in UTC and should not be used together with `start_on`.
+	// *Note: `due_at` must be present in the request when setting or unsetting the `start_at` parameter.*
+	StartAt *types.Date `json:"start_at,omitempty"`
+	// The day on which work begins for the task , or null if the task has no start date. This takes a date with `YYYY-MM-DD` format and should not be used together with `start_at`.
 	// *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter.*
 	StartOn *types.Date `json:"start_on,omitempty"`
 	// Array of tags associated with this task. In order to change tags on an existing task use `addTag` and `removeTag`.

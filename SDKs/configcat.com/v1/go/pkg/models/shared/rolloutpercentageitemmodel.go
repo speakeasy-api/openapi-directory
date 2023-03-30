@@ -6,5 +6,5 @@ type RolloutPercentageItemModel struct {
 	// The percentage value for the rule.
 	Percentage int64 `json:"percentage"`
 	// The value to serve when the user falls in the percentage rule. It must respect the setting type.
-	Value map[string]interface{} `json:"value,omitempty"`
+	Value interface{} `json:"value,omitempty"`
 }

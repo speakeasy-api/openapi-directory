@@ -347,61 +347,6 @@ func (s *projects) BaremetalsolutionProjectsLocationsInstancesList(ctx context.C
 	return res, nil
 }
 
-// BaremetalsolutionProjectsLocationsInstancesRename - RenameInstance sets a new name for an instance.
-func (s *projects) BaremetalsolutionProjectsLocationsInstancesRename(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesRenameRequest) (*operations.BaremetalsolutionProjectsLocationsInstancesRenameResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:rename", request.PathParams, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.BaremetalsolutionProjectsLocationsInstancesRenameResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Instance
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Instance = out
-		}
-	}
-
-	return res, nil
-}
-
 // BaremetalsolutionProjectsLocationsInstancesReset - Perform an ungraceful, hard reset on a server. Equivalent to shutting the power off and then turning it back on.
 func (s *projects) BaremetalsolutionProjectsLocationsInstancesReset(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsInstancesResetRequest) (*operations.BaremetalsolutionProjectsLocationsInstancesResetResponse, error) {
 	baseURL := s.serverURL
@@ -1275,6 +1220,61 @@ func (s *projects) BaremetalsolutionProjectsLocationsVolumesPatch(ctx context.Co
 			}
 
 			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// BaremetalsolutionProjectsLocationsVolumesRename - RenameVolume sets a new name for a volume. Use with caution, previous names become immediately invalidated.
+func (s *projects) BaremetalsolutionProjectsLocationsVolumesRename(ctx context.Context, request operations.BaremetalsolutionProjectsLocationsVolumesRenameRequest) (*operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2/{name}:rename", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Volume
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Volume = out
 		}
 	}
 

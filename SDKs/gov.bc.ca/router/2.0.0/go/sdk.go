@@ -16,7 +16,7 @@ var ServerList = []string{
 	// Test
 	"https://routertst.api.gov.bc.ca/",
 	// Delivery
-	"https://routerdlv.api.gov.bc.ca/",
+	"https://router-dev.api.gov.bc.ca/",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -31,7 +31,7 @@ func String(s string) *string { return &s }
 //
 // Please note that you may experience issues when submitting requests to the delivery or test environment if using this [OpenAPI specification](https://github.com/bcgov/api-specs) in other API console viewers.
 //
-// [Developer API keys](https://github.com/bcgov/gwa/wiki/Developer-Guide#developer-api-keys) are unique and can be acquired with a GitHub account. Production government applications may use organization API keys acquired by [contacting DataBC](https://forms.gov.bc.ca/databc-contact-us/).
+// [API keys](https://api.gov.bc.ca/devportal/api-directory/740) are unique and can be acquired with a GitHub or IDIR account.
 //
 // https://github.com/bcgov/ols-router/blob/gh-pages/router-developer-guide.md - Developer Guide
 type SDK struct {

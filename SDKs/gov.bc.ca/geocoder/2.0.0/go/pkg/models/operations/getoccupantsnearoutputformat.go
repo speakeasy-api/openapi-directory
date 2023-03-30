@@ -8,7 +8,9 @@ import (
 	"net/http"
 )
 
-// GetOccupantsNearOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+// GetOccupantsNearOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+//
+// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 type GetOccupantsNearOutputFormatOutputFormatEnum string
 
 const (
@@ -48,11 +50,13 @@ func (e *GetOccupantsNearOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte
 }
 
 type GetOccupantsNearOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 	OutputFormat GetOccupantsNearOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 }
 
-// GetOccupantsNearOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+// GetOccupantsNearOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
 type GetOccupantsNearOutputFormatLocationDescriptorEnum string
 
 const (
@@ -88,7 +92,7 @@ func (e *GetOccupantsNearOutputFormatLocationDescriptorEnum) UnmarshalJSON(data 
 	}
 }
 
-// GetOccupantsNearOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+// GetOccupantsNearOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetOccupantsNearOutputFormatOutputSrsEnum string
 
 const (
@@ -133,13 +137,13 @@ func (e *GetOccupantsNearOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) e
 type GetOccupantsNearOutputFormatQueryParams struct {
 	// If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
 	Brief *bool `queryParam:"style=form,explode=true,name=brief"`
-	// Describes the nature of the address location. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+	// Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
 	LocationDescriptor *GetOccupantsNearOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
 	// The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.
 	MaxDistance *int64 `queryParam:"style=form,explode=true,name=maxDistance"`
 	// The maximum number of search results to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetOccupantsNearOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// The point (x,y) from which the nearest site will be identified. The coordinates must be specified in the same SRS as given by the 'outputSRS' parameter.
 	Point string `queryParam:"style=form,explode=true,name=point"`

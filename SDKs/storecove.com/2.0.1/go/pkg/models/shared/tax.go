@@ -7,9 +7,9 @@ import (
 	"fmt"
 )
 
-// TaxTaxCategoryEnum - The optional category code for the tax. This is not mandatory, but highly recommended. If not provided, it will be automatically derived from the country/percentage in combination with the invoice taxPointDate (which defaults to the issueDate), but there are situations in which this fails and the category needs to be specified explicitly. In particular, there are multiple categories available for 0%. The allowed values depend on the country of the tax.
+// TaxTaxCategoryEnum - The allowed values depend on the country of the tax:
 // ++++
-// <ul><li>AU/NZ:<ul><li>standard (S)</li><li>zero_rated (Z - 0%)</li><li>exempt (E - 0%)</li><li>export (G - 0%)</li><li>outside_scope (O - 0%)</li></ul></li><li>EU:<ul><li>standard (S)</li><li>zero_rated (Z - 0%)</li><li>reverse_charge (AE - 0%)</li><li>intra_community (K - 0%)</li><li>exempt (E - 0%)</li><li>export (G - 0%)</li><li>outside_scope (O - 0%)</li></ul></li><li>SG:<ul><li>standard (SR)</li><li>deemed_supply (DS)</li><li>srca_s (SRCA-S)</li><li>srca_c (SRCA-C - 0%)</li><li>zero_rated (ZR - 0%)</li><li>regulation33_exempt (ES33 - 0%)</li><li>nonregulation33_exempt (ESN33 - 0%)</li><li>outside_scope (OS - 0%)</li><li>not_registered (NG - 0%)</li></ul></li><li>MY:<ul><li>sales_tax (S), also 0%</li><li>sales_tax_work (SW)</li><li>service_tax (SV), also 0%</li><li>service_tax_import (SVI)</li><li>sales_export_market (EEM)</li><li>sales_special_area (ESP)</li><li>sales_designated_area (EDA)</li><li>exemption_schedule_a (ESA)</li><li>exemption_schedule_b (ESB)</li><li>exemption_schedule_c_a (ESC-A)</li><li>exemption_schedule_c_b (ESC-B)</li><li>exemption_schedule_c_c (ESC-C)</li><li>exemption_service_tax (ESV)</li></ul></li></ul>
+// <ul>    <li>        AU:        <ul>            <li>standard (10%, 5.5%)</li>            <li>zero_rated (0%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li>    <li>        EU:        <ul>            <li>standard (percentages country dependent)</li>            <li>zero_rated (0%)</li>            <li>reverse_charge (0%)</li>            <li>intra_community (0%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li>    <li>        IN:        <ul>            <li>igst (28%, 18%, 12%, 5%, 3%, 0.25%)</li>            <li>sgst (14%, 9%, 6%, 2.5%, 1.5%</li>            <li>cgst (14%, 9%, 6%, 2.5%, 1.5%</li>            <li>cess (any percentage)</li>            <li>state_cess (any percentage)</li>            <li>reverse_charge (0%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>            <li>zero_rated (0%)</li>        </ul>    </li>    <li>        JP:        <ul>            <li>standard (10%, 8%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li>    <li>        MY:        <ul>            <li>standard (10%, 6%, 5%)</li>            <li>zero_rated (0%)</li>        </ul>    </li>    <li>        NZ:        <ul>            <li>standard (15%)</li>            <li>zero_rated (0%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li>    <li>        SG:        <ul>            <li>standard (7%; 8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>deemed_supply (7%; 8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srca_c (7%; 8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srovr (7%; NOT to be used from 2023-01-01)</li>            <li>srovr_rs (8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srovr_lvg (8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srlvg (8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srca_s (0%)</li>            <li>outside_scope (0%)</li>            <li>not_registered (0%)</li>            <li>zero_rated (0%)</li>            <li>regulation33_exempt (0%)</li>            <li>nonregulation33_exempt (0%)</li>            <li>export (0%)</li>        </ul>    </li>    <li>        US:        <ul>            <li>standard (any percentage)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li></ul>
 // ++++
 type TaxTaxCategoryEnum string
 
@@ -27,19 +27,15 @@ const (
 	TaxTaxCategoryEnumSrcaS                 TaxTaxCategoryEnum = "srca_s"
 	TaxTaxCategoryEnumSrcaC                 TaxTaxCategoryEnum = "srca_c"
 	TaxTaxCategoryEnumNotRegistered         TaxTaxCategoryEnum = "not_registered"
-	TaxTaxCategoryEnumSalesTax              TaxTaxCategoryEnum = "sales_tax"
-	TaxTaxCategoryEnumSalesTaxWork          TaxTaxCategoryEnum = "sales_tax_work"
-	TaxTaxCategoryEnumServiceTax            TaxTaxCategoryEnum = "service_tax"
-	TaxTaxCategoryEnumServiceTaxImport      TaxTaxCategoryEnum = "service_tax_import"
-	TaxTaxCategoryEnumSalesToExportMarket   TaxTaxCategoryEnum = "sales_to_export_market"
-	TaxTaxCategoryEnumSalesToSpecialArea    TaxTaxCategoryEnum = "sales_to_special_area"
-	TaxTaxCategoryEnumSalesToDesignatedArea TaxTaxCategoryEnum = "sales_to_designated_area"
-	TaxTaxCategoryEnumExemptionScheduleA    TaxTaxCategoryEnum = "exemption_schedule_a"
-	TaxTaxCategoryEnumExemptionScheduleB    TaxTaxCategoryEnum = "exemption_schedule_b"
-	TaxTaxCategoryEnumExemptionScheduleCA   TaxTaxCategoryEnum = "exemption_schedule_c_a"
-	TaxTaxCategoryEnumExemptionScheduleCB   TaxTaxCategoryEnum = "exemption_schedule_c_b"
-	TaxTaxCategoryEnumExemptionScheduleCC   TaxTaxCategoryEnum = "exemption_schedule_c_c"
-	TaxTaxCategoryEnumExemptionServiceTax   TaxTaxCategoryEnum = "exemption_service_tax"
+	TaxTaxCategoryEnumIgst                  TaxTaxCategoryEnum = "igst"
+	TaxTaxCategoryEnumCgst                  TaxTaxCategoryEnum = "cgst"
+	TaxTaxCategoryEnumSgst                  TaxTaxCategoryEnum = "sgst"
+	TaxTaxCategoryEnumCess                  TaxTaxCategoryEnum = "cess"
+	TaxTaxCategoryEnumStateCess             TaxTaxCategoryEnum = "state_cess"
+	TaxTaxCategoryEnumSrovr                 TaxTaxCategoryEnum = "srovr"
+	TaxTaxCategoryEnumSrovrRs               TaxTaxCategoryEnum = "srovr_rs"
+	TaxTaxCategoryEnumSrovrLvg              TaxTaxCategoryEnum = "srovr_lvg"
+	TaxTaxCategoryEnumSrlvg                 TaxTaxCategoryEnum = "srlvg"
 )
 
 func (e *TaxTaxCategoryEnum) UnmarshalJSON(data []byte) error {
@@ -74,31 +70,23 @@ func (e *TaxTaxCategoryEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "not_registered":
 		fallthrough
-	case "sales_tax":
+	case "igst":
 		fallthrough
-	case "sales_tax_work":
+	case "cgst":
 		fallthrough
-	case "service_tax":
+	case "sgst":
 		fallthrough
-	case "service_tax_import":
+	case "cess":
 		fallthrough
-	case "sales_to_export_market":
+	case "state_cess":
 		fallthrough
-	case "sales_to_special_area":
+	case "srovr":
 		fallthrough
-	case "sales_to_designated_area":
+	case "srovr_rs":
 		fallthrough
-	case "exemption_schedule_a":
+	case "srovr_lvg":
 		fallthrough
-	case "exemption_schedule_b":
-		fallthrough
-	case "exemption_schedule_c_a":
-		fallthrough
-	case "exemption_schedule_c_b":
-		fallthrough
-	case "exemption_schedule_c_c":
-		fallthrough
-	case "exemption_service_tax":
+	case "srlvg":
 		*e = TaxTaxCategoryEnum(s)
 		return nil
 	default:
@@ -109,9 +97,9 @@ func (e *TaxTaxCategoryEnum) UnmarshalJSON(data []byte) error {
 type Tax struct {
 	// The amount of tax. Mandatory if taxSystem == 'tax_line_amounts'. However, it is best to use taxSystem tax_line_percentages and provide only the percentage, not the actual amount. The amount is then provided at the invoice level, in the taxSubtotals element.
 	Amount *float64 `json:"amount,omitempty"`
-	// The optional category code for the tax. This is not mandatory, but highly recommended. If not provided, it will be automatically derived from the country/percentage in combination with the invoice taxPointDate (which defaults to the issueDate), but there are situations in which this fails and the category needs to be specified explicitly. In particular, there are multiple categories available for 0%. The allowed values depend on the country of the tax.
+	// The allowed values depend on the country of the tax:
 	// ++++
-	// <ul><li>AU/NZ:<ul><li>standard (S)</li><li>zero_rated (Z - 0%)</li><li>exempt (E - 0%)</li><li>export (G - 0%)</li><li>outside_scope (O - 0%)</li></ul></li><li>EU:<ul><li>standard (S)</li><li>zero_rated (Z - 0%)</li><li>reverse_charge (AE - 0%)</li><li>intra_community (K - 0%)</li><li>exempt (E - 0%)</li><li>export (G - 0%)</li><li>outside_scope (O - 0%)</li></ul></li><li>SG:<ul><li>standard (SR)</li><li>deemed_supply (DS)</li><li>srca_s (SRCA-S)</li><li>srca_c (SRCA-C - 0%)</li><li>zero_rated (ZR - 0%)</li><li>regulation33_exempt (ES33 - 0%)</li><li>nonregulation33_exempt (ESN33 - 0%)</li><li>outside_scope (OS - 0%)</li><li>not_registered (NG - 0%)</li></ul></li><li>MY:<ul><li>sales_tax (S), also 0%</li><li>sales_tax_work (SW)</li><li>service_tax (SV), also 0%</li><li>service_tax_import (SVI)</li><li>sales_export_market (EEM)</li><li>sales_special_area (ESP)</li><li>sales_designated_area (EDA)</li><li>exemption_schedule_a (ESA)</li><li>exemption_schedule_b (ESB)</li><li>exemption_schedule_c_a (ESC-A)</li><li>exemption_schedule_c_b (ESC-B)</li><li>exemption_schedule_c_c (ESC-C)</li><li>exemption_service_tax (ESV)</li></ul></li></ul>
+	// <ul>    <li>        AU:        <ul>            <li>standard (10%, 5.5%)</li>            <li>zero_rated (0%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li>    <li>        EU:        <ul>            <li>standard (percentages country dependent)</li>            <li>zero_rated (0%)</li>            <li>reverse_charge (0%)</li>            <li>intra_community (0%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li>    <li>        IN:        <ul>            <li>igst (28%, 18%, 12%, 5%, 3%, 0.25%)</li>            <li>sgst (14%, 9%, 6%, 2.5%, 1.5%</li>            <li>cgst (14%, 9%, 6%, 2.5%, 1.5%</li>            <li>cess (any percentage)</li>            <li>state_cess (any percentage)</li>            <li>reverse_charge (0%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>            <li>zero_rated (0%)</li>        </ul>    </li>    <li>        JP:        <ul>            <li>standard (10%, 8%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li>    <li>        MY:        <ul>            <li>standard (10%, 6%, 5%)</li>            <li>zero_rated (0%)</li>        </ul>    </li>    <li>        NZ:        <ul>            <li>standard (15%)</li>            <li>zero_rated (0%)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li>    <li>        SG:        <ul>            <li>standard (7%; 8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>deemed_supply (7%; 8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srca_c (7%; 8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srovr (7%; NOT to be used from 2023-01-01)</li>            <li>srovr_rs (8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srovr_lvg (8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srlvg (8% from 2023-01-01; 9% from 2024-01-01)</li>            <li>srca_s (0%)</li>            <li>outside_scope (0%)</li>            <li>not_registered (0%)</li>            <li>zero_rated (0%)</li>            <li>regulation33_exempt (0%)</li>            <li>nonregulation33_exempt (0%)</li>            <li>export (0%)</li>        </ul>    </li>    <li>        US:        <ul>            <li>standard (any percentage)</li>            <li>export (0%)</li>            <li>exempt (0%)</li>            <li>outside_scope (0%)</li>        </ul>    </li></ul>
 	// ++++
 	Category *TaxTaxCategoryEnum `json:"category,omitempty"`
 	// An ISO 3166-1 alpha-2 country code.

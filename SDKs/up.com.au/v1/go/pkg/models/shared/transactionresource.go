@@ -126,6 +126,10 @@ type TransactionResourceAttributes struct {
 	// transaction while `HELD`.
 	//
 	HoldInfo TransactionResourceAttributesHoldInfo `json:"holdInfo"`
+	// Boolean flag set to true on transactions that support the use of
+	// categories.
+	//
+	IsCategorizable bool `json:"isCategorizable"`
 	// Attached message for this transaction, such as a payment message, or a
 	// transfer note.
 	//
@@ -185,7 +189,11 @@ type TransactionResourceRelationshipsCategoryData struct {
 type TransactionResourceRelationshipsCategoryLinks struct {
 	// The link to retrieve the related resource(s) in this relationship.
 	//
-	Related string `json:"related"`
+	Related *string `json:"related,omitempty"`
+	// The link to retrieve or modify linkage between this resources and the
+	// related resource(s) in this relationship.
+	//
+	Self string `json:"self"`
 }
 
 type TransactionResourceRelationshipsCategory struct {
@@ -232,11 +240,38 @@ type TransactionResourceRelationshipsTags struct {
 	Links *TransactionResourceRelationshipsTagsLinks `json:"links,omitempty"`
 }
 
+type TransactionResourceRelationshipsTransferAccountData struct {
+	// The unique identifier of the resource within its type.
+	//
+	ID string `json:"id"`
+	// The type of this resource: `accounts`
+	Type string `json:"type"`
+}
+
+type TransactionResourceRelationshipsTransferAccountLinks struct {
+	// The link to retrieve the related resource(s) in this relationship.
+	//
+	Related string `json:"related"`
+}
+
+// TransactionResourceRelationshipsTransferAccount - If this transaction is a transfer between accounts, this relationship
+// will contain the account the transaction went to/came from. The
+// `amount` field can be used to determine the direction of the transfer.
+type TransactionResourceRelationshipsTransferAccount struct {
+	Data  TransactionResourceRelationshipsTransferAccountData   `json:"data"`
+	Links *TransactionResourceRelationshipsTransferAccountLinks `json:"links,omitempty"`
+}
+
 type TransactionResourceRelationships struct {
 	Account        TransactionResourceRelationshipsAccount        `json:"account"`
 	Category       TransactionResourceRelationshipsCategory       `json:"category"`
 	ParentCategory TransactionResourceRelationshipsParentCategory `json:"parentCategory"`
 	Tags           TransactionResourceRelationshipsTags           `json:"tags"`
+	// If this transaction is a transfer between accounts, this relationship
+	// will contain the account the transaction went to/came from. The
+	// `amount` field can be used to determine the direction of the transfer.
+	//
+	TransferAccount TransactionResourceRelationshipsTransferAccount `json:"transferAccount"`
 }
 
 type TransactionResource struct {

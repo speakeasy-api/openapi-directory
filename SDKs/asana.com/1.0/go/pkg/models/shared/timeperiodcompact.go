@@ -48,6 +48,8 @@ func (e *TimePeriodCompactPeriodEnum) UnmarshalJSON(data []byte) error {
 
 // TimePeriodCompact - A generic Asana Resource, containing a globally unique identifier.
 type TimePeriodCompact struct {
+	// A string representing the cadence code and the fiscal year.
+	DisplayName *string `json:"display_name,omitempty"`
 	// The localized end date of the time period in `YYYY-MM-DD` format.
 	EndOn *string `json:"end_on,omitempty"`
 	// Globally unique identifier of the resource, as a string.

@@ -109,8 +109,6 @@ pkg/models/operations/getstoppointidplacetypes.go
 pkg/models/operations/traveltimegetcompareoverlay.go
 pkg/models/operations/traveltimegetoverlay.go
 pkg/models/operations/vehicleget.go
-pkg/models/operations/vehiclegetemissionssurchargecompliance.go
-pkg/models/operations/vehiclegetulezcompliance.go
 pkg/models/shared/tflapipresentationentitiesaccidentstatsaccidentdetail.go
 pkg/models/shared/tflapipresentationentitiesaccidentstatsvehicle.go
 pkg/models/shared/tflapipresentationentitiesaccidentstatscasualty.go
@@ -133,7 +131,7 @@ pkg/models/shared/tflapipresentationentitiestrainloading.go
 pkg/models/shared/tflapipresentationentitiespassengerflow.go
 pkg/models/shared/tflapipresentationentitieslinemodegroup.go
 pkg/models/shared/tflapipresentationentitieslinegroup.go
-pkg/models/shared/tflapipresentationentitiesroutesection.go
+pkg/models/shared/tflapipresentationentitiesdisruptedroute.go
 pkg/models/shared/tflapipresentationentitiesroutesectionnaptanentrysequence.go
 pkg/models/shared/tflapipresentationentitiesjourneyplannerjourney.go
 pkg/models/shared/tflapipresentationentitiesjourneyplannerleg.go
@@ -202,5 +200,4 @@ pkg/models/shared/tflapipresentationentitieslineservicetype.go
 pkg/models/shared/tflapipresentationentitieslinespecificservicetype.go
 pkg/models/shared/tflapipresentationentitiesstoppointcategory.go
 pkg/models/shared/tflapipresentationentitiesstoppointroutesection.go
-pkg/models/shared/tflapipresentationentitiesvehiclematch.go
 USAGE.md

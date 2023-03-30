@@ -160,6 +160,8 @@ type Service struct {
 	Port *int `json:"port,omitempty"`
 	// Immutable. The release channel of the service. If unspecified, defaults to STABLE.
 	ReleaseChannel *ServiceReleaseChannelEnum `json:"releaseChannel,omitempty"`
+	// Represents the scaling configuration of a metastore service.
+	ScalingConfig *ScalingConfig `json:"scalingConfig,omitempty"`
 	// Output only. The current state of the metastore service.
 	State *ServiceStateEnum `json:"state,omitempty"`
 	// Output only. Additional information about the current state of the metastore service, if available.
@@ -181,7 +183,7 @@ type ServiceInput struct {
 	// Encryption settings for the service.
 	EncryptionConfig *EncryptionConfig `json:"encryptionConfig,omitempty"`
 	// Specifies configuration information specific to running Hive metastore software as the metastore service.
-	HiveMetastoreConfig *HiveMetastoreConfig `json:"hiveMetastoreConfig,omitempty"`
+	HiveMetastoreConfig *HiveMetastoreConfigInput `json:"hiveMetastoreConfig,omitempty"`
 	// User-defined labels for the metastore service.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Maintenance window. This specifies when Dataproc Metastore may perform system maintenance operation to the service.
@@ -196,6 +198,8 @@ type ServiceInput struct {
 	Port *int `json:"port,omitempty"`
 	// Immutable. The release channel of the service. If unspecified, defaults to STABLE.
 	ReleaseChannel *ServiceReleaseChannelEnum `json:"releaseChannel,omitempty"`
+	// Represents the scaling configuration of a metastore service.
+	ScalingConfig *ScalingConfig `json:"scalingConfig,omitempty"`
 	// Telemetry Configuration for the Dataproc Metastore service.
 	TelemetryConfig *TelemetryConfig `json:"telemetryConfig,omitempty"`
 	// The tier of the service.

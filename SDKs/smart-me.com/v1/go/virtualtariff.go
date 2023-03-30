@@ -145,20 +145,6 @@ func (s *virtualTariff) GetAPIVirtualTariffID(ctx context.Context, request opera
 			}
 
 			res.VirtualTariffsOfFolder = out
-		case utils.MatchContentType(contentType, `application/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
-		case utils.MatchContentType(contentType, `text/xml`):
-			out, err := io.ReadAll(httpRes.Body)
-			if err != nil {
-				return nil, fmt.Errorf("error reading response body: %w", err)
-			}
-
-			res.Body = out
 		}
 	}
 

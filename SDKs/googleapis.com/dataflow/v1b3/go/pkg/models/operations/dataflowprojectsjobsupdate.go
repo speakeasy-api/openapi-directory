@@ -62,6 +62,8 @@ type DataflowProjectsJobsUpdateQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
+	// The list of fields to update relative to Job. If empty, only RequestedJobState will be considered for update. If the FieldMask is not empty and RequestedJobState is none/empty, The fields specified in the update mask will be the only ones considered for update. If both RequestedJobState and update_mask are specified, we will first handle RequestedJobState and then the update_mask fields.
+	UpdateMask *string `queryParam:"style=form,explode=true,name=updateMask"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`
 	// Upload protocol for media (e.g. "raw", "multipart").

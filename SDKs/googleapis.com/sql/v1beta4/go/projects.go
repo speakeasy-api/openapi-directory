@@ -31,6 +31,109 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
+// SQLProjectsInstancesGetDiskShrinkConfig - Get Disk Shrink Config for a given instance.
+func (s *projects) SQLProjectsInstancesGetDiskShrinkConfig(ctx context.Context, request operations.SQLProjectsInstancesGetDiskShrinkConfigRequest) (*operations.SQLProjectsInstancesGetDiskShrinkConfigResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/getDiskShrinkConfig", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SQLProjectsInstancesGetDiskShrinkConfigResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.SQLInstancesGetDiskShrinkConfigResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SQLInstancesGetDiskShrinkConfigResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// SQLProjectsInstancesPerformDiskShrink - Perform Disk Shrink on primary instance.
+func (s *projects) SQLProjectsInstancesPerformDiskShrink(ctx context.Context, request operations.SQLProjectsInstancesPerformDiskShrinkRequest) (*operations.SQLProjectsInstancesPerformDiskShrinkResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/performDiskShrink", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SQLProjectsInstancesPerformDiskShrinkResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
 // SQLProjectsInstancesRescheduleMaintenance - Reschedules the maintenance on the given instance.
 func (s *projects) SQLProjectsInstancesRescheduleMaintenance(ctx context.Context, request operations.SQLProjectsInstancesRescheduleMaintenanceRequest) (*operations.SQLProjectsInstancesRescheduleMaintenanceResponse, error) {
 	baseURL := s.serverURL
@@ -66,6 +169,61 @@ func (s *projects) SQLProjectsInstancesRescheduleMaintenance(ctx context.Context
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.SQLProjectsInstancesRescheduleMaintenanceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
+// SQLProjectsInstancesResetReplicaSize - Reset Replica Size to primary instance disk size.
+func (s *projects) SQLProjectsInstancesResetReplicaSize(ctx context.Context, request operations.SQLProjectsInstancesResetReplicaSizeRequest) (*operations.SQLProjectsInstancesResetReplicaSizeResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/sql/v1beta4/projects/{project}/instances/{instance}/resetReplicaSize", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SQLProjectsInstancesResetReplicaSizeResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

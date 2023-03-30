@@ -221,6 +221,70 @@ func (s *remoteServers) GetRemoteServersID(ctx context.Context, request operatio
 	return res, nil
 }
 
+// GetRemoteServersIDConfigurationFile - Download configuration file (required for some Remote Server integrations, such as the Files.com Agent)
+// Download configuration file (required for some Remote Server integrations, such as the Files.com Agent)
+func (s *remoteServers) GetRemoteServersIDConfigurationFile(ctx context.Context, request operations.GetRemoteServersIDConfigurationFileRequest) (*operations.GetRemoteServersIDConfigurationFileResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}/configuration_file", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRemoteServersIDConfigurationFileResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RemoteServerConfigurationFileEntity
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RemoteServerConfigurationFileEntity = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		fallthrough
+	case httpRes.StatusCode == 409:
+		fallthrough
+	case httpRes.StatusCode == 412:
+		fallthrough
+	case httpRes.StatusCode == 422:
+		fallthrough
+	case httpRes.StatusCode == 423:
+		fallthrough
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
 // PatchRemoteServersID - Update Remote Server
 // Update Remote Server
 func (s *remoteServers) PatchRemoteServersID(ctx context.Context, request operations.PatchRemoteServersIDRequest) (*operations.PatchRemoteServersIDResponse, error) {
@@ -338,6 +402,77 @@ func (s *remoteServers) PostRemoteServers(ctx context.Context, request operation
 			}
 
 			res.RemoteServerEntity = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		fallthrough
+	case httpRes.StatusCode == 409:
+		fallthrough
+	case httpRes.StatusCode == 412:
+		fallthrough
+	case httpRes.StatusCode == 422:
+		fallthrough
+	case httpRes.StatusCode == 423:
+		fallthrough
+	case httpRes.StatusCode == 429:
+	}
+
+	return res, nil
+}
+
+// PostRemoteServersIDConfigurationFile - Post local changes, check in, and download configuration file (used by some Remote Server integrations, such as the Files.com Agent)
+// Post local changes, check in, and download configuration file (used by some Remote Server integrations, such as the Files.com Agent)
+func (s *remoteServers) PostRemoteServersIDConfigurationFile(ctx context.Context, request operations.PostRemoteServersIDConfigurationFileRequest) (*operations.PostRemoteServersIDConfigurationFileResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/remote_servers/{id}/configuration_file", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostRemoteServersIDConfigurationFileResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 201:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RemoteServerConfigurationFileEntity
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RemoteServerConfigurationFileEntity = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough

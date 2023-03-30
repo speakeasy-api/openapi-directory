@@ -16,6 +16,8 @@ const (
 	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumCloudPubsub                 GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "CLOUD_PUBSUB"
 	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumDataprocMetastore           GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "DATAPROC_METASTORE"
 	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumDataplex                    GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "DATAPLEX"
+	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumCloudSpanner                GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "CLOUD_SPANNER"
+	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumCloudBigtable               GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "CLOUD_BIGTABLE"
 	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumCloudSQL                    GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "CLOUD_SQL"
 	GoogleCloudDatacatalogV1DataplexExternalTableSystemEnumLooker                      GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum = "LOOKER"
 )
@@ -35,6 +37,10 @@ func (e *GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum) UnmarshalJSON(
 	case "DATAPROC_METASTORE":
 		fallthrough
 	case "DATAPLEX":
+		fallthrough
+	case "CLOUD_SPANNER":
+		fallthrough
+	case "CLOUD_BIGTABLE":
 		fallthrough
 	case "CLOUD_SQL":
 		fallthrough

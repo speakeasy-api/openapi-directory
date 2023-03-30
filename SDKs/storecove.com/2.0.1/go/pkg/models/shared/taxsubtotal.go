@@ -24,18 +24,15 @@ const (
 	TaxSubtotalTaxCategoryEnumSrcaS                 TaxSubtotalTaxCategoryEnum = "srca_s"
 	TaxSubtotalTaxCategoryEnumSrcaC                 TaxSubtotalTaxCategoryEnum = "srca_c"
 	TaxSubtotalTaxCategoryEnumNotRegistered         TaxSubtotalTaxCategoryEnum = "not_registered"
-	TaxSubtotalTaxCategoryEnumSalesTaxWork          TaxSubtotalTaxCategoryEnum = "sales_tax_work"
-	TaxSubtotalTaxCategoryEnumServiceTax            TaxSubtotalTaxCategoryEnum = "service_tax"
-	TaxSubtotalTaxCategoryEnumServiceTaxImport      TaxSubtotalTaxCategoryEnum = "service_tax_import"
-	TaxSubtotalTaxCategoryEnumSalesToExportMarket   TaxSubtotalTaxCategoryEnum = "sales_to_export_market"
-	TaxSubtotalTaxCategoryEnumSalesToSpecialArea    TaxSubtotalTaxCategoryEnum = "sales_to_special_area"
-	TaxSubtotalTaxCategoryEnumSalesToDesignatedArea TaxSubtotalTaxCategoryEnum = "sales_to_designated_area"
-	TaxSubtotalTaxCategoryEnumExemptionScheduleA    TaxSubtotalTaxCategoryEnum = "exemption_schedule_a"
-	TaxSubtotalTaxCategoryEnumExemptionScheduleB    TaxSubtotalTaxCategoryEnum = "exemption_schedule_b"
-	TaxSubtotalTaxCategoryEnumExemptionScheduleCA   TaxSubtotalTaxCategoryEnum = "exemption_schedule_c_a"
-	TaxSubtotalTaxCategoryEnumExemptionScheduleCB   TaxSubtotalTaxCategoryEnum = "exemption_schedule_c_b"
-	TaxSubtotalTaxCategoryEnumExemptionScheduleCC   TaxSubtotalTaxCategoryEnum = "exemption_schedule_c_c"
-	TaxSubtotalTaxCategoryEnumExemptionServiceTax   TaxSubtotalTaxCategoryEnum = "exemption_service_tax"
+	TaxSubtotalTaxCategoryEnumIgst                  TaxSubtotalTaxCategoryEnum = "igst"
+	TaxSubtotalTaxCategoryEnumCgst                  TaxSubtotalTaxCategoryEnum = "cgst"
+	TaxSubtotalTaxCategoryEnumSgst                  TaxSubtotalTaxCategoryEnum = "sgst"
+	TaxSubtotalTaxCategoryEnumCess                  TaxSubtotalTaxCategoryEnum = "cess"
+	TaxSubtotalTaxCategoryEnumStateCess             TaxSubtotalTaxCategoryEnum = "state_cess"
+	TaxSubtotalTaxCategoryEnumSrovr                 TaxSubtotalTaxCategoryEnum = "srovr"
+	TaxSubtotalTaxCategoryEnumSrovrRs               TaxSubtotalTaxCategoryEnum = "srovr_rs"
+	TaxSubtotalTaxCategoryEnumSrovrLvg              TaxSubtotalTaxCategoryEnum = "srovr_lvg"
+	TaxSubtotalTaxCategoryEnumSrlvg                 TaxSubtotalTaxCategoryEnum = "srlvg"
 )
 
 func (e *TaxSubtotalTaxCategoryEnum) UnmarshalJSON(data []byte) error {
@@ -70,29 +67,23 @@ func (e *TaxSubtotalTaxCategoryEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "not_registered":
 		fallthrough
-	case "sales_tax_work":
+	case "igst":
 		fallthrough
-	case "service_tax":
+	case "cgst":
 		fallthrough
-	case "service_tax_import":
+	case "sgst":
 		fallthrough
-	case "sales_to_export_market":
+	case "cess":
 		fallthrough
-	case "sales_to_special_area":
+	case "state_cess":
 		fallthrough
-	case "sales_to_designated_area":
+	case "srovr":
 		fallthrough
-	case "exemption_schedule_a":
+	case "srovr_rs":
 		fallthrough
-	case "exemption_schedule_b":
+	case "srovr_lvg":
 		fallthrough
-	case "exemption_schedule_c_a":
-		fallthrough
-	case "exemption_schedule_c_b":
-		fallthrough
-	case "exemption_schedule_c_c":
-		fallthrough
-	case "exemption_service_tax":
+	case "srlvg":
 		*e = TaxSubtotalTaxCategoryEnum(s)
 		return nil
 	default:
@@ -105,11 +96,11 @@ type TaxSubtotal struct {
 	// The tax category. For a description see <<_openapi_tax>>
 	Category *TaxSubtotalTaxCategoryEnum `json:"category,omitempty"`
 	// An ISO 3166-1 alpha-2 country code.
-	Country *CountryEnum `json:"country,omitempty"`
-	// The tax percentage. This should be a valid tax percentage in the country at the time of the taxpointDate of this invoice. Required unless taxAmount is provided.
-	Percentage *float64 `json:"percentage,omitempty"`
+	Country CountryEnum `json:"country"`
+	// The tax percentage. This should be a valid tax percentage in the country at the time of the taxpointDate of this invoice.
+	Percentage float64 `json:"percentage"`
 	// The amount of tax.
-	TaxAmount *float64 `json:"taxAmount,omitempty"`
-	// The amount on which the tax is levied. Required unless percentage is provided.
+	TaxAmount float64 `json:"taxAmount"`
+	// The amount on which the tax is levied.
 	TaxableAmount float64 `json:"taxableAmount"`
 }

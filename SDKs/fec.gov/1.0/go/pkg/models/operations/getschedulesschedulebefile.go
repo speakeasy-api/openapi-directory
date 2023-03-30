@@ -17,7 +17,8 @@ type GetSchedulesScheduleBEfileQueryParams struct {
 	CommitteeID []string `queryParam:"style=form,explode=true,name=committee_id"`
 	// Description of disbursement
 	DisbursementDescription []string `queryParam:"style=form,explode=true,name=disbursement_description"`
-	// The image number of the page where the schedule item is reported
+	// An unique identifier for each page where the electronic or paper filing is reported.
+	//
 	ImageNumber []string `queryParam:"style=form,explode=true,name=image_number"`
 	// Filter for all amounts less than a value.
 	MaxAmount *string `queryParam:"style=form,explode=true,name=max_amount"`

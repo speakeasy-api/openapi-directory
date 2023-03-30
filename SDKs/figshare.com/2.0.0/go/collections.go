@@ -249,6 +249,8 @@ func (s *collections) CollectionsList(ctx context.Context, request operations.Co
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
 	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
@@ -273,6 +275,8 @@ func (s *collections) CollectionsList(ctx context.Context, request operations.Co
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out []shared.Collection
@@ -310,6 +314,8 @@ func (s *collections) CollectionsSearch(ctx context.Context, request operations.
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
 	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
@@ -330,6 +336,8 @@ func (s *collections) CollectionsSearch(ctx context.Context, request operations.
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out []shared.Collection
@@ -480,6 +488,10 @@ func (s *collections) PrivateCollectionArticlesList(ctx context.Context, request
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
@@ -1127,12 +1139,12 @@ func (s *collections) PrivateCollectionCreate(ctx context.Context, request opera
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.CollectionComplete
+			var out *shared.LocationWarnings
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.CollectionComplete = out
+			res.LocationWarnings = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -1237,12 +1249,12 @@ func (s *collections) PrivateCollectionDetails(ctx context.Context, request oper
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.CollectionComplete
+			var out *shared.CollectionCompletePrivate
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.CollectionComplete = out
+			res.CollectionCompletePrivate = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -1296,12 +1308,12 @@ func (s *collections) PrivateCollectionPrivateLinkCreate(ctx context.Context, re
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Location
+			var out *shared.PrivateLinkResponse
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Location = out
+			res.PrivateLinkResponse = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -1673,8 +1685,78 @@ func (s *collections) PrivateCollectionReserveHandle(ctx context.Context, reques
 	return res, nil
 }
 
+// PrivateCollectionResource - Private Collection Resource
+// Edit collection resource data.
+func (s *collections) PrivateCollectionResource(ctx context.Context, request operations.PrivateCollectionResourceRequest) (*operations.PrivateCollectionResourceResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}/resource", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PrivateCollectionResourceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 205:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Location
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Location = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ErrorMessage
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorMessage = out
+		}
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 422:
+	}
+
+	return res, nil
+}
+
 // PrivateCollectionUpdate - Update collection
-// Update collection details
+// Update collection details; request can also be made with the PATCH method.
 func (s *collections) PrivateCollectionUpdate(ctx context.Context, request operations.PrivateCollectionUpdateRequest) (*operations.PrivateCollectionUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/account/collections/{collection_id}", request.PathParams, nil)
@@ -1716,6 +1798,15 @@ func (s *collections) PrivateCollectionUpdate(ctx context.Context, request opera
 	case httpRes.StatusCode == 205:
 		res.Headers = httpRes.Header
 
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.LocationWarningsUpdate
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.LocationWarningsUpdate = out
+		}
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 404:

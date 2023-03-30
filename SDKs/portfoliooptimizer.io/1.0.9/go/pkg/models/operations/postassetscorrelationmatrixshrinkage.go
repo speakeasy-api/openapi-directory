@@ -15,19 +15,20 @@ type PostAssetsCorrelationMatrixShrinkageRequestBody2 struct {
 	// assetsCorrelationMatrix[i][j] is the correlation between the asset i and the asset j
 	AssetsCorrelationMatrix [][]float64 `json:"assetsCorrelationMatrix"`
 	ShrinkageFactor         float64     `json:"shrinkageFactor"`
-	// shrinkageTargetCorrelationMatrix[i][j] is the target correlation between the asset i and the asset j
-	ShrinkageTargetCorrelationMatrix [][]float64 `json:"shrinkageTargetCorrelationMatrix"`
+	// targetCorrelationMatrix[i][j] is the target correlation between the asset i and the asset j
+	TargetCorrelationMatrix [][]float64 `json:"targetCorrelationMatrix"`
 }
 
-type PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnum string
+// PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum - The shrinkage target correlation matrix
+type PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum string
 
 const (
-	PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnumMinimumEquicorrelationMatrix PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnum = "minimumEquicorrelationMatrix"
-	PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnumZeroEquicorrelationMatrix    PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnum = "zeroEquicorrelationMatrix"
-	PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnumMaximumEquicorrelationMatrix PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnum = "maximumEquicorrelationMatrix"
+	PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnumMinimumEquicorrelationMatrix PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum = "minimumEquicorrelationMatrix"
+	PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnumZeroEquicorrelationMatrix    PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum = "zeroEquicorrelationMatrix"
+	PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnumMaximumEquicorrelationMatrix PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum = "maximumEquicorrelationMatrix"
 )
 
-func (e *PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnum) UnmarshalJSON(data []byte) error {
+func (e *PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum) UnmarshalJSON(data []byte) error {
 	var s string
 	if err := json.Unmarshal(data, &s); err != nil {
 		return err
@@ -38,19 +39,21 @@ func (e *PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnum) Un
 	case "zeroEquicorrelationMatrix":
 		fallthrough
 	case "maximumEquicorrelationMatrix":
-		*e = PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnum(s)
+		*e = PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum(s)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnum: %s", s)
+		return fmt.Errorf("invalid value for PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum: %s", s)
 	}
 }
 
 type PostAssetsCorrelationMatrixShrinkageRequestBody1 struct {
 	Assets int64 `json:"assets"`
 	// assetsCorrelationMatrix[i][j] is the correlation between the asset i and the asset j
-	AssetsCorrelationMatrix [][]float64                                                         `json:"assetsCorrelationMatrix"`
-	ShrinkageFactor         float64                                                             `json:"shrinkageFactor"`
-	ShrinkageTarget         PostAssetsCorrelationMatrixShrinkageRequestBody1ShrinkageTargetEnum `json:"shrinkageTarget"`
+	AssetsCorrelationMatrix [][]float64 `json:"assetsCorrelationMatrix"`
+	// The shrinkage factor
+	ShrinkageFactor float64 `json:"shrinkageFactor"`
+	// The shrinkage target correlation matrix
+	TargetEquicorrelationMatrix PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum `json:"targetEquicorrelationMatrix"`
 }
 
 type PostAssetsCorrelationMatrixShrinkageRequestBodyType string

@@ -32,8 +32,7 @@ type AddCustomFieldSettingForPortfolioRequest struct {
 
 // AddCustomFieldSettingForPortfolio200ApplicationJSON - Successfully added the custom field to the portfolio.
 type AddCustomFieldSettingForPortfolio200ApplicationJSON struct {
-	// An empty object. Some endpoints do not return an object on success. The success is conveyed through a 2-- status code and returning an empty object.
-	Data map[string]interface{} `json:"data,omitempty"`
+	Data *shared.CustomFieldSettingResponse `json:"data,omitempty"`
 }
 
 type AddCustomFieldSettingForPortfolioResponse struct {

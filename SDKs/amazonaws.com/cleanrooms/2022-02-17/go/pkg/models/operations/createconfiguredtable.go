@@ -40,7 +40,7 @@ func (e *CreateConfiguredTableRequestBodyAnalysisMethodEnum) UnmarshalJSON(data 
 	}
 }
 
-// CreateConfiguredTableRequestBodyTableReference - A pointer to the data set that underlies this table. Currently, this can only be an AWS Glue table.
+// CreateConfiguredTableRequestBodyTableReference - A pointer to the dataset that underlies this table. Currently, this can only be an AWS Glue table.
 type CreateConfiguredTableRequestBodyTableReference struct {
 	Glue *shared.GlueTableReference `json:"glue,omitempty"`
 }
@@ -54,8 +54,10 @@ type CreateConfiguredTableRequestBody struct {
 	Description *string `json:"description,omitempty"`
 	// The name of the configured table.
 	Name string `json:"name"`
-	// A pointer to the data set that underlies this table. Currently, this can only be an AWS Glue table.
+	// A pointer to the dataset that underlies this table. Currently, this can only be an AWS Glue table.
 	TableReference CreateConfiguredTableRequestBodyTableReference `json:"tableReference"`
+	// Map of tags assigned to a resource
+	Tags map[string]string `json:"tags,omitempty"`
 }
 
 type CreateConfiguredTableRequest struct {

@@ -42,8 +42,6 @@ type FirestoreProjectsDatabasesOperationsDeleteQueryParams struct {
 	CurrentDocumentUpdateTime *string `queryParam:"style=form,explode=true,name=currentDocument.updateTime"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-	// If set, will free the database_id associated with this database. uid will be used as the resource id to identify this deleted database.
-	FreeID *bool `queryParam:"style=form,explode=true,name=freeId"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.

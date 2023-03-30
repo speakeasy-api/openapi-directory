@@ -11,13 +11,7 @@ type CreateOrderTaskSecurity struct {
 	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
 }
 
-type CreateOrderTaskHeaders struct {
-	// The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID:EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum.
-	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
-}
-
 type CreateOrderTaskRequest struct {
-	Headers CreateOrderTaskHeaders
 	// description not needed
 	Request  shared.CreateOrderTaskRequest `request:"mediaType=application/json"`
 	Security CreateOrderTaskSecurity

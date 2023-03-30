@@ -66,10 +66,11 @@ func main() {
 ### Domains
 
 * `ConfigureDomain` - Edit domain name renew state
-* `Domains` - Overviews of domains
-* `GetDomainsDomainName` - Details of a domain
-* `PostDomainsRegistrations` - Register a domain
-* `PutDomainsDomainNameNameservers` - Edit domain name servers
+* `EditNameServers` - Edit domain name servers
+* `GetDomain` - Details of a domain
+* `GetDomains` - Overviews of domains
+* `Register` - Register a domain
+* `Transfer` - Transfer a domain
 
 ### LinuxHostings
 

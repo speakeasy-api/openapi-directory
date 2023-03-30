@@ -8,34 +8,52 @@ import (
 )
 
 type SearchQueryParams struct {
+	// date range to filter listings that were active within given date range. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+	ActiveInventoryDateRange *string `queryParam:"style=form,explode=true,name=active_inventory_date_range"`
 	// The API Authentication Key. Mandatory with all API calls.
 	APIKey *string `queryParam:"style=form,explode=true,name=api_key"`
-	// Flag on whether to include api_key in response API urls (if any)
-	AppendAPIKey *bool `queryParam:"style=form,explode=true,name=append_api_key"`
 	// Base exterior color to match. Valid filter values are those that our Search facets API returns for unique base exterior colors. You can pass in multiple base interior color values comma separated
 	BaseExteriorColor *string `queryParam:"style=form,explode=true,name=base_exterior_color"`
 	// Base interior color to match. Valid filter values are those that our Search facets API returns for unique base interior colors. You can pass in multiple base interior color values comma separated
 	BaseInteriorColor *string `queryParam:"style=form,explode=true,name=base_interior_color"`
-	// Body subtype to filter the listings on. Valid filter values are those that our Search facets API returns for unique body subtypes. You can pass in multiple body subtype values comma separated
-	BodySubtype *string `queryParam:"style=form,explode=true,name=body_subtype"`
 	// To filter listing on their body type
 	BodyType *string `queryParam:"style=form,explode=true,name=body_type"`
-	// Car type. Allowed values are - new / used / certified
-	CarType *shared.CarCarTypeEnum `queryParam:"style=form,explode=true,name=car_type"`
-	// Indicates whether car has had only one owner or not
-	Carfax1Owner *shared.Carfax1OwnerEnum `queryParam:"style=form,explode=true,name=carfax_1_owner"`
-	// Indicates whether car has clean ownership records
-	CarfaxCleanTitle *shared.CarfaxCleanTitleEnum `queryParam:"style=form,explode=true,name=carfax_clean_title"`
+	// Flag to sort listings based on client filter score in solr
+	Boost *shared.BoostEnum `queryParam:"style=form,explode=true,name=boost"`
+	// Filter cars on city
+	CarLocationCity *string `queryParam:"style=form,explode=true,name=car_location_city"`
+	// Filter cars on county
+	CarLocationCounty *string `queryParam:"style=form,explode=true,name=car_location_county"`
+	// Latitude component of car location
+	CarLocationLatitude *float64 `queryParam:"style=form,explode=true,name=car_location_latitude"`
+	// Longitude component of car location
+	CarLocationLongitude *float64 `queryParam:"style=form,explode=true,name=car_location_longitude"`
+	// Filter cars on seller name
+	CarLocationSellerName *string `queryParam:"style=form,explode=true,name=car_location_seller_name"`
+	// Filter cars on street name
+	CarLocationStreet *string `queryParam:"style=form,explode=true,name=car_location_street"`
+	// To filter listing on car ZIP around which they are listed
+	CarLocationZip *string `queryParam:"style=form,explode=true,name=car_location_zip"`
+	// Car type. Allowed values are - new / used
+	CarType *shared.CarTypeEnum `queryParam:"style=form,explode=true,name=car_type"`
 	// To filter listing on City in which they are listed
 	City *string `queryParam:"style=form,explode=true,name=city"`
-	// City mileage range to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
+	// City mileage range for UK to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
 	CityMpgRange *string `queryParam:"style=form,explode=true,name=city_mpg_range"`
+	// Flag to add explicit filters set on client level in solr
+	ClientFilters *shared.ClientFiltersEnum `queryParam:"style=form,explode=true,name=client_filters"`
+	// CO2 emissions
+	Co2Emissions *string `queryParam:"style=form,explode=true,name=co2_emissions"`
+	// Combined mileage range for UK to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
+	CombinedMpgRange *string `queryParam:"style=form,explode=true,name=combined_mpg_range"`
 	// To filter listing on Country in which they are listed
-	Country *shared.CarCountryEnum `queryParam:"style=form,explode=true,name=country"`
+	Country *shared.CarUkCountryEnum `queryParam:"style=form,explode=true,name=country"`
+	// To filter listing on county in which they are listed
+	County *string `queryParam:"style=form,explode=true,name=county"`
 	// To filter listing on their cylinders
 	Cylinders *string `queryParam:"style=form,explode=true,name=cylinders"`
-	// Filter based on dealer type independant or franchise
-	DealerType *shared.DealerTypeEnum `queryParam:"style=form,explode=true,name=dealer_type"`
+	// Dealer id to filter the listings.
+	DealerID *string `queryParam:"style=form,explode=true,name=dealer_id"`
 	// If dedup is set to true then will give results with is_searchable irrespecive of dealer_id or source
 	Dedup *bool `queryParam:"style=form,explode=true,name=dedup"`
 	// Last 180 Days on Market range to filter cars with the DOM within the given range. Range to be given in the format - min-max e.g. 10-50
@@ -50,30 +68,24 @@ type SearchQueryParams struct {
 	Drivetrain *string `queryParam:"style=form,explode=true,name=drivetrain"`
 	// To filter listing on their engine
 	Engine *string `queryParam:"style=form,explode=true,name=engine"`
-	// Engine Aspiration to match. Valid filter values are those that our Search facets API returns for unique Engine Aspirations. You can pass in multiple Engine aspirations values comma separated
-	EngineAspiration *string `queryParam:"style=form,explode=true,name=engine_aspiration"`
-	// Engine Block to match. Valid filter values are those that our Search facets API returns for unique Engine Block. You can pass in multiple Engine Block values comma separated
-	EngineBlock *string `queryParam:"style=form,explode=true,name=engine_block"`
 	// Engine Size to match. Valid filter values are those that our Search facets API returns for unique engine size. You can pass in multiple engine size values comma separated
 	EngineSize *string `queryParam:"style=form,explode=true,name=engine_size"`
-	// Boolean param to exclude certified cars from search results
-	ExcludeCertified *bool `queryParam:"style=form,explode=true,name=exclude_certified"`
+	// Engine size range to filter listings with engine size in the given range. Range to be given in the format - min-max e.g. 1.0-2
+	EngineSizeRange *string `queryParam:"style=form,explode=true,name=engine_size_range"`
+	// A list of dealer ids to exclude from result
+	ExcludeDealerIds *string `queryParam:"style=form,explode=true,name=exclude_dealer_ids"`
+	// A list of sources to exclude from result
+	ExcludeSources *string `queryParam:"style=form,explode=true,name=exclude_sources"`
+	// To exclude write off category
+	ExcludeWriteOffCategory *string `queryParam:"style=form,explode=true,name=exclude_write_off_category"`
 	// Exterior color to match. Valid filter values are those that our Search facets API returns for unique exterior colors. You can pass in multiple exterior color values comma separated
 	ExteriorColor *string `queryParam:"style=form,explode=true,name=exterior_color"`
 	// Control sort order of facets with this parameter with default sort being on count, Other available sort is alphabetical sort, which can be obtained by using index as value for this param
 	FacetSort *shared.FacetSortEnum `queryParam:"style=form,explode=true,name=facet_sort"`
 	// The comma separated list of fields for which facets are requested. Facets could be requested in addition to the listings for the search. Please note - The API calls with lots of facet fields may take longer to respond.
 	Facets *string `queryParam:"style=form,explode=true,name=facets"`
-	// Search listings with exact down payment in finance offers, or inside a range with min and max seperated by a dash like finance_down_payment=30-60
-	FinanceDownPayment *string `queryParam:"style=form,explode=true,name=finance_down_payment"`
-	// Search listings with exact down payment percentage in finance offers, or inside a range with min and max seperated by a dash like finance_down_payment_per=30-60
-	FinanceDownPaymentPer *string `queryParam:"style=form,explode=true,name=finance_down_payment_per"`
-	// Search listings with finance offers exactly matching Estimated Monthly Payment(EMI), or inside a range with min and max seperated by a dash like finance_emp=30-60
-	FinanceEmp *string `queryParam:"style=form,explode=true,name=finance_emp"`
-	// Search listings with finance offers exactly matching loans Annual Percentage Rate, or inside a range with min and max seperated by a dash like finance_loan_apr=30-60
-	FinanceLoanApr *string `queryParam:"style=form,explode=true,name=finance_loan_apr"`
-	// Search listings with exact finance loan term, or inside a range with min and max seperated by a dash like finance_loan_term=30-60
-	FinanceLoanTerm *string `queryParam:"style=form,explode=true,name=finance_loan_term"`
+	// To filter on fca status
+	FcaStatus *string `queryParam:"style=form,explode=true,name=fca_status"`
 	// First seen at MC days range to filter listings with the first seen at MC in the range given. Range to be given in the format - min-max e.g. 25-12
 	FirstSeenAtMcDays *string `queryParam:"style=form,explode=true,name=first_seen_at_mc_days"`
 	// First seen at MC date range to filter listings with the first seen at MC in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
@@ -88,40 +100,34 @@ type SearchQueryParams struct {
 	FirstSeenRange *string `queryParam:"style=form,explode=true,name=first_seen_range"`
 	// To filter listing on their fuel type
 	FuelType *string `queryParam:"style=form,explode=true,name=fuel_type"`
-	// Highway mileage range to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
+	// Highway mileage range for UK to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
 	HighwayMpgRange *string `queryParam:"style=form,explode=true,name=highway_mpg_range"`
-	// Boolean param to search for listings that include finance options in them
-	IncludeFinance *bool `queryParam:"style=form,explode=true,name=include_finance"`
-	// Boolean param to search for listings that include leasing options in them
-	IncludeLease *bool `queryParam:"style=form,explode=true,name=include_lease"`
+	// A boolean to filter in transit vehicles
+	InTransit *shared.InTransitEnum `queryParam:"style=form,explode=true,name=in_transit"`
 	// To include non vin listings. Default is false
 	IncludeNonVinListings *bool `queryParam:"style=form,explode=true,name=include_non_vin_listings"`
-	// To include_relevant_links. Default is true
-	IncludeRelevantLinks *bool `queryParam:"style=form,explode=true,name=include_relevant_links"`
+	// Insurance Group
+	InsuranceGroup *string `queryParam:"style=form,explode=true,name=insurance_group"`
 	// Interior color to match. Valid filter values are those that our Search facets API returns for unique interior colors. You can pass in multiple interior color values comma separated
 	InteriorColor *string `queryParam:"style=form,explode=true,name=interior_color"`
+	// Inventory count range to filter listings with count of total listings in dealers inventory. Range to be given in the format - min-max e.g. 10-50
+	InventoryCountRange *string `queryParam:"style=form,explode=true,name=inventory_count_range"`
 	// Last seen days range to filter listings with the last seen in the range given. Range to be given in the format - min-max e.g. 25-12
 	LastSeenDays *string `queryParam:"style=form,explode=true,name=last_seen_days"`
 	// Last seen date range to filter listings with the last seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
 	LastSeenRange *string `queryParam:"style=form,explode=true,name=last_seen_range"`
 	// Latitude component of location
 	Latitude *float64 `queryParam:"style=form,explode=true,name=latitude"`
-	// Search listings with exact down payment in lease offers, or inside a range with min and max seperated by a dash like lease_down_payment=30-60
-	LeaseDownPayment *string `queryParam:"style=form,explode=true,name=lease_down_payment"`
-	// Search listings with lease offers exactly matching Estimated Monthly Payment(EMI), or inside a range with min and max seperated by a dash like lease_emp=30-60
-	LeaseEmp *string `queryParam:"style=form,explode=true,name=lease_emp"`
-	// Search listings with exact lease term, or inside a range with min and max seperated by a dash like lease_term=30-60
-	LeaseTerm *string `queryParam:"style=form,explode=true,name=lease_term"`
 	// Longitude component of location
 	Longitude *float64 `queryParam:"style=form,explode=true,name=longitude"`
 	// To filter listings on their make
 	Make *string `queryParam:"style=form,explode=true,name=make"`
-	// Comma separated list of Year, Make, Model, Trim fields. For example - year,make,model,trim fields for which user wants to do an exact match
-	Match *string `queryParam:"style=form,explode=true,name=match"`
 	// Miles range to filter listings with miles in the given range. Range to be given in the format - min-max e.g. 1000-5000
 	MilesRange *string `queryParam:"style=form,explode=true,name=miles_range"`
-	// Make-Model concatenated string. To help passing the results of auto-complete API on mm field, use this parameter and pass in the selected value as is
-	Mm *string `queryParam:"style=form,explode=true,name=mm"`
+	// Filter listings based by number of photo links within given range
+	MinPhotoLinks *string `queryParam:"style=form,explode=true,name=min_photo_links"`
+	// Filter listings based by number of cached photo links within given range
+	MinPhotoLinksCached *string `queryParam:"style=form,explode=true,name=min_photo_links_cached"`
 	// To filter listings on their model
 	Model *string `queryParam:"style=form,explode=true,name=model"`
 	// To filter listing on msa code in which they are listed
@@ -130,12 +136,24 @@ type SearchQueryParams struct {
 	MsrpRange *string `queryParam:"style=form,explode=true,name=msrp_range"`
 	// If nodedup is set to true then API will give results without is_searchable i.e multiple listings for single vin
 	Nodedup *bool `queryParam:"style=form,explode=true,name=nodedup"`
+	// Number of owners. Range to be given in the format - min-max e.g. 1000-5000
+	NumOwners *string `queryParam:"style=form,explode=true,name=num_owners"`
 	// Used in combination with dealer_id or source, when true returns the listings actually owned by dealer himself
 	Owned *bool `queryParam:"style=form,explode=true,name=owned"`
 	// A boolean indicating whether to include only those listings that have photo_links in search results, And discard those that don't have them
 	PhotoLinks *bool `queryParam:"style=form,explode=true,name=photo_links"`
+	// A boolean indicating whether to include only those listings that have photo_links_cached in search results, And discard those that don't have them
+	PhotoLinksCached *bool `queryParam:"style=form,explode=true,name=photo_links_cached"`
 	// If plot has value true results in around 25k coordinates with limited fields to plot respective graph
 	Plot *bool `queryParam:"style=form,explode=true,name=plot"`
+	// To filter listing on postal code around which they are listed
+	PostalCode *string `queryParam:"style=form,explode=true,name=postal_code"`
+	// To filter on powertrain_type
+	PowertrainType *string `queryParam:"style=form,explode=true,name=powertrain_type"`
+	// Query to filter listings based on their positive and negative price change
+	PriceChange *shared.PriceChangeEnum `queryParam:"style=form,explode=true,name=price_change"`
+	// Price change range to filter listings with price change within given price_change_range. Range to be given in the format - min-max e.g. 10-500
+	PriceChangeRange *string `queryParam:"style=form,explode=true,name=price_change_range"`
 	// Price range to filter listings with the price in the range given. Range to be given in the format - min-max e.g. 1000-5000
 	PriceRange *string `queryParam:"style=form,explode=true,name=price_range"`
 	// Radius around the search location (Unit - Miles)
@@ -144,10 +162,14 @@ type SearchQueryParams struct {
 	RangeFacets *string `queryParam:"style=form,explode=true,name=range_facets"`
 	// Number of results to return. Default is 10. Max is 50
 	Rows *int `queryParam:"style=form,explode=true,name=rows"`
+	// To filter on vehicle seating capacity
+	SeatingCapacity *string `queryParam:"style=form,explode=true,name=seating_capacity"`
 	// Sort by field. Default sort field is distance from the given point
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Sort order - asc or desc. Default sort order is asc
 	SortOrder *shared.SortOrderEnum `queryParam:"style=form,explode=true,name=sort_order"`
+	// To filter listing on their source only for widget requests
+	Source *string `queryParam:"style=form,explode=true,name=source"`
 	// Page number to fetch the results for the given criteria. Default is 0. Pagination is allowed only till first 10000 results for the search and sort criteria. The page value can be only between 1 to 10000/rows
 	Start *int `queryParam:"style=form,explode=true,name=start"`
 	// To filter listing on State in which they are listed
@@ -156,26 +178,28 @@ type SearchQueryParams struct {
 	Stats *string `queryParam:"style=form,explode=true,name=stats"`
 	// To filter listing on their stock number on lot
 	StockNo *string `queryParam:"style=form,explode=true,name=stock_no"`
-	// Comma separated list of 10 letters excert from the 17 letter VIN. The 10 letters to be picked up from the 17 letter VIN are - first 8 letters and the 10th and 11th letter. E.g. For a VIN - 1FTFW1EF3EKE57182 the taxonomy vin would be - 1FTFW1EFEK  A taxonomy VIN identified a build of a car and could be used to filter our cars of a particular build. This is an alternative to the vin or ymmt parameters to the search API.
-	TaxonomyVins *string `queryParam:"style=form,explode=true,name=taxonomy_vins"`
 	// To filter listing on their transmission
 	Transmission *string `queryParam:"style=form,explode=true,name=transmission"`
 	// To filter listing on their trim
 	Trim *string `queryParam:"style=form,explode=true,name=trim"`
-	// Filter listings on web scraped trim
-	TrimO *string `queryParam:"style=form,explode=true,name=trim_o"`
-	// Filter trim on custom possible matches
-	TrimR *string `queryParam:"style=form,explode=true,name=trim_r"`
-	// To filter listing on their vehicle type
-	VehicleType *string `queryParam:"style=form,explode=true,name=vehicle_type"`
+	// To filter on uvc id
+	UvcID *string `queryParam:"style=form,explode=true,name=uvc_id"`
+	// To filter listing on their variant
+	Variant *string `queryParam:"style=form,explode=true,name=variant"`
+	// Vehicle registration date range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+	VehicleRegistrationDateRange *string `queryParam:"style=form,explode=true,name=vehicle_registration_date_range"`
+	// Vehicle Registration Mark
+	VehicleRegistrationMark *string `queryParam:"style=form,explode=true,name=vehicle_registration_mark"`
 	// To filter listing on their VIN
 	Vin *string `queryParam:"style=form,explode=true,name=vin"`
-	// Comma separated list of 17 digit vins to search the matching cars for. Only 10 VINs allowed per request. If the request contains more than 10 VINs the first 10 VINs will be considered. Could be used as a More Like This or Similar Vehicles search for the given VINs. Ths vins parameter is an alternative to taxonomy_vins or ymmt parameters available with the search API. vins and taxonomy_vins parameters could be used to filter our cars with the exact build represented by the vins or taxonomy_vins whereas ymmt is a top level filter that does not filter cars by the build attributes like doors, drivetrain, cylinders, body type, body subtype, vehicle type etc
-	Vins *string `queryParam:"style=form,explode=true,name=vins"`
+	// To filter on vrm
+	Vrm *string `queryParam:"style=form,explode=true,name=vrm"`
+	// write off category
+	WriteOffCategory *string `queryParam:"style=form,explode=true,name=write_off_category"`
 	// To filter listing on their year
 	Year *string `queryParam:"style=form,explode=true,name=year"`
-	// Year-Make-Model concatenated string. To help passing the results of auto-complete API on ymm field, use this parameter and pass in the selected value as is
-	Ymm *string `queryParam:"style=form,explode=true,name=ymm"`
+	// Year range to filter listings with the year in the range given. Range to be given in the format - min-max e.g. 2019-2021
+	YearRange *string `queryParam:"style=form,explode=true,name=year_range"`
 	// Comma separated list of Year, Make, Model, Trim combinations. Each combination needs to have the year,make,model, trim values separated by a pipe '|' character in the form year|make|model|trim. e.g. 2010|Audi|A5,2014|Nissan|Sentra|S 6MT,|Honda|City|   You could just provide strings of the form - 'year|make||' or 'year|make|model' or '|make|model|' combinations. Individual year / make / model filters provied with the API calls will take precedence over the Year, Make, Model, Trim combinations. The Make, Model, Trim values must be valid values as per the Marketcheck Vin Decoder. If you are using a separate vin decoder then look at using the 'vins' or 'taxonomy_vins' parameter to the search api instead the year|make|model|trim combinations.
 	Ymmt *string `queryParam:"style=form,explode=true,name=ymmt"`
 	// To filter listing on ZIP around which they are listed
@@ -189,9 +213,9 @@ type SearchRequest struct {
 type SearchResponse struct {
 	ContentType string
 	// Error
-	Error *shared.Error
+	Error       *shared.Error
+	StatusCode  int
+	RawResponse *http.Response
 	// List of all cars listings matching the search & filter criteria
-	SearchResponse *shared.SearchResponse
-	StatusCode     int
-	RawResponse    *http.Response
+	UKSearchResponse *shared.UKSearchResponse
 }

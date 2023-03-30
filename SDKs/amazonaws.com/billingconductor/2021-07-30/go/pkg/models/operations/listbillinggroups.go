@@ -26,8 +26,9 @@ type ListBillingGroupsHeaders struct {
 
 // ListBillingGroupsRequestBodyFilters - The filter that specifies the billing groups and pricing plans to retrieve billing group information.
 type ListBillingGroupsRequestBodyFilters struct {
-	Arns        []string `json:"Arns,omitempty"`
-	PricingPlan *string  `json:"PricingPlan,omitempty"`
+	Arns        []string                        `json:"Arns,omitempty"`
+	PricingPlan *string                         `json:"PricingPlan,omitempty"`
+	Statuses    []shared.BillingGroupStatusEnum `json:"Statuses,omitempty"`
 }
 
 type ListBillingGroupsRequestBody struct {

@@ -77,7 +77,7 @@ func main() {
 
 * `CreateReplicationSet` - A replication set replicates and encrypts your data to the provided Regions with the provided KMS key. 
 * `CreateResponsePlan` - Creates a response plan that automates the initial response to incidents. A response plan engages contacts, starts chat channel collaboration, and initiates runbooks at the beginning of an incident.
-* `CreateTimelineEvent` - Creates a custom timeline event on the incident details page of an incident record. Timeline events are automatically created by Incident Manager, marking key moment during an incident. You can create custom timeline events to mark important events that are automatically detected by Incident Manager.
+* `CreateTimelineEvent` - Creates a custom timeline event on the incident details page of an incident record. Incident Manager automatically creates timeline events that mark key moments during an incident. You can create custom timeline events to mark important events that Incident Manager can detect automatically.
 * `DeleteIncidentRecord` - Delete an incident record from Incident Manager. 
 * `DeleteReplicationSet` - Deletes all Regions in your replication set. Deleting the replication set deletes all Incident Manager data.
 * `DeleteResourcePolicy` - Deletes the resource policy that Resource Access Manager uses to share your Incident Manager resource.

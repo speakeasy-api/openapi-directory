@@ -4,7 +4,9 @@ package shared
 
 // ConfigModel - When everything is ok, the config data returned.
 type ConfigModel struct {
-	ConfigID *string       `json:"configId,omitempty"`
-	Name     *string       `json:"name,omitempty"`
-	Product  *ProductModel `json:"product,omitempty"`
+	ConfigID    *string       `json:"configId,omitempty"`
+	Description *string       `json:"description,omitempty"`
+	Name        *string       `json:"name,omitempty"`
+	Order       *int          `json:"order,omitempty"`
+	Product     *ProductModel `json:"product,omitempty"`
 }

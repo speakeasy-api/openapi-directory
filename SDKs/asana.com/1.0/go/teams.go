@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-// teams - A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
+// teams - A team is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
 type teams struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -35,6 +35,8 @@ func newTeams(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 
 // AddUserForTeam - Add a user to a team
 // The user making this call must be a member of the team in order to add others. The user being added must exist in the same organization as the team.
+//
+// Returns the complete team membership record for the newly added user.
 func (s *teams) AddUserForTeam(ctx context.Context, request operations.AddUserForTeamRequest) (*operations.AddUserForTeamResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/teams/{team_gid}/addUser", request.PathParams, nil)
@@ -254,73 +256,6 @@ func (s *teams) GetTeam(ctx context.Context, request operations.GetTeamRequest) 
 	return res, nil
 }
 
-// GetTeamsForOrganization - Get teams in an organization
-// Returns the compact records for all teams in the organization visible to the authorized user.
-func (s *teams) GetTeamsForOrganization(ctx context.Context, request operations.GetTeamsForOrganizationRequest) (*operations.GetTeamsForOrganizationResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/organizations/{workspace_gid}/teams", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetTeamsForOrganizationResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.GetTeamsForOrganization200ApplicationJSON
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.GetTeamsForOrganization200ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 400:
-		fallthrough
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 403:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	case httpRes.StatusCode == 500:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ErrorResponse
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.ErrorResponse = out
-		}
-	}
-
-	return res, nil
-}
-
 // GetTeamsForUser - Get teams for a user
 // Returns the compact records for all teams to which the given user is assigned.
 func (s *teams) GetTeamsForUser(ctx context.Context, request operations.GetTeamsForUserRequest) (*operations.GetTeamsForUserResponse, error) {
@@ -364,6 +299,73 @@ func (s *teams) GetTeamsForUser(ctx context.Context, request operations.GetTeams
 			}
 
 			res.GetTeamsForUser200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ErrorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetTeamsForWorkspace - Get teams in a workspace
+// Returns the compact records for all teams in the workspace visible to the authorized user.
+func (s *teams) GetTeamsForWorkspace(ctx context.Context, request operations.GetTeamsForWorkspaceRequest) (*operations.GetTeamsForWorkspaceResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace_gid}/teams", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetTeamsForWorkspaceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.GetTeamsForWorkspace200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetTeamsForWorkspace200ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -441,6 +443,83 @@ func (s *teams) RemoveUserForTeam(ctx context.Context, request operations.Remove
 			}
 
 			res.RemoveUserForTeam204ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ErrorResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ErrorResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateTeam - Update a team
+// Updates a team within the current workspace.
+func (s *teams) UpdateTeam(ctx context.Context, request operations.UpdateTeamRequest) (*operations.UpdateTeamResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/teams"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateTeamResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.UpdateTeam200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UpdateTeam200ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough

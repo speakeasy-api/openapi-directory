@@ -31,6 +31,8 @@ type CreateSceneRequestBody struct {
 	Description *string `json:"description,omitempty"`
 	// The ID of the scene.
 	SceneID string `json:"sceneId"`
+	// The request metadata.
+	SceneMetadata map[string]string `json:"sceneMetadata,omitempty"`
 	// Metadata that you can use to manage the scene.
 	Tags map[string]string `json:"tags,omitempty"`
 }

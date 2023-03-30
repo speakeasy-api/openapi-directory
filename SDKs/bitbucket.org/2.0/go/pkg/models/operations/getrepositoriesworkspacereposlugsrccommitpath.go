@@ -59,9 +59,9 @@ type GetRepositoriesWorkspaceRepoSlugSrcCommitPathQueryParams struct {
 	Format *GetRepositoriesWorkspaceRepoSlugSrcCommitPathFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// If provided, returns the contents of the repository and its subdirectories recursively until the specified max_depth of nested directories. When omitted, this defaults to 1.
 	MaxDepth *int64 `queryParam:"style=form,explode=true,name=max_depth"`
-	// Optional filter expression as per [filtering and sorting](../../../../../../meta/filtering).
+	// Optional filter expression as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	Q *string `queryParam:"style=form,explode=true,name=q"`
-	// Optional sorting parameter as per [filtering and sorting](../../../../../../meta/filtering#query-sort).
+	// Optional sorting parameter as per [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results).
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 

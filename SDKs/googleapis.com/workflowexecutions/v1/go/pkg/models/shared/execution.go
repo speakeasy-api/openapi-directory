@@ -79,7 +79,7 @@ type Execution struct {
 	EndTime *string `json:"endTime,omitempty"`
 	// Error describes why the execution was abnormally terminated.
 	Error *Error `json:"error,omitempty"`
-	// Labels associated with this execution. Labels can contain at most 64 entries. Keys and values can be no longer than 63 characters and can only contain lowercase letters, numeric characters, underscores and dashes. Label keys must start with a letter. International characters are allowed.
+	// Labels associated with this execution. Labels can contain at most 64 entries. Keys and values can be no longer than 63 characters and can only contain lowercase letters, numeric characters, underscores, and dashes. Label keys must start with a letter. International characters are allowed. By default, labels are inherited from the workflow but are overridden by any labels associated with the execution.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Output only. The resource name of the execution. Format: projects/{project}/locations/{location}/workflows/{workflow}/executions/{execution}
 	Name *string `json:"name,omitempty"`
@@ -103,7 +103,7 @@ type ExecutionInput struct {
 	CallLogLevel *ExecutionCallLogLevelEnum `json:"callLogLevel,omitempty"`
 	// Error describes why the execution was abnormally terminated.
 	Error *Error `json:"error,omitempty"`
-	// Labels associated with this execution. Labels can contain at most 64 entries. Keys and values can be no longer than 63 characters and can only contain lowercase letters, numeric characters, underscores and dashes. Label keys must start with a letter. International characters are allowed.
+	// Labels associated with this execution. Labels can contain at most 64 entries. Keys and values can be no longer than 63 characters and can only contain lowercase letters, numeric characters, underscores, and dashes. Label keys must start with a letter. International characters are allowed. By default, labels are inherited from the workflow but are overridden by any labels associated with the execution.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Represents the current status of this execution.
 	Status *Status `json:"status,omitempty"`

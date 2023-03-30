@@ -8,7 +8,7 @@ import (
 )
 
 type AcmednsAcmeChallengeSetsGetPathParams struct {
-	// Required. SLD + TLD domain name to list challenges. This MAY be Unicode or Punycode.
+	// Required. SLD + TLD domain name to list challenges. For example, this would be "google.com" for any FQDN under "google.com". That includes challenges for "subdomain.google.com". This MAY be Unicode or Punycode.
 	RootDomain string `pathParam:"style=simple,explode=false,name=rootDomain"`
 }
 

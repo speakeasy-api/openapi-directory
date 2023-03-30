@@ -57,7 +57,10 @@ pkg/models/operations/sqlinstancestruncatelog.go
 pkg/models/operations/sqlinstancesupdate.go
 pkg/models/operations/sqloperationsget.go
 pkg/models/operations/sqloperationslist.go
+pkg/models/operations/sqlprojectsinstancesgetdiskshrinkconfig.go
+pkg/models/operations/sqlprojectsinstancesperformdiskshrink.go
 pkg/models/operations/sqlprojectsinstancesreschedulemaintenance.go
+pkg/models/operations/sqlprojectsinstancesresetreplicasize.go
 pkg/models/operations/sqlprojectsinstancesstartexternalsync.go
 pkg/models/operations/sqlprojectsinstancesverifyexternalsyncsettings.go
 pkg/models/operations/sqlsslcertscreateephemeral.go
@@ -135,6 +138,8 @@ pkg/models/shared/rotateservercacontext.go
 pkg/models/shared/instancestruncatelogrequest.go
 pkg/models/shared/truncatelogcontext.go
 pkg/models/shared/operationslistresponse.go
+pkg/models/shared/sqlinstancesgetdiskshrinkconfigresponse.go
+pkg/models/shared/performdiskshrinkcontext.go
 pkg/models/shared/sqlinstancesreschedulemaintenancerequestbody.go
 pkg/models/shared/reschedule.go
 pkg/models/shared/sqlinstancesstartexternalsyncrequest.go

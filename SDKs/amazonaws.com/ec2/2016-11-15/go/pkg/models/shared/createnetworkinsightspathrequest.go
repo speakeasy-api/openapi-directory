@@ -293,13 +293,15 @@ type CreateNetworkInsightsPathRequestTagSpecifications struct {
 }
 
 type CreateNetworkInsightsPathRequest struct {
-	ClientToken       string
-	Destination       string
-	DestinationIP     *string
-	DestinationPort   *int64
-	DryRun            *bool
-	Protocol          ProtocolEnum
-	Source            string
-	SourceIP          *string
-	TagSpecifications []CreateNetworkInsightsPathRequestTagSpecifications
+	ClientToken         string
+	Destination         *string
+	DestinationIP       *string
+	DestinationPort     *int64
+	DryRun              *bool
+	FilterAtDestination *PathRequestFilter
+	FilterAtSource      *PathRequestFilter
+	Protocol            ProtocolEnum
+	Source              string
+	SourceIP            *string
+	TagSpecifications   []CreateNetworkInsightsPathRequestTagSpecifications
 }

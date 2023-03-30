@@ -55,7 +55,7 @@ type RegisterScalableTargetResponse struct {
 	// LimitExceededException
 	LimitExceededException interface{}
 	// Success
-	RegisterScalableTargetResponse map[string]interface{}
+	RegisterScalableTargetResponse *shared.RegisterScalableTargetResponse
 	StatusCode                     int
 	RawResponse                    *http.Response
 	// ValidationException

@@ -41,6 +41,7 @@ pkg/models/operations/gamesleaderboardslist.go
 pkg/models/operations/gamesmetagamegetmetagameconfig.go
 pkg/models/operations/gamesmetagamelistcategoriesbyplayer.go
 pkg/models/operations/gamesplayersget.go
+pkg/models/operations/gamesplayersgetmultipleapplicationplayerids.go
 pkg/models/operations/gamesplayersgetscopedplayerids.go
 pkg/models/operations/gamesplayerslist.go
 pkg/models/operations/gamesrevisionscheck.go
@@ -99,6 +100,8 @@ pkg/models/shared/category.go
 pkg/models/shared/player.go
 pkg/models/shared/profilesettings.go
 pkg/models/shared/playerexperienceinfo.go
+pkg/models/shared/getmultipleapplicationplayeridsresponse.go
+pkg/models/shared/applicationplayerid.go
 pkg/models/shared/scopedplayerids.go
 pkg/models/shared/playerlistresponse.go
 pkg/models/shared/revisioncheckresponse.go

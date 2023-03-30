@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// HTTPTargetHTTPMethodEnum - The HTTP method to use for the request. When specified, it will override HttpRequest for the task. Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at execution time.
+// HTTPTargetHTTPMethodEnum - The HTTP method to use for the request. When specified, it overrides HttpRequest for the task. Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at execution time.
 type HTTPTargetHTTPMethodEnum string
 
 const (
@@ -53,7 +53,7 @@ func (e *HTTPTargetHTTPMethodEnum) UnmarshalJSON(data []byte) error {
 type HTTPTarget struct {
 	// HTTP target headers. This map contains the header field names and values. Headers will be set when running the CreateTask and/or BufferTask. These headers represent a subset of the headers that will be configured for the task's HTTP request. Some HTTP request headers will be ignored or replaced. A partial list of headers that will be ignored or replaced is: * Several predefined headers, prefixed with "X-CloudTasks-", can be used to define properties of the task. * Host: This will be computed by Cloud Tasks and derived from HttpRequest.url. * Content-Length: This will be computed by Cloud Tasks. `Content-Type` won't be set by Cloud Tasks. You can explicitly set `Content-Type` to a media type when the task is created. For example,`Content-Type` can be set to `"application/octet-stream"` or `"application/json"`. The default value is set to "application/json"`. * User-Agent: This will be set to `"Google-Cloud-Tasks"`. Headers which can have multiple values (according to RFC2616) can be specified using comma-separated values. The size of the headers must be less than 80KB. Queue-level headers to override headers of all the tasks in the queue.
 	HeaderOverrides []HeaderOverride `json:"headerOverrides,omitempty"`
-	// The HTTP method to use for the request. When specified, it will override HttpRequest for the task. Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at execution time.
+	// The HTTP method to use for the request. When specified, it overrides HttpRequest for the task. Note that if the value is set to HttpMethod the HttpRequest of the task will be ignored at execution time.
 	HTTPMethod *HTTPTargetHTTPMethodEnum `json:"httpMethod,omitempty"`
 	// URI Override. When specified, all the HTTP tasks inside the queue will be partially or fully overridden depending on the configured values.
 	URIOverride *URIOverride `json:"uriOverride,omitempty"`

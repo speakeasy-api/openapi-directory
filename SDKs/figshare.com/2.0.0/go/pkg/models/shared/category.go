@@ -4,9 +4,15 @@ package shared
 
 type Category struct {
 	// Category id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Parent category
-	ParentID *int64 `json:"parent_id,omitempty"`
+	ParentID int64 `json:"parent_id"`
+	// Path to all ancestor ids
+	Path string `json:"path"`
+	// ID in original standard taxonomy
+	SourceID string `json:"source_id"`
+	// Internal id of taxonomy the category is part of
+	TaxonomyID int64 `json:"taxonomy_id"`
 	// Category title
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 }

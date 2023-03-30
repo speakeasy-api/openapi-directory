@@ -4,17 +4,25 @@ package shared
 
 type ShortAccount struct {
 	// Account activity status
-	Active *int64 `json:"active,omitempty"`
+	Active int64 `json:"active"`
 	// User email
-	Email *string `json:"email,omitempty"`
+	Email string `json:"email"`
 	// First Name
-	FirstName *string `json:"first_name,omitempty"`
+	FirstName string `json:"first_name"`
 	// Account id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Account institution
-	InstitutionID *int64 `json:"institution_id,omitempty"`
+	InstitutionID int64 `json:"institution_id"`
 	// Account institution user id
-	InstitutionUserID *string `json:"institution_user_id,omitempty"`
+	InstitutionUserID string `json:"institution_user_id"`
 	// Last Name
-	LastName *string `json:"last_name,omitempty"`
+	LastName string `json:"last_name"`
+	// ORCID iD associated to account
+	OrcidID string `json:"orcid_id"`
+	// Total storage available to account, in bytes
+	Quota int64 `json:"quota"`
+	// Storage used by the account, in bytes
+	UsedQuota int64 `json:"used_quota"`
+	// User id associated with account, useful for example for adding the account as an author to an item
+	UserID int64 `json:"user_id"`
 }

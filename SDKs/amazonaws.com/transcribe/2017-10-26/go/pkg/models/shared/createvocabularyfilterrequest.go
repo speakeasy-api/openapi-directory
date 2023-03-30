@@ -3,6 +3,7 @@
 package shared
 
 type CreateVocabularyFilterRequest struct {
+	DataAccessRoleArn       *string          `json:"DataAccessRoleArn,omitempty"`
 	LanguageCode            LanguageCodeEnum `json:"LanguageCode"`
 	Tags                    []Tag            `json:"Tags,omitempty"`
 	VocabularyFilterFileURI *string          `json:"VocabularyFilterFileUri,omitempty"`

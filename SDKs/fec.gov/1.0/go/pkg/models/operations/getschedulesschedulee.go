@@ -105,7 +105,8 @@ type GetSchedulesScheduleEQueryParams struct {
 	//     - FRQ  Request for Additional Information
 	//
 	FilingForm []string `queryParam:"style=form,explode=true,name=filing_form"`
-	// The image number of the page where the schedule item is reported
+	// An unique identifier for each page where the electronic or paper filing is reported.
+	//
 	ImageNumber []string `queryParam:"style=form,explode=true,name=image_number"`
 	// Record filed as 24- or 48-hour notice.
 	//
@@ -146,8 +147,9 @@ type GetSchedulesScheduleEQueryParams struct {
 	MaxDisseminationDate *types.Date `queryParam:"style=form,explode=true,name=max_dissemination_date"`
 	// Selects all filings received before this date
 	//
-	MaxFilingDate  *types.Date `queryParam:"style=form,explode=true,name=max_filing_date"`
-	MaxImageNumber *string     `queryParam:"style=form,explode=true,name=max_image_number"`
+	MaxFilingDate *types.Date `queryParam:"style=form,explode=true,name=max_filing_date"`
+	// Maxium image number of the page where the schedule item is reported
+	MaxImageNumber *string `queryParam:"style=form,explode=true,name=max_image_number"`
 	// Filter for all amounts greater than a value.
 	MinAmount *string `queryParam:"style=form,explode=true,name=min_amount"`
 	// Minimum date
@@ -156,8 +158,9 @@ type GetSchedulesScheduleEQueryParams struct {
 	MinDisseminationDate *types.Date `queryParam:"style=form,explode=true,name=min_dissemination_date"`
 	// Selects all filings received after this date
 	//
-	MinFilingDate  *types.Date `queryParam:"style=form,explode=true,name=min_filing_date"`
-	MinImageNumber *string     `queryParam:"style=form,explode=true,name=min_image_number"`
+	MinFilingDate *types.Date `queryParam:"style=form,explode=true,name=min_filing_date"`
+	// Minium image number of the page where the schedule item is reported
+	MinImageNumber *string `queryParam:"style=form,explode=true,name=min_image_number"`
 	// The report associated with the transaction is either new or is the most-recently filed amendment. Undetermined version (`null`) is always included.
 	//
 	MostRecent *bool `queryParam:"style=form,explode=true,name=most_recent"`
@@ -166,6 +169,9 @@ type GetSchedulesScheduleEQueryParams struct {
 	PayeeName []string `queryParam:"style=form,explode=true,name=payee_name"`
 	// The number of results returned per page. Defaults to 20.
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
+	// Keyword search for spender name or ID
+	//
+	QSpender []string `queryParam:"style=form,explode=true,name=q_spender"`
 	// Provide a field to sort by. Use `-` for descending order.
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`

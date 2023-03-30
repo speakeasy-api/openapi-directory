@@ -22,7 +22,7 @@ type RunProjectsLocationsServicesPatchQueryParams struct {
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
 	// OAuth access token.
 	AccessToken *string `queryParam:"style=form,explode=true,name=access_token"`
-	// If set to true, and if the Service does not exist, it will create a new one. Caller must have both create and update permissions for this call if this is set to true.
+	// This field is currently not used by Cloud Run; setting it does not have any effect.
 	AllowMissing *bool `queryParam:"style=form,explode=true,name=allowMissing"`
 	// Data format for response.
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`

@@ -10,13 +10,14 @@ import (
 type ModelStatusEnum string
 
 const (
-	ModelStatusEnumSubmitted     ModelStatusEnum = "SUBMITTED"
-	ModelStatusEnumTraining      ModelStatusEnum = "TRAINING"
-	ModelStatusEnumDeleting      ModelStatusEnum = "DELETING"
-	ModelStatusEnumStopRequested ModelStatusEnum = "STOP_REQUESTED"
-	ModelStatusEnumStopped       ModelStatusEnum = "STOPPED"
-	ModelStatusEnumInError       ModelStatusEnum = "IN_ERROR"
-	ModelStatusEnumTrained       ModelStatusEnum = "TRAINED"
+	ModelStatusEnumSubmitted          ModelStatusEnum = "SUBMITTED"
+	ModelStatusEnumTraining           ModelStatusEnum = "TRAINING"
+	ModelStatusEnumDeleting           ModelStatusEnum = "DELETING"
+	ModelStatusEnumStopRequested      ModelStatusEnum = "STOP_REQUESTED"
+	ModelStatusEnumStopped            ModelStatusEnum = "STOPPED"
+	ModelStatusEnumInError            ModelStatusEnum = "IN_ERROR"
+	ModelStatusEnumTrained            ModelStatusEnum = "TRAINED"
+	ModelStatusEnumTrainedWithWarning ModelStatusEnum = "TRAINED_WITH_WARNING"
 )
 
 func (e *ModelStatusEnum) UnmarshalJSON(data []byte) error {
@@ -38,6 +39,8 @@ func (e *ModelStatusEnum) UnmarshalJSON(data []byte) error {
 	case "IN_ERROR":
 		fallthrough
 	case "TRAINED":
+		fallthrough
+	case "TRAINED_WITH_WARNING":
 		*e = ModelStatusEnum(s)
 		return nil
 	default:

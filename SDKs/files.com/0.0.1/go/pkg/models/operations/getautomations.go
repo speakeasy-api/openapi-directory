@@ -10,24 +10,26 @@ import (
 type GetAutomationsQueryParams struct {
 	// DEPRECATED: Type of automation to filter by. Use `filter[automation]` instead.
 	Automation *string `queryParam:"style=form,explode=true,name=automation"`
-	// Used for pagination.  Send a cursor value to resume an existing list from the point at which you left off.  Get a cursor from an existing list via the X-Files-Cursor-Next header.
+	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
-	// If set, return records where the specifiied field is equal to the supplied value. Valid fields are `automation`.
+	// If set, return records where the specified field is equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
 	Filter map[string]interface{} `queryParam:"style=form,explode=true,name=filter"`
-	// If set, return records where the specifiied field is greater than the supplied value. Valid fields are `automation`.
+	// If set, return records where the specified field is greater than the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
 	FilterGt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gt"`
-	// If set, return records where the specifiied field is greater than or equal to the supplied value. Valid fields are `automation`.
+	// If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
 	FilterGteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gteq"`
-	// If set, return records where the specifiied field is equal to the supplied value. Valid fields are `automation`.
+	// If set, return records where the specified field is equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
 	FilterLike map[string]interface{} `queryParam:"style=form,explode=true,name=filter_like"`
-	// If set, return records where the specifiied field is less than the supplied value. Valid fields are `automation`.
+	// If set, return records where the specified field is less than the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
 	FilterLt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lt"`
-	// If set, return records where the specifiied field is less than or equal to the supplied value. Valid fields are `automation`.
+	// If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
 	FilterLteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lteq"`
 	// Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
-	// If set, sort records by the specified field in either 'asc' or 'desc' direction (e.g. sort_by[last_login_at]=desc). Valid fields are `automation`.
+	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[automation]=desc`). Valid fields are `automation`, `disabled`, `last_modified_at` or `name`.
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
+	// Set to true to include deleted automations in the results.
+	WithDeleted *bool `queryParam:"style=form,explode=true,name=with_deleted"`
 }
 
 type GetAutomationsRequest struct {

@@ -315,8 +315,8 @@ func (s *candidate) GetCandidates(ctx context.Context, request operations.GetCan
 // candidate runs for a Senate office — that candidate will get a unique ID for each office.
 //
 // The candidate endpoints primarily use data from FEC registration
-// [Form 1](http://www.fec.gov/pdf/forms/fecfrm1.pdf) for committee information and
-// [Form 2](http://www.fec.gov/pdf/forms/fecfrm2.pdf) for candidate information.
+// [Form 1](https://www.fec.gov/pdf/forms/fecfrm1.pdf) for committee information and
+// [Form 2](https://www.fec.gov/pdf/forms/fecfrm2.pdf) for candidate information.
 func (s *candidate) GetCandidatesSearch(ctx context.Context, request operations.GetCandidatesSearchRequest) (*operations.GetCandidatesSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/candidates/search/"
@@ -407,6 +407,54 @@ func (s *candidate) GetCandidatesTotals(ctx context.Context, request operations.
 			}
 
 			res.CandidateHistoryTotalPage = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetCandidatesTotalsAggregates -  Candidate total receipts and disbursements aggregated by `aggregate_by`.
+func (s *candidate) GetCandidatesTotalsAggregates(ctx context.Context, request operations.GetCandidatesTotalsAggregatesRequest) (*operations.GetCandidatesTotalsAggregatesResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/candidates/totals/aggregates/"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetCandidatesTotalsAggregatesResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.CandidateTotalAggregatePage
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CandidateTotalAggregatePage = out
 		}
 	}
 

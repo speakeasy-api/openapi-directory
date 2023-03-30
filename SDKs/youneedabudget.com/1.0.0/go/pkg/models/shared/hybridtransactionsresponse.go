@@ -3,7 +3,9 @@
 package shared
 
 type HybridTransactionsResponseData struct {
-	Transactions []HybridTransaction `json:"transactions"`
+	// The knowledge of the server
+	ServerKnowledge *int64              `json:"server_knowledge,omitempty"`
+	Transactions    []HybridTransaction `json:"transactions"`
 }
 
 // HybridTransactionsResponse - The list of requested transactions

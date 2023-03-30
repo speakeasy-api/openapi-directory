@@ -8,8 +8,7 @@ import (
 )
 
 type UpdateProductSecurity struct {
-	ZettleAPIKey *shared.SchemeZettleAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	ZettleOauth  *shared.SchemeZettleOauth  `security:"scheme,type=oauth2"`
+	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
 }
 
 type UpdateProductPathParams struct {
@@ -24,7 +23,7 @@ type UpdateProductHeaders struct {
 type UpdateProductRequest struct {
 	PathParams UpdateProductPathParams
 	Headers    UpdateProductHeaders
-	Request    shared.ProductUpdateRequest `request:"mediaType=application/json"`
+	Request    shared.FullProductUpdateRequest `request:"mediaType=application/json"`
 	Security   UpdateProductSecurity
 }
 

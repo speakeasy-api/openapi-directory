@@ -3,6 +3,8 @@
 package shared
 
 type PodcastExtraField struct {
+	// Amazon Music url for this podcast
+	AmazonMusicURL *string `json:"amazon_music_url,omitempty"`
 	// Facebook username affiliated with this podcast
 	FacebookHandle *string `json:"facebook_handle,omitempty"`
 	// Google Podcasts url for this podcast

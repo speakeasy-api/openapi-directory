@@ -40,7 +40,7 @@ type NotificationConfigurationDetails struct {
 	// A description of the notification subscription configuration.
 	Description *string `json:"description,omitempty"`
 	// Contains objects that define event types and their subscription settings.
-	EventConfigs []NotificationEventConfiguration `json:"eventConfigs"`
+	EventConfigs []NotificationEventConfiguration `json:"eventConfigs,omitempty"`
 	// A string with which to salt the notification(s) before hashing. If this field is provided, a hash value will be included under the notification header `HmacSignature` and the hash protocol will be included under the notification header `Protocol`. A notification body along with its `hmacSignatureKey` and `Protocol` can be used to calculate a hash value; matching this hash value with the `HmacSignature` will ensure that the notification body has not been tampered with or corrupted.
 	//
 	// >Must be a 32-byte hex-encoded string (i.e. a string containing 64 hexadecimal characters; e.g. "b0ea55c2fe60d4d1d605e9c385e0e7f7e6cafbb939ce07010f31a327a0871f27").
@@ -52,7 +52,7 @@ type NotificationConfigurationDetails struct {
 	// The password to use when accessing the notifyURL with the specified username.
 	NotifyPassword *string `json:"notifyPassword,omitempty"`
 	// The URL to which the notifications are to be sent.
-	NotifyURL string `json:"notifyURL"`
+	NotifyURL *string `json:"notifyURL,omitempty"`
 	// The username to use when accessing the notifyURL.
 	NotifyUsername *string `json:"notifyUsername,omitempty"`
 	// The SSL protocol employed by the endpoint.

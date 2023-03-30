@@ -6,7 +6,7 @@ type TransactionResponseData struct {
 	Transaction TransactionDetail `json:"transaction"`
 }
 
-// TransactionResponse - The requested transaction
+// TransactionResponse - The transaction was successfully deleted
 type TransactionResponse struct {
 	Data TransactionResponseData `json:"data"`
 }

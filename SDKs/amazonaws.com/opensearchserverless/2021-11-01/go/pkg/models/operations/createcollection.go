@@ -54,8 +54,12 @@ type CreateCollectionResponse struct {
 	CreateCollectionResponse *shared.CreateCollectionResponse
 	// InternalServerException
 	InternalServerException interface{}
-	StatusCode              int
-	RawResponse             *http.Response
+	// OcuLimitExceededException
+	OcuLimitExceededException interface{}
+	StatusCode                int
+	RawResponse               *http.Response
+	// ServiceQuotaExceededException
+	ServiceQuotaExceededException interface{}
 	// ValidationException
 	ValidationException interface{}
 }

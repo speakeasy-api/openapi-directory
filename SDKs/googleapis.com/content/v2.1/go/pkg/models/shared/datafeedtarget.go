@@ -7,7 +7,7 @@ type DatafeedTarget struct {
 	Country *string `json:"country,omitempty"`
 	// The list of destinations to exclude for this target (corresponds to cleared check boxes in Merchant Center). Products that are excluded from all destinations for more than 7 days are automatically deleted.
 	ExcludedDestinations []string `json:"excludedDestinations,omitempty"`
-	// Feed label for the DatafeedTarget. Either `country` or `feedLabel` is required. If both `feedLabel` and `country` is specified, the values must match.
+	// Feed label for the DatafeedTarget. Either `country` or `feedLabel` is required. If both `feedLabel` and `country` is specified, the values must match. Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
 	FeedLabel *string `json:"feedLabel,omitempty"`
 	// The list of destinations to include for this target (corresponds to checked check boxes in Merchant Center). Default destinations are always included unless provided in `excludedDestinations`.
 	IncludedDestinations []string `json:"includedDestinations,omitempty"`

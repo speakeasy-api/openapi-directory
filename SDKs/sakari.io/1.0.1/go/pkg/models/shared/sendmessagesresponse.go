@@ -4,9 +4,11 @@ package shared
 
 type SendMessagesResponseData struct {
 	EstimatedPrice *float64  `json:"estimatedPrice,omitempty"`
+	Invalid        []Contact `json:"invalid,omitempty"`
 	JobID          *string   `json:"jobId,omitempty"`
 	Messages       []Message `json:"messages,omitempty"`
-	Queued         *int64    `json:"queued,omitempty"`
+	Requested      *int64    `json:"requested,omitempty"`
+	Valid          *int64    `json:"valid,omitempty"`
 }
 
 // SendMessagesResponse - successful operation

@@ -4,10 +4,14 @@ package shared
 
 // GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest - Finalizes sign-in by verifying MFA challenge.
 type GoogleCloudIdentitytoolkitV2FinalizeMfaSignInRequest struct {
+	// The MFA enrollment ID from the user's list of current MFA enrollments.
+	MfaEnrollmentID *string `json:"mfaEnrollmentId,omitempty"`
 	// Required. Pending credential from first factor sign-in.
 	MfaPendingCredential *string `json:"mfaPendingCredential,omitempty"`
 	// Phone Verification info for a FinalizeMfa request.
 	PhoneVerificationInfo *GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo `json:"phoneVerificationInfo,omitempty"`
 	// The ID of the Identity Platform tenant the user is signing in to. If not set, the user will sign in to the default Identity Platform project.
 	TenantID *string `json:"tenantId,omitempty"`
+	// TOTP verification info for FinalizeMfaSignInRequest.
+	TotpVerificationInfo *GoogleCloudIdentitytoolkitV2MfaTotpSignInRequestInfo `json:"totpVerificationInfo,omitempty"`
 }

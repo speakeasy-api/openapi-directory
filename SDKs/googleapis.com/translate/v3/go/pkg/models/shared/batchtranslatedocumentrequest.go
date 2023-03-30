@@ -6,6 +6,8 @@ package shared
 type BatchTranslateDocumentRequest struct {
 	// Optional. This flag is to support user customized attribution. If not provided, the default is `Machine Translated by Google`. Customized attribution should follow rules in https://cloud.google.com/translate/attribution#attribution_and_logos
 	CustomizedAttribution *string `json:"customizedAttribution,omitempty"`
+	// Optional. If true, use the text removal server to remove the shadow text on background image for native pdf translation. Shadow removal feature can only be enabled when is_translate_native_pdf_only: false && pdf_native_only: false
+	EnableShadowRemovalNativePdf *bool `json:"enableShadowRemovalNativePdf,omitempty"`
 	// Optional.
 	FormatConversions map[string]string `json:"formatConversions,omitempty"`
 	// Optional. Glossaries to be applied. It's keyed by target language code.

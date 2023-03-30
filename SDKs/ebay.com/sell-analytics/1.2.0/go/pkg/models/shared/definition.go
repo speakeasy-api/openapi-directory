@@ -4,7 +4,7 @@ package shared
 
 // Definition - A complex type that defines a dimension key and metrics in a traffic report.
 type Definition struct {
-	// Indicates the data type of the returned dimension. For example, if the dimension is day, the data type is DATE. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/analytics/types/ssp:DataTypeEnum'>eBay API documentation</a>
+	// Indicates the data type of the returned dimension. For example, if the dimension is day, the data type is DATE. For implementation help, refer to <a href='https://developer.ebay.com/devzone/rest/api-ref/analytics/types/DataTypeEnum.html'>eBay API documentation</a>
 	DataType *string `json:"dataType,omitempty"`
 	// The value the dimension or metric parameter as submitted in the request.
 	Key *string `json:"key,omitempty"`

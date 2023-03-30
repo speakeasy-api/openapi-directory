@@ -45,12 +45,14 @@ pkg/models/shared/listoperationsresponse.go
 pkg/models/shared/backup.go
 pkg/models/shared/service.go
 pkg/models/shared/telemetryconfig.go
+pkg/models/shared/scalingconfig.go
 pkg/models/shared/networkconfig.go
 pkg/models/shared/consumer.go
 pkg/models/shared/maintenancewindow.go
 pkg/models/shared/hivemetastoreconfig.go
 pkg/models/shared/kerberosconfig.go
 pkg/models/shared/secret.go
+pkg/models/shared/auxiliaryversionconfig.go
 pkg/models/shared/encryptionconfig.go
 pkg/models/shared/policy.go
 pkg/models/shared/binding.go

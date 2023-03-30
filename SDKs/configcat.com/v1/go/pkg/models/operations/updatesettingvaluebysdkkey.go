@@ -19,14 +19,14 @@ type UpdateSettingValueBySdkkeyQueryParams struct {
 
 type UpdateSettingValueBySdkkeyHeaders struct {
 	// The ConfigCat SDK Key. (https://app.configcat.com/sdkkey)
-	XConfigcatSdkkey string `header:"style=simple,explode=false,name=X-CONFIGCAT-SDKKEY"`
+	XConfigcatSdkkey *string `header:"style=simple,explode=false,name=X-CONFIGCAT-SDKKEY"`
 }
 
 type UpdateSettingValueBySdkkeyRequest struct {
 	PathParams  UpdateSettingValueBySdkkeyPathParams
 	QueryParams UpdateSettingValueBySdkkeyQueryParams
 	Headers     UpdateSettingValueBySdkkeyHeaders
-	Request     []shared.Operation `request:"mediaType=application/json"`
+	Request     shared.JSONPatchInput `request:"mediaType=application/json"`
 }
 
 type UpdateSettingValueBySdkkeyResponse struct {

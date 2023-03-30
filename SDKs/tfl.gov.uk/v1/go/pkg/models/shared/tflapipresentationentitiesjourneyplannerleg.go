@@ -11,18 +11,22 @@ type TflAPIPresentationEntitiesJourneyPlannerLeg struct {
 	ArrivalPoint *TflAPIPresentationEntitiesPoint `json:"arrivalPoint,omitempty"`
 	ArrivalTime  *time.Time                       `json:"arrivalTime,omitempty"`
 	// Represents a point located at a latitude and longitude using the WGS84 co-ordinate system.
-	DeparturePoint    *TflAPIPresentationEntitiesPoint                      `json:"departurePoint,omitempty"`
-	DepartureTime     *time.Time                                            `json:"departureTime,omitempty"`
-	Disruptions       []TflAPIPresentationEntitiesDisruption                `json:"disruptions,omitempty"`
-	Distance          *float64                                              `json:"distance,omitempty"`
-	Duration          *int                                                  `json:"duration,omitempty"`
-	HasFixedLocations *bool                                                 `json:"hasFixedLocations,omitempty"`
-	Instruction       *TflAPIPresentationEntitiesInstruction                `json:"instruction,omitempty"`
-	IsDisrupted       *bool                                                 `json:"isDisrupted,omitempty"`
-	Mode              *TflAPIPresentationEntitiesIdentifier                 `json:"mode,omitempty"`
-	Obstacles         []TflAPIPresentationEntitiesJourneyPlannerObstacle    `json:"obstacles,omitempty"`
-	Path              *TflAPIPresentationEntitiesJourneyPlannerPath         `json:"path,omitempty"`
-	PlannedWorks      []TflAPIPresentationEntitiesJourneyPlannerPlannedWork `json:"plannedWorks,omitempty"`
-	RouteOptions      []TflAPIPresentationEntitiesJourneyPlannerRouteOption `json:"routeOptions,omitempty"`
-	Speed             *string                                               `json:"speed,omitempty"`
+	DeparturePoint         *TflAPIPresentationEntitiesPoint                      `json:"departurePoint,omitempty"`
+	DepartureTime          *time.Time                                            `json:"departureTime,omitempty"`
+	Disruptions            []TflAPIPresentationEntitiesDisruption                `json:"disruptions,omitempty"`
+	Distance               *float64                                              `json:"distance,omitempty"`
+	Duration               *int                                                  `json:"duration,omitempty"`
+	HasFixedLocations      *bool                                                 `json:"hasFixedLocations,omitempty"`
+	Instruction            *TflAPIPresentationEntitiesInstruction                `json:"instruction,omitempty"`
+	InterChangeDuration    *string                                               `json:"interChangeDuration,omitempty"`
+	InterChangePosition    *string                                               `json:"interChangePosition,omitempty"`
+	IsDisrupted            *bool                                                 `json:"isDisrupted,omitempty"`
+	Mode                   *TflAPIPresentationEntitiesIdentifier                 `json:"mode,omitempty"`
+	Obstacles              []TflAPIPresentationEntitiesJourneyPlannerObstacle    `json:"obstacles,omitempty"`
+	Path                   *TflAPIPresentationEntitiesJourneyPlannerPath         `json:"path,omitempty"`
+	PlannedWorks           []TflAPIPresentationEntitiesJourneyPlannerPlannedWork `json:"plannedWorks,omitempty"`
+	RouteOptions           []TflAPIPresentationEntitiesJourneyPlannerRouteOption `json:"routeOptions,omitempty"`
+	ScheduledArrivalTime   *time.Time                                            `json:"scheduledArrivalTime,omitempty"`
+	ScheduledDepartureTime *time.Time                                            `json:"scheduledDepartureTime,omitempty"`
+	Speed                  *string                                               `json:"speed,omitempty"`
 }

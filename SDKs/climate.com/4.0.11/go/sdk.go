@@ -21,7 +21,7 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
-// SDK - **Last Modified**: Thu Oct 29 12:30:46 PDT 2020
+// SDK - **Last Modified**: Wed Jan  4 12:47:29 UTC 2023
 //
 // All endpoints are only accessible via HTTPS.
 //
@@ -146,12 +146,16 @@ func String(s string) *string { return &s }
 type SDK struct {
 	// Boundaries - Field Boundary data endpoints.
 	Boundaries *boundaries
+	// Exports - General data export endpoints.
+	Exports *exports
 	// FarmOrganizations - Farm organization data endpoints.
 	FarmOrganizations *farmOrganizations
 	// Fields - Field data endpoints.
 	Fields *fields
 	// Layers - General data retrieval endpoints.
 	Layers *layers
+	// Operations - Operation data endpoints.
+	Operations *operationsT
 	// ResourceOwners - Resource Owner data endpoints.
 	ResourceOwners *resourceOwners
 	// Uploads - General data upload endpoints.
@@ -226,6 +230,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.Exports = newExports(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.FarmOrganizations = newFarmOrganizations(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -245,6 +258,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.Layers = newLayers(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Operations = newOperations(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

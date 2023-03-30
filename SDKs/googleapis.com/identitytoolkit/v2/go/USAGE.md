@@ -45,6 +45,10 @@ func main() {
                 SessionInfo: "inventore",
             },
             TenantID: "sapiente",
+            TotpVerificationInfo: &shared.GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo{
+                SessionInfo: "enim",
+                VerificationCode: "eum",
+            },
         },
     }
 

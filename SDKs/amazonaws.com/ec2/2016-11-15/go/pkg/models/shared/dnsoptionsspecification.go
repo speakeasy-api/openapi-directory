@@ -4,5 +4,6 @@ package shared
 
 // DNSOptionsSpecification - Describes the DNS options for an endpoint.
 type DNSOptionsSpecification struct {
-	DNSRecordIPType *DNSRecordIPTypeEnum
+	DNSRecordIPType                          *DNSRecordIPTypeEnum
+	PrivateDNSOnlyForInboundResolverEndpoint *bool
 }

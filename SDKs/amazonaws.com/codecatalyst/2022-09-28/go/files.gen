@@ -33,6 +33,7 @@ pkg/models/operations/listspaces.go
 pkg/models/operations/startdevenvironment.go
 pkg/models/operations/startdevenvironmentsession.go
 pkg/models/operations/stopdevenvironment.go
+pkg/models/operations/stopdevenvironmentsession.go
 pkg/models/operations/updatedevenvironment.go
 pkg/models/operations/verifysession.go
 pkg/models/shared/createaccesstokenresponse.go
@@ -83,6 +84,7 @@ pkg/models/shared/devenvironmentaccessdetails.go
 pkg/models/shared/devenvironmentsessiontypeenum.go
 pkg/models/shared/executecommandsessionconfiguration.go
 pkg/models/shared/stopdevenvironmentresponse.go
+pkg/models/shared/stopdevenvironmentsessionresponse.go
 pkg/models/shared/updatedevenvironmentresponse.go
 pkg/models/shared/verifysessionresponse.go
 pkg/models/shared/security.go

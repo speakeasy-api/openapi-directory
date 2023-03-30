@@ -9,3 +9,11 @@ type GoogleAppsDriveLabelsV2FieldSelectionOptions struct {
 	// Options for a multi-valued variant of an associated field type.
 	ListOptions *GoogleAppsDriveLabelsV2FieldListOptions `json:"listOptions,omitempty"`
 }
+
+// GoogleAppsDriveLabelsV2FieldSelectionOptionsInput - Options for the selection field type.
+type GoogleAppsDriveLabelsV2FieldSelectionOptionsInput struct {
+	// The options available for this selection field. The list order is consistent, and modified with `insert_before_choice`.
+	Choices []GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceInput `json:"choices,omitempty"`
+	// Options for a multi-valued variant of an associated field type.
+	ListOptions *GoogleAppsDriveLabelsV2FieldListOptions `json:"listOptions,omitempty"`
+}

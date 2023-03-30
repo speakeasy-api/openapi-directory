@@ -4,6 +4,8 @@ package shared
 
 // Strategy - Strategy contains deployment strategy information.
 type Strategy struct {
+	// Canary represents the canary deployment strategy.
+	Canary *Canary `json:"canary,omitempty"`
 	// Standard represents the standard deployment strategy.
 	Standard *Standard `json:"standard,omitempty"`
 }

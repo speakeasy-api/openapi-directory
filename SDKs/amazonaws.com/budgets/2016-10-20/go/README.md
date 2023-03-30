@@ -50,7 +50,7 @@ func main() {
                         BudgetAdjustmentPeriod: 645894,
                         LookBackAvailablePeriods: 384382,
                     },
-                    LastAutoAdjustTime: "2022-10-20T19:14:38.951Z",
+                    LastAutoAdjustTime: "2022-10-21T06:35:29.272Z",
                 },
                 BudgetLimit: &shared.Spend{
                     Amount: "ullam",
@@ -100,7 +100,7 @@ func main() {
                     UseAmortized: false,
                     UseBlended: false,
                 },
-                LastUpdatedTime: "2022-05-15T22:32:38.090Z",
+                LastUpdatedTime: "2022-05-16T09:53:28.409Z",
                 PlannedBudgetLimits: map[string]shared.Spend{
                     "rem": shared.Spend{
                         Amount: "quibusdam",
@@ -120,8 +120,8 @@ func main() {
                     },
                 },
                 TimePeriod: &shared.TimePeriod{
-                    End: "2022-09-14T09:07:07.183Z",
-                    Start: "2022-04-18T17:12:30.698Z",
+                    End: "2022-09-14T20:27:57.502Z",
+                    Start: "2022-04-19T04:33:21.017Z",
                 },
                 TimeUnit: "ANNUALLY",
             },

@@ -5,7 +5,7 @@ package shared
 // Comment - Comment model
 type Comment struct {
 	// Comment text.
-	Comment *string `json:"comment,omitempty"`
+	Comment string `json:"comment"`
 	// Unix epoch time
 	CommentedAt *int64        `json:"commented_at,omitempty"`
 	ID          *int64        `json:"id,omitempty"`

@@ -336,6 +336,8 @@ type ReportSchedule struct {
 	// Enum to define for "MONTHLY" scheduled reports whether reports should be repeated on the same day of the month as "startDate" or the same day of the week of the month. Example: If 'startDate' is Monday, April 2nd 2012 (2012-04-02), "DAY_OF_MONTH" would run subsequent reports on the 2nd of every Month, and "WEEK_OF_MONTH" would run subsequent reports on the first Monday of the month.
 	RunsOnDayOfMonth *ReportScheduleRunsOnDayOfMonthEnum `json:"runsOnDayOfMonth,omitempty"`
 	StartDate        *types.Date                         `json:"startDate,omitempty"`
+	// The timezone when the report will run.
+	Timezone *string `json:"timezone,omitempty"`
 }
 
 // ReportTypeEnum - The type of the report.

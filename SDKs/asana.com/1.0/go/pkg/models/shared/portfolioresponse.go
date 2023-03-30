@@ -81,6 +81,47 @@ func (e *PortfolioResponseColorEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum - The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+// The `resource_subtype`s for `status` objects represent the type of their parent.
+type PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum string
+
+const (
+	PortfolioResponseCurrentStatusUpdateResourceSubtypeEnumProjectStatusUpdate   PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum = "project_status_update"
+	PortfolioResponseCurrentStatusUpdateResourceSubtypeEnumPortfolioStatusUpdate PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum = "portfolio_status_update"
+	PortfolioResponseCurrentStatusUpdateResourceSubtypeEnumGoalStatusUpdate      PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum = "goal_status_update"
+)
+
+func (e *PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "project_status_update":
+		fallthrough
+	case "portfolio_status_update":
+		fallthrough
+	case "goal_status_update":
+		*e = PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum: %s", s)
+	}
+}
+
+// PortfolioResponseCurrentStatusUpdate - A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent's followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the project.
+type PortfolioResponseCurrentStatusUpdate struct {
+	// Globally unique identifier of the resource, as a string.
+	Gid *string `json:"gid,omitempty"`
+	// The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+	// The `resource_subtype`s for `status` objects represent the type of their parent.
+	ResourceSubtype *PortfolioResponseCurrentStatusUpdateResourceSubtypeEnum `json:"resource_subtype,omitempty"`
+	// The base type of this resource.
+	ResourceType *string `json:"resource_type,omitempty"`
+	// The title of the status update.
+	Title *string `json:"title,omitempty"`
+}
+
 // PortfolioResponseWorkspace - A *workspace* is the highest-level organizational unit in Asana. All projects and tasks have an associated workspace.
 type PortfolioResponseWorkspace struct {
 	// Globally unique identifier of the resource, as a string.
@@ -92,15 +133,19 @@ type PortfolioResponseWorkspace struct {
 }
 
 // PortfolioResponse - A *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/docs/asana-project-statuses) update.
-// Portfolios have some restrictions on size. Each portfolio has a max of 250 items and, like projects, a max of 20 custom fields.
+// Portfolios have some restrictions on size. Each portfolio has a max of 500 items and, like projects, a max of 20 custom fields.
 type PortfolioResponse struct {
 	// Color of the portfolio.
 	Color *PortfolioResponseColorEnum `json:"color,omitempty"`
 	// The time at which this resource was created.
 	CreatedAt *time.Time   `json:"created_at,omitempty"`
 	CreatedBy *UserCompact `json:"created_by,omitempty"`
+	// The latest `status_update` posted to this portfolio.
+	CurrentStatusUpdate *PortfolioResponseCurrentStatusUpdate `json:"current_status_update,omitempty"`
 	// Array of custom field settings applied to the portfolio.
 	CustomFieldSettings []CustomFieldSettingResponse `json:"custom_field_settings,omitempty"`
+	// Array of Custom Fields.
+	CustomFields []CustomFieldCompact `json:"custom_fields,omitempty"`
 	// The localized day on which this portfolio is due. This takes a date with format YYYY-MM-DD.
 	DueOn *time.Time `json:"due_on,omitempty"`
 	// Globally unique identifier of the resource, as a string.
@@ -111,9 +156,11 @@ type PortfolioResponse struct {
 	Owner *UserCompact `json:"owner,omitempty"`
 	// A url that points directly to the object within Asana.
 	PermalinkURL *string `json:"permalink_url,omitempty"`
+	// True if the portfolio is public to its workspace members.
+	Public *bool `json:"public,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
-	// The day on which work for this portfolio begins, or null if the portfolio has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, start_on and due_on cannot be the same date.*
+	// The day on which work for this portfolio begins, or null if the portfolio has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*
 	StartOn   *types.Date                 `json:"start_on,omitempty"`
 	Workspace *PortfolioResponseWorkspace `json:"workspace,omitempty"`
 }

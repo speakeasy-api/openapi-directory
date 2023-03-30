@@ -35,16 +35,16 @@ func main() {
                 Status: "CANCELED",
             },
             CloseTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-08-13T22:08:13.583Z",
-                OldestDate: "2022-08-05T18:31:21.521Z",
+                LatestDate: "2022-08-14T09:37:38.486Z",
+                OldestDate: "2022-08-06T06:00:46.424Z",
             },
             Domain: "eum",
             ExecutionFilter: &shared.WorkflowExecutionFilter{
                 WorkflowID: "iusto",
             },
             StartTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-12-10T22:09:06.676Z",
-                OldestDate: "2022-05-08T00:37:25.198Z",
+                LatestDate: "2022-12-11T09:38:31.578Z",
+                OldestDate: "2022-05-08T12:06:50.100Z",
             },
             TagFilter: &shared.TagFilter{
                 Tag: "inventore",

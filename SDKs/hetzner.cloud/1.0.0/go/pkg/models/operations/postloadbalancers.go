@@ -48,7 +48,7 @@ type PostLoadBalancersCreateLoadBalancerRequestLabels struct {
 type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHealthCheckHTTP struct {
 	// Host header to send in the HTTP request. May not contain spaces, percent or backslash symbols. Can be null, in that case no host header is sent.
 	Domain string `json:"domain"`
-	// HTTP path to use for health checks
+	// HTTP path to use for health checks. May not contain literal spaces, use percent-encoding instead.
 	Path string `json:"path"`
 	// String that must be contained in HTTP response in order to pass the health check
 	Response *string `json:"response,omitempty"`
@@ -98,14 +98,14 @@ type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerSe
 	Timeout int64 `json:"timeout"`
 }
 
-// PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceHTTP - Configuration option for protocols http and https
-type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceHTTP struct {
+// PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHTTP - Configuration option for protocols http and https
+type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHTTP struct {
 	// IDs of the Certificates to use for TLS/SSL termination by the Load Balancer; empty for TLS/SSL passthrough or if `protocol` is "http"
 	Certificates []int64 `json:"certificates,omitempty"`
 	// Lifetime of the cookie used for sticky sessions
-	CookieLifetime int64 `json:"cookie_lifetime"`
+	CookieLifetime *int64 `json:"cookie_lifetime,omitempty"`
 	// Name of the cookie used for sticky sessions
-	CookieName string `json:"cookie_name"`
+	CookieName *string `json:"cookie_name,omitempty"`
 	// Redirect HTTP requests to HTTPS. Only available if protocol is "https". Default `false`
 	RedirectHTTP *bool `json:"redirect_http,omitempty"`
 	// Use sticky sessions. Only available if protocol is "http" or "https". Default `false`
@@ -145,7 +145,7 @@ type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerService struct {
 	// Service health check
 	HealthCheck PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHealthCheck `json:"health_check"`
 	// Configuration option for protocols http and https
-	HTTP *PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceHTTP `json:"http,omitempty"`
+	HTTP *PostLoadBalancersCreateLoadBalancerRequestLoadBalancerServiceLoadBalancerServiceHTTP `json:"http,omitempty"`
 	// Port the Load Balancer listens on
 	ListenPort int64 `json:"listen_port"`
 	// Protocol of the Load Balancer
@@ -154,9 +154,35 @@ type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerService struct {
 	Proxyprotocol bool `json:"proxyprotocol"`
 }
 
+type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnum string
+
+const (
+	PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnumHealthy   PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnum = "healthy"
+	PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnumUnhealthy PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnum = "unhealthy"
+	PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnumUnknown   PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnum = "unknown"
+)
+
+func (e *PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "healthy":
+		fallthrough
+	case "unhealthy":
+		fallthrough
+	case "unknown":
+		*e = PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnum: %s", s)
+	}
+}
+
 type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatus struct {
-	ListenPort *int64  `json:"listen_port,omitempty"`
-	Status     *string `json:"status,omitempty"`
+	ListenPort *int64                                                                              `json:"listen_port,omitempty"`
+	Status     *PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetHealthStatusStatusEnum `json:"status,omitempty"`
 }
 
 // PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetIP - IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
@@ -177,9 +203,35 @@ type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetLoadBalancerTar
 	ID int64 `json:"id"`
 }
 
+type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnum string
+
+const (
+	PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnumHealthy   PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnum = "healthy"
+	PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnumUnhealthy PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnum = "unhealthy"
+	PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnumUnknown   PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnum = "unknown"
+)
+
+func (e *PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "healthy":
+		fallthrough
+	case "unhealthy":
+		fallthrough
+	case "unknown":
+		*e = PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnum: %s", s)
+	}
+}
+
 type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatus struct {
-	ListenPort *int64  `json:"listen_port,omitempty"`
-	Status     *string `json:"status,omitempty"`
+	ListenPort *int64                                                                                     `json:"listen_port,omitempty"`
+	Status     *PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsHealthStatusStatusEnum `json:"status,omitempty"`
 }
 
 type PostLoadBalancersCreateLoadBalancerRequestLoadBalancerTargetTargetsServer struct {
@@ -462,7 +514,7 @@ type PostLoadBalancers201ApplicationJSONLoadBalancerPublicNet struct {
 type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckHTTP struct {
 	// Host header to send in the HTTP request. May not contain spaces, percent or backslash symbols. Can be null, in that case no host header is sent.
 	Domain string `json:"domain"`
-	// HTTP path to use for health checks
+	// HTTP path to use for health checks. May not contain literal spaces, use percent-encoding instead.
 	Path string `json:"path"`
 	// String that must be contained in HTTP response in order to pass the health check
 	Response *string `json:"response,omitempty"`
@@ -512,14 +564,14 @@ type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalan
 	Timeout int64 `json:"timeout"`
 }
 
-// PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceHTTP - Configuration option for protocols http and https
-type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceHTTP struct {
+// PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP - Configuration option for protocols http and https
+type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP struct {
 	// IDs of the Certificates to use for TLS/SSL termination by the Load Balancer; empty for TLS/SSL passthrough or if `protocol` is "http"
 	Certificates []int64 `json:"certificates,omitempty"`
 	// Lifetime of the cookie used for sticky sessions
-	CookieLifetime int64 `json:"cookie_lifetime"`
+	CookieLifetime *int64 `json:"cookie_lifetime,omitempty"`
 	// Name of the cookie used for sticky sessions
-	CookieName string `json:"cookie_name"`
+	CookieName *string `json:"cookie_name,omitempty"`
 	// Redirect HTTP requests to HTTPS. Only available if protocol is "https". Default `false`
 	RedirectHTTP *bool `json:"redirect_http,omitempty"`
 	// Use sticky sessions. Only available if protocol is "http" or "https". Default `false`
@@ -559,7 +611,7 @@ type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerService struct {
 	// Service health check
 	HealthCheck PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheck `json:"health_check"`
 	// Configuration option for protocols http and https
-	HTTP *PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceHTTP `json:"http,omitempty"`
+	HTTP *PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHTTP `json:"http,omitempty"`
 	// Port the Load Balancer listens on
 	ListenPort int64 `json:"listen_port"`
 	// Protocol of the Load Balancer
@@ -568,9 +620,35 @@ type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerService struct {
 	Proxyprotocol bool `json:"proxyprotocol"`
 }
 
+type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum string
+
+const (
+	PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnumHealthy   PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum = "healthy"
+	PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnumUnhealthy PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum = "unhealthy"
+	PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnumUnknown   PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum = "unknown"
+)
+
+func (e *PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "healthy":
+		fallthrough
+	case "unhealthy":
+		fallthrough
+	case "unknown":
+		*e = PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum: %s", s)
+	}
+}
+
 type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatus struct {
-	ListenPort *int64  `json:"listen_port,omitempty"`
-	Status     *string `json:"status,omitempty"`
+	ListenPort *int64                                                                                   `json:"listen_port,omitempty"`
+	Status     *PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetHealthStatusStatusEnum `json:"status,omitempty"`
 }
 
 // PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetIP - IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
@@ -591,9 +669,35 @@ type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalanc
 	ID int64 `json:"id"`
 }
 
+type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum string
+
+const (
+	PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnumHealthy   PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum = "healthy"
+	PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnumUnhealthy PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum = "unhealthy"
+	PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnumUnknown   PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum = "unknown"
+)
+
+func (e *PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "healthy":
+		fallthrough
+	case "unhealthy":
+		fallthrough
+	case "unknown":
+		*e = PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum: %s", s)
+	}
+}
+
 type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatus struct {
-	ListenPort *int64  `json:"listen_port,omitempty"`
-	Status     *string `json:"status,omitempty"`
+	ListenPort *int64                                                                                          `json:"listen_port,omitempty"`
+	Status     *PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsHealthStatusStatusEnum `json:"status,omitempty"`
 }
 
 type PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetTargetsServer struct {

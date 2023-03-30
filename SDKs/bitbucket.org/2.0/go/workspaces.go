@@ -36,7 +36,8 @@ func newWorkspaces(defaultClient, securityClient HTTPClient, serverURL, language
 	}
 }
 
-// DeleteWorkspacesWorkspaceHooksUID - Deletes the specified webhook subscription from the given workspace.
+// DeleteWorkspacesWorkspaceHooksUID - Delete a webhook for a workspace
+// Deletes the specified webhook subscription from the given workspace.
 func (s *workspaces) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.DeleteWorkspacesWorkspaceHooksUIDRequest) (*operations.DeleteWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks/{uid}", request.PathParams, nil)
@@ -83,7 +84,8 @@ func (s *workspaces) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, requ
 	return res, nil
 }
 
-// GetUserPermissionsWorkspaces - Returns an object for each workspace the caller is a member of, and
+// GetUserPermissionsWorkspaces - List workspaces for the current user
+// Returns an object for each workspace the caller is a member of, and
 // their effective role - the highest level of privilege the caller has.
 // If a user is a member of multiple groups with distinct roles, only the
 // highest level is returned.
@@ -93,6 +95,9 @@ func (s *workspaces) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, requ
 // * `owner`
 // * `collaborator`
 // * `member`
+//
+// **The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,
+// see the [deprecation announcement](/cloud/bitbucket/deprecation-notice-collaborator-role/).**
 //
 // Example:
 //
@@ -127,7 +132,7 @@ func (s *workspaces) DeleteWorkspacesWorkspaceHooksUID(ctx context.Context, requ
 //
 // ```
 //
-// Results may be further [filtered or sorted](../../../meta/filtering) by
+// Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering) by
 // workspace or permission by adding the following query string parameters:
 //
 // * `q=workspace.slug="bbworkspace1"` or `q=permission="owner"`
@@ -192,7 +197,8 @@ func (s *workspaces) GetUserPermissionsWorkspaces(ctx context.Context, request o
 	return res, nil
 }
 
-// GetWorkspaces - Returns a list of workspaces accessible by the authenticated user.
+// GetWorkspaces - List workspaces for user
+// Returns a list of workspaces accessible by the authenticated user.
 //
 // Example:
 //
@@ -243,7 +249,7 @@ func (s *workspaces) GetUserPermissionsWorkspaces(ctx context.Context, request o
 //
 // ```
 //
-// Results may be further [filtered or sorted](../meta/filtering) by
+// Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering) by
 // workspace or permission by adding the following query string parameters:
 //
 // * `q=slug="bbworkspace1"` or `q=is_private=true`
@@ -251,6 +257,9 @@ func (s *workspaces) GetUserPermissionsWorkspaces(ctx context.Context, request o
 //
 // Note that the query parameter values need to be URL escaped so that `=`
 // would become `%3D`.
+//
+// **The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,
+// see the [deprecation announcement](/cloud/bitbucket/deprecation-notice-collaborator-role/).**
 func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWorkspacesRequest) (*operations.GetWorkspacesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/workspaces"
@@ -308,7 +317,8 @@ func (s *workspaces) GetWorkspaces(ctx context.Context, request operations.GetWo
 	return res, nil
 }
 
-// GetWorkspacesWorkspace - Returns the requested workspace.
+// GetWorkspacesWorkspace - Get a workspace
+// Returns the requested workspace.
 func (s *workspaces) GetWorkspacesWorkspace(ctx context.Context, request operations.GetWorkspacesWorkspaceRequest) (*operations.GetWorkspacesWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}", request.PathParams, nil)
@@ -362,7 +372,8 @@ func (s *workspaces) GetWorkspacesWorkspace(ctx context.Context, request operati
 	return res, nil
 }
 
-// GetWorkspacesWorkspaceHooks - Returns a paginated list of webhooks installed on this workspace.
+// GetWorkspacesWorkspaceHooks - List webhooks for a workspace
+// Returns a paginated list of webhooks installed on this workspace.
 func (s *workspaces) GetWorkspacesWorkspaceHooks(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksRequest) (*operations.GetWorkspacesWorkspaceHooksResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request.PathParams, nil)
@@ -418,7 +429,8 @@ func (s *workspaces) GetWorkspacesWorkspaceHooks(ctx context.Context, request op
 	return res, nil
 }
 
-// GetWorkspacesWorkspaceHooksUID - Returns the webhook with the specified id installed on the given
+// GetWorkspacesWorkspaceHooksUID - Get a webhook for a workspace
+// Returns the webhook with the specified id installed on the given
 // workspace.
 func (s *workspaces) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request operations.GetWorkspacesWorkspaceHooksUIDRequest) (*operations.GetWorkspacesWorkspaceHooksUIDResponse, error) {
 	baseURL := s.serverURL
@@ -473,7 +485,8 @@ func (s *workspaces) GetWorkspacesWorkspaceHooksUID(ctx context.Context, request
 	return res, nil
 }
 
-// GetWorkspacesWorkspaceMembers - Returns all members of the requested workspace.
+// GetWorkspacesWorkspaceMembers - List users in a workspace
+// Returns all members of the requested workspace.
 func (s *workspaces) GetWorkspacesWorkspaceMembers(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersRequest) (*operations.GetWorkspacesWorkspaceMembersResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/members", request.PathParams, nil)
@@ -527,7 +540,8 @@ func (s *workspaces) GetWorkspacesWorkspaceMembers(ctx context.Context, request 
 	return res, nil
 }
 
-// GetWorkspacesWorkspaceMembersMember - Returns the workspace membership, which includes
+// GetWorkspacesWorkspaceMembersMember - Get user membership for a workspace
+// Returns the workspace membership, which includes
 // a `User` object for the member and a `Workspace` object
 // for the requested workspace.
 func (s *workspaces) GetWorkspacesWorkspaceMembersMember(ctx context.Context, request operations.GetWorkspacesWorkspaceMembersMemberRequest) (*operations.GetWorkspacesWorkspaceMembersMemberResponse, error) {
@@ -585,12 +599,16 @@ func (s *workspaces) GetWorkspacesWorkspaceMembersMember(ctx context.Context, re
 	return res, nil
 }
 
-// GetWorkspacesWorkspacePermissions - Returns the list of members in a workspace
+// GetWorkspacesWorkspacePermissions - List user permissions in a workspace
+// Returns the list of members in a workspace
 // and their permission levels.
 // Permission can be:
 // * `owner`
 // * `collaborator`
 // * `member`
+//
+// **The `collaborator` role is being removed from the Bitbucket Cloud API. For more information,
+// see the [deprecation announcement](/cloud/bitbucket/deprecation-notice-collaborator-role/).**
 //
 // Example:
 //
@@ -638,7 +656,7 @@ func (s *workspaces) GetWorkspacesWorkspaceMembersMember(ctx context.Context, re
 //
 // ```
 //
-// Results may be further [filtered](../../../meta/filtering) by
+// Results may be further [filtered](/cloud/bitbucket/rest/intro/#filtering) by
 // permission by adding the following query string parameters:
 //
 // * `q=permission="owner"`
@@ -699,7 +717,8 @@ func (s *workspaces) GetWorkspacesWorkspacePermissions(ctx context.Context, requ
 	return res, nil
 }
 
-// GetWorkspacesWorkspacePermissionsRepositories - Returns an object for each repository permission for all of a
+// GetWorkspacesWorkspacePermissionsRepositories - List all repository permissions for a workspace
+// Returns an object for each repository permission for all of a
 // workspace's repositories.
 //
 // Permissions returned are effective permissions: the highest level of
@@ -774,7 +793,7 @@ func (s *workspaces) GetWorkspacesWorkspacePermissions(ctx context.Context, requ
 //
 // ```
 //
-// Results may be further [filtered or sorted](../../../../meta/filtering)
+// Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering)
 // by repository, user, or permission by adding the following query string
 // parameters:
 //
@@ -840,7 +859,8 @@ func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositories(ctx context.C
 	return res, nil
 }
 
-// GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug - Returns an object for the repository permission of each user in the
+// GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug - List a repository permissions for a workspace
+// Returns an object for the repository permission of each user in the
 // requested repository.
 //
 // Permissions returned are effective permissions: the highest level of
@@ -900,7 +920,7 @@ func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositories(ctx context.C
 //
 // ```
 //
-// Results may be further [filtered or sorted](../../../../meta/filtering)
+// Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering)
 // by user, or permission by adding the following query string parameters:
 //
 // * `q=permission>"read"`
@@ -965,7 +985,8 @@ func (s *workspaces) GetWorkspacesWorkspacePermissionsRepositoriesRepoSlug(ctx c
 	return res, nil
 }
 
-// GetWorkspacesWorkspaceProjects - Returns the list of projects in this workspace.
+// GetWorkspacesWorkspaceProjects - List projects in a workspace
+// Returns the list of projects in this workspace.
 func (s *workspaces) GetWorkspacesWorkspaceProjects(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsRequest) (*operations.GetWorkspacesWorkspaceProjectsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects", request.PathParams, nil)
@@ -1019,7 +1040,8 @@ func (s *workspaces) GetWorkspacesWorkspaceProjects(ctx context.Context, request
 	return res, nil
 }
 
-// GetWorkspacesWorkspaceProjectsProjectKey - Returns the requested project.
+// GetWorkspacesWorkspaceProjectsProjectKey - Get a project for a workspace
+// Returns the requested project.
 func (s *workspaces) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request.PathParams, nil)
@@ -1077,12 +1099,39 @@ func (s *workspaces) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Contex
 	return res, nil
 }
 
-// PostWorkspacesWorkspaceHooks - Creates a new webhook on the specified workspace.
+// PostWorkspacesWorkspaceHooks - Create a webhook for a workspace
+// Creates a new webhook on the specified workspace.
 //
 // Workspace webhooks are fired for events from all repositories contained
 // by that workspace.
 //
-// Note that only owners can install webhooks on workspaces.
+// Example:
+//
+// ```
+// $ curl -X POST -u credentials -H 'Content-Type: application/json'
+//
+//	https://api.bitbucket.org/2.0/workspaces/my-workspace/hooks
+//	-d '
+//	  {
+//	    "description": "Webhook Description",
+//	    "url": "https://example.com/",
+//	    "active": true,
+//	    "events": [
+//	      "repo:push",
+//	      "issue:created",
+//	      "issue:updated"
+//	    ]
+//	  }'
+//
+// ```
+//
+// This call requires the webhook scope, as well as any scope
+// that applies to the events that the webhook subscribes to. In the
+// example above that means: `webhook`, `repository` and `issue`.
+//
+// The `url` must properly resolve and cannot be an internal, non-routed address.
+//
+// Only workspace owners can install webhooks on workspaces.
 func (s *workspaces) PostWorkspacesWorkspaceHooks(ctx context.Context, request operations.PostWorkspacesWorkspaceHooksRequest) (*operations.PostWorkspacesWorkspaceHooksResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/hooks", request.PathParams, nil)
@@ -1140,7 +1189,8 @@ func (s *workspaces) PostWorkspacesWorkspaceHooks(ctx context.Context, request o
 	return res, nil
 }
 
-// PutWorkspacesWorkspaceHooksUID - Updates the specified webhook subscription.
+// PutWorkspacesWorkspaceHooksUID - Update a webhook for a workspace
+// Updates the specified webhook subscription.
 //
 // The following properties can be mutated:
 //

@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 )
 
 // DocumentTypeEnum - Type of document, used when providing an ID number or uploading a document. The possible values depend on the legal entity type.
@@ -104,6 +105,8 @@ type Document struct {
 	Attachment *Attachment `json:"attachment,omitempty"`
 	// Array that contains the document. The array supports multiple attachments for uploading different sides or pages of a document.
 	Attachments []Attachment `json:"attachments"`
+	// The creation date of the document.
+	CreationDate *time.Time `json:"creationDate,omitempty"`
 	// Your description for the document.
 	Description string `json:"description"`
 	// The expiry date of the document, in YYYY-MM-DD format.
@@ -116,6 +119,8 @@ type Document struct {
 	IssuerCountry *string `json:"issuerCountry,omitempty"`
 	// The state or province where the document was issued (AU only).
 	IssuerState *string `json:"issuerState,omitempty"`
+	// The modification date of the document.
+	ModificationDate *time.Time `json:"modificationDate,omitempty"`
 	// The number in the document.
 	Number *string     `json:"number,omitempty"`
 	Owner  OwnerEntity `json:"owner"`

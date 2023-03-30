@@ -98,7 +98,7 @@ func (s *legalEntities) GetLegalEntitiesID(ctx context.Context, request operatio
 // PatchLegalEntitiesID - Update a legal entity
 // Updates a legal entity.
 //
-//	>To update the `entityAssociations` array, you need to replace the entire array. For example, if the array has 3 entries and you want to remove 1 entry, you need to PATCH the resource with the remaining 2 entries.
+//	>To change the legal entity type, include only the new `type` in your request. To update the `entityAssociations` array, you need to replace the entire array. For example, if the array has 3 entries and you want to remove 1 entry, you need to PATCH the resource with the remaining 2 entries.
 func (s *legalEntities) PatchLegalEntitiesID(ctx context.Context, request operations.PatchLegalEntitiesIDRequest) (*operations.PatchLegalEntitiesIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/legalEntities/{id}", request.PathParams, nil)

@@ -37,7 +37,7 @@ func newFiles(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // Returns a JSON object with a `data` key containing the representation of the requested file, if the request was successful.
 //
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
-// ###Waterbutler API actions
+// ### Waterbutler API actions
 //
 // Files can be modified through the Waterbutler API routes found in `links` (`new_folder`, `move`, `upload`, `download`, and `delete`).
 //

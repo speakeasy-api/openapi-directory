@@ -31,7 +31,7 @@ func newProducts(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// CountAllProducts - Retrieves the count of existing products
+// CountAllProducts - Retrieve the count of existing products
 func (s *products) CountAllProducts(ctx context.Context, request operations.CountAllProductsRequest) (*operations.CountAllProductsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/v2/count", request.PathParams, nil)
@@ -75,7 +75,7 @@ func (s *products) CountAllProducts(ctx context.Context, request operations.Coun
 	return res, nil
 }
 
-// CreateProduct - Creates a new product
+// CreateProduct - Create a new product
 func (s *products) CreateProduct(ctx context.Context, request operations.CreateProductRequest) (*operations.CreateProductResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products", request.PathParams, nil)
@@ -135,7 +135,7 @@ func (s *products) CreateProduct(ctx context.Context, request operations.CreateP
 	return res, nil
 }
 
-// DeleteProduct - Deletes a single product
+// DeleteProduct - Delete a single product
 func (s *products) DeleteProduct(ctx context.Context, request operations.DeleteProductRequest) (*operations.DeleteProductResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/{productUuid}", request.PathParams, nil)
@@ -172,7 +172,7 @@ func (s *products) DeleteProduct(ctx context.Context, request operations.DeleteP
 	return res, nil
 }
 
-// DeleteProducts - Deletes a list of products
+// DeleteProducts - Delete a list of products
 func (s *products) DeleteProducts(ctx context.Context, request operations.DeleteProductsRequest) (*operations.DeleteProductsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products", request.PathParams, nil)
@@ -211,7 +211,7 @@ func (s *products) DeleteProducts(ctx context.Context, request operations.Delete
 	return res, nil
 }
 
-// GetAllOptions - Retrieves an aggregate of active Options in the library
+// GetAllOptions - Retrieve an aggregate of active Options in the library
 func (s *products) GetAllOptions(ctx context.Context, request operations.GetAllOptionsRequest) (*operations.GetAllOptionsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/options", request.PathParams, nil)
@@ -255,7 +255,7 @@ func (s *products) GetAllOptions(ctx context.Context, request operations.GetAllO
 	return res, nil
 }
 
-// GetAllProductsInPos - Retrieves all products visible in POS
+// GetAllProductsInPos - Retrieve all products visible in POS
 func (s *products) GetAllProductsInPos(ctx context.Context, request operations.GetAllProductsInPosRequest) (*operations.GetAllProductsInPosResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products", request.PathParams, nil)
@@ -299,7 +299,7 @@ func (s *products) GetAllProductsInPos(ctx context.Context, request operations.G
 	return res, nil
 }
 
-// GetAllProductsV2 - Retrieves all products visible in POS – v2
+// GetAllProductsV2 - Retrieve all products visible in POS – v2
 func (s *products) GetAllProductsV2(ctx context.Context, request operations.GetAllProductsV2Request) (*operations.GetAllProductsV2Response, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/organizations/{organizationUuid}/products/v2", request.PathParams, nil)
@@ -347,7 +347,7 @@ func (s *products) GetAllProductsV2(ctx context.Context, request operations.GetA
 	return res, nil
 }
 
-// GetProduct - Retrieves a single product
+// GetProduct - Retrieve a single product
 // Get the full product with the provided UUID. The method supports conditional GET through providing a HttpHeaders.IF_NONE_MATCH header. If the conditional prerequisite is fullfilled, the full product is returned, otherwise a 304 not modified will be returned with an empty body.
 func (s *products) GetProduct(ctx context.Context, request operations.GetProductRequest) (*operations.GetProductResponse, error) {
 	baseURL := s.serverURL
@@ -401,7 +401,7 @@ func (s *products) GetProduct(ctx context.Context, request operations.GetProduct
 	return res, nil
 }
 
-// UpdateProduct - Updates a single product
+// UpdateProduct - Update a single product
 // Updates a product entity using JSON merge patch (https://tools.ietf.org/html/rfc7386). This means that only included fields will be changed: null values removes the field on the target entity, and other values updates the field. Conditional updates are supported through the HttpHeaders.IF_MATCH header. If the conditional prerequisite is fullfilled, the product is updated: otherwise a 412 (precondition failed) will be returned with an empty body.
 func (s *products) UpdateProduct(ctx context.Context, request operations.UpdateProductRequest) (*operations.UpdateProductResponse, error) {
 	baseURL := s.serverURL

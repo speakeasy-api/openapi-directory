@@ -37,7 +37,8 @@ type AddDependentsForTaskRequest struct {
 
 // AddDependentsForTask200ApplicationJSON - Successfully set the specified dependents on the given task.
 type AddDependentsForTask200ApplicationJSON struct {
-	Data []shared.TaskCompact `json:"data,omitempty"`
+	// An empty object. Some endpoints do not return an object on success. The success is conveyed through a 2-- status code and returning an empty object.
+	Data map[string]interface{} `json:"data,omitempty"`
 }
 
 type AddDependentsForTaskResponse struct {

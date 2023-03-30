@@ -35,7 +35,7 @@ func newCampaigns(defaultClient, securityClient HTTPClient, serverURL, language,
 // CampaignsCreate - Create campaign
 func (s *campaigns) CampaignsCreate(ctx context.Context, request operations.CampaignsCreateRequest) (*operations.CampaignsCreateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/campaigns", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *campaigns) CampaignsCreate(ctx context.Context, request operations.Camp
 // CampaignsFetch - Fetch campaign by ID
 func (s *campaigns) CampaignsFetch(ctx context.Context, request operations.CampaignsFetchRequest) (*operations.CampaignsFetchResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/campaigns/{campaignId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/campaigns/{campaignId}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -130,7 +130,7 @@ func (s *campaigns) CampaignsFetch(ctx context.Context, request operations.Campa
 // CampaignsFetchAll - Fetch campaigns
 func (s *campaigns) CampaignsFetchAll(ctx context.Context, request operations.CampaignsFetchAllRequest) (*operations.CampaignsFetchAllResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/campaigns", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/campaigns", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -190,7 +190,7 @@ func (s *campaigns) CampaignsFetchAll(ctx context.Context, request operations.Ca
 // CampaignsRemove - Deletes a campaign
 func (s *campaigns) CampaignsRemove(ctx context.Context, request operations.CampaignsRemoveRequest) (*operations.CampaignsRemoveResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/campaigns/{campaignId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/campaigns/{campaignId}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -234,7 +234,7 @@ func (s *campaigns) CampaignsRemove(ctx context.Context, request operations.Camp
 // CampaignsUpdate - Updates a campaign
 func (s *campaigns) CampaignsUpdate(ctx context.Context, request operations.CampaignsUpdateRequest) (*operations.CampaignsUpdateResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/campaigns/{campaignId}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/v1/accounts/{accountId}/campaigns/{campaignId}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
 	if err != nil {

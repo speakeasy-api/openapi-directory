@@ -12,11 +12,12 @@ import (
 type UserEntityAuthenticationMethodEnum string
 
 const (
-	UserEntityAuthenticationMethodEnumPassword         UserEntityAuthenticationMethodEnum = "password"
-	UserEntityAuthenticationMethodEnumUnusedFormerLdap UserEntityAuthenticationMethodEnum = "unused_former_ldap"
-	UserEntityAuthenticationMethodEnumSso              UserEntityAuthenticationMethodEnum = "sso"
-	UserEntityAuthenticationMethodEnumNone             UserEntityAuthenticationMethodEnum = "none"
-	UserEntityAuthenticationMethodEnumEmailSignup      UserEntityAuthenticationMethodEnum = "email_signup"
+	UserEntityAuthenticationMethodEnumPassword                 UserEntityAuthenticationMethodEnum = "password"
+	UserEntityAuthenticationMethodEnumUnusedFormerLdap         UserEntityAuthenticationMethodEnum = "unused_former_ldap"
+	UserEntityAuthenticationMethodEnumSso                      UserEntityAuthenticationMethodEnum = "sso"
+	UserEntityAuthenticationMethodEnumNone                     UserEntityAuthenticationMethodEnum = "none"
+	UserEntityAuthenticationMethodEnumEmailSignup              UserEntityAuthenticationMethodEnum = "email_signup"
+	UserEntityAuthenticationMethodEnumPasswordWithImportedHash UserEntityAuthenticationMethodEnum = "password_with_imported_hash"
 )
 
 func (e *UserEntityAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
@@ -34,6 +35,8 @@ func (e *UserEntityAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
 	case "none":
 		fallthrough
 	case "email_signup":
+		fallthrough
+	case "password_with_imported_hash":
 		*e = UserEntityAuthenticationMethodEnum(s)
 		return nil
 	default:
@@ -125,12 +128,16 @@ type UserEntity struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Can the user connect with WebDAV?
 	DavPermission *bool `json:"dav_permission,omitempty"`
+	// Number of days remaining until password expires
+	DaysRemainingUntilPasswordExpire *int `json:"days_remaining_until_password_expire,omitempty"`
 	// Is user disabled? Disabled users cannot log in, and do not count for billing purposes.  Users can be automatically disabled after an inactivity period via a Site setting.
 	Disabled *bool `json:"disabled,omitempty"`
 	// User email address
 	Email *string `json:"email,omitempty"`
 	// Is this user managed by a SsoStrategy?
 	ExternallyManaged *bool `json:"externally_managed,omitempty"`
+	// User's first login time
+	FirstLoginAt *time.Time `json:"first_login_at,omitempty"`
 	// Can the user access with FTP/FTPS?
 	FtpPermission *bool `json:"ftp_permission,omitempty"`
 	// Comma-separated list of group IDs of which this user is a member
@@ -141,10 +148,26 @@ type UserEntity struct {
 	ID *int `json:"id,omitempty"`
 	// Preferred language
 	Language *string `json:"language,omitempty"`
-	// User's last login time
+	// User's most recent activity time, which is the latest of most recent login, most recent API use, enablement, or creation
+	LastActiveAt *time.Time `json:"last_active_at,omitempty"`
+	// User's most recent API use time
+	LastAPIUseAt *time.Time `json:"last_api_use_at,omitempty"`
+	// User's most recent login time via WebDAV
+	LastDavLoginAt *time.Time `json:"last_dav_login_at,omitempty"`
+	// User's most recent login time via Desktop app
+	LastDesktopLoginAt *time.Time `json:"last_desktop_login_at,omitempty"`
+	// User's most recent login time via FTP
+	LastFtpLoginAt *time.Time `json:"last_ftp_login_at,omitempty"`
+	// User's most recent login time via any protocol
 	LastLoginAt *time.Time `json:"last_login_at,omitempty"`
-	// The last protocol and cipher used
+	// The most recent protocol and cipher used
 	LastProtocolCipher *string `json:"last_protocol_cipher,omitempty"`
+	// User's most recent login time via Rest API
+	LastRestapiLoginAt *time.Time `json:"last_restapi_login_at,omitempty"`
+	// User's most recent login time via SFTP
+	LastSftpLoginAt *time.Time `json:"last_sftp_login_at,omitempty"`
+	// User's most recent login time via web
+	LastWebLoginAt *time.Time `json:"last_web_login_at,omitempty"`
 	// Time in the future that the user will no longer be locked out if applicable
 	LockoutExpires *time.Time `json:"lockout_expires,omitempty"`
 	// User's full name
@@ -155,6 +178,10 @@ type UserEntity struct {
 	NotificationDailySendTime *int `json:"notification_daily_send_time,omitempty"`
 	// Enable integration with Office for the web?
 	OfficeIntegrationEnabled *bool `json:"office_integration_enabled,omitempty"`
+	// Password expiration datetime
+	PasswordExpireAt *time.Time `json:"password_expire_at,omitempty"`
+	// Is user's password expired?
+	PasswordExpired *bool `json:"password_expired,omitempty"`
 	// Last time the user's password was set
 	PasswordSetAt *time.Time `json:"password_set_at,omitempty"`
 	// Number of days to allow user to use the same password

@@ -7,6 +7,42 @@ import (
 	"fmt"
 )
 
+// MembershipDeliverySettingEnum - Output only. Delivery setting associated with the membership.
+type MembershipDeliverySettingEnum string
+
+const (
+	MembershipDeliverySettingEnumDeliverySettingUnspecified MembershipDeliverySettingEnum = "DELIVERY_SETTING_UNSPECIFIED"
+	MembershipDeliverySettingEnumAllMail                    MembershipDeliverySettingEnum = "ALL_MAIL"
+	MembershipDeliverySettingEnumDigest                     MembershipDeliverySettingEnum = "DIGEST"
+	MembershipDeliverySettingEnumDaily                      MembershipDeliverySettingEnum = "DAILY"
+	MembershipDeliverySettingEnumNone                       MembershipDeliverySettingEnum = "NONE"
+	MembershipDeliverySettingEnumDisabled                   MembershipDeliverySettingEnum = "DISABLED"
+)
+
+func (e *MembershipDeliverySettingEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "DELIVERY_SETTING_UNSPECIFIED":
+		fallthrough
+	case "ALL_MAIL":
+		fallthrough
+	case "DIGEST":
+		fallthrough
+	case "DAILY":
+		fallthrough
+	case "NONE":
+		fallthrough
+	case "DISABLED":
+		*e = MembershipDeliverySettingEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for MembershipDeliverySettingEnum: %s", s)
+	}
+}
+
 // MembershipTypeEnum - Output only. The type of the membership.
 type MembershipTypeEnum string
 
@@ -47,6 +83,8 @@ func (e *MembershipTypeEnum) UnmarshalJSON(data []byte) error {
 type Membership struct {
 	// Output only. The time when the `Membership` was created.
 	CreateTime *string `json:"createTime,omitempty"`
+	// Output only. Delivery setting associated with the membership.
+	DeliverySetting *MembershipDeliverySettingEnum `json:"deliverySetting,omitempty"`
 	// Output only. The [resource name](https://cloud.google.com/apis/design/resource_names) of the `Membership`. Shall be of the form `groups/{group}/memberships/{membership}`.
 	Name *string `json:"name,omitempty"`
 	// A unique identifier for an entity in the Cloud Identity Groups API. An entity can represent either a group with an optional `namespace` or a user without a `namespace`. The combination of `id` and `namespace` must be unique; however, the same `id` can be used with different `namespace`s.

@@ -9,11 +9,14 @@ import (
 // Invoice - Invoice
 type Invoice struct {
 	// Monetary amount
-	Amount    *float32        `json:"amount,omitempty"`
-	Billing   *BillingAddress `json:"billing,omitempty"`
-	Currency  *string         `json:"currency,omitempty"`
-	ID        *int64          `json:"id,omitempty"`
-	InvoiceNo *int64          `json:"invoice_no,omitempty"`
+	Amount *float32 `json:"amount,omitempty"`
+	// Monetary amount
+	BaseAmount   *float32        `json:"base_amount,omitempty"`
+	BaseCurrency *string         `json:"base_currency,omitempty"`
+	Billing      *BillingAddress `json:"billing,omitempty"`
+	Currency     *string         `json:"currency,omitempty"`
+	ID           *int64          `json:"id,omitempty"`
+	InvoiceNo    *int64          `json:"invoice_no,omitempty"`
 	// the date-time notation as defined by RFC 3339, section 5.6, for example, 2017-07-21T17:32:28Z
 	InvoicedAt *time.Time    `json:"invoiced_at,omitempty"`
 	Links      *InvoiceLinks `json:"links,omitempty"`

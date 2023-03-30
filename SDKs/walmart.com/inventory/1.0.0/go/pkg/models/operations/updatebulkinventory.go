@@ -3,21 +3,45 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 )
 
+// UpdateBulkInventoryFeedTypeEnum - The feed Type
+type UpdateBulkInventoryFeedTypeEnum string
+
+const (
+	UpdateBulkInventoryFeedTypeEnumInventory   UpdateBulkInventoryFeedTypeEnum = "inventory"
+	UpdateBulkInventoryFeedTypeEnumMpInventory UpdateBulkInventoryFeedTypeEnum = "MP_INVENTORY"
+)
+
+func (e *UpdateBulkInventoryFeedTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "inventory":
+		fallthrough
+	case "MP_INVENTORY":
+		*e = UpdateBulkInventoryFeedTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for UpdateBulkInventoryFeedTypeEnum: %s", s)
+	}
+}
+
 type UpdateBulkInventoryQueryParams struct {
-	// Includes details of each entity in the feed. Do not set this parameter to true.
-	FeedType string `queryParam:"style=form,explode=true,name=feedType"`
-	// The shipNode for which the inventory is to be updated.
+	// The feed Type
+	FeedType UpdateBulkInventoryFeedTypeEnum `queryParam:"style=form,explode=true,name=feedType"`
+	// The shipNode for which the inventory is to be updated. Not required in case of Multi Node Inventory Update Feed (feedType=MP_INVENTORY)
 	ShipNode *string `queryParam:"style=form,explode=true,name=shipNode"`
 }
 
 type UpdateBulkInventoryHeaders struct {
-	// Basic authorization header. Base 64 encodes the Client ID and Client Secret retrieved in step two of the integration steps.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
-	WmConsumerChannelType string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
+	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
 	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
 	// The access token retrieved in the Token API call
@@ -31,16 +55,15 @@ type UpdateBulkInventoryRequestBodyFile struct {
 	File    string `multipartForm:"name=file"`
 }
 
-// UpdateBulkInventoryRequestBody - Feed file to upload
 type UpdateBulkInventoryRequestBody struct {
-	File *UpdateBulkInventoryRequestBodyFile `multipartForm:"file"`
+	// Feed file to upload
+	File UpdateBulkInventoryRequestBodyFile `multipartForm:"file"`
 }
 
 type UpdateBulkInventoryRequest struct {
 	QueryParams UpdateBulkInventoryQueryParams
 	Headers     UpdateBulkInventoryHeaders
-	// Feed file to upload
-	Request UpdateBulkInventoryRequestBody `request:"mediaType=multipart/form-data"`
+	Request     *UpdateBulkInventoryRequestBody `request:"mediaType=multipart/form-data"`
 }
 
 // UpdateBulkInventory200ApplicationXML - Successful Operation

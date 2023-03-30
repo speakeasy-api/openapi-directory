@@ -8,6 +8,159 @@ import (
 	"time"
 )
 
+// PicoChargingDataConnectionModeEnum - The mode how this station is connected to the cloud
+type PicoChargingDataConnectionModeEnum string
+
+const (
+	PicoChargingDataConnectionModeEnumNetworkToCloudConnectionModeNoConnection         PicoChargingDataConnectionModeEnum = "NetworkToCloudConnectionMode_NoConnection"
+	PicoChargingDataConnectionModeEnumNetworkToCloudConnectionModeDirectWiFiConnection PicoChargingDataConnectionModeEnum = "NetworkToCloudConnectionMode_DirectWiFiConnection"
+	PicoChargingDataConnectionModeEnumNetworkToCloudConnectionModeGprsConnection       PicoChargingDataConnectionModeEnum = "NetworkToCloudConnectionMode_GPRSConnection"
+	PicoChargingDataConnectionModeEnumNetworkToCloudConnectionModeNbIotConnection      PicoChargingDataConnectionModeEnum = "NetworkToCloudConnectionMode_NBIotConnection"
+	PicoChargingDataConnectionModeEnumNetworkToCloudConnectionModeLteCatM1Connection   PicoChargingDataConnectionModeEnum = "NetworkToCloudConnectionMode_LteCatM1Connection"
+	PicoChargingDataConnectionModeEnumNetworkToCloudConnectionModeMeshWiFiConnection   PicoChargingDataConnectionModeEnum = "NetworkToCloudConnectionMode_MeshWiFiConnection"
+	PicoChargingDataConnectionModeEnumNetworkToCloudConnectionModeMeshMobileConnection PicoChargingDataConnectionModeEnum = "NetworkToCloudConnectionMode_MeshMobileConnection"
+)
+
+func (e *PicoChargingDataConnectionModeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "NetworkToCloudConnectionMode_NoConnection":
+		fallthrough
+	case "NetworkToCloudConnectionMode_DirectWiFiConnection":
+		fallthrough
+	case "NetworkToCloudConnectionMode_GPRSConnection":
+		fallthrough
+	case "NetworkToCloudConnectionMode_NBIotConnection":
+		fallthrough
+	case "NetworkToCloudConnectionMode_LteCatM1Connection":
+		fallthrough
+	case "NetworkToCloudConnectionMode_MeshWiFiConnection":
+		fallthrough
+	case "NetworkToCloudConnectionMode_MeshMobileConnection":
+		*e = PicoChargingDataConnectionModeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PicoChargingDataConnectionModeEnum: %s", s)
+	}
+}
+
+// PicoChargingDataLastWarningOrErrorEnum - The last warning or error of the station. This message is only shown if the warning or error happend in the last 5 minutes.
+type PicoChargingDataLastWarningOrErrorEnum string
+
+const (
+	PicoChargingDataLastWarningOrErrorEnumMeterDataloggerEvent       PicoChargingDataLastWarningOrErrorEnum = "MeterDataloggerEvent"
+	PicoChargingDataLastWarningOrErrorEnumMeterRestart               PicoChargingDataLastWarningOrErrorEnum = "MeterRestart"
+	PicoChargingDataLastWarningOrErrorEnumPowerDown                  PicoChargingDataLastWarningOrErrorEnum = "PowerDown"
+	PicoChargingDataLastWarningOrErrorEnumMissingPhaseL1             PicoChargingDataLastWarningOrErrorEnum = "MissingPhaseL1"
+	PicoChargingDataLastWarningOrErrorEnumMissingPhaseL2             PicoChargingDataLastWarningOrErrorEnum = "MissingPhaseL2"
+	PicoChargingDataLastWarningOrErrorEnumMissingPhaseL3             PicoChargingDataLastWarningOrErrorEnum = "MissingPhaseL3"
+	PicoChargingDataLastWarningOrErrorEnumTamperDetectionCover       PicoChargingDataLastWarningOrErrorEnum = "TamperDetectionCover"
+	PicoChargingDataLastWarningOrErrorEnumMagneticFieldDetection     PicoChargingDataLastWarningOrErrorEnum = "MagneticFieldDetection"
+	PicoChargingDataLastWarningOrErrorEnumClockAdjusted              PicoChargingDataLastWarningOrErrorEnum = "ClockAdjusted"
+	PicoChargingDataLastWarningOrErrorEnumOvervoltage                PicoChargingDataLastWarningOrErrorEnum = "Overvoltage"
+	PicoChargingDataLastWarningOrErrorEnumUndervoltage               PicoChargingDataLastWarningOrErrorEnum = "Undervoltage"
+	PicoChargingDataLastWarningOrErrorEnumOvervoltageL1              PicoChargingDataLastWarningOrErrorEnum = "OvervoltageL1"
+	PicoChargingDataLastWarningOrErrorEnumOvervoltageL2              PicoChargingDataLastWarningOrErrorEnum = "OvervoltageL2"
+	PicoChargingDataLastWarningOrErrorEnumOvervoltageL3              PicoChargingDataLastWarningOrErrorEnum = "OvervoltageL3"
+	PicoChargingDataLastWarningOrErrorEnumChargingTransaction        PicoChargingDataLastWarningOrErrorEnum = "ChargingTransaction"
+	PicoChargingDataLastWarningOrErrorEnumPicoErrorControllerPanic   PicoChargingDataLastWarningOrErrorEnum = "PicoErrorControllerPanic"
+	PicoChargingDataLastWarningOrErrorEnumPicoErrorMidServicePanic   PicoChargingDataLastWarningOrErrorEnum = "PicoErrorMidServicePanic"
+	PicoChargingDataLastWarningOrErrorEnumPicoWarningRcdTriggered    PicoChargingDataLastWarningOrErrorEnum = "PicoWarningRcdTriggered"
+	PicoChargingDataLastWarningOrErrorEnumPicoWarningCableLockError  PicoChargingDataLastWarningOrErrorEnum = "PicoWarningCableLockError"
+	PicoChargingDataLastWarningOrErrorEnumPicoWarningDiodeFailure    PicoChargingDataLastWarningOrErrorEnum = "PicoWarningDiodeFailure"
+	PicoChargingDataLastWarningOrErrorEnumPicoWarningOverload        PicoChargingDataLastWarningOrErrorEnum = "PicoWarningOverload"
+	PicoChargingDataLastWarningOrErrorEnumPicoWarningHighTemperature PicoChargingDataLastWarningOrErrorEnum = "PicoWarningHighTemperature"
+)
+
+func (e *PicoChargingDataLastWarningOrErrorEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "MeterDataloggerEvent":
+		fallthrough
+	case "MeterRestart":
+		fallthrough
+	case "PowerDown":
+		fallthrough
+	case "MissingPhaseL1":
+		fallthrough
+	case "MissingPhaseL2":
+		fallthrough
+	case "MissingPhaseL3":
+		fallthrough
+	case "TamperDetectionCover":
+		fallthrough
+	case "MagneticFieldDetection":
+		fallthrough
+	case "ClockAdjusted":
+		fallthrough
+	case "Overvoltage":
+		fallthrough
+	case "Undervoltage":
+		fallthrough
+	case "OvervoltageL1":
+		fallthrough
+	case "OvervoltageL2":
+		fallthrough
+	case "OvervoltageL3":
+		fallthrough
+	case "ChargingTransaction":
+		fallthrough
+	case "PicoErrorControllerPanic":
+		fallthrough
+	case "PicoErrorMidServicePanic":
+		fallthrough
+	case "PicoWarningRcdTriggered":
+		fallthrough
+	case "PicoWarningCableLockError":
+		fallthrough
+	case "PicoWarningDiodeFailure":
+		fallthrough
+	case "PicoWarningOverload":
+		fallthrough
+	case "PicoWarningHighTemperature":
+		*e = PicoChargingDataLastWarningOrErrorEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PicoChargingDataLastWarningOrErrorEnum: %s", s)
+	}
+}
+
+// PicoChargingDataLoadSheddingStateEnum - Max. dynamic current (e.g. set over API or Modbus TCP) of this station or the loadmanagement group of the station if the station is in a group. in A
+type PicoChargingDataLoadSheddingStateEnum string
+
+const (
+	PicoChargingDataLoadSheddingStateEnumMaxCurrent  PicoChargingDataLoadSheddingStateEnum = "MaxCurrent"
+	PicoChargingDataLoadSheddingStateEnumHalfCurrent PicoChargingDataLoadSheddingStateEnum = "HalfCurrent"
+	PicoChargingDataLoadSheddingStateEnumMinCurrent  PicoChargingDataLoadSheddingStateEnum = "MinCurrent"
+	PicoChargingDataLoadSheddingStateEnumNoCurrent   PicoChargingDataLoadSheddingStateEnum = "NoCurrent"
+)
+
+func (e *PicoChargingDataLoadSheddingStateEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "MaxCurrent":
+		fallthrough
+	case "HalfCurrent":
+		fallthrough
+	case "MinCurrent":
+		fallthrough
+	case "NoCurrent":
+		*e = PicoChargingDataLoadSheddingStateEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PicoChargingDataLoadSheddingStateEnum: %s", s)
+	}
+}
+
 // PicoChargingDataStateEnum - The state of the charging station
 type PicoChargingDataStateEnum string
 
@@ -17,6 +170,8 @@ const (
 	PicoChargingDataStateEnumReadyCarConnected   PicoChargingDataStateEnum = "ReadyCarConnected"
 	PicoChargingDataStateEnumStartedWaitForCar   PicoChargingDataStateEnum = "StartedWaitForCar"
 	PicoChargingDataStateEnumCharging            PicoChargingDataStateEnum = "Charging"
+	PicoChargingDataStateEnumInstallation        PicoChargingDataStateEnum = "Installation"
+	PicoChargingDataStateEnumAuthorize           PicoChargingDataStateEnum = "Authorize"
 	PicoChargingDataStateEnumOffline             PicoChargingDataStateEnum = "Offline"
 )
 
@@ -36,6 +191,10 @@ func (e *PicoChargingDataStateEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "Charging":
 		fallthrough
+	case "Installation":
+		fallthrough
+	case "Authorize":
+		fallthrough
 	case "Offline":
 		*e = PicoChargingDataStateEnum(s)
 		return nil
@@ -50,8 +209,30 @@ type PicoChargingData struct {
 	ActiveChargingEnergy *float64 `json:"ActiveChargingEnergy,omitempty"`
 	// The power of the active charging (in kW)
 	ActiveChargingPower *float64 `json:"ActiveChargingPower,omitempty"`
+	// The mode how this station is connected to the cloud
+	ConnectionMode *PicoChargingDataConnectionModeEnum `json:"ConnectionMode,omitempty"`
 	// The duration of this charging in seconds
 	Duration *int `json:"Duration,omitempty"`
+	// The last warning or error of the station. This message is only shown if the warning or error happend in the last 5 minutes.
+	LastWarningOrError *PicoChargingDataLastWarningOrErrorEnum `json:"LastWarningOrError,omitempty"`
+	// The message of the last warning or error of the station.
+	LastWarningOrErrorMessage *string `json:"LastWarningOrErrorMessage,omitempty"`
+	// The time when the LastWarningOrError happend
+	LastWarningOrErrorTime *time.Time `json:"LastWarningOrErrorTime,omitempty"`
+	// Max. dynamic current (e.g. set over API or Modbus TCP) of this station or the loadmanagement group of the station if the station is in a group. in A
+	LoadSheddingState *PicoChargingDataLoadSheddingStateEnum `json:"LoadSheddingState,omitempty"`
+	// The name of the loadmanagement group. Or string.empty if the station is not in a group
+	LoadmanagementGroupName *string `json:"LoadmanagementGroupName,omitempty"`
+	// Max allowed charging current in A
+	MaxAllowedChargingCurrent *int `json:"MaxAllowedChargingCurrent,omitempty"`
+	// Max. dynamic current (e.g. set over API or Modbus TCP) of this station or the loadmanagement group of the station if the station is in a group. in A
+	MaxDynamicCurrent *int `json:"MaxDynamicCurrent,omitempty"`
+	// Max. current of the loadmanagement group of this station (if there is any) in A
+	MaxLoadmanagementGroupCurrent *int `json:"MaxLoadmanagementGroupCurrent,omitempty"`
+	// Max. current of the station in A
+	MaxStationCurrent *int `json:"MaxStationCurrent,omitempty"`
+	// Min. current of the station in A
+	MinStationCurrent *int `json:"MinStationCurrent,omitempty"`
 	// The state of the charging station
 	State *PicoChargingDataStateEnum `json:"State,omitempty"`
 	// The date of this values

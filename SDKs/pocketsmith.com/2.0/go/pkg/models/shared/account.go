@@ -20,6 +20,7 @@ const (
 	AccountTypeEnumVehicle        AccountTypeEnum = "vehicle"
 	AccountTypeEnumProperty       AccountTypeEnum = "property"
 	AccountTypeEnumInsurance      AccountTypeEnum = "insurance"
+	AccountTypeEnumOtherAsset     AccountTypeEnum = "other_asset"
 	AccountTypeEnumOtherLiability AccountTypeEnum = "other_liability"
 )
 
@@ -46,6 +47,8 @@ func (e *AccountTypeEnum) UnmarshalJSON(data []byte) error {
 	case "property":
 		fallthrough
 	case "insurance":
+		fallthrough
+	case "other_asset":
 		fallthrough
 	case "other_liability":
 		*e = AccountTypeEnum(s)

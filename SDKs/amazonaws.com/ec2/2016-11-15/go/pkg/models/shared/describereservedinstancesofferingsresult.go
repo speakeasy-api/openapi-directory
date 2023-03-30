@@ -678,6 +678,25 @@ const (
 	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR6idn16xlarge   DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r6idn.16xlarge"
 	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR6idn24xlarge   DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r6idn.24xlarge"
 	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR6idn32xlarge   DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r6idn.32xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumC7gMetal        DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "c7g.metal"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumM7gMedium       DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "m7g.medium"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumM7gLarge        DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "m7g.large"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumM7gXlarge       DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "m7g.xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumM7g2xlarge      DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "m7g.2xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumM7g4xlarge      DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "m7g.4xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumM7g8xlarge      DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "m7g.8xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumM7g12xlarge     DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "m7g.12xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumM7g16xlarge     DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "m7g.16xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumM7gMetal        DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "m7g.metal"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR7gMedium       DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r7g.medium"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR7gLarge        DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r7g.large"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR7gXlarge       DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r7g.xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR7g2xlarge      DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r7g.2xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR7g4xlarge      DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r7g.4xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR7g8xlarge      DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r7g.8xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR7g12xlarge     DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r7g.12xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR7g16xlarge     DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r7g.16xlarge"
+	DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnumR7gMetal        DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -1923,6 +1942,44 @@ func (e *DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInsta
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsInstanceTypeEnum(s)
 		return nil
 	default:

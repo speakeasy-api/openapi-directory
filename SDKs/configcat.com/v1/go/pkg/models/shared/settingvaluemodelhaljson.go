@@ -26,15 +26,19 @@ type SettingValueModelHaljsonEmbeddedConfigEmbeddedProductLinks struct {
 	Environments     *string `json:"environments,omitempty"`
 	Members          *string `json:"members,omitempty"`
 	PermissionGroups *string `json:"permission-groups,omitempty"`
+	Segments         *string `json:"segments,omitempty"`
 	Self             *string `json:"self,omitempty"`
 	Tags             *string `json:"tags,omitempty"`
 }
 
 type SettingValueModelHaljsonEmbeddedConfigEmbeddedProduct struct {
-	Embedded  *SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbedded `json:"_embedded,omitempty"`
-	Links     *SettingValueModelHaljsonEmbeddedConfigEmbeddedProductLinks    `json:"_links,omitempty"`
-	Name      *string                                                        `json:"name,omitempty"`
-	ProductID *string                                                        `json:"productId,omitempty"`
+	Embedded       *SettingValueModelHaljsonEmbeddedConfigEmbeddedProductEmbedded `json:"_embedded,omitempty"`
+	Links          *SettingValueModelHaljsonEmbeddedConfigEmbeddedProductLinks    `json:"_links,omitempty"`
+	Description    *string                                                        `json:"description,omitempty"`
+	Name           *string                                                        `json:"name,omitempty"`
+	Order          *int                                                           `json:"order,omitempty"`
+	ProductID      *string                                                        `json:"productId,omitempty"`
+	ReasonRequired *bool                                                          `json:"reasonRequired,omitempty"`
 }
 
 type SettingValueModelHaljsonEmbeddedConfigEmbedded struct {
@@ -47,10 +51,12 @@ type SettingValueModelHaljsonEmbeddedConfigLinks struct {
 }
 
 type SettingValueModelHaljsonEmbeddedConfig struct {
-	Embedded *SettingValueModelHaljsonEmbeddedConfigEmbedded `json:"_embedded,omitempty"`
-	Links    *SettingValueModelHaljsonEmbeddedConfigLinks    `json:"_links,omitempty"`
-	ConfigID *string                                         `json:"configId,omitempty"`
-	Name     *string                                         `json:"name,omitempty"`
+	Embedded    *SettingValueModelHaljsonEmbeddedConfigEmbedded `json:"_embedded,omitempty"`
+	Links       *SettingValueModelHaljsonEmbeddedConfigLinks    `json:"_links,omitempty"`
+	ConfigID    *string                                         `json:"configId,omitempty"`
+	Description *string                                         `json:"description,omitempty"`
+	Name        *string                                         `json:"name,omitempty"`
+	Order       *int                                            `json:"order,omitempty"`
 }
 
 type SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbeddedOrganizationLinks struct {
@@ -73,15 +79,19 @@ type SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks struct {
 	Environments     *string `json:"environments,omitempty"`
 	Members          *string `json:"members,omitempty"`
 	PermissionGroups *string `json:"permission-groups,omitempty"`
+	Segments         *string `json:"segments,omitempty"`
 	Self             *string `json:"self,omitempty"`
 	Tags             *string `json:"tags,omitempty"`
 }
 
 type SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProduct struct {
-	Embedded  *SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbedded `json:"_embedded,omitempty"`
-	Links     *SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks    `json:"_links,omitempty"`
-	Name      *string                                                             `json:"name,omitempty"`
-	ProductID *string                                                             `json:"productId,omitempty"`
+	Embedded       *SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductEmbedded `json:"_embedded,omitempty"`
+	Links          *SettingValueModelHaljsonEmbeddedEnvironmentEmbeddedProductLinks    `json:"_links,omitempty"`
+	Description    *string                                                             `json:"description,omitempty"`
+	Name           *string                                                             `json:"name,omitempty"`
+	Order          *int                                                                `json:"order,omitempty"`
+	ProductID      *string                                                             `json:"productId,omitempty"`
+	ReasonRequired *bool                                                               `json:"reasonRequired,omitempty"`
 }
 
 type SettingValueModelHaljsonEmbeddedEnvironmentEmbedded struct {
@@ -93,10 +103,14 @@ type SettingValueModelHaljsonEmbeddedEnvironmentLinks struct {
 }
 
 type SettingValueModelHaljsonEmbeddedEnvironment struct {
-	Embedded      *SettingValueModelHaljsonEmbeddedEnvironmentEmbedded `json:"_embedded,omitempty"`
-	Links         *SettingValueModelHaljsonEmbeddedEnvironmentLinks    `json:"_links,omitempty"`
-	EnvironmentID *string                                              `json:"environmentId,omitempty"`
-	Name          *string                                              `json:"name,omitempty"`
+	Embedded       *SettingValueModelHaljsonEmbeddedEnvironmentEmbedded `json:"_embedded,omitempty"`
+	Links          *SettingValueModelHaljsonEmbeddedEnvironmentLinks    `json:"_links,omitempty"`
+	Color          *string                                              `json:"color,omitempty"`
+	Description    *string                                              `json:"description,omitempty"`
+	EnvironmentID  *string                                              `json:"environmentId,omitempty"`
+	Name           *string                                              `json:"name,omitempty"`
+	Order          *int                                                 `json:"order,omitempty"`
+	ReasonRequired *bool                                                `json:"reasonRequired,omitempty"`
 }
 
 type SettingValueModelHaljsonEmbeddedIntegrationLinks struct {
@@ -107,18 +121,16 @@ type SettingValueModelHaljsonEmbeddedIntegrationLinks struct {
 }
 
 type SettingValueModelHaljsonEmbeddedSetting struct {
-	CreatedAt           *time.Time       `json:"createdAt,omitempty"`
-	CreatorEmail        *string          `json:"creatorEmail,omitempty"`
-	CreatorFullName     *string          `json:"creatorFullName,omitempty"`
-	ExpirationWarningAt *time.Time       `json:"expirationWarningAt,omitempty"`
-	Hint                *string          `json:"hint,omitempty"`
-	IsWatching          *bool            `json:"isWatching,omitempty"`
-	Key                 *string          `json:"key,omitempty"`
-	Name                *string          `json:"name,omitempty"`
-	OwnerEmail          *string          `json:"ownerEmail,omitempty"`
-	OwnerFullName       *string          `json:"ownerFullName,omitempty"`
-	SettingID           *int             `json:"settingId,omitempty"`
-	SettingType         *SettingTypeEnum `json:"settingType,omitempty"`
+	CreatedAt       *time.Time       `json:"createdAt,omitempty"`
+	CreatorEmail    *string          `json:"creatorEmail,omitempty"`
+	CreatorFullName *string          `json:"creatorFullName,omitempty"`
+	Hint            *string          `json:"hint,omitempty"`
+	IsWatching      *bool            `json:"isWatching,omitempty"`
+	Key             *string          `json:"key,omitempty"`
+	Name            *string          `json:"name,omitempty"`
+	Order           *int             `json:"order,omitempty"`
+	SettingID       *int             `json:"settingId,omitempty"`
+	SettingType     *SettingTypeEnum `json:"settingType,omitempty"`
 }
 
 type SettingValueModelHaljsonEmbeddedSettingTags struct {
@@ -153,5 +165,5 @@ type SettingValueModelHaljson struct {
 	RolloutRules []RolloutRuleModel `json:"rolloutRules,omitempty"`
 	UpdatedAt    *time.Time         `json:"updatedAt,omitempty"`
 	// The value to serve. It must respect the setting type.
-	Value map[string]interface{} `json:"value,omitempty"`
+	Value interface{} `json:"value,omitempty"`
 }

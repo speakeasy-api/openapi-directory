@@ -8,7 +8,7 @@ import (
 )
 
 type ListTagsForResourcePathParams struct {
-	// The Amazon Resource Name (ARN) for a specific resource in your AWS Resilience Hub application.
+	// The Amazon Resource Name (ARN) for a specific resource in your Resilience Hub application.
 	ResourceArn string `pathParam:"style=simple,explode=false,name=resourceArn"`
 }
 

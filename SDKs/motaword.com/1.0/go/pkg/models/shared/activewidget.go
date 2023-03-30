@@ -8,18 +8,46 @@ import (
 
 // ActiveWidget - Updated widget details
 type ActiveWidget struct {
+	// When true, hash params are included in filenames. When false, params are ignored.
+	AllowHashInURL *bool `json:"allow_hash_in_url,omitempty"`
+	// When true, query params are included in filenames. When false, params are ignored.
+	AllowQueryInURL *bool `json:"allow_query_in_url,omitempty"`
+	// When true, we will ignore the source language of your project and try to automatically detect the source language of the given content. This is especially useful in environments with unpredictable source contents, such as a chat environment.
+	AutoDetectSourceLanguage *bool `json:"auto_detect_source_language,omitempty"`
 	// the date-time notation as defined by RFC 3339, section 5.6, for example, 2017-07-21T17:32:28Z
 	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// Continuous project exclusive elements and rules
+	Elements *string `json:"elements,omitempty"`
 	// Specify whether we should follow the user around in your website and automatically translate pages.
 	FollowUser *bool `json:"follow_user,omitempty"`
 	// Determines whether to force-refresh local browser cache of your translations in certain period of times, no matter if there is a new activity in the project.
 	ForceCacheRefreshInterval *bool  `json:"force_cache_refresh_interval,omitempty"`
 	ID                        *int64 `json:"id,omitempty"`
+	// Continuous project language mappings
+	LanguageMappings *string `json:"language_mappings,omitempty"`
+	// Whether ActiveJS should be considered live in an embedded site. Use `false` if you are still testing Active. Go to your Active dashboard and follow links to your website to actually test Active.
+	Live *bool `json:"live,omitempty"`
 	// We can automatically localize the same-domain URLs in your page. The way we localize the URL depends on urlMode configuration. We can either add/update the locale query parameter, or add/update the path of the URL.
 	ModifyLinks *bool   `json:"modify_links,omitempty"`
 	Name        *string `json:"name,omitempty"`
+	// When true, Active ecosystem will optimize the script and data flows per page, rather than per project. This decreases the bandwidth usage per script, but makes translation publishing more complex and script serving per-page.
+	OptimizePerPage *bool `json:"optimize_per_page,omitempty"`
+	// Continuous project page rules
+	Pages *string `json:"pages,omitempty"`
+	// Custom regex for path-type URL mode.
+	PathRegex *string `json:"path_regex,omitempty"`
 	// Options are "bottom-left", "bottom-right", "in-place"
 	Position *string `json:"position,omitempty"`
+	// Query parameter name to be used with query-type URL mode. Default is 'locale'.
+	QueryName *string `json:"query_name,omitempty"`
+	// When true, Active ecosystem reboots itself when url changes.
+	RebootOnURLChange *bool `json:"reboot_on_url_change,omitempty"`
+	// JSON string for a list of domains that this widget's API interactions are limited to.
+	RestrictedDomains *string `json:"restricted_domains,omitempty"`
+	// Continuous project section rules
+	Sections *string `json:"sections,omitempty"`
+	// Is the Active Widget in test mode? This changes a couple behaviors in the widget to make it easier for you to test and develop your Active integration.
+	TestMode *bool `json:"test_mode,omitempty"`
 	// \"light\", \"dark\" OR custom JSON.
 	Theme *string `json:"theme,omitempty"`
 	// Token that you should use when you are using this widget on your website.
@@ -32,4 +60,6 @@ type ActiveWidget struct {
 	UseCache *bool `json:"use_cache,omitempty"`
 	// When enabled, we will translate your website with dummy content, rather than actually using MT/TM.
 	UseDummyTranslations *bool `json:"use_dummy_translations,omitempty"`
+	// Continuous project variable definitions
+	Variables *string `json:"variables,omitempty"`
 }

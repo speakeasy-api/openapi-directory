@@ -2,8 +2,57 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// RoleAssignmentAssigneeTypeEnum - Output only. The type of the assignee (`USER` or `GROUP`).
+type RoleAssignmentAssigneeTypeEnum string
+
+const (
+	RoleAssignmentAssigneeTypeEnumUser  RoleAssignmentAssigneeTypeEnum = "user"
+	RoleAssignmentAssigneeTypeEnumGroup RoleAssignmentAssigneeTypeEnum = "group"
+)
+
+func (e *RoleAssignmentAssigneeTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "user":
+		fallthrough
+	case "group":
+		*e = RoleAssignmentAssigneeTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for RoleAssignmentAssigneeTypeEnum: %s", s)
+	}
+}
+
 // RoleAssignment - Defines an assignment of a role.
 type RoleAssignment struct {
+	// The unique ID of the entity this role is assigned to—either the `user_id` of a user or the `uniqueId` of a service account, as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
+	AssignedTo *string `json:"assignedTo,omitempty"`
+	// Output only. The type of the assignee (`USER` or `GROUP`).
+	AssigneeType *RoleAssignmentAssigneeTypeEnum `json:"assigneeType,omitempty"`
+	// ETag of the resource.
+	Etag *string `json:"etag,omitempty"`
+	// The type of the API resource. This is always `admin#directory#roleAssignment`.
+	Kind *string `json:"kind,omitempty"`
+	// If the role is restricted to an organization unit, this contains the ID for the organization unit the exercise of this role is restricted to.
+	OrgUnitID *string `json:"orgUnitId,omitempty"`
+	// ID of this roleAssignment.
+	RoleAssignmentID *string `json:"roleAssignmentId,omitempty"`
+	// The ID of the role that is assigned.
+	RoleID *string `json:"roleId,omitempty"`
+	// The scope in which this role is assigned.
+	ScopeType *string `json:"scopeType,omitempty"`
+}
+
+// RoleAssignmentInput - Defines an assignment of a role.
+type RoleAssignmentInput struct {
 	// The unique ID of the entity this role is assigned to—either the `user_id` of a user or the `uniqueId` of a service account, as defined in [Identity and Access Management (IAM)](https://cloud.google.com/iam/docs/reference/rest/v1/projects.serviceAccounts).
 	AssignedTo *string `json:"assignedTo,omitempty"`
 	// ETag of the resource.

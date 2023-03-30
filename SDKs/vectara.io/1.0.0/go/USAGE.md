@@ -1,0 +1,90 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "context"
+    "log"
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            OAuth: shared.SchemeOAuth{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
+            },
+        }),
+    )
+
+    req := operations.CreateCorpusRequest{
+        Headers: operations.CreateCorpusHeaders{
+            CustomerID: 548814,
+        },
+        Request: shared.AdminCreateCorpusRequest{
+            Corpus: &shared.AdminCorpus{
+                CustomDimensions: []shared.AdminDimension{
+                    shared.AdminDimension{
+                        Description: "porro",
+                        IndexingDefault: 8442.66,
+                        Name: "id",
+                        ServingDefault: 8579.46,
+                    },
+                    shared.AdminDimension{
+                        Description: "perspiciatis",
+                        IndexingDefault: 8472.52,
+                        Name: "nihil",
+                        ServingDefault: 6235.64,
+                    },
+                    shared.AdminDimension{
+                        Description: "facilis",
+                        IndexingDefault: 3843.82,
+                        Name: "iusto",
+                        ServingDefault: 2975.34,
+                    },
+                },
+                Description: "saepe",
+                DtProvision: "inventore",
+                Enabled: false,
+                EncoderID: "sapiente",
+                Encrypted: false,
+                FilterAttributes: []shared.AdminFilterAttribute{
+                    shared.AdminFilterAttribute{
+                        Description: "eum",
+                        Indexed: false,
+                        Level: "FILTER_ATTRIBUTE_LEVEL__DOCUMENT",
+                        Name: "autem",
+                        Type: "FILTER_ATTRIBUTE_TYPE__TEXT",
+                    },
+                    shared.AdminFilterAttribute{
+                        Description: "non",
+                        Indexed: false,
+                        Level: "FILTER_ATTRIBUTE_LEVEL__DOCUMENT",
+                        Name: "similique",
+                        Type: "FILTER_ATTRIBUTE_TYPE__INTEGER_LIST",
+                    },
+                },
+                ID: 925597,
+                MetadataMaxBytes: 836079,
+                Name: "quasi",
+                SwapIenc: false,
+                SwapQenc: false,
+                Textless: false,
+            },
+        },
+    }
+
+    ctx := context.Background()
+    res, err := s.AdminService.CreateCorpus(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.AdminCreateCorpusResponse != nil {
+        // handle response
+    }
+}
+```
+<!-- End SDK Example Usage -->

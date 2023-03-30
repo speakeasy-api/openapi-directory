@@ -26,8 +26,8 @@ func main() {
             Limit: 844266,
             ObjectID: 602763,
             ObjectType: "vero",
-            OccurredAfter: "2022-09-11T15:33:40.095Z",
-            OccurredBefore: "2022-05-24T06:48:45.493Z",
+            OccurredAfter: "2022-09-12T03:32:53.485Z",
+            OccurredBefore: "2022-05-24T18:47:58.883Z",
             Sort: []string{
                 "fuga",
                 "facilis",

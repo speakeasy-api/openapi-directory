@@ -10,15 +10,16 @@ import (
 type LifeCycleStateEnum string
 
 const (
-	LifeCycleStateEnumStopped         LifeCycleStateEnum = "STOPPED"
-	LifeCycleStateEnumNotReady        LifeCycleStateEnum = "NOT_READY"
-	LifeCycleStateEnumReadyForTest    LifeCycleStateEnum = "READY_FOR_TEST"
-	LifeCycleStateEnumTesting         LifeCycleStateEnum = "TESTING"
-	LifeCycleStateEnumReadyForCutover LifeCycleStateEnum = "READY_FOR_CUTOVER"
-	LifeCycleStateEnumCuttingOver     LifeCycleStateEnum = "CUTTING_OVER"
-	LifeCycleStateEnumCutover         LifeCycleStateEnum = "CUTOVER"
-	LifeCycleStateEnumDisconnected    LifeCycleStateEnum = "DISCONNECTED"
-	LifeCycleStateEnumDiscovered      LifeCycleStateEnum = "DISCOVERED"
+	LifeCycleStateEnumStopped             LifeCycleStateEnum = "STOPPED"
+	LifeCycleStateEnumNotReady            LifeCycleStateEnum = "NOT_READY"
+	LifeCycleStateEnumReadyForTest        LifeCycleStateEnum = "READY_FOR_TEST"
+	LifeCycleStateEnumTesting             LifeCycleStateEnum = "TESTING"
+	LifeCycleStateEnumReadyForCutover     LifeCycleStateEnum = "READY_FOR_CUTOVER"
+	LifeCycleStateEnumCuttingOver         LifeCycleStateEnum = "CUTTING_OVER"
+	LifeCycleStateEnumCutover             LifeCycleStateEnum = "CUTOVER"
+	LifeCycleStateEnumDisconnected        LifeCycleStateEnum = "DISCONNECTED"
+	LifeCycleStateEnumDiscovered          LifeCycleStateEnum = "DISCOVERED"
+	LifeCycleStateEnumPendingInstallation LifeCycleStateEnum = "PENDING_INSTALLATION"
 )
 
 func (e *LifeCycleStateEnum) UnmarshalJSON(data []byte) error {
@@ -44,6 +45,8 @@ func (e *LifeCycleStateEnum) UnmarshalJSON(data []byte) error {
 	case "DISCONNECTED":
 		fallthrough
 	case "DISCOVERED":
+		fallthrough
+	case "PENDING_INSTALLATION":
 		*e = LifeCycleStateEnum(s)
 		return nil
 	default:

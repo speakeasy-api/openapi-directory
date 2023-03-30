@@ -17,6 +17,8 @@ const (
 	DeviceChargingStationStateEnumReadyCarConnected   DeviceChargingStationStateEnum = "ReadyCarConnected"
 	DeviceChargingStationStateEnumStartedWaitForCar   DeviceChargingStationStateEnum = "StartedWaitForCar"
 	DeviceChargingStationStateEnumCharging            DeviceChargingStationStateEnum = "Charging"
+	DeviceChargingStationStateEnumInstallation        DeviceChargingStationStateEnum = "Installation"
+	DeviceChargingStationStateEnumAuthorize           DeviceChargingStationStateEnum = "Authorize"
 	DeviceChargingStationStateEnumOffline             DeviceChargingStationStateEnum = "Offline"
 )
 
@@ -35,6 +37,10 @@ func (e *DeviceChargingStationStateEnum) UnmarshalJSON(data []byte) error {
 	case "StartedWaitForCar":
 		fallthrough
 	case "Charging":
+		fallthrough
+	case "Installation":
+		fallthrough
+	case "Authorize":
 		fallthrough
 	case "Offline":
 		*e = DeviceChargingStationStateEnum(s)

@@ -36,14 +36,14 @@ pkg/models/shared/instance.go
 pkg/models/shared/networkconfig.go
 pkg/models/shared/eventpublishconfig.go
 pkg/models/shared/cryptokeyconfig.go
-pkg/models/shared/version.go
-pkg/models/shared/accelerator.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/security.go
 pkg/models/shared/dnspeering.go
 pkg/models/shared/listdnspeeringsresponse.go
 pkg/models/shared/listinstancesresponse.go
+pkg/models/shared/version.go
+pkg/models/shared/accelerator.go
 pkg/models/shared/policy.go
 pkg/models/shared/binding.go
 pkg/models/shared/expr.go

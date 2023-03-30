@@ -47,6 +47,8 @@ func newCitations(defaultClient, securityClient HTTPClient, serverURL, language,
 // You can optionally request that the response only include citation styles that match your filters by utilizing the `filter` query parameter, e.g. https://api.osf.io/v2/citations/styles/?filter[title]=open.
 //
 // Citation styles may be filtered by their `id`, `title`, `short-title`, and `summary`.
+// #### Errors
+// This request should never return an error.
 func (s *citations) CitationsStylesList(ctx context.Context) (*operations.CitationsStylesListResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/citations/styles/"
@@ -94,7 +96,7 @@ func (s *citations) CitationsStylesList(ctx context.Context) (*operations.Citati
 // Retrieves the details of a citation style.
 // #### Returns
 // Returns a JSON object with a `data` key containing the representation of the requested citation style, if the request is successful.
-//
+// #### Errors
 // If the request is unsuccessful, an `errors` key containing information about the failure will be returned. Refer to the [list of error codes](#tag/Errors-and-Error-Codes) to understand why this request may have failed.
 func (s *citations) CitationsStylesRead(ctx context.Context, request operations.CitationsStylesReadRequest) (*operations.CitationsStylesReadResponse, error) {
 	baseURL := s.serverURL

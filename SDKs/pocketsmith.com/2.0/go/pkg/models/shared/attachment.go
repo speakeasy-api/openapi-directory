@@ -3,18 +3,18 @@
 package shared
 
 type AttachmentContentTypeMeta struct {
-	// The content type description of the attachment
+	// The content type description of the attachment.
 	Description *string `json:"description,omitempty"`
-	// The extension type of the attachment
+	// The extension type of the attachment.
 	Extension *string `json:"extension,omitempty"`
-	// The content type title of the attachment
+	// The content type title of the attachment.
 	Title *string `json:"title,omitempty"`
 }
 
 type AttachmentVariants struct {
-	// The url of the large version of the attachment
+	// The url of the large version of the attachment.
 	LargeURL *string `json:"large_url,omitempty"`
-	// The url of the thumb version of the attachment
+	// The url of the thumb version of the attachment.
 	ThumbURL *string `json:"thumb_url,omitempty"`
 }
 
@@ -23,19 +23,19 @@ type Attachment struct {
 	// The content type of the attachment.
 	ContentType     *string                    `json:"content_type,omitempty"`
 	ContentTypeMeta *AttachmentContentTypeMeta `json:"content_type_meta,omitempty"`
-	// When the attachment was created
+	// When the attachment was created.
 	CreatedAt *string `json:"created_at,omitempty"`
-	// The file name of the attachment
+	// The file name of the attachment.
 	FileName *string `json:"file_name,omitempty"`
 	// The unique identifier of the attachment
 	ID *int64 `json:"id,omitempty"`
-	// The url of the attachment
+	// The url of the attachment.
 	OriginalURL *string `json:"original_url,omitempty"`
 	// The title of the attachment. If blank or not provided, the title will be derived from the file name.
 	Title *string `json:"title,omitempty"`
-	// The type of attachment
+	// The type of attachment.
 	Type *string `json:"type,omitempty"`
-	// When the attachment was last updated
+	// When the attachment was last updated.
 	UpdatedAt *string             `json:"updated_at,omitempty"`
 	Variants  *AttachmentVariants `json:"variants,omitempty"`
 }

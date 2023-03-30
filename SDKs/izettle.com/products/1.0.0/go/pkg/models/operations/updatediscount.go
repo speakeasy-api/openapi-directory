@@ -8,8 +8,7 @@ import (
 )
 
 type UpdateDiscountSecurity struct {
-	ZettleAPIKey *shared.SchemeZettleAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	ZettleOauth  *shared.SchemeZettleOauth  `security:"scheme,type=oauth2"`
+	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
 }
 
 type UpdateDiscountPathParams struct {

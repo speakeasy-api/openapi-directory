@@ -145,6 +145,7 @@ type PlayerGameRedZone struct {
 	Season                            *int64          `json:"Season,omitempty"`
 	SeasonType                        *int64          `json:"SeasonType,omitempty"`
 	ShortName                         *string         `json:"ShortName,omitempty"`
+	SnapCountsConfirmed               *bool           `json:"SnapCountsConfirmed,omitempty"`
 	SoloTackles                       *float64        `json:"SoloTackles,omitempty"`
 	SpecialTeamsAssistedTackles       *float64        `json:"SpecialTeamsAssistedTackles,omitempty"`
 	SpecialTeamsFumblesForced         *float64        `json:"SpecialTeamsFumblesForced,omitempty"`

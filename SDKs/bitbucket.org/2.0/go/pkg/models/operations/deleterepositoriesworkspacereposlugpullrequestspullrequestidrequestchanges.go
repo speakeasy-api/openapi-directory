@@ -35,6 +35,6 @@ type DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesR
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// The request wasn't authenticated.
+	// Pull request requested changes cannot be removed because the pull request has already been merged.
 	Error map[string]interface{}
 }

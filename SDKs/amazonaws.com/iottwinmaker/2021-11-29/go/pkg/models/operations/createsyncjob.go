@@ -8,9 +8,9 @@ import (
 )
 
 type CreateSyncJobPathParams struct {
-	// <p>The sync source.</p> <note> <p>Currently the only supported syncSoucre is <code>SITEWISE </code>.</p> </note>
+	// <p>The sync source.</p> <note> <p>Currently the only supported syncSoource is <code>SITEWISE </code>.</p> </note>
 	SyncSource string `pathParam:"style=simple,explode=false,name=syncSource"`
-	// The workspace Id.
+	// The workspace ID.
 	WorkspaceID string `pathParam:"style=simple,explode=false,name=workspaceId"`
 }
 
@@ -25,7 +25,7 @@ type CreateSyncJobHeaders struct {
 }
 
 type CreateSyncJobRequestBody struct {
-	// The SyncJob IAM role. This IAM role is used by the sync job to read from the syncSource, and create, update or delete the corresponding resources.
+	// The SyncJob IAM role. This IAM role is used by the SyncJob to read from the syncSource, and create, update, or delete the corresponding resources.
 	SyncRole string `json:"syncRole"`
 	// The SyncJob tags.
 	Tags map[string]string `json:"tags,omitempty"`

@@ -25,7 +25,7 @@ type UpdateIncidentRecordRequestBodyChatChannel struct {
 	Empty      map[string]interface{} `json:"empty,omitempty"`
 }
 
-// UpdateIncidentRecordRequestBodyStatusEnum - The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+// UpdateIncidentRecordRequestBodyStatusEnum - The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
 type UpdateIncidentRecordRequestBodyStatusEnum string
 
 const (
@@ -54,13 +54,13 @@ type UpdateIncidentRecordRequestBody struct {
 	Arn string `json:"arn"`
 	// The Chatbot chat channel used for collaboration during an incident.
 	ChatChannel *UpdateIncidentRecordRequestBodyChatChannel `json:"chatChannel,omitempty"`
-	// A token that ensures that the operation is called only once with the specified details.
+	// A token that ensures that a client calls the operation only once with the specified details.
 	ClientToken *string `json:"clientToken,omitempty"`
-	// <p>Defines the impact of the incident to customers and applications. Providing an impact overwrites the impact provided by the response plan.</p> <p class="title"> <b>Possible impacts:</b> </p> <ul> <li> <p> <code>1</code> - Critical impact, full application failure that impacts many to all customers. </p> </li> <li> <p> <code>2</code> - High impact, partial application failure with impact to many customers.</p> </li> <li> <p> <code>3</code> - Medium impact, the application is providing reduced service to customers.</p> </li> <li> <p> <code>4</code> - Low impact, customer aren't impacted by the problem yet.</p> </li> <li> <p> <code>5</code> - No impact, customers aren't currently impacted but urgent action is needed to avoid impact.</p> </li> </ul>
+	// <p>Defines the impact of the incident to customers and applications. If you provide an impact for an incident, it overwrites the impact provided by the response plan.</p> <p class="title"> <b>Possible impacts:</b> </p> <ul> <li> <p> <code>1</code> - Critical impact, full application failure that impacts many to all customers. </p> </li> <li> <p> <code>2</code> - High impact, partial application failure with impact to many customers.</p> </li> <li> <p> <code>3</code> - Medium impact, the application is providing reduced service to customers.</p> </li> <li> <p> <code>4</code> - Low impact, customer aren't impacted by the problem yet.</p> </li> <li> <p> <code>5</code> - No impact, customers aren't currently impacted but urgent action is needed to avoid impact.</p> </li> </ul>
 	Impact *int64 `json:"impact,omitempty"`
-	// <p>The Amazon SNS targets that are notified when updates are made to an incident.</p> <p>Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.</p>
+	// <p>The Amazon SNS targets that Incident Manager notifies when a client updates an incident.</p> <p>Using multiple SNS topics creates redundancy in the event that a Region is down during the incident.</p>
 	NotificationTargets []shared.NotificationTargetItem `json:"notificationTargets,omitempty"`
-	// The status of the incident. An incident can be <code>Open</code> or <code>Resolved</code>.
+	// The status of the incident. Possible statuses are <code>Open</code> or <code>Resolved</code>.
 	Status *UpdateIncidentRecordRequestBodyStatusEnum `json:"status,omitempty"`
 	// A longer description of what occurred during the incident.
 	Summary *string `json:"summary,omitempty"`

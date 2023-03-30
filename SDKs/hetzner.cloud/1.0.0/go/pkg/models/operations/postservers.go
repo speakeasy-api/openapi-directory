@@ -13,13 +13,25 @@ type PostServersCreateServerRequestFirewalls struct {
 	Firewall *int64 `json:"firewall,omitempty"`
 }
 
+// PostServersCreateServerRequestPublicNet - Public Network options
+type PostServersCreateServerRequestPublicNet struct {
+	// Attach an IPv4 on the public NIC. If false, no IPv4 address will be attached. Defaults to true.
+	EnableIpv4 *bool `json:"enable_ipv4,omitempty"`
+	// Attach an IPv6 on the public NIC. If false, no IPv6 address will be attached. Defaults to true.
+	EnableIpv6 *bool `json:"enable_ipv6,omitempty"`
+	// ID of the ipv4 Primary IP to use. If omitted and enable_ipv4 is true, a new ipv4 Primary IP will automatically be created.
+	Ipv4 *int64 `json:"ipv4,omitempty"`
+	// ID of the ipv6 Primary IP to use. If omitted and enable_ipv6 is true, a new ipv6 Primary IP will automatically be created.
+	Ipv6 *int64 `json:"ipv6,omitempty"`
+}
+
 // PostServersCreateServerRequest - Please note that Server names must be unique per Project and valid hostnames as per RFC 1123 (i.e. may only contain letters, digits, periods, and dashes).
 //
 // For `server_type` you can either use the ID as listed in `/server_types` or its name.
 //
 // For `image` you can either use the ID as listed in `/images` or its name.
 //
-// If you want to create the Server in a Location, you must set `location` to the ID or name as listed in `/locations`. This is the recommended way. You can be even more specific by setting `datacenter` to the ID or name as listed in `/datacenters`. However directly specifying the Datacenter is discouraged since supply availability in Datacenters varies greatly and Datacenters may be out of stock for extended periods of time or not serve certain Server types at all.
+// If you want to create the Server in a Location, you must set `location` to the ID or name as listed in `/locations`. This is the recommended way. You can be even more specific by setting `datacenter` to the ID or name as listed in `/datacenters`. However we only recommend this if you want to assign a specific Primary IP to the Server which is located in the specified Datacenter.
 //
 // Some properties like `start_after_create` or `automount` will trigger Actions after the Server is created. Those Actions are listed in the `next_actions` field in the response.
 //
@@ -29,9 +41,12 @@ type PostServersCreateServerRequestFirewalls struct {
 //
 // #### Call specific error codes
 //
-// | Code                          | Description                              |
-// |-------------------------------|------------------------------------------|
-// | `placement_error`             | An error during the placement occurred   |
+// | Code                             | Description                                                |
+// |----------------------------------|------------------------------------------------------------|
+// | `placement_error`                | An error during the placement occurred                     |
+// | `primary_ip_assigned`            | The specified Primary IP is already assigned to a server   |
+// | `primary_ip_datacenter_mismatch` | The specified Primary IP is in a different datacenter      |
+// | `primary_ip_version_mismatch`    | The specified Primary IP has the wrong IP Version          |
 type PostServersCreateServerRequest struct {
 	// Auto-mount Volumes after attach
 	Automount *bool `json:"automount,omitempty"`
@@ -49,6 +64,10 @@ type PostServersCreateServerRequest struct {
 	Name string `json:"name"`
 	// Network IDs which should be attached to the Server private network interface at the creation time
 	Networks []int64 `json:"networks,omitempty"`
+	// ID of the Placement Group the server should be in
+	PlacementGroup *int64 `json:"placement_group,omitempty"`
+	// Public Network options
+	PublicNet *PostServersCreateServerRequestPublicNet `json:"public_net,omitempty"`
 	// ID or name of the Server type this Server should be created with
 	ServerType string `json:"server_type"`
 	// SSH key IDs (`integer`) or names (`string`) which should be injected into the Server at creation time
@@ -68,7 +87,7 @@ type PostServersRequest struct {
 	//
 	// For `image` you can either use the ID as listed in `/images` or its name.
 	//
-	// If you want to create the Server in a Location, you must set `location` to the ID or name as listed in `/locations`. This is the recommended way. You can be even more specific by setting `datacenter` to the ID or name as listed in `/datacenters`. However directly specifying the Datacenter is discouraged since supply availability in Datacenters varies greatly and Datacenters may be out of stock for extended periods of time or not serve certain Server types at all.
+	// If you want to create the Server in a Location, you must set `location` to the ID or name as listed in `/locations`. This is the recommended way. You can be even more specific by setting `datacenter` to the ID or name as listed in `/datacenters`. However we only recommend this if you want to assign a specific Primary IP to the Server which is located in the specified Datacenter.
 	//
 	// Some properties like `start_after_create` or `automount` will trigger Actions after the Server is created. Those Actions are listed in the `next_actions` field in the response.
 	//
@@ -78,9 +97,12 @@ type PostServersRequest struct {
 	//
 	// #### Call specific error codes
 	//
-	// | Code                          | Description                              |
-	// |-------------------------------|------------------------------------------|
-	// | `placement_error`             | An error during the placement occurred   |
+	// | Code                             | Description                                                |
+	// |----------------------------------|------------------------------------------------------------|
+	// | `placement_error`                | An error during the placement occurred                     |
+	// | `primary_ip_assigned`            | The specified Primary IP is already assigned to a server   |
+	// | `primary_ip_datacenter_mismatch` | The specified Primary IP is in a different datacenter      |
+	// | `primary_ip_version_mismatch`    | The specified Primary IP has the wrong IP Version          |
 	//
 	Request *PostServersCreateServerRequest `request:"mediaType=application/json"`
 }
@@ -298,8 +320,6 @@ func (e *PostServersCreateServerResponseServerImageTypeEnum) UnmarshalJSON(data 
 type PostServersCreateServerResponseServerImage struct {
 	// ID of Server the Image is bound to. Only set for Images of type `backup`.
 	BoundTo int64 `json:"bound_to"`
-	// Build ID of the Image
-	BuildID *string `json:"build_id,omitempty"`
 	// Point in time when the Resource was created (in ISO-8601 format)
 	Created string `json:"created"`
 	// Information about the Server the Image was created from
@@ -460,6 +480,8 @@ type PostServersCreateServerResponseServerPublicNetIpv4 struct {
 	Blocked bool `json:"blocked"`
 	// Reverse DNS PTR entry for the IPv4 addresses of this Server
 	DNSPtr string `json:"dns_ptr"`
+	// ID of the Resource
+	ID *int64 `json:"id,omitempty"`
 	// IP address (v4) of this Server
 	IP string `json:"ip"`
 }
@@ -477,7 +499,9 @@ type PostServersCreateServerResponseServerPublicNetIpv6 struct {
 	Blocked bool `json:"blocked"`
 	// Reverse DNS PTR entries for the IPv6 addresses of this Server, `null` by default
 	DNSPtr []PostServersCreateServerResponseServerPublicNetIpv6DNSPtr `json:"dns_ptr"`
-	// IP address (v4) of this Server
+	// ID of the Resource
+	ID *int64 `json:"id,omitempty"`
+	// IP address (v6) of this Server
 	IP string `json:"ip"`
 }
 
@@ -656,7 +680,7 @@ type PostServersCreateServerResponseServer struct {
 	LoadBalancers []int64           `json:"load_balancers,omitempty"`
 	// True if Server has been locked and is not available to user
 	Locked bool `json:"locked"`
-	// Name of the Resource. Must be unique per Project.
+	// Name of the Server (must be unique per Project and a valid hostname as per RFC 1123)
 	Name string `json:"name"`
 	// Outbound Traffic for the current billing period in bytes
 	OutgoingTraffic float64                                                      `json:"outgoing_traffic"`

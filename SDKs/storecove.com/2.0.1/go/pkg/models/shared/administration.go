@@ -12,6 +12,8 @@ type AdministrationPackageVersionEnum string
 
 const (
 	AdministrationPackageVersionEnumPeppolBisV3 AdministrationPackageVersionEnum = "peppol_bis_v3"
+	AdministrationPackageVersionEnumAunz        AdministrationPackageVersionEnum = "aunz"
+	AdministrationPackageVersionEnumSg          AdministrationPackageVersionEnum = "sg"
 )
 
 func (e *AdministrationPackageVersionEnum) UnmarshalJSON(data []byte) error {
@@ -21,6 +23,10 @@ func (e *AdministrationPackageVersionEnum) UnmarshalJSON(data []byte) error {
 	}
 	switch s {
 	case "peppol_bis_v3":
+		fallthrough
+	case "aunz":
+		fallthrough
+	case "sg":
 		*e = AdministrationPackageVersionEnum(s)
 		return nil
 	default:

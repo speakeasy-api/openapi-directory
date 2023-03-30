@@ -1466,6 +1466,8 @@ pkg/models/shared/packetheaderstatementrequest.go
 pkg/models/shared/createnetworkinsightspathresult.go
 pkg/models/shared/createnetworkinsightspathrequest.go
 pkg/models/shared/protocolenum.go
+pkg/models/shared/pathrequestfilter.go
+pkg/models/shared/requestfilterportrange.go
 pkg/models/shared/createnetworkinterfaceresult.go
 pkg/models/shared/createnetworkinterfacerequest.go
 pkg/models/shared/networkinterfacecreationtypeenum.go

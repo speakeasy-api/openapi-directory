@@ -2,6 +2,39 @@
 
 package shared
 
+// EpisodeSearchResultPodcast - The podcast that this episode belongs to.
+type EpisodeSearchResultPodcast struct {
+	GenreIds []int64 `json:"genre_ids,omitempty"`
+	// Podcast id, which can be used to further fetch detailed podcast metadata via `GET /podcasts/{id}`.
+	ID *string `json:"id,omitempty"`
+	// Image url for this podcast's artwork. If you are using PRO/ENTERPRISE plan, then it's
+	// a high resolution image (1400x1400). If you are using FREE plan, then it's the same as **thumbnail**,
+	// low resolution image (300x300).
+	//
+	Image *string `json:"image,omitempty"`
+	// The estimated popularity score of a podcast compared to all other rss-based public podcasts in the world on a scale from 0 to 100.
+	// If the score is not available, it'll be null. Learn more at listennotes.com/listen-score
+	//
+	ListenScore *int64 `json:"listen_score,omitempty"`
+	// The estimated popularity ranking of a podcast compared to all other rss-based public podcasts in the world.
+	// For example, if the value is 0.5%, then this podcast is one of the top 0.5% most popular shows out of all podcasts globally, ranked by Listen Score.
+	// If the ranking is not available, it'll be null. Learn more at listennotes.com/listen-score
+	//
+	ListenScoreGlobalRank *string `json:"listen_score_global_rank,omitempty"`
+	// The url of this podcast on [ListenNotes.com](https://www.ListenNotes.com).
+	ListennotesURL *string `json:"listennotes_url,omitempty"`
+	// Highlighted segment of this podcast's publisher name.
+	PublisherHighlighted *string `json:"publisher_highlighted,omitempty"`
+	// Plain text of this podcast's publisher name.
+	PublisherOriginal *string `json:"publisher_original,omitempty"`
+	// Thumbnail image url for this podcast's artwork (300x300).
+	Thumbnail *string `json:"thumbnail,omitempty"`
+	// Highlighted segment of podcast name.
+	TitleHighlighted *string `json:"title_highlighted,omitempty"`
+	// Plain text of podcast name.
+	TitleOriginal *string `json:"title_original,omitempty"`
+}
+
 // EpisodeSearchResult - When **type** is *episode*.
 type EpisodeSearchResult struct {
 	// Audio url of this episode, which can be played directly.
@@ -14,7 +47,7 @@ type EpisodeSearchResult struct {
 	DescriptionOriginal *string `json:"description_original,omitempty"`
 	// Whether this podcast contains explicit language.
 	ExplicitContent *bool `json:"explicit_content,omitempty"`
-	// Episode id.
+	// Episode id, which can be used to further fetch detailed episode metadata via `GET /episodes/{id}`.
 	ID *string `json:"id,omitempty"`
 	// Image url for this episode.
 	// If an episode doesn't have its own image, then this field would be the url of the podcast artwork image.

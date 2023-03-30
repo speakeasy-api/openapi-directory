@@ -20,6 +20,7 @@ const (
 	GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnumShpz    GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum = "shpz"
 	GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnumGeojson GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum = "geojson"
 	GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnumGml     GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum = "gml"
+	GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnumGpkg    GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum = "gpkg"
 	GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnumWkt     GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum = "wkt"
 )
 
@@ -44,6 +45,8 @@ func (e *GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum) Unmarsh
 	case "geojson":
 		fallthrough
 	case "gml":
+		fallthrough
+	case "gpkg":
 		fallthrough
 	case "wkt":
 		*e = GetGeomarksGeomarkIDFileFormatExtensionFileFormatExtensionEnum(s)

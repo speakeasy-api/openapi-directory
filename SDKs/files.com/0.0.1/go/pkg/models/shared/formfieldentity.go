@@ -51,7 +51,7 @@ type FormFieldEntity struct {
 	// Label to be displayed
 	Label *string `json:"label,omitempty"`
 	// Options to display for radio and dropdown
-	OptionsForSelect *string `json:"options_for_select,omitempty"`
+	OptionsForSelect []string `json:"options_for_select,omitempty"`
 	// Is this a required field?
 	Required *bool `json:"required,omitempty"`
 }

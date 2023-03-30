@@ -40,7 +40,7 @@ func main() {
                 "iusto",
                 "ullam",
             },
-            EndTime: "2022-05-08T00:36:32.534Z",
+            EndTime: "2022-05-08T12:03:51.760Z",
             Filter: map[string]string{
                 "sapiente": "enim",
             },
@@ -68,7 +68,7 @@ func main() {
             },
             PeriodInSeconds: 832620,
             ServiceType: "DOCDB",
-            StartTime: "2022-06-18T11:53:14.321Z",
+            StartTime: "2022-06-18T23:20:33.546Z",
         },
     }
 

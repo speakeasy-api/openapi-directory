@@ -10,7 +10,7 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"https://test-api.osf.io/v2",
+	"https://api.test.osf.io/v2",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -21,26 +21,82 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
-// SDK - ## https://api.osf.io/v2/
 type SDK struct {
-	Addons            *addons
-	Base              *base
-	Citations         *citations
-	Collections       *collections
-	Comments          *comments
-	Files             *files
-	Institutions      *institutions
-	Licenses          *licenses
-	Logs              *logs
-	Metaschemas       *metaschemas
-	Nodes             *nodes
-	PreprintProviders *preprintProviders
-	Preprints         *preprints
-	Registrations     *registrations
-	Taxonomies        *taxonomies
-	Users             *users
-	ViewOnlyLinks     *viewOnlyLinks
-	Wikis             *wikis
+	// Addons - Addons represent a user connection to an external service, some addons allow for additional storage, some modify user authentication or add a redirect link to a project.
+	Addons *addons
+	// Base - This is the "home page" of the API you can get important autentication information for the user making the request and get links to other resources.
+	Base        *base
+	Citations   *citations
+	Collections *collections
+	Comments    *comments
+	// DraftRegistrations -
+	// A Draft Registration is a object that allows a user to edit and revise a registration before it is registered. Draft Registrations allow contributors to coordinate on a single registration, so they can upload files and change Registration metadata before the Registration is archived.
+	DraftRegistrations *draftRegistrations
+	Files              *files
+	Institutions       *institutions
+	Licenses           *licenses
+	Logs               *logs
+	Nodes              *nodes
+	PreprintProviders  *preprintProviders
+	Preprints          *preprints
+	// RegistrationSchemaBlocks - Registration Schema Blocks are read-only entities, they represent question prompts and form inputs known as "blocks" that make up a Registration Schemas. Each block has a designated `block_type` that determines what type of information that Schema Block's corresponding block in the Schema Response.
+	RegistrationSchemaBlocks *registrationSchemaBlocks
+	// RegistrationSchemas - A Registration Schemas defines the range of valid responses to a registration. Each Registration Schema is composed of <a href="#tag/Registration-Schema-Blocks">"blocks"</a> that define the individual questions a user responds to. Registration Schemas are created by the Center for Open Science or an affiliated institution and periodically migrated into the system. Registration Schemas are updated and deactivated using an internal versioning system.
+	RegistrationSchemas *registrationSchemas
+	Registrations       *registrations
+	// SchemaResponseActions - Schema Response Actions are objects that when created cause state transitions for Schema Responses. Users use state transitions to submit, approve, and revise new Schema Responses.
+	//
+	// Schema Response Actions have a  few different triggers to cause state transitions:
+	//
+	//   - `submit` is a trigger to transition a Schema Response from an `in_progress` state to an `unapproved` state,
+	//   this freezes edits for the Schema Response and allows all admin contributors to the Schema Response's
+	//   Registration to either approved or reject the Schema Response.
+	//
+	//   - `approve` is a trigger to transition a Schema Response from an `unapproved` state to an `approved` state, this
+	//   makes the Schema Response changes public completing the update of the Schema Response. On Schema Responses that
+	//   are associated with a Registration that has Registration Provider a moderated workflow the `approve` trigger
+	//   will transition the Schema Response to `pending_moderation`.
+	//
+	//   - `accept` is a trigger to transition a Schema Response from an `pending_moderation` state to an `approved`
+	//   state. This trigger is only valid for Schema Responses that are associated with a Registration that has
+	//   Registration Provider a moderated workflow and only possible for a user designated as moderator of a
+	//   Registration Provider.
+	//
+	//   - `admin_reject` is a trigger to transition a Schema Response from an `unapproved` state to an
+	//   `in_progress`  state. This trigger allows users to reject purposed changes to a Schema Response.
+	//
+	//   - `moderator_reject` is a trigger to transition a Schema Response from an `pending_moderation` state to an
+	//   `in_progress`  state. This trigger is only valid for Schema Responses that are associated with a Registration
+	//   that has Registration Provider a moderated workflow and only possible for a user designated as moderator of a
+	//   Registration Provider.
+	SchemaResponseActions *schemaResponseActions
+	// SchemaResponses - Schema Responses contain user supplied responses to a Registration Schema. A Schema Response aggregates all of the the responses for a given version of a Registration's Registration Schema. Schema Responses are created when a Registration is completed. Once a Registration is completed the Schema Responses for a Registration can be revisied and updated by using it's associated action endpoints.
+	//
+	// There are a few states for Schema Responses:
+	//
+	//   - `initial` is the state of a Schema Response on a newly registered Registration, to edit a Schema Response you
+	//   must create a Schema Response Action that triggers a new submission.
+	//
+	//   - `in_progess` is the state of a Schema Response where the response is editable and still private, Schema
+	//   Responses are editted via a PATCH request as specified below.
+	//
+	//   - `unapproved` is the state of a Schema Response where edits have been made and "locked-in", now contributors
+	//   have the ability to reject the changes, however if they are not rejected changes are automatically approved
+	//   after 48 hours. If `unapproved` Schema Responses are rejected, they are returned to the `in_progress` state. If
+	//   `unapproved` Schema Responses are approved they either enter an `approved` state or go into a
+	//   `pending_moderation` to be accepted or denied by a moderator.
+	//
+	//   - `pending_moderation` is the state of a Schema Response where moderators have an opportunity to reject or
+	//   approve a Schema Response that has been approved by it's contributors. This state is only reachable for Schema
+	//   Responses that are associated with a Registration that has Registration Provider a moderated workflow.
+	//
+	//   - `approved` is the state of a Schema Response where it is public and immutable, in order to update an approved
+	//   Schema Response a new one must be created.
+	SchemaResponses *schemaResponses
+	Taxonomies      *taxonomies
+	Users           *users
+	ViewOnlyLinks   *viewOnlyLinks
+	Wikis           *wikis
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -147,6 +203,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.DraftRegistrations = newDraftRegistrations(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.Files = newFiles(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -183,15 +248,6 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Metaschemas = newMetaschemas(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
 	sdk.Nodes = newNodes(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -219,7 +275,43 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.RegistrationSchemaBlocks = newRegistrationSchemaBlocks(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.RegistrationSchemas = newRegistrationSchemas(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.Registrations = newRegistrations(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.SchemaResponseActions = newSchemaResponseActions(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.SchemaResponses = newSchemaResponses(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

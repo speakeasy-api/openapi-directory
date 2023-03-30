@@ -43,7 +43,7 @@ func main() {
             UploadProtocol: "eum",
         },
         Request: &shared.CapacityCommitmentInput{
-            Edition: "EDITION_UNSPECIFIED",
+            Edition: "STANDARD",
             FailureStatus: &shared.Status{
                 Code: 297534,
                 Details: []map[string]interface{}{

@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// GoogleCloudRunV2JobLaunchStageEnum - The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+// GoogleCloudRunV2JobLaunchStageEnum - The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features. For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output.
 type GoogleCloudRunV2JobLaunchStageEnum string
 
 const (
@@ -81,7 +81,7 @@ type GoogleCloudRunV2Job struct {
 	LastModifier *string `json:"lastModifier,omitempty"`
 	// Reference to an Execution. Use /Executions.GetExecution with the given name to get full execution including the latest status.
 	LatestCreatedExecution *GoogleCloudRunV2ExecutionReference `json:"latestCreatedExecution,omitempty"`
-	// The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+	// The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features. For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output.
 	LaunchStage *GoogleCloudRunV2JobLaunchStageEnum `json:"launchStage,omitempty"`
 	// The fully qualified name of this Job. Format: projects/{project}/locations/{location}/jobs/{job}
 	Name *string `json:"name,omitempty"`
@@ -89,6 +89,8 @@ type GoogleCloudRunV2Job struct {
 	ObservedGeneration *string `json:"observedGeneration,omitempty"`
 	// Output only. Returns true if the Job is currently being acted upon by the system to bring it into the desired state. When a new Job is created, or an existing one is updated, Cloud Run will asynchronously perform all necessary steps to bring the Job to the desired state. This process is called reconciliation. While reconciliation is in process, `observed_generation` and `latest_succeeded_execution`, will have transient values that might mismatch the intended state: Once reconciliation is over (and this field is false), there are two possible outcomes: reconciliation succeeded and the state matches the Job, or there was an error, and reconciliation failed. This state can be found in `terminal_condition.state`. If reconciliation succeeded, the following fields will match: `observed_generation` and `generation`, `latest_succeeded_execution` and `latest_created_execution`. If reconciliation failed, `observed_generation` and `latest_succeeded_execution` will have the state of the last succeeded execution or empty for newly created Job. Additional information on the failure can be found in `terminal_condition` and `conditions`.
 	Reconciling *bool `json:"reconciling,omitempty"`
+	// Output only. Reserved for future use.
+	SatisfiesPzs *bool `json:"satisfiesPzs,omitempty"`
 	// ExecutionTemplate describes the data an execution should have when created from a template.
 	Template *GoogleCloudRunV2ExecutionTemplate `json:"template,omitempty"`
 	// Defines a status condition for a resource.
@@ -113,7 +115,7 @@ type GoogleCloudRunV2JobInput struct {
 	Labels map[string]string `json:"labels,omitempty"`
 	// Reference to an Execution. Use /Executions.GetExecution with the given name to get full execution including the latest status.
 	LatestCreatedExecution *GoogleCloudRunV2ExecutionReference `json:"latestCreatedExecution,omitempty"`
-	// The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed.
+	// The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports `ALPHA`, `BETA`, and `GA`. If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features. For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output.
 	LaunchStage *GoogleCloudRunV2JobLaunchStageEnum `json:"launchStage,omitempty"`
 	// The fully qualified name of this Job. Format: projects/{project}/locations/{location}/jobs/{job}
 	Name *string `json:"name,omitempty"`

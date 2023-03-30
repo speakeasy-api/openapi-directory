@@ -2,6 +2,38 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// CategoryRefundBehaviourEnum - How the category's refunds or deductions should be reported on.
+type CategoryRefundBehaviourEnum string
+
+const (
+	CategoryRefundBehaviourEnumDebitsAreDeductions CategoryRefundBehaviourEnum = "debits_are_deductions"
+	CategoryRefundBehaviourEnumCreditsAreRefunds   CategoryRefundBehaviourEnum = "credits_are_refunds"
+	CategoryRefundBehaviourEnumNull                CategoryRefundBehaviourEnum = "null"
+)
+
+func (e *CategoryRefundBehaviourEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "debits_are_deductions":
+		fallthrough
+	case "credits_are_refunds":
+		fallthrough
+	case "null":
+		*e = CategoryRefundBehaviourEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for CategoryRefundBehaviourEnum: %s", s)
+	}
+}
+
 // Category - Success
 type Category struct {
 	// The category's child categories.
@@ -12,10 +44,16 @@ type Category struct {
 	CreatedAt *string `json:"created_at,omitempty"`
 	// The unique identifier of the category.
 	ID *int64 `json:"id,omitempty"`
+	// Whether the category is a bill category. A bill category is when budgeted amounts are normally spent at once, instead of spread across a budgeting period. This category will be included in the bill reminder email when set to true.
+	IsBill *bool `json:"is_bill,omitempty"`
 	// Whether this category has been marked as a transfer category.
 	IsTransfer *bool `json:"is_transfer,omitempty"`
 	// The unique identifier of the parent category of this category, or null if this category has no parent (i.e. is a top-level category)
 	ParentID *int64 `json:"parent_id,omitempty"`
+	// How the category's refunds or deductions should be reported on.
+	RefundBehaviour *CategoryRefundBehaviourEnum `json:"refund_behaviour,omitempty"`
+	// Whether the category's budget is rolled up into its parent category, if a parent category is present.
+	RollUp *bool `json:"roll_up,omitempty"`
 	// The title of the category.
 	Title *string `json:"title,omitempty"`
 	// When the category was last updated.

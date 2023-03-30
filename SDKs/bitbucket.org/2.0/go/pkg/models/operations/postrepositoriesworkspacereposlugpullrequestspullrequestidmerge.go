@@ -27,7 +27,19 @@ type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergePathParams s
 }
 
 type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeQueryParams struct {
-	// Runs merge asynchronously and immediately returns a 202 with polling link to the task-status API in the Location header. Default value is false.
+	// Default value is false.
+	//
+	//
+	// When set to true, runs merge asynchronously and
+	// immediately returns a 202 with polling link to
+	// the task-status API in the Location header.
+	//
+	//
+	// When set to false, runs merge and waits for it to
+	// complete, returning 200 when it succeeds. If the
+	// duration of the merge exceeds a timeout threshold,
+	// the API returns a 202 with polling link to the
+	// task-status API in the Location header.
 	Async *bool `queryParam:"style=form,explode=true,name=async"`
 }
 

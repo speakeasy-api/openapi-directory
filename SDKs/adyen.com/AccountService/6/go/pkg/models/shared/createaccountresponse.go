@@ -68,9 +68,9 @@ func (e *CreateAccountResponseStatusEnum) UnmarshalJSON(data []byte) error {
 // CreateAccountResponse - OK - the request has succeeded.
 type CreateAccountResponse struct {
 	// The code of the new account.
-	AccountCode string `json:"accountCode"`
+	AccountCode *string `json:"accountCode,omitempty"`
 	// The code of the account holder.
-	AccountHolderCode string `json:"accountHolderCode"`
+	AccountHolderCode *string `json:"accountHolderCode,omitempty"`
 	// The bankAccountUUID of the bank account held by the account holder to couple the account with. Scheduled payouts in currencies matching the currency of this bank account will be sent to this bank account. Payouts in different currencies will be sent to a matching bank account of the account holder.
 	BankAccountUUID *string `json:"bankAccountUUID,omitempty"`
 	// The description of the account.
@@ -90,5 +90,5 @@ type CreateAccountResponse struct {
 	ResultCode *string `json:"resultCode,omitempty"`
 	// The status of the account.
 	// >Permitted values: `Active`.
-	Status CreateAccountResponseStatusEnum `json:"status"`
+	Status *CreateAccountResponseStatusEnum `json:"status,omitempty"`
 }

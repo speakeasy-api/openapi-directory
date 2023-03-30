@@ -3,9 +3,6 @@
 package operations
 
 import (
-	"bytes"
-	"encoding/json"
-	"errors"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -17,97 +14,15 @@ type TranslatePathParams struct {
 	TargetLanguage string `pathParam:"style=simple,explode=false,name=targetLanguage"`
 }
 
-type TranslateRequestBody struct {
-	// Simple list of strings to be translated. You can also choose to upload files instead of strings.
-	Contents []string `json:"contents,omitempty"`
-	// You can add as many files as you want in documents parameter.
-	Documents []shared.FileAsData `json:"documents,omitempty"`
-	// Free-form meta data to attach to your instant translation request. This can be used in statistics and analytical dashboards.
-	Meta map[string]interface{} `json:"meta,omitempty"`
-}
-
 type TranslateRequest struct {
 	PathParams TranslatePathParams
-	Request    *TranslateRequestBody `request:"mediaType=application/json"`
-}
-
-type Translate200ApplicationJSONResultsType string
-
-const (
-	Translate200ApplicationJSONResultsTypeInstantContentsTranslationResult Translate200ApplicationJSONResultsType = "InstantContentsTranslationResult"
-	Translate200ApplicationJSONResultsTypeInstantFilesTranslationResult    Translate200ApplicationJSONResultsType = "InstantFilesTranslationResult"
-)
-
-type Translate200ApplicationJSONResults struct {
-	InstantContentsTranslationResult *shared.InstantContentsTranslationResult
-	InstantFilesTranslationResult    *shared.InstantFilesTranslationResult
-
-	Type Translate200ApplicationJSONResultsType
-}
-
-func CreateTranslate200ApplicationJSONResultsInstantContentsTranslationResult(instantContentsTranslationResult shared.InstantContentsTranslationResult) Translate200ApplicationJSONResults {
-	typ := Translate200ApplicationJSONResultsTypeInstantContentsTranslationResult
-
-	return Translate200ApplicationJSONResults{
-		InstantContentsTranslationResult: &instantContentsTranslationResult,
-		Type:                             typ,
-	}
-}
-
-func CreateTranslate200ApplicationJSONResultsInstantFilesTranslationResult(instantFilesTranslationResult shared.InstantFilesTranslationResult) Translate200ApplicationJSONResults {
-	typ := Translate200ApplicationJSONResultsTypeInstantFilesTranslationResult
-
-	return Translate200ApplicationJSONResults{
-		InstantFilesTranslationResult: &instantFilesTranslationResult,
-		Type:                          typ,
-	}
-}
-
-func (u *Translate200ApplicationJSONResults) UnmarshalJSON(data []byte) error {
-	var d *json.Decoder
-
-	instantContentsTranslationResult := new(shared.InstantContentsTranslationResult)
-	d = json.NewDecoder(bytes.NewReader(data))
-	d.DisallowUnknownFields()
-	if err := d.Decode(&instantContentsTranslationResult); err == nil {
-		u.InstantContentsTranslationResult = instantContentsTranslationResult
-		u.Type = Translate200ApplicationJSONResultsTypeInstantContentsTranslationResult
-		return nil
-	}
-
-	instantFilesTranslationResult := new(shared.InstantFilesTranslationResult)
-	d = json.NewDecoder(bytes.NewReader(data))
-	d.DisallowUnknownFields()
-	if err := d.Decode(&instantFilesTranslationResult); err == nil {
-		u.InstantFilesTranslationResult = instantFilesTranslationResult
-		u.Type = Translate200ApplicationJSONResultsTypeInstantFilesTranslationResult
-		return nil
-	}
-
-	return errors.New("could not unmarshal into supported union types")
-}
-
-func (u Translate200ApplicationJSONResults) MarshalJSON() ([]byte, error) {
-	if u.InstantContentsTranslationResult != nil {
-		return json.Marshal(u.InstantContentsTranslationResult)
-	}
-
-	if u.InstantFilesTranslationResult != nil {
-		return json.Marshal(u.InstantFilesTranslationResult)
-	}
-
-	return nil, nil
-}
-
-// Translate200ApplicationJSON - Instant translation result. It may return a list of translated strings, or a list of translated files.
-type Translate200ApplicationJSON struct {
-	Results *Translate200ApplicationJSONResults `json:"results,omitempty"`
+	Request    *shared.InstantTranslationRequest `request:"mediaType=application/json"`
 }
 
 type TranslateResponse struct {
 	ContentType string
-	StatusCode  int
-	RawResponse *http.Response
 	// Instant translation result. It may return a list of translated strings, or a list of translated files.
-	Translate200ApplicationJSONObject *Translate200ApplicationJSON
+	InstantTranslationResult *shared.InstantTranslationResult
+	StatusCode               int
+	RawResponse              *http.Response
 }

@@ -33,7 +33,7 @@ func newBalanceAccounts(defaultClient, securityClient HTTPClient, serverURL, lan
 }
 
 // GetBalanceAccountsID - Get a balance account
-// Returns a balance account.
+// Returns a balance account and its balances for the default currency and other currencies with a non-zero balance.
 func (s *balanceAccounts) GetBalanceAccountsID(ctx context.Context, request operations.GetBalanceAccountsIDRequest) (*operations.GetBalanceAccountsIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/balanceAccounts/{id}", request.PathParams, nil)

@@ -54,8 +54,10 @@ type UpdateSecurityPolicyResponse struct {
 	InternalServerException interface{}
 	// ResourceNotFoundException
 	ResourceNotFoundException interface{}
-	StatusCode                int
-	RawResponse               *http.Response
+	// ServiceQuotaExceededException
+	ServiceQuotaExceededException interface{}
+	StatusCode                    int
+	RawResponse                   *http.Response
 	// Success
 	UpdateSecurityPolicyResponse *shared.UpdateSecurityPolicyResponse
 	// ValidationException

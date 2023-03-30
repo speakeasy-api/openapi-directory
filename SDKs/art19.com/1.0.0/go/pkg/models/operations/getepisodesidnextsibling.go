@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetEpisodesIDNextSiblingSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetEpisodesIDNextSiblingPathParams struct {
 	// The ID of the episode to find the one episode released right after it.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -21,6 +25,7 @@ type GetEpisodesIDNextSiblingQueryParams struct {
 type GetEpisodesIDNextSiblingRequest struct {
 	PathParams  GetEpisodesIDNextSiblingPathParams
 	QueryParams GetEpisodesIDNextSiblingQueryParams
+	Security    GetEpisodesIDNextSiblingSecurity
 }
 
 // GetEpisodesIDNextSibling200ApplicationVndAPIPlusJSON - Success

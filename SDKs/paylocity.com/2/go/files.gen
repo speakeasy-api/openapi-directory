@@ -13,6 +13,7 @@ localtaxes.go
 nonprimarystatetax.go
 paystatements.go
 primarystatetax.go
+sensitivedata.go
 sdk.go
 go.mod
 go.sum
@@ -54,6 +55,8 @@ pkg/models/operations/getsemployeepaystatementdetaildatabasedonthespecifiedyeara
 pkg/models/operations/getsemployeepaystatementsummarydatabasedonthespecifiedyear.go
 pkg/models/operations/getsemployeepaystatementsummarydatabasedonthespecifiedyearandcheckdate.go
 pkg/models/operations/addorupdateprimarystatetax.go
+pkg/models/operations/addorupdatesensitivedata.go
+pkg/models/operations/getsensitivedata.go
 pkg/models/shared/error.go
 pkg/models/shared/additionalrate.go
 pkg/models/shared/security.go
@@ -75,4 +78,5 @@ pkg/models/shared/nonprimarystatetax.go
 pkg/models/shared/paystatementdetails.go
 pkg/models/shared/paystatementsummary.go
 pkg/models/shared/statetax.go
+pkg/models/shared/sensitivedata.go
 USAGE.md

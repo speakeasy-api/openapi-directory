@@ -47,7 +47,9 @@ type PutResolverRulePolicyRequest struct {
 }
 
 type PutResolverRulePolicyResponse struct {
-	ContentType string
+	// AccessDeniedException
+	AccessDeniedException interface{}
+	ContentType           string
 	// InternalServiceErrorException
 	InternalServiceErrorException interface{}
 	// InvalidParameterException

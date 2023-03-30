@@ -3,5 +3,6 @@
 package shared
 
 type CreateConfigRequest struct {
-	Name string `json:"name"`
+	Description *string `json:"description,omitempty"`
+	Name        string  `json:"name"`
 }

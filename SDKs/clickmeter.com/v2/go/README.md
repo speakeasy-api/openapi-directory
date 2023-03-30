@@ -112,7 +112,6 @@ func main() {
 * `ConversionsGetStatisticsAllList` - Retrieve statistics about this customer for a timeframe related to a subset of conversions grouped by some temporal entity (day/week/month)
 * `ConversionsGetStatisticsList` - Retrieve statistics about this conversion for a timeframe grouped by some temporal entity (day/week/month)
 * `ConversionsGetStatisticsSingle` - Retrieve statistics about this conversion for a timeframe
-* `ConversionsGetTops` - Retrieve a top report connected to this conversion
 * `ConversionsPatchNotesForm` - Fast patch the "notes" field of a conversion
 * `ConversionsPatchNotesJSON` - Fast patch the "notes" field of a conversion
 * `ConversionsPatchNotesRaw` - Fast patch the "notes" field of a conversion
@@ -141,7 +140,6 @@ func main() {
 * `DataPointsGetStatisticsAllList` - Retrieve statistics about all datapoints of this customer for a timeframe grouped by some temporal entity (day/week/month)
 * `DataPointsGetStatisticsList` - Retrieve statistics about this datapoint for a timeframe grouped by some temporal entity (day/week/month)
 * `DataPointsGetStatisticsSingle` - Retrieve statistics about this datapoint for a timeframe
-* `DataPointsGetTops` - Retrieve a top report connected to this datapoint
 * `DataPointsPatchFavourite` - Fast switch the "favourite" field of a datapoint
 * `DataPointsPatchNotesForm` - Fast patch the "notes" field of a datapoint
 * `DataPointsPatchNotesJSON` - Fast patch the "notes" field of a datapoint
@@ -176,7 +174,6 @@ func main() {
 * `GroupsGetStatisticsAllList` - Retrieve statistics about all groups of this customer for a timeframe grouped by some temporal entity (day/week/month)
 * `GroupsGetStatisticsList` - Retrieve statistics about this group for a timeframe grouped by some temporal entity (day/week/month)
 * `GroupsGetStatisticsSingle` - Retrieve statistics about this group for a timeframe
-* `GroupsGetTops` - Retrieve a top report connected to this group
 * `GroupsPatchFavourite` - Fast switch the "favourite" field of a group
 * `GroupsPatchNotesForm` - Fast patch the "notes" field of a group
 * `GroupsPatchNotesJSON` - Fast patch the "notes" field of a group
@@ -194,10 +191,6 @@ func main() {
 
 * `MeGetMe` - Retrieve current account data
 * `MeGetMePlan` - Retrieve current account plan
-
-### Reports
-
-* `ReportsGet` - Retrieve a top report
 
 ### Retargeting
 

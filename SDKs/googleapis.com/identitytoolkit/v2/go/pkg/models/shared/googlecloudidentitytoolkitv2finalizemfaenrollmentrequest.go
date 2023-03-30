@@ -12,4 +12,6 @@ type GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentRequest struct {
 	PhoneVerificationInfo *GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneRequestInfo `json:"phoneVerificationInfo,omitempty"`
 	// The ID of the Identity Platform tenant that the user enrolling MFA belongs to. If not set, the user belongs to the default Identity Platform project.
 	TenantID *string `json:"tenantId,omitempty"`
+	// Mfa request info specific to TOTP auth for FinalizeMfa.
+	TotpVerificationInfo *GoogleCloudIdentitytoolkitV2FinalizeMfaTotpEnrollmentRequestInfo `json:"totpVerificationInfo,omitempty"`
 }

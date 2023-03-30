@@ -35,9 +35,9 @@ type AddUserForTeamRequest struct {
 	Request AddUserForTeamRequestBody `request:"mediaType=application/json"`
 }
 
-// AddUserForTeam200ApplicationJSON - Returns the full user record for the added user.
+// AddUserForTeam200ApplicationJSON - Successfully added user to the team.
 type AddUserForTeam200ApplicationJSON struct {
-	Data *shared.UserResponse `json:"data,omitempty"`
+	Data *shared.TeamMembershipResponse `json:"data,omitempty"`
 }
 
 type AddUserForTeamResponse struct {
@@ -46,6 +46,6 @@ type AddUserForTeamResponse struct {
 	ErrorResponse *shared.ErrorResponse
 	StatusCode    int
 	RawResponse   *http.Response
-	// Returns the full user record for the added user.
+	// Successfully added user to the team.
 	AddUserForTeam200ApplicationJSONObject *AddUserForTeam200ApplicationJSON
 }

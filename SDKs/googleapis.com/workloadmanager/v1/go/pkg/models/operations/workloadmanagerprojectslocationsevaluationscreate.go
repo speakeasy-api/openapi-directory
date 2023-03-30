@@ -13,7 +13,7 @@ type WorkloadmanagerProjectsLocationsEvaluationsCreateSecurity struct {
 }
 
 type WorkloadmanagerProjectsLocationsEvaluationsCreatePathParams struct {
-	// Required. The resource name of the evaluation location using the form: `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region.
+	// Required. The resource prefix of the evaluation location using the form: `projects/{project_id}/locations/{location_id}`
 	Parent string `pathParam:"style=simple,explode=false,name=parent"`
 }
 
@@ -26,7 +26,7 @@ type WorkloadmanagerProjectsLocationsEvaluationsCreateQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// JSONP
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
-	// Required. Id of the requesting object If auto-generating Id server-side, remove this field and evaluation_id from the method_signature of Create RPC
+	// Required. Id of the requesting object
 	EvaluationID *string `queryParam:"style=form,explode=true,name=evaluationId"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
@@ -38,7 +38,7 @@ type WorkloadmanagerProjectsLocationsEvaluationsCreateQueryParams struct {
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`
 	// Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
 	QuotaUser *string `queryParam:"style=form,explode=true,name=quotaUser"`
-	// Optional. An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and t he request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+	// Optional. An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. The server will guarantee that for at least 60 minutes since the first request. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
 	RequestID *string `queryParam:"style=form,explode=true,name=requestId"`
 	// Legacy upload protocol for media (e.g. "media", "multipart").
 	UploadType *string `queryParam:"style=form,explode=true,name=uploadType"`

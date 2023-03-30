@@ -2,11 +2,12 @@
 
 package shared
 
-// FormFieldSetEntity - Create Form Field Set
+// FormFieldSetEntity - List Form Field Sets
 type FormFieldSetEntity struct {
-	FormFields *FormFieldEntity `json:"form_fields,omitempty"`
+	// Associated form fields
+	FormFields []FormFieldEntity `json:"form_fields,omitempty"`
 	// Layout of the form
-	FormLayout *int `json:"form_layout,omitempty"`
+	FormLayout []int `json:"form_layout,omitempty"`
 	// Form field set id
 	ID *int `json:"id,omitempty"`
 	// Any associated InboxRegistrations or BundleRegistrations can be saved without providing company

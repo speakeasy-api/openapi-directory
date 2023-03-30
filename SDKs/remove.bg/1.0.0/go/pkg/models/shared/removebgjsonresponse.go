@@ -3,6 +3,14 @@
 package shared
 
 type RemoveBgJSONResponseData struct {
+	// Height of the foreground image. In case the input image resolution is higher than the limit (> 25 megapixels) this value is expressed with respect to the input image resolution.
+	ForegroundHeight *int64 `json:"foreground_height,omitempty"`
+	// Left position of the foreground image along the horizontal axis. In case the input image resolution is higher than the limit (> 25 megapixels) this value is expressed with respect to the input image resolution.
+	ForegroundLeft *int64 `json:"foreground_left,omitempty"`
+	// Top position of the foreground image along the vertical axis. In case the input image resolution is higher than the limit (> 25 megapixels) this value is expressed with respect to the input image resolution.
+	ForegroundTop *int64 `json:"foreground_top,omitempty"`
+	// Width of the foreground image. In case the input image resolution is higher than the limit (> 25 megapixels) this value is expressed with respect to the input image resolution.
+	ForegroundWidth *int64 `json:"foreground_width,omitempty"`
 	// Base64 encoded string of result image
 	ResultB64 *string `json:"result_b64,omitempty"`
 }

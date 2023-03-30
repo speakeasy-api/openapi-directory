@@ -6,6 +6,8 @@ type ScheduleBByRecipient struct {
 	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
 	//
 	CommitteeID string `json:"committee_id"`
+	// Disbursements
+	CommitteeTotalDisbursements *float64 `json:"committee_total_disbursements,omitempty"`
 	// Number of records making up the total.
 	//
 	Count *int `json:"count,omitempty"`
@@ -19,7 +21,8 @@ type ScheduleBByRecipient struct {
 	MemoCount *int `json:"memo_count,omitempty"`
 	// Schedule B disbursements aggregated by memoed items only
 	//
-	MemoTotal *float64 `json:"memo_total,omitempty"`
+	MemoTotal                    *float64 `json:"memo_total,omitempty"`
+	RecipientDisbursementPercent *float64 `json:"recipient_disbursement_percent,omitempty"`
 	// Name of the entity receiving the disbursement
 	RecipientName string `json:"recipient_name"`
 	// Schedule B disbursements aggregated by non-memoed items only

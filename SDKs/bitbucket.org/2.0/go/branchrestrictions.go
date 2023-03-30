@@ -39,7 +39,8 @@ func newBranchRestrictions(defaultClient, securityClient HTTPClient, serverURL, 
 	}
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsID - Deletes an existing branch restriction rule.
+// DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsID - Delete a branch restriction rule
+// Deletes an existing branch restriction rule.
 func (s *branchRestrictions) DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request.PathParams, nil)
@@ -88,7 +89,8 @@ func (s *branchRestrictions) DeleteRepositoriesWorkspaceRepoSlugBranchRestrictio
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugBranchRestrictions - Returns a paginated list of all branch restrictions on the
+// GetRepositoriesWorkspaceRepoSlugBranchRestrictions - List branch restrictions
+// Returns a paginated list of all branch restrictions on the
 // repository.
 func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictions(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse, error) {
 	baseURL := s.serverURL
@@ -151,7 +153,8 @@ func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictions(
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugBranchRestrictionsID - Returns a specific branch restriction rule.
+// GetRepositoriesWorkspaceRepoSlugBranchRestrictionsID - Get a branch restriction rule
+// Returns a specific branch restriction rule.
 func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request.PathParams, nil)
@@ -209,7 +212,8 @@ func (s *branchRestrictions) GetRepositoriesWorkspaceRepoSlugBranchRestrictionsI
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugBranchRestrictions - Creates a new branch restriction rule for a repository.
+// PostRepositoriesWorkspaceRepoSlugBranchRestrictions - Create a branch restriction rule
+// Creates a new branch restriction rule for a repository.
 //
 // `kind` describes what will be restricted. Allowed values include:
 // `push`, `force`, `delete` and `restrict_merges`.
@@ -316,11 +320,12 @@ func (s *branchRestrictions) PostRepositoriesWorkspaceRepoSlugBranchRestrictions
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugBranchRestrictionsID - Updates an existing branch restriction rule.
+// PutRepositoriesWorkspaceRepoSlugBranchRestrictionsID - Update a branch restriction rule
+// Updates an existing branch restriction rule.
 //
 // Fields not present in the request body are ignored.
 //
-// See [`POST`](../branch-restrictions#post) for details.
+// See [`POST`](/cloud/bitbucket/rest/api-group-branch-restrictions/#api-repositories-workspace-repo-slug-branch-restrictions-post) for details.
 func (s *branchRestrictions) PutRepositoriesWorkspaceRepoSlugBranchRestrictionsID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request.PathParams, nil)

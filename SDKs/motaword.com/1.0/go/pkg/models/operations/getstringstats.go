@@ -8,7 +8,7 @@ import (
 )
 
 type GetStringStatsResponse struct {
-	// User stats for client and vendors
+	// Translation statistics for your account
 	ClientStringStats *shared.ClientStringStats
 	ContentType       string
 	// UserNotFound

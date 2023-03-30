@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// SessionStatus - Contains information about the status of a notebook session.
+// SessionStatus - Contains information about the status of a session.
 type SessionStatus struct {
 	EndDateTime          *time.Time        `json:"EndDateTime,omitempty"`
 	IdleSinceDateTime    *time.Time        `json:"IdleSinceDateTime,omitempty"`

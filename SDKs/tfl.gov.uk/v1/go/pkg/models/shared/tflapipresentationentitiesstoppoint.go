@@ -19,7 +19,8 @@ type TflAPIPresentationEntitiesStopPoint struct {
 	// A unique identifier.
 	ID *string `json:"id,omitempty"`
 	// The indicator of the stop point e.g. "Stop K"
-	Indicator *string `json:"indicator,omitempty"`
+	Indicator        *string `json:"indicator,omitempty"`
+	IndividualStopID *string `json:"individualStopId,omitempty"`
 	// WGS84 latitude of the location.
 	Lat            *float64                                  `json:"lat,omitempty"`
 	LineGroup      []TflAPIPresentationEntitiesLineGroup     `json:"lineGroup,omitempty"`

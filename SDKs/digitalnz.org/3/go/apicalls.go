@@ -43,6 +43,8 @@ func (s *apiCalls) GetRecordsFormat(ctx context.Context, request operations.GetR
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
 	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
@@ -115,16 +117,18 @@ func (s *apiCalls) GetRecordsFormat(ctx context.Context, request operations.GetR
 	return res, nil
 }
 
-// GetRecordsRecordIDJSON - View metadata associated with a single record.
+// GetRecordsRecordIDFormat - View metadata associated with a single record.
 // If you know its `record_id` you can use this endpoint to view all metadata associated with that specific record.
-func (s *apiCalls) GetRecordsRecordIDJSON(ctx context.Context, request operations.GetRecordsRecordIDJSONRequest) (*operations.GetRecordsRecordIDJSONResponse, error) {
+func (s *apiCalls) GetRecordsRecordIDFormat(ctx context.Context, request operations.GetRecordsRecordIDFormatRequest) (*operations.GetRecordsRecordIDFormatResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/records/{record_id}.json", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/records/{record_id}.{format}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
 
 	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
@@ -143,7 +147,7 @@ func (s *apiCalls) GetRecordsRecordIDJSON(ctx context.Context, request operation
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetRecordsRecordIDJSONResponse{
+	res := &operations.GetRecordsRecordIDFormatResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -167,7 +171,7 @@ func (s *apiCalls) GetRecordsRecordIDJSON(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.GetRecordsRecordIDJSON403ApplicationJSONObject = out
+			res.GetRecordsRecordIDFormat403ApplicationJSONObject = out
 		case utils.MatchContentType(contentType, `application/xml`):
 			out, err := io.ReadAll(httpRes.Body)
 			if err != nil {
@@ -191,7 +195,93 @@ func (s *apiCalls) GetRecordsRecordIDJSON(ctx context.Context, request operation
 				return nil, err
 			}
 
-			res.GetRecordsRecordIDJSON404ApplicationJSONObject = out
+			res.GetRecordsRecordIDFormat404ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRecordsRecordIDMoreLikeThisFormat - The "More Like This" call returns similar records to the specified ID.
+//
+// This feature returns a set of search results that are similar (ie have similar metadata) to a specific record.
+func (s *apiCalls) GetRecordsRecordIDMoreLikeThisFormat(ctx context.Context, request operations.GetRecordsRecordIDMoreLikeThisFormatRequest) (*operations.GetRecordsRecordIDMoreLikeThisFormatResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/records/{record_id}/more_like_this.{format}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRecordsRecordIDMoreLikeThisFormatResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.GetRecordsRecordIDMoreLikeThisFormat200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetRecordsRecordIDMoreLikeThisFormat200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetRecordsRecordIDMoreLikeThisFormat403ApplicationJSONObject = out
+		case utils.MatchContentType(contentType, `application/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/xml`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetRecordsRecordIDMoreLikeThisFormat404ApplicationJSONObject = out
 		}
 	}
 

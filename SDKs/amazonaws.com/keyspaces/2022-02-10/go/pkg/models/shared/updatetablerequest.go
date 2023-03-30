@@ -5,6 +5,7 @@ package shared
 type UpdateTableRequest struct {
 	AddColumns              []ColumnDefinition       `json:"addColumns,omitempty"`
 	CapacitySpecification   *CapacitySpecification   `json:"capacitySpecification,omitempty"`
+	ClientSideTimestamps    *ClientSideTimestamps    `json:"clientSideTimestamps,omitempty"`
 	DefaultTimeToLive       *int64                   `json:"defaultTimeToLive,omitempty"`
 	EncryptionSpecification *EncryptionSpecification `json:"encryptionSpecification,omitempty"`
 	KeyspaceName            string                   `json:"keyspaceName"`

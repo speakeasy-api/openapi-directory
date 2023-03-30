@@ -124,7 +124,8 @@ func (s *search) ReindexDocuments(ctx context.Context) (*operations.ReindexDocum
 	return res, nil
 }
 
-// SearchEverywhere - Search everywhere! Including projects, documents, translations...
+// SearchEverywhere - Search everything in your account
+// Search through everything in your account, from projects to documents, from source strings to translations...
 func (s *search) SearchEverywhere(ctx context.Context, request operations.SearchEverywhereRequest) (*operations.SearchEverywhereResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/search"

@@ -30,10 +30,14 @@ pkg/models/shared/packagedata.go
 pkg/models/shared/maintainer.go
 pkg/models/shared/filelocation.go
 pkg/models/shared/languagepackagedependency.go
+pkg/models/shared/binary.go
 pkg/models/shared/listvulnerabilitiesresponsev1.go
 pkg/models/shared/occurrence.go
 pkg/models/shared/vulnerabilityoccurrence.go
+pkg/models/shared/vexassessment.go
+pkg/models/shared/remediation.go
 pkg/models/shared/relatedurl.go
+pkg/models/shared/justification.go
 pkg/models/shared/packageissue.go
 pkg/models/shared/version.go
 pkg/models/shared/grafeasv1filelocation.go

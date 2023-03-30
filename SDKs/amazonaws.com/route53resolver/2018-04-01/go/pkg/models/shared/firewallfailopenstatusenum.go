@@ -10,8 +10,9 @@ import (
 type FirewallFailOpenStatusEnum string
 
 const (
-	FirewallFailOpenStatusEnumEnabled  FirewallFailOpenStatusEnum = "ENABLED"
-	FirewallFailOpenStatusEnumDisabled FirewallFailOpenStatusEnum = "DISABLED"
+	FirewallFailOpenStatusEnumEnabled                 FirewallFailOpenStatusEnum = "ENABLED"
+	FirewallFailOpenStatusEnumDisabled                FirewallFailOpenStatusEnum = "DISABLED"
+	FirewallFailOpenStatusEnumUseLocalResourceSetting FirewallFailOpenStatusEnum = "USE_LOCAL_RESOURCE_SETTING"
 )
 
 func (e *FirewallFailOpenStatusEnum) UnmarshalJSON(data []byte) error {
@@ -23,6 +24,8 @@ func (e *FirewallFailOpenStatusEnum) UnmarshalJSON(data []byte) error {
 	case "ENABLED":
 		fallthrough
 	case "DISABLED":
+		fallthrough
+	case "USE_LOCAL_RESOURCE_SETTING":
 		*e = FirewallFailOpenStatusEnum(s)
 		return nil
 	default:

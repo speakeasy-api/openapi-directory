@@ -2,10 +2,10 @@
 
 package shared
 
-// CreateTaskRequest - The type that defines the fields for the createTask method.
+// CreateTaskRequest - The type that defines the fields for the <b> createTask</b> method.
 type CreateTaskRequest struct {
-	// The feed type associated with the task. Only use a feedType that is available for your API. Available feed types: LMS FeedTypes: All LMS feed types except LMS_ORDER_REPORT and LMS_ACTIVE_INVENTORY_REPORT File Exchange FeedTypes
+	// The feed type associated with the task. Only use a <strong>feedType</strong> that is available for your API. Available feed types:<ul><li><a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#trading-upload-feed-types" target="_blank">Inventory upload feed types</a></li><li><a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#merchant-data-upload-feed-types" target="_blank">Fulfillment upload feed types</a></li><li><a href="/api-docs/sell/static/feed/fx-feeds-quick-reference.html#availabl" target="_blank">Seller Hub feed types</a></li></ul>
 	FeedType *string `json:"feedType,omitempty"`
-	// The schemaVersion/version number of the file format (use the schema version of the API to which you are programming): LMS Version Details / Schema Version File Exchange Schema Version
+	// The schemaVersion/version number of the file format (use the schema version of the API to which you are programming):<ul><li><a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#Version" target="_blank">Version Details / Schema Version</a></li><li><a href="/api-docs/sell/static/feed/fx-feeds-quick-reference.html#schema" target="_blank">Seller Hub feed schema version</a></li></ul>
 	SchemaVersion *string `json:"schemaVersion,omitempty"`
 }

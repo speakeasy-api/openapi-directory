@@ -4,6 +4,7 @@ package shared
 
 // CustomLineItemVersionListElement - A representation of a custom line item version.
 type CustomLineItemVersionListElement struct {
+	Arn             *string `json:"Arn,omitempty"`
 	AssociationSize *int64  `json:"AssociationSize,omitempty"`
 	BillingGroupArn *string `json:"BillingGroupArn,omitempty"`
 	//  A representation of the charge details of a custom line item.
@@ -16,4 +17,5 @@ type CustomLineItemVersionListElement struct {
 	Name               *string                          `json:"Name,omitempty"`
 	ProductCode        *string                          `json:"ProductCode,omitempty"`
 	StartBillingPeriod *string                          `json:"StartBillingPeriod,omitempty"`
+	StartTime          *int64                           `json:"StartTime,omitempty"`
 }

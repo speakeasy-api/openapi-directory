@@ -3,8 +3,46 @@
 package shared
 
 import (
+	"encoding/json"
+	"fmt"
 	"time"
 )
+
+// BundleEntityPermissionsEnum - Permissions that apply to Folders in this Share Link.
+type BundleEntityPermissionsEnum string
+
+const (
+	BundleEntityPermissionsEnumRead        BundleEntityPermissionsEnum = "read"
+	BundleEntityPermissionsEnumWrite       BundleEntityPermissionsEnum = "write"
+	BundleEntityPermissionsEnumReadWrite   BundleEntityPermissionsEnum = "read_write"
+	BundleEntityPermissionsEnumFull        BundleEntityPermissionsEnum = "full"
+	BundleEntityPermissionsEnumNone        BundleEntityPermissionsEnum = "none"
+	BundleEntityPermissionsEnumPreviewOnly BundleEntityPermissionsEnum = "preview_only"
+)
+
+func (e *BundleEntityPermissionsEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "read":
+		fallthrough
+	case "write":
+		fallthrough
+	case "read_write":
+		fallthrough
+	case "full":
+		fallthrough
+	case "none":
+		fallthrough
+	case "preview_only":
+		*e = BundleEntityPermissionsEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for BundleEntityPermissionsEnum: %s", s)
+	}
+}
 
 // BundleEntity - Create Bundle
 type BundleEntity struct {
@@ -18,9 +56,11 @@ type BundleEntity struct {
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Public description
 	Description *string `json:"description,omitempty"`
+	// Do not create subfolders for files uploaded to this share. Note: there are subtle security pitfalls with allowing anonymous uploads from multiple users to live in the same folder. We strongly discourage use of this option unless absolutely required.
+	DontSeparateSubmissionsByFolder *bool `json:"dont_separate_submissions_by_folder,omitempty"`
 	// Bundle expiration date/time
 	ExpiresAt *time.Time `json:"expires_at,omitempty"`
-	// Create Form Field Set
+	// List Form Field Sets
 	FormFieldSet *FormFieldSetEntity `json:"form_field_set,omitempty"`
 	// Does this bundle have an associated inbox?
 	HasInbox *bool `json:"has_inbox,omitempty"`
@@ -34,18 +74,33 @@ type BundleEntity struct {
 	Note *string `json:"note,omitempty"`
 	// Is this bundle password protected?
 	PasswordProtected *bool `json:"password_protected,omitempty"`
+	// Template for creating submission subfolders. Can use the uploader's name, email address, ip, company, and any custom form data.
+	PathTemplate *string `json:"path_template,omitempty"`
 	// A list of paths in this bundle
 	Paths []string `json:"paths,omitempty"`
+	// Permissions that apply to Folders in this Share Link.
+	Permissions *BundleEntityPermissionsEnum `json:"permissions,omitempty"`
 	// Restrict users to previewing files only?
 	PreviewOnly *bool `json:"preview_only,omitempty"`
 	// Show a registration page that captures the downloader's name and email address?
 	RequireRegistration *bool `json:"require_registration,omitempty"`
 	// Only allow access to recipients who have explicitly received the share via an email sent through the Files.com UI?
 	RequireShareRecipient *bool `json:"require_share_recipient,omitempty"`
+	// Send delivery receipt to the uploader. Note: For writable share only
+	SendEmailReceiptToUploader *bool `json:"send_email_receipt_to_uploader,omitempty"`
+	// BundleRegistrations can be saved without providing company?
+	SkipCompany *bool `json:"skip_company,omitempty"`
+	// BundleRegistrations can be saved without providing email?
+	SkipEmail *bool `json:"skip_email,omitempty"`
+	// BundleRegistrations can be saved without providing name?
+	SkipName *bool `json:"skip_name,omitempty"`
 	// Public URL of Share Link
 	URL *string `json:"url,omitempty"`
 	// Bundle creator user ID
 	UserID *int `json:"user_id,omitempty"`
 	// Bundle creator username
-	Username *string `json:"username,omitempty"`
+	Username            *string      `json:"username,omitempty"`
+	WatermarkAttachment *ImageEntity `json:"watermark_attachment,omitempty"`
+	// Preview watermark settings applied to all bundle items. Uses the same keys as Behavior.value
+	WatermarkValue map[string]interface{} `json:"watermark_value,omitempty"`
 }

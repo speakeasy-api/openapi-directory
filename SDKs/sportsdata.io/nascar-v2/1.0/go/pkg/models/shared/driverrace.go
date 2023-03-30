@@ -5,6 +5,7 @@ package shared
 type DriverRace struct {
 	Bonus                   *float64 `json:"Bonus,omitempty"`
 	Created                 *string  `json:"Created,omitempty"`
+	CurrentPosition         *float64 `json:"CurrentPosition,omitempty"`
 	DateTime                *string  `json:"DateTime,omitempty"`
 	Day                     *string  `json:"Day,omitempty"`
 	DraftKingsSalary        *int64   `json:"DraftKingsSalary,omitempty"`

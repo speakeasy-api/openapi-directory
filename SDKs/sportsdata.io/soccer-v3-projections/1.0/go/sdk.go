@@ -14,10 +14,8 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"http://api.sportsdata.io",
-	"https://api.sportsdata.io",
-	"http://azure-api.sportsdata.io",
-	"https://azure-api.sportsdata.io",
+	"http://azure-api.sportsdata.io/v3/soccer/projections",
+	"https://azure-api.sportsdata.io/v3/soccer/projections",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -142,6 +140,51 @@ func (s *SDK) DfsSlatesByDate(ctx context.Context, request operations.DfsSlatesB
 			}
 
 			res.DfsSlates = out
+		}
+	}
+
+	return res, nil
+}
+
+// InjuredPlayersByCompetition - Injured Players By Competition
+// This endpoint provides all currently injured soccer players by competition, along with injury details.
+func (s *SDK) InjuredPlayersByCompetition(ctx context.Context, request operations.InjuredPlayersByCompetitionRequest) (*operations.InjuredPlayersByCompetitionResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/InjuredPlayers/{competition}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.InjuredPlayersByCompetitionResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.Player
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Players = out
 		}
 	}
 

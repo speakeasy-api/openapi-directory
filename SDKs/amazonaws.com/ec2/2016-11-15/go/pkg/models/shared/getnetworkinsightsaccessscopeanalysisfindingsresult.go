@@ -30,10 +30,54 @@ type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingC
 	Name *string
 }
 
-// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetails - Describes an additional detail for a path analysis.
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsLoadBalancers - Describes a path component.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsLoadBalancers struct {
+	Arn  *string
+	ID   *string
+	Name *string
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions - Describes additional settings for a stateful rule.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions struct {
+	Keyword  *string
+	Settings []string
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairs - Describes the rule options for a stateful rule group.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairs struct {
+	RuleGroupArn *string
+	RuleOptions  []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupTypePairs - Describes the type of a stateful rule group.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupTypePairs struct {
+	RuleGroupArn  *string
+	RuleGroupType *string
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleOptions - Describes additional settings for a stateful rule.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleOptions struct {
+	Keyword  *string
+	Settings []string
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsVpcEndpointService - The VPC endpoint service.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsVpcEndpointService struct {
+	Arn  *string
+	ID   *string
+	Name *string
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetails - Describes an additional detail for a path analysis. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/reachability/additional-detail-codes.html">Reachability Analyzer additional detail codes</a>.
 type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetails struct {
-	AdditionalDetailType *string
-	Component            *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsComponent
+	AdditionalDetailType      *string
+	Component                 *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsComponent
+	LoadBalancers             []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsLoadBalancers
+	RuleGroupRuleOptionsPairs []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupRuleOptionsPairs
+	RuleGroupTypePairs        []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleGroupTypePairs
+	RuleOptions               []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsRuleOptions
+	ServiceName               *string
+	VpcEndpointService        *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAdditionalDetailsVpcEndpointService
 }
 
 // GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsAttachedTo - The resource to which the path component is attached.
@@ -135,6 +179,54 @@ type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingC
 	Name *string
 }
 
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatefulRuleDestinationPorts - Describes a range of ports.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatefulRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatefulRuleSourcePorts - Describes a range of ports.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatefulRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatefulRule - The Network Firewall stateful rule.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatefulRule struct {
+	DestinationPorts []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatefulRuleDestinationPorts
+	Destinations     []string
+	Direction        *string
+	Protocol         *string
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatefulRuleSourcePorts
+	Sources          []string
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatelessRuleDestinationPorts - Describes a range of ports.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatelessRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatelessRuleSourcePorts - Describes a range of ports.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatelessRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatelessRule - The Network Firewall stateless rule.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatelessRule struct {
+	DestinationPorts []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatelessRuleDestinationPorts
+	Destinations     []string
+	Priority         *int64
+	Protocols        []int64
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatelessRuleSourcePorts
+	Sources          []string
+}
+
 // GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsIngressRouteTable - The route table.
 type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsIngressRouteTable struct {
 	Arn  *string
@@ -214,11 +306,14 @@ type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingC
 
 // GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsRouteTableRoute - The route table route.
 type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsRouteTableRoute struct {
+	CarrierGatewayID            *string
+	CoreNetworkArn              *string
 	DestinationCidr             *string
 	DestinationPrefixListID     *string
 	EgressOnlyInternetGatewayID *string
 	GatewayID                   *string
 	InstanceID                  *string
+	LocalGatewayID              *string
 	NatGatewayID                *string
 	NetworkInterfaceID          *string
 	Origin                      *string
@@ -364,6 +459,8 @@ type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingC
 	Direction                     *string
 	ElasticLoadBalancerListener   *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsElasticLoadBalancerListener
 	ExplanationCode               *string
+	FirewallStatefulRule          *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatefulRule
+	FirewallStatelessRule         *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsFirewallStatelessRule
 	IngressRouteTable             *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsIngressRouteTable
 	InternetGateway               *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsInternetGateway
 	LoadBalancerArn               *string
@@ -398,6 +495,54 @@ type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingC
 	VpcPeeringConnection          *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsVpcPeeringConnection
 	VpnConnection                 *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsVpnConnection
 	VpnGateway                    *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanationsVpnGateway
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleDestinationPorts - Describes a range of ports.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleSourcePorts - Describes a range of ports.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule - The Network Firewall stateful rule.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule struct {
+	DestinationPorts []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleDestinationPorts
+	Destinations     []string
+	Direction        *string
+	Protocol         *string
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRuleSourcePorts
+	Sources          []string
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRuleDestinationPorts - Describes a range of ports.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRuleSourcePorts - Describes a range of ports.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRule - The Network Firewall stateless rule.
+type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRule struct {
+	DestinationPorts []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRuleDestinationPorts
+	Destinations     []string
+	Priority         *int64
+	Protocols        []int64
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRuleSourcePorts
+	Sources          []string
 }
 
 // GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsInboundHeaderDestinationPortRanges - Describes a range of ports.
@@ -444,11 +589,14 @@ type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingC
 
 // GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute - The route table route.
 type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute struct {
+	CarrierGatewayID            *string
+	CoreNetworkArn              *string
 	DestinationCidr             *string
 	DestinationPrefixListID     *string
 	EgressOnlyInternetGatewayID *string
 	GatewayID                   *string
 	InstanceID                  *string
+	LocalGatewayID              *string
 	NatGatewayID                *string
 	NetworkInterfaceID          *string
 	Origin                      *string
@@ -521,11 +669,14 @@ type GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingC
 	DestinationVpc                *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsDestinationVpc
 	ElasticLoadBalancerListener   *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsElasticLoadBalancerListener
 	Explanations                  []GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsExplanations
+	FirewallStatefulRule          *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatefulRule
+	FirewallStatelessRule         *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsFirewallStatelessRule
 	InboundHeader                 *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsInboundHeader
 	OutboundHeader                *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsOutboundHeader
 	RouteTableRoute               *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsRouteTableRoute
 	SecurityGroupRule             *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSecurityGroupRule
 	SequenceNumber                *int64
+	ServiceName                   *string
 	SourceVpc                     *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSourceVpc
 	Subnet                        *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsSubnet
 	TransitGateway                *GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindingsFindingComponentsTransitGateway

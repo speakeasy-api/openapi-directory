@@ -7,6 +7,21 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type AnalyticsadminPropertiesListConnectedSiteTagsSecurityOption1 struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type AnalyticsadminPropertiesListConnectedSiteTagsSecurityOption2 struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type AnalyticsadminPropertiesListConnectedSiteTagsSecurity struct {
+	Option1 *AnalyticsadminPropertiesListConnectedSiteTagsSecurityOption1 `security:"option"`
+	Option2 *AnalyticsadminPropertiesListConnectedSiteTagsSecurityOption2 `security:"option"`
+}
+
 type AnalyticsadminPropertiesListConnectedSiteTagsQueryParams struct {
 	// V1 error format.
 	DollarXgafv *shared.XgafvEnum `queryParam:"style=form,explode=true,name=$.xgafv"`
@@ -35,6 +50,7 @@ type AnalyticsadminPropertiesListConnectedSiteTagsQueryParams struct {
 type AnalyticsadminPropertiesListConnectedSiteTagsRequest struct {
 	QueryParams AnalyticsadminPropertiesListConnectedSiteTagsQueryParams
 	Request     *shared.GoogleAnalyticsAdminV1alphaListConnectedSiteTagsRequest `request:"mediaType=application/json"`
+	Security    AnalyticsadminPropertiesListConnectedSiteTagsSecurity
 }
 
 type AnalyticsadminPropertiesListConnectedSiteTagsResponse struct {

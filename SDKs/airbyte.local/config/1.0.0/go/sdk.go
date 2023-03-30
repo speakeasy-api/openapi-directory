@@ -33,27 +33,26 @@ func String(s string) *string { return &s }
 // * The naming convention for endpoints is: localhost:8000/{VERSION}/{METHOD_FAMILY}/{METHOD_NAME} e.g. `localhost:8000/v1/connections/create`.
 // * For all `update` methods, the whole object must be passed in, even the fields that did not change.
 //
-// Change Management:
-// * The major version of the API endpoint can be determined / specified in the URL `localhost:8080/v1/connections/create`
-// * Minor version bumps will be invisible to the end user. The user cannot specify minor versions in requests.
-// * All backwards incompatible changes will happen in major version bumps. We will not make backwards incompatible changes in minor version bumps. Examples of non-breaking changes (includes but not limited to...):
-//   - Adding fields to request or response bodies.
-//   - Adding new HTTP endpoints.
+// Authentication (OSS):
+// * When authenticating to the Configuration API, you must use Basic Authentication by setting the Authentication Header to Basic and base64 encoding the username and password (which are `airbyte` and `password` by default - so base64 encoding `airbyte:password` results in `YWlyYnl0ZTpwYXNzd29yZA==`). So the full header reads `'Authorization': "Basic YWlyYnl0ZTpwYXNzd29yZA=="`
 //
 // https://airbyte.io - Find out more about Airbyte
 type SDK struct {
+	// Attempt - Interactions with attempt related resources.
+	Attempt *attempt
 	// Connection - Connection between sources and destinations.
 	Connection *connection
-	// Deployment - Export/Import Airbyte Configuration and Database resources.
-	Deployment *deployment
-	// Destination - Destination  related resources.
+	// Destination - Destination related resources.
 	Destination *destination
 	// DestinationDefinition - DestinationDefinition related resources.
 	DestinationDefinition *destinationDefinition
 	// DestinationDefinitionSpecification - DestinationDefinitionSpecification related resources.
 	DestinationDefinitionSpecification *destinationDefinitionSpecification
+	// DestinationOauth - Source OAuth related resources to delegate access from user.
+	DestinationOauth *destinationOauth
 	// Health - Healthchecks
 	Health        *health
+	Internal      *internal
 	Jobs          *jobs
 	Logs          *logs
 	Notifications *notifications
@@ -66,7 +65,13 @@ type SDK struct {
 	SourceDefinition *sourceDefinition
 	// SourceDefinitionSpecification - SourceDefinition specification related resources.
 	SourceDefinitionSpecification *sourceDefinitionSpecification
-	// WebBackend - Connection between sources and destinations.
+	// SourceOauth - Source OAuth related resources to delegate access from user.
+	SourceOauth *sourceOauth
+	// State - Interactions with state related resources.
+	State *state
+	// WebBackend - Endpoints for the Airbyte web application. Those APIs should not be called outside the web application implementation and are not
+	// guaranteeing any backwards compatibility.
+	//
 	WebBackend *webBackend
 	// Workspace - Workspace related resources.
 	Workspace *workspace
@@ -131,7 +136,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
-	sdk.Connection = newConnection(
+	sdk.Attempt = newAttempt(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -140,7 +145,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Deployment = newDeployment(
+	sdk.Connection = newConnection(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -176,7 +181,25 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.DestinationOauth = newDestinationOauth(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.Health = newHealth(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Internal = newInternal(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -258,6 +281,24 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.SourceDefinitionSpecification = newSourceDefinitionSpecification(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.SourceOauth = newSourceOauth(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.State = newState(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

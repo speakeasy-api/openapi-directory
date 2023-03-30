@@ -107,7 +107,7 @@ func (e *GetRelatedWordsUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 }
 
 type GetRelatedWordsQueryParams struct {
-	// Restrict to the supplied relatinship types
+	// Restrict to the supplied relationship types
 	LimitPerRelationshipType *int `queryParam:"style=form,explode=true,name=limitPerRelationshipType"`
 	// Limits the total results per type of relationship type
 	RelationshipTypes *GetRelatedWordsRelationshipTypesEnum `queryParam:"style=form,explode=true,name=relationshipTypes"`

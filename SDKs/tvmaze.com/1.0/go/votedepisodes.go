@@ -205,6 +205,8 @@ func (s *votedEpisodes) PutUserVotesEpisodesEpisodeID(ctx context.Context, reque
 			res.EpisodeVote = out
 		}
 	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 422:
 	}
 
 	return res, nil

@@ -11,13 +11,7 @@ type CreateInventoryTaskSecurity struct {
 	APIAuth shared.SchemeAPIAuth `security:"scheme,type=oauth2"`
 }
 
-type CreateInventoryTaskHeaders struct {
-	// The ID of the eBay marketplace where the item is hosted. Note: This value is case sensitive. For example: X-EBAY-C-MARKETPLACE-ID:EBAY_US This identifies the eBay marketplace that applies to this task. See MarketplaceIdEnum.
-	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
-}
-
 type CreateInventoryTaskRequest struct {
-	Headers CreateInventoryTaskHeaders
 	// The request payload containing the version, feedType, and optional filterCriteria.
 	Request  shared.CreateInventoryTaskRequest `request:"mediaType=application/json"`
 	Security CreateInventoryTaskSecurity

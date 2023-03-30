@@ -35,8 +35,8 @@ func main() {
             DatabaseName: "fuga",
             PartitionInputList: []shared.PartitionInput{
                 shared.PartitionInput{
-                    LastAccessTime: "2022-11-09T05:20:43.484Z",
-                    LastAnalyzedTime: "2022-10-20T19:15:54.834Z",
+                    LastAccessTime: "2022-11-09T16:45:28.236Z",
+                    LastAnalyzedTime: "2022-10-21T06:40:39.586Z",
                     Parameters: map[string]string{
                         "saepe": "inventore",
                         "sapiente": "enim",
@@ -158,8 +158,8 @@ func main() {
                     },
                 },
                 shared.PartitionInput{
-                    LastAccessTime: "2022-03-31T05:42:18.549Z",
-                    LastAnalyzedTime: "2022-08-03T03:18:01.263Z",
+                    LastAccessTime: "2022-03-31T17:07:03.299Z",
+                    LastAnalyzedTime: "2022-08-03T14:42:46.013Z",
                     Parameters: map[string]string{
                         "aliquam": "esse",
                         "totam": "voluptatum",
@@ -267,8 +267,8 @@ func main() {
                     },
                 },
                 shared.PartitionInput{
-                    LastAccessTime: "2022-12-14T05:28:32.175Z",
-                    LastAnalyzedTime: "2022-04-12T07:45:27.669Z",
+                    LastAccessTime: "2022-12-14T16:53:16.922Z",
+                    LastAnalyzedTime: "2022-04-12T19:10:12.416Z",
                     Parameters: map[string]string{
                         "dolore": "possimus",
                         "in": "qui",

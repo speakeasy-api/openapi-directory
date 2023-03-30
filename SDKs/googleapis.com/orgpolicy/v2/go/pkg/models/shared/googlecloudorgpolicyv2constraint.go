@@ -48,4 +48,6 @@ type GoogleCloudOrgpolicyV2Constraint struct {
 	ListConstraint *GoogleCloudOrgpolicyV2ConstraintListConstraint `json:"listConstraint,omitempty"`
 	// Immutable. The resource name of the constraint. Must be in one of the following forms: * `projects/{project_number}/constraints/{constraint_name}` * `folders/{folder_id}/constraints/{constraint_name}` * `organizations/{organization_id}/constraints/{constraint_name}` For example, "/projects/123/constraints/compute.disableSerialPortAccess".
 	Name *string `json:"name,omitempty"`
+	// Shows if dry run is supported for this constraint or not.
+	SupportsDryRun *bool `json:"supportsDryRun,omitempty"`
 }

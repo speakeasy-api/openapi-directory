@@ -19,6 +19,7 @@ type DescribeJobTemplateResponse struct {
 	JobExecutionsRolloutConfig *JobExecutionsRolloutConfig `json:"jobExecutionsRolloutConfig,omitempty"`
 	JobTemplateArn             *string                     `json:"jobTemplateArn,omitempty"`
 	JobTemplateID              *string                     `json:"jobTemplateId,omitempty"`
+	MaintenanceWindows         []MaintenanceWindow         `json:"maintenanceWindows,omitempty"`
 	// Configuration for pre-signed S3 URLs.
 	PresignedURLConfig *PresignedURLConfig `json:"presignedUrlConfig,omitempty"`
 	// Specifies the amount of time each device has to finish its execution of the job. A timer is started when the job execution status is set to <code>IN_PROGRESS</code>. If the job execution status is not set to another terminal state before the timer expires, it will be automatically set to <code>TIMED_OUT</code>.

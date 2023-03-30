@@ -318,7 +318,7 @@ func (s *drives) DriveDrivesUnhide(ctx context.Context, request operations.Drive
 	return res, nil
 }
 
-// DriveDrivesUpdate - Updates the metadate for a shared drive.
+// DriveDrivesUpdate - Updates the metadata for a shared drive.
 func (s *drives) DriveDrivesUpdate(ctx context.Context, request operations.DriveDrivesUpdateRequest) (*operations.DriveDrivesUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/drives/{driveId}", request.PathParams, nil)

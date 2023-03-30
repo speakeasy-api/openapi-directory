@@ -85,6 +85,7 @@ func main() {
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsDeploy` - Deploys the processor version.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersion` - Evaluates a ProcessorVersion against annotated documents, producing an Evaluation.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsList` - Retrieves a set of evaluations for a given processor version.
+* `DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersion` - Imports a processor version from source processor version.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsList` - Lists all versions of a processor.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsProcess` - Processes a single document.
 * `DocumentaiProjectsLocationsProcessorsProcessorVersionsTrain` - Trains a new processor version. Operation metadata is returned as cloud_documentai_core.TrainProcessorVersionMetadata.

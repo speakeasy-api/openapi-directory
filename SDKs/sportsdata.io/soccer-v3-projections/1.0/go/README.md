@@ -56,6 +56,7 @@ func main() {
 ### SDK SDK
 
 * `DfsSlatesByDate` - Dfs Slates By Date
+* `InjuredPlayersByCompetition` - Injured Players By Competition
 * `ProjectedPlayerGameStatsByCompetitionWDfsSalaries` - Projected Player Game Stats by Competition (w/ DFS Salaries)
 * `ProjectedPlayerGameStatsByDateWDfsSalaries` - Projected Player Game Stats by Date (w/ DFS Salaries)
 * `ProjectedPlayerGameStatsByPlayerWDfsSalaries` - Projected Player Game Stats by Player (w/ DFS Salaries)

@@ -3,60 +3,8 @@
 package shared
 
 import (
-	"encoding/json"
-	"fmt"
+	"time"
 )
-
-// AccountTypeEnum - The type of account. Note: payPal, merchantAccount, investmentAccount, and mortgage types have been deprecated and will be removed in the future.
-type AccountTypeEnum string
-
-const (
-	AccountTypeEnumChecking          AccountTypeEnum = "checking"
-	AccountTypeEnumSavings           AccountTypeEnum = "savings"
-	AccountTypeEnumCash              AccountTypeEnum = "cash"
-	AccountTypeEnumCreditCard        AccountTypeEnum = "creditCard"
-	AccountTypeEnumLineOfCredit      AccountTypeEnum = "lineOfCredit"
-	AccountTypeEnumOtherAsset        AccountTypeEnum = "otherAsset"
-	AccountTypeEnumOtherLiability    AccountTypeEnum = "otherLiability"
-	AccountTypeEnumPayPal            AccountTypeEnum = "payPal"
-	AccountTypeEnumMerchantAccount   AccountTypeEnum = "merchantAccount"
-	AccountTypeEnumInvestmentAccount AccountTypeEnum = "investmentAccount"
-	AccountTypeEnumMortgage          AccountTypeEnum = "mortgage"
-)
-
-func (e *AccountTypeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "checking":
-		fallthrough
-	case "savings":
-		fallthrough
-	case "cash":
-		fallthrough
-	case "creditCard":
-		fallthrough
-	case "lineOfCredit":
-		fallthrough
-	case "otherAsset":
-		fallthrough
-	case "otherLiability":
-		fallthrough
-	case "payPal":
-		fallthrough
-	case "merchantAccount":
-		fallthrough
-	case "investmentAccount":
-		fallthrough
-	case "mortgage":
-		*e = AccountTypeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for AccountTypeEnum: %s", s)
-	}
-}
 
 type Account struct {
 	// The current balance of the account in milliunits format
@@ -64,21 +12,28 @@ type Account struct {
 	// The current cleared balance of the account in milliunits format
 	ClearedBalance int64 `json:"cleared_balance"`
 	// Whether this account is closed or not
-	Closed bool `json:"closed"`
+	Closed              bool             `json:"closed"`
+	DebtEscrowAmounts   map[string]int64 `json:"debt_escrow_amounts,omitempty"`
+	DebtInterestRates   map[string]int64 `json:"debt_interest_rates,omitempty"`
+	DebtMinimumPayments map[string]int64 `json:"debt_minimum_payments,omitempty"`
+	// The original debt/loan account balance, specified in milliunits format.
+	DebtOriginalBalance *int64 `json:"debt_original_balance,omitempty"`
 	// Whether or not the account has been deleted.  Deleted accounts will only be included in delta requests.
 	Deleted bool `json:"deleted"`
 	// If an account linked to a financial institution (direct_import_linked=true) and the linked connection is not in a healthy state, this will be true.
 	DirectImportInError *bool `json:"direct_import_in_error,omitempty"`
 	// Whether or not the account is linked to a financial institution for automatic transaction import.
-	DirectImportLinked *bool   `json:"direct_import_linked,omitempty"`
-	ID                 string  `json:"id"`
-	Name               string  `json:"name"`
-	Note               *string `json:"note,omitempty"`
+	DirectImportLinked *bool  `json:"direct_import_linked,omitempty"`
+	ID                 string `json:"id"`
+	// A date/time specifying when the account was last reconciled.
+	LastReconciledAt *time.Time `json:"last_reconciled_at,omitempty"`
+	Name             string     `json:"name"`
+	Note             *string    `json:"note,omitempty"`
 	// Whether this account is on budget or not
 	OnBudget bool `json:"on_budget"`
 	// The payee id which should be used when transferring to this account
 	TransferPayeeID string `json:"transfer_payee_id"`
-	// The type of account. Note: payPal, merchantAccount, investmentAccount, and mortgage types have been deprecated and will be removed in the future.
+	// The type of account
 	Type AccountTypeEnum `json:"type"`
 	// The current uncleared balance of the account in milliunits format
 	UnclearedBalance int64 `json:"uncleared_balance"`

@@ -1,5 +1,6 @@
 attachments.go
 blockednumbers.go
+credits.go
 message.go
 profile.go
 webhooks.go
@@ -19,6 +20,7 @@ pkg/utils/utils.go
 pkg/models/operations/postrmmpresignattachment.go
 pkg/models/operations/getblockednumbers.go
 pkg/models/operations/postblockednumbers.go
+pkg/models/operations/postcredittransfer.go
 pkg/models/operations/getmessages.go
 pkg/models/operations/getmessagessend.go
 pkg/models/operations/getmessagesid.go
@@ -34,6 +36,7 @@ pkg/models/shared/presigninfo.go
 pkg/models/shared/presignrequest.go
 pkg/models/shared/security.go
 pkg/models/shared/blockednumber.go
+pkg/models/shared/transferentry.go
 pkg/models/shared/message.go
 pkg/models/shared/error.go
 pkg/models/shared/submissionentry.go

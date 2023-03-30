@@ -37,7 +37,7 @@ type AddUserForWorkspaceRequest struct {
 
 // AddUserForWorkspace200ApplicationJSON - The user was added successfully to the workspace or organization.
 type AddUserForWorkspace200ApplicationJSON struct {
-	Data *shared.UserResponse `json:"data,omitempty"`
+	Data *shared.UserBaseResponse `json:"data,omitempty"`
 }
 
 type AddUserForWorkspaceResponse struct {

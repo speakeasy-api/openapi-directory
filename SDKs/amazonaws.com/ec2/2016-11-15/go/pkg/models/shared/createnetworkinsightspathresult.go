@@ -8,6 +8,46 @@ import (
 	"time"
 )
 
+// CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationDestinationPortRange - The destination port range.
+type CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationDestinationPortRange struct {
+	FromPort *int64
+	ToPort   *int64
+}
+
+// CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationSourcePortRange - The source port range.
+type CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationSourcePortRange struct {
+	FromPort *int64
+	ToPort   *int64
+}
+
+// CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestination - Scopes the analysis to network paths that match specific filters at the destination.
+type CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestination struct {
+	DestinationAddress   *string
+	DestinationPortRange *CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationDestinationPortRange
+	SourceAddress        *string
+	SourcePortRange      *CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestinationSourcePortRange
+}
+
+// CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSourceDestinationPortRange - The destination port range.
+type CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSourceDestinationPortRange struct {
+	FromPort *int64
+	ToPort   *int64
+}
+
+// CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSourceSourcePortRange - The source port range.
+type CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSourceSourcePortRange struct {
+	FromPort *int64
+	ToPort   *int64
+}
+
+// CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSource - Scopes the analysis to network paths that match specific filters at the source.
+type CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSource struct {
+	DestinationAddress   *string
+	DestinationPortRange *CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSourceDestinationPortRange
+	SourceAddress        *string
+	SourcePortRange      *CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSourceSourcePortRange
+}
+
 // CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum - The protocol.
 type CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum string
 
@@ -45,6 +85,8 @@ type CreateNetworkInsightsPathResultNetworkInsightsPath struct {
 	DestinationArn         *string
 	DestinationIP          *string
 	DestinationPort        *int64
+	FilterAtDestination    *CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestination
+	FilterAtSource         *CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSource
 	NetworkInsightsPathArn *string
 	NetworkInsightsPathID  *string
 	Protocol               *CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum

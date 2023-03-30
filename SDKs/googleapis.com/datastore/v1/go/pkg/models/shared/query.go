@@ -4,7 +4,7 @@ package shared
 
 // Query - A query for entities.
 type Query struct {
-	// The properties to make distinct. The query results will contain the first result for each distinct combination of values for the given properties (if empty, all results are returned).
+	// The properties to make distinct. The query results will contain the first result for each distinct combination of values for the given properties (if empty, all results are returned). Requires: * If `order` is specified, the set of distinct on properties must appear before the non-distinct on properties in `order`.
 	DistinctOn []PropertyReference `json:"distinctOn,omitempty"`
 	// An ending point for the query results. Query cursors are returned in query result batches and [can only be used to limit the same query](https://cloud.google.com/datastore/docs/concepts/queries#cursors_limits_and_offsets).
 	EndCursor *string `json:"endCursor,omitempty"`

@@ -17,6 +17,8 @@ type Store struct {
 	CurrencyCode string `json:"currencyCode"`
 	// The version of GO to use
 	GoVersion int `json:"goVersion"`
+	// Is the store a test or a production store
+	IsTest bool `json:"isTest"`
 	// The action links for this store
 	Links StoreLinks `json:"links"`
 	// The store name. Must be unique.

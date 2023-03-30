@@ -23,7 +23,7 @@ type CreateContentHeaders struct {
 }
 
 type CreateContentRequestBody struct {
-	// A unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
+	// A unique, case-sensitive identifier that you provide to ensure the idempotency of the request. If not provided, the Amazon Web Services SDK populates this field. For more information about idempotency, see <a href="https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/">Making retries safe with idempotent APIs</a>.
 	ClientToken *string `json:"clientToken,omitempty"`
 	// A key/value map to store attributes without affecting tagging or recommendations. For example, when synchronizing data between an external system and Wisdom, you can store an external version identifier as metadata to utilize for determining drift.
 	Metadata map[string]string `json:"metadata,omitempty"`

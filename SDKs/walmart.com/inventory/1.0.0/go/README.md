@@ -22,14 +22,7 @@ import (
 )
 
 func main() {
-    s := sdk.New(
-        sdk.WithSecurity(shared.Security{
-            BasicScheme: shared.SchemeBasicScheme{
-                Password: "YOUR_PASSWORD_HERE",
-                Username: "YOUR_USERNAME_HERE",
-            },
-        }),
-    )
+    s := sdk.New()
 
     req := operations.GetInventoryRequest{
         QueryParams: operations.GetInventoryQueryParams{
@@ -37,11 +30,10 @@ func main() {
             Sku: "deserunt",
         },
         Headers: operations.GetInventoryHeaders{
-            Authorization: "porro",
-            WmConsumerChannelType: "nulla",
-            WmQosCorrelationID: "id",
-            WmSecAccessToken: "vero",
-            WmSvcName: "perspiciatis",
+            WmConsumerChannelType: "porro",
+            WmQosCorrelationID: "nulla",
+            WmSecAccessToken: "id",
+            WmSvcName: "vero",
         },
     }
 

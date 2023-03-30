@@ -28,7 +28,7 @@ type NetworkconnectivityProjectsLocationsSpokesListQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-	// An expression that filters the results listed in the response.
+	// An expression that filters the list of results.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`

@@ -11,8 +11,9 @@ import (
 type TypeSyntaxEnum string
 
 const (
-	TypeSyntaxEnumSyntaxProto2 TypeSyntaxEnum = "SYNTAX_PROTO2"
-	TypeSyntaxEnumSyntaxProto3 TypeSyntaxEnum = "SYNTAX_PROTO3"
+	TypeSyntaxEnumSyntaxProto2   TypeSyntaxEnum = "SYNTAX_PROTO2"
+	TypeSyntaxEnumSyntaxProto3   TypeSyntaxEnum = "SYNTAX_PROTO3"
+	TypeSyntaxEnumSyntaxEditions TypeSyntaxEnum = "SYNTAX_EDITIONS"
 )
 
 func (e *TypeSyntaxEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *TypeSyntaxEnum) UnmarshalJSON(data []byte) error {
 	case "SYNTAX_PROTO2":
 		fallthrough
 	case "SYNTAX_PROTO3":
+		fallthrough
+	case "SYNTAX_EDITIONS":
 		*e = TypeSyntaxEnum(s)
 		return nil
 	default:
@@ -33,6 +36,8 @@ func (e *TypeSyntaxEnum) UnmarshalJSON(data []byte) error {
 
 // Type - A protocol buffer message type.
 type Type struct {
+	// The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+	Edition *string `json:"edition,omitempty"`
 	// The list of fields.
 	Fields []Field `json:"fields,omitempty"`
 	// The fully qualified message name.

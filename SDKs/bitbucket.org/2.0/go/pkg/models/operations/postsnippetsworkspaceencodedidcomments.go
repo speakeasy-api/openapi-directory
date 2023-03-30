@@ -37,5 +37,5 @@ type PostSnippetsWorkspaceEncodedIDCommentsResponse struct {
 	// If the authenticated user does not have access to the snippet.
 	Error map[string]interface{}
 	// The newly created comment.
-	Snippet map[string]interface{}
+	SnippetComment map[string]interface{}
 }

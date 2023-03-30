@@ -18,7 +18,7 @@ type DeclineInvitationsHeaders struct {
 }
 
 type DeclineInvitationsRequestBody struct {
-	// The list of account IDs for the accounts from which to decline the invitations to Security Hub.
+	// The list of prospective member account IDs for which to decline an invitation.
 	AccountIds []string `json:"AccountIds"`
 }
 

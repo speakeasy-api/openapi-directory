@@ -15,8 +15,14 @@ type ListFeatureValuesQueryParams struct {
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 }
 
+type ListFeatureValuesHeaders struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
+}
+
 type ListFeatureValuesRequest struct {
 	QueryParams ListFeatureValuesQueryParams
+	Headers     ListFeatureValuesHeaders
 }
 
 type ListFeatureValuesResponse struct {

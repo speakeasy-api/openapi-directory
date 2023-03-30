@@ -67,7 +67,7 @@ func (e *ProductViewChannelEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// ProductView - Product fields. Values are only set for fields requested explicitly in the request's search query. Available only to selected merchants. Submit the [interest form](https://forms.gle/7Uy8htzAN8oNokz9A) to request access.
+// ProductView - Product fields. Values are only set for fields requested explicitly in the request's search query.
 type ProductView struct {
 	// Aggregated destination status.
 	AggregatedDestinationStatus *ProductViewAggregatedDestinationStatusEnum `json:"aggregatedDestinationStatus,omitempty"`

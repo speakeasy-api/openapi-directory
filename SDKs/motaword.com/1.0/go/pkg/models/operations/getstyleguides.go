@@ -35,7 +35,7 @@ func (e *GetStyleGuidesWithEnum) UnmarshalJSON(data []byte) error {
 }
 
 type GetStyleGuidesQueryParams struct {
-	// Attach further information. Possible values 'preview' to fetch temporary preview URLs for Box.com or native PDF. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
+	// Attach further information. Possible values 'preview' to fetch temporary preview URLs. This is NOT recommended to be used with list calls. Only use with[]=preview for single document/style guide calls.
 	With []GetStyleGuidesWithEnum `queryParam:"style=form,explode=true,name=with[]"`
 }
 

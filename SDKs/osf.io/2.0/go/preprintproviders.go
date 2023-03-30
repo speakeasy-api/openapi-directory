@@ -123,7 +123,7 @@ func (s *preprintProviders) PreprintProviderDetail(ctx context.Context, request 
 
 // PreprintProviderLicensesList - List all licenses
 //
-// A paginated list of the licenses allowed bya preprint provider.
+// A paginated list of the licenses allowed by a preprint provider.
 // #### Returns
 // Returns a JSON object containing `data` and `links` keys.
 //

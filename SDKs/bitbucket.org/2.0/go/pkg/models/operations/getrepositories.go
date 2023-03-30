@@ -55,7 +55,7 @@ type GetRepositoriesQueryParams struct {
 	// after this [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)
 	//  timestamp. Example: `YYYY-MM-DDTHH:mm:ss.sssZ`
 	After *string `queryParam:"style=form,explode=true,name=after"`
-	// Query string to narrow down the response as per [filtering and sorting](../meta/filtering).
+	// Query string to narrow down the response as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	// `role` parameter must also be specified.
 	//
 	Q *string `queryParam:"style=form,explode=true,name=q"`
@@ -67,7 +67,7 @@ type GetRepositoriesQueryParams struct {
 	// * **owner**: returns all repositories owned by the current user
 	//
 	Role *GetRepositoriesRoleEnum `queryParam:"style=form,explode=true,name=role"`
-	// Field by which the results should be sorted as per [filtering and sorting](../meta/filtering).
+	// Field by which the results should be sorted as per [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }

@@ -10,7 +10,7 @@ type OrderSummary struct {
 	// Sets of two or more line items in current order
 	Items []LineItemSummary `json:"items"`
 	// Unique identifier of the current order
-	OrderID int64 `json:"orderId"`
+	OrderID string `json:"orderId"`
 	// Unique identifier of the parent order. All refund/chargeback orders are tied to the original order.
 	// The orginal order's `orderId` is the `parentOrderId` of refund/chargeback orders
 	ParentOrderID *string             `json:"parentOrderId,omitempty"`

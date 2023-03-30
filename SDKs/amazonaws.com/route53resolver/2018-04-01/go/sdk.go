@@ -2951,7 +2951,7 @@ func (s *SDK) GetFirewallRuleGroupPolicy(ctx context.Context, request operations
 	return res, nil
 }
 
-// GetResolverConfig - Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private Cloud.
+// GetResolverConfig - Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private Cloud.
 func (s *SDK) GetResolverConfig(ctx context.Context, request operations.GetResolverConfigRequest) (*operations.GetResolverConfigResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Resolver.GetResolverConfig"
@@ -3051,6 +3051,16 @@ func (s *SDK) GetResolverConfig(ctx context.Context, request operations.GetResol
 			}
 
 			res.AccessDeniedException = out
+		}
+	case httpRes.StatusCode == 485:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ValidationException = out
 		}
 	}
 
@@ -3880,6 +3890,16 @@ func (s *SDK) GetResolverRulePolicy(ctx context.Context, request operations.GetR
 
 			res.InternalServiceErrorException = out
 		}
+	case httpRes.StatusCode == 483:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AccessDeniedException = out
+		}
 	}
 
 	return res, nil
@@ -4631,7 +4651,7 @@ func (s *SDK) ListFirewallRules(ctx context.Context, request operations.ListFire
 	return res, nil
 }
 
-// ListResolverConfigs - Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage DNS resolution behavior for your VPCs.
+// ListResolverConfigs - Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage DNS resolution behavior for your VPCs.
 func (s *SDK) ListResolverConfigs(ctx context.Context, request operations.ListResolverConfigsRequest) (*operations.ListResolverConfigsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Resolver.ListResolverConfigs"
@@ -4745,6 +4765,16 @@ func (s *SDK) ListResolverConfigs(ctx context.Context, request operations.ListRe
 			}
 
 			res.AccessDeniedException = out
+		}
+	case httpRes.StatusCode == 486:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ValidationException = out
 		}
 	}
 
@@ -5984,6 +6014,16 @@ func (s *SDK) PutResolverRulePolicy(ctx context.Context, request operations.PutR
 
 			res.InternalServiceErrorException = out
 		}
+	case httpRes.StatusCode == 484:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.AccessDeniedException = out
+		}
 	}
 
 	return res, nil
@@ -6685,7 +6725,7 @@ func (s *SDK) UpdateFirewallRuleGroupAssociation(ctx context.Context, request op
 	return res, nil
 }
 
-// UpdateResolverConfig - Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private Cloud.
+// UpdateResolverConfig - Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private Cloud.
 func (s *SDK) UpdateResolverConfig(ctx context.Context, request operations.UpdateResolverConfigRequest) (*operations.UpdateResolverConfigResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Resolver.UpdateResolverConfig"
@@ -6816,6 +6856,16 @@ func (s *SDK) UpdateResolverConfig(ctx context.Context, request operations.Updat
 
 			res.AccessDeniedException = out
 		}
+	case httpRes.StatusCode == 488:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ValidationException = out
+		}
 	}
 
 	return res, nil
@@ -6937,7 +6987,7 @@ func (s *SDK) UpdateResolverDnssecConfig(ctx context.Context, request operations
 	return res, nil
 }
 
-// UpdateResolverEndpoint - Updates the name of an inbound or an outbound Resolver endpoint.
+// UpdateResolverEndpoint - Updates the name, or enpoint type for an inbound or an outbound Resolver endpoint. You can only update between IPV4 and DUALSTACK, IPV6 endpoint type can't be updated to other type.
 func (s *SDK) UpdateResolverEndpoint(ctx context.Context, request operations.UpdateResolverEndpointRequest) (*operations.UpdateResolverEndpointResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=Route53Resolver.UpdateResolverEndpoint"

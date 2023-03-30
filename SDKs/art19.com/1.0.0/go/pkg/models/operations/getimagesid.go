@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetImagesIDSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetImagesIDPathParams struct {
 	// The ID of the image resource to load.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -14,6 +18,7 @@ type GetImagesIDPathParams struct {
 
 type GetImagesIDRequest struct {
 	PathParams GetImagesIDPathParams
+	Security   GetImagesIDSecurity
 }
 
 // GetImagesID200ApplicationVndAPIPlusJSON - Success

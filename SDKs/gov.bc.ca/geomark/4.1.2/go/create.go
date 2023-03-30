@@ -65,6 +65,10 @@ func (s *create) PostGeomarksCopy(ctx context.Context, request operations.PostGe
 		RawResponse: httpRes,
 	}
 	switch {
+	case httpRes.StatusCode == 200:
+		fallthrough
+	case httpRes.StatusCode == 302:
+		fallthrough
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 500:
@@ -110,6 +114,8 @@ func (s *create) PostGeomarksNew(ctx context.Context, request operations.PostGeo
 		RawResponse: httpRes,
 	}
 	switch {
+	case httpRes.StatusCode == 200:
+		fallthrough
 	case httpRes.StatusCode == 302:
 		fallthrough
 	case httpRes.StatusCode == 400:

@@ -35,7 +35,7 @@ func main() {
                 "fuga": "facilis",
                 "eum": "iusto",
             },
-            DataSetPublicationDate: "2022-12-10T22:07:53.414Z",
+            DataSetPublicationDate: "2022-12-11T09:34:29.891Z",
             DataSetType: "customer_profile_by_geography",
             DestinationS3BucketName: "inventore",
             DestinationS3Prefix: "sapiente",

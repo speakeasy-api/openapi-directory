@@ -54,6 +54,7 @@ pkg/models/shared/npmrepository.go
 pkg/models/shared/mavenrepository.go
 pkg/models/shared/dockerrepository.go
 pkg/models/shared/mavenrepositoryconfig.go
+pkg/models/shared/dockerrepositoryconfig.go
 pkg/models/shared/listdockerimagesresponse.go
 pkg/models/shared/dockerimage.go
 pkg/models/shared/listfilesresponse.go

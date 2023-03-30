@@ -76,6 +76,7 @@ type DBInstance struct {
 	PubliclyAccessible                            *bool
 	ReadReplicaDBClusterIdentifiers               []string
 	ReadReplicaDBInstanceIdentifiers              []string
+	ReadReplicaSourceDBClusterIdentifier          *string
 	ReadReplicaSourceDBInstanceIdentifier         *string
 	ReplicaMode                                   *ReplicaModeEnum
 	ResumeFullAutomationModeTime                  *time.Time

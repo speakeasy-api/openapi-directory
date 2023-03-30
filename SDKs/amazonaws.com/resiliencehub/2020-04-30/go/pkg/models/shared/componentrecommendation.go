@@ -2,7 +2,7 @@
 
 package shared
 
-// ComponentRecommendation - Defines recommendations for an AWS Resilience Hub Application Component, returned as an object. This object contains component names, configuration recommendations, and recommendation statuses.
+// ComponentRecommendation - Defines recommendations for an Resilience Hub Application Component, returned as an object. This object contains component names, configuration recommendations, and recommendation statuses.
 type ComponentRecommendation struct {
 	AppComponentName      string                             `json:"appComponentName"`
 	ConfigRecommendations []ConfigRecommendation             `json:"configRecommendations"`

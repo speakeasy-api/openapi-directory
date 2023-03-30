@@ -19,10 +19,8 @@ type GetMultiNodeInventoryForSkuAndAllShipnodesQueryParams struct {
 }
 
 type GetMultiNodeInventoryForSkuAndAllShipnodesHeaders struct {
-	// Basic authorization header. Base 64 encodes the Client ID and Client Secret retrieved in step two of the integration steps.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
-	WmConsumerChannelType string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
+	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
 	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
 	// The access token retrieved in the Token API call
@@ -58,8 +56,9 @@ func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailT
 	}
 }
 
+// GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQty - Quantity of an item that is available to be allocated to orders
 type GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQty struct {
-	// The number available in the inventory
+	// Inventory Count
 	Amount float64 `json:"amount"`
 	// The unit of measurement. Example: 'EACH'
 	Unit GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum `json:"unit"`
@@ -127,7 +126,6 @@ func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors
 	}
 }
 
-// GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors - Node Update Error description.
 type GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors struct {
 	Category         *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCategoryEnum `json:"category,omitempty"`
 	Causes           []GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrorsCauses      `json:"causes,omitempty"`
@@ -160,17 +158,51 @@ func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQ
 	}
 }
 
+// GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQty - Quantity of an item that is input by the seller
 type GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQty struct {
-	// The number available in the inventory
+	// Inventory Count
 	Amount float64 `json:"amount"`
 	// The unit of measurement. Example: 'EACH'
 	Unit GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQtyUnitEnum `json:"unit"`
 }
 
+// GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum - The unit of measurement. Example: 'EACH'
+type GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum string
+
+const (
+	GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnumEach GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum = "EACH"
+)
+
+func (e *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "EACH":
+		*e = GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum: %s", s)
+	}
+}
+
+// GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQty - Quantity that has been ordered by the customers but not yet shipped
+type GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQty struct {
+	// Inventory Count
+	Amount float64 `json:"amount"`
+	// The unit of measurement. Example: 'EACH'
+	Unit GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQtyUnitEnum `json:"unit"`
+}
+
 type GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes struct {
+	// Quantity of an item that is available to be allocated to orders
 	AvailToSellQty *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQty `json:"availToSellQty,omitempty"`
 	Errors         []GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesErrors        `json:"errors,omitempty"`
-	InputQty       *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQty       `json:"inputQty,omitempty"`
+	// Quantity of an item that is input by the seller
+	InputQty *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesInputQty `json:"inputQty,omitempty"`
+	// Quantity that has been ordered by the customers but not yet shipped
+	ReservedQty *GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesReservedQty `json:"reservedQty,omitempty"`
 	// ShipNode Id of the ship node for which the inventory is requested
 	ShipNode *string `json:"shipNode,omitempty"`
 }

@@ -4,15 +4,19 @@ package shared
 
 // WorkspaceRead - Successful operation
 type WorkspaceRead struct {
-	AnonymousDataCollection *bool          `json:"anonymousDataCollection,omitempty"`
-	CustomerID              string         `json:"customerId"`
-	DisplaySetupWizard      *bool          `json:"displaySetupWizard,omitempty"`
-	Email                   *string        `json:"email,omitempty"`
-	InitialSetupComplete    bool           `json:"initialSetupComplete"`
-	Name                    string         `json:"name"`
-	News                    *bool          `json:"news,omitempty"`
-	Notifications           []Notification `json:"notifications,omitempty"`
-	SecurityUpdates         *bool          `json:"securityUpdates,omitempty"`
-	Slug                    string         `json:"slug"`
-	WorkspaceID             string         `json:"workspaceId"`
+	AnonymousDataCollection *bool               `json:"anonymousDataCollection,omitempty"`
+	CustomerID              string              `json:"customerId"`
+	DefaultGeography        *GeographyEnum      `json:"defaultGeography,omitempty"`
+	DisplaySetupWizard      *bool               `json:"displaySetupWizard,omitempty"`
+	Email                   *string             `json:"email,omitempty"`
+	FeedbackDone            *bool               `json:"feedbackDone,omitempty"`
+	FirstCompletedSync      *bool               `json:"firstCompletedSync,omitempty"`
+	InitialSetupComplete    bool                `json:"initialSetupComplete"`
+	Name                    string              `json:"name"`
+	News                    *bool               `json:"news,omitempty"`
+	Notifications           []Notification      `json:"notifications,omitempty"`
+	SecurityUpdates         *bool               `json:"securityUpdates,omitempty"`
+	Slug                    string              `json:"slug"`
+	WebhookConfigs          []WebhookConfigRead `json:"webhookConfigs,omitempty"`
+	WorkspaceID             string              `json:"workspaceId"`
 }

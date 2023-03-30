@@ -15,8 +15,14 @@ type ListInflectedFormsQueryParams struct {
 	Lexeme *string `queryParam:"style=form,explode=true,name=lexeme"`
 }
 
+type ListInflectedFormsHeaders struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
+}
+
 type ListInflectedFormsRequest struct {
 	QueryParams ListInflectedFormsQueryParams
+	Headers     ListInflectedFormsHeaders
 }
 
 type ListInflectedForms200ApplicationJSONFeatures struct {

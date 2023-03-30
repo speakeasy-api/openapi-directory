@@ -700,6 +700,25 @@ const (
 	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR6idn16xlarge   CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r6idn.16xlarge"
 	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR6idn24xlarge   CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r6idn.24xlarge"
 	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR6idn32xlarge   CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r6idn.32xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumC7gMetal        CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "c7g.metal"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM7gMedium       CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m7g.medium"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM7gLarge        CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m7g.large"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM7gXlarge       CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m7g.xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM7g2xlarge      CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m7g.2xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM7g4xlarge      CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m7g.4xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM7g8xlarge      CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m7g.8xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM7g12xlarge     CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m7g.12xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM7g16xlarge     CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m7g.16xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumM7gMetal        CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "m7g.metal"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7gMedium       CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.medium"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7gLarge        CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.large"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7gXlarge       CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7g2xlarge      CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.2xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7g4xlarge      CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.4xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7g8xlarge      CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.8xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7g12xlarge     CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.12xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7g16xlarge     CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.16xlarge"
+	CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnumR7gMetal        CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -1945,6 +1964,44 @@ func (e *CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTy
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = CreateCapacityReservationFleetResultFleetCapacityReservationsInstanceTypeEnum(s)
 		return nil
 	default:

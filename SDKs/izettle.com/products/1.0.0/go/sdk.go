@@ -22,27 +22,7 @@ type HTTPClient interface {
 // String provides a helper function to return a pointer to a string
 func String(s string) *string { return &s }
 
-// SDK - A product library is a representation of all the items that can be
-// displayed, put in a shopping cart and sold to a customer. Items may be
-// either producs or discounts.
-//
-// A product is a synthetic construct, wrapping one or more variants (which is
-// the actual item being sold) Variants expresses different variations of
-// properties such as for example price, size or color. A discount will reduce
-// the total amount charged in a shopping cart. It can be used per item line,
-// or on the whole cart. It may reduce the affected amount by a percentage, or
-// by a fixed amount.
-//
-// Together, the above types of entities makes up a complete library. The
-// library can be fetched as a whole through the library endpoint, where each
-// consecutive change applied to the library is available. Once the full
-// library is retrieved, only later events needs to be fetched to keep the
-// client up to date with the server
-//
-// All path patterns "/organizations/{organizationUuid}/" can be replaced
-// with "/organizations/self/" for convenience as all endpoints are for
-// authorized users.
-// https://github.com/iZettle/api-documentation
+// SDK - The Product Library API is used for managing merchant's product information and product images.
 type SDK struct {
 	Categories     *categories
 	Discounts      *discounts

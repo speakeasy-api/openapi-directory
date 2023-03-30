@@ -22,7 +22,7 @@ type PrivateArticleCreateResponse struct {
 	// Forbidden
 	ErrorMessage *shared.ErrorMessage
 	// Created
-	Location    *shared.Location
-	StatusCode  int
-	RawResponse *http.Response
+	LocationWarnings *shared.LocationWarnings
+	StatusCode       int
+	RawResponse      *http.Response
 }

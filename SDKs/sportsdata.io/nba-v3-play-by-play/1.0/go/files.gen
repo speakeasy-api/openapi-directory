@@ -17,5 +17,6 @@ pkg/models/shared/playbyplay.go
 pkg/models/shared/quarter.go
 pkg/models/shared/play.go
 pkg/models/shared/game.go
+pkg/models/shared/series.go
 pkg/models/shared/security.go
 USAGE.md

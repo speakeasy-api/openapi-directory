@@ -2,14 +2,14 @@
 
 package shared
 
-// RateLimit - This complex types defines the resource (such as an API method) for which the rate-limit data is returned. A method is included in an API, and an API is part of an API context for the API version specified.
+// RateLimit - This complex types defines the resource (such as an API method) for which the rate-limit data is returned.  <br><br>A method is included in an API, and an API is part of an API context for the API version specified.
 type RateLimit struct {
-	// The context of the API for which rate-limit data is returned. For example buy, sell, commerce, or developer.
+	// The context of the API for which rate-limit data is returned. For example <code>buy</code>, <code>sell</code>, <code>commerce</code>, <code>developer</code> or <code>tradingapi</code>.
 	APIContext *string `json:"apiContext,omitempty"`
-	// The name of the API for which rate-limit data is returned. For example browse for the Buy API, inventory for the Sell API, or taxonomy for the Commerce API.
+	// The name of the API for which rate-limit data is returned. For example <code>browse</code> for the Buy API, <code>inventory</code> for the Sell API, <code>taxonomy</code> for the Commerce API, or <code>tradingapi</code> for Trading API.
 	APIName *string `json:"apiName,omitempty"`
-	// The version of the API for which rate-limit data is returned. For example v1 or v2.
+	// The version of the API for which rate-limit data is returned. For example <code>v1</code> or <code>v2</code>.
 	APIVersion *string `json:"apiVersion,omitempty"`
-	// A list of the methods for which rate-limit data is returned. For example item for the Feed API, getOrder for the Fulfillment API, and getProduct for the Catalog API.
+	// A list of the methods for which rate-limit data is returned. For example <code>item</code> for the Feed API, <code>getOrder</code> for the Fulfillment API, <code>getProduct</code> for the Catalog API, <code>AddItems</code> for the Trading API.
 	Resources []Resource `json:"resources,omitempty"`
 }

@@ -12,12 +12,17 @@ type AttachmentRequestFile struct {
 	File    string `multipartForm:"name=file"`
 }
 
-// AttachmentRequestResourceSubtypeEnum - The type of the attachment. Must be one of the given values. If not specified, a file attachment of type `asana_file_attachments` will be assumed.
+// AttachmentRequestResourceSubtypeEnum - The type of the attachment. Must be one of the given values. If not specified, a file attachment of type `asana` will be assumed. Note that if the value of `resource_subtype` is `external`, a `parent`, `name`, and `url` must also be provided.
 type AttachmentRequestResourceSubtypeEnum string
 
 const (
-	AttachmentRequestResourceSubtypeEnumAsanaFileAttachments AttachmentRequestResourceSubtypeEnum = "asana_file_attachments"
-	AttachmentRequestResourceSubtypeEnumExternal             AttachmentRequestResourceSubtypeEnum = "external"
+	AttachmentRequestResourceSubtypeEnumAsana    AttachmentRequestResourceSubtypeEnum = "asana"
+	AttachmentRequestResourceSubtypeEnumDropbox  AttachmentRequestResourceSubtypeEnum = "dropbox"
+	AttachmentRequestResourceSubtypeEnumGdrive   AttachmentRequestResourceSubtypeEnum = "gdrive"
+	AttachmentRequestResourceSubtypeEnumOnedrive AttachmentRequestResourceSubtypeEnum = "onedrive"
+	AttachmentRequestResourceSubtypeEnumBox      AttachmentRequestResourceSubtypeEnum = "box"
+	AttachmentRequestResourceSubtypeEnumVimeo    AttachmentRequestResourceSubtypeEnum = "vimeo"
+	AttachmentRequestResourceSubtypeEnumExternal AttachmentRequestResourceSubtypeEnum = "external"
 )
 
 func (e *AttachmentRequestResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
@@ -26,7 +31,17 @@ func (e *AttachmentRequestResourceSubtypeEnum) UnmarshalJSON(data []byte) error 
 		return err
 	}
 	switch s {
-	case "asana_file_attachments":
+	case "asana":
+		fallthrough
+	case "dropbox":
+		fallthrough
+	case "gdrive":
+		fallthrough
+	case "onedrive":
+		fallthrough
+	case "box":
+		fallthrough
+	case "vimeo":
 		fallthrough
 	case "external":
 		*e = AttachmentRequestResourceSubtypeEnum(s)
@@ -47,16 +62,22 @@ func (e *AttachmentRequestResourceSubtypeEnum) UnmarshalJSON(data []byte) error 
 // appending the content type to the file path: `--form
 // "file=@file.pdf;type=application/pdf"`.
 type AttachmentRequest struct {
-	// Required for file attachments.
+	// *Optional*. Only relevant for external attachments with a parent task. A boolean indicating whether the current app should be connected with the attachment for the purposes of showing an app components widget. Requires the app to have been added to a project the parent task is in.
+	//
+	ConnectToApp *bool `multipartForm:"name=connect_to_app"`
+	// Required for `asana` attachments.
 	//
 	File *AttachmentRequestFile `multipartForm:"file"`
-	// The name of the external resource being attached. Required for attachments of type 'external'.
+	// The name of the external resource being attached. Required for attachments of type `external`.
 	//
 	Name *string `multipartForm:"name=name"`
-	// The type of the attachment. Must be one of the given values. If not specified, a file attachment of type `asana_file_attachments` will be assumed.
+	// Required identifier of the parent task, project, or project_brief, as a string.
+	//
+	Parent *string `multipartForm:"name=parent"`
+	// The type of the attachment. Must be one of the given values. If not specified, a file attachment of type `asana` will be assumed. Note that if the value of `resource_subtype` is `external`, a `parent`, `name`, and `url` must also be provided.
 	//
 	ResourceSubtype *AttachmentRequestResourceSubtypeEnum `multipartForm:"name=resource_subtype"`
-	// The URL of the external resource being attached. Required for attachments of type 'external'.
+	// The URL of the external resource being attached. Required for attachments of type `external`.
 	//
 	URL *string `multipartForm:"name=url"`
 }

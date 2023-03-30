@@ -11,4 +11,5 @@ type Fraudster struct {
 	CreatedAt            *time.Time `json:"CreatedAt,omitempty"`
 	DomainID             *string    `json:"DomainId,omitempty"`
 	GeneratedFraudsterID *string    `json:"GeneratedFraudsterId,omitempty"`
+	WatchlistIds         []string   `json:"WatchlistIds,omitempty"`
 }

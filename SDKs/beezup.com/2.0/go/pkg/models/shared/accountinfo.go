@@ -4,7 +4,9 @@ package shared
 
 // AccountInfo - User account information
 type AccountInfo struct {
-	CompanyInfo *CompanyInfo `json:"companyInfo,omitempty"`
+	// The email
+	CommercialOwnerEmail *string      `json:"commercialOwnerEmail,omitempty"`
+	CompanyInfo          *CompanyInfo `json:"companyInfo,omitempty"`
 	// The email
 	Email string                     `json:"email"`
 	Info  *BeezUPCommonInfoSummaries `json:"info,omitempty"`

@@ -32,7 +32,8 @@ func newSSH(defaultClient, securityClient HTTPClient, serverURL, language, sdkVe
 	}
 }
 
-// DeleteUsersSelectedUserSSHKeysKeyID - Deletes a specific SSH public key from a user's account
+// DeleteUsersSelectedUserSSHKeysKeyID - Delete a SSH key
+// Deletes a specific SSH public key from a user's account
 //
 // Example:
 // ```
@@ -86,7 +87,8 @@ func (s *ssh) DeleteUsersSelectedUserSSHKeysKeyID(ctx context.Context, request o
 	return res, nil
 }
 
-// GetUsersSelectedUserSSHKeys - Returns a paginated list of the user's SSH public keys.
+// GetUsersSelectedUserSSHKeys - List SSH keys
+// Returns a paginated list of the user's SSH public keys.
 //
 // Example:
 //
@@ -188,7 +190,8 @@ func (s *ssh) GetUsersSelectedUserSSHKeys(ctx context.Context, request operation
 	return res, nil
 }
 
-// GetUsersSelectedUserSSHKeysKeyID - Returns a specific SSH public key belonging to a user.
+// GetUsersSelectedUserSSHKeysKeyID - Get a SSH key
+// Returns a specific SSH public key belonging to a user.
 //
 // Example:
 // ```
@@ -282,7 +285,8 @@ func (s *ssh) GetUsersSelectedUserSSHKeysKeyID(ctx context.Context, request oper
 	return res, nil
 }
 
-// PostUsersSelectedUserSSHKeys - Adds a new SSH public key to the specified user account and returns the resulting key.
+// PostUsersSelectedUserSSHKeys - Add a new SSH key
+// Adds a new SSH public key to the specified user account and returns the resulting key.
 //
 // Example:
 // ```
@@ -385,7 +389,8 @@ func (s *ssh) PostUsersSelectedUserSSHKeys(ctx context.Context, request operatio
 	return res, nil
 }
 
-// PutUsersSelectedUserSSHKeysKeyID - Updates a specific SSH public key on a user's account
+// PutUsersSelectedUserSSHKeysKeyID - Update a SSH key
+// Updates a specific SSH public key on a user's account
 //
 // Note: Only the 'comment' field can be updated using this API. To modify the key or comment values, you must delete and add the key again.
 //

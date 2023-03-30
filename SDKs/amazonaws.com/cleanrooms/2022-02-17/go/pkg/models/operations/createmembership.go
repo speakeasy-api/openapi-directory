@@ -48,6 +48,8 @@ type CreateMembershipRequestBody struct {
 	CollaborationIdentifier string `json:"collaborationIdentifier"`
 	// An indicator as to whether query logging has been enabled or disabled for the collaboration.
 	QueryLogStatus CreateMembershipRequestBodyQueryLogStatusEnum `json:"queryLogStatus"`
+	// Map of tags assigned to a resource
+	Tags map[string]string `json:"tags,omitempty"`
 }
 
 type CreateMembershipRequest struct {

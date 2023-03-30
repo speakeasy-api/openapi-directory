@@ -25,10 +25,10 @@ type PatchPaymentInstrumentsIDRequest struct {
 
 type PatchPaymentInstrumentsIDResponse struct {
 	ContentType string
-	// OK - the request has succeeded.
-	PaymentInstrument *shared.PaymentInstrument
+	StatusCode  int
+	RawResponse *http.Response
 	// Bad Request - a problem reading or understanding the request.
 	RestServiceError *shared.RestServiceError
-	StatusCode       int
-	RawResponse      *http.Response
+	// OK - the request has succeeded.
+	UpdatePaymentInstrument *shared.UpdatePaymentInstrument
 }

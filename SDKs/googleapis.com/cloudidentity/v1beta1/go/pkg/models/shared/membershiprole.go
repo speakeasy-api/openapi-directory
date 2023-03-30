@@ -2,14 +2,6 @@
 
 package shared
 
-// MembershipRoleInput - A membership role within the Cloud Identity Groups API. A `MembershipRole` defines the privileges granted to a `Membership`.
-type MembershipRoleInput struct {
-	// The `MembershipRole` expiry details.
-	ExpiryDetail *ExpiryDetail `json:"expiryDetail,omitempty"`
-	// The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
-	Name *string `json:"name,omitempty"`
-}
-
 // MembershipRole - A membership role within the Cloud Identity Groups API. A `MembershipRole` defines the privileges granted to a `Membership`.
 type MembershipRole struct {
 	// The `MembershipRole` expiry details.
@@ -18,4 +10,12 @@ type MembershipRole struct {
 	Name *string `json:"name,omitempty"`
 	// Evaluations of restrictions applied to parent group on this membership.
 	RestrictionEvaluations *RestrictionEvaluations `json:"restrictionEvaluations,omitempty"`
+}
+
+// MembershipRoleInput - A membership role within the Cloud Identity Groups API. A `MembershipRole` defines the privileges granted to a `Membership`.
+type MembershipRoleInput struct {
+	// The `MembershipRole` expiry details.
+	ExpiryDetail *ExpiryDetail `json:"expiryDetail,omitempty"`
+	// The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
+	Name *string `json:"name,omitempty"`
 }

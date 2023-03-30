@@ -313,12 +313,12 @@ func (s *projects) PrivateProjectArticlesCreate(ctx context.Context, request ope
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Location
+			var out *shared.LocationWarnings
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Location = out
+			res.LocationWarnings = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -629,12 +629,12 @@ func (s *projects) PrivateProjectCreate(ctx context.Context, request operations.
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Location
+			var out *shared.CreateProjectResponse
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Location = out
+			res.CreateProjectResponse = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -1187,7 +1187,7 @@ func (s *projects) PrivateProjectPublish(ctx context.Context, request operations
 }
 
 // PrivateProjectUpdate - Update project
-// Updating an project by passing body parameters
+// Updating an project by passing body parameters; request can also be made with the PATCH method.
 func (s *projects) PrivateProjectUpdate(ctx context.Context, request operations.PrivateProjectUpdateRequest) (*operations.PrivateProjectUpdateResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/account/projects/{project_id}", request.PathParams, nil)
@@ -1477,6 +1477,8 @@ func (s *projects) ProjectsList(ctx context.Context, request operations.Projects
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
 	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
@@ -1501,6 +1503,8 @@ func (s *projects) ProjectsList(ctx context.Context, request operations.Projects
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out []shared.Project
@@ -1538,6 +1542,8 @@ func (s *projects) ProjectsSearch(ctx context.Context, request operations.Projec
 
 	req.Header.Set("Content-Type", reqContentType)
 
+	utils.PopulateHeaders(ctx, req, request.Headers)
+
 	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
@@ -1558,6 +1564,8 @@ func (s *projects) ProjectsSearch(ctx context.Context, request operations.Projec
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		res.Headers = httpRes.Header
+
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out []shared.Project

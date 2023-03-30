@@ -4,6 +4,8 @@ package shared
 
 // Group - A group within the Cloud Identity Groups API. A `Group` is a collection of entities, where each entity is either a user, another group, or a service account.
 type Group struct {
+	// Output only. Additional group keys associated with the Group.
+	AdditionalGroupKeys []EntityKey `json:"additionalGroupKeys,omitempty"`
 	// Output only. The time when the `Group` was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// An extended description to help users determine the purpose of a `Group`. Must not be longer than 4,096 characters.

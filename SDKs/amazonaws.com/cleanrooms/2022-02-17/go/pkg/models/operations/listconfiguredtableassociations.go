@@ -43,8 +43,10 @@ type ListConfiguredTableAssociationsResponse struct {
 	InternalServerException interface{}
 	// Success
 	ListConfiguredTableAssociationsOutput *shared.ListConfiguredTableAssociationsOutput
-	StatusCode                            int
-	RawResponse                           *http.Response
+	// ResourceNotFoundException
+	ResourceNotFoundException interface{}
+	StatusCode                int
+	RawResponse               *http.Response
 	// ThrottlingException
 	ThrottlingException interface{}
 	// ValidationException

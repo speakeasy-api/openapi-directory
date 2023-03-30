@@ -17,7 +17,7 @@ type AndroidpublisherEditsTracksPatchPathParams struct {
 	EditID string `pathParam:"style=simple,explode=false,name=editId"`
 	// Package name of the app.
 	PackageName string `pathParam:"style=simple,explode=false,name=packageName"`
-	// Identifier of the track.
+	// Identifier of the track. [More on track name](https://developers.google.com/android-publisher/tracks#ff-track-name)
 	Track string `pathParam:"style=simple,explode=false,name=track"`
 }
 

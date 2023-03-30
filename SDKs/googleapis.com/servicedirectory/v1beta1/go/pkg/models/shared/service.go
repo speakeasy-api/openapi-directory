@@ -12,6 +12,8 @@ type Service struct {
 	Metadata map[string]string `json:"metadata,omitempty"`
 	// Immutable. The resource name for the service in the format `projects/*/locations/*/namespaces/*/services/*`.
 	Name *string `json:"name,omitempty"`
+	// Output only. A globally unique identifier (in UUID4 format) for this service.
+	UID *string `json:"uid,omitempty"`
 	// Output only. The timestamp when the service was last updated. Note: endpoints being created/deleted/updated within the service are not considered service updates for the purpose of this timestamp.
 	UpdateTime *string `json:"updateTime,omitempty"`
 }

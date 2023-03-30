@@ -15,11 +15,10 @@ type GetUserPermissionsRepositoriesSecurity struct {
 
 type GetUserPermissionsRepositoriesQueryParams struct {
 	// Query string to narrow down the response as per
-	// [filtering and sorting](../../../meta/filtering).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Name of a response property sort the result by as per
-	// [filtering and sorting](../../../meta/filtering#query-sort).
-	//
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
 

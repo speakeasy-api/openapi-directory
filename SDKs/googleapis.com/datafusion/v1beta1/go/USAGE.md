@@ -40,68 +40,37 @@ func main() {
             UploadProtocol: "eum",
         },
         Request: &shared.InstanceInput{
-            Accelerators: []shared.Accelerator{
-                shared.Accelerator{
-                    AcceleratorType: "CDC",
-                    State: "UNKNOWN",
-                },
-                shared.Accelerator{
-                    AcceleratorType: "ACCELERATOR_TYPE_UNSPECIFIED",
-                    State: "UNKNOWN",
-                },
-            },
-            AvailableVersion: []shared.Version{
-                shared.Version{
-                    AvailableFeatures: []string{
-                        "voluptatum",
-                        "autem",
-                    },
-                    DefaultVersion: false,
-                    Type: "TYPE_GENERAL_AVAILABILITY",
-                    VersionNumber: "non",
-                },
-                shared.Version{
-                    AvailableFeatures: []string{
-                        "similique",
-                        "reprehenderit",
-                    },
-                    DefaultVersion: false,
-                    Type: "TYPE_GENERAL_AVAILABILITY",
-                    VersionNumber: "quo",
-                },
-            },
             CryptoKeyConfig: &shared.CryptoKeyConfig{
-                KeyReference: "quasi",
+                KeyReference: "iusto",
             },
-            DataprocServiceAccount: "laboriosam",
-            Description: "dicta",
-            DisplayName: "est",
+            DataprocServiceAccount: "ullam",
+            Description: "saepe",
+            DisplayName: "inventore",
             EnableRbac: false,
             EnableStackdriverLogging: false,
             EnableStackdriverMonitoring: false,
             EnableZoneSeparation: false,
             EventPublishConfig: &shared.EventPublishConfig{
                 Enabled: false,
-                Topic: "voluptatem",
+                Topic: "sapiente",
             },
             Labels: map[string]string{
-                "fugiat": "a",
-                "omnis": "eos",
+                "eum": "voluptatum",
+                "autem": "vel",
             },
             NetworkConfig: &shared.NetworkConfig{
-                IPAllocation: "accusamus",
-                Network: "accusamus",
+                IPAllocation: "non",
+                Network: "deleniti",
             },
             Options: map[string]string{
-                "rem": "quibusdam",
-                "et": "praesentium",
-                "occaecati": "dolor",
-                "soluta": "sed",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
+                "laboriosam": "dicta",
             },
             PrivateInstance: false,
             Type: "ENTERPRISE",
-            Version: "rerum",
-            Zone: "culpa",
+            Version: "voluptatem",
+            Zone: "consequatur",
         },
     }
 

@@ -4,7 +4,7 @@ package shared
 
 type ArticleVersions struct {
 	// Api endpoint for the item version
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 	// Version number
-	Version *int64 `json:"version,omitempty"`
+	Version int64 `json:"version"`
 }

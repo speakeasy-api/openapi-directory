@@ -86,6 +86,8 @@ func main() {
 
 * `RecaptchaenterpriseProjectsAssessmentsAnnotate` - Annotates a previously created Assessment to provide additional information on whether the event turned out to be authentic or fraudulent.
 * `RecaptchaenterpriseProjectsAssessmentsCreate` - Creates an Assessment of the likelihood an event is legitimate.
+* `RecaptchaenterpriseProjectsFirewallpoliciesCreate` - Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA Enterprise actions can be executed. A project may have a maximum of 1000 policies.
+* `RecaptchaenterpriseProjectsFirewallpoliciesList` - Returns the list of all firewall policies that belong to a project.
 * `RecaptchaenterpriseProjectsKeysCreate` - Creates a new reCAPTCHA Enterprise key.
 * `RecaptchaenterpriseProjectsKeysDelete` - Deletes the specified key.
 * `RecaptchaenterpriseProjectsKeysGetMetrics` - Get some aggregated metrics for a Key. This data can be used to build dashboards.

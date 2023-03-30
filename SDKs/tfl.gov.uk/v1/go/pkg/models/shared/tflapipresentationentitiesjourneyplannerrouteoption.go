@@ -3,6 +3,8 @@
 package shared
 
 type TflAPIPresentationEntitiesJourneyPlannerRouteOption struct {
+	// The direction of the route, i.e. outbound or inbound.
+	Direction  *string  `json:"direction,omitempty"`
 	Directions []string `json:"directions,omitempty"`
 	// The Id of the route
 	ID             *string                               `json:"id,omitempty"`

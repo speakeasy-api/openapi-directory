@@ -32,12 +32,14 @@ type DBCluster struct {
 	Endpoint                         *string
 	Engine                           *string
 	EngineVersion                    *string
+	GlobalClusterIdentifier          *string
 	HostedZoneID                     *string
 	IAMDatabaseAuthenticationEnabled *bool
 	KmsKeyID                         *string
 	LatestRestorableTime             *time.Time
 	MasterUsername                   *string
 	MultiAZ                          *bool
+	PendingModifiedValues            *ClusterPendingModifiedValues
 	PercentProgress                  *string
 	Port                             *int64
 	PreferredBackupWindow            *string

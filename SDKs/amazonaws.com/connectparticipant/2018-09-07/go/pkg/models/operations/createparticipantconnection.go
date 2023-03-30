@@ -20,7 +20,7 @@ type CreateParticipantConnectionHeaders struct {
 }
 
 type CreateParticipantConnectionRequestBody struct {
-	// Amazon Connect Participant is used to mark the participant as connected for message streaming.
+	// Amazon Connect Participant is used to mark the participant as connected for customer participant in message streaming, as well as for agent or manager participant in non-streaming chats.
 	ConnectParticipant *bool `json:"ConnectParticipant,omitempty"`
 	// Type of connection information required. This can be omitted if <code>ConnectParticipant</code> is <code>true</code>.
 	Type []shared.ConnectionTypeEnum `json:"Type,omitempty"`

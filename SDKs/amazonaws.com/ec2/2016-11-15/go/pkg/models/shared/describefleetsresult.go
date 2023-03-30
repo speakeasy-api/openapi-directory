@@ -1001,6 +1001,25 @@ const (
 	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6idn16xlarge   DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6idn.16xlarge"
 	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6idn24xlarge   DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6idn.24xlarge"
 	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6idn32xlarge   DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6idn.32xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumC7gMetal        DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "c7g.metal"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7gMedium       DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.medium"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7gLarge        DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.large"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7gXlarge       DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g2xlarge      DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.2xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g4xlarge      DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.4xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g8xlarge      DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.8xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g12xlarge     DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.12xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g16xlarge     DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.16xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7gMetal        DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.metal"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gMedium       DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.medium"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gLarge        DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.large"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gXlarge       DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g2xlarge      DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.2xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g4xlarge      DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.4xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g8xlarge      DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.8xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g12xlarge     DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.12xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g16xlarge     DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.16xlarge"
+	DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gMetal        DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -2246,6 +2265,44 @@ func (e *DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInst
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = DescribeFleetsResultFleetsErrorsLaunchTemplateAndOverridesOverridesInstanceTypeEnum(s)
 		return nil
 	default:
@@ -2995,6 +3052,25 @@ const (
 	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR6idn16xlarge   DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r6idn.16xlarge"
 	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR6idn24xlarge   DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r6idn.24xlarge"
 	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR6idn32xlarge   DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r6idn.32xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumC7gMetal        DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "c7g.metal"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumM7gMedium       DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "m7g.medium"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumM7gLarge        DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "m7g.large"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumM7gXlarge       DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "m7g.xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumM7g2xlarge      DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "m7g.2xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumM7g4xlarge      DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "m7g.4xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumM7g8xlarge      DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "m7g.8xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumM7g12xlarge     DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "m7g.12xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumM7g16xlarge     DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "m7g.16xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumM7gMetal        DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "m7g.metal"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR7gMedium       DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r7g.medium"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR7gLarge        DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r7g.large"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR7gXlarge       DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r7g.xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR7g2xlarge      DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r7g.2xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR7g4xlarge      DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r7g.4xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR7g8xlarge      DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r7g.8xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR7g12xlarge     DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r7g.12xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR7g16xlarge     DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r7g.16xlarge"
+	DescribeFleetsResultFleetsInstancesInstanceTypeEnumR7gMetal        DescribeFleetsResultFleetsInstancesInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *DescribeFleetsResultFleetsInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -4240,6 +4316,44 @@ func (e *DescribeFleetsResultFleetsInstancesInstanceTypeEnum) UnmarshalJSON(data
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = DescribeFleetsResultFleetsInstancesInstanceTypeEnum(s)
 		return nil
 	default:
@@ -5210,6 +5324,25 @@ const (
 	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6idn16xlarge   DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6idn.16xlarge"
 	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6idn24xlarge   DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6idn.24xlarge"
 	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR6idn32xlarge   DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r6idn.32xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumC7gMetal        DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "c7g.metal"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7gMedium       DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.medium"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7gLarge        DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.large"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7gXlarge       DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g2xlarge      DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.2xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g4xlarge      DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.4xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g8xlarge      DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.8xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g12xlarge     DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.12xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7g16xlarge     DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.16xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumM7gMetal        DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "m7g.metal"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gMedium       DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.medium"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gLarge        DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.large"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gXlarge       DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g2xlarge      DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.2xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g4xlarge      DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.4xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g8xlarge      DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.8xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g12xlarge     DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.12xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7g16xlarge     DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.16xlarge"
+	DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnumR7gMetal        DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -6455,6 +6588,44 @@ func (e *DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesI
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverridesOverridesInstanceTypeEnum(s)
 		return nil
 	default:
@@ -7503,6 +7674,25 @@ const (
 	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR6idn16xlarge   DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6idn.16xlarge"
 	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR6idn24xlarge   DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6idn.24xlarge"
 	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR6idn32xlarge   DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6idn.32xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumC7gMetal        DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "c7g.metal"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumM7gMedium       DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.medium"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumM7gLarge        DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.large"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumM7gXlarge       DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumM7g2xlarge      DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.2xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumM7g4xlarge      DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.4xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumM7g8xlarge      DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.8xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumM7g12xlarge     DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.12xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumM7g16xlarge     DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.16xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumM7gMetal        DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.metal"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR7gMedium       DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.medium"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR7gLarge        DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.large"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR7gXlarge       DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR7g2xlarge      DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.2xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR7g4xlarge      DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.4xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR7g8xlarge      DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.8xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR7g12xlarge     DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.12xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR7g16xlarge     DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.16xlarge"
+	DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnumR7gMetal        DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -8748,6 +8938,44 @@ func (e *DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnu
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = DescribeFleetsResultFleetsLaunchTemplateConfigsOverridesInstanceTypeEnum(s)
 		return nil
 	default:

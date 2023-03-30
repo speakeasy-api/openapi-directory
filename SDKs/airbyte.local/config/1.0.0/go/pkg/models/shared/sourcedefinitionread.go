@@ -2,12 +2,55 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+	"openapi/pkg/types"
+)
+
+type SourceDefinitionReadSourceTypeEnum string
+
+const (
+	SourceDefinitionReadSourceTypeEnumAPI      SourceDefinitionReadSourceTypeEnum = "api"
+	SourceDefinitionReadSourceTypeEnumFile     SourceDefinitionReadSourceTypeEnum = "file"
+	SourceDefinitionReadSourceTypeEnumDatabase SourceDefinitionReadSourceTypeEnum = "database"
+	SourceDefinitionReadSourceTypeEnumCustom   SourceDefinitionReadSourceTypeEnum = "custom"
+)
+
+func (e *SourceDefinitionReadSourceTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "api":
+		fallthrough
+	case "file":
+		fallthrough
+	case "database":
+		fallthrough
+	case "custom":
+		*e = SourceDefinitionReadSourceTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SourceDefinitionReadSourceTypeEnum: %s", s)
+	}
+}
+
 // SourceDefinitionRead - Successful operation
 type SourceDefinitionRead struct {
-	DockerImageTag     string  `json:"dockerImageTag"`
-	DockerRepository   string  `json:"dockerRepository"`
-	DocumentationURL   *string `json:"documentationUrl,omitempty"`
-	Icon               *string `json:"icon,omitempty"`
-	Name               string  `json:"name"`
-	SourceDefinitionID string  `json:"sourceDefinitionId"`
+	DockerImageTag   string  `json:"dockerImageTag"`
+	DockerRepository string  `json:"dockerRepository"`
+	DocumentationURL *string `json:"documentationUrl,omitempty"`
+	Icon             *string `json:"icon,omitempty"`
+	Name             string  `json:"name"`
+	// The Airbyte Protocol version supported by the connector
+	ProtocolVersion *string `json:"protocolVersion,omitempty"`
+	// The date when this connector was first released, in yyyy-mm-dd format.
+	ReleaseDate  *types.Date       `json:"releaseDate,omitempty"`
+	ReleaseStage *ReleaseStageEnum `json:"releaseStage,omitempty"`
+	// actor definition specific resource requirements. if default is set, these are the requirements that should be set for ALL jobs run for this actor definition. it is overriden by the job type specific configurations. if not set, the platform will use defaults. these values will be overriden by configuration at the connection level.
+	ResourceRequirements *ActorDefinitionResourceRequirements `json:"resourceRequirements,omitempty"`
+	SourceDefinitionID   string                               `json:"sourceDefinitionId"`
+	SourceType           *SourceDefinitionReadSourceTypeEnum  `json:"sourceType,omitempty"`
 }

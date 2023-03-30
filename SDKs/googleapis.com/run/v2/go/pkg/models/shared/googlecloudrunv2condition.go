@@ -15,6 +15,7 @@ const (
 	GoogleCloudRunV2ConditionExecutionReasonEnumJobStatusServicePollingError GoogleCloudRunV2ConditionExecutionReasonEnum = "JOB_STATUS_SERVICE_POLLING_ERROR"
 	GoogleCloudRunV2ConditionExecutionReasonEnumNonZeroExitCode              GoogleCloudRunV2ConditionExecutionReasonEnum = "NON_ZERO_EXIT_CODE"
 	GoogleCloudRunV2ConditionExecutionReasonEnumCancelled                    GoogleCloudRunV2ConditionExecutionReasonEnum = "CANCELLED"
+	GoogleCloudRunV2ConditionExecutionReasonEnumCancelling                   GoogleCloudRunV2ConditionExecutionReasonEnum = "CANCELLING"
 )
 
 func (e *GoogleCloudRunV2ConditionExecutionReasonEnum) UnmarshalJSON(data []byte) error {
@@ -30,6 +31,8 @@ func (e *GoogleCloudRunV2ConditionExecutionReasonEnum) UnmarshalJSON(data []byte
 	case "NON_ZERO_EXIT_CODE":
 		fallthrough
 	case "CANCELLED":
+		fallthrough
+	case "CANCELLING":
 		*e = GoogleCloudRunV2ConditionExecutionReasonEnum(s)
 		return nil
 	default:

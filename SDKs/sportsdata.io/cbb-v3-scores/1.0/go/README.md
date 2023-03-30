@@ -57,12 +57,14 @@ func main() {
 * `AreGamesInProgress` - Are Games In Progress
 * `CurrentSeason` - Current Season
 * `GamesByDate` - Games by Date
+* `InjuredPlayers` - Injured Players
 * `LeagueHierarchy` - League Hierarchy
 * `PlayerDetailsByActive` - Player Details by Active
 * `PlayerDetailsByPlayer` - Player Details by Player
 * `PlayerDetailsByTeam` - Player Details by Team
 * `Schedules` - Schedules
 * `Stadiums` - Stadiums
+* `TeamGameLogsBySeason` - Team Game Logs By Season
 * `TeamGameStatsByDate` - Team Game Stats by Date
 * `TeamSchedule` - Team Schedule
 * `TeamSeasonStats` - Team Season Stats

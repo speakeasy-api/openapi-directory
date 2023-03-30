@@ -84,6 +84,30 @@ func (e *SearchTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// SearchUniquePodcastsEnum - Whether or not to keep only one episode per podcast in search results. 1 is yes and 0 is no. It works only when **type** is *episode*.
+type SearchUniquePodcastsEnum string
+
+const (
+	SearchUniquePodcastsEnumZero SearchUniquePodcastsEnum = "0"
+	SearchUniquePodcastsEnumOne  SearchUniquePodcastsEnum = "1"
+)
+
+func (e *SearchUniquePodcastsEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "0":
+		fallthrough
+	case "1":
+		*e = SearchUniquePodcastsEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for SearchUniquePodcastsEnum: %s", s)
+	}
+}
+
 type SearchQueryParams struct {
 	// Maximum number of episodes. Applicable only when type parameter is **podcast**.
 	//
@@ -97,10 +121,14 @@ type SearchQueryParams struct {
 	// Limit search results to a specific language. If not specified, it'll be any language. You can get a list of supported languages from `GET /languages`. It works only when **type** is *episode* or *podcast*.
 	//
 	Language *string `queryParam:"style=form,explode=true,name=language"`
-	// Maximum audio length in minutes. Applicable only when type parameter is **episode**.
+	// Maximum audio length in minutes. Applicable only when **type** parameter is **episode** or **podcast**.
+	// If **type** parameter is **episode**, it's for audio length of an episode.
+	// If **type** parameter is **podcast**, it's for average audio length of all episodes in a podcast.
 	//
 	LenMax *int64 `queryParam:"style=form,explode=true,name=len_max"`
-	// Minimum audio length in minutes. Applicable only when type parameter is **episode**.
+	// Minimum audio length in minutes. Applicable only when **type** parameter is **episode** or **podcast**.
+	// If **type** parameter is **episode**, it's for audio length of an episode.
+	// If **type** parameter is **podcast**, it's for average audio length of all episodes in a podcast.
 	//
 	LenMin *int64 `queryParam:"style=form,explode=true,name=len_min"`
 	// A comma-delimited string of podcast ids (up to 5 podcasts) - you can get a podcast id from the **podcast_id** field in response. This parameter is to exclude search results of a few specific podcasts. It works only when **type** is *episode*.
@@ -136,6 +164,15 @@ type SearchQueryParams struct {
 	// What type of contents do you want to search for?
 	//
 	Type *SearchTypeEnum `queryParam:"style=form,explode=true,name=type"`
+	// Whether or not to keep only one episode per podcast in search results. 1 is yes and 0 is no. It works only when **type** is *episode*.
+	//
+	UniquePodcasts *SearchUniquePodcastsEnum `queryParam:"style=form,explode=true,name=unique_podcasts"`
+	// Maximum update frequency in hours (how frequently does a podcast release a new episode). For example, if you want to find "weekly" podcasts, then you can set **update_freq_min**=144 hours (or 6 days) and **update_freq_max**=192 hours (or 8 days). Applicable only when type parameter is **podcast**.
+	//
+	UpdateFreqMax *int64 `queryParam:"style=form,explode=true,name=update_freq_max"`
+	// Minimum update frequency in hours (how frequently does a podcast release a new episode). For example, if you want to find "weekly" podcasts, then you can set **update_freq_min**=144 hours (or 6 days) and **update_freq_max**=192 hours (or 8 days). Applicable only when type parameter is **podcast**.
+	//
+	UpdateFreqMin *int64 `queryParam:"style=form,explode=true,name=update_freq_min"`
 }
 
 type SearchHeaders struct {

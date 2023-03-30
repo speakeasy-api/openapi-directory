@@ -4,6 +4,10 @@ package shared
 
 // Listing - Represents a full list of attributes available with Marketcheck for a car
 type Listing struct {
+	// Base exterior color of the car
+	BaseExtColor *string `json:"base_ext_color,omitempty"`
+	// Base interior color of the car
+	BaseIntColor *string `json:"base_int_color,omitempty"`
 	// Describes the Car specification
 	Build *Build `json:"build,omitempty"`
 	// Flag to indicate whether listing is carfax_1_owner
@@ -59,6 +63,8 @@ type Listing struct {
 	Msrp *int64 `json:"msrp,omitempty"`
 	// Asking price for the car
 	Price *int64 `json:"price,omitempty"`
+	// Percentage difference between the cars's current price and ref_price i.e. last reported price
+	PriceChangePercent *float64 `json:"price_change_percent,omitempty"`
 	// Relative rank of the listing determined by ranking service
 	Rank *int64 `json:"rank,omitempty"`
 	// Last Odometer reading / reported miles usage for the car. If the asking miles value is not or is available then the last_miles could perhaps be used. last_miles is the miles for the car listed on the source website as of last_miles_dt date
@@ -83,6 +89,8 @@ type Listing struct {
 	StockNo *string `json:"stock_no,omitempty"`
 	// Vehicle Details Page url of the specific car
 	VdpURL *string `json:"vdp_url,omitempty"`
+	//  Vehicle Registration Mark of the car
+	VehicleRegistrationMark *string `json:"vehicle_registration_mark,omitempty"`
 	// VIN for the car
 	Vin *string `json:"vin,omitempty"`
 }

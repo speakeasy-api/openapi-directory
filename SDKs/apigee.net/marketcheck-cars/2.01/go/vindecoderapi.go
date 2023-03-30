@@ -47,7 +47,7 @@ func (s *vinDecoderAPI) Decode(ctx context.Context, request operations.DecodeReq
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *vinDecoderAPI) DecodeViaEPI(ctx context.Context, request operations.Dec
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -150,6 +150,65 @@ func (s *vinDecoderAPI) DecodeViaEPI(ctx context.Context, request operations.Dec
 	return res, nil
 }
 
+// DecodeViaNeoVIN - NeoVIN Decoder
+// Get the basic information on specifications for a car identified by a valid VIN from NeoVIN decoder
+func (s *vinDecoderAPI) DecodeViaNeoVIN(ctx context.Context, request operations.DecodeViaNeoVINRequest) (*operations.DecodeViaNeoVINResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/decode/car/neovin/{vin}/specs", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DecodeViaNeoVINResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.NeoVIN
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.NeoVIN = out
+		}
+	default:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // GetTaxonomyTerms - API for getting terms from taxonomy
 // Facets on taxonomy
 func (s *vinDecoderAPI) GetTaxonomyTerms(ctx context.Context, request operations.GetTaxonomyTermsRequest) (*operations.GetTaxonomyTermsResponse, error) {
@@ -165,7 +224,7 @@ func (s *vinDecoderAPI) GetTaxonomyTerms(ctx context.Context, request operations
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -224,7 +283,7 @@ func (s *vinDecoderAPI) GetSpecsCarAutoComplete(ctx context.Context, request ope
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

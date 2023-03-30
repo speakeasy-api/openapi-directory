@@ -679,6 +679,25 @@ const (
 	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR6idn16xlarge   DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r6idn.16xlarge"
 	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR6idn24xlarge   DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r6idn.24xlarge"
 	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR6idn32xlarge   DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r6idn.32xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumC7gMetal        DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "c7g.metal"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM7gMedium       DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m7g.medium"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM7gLarge        DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m7g.large"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM7gXlarge       DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m7g.xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM7g2xlarge      DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m7g.2xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM7g4xlarge      DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m7g.4xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM7g8xlarge      DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m7g.8xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM7g12xlarge     DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m7g.12xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM7g16xlarge     DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m7g.16xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumM7gMetal        DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "m7g.metal"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7gMedium       DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.medium"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7gLarge        DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.large"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7gXlarge       DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7g2xlarge      DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.2xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7g4xlarge      DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.4xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7g8xlarge      DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.8xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7g12xlarge     DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.12xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7g16xlarge     DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.16xlarge"
+	DescribeReservedInstancesResultReservedInstancesInstanceTypeEnumR7gMetal        DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -1924,6 +1943,44 @@ func (e *DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum) Unmar
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = DescribeReservedInstancesResultReservedInstancesInstanceTypeEnum(s)
 		return nil
 	default:

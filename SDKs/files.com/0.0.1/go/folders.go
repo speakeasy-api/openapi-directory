@@ -106,10 +106,17 @@ func (s *folders) PostFoldersPath(ctx context.Context, request operations.PostFo
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/folders/{path}", request.PathParams, nil)
 
-	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+
+	req.Header.Set("Content-Type", reqContentType)
 
 	client := s.defaultClient
 

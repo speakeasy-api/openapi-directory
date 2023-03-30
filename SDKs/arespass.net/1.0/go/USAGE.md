@@ -1,0 +1,33 @@
+<!-- Start SDK Example Usage -->
+```go
+package main
+
+import (
+    "context"
+    "log"
+    "openapi"
+    "openapi/pkg/models/shared"
+    "openapi/pkg/models/operations"
+)
+
+func main() {
+    s := sdk.New()
+
+    req := operations.GetAboutRequest{
+        QueryParams: operations.GetAboutQueryParams{
+            OutputFormat: "unde",
+        },
+    }
+
+    ctx := context.Background()
+    res, err := s.GetAbout(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    if res.About != nil {
+        // handle response
+    }
+}
+```
+<!-- End SDK Example Usage -->

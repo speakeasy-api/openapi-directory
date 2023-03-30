@@ -47,7 +47,9 @@ type GetResolverRulePolicyRequest struct {
 }
 
 type GetResolverRulePolicyResponse struct {
-	ContentType string
+	// AccessDeniedException
+	AccessDeniedException interface{}
+	ContentType           string
 	// Success
 	GetResolverRulePolicyResponse *shared.GetResolverRulePolicyResponse
 	// InternalServiceErrorException

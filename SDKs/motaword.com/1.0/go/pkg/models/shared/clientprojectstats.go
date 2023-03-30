@@ -2,7 +2,7 @@
 
 package shared
 
-// ClientProjectStats - User stats for client and vendors
+// ClientProjectStats - Project statistics for your account
 type ClientProjectStats struct {
 	Stats []ClientProjectStat `json:"stats,omitempty"`
 }

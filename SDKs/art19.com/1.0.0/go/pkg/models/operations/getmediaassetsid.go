@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetMediaAssetsIDSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetMediaAssetsIDPathParams struct {
 	// The ID of the media asset resource to load.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -14,6 +18,7 @@ type GetMediaAssetsIDPathParams struct {
 
 type GetMediaAssetsIDRequest struct {
 	PathParams GetMediaAssetsIDPathParams
+	Security   GetMediaAssetsIDSecurity
 }
 
 // GetMediaAssetsID200ApplicationVndAPIPlusJSON - Success

@@ -51,6 +51,7 @@ const (
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumChile               GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "CHILE"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumChina               GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "CHINA"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumColombia            GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "COLOMBIA"
+	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumCroatia             GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "CROATIA"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumDenmark             GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "DENMARK"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumFrance              GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "FRANCE"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumFinland             GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "FINLAND"
@@ -64,6 +65,7 @@ const (
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumJapan               GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "JAPAN"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumKorea               GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "KOREA"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumMexico              GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "MEXICO"
+	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumNewZealand          GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "NEW_ZEALAND"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumTheNetherlands      GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "THE_NETHERLANDS"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumNorway              GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "NORWAY"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumParaguay            GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "PARAGUAY"
@@ -82,7 +84,6 @@ const (
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumUruguay             GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "URUGUAY"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumVenezuela           GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "VENEZUELA"
 	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumInternal            GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "INTERNAL"
-	GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnumNewZealand          GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum = "NEW_ZEALAND"
 )
 
 func (e *GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum) UnmarshalJSON(data []byte) error {
@@ -111,6 +112,8 @@ func (e *GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum) UnmarshalJSON(d
 		fallthrough
 	case "COLOMBIA":
 		fallthrough
+	case "CROATIA":
+		fallthrough
 	case "DENMARK":
 		fallthrough
 	case "FRANCE":
@@ -136,6 +139,8 @@ func (e *GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum) UnmarshalJSON(d
 	case "KOREA":
 		fallthrough
 	case "MEXICO":
+		fallthrough
+	case "NEW_ZEALAND":
 		fallthrough
 	case "THE_NETHERLANDS":
 		fallthrough
@@ -172,8 +177,6 @@ func (e *GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum) UnmarshalJSON(d
 	case "VENEZUELA":
 		fallthrough
 	case "INTERNAL":
-		fallthrough
-	case "NEW_ZEALAND":
 		*e = GooglePrivacyDlpV2InfoTypeCategoryLocationCategoryEnum(s)
 		return nil
 	default:

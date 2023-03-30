@@ -2,11 +2,12 @@
 
 package shared
 
-// ProductionVariant - Identifies a model that you want to host and the resources chosen to deploy for hosting it. If you are deploying multiple models, tell SageMaker how to distribute traffic among the models by specifying variant weights.
+// ProductionVariant -  Identifies a model that you want to host and the resources chosen to deploy for hosting it. If you are deploying multiple models, tell SageMaker how to distribute traffic among the models by specifying variant weights. For more information on production variants, check <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/model-ab-testing.html"> Production variants</a>.
 type ProductionVariant struct {
 	AcceleratorType                             *ProductionVariantAcceleratorTypeEnum `json:"AcceleratorType,omitempty"`
 	ContainerStartupHealthCheckTimeoutInSeconds *int64                                `json:"ContainerStartupHealthCheckTimeoutInSeconds,omitempty"`
 	CoreDumpConfig                              *ProductionVariantCoreDumpConfig      `json:"CoreDumpConfig,omitempty"`
+	EnableSSMAccess                             *bool                                 `json:"EnableSSMAccess,omitempty"`
 	InitialInstanceCount                        *int64                                `json:"InitialInstanceCount,omitempty"`
 	InitialVariantWeight                        *float32                              `json:"InitialVariantWeight,omitempty"`
 	InstanceType                                *ProductionVariantInstanceTypeEnum    `json:"InstanceType,omitempty"`

@@ -12,7 +12,7 @@ type CancelShipmentSecurity struct {
 }
 
 type CancelShipmentPathParams struct {
-	// This path parameter specifies the unique eBay-assigned ID of the shipment to be canceled. The shipmentId value is generated and returned by a call to createFromShippingQuote.
+	// This path parameter specifies the unique eBay-assigned ID of the shipment to be canceled. The <b>shipmentId</b> value is generated and returned by a call to <b>createFromShippingQuote</b>.
 	ShipmentID string `pathParam:"style=simple,explode=false,name=shipmentId"`
 }
 

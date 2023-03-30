@@ -4,8 +4,6 @@ package shared
 
 // GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse - Response message for ListConnectedSiteTags RPC.
 type GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse struct {
-	// The site tags for the Universal Analytics property
+	// The site tags for the Universal Analytics property. A maximum of 20 connected site tags will be returned.
 	ConnectedSiteTags []GoogleAnalyticsAdminV1alphaConnectedSiteTag `json:"connectedSiteTags,omitempty"`
-	// A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted, there are no subsequent pages.
-	NextPageToken *string `json:"nextPageToken,omitempty"`
 }

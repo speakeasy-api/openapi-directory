@@ -8,9 +8,8 @@ type AttachmentCompact struct {
 	Gid *string `json:"gid,omitempty"`
 	// The name of the file.
 	Name *string `json:"name,omitempty"`
-	// The service hosting the attachment. Valid values are `asana`, `dropbox`, `gdrive`, `onedrive`, `box`, and `external`.
-	// `external` attachments are a beta feature currently limited to specific integrations.
-	ResourceSubtype interface{} `json:"resource_subtype,omitempty"`
+	// The service hosting the attachment. Valid values are `asana`, `dropbox`, `gdrive`, `onedrive`, `box`, `vimeo`, and `external`.
+	ResourceSubtype *string `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
 }

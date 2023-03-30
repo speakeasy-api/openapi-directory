@@ -2,13 +2,16 @@
 
 package shared
 
+// WorkspaceUpdate - Used to apply a patch-style update to a workspace, which means that null properties remain unchanged
 type WorkspaceUpdate struct {
-	AnonymousDataCollection bool           `json:"anonymousDataCollection"`
-	DisplaySetupWizard      *bool          `json:"displaySetupWizard,omitempty"`
-	Email                   *string        `json:"email,omitempty"`
-	InitialSetupComplete    bool           `json:"initialSetupComplete"`
-	News                    bool           `json:"news"`
-	Notifications           []Notification `json:"notifications,omitempty"`
-	SecurityUpdates         bool           `json:"securityUpdates"`
-	WorkspaceID             string         `json:"workspaceId"`
+	AnonymousDataCollection *bool                `json:"anonymousDataCollection,omitempty"`
+	DefaultGeography        *GeographyEnum       `json:"defaultGeography,omitempty"`
+	DisplaySetupWizard      *bool                `json:"displaySetupWizard,omitempty"`
+	Email                   *string              `json:"email,omitempty"`
+	InitialSetupComplete    *bool                `json:"initialSetupComplete,omitempty"`
+	News                    *bool                `json:"news,omitempty"`
+	Notifications           []Notification       `json:"notifications,omitempty"`
+	SecurityUpdates         *bool                `json:"securityUpdates,omitempty"`
+	WebhookConfigs          []WebhookConfigWrite `json:"webhookConfigs,omitempty"`
+	WorkspaceID             string               `json:"workspaceId"`
 }

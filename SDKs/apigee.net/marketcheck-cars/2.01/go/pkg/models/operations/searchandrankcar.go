@@ -134,6 +134,8 @@ type SearchAndRankCarQueryParams struct {
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
 	// A boolean indicating whether to include only those listings that have photo_links in search results, And discard those that don't have them
 	PhotoLinks *bool `queryParam:"style=form,explode=true,name=photo_links"`
+	// A boolean indicating whether to include only those listings that have photo_links_cached in search results, And discard those that don't have them
+	PhotoLinksCached *bool `queryParam:"style=form,explode=true,name=photo_links_cached"`
 	// If plot has value true results in around 25k coordinates with limited fields to plot respective graph
 	Plot *bool `queryParam:"style=form,explode=true,name=plot"`
 	// Price range to filter listings with the price in the range given. Range to be given in the format - min-max e.g. 1000-5000

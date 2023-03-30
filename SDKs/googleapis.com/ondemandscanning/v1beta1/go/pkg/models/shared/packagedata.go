@@ -47,6 +47,9 @@ func (e *PackageDataPackageTypeEnum) UnmarshalJSON(data []byte) error {
 }
 
 type PackageData struct {
+	// The architecture of the package.
+	Architecture *string `json:"architecture,omitempty"`
+	Binary       *Binary `json:"binary,omitempty"`
 	// The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability may manifest. Examples include distro or storage location for vulnerable jar.
 	CpeURI *string `json:"cpeUri,omitempty"`
 	// The dependency chain between this package and the user's artifact. List in order from the customer's package under review first, to the current package last. Inclusive of the original package and the current package.

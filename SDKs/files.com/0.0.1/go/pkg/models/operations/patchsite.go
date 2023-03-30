@@ -7,6 +7,11 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type PatchSiteRequestBodyBundleWatermarkAttachmentFile struct {
+	BundleWatermarkAttachmentFile string `multipartForm:"name=bundle_watermark_attachment_file"`
+	Content                       []byte `multipartForm:"content"`
+}
+
 type PatchSiteRequestBodyIcon128File struct {
 	Content     []byte `multipartForm:"content"`
 	Icon128File string `multipartForm:"name=icon128_file"`
@@ -33,14 +38,20 @@ type PatchSiteRequestBodyLogoFile struct {
 }
 
 type PatchSiteRequestBody struct {
+	// Id of the currently selected custom SFTP Host Key
+	ActiveSftpHostKeyID *int `multipartForm:"name=active_sftp_host_key_id"`
 	// Are manual Bundle names allowed?
 	AllowBundleNames *bool `multipartForm:"name=allow_bundle_names"`
+	// Are users allowed to configure their two factor authentication to be bypassed for FTP/SFTP/WebDAV?
+	Allowed2faMethodBypassForFtpSftpDav *bool `multipartForm:"name=allowed_2fa_method_bypass_for_ftp_sftp_dav"`
 	// Is SMS two factor authentication allowed?
 	Allowed2faMethodSms *bool `multipartForm:"name=allowed_2fa_method_sms"`
 	// Is TOTP two factor authentication allowed?
 	Allowed2faMethodTotp *bool `multipartForm:"name=allowed_2fa_method_totp"`
 	// Is U2F two factor authentication allowed?
 	Allowed2faMethodU2f *bool `multipartForm:"name=allowed_2fa_method_u2f"`
+	// Is WebAuthn two factor authentication allowed?
+	Allowed2faMethodWebauthn *bool `multipartForm:"name=allowed_2fa_method_webauthn"`
 	// Is yubikey two factor authentication allowed?
 	Allowed2faMethodYubi *bool `multipartForm:"name=allowed_2fa_method_yubi"`
 	// Comma seperated list of allowed Country codes
@@ -49,12 +60,23 @@ type PatchSiteRequestBody struct {
 	AllowedIps *string `multipartForm:"name=allowed_ips"`
 	// If false, rename conflicting files instead of asking for overwrite confirmation.  Only applies to web interface.
 	AskAboutOverwrites *bool `multipartForm:"name=ask_about_overwrites"`
+	// Do Bundle owners receive activity notifications?
+	BundleActivityNotifications *string `multipartForm:"name=bundle_activity_notifications"`
 	// Site-wide Bundle expiration in days
 	BundleExpiration *int `multipartForm:"name=bundle_expiration"`
 	// Do Bundles require password protection?
 	BundlePasswordRequired *bool `multipartForm:"name=bundle_password_required"`
+	// Do Bundle owners receive registration notification?
+	BundleRegistrationNotifications *string `multipartForm:"name=bundle_registration_notifications"`
 	// Do Bundles require recipients for sharing?
 	BundleRequireShareRecipient *bool `multipartForm:"name=bundle_require_share_recipient"`
+	// Do Bundle uploaders receive upload confirmation notifications?
+	BundleUploadReceiptNotifications *string `multipartForm:"name=bundle_upload_receipt_notifications"`
+	// If true, will delete the file stored in bundle_watermark_attachment
+	BundleWatermarkAttachmentDelete *bool                                              `multipartForm:"name=bundle_watermark_attachment_delete"`
+	BundleWatermarkAttachmentFile   *PatchSiteRequestBodyBundleWatermarkAttachmentFile `multipartForm:"file"`
+	// Preview watermark settings applied to all bundle items. Uses the same keys as Behavior.value
+	BundleWatermarkValue map[string]interface{} `multipartForm:"name=bundle_watermark_value,json"`
 	// Page link and button color
 	Color2Left *string `multipartForm:"name=color2_left"`
 	// Top bar link color
@@ -79,6 +101,8 @@ type PatchSiteRequestBody struct {
 	DesktopAppSessionLifetime *int `multipartForm:"name=desktop_app_session_lifetime"`
 	// If set to true, we will begin the process of disabling 2FA on this site.
 	Disable2faWithDelay *bool `multipartForm:"name=disable_2fa_with_delay"`
+	// If set, Files.com will not set the CAA records required to generate future SSL certificates for this domain.
+	DisableFilesCertificateGeneration *bool `multipartForm:"name=disable_files_certificate_generation"`
 	// Is password reset disabled?
 	DisablePasswordReset *bool `multipartForm:"name=disable_password_reset"`
 	// If greater than zero, users will unable to login if they do not show activity within this number of days.
@@ -87,10 +111,16 @@ type PatchSiteRequestBody struct {
 	DisallowedCountries *string `multipartForm:"name=disallowed_countries"`
 	// Custom domain
 	Domain *string `multipartForm:"name=domain"`
+	// Send HSTS (HTTP Strict Transport Security) header when visitors access the site via a custom domain?
+	DomainHstsHeader *bool `multipartForm:"name=domain_hsts_header"`
+	// Letsencrypt chain to use when registering SSL Certificate for domain.
+	DomainLetsencryptChain *string `multipartForm:"name=domain_letsencrypt_chain"`
 	// Main email for this site
 	Email *string `multipartForm:"name=email"`
 	// If true, permissions for this site must be bound to a group (not a user). Otherwise, permissions must be bound to a user.
 	FolderPermissionsGroupsOnly *bool `multipartForm:"name=folder_permissions_groups_only"`
+	// Is FTP enabled?
+	FtpEnabled *bool `multipartForm:"name=ftp_enabled"`
 	// If true, will delete the file stored in icon128
 	Icon128Delete *bool                            `multipartForm:"name=icon128_delete"`
 	Icon128File   *PatchSiteRequestBodyIcon128File `multipartForm:"file"`
@@ -158,6 +188,12 @@ type PatchSiteRequestBody struct {
 	MobileAppSessionIPPinning *bool `multipartForm:"name=mobile_app_session_ip_pinning"`
 	// Mobile app session lifetime (in hours)
 	MobileAppSessionLifetime *int `multipartForm:"name=mobile_app_session_lifetime"`
+	// A message to show users when they connect via FTP or SFTP.
+	MotdText *string `multipartForm:"name=motd_text"`
+	// Show message to users connecting via FTP
+	MotdUseForFtp *bool `multipartForm:"name=motd_use_for_ftp"`
+	// Show message to users connecting via SFTP
+	MotdUseForSftp *bool `multipartForm:"name=motd_use_for_sftp"`
 	// Site name
 	Name *string `multipartForm:"name=name"`
 	// If true, groups can be manually created / modified / deleted by Site Admins. Otherwise, groups can only be managed via your SSO provider.
@@ -166,6 +202,8 @@ type PatchSiteRequestBody struct {
 	NonSsoUsersAllowed *bool `multipartForm:"name=non_sso_users_allowed"`
 	// Allow users to use Office for the web?
 	OfficeIntegrationAvailable *bool `multipartForm:"name=office_integration_available"`
+	// Office integration application used to edit and view the MS Office documents
+	OfficeIntegrationType *string `multipartForm:"name=office_integration_type"`
 	// Use servers in the USA only?
 	OptOutGlobal *bool `multipartForm:"name=opt_out_global"`
 	// Notify site email of overages?
@@ -186,6 +224,8 @@ type PatchSiteRequestBody struct {
 	PasswordRequirementsApplyToBundles *bool `multipartForm:"name=password_requirements_apply_to_bundles"`
 	// Number of days password is valid
 	PasswordValidityDays *int `multipartForm:"name=password_validity_days"`
+	// If true, we will ensure that all internal communications with any remote server are made through the primary region of the site. This setting overrides individual remote server settings.
+	PinAllRemoteServersToSiteRegion *bool `multipartForm:"name=pin_all_remote_servers_to_site_region"`
 	// Reply-to email for this site
 	ReplyToEmail *string `multipartForm:"name=reply_to_email"`
 	// Require two-factor authentication for all users?
@@ -194,8 +234,16 @@ type PatchSiteRequestBody struct {
 	Require2faUserType *string `multipartForm:"name=require_2fa_user_type"`
 	// Session expiry in hours
 	SessionExpiry *float64 `multipartForm:"name=session_expiry"`
+	// Session expiry in minutes
+	SessionExpiryMinutes *int `multipartForm:"name=session_expiry_minutes"`
 	// Are sessions locked to the same IP? (i.e. do users need to log in again if they change IPs?)
 	SessionPinnedByIP *bool `multipartForm:"name=session_pinned_by_ip"`
+	// Is SFTP enabled?
+	SftpEnabled *bool `multipartForm:"name=sftp_enabled"`
+	// Sftp Host Key Type
+	SftpHostKeyType *string `multipartForm:"name=sftp_host_key_type"`
+	// Are Insecure Ciphers allowed for SFTP?  Note:  Settting TLS Disabled -> True will always allow insecure ciphers for SFTP as well.  Enabling this is insecure.
+	SftpInsecureCiphers *bool `multipartForm:"name=sftp_insecure_ciphers"`
 	// Use user FTP roots also for SFTP?
 	SftpUserRootEnabled *bool `multipartForm:"name=sftp_user_root_enabled"`
 	// Allow bundle creation
@@ -222,8 +270,10 @@ type PatchSiteRequestBody struct {
 	SslRequired *bool `multipartForm:"name=ssl_required"`
 	// Site subdomain
 	Subdomain *string `multipartForm:"name=subdomain"`
-	// Is TLS disabled(site setting)?
+	// Are Insecure TLS and SFTP Ciphers allowed?  Enabling this is insecure.
 	TLSDisabled *bool `multipartForm:"name=tls_disabled"`
+	// Do incoming emails in the Inboxes require checking for SPF/DKIM/DMARC?
+	UploadsViaEmailAuthentication *bool `multipartForm:"name=uploads_via_email_authentication"`
 	// Allow uploaders to set `provided_modified_at` for uploaded files?
 	UseProvidedModifiedAt *bool `multipartForm:"name=use_provided_modified_at"`
 	// Will users be locked out after incorrect login attempts?
@@ -236,12 +286,16 @@ type PatchSiteRequestBody struct {
 	UserLockoutWithin *int `multipartForm:"name=user_lockout_within"`
 	// Enable User Requests feature
 	UserRequestsEnabled *bool `multipartForm:"name=user_requests_enabled"`
+	// Send email to site admins when a user request is received?
+	UserRequestsNotifyAdmins *bool `multipartForm:"name=user_requests_notify_admins"`
 	// Custom text send in user welcome email
 	WelcomeCustomText *string `multipartForm:"name=welcome_custom_text"`
 	// Include this email in welcome emails if enabled
 	WelcomeEmailCc *string `multipartForm:"name=welcome_email_cc"`
 	// Will the welcome email be sent to new users?
 	WelcomeEmailEnabled *bool `multipartForm:"name=welcome_email_enabled"`
+	// Include this email subject in welcome emails if enabled
+	WelcomeEmailSubject *string `multipartForm:"name=welcome_email_subject"`
 	// Does the welcome screen appear?
 	WelcomeScreen *string `multipartForm:"name=welcome_screen"`
 	// Does FTP user Windows emulation mode?

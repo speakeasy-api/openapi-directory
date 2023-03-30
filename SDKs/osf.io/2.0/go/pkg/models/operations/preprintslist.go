@@ -39,6 +39,8 @@ type PreprintsListPreprintLinks struct {
 
 // PreprintsListPreprintRelationships - URLs to other entities or entity collections that have a relationship to the preprint entity.
 type PreprintsListPreprintRelationships struct {
+	// A relationship to the bibliographic contributors that are listed as contributing to this preprint.
+	BibliographicContributors *string
 	// A relationship to the citation of the preprint.
 	Citation *string
 	// A relationship to the identifiers associated with the preprint.

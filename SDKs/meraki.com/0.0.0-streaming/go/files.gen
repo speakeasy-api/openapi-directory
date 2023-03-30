@@ -20,7 +20,6 @@ licenses.go
 linkaggregations.go
 mglansettings.go
 mgportforwardingrules.go
-mgsubnetpoolsettings.go
 mrl3firewall.go
 mvsense.go
 mx11natrules.go
@@ -160,8 +159,6 @@ pkg/models/operations/getdevicecellulargatewaysettings.go
 pkg/models/operations/updatedevicecellulargatewaysettings.go
 pkg/models/operations/getdevicecellulargatewaysettingsportforwardingrules.go
 pkg/models/operations/updatedevicecellulargatewaysettingsportforwardingrules.go
-pkg/models/operations/getnetworkcellulargatewaysettingssubnetpool.go
-pkg/models/operations/updatenetworkcellulargatewaysettingssubnetpool.go
 pkg/models/operations/getnetworkssidl3firewallrules.go
 pkg/models/operations/updatenetworkssidl3firewallrules.go
 pkg/models/operations/getdevicecameraanalyticslive.go
@@ -243,7 +240,6 @@ pkg/models/operations/getnetworkpiismdevicesforkey.go
 pkg/models/operations/getnetworkpiismownersforkey.go
 pkg/models/operations/createnetworkwirelessrfprofile.go
 pkg/models/operations/deletenetworkwirelessrfprofile.go
-pkg/models/operations/getnetworkdevicewirelessradiosettings.go
 pkg/models/operations/getnetworkwirelessrfprofile.go
 pkg/models/operations/getnetworkwirelessrfprofiles.go
 pkg/models/operations/updatenetworkwirelessrfprofile.go
@@ -299,8 +295,6 @@ pkg/models/operations/getorganizationconfigtemplateswitchprofiles.go
 pkg/models/operations/createnetworkswitchsettingsqosrule.go
 pkg/models/operations/deletenetworkswitchsettingsqosrule.go
 pkg/models/operations/getnetworkswitchsettings.go
-pkg/models/operations/getnetworkswitchsettingsdhcpserverpolicy.go
-pkg/models/operations/getnetworkswitchsettingsdscptocosmappings.go
 pkg/models/operations/getnetworkswitchsettingsmtu.go
 pkg/models/operations/getnetworkswitchsettingsmulticast.go
 pkg/models/operations/getnetworkswitchsettingsqosrule.go
@@ -308,8 +302,6 @@ pkg/models/operations/getnetworkswitchsettingsqosrules.go
 pkg/models/operations/getnetworkswitchsettingsqosrulesorder.go
 pkg/models/operations/getnetworkswitchsettingsstormcontrol.go
 pkg/models/operations/updatenetworkswitchsettings.go
-pkg/models/operations/updatenetworkswitchsettingsdhcpserverpolicy.go
-pkg/models/operations/updatenetworkswitchsettingsdscptocosmappings.go
 pkg/models/operations/updatenetworkswitchsettingsmtu.go
 pkg/models/operations/updatenetworkswitchsettingsmulticast.go
 pkg/models/operations/updatenetworkswitchsettingsqosrule.go

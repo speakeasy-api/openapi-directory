@@ -55,6 +55,10 @@ func String(s string) *string { return &s }
 type SDK struct {
 	// AuditLogs - Access audit log entries.
 	AuditLogs *auditLogs
+	// CodeReferences - With this endpoint you can upload Feature Flag and Setting usage references that will be shown on the ConfigCat Dashboard.
+	//
+	// <a href="https://configcat.com/docs/advanced/code-references/overview/" target="_blank" rel="noopener noreferrer">Here</a> you can read more about the concept of Code References.
+	CodeReferences *codeReferences
 	// Configs - With these endpoints you can manage your Configs.
 	// This also can be used to manage [Feature Flags and Settings](#tag/Feature-Flags-and-Settings) and their
 	// [served values](#tag/Feature-Flag-and-Setting-values) through this API.
@@ -119,6 +123,9 @@ type SDK struct {
 	Products *products
 	// SDKKeys - With these endpoints you can manage your SDK Keys.
 	SDKKeys *sdkKeys
+	// Segments - With these endpoints you can manage your Segments.
+	// Segments allow you to group your users based on any of their properties. Define user segments and add them to multiple feature flags.
+	Segments *segments
 	// Tags - With these endpoints you can manage Tags. Tags are stored under a Product. You can  and add a Tag to a Feature Flag or Setting using the [Update Flag](#operation/update-setting) endpoint.
 	Tags *tags
 
@@ -194,6 +201,15 @@ func New(opts ...SDKOption) *SDK {
 	}
 
 	sdk.AuditLogs = newAuditLogs(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.CodeReferences = newCodeReferences(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -302,6 +318,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.SDKKeys = newSDKKeys(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Segments = newSegments(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

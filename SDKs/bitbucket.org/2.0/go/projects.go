@@ -33,59 +33,11 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// DeleteTeamsUsernameProjectsProjectKey - **This endpoint has been deprecated,
-// and you should use the [workspace project](../../../workspaces/%7Bworkspace%7D/projects/%7Bproject_key%7D#delete) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *projects) DeleteTeamsUsernameProjectsProjectKey(ctx context.Context, request operations.DeleteTeamsUsernameProjectsProjectKeyRequest) (*operations.DeleteTeamsUsernameProjectsProjectKeyResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/projects/{project_key}", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DeleteTeamsUsernameProjectsProjectKeyResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 204:
-	case httpRes.StatusCode == 403:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// DeleteWorkspacesWorkspaceProjectsProjectKey - Deletes this project. This is an irreversible operation.
+// DeleteWorkspacesWorkspaceProjectsProjectKey - Delete a project for a workspace
+// Deletes this project. This is an irreversible operation.
 //
 // You cannot delete a project that still contains repositories.
-// To delete the project, [delete](../../../repositories/%7Bworkspace%7D/%7Brepo_slug%7D#delete)
+// To delete the project, [delete](/cloud/bitbucket/rest/api-group-repositories/#api-repositories-workspace-repo-slug-delete)
 // or transfer the repositories first.
 //
 // Example:
@@ -138,14 +90,20 @@ func (s *projects) DeleteWorkspacesWorkspaceProjectsProjectKey(ctx context.Conte
 	return res, nil
 }
 
-// GetTeamsUsernameProjects - **This endpoint has been deprecated,
-// and you should use the [workspace projects](../../../workspaces/%7Bworkspace%7D/projects#get) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *projects) GetTeamsUsernameProjects(ctx context.Context, request operations.GetTeamsUsernameProjectsRequest) (*operations.GetTeamsUsernameProjectsResponse, error) {
+// DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser - Remove the specific user from the project's default reviewers
+// Removes a default reviewer from the project.
+//
+// Example:
+// ```
+// $ curl https://api.bitbucket.org/2.0/.../default-reviewers/%7Bf0e0e8e9-66c1-4b85-a784-44a9eb9ef1a6%7D
+//
+// HTTP/1.1 204
+// ```
+func (s *projects) DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(ctx context.Context, request operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest) (*operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/projects/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request.PathParams, nil)
 
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
@@ -163,22 +121,15 @@ func (s *projects) GetTeamsUsernameProjects(ctx context.Context, request operati
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetTeamsUsernameProjectsResponse{
+	res := &operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaginatedProjects
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PaginatedProjects = out
-		}
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 400:
+		fallthrough
 	case httpRes.StatusCode == 403:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -196,65 +147,8 @@ func (s *projects) GetTeamsUsernameProjects(ctx context.Context, request operati
 	return res, nil
 }
 
-// GetTeamsUsernameProjectsProjectKey - **This endpoint has been deprecated,
-// and you should use the [workspace project](../../../workspaces/%7Bworkspace%7D/projects/%7Bproject_key%7D#get) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *projects) GetTeamsUsernameProjectsProjectKey(ctx context.Context, request operations.GetTeamsUsernameProjectsProjectKeyRequest) (*operations.GetTeamsUsernameProjectsProjectKeyResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/projects/{project_key}", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetTeamsUsernameProjectsProjectKeyResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Project = out
-		}
-	case httpRes.StatusCode == 403:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetWorkspacesWorkspaceProjectsProjectKey - Returns the requested project.
+// GetWorkspacesWorkspaceProjectsProjectKey - Get a project for a workspace
+// Returns the requested project.
 func (s *projects) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}", request.PathParams, nil)
@@ -312,92 +206,47 @@ func (s *projects) GetWorkspacesWorkspaceProjectsProjectKey(ctx context.Context,
 	return res, nil
 }
 
-// PostTeamsUsernameProjects - Creates a new project.
+// GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewers - List the default reviewers in a project
+// Return a list of all default reviewers for a project. This is a list of users that will be added as default
+// reviewers to pull requests for any repository within the project.
 //
-// **This endpoint has been deprecated,
-// and you should use the [workspace projects](../../../workspaces/%7Bworkspace%7D/projects#post) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-//
-// Note that the avatar has to be embedded as either a data-url
-// or a URL to an external image as shown in the examples below:
-//
+// Example:
 // ```
-// $ body=$(cat << EOF
+// $ curl https://api.bitbucket.org/2.0/.../projects/.../default-reviewers | jq .
 //
 //	{
-//	    "name": "Mars Project",
-//	    "key": "MARS",
-//	    "description": "Software for colonizing mars.",
-//	    "links": {
-//	        "avatar": {
-//	            "href": "data:image/gif;base64,R0lGODlhEAAQAMQAAORHHOVSKudfOulrSOp3WOyDZu6QdvCchPGolfO0o/..."
+//	    "pagelen": 10,
+//	    "values": [
+//	        {
+//	            "user": {
+//	                "display_name": "Davis Lee",
+//	                "uuid": "{f0e0e8e9-66c1-4b85-a784-44a9eb9ef1a6}"
+//	            },
+//	            "reviewer_type": "project",
+//	            "type": "default_reviewer"
+//	        },
+//	        {
+//	            "user": {
+//	                "display_name": "Jorge Rodriguez",
+//	                "uuid": "{1aa43376-260d-4a0b-9660-f62672b9655d}"
+//	            },
+//	            "reviewer_type": "project",
+//	            "type": "default_reviewer"
 //	        }
-//	    },
-//	    "is_private": false
-//	}
-//
-// EOF
-// )
-//
-//	$ curl -H "Content-Type: application/json" \
-//	       -X POST \
-//	       -d "$body" \
-//	       https://api.bitbucket.org/2.0/teams/teams-in-space/projects/ | jq .
-//
-//	{
-//	  // Serialized project document
+//	    ],
+//	    "page": 1,
+//	    "size": 2
 //	}
 //
 // ```
-//
-// or even:
-//
-// ```
-// $ body=$(cat << EOF
-//
-//	{
-//	    "name": "Mars Project",
-//	    "key": "MARS",
-//	    "description": "Software for colonizing mars.",
-//	    "links": {
-//	        "avatar": {
-//	            "href": "http://i.imgur.com/72tRx4w.gif"
-//	        }
-//	    },
-//	    "is_private": false
-//	}
-//
-// EOF
-// )
-//
-//	$ curl -H "Content-Type: application/json" \
-//	       -X POST \
-//	       -d "$body" \
-//	       https://api.bitbucket.org/2.0/teams/teams-in-space/projects/ | jq .
-//
-//	{
-//	  // Serialized project document
-//	}
-//
-// ```
-func (s *projects) PostTeamsUsernameProjects(ctx context.Context, request operations.PostTeamsUsernameProjectsRequest) (*operations.PostTeamsUsernameProjectsResponse, error) {
+func (s *projects) GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewers(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/projects/", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-
-	req.Header.Set("Content-Type", reqContentType)
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
@@ -412,23 +261,21 @@ func (s *projects) PostTeamsUsernameProjects(ctx context.Context, request operat
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostTeamsUsernameProjectsResponse{
+	res := &operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
-	case httpRes.StatusCode == 201:
-		res.Headers = httpRes.Header
-
+	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
+			var out *shared.PaginatedDefaultReviewerAndType
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Project = out
+			res.PaginatedDefaultReviewerAndType = out
 		}
 	case httpRes.StatusCode == 403:
 		fallthrough
@@ -447,7 +294,79 @@ func (s *projects) PostTeamsUsernameProjects(ctx context.Context, request operat
 	return res, nil
 }
 
-// PostWorkspacesWorkspaceProjects - Creates a new project.
+// GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser - Get a default reviewer
+// Returns the specified default reviewer.
+//
+// Example:
+// ```
+// $ curl https://api.bitbucket.org/2.0/.../default-reviewers/%7Bf0e0e8e9-66c1-4b85-a784-44a9eb9ef1a6%7D
+//
+//	{
+//	    "display_name": "Davis Lee",
+//	    "type": "user",
+//	    "uuid": "{f0e0e8e9-66c1-4b85-a784-44a9eb9ef1a6}"
+//	}
+//
+// ```
+func (s *projects) GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.User = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostWorkspacesWorkspaceProjects - Create a project in a workspace
+// Creates a new project.
 //
 // Note that the avatar has to be embedded as either a data-url
 // or a URL to an external image as shown in the examples below:
@@ -578,14 +497,11 @@ func (s *projects) PostWorkspacesWorkspaceProjects(ctx context.Context, request 
 	return res, nil
 }
 
-// PutTeamsUsernameProjectsProjectKey - Since this endpoint can be used to both update and to create a
+// PutWorkspacesWorkspaceProjectsProjectKey - Update a project for a workspace
+// Since this endpoint can be used to both update and to create a
 // project, the request body depends on the intent.
 //
-// **This endpoint has been deprecated,
-// and you should use the [workspace project](../../../workspaces/%7Bworkspace%7D/projects/%7Bproject_key%7D#put) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-//
-// ### Creation
+// #### Creation
 //
 // See the POST documentation for the project collection for an
 // example of the request body.
@@ -594,98 +510,7 @@ func (s *projects) PostWorkspacesWorkspaceProjects(ctx context.Context, request 
 // (since it is already present in the URL). The `name` is required,
 // everything else is optional.
 //
-// ### Update
-//
-// See the POST documentation for the project collection for an
-// example of the request body.
-//
-// Note: The key is not required in the body (since it is already in
-// the URL). The key may be specified in the body, if the intent is
-// to change the key itself. In such a scenario, the location of the
-// project is changed and is returned in the `Location` header of the
-// response.
-func (s *projects) PutTeamsUsernameProjectsProjectKey(ctx context.Context, request operations.PutTeamsUsernameProjectsProjectKeyRequest) (*operations.PutTeamsUsernameProjectsProjectKeyResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{username}/projects/{project_key}", request.PathParams, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PutTeamsUsernameProjectsProjectKeyResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		fallthrough
-	case httpRes.StatusCode == 201:
-		res.Headers = httpRes.Header
-
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Project = out
-		}
-	case httpRes.StatusCode == 403:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// PutWorkspacesWorkspaceProjectsProjectKey - Since this endpoint can be used to both update and to create a
-// project, the request body depends on the intent.
-//
-// ### Creation
-//
-// See the POST documentation for the project collection for an
-// example of the request body.
-//
-// Note: The `key` should not be specified in the body of request
-// (since it is already present in the URL). The `name` is required,
-// everything else is optional.
-//
-// ### Update
+// #### Update
 //
 // See the POST documentation for the project collection for an
 // example of the request body.
@@ -747,6 +572,74 @@ func (s *projects) PutWorkspacesWorkspaceProjectsProjectKey(ctx context.Context,
 
 			res.Project = out
 		}
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser - Add the specific user as a default reviewer for the project
+// Adds the specified user to the project's list of default reviewers. The method is
+// idempotent. Accepts an optional body containing the `uuid` of the user to be added.
+//
+// Example:
+// ```
+// $ curl -XPUT https://api.bitbucket.org/2.0/.../default-reviewers/%7Bf0e0e8e9-66c1-4b85-a784-44a9eb9ef1a6%7D
+// -d { 'uuid': '{f0e0e8e9-66c1-4b85-a784-44a9eb9ef1a6}' }
+//
+// HTTP/1.1 204
+// ```
+func (s *projects) PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(ctx context.Context, request operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest) (*operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.User = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
 	case httpRes.StatusCode == 403:
 		fallthrough
 	case httpRes.StatusCode == 404:

@@ -13,6 +13,7 @@ type VendorProjectRoleEnum string
 const (
 	VendorProjectRoleEnumTranslator  VendorProjectRoleEnum = "translator"
 	VendorProjectRoleEnumProofreader VendorProjectRoleEnum = "proofreader"
+	VendorProjectRoleEnumBoth        VendorProjectRoleEnum = "both"
 )
 
 func (e *VendorProjectRoleEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *VendorProjectRoleEnum) UnmarshalJSON(data []byte) error {
 	case "translator":
 		fallthrough
 	case "proofreader":
+		fallthrough
+	case "both":
 		*e = VendorProjectRoleEnum(s)
 		return nil
 	default:

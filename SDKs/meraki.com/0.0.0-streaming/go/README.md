@@ -217,11 +217,6 @@ func main() {
 * `GetDeviceCellularGatewaySettingsPortForwardingRules` - Returns the port forwarding rules for a single MG.
 * `UpdateDeviceCellularGatewaySettingsPortForwardingRules` - Updates the port forwarding rules for a single MG.
 
-### MGSubnetPoolSettings
-
-* `GetNetworkCellularGatewaySettingsSubnetPool` - Return the subnet pool and mask configured for MGs in the network.
-* `UpdateNetworkCellularGatewaySettingsSubnetPool` - Update the subnet pool and mask configuration for MGs in the network.
-
 ### MRL3Firewall
 
 * `GetNetworkSsidL3FirewallRules` - Return the L3 firewall rules for an SSID on an MR network
@@ -371,7 +366,6 @@ func main() {
 
 * `CreateNetworkWirelessRfProfile` - Creates new RF profile for this network
 * `DeleteNetworkWirelessRfProfile` - Delete a RF Profile
-* `GetNetworkDeviceWirelessRadioSettings` - Return the radio settings of a device
 * `GetNetworkWirelessRfProfile` - Return a RF profile
 * `GetNetworkWirelessRfProfiles` - List the non-basic RF profiles for this network
 * `UpdateNetworkWirelessRfProfile` - Updates specified RF profile for this network
@@ -463,8 +457,6 @@ func main() {
 * `CreateNetworkSwitchSettingsQosRule` - Add a quality of service rule
 * `DeleteNetworkSwitchSettingsQosRule` - Delete a quality of service rule
 * `GetNetworkSwitchSettings` - Returns the switch network settings
-* `GetNetworkSwitchSettingsDhcpServerPolicy` - Return the DHCP server policy
-* `GetNetworkSwitchSettingsDscpToCosMappings` - Return the DSCP to CoS mappings
 * `GetNetworkSwitchSettingsMtu` - Return the MTU configuration
 * `GetNetworkSwitchSettingsMulticast` - Return multicast settings for a network
 * `GetNetworkSwitchSettingsQosRule` - Return a quality of service rule
@@ -472,8 +464,6 @@ func main() {
 * `GetNetworkSwitchSettingsQosRulesOrder` - Return the quality of service rule IDs by order in which they will be processed by the switch
 * `GetNetworkSwitchSettingsStormControl` - Return the storm control configuration for a switch network
 * `UpdateNetworkSwitchSettings` - Update switch network settings
-* `UpdateNetworkSwitchSettingsDhcpServerPolicy` - Update the DHCP server policy
-* `UpdateNetworkSwitchSettingsDscpToCosMappings` - Update the DSCP to CoS mappings
 * `UpdateNetworkSwitchSettingsMtu` - Update the MTU configuration
 * `UpdateNetworkSwitchSettingsMulticast` - Update multicast settings for a network
 * `UpdateNetworkSwitchSettingsQosRule` - Update a quality of service rule

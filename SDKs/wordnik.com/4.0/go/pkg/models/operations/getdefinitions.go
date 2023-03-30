@@ -136,15 +136,13 @@ func (e *GetDefinitionsPartOfSpeechEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// GetDefinitionsSourceDictionariesEnum - Source dictionary to return definitions from.  If 'all' is received, results are returned from all sources. If multiple values are received (e.g. 'century,wiktionary'), results are returned from the first specified dictionary that has definitions. If left blank, results are returned from the first dictionary that has definitions. By default, dictionaries are searched in this order: ahd, wiktionary, webster, century, wordnet
+// GetDefinitionsSourceDictionariesEnum - Source dictionary to return definitions from.  If 'all' is received, results are returned from all sources. If multiple values are received (e.g. 'century,wiktionary'), results are returned from the first specified dictionary that has definitions. If left blank, results are returned from the first dictionary that has definitions. By default, dictionaries are searched in this order: ahd-5, wiktionary, webster, century, wordnet
 type GetDefinitionsSourceDictionariesEnum string
 
 const (
 	GetDefinitionsSourceDictionariesEnumAll        GetDefinitionsSourceDictionariesEnum = "all"
-	GetDefinitionsSourceDictionariesEnumAhd        GetDefinitionsSourceDictionariesEnum = "ahd"
+	GetDefinitionsSourceDictionariesEnumAhd5       GetDefinitionsSourceDictionariesEnum = "ahd-5"
 	GetDefinitionsSourceDictionariesEnumCentury    GetDefinitionsSourceDictionariesEnum = "century"
-	GetDefinitionsSourceDictionariesEnumCmu        GetDefinitionsSourceDictionariesEnum = "cmu"
-	GetDefinitionsSourceDictionariesEnumMacmillan  GetDefinitionsSourceDictionariesEnum = "macmillan"
 	GetDefinitionsSourceDictionariesEnumWiktionary GetDefinitionsSourceDictionariesEnum = "wiktionary"
 	GetDefinitionsSourceDictionariesEnumWebster    GetDefinitionsSourceDictionariesEnum = "webster"
 	GetDefinitionsSourceDictionariesEnumWordnet    GetDefinitionsSourceDictionariesEnum = "wordnet"
@@ -158,13 +156,9 @@ func (e *GetDefinitionsSourceDictionariesEnum) UnmarshalJSON(data []byte) error 
 	switch s {
 	case "all":
 		fallthrough
-	case "ahd":
+	case "ahd-5":
 		fallthrough
 	case "century":
-		fallthrough
-	case "cmu":
-		fallthrough
-	case "macmillan":
 		fallthrough
 	case "wiktionary":
 		fallthrough
@@ -211,7 +205,7 @@ type GetDefinitionsQueryParams struct {
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
 	// CSV list of part-of-speech types
 	PartOfSpeech *GetDefinitionsPartOfSpeechEnum `queryParam:"style=form,explode=true,name=partOfSpeech"`
-	// Source dictionary to return definitions from.  If 'all' is received, results are returned from all sources. If multiple values are received (e.g. 'century,wiktionary'), results are returned from the first specified dictionary that has definitions. If left blank, results are returned from the first dictionary that has definitions. By default, dictionaries are searched in this order: ahd, wiktionary, webster, century, wordnet
+	// Source dictionary to return definitions from.  If 'all' is received, results are returned from all sources. If multiple values are received (e.g. 'century,wiktionary'), results are returned from the first specified dictionary that has definitions. If left blank, results are returned from the first dictionary that has definitions. By default, dictionaries are searched in this order: ahd-5, wiktionary, webster, century, wordnet
 	SourceDictionaries *GetDefinitionsSourceDictionariesEnum `queryParam:"style=form,explode=false,name=sourceDictionaries"`
 	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetDefinitionsUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`

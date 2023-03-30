@@ -57,7 +57,7 @@ func main() {
 * `PricePrediction` - Price Prediction
 * `QuantmetricsTier1` - Quantmetrics Tier 1
 * `QuantmetricsTier2` - Quantmetrics Tier 2
-* `ResistanceAndSupport` - Resistance & Support
+* `ResistanceSupport` - Resistance & Support
 * `ScenarioAnalysis` - Scenario Analysis
 * `Sentiments` - Sentiments
 * `Tokens` - Tokens

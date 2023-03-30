@@ -21,6 +21,7 @@ pkg/models/operations/getaccounts.go
 pkg/models/operations/getaccountsid.go
 pkg/models/operations/getcategories.go
 pkg/models/operations/getcategoriesid.go
+pkg/models/operations/patchtransactionstransactionidrelationshipscategory.go
 pkg/models/operations/deletetransactionstransactionidrelationshipstags.go
 pkg/models/operations/gettags.go
 pkg/models/operations/posttransactionstransactionidrelationshipstags.go
@@ -36,12 +37,14 @@ pkg/models/operations/postwebhooks.go
 pkg/models/operations/postwebhookswebhookidping.go
 pkg/models/shared/listaccountsresponse.go
 pkg/models/shared/accountresource.go
+pkg/models/shared/ownershiptypeenumenum.go
 pkg/models/shared/moneyobject.go
 pkg/models/shared/accounttypeenumenum.go
 pkg/models/shared/getaccountresponse.go
 pkg/models/shared/listcategoriesresponse.go
 pkg/models/shared/categoryresource.go
 pkg/models/shared/getcategoryresponse.go
+pkg/models/shared/updatetransactioncategoryrequest.go
 pkg/models/shared/updatetransactiontagsrequest.go
 pkg/models/shared/taginputresourceidentifier.go
 pkg/models/shared/listtagsresponse.go

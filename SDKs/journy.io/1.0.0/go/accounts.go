@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-// accounts - Endpoints for creating or updating accounts
+// accounts - Endpoints for creating, deleting or updating accounts.
 type accounts struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient
@@ -32,11 +32,11 @@ func newAccounts(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// AddUserToAccount - Add user to account
-// Endpoint used to add a user to an account.
+// AddUserToAccount - Add users to an account
+// You can add up to 100 users to an account.
 func (s *accounts) AddUserToAccount(ctx context.Context, request operations.AddUserToAccountRequest) (*operations.AddUserToAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/users", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/accounts/users/add"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -137,11 +137,11 @@ func (s *accounts) AddUserToAccount(ctx context.Context, request operations.AddU
 	return res, nil
 }
 
-// RemoveUserFromAccount - Remove user from account
-// Endpoint used to remove a user from an account.
-func (s *accounts) RemoveUserFromAccount(ctx context.Context, request operations.RemoveUserFromAccountRequest) (*operations.RemoveUserFromAccountResponse, error) {
+// DeleteAccount - Delete account
+// Endpoint used to delete an account.
+func (s *accounts) DeleteAccount(ctx context.Context, request operations.DeleteAccountRequest) (*operations.DeleteAccountResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/accounts/{accountId}/users", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/accounts"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -171,23 +171,142 @@ func (s *accounts) RemoveUserFromAccount(ctx context.Context, request operations
 
 	contentType := httpRes.Header.Get("Content-Type")
 
+	res := &operations.DeleteAccountResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 202:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteAccount202ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteAccount202ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 400:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteAccount400ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteAccount400ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 401:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteAccount401ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteAccount401ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 403:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteAccount403ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteAccount403ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteAccount429ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteAccount429ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 500:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.DeleteAccount500ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DeleteAccount500ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// RemoveUserFromAccount - Remove user from account
+// You can remove up to 100 users from an account.
+//
+// When removing a user, the user will still be stored in journy.io, but marked as "removed".
+func (s *accounts) RemoveUserFromAccount(ctx context.Context, request operations.RemoveUserFromAccountRequest) (*operations.RemoveUserFromAccountResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/accounts/users/remove"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
 	res := &operations.RemoveUserFromAccountResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
-	case httpRes.StatusCode == 201:
+	case httpRes.StatusCode == 204:
 		res.Headers = httpRes.Header
 
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.RemoveUserFromAccount201ApplicationJSON
+			var out *operations.RemoveUserFromAccount204ApplicationJSON
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.RemoveUserFromAccount201ApplicationJSONObject = out
+			res.RemoveUserFromAccount204ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 400:
 		res.Headers = httpRes.Header
@@ -212,18 +331,6 @@ func (s *accounts) RemoveUserFromAccount(ctx context.Context, request operations
 			}
 
 			res.RemoveUserFromAccount401ApplicationJSONObject = out
-		}
-	case httpRes.StatusCode == 403:
-		res.Headers = httpRes.Header
-
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.RemoveUserFromAccount403ApplicationJSON
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.RemoveUserFromAccount403ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 429:
 		res.Headers = httpRes.Header
@@ -329,6 +436,18 @@ func (s *accounts) UpsertAccount(ctx context.Context, request operations.UpsertA
 			}
 
 			res.UpsertAccount401ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 403:
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.UpsertAccount403ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UpsertAccount403ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 429:
 		res.Headers = httpRes.Header

@@ -112,6 +112,62 @@ type GetPricing200ApplicationJSONPricingLoadBalancerTypes struct {
 	Prices []GetPricing200ApplicationJSONPricingLoadBalancerTypesPrices `json:"prices"`
 }
 
+// GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceHourly - Hourly costs for a Primary IP type in this Location
+type GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceHourly struct {
+	// Price with VAT added
+	Gross string `json:"gross"`
+	// Price without VAT
+	Net string `json:"net"`
+}
+
+// GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceMonthly - Monthly costs for a Primary IP type in this Location
+type GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceMonthly struct {
+	// Price with VAT added
+	Gross string `json:"gross"`
+	// Price without VAT
+	Net string `json:"net"`
+}
+
+type GetPricing200ApplicationJSONPricingPrimaryIpsPrices struct {
+	// Name of the Location the price is for
+	Location string `json:"location"`
+	// Hourly costs for a Primary IP type in this Location
+	PriceHourly GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceHourly `json:"price_hourly"`
+	// Monthly costs for a Primary IP type in this Location
+	PriceMonthly GetPricing200ApplicationJSONPricingPrimaryIpsPricesPriceMonthly `json:"price_monthly"`
+}
+
+// GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum - The type of the Primary IP
+type GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum string
+
+const (
+	GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnumIpv4 GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum = "ipv4"
+	GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnumIpv6 GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum = "ipv6"
+)
+
+func (e *GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "ipv4":
+		fallthrough
+	case "ipv6":
+		*e = GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum: %s", s)
+	}
+}
+
+type GetPricing200ApplicationJSONPricingPrimaryIps struct {
+	// Primary IP type costs per Location
+	Prices []GetPricing200ApplicationJSONPricingPrimaryIpsPrices `json:"prices"`
+	// The type of the Primary IP
+	Type GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum `json:"type"`
+}
+
 // GetPricing200ApplicationJSONPricingServerBackup - Will increase base Server costs by specific percentage
 type GetPricing200ApplicationJSONPricingServerBackup struct {
 	// Percentage by how much the base price will increase
@@ -187,6 +243,8 @@ type GetPricing200ApplicationJSONPricing struct {
 	Image GetPricing200ApplicationJSONPricingImage `json:"image"`
 	// Costs of Load Balancer types per Location and type
 	LoadBalancerTypes []GetPricing200ApplicationJSONPricingLoadBalancerTypes `json:"load_balancer_types"`
+	// Costs of Primary IPs types per Location
+	PrimaryIps []GetPricing200ApplicationJSONPricingPrimaryIps `json:"primary_ips"`
 	// Will increase base Server costs by specific percentage
 	ServerBackup GetPricing200ApplicationJSONPricingServerBackup `json:"server_backup"`
 	// Costs of Server types per Location and type

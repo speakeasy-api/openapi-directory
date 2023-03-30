@@ -6,7 +6,7 @@ package shared
 type ListHubsResponse struct {
 	// The requested hubs.
 	Hubs []Hub `json:"hubs,omitempty"`
-	// The next pagination token in the List response. It should be used as page_token for the following request. An empty value means no more result.
+	// The token for the next page of the response. To see more results, use this value as the page_token for your next request. If this value is empty, there are no more results.
 	NextPageToken *string `json:"nextPageToken,omitempty"`
 	// Locations that could not be reached.
 	Unreachable []string `json:"unreachable,omitempty"`

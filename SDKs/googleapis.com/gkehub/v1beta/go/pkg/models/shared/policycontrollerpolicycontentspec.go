@@ -6,4 +6,6 @@ package shared
 type PolicyControllerPolicyContentSpec struct {
 	// map of bundle name to BundleInstallSpec. The bundle name maps to the `bundleName` key in the `policycontroller.gke.io/constraintData` annotation on a constraint.
 	Bundles map[string]PolicyControllerBundleInstallSpec `json:"bundles,omitempty"`
+	// The config specifying which default library templates to install.
+	TemplateLibrary *PolicyControllerTemplateLibraryConfig `json:"templateLibrary,omitempty"`
 }

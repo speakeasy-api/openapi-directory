@@ -13,17 +13,18 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AuthenticateRequest{
-        PathParams: operations.AuthenticatePathParams{
-            Username: "Katelynn_Medhurst60",
+    req := operations.GetAudioRequest{
+        PathParams: operations.GetAudioPathParams{
+            Word: "unde",
         },
-        QueryParams: operations.AuthenticateQueryParams{
-            Password: "vero",
+        QueryParams: operations.GetAudioQueryParams{
+            Limit: 592845,
+            UseCanonical: "true",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Account.Authenticate(ctx, req)
+    res, err := s.Word.GetAudio(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

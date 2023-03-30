@@ -39,7 +39,9 @@ type SDK struct {
 	Corporate         *corporate
 	Document          *document
 	Glossary          *glossary
+	Integrations      *integrations
 	Invitation        *invitation
+	MachineLearning   *machineLearning
 	Pam               *pam
 	Payment           *payment
 	Project           *project
@@ -51,7 +53,7 @@ type SDK struct {
 	Stats             *stats
 	Strings           *stringsT
 	StyleGuide        *styleGuide
-	Translations      *translations
+	Surveys           *surveys
 	User              *user
 	Vendor            *vendor
 
@@ -207,7 +209,25 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.Integrations = newIntegrations(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.Invitation = newInvitation(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.MachineLearning = newMachineLearning(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -315,7 +335,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
-	sdk.Translations = newTranslations(
+	sdk.Surveys = newSurveys(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

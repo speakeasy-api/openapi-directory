@@ -32,7 +32,131 @@ func newReport(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
-// GetLanguagePairsReport - Returns a report of language pairs.
+// GenerateQAReport - Generate a QA report for given filter
+// Generate a QA report for given filter
+func (s *report) GenerateQAReport(ctx context.Context, request operations.GenerateQAReportRequest) (*operations.GenerateQAReportResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/reports/qa"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GenerateQAReportResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.QaWarnings
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.QaWarnings = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetFilterContents - Returns available options for selected timeframe.
+func (s *report) GetFilterContents(ctx context.Context, request operations.GetFilterContentsRequest) (*operations.GetFilterContentsResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/reports/filter"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetFilterContentsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.FilterContents
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.FilterContents = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetLanguagePairsReport - Language pairs report
+// View translation reports for each language pair with translations under your account. You can view company-wide language pairs if you have the user permission.
 func (s *report) GetLanguagePairsReport(ctx context.Context, request operations.GetLanguagePairsReportRequest) (*operations.GetLanguagePairsReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/language-pairs"
@@ -93,7 +217,8 @@ func (s *report) GetLanguagePairsReport(ctx context.Context, request operations.
 	return res, nil
 }
 
-// GetProjectsReport - Returns a report of corporate account users.
+// GetProjectsReport - Projects report
+// View projects under your account, with advanced filtering. You can view company-wide projects if you have the user permission.
 func (s *report) GetProjectsReport(ctx context.Context, request operations.GetProjectsReportRequest) (*operations.GetProjectsReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/projects"
@@ -154,7 +279,8 @@ func (s *report) GetProjectsReport(ctx context.Context, request operations.GetPr
 	return res, nil
 }
 
-// GetUsersReport - Returns a report of corporate account users.
+// GetUsersReport - Company users report
+// View translation reports for each user under your company account. You need the permission to view users in your company.
 func (s *report) GetUsersReport(ctx context.Context, request operations.GetUsersReportRequest) (*operations.GetUsersReportResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/reports/users"

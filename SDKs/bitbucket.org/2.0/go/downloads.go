@@ -31,7 +31,8 @@ func newDownloads(defaultClient, securityClient HTTPClient, serverURL, language,
 	}
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename - Deletes the specified download artifact from the repository.
+// DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename - Delete a download artifact
+// Deletes the specified download artifact from the repository.
 func (s *downloads) DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugDownloadsFilenameResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads/{filename}", request.PathParams, nil)
@@ -60,7 +61,10 @@ func (s *downloads) DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx con
 		RawResponse: httpRes,
 	}
 	switch {
-	default:
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out map[string]interface{}
@@ -75,7 +79,8 @@ func (s *downloads) DeleteRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx con
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugDownloads - Returns a list of download links associated with the repository.
+// GetRepositoriesWorkspaceRepoSlugDownloads - List download artifacts
+// Returns a list of download links associated with the repository.
 func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloads(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDownloadsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDownloadsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/downloads", request.PathParams, nil)
@@ -104,7 +109,8 @@ func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloads(ctx context.Contex
 		RawResponse: httpRes,
 	}
 	switch {
-	default:
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 403:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out map[string]interface{}
@@ -119,7 +125,8 @@ func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloads(ctx context.Contex
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugDownloadsFilename - Return a redirect to the contents of a download artifact.
+// GetRepositoriesWorkspaceRepoSlugDownloadsFilename - Get a download artifact link
+// Return a redirect to the contents of a download artifact.
 //
 // This endpoint returns the actual file contents and not the artifact's
 // metadata.
@@ -154,7 +161,10 @@ func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx contex
 		RawResponse: httpRes,
 	}
 	switch {
-	default:
+	case httpRes.StatusCode == 302:
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out map[string]interface{}
@@ -169,7 +179,8 @@ func (s *downloads) GetRepositoriesWorkspaceRepoSlugDownloadsFilename(ctx contex
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugDownloads - Upload new download artifacts.
+// PostRepositoriesWorkspaceRepoSlugDownloads - Upload a download artifact
+// Upload new download artifacts.
 //
 // To upload files, perform a `multipart/form-data` POST containing one
 // or more `files` fields:
@@ -207,7 +218,12 @@ func (s *downloads) PostRepositoriesWorkspaceRepoSlugDownloads(ctx context.Conte
 		RawResponse: httpRes,
 	}
 	switch {
-	default:
+	case httpRes.StatusCode == 201:
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 406:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out map[string]interface{}

@@ -4,6 +4,7 @@ package shared
 
 // AwsEksClusterResourcesVpcConfigDetails - Information about the VPC configuration used by the cluster control plane.
 type AwsEksClusterResourcesVpcConfigDetails struct {
-	SecurityGroupIds []string `json:"SecurityGroupIds,omitempty"`
-	SubnetIds        []string `json:"SubnetIds,omitempty"`
+	EndpointPublicAccess *bool    `json:"EndpointPublicAccess,omitempty"`
+	SecurityGroupIds     []string `json:"SecurityGroupIds,omitempty"`
+	SubnetIds            []string `json:"SubnetIds,omitempty"`
 }

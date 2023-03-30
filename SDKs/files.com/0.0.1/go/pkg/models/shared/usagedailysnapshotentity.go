@@ -8,12 +8,26 @@ import (
 
 // UsageDailySnapshotEntity - List Usage Daily Snapshots
 type UsageDailySnapshotEntity struct {
-	// The quantity of storage held for this site
+	// True if the API usage fields `read_api_usage` and `write_api_usage` can be relied upon.  If this is false, we suggest hiding that value from any UI.
+	APIUsageAvailable *bool `json:"api_usage_available,omitempty"`
+	// GB of Files Native Storage used on this day.
 	CurrentStorage *int `json:"current_storage,omitempty"`
 	// The date of this usage record
 	Date *types.Date `json:"date,omitempty"`
+	// GB of Files Native Storage used on this day for files that have been permanently deleted but were uploaded less than 30 days ago, and are still billable.
+	DeletedFilesCountedInMinimum *int `json:"deleted_files_counted_in_minimum,omitempty"`
+	// GB of Files Native Storage used on this day for files that have been deleted and are stored as backups.
+	DeletedFilesStorage *int `json:"deleted_files_storage,omitempty"`
 	// ID of the usage record
 	ID *int `json:"id,omitempty"`
+	// Read API Calls used on this day. Note: only updated for days before the current day.
+	ReadAPIUsage *int `json:"read_api_usage,omitempty"`
+	// GB of Files Native Storage used for the root folder.  Included here because this value will not be part of `usage_by_top_level_dir`
+	RootStorage *int `json:"root_storage,omitempty"`
 	// Usage broken down by each top-level folder
-	UsageByTopLevelDir []interface{} `json:"usage_by_top_level_dir,omitempty"`
+	UsageByTopLevelDir map[string]interface{} `json:"usage_by_top_level_dir,omitempty"`
+	// Number of billable users as of this day.
+	UserCount *int `json:"user_count,omitempty"`
+	// Write API Calls used on this day. Note: only updated for days before the current day.
+	WriteAPIUsage *int `json:"write_api_usage,omitempty"`
 }

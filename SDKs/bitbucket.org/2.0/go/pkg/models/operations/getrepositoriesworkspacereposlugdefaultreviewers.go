@@ -33,4 +33,8 @@ type GetRepositoriesWorkspaceRepoSlugDefaultReviewersResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
+	// If the authenticated user does not have access to view the default reviewers
+	Error map[string]interface{}
+	// The paginated list of default reviewers
+	PaginatedAccounts *shared.PaginatedAccounts
 }

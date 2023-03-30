@@ -19,8 +19,8 @@ type PrivateArticlesSearchRequest struct {
 
 type PrivateArticlesSearchResponse struct {
 	// OK. An array of articles
-	Articles    []shared.Article
-	ContentType string
+	ArticleWithProjects []shared.ArticleWithProject
+	ContentType         string
 	// Forbidden
 	ErrorMessage *shared.ErrorMessage
 	StatusCode   int

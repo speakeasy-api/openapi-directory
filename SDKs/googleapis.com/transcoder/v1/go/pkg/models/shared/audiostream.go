@@ -12,9 +12,9 @@ type AudioStream struct {
 	ChannelLayout []string `json:"channelLayout,omitempty"`
 	// The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
 	Codec *string `json:"codec,omitempty"`
-	// The name for this particular audio stream that will be added to the HLS/DASH manifest.
+	// The name for this particular audio stream that will be added to the HLS/DASH manifest. Not supported in MP4 files.
 	DisplayName *string `json:"displayName,omitempty"`
-	// The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+	// The BCP-47 language code, such as `en-US` or `sr-Latn`. For more information, see https://www.unicode.org/reports/tr35/#Unicode_locale_identifier. Not supported in MP4 files.
 	LanguageCode *string `json:"languageCode,omitempty"`
 	// The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
 	Mapping []AudioMapping `json:"mapping,omitempty"`

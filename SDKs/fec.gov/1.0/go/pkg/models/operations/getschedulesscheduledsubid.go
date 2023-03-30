@@ -44,15 +44,15 @@ type GetSchedulesScheduleDSubIDDefaultApplicationJSONResults struct {
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
 	//
-	CandidateID              *string `json:"candidate_id,omitempty"`
-	CandidateLastName        *string `json:"candidate_last_name,omitempty"`
-	CandidateOffice          *string `json:"candidate_office,omitempty"`
-	CandidateOfficeDistrict  *string `json:"candidate_office_district,omitempty"`
-	CandidateOfficeState     *string `json:"candidate_office_state,omitempty"`
-	CandidateOfficeStateFull *string `json:"candidate_office_state_full,omitempty"`
+	CandidateID       *string `json:"candidate_id,omitempty"`
+	CandidateLastName *string `json:"candidate_last_name,omitempty"`
 	// Name of candidate running for office
-	CanidateName *string                  `json:"canidate_name,omitempty"`
-	Committee    *shared.CommitteeHistory `json:"committee,omitempty"`
+	CandidateName            *string                  `json:"candidate_name,omitempty"`
+	CandidateOffice          *string                  `json:"candidate_office,omitempty"`
+	CandidateOfficeDistrict  *string                  `json:"candidate_office_district,omitempty"`
+	CandidateOfficeState     *string                  `json:"candidate_office_state,omitempty"`
+	CandidateOfficeStateFull *string                  `json:"candidate_office_state_full,omitempty"`
+	Committee                *shared.CommitteeHistory `json:"committee,omitempty"`
 	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
 	//
 	CommitteeID *string `json:"committee_id,omitempty"`

@@ -75,6 +75,8 @@ func (e *GooglePrivacyDlpV2DlpJobTypeEnum) UnmarshalJSON(data []byte) error {
 
 // GooglePrivacyDlpV2DlpJob - Combines all of the information about a DLP job.
 type GooglePrivacyDlpV2DlpJob struct {
+	// Events that should occur after the job has completed.
+	ActionDetails []GooglePrivacyDlpV2ActionDetails `json:"actionDetails,omitempty"`
 	// Time when the job was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// Time when the job finished.

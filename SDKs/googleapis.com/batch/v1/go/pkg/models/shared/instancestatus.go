@@ -39,7 +39,7 @@ func (e *InstanceStatusProvisioningModelEnum) UnmarshalJSON(data []byte) error {
 
 // InstanceStatus - VM instance status.
 type InstanceStatus struct {
-	// A new persistent disk or a local ssd. A VM can only have one local SSD setting but multiple local SSD partitions. https://cloud.google.com/compute/docs/disks#pdspecs. https://cloud.google.com/compute/docs/disks#localssds.
+	// A new persistent disk or a local ssd. A VM can only have one local SSD setting but multiple local SSD partitions. See https://cloud.google.com/compute/docs/disks#pdspecs and https://cloud.google.com/compute/docs/disks#localssds.
 	BootDisk *Disk `json:"bootDisk,omitempty"`
 	// The Compute Engine machine type.
 	MachineType *string `json:"machineType,omitempty"`

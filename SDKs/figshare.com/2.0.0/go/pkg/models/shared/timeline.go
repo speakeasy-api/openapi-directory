@@ -4,15 +4,15 @@ package shared
 
 type Timeline struct {
 	// Online posted date
-	FirstOnline *string `json:"firstOnline,omitempty"`
+	FirstOnline string `json:"firstOnline"`
 	// Posted date
-	Posted *string `json:"posted,omitempty"`
+	Posted string `json:"posted"`
 	// Date when the item was accepted for publication
-	PublisherAcceptance *string `json:"publisherAcceptance,omitempty"`
+	PublisherAcceptance string `json:"publisherAcceptance"`
 	// Publish date
-	PublisherPublication *string `json:"publisherPublication,omitempty"`
+	PublisherPublication string `json:"publisherPublication"`
 	// Revision date from curation (if curated)
-	Revision *string `json:"revision,omitempty"`
+	Revision string `json:"revision"`
 	// Submission date in curation (if curated)
-	Submission *string `json:"submission,omitempty"`
+	Submission string `json:"submission"`
 }

@@ -26,7 +26,9 @@ type PutSnippetsWorkspaceEncodedIDCommentsCommentIDPathParams struct {
 
 type PutSnippetsWorkspaceEncodedIDCommentsCommentIDRequest struct {
 	PathParams PutSnippetsWorkspaceEncodedIDCommentsCommentIDPathParams
-	Security   PutSnippetsWorkspaceEncodedIDCommentsCommentIDSecurity
+	// The contents to update the comment to.
+	Request  map[string]interface{} `request:"mediaType=application/json"`
+	Security PutSnippetsWorkspaceEncodedIDCommentsCommentIDSecurity
 }
 
 type PutSnippetsWorkspaceEncodedIDCommentsCommentIDResponse struct {
@@ -35,4 +37,6 @@ type PutSnippetsWorkspaceEncodedIDCommentsCommentIDResponse struct {
 	RawResponse *http.Response
 	// If the authenticated user does not have access to the snippet.
 	Error map[string]interface{}
+	// The updated comment object.
+	SnippetComment map[string]interface{}
 }

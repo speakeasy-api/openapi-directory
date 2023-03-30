@@ -9,6 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetSeriesSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetSeriesSortEnum string
 
 const (
@@ -70,6 +74,7 @@ type GetSeriesQueryParams struct {
 
 type GetSeriesRequest struct {
 	QueryParams GetSeriesQueryParams
+	Security    GetSeriesSecurity
 }
 
 // GetSeries400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

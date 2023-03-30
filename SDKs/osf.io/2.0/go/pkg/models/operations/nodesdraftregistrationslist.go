@@ -16,16 +16,36 @@ type NodesDraftRegistrationsListRequest struct {
 	PathParams NodesDraftRegistrationsListPathParams
 }
 
-// NodesDraftRegistrationsListDraftRegistrationAttributes - The properties of the draft registration entity.
+type NodesDraftRegistrationsListDraftRegistrationAttributesNodeLicense struct {
+	// A list of names of copyright holders for the license.
+	CopyrightHolders []string
+	// The year the copyright was made.
+	Year *int64
+}
+
+// NodesDraftRegistrationsListDraftRegistrationAttributes - The properties of the Draft Registration entity.
 type NodesDraftRegistrationsListDraftRegistrationAttributes struct {
+	// The category of the Draft Registration.
+	Category *string
+	// The current users permission level for the Draft Registration.
+	CurrentUserPermissions []string
 	// The time at which the draft registration was first initiated, as an iso8601 formatted timestamp.
-	DatetimeInitiated time.Time
+	DatetimeInitiated *time.Time
 	// The time at which the draft registration was last updated, as an iso8601 formatted timestamp.
-	DatetimeUpdated time.Time
+	DatetimeUpdated *time.Time
+	// The description of the Draft Registration.
+	Description *string
+	// This indicates whether a Draft Registration was branched from a project.
+	HasProject  *bool
+	NodeLicense *NodesDraftRegistrationsListDraftRegistrationAttributesNodeLicense
+	// This is a legacy format for `registration_responses`.
+	RegistrationMetadata map[string]interface{}
 	// A dictionary of question IDs and responses from the registration schema.
-	RegistrationMetadata *string
-	// The ID of an active registration schema that this registration will conform to.
-	RegistrationSupplement string
+	RegistrationResponses map[string]interface{}
+	// The searchable tags of the Draft Registration.
+	Tags []string
+	// The title of the Draft Registration.
+	Title *string
 }
 
 // NodesDraftRegistrationsListDraftRegistrationLinks - URLs to alternative representations of the draft registration entity.
@@ -37,15 +57,15 @@ type NodesDraftRegistrationsListDraftRegistrationLinks struct {
 // NodesDraftRegistrationsListDraftRegistrationRelationships - URLs to other entities or entity collections that have a relationship to the draft registration entity.
 type NodesDraftRegistrationsListDraftRegistrationRelationships struct {
 	// A link to the node that this draft registration was created from.
-	BranchedFrom string
+	BranchedFrom *string
 	// A link to the user who initiated the draft registration.
-	Initiator string
+	Initiator *string
 	// A link to the detailed registration schema that this draft conforms to.
-	RegistrationSchema string
+	RegistrationSchema *string
 }
 
 type NodesDraftRegistrationsListDraftRegistration struct {
-	// The properties of the draft registration entity.
+	// The properties of the Draft Registration entity.
 	Attributes NodesDraftRegistrationsListDraftRegistrationAttributes
 	// The unique identifier of the draft registration entity.
 	ID string

@@ -9,7 +9,7 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-// GetResponsivityPeriodEnum - Period for calcualtion.
+// GetResponsivityPeriodEnum - Time period to calculate your responsiveness
 type GetResponsivityPeriodEnum string
 
 const (
@@ -34,7 +34,7 @@ func (e *GetResponsivityPeriodEnum) UnmarshalJSON(data []byte) error {
 }
 
 type GetResponsivityQueryParams struct {
-	// Period for calcualtion.
+	// Time period to calculate your responsiveness
 	Period *GetResponsivityPeriodEnum `queryParam:"style=form,explode=true,name=period"`
 }
 

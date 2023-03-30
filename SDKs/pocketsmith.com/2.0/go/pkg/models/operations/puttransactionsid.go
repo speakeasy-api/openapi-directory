@@ -12,11 +12,6 @@ type PutTransactionsIDPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
-type PutTransactionsIDQueryParams struct {
-	// A new set of labels for the transaction.
-	Labels *string `queryParam:"style=form,explode=true,name=labels"`
-}
-
 type PutTransactionsIDRequestBody struct {
 	// A new amount for the transaction.
 	Amount *float64 `json:"amount,omitempty"`
@@ -28,8 +23,12 @@ type PutTransactionsIDRequestBody struct {
 	Date *string `json:"date,omitempty"`
 	// Whether the transaction is a transfer or not.
 	IsTransfer *bool `json:"is_transfer,omitempty"`
+	// A new comma-separated set of labels for the transaction.
+	Labels *string `json:"labels,omitempty"`
 	// A new memo for the transaction.
 	Memo *string `json:"memo,omitempty"`
+	// Whether the transaction needs to be reviewed or not.
+	NeedsReview *bool `json:"needs_review,omitempty"`
 	// A new note for the transaction.
 	Note *string `json:"note,omitempty"`
 	// A new payee for the transaction.
@@ -37,9 +36,8 @@ type PutTransactionsIDRequestBody struct {
 }
 
 type PutTransactionsIDRequest struct {
-	PathParams  PutTransactionsIDPathParams
-	QueryParams PutTransactionsIDQueryParams
-	Request     *PutTransactionsIDRequestBody `request:"mediaType=application/json"`
+	PathParams PutTransactionsIDPathParams
+	Request    *PutTransactionsIDRequestBody `request:"mediaType=application/json"`
 }
 
 type PutTransactionsIDResponse struct {

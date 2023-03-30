@@ -19,11 +19,12 @@ type PatchUsersIDPathParams struct {
 type PatchUsersIDRequestBodyAuthenticationMethodEnum string
 
 const (
-	PatchUsersIDRequestBodyAuthenticationMethodEnumPassword         PatchUsersIDRequestBodyAuthenticationMethodEnum = "password"
-	PatchUsersIDRequestBodyAuthenticationMethodEnumUnusedFormerLdap PatchUsersIDRequestBodyAuthenticationMethodEnum = "unused_former_ldap"
-	PatchUsersIDRequestBodyAuthenticationMethodEnumSso              PatchUsersIDRequestBodyAuthenticationMethodEnum = "sso"
-	PatchUsersIDRequestBodyAuthenticationMethodEnumNone             PatchUsersIDRequestBodyAuthenticationMethodEnum = "none"
-	PatchUsersIDRequestBodyAuthenticationMethodEnumEmailSignup      PatchUsersIDRequestBodyAuthenticationMethodEnum = "email_signup"
+	PatchUsersIDRequestBodyAuthenticationMethodEnumPassword                 PatchUsersIDRequestBodyAuthenticationMethodEnum = "password"
+	PatchUsersIDRequestBodyAuthenticationMethodEnumUnusedFormerLdap         PatchUsersIDRequestBodyAuthenticationMethodEnum = "unused_former_ldap"
+	PatchUsersIDRequestBodyAuthenticationMethodEnumSso                      PatchUsersIDRequestBodyAuthenticationMethodEnum = "sso"
+	PatchUsersIDRequestBodyAuthenticationMethodEnumNone                     PatchUsersIDRequestBodyAuthenticationMethodEnum = "none"
+	PatchUsersIDRequestBodyAuthenticationMethodEnumEmailSignup              PatchUsersIDRequestBodyAuthenticationMethodEnum = "email_signup"
+	PatchUsersIDRequestBodyAuthenticationMethodEnumPasswordWithImportedHash PatchUsersIDRequestBodyAuthenticationMethodEnum = "password_with_imported_hash"
 )
 
 func (e *PatchUsersIDRequestBodyAuthenticationMethodEnum) UnmarshalJSON(data []byte) error {
@@ -41,6 +42,8 @@ func (e *PatchUsersIDRequestBodyAuthenticationMethodEnum) UnmarshalJSON(data []b
 	case "none":
 		fallthrough
 	case "email_signup":
+		fallthrough
+	case "password_with_imported_hash":
 		*e = PatchUsersIDRequestBodyAuthenticationMethodEnum(s)
 		return nil
 	default:
@@ -150,6 +153,8 @@ type PatchUsersIDRequestBody struct {
 	GroupIds *string `multipartForm:"name=group_ids"`
 	// Text to display to the user in the header of the UI
 	HeaderText *string `multipartForm:"name=header_text"`
+	// Pre-calculated hash of the user's password. If supplied, this will be used to authenticate the user on first login. Supported hash menthods are MD5, SHA1, and SHA256.
+	ImportedPasswordHash *string `multipartForm:"name=imported_password_hash"`
 	// Preferred language
 	Language *string `multipartForm:"name=language"`
 	// User's full name

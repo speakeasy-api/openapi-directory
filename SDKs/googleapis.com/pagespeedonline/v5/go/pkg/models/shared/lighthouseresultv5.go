@@ -12,16 +12,24 @@ type LighthouseResultV5 struct {
 	CategoryGroups map[string]CategoryGroupV5 `json:"categoryGroups,omitempty"`
 	// Message containing the configuration settings for the Lighthouse run.
 	ConfigSettings *ConfigSettings `json:"configSettings,omitempty"`
+	// Entity classification data.
+	Entities []LhrEntity `json:"entities,omitempty"`
 	// Message containing environment configuration for a Lighthouse run.
 	Environment *Environment `json:"environment,omitempty"`
 	// The time that this run was fetched.
 	FetchTime *string `json:"fetchTime,omitempty"`
+	// URL displayed on the page after Lighthouse finishes.
+	FinalDisplayedURL *string `json:"finalDisplayedUrl,omitempty"`
 	// The final resolved url that was audited.
 	FinalURL *string `json:"finalUrl,omitempty"`
+	// Screenshot data of the full page, along with node rects relevant to the audit results.
+	FullPageScreenshot interface{} `json:"fullPageScreenshot,omitempty"`
 	// Message containing the i18n data for the LHR - Version 1.
 	I18n *I18n `json:"i18n,omitempty"`
 	// The lighthouse version that was used to generate this LHR.
 	LighthouseVersion *string `json:"lighthouseVersion,omitempty"`
+	// URL of the main document request of the final navigation.
+	MainDocumentURL *string `json:"mainDocumentUrl,omitempty"`
 	// The original requested url.
 	RequestedURL *string `json:"requestedUrl,omitempty"`
 	// List of all run warnings in the LHR. Will always output to at least `[]`.

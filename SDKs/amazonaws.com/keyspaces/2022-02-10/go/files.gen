@@ -42,6 +42,8 @@ pkg/models/shared/pointintimerecoverystatusenum.go
 pkg/models/shared/encryptionspecification.go
 pkg/models/shared/encryptiontypeenum.go
 pkg/models/shared/comment.go
+pkg/models/shared/clientsidetimestamps.go
+pkg/models/shared/clientsidetimestampsstatusenum.go
 pkg/models/shared/capacityspecification.go
 pkg/models/shared/throughputmodeenum.go
 pkg/models/shared/deletekeyspacerequest.go

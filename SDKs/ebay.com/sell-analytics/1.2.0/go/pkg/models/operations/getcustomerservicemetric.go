@@ -19,7 +19,7 @@ type GetCustomerServiceMetricPathParams struct {
 }
 
 type GetCustomerServiceMetricQueryParams struct {
-	// Use this query parameter to specify the Marketplace ID to evaluate for the customer service metrics and benchmark data. For the list of supported marketplaces, see Analytics API requirements and restrictions. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/analytics/types/bas:MarketplaceIdEnum
+	// Use this query parameter to specify the Marketplace ID to evaluate for the customer service metrics and benchmark data. For the list of supported marketplaces, see Analytics API requirements and restrictions. For implementation help, refer to eBay API documentation at https://developer.ebay.com/devzone/rest/api-ref/analytics/types/MarketplaceIdEnum.html
 	EvaluationMarketplaceID string `queryParam:"style=form,explode=true,name=evaluation_marketplace_id"`
 }
 

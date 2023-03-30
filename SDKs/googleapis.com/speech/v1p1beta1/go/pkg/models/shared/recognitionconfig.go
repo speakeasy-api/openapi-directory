@@ -71,7 +71,7 @@ type RecognitionConfigInput struct {
 	EnableAutomaticPunctuation *bool `json:"enableAutomaticPunctuation,omitempty"`
 	// This needs to be set to `true` explicitly and `audio_channel_count` > 1 to get each channel recognized separately. The recognition result will contain a `channel_tag` field to state which channel that result belongs to. If this is not true, we will only recognize the first channel. The request is billed cumulatively for all channels recognized: `audio_channel_count` multiplied by the length of the audio.
 	EnableSeparateRecognitionPerChannel *bool `json:"enableSeparateRecognitionPerChannel,omitempty"`
-	// If 'true', enables speaker detection for each recognized word in the top alternative of the recognition result using a speaker_tag provided in the WordInfo. Note: Use diarization_config instead.
+	// If 'true', enables speaker detection for each recognized word in the top alternative of the recognition result using a speaker_label provided in the WordInfo. Note: Use diarization_config instead.
 	EnableSpeakerDiarization *bool `json:"enableSpeakerDiarization,omitempty"`
 	// The spoken emoji behavior for the call If not set, uses default behavior based on model of choice If 'true', adds spoken emoji formatting for the request. This will replace spoken emojis with the corresponding Unicode symbols in the final transcript. If 'false', spoken emojis are not replaced.
 	EnableSpokenEmojis *bool `json:"enableSpokenEmojis,omitempty"`

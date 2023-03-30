@@ -47,7 +47,7 @@ func (s *heavyEquipmentSearch) GetListingHeavyEquipmentID(ctx context.Context, r
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -106,7 +106,7 @@ func (s *heavyEquipmentSearch) GetListingHeavyEquipmentIDExtra(ctx context.Conte
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -165,7 +165,7 @@ func (s *heavyEquipmentSearch) GetListingHeavyEquipmentIDMedia(ctx context.Conte
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -236,7 +236,7 @@ func (s *heavyEquipmentSearch) GetSearchHeavyEquipmentActive(ctx context.Context
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -295,7 +295,7 @@ func (s *heavyEquipmentSearch) GetSearchHeavyEquipmentAutoComplete(ctx context.C
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

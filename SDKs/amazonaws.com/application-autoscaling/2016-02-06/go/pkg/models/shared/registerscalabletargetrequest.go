@@ -10,4 +10,5 @@ type RegisterScalableTargetRequest struct {
 	ScalableDimension ScalableDimensionEnum `json:"ScalableDimension"`
 	ServiceNamespace  ServiceNamespaceEnum  `json:"ServiceNamespace"`
 	SuspendedState    *SuspendedState       `json:"SuspendedState,omitempty"`
+	Tags              map[string]string     `json:"Tags,omitempty"`
 }

@@ -3,6 +3,7 @@
 package shared
 
 type UserLinks struct {
+	LoginAs      *Href `json:"login_as,omitempty"`
 	Projects     *Href `json:"projects,omitempty"`
 	Responsivity *Href `json:"responsivity,omitempty"`
 	Self         *Href `json:"self,omitempty"`

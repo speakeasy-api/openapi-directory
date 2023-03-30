@@ -11,9 +11,10 @@ import (
 type FileMigrationEntityOperationEnum string
 
 const (
-	FileMigrationEntityOperationEnumDelete FileMigrationEntityOperationEnum = "delete"
-	FileMigrationEntityOperationEnumMove   FileMigrationEntityOperationEnum = "move"
-	FileMigrationEntityOperationEnumCopy   FileMigrationEntityOperationEnum = "copy"
+	FileMigrationEntityOperationEnumDelete            FileMigrationEntityOperationEnum = "delete"
+	FileMigrationEntityOperationEnumMove              FileMigrationEntityOperationEnum = "move"
+	FileMigrationEntityOperationEnumCopy              FileMigrationEntityOperationEnum = "copy"
+	FileMigrationEntityOperationEnumRegionalMigration FileMigrationEntityOperationEnum = "regional_migration"
 )
 
 func (e *FileMigrationEntityOperationEnum) UnmarshalJSON(data []byte) error {
@@ -27,6 +28,8 @@ func (e *FileMigrationEntityOperationEnum) UnmarshalJSON(data []byte) error {
 	case "move":
 		fallthrough
 	case "copy":
+		fallthrough
+	case "regional_migration":
 		*e = FileMigrationEntityOperationEnum(s)
 		return nil
 	default:
@@ -41,7 +44,7 @@ const (
 	FileMigrationEntityStatusEnumPending                      FileMigrationEntityStatusEnum = "pending"
 	FileMigrationEntityStatusEnumCounting                     FileMigrationEntityStatusEnum = "counting"
 	FileMigrationEntityStatusEnumProcessing                   FileMigrationEntityStatusEnum = "processing"
-	FileMigrationEntityStatusEnumComplete                     FileMigrationEntityStatusEnum = "complete"
+	FileMigrationEntityStatusEnumCompleted                    FileMigrationEntityStatusEnum = "completed"
 	FileMigrationEntityStatusEnumProcessingSubfolders         FileMigrationEntityStatusEnum = "processing_subfolders"
 	FileMigrationEntityStatusEnumFinishing                    FileMigrationEntityStatusEnum = "finishing"
 	FileMigrationEntityStatusEnumCreatingDestFolder           FileMigrationEntityStatusEnum = "creating_dest_folder"
@@ -51,7 +54,7 @@ const (
 	FileMigrationEntityStatusEnumWaitingForAllSubfolders      FileMigrationEntityStatusEnum = "waiting_for_all_subfolders"
 	FileMigrationEntityStatusEnumFailed                       FileMigrationEntityStatusEnum = "failed"
 	FileMigrationEntityStatusEnumWaitingForEnqueuedOperations FileMigrationEntityStatusEnum = "waiting_for_enqueued_operations"
-	FileMigrationEntityStatusEnumProcessingDeferredFolders    FileMigrationEntityStatusEnum = "processing_deferred_folders"
+	FileMigrationEntityStatusEnumUnused                       FileMigrationEntityStatusEnum = "unused"
 	FileMigrationEntityStatusEnumProcessingRecursively        FileMigrationEntityStatusEnum = "processing_recursively"
 	FileMigrationEntityStatusEnumRemovingDeferredFolders      FileMigrationEntityStatusEnum = "removing_deferred_folders"
 )
@@ -68,7 +71,7 @@ func (e *FileMigrationEntityStatusEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "processing":
 		fallthrough
-	case "complete":
+	case "completed":
 		fallthrough
 	case "processing_subfolders":
 		fallthrough
@@ -88,7 +91,7 @@ func (e *FileMigrationEntityStatusEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "waiting_for_enqueued_operations":
 		fallthrough
-	case "processing_deferred_folders":
+	case "unused":
 		fallthrough
 	case "processing_recursively":
 		fallthrough
@@ -106,7 +109,7 @@ type FileMigrationEntity struct {
 	DestPath *string `json:"dest_path,omitempty"`
 	// Number of files processed
 	FilesMoved *int `json:"files_moved,omitempty"`
-	// Total number of files to process
+	// Deprecated: used to return a count of the applicable files.  Currently returns 0 always.  On remote servers, it is not possible to reliably determine the number of affected files for every migration operation.
 	FilesTotal *int `json:"files_total,omitempty"`
 	// File migration ID
 	ID *int `json:"id,omitempty"`

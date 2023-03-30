@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetImagesSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetImagesQueryParams struct {
 	// The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
 	// The brackets *MUST* be percent-encoded, per the requirements in
@@ -17,6 +21,7 @@ type GetImagesQueryParams struct {
 
 type GetImagesRequest struct {
 	QueryParams GetImagesQueryParams
+	Security    GetImagesSecurity
 }
 
 // GetImages400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

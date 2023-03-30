@@ -19,6 +19,8 @@ type UpdateRepositoryHostedPropertyValuePathParams struct {
 
 type UpdateRepositoryHostedPropertyValueRequest struct {
 	PathParams UpdateRepositoryHostedPropertyValuePathParams
+	// The application property to create or update.
+	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdateRepositoryHostedPropertyValueResponse struct {

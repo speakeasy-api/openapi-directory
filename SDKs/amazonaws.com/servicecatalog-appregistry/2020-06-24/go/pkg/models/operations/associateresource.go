@@ -34,7 +34,7 @@ func (e *AssociateResourceResourceTypeEnum) UnmarshalJSON(data []byte) error {
 }
 
 type AssociateResourcePathParams struct {
-	// The name or ID of the application.
+	//  The name, ID, or ARN of the application.
 	Application string `pathParam:"style=simple,explode=false,name=application"`
 	// The name or ID of the resource of which the application will be associated.
 	Resource string `pathParam:"style=simple,explode=false,name=resource"`
@@ -71,6 +71,8 @@ type AssociateResourceResponse struct {
 	RawResponse               *http.Response
 	// ServiceQuotaExceededException
 	ServiceQuotaExceededException interface{}
+	// ThrottlingException
+	ThrottlingException interface{}
 	// ValidationException
 	ValidationException interface{}
 }

@@ -4,8 +4,8 @@ package shared
 
 // Amount - A complex type that describes the value of a monetary amount as represented by a global currency.
 type Amount struct {
-	// The base currency applied to the value field to establish a monetary amount. The currency is represented as a 3-letter ISO 4217 currency code. For example, the code for the Canadian Dollar is CAD. Default: The default currency of the eBay marketplace that hosts the listing. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/logistics/types/bas:CurrencyCodeEnum'>eBay API documentation</a>
+	// The base currency applied to the <b>value</b> field to establish a monetary amount.  <br><br>The currency is represented as a 3-letter <a href="https://www.iso.org/iso-4217-currency-codes.html" title="https://www.iso.org" target="_blank">ISO 4217</a> currency code. For example, the code for the Canadian Dollar is <code>CAD</code>.  <br><br><b>Default:</b> The default currency of the eBay marketplace that hosts the listing. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/logistics/types/bas:CurrencyCodeEnum'>eBay API documentation</a>
 	Currency *string `json:"currency,omitempty"`
-	// The monetary amount in the specified currency.
+	// The monetary amount in the specified <b>currency</b>.
 	Value *string `json:"value,omitempty"`
 }

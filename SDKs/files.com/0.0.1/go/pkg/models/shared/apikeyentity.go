@@ -48,6 +48,8 @@ func (e *APIKeyEntityPermissionSetEnum) UnmarshalJSON(data []byte) error {
 type APIKeyEntity struct {
 	// Time which API Key was created
 	CreatedAt *time.Time `json:"created_at,omitempty"`
+	// User-supplied description of API key.
+	Description *string `json:"description,omitempty"`
 	// Unique label that describes this API key.  Useful for external systems where you may have API keys from multiple accounts and want a human-readable label for each key.
 	DescriptiveLabel *string `json:"descriptive_label,omitempty"`
 	// API Key expiration date
@@ -66,6 +68,8 @@ type APIKeyEntity struct {
 	PermissionSet *APIKeyEntityPermissionSetEnum `json:"permission_set,omitempty"`
 	// If this API key represents a Desktop app, what platform was it created on?
 	Platform *string `json:"platform,omitempty"`
+	// URL for API host.
+	URL *string `json:"url,omitempty"`
 	// User ID for the owner of this API Key.  May be blank for Site-wide API Keys.
 	UserID *int `json:"user_id,omitempty"`
 }

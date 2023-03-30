@@ -5,7 +5,7 @@ package shared
 // AccountUpdate - Account description
 type AccountUpdate struct {
 	// Not applicable to regular users. This field is reserved to institutions/publishers with access to assign to specific groups
-	GroupID *int64 `json:"group_id,omitempty"`
+	GroupID int64 `json:"group_id"`
 	// Is account active
-	IsActive *bool `json:"is_active,omitempty"`
+	IsActive bool `json:"is_active"`
 }

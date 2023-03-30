@@ -30,10 +30,10 @@ type GetRepositoriesWorkspaceRepoSlugPullrequestsPathParams struct {
 type GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum string
 
 const (
-	GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnumMerged     GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum = "MERGED"
-	GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnumSuperseded GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum = "SUPERSEDED"
 	GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnumOpen       GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum = "OPEN"
+	GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnumMerged     GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum = "MERGED"
 	GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnumDeclined   GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum = "DECLINED"
+	GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnumSuperseded GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum = "SUPERSEDED"
 )
 
 func (e *GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum) UnmarshalJSON(data []byte) error {
@@ -42,13 +42,13 @@ func (e *GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum) UnmarshalJSON(da
 		return err
 	}
 	switch s {
-	case "MERGED":
-		fallthrough
-	case "SUPERSEDED":
-		fallthrough
 	case "OPEN":
 		fallthrough
+	case "MERGED":
+		fallthrough
 	case "DECLINED":
+		fallthrough
+	case "SUPERSEDED":
 		*e = GetRepositoriesWorkspaceRepoSlugPullrequestsStateEnum(s)
 		return nil
 	default:

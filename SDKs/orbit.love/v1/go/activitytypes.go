@@ -30,10 +30,10 @@ func newActivityTypes(defaultClient, securityClient HTTPClient, serverURL, langu
 	}
 }
 
-// GetWorkspaceIDActivityTypes - List all activity types for a workspace
-func (s *activityTypes) GetWorkspaceIDActivityTypes(ctx context.Context, request operations.GetWorkspaceIDActivityTypesRequest) (*operations.GetWorkspaceIDActivityTypesResponse, error) {
+// GetWorkspaceSlugActivityTypes - List all activity types for a workspace
+func (s *activityTypes) GetWorkspaceSlugActivityTypes(ctx context.Context, request operations.GetWorkspaceSlugActivityTypesRequest) (*operations.GetWorkspaceSlugActivityTypesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/activity_types", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/activity_types", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -53,7 +53,7 @@ func (s *activityTypes) GetWorkspaceIDActivityTypes(ctx context.Context, request
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspaceIDActivityTypesResponse{
+	res := &operations.GetWorkspaceSlugActivityTypesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

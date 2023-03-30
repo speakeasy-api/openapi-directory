@@ -26,10 +26,10 @@ type GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugPathParams struct {
 
 type GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugQueryParams struct {
 	// Query string to narrow down the response as per
-	// [filtering and sorting](../../../../meta/filtering).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Name of a response property sort the result by as per
-	// [filtering and sorting](../../../../meta/filtering#query-sort).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results).
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }
@@ -46,6 +46,6 @@ type GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugResponse struct {
 	RawResponse *http.Response
 	// The requesting user isn't an admin of the repository.
 	Error map[string]interface{}
-	// The respository permission for all users in this repository.
+	// The repository permission for all users in this repository.
 	PaginatedRepositoryPermissions *shared.PaginatedRepositoryPermissions
 }

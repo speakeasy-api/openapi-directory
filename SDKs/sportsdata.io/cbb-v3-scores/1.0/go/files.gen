@@ -14,12 +14,14 @@ pkg/utils/utils.go
 pkg/models/operations/aregamesinprogress.go
 pkg/models/operations/currentseason.go
 pkg/models/operations/gamesbydate.go
+pkg/models/operations/injuredplayers.go
 pkg/models/operations/leaguehierarchy.go
 pkg/models/operations/playerdetailsbyactive.go
 pkg/models/operations/playerdetailsbyplayer.go
 pkg/models/operations/playerdetailsbyteam.go
 pkg/models/operations/schedules.go
 pkg/models/operations/stadiums.go
+pkg/models/operations/teamgamelogsbyseason.go
 pkg/models/operations/teamgamestatsbydate.go
 pkg/models/operations/teamschedule.go
 pkg/models/operations/teamseasonstats.go
@@ -29,9 +31,9 @@ pkg/models/shared/season.go
 pkg/models/shared/game.go
 pkg/models/shared/stadium.go
 pkg/models/shared/period.go
+pkg/models/shared/player.go
 pkg/models/shared/conference.go
 pkg/models/shared/team.go
-pkg/models/shared/player.go
 pkg/models/shared/teamgame.go
 pkg/models/shared/teamseason.go
 pkg/models/shared/tournament.go

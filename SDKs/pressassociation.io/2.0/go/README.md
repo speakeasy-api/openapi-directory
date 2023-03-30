@@ -61,6 +61,13 @@ func main() {
 * `GetAssetContributors` - Asset Contributors
 * `ListAssets` - Asset Collection
 
+### Catalogue
+
+* `GetCatalogue` - Catalogue Detail
+* `GetCatalogueAsset` - Catalogue Asset Collection
+* `GetCatalogueAssetDetail` - Catalogue Asset Detail
+* `ListCatalogues` - Catalogue Collection
+
 ### Channel
 
 * `GetChannel` - Channel Detail

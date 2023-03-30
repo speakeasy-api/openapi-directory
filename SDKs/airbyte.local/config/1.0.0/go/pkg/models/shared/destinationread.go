@@ -9,6 +9,7 @@ type DestinationRead struct {
 	DestinationDefinitionID string      `json:"destinationDefinitionId"`
 	DestinationID           string      `json:"destinationId"`
 	DestinationName         string      `json:"destinationName"`
+	Icon                    *string     `json:"icon,omitempty"`
 	Name                    string      `json:"name"`
 	WorkspaceID             string      `json:"workspaceId"`
 }

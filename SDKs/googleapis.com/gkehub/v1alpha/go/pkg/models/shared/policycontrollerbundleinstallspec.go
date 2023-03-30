@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// PolicyControllerBundleInstallSpecManagementEnum - Management specifies how the bundle will be managed by the controller.
+// PolicyControllerBundleInstallSpecManagementEnum - Management specifies how the bundle will be managed by the controller. TODO (b/271878194): Remove this
 type PolicyControllerBundleInstallSpecManagementEnum string
 
 const (
@@ -33,8 +33,8 @@ func (e *PolicyControllerBundleInstallSpecManagementEnum) UnmarshalJSON(data []b
 
 // PolicyControllerBundleInstallSpec - BundleInstallSpec is the specification configuration for a single managed bundle.
 type PolicyControllerBundleInstallSpec struct {
-	// the set of namespaces to be exempted from the bundle
+	// the set of namespaces to be exempted from the bundle TODO (b/271878194): Decrement this
 	ExemptedNamespaces []string `json:"exemptedNamespaces,omitempty"`
-	// Management specifies how the bundle will be managed by the controller.
+	// Management specifies how the bundle will be managed by the controller. TODO (b/271878194): Remove this
 	Management *PolicyControllerBundleInstallSpecManagementEnum `json:"management,omitempty"`
 }

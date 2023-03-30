@@ -33,6 +33,4 @@ type PutSnippetsWorkspaceEncodedIDWatchResponse struct {
 	RawResponse *http.Response
 	// If the request was not authenticated.
 	Error map[string]interface{}
-	// Indicates the authenticated user is now watching the snippet.
-	PaginatedUsers *shared.PaginatedUsers
 }

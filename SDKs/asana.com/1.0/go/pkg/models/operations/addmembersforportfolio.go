@@ -36,8 +36,7 @@ type AddMembersForPortfolioRequest struct {
 
 // AddMembersForPortfolio200ApplicationJSON - Successfully added members to the portfolio.
 type AddMembersForPortfolio200ApplicationJSON struct {
-	// An empty object. Some endpoints do not return an object on success. The success is conveyed through a 2-- status code and returning an empty object.
-	Data map[string]interface{} `json:"data,omitempty"`
+	Data *shared.PortfolioResponse `json:"data,omitempty"`
 }
 
 type AddMembersForPortfolioResponse struct {

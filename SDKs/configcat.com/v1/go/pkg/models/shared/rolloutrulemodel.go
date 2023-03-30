@@ -5,9 +5,12 @@ package shared
 type RolloutRuleModel struct {
 	Comparator *RolloutRuleComparatorEnum `json:"comparator,omitempty"`
 	// The user attribute to compare.
-	ComparisonAttribute string `json:"comparisonAttribute"`
+	ComparisonAttribute *string `json:"comparisonAttribute,omitempty"`
 	// The value to compare against.
-	ComparisonValue string `json:"comparisonValue"`
+	ComparisonValue   *string                `json:"comparisonValue,omitempty"`
+	SegmentComparator *SegmentComparatorEnum `json:"segmentComparator,omitempty"`
+	// The segment to compare against.
+	SegmentID *string `json:"segmentId,omitempty"`
 	// The value to serve when the comparison matches. It must respect the setting type.
-	Value map[string]interface{} `json:"value,omitempty"`
+	Value interface{} `json:"value,omitempty"`
 }

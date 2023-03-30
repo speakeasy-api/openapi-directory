@@ -94,6 +94,7 @@ func main() {
 * `AnalyticsadminPropertiesConversionEventsCreate` - Creates a conversion event with the specified attributes.
 * `AnalyticsadminPropertiesConversionEventsList` - Returns a list of conversion events in the specified parent property. Returns an empty list if no conversion events are found.
 * `AnalyticsadminPropertiesCreate` - Creates an "GA4" property with the specified location and attributes.
+* `AnalyticsadminPropertiesCreateConnectedSiteTag` - Creates a connected site tag for a Universal Analytics property. You can create a maximum of 20 connected site tags per property. Note: This API cannot be used on GA4 properties.
 * `AnalyticsadminPropertiesCustomDimensionsCreate` - Creates a CustomDimension.
 * `AnalyticsadminPropertiesCustomDimensionsList` - Lists CustomDimensions on a property.
 * `AnalyticsadminPropertiesCustomMetricsArchive` - Archives a CustomMetric on a property.
@@ -118,7 +119,7 @@ func main() {
 * `AnalyticsadminPropertiesGoogleAdsLinksCreate` - Creates a GoogleAdsLink.
 * `AnalyticsadminPropertiesGoogleAdsLinksList` - Lists GoogleAdsLinks on a property.
 * `AnalyticsadminPropertiesList` - Returns child Properties under the specified parent Account. Only "GA4" properties will be returned. Properties will be excluded if the caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default. Returns an empty list if no relevant properties are found.
-* `AnalyticsadminPropertiesListConnectedSiteTags` - Lists the connected site tags for a Universal Analytics property. Note: this has no effect on GA4 property.
+* `AnalyticsadminPropertiesListConnectedSiteTags` - Lists the connected site tags for a Universal Analytics property. A maximum of 20 connected site tags will be returned. Note: this has no effect on GA4 property.
 * `AnalyticsadminPropertiesRunAccessReport` - Returns a customized report of data access records. The report provides records of each time a user reads Google Analytics reporting data. Access records are retained for up to 2 years. Data Access Reports can be requested for a property. The property must be in Google Analytics 360. This method is only available to Administrators. These data access records include GA4 UI Reporting, GA4 UI Explorations, GA4 Data API, and other products like Firebase & Admob that can retrieve data from Google Analytics through a linkage. These records don't include property configuration changes like adding a stream or changing a property's time zone. For configuration change history, see [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
 * `AnalyticsadminPropertiesSearchAds360LinksCreate` - Creates a SearchAds360Link.
 * `AnalyticsadminPropertiesSearchAds360LinksList` - Lists all SearchAds360Links on a property.

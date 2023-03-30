@@ -11,24 +11,26 @@ import (
 )
 
 func main() {
-    s := sdk.New()
+    s := sdk.New(
+        sdk.WithSecurity(shared.Security{
+            Token: shared.SchemeToken{
+                APIKey: "YOUR_API_KEY_HERE",
+            },
+        }),
+    )
 
-    req := operations.GetAPIVVersionCurrenciesHistoryRequest{
-        PathParams: operations.GetAPIVVersionCurrenciesHistoryPathParams{
-            Version: "unde",
-        },
-        QueryParams: operations.GetAPIVVersionCurrenciesHistoryQueryParams{
-            End: "2022-08-25T03:26:03.964Z",
+    req := operations.CurrenciesHistoryGETRequest{
+        QueryParams: operations.CurrenciesHistoryGETQueryParams{
+            End: "2022-09-10T17:11:35.327Z",
             Format: "xml",
-            Interval: "nulla",
-            Pairs: "id",
-            Start: "2022-05-20T09:08:58.984Z",
-            Token: "perspiciatis",
+            Interval: "porro",
+            Pairs: "nulla",
+            Start: "2022-08-22T00:35:32.341Z",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Currencies.GetAPIVVersionCurrenciesHistory(ctx, req)
+    res, err := s.Currencies.CurrenciesHistoryGET(ctx, req)
     if err != nil {
         log.Fatal(err)
     }

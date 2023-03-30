@@ -5,94 +5,94 @@ package shared
 // ArticleComplete - OK. Article representation
 type ArticleComplete struct {
 	// List of article authors
-	Authors []Author `json:"authors,omitempty"`
+	Authors []Author `json:"authors"`
 	// List of categories selected for the article
-	Categories []Category `json:"categories,omitempty"`
+	Categories []Category `json:"categories"`
 	// Article citation
-	Citation *string `json:"citation,omitempty"`
+	Citation string `json:"citation"`
 	// Confidentiality reason
-	ConfidentialReason *string `json:"confidential_reason,omitempty"`
+	ConfidentialReason string `json:"confidential_reason"`
 	// Date when article was created
-	CreatedDate *string `json:"created_date,omitempty"`
+	CreatedDate string `json:"created_date"`
 	// List of custom fields values
-	CustomFields []CustomArticleField `json:"custom_fields,omitempty"`
-	// Type of article identificator
-	DefinedType *int64 `json:"defined_type,omitempty"`
-	// Name of the article type identificator
-	DefinedTypeName *string `json:"defined_type_name,omitempty"`
+	CustomFields []CustomArticleField `json:"custom_fields"`
+	// Type of article identifier
+	DefinedType int64 `json:"defined_type"`
+	// Name of the article type identifier
+	DefinedTypeName string `json:"defined_type_name"`
 	// Article description
-	Description *string `json:"description,omitempty"`
+	Description string `json:"description"`
 	// DOI
-	Doi *string `json:"doi,omitempty"`
+	Doi string `json:"doi"`
 	// Date when embargo lifts
-	EmbargoDate *string `json:"embargo_date,omitempty"`
+	EmbargoDate string `json:"embargo_date"`
 	// List of embargo options
-	EmbargoOptions []GroupEmbargoOptions `json:"embargo_options,omitempty"`
+	EmbargoOptions []GroupEmbargoOptions `json:"embargo_options"`
 	// Reason for embargo
-	EmbargoReason *string `json:"embargo_reason,omitempty"`
+	EmbargoReason string `json:"embargo_reason"`
 	// Title for embargo
-	EmbargoTitle *string `json:"embargo_title,omitempty"`
+	EmbargoTitle string `json:"embargo_title"`
 	// Article embargo
-	EmbargoType *string `json:"embargo_type,omitempty"`
+	EmbargoType string `json:"embargo_type"`
 	// Article public url
-	FigshareURL *string `json:"figshare_url,omitempty"`
+	FigshareURL string `json:"figshare_url"`
 	// List of article files
-	Files []PublicFile `json:"files,omitempty"`
+	Files []PublicFile `json:"files"`
 	// Article funding
-	Funding     *string `json:"funding,omitempty"`
-	FundingList []int64 `json:"funding_list,omitempty"`
+	Funding     string  `json:"funding"`
+	FundingList []int64 `json:"funding_list"`
 	// Group ID
-	GroupID *float64 `json:"group_id,omitempty"`
+	GroupID float64 `json:"group_id"`
 	// Handle
-	Handle *string `json:"handle,omitempty"`
+	Handle string `json:"handle"`
 	// True if any files are linked to the article
-	HasLinkedFile *bool `json:"has_linked_file,omitempty"`
+	HasLinkedFile bool `json:"has_linked_file"`
 	// Unique identifier for article
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// True if article is active
-	IsActive *bool `json:"is_active,omitempty"`
+	IsActive bool `json:"is_active"`
 	// Article Confidentiality
-	IsConfidential *bool `json:"is_confidential,omitempty"`
+	IsConfidential bool `json:"is_confidential"`
 	// True if article is embargoed
-	IsEmbargoed *bool `json:"is_embargoed,omitempty"`
+	IsEmbargoed bool `json:"is_embargoed"`
 	// True if article has no files
-	IsMetadataRecord *bool `json:"is_metadata_record,omitempty"`
+	IsMetadataRecord bool `json:"is_metadata_record"`
 	// True if article is published
-	IsPublic *bool    `json:"is_public,omitempty"`
-	License  *License `json:"license,omitempty"`
+	IsPublic bool    `json:"is_public"`
+	License  License `json:"license"`
 	// Article metadata reason
-	MetadataReason *string `json:"metadata_reason,omitempty"`
+	MetadataReason string `json:"metadata_reason"`
 	// Date when article was last modified
-	ModifiedDate *string `json:"modified_date,omitempty"`
+	ModifiedDate string `json:"modified_date"`
 	// Posted date
-	PublishedDate *string `json:"published_date,omitempty"`
+	PublishedDate string `json:"published_date"`
 	// List of references
-	References []string `json:"references,omitempty"`
+	References []string `json:"references"`
 	// Article DOI
-	ResourceDoi *string `json:"resource_doi,omitempty"`
+	ResourceDoi string `json:"resource_doi"`
 	// Article resource title
-	ResourceTitle *string `json:"resource_title,omitempty"`
+	ResourceTitle string `json:"resource_title"`
 	// Article size
-	Size *int64 `json:"size,omitempty"`
+	Size int64 `json:"size"`
 	// Article status
-	Status *string `json:"status,omitempty"`
+	Status string `json:"status"`
 	// List of article tags
-	Tags []string `json:"tags,omitempty"`
+	Tags []string `json:"tags"`
 	// Thumbnail image
-	Thumb    *string   `json:"thumb,omitempty"`
-	Timeline *Timeline `json:"timeline,omitempty"`
+	Thumb    string   `json:"thumb"`
+	Timeline Timeline `json:"timeline"`
 	// Title of article
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 	// Api endpoint for article
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 	// Private Api endpoint for article
-	URLPrivateAPI *string `json:"url_private_api,omitempty"`
+	URLPrivateAPI string `json:"url_private_api"`
 	// Private site endpoint for article
-	URLPrivateHTML *string `json:"url_private_html,omitempty"`
+	URLPrivateHTML string `json:"url_private_html"`
 	// Public Api endpoint for article
-	URLPublicAPI *string `json:"url_public_api,omitempty"`
+	URLPublicAPI string `json:"url_public_api"`
 	// Public site endpoint for article
-	URLPublicHTML *string `json:"url_public_html,omitempty"`
+	URLPublicHTML string `json:"url_public_html"`
 	// Article version
-	Version *int64 `json:"version,omitempty"`
+	Version int64 `json:"version"`
 }

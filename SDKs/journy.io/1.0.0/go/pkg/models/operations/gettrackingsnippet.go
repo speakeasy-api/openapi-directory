@@ -20,7 +20,7 @@ type GetTrackingSnippet500ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetTrackingSnippet500ApplicationJSON - The error message should specify what cause the error
+// GetTrackingSnippet500ApplicationJSON - The message specifies what is done
 type GetTrackingSnippet500ApplicationJSON struct {
 	Message string                                   `json:"message"`
 	Meta    GetTrackingSnippet500ApplicationJSONMeta `json:"meta"`
@@ -31,7 +31,7 @@ type GetTrackingSnippet429ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetTrackingSnippet429ApplicationJSON - The error message should specify what cause the error
+// GetTrackingSnippet429ApplicationJSON - The message specifies what is done
 type GetTrackingSnippet429ApplicationJSON struct {
 	Message string                                   `json:"message"`
 	Meta    GetTrackingSnippet429ApplicationJSONMeta `json:"meta"`
@@ -42,7 +42,7 @@ type GetTrackingSnippet404ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetTrackingSnippet404ApplicationJSON - The error message should specify what cause the error
+// GetTrackingSnippet404ApplicationJSON - The message specifies what is done
 type GetTrackingSnippet404ApplicationJSON struct {
 	Message string                                   `json:"message"`
 	Meta    GetTrackingSnippet404ApplicationJSONMeta `json:"meta"`
@@ -53,7 +53,7 @@ type GetTrackingSnippet403ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetTrackingSnippet403ApplicationJSON - The error message should specify what cause the error
+// GetTrackingSnippet403ApplicationJSON - The message specifies what is done
 type GetTrackingSnippet403ApplicationJSON struct {
 	Message string                                   `json:"message"`
 	Meta    GetTrackingSnippet403ApplicationJSONMeta `json:"meta"`
@@ -64,7 +64,7 @@ type GetTrackingSnippet401ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetTrackingSnippet401ApplicationJSON - The error message should specify what cause the error
+// GetTrackingSnippet401ApplicationJSON - The message specifies what is done
 type GetTrackingSnippet401ApplicationJSON struct {
 	Message string                                   `json:"message"`
 	Meta    GetTrackingSnippet401ApplicationJSONMeta `json:"meta"`
@@ -90,7 +90,7 @@ type GetTrackingSnippet400ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// GetTrackingSnippet400ApplicationJSON - The error message should specify what cause the error
+// GetTrackingSnippet400ApplicationJSON - The message specifies what is done
 type GetTrackingSnippet400ApplicationJSON struct {
 	// Map that sums up all received values that seemed incorrect
 	Errors  GetTrackingSnippet400ApplicationJSONErrors `json:"errors"`

@@ -28,7 +28,7 @@ type ChromemanagementCustomersTelemetryEventsListQueryParams struct {
 	Callback *string `queryParam:"style=form,explode=true,name=callback"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
-	// Optional. Only include resources that match the filter. Supported filter fields: - device_id - user_id - device_org_unit_id - user_org_unit_id - timestamp - event_type The "timestamp" filter accepts either Epoch milliseconds or RFC 3339 formatted time surrounded by simple double quotes.
+	// Optional. Only include resources that match the filter. Supported filter fields: - device_id - user_id - device_org_unit_id - user_org_unit_id - timestamp - event_type The "timestamp" filter accepts either the Unix Epoch milliseconds format or the RFC3339 UTC "Zulu" format with nanosecond resolution and up to nine fractional digits. Both formats should be surrounded by simple double quotes. Examples: "2014-10-02T15:01:23Z", "2014-10-02T15:01:23.045123456Z", "1679283943823".
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
 	// API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
 	Key *string `queryParam:"style=form,explode=true,name=key"`

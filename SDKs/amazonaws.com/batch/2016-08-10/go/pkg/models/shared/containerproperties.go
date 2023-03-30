@@ -6,6 +6,7 @@ package shared
 type ContainerProperties struct {
 	Command                      []string                      `json:"command,omitempty"`
 	Environment                  []KeyValuePair                `json:"environment,omitempty"`
+	EphemeralStorage             *EphemeralStorage             `json:"ephemeralStorage,omitempty"`
 	ExecutionRoleArn             *string                       `json:"executionRoleArn,omitempty"`
 	FargatePlatformConfiguration *FargatePlatformConfiguration `json:"fargatePlatformConfiguration,omitempty"`
 	Image                        *string                       `json:"image,omitempty"`

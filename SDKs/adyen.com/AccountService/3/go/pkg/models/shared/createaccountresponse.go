@@ -41,9 +41,9 @@ func (e *CreateAccountResponseStatusEnum) UnmarshalJSON(data []byte) error {
 // CreateAccountResponse - OK - the request has succeeded.
 type CreateAccountResponse struct {
 	// The code of the new account.
-	AccountCode string `json:"accountCode"`
+	AccountCode *string `json:"accountCode,omitempty"`
 	// The code of the account holder.
-	AccountHolderCode string                  `json:"accountHolderCode"`
+	AccountHolderCode *string                 `json:"accountHolderCode,omitempty"`
 	PayoutSchedule    *PayoutScheduleResponse `json:"payoutSchedule,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
 	PspReference *string `json:"pspReference,omitempty"`
@@ -51,7 +51,7 @@ type CreateAccountResponse struct {
 	ResultCode *string `json:"resultCode,omitempty"`
 	// The status of the account.
 	// >Permitted values: `Active`.
-	Status CreateAccountResponseStatusEnum `json:"status"`
+	Status *CreateAccountResponseStatusEnum `json:"status,omitempty"`
 	// Indicates whether the request is processed asynchronously. Depending on the request's platform settings, the following scenarios may be applied:
 	// * **true**: The request is queued and will be executed when the providing service is available in the order in which the requests are received.
 	// * **false**: The processing of the request is immediately attempted; it may result in an error if the providing service is unavailable.

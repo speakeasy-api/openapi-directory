@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-// timePeriods - A `time_period` is an object that represents a domain-scoped date range that can be set on `Goals`.
+// timePeriods - A time period is an object that represents a domain-scoped date range that can be set on [goals](/docs/goals).
 type timePeriods struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient

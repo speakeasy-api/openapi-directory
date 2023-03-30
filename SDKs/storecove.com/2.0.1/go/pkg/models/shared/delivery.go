@@ -2,21 +2,31 @@
 
 package shared
 
-type DeliveryLocation struct {
+type DeliveryDeliveryLocation struct {
 	// The address
 	Address *Address `json:"address,omitempty"`
 	// The location identifier.
 	ID *string `json:"id,omitempty"`
-	// The schemeAgencyId of the location identifier (e.g. 'ZZZ')
+	// The name of the delivery location. Only used for DocumentOrder.
+	LocationName *string `json:"locationName,omitempty"`
+	// DEPRECATED. The schemeAgencyId of the location identifier (e.g. 'ZZZ')
 	SchemeAgencyID *string `json:"schemeAgencyId,omitempty"`
 	// The schemeId of the location identifier (e.g. 'EAN')
 	SchemeID *string `json:"schemeId,omitempty"`
 }
 
 type Delivery struct {
-	// The actual date of the delivery.
-	ActualDate *string           `json:"actualDate,omitempty"`
-	Location   *DeliveryLocation `json:"location,omitempty"`
-	// The quantity of the delivery.
+	// The actual date of the delivery. Used only for Invoice
+	ActualDate       *string                   `json:"actualDate,omitempty"`
+	DeliveryLocation *DeliveryDeliveryLocation `json:"deliveryLocation,omitempty"`
+	// The party receiving the shipment.
+	DeliveryParty *DeliveryParty `json:"deliveryParty,omitempty"`
+	// Use deliveryParty. The name of the party that took delivery. Used only for Invoice
+	DeliveryPartyName *string `json:"deliveryPartyName,omitempty"`
+	// The quantity of the delivery. Used only for Invoice
 	Quantity *float64 `json:"quantity,omitempty"`
+	// The requested delivery period. Used only for DocumentOrder.
+	RequestedDeliveryPeriod *string `json:"requestedDeliveryPeriod,omitempty"`
+	// A text that the buyer requests to be printed on the packing labels. Used only for DocumentOrder.
+	ShippingMarks *string `json:"shippingMarks,omitempty"`
 }

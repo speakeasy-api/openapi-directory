@@ -35,6 +35,7 @@ pkg/models/operations/playersbyteam.go
 pkg/models/operations/schedules.go
 pkg/models/operations/stadiums.go
 pkg/models/operations/standings.go
+pkg/models/operations/teamgamelogsbyseason.go
 pkg/models/operations/teamgamestatsbydate.go
 pkg/models/operations/teamseasonstats.go
 pkg/models/operations/teamstatsallowedbyposition.go
@@ -48,6 +49,7 @@ pkg/models/shared/period.go
 pkg/models/shared/scoringplay.go
 pkg/models/shared/penalty.go
 pkg/models/shared/game.go
+pkg/models/shared/series.go
 pkg/models/shared/season.go
 pkg/models/shared/dfsslate.go
 pkg/models/shared/dfsslateplayer.go

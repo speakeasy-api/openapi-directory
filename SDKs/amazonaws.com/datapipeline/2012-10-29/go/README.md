@@ -53,7 +53,7 @@ func main() {
                 },
             },
             PipelineID: "ullam",
-            StartTimestamp: "2022-05-08T00:35:00.818Z",
+            StartTimestamp: "2022-05-08T11:57:13.872Z",
         },
     }
 

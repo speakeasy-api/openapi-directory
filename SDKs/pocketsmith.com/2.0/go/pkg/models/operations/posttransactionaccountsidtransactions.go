@@ -27,6 +27,8 @@ type PostTransactionAccountsIDTransactionsRequestBody struct {
 	Labels *string `json:"labels,omitempty"`
 	// A memo for the transaction.
 	Memo *string `json:"memo,omitempty"`
+	// Whether the transaction needs to be reviewed or not.
+	NeedsReview *bool `json:"needs_review,omitempty"`
 	// A note for the transaction.
 	Note *string `json:"note,omitempty"`
 	// The payee/merchant of the transaction.

@@ -42,7 +42,7 @@ type FirebaseappcheckProjectsServicesListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
-	// The maximum number of Services to return in the response. Only explicitly configured services are returned. The server may return fewer than this at its own discretion. If no value is specified (or too large a value is specified), the server will impose its own limit.
+	// The maximum number of Services to return in the response. Only explicitly configured services are returned. The server may return fewer than this at its own discretion. If no value is specified or set to zero (or too large a value is specified), the server will impose its own limit.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Token returned from a previous call to ListServices indicating where in the set of Services to resume listing. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to ListServices must match the call that provided the page token; if they do not match, the result is undefined.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`

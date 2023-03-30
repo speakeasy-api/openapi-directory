@@ -25,6 +25,7 @@ func String(s string) *string { return &s }
 // SDK - Welcome to the API Reference Docs page for the Press Association TV API (v2).
 type SDK struct {
 	Asset       *asset
+	Catalogue   *catalogue
 	Channel     *channel
 	Contributor *contributor
 	Feature     *feature
@@ -92,6 +93,15 @@ func New(opts ...SDKOption) *SDK {
 	}
 
 	sdk.Asset = newAsset(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Catalogue = newCatalogue(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

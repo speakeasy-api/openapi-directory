@@ -15,6 +15,7 @@ const (
 	AcceleratorAcceleratorTypeEnumCdc                        AcceleratorAcceleratorTypeEnum = "CDC"
 	AcceleratorAcceleratorTypeEnumHealthcare                 AcceleratorAcceleratorTypeEnum = "HEALTHCARE"
 	AcceleratorAcceleratorTypeEnumCcaiInsights               AcceleratorAcceleratorTypeEnum = "CCAI_INSIGHTS"
+	AcceleratorAcceleratorTypeEnumCloudsearch                AcceleratorAcceleratorTypeEnum = "CLOUDSEARCH"
 )
 
 func (e *AcceleratorAcceleratorTypeEnum) UnmarshalJSON(data []byte) error {
@@ -30,6 +31,8 @@ func (e *AcceleratorAcceleratorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "HEALTHCARE":
 		fallthrough
 	case "CCAI_INSIGHTS":
+		fallthrough
+	case "CLOUDSEARCH":
 		*e = AcceleratorAcceleratorTypeEnum(s)
 		return nil
 	default:

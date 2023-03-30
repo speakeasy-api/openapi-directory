@@ -2,7 +2,7 @@
 
 package shared
 
-// ShippingQuote - This complex type describes a &quot;shipping quote,&quot; which contains the parameters for a package shipment. The shipping quote contains a list of &quot;live quotes&quot; or rates for the shipment. Rates are offerd by a carrier for a particular service, of set of services, for shipping the package. Included in the shipping quote are the package specifications, the shipment's origin and destination addresses, and the shipping parameters specified by the seller. Use the rateId value to select the specific service you want when you create a shipment by calling createFromShippingQuote.
+// ShippingQuote - This complex type describes a "shipping quote," which contains the parameters for a package shipment. The shipping quote contains a list of "live quotes" or <i>rates</i> for the shipment. Rates are offerd by a carrier for a particular service, of set of services, for shipping the package. Included in the shipping quote are the package specifications, the shipment's origin and destination addresses, and the shipping parameters specified by the seller.  <br><br>Use the <b>rateId</b> value to select the specific service you want when you create a shipment by calling <b>createFromShippingQuote</b>.
 type ShippingQuote struct {
 	// The date and time this quote was created, expressed as an ISO 8601 UTC string.
 	CreationDate *string `json:"creationDate,omitempty"`
@@ -12,7 +12,7 @@ type ShippingQuote struct {
 	Orders []Order `json:"orders,omitempty"`
 	// This complex type specifies the dimensions and weight of a package.
 	PackageSpecification *PackageSpecification `json:"packageSpecification,omitempty"`
-	// A list of rates where each rate, as identified by a rateId, contains information about a specific shipping service offered by a carrier. Rates include shipping carrier and service, the to and from locations, the pickup and delivery windows, the seller's shipping parameters, the service constraints, and the cost for the base service and a list of additional shipping options. Each rate offered is supported by a label service where you can purchase the rate, and associated shipping label, via a call to createFromShippingQuote.
+	// A list of <i>rates</i> where each rate, as identified by a <b>rateId</b>, contains information about a specific shipping service offered by a carrier.  Rates include shipping carrier and service, the to and from locations, the pickup and delivery windows, the seller's shipping parameters, the service constraints, and the cost for the base service and a list of additional shipping options.  <br><br>Each rate offered is supported by a label service where you can purchase the rate, and associated shipping label, via a call to <b>createFromShippingQuote</b>.
 	Rates []Rate `json:"rates,omitempty"`
 	// This complex type contains contact information for an individual buyer or seller.
 	ShipFrom *Contact `json:"shipFrom,omitempty"`

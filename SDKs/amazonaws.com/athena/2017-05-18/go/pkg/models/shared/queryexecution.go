@@ -14,5 +14,6 @@ type QueryExecution struct {
 	StatementType            *StatementTypeEnum        `json:"StatementType,omitempty"`
 	Statistics               *QueryExecutionStatistics `json:"Statistics,omitempty"`
 	Status                   *QueryExecutionStatus     `json:"Status,omitempty"`
+	SubstatementType         *string                   `json:"SubstatementType,omitempty"`
 	WorkGroup                *string                   `json:"WorkGroup,omitempty"`
 }

@@ -59,7 +59,9 @@ pkg/models/shared/deletecustomlogsourceresponse.go
 pkg/models/shared/deletedatalakeexceptionssubscriptionresponse.go
 pkg/models/shared/getdatalakeresponse.go
 pkg/models/shared/lakeconfigurationresponse.go
+pkg/models/shared/updatestatus.go
 pkg/models/shared/settingsstatusenum.go
+pkg/models/shared/lastupdatefailure.go
 pkg/models/shared/getdatalakeautoenableresponse.go
 pkg/models/shared/getdatalakeexceptionsexpiryresponse.go
 pkg/models/shared/getdatalakeexceptionssubscriptionresponse.go

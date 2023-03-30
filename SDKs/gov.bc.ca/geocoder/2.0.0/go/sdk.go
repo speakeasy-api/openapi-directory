@@ -31,7 +31,7 @@ func String(s string) *string { return &s }
 //
 // Please note that you may experience issues when submitting requests to the delivery or test environment if using this [OpenAPI specification](https://github.com/bcgov/api-specs) in other API console viewers.
 //
-// [Developer API keys](https://github.com/bcgov/gwa/wiki/Developer-Guide#developer-api-keys) are unique and can be acquired with a GitHub account. Production government applications may use organization API keys acquired by [contacting DataBC](https://forms.gov.bc.ca/databc-contact-us/). API keys are further described in the [Developer guide](https://github.com/bcgov/ols-geocoder/blob/gh-pages/geocoder-developer-guide.md).
+// [API keys](https://api.gov.bc.ca/devportal/api-directory/273) are unique and can be acquired with a GitHub or IDIR account.
 //
 //	**Notification:** If you have applications or web pages that link to the BC Address Geocoder you must use the following URL.
 //

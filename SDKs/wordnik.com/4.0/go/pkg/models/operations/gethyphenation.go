@@ -13,11 +13,11 @@ type GetHyphenationPathParams struct {
 	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
-// GetHyphenationSourceDictionaryEnum - Get from a single dictionary. Valid options: ahd, century, wiktionary, webster, and wordnet.
+// GetHyphenationSourceDictionaryEnum - Get from a single dictionary. Valid options: ahd-5, century, wiktionary, webster, and wordnet.
 type GetHyphenationSourceDictionaryEnum string
 
 const (
-	GetHyphenationSourceDictionaryEnumAhd        GetHyphenationSourceDictionaryEnum = "ahd"
+	GetHyphenationSourceDictionaryEnumAhd5       GetHyphenationSourceDictionaryEnum = "ahd-5"
 	GetHyphenationSourceDictionaryEnumCentury    GetHyphenationSourceDictionaryEnum = "century"
 	GetHyphenationSourceDictionaryEnumWiktionary GetHyphenationSourceDictionaryEnum = "wiktionary"
 	GetHyphenationSourceDictionaryEnumWebster    GetHyphenationSourceDictionaryEnum = "webster"
@@ -30,7 +30,7 @@ func (e *GetHyphenationSourceDictionaryEnum) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch s {
-	case "ahd":
+	case "ahd-5":
 		fallthrough
 	case "century":
 		fallthrough
@@ -73,7 +73,7 @@ func (e *GetHyphenationUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 type GetHyphenationQueryParams struct {
 	// Maximum number of results to return
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Get from a single dictionary. Valid options: ahd, century, wiktionary, webster, and wordnet.
+	// Get from a single dictionary. Valid options: ahd-5, century, wiktionary, webster, and wordnet.
 	SourceDictionary *GetHyphenationSourceDictionaryEnum `queryParam:"style=form,explode=true,name=sourceDictionary"`
 	// If true will try to return a correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetHyphenationUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`

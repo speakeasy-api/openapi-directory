@@ -2,12 +2,13 @@
 
 package shared
 
-// WorkGroupConfigurationUpdates - The configuration information that will be updated for this workgroup, which includes the location in Amazon S3 where query results are stored, the encryption option, if any, used for query results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, whether the workgroup settings override the client-side settings, and the data usage limit for the amount of bytes scanned per query, if it is specified.
+// WorkGroupConfigurationUpdates - The configuration information that will be updated for this workgroup, which includes the location in Amazon S3 where query and calculation results are stored, the encryption option, if any, used for query results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, whether the workgroup settings override the client-side settings, and the data usage limit for the amount of bytes scanned per query, if it is specified.
 type WorkGroupConfigurationUpdates struct {
 	AdditionalConfiguration    *string `json:"AdditionalConfiguration,omitempty"`
 	BytesScannedCutoffPerQuery *int64  `json:"BytesScannedCutoffPerQuery,omitempty"`
 	// Specifies the KMS key that is used to encrypt the user's data stores in Athena.
 	CustomerContentEncryptionConfiguration       *CustomerContentEncryptionConfiguration `json:"CustomerContentEncryptionConfiguration,omitempty"`
+	EnableMinimumEncryptionConfiguration         *bool                                   `json:"EnableMinimumEncryptionConfiguration,omitempty"`
 	EnforceWorkGroupConfiguration                *bool                                   `json:"EnforceWorkGroupConfiguration,omitempty"`
 	EngineVersion                                *EngineVersion                          `json:"EngineVersion,omitempty"`
 	ExecutionRole                                *string                                 `json:"ExecutionRole,omitempty"`

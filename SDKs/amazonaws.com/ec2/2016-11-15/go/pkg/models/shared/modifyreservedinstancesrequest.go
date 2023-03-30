@@ -630,6 +630,25 @@ const (
 	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR6idn16xlarge   ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r6idn.16xlarge"
 	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR6idn24xlarge   ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r6idn.24xlarge"
 	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR6idn32xlarge   ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r6idn.32xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumC7gMetal        ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "c7g.metal"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM7gMedium       ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m7g.medium"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM7gLarge        ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m7g.large"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM7gXlarge       ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m7g.xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM7g2xlarge      ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m7g.2xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM7g4xlarge      ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m7g.4xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM7g8xlarge      ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m7g.8xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM7g12xlarge     ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m7g.12xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM7g16xlarge     ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m7g.16xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumM7gMetal        ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "m7g.metal"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7gMedium       ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.medium"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7gLarge        ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.large"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7gXlarge       ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7g2xlarge      ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.2xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7g4xlarge      ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.4xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7g8xlarge      ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.8xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7g12xlarge     ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.12xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7g16xlarge     ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.16xlarge"
+	ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnumR7gMetal        ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -1875,6 +1894,44 @@ func (e *ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum) Unm
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = ModifyReservedInstancesRequestTargetConfigurationsInstanceTypeEnum(s)
 		return nil
 	default:

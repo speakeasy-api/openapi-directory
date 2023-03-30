@@ -12,6 +12,7 @@ type OperatorTypeEnum string
 const (
 	OperatorTypeEnumNormalization OperatorTypeEnum = "normalization"
 	OperatorTypeEnumDbt           OperatorTypeEnum = "dbt"
+	OperatorTypeEnumWebhook       OperatorTypeEnum = "webhook"
 )
 
 func (e *OperatorTypeEnum) UnmarshalJSON(data []byte) error {
@@ -23,6 +24,8 @@ func (e *OperatorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "normalization":
 		fallthrough
 	case "dbt":
+		fallthrough
+	case "webhook":
 		*e = OperatorTypeEnum(s)
 		return nil
 	default:

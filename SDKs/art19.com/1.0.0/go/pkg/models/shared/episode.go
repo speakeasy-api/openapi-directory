@@ -111,7 +111,7 @@ type EpisodeAttributes struct {
 	// Determines whether `description` is in HTML format or plain.
 	DescriptionIsHTML *bool `json:"description_is_html,omitempty"`
 	// The description with all HTML markup removed. If the description does not contain markup,
-	// this is identitcal to `description`.
+	// this is identical to `description`.
 	//
 	DescriptionPlain *string `json:"description_plain,omitempty"`
 	// The file name, without extension, to present users when downloading the episode
@@ -124,17 +124,20 @@ type EpisodeAttributes struct {
 	ListenCount *int64 `json:"listen_count,omitempty"`
 	// The current premium status of the episode
 	PremiumStatus *EpisodeAttributesPremiumStatusEnum `json:"premium_status,omitempty"`
-	// If true, the episode will be available for download and included in the feed as soon as its
-	// release time is reached. Aside from that, it also needs to have valid media file associated.
+	// If `true`, the episode will be available for download and included in the feed as soon as its
+	// release time is reached, provided it has a valid media file, and `release_end_at` is in the future (if applicable).
 	//
 	Published *bool `json:"published,omitempty"`
-	// If true, the episode's release time is set in a way it is considered released right away.
+	// The date and time when an episode will no longer be included in the feed, or available for download.
+	// `Published` will remain `true` unless the episode is manually unpublished.
+	//
+	ReleaseEndAt *time.Time `json:"release_end_at,omitempty"`
+	// If `true`, the episode's release time is set in a way it is considered released right away.
 	// Only visible if the credential has write privileges on the series.
 	//
 	ReleaseImmediately *bool `json:"release_immediately,omitempty"`
-	// The date & time when an episode shall be released. It will be available for download and
-	// included in the feed, if this time is reached and `published` is set to `true` and the episode
-	// has an available media file associated.
+	// The date and time when an episode will be released. It will be available for download and included
+	// in the feed if this time is reached, `published` is set to `true`, and the episode has a media file.
 	//
 	ReleasedAt *time.Time `json:"released_at,omitempty"`
 	// A globally unique identifier describing the episode. This ID is commonly used by podcast applications

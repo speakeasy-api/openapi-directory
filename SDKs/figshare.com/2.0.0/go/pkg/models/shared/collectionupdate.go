@@ -6,13 +6,17 @@ package shared
 type CollectionUpdate struct {
 	// List of articles to be associated with the collection
 	Articles []int64 `json:"articles,omitempty"`
-	// List of authors to be associated with the article. The list can contain the following fields: id, name, first_name, last_name, email, orcid_id. If an id is supplied, it will take priority and everything else will be ignored. No more than 10 authors. For adding more authors use the specific authors endpoint.
+	// List of authors to be associated with the collection. The list can contain the following fields: id, name, first_name, last_name, email, orcid_id. If an id is supplied, it will take priority and everything else will be ignored. No more than 10 authors. For adding more authors use the specific authors endpoint.
 	Authors []map[string]interface{} `json:"authors,omitempty"`
-	// List of category ids to be associated with the article(e.g [1, 23, 33, 66])
+	// List of category ids to be associated with the collection (e.g [1, 23, 33, 66])
 	Categories []int64 `json:"categories,omitempty"`
-	// List of key, values pairs to be associated with the article
+	// List of category source ids to be associated with the article, supersedes the categories property
+	CategoriesBySourceID []string `json:"categories_by_source_id,omitempty"`
+	// List of key, values pairs to be associated with the collection
 	CustomFields map[string]interface{} `json:"custom_fields,omitempty"`
-	// The article description. In a publisher case, usually this is the remote article description
+	// List of custom fields values, supersedes custom_fields parameter
+	CustomFieldsList []CustomArticleFieldAdd `json:"custom_fields_list,omitempty"`
+	// The collection description. In a publisher case, usually this is the remote collection description
 	Description *string `json:"description,omitempty"`
 	// Not applicable for regular users. In an institutional case, make sure your group supports setting DOIs. This setting is applied by figshare via opening a ticket through our support/helpdesk system.
 	Doi *string `json:"doi,omitempty"`
@@ -24,9 +28,9 @@ type CollectionUpdate struct {
 	GroupID *int64 `json:"group_id,omitempty"`
 	// Not applicable for regular users. In an institutional case, make sure your group supports setting Handles. This setting is applied by figshare via opening a ticket through our support/helpdesk system.
 	Handle *string `json:"handle,omitempty"`
-	// List of tags to be associated with the article. Tags can be used instead
+	// List of tags to be associated with the collection. Tags can be used instead
 	Keywords []string `json:"keywords,omitempty"`
-	// List of links to be associated with the article (e.g ["http://link1", "http://link2", "http://link3"])
+	// List of links to be associated with the collection (e.g ["http://link1", "http://link2", "http://link3"])
 	References []string `json:"references,omitempty"`
 	// Not applicable to regular users. In a publisher case, this is the publisher article DOI.
 	ResourceDoi *string `json:"resource_doi,omitempty"`
@@ -38,9 +42,9 @@ type CollectionUpdate struct {
 	ResourceTitle *string `json:"resource_title,omitempty"`
 	// Not applicable to regular users. In a publisher case, this is the publisher article version
 	ResourceVersion *int64 `json:"resource_version,omitempty"`
-	// List of tags to be associated with the article. Keywords can be used instead
+	// List of tags to be associated with the collection. Keywords can be used instead
 	Tags     []string        `json:"tags,omitempty"`
 	Timeline *TimelineUpdate `json:"timeline,omitempty"`
-	// Title of article
+	// Title of collection
 	Title *string `json:"title,omitempty"`
 }

@@ -22,7 +22,7 @@ type GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearPathParams struct 
 
 type GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearQueryParams struct {
 	// Retrieve pay statement details related to specific deduction, earning or tax types. Common values include 401k, Memo, Reg, OT, Cash Tips, FED and SITW.
-	Dettypes *string `queryParam:"style=form,explode=true,name=dettypes"`
+	Codegroup *string `queryParam:"style=form,explode=true,name=codegroup"`
 	// Whether to include the total record count in the header's X-Pcty-Total-Count property. Default value is true.
 	Includetotalcount *bool `queryParam:"style=form,explode=true,name=includetotalcount"`
 	// Page number to retrieve; page numbers are 0-based (so to get the first page of results, pass pagenumber=0). Default value is 0.

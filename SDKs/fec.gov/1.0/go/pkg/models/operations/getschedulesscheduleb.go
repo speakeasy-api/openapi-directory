@@ -165,7 +165,8 @@ type GetSchedulesScheduleBQueryParams struct {
 	DisbursementDescription []string `queryParam:"style=form,explode=true,name=disbursement_description"`
 	// Disbursement purpose category
 	DisbursementPurposeCategory []string `queryParam:"style=form,explode=true,name=disbursement_purpose_category"`
-	// The image number of the page where the schedule item is reported
+	// An unique identifier for each page where the electronic or paper filing is reported.
+	//
 	ImageNumber []string `queryParam:"style=form,explode=true,name=image_number"`
 	// When sorting by `disbursement_amount`, this is populated with the `disbursement_amount` of the last result.  However, you will need to pass the index of that last result to `last_index` to get the next page.
 	LastDisbursementAmount *float32 `queryParam:"style=form,explode=true,name=last_disbursement_amount"`
@@ -178,13 +179,15 @@ type GetSchedulesScheduleBQueryParams struct {
 	// Filter for all amounts less than a value.
 	MaxAmount *string `queryParam:"style=form,explode=true,name=max_amount"`
 	// Maximum date
-	MaxDate        *types.Date `queryParam:"style=form,explode=true,name=max_date"`
-	MaxImageNumber *string     `queryParam:"style=form,explode=true,name=max_image_number"`
+	MaxDate *types.Date `queryParam:"style=form,explode=true,name=max_date"`
+	// Maxium image number of the page where the schedule item is reported
+	MaxImageNumber *string `queryParam:"style=form,explode=true,name=max_image_number"`
 	// Filter for all amounts greater than a value.
 	MinAmount *string `queryParam:"style=form,explode=true,name=min_amount"`
 	// Minimum date
-	MinDate        *types.Date `queryParam:"style=form,explode=true,name=min_date"`
-	MinImageNumber *string     `queryParam:"style=form,explode=true,name=min_image_number"`
+	MinDate *types.Date `queryParam:"style=form,explode=true,name=min_date"`
+	// Minium image number of the page where the schedule item is reported
+	MinImageNumber *string `queryParam:"style=form,explode=true,name=min_image_number"`
 	// The number of results returned per page. Defaults to 20.
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// City of recipient
@@ -225,7 +228,7 @@ type GetSchedulesScheduleBQueryParams struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential

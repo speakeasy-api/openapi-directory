@@ -7,6 +7,80 @@ import (
 	"fmt"
 )
 
+// GoalResponseCurrentStatusUpdateResourceSubtypeEnum - The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+// The `resource_subtype`s for `status` objects represent the type of their parent.
+type GoalResponseCurrentStatusUpdateResourceSubtypeEnum string
+
+const (
+	GoalResponseCurrentStatusUpdateResourceSubtypeEnumProjectStatusUpdate   GoalResponseCurrentStatusUpdateResourceSubtypeEnum = "project_status_update"
+	GoalResponseCurrentStatusUpdateResourceSubtypeEnumPortfolioStatusUpdate GoalResponseCurrentStatusUpdateResourceSubtypeEnum = "portfolio_status_update"
+	GoalResponseCurrentStatusUpdateResourceSubtypeEnumGoalStatusUpdate      GoalResponseCurrentStatusUpdateResourceSubtypeEnum = "goal_status_update"
+)
+
+func (e *GoalResponseCurrentStatusUpdateResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "project_status_update":
+		fallthrough
+	case "portfolio_status_update":
+		fallthrough
+	case "goal_status_update":
+		*e = GoalResponseCurrentStatusUpdateResourceSubtypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GoalResponseCurrentStatusUpdateResourceSubtypeEnum: %s", s)
+	}
+}
+
+// GoalResponseCurrentStatusUpdate - A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent's followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the project.
+type GoalResponseCurrentStatusUpdate struct {
+	// Globally unique identifier of the resource, as a string.
+	Gid *string `json:"gid,omitempty"`
+	// The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+	// The `resource_subtype`s for `status` objects represent the type of their parent.
+	ResourceSubtype *GoalResponseCurrentStatusUpdateResourceSubtypeEnum `json:"resource_subtype,omitempty"`
+	// The base type of this resource.
+	ResourceType *string `json:"resource_type,omitempty"`
+	// The title of the status update.
+	Title *string `json:"title,omitempty"`
+}
+
+// GoalResponseMetricProgressSourceEnum - This field defines how the progress value of a goal metric is being calculated. A goal's progress can be provided manually by the user, calculated automatically from contributing subgoals or projects, or managed by an integration with an external data source, such as Salesforce.
+type GoalResponseMetricProgressSourceEnum string
+
+const (
+	GoalResponseMetricProgressSourceEnumManual                     GoalResponseMetricProgressSourceEnum = "manual"
+	GoalResponseMetricProgressSourceEnumSubgoalProgress            GoalResponseMetricProgressSourceEnum = "subgoal_progress"
+	GoalResponseMetricProgressSourceEnumProjectTaskCompletion      GoalResponseMetricProgressSourceEnum = "project_task_completion"
+	GoalResponseMetricProgressSourceEnumProjectMilestoneCompletion GoalResponseMetricProgressSourceEnum = "project_milestone_completion"
+	GoalResponseMetricProgressSourceEnumExternal                   GoalResponseMetricProgressSourceEnum = "external"
+)
+
+func (e *GoalResponseMetricProgressSourceEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "manual":
+		fallthrough
+	case "subgoal_progress":
+		fallthrough
+	case "project_task_completion":
+		fallthrough
+	case "project_milestone_completion":
+		fallthrough
+	case "external":
+		*e = GoalResponseMetricProgressSourceEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GoalResponseMetricProgressSourceEnum: %s", s)
+	}
+}
+
 // GoalResponseMetricResourceSubtypeEnum - The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
 type GoalResponseMetricResourceSubtypeEnum string
 
@@ -57,24 +131,28 @@ func (e *GoalResponseMetricUnitEnum) UnmarshalJSON(data []byte) error {
 
 // GoalResponseMetric - A generic Asana Resource, containing a globally unique identifier.
 type GoalResponseMetric struct {
-	// ISO 4217 currency code to format this custom field. This will be null if the `format` is not `currency`.
+	// *Conditional*. Only relevant for `progress_source` of type `external`. This boolean indicates whether the requester has the ability to update the current value of this metric. This returns `true` if the external metric was created by the requester, `false` otherwise.
+	CanManage *bool `json:"can_manage,omitempty"`
+	// ISO 4217 currency code to format this custom field. This will be null if the `unit` is not `currency`.
 	CurrencyCode *string `json:"currency_code,omitempty"`
-	// *Conditional*. This string is the current value of a goal metric of type string.
+	// This string is the current value of a goal metric of type string.
 	CurrentDisplayValue *string `json:"current_display_value,omitempty"`
-	// *Conditional*. This number is the current value of a goal metric of type number.
+	// This number is the current value of a goal metric of type number.
 	CurrentNumberValue *float64 `json:"current_number_value,omitempty"`
 	// Globally unique identifier of the resource, as a string.
 	Gid *string `json:"gid,omitempty"`
-	// *Conditional*. This number is the start value of a goal metric of type number.
+	// This number is the start value of a goal metric of type number.
 	InitialNumberValue *float64 `json:"initial_number_value,omitempty"`
-	// Only relevant for goal metrics of type ‘Number’. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.
+	// *Conditional*. Only relevant for goal metrics of type ‘Number’. This field dictates the number of places after the decimal to round to, i.e. 0 is integer values, 1 rounds to the nearest tenth, and so on. Must be between 0 and 6, inclusive.
 	// For percentage format, this may be unintuitive, as a value of 0.25 has a precision of 0, while a value of 0.251 has a precision of 1. This is due to 0.25 being displayed as 25%.
 	Precision *int64 `json:"precision,omitempty"`
+	// This field defines how the progress value of a goal metric is being calculated. A goal's progress can be provided manually by the user, calculated automatically from contributing subgoals or projects, or managed by an integration with an external data source, such as Salesforce.
+	ProgressSource *GoalResponseMetricProgressSourceEnum `json:"progress_source,omitempty"`
 	// The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
 	ResourceSubtype *GoalResponseMetricResourceSubtypeEnum `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
-	// *Conditional*. This number is the end value of a goal metric of type number.
+	// This number is the end value of a goal metric of type number. This number cannot equal `initial_number_value`.
 	TargetNumberValue *float64 `json:"target_number_value,omitempty"`
 	// A supported unit of measure for the goal metric, or none.
 	Unit *GoalResponseMetricUnitEnum `json:"unit,omitempty"`
@@ -141,6 +219,8 @@ func (e *GoalResponseTimePeriodPeriodEnum) UnmarshalJSON(data []byte) error {
 
 // GoalResponseTimePeriod - A generic Asana Resource, containing a globally unique identifier.
 type GoalResponseTimePeriod struct {
+	// A string representing the cadence code and the fiscal year.
+	DisplayName *string `json:"display_name,omitempty"`
 	// The localized end date of the time period in `YYYY-MM-DD` format.
 	EndOn *string `json:"end_on,omitempty"`
 	// Globally unique identifier of the resource, as a string.
@@ -165,9 +245,11 @@ type GoalResponseWorkspace struct {
 
 // GoalResponse - A generic Asana Resource, containing a globally unique identifier.
 type GoalResponse struct {
+	// The latest `status_update` posted to this goal.
+	CurrentStatusUpdate *GoalResponseCurrentStatusUpdate `json:"current_status_update,omitempty"`
 	// The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.
 	DueOn *string `json:"due_on,omitempty"`
-	// Array of users following this goal.
+	// Array of users who are members of this goal.
 	Followers []UserCompact `json:"followers,omitempty"`
 	// Globally unique identifier of the resource, as a string.
 	Gid *string `json:"gid,omitempty"`
@@ -192,6 +274,7 @@ type GoalResponse struct {
 	// The day on which work for this goal begins, or null if the goal has no start date. This takes a date with `YYYY-MM-DD` format, and cannot be set unless there is an accompanying due date.
 	StartOn *string `json:"start_on,omitempty"`
 	// The current status of this goal. When the goal is open, its status can be `green`, `yellow`, and `red` to reflect "On Track", "At Risk", and "Off Track", respectively. When the goal is closed, the value can be `missed`, `achieved`, `partial`, or `dropped`.
+	// *Note* you can only write to this property if `metric` is set.
 	Status *string `json:"status,omitempty"`
 	// *Conditional*. This property is only present when the `workspace` provided is an organization.
 	Team       *GoalResponseTeam       `json:"team,omitempty"`

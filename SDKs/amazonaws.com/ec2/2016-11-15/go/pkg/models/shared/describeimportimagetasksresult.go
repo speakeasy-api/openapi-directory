@@ -11,8 +11,9 @@ import (
 type DescribeImportImageTasksResultImportImageTasksBootModeEnum string
 
 const (
-	DescribeImportImageTasksResultImportImageTasksBootModeEnumLegacyBios DescribeImportImageTasksResultImportImageTasksBootModeEnum = "legacy-bios"
-	DescribeImportImageTasksResultImportImageTasksBootModeEnumUefi       DescribeImportImageTasksResultImportImageTasksBootModeEnum = "uefi"
+	DescribeImportImageTasksResultImportImageTasksBootModeEnumLegacyBios    DescribeImportImageTasksResultImportImageTasksBootModeEnum = "legacy-bios"
+	DescribeImportImageTasksResultImportImageTasksBootModeEnumUefi          DescribeImportImageTasksResultImportImageTasksBootModeEnum = "uefi"
+	DescribeImportImageTasksResultImportImageTasksBootModeEnumUefiPreferred DescribeImportImageTasksResultImportImageTasksBootModeEnum = "uefi-preferred"
 )
 
 func (e *DescribeImportImageTasksResultImportImageTasksBootModeEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *DescribeImportImageTasksResultImportImageTasksBootModeEnum) UnmarshalJS
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
+		fallthrough
+	case "uefi-preferred":
 		*e = DescribeImportImageTasksResultImportImageTasksBootModeEnum(s)
 		return nil
 	default:

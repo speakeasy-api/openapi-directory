@@ -28,6 +28,9 @@ func main() {
         QueryParams: operations.GetFamilyDetailsQueryParams{
             ID: "{family_id}",
         },
+        Headers: operations.GetFamilyDetailsHeaders{
+            OcpApimSubscriptionKey: "{{apiKey}}",
+        },
     }
 
     ctx := context.Background()

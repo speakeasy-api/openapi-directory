@@ -32,7 +32,8 @@ type GetSchedulesScheduleCQueryParams struct {
 	LoanSourceName []string `queryParam:"style=form,explode=true,name=loan_source_name"`
 	// Filter for all amounts less than a value.
 	//
-	MaxAmount      *string `queryParam:"style=form,explode=true,name=max_amount"`
+	MaxAmount *string `queryParam:"style=form,explode=true,name=max_amount"`
+	// Maxium image number of the page where the schedule item is reported
 	MaxImageNumber *string `queryParam:"style=form,explode=true,name=max_image_number"`
 	// Maximum incurred date
 	//
@@ -42,7 +43,8 @@ type GetSchedulesScheduleCQueryParams struct {
 	MaxPaymentToDate *int `queryParam:"style=form,explode=true,name=max_payment_to_date"`
 	// Filter for all amounts greater than a value.
 	//
-	MinAmount      *string `queryParam:"style=form,explode=true,name=min_amount"`
+	MinAmount *string `queryParam:"style=form,explode=true,name=min_amount"`
+	// Minium image number of the page where the schedule item is reported
 	MinImageNumber *string `queryParam:"style=form,explode=true,name=min_image_number"`
 	// Minimum incurred date
 	//

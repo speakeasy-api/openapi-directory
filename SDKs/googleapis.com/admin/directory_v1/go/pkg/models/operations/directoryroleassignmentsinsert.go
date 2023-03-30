@@ -45,7 +45,7 @@ type DirectoryRoleAssignmentsInsertQueryParams struct {
 type DirectoryRoleAssignmentsInsertRequest struct {
 	PathParams  DirectoryRoleAssignmentsInsertPathParams
 	QueryParams DirectoryRoleAssignmentsInsertQueryParams
-	Request     *shared.RoleAssignment `request:"mediaType=application/json"`
+	Request     *shared.RoleAssignmentInput `request:"mediaType=application/json"`
 	Security    DirectoryRoleAssignmentsInsertSecurity
 }
 

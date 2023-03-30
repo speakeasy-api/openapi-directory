@@ -5,5 +5,5 @@ package shared
 // ResponseMessage - Created
 type ResponseMessage struct {
 	// Response message text
-	Message *string `json:"message,omitempty"`
+	Message string `json:"message"`
 }

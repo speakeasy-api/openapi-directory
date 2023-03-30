@@ -10,7 +10,7 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"https://app.bigredcloud.com/API",
+	"https://app.bigredcloud.com/api",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -48,6 +48,7 @@ type SDK struct {
 	OwnerTypeGroups    *ownerTypeGroups
 	OwnerTypes         *ownerTypes
 	Payments           *payments
+	ProductTypes       *productTypes
 	Products           *products
 	Purchases          *purchases
 	Quote              *quote
@@ -241,6 +242,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.Payments = newPayments(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.ProductTypes = newProductTypes(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

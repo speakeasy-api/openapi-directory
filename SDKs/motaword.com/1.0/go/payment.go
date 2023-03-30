@@ -32,7 +32,7 @@ func newPayment(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-// DeleteCreditCard - Delete credit card.
+// DeleteCreditCard - Delete credit card
 func (s *payment) DeleteCreditCard(ctx context.Context, request operations.DeleteCreditCardRequest) (*operations.DeleteCreditCardResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/payment/{cardId}/delete", request.PathParams, nil)
@@ -86,7 +86,7 @@ func (s *payment) DeleteCreditCard(ctx context.Context, request operations.Delet
 	return res, nil
 }
 
-// GetCreditCard - Get credit card by cardId
+// GetCreditCard - View saved credit card
 func (s *payment) GetCreditCard(ctx context.Context, request operations.GetCreditCardRequest) (*operations.GetCreditCardResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/payment/{cardId}", request.PathParams, nil)
@@ -140,7 +140,8 @@ func (s *payment) GetCreditCard(ctx context.Context, request operations.GetCredi
 	return res, nil
 }
 
-// ResetCardPaymentCode - Reset credit card payment code.
+// ResetCardPaymentCode - Reset credit card payment code
+// Reset the payment code used to bypass credit card payment. This will invalidate your current payment code and your users should be aware of this change while ordering translations.
 func (s *payment) ResetCardPaymentCode(ctx context.Context, request operations.ResetCardPaymentCodeRequest) (*operations.ResetCardPaymentCodeResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/payment/{cardId}/reset-payment-code", request.PathParams, nil)
@@ -194,12 +195,13 @@ func (s *payment) ResetCardPaymentCode(ctx context.Context, request operations.R
 	return res, nil
 }
 
-// ResetCorporatePaymentCode - Reset corporate credit card payment code.
+// ResetCorporatePaymentCode - Reset payment code
+// Reset your corporate account's payment code to bypass credit card payment. This will invalidate your current payment code and your users should be aware of this change while ordering translations.
 func (s *payment) ResetCorporatePaymentCode(ctx context.Context) (*operations.ResetCorporatePaymentCodeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment/reset-corporate-payment-code"
 
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
@@ -248,12 +250,13 @@ func (s *payment) ResetCorporatePaymentCode(ctx context.Context) (*operations.Re
 	return res, nil
 }
 
-// ToggleCorporateAutoCharge - Toggle corporate auto charge option.
+// ToggleCorporateAutoCharge - Manage automatic charges on your credit card
+// Toggle (enable/disable) automatic charges on the credit card on file.
 func (s *payment) ToggleCorporateAutoCharge(ctx context.Context) (*operations.ToggleCorporateAutoChargeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment/toggle-corporate-auto-charge"
 
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}

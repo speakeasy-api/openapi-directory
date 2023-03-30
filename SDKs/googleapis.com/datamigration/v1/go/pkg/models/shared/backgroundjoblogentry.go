@@ -69,10 +69,14 @@ func (e *BackgroundJobLogEntryJobTypeEnum) UnmarshalJSON(data []byte) error {
 
 // BackgroundJobLogEntry - Execution log of a background job.
 type BackgroundJobLogEntry struct {
+	// Details regarding an Apply background job.
+	ApplyJobDetails *ApplyJobDetails `json:"applyJobDetails,omitempty"`
 	// Job completion comment, such as how many entities were seeded, how many warnings were found during conversion, and similar information.
 	CompletionComment *string `json:"completionComment,omitempty"`
 	// Job completion state, i.e. the final state after the job completed.
 	CompletionState *BackgroundJobLogEntryCompletionStateEnum `json:"completionState,omitempty"`
+	// Details regarding a Convert background job.
+	ConvertJobDetails *ConvertJobDetails `json:"convertJobDetails,omitempty"`
 	// The timestamp when the background job was finished.
 	FinishTime *string `json:"finishTime,omitempty"`
 	// The background job log entry ID.

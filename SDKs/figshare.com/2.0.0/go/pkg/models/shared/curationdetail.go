@@ -40,26 +40,26 @@ func (e *CurationDetailStatusEnum) UnmarshalJSON(data []byte) error {
 // CurationDetail - OK. A curation review.
 type CurationDetail struct {
 	// The ID of the account of the owner of the article of this review.
-	AccountID *int64 `json:"account_id,omitempty"`
+	AccountID int64 `json:"account_id"`
 	// The ID of the article of this review.
-	ArticleID *int64 `json:"article_id,omitempty"`
+	ArticleID int64 `json:"article_id"`
 	// The ID of the account to which this review is assigned.
-	AssignedTo *int64 `json:"assigned_to,omitempty"`
+	AssignedTo int64 `json:"assigned_to"`
 	// The number of comments in the review.
-	CommentsCount *int64 `json:"comments_count,omitempty"`
+	CommentsCount int64 `json:"comments_count"`
 	// The creation date of the review.
-	CreatedDate *string `json:"created_date,omitempty"`
+	CreatedDate string `json:"created_date"`
 	// The group in which the article is present.
-	GroupID *int64 `json:"group_id,omitempty"`
+	GroupID int64 `json:"group_id"`
 	// The review id
-	ID   *int64           `json:"id,omitempty"`
-	Item *ArticleComplete `json:"item,omitempty"`
+	ID   int64           `json:"id"`
+	Item ArticleComplete `json:"item"`
 	// The date the review has been modified.
-	ModifiedDate *string `json:"modified_date,omitempty"`
+	ModifiedDate string `json:"modified_date"`
 	// The last time a comment has been added to the review.
-	ReviewDate *string `json:"review_date,omitempty"`
+	ReviewDate string `json:"review_date"`
 	// The status of the review.
-	Status *CurationDetailStatusEnum `json:"status,omitempty"`
+	Status CurationDetailStatusEnum `json:"status"`
 	// The Version number of the article in review.
-	Version *int64 `json:"version,omitempty"`
+	Version int64 `json:"version"`
 }

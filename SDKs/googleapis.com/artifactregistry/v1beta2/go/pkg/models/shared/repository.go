@@ -48,7 +48,7 @@ func (e *RepositoryFormatEnum) UnmarshalJSON(data []byte) error {
 
 // Repository - A Repository for storing artifacts with a specific format.
 type Repository struct {
-	// The time when the repository was created.
+	// Output only. The time when the repository was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// The user-provided description of the repository.
 	Description *string `json:"description,omitempty"`
@@ -66,14 +66,12 @@ type Repository struct {
 	SatisfiesPzs *bool `json:"satisfiesPzs,omitempty"`
 	// Output only. The size, in bytes, of all artifact storage in this repository. Repositories that are generally available or in public preview use this to calculate storage costs.
 	SizeBytes *string `json:"sizeBytes,omitempty"`
-	// The time when the repository was last updated.
+	// Output only. The time when the repository was last updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
 }
 
 // RepositoryInput - A Repository for storing artifacts with a specific format.
 type RepositoryInput struct {
-	// The time when the repository was created.
-	CreateTime *string `json:"createTime,omitempty"`
 	// The user-provided description of the repository.
 	Description *string `json:"description,omitempty"`
 	// The format of packages that are stored in the repository.
@@ -86,6 +84,4 @@ type RepositoryInput struct {
 	MavenConfig *MavenRepositoryConfig `json:"mavenConfig,omitempty"`
 	// The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1".
 	Name *string `json:"name,omitempty"`
-	// The time when the repository was last updated.
-	UpdateTime *string `json:"updateTime,omitempty"`
 }

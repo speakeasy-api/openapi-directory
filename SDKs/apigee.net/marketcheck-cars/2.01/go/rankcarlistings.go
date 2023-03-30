@@ -57,7 +57,7 @@ func (s *rankCarListings) RankCar(ctx context.Context, request operations.RankCa
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -126,7 +126,7 @@ func (s *rankCarListings) SearchAndRankCar(ctx context.Context, request operatio
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

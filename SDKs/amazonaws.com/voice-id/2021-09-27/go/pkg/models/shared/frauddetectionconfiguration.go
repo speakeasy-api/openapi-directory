@@ -4,5 +4,6 @@ package shared
 
 // FraudDetectionConfiguration - The configuration used for performing fraud detection over a speaker during a session.
 type FraudDetectionConfiguration struct {
-	RiskThreshold int64 `json:"RiskThreshold"`
+	RiskThreshold *int64  `json:"RiskThreshold,omitempty"`
+	WatchlistID   *string `json:"WatchlistId,omitempty"`
 }

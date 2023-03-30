@@ -11,31 +11,31 @@ import (
 type HookEventEventEnum string
 
 const (
-	HookEventEventEnumPullrequestUnapproved            HookEventEventEnum = "pullrequest:unapproved"
-	HookEventEventEnumIssueCommentCreated              HookEventEventEnum = "issue:comment_created"
-	HookEventEventEnumRepoImported                     HookEventEventEnum = "repo:imported"
-	HookEventEventEnumRepoCreated                      HookEventEventEnum = "repo:created"
-	HookEventEventEnumRepoCommitCommentCreated         HookEventEventEnum = "repo:commit_comment_created"
-	HookEventEventEnumPullrequestApproved              HookEventEventEnum = "pullrequest:approved"
-	HookEventEventEnumPullrequestCommentUpdated        HookEventEventEnum = "pullrequest:comment_updated"
-	HookEventEventEnumIssueUpdated                     HookEventEventEnum = "issue:updated"
-	HookEventEventEnumProjectUpdated                   HookEventEventEnum = "project:updated"
-	HookEventEventEnumRepoDeleted                      HookEventEventEnum = "repo:deleted"
 	HookEventEventEnumPullrequestChangesRequestCreated HookEventEventEnum = "pullrequest:changes_request_created"
-	HookEventEventEnumPullrequestCommentCreated        HookEventEventEnum = "pullrequest:comment_created"
-	HookEventEventEnumRepoCommitStatusUpdated          HookEventEventEnum = "repo:commit_status_updated"
-	HookEventEventEnumPullrequestUpdated               HookEventEventEnum = "pullrequest:updated"
-	HookEventEventEnumIssueCreated                     HookEventEventEnum = "issue:created"
-	HookEventEventEnumRepoFork                         HookEventEventEnum = "repo:fork"
-	HookEventEventEnumPullrequestCommentDeleted        HookEventEventEnum = "pullrequest:comment_deleted"
-	HookEventEventEnumRepoCommitStatusCreated          HookEventEventEnum = "repo:commit_status_created"
-	HookEventEventEnumRepoUpdated                      HookEventEventEnum = "repo:updated"
 	HookEventEventEnumPullrequestRejected              HookEventEventEnum = "pullrequest:rejected"
-	HookEventEventEnumPullrequestFulfilled             HookEventEventEnum = "pullrequest:fulfilled"
-	HookEventEventEnumPullrequestCreated               HookEventEventEnum = "pullrequest:created"
+	HookEventEventEnumIssueUpdated                     HookEventEventEnum = "issue:updated"
+	HookEventEventEnumPullrequestUnapproved            HookEventEventEnum = "pullrequest:unapproved"
+	HookEventEventEnumPullrequestCommentDeleted        HookEventEventEnum = "pullrequest:comment_deleted"
+	HookEventEventEnumRepoCommitStatusUpdated          HookEventEventEnum = "repo:commit_status_updated"
 	HookEventEventEnumPullrequestChangesRequestRemoved HookEventEventEnum = "pullrequest:changes_request_removed"
+	HookEventEventEnumPullrequestCommentCreated        HookEventEventEnum = "pullrequest:comment_created"
 	HookEventEventEnumRepoTransfer                     HookEventEventEnum = "repo:transfer"
+	HookEventEventEnumPullrequestFulfilled             HookEventEventEnum = "pullrequest:fulfilled"
+	HookEventEventEnumRepoCommitCommentCreated         HookEventEventEnum = "repo:commit_comment_created"
+	HookEventEventEnumIssueCommentCreated              HookEventEventEnum = "issue:comment_created"
+	HookEventEventEnumProjectUpdated                   HookEventEventEnum = "project:updated"
+	HookEventEventEnumPullrequestCommentUpdated        HookEventEventEnum = "pullrequest:comment_updated"
+	HookEventEventEnumRepoCreated                      HookEventEventEnum = "repo:created"
+	HookEventEventEnumRepoFork                         HookEventEventEnum = "repo:fork"
+	HookEventEventEnumRepoUpdated                      HookEventEventEnum = "repo:updated"
 	HookEventEventEnumRepoPush                         HookEventEventEnum = "repo:push"
+	HookEventEventEnumPullrequestApproved              HookEventEventEnum = "pullrequest:approved"
+	HookEventEventEnumRepoDeleted                      HookEventEventEnum = "repo:deleted"
+	HookEventEventEnumRepoCommitStatusCreated          HookEventEventEnum = "repo:commit_status_created"
+	HookEventEventEnumRepoImported                     HookEventEventEnum = "repo:imported"
+	HookEventEventEnumIssueCreated                     HookEventEventEnum = "issue:created"
+	HookEventEventEnumPullrequestUpdated               HookEventEventEnum = "pullrequest:updated"
+	HookEventEventEnumPullrequestCreated               HookEventEventEnum = "pullrequest:created"
 )
 
 func (e *HookEventEventEnum) UnmarshalJSON(data []byte) error {
@@ -44,55 +44,55 @@ func (e *HookEventEventEnum) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch s {
-	case "pullrequest:unapproved":
-		fallthrough
-	case "issue:comment_created":
-		fallthrough
-	case "repo:imported":
-		fallthrough
-	case "repo:created":
-		fallthrough
-	case "repo:commit_comment_created":
-		fallthrough
-	case "pullrequest:approved":
-		fallthrough
-	case "pullrequest:comment_updated":
-		fallthrough
-	case "issue:updated":
-		fallthrough
-	case "project:updated":
-		fallthrough
-	case "repo:deleted":
-		fallthrough
 	case "pullrequest:changes_request_created":
-		fallthrough
-	case "pullrequest:comment_created":
-		fallthrough
-	case "repo:commit_status_updated":
-		fallthrough
-	case "pullrequest:updated":
-		fallthrough
-	case "issue:created":
-		fallthrough
-	case "repo:fork":
-		fallthrough
-	case "pullrequest:comment_deleted":
-		fallthrough
-	case "repo:commit_status_created":
-		fallthrough
-	case "repo:updated":
 		fallthrough
 	case "pullrequest:rejected":
 		fallthrough
-	case "pullrequest:fulfilled":
+	case "issue:updated":
 		fallthrough
-	case "pullrequest:created":
+	case "pullrequest:unapproved":
+		fallthrough
+	case "pullrequest:comment_deleted":
+		fallthrough
+	case "repo:commit_status_updated":
 		fallthrough
 	case "pullrequest:changes_request_removed":
 		fallthrough
+	case "pullrequest:comment_created":
+		fallthrough
 	case "repo:transfer":
 		fallthrough
+	case "pullrequest:fulfilled":
+		fallthrough
+	case "repo:commit_comment_created":
+		fallthrough
+	case "issue:comment_created":
+		fallthrough
+	case "project:updated":
+		fallthrough
+	case "pullrequest:comment_updated":
+		fallthrough
+	case "repo:created":
+		fallthrough
+	case "repo:fork":
+		fallthrough
+	case "repo:updated":
+		fallthrough
 	case "repo:push":
+		fallthrough
+	case "pullrequest:approved":
+		fallthrough
+	case "repo:deleted":
+		fallthrough
+	case "repo:commit_status_created":
+		fallthrough
+	case "repo:imported":
+		fallthrough
+	case "issue:created":
+		fallthrough
+	case "pullrequest:updated":
+		fallthrough
+	case "pullrequest:created":
 		*e = HookEventEventEnum(s)
 		return nil
 	default:

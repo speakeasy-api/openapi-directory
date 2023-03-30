@@ -46,7 +46,7 @@ type CloseAccountResponse struct {
 	ResultCode *string `json:"resultCode,omitempty"`
 	// The new status of the account.
 	// >Permitted values: `Active`, `Inactive`, `Suspended`, `Closed`.
-	Status CloseAccountResponseStatusEnum `json:"status"`
+	Status *CloseAccountResponseStatusEnum `json:"status,omitempty"`
 	// Indicates whether the request is processed asynchronously. Depending on the request's platform settings, the following scenarios may be applied:
 	// * **true**: The request is queued and will be executed when the providing service is available in the order in which the requests are received.
 	// * **false**: The processing of the request is immediately attempted; it may result in an error if the providing service is unavailable.

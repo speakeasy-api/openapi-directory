@@ -14,7 +14,7 @@ type CreateSettingPathParams struct {
 
 type CreateSettingRequest struct {
 	PathParams CreateSettingPathParams
-	Request    shared.CreateSettingModel `request:"mediaType=application/json"`
+	Request    shared.CreateSettingInitialValues `request:"mediaType=application/json"`
 }
 
 type CreateSettingResponse struct {

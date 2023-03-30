@@ -81,10 +81,12 @@ func (e *RepositoryModeEnum) UnmarshalJSON(data []byte) error {
 
 // Repository - A Repository for storing artifacts with a specific format.
 type Repository struct {
-	// The time when the repository was created.
+	// Output only. The time when the repository was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// The user-provided description of the repository.
 	Description *string `json:"description,omitempty"`
+	// DockerRepositoryConfig is docker related repository details. Provides additional configuration details for repositories of the docker format type.
+	DockerConfig *DockerRepositoryConfig `json:"dockerConfig,omitempty"`
 	// The format of packages that are stored in the repository.
 	Format *RepositoryFormatEnum `json:"format,omitempty"`
 	// The Cloud KMS resource name of the customer managed encryption key that's used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
@@ -103,7 +105,7 @@ type Repository struct {
 	SatisfiesPzs *bool `json:"satisfiesPzs,omitempty"`
 	// Output only. The size, in bytes, of all artifact storage in this repository. Repositories that are generally available or in public preview use this to calculate storage costs.
 	SizeBytes *string `json:"sizeBytes,omitempty"`
-	// The time when the repository was last updated.
+	// Output only. The time when the repository was last updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
 	// Virtual repository configuration.
 	VirtualRepositoryConfig *VirtualRepositoryConfig `json:"virtualRepositoryConfig,omitempty"`
@@ -111,10 +113,10 @@ type Repository struct {
 
 // RepositoryInput - A Repository for storing artifacts with a specific format.
 type RepositoryInput struct {
-	// The time when the repository was created.
-	CreateTime *string `json:"createTime,omitempty"`
 	// The user-provided description of the repository.
 	Description *string `json:"description,omitempty"`
+	// DockerRepositoryConfig is docker related repository details. Provides additional configuration details for repositories of the docker format type.
+	DockerConfig *DockerRepositoryConfig `json:"dockerConfig,omitempty"`
 	// The format of packages that are stored in the repository.
 	Format *RepositoryFormatEnum `json:"format,omitempty"`
 	// The Cloud KMS resource name of the customer managed encryption key that's used to encrypt the contents of the Repository. Has the form: `projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value may not be changed after the Repository has been created.
@@ -129,8 +131,6 @@ type RepositoryInput struct {
 	Name *string `json:"name,omitempty"`
 	// Remote repository configuration.
 	RemoteRepositoryConfig *RemoteRepositoryConfig `json:"remoteRepositoryConfig,omitempty"`
-	// The time when the repository was last updated.
-	UpdateTime *string `json:"updateTime,omitempty"`
 	// Virtual repository configuration.
 	VirtualRepositoryConfig *VirtualRepositoryConfig `json:"virtualRepositoryConfig,omitempty"`
 }

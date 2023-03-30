@@ -3,8 +3,41 @@
 package shared
 
 import (
+	"encoding/json"
+	"fmt"
 	"time"
 )
+
+// AttachmentResponseParentResourceSubtypeEnum - The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+// The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.
+type AttachmentResponseParentResourceSubtypeEnum string
+
+const (
+	AttachmentResponseParentResourceSubtypeEnumDefaultTask AttachmentResponseParentResourceSubtypeEnum = "default_task"
+	AttachmentResponseParentResourceSubtypeEnumMilestone   AttachmentResponseParentResourceSubtypeEnum = "milestone"
+	AttachmentResponseParentResourceSubtypeEnumSection     AttachmentResponseParentResourceSubtypeEnum = "section"
+	AttachmentResponseParentResourceSubtypeEnumApproval    AttachmentResponseParentResourceSubtypeEnum = "approval"
+)
+
+func (e *AttachmentResponseParentResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "default_task":
+		fallthrough
+	case "milestone":
+		fallthrough
+	case "section":
+		fallthrough
+	case "approval":
+		*e = AttachmentResponseParentResourceSubtypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for AttachmentResponseParentResourceSubtypeEnum: %s", s)
+	}
+}
 
 // AttachmentResponseParent - The *task* is the basic object around which many operations in Asana are centered.
 type AttachmentResponseParent struct {
@@ -12,29 +45,36 @@ type AttachmentResponseParent struct {
 	Gid *string `json:"gid,omitempty"`
 	// The name of the task.
 	Name *string `json:"name,omitempty"`
+	// The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+	// The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.
+	ResourceSubtype *AttachmentResponseParentResourceSubtypeEnum `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
 }
 
 // AttachmentResponse - An *attachment* object represents any file attached to a task in Asana, whether it’s an uploaded file or one associated via a third-party service such as Dropbox or Google Drive.
 type AttachmentResponse struct {
+	// Whether the attachment is connected to the app making the request for the purposes of showing an app components widget. Only present when the `resource_subtype` is `external` or `gdrive`.
+	ConnectedToApp *bool `json:"connected_to_app,omitempty"`
 	// The time at which this resource was created.
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// The URL containing the content of the attachment.
-	// *Note:* May be null if the attachment is hosted by [Box](https://www.box.com/). If present, this URL may only be valid for two minutes from the time of retrieval. You should avoid persisting this URL somewhere and just refresh it on demand to ensure you do not keep stale URLs.
+	// *Note:* May be null if the attachment is hosted by [Box](https://www.box.com/) and will be null if the attachment is a Video Message hosted by [Vimeo](https://vimeo.com/). If present, this URL may only be valid for two minutes from the time of retrieval. You should avoid persisting this URL somewhere and just refresh it on demand to ensure you do not keep stale URLs.
 	DownloadURL *string `json:"download_url,omitempty"`
 	// Globally unique identifier of the resource, as a string.
 	Gid *string `json:"gid,omitempty"`
-	// The service hosting the attachment. Valid values are `asana`, `dropbox`, `gdrive` and `box`.
+	// The service hosting the attachment. Valid values are `asana`, `dropbox`, `gdrive`, `box`, and `vimeo`.
 	Host *string `json:"host,omitempty"`
 	// The name of the file.
-	Name   *string                   `json:"name,omitempty"`
-	Parent *AttachmentResponseParent `json:"parent,omitempty"`
-	// The service hosting the attachment. Valid values are `asana`, `dropbox`, `gdrive`, `onedrive`, `box`, and `external`.
-	// `external` attachments are a beta feature currently limited to specific integrations.
-	ResourceSubtype interface{} `json:"resource_subtype,omitempty"`
+	Name         *string                   `json:"name,omitempty"`
+	Parent       *AttachmentResponseParent `json:"parent,omitempty"`
+	PermanentURL *string                   `json:"permanent_url,omitempty"`
+	// The service hosting the attachment. Valid values are `asana`, `dropbox`, `gdrive`, `onedrive`, `box`, `vimeo`, and `external`.
+	ResourceSubtype *string `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
+	// The size of the attachment in bytes. Only present when the `resource_subtype` is `asana`.
+	Size *int64 `json:"size,omitempty"`
 	// The URL where the attachment can be viewed, which may be friendlier to users in a browser than just directing them to a raw file. May be null if no view URL exists for the service.
 	ViewURL *string `json:"view_url,omitempty"`
 }

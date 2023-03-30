@@ -14,9 +14,9 @@ import (
 type CreateCompanyWebhookRequestCommunicationFormatEnum string
 
 const (
-	CreateCompanyWebhookRequestCommunicationFormatEnumHTTP CreateCompanyWebhookRequestCommunicationFormatEnum = "HTTP"
-	CreateCompanyWebhookRequestCommunicationFormatEnumJSON CreateCompanyWebhookRequestCommunicationFormatEnum = "JSON"
-	CreateCompanyWebhookRequestCommunicationFormatEnumSoap CreateCompanyWebhookRequestCommunicationFormatEnum = "SOAP"
+	CreateCompanyWebhookRequestCommunicationFormatEnumHTTP CreateCompanyWebhookRequestCommunicationFormatEnum = "http"
+	CreateCompanyWebhookRequestCommunicationFormatEnumJSON CreateCompanyWebhookRequestCommunicationFormatEnum = "json"
+	CreateCompanyWebhookRequestCommunicationFormatEnumSoap CreateCompanyWebhookRequestCommunicationFormatEnum = "soap"
 )
 
 func (e *CreateCompanyWebhookRequestCommunicationFormatEnum) UnmarshalJSON(data []byte) error {
@@ -25,11 +25,11 @@ func (e *CreateCompanyWebhookRequestCommunicationFormatEnum) UnmarshalJSON(data 
 		return err
 	}
 	switch s {
-	case "HTTP":
+	case "http":
 		fallthrough
-	case "JSON":
+	case "json":
 		fallthrough
-	case "SOAP":
+	case "soap":
 		*e = CreateCompanyWebhookRequestCommunicationFormatEnum(s)
 		return nil
 	default:
@@ -44,9 +44,9 @@ func (e *CreateCompanyWebhookRequestCommunicationFormatEnum) UnmarshalJSON(data 
 type CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum string
 
 const (
-	CreateCompanyWebhookRequestFilterMerchantAccountTypeEnumExcludeList CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum = "EXCLUDE_LIST"
-	CreateCompanyWebhookRequestFilterMerchantAccountTypeEnumIncludeAll  CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum = "INCLUDE_ALL"
-	CreateCompanyWebhookRequestFilterMerchantAccountTypeEnumIncludeList CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum = "INCLUDE_LIST"
+	CreateCompanyWebhookRequestFilterMerchantAccountTypeEnumAllAccounts     CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum = "allAccounts"
+	CreateCompanyWebhookRequestFilterMerchantAccountTypeEnumExcludeAccounts CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum = "excludeAccounts"
+	CreateCompanyWebhookRequestFilterMerchantAccountTypeEnumIncludeAccounts CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum = "includeAccounts"
 )
 
 func (e *CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum) UnmarshalJSON(data []byte) error {
@@ -55,11 +55,11 @@ func (e *CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum) UnmarshalJSON
 		return err
 	}
 	switch s {
-	case "EXCLUDE_LIST":
+	case "allAccounts":
 		fallthrough
-	case "INCLUDE_ALL":
+	case "excludeAccounts":
 		fallthrough
-	case "INCLUDE_LIST":
+	case "includeAccounts":
 		*e = CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum(s)
 		return nil
 	default:
@@ -104,16 +104,14 @@ func (e *CreateCompanyWebhookRequestNetworkTypeEnum) UnmarshalJSON(data []byte) 
 type CreateCompanyWebhookRequestSslVersionEnum string
 
 const (
-	CreateCompanyWebhookRequestSslVersionEnumHTTP                 CreateCompanyWebhookRequestSslVersionEnum = "HTTP"
-	CreateCompanyWebhookRequestSslVersionEnumSsl                  CreateCompanyWebhookRequestSslVersionEnum = "SSL"
-	CreateCompanyWebhookRequestSslVersionEnumSslv3                CreateCompanyWebhookRequestSslVersionEnum = "SSLV3"
-	CreateCompanyWebhookRequestSslVersionEnumSslInsecureCiphers   CreateCompanyWebhookRequestSslVersionEnum = "SSL_INSECURE_CIPHERS"
-	CreateCompanyWebhookRequestSslVersionEnumTLS                  CreateCompanyWebhookRequestSslVersionEnum = "TLS"
-	CreateCompanyWebhookRequestSslVersionEnumTlsv1                CreateCompanyWebhookRequestSslVersionEnum = "TLSV1"
-	CreateCompanyWebhookRequestSslVersionEnumTlsv11               CreateCompanyWebhookRequestSslVersionEnum = "TLSV1_1"
-	CreateCompanyWebhookRequestSslVersionEnumTlsv12               CreateCompanyWebhookRequestSslVersionEnum = "TLSV1_2"
-	CreateCompanyWebhookRequestSslVersionEnumTlsv13               CreateCompanyWebhookRequestSslVersionEnum = "TLSV1_3"
-	CreateCompanyWebhookRequestSslVersionEnumTlsv1InsecureCiphers CreateCompanyWebhookRequestSslVersionEnum = "TLSV1_INSECURE_CIPHERS"
+	CreateCompanyWebhookRequestSslVersionEnumHTTP   CreateCompanyWebhookRequestSslVersionEnum = "HTTP"
+	CreateCompanyWebhookRequestSslVersionEnumSsl    CreateCompanyWebhookRequestSslVersionEnum = "SSL"
+	CreateCompanyWebhookRequestSslVersionEnumSsLv3  CreateCompanyWebhookRequestSslVersionEnum = "SSLv3"
+	CreateCompanyWebhookRequestSslVersionEnumTLS    CreateCompanyWebhookRequestSslVersionEnum = "TLS"
+	CreateCompanyWebhookRequestSslVersionEnumTlSv1  CreateCompanyWebhookRequestSslVersionEnum = "TLSv1"
+	CreateCompanyWebhookRequestSslVersionEnumTlSv11 CreateCompanyWebhookRequestSslVersionEnum = "TLSv1.1"
+	CreateCompanyWebhookRequestSslVersionEnumTlSv12 CreateCompanyWebhookRequestSslVersionEnum = "TLSv1.2"
+	CreateCompanyWebhookRequestSslVersionEnumTlSv13 CreateCompanyWebhookRequestSslVersionEnum = "TLSv1.3"
 )
 
 func (e *CreateCompanyWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) error {
@@ -126,21 +124,17 @@ func (e *CreateCompanyWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) e
 		fallthrough
 	case "SSL":
 		fallthrough
-	case "SSLV3":
-		fallthrough
-	case "SSL_INSECURE_CIPHERS":
+	case "SSLv3":
 		fallthrough
 	case "TLS":
 		fallthrough
-	case "TLSV1":
+	case "TLSv1":
 		fallthrough
-	case "TLSV1_1":
+	case "TLSv1.1":
 		fallthrough
-	case "TLSV1_2":
+	case "TLSv1.2":
 		fallthrough
-	case "TLSV1_3":
-		fallthrough
-	case "TLSV1_INSECURE_CIPHERS":
+	case "TLSv1.3":
 		*e = CreateCompanyWebhookRequestSslVersionEnum(s)
 		return nil
 	default:

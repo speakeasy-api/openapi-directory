@@ -18,6 +18,8 @@ type PreprintsCreatePreprintAttributesInput struct {
 
 // PreprintsCreatePreprintRelationshipsInput - URLs to other entities or entity collections that have a relationship to the preprint entity.
 type PreprintsCreatePreprintRelationshipsInput struct {
+	// A relationship to the bibliographic contributors that are listed as contributing to this preprint.
+	BibliographicContributors *string `json:"bibliographic_contributors,omitempty"`
 	// A relationship to the license that has been applied to the preprint.
 	License *string `json:"license,omitempty"`
 	// A relationship to the node that was created for the preprint, or from which the preprint was created.

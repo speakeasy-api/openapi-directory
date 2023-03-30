@@ -37,6 +37,17 @@ pkg/models/shared/associatedapplication.go
 pkg/models/shared/applicationcomponentdetail.go
 pkg/models/shared/sourcecoderepository.go
 pkg/models/shared/runtimeanalysisstatusenum.go
+pkg/models/shared/result.go
+pkg/models/shared/antipatternreportresult.go
+pkg/models/shared/antipatternreportstatusenum.go
+pkg/models/shared/s3object.go
+pkg/models/shared/analyzernameunion.go
+pkg/models/shared/sourcecodeanalyzernameenum.go
+pkg/models/shared/runtimeanalyzernameenum.go
+pkg/models/shared/binaryanalyzernameenum.go
+pkg/models/shared/analysistypeenum.go
+pkg/models/shared/analysisstatusunion.go
+pkg/models/shared/srccodeordbanalysisstatusenum.go
 pkg/models/shared/resourcesubtypeenum.go
 pkg/models/shared/recommendationset.go
 pkg/models/shared/transformationtool.go
@@ -50,9 +61,6 @@ pkg/models/shared/databaseconfigdetail.go
 pkg/models/shared/appuniterror.go
 pkg/models/shared/appuniterrorcategoryenum.go
 pkg/models/shared/apptypeenum.go
-pkg/models/shared/antipatternreportstatusenum.go
-pkg/models/shared/s3object.go
-pkg/models/shared/srccodeordbanalysisstatusenum.go
 pkg/models/shared/getapplicationcomponentstrategiesresponse.go
 pkg/models/shared/applicationcomponentstrategy.go
 pkg/models/shared/strategyrecommendationenum.go

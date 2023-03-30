@@ -19,17 +19,39 @@ func main() {
         }),
     )
 
-    req := operations.PostAssetsCorrelationMatrixRequest{
-        Request: operations.PostAssetsCorrelationMatrixRequestBody{},
+    req := operations.PostAssetsAnalysisAbsorptionRatioRequest{
+        Request: operations.PostAssetsAnalysisAbsorptionRatioRequestBody{
+            Assets: 548814,
+            AssetsCovarianceMatrix: [][]float64{
+                []float64{
+                    8442.66,
+                    6027.63,
+                    8579.46,
+                },
+                []float64{
+                    8472.52,
+                    4236.55,
+                    6235.64,
+                },
+                []float64{
+                    3843.82,
+                    4375.87,
+                    2975.34,
+                },
+            },
+            AssetsCovarianceMatrixEigenvectors: &operations.PostAssetsAnalysisAbsorptionRatioRequestBodyAssetsCovarianceMatrixEigenvectors{
+                EigenvectorsRetained: 891773,
+            },
+        },
     }
 
     ctx := context.Background()
-    res, err := s.AssetsCorrelationMatrix.PostAssetsCorrelationMatrix(ctx, req)
+    res, err := s.AssetsAnalysis.PostAssetsAnalysisAbsorptionRatio(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.PostAssetsCorrelationMatrix200ApplicationJSONObject != nil {
+    if res.PostAssetsAnalysisAbsorptionRatio200ApplicationJSONObject != nil {
         // handle response
     }
 }

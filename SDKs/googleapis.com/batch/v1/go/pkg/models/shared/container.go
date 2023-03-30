@@ -4,7 +4,7 @@ package shared
 
 // Container - Container runnable.
 type Container struct {
-	// If set to true, external network access to and from container will be blocked. The container will use the default internal network 'goog-internal'.
+	// If set to true, external network access to and from container will be blocked, containers that are with block_external_network as true can still communicate with each other, network cannot be specified in the `container.options` field.
 	BlockExternalNetwork *bool `json:"blockExternalNetwork,omitempty"`
 	// Overrides the `CMD` specified in the container. If there is an ENTRYPOINT (either in the container image or with the entrypoint field below) then commands are appended as arguments to the ENTRYPOINT.
 	Commands []string `json:"commands,omitempty"`

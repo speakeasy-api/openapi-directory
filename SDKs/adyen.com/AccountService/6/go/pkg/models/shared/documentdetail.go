@@ -79,7 +79,7 @@ func (e *DocumentDetailDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 
 type DocumentDetail struct {
 	// The code of account holder, to which the document applies.
-	AccountHolderCode string `json:"accountHolderCode"`
+	AccountHolderCode *string `json:"accountHolderCode,omitempty"`
 	// The Adyen-generated [`bankAccountUUID`](https://docs.adyen.com/api-explorer/#/Account/latest/post/createAccountHolder__resParam_accountHolderDetails-bankAccountDetails-bankAccountUUID) to which the document must be linked. Refer to [Bank account check](https://docs.adyen.com/marketplaces-and-platforms/classic/verification-checks/bank-account-check#uploading-a-bank-statement) for details on when a document should be submitted.
 	// >Required if the `documentType` is **BANK_STATEMENT**, where a document is being submitted in order to verify a bank account.
 	//
@@ -100,7 +100,7 @@ type DocumentDetail struct {
 	//
 	DocumentType DocumentDetailDocumentTypeEnum `json:"documentType"`
 	// Filename of the document.
-	Filename string `json:"filename"`
+	Filename *string `json:"filename,omitempty"`
 	// The Adyen-generated [`legalArrangementCode`](https://docs.adyen.com/api-explorer/#/Account/latest/post/createAccountHolder__resParam_accountHolderDetails-legalArrangements-legalArrangementCode) to which the document must be linked.
 	LegalArrangementCode *string `json:"legalArrangementCode,omitempty"`
 	// The Adyen-generated [`legalArrangementEntityCode`](https://docs.adyen.com/api-explorer/#/Account/v6/post/createAccountHolder__resParam_accountHolderDetails-legalArrangements-legalArrangementEntities-legalArrangementEntityCode)  to which the document must be linked.

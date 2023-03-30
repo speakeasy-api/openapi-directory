@@ -10,8 +10,9 @@ import (
 type AutodefinedReverseFlagEnum string
 
 const (
-	AutodefinedReverseFlagEnumEnable  AutodefinedReverseFlagEnum = "ENABLE"
-	AutodefinedReverseFlagEnumDisable AutodefinedReverseFlagEnum = "DISABLE"
+	AutodefinedReverseFlagEnumEnable                  AutodefinedReverseFlagEnum = "ENABLE"
+	AutodefinedReverseFlagEnumDisable                 AutodefinedReverseFlagEnum = "DISABLE"
+	AutodefinedReverseFlagEnumUseLocalResourceSetting AutodefinedReverseFlagEnum = "USE_LOCAL_RESOURCE_SETTING"
 )
 
 func (e *AutodefinedReverseFlagEnum) UnmarshalJSON(data []byte) error {
@@ -23,6 +24,8 @@ func (e *AutodefinedReverseFlagEnum) UnmarshalJSON(data []byte) error {
 	case "ENABLE":
 		fallthrough
 	case "DISABLE":
+		fallthrough
+	case "USE_LOCAL_RESOURCE_SETTING":
 		*e = AutodefinedReverseFlagEnum(s)
 		return nil
 	default:

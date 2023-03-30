@@ -39,6 +39,7 @@ const (
 	FieldTypeFieldNameEnumCity                                                   FieldTypeFieldNameEnum = "city"
 	FieldTypeFieldNameEnumCompanyRegistration                                    FieldTypeFieldNameEnum = "companyRegistration"
 	FieldTypeFieldNameEnumConstitutionalDocument                                 FieldTypeFieldNameEnum = "constitutionalDocument"
+	FieldTypeFieldNameEnumController                                             FieldTypeFieldNameEnum = "controller"
 	FieldTypeFieldNameEnumCountry                                                FieldTypeFieldNameEnum = "country"
 	FieldTypeFieldNameEnumCountryCode                                            FieldTypeFieldNameEnum = "countryCode"
 	FieldTypeFieldNameEnumCurrency                                               FieldTypeFieldNameEnum = "currency"
@@ -124,6 +125,7 @@ const (
 	FieldTypeFieldNameEnumShareholderCodeAndSignatoryCode                        FieldTypeFieldNameEnum = "shareholderCodeAndSignatoryCode"
 	FieldTypeFieldNameEnumShareholderCodeOrSignatoryCode                         FieldTypeFieldNameEnum = "shareholderCodeOrSignatoryCode"
 	FieldTypeFieldNameEnumShareholderType                                        FieldTypeFieldNameEnum = "shareholderType"
+	FieldTypeFieldNameEnumShareholderTypes                                       FieldTypeFieldNameEnum = "shareholderTypes"
 	FieldTypeFieldNameEnumShopperInteraction                                     FieldTypeFieldNameEnum = "shopperInteraction"
 	FieldTypeFieldNameEnumSignatory                                              FieldTypeFieldNameEnum = "signatory"
 	FieldTypeFieldNameEnumSignatoryCode                                          FieldTypeFieldNameEnum = "signatoryCode"
@@ -229,6 +231,8 @@ func (e *FieldTypeFieldNameEnum) UnmarshalJSON(data []byte) error {
 	case "companyRegistration":
 		fallthrough
 	case "constitutionalDocument":
+		fallthrough
+	case "controller":
 		fallthrough
 	case "country":
 		fallthrough
@@ -399,6 +403,8 @@ func (e *FieldTypeFieldNameEnum) UnmarshalJSON(data []byte) error {
 	case "shareholderCodeOrSignatoryCode":
 		fallthrough
 	case "shareholderType":
+		fallthrough
+	case "shareholderTypes":
 		fallthrough
 	case "shopperInteraction":
 		fallthrough

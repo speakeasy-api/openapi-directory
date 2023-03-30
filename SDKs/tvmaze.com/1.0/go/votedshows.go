@@ -210,6 +210,8 @@ func (s *votedShows) PutUserVotesShowsShowID(ctx context.Context, request operat
 			res.ShowVote = out
 		}
 	case httpRes.StatusCode == 404:
+		fallthrough
+	case httpRes.StatusCode == 422:
 	}
 
 	return res, nil

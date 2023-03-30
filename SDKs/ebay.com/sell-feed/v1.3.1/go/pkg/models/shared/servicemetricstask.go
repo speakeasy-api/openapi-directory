@@ -4,19 +4,19 @@ package shared
 
 // ServiceMetricsTask - Success
 type ServiceMetricsTask struct {
-	// The timestamp when the customer service metrics task went into the COMPLETED or COMPLETED_WITH_ERROR state. This field is only returned if the status is one of the two completed values. This state means that eBay has compiled the report for the seller based on the seller&rsquo;s filter criteria, and the seller can run a getResultFile call to download the report.
+	// The timestamp when the customer service metrics task went into the <code>COMPLETED</code> or <code>COMPLETED_WITH_ERROR</code> state. This field is only returned if the status is one of the two completed values. This state means that eBay has compiled the report for the seller based on the seller’s filter criteria, and the seller can run a <strong>getResultFile</strong> call to download the report.
 	CompletionDate *string `json:"completionDate,omitempty"`
 	// The date the customer service metrics task was created.
 	CreationDate *string `json:"creationDate,omitempty"`
-	// The relative getCustomerServiceMetricTask call URI path to retrieve the corresponding task.
+	// The relative <strong>getCustomerServiceMetricTask</strong> call URI path to retrieve the corresponding task.
 	DetailHref *string `json:"detailHref,omitempty"`
 	// The feed type associated with the task.
 	FeedType *string `json:"feedType,omitempty"`
-	// A complex data type that filters data for report creation. See CustomerServiceMetricsFilterCriteria for fields and descriptions.
+	// A complex data type that filters data for report creation. See <strong>CustomerServiceMetricsFilterCriteria</strong> for fields and descriptions.
 	FilterCriteria *CustomerServiceMetricsFilterCriteria `json:"filterCriteria,omitempty"`
-	// The schema version number of the file format. If omitted, the default value is used. Default value: 1.0
+	// The schema version number of the file format. If omitted, the default value is used. <p><b>Default value: </b><code>1.0</code><p>
 	SchemaVersion *string `json:"schemaVersion,omitempty"`
-	// An enumeration value that indicates the state of the task. See FeedStatusEnum for values. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:FeedStatusEnum'>eBay API documentation</a>
+	// An enumeration value that indicates the state of the task. See <strong>FeedStatusEnum</strong> for values. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:FeedStatusEnum'>eBay API documentation</a>
 	Status *string `json:"status,omitempty"`
 	// The unique eBay-assigned ID of the task.
 	TaskID *string `json:"taskId,omitempty"`

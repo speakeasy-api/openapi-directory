@@ -12,12 +12,17 @@ import (
 type InvoiceLineItemEntityTypeEnum string
 
 const (
-	InvoiceLineItemEntityTypeEnumInvoice           InvoiceLineItemEntityTypeEnum = "invoice"
-	InvoiceLineItemEntityTypeEnumAdjustment        InvoiceLineItemEntityTypeEnum = "adjustment"
-	InvoiceLineItemEntityTypeEnumUsageOverage      InvoiceLineItemEntityTypeEnum = "usage_overage"
-	InvoiceLineItemEntityTypeEnumUserOverage       InvoiceLineItemEntityTypeEnum = "user_overage"
-	InvoiceLineItemEntityTypeEnumAddonSubscription InvoiceLineItemEntityTypeEnum = "addon_subscription"
-	InvoiceLineItemEntityTypeEnumMiscFee           InvoiceLineItemEntityTypeEnum = "misc_fee"
+	InvoiceLineItemEntityTypeEnumInvoice                     InvoiceLineItemEntityTypeEnum = "invoice"
+	InvoiceLineItemEntityTypeEnumInvoiceAdjustment           InvoiceLineItemEntityTypeEnum = "invoice_adjustment"
+	InvoiceLineItemEntityTypeEnumUsageOverage                InvoiceLineItemEntityTypeEnum = "usage_overage"
+	InvoiceLineItemEntityTypeEnumUserOverage                 InvoiceLineItemEntityTypeEnum = "user_overage"
+	InvoiceLineItemEntityTypeEnumAddonSubscription           InvoiceLineItemEntityTypeEnum = "addon_subscription"
+	InvoiceLineItemEntityTypeEnumMiscFee                     InvoiceLineItemEntityTypeEnum = "misc_fee"
+	InvoiceLineItemEntityTypeEnumUsageOverageAdjustment      InvoiceLineItemEntityTypeEnum = "usage_overage_adjustment"
+	InvoiceLineItemEntityTypeEnumUserOverageAdjustment       InvoiceLineItemEntityTypeEnum = "user_overage_adjustment"
+	InvoiceLineItemEntityTypeEnumAddonSubscriptionAdjustment InvoiceLineItemEntityTypeEnum = "addon_subscription_adjustment"
+	InvoiceLineItemEntityTypeEnumMiscFeeAdjustment           InvoiceLineItemEntityTypeEnum = "misc_fee_adjustment"
+	InvoiceLineItemEntityTypeEnumCreditExpiration            InvoiceLineItemEntityTypeEnum = "credit_expiration"
 )
 
 func (e *InvoiceLineItemEntityTypeEnum) UnmarshalJSON(data []byte) error {
@@ -28,7 +33,7 @@ func (e *InvoiceLineItemEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	switch s {
 	case "invoice":
 		fallthrough
-	case "adjustment":
+	case "invoice_adjustment":
 		fallthrough
 	case "usage_overage":
 		fallthrough
@@ -37,6 +42,16 @@ func (e *InvoiceLineItemEntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "addon_subscription":
 		fallthrough
 	case "misc_fee":
+		fallthrough
+	case "usage_overage_adjustment":
+		fallthrough
+	case "user_overage_adjustment":
+		fallthrough
+	case "addon_subscription_adjustment":
+		fallthrough
+	case "misc_fee_adjustment":
+		fallthrough
+	case "credit_expiration":
 		*e = InvoiceLineItemEntityTypeEnum(s)
 		return nil
 	default:

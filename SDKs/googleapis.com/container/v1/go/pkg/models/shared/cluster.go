@@ -90,6 +90,8 @@ type Cluster struct {
 	Etag *string `json:"etag,omitempty"`
 	// [Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 	ExpireTime *string `json:"expireTime,omitempty"`
+	// Fleet is the fleet configuration for the cluster.
+	Fleet *Fleet `json:"fleet,omitempty"`
 	// Output only. Unique id for the cluster.
 	ID *string `json:"id,omitempty"`
 	// IdentityServiceConfig is configuration for Identity Service which allows customers to use external identity providers with the K8S API
@@ -220,6 +222,8 @@ type ClusterInput struct {
 	Etag *string `json:"etag,omitempty"`
 	// [Output only] The time the cluster will be automatically deleted in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
 	ExpireTime *string `json:"expireTime,omitempty"`
+	// Fleet is the fleet configuration for the cluster.
+	Fleet *Fleet `json:"fleet,omitempty"`
 	// IdentityServiceConfig is configuration for Identity Service which allows customers to use external identity providers with the K8S API
 	IdentityServiceConfig *IdentityServiceConfig `json:"identityServiceConfig,omitempty"`
 	// The initial Kubernetes version for this cluster. Valid versions are those found in validMasterVersions returned by getServerConfig. The version can be upgraded over time; such upgrades are reflected in currentMasterVersion and currentNodeVersion. Users may specify either explicit versions offered by Kubernetes Engine or version aliases, which have the following behavior: - "latest": picks the highest valid Kubernetes version - "1.X": picks the highest valid patch+gke.N patch in the 1.X version - "1.X.Y": picks the highest valid gke.N patch in the 1.X.Y version - "1.X.Y-gke.N": picks an explicit Kubernetes version - "","-": picks the default Kubernetes version

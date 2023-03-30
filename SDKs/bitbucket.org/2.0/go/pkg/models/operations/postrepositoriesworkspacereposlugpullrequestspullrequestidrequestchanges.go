@@ -35,7 +35,7 @@ type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesRes
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// The request wasn't authenticated.
+	// Pull request changes cannot be requested because the pull request has already been merged.
 	Error map[string]interface{}
 	// The `participant` object recording that the authenticated user requested changes on the pull request.
 	Participant map[string]interface{}

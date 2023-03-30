@@ -615,7 +615,7 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsListDocuments(ctx context.
 	return res, nil
 }
 
-// FirestoreProjectsDatabasesDocumentsListen - Listens to changes. This method is only available via the gRPC API (not REST).
+// FirestoreProjectsDatabasesDocumentsListen - Listens to changes. This method is only available via gRPC or WebChannel (not REST).
 func (s *projects) FirestoreProjectsDatabasesDocumentsListen(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsListenRequest) (*operations.FirestoreProjectsDatabasesDocumentsListenResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{database}/documents:listen", request.PathParams, nil)
@@ -945,7 +945,7 @@ func (s *projects) FirestoreProjectsDatabasesDocumentsRunQuery(ctx context.Conte
 	return res, nil
 }
 
-// FirestoreProjectsDatabasesDocumentsWrite - Streams batches of document updates and deletes, in order. This method is only available via the gRPC API (not REST).
+// FirestoreProjectsDatabasesDocumentsWrite - Streams batches of document updates and deletes, in order. This method is only available via gRPC or WebChannel (not REST).
 func (s *projects) FirestoreProjectsDatabasesDocumentsWrite(ctx context.Context, request operations.FirestoreProjectsDatabasesDocumentsWriteRequest) (*operations.FirestoreProjectsDatabasesDocumentsWriteResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{database}/documents:write", request.PathParams, nil)
@@ -1261,7 +1261,7 @@ func (s *projects) FirestoreProjectsDatabasesOperationsDelete(ctx context.Contex
 	return res, nil
 }
 
-// FirestoreProjectsDatabasesOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+// FirestoreProjectsDatabasesOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) FirestoreProjectsDatabasesOperationsList(ctx context.Context, request operations.FirestoreProjectsDatabasesOperationsListRequest) (*operations.FirestoreProjectsDatabasesOperationsListResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{name}/operations", request.PathParams, nil)

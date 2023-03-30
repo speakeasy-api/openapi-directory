@@ -37,12 +37,12 @@ type LegalEntityInfoInput struct {
 	// List of legal entities associated with the current legal entity.
 	// For example, ultimate beneficial owners associated with an organization through ownership or control, or as signatories.
 	EntityAssociations []LegalEntityAssociationInput `json:"entityAssociations,omitempty"`
-	Individual         *Individual                   `json:"individual,omitempty"`
-	Organization       *Organization                 `json:"organization,omitempty"`
+	Individual         *IndividualInput              `json:"individual,omitempty"`
+	Organization       *OrganizationInput            `json:"organization,omitempty"`
 	// Your reference for the legal entity, maximum 150 characters.
 	Reference *string `json:"reference,omitempty"`
 	// The type of legal entity.
 	//
 	//  Possible values: **individual** or **organization**
-	Type LegalEntityInfoTypeEnum `json:"type"`
+	Type *LegalEntityInfoTypeEnum `json:"type,omitempty"`
 }

@@ -32,7 +32,7 @@ func main() {
                     "perspiciatis",
                     "nulla",
                 },
-                Ndarry: []interface{}{
+                Ndarray: []interface{}{
                     "fuga",
                     "facilis",
                 },

@@ -4,10 +4,10 @@ package shared
 
 // SearchResponse - Search query response
 type SearchResponse struct {
-	Facets   map[string]interface{} `json:"facets,omitempty"`
-	Listings []BaseListing          `json:"listings,omitempty"`
+	Facets   *CarSearchFacets `json:"facets,omitempty"`
+	Listings []BaseListing    `json:"listings,omitempty"`
 	// The number of listings found
-	NumFound    *int64                 `json:"num_found,omitempty"`
-	RangeFacets map[string]interface{} `json:"range_facets,omitempty"`
-	Stats       map[string]interface{} `json:"stats,omitempty"`
+	NumFound    *int64                `json:"num_found,omitempty"`
+	RangeFacets *CarSearchRangeFacets `json:"range_facets,omitempty"`
+	Stats       *CarSearchStats       `json:"stats,omitempty"`
 }

@@ -93,6 +93,8 @@ type ArticleSearch struct {
 	Page *int64 `json:"page,omitempty"`
 	// The number of results included on a page. Used for pagination with page
 	PageSize *int64 `json:"page_size,omitempty"`
+	// Only return articles in this project
+	ProjectID *int64 `json:"project_id,omitempty"`
 	// Filter by article publishing date. Will only return articles published after the date. date(ISO 8601) YYYY-MM-DD
 	PublishedSince *string `json:"published_since,omitempty"`
 	// Only return articles with this resource_doi

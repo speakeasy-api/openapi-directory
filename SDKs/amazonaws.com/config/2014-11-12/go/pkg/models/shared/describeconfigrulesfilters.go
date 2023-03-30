@@ -2,7 +2,7 @@
 
 package shared
 
-// DescribeConfigRulesFilters - Returns a filtered list of Detective or Proactive Config rules. By default, if the filter is not defined, this API returns an unfiltered list.
+// DescribeConfigRulesFilters - Returns a filtered list of Detective or Proactive Config rules. By default, if the filter is not defined, this API returns an unfiltered list. For more information on Detective or Proactive Config rules, see <a href="https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html"> <b>Evaluation Mode</b> </a> in the Config Developer Guide.
 type DescribeConfigRulesFilters struct {
 	EvaluationMode *EvaluationModeEnum `json:"EvaluationMode,omitempty"`
 }

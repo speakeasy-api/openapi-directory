@@ -32,8 +32,8 @@ func newDocumentSubmissions(defaultClient, securityClient HTTPClient, serverURL,
 	}
 }
 
-// CreateDocumentSubmission - *** NOTE: Experimental. Only to be used for sending Invoice Response documents. *** Submit a new document.
-// Submit a document for delivery. This endpoint will replace the /invoice_submissions endpoint, but for now should only be used to send Invoice Response doucments.
+// CreateDocumentSubmission - Submit a new document.
+// Submit a document for delivery. This endpoint will replaces the /invoice_submissions endpoint which will soon be deprecated.
 func (s *documentSubmissions) CreateDocumentSubmission(ctx context.Context, request operations.CreateDocumentSubmissionRequest) (*operations.CreateDocumentSubmissionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/document_submissions"
@@ -95,6 +95,56 @@ func (s *documentSubmissions) CreateDocumentSubmission(ctx context.Context, requ
 
 			res.ErrorModels = out
 		}
+	}
+
+	return res, nil
+}
+
+// ShowDocumentSubmissionEvidence - Get DocumentSubmission Evidence
+// Get evidence for a DocumentSubmission by GUID with corresponding status
+func (s *documentSubmissions) ShowDocumentSubmissionEvidence(ctx context.Context, request operations.ShowDocumentSubmissionEvidenceRequest) (*operations.ShowDocumentSubmissionEvidenceResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/document_submissions/{guid}/evidence/{evidence_type}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ShowDocumentSubmissionEvidenceResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.DocumentSubmissionEvidence
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.DocumentSubmissionEvidence = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
 	}
 
 	return res, nil

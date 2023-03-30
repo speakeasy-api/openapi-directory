@@ -112,85 +112,181 @@ func (e *GetLegalSearchAoRequestorTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+type GetLegalSearchCaseDocCategoryIDEnum string
+
+const (
+	GetLegalSearchCaseDocCategoryIDEnumOne   GetLegalSearchCaseDocCategoryIDEnum = "1"
+	GetLegalSearchCaseDocCategoryIDEnumTwo   GetLegalSearchCaseDocCategoryIDEnum = "2"
+	GetLegalSearchCaseDocCategoryIDEnumThree GetLegalSearchCaseDocCategoryIDEnum = "3"
+	GetLegalSearchCaseDocCategoryIDEnumFour  GetLegalSearchCaseDocCategoryIDEnum = "4"
+	GetLegalSearchCaseDocCategoryIDEnumFive  GetLegalSearchCaseDocCategoryIDEnum = "5"
+	GetLegalSearchCaseDocCategoryIDEnumSix   GetLegalSearchCaseDocCategoryIDEnum = "6"
+)
+
+func (e *GetLegalSearchCaseDocCategoryIDEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "1":
+		fallthrough
+	case "2":
+		fallthrough
+	case "3":
+		fallthrough
+	case "4":
+		fallthrough
+	case "5":
+		fallthrough
+	case "6":
+		*e = GetLegalSearchCaseDocCategoryIDEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetLegalSearchCaseDocCategoryIDEnum: %s", s)
+	}
+}
+
 type GetLegalSearchQueryParams struct {
 	// Admin fine committee ID
+	//
 	AfCommitteeID *string `queryParam:"style=form,explode=true,name=af_committee_id"`
-	// Filter cases by Final Determination fine amount
+	// Final Determination fine amount
+	//
 	AfFdFineAmount *int `queryParam:"style=form,explode=true,name=af_fd_fine_amount"`
-	// Filter cases by latest Final Determination date
+	// The latest Final Determination date
+	//
 	AfMaxFdDate *types.Date `queryParam:"style=form,explode=true,name=af_max_fd_date"`
-	// Filter cases by latest Reason to Believe date
+	// The latest Reason to Believe date
+	//
 	AfMaxRtbDate *types.Date `queryParam:"style=form,explode=true,name=af_max_rtb_date"`
-	// Filter cases by earliest Final Determination date
+	// The earliest Final Determination date
+	//
 	AfMinFdDate *types.Date `queryParam:"style=form,explode=true,name=af_min_fd_date"`
-	// Filter cases by earliest Reason to Believe date
+	// The earliest Reason to Believe date
+	//
 	AfMinRtbDate *types.Date `queryParam:"style=form,explode=true,name=af_min_rtb_date"`
 	// Admin fine committee name
+	//
 	AfName []string `queryParam:"style=form,explode=true,name=af_name"`
 	// Admin fine report year
+	//
 	AfReportYear *string `queryParam:"style=form,explode=true,name=af_report_year"`
-	// Filter cases by Reason to Believe fine amount
+	// Reason to Believe fine amount
+	//
 	AfRtbFineAmount *int `queryParam:"style=form,explode=true,name=af_rtb_fine_amount"`
 	// Category of the document
+	//
 	AoCategory []GetLegalSearchAoCategoryEnum `queryParam:"style=form,explode=true,name=ao_category"`
 	// Require all citations to be in document (default behavior is any)
+	//
 	AoCitationRequireAll *bool `queryParam:"style=form,explode=true,name=ao_citation_require_all"`
-	// Search by name of commenter or representative
+	// Name of commenter or representative
+	//
 	AoEntityName []string `queryParam:"style=form,explode=true,name=ao_entity_name"`
 	// AO is pending
+	//
 	AoIsPending *bool `queryParam:"style=form,explode=true,name=ao_is_pending"`
 	// Latest issue date of advisory opinion
+	//
 	AoMaxIssueDate *types.Date `queryParam:"style=form,explode=true,name=ao_max_issue_date"`
 	// Latest request date of advisory opinion
+	//
 	AoMaxRequestDate *types.Date `queryParam:"style=form,explode=true,name=ao_max_request_date"`
 	// Earliest issue date of advisory opinion
+	//
 	AoMinIssueDate *types.Date `queryParam:"style=form,explode=true,name=ao_min_issue_date"`
 	// Earliest request date of advisory opinion
+	//
 	AoMinRequestDate *types.Date `queryParam:"style=form,explode=true,name=ao_min_request_date"`
 	// Force advisory opinion name
+	//
 	AoName []string `queryParam:"style=form,explode=true,name=ao_name"`
 	// Force advisory opinion number
+	//
 	AoNo []string `queryParam:"style=form,explode=true,name=ao_no"`
-	// Search for regulatory citations
+	// Regulatory citations
+	//
 	AoRegulatoryCitation []string `queryParam:"style=form,explode=true,name=ao_regulatory_citation"`
 	// The requestor of the advisory opinion
+	//
 	AoRequestor *string `queryParam:"style=form,explode=true,name=ao_requestor"`
 	// Code of the advisory opinion requestor type.
+	//
 	AoRequestorType []GetLegalSearchAoRequestorTypeEnum `queryParam:"style=form,explode=true,name=ao_requestor_type"`
 	// Status of AO (pending, withdrawn, or final)
+	//
 	AoStatus *string `queryParam:"style=form,explode=true,name=ao_status"`
-	// Search for statutory citations
+	// Statutory citations
+	//
 	AoStatutoryCitation []string `queryParam:"style=form,explode=true,name=ao_statutory_citation"`
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
-	// Filter cases by dispositions
+	// Require all citations to be in document (default behavior is any)
+	//
+	CaseCitationRequireAll *bool `queryParam:"style=form,explode=true,name=case_citation_require_all"`
+	// Cases dispositions
+	//
 	CaseDispositions []string `queryParam:"style=form,explode=true,name=case_dispositions"`
-	// Filter cases by category of associated documents
-	CaseDocumentCategory []string `queryParam:"style=form,explode=true,name=case_document_category"`
-	// Filter cases by election cycles
+	// Select one or more case_doc_category_id to filter by corresponding CASE_DOCUMENT_CATEGORY:
+	//         - 1 - Conciliation Agreements
+	//         - 2 - Complaint, Responses, Designation of Counsel and Extensions of Timee
+	//         - 3 - General Counsel Reports, Briefs, Notifications and Responses
+	//         - 4 - Certifications
+	//         - 5 - Civil Penalties, Disgorgements and Other Payments
+	//         - 6 - Statements of Reasons
+	//
+	CaseDocCategoryID []GetLegalSearchCaseDocCategoryIDEnum `queryParam:"style=form,explode=true,name=case_doc_category_id"`
+	// Cases election cycles
+	//
 	CaseElectionCycles *int `queryParam:"style=form,explode=true,name=case_election_cycles"`
-	// Filter cases by latest date closed
+	// The latest date closed of case
+	//
 	CaseMaxCloseDate *types.Date `queryParam:"style=form,explode=true,name=case_max_close_date"`
-	// Filter cases by latest date opened
+	// The latest date opened of case
+	//
 	CaseMaxOpenDate *types.Date `queryParam:"style=form,explode=true,name=case_max_open_date"`
-	// Filter cases by earliest date closed
+	// The earliest date closed of case
+	//
 	CaseMinCloseDate *types.Date `queryParam:"style=form,explode=true,name=case_min_close_date"`
-	// Filter cases by earliest date opened
+	// The earliest date opened of case
+	//
 	CaseMinOpenDate *types.Date `queryParam:"style=form,explode=true,name=case_min_open_date"`
 	// Enforcement matter case number
+	//
 	CaseNo []string `queryParam:"style=form,explode=true,name=case_no"`
-	// Filter cases by respondents
+	// Regulatory citations
+	//
+	CaseRegulatoryCitation []string `queryParam:"style=form,explode=true,name=case_regulatory_citation"`
+	// Cases respondents
+	//
 	CaseRespondents *string `queryParam:"style=form,explode=true,name=case_respondents"`
-	// Get results starting from this index.
+	// Statutory citations
+	//
+	CaseStatutoryCitation []string `queryParam:"style=form,explode=true,name=case_statutory_citation"`
+	// Get results starting from this index
+	//
 	FromHit *int `queryParam:"style=form,explode=true,name=from_hit"`
-	// Number of results to return (max 10).
+	// Number of results to return (max 10)
+	//
 	HitsReturned *int `queryParam:"style=form,explode=true,name=hits_returned"`
-	// Mur type
+	// Type of MUR : current or archived
+	//
 	MurType *string `queryParam:"style=form,explode=true,name=mur_type"`
-	// Text to search legal documents for.
+	// Text to search legal documents for
+	//
 	Q *string `queryParam:"style=form,explode=true,name=q"`
-	// Document type to refine search by
+	// Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
+	//
+	Sort *string `queryParam:"style=form,explode=true,name=sort"`
+	// Legal Document type to refine search by
+	//     - statutes
+	//     - regulations
+	//     - advisory_opinions
+	//     - murs
+	//     - admin_fines
+	//
 	Type *string `queryParam:"style=form,explode=true,name=type"`
 }
 

@@ -96,7 +96,10 @@ func main() {
 * `ListMemberships` - Lists all memberships resources within the caller's account.
 * `ListProtectedQueries` - Lists protected queries, sorted by the most recent query.
 * `ListSchemas` - Lists the schemas for relations within a collaboration.
+* `ListTagsForResource` - Lists all of the tags that have been added to a resource.
 * `StartProtectedQuery` - Creates a protected query that is started by AWS Clean Rooms.
+* `TagResource` - Tags a resource.
+* `UntagResource` - Removes a tag or list of tags from a resource.
 * `UpdateCollaboration` - Updates collaboration metadata and can only be called by the collaboration owner.
 * `UpdateConfiguredTable` - Updates a configured table.
 * `UpdateConfiguredTableAnalysisRule` - Updates a configured table analysis rule.

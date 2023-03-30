@@ -138,6 +138,8 @@ const (
 	InventorySourceExchangeEnumExchangePlaceExchange     InventorySourceExchangeEnum = "EXCHANGE_PLACE_EXCHANGE"
 	InventorySourceExchangeEnumExchangeApplovin          InventorySourceExchangeEnum = "EXCHANGE_APPLOVIN"
 	InventorySourceExchangeEnumExchangeConnatix          InventorySourceExchangeEnum = "EXCHANGE_CONNATIX"
+	InventorySourceExchangeEnumExchangeResetDigital      InventorySourceExchangeEnum = "EXCHANGE_RESET_DIGITAL"
+	InventorySourceExchangeEnumExchangeHivestack         InventorySourceExchangeEnum = "EXCHANGE_HIVESTACK"
 )
 
 func (e *InventorySourceExchangeEnum) UnmarshalJSON(data []byte) error {
@@ -291,6 +293,10 @@ func (e *InventorySourceExchangeEnum) UnmarshalJSON(data []byte) error {
 	case "EXCHANGE_APPLOVIN":
 		fallthrough
 	case "EXCHANGE_CONNATIX":
+		fallthrough
+	case "EXCHANGE_RESET_DIGITAL":
+		fallthrough
+	case "EXCHANGE_HIVESTACK":
 		*e = InventorySourceExchangeEnum(s)
 		return nil
 	default:

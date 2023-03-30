@@ -12,7 +12,7 @@ type GoogleCloudDiscoveryengineV1betaDocument struct {
 	Name *string `json:"name,omitempty"`
 	// The identifier of the parent document. Currently supports at most two level document hierarchy. Id should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
 	ParentDocumentID *string `json:"parentDocumentId,omitempty"`
-	// Required. The identifier of the schema located in the same data store.
+	// The identifier of the schema located in the same data store.
 	SchemaID *string `json:"schemaId,omitempty"`
 	// The structured JSON data for the document. It should conform to the registered schema or an INVALID_ARGUMENT error is thrown.
 	StructData map[string]interface{} `json:"structData,omitempty"`

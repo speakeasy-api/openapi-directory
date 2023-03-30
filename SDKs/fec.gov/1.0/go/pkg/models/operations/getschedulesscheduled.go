@@ -20,23 +20,26 @@ type GetSchedulesScheduleDQueryParams struct {
 	//
 	CommitteeID        []string `queryParam:"style=form,explode=true,name=committee_id"`
 	CreditorDebtorName []string `queryParam:"style=form,explode=true,name=creditor_debtor_name"`
-	// The image number of the page where the schedule item is reported
+	// An unique identifier for each page where the electronic or paper filing is reported.
+	//
 	ImageNumber                   []string `queryParam:"style=form,explode=true,name=image_number"`
 	MaxAmountIncurred             *float32 `queryParam:"style=form,explode=true,name=max_amount_incurred"`
 	MaxAmountOutstandingBeginning *float32 `queryParam:"style=form,explode=true,name=max_amount_outstanding_beginning"`
 	MaxAmountOutstandingClose     *float32 `queryParam:"style=form,explode=true,name=max_amount_outstanding_close"`
 	// Maximum load date
-	MaxDate                       *types.Date `queryParam:"style=form,explode=true,name=max_date"`
-	MaxImageNumber                *string     `queryParam:"style=form,explode=true,name=max_image_number"`
-	MaxPaymentPeriod              *float32    `queryParam:"style=form,explode=true,name=max_payment_period"`
-	MinAmountIncurred             *float32    `queryParam:"style=form,explode=true,name=min_amount_incurred"`
-	MinAmountOutstandingBeginning *float32    `queryParam:"style=form,explode=true,name=min_amount_outstanding_beginning"`
-	MinAmountOutstandingClose     *float32    `queryParam:"style=form,explode=true,name=min_amount_outstanding_close"`
+	MaxDate *types.Date `queryParam:"style=form,explode=true,name=max_date"`
+	// Maxium image number of the page where the schedule item is reported
+	MaxImageNumber                *string  `queryParam:"style=form,explode=true,name=max_image_number"`
+	MaxPaymentPeriod              *float32 `queryParam:"style=form,explode=true,name=max_payment_period"`
+	MinAmountIncurred             *float32 `queryParam:"style=form,explode=true,name=min_amount_incurred"`
+	MinAmountOutstandingBeginning *float32 `queryParam:"style=form,explode=true,name=min_amount_outstanding_beginning"`
+	MinAmountOutstandingClose     *float32 `queryParam:"style=form,explode=true,name=min_amount_outstanding_close"`
 	// Minimum load date
-	MinDate          *types.Date `queryParam:"style=form,explode=true,name=min_date"`
-	MinImageNumber   *string     `queryParam:"style=form,explode=true,name=min_image_number"`
-	MinPaymentPeriod *float32    `queryParam:"style=form,explode=true,name=min_payment_period"`
-	NatureOfDebt     *string     `queryParam:"style=form,explode=true,name=nature_of_debt"`
+	MinDate *types.Date `queryParam:"style=form,explode=true,name=min_date"`
+	// Minium image number of the page where the schedule item is reported
+	MinImageNumber   *string  `queryParam:"style=form,explode=true,name=min_image_number"`
+	MinPaymentPeriod *float32 `queryParam:"style=form,explode=true,name=min_payment_period"`
+	NatureOfDebt     *string  `queryParam:"style=form,explode=true,name=nature_of_debt"`
 	// For paginating through results, starting at page 1
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results returned per page. Defaults to 20.
@@ -64,15 +67,15 @@ type GetSchedulesScheduleDDefaultApplicationJSONResults struct {
 	// A unique identifier assigned to each candidate registered with the FEC.
 	// If a person runs for several offices, that person will have separate candidate IDs for each office.
 	//
-	CandidateID              *string `json:"candidate_id,omitempty"`
-	CandidateLastName        *string `json:"candidate_last_name,omitempty"`
-	CandidateOffice          *string `json:"candidate_office,omitempty"`
-	CandidateOfficeDistrict  *string `json:"candidate_office_district,omitempty"`
-	CandidateOfficeState     *string `json:"candidate_office_state,omitempty"`
-	CandidateOfficeStateFull *string `json:"candidate_office_state_full,omitempty"`
+	CandidateID       *string `json:"candidate_id,omitempty"`
+	CandidateLastName *string `json:"candidate_last_name,omitempty"`
 	// Name of candidate running for office
-	CanidateName *string                  `json:"canidate_name,omitempty"`
-	Committee    *shared.CommitteeHistory `json:"committee,omitempty"`
+	CandidateName            *string                  `json:"candidate_name,omitempty"`
+	CandidateOffice          *string                  `json:"candidate_office,omitempty"`
+	CandidateOfficeDistrict  *string                  `json:"candidate_office_district,omitempty"`
+	CandidateOfficeState     *string                  `json:"candidate_office_state,omitempty"`
+	CandidateOfficeStateFull *string                  `json:"candidate_office_state_full,omitempty"`
+	Committee                *shared.CommitteeHistory `json:"committee,omitempty"`
 	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
 	//
 	CommitteeID *string `json:"committee_id,omitempty"`

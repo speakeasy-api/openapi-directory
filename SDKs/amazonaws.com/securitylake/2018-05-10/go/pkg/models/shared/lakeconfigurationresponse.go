@@ -11,4 +11,5 @@ type LakeConfigurationResponse struct {
 	S3BucketArn                   *string             `json:"s3BucketArn,omitempty"`
 	Status                        *SettingsStatusEnum `json:"status,omitempty"`
 	TagsMap                       map[string]string   `json:"tagsMap,omitempty"`
+	UpdateStatus                  *UpdateStatus       `json:"updateStatus,omitempty"`
 }

@@ -15,6 +15,8 @@ const (
 	JobRunStateEnumInProgress       JobRunStateEnum = "IN_PROGRESS"
 	JobRunStateEnumSucceeded        JobRunStateEnum = "SUCCEEDED"
 	JobRunStateEnumFailed           JobRunStateEnum = "FAILED"
+	JobRunStateEnumTerminating      JobRunStateEnum = "TERMINATING"
+	JobRunStateEnumTerminated       JobRunStateEnum = "TERMINATED"
 )
 
 func (e *JobRunStateEnum) UnmarshalJSON(data []byte) error {
@@ -30,6 +32,10 @@ func (e *JobRunStateEnum) UnmarshalJSON(data []byte) error {
 	case "SUCCEEDED":
 		fallthrough
 	case "FAILED":
+		fallthrough
+	case "TERMINATING":
+		fallthrough
+	case "TERMINATED":
 		*e = JobRunStateEnum(s)
 		return nil
 	default:
@@ -39,6 +45,10 @@ func (e *JobRunStateEnum) UnmarshalJSON(data []byte) error {
 
 // JobRun - A `JobRun` resource in the Google Cloud Deploy API. A `JobRun` contains information of a single `Rollout` job evaluation.
 type JobRun struct {
+	// AdvanceChildRolloutJobRun contains information specific to a advanceChildRollout `JobRun`.
+	AdvanceChildRolloutJobRun *AdvanceChildRolloutJobRun `json:"advanceChildRolloutJobRun,omitempty"`
+	// CreateChildRolloutJobRun contains information specific to a createChildRollout `JobRun`.
+	CreateChildRolloutJobRun *CreateChildRolloutJobRun `json:"createChildRolloutJobRun,omitempty"`
 	// Output only. Time at which the `JobRun` was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// DeployJobRun contains information specific to a deploy `JobRun`.

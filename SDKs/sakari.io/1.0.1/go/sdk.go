@@ -11,7 +11,7 @@ import (
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
 	// Sakari Production
-	"https://api.sakari.io/v1",
+	"https://api.sakari.io",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client

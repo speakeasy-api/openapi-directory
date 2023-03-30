@@ -8,6 +8,8 @@ type GetOnboardingURLRequest struct {
 	CollectInformation *CollectInformation `json:"collectInformation,omitempty"`
 	// Indicates if editing checks is allowed even if all the checks have passed.
 	EditMode *bool `json:"editMode,omitempty"`
+	// The URL to which the account holder is redirected after completing an OAuth authentication with a bank through Trustly/PayMyBank.
+	MobileOAuthCallbackURL *string `json:"mobileOAuthCallbackUrl,omitempty"`
 	// The platform name which will show up in the welcome page.
 	PlatformName *string `json:"platformName,omitempty"`
 	// The URL where the account holder will be redirected back to after they complete the onboarding, or if their session times out. Maximum length of 500 characters. If you don't provide this, the account holder will be redirected back to the default return URL configured in your platform account.

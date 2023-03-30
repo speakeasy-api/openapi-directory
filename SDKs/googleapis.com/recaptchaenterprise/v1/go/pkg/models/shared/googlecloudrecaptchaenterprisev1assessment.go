@@ -8,13 +8,17 @@ type GoogleCloudRecaptchaenterpriseV1AssessmentInput struct {
 	AccountDefenderAssessment *GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment `json:"accountDefenderAssessment,omitempty"`
 	// Information about account verification, used for identity verification.
 	AccountVerification *GoogleCloudRecaptchaenterpriseV1AccountVerificationInfoInput `json:"accountVerification,omitempty"`
-	Event               *GoogleCloudRecaptchaenterpriseV1Event                        `json:"event,omitempty"`
+	// The event being assessed.
+	Event *GoogleCloudRecaptchaenterpriseV1Event `json:"event,omitempty"`
+	// Policy config assessment.
+	FirewallPolicyAssessment *GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment `json:"firewallPolicyAssessment,omitempty"`
 	// Assessment for Fraud Prevention.
 	FraudPreventionAssessment *GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment `json:"fraudPreventionAssessment,omitempty"`
 	// Private password leak verification info.
 	PrivatePasswordLeakVerification *GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerificationInput `json:"privatePasswordLeakVerification,omitempty"`
 	// Risk analysis result for an event.
-	RiskAnalysis    *GoogleCloudRecaptchaenterpriseV1RiskAnalysis    `json:"riskAnalysis,omitempty"`
+	RiskAnalysis *GoogleCloudRecaptchaenterpriseV1RiskAnalysis `json:"riskAnalysis,omitempty"`
+	// Properties of the provided event token.
 	TokenProperties *GoogleCloudRecaptchaenterpriseV1TokenProperties `json:"tokenProperties,omitempty"`
 }
 
@@ -24,7 +28,10 @@ type GoogleCloudRecaptchaenterpriseV1Assessment struct {
 	AccountDefenderAssessment *GoogleCloudRecaptchaenterpriseV1AccountDefenderAssessment `json:"accountDefenderAssessment,omitempty"`
 	// Information about account verification, used for identity verification.
 	AccountVerification *GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo `json:"accountVerification,omitempty"`
-	Event               *GoogleCloudRecaptchaenterpriseV1Event                   `json:"event,omitempty"`
+	// The event being assessed.
+	Event *GoogleCloudRecaptchaenterpriseV1Event `json:"event,omitempty"`
+	// Policy config assessment.
+	FirewallPolicyAssessment *GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment `json:"firewallPolicyAssessment,omitempty"`
 	// Assessment for Fraud Prevention.
 	FraudPreventionAssessment *GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment `json:"fraudPreventionAssessment,omitempty"`
 	// Output only. The resource name for the Assessment in the format "projects/{project}/assessments/{assessment}".
@@ -32,6 +39,7 @@ type GoogleCloudRecaptchaenterpriseV1Assessment struct {
 	// Private password leak verification info.
 	PrivatePasswordLeakVerification *GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification `json:"privatePasswordLeakVerification,omitempty"`
 	// Risk analysis result for an event.
-	RiskAnalysis    *GoogleCloudRecaptchaenterpriseV1RiskAnalysis    `json:"riskAnalysis,omitempty"`
+	RiskAnalysis *GoogleCloudRecaptchaenterpriseV1RiskAnalysis `json:"riskAnalysis,omitempty"`
+	// Properties of the provided event token.
 	TokenProperties *GoogleCloudRecaptchaenterpriseV1TokenProperties `json:"tokenProperties,omitempty"`
 }

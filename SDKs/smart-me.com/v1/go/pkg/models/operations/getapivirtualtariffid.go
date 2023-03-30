@@ -17,7 +17,6 @@ type GetAPIVirtualTariffIDRequest struct {
 }
 
 type GetAPIVirtualTariffIDResponse struct {
-	Body        []byte
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response

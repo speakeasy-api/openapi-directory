@@ -21,7 +21,9 @@ func main() {
 
     req := operations.GetAccountsRequest{
         QueryParams: operations.GetAccountsQueryParams{
-            PageSize: 548814,
+            FilterAccountType: "TRANSACTIONAL",
+            FilterOwnershipType: "JOINT",
+            PageSize: 715190,
         },
     }
 

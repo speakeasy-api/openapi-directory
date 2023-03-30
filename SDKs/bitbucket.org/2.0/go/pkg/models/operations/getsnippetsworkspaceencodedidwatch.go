@@ -33,6 +33,4 @@ type GetSnippetsWorkspaceEncodedIDWatchResponse struct {
 	RawResponse *http.Response
 	// If the snippet does not exist, or if the authenticated user is not watching the snippet.
 	Error map[string]interface{}
-	// If the authenticated user is watching the snippet.
-	PaginatedUsers *shared.PaginatedUsers
 }

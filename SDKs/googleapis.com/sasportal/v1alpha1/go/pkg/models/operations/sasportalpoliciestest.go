@@ -7,9 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SasportalPoliciesTestSecurity struct {
+type SasportalPoliciesTestSecurityOption1 struct {
 	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
 	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type SasportalPoliciesTestSecurityOption2 struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type SasportalPoliciesTestSecurity struct {
+	Option1 *SasportalPoliciesTestSecurityOption1 `security:"option"`
+	Option2 *SasportalPoliciesTestSecurityOption2 `security:"option"`
 }
 
 type SasportalPoliciesTestQueryParams struct {

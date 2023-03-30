@@ -19,10 +19,8 @@ type GetHookEventsSubjectTypeSecurity struct {
 type GetHookEventsSubjectTypeSubjectTypeEnum string
 
 const (
-	GetHookEventsSubjectTypeSubjectTypeEnumWorkspace  GetHookEventsSubjectTypeSubjectTypeEnum = "workspace"
-	GetHookEventsSubjectTypeSubjectTypeEnumUser       GetHookEventsSubjectTypeSubjectTypeEnum = "user"
 	GetHookEventsSubjectTypeSubjectTypeEnumRepository GetHookEventsSubjectTypeSubjectTypeEnum = "repository"
-	GetHookEventsSubjectTypeSubjectTypeEnumTeam       GetHookEventsSubjectTypeSubjectTypeEnum = "team"
+	GetHookEventsSubjectTypeSubjectTypeEnumWorkspace  GetHookEventsSubjectTypeSubjectTypeEnum = "workspace"
 )
 
 func (e *GetHookEventsSubjectTypeSubjectTypeEnum) UnmarshalJSON(data []byte) error {
@@ -31,13 +29,9 @@ func (e *GetHookEventsSubjectTypeSubjectTypeEnum) UnmarshalJSON(data []byte) err
 		return err
 	}
 	switch s {
-	case "workspace":
-		fallthrough
-	case "user":
-		fallthrough
 	case "repository":
 		fallthrough
-	case "team":
+	case "workspace":
 		*e = GetHookEventsSubjectTypeSubjectTypeEnum(s)
 		return nil
 	default:

@@ -8,5 +8,5 @@ type UpdateSettingValueModel struct {
 	// The targeting rule collection.
 	RolloutRules []RolloutRuleModel `json:"rolloutRules,omitempty"`
 	// The value to serve. It must respect the setting type.
-	Value map[string]interface{} `json:"value,omitempty"`
+	Value interface{} `json:"value,omitempty"`
 }

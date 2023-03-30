@@ -96,6 +96,7 @@ pkg/models/shared/assessmentstatusenum.go
 pkg/models/shared/deleteappinputsourceresponse.go
 pkg/models/shared/appinputsource.go
 pkg/models/shared/terraformsource.go
+pkg/models/shared/ekssourceclusternamespace.go
 pkg/models/shared/deleteappversionappcomponentresponse.go
 pkg/models/shared/deleteappversionresourceresponse.go
 pkg/models/shared/deleterecommendationtemplateresponse.go
@@ -121,6 +122,7 @@ pkg/models/shared/describedraftappversionresourcesimportstatusresponse.go
 pkg/models/shared/resourceimportstatustypeenum.go
 pkg/models/shared/describeresiliencypolicyresponse.go
 pkg/models/shared/importresourcestodraftappversionresponse.go
+pkg/models/shared/ekssource.go
 pkg/models/shared/listalarmrecommendationsresponse.go
 pkg/models/shared/alarmrecommendation.go
 pkg/models/shared/alarmtypeenum.go

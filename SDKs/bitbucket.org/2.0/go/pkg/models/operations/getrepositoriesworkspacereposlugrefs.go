@@ -26,10 +26,10 @@ type GetRepositoriesWorkspaceRepoSlugRefsPathParams struct {
 
 type GetRepositoriesWorkspaceRepoSlugRefsQueryParams struct {
 	// Query string to narrow down the response as per
-	// [filtering and sorting](../../../../meta/filtering).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Field by which the results should be sorted as per
-	// [filtering and sorting](../../../../meta/filtering). The `name`
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering). The `name`
 	// field is handled specially for refs in that, if specified as the sort field, it
 	// uses a natural sort order instead of the default lexicographical sort order. For example,
 	// it will return ['1.1', '1.2', '1.10'] instead of ['1.1', '1.10', '1.2'].

@@ -2,6 +2,10 @@
 
 package shared
 
+import (
+	"time"
+)
+
 // InboxRegistrationEntity - List Inbox Registrations
 type InboxRegistrationEntity struct {
 	// Clickwrap text that was shown to the registrant
@@ -10,12 +14,20 @@ type InboxRegistrationEntity struct {
 	Code *string `json:"code,omitempty"`
 	// Registrant company name
 	Company *string `json:"company,omitempty"`
+	// Registration creation date/time
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Registrant email address
 	Email *string `json:"email,omitempty"`
 	// Data for form field set with form field ids as keys and user data as values
-	FormFieldData *string `json:"form_field_data,omitempty"`
+	FormFieldData map[string]interface{} `json:"form_field_data,omitempty"`
 	// Id of associated form field set
 	FormFieldSetID *int `json:"form_field_set_id,omitempty"`
+	// Id of associated inbox
+	InboxID *int `json:"inbox_id,omitempty"`
+	// Id of associated inbox recipient
+	InboxRecipientID *int `json:"inbox_recipient_id,omitempty"`
+	// Title of associated inbox
+	InboxTitle *string `json:"inbox_title,omitempty"`
 	// Registrant name
 	Name *string `json:"name,omitempty"`
 }

@@ -94,6 +94,9 @@ const (
 	RolloutStateEnumApprovalRejected RolloutStateEnum = "APPROVAL_REJECTED"
 	RolloutStateEnumPending          RolloutStateEnum = "PENDING"
 	RolloutStateEnumPendingRelease   RolloutStateEnum = "PENDING_RELEASE"
+	RolloutStateEnumCancelling       RolloutStateEnum = "CANCELLING"
+	RolloutStateEnumCancelled        RolloutStateEnum = "CANCELLED"
+	RolloutStateEnumHalted           RolloutStateEnum = "HALTED"
 )
 
 func (e *RolloutStateEnum) UnmarshalJSON(data []byte) error {
@@ -117,6 +120,12 @@ func (e *RolloutStateEnum) UnmarshalJSON(data []byte) error {
 	case "PENDING":
 		fallthrough
 	case "PENDING_RELEASE":
+		fallthrough
+	case "CANCELLING":
+		fallthrough
+	case "CANCELLED":
+		fallthrough
+	case "HALTED":
 		*e = RolloutStateEnum(s)
 		return nil
 	default:
@@ -132,6 +141,8 @@ type Rollout struct {
 	ApprovalState *RolloutApprovalStateEnum `json:"approvalState,omitempty"`
 	// Output only. Time at which the `Rollout` was approved.
 	ApproveTime *string `json:"approveTime,omitempty"`
+	// Output only. Name of the `ControllerRollout`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/a-z{0,62}.
+	ControllerRollout *string `json:"controllerRollout,omitempty"`
 	// Output only. Time at which the `Rollout` was created.
 	CreateTime *string `json:"createTime,omitempty"`
 	// Output only. Time at which the `Rollout` finished deploying.

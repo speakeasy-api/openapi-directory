@@ -24,7 +24,7 @@ func String(s string) *string { return &s }
 
 // SDK - The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.
 //
-// > Date: 27 February, 2023
+// > Date: 05 March, 2023
 // >
 // > [Recent Updates](https://meraki.io/whats-new/)
 //
@@ -58,7 +58,6 @@ type SDK struct {
 	LinkAggregations               *linkAggregations
 	MGLANSettings                  *mgLANSettings
 	MGPortForwardingRules          *mgPortForwardingRules
-	MGSubnetPoolSettings           *mgSubnetPoolSettings
 	MRL3Firewall                   *mrL3Firewall
 	MVSense                        *mvSense
 	MX11NATRules                   *mx11NATRules
@@ -362,15 +361,6 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.MGPortForwardingRules = newMGPortForwardingRules(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.MGSubnetPoolSettings = newMGSubnetPoolSettings(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

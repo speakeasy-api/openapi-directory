@@ -34,5 +34,5 @@ type GetSnippetsWorkspaceEncodedIDWatchersResponse struct {
 	// If the snippet does not exist.
 	Error map[string]interface{}
 	// The paginated list of users watching this snippet
-	PaginatedUsers *shared.PaginatedUsers
+	PaginatedAccounts *shared.PaginatedAccounts
 }

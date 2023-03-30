@@ -13,8 +13,14 @@ type ListWordSensesQueryParams struct {
 	Word *string `queryParam:"style=form,explode=true,name=word"`
 }
 
+type ListWordSensesHeaders struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
+}
+
 type ListWordSensesRequest struct {
 	QueryParams ListWordSensesQueryParams
+	Headers     ListWordSensesHeaders
 }
 
 type ListWordSenses200ApplicationJSONFamilies struct {
@@ -25,6 +31,7 @@ type ListWordSenses200ApplicationJSONFamilies struct {
 
 type ListWordSenses200ApplicationJSONFeatures struct {
 	Index *float64 `json:"index,omitempty"`
+	Type  *string  `json:"type,omitempty"`
 	Value *string  `json:"value,omitempty"`
 }
 

@@ -23,8 +23,8 @@ type PrivateCollectionDetailsRequest struct {
 
 type PrivateCollectionDetailsResponse struct {
 	// OK. Collection representation
-	CollectionComplete *shared.CollectionComplete
-	ContentType        string
-	StatusCode         int
-	RawResponse        *http.Response
+	CollectionCompletePrivate *shared.CollectionCompletePrivate
+	ContentType               string
+	StatusCode                int
+	RawResponse               *http.Response
 }

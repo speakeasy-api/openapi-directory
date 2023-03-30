@@ -265,6 +265,7 @@ pkg/models/shared/attributepayload.go
 pkg/models/shared/createfleetmetricresponse.go
 pkg/models/shared/aggregationtypenameenum.go
 pkg/models/shared/createjobresponse.go
+pkg/models/shared/maintenancewindow.go
 pkg/models/shared/jobendbehaviorenum.go
 pkg/models/shared/exponentialrolloutrate.go
 pkg/models/shared/rateincreasecriteria.go
@@ -450,6 +451,7 @@ pkg/models/shared/timeoutconfig.go
 pkg/models/shared/targetselectionenum.go
 pkg/models/shared/jobstatusenum.go
 pkg/models/shared/schedulingconfig.go
+pkg/models/shared/scheduledjobrollout.go
 pkg/models/shared/presignedurlconfig.go
 pkg/models/shared/jobprocessdetails.go
 pkg/models/shared/jobexecutionsrolloutconfig.go

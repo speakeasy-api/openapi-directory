@@ -2,8 +2,42 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// PolicyControllerTemplateLibraryConfigInstallationEnum - Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this
+type PolicyControllerTemplateLibraryConfigInstallationEnum string
+
+const (
+	PolicyControllerTemplateLibraryConfigInstallationEnumInstallationUnspecified PolicyControllerTemplateLibraryConfigInstallationEnum = "INSTALLATION_UNSPECIFIED"
+	PolicyControllerTemplateLibraryConfigInstallationEnumNotInstalled            PolicyControllerTemplateLibraryConfigInstallationEnum = "NOT_INSTALLED"
+	PolicyControllerTemplateLibraryConfigInstallationEnumAll                     PolicyControllerTemplateLibraryConfigInstallationEnum = "ALL"
+)
+
+func (e *PolicyControllerTemplateLibraryConfigInstallationEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "INSTALLATION_UNSPECIFIED":
+		fallthrough
+	case "NOT_INSTALLED":
+		fallthrough
+	case "ALL":
+		*e = PolicyControllerTemplateLibraryConfigInstallationEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PolicyControllerTemplateLibraryConfigInstallationEnum: %s", s)
+	}
+}
+
 // PolicyControllerTemplateLibraryConfig - The config specifying which default library templates to install.
 type PolicyControllerTemplateLibraryConfig struct {
-	// Whether the standard template library should be installed or not.
+	// Whether the standard template library should be installed or not. TODO (b/271878194): Remove this
 	Included *bool `json:"included,omitempty"`
+	// Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this
+	Installation *PolicyControllerTemplateLibraryConfigInstallationEnum `json:"installation,omitempty"`
 }

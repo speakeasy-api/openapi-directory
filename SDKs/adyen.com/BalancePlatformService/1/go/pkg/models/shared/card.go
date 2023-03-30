@@ -39,10 +39,10 @@ type Card struct {
 	Authentication *Authentication `json:"authentication,omitempty"`
 	// The bank identification number (BIN) of the card number.
 	Bin *string `json:"bin,omitempty"`
-	// The brand of the payment instrument.
+	// The brand of the physical or the virtual card.
 	// Possible values: **visa**, **mc**.
 	Brand string `json:"brand"`
-	// The brand variant of the payment instrument.
+	// The brand variant of the physical or the virtual card.
 	// >Contact your Adyen Implementation Manager to get the values that are relevant to your integration. Examples: **visadebit**, **mcprepaid**.
 	BrandVariant string `json:"brandVariant"`
 	// The name of the cardholder.

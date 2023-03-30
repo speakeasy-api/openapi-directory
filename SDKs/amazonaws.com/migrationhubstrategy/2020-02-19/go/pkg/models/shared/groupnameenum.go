@@ -10,7 +10,8 @@ import (
 type GroupNameEnum string
 
 const (
-	GroupNameEnumExternalID GroupNameEnum = "ExternalId"
+	GroupNameEnumExternalID         GroupNameEnum = "ExternalId"
+	GroupNameEnumExternalSourceType GroupNameEnum = "ExternalSourceType"
 )
 
 func (e *GroupNameEnum) UnmarshalJSON(data []byte) error {
@@ -20,6 +21,8 @@ func (e *GroupNameEnum) UnmarshalJSON(data []byte) error {
 	}
 	switch s {
 	case "ExternalId":
+		fallthrough
+	case "ExternalSourceType":
 		*e = GroupNameEnum(s)
 		return nil
 	default:

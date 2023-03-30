@@ -608,7 +608,7 @@ func (s *projects) TpuProjectsLocationsOperationsCancel(ctx context.Context, req
 	return res, nil
 }
 
-// TpuProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+// TpuProjectsLocationsOperationsList - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 func (s *projects) TpuProjectsLocationsOperationsList(ctx context.Context, request operations.TpuProjectsLocationsOperationsListRequest) (*operations.TpuProjectsLocationsOperationsListResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}/operations", request.PathParams, nil)
@@ -801,6 +801,61 @@ func (s *projects) TpuProjectsLocationsQueuedResourcesList(ctx context.Context, 
 			}
 
 			res.ListQueuedResourcesResponse = out
+		}
+	}
+
+	return res, nil
+}
+
+// TpuProjectsLocationsQueuedResourcesReset - Resets a QueuedResource TPU instance
+func (s *projects) TpuProjectsLocationsQueuedResourcesReset(ctx context.Context, request operations.TpuProjectsLocationsQueuedResourcesResetRequest) (*operations.TpuProjectsLocationsQueuedResourcesResetResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v2alpha1/{name}:reset", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.TpuProjectsLocationsQueuedResourcesResetResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
 		}
 	}
 

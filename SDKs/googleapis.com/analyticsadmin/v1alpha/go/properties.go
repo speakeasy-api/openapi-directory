@@ -712,6 +712,61 @@ func (s *properties) AnalyticsadminPropertiesCreate(ctx context.Context, request
 	return res, nil
 }
 
+// AnalyticsadminPropertiesCreateConnectedSiteTag - Creates a connected site tag for a Universal Analytics property. You can create a maximum of 20 connected site tags per property. Note: This API cannot be used on GA4 properties.
+func (s *properties) AnalyticsadminPropertiesCreateConnectedSiteTag(ctx context.Context, request operations.AnalyticsadminPropertiesCreateConnectedSiteTagRequest) (*operations.AnalyticsadminPropertiesCreateConnectedSiteTagResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha/properties:createConnectedSiteTag"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AnalyticsadminPropertiesCreateConnectedSiteTagResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleAnalyticsAdminV1alphaCreateConnectedSiteTagResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // AnalyticsadminPropertiesCustomDimensionsCreate - Creates a CustomDimension.
 func (s *properties) AnalyticsadminPropertiesCustomDimensionsCreate(ctx context.Context, request operations.AnalyticsadminPropertiesCustomDimensionsCreateRequest) (*operations.AnalyticsadminPropertiesCustomDimensionsCreateResponse, error) {
 	baseURL := s.serverURL
@@ -1200,7 +1255,7 @@ func (s *properties) AnalyticsadminPropertiesDeleteConnectedSiteTag(ctx context.
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -1962,7 +2017,7 @@ func (s *properties) AnalyticsadminPropertiesList(ctx context.Context, request o
 	return res, nil
 }
 
-// AnalyticsadminPropertiesListConnectedSiteTags - Lists the connected site tags for a Universal Analytics property. Note: this has no effect on GA4 property.
+// AnalyticsadminPropertiesListConnectedSiteTags - Lists the connected site tags for a Universal Analytics property. A maximum of 20 connected site tags will be returned. Note: this has no effect on GA4 property.
 func (s *properties) AnalyticsadminPropertiesListConnectedSiteTags(ctx context.Context, request operations.AnalyticsadminPropertiesListConnectedSiteTagsRequest) (*operations.AnalyticsadminPropertiesListConnectedSiteTagsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1alpha/properties:listConnectedSiteTags"
@@ -1983,7 +2038,7 @@ func (s *properties) AnalyticsadminPropertiesListConnectedSiteTags(ctx context.C
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
 	httpRes, err := client.Do(req)
 	if err != nil {

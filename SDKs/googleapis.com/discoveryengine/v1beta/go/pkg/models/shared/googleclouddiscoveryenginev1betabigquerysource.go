@@ -4,7 +4,7 @@ package shared
 
 // GoogleCloudDiscoveryengineV1betaBigQuerySource - BigQuery source import data from.
 type GoogleCloudDiscoveryengineV1betaBigQuerySource struct {
-	// The schema to use when parsing the data from the source. Supported values for imports: * `user_event` (default): One JSON UserEvent per line. * `document` (default): One JSON Document per line. Each document must have a valid document.id.
+	// The schema to use when parsing the data from the source. Supported values for user event imports: * `user_event` (default): One UserEvent per row. Supported values for document imports: * `document` (default): One Document format per row. Each document must have a valid Document.id and one of Document.json_data or Document.struct_data. * `custom`: One custom data per row in arbitrary format that conforms the defined Schema of the data store. This can only be used by the GENERIC Data Store vertical.
 	DataSchema *string `json:"dataSchema,omitempty"`
 	// Required. The BigQuery data set to copy the data from with a length limit of 1,024 characters.
 	DatasetID *string `json:"datasetId,omitempty"`

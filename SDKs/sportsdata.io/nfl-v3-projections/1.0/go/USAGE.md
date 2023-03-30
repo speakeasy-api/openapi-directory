@@ -19,20 +19,20 @@ func main() {
         }),
     )
 
-    req := operations.DfsSlatesByDateRequest{
-        PathParams: operations.DfsSlatesByDatePathParams{
-            Date: "unde",
+    req := operations.DfsSlateOwnershipProjectionsBySlateidRequest{
+        PathParams: operations.DfsSlateOwnershipProjectionsBySlateidPathParams{
             Format: "JSON",
+            SlateID: "deserunt",
         },
     }
 
     ctx := context.Background()
-    res, err := s.DfsSlatesByDate(ctx, req)
+    res, err := s.DfsSlateOwnershipProjectionsBySlateid(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.DfsSlates != nil {
+    if res.DfsSlateWithOwnershipProjection != nil {
         // handle response
     }
 }

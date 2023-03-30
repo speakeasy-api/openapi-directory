@@ -41,7 +41,9 @@ type UpdateLoggingConfigurationRequest struct {
 type UpdateLoggingConfigurationResponse struct {
 	// AccessDeniedException
 	AccessDeniedException interface{}
-	ContentType           string
+	// ConflictException
+	ConflictException interface{}
+	ContentType       string
 	// PendingVerification
 	PendingVerification interface{}
 	// ResourceNotFoundException

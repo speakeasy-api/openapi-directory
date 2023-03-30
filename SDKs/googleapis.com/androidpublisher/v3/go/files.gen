@@ -93,6 +93,7 @@ pkg/models/operations/androidpublishermonetizationsubscriptionslist.go
 pkg/models/operations/androidpublishermonetizationsubscriptionspatch.go
 pkg/models/operations/androidpublisherordersrefund.go
 pkg/models/operations/androidpublisherpurchasesproductsacknowledge.go
+pkg/models/operations/androidpublisherpurchasesproductsconsume.go
 pkg/models/operations/androidpublisherpurchasesproductsget.go
 pkg/models/operations/androidpublisherpurchasessubscriptionsacknowledge.go
 pkg/models/operations/androidpublisherpurchasessubscriptionscancel.go

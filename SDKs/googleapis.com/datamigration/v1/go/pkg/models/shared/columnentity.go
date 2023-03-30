@@ -36,7 +36,7 @@ type ColumnEntity struct {
 	Precision *int `json:"precision,omitempty"`
 	// Column scale - when relevant.
 	Scale *int `json:"scale,omitempty"`
-	// Specifies the list of values allowed in the column. List is empty if setValues is not required.
+	// Specifies the list of values allowed in the column. Only used for set data type.
 	SetValues []string `json:"setValues,omitempty"`
 	// Is the column a UDT.
 	Udt *bool `json:"udt,omitempty"`

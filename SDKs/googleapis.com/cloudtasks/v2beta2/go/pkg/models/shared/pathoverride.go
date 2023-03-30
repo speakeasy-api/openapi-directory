@@ -4,6 +4,6 @@ package shared
 
 // PathOverride - PathOverride. Path message defines path override for HTTP targets.
 type PathOverride struct {
-	// The URI path (e.g., a/b/c). Default is Empty string.
+	// The URI path (e.g., /users/1234). Default is an empty string.
 	Path *string `json:"path,omitempty"`
 }

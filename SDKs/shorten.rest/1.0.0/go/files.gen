@@ -1,5 +1,6 @@
 alias.go
 click.go
+statistics.go
 sdk.go
 go.mod
 go.sum
@@ -19,6 +20,7 @@ pkg/models/operations/getalias.go
 pkg/models/operations/getaliases.go
 pkg/models/operations/updatealias.go
 pkg/models/operations/getclicks.go
+pkg/models/operations/getstatistics.go
 pkg/models/shared/createaliasresponsemodel.go
 pkg/models/shared/createaliasmodel.go
 pkg/models/shared/snippetmodel.go
@@ -29,4 +31,6 @@ pkg/models/shared/aliasmodel.go
 pkg/models/shared/getaliasesmodel.go
 pkg/models/shared/getclicksmodel.go
 pkg/models/shared/clickmodel.go
+pkg/models/shared/clickmodelpg.go
+pkg/models/shared/clicksfiltermodel.go
 USAGE.md

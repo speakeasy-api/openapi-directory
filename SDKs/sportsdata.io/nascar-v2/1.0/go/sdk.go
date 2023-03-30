@@ -14,10 +14,8 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"http://api.sportsdata.io",
-	"https://api.sportsdata.io",
-	"http://azure-api.sportsdata.io",
-	"https://azure-api.sportsdata.io",
+	"http://azure-api.sportsdata.io/nascar/v2",
+	"https://azure-api.sportsdata.io/nascar/v2",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client

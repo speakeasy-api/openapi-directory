@@ -4,7 +4,8 @@ package shared
 
 // UserContext - Information about the user who created or modified an experiment, trial, trial component, lineage group, project, or model card.
 type UserContext struct {
-	DomainID        *string `json:"DomainId,omitempty"`
-	UserProfileArn  *string `json:"UserProfileArn,omitempty"`
-	UserProfileName *string `json:"UserProfileName,omitempty"`
+	DomainID        *string      `json:"DomainId,omitempty"`
+	IamIdentity     *IamIdentity `json:"IamIdentity,omitempty"`
+	UserProfileArn  *string      `json:"UserProfileArn,omitempty"`
+	UserProfileName *string      `json:"UserProfileName,omitempty"`
 }

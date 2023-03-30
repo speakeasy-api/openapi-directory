@@ -794,7 +794,24 @@ func (s *layers) GetV4LayersScoutingObservationsScoutingObservationIDAttachments
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		fallthrough
+		res.Headers = httpRes.Header
+
+		switch {
+		case utils.MatchContentType(contentType, `image/jpeg`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		case utils.MatchContentType(contentType, `image/png`):
+			out, err := io.ReadAll(httpRes.Body)
+			if err != nil {
+				return nil, fmt.Errorf("error reading response body: %w", err)
+			}
+
+			res.Body = out
+		}
 	case httpRes.StatusCode == 206:
 		res.Headers = httpRes.Header
 

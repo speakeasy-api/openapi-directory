@@ -9,6 +9,4 @@ type SectionRequest struct {
 	InsertBefore *string `json:"insert_before,omitempty"`
 	// The text to be displayed as the section name. This cannot be an empty string.
 	Name string `json:"name"`
-	// *Create-Only* The project to create the section in
-	Project string `json:"project"`
 }

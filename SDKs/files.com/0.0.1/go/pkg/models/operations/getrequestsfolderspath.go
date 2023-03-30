@@ -13,13 +13,13 @@ type GetRequestsFoldersPathPathParams struct {
 }
 
 type GetRequestsFoldersPathQueryParams struct {
-	// Used for pagination.  Send a cursor value to resume an existing list from the point at which you left off.  Get a cursor from an existing list via the X-Files-Cursor-Next header.
+	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// Only show requests of the current user?  (Defaults to true if current user is not a site admin.)
 	Mine *bool `queryParam:"style=form,explode=true,name=mine"`
 	// Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
-	// If set, sort records by the specified field in either 'asc' or 'desc' direction (e.g. sort_by[last_login_at]=desc). Valid fields are `destination`.
+	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[destination]=desc`). Valid fields are `destination`.
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
 }
 

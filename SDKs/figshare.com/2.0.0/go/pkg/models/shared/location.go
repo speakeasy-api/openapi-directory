@@ -5,5 +5,5 @@ package shared
 // Location - Created
 type Location struct {
 	// Url for item
-	Location *string `json:"location,omitempty"`
+	Location string `json:"location"`
 }

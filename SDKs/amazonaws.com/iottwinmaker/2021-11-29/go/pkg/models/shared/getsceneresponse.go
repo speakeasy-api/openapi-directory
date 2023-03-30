@@ -8,12 +8,14 @@ import (
 
 // GetSceneResponse - Success
 type GetSceneResponse struct {
-	Arn              string    `json:"arn"`
-	Capabilities     []string  `json:"capabilities,omitempty"`
-	ContentLocation  string    `json:"contentLocation"`
-	CreationDateTime time.Time `json:"creationDateTime"`
-	Description      *string   `json:"description,omitempty"`
-	SceneID          string    `json:"sceneId"`
-	UpdateDateTime   time.Time `json:"updateDateTime"`
-	WorkspaceID      string    `json:"workspaceId"`
+	Arn                    string            `json:"arn"`
+	Capabilities           []string          `json:"capabilities,omitempty"`
+	ContentLocation        string            `json:"contentLocation"`
+	CreationDateTime       time.Time         `json:"creationDateTime"`
+	Description            *string           `json:"description,omitempty"`
+	GeneratedSceneMetadata map[string]string `json:"generatedSceneMetadata,omitempty"`
+	SceneID                string            `json:"sceneId"`
+	SceneMetadata          map[string]string `json:"sceneMetadata,omitempty"`
+	UpdateDateTime         time.Time         `json:"updateDateTime"`
+	WorkspaceID            string            `json:"workspaceId"`
 }

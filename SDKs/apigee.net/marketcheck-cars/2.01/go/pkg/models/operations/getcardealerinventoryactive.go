@@ -62,6 +62,8 @@ type GetCarDealerInventoryActiveQueryParams struct {
 	EngineBlock *string `queryParam:"style=form,explode=true,name=engine_block"`
 	// Engine Size to match. Valid filter values are those that our Search facets API returns for unique engine size. You can pass in multiple engine size values comma separated
 	EngineSize *string `queryParam:"style=form,explode=true,name=engine_size"`
+	// Engine size range to filter listings with engine size in the given range. Range to be given in the format - min-max e.g. 1.0-2
+	EngineSizeRange *string `queryParam:"style=form,explode=true,name=engine_size_range"`
 	// Boolean param to exclude certified cars from search results
 	ExcludeCertified *bool `queryParam:"style=form,explode=true,name=exclude_certified"`
 	// Exterior color to match. Valid filter values are those that our Search facets API returns for unique exterior colors. You can pass in multiple exterior color values comma separated
@@ -96,6 +98,8 @@ type GetCarDealerInventoryActiveQueryParams struct {
 	FuelType *string `queryParam:"style=form,explode=true,name=fuel_type"`
 	// Highway mileage range to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
 	HighwayMpgRange *string `queryParam:"style=form,explode=true,name=highway_mpg_range"`
+	// A boolean to filter in transit vehicles
+	InTransit *shared.InTransitEnum `queryParam:"style=form,explode=true,name=in_transit"`
 	// Boolean param to search for listings that include finance options in them
 	IncludeFinance *bool `queryParam:"style=form,explode=true,name=include_finance"`
 	// Boolean param to search for listings that include leasing options in them
@@ -106,6 +110,8 @@ type GetCarDealerInventoryActiveQueryParams struct {
 	IncludeRelevantLinks *bool `queryParam:"style=form,explode=true,name=include_relevant_links"`
 	// Interior color to match. Valid filter values are those that our Search facets API returns for unique interior colors. You can pass in multiple interior color values comma separated
 	InteriorColor *string `queryParam:"style=form,explode=true,name=interior_color"`
+	// Inventory count range to filter listings with count of total listings in dealers inventory. Range to be given in the format - min-max e.g. 10-50
+	InventoryCountRange *string `queryParam:"style=form,explode=true,name=inventory_count_range"`
 	// Last seen days range to filter listings with the last seen in the range given. Range to be given in the format - min-max e.g. 25-12
 	LastSeenDays *string `queryParam:"style=form,explode=true,name=last_seen_days"`
 	// Last seen date range to filter listings with the last seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
@@ -126,6 +132,10 @@ type GetCarDealerInventoryActiveQueryParams struct {
 	Match *string `queryParam:"style=form,explode=true,name=match"`
 	// Miles range to filter listings with miles in the given range. Range to be given in the format - min-max e.g. 1000-5000
 	MilesRange *string `queryParam:"style=form,explode=true,name=miles_range"`
+	// Filter listings based by number of photo links within given range
+	MinPhotoLinks *string `queryParam:"style=form,explode=true,name=min_photo_links"`
+	// Filter listings based by number of cached photo links within given range
+	MinPhotoLinksCached *string `queryParam:"style=form,explode=true,name=min_photo_links_cached"`
 	// Make-Model concatenated string. To help passing the results of auto-complete API on mm field, use this parameter and pass in the selected value as is
 	Mm *string `queryParam:"style=form,explode=true,name=mm"`
 	// To filter listings on their model
@@ -140,8 +150,12 @@ type GetCarDealerInventoryActiveQueryParams struct {
 	Owned *bool `queryParam:"style=form,explode=true,name=owned"`
 	// A boolean indicating whether to include only those listings that have photo_links in search results, And discard those that don't have them
 	PhotoLinks *bool `queryParam:"style=form,explode=true,name=photo_links"`
+	// A boolean indicating whether to include only those listings that have photo_links_cached in search results, And discard those that don't have them
+	PhotoLinksCached *bool `queryParam:"style=form,explode=true,name=photo_links_cached"`
 	// If plot has value true results in around 25k coordinates with limited fields to plot respective graph
 	Plot *bool `queryParam:"style=form,explode=true,name=plot"`
+	// To filter on powertrain_type
+	PowertrainType *string `queryParam:"style=form,explode=true,name=powertrain_type"`
 	// Price range to filter listings with the price in the range given. Range to be given in the format - min-max e.g. 1000-5000
 	PriceRange *string `queryParam:"style=form,explode=true,name=price_range"`
 	// Radius around the search location (Unit - Miles)
@@ -150,6 +164,8 @@ type GetCarDealerInventoryActiveQueryParams struct {
 	RangeFacets *string `queryParam:"style=form,explode=true,name=range_facets"`
 	// Number of results to return. Default is 10. Max is 50
 	Rows *int `queryParam:"style=form,explode=true,name=rows"`
+	// To filter on vehicle seating capacity
+	SeatingCapacity *string `queryParam:"style=form,explode=true,name=seating_capacity"`
 	// Sort by field. Default sort field is distance from the given point
 	SortBy *string `queryParam:"style=form,explode=true,name=sort_by"`
 	// Sort order - asc or desc. Default sort order is asc
@@ -182,6 +198,8 @@ type GetCarDealerInventoryActiveQueryParams struct {
 	Vins *string `queryParam:"style=form,explode=true,name=vins"`
 	// To filter listing on their year
 	Year *string `queryParam:"style=form,explode=true,name=year"`
+	// Year range to filter listings with the year in the range given. Range to be given in the format - min-max e.g. 2019-2021
+	YearRange *string `queryParam:"style=form,explode=true,name=year_range"`
 	// Year-Make-Model concatenated string. To help passing the results of auto-complete API on ymm field, use this parameter and pass in the selected value as is
 	Ymm *string `queryParam:"style=form,explode=true,name=ymm"`
 	// Comma separated list of Year, Make, Model, Trim combinations. Each combination needs to have the year,make,model, trim values separated by a pipe '|' character in the form year|make|model|trim. e.g. 2010|Audi|A5,2014|Nissan|Sentra|S 6MT,|Honda|City|   You could just provide strings of the form - 'year|make||' or 'year|make|model' or '|make|model|' combinations. Individual year / make / model filters provied with the API calls will take precedence over the Year, Make, Model, Trim combinations. The Make, Model, Trim values must be valid values as per the Marketcheck Vin Decoder. If you are using a separate vin decoder then look at using the 'vins' or 'taxonomy_vins' parameter to the search api instead the year|make|model|trim combinations.

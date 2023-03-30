@@ -108,7 +108,7 @@ type YoutubeAdGroup struct {
 	Name *string `json:"name,omitempty"`
 	// The details of product feed.
 	ProductFeedData *ProductFeedData `json:"productFeedData,omitempty"`
-	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level.
+	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
 	TargetingExpansion *TargetingExpansionConfig `json:"targetingExpansion,omitempty"`
 	// The IDs of the youtube_ad_group_ad resources associated with the ad group.
 	YoutubeAdIds []string `json:"youtubeAdIds,omitempty"`

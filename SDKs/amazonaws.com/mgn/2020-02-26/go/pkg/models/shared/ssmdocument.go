@@ -5,6 +5,7 @@ package shared
 // SsmDocument - AWS Systems Manager Document.
 type SsmDocument struct {
 	ActionName            string                                  `json:"actionName"`
+	ExternalParameters    map[string]SsmExternalParameter         `json:"externalParameters,omitempty"`
 	MustSucceedForCutover *bool                                   `json:"mustSucceedForCutover,omitempty"`
 	Parameters            map[string][]SsmParameterStoreParameter `json:"parameters,omitempty"`
 	SsmDocumentName       string                                  `json:"ssmDocumentName"`

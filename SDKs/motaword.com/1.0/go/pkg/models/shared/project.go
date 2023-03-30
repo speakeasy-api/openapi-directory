@@ -7,17 +7,29 @@ import (
 )
 
 type ProjectPrice struct {
-	Amount   *float32 `json:"amount,omitempty"`
-	Currency *string  `json:"currency,omitempty"`
+	Amount       *float32 `json:"amount,omitempty"`
+	BaseAmount   *float32 `json:"base_amount,omitempty"`
+	BaseCurrency *string  `json:"base_currency,omitempty"`
+	Currency     *string  `json:"currency,omitempty"`
 	// USD is our base pricing currency. If `currency` is different, this will help.
 	UsdAmount *float32 `json:"usd_amount,omitempty"`
 }
 
 type ProjectPriceWithoutDiscount struct {
-	Amount   *float32 `json:"amount,omitempty"`
-	Currency *string  `json:"currency,omitempty"`
+	Amount       *float32 `json:"amount,omitempty"`
+	BaseAmount   *float32 `json:"base_amount,omitempty"`
+	BaseCurrency *string  `json:"base_currency,omitempty"`
+	Currency     *string  `json:"currency,omitempty"`
 	// USD is our base pricing currency. If `currency` is different, this will help.
 	UsdAmount *float32 `json:"usd_amount,omitempty"`
+}
+
+type ProjectWordCountAnalysis struct {
+	Base      *float64 `json:"base,omitempty"`
+	Duplicate *float64 `json:"duplicate,omitempty"`
+	Exclusion *float64 `json:"exclusion,omitempty"`
+	Final     *float64 `json:"final,omitempty"`
+	Tm        *float64 `json:"tm,omitempty"`
 }
 
 // Project - Newly created project
@@ -25,8 +37,11 @@ type Project struct {
 	AverageScores map[string]float32 `json:"average_scores,omitempty"`
 	BudgetCode    *string            `json:"budget_code,omitempty"`
 	// Callback URL to notify when project status changed.
-	CallbackURL *string `json:"callback_url,omitempty"`
-	Client      *User   `json:"client,omitempty"`
+	CallbackURL  *string `json:"callback_url,omitempty"`
+	CanPamManage *bool   `json:"can_pam_manage,omitempty"`
+	Client       *User   `json:"client,omitempty"`
+	// Assigned admin's id
+	CmID *int64 `json:"cm_id,omitempty"`
 	// the date-time notation as defined by RFC 3339, section 5.6, for example, 2017-07-21T17:32:28Z
 	CompletedOn           *time.Time `json:"completed_on,omitempty"`
 	ContinuousProjectType *string    `json:"continuous_project_type,omitempty"`
@@ -37,14 +52,17 @@ type Project struct {
 	// Unix epoch time
 	DeliveryAt *int64 `json:"delivery_at,omitempty"`
 	// A list of errors. Visible when creating a project and uploading your documents at the same time, in case of multiple errors.
-	Errors               []Error                      `json:"errors,omitempty"`
-	ID                   *int64                       `json:"id,omitempty"`
-	IsAPIProject         *bool                        `json:"is_api_project,omitempty"`
-	IsCertified          *bool                        `json:"is_certified,omitempty"`
-	IsContinuous         *bool                        `json:"is_continuous,omitempty"`
-	IsManual             *bool                        `json:"is_manual,omitempty"`
-	Links                *ProjectLinks                `json:"links,omitempty"`
-	Pairs                []VendorProjectPair          `json:"pairs,omitempty"`
+	Errors       []Error       `json:"errors,omitempty"`
+	ID           *int64        `json:"id,omitempty"`
+	IsAPIProject *bool         `json:"is_api_project,omitempty"`
+	IsCertified  *bool         `json:"is_certified,omitempty"`
+	IsContinuous *bool         `json:"is_continuous,omitempty"`
+	IsManual     *bool         `json:"is_manual,omitempty"`
+	Links        *ProjectLinks `json:"links,omitempty"`
+	// Currently authed vendor's available working language pairs in this project. Includes rates per language pair. Includes complex pair logic such as bilingualism, project reverse pair enforcement etc.
+	Pairs []VendorProjectPair `json:"pairs,omitempty"`
+	// Quote IDs of pivots
+	PivotedProjects      []int64                      `json:"pivoted_projects,omitempty"`
 	Price                *ProjectPrice                `json:"price,omitempty"`
 	PriceWithoutDiscount *ProjectPriceWithoutDiscount `json:"price_without_discount,omitempty"`
 	// Currently authed vendor's role in this project. If vendor has already joined, this contains the role they joined the project with. If not joined yet, this is the role that they can join the project with.
@@ -58,7 +76,8 @@ type Project struct {
 	// TMS project name for this MW project. Requires privileged scope.
 	TmsName *string `json:"tms_name,omitempty"`
 	// Unix epoch time. Available only if status is `pending`.
-	ValidUntil      *int64 `json:"valid_until,omitempty"`
-	VendorWordCount *int64 `json:"vendor_word_count,omitempty"`
-	WordCount       *int64 `json:"word_count,omitempty"`
+	ValidUntil        *int64                    `json:"valid_until,omitempty"`
+	VendorWordCount   *int64                    `json:"vendor_word_count,omitempty"`
+	WordCount         *int64                    `json:"word_count,omitempty"`
+	WordCountAnalysis *ProjectWordCountAnalysis `json:"word_count_analysis,omitempty"`
 }

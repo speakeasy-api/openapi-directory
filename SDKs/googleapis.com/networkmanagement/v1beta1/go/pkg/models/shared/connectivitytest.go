@@ -7,7 +7,7 @@ type ConnectivityTestInput struct {
 	// The user-supplied description of the Connectivity Test. Maximum of 512 characters.
 	Description *string `json:"description,omitempty"`
 	// Source or destination of the Connectivity Test.
-	Destination *Endpoint `json:"destination,omitempty"`
+	Destination *EndpointInput `json:"destination,omitempty"`
 	// Resource labels to represent user-provided metadata.
 	Labels map[string]string `json:"labels,omitempty"`
 	// Required. Unique name of the resource using the form: `projects/{project_id}/locations/global/connectivityTests/{test}`
@@ -21,7 +21,7 @@ type ConnectivityTestInput struct {
 	// Other projects that may be relevant for reachability analysis. This is applicable to scenarios where a test can cross project boundaries.
 	RelatedProjects []string `json:"relatedProjects,omitempty"`
 	// Source or destination of the Connectivity Test.
-	Source *Endpoint `json:"source,omitempty"`
+	Source *EndpointInput `json:"source,omitempty"`
 }
 
 // ConnectivityTest - A Connectivity Test for a network reachability analysis.

@@ -13,44 +13,44 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesRequest{
-        PathParams: operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesPathParams{
-            Name: "unde",
+    req := operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesRequest{
+        PathParams: operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesPathParams{
+            Location: "unde",
         },
-        QueryParams: operations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeriesQueryParams{
+        QueryParams: operations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesQueryParams{
             DollarXgafv: "2",
             AccessToken: "porro",
             Alt: "proto",
             Callback: "id",
-            DailyMetric: "BUSINESS_FOOD_ORDERS",
-            DailyRangeEndDateDay: 544883,
-            DailyRangeEndDateMonth: 847252,
-            DailyRangeEndDateYear: 423655,
-            DailyRangeStartDateDay: 623564,
-            DailyRangeStartDateMonth: 645894,
-            DailyRangeStartDateYear: 384382,
-            DailySubEntityTypeDayOfWeek: "WEDNESDAY",
-            DailySubEntityTypeTimeOfDayHours: 297534,
-            DailySubEntityTypeTimeOfDayMinutes: 891773,
-            DailySubEntityTypeTimeOfDayNanos: 56713,
-            DailySubEntityTypeTimeOfDaySeconds: 963663,
-            Fields: "enim",
-            Key: "eum",
-            OauthToken: "voluptatum",
+            DailyMetrics: []BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeriesDailyMetricsEnum{
+                "BUSINESS_DIRECTION_REQUESTS",
+                "BUSINESS_FOOD_ORDERS",
+                "BUSINESS_CONVERSATIONS",
+                "CALL_CLICKS",
+            },
+            DailyRangeEndDateDay: 645894,
+            DailyRangeEndDateMonth: 384382,
+            DailyRangeEndDateYear: 437587,
+            DailyRangeStartDateDay: 297534,
+            DailyRangeStartDateMonth: 891773,
+            DailyRangeStartDateYear: 56713,
+            Fields: "sapiente",
+            Key: "enim",
+            OauthToken: "eum",
             PrettyPrint: false,
-            QuotaUser: "autem",
-            UploadType: "vel",
-            UploadProtocol: "non",
+            QuotaUser: "voluptatum",
+            UploadType: "autem",
+            UploadProtocol: "vel",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Locations.BusinessprofileperformanceLocationsGetDailyMetricsTimeSeries(ctx, req)
+    res, err := s.Locations.BusinessprofileperformanceLocationsFetchMultiDailyMetricsTimeSeries(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.GetDailyMetricsTimeSeriesResponse != nil {
+    if res.FetchMultiDailyMetricsTimeSeriesResponse != nil {
         // handle response
     }
 }

@@ -37,7 +37,7 @@ func (e *ViasNameGenderEnum) UnmarshalJSON(data []byte) error {
 
 type ViasName struct {
 	// The first name.
-	FirstName string `json:"firstName"`
+	FirstName *string `json:"firstName,omitempty"`
 	// The gender.
 	// >The following values are permitted: `MALE`, `FEMALE`, `UNKNOWN`.
 	Gender *ViasNameGenderEnum `json:"gender,omitempty"`
@@ -45,5 +45,5 @@ type ViasName struct {
 	// >A maximum length of twenty (20) characters is imposed.
 	Infix *string `json:"infix,omitempty"`
 	// The last name.
-	LastName string `json:"lastName"`
+	LastName *string `json:"lastName,omitempty"`
 }

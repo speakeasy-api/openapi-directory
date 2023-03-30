@@ -10,7 +10,7 @@ type RBACRoleBinding struct {
 	DeleteTime *string `json:"deleteTime,omitempty"`
 	// group is the group, as seen by the kubernetes cluster.
 	Group *string `json:"group,omitempty"`
-	// The resource name for the rbacrolebinding `projects/{project}/locations/{location}/namespaces/{namespace}/rbacrolebindings/{rbacrolebinding}`
+	// The resource name for the rbacrolebinding `projects/{project}/locations/{location}/namespaces/{namespace}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
 	Name *string `json:"name,omitempty"`
 	// Role is the type for Kubernetes roles
 	Role *Role `json:"role,omitempty"`
@@ -28,7 +28,7 @@ type RBACRoleBinding struct {
 type RBACRoleBindingInput struct {
 	// group is the group, as seen by the kubernetes cluster.
 	Group *string `json:"group,omitempty"`
-	// The resource name for the rbacrolebinding `projects/{project}/locations/{location}/namespaces/{namespace}/rbacrolebindings/{rbacrolebinding}`
+	// The resource name for the rbacrolebinding `projects/{project}/locations/{location}/namespaces/{namespace}/rbacrolebindings/{rbacrolebinding}` or `projects/{project}/locations/{location}/memberships/{membership}/rbacrolebindings/{rbacrolebinding}`
 	Name *string `json:"name,omitempty"`
 	// Role is the type for Kubernetes roles
 	Role *Role `json:"role,omitempty"`

@@ -155,7 +155,7 @@ type User struct {
 	SuspensionReason *string `json:"suspensionReason,omitempty"`
 	// Output only. ETag of the user's photo (Read-only)
 	ThumbnailPhotoEtag *string `json:"thumbnailPhotoEtag,omitempty"`
-	// Output only. Photo Url of the user (Read-only)
+	// Output only. The URL of the user's profile photo. The URL might be temporary or private.
 	ThumbnailPhotoURL *string `json:"thumbnailPhotoUrl,omitempty"`
 	// The user's websites. The maximum allowed data size for this field is 2KB.
 	Websites interface{} `json:"websites,omitempty"`

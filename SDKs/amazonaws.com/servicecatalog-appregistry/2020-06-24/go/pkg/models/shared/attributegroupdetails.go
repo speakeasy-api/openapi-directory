@@ -4,7 +4,8 @@ package shared
 
 // AttributeGroupDetails -  The details related to a specific AttributeGroup.
 type AttributeGroupDetails struct {
-	Arn  *string `json:"arn,omitempty"`
-	ID   *string `json:"id,omitempty"`
-	Name *string `json:"name,omitempty"`
+	Arn       *string `json:"arn,omitempty"`
+	CreatedBy *string `json:"createdBy,omitempty"`
+	ID        *string `json:"id,omitempty"`
+	Name      *string `json:"name,omitempty"`
 }

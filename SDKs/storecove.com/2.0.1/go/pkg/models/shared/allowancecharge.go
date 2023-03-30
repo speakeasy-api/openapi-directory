@@ -3,13 +3,17 @@
 package shared
 
 type AllowanceCharge struct {
-	// The amount for the allowance or charge, excluding VAT
-	AmountExcludingVat float64 `json:"amountExcludingVat"`
+	// The amount for the allowance or charge, excluding tax.
+	AmountExcludingTax *float64 `json:"amountExcludingTax,omitempty"`
+	// DEPRECATED. Use amountExcludingTax. The amount for the allowance or charge, excluding VAT.
+	AmountExcludingVat *float64 `json:"amountExcludingVat,omitempty"`
+	// The base amount for the allowance or charge, excluding tax.
+	BaseAmountExcludingTax *float64 `json:"baseAmountExcludingTax,omitempty"`
 	// The reason for the allowance or charge, free text
 	Reason *string `json:"reason,omitempty"`
 	// Do not use. Contact Storecove first if you want to use this field.
 	ReasonCode *string `json:"reasonCode,omitempty"`
-	Tax        Tax     `json:"tax"`
-	// An array of taxes, duties and fees for this allowance or charge. At this moment, only a single Tax item is allowed. When used, the 'tax' element must be empty.
-	TaxesDutiesFees []Tax `json:"taxes_duties_fees,omitempty"`
+	Tax        *Tax    `json:"tax,omitempty"`
+	// An array of taxes, duties and fees for this invoice line. At this moment, multiple Tax items is allowed only for IN (India) and US (USA) taxes. All other countries can only have a single Tax item in this array.
+	TaxesDutiesFees []Tax `json:"taxesDutiesFees,omitempty"`
 }

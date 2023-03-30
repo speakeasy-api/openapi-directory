@@ -110,6 +110,8 @@ type GoogleCloudAssuredworkloadsV1WorkloadInput struct {
 	ComplianceStatus *GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus `json:"complianceStatus,omitempty"`
 	// Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
 	DisplayName *string `json:"displayName,omitempty"`
+	// External key management systems(EKM) Provisioning response
+	EkmProvisioningResponse *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse `json:"ekmProvisioningResponse,omitempty"`
 	// Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
 	EnableSovereignControls *bool `json:"enableSovereignControls,omitempty"`
 	// Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
@@ -171,6 +173,8 @@ type GoogleCloudAssuredworkloadsV1Workload struct {
 	CreateTime *string `json:"createTime,omitempty"`
 	// Required. The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
 	DisplayName *string `json:"displayName,omitempty"`
+	// External key management systems(EKM) Provisioning response
+	EkmProvisioningResponse *GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse `json:"ekmProvisioningResponse,omitempty"`
 	// Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
 	EnableSovereignControls *bool `json:"enableSovereignControls,omitempty"`
 	// Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.

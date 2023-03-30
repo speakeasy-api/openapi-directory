@@ -4,8 +4,8 @@ package shared
 
 // AspectDistribution - This type contains information about one category aspect that is associated with a specified category.
 type AspectDistribution struct {
-	// Contains information about one or more values of the category aspect identified by localizedAspectName.
+	// Contains information about one or more values of the category aspect identified by <b>localizedAspectName</b>.
 	AspectValueDistributions []AspectValueDistribution `json:"aspectValueDistributions,omitempty"`
-	// The localized name of an aspect that is associated with the category identified by dominantCategoryId.
+	// The localized name of an aspect that is associated with the category identified by <b>dominantCategoryId</b>.
 	LocalizedAspectName *string `json:"localizedAspectName,omitempty"`
 }

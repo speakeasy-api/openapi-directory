@@ -18,10 +18,16 @@ type PatchBehaviorsIDRequestBodyAttachmentFile struct {
 }
 
 type PatchBehaviorsIDRequestBody struct {
+	// If true, will delete the file stored in attachment
+	AttachmentDelete *bool `multipartForm:"name=attachment_delete"`
 	// Certain behaviors may require a file, for instance, the "watermark" behavior requires a watermark image
 	AttachmentFile *PatchBehaviorsIDRequestBodyAttachmentFile `multipartForm:"file"`
 	// Behavior type.
 	Behavior *string `multipartForm:"name=behavior"`
+	// Description for this behavior.
+	Description *string `multipartForm:"name=description"`
+	// Name for this behavior.
+	Name *string `multipartForm:"name=name"`
 	// Folder behaviors path.
 	Path *string `multipartForm:"name=path"`
 	// The value of the folder behavior.  Can be a integer, array, or hash depending on the type of folder behavior. See The Behavior Types section for example values for each type of behavior.

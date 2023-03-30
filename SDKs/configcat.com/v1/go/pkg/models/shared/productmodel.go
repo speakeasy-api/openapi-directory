@@ -4,7 +4,10 @@ package shared
 
 // ProductModel - When the creation was successful.
 type ProductModel struct {
-	Name         *string            `json:"name,omitempty"`
-	Organization *OrganizationModel `json:"organization,omitempty"`
-	ProductID    *string            `json:"productId,omitempty"`
+	Description    *string            `json:"description,omitempty"`
+	Name           *string            `json:"name,omitempty"`
+	Order          *int               `json:"order,omitempty"`
+	Organization   *OrganizationModel `json:"organization,omitempty"`
+	ProductID      *string            `json:"productId,omitempty"`
+	ReasonRequired *bool              `json:"reasonRequired,omitempty"`
 }

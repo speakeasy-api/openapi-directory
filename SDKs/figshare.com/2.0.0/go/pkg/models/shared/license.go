@@ -4,9 +4,9 @@ package shared
 
 type License struct {
 	// License name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// License url
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 	// License value
-	Value *int64 `json:"value,omitempty"`
+	Value int64 `json:"value"`
 }

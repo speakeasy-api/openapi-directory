@@ -33,9 +33,9 @@ func newAssetsVolatility(defaultClient, securityClient HTTPClient, serverURL, la
 
 // PostAssetsVolatility - Volatility
 // Compute the volatility (i.e., standard deviation) of one or several asset(s) from either:
-// * The asset(s) returns
-// * The assets covariance matrix
-// * The asset(s) variance
+// * The asset returns
+// * The asset covariance matrix
+// * The asset variance(s)
 //
 // References
 // * [Wikipedia, Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation)
@@ -86,66 +86,6 @@ func (s *assetsVolatility) PostAssetsVolatility(ctx context.Context, request ope
 			}
 
 			res.PostAssetsVolatility200ApplicationJSONObject = out
-		}
-	}
-
-	return res, nil
-}
-
-// PostAssetsVolatilitySample - Sample volatility
-// Compute the sample volatility (i.e., sample standard deviation) of one or several asset(s) from the asset(s) returns.
-//
-// > This endpoint is similar to the endpoint [`/assets/volatility`](#post-/assets/volatility), but uses [Bessel's correction](https://en.wikipedia.org/wiki/Bessel%27s_correction) to compute the volatility.
-//
-// References
-// * [Wikipedia, Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation)
-func (s *assetsVolatility) PostAssetsVolatilitySample(ctx context.Context, request operations.PostAssetsVolatilitySampleRequest) (*operations.PostAssetsVolatilitySampleResponse, error) {
-	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/assets/volatility/sample"
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PostAssetsVolatilitySampleResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.PostAssetsVolatilitySample200ApplicationJSON
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PostAssetsVolatilitySample200ApplicationJSONObject = out
 		}
 	}
 

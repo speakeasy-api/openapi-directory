@@ -3,5 +3,5 @@
 package shared
 
 type SchemeBearer struct {
-	APIKey string `security:"name=Authorization"`
+	Authorization string `security:"name=Authorization"`
 }

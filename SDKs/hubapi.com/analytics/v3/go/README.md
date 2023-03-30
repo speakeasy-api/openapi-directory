@@ -34,7 +34,7 @@ func main() {
             Email: "Larry_Rau85@yahoo.com",
             EventName: "perspiciatis",
             ObjectID: "nulla",
-            OccurredAt: "2022-10-25T21:31:15.800Z",
+            OccurredAt: "2022-10-26T09:30:20.953Z",
             Properties: map[string]string{
                 "facilis": "eum",
                 "iusto": "ullam",

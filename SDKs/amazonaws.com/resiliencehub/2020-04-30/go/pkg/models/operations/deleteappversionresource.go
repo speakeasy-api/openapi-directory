@@ -19,6 +19,7 @@ type DeleteAppVersionResourceHeaders struct {
 
 // DeleteAppVersionResourceRequestBodyLogicalResourceID - Defines a logical resource identifier.
 type DeleteAppVersionResourceRequestBodyLogicalResourceID struct {
+	EksSourceName       *string `json:"eksSourceName,omitempty"`
 	Identifier          *string `json:"identifier,omitempty"`
 	LogicalStackName    *string `json:"logicalStackName,omitempty"`
 	ResourceGroupName   *string `json:"resourceGroupName,omitempty"`

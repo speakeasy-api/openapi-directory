@@ -58,6 +58,8 @@ type GetMDSQueryParams struct {
 	EngineBlock *string `queryParam:"style=form,explode=true,name=engine_block"`
 	// Engine Size to match. Valid filter values are those that our Search facets API returns for unique engine size. You can pass in multiple engine size values comma separated
 	EngineSize *string `queryParam:"style=form,explode=true,name=engine_size"`
+	// Engine size range to filter listings with engine size in the given range. Range to be given in the format - min-max e.g. 1.0-2
+	EngineSizeRange *string `queryParam:"style=form,explode=true,name=engine_size_range"`
 	// Exact parameter
 	Exact *bool `queryParam:"style=form,explode=true,name=exact"`
 	// Exterior color to match. Valid filter values are those that our Search facets API returns for unique exterior colors. You can pass in multiple exterior color values comma separated

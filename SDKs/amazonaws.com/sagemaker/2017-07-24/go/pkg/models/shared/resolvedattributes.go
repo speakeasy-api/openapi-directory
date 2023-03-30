@@ -4,7 +4,7 @@ package shared
 
 // ResolvedAttributes - The resolved attributes.
 type ResolvedAttributes struct {
-	// Specifies a metric to minimize or maximize as the objective of a job.
+	// Specifies a metric to minimize or maximize as the objective of a job. V2 API jobs (for example jobs created by calling <code>CreateAutoMLJobV2</code>), support <code>Accuracy</code> only.
 	AutoMLJobObjective *AutoMLJobObjective `json:"AutoMLJobObjective,omitempty"`
 	// How long a job is allowed to run, or how many candidates a job is allowed to generate.
 	CompletionCriteria *AutoMLJobCompletionCriteria `json:"CompletionCriteria,omitempty"`

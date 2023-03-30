@@ -4,12 +4,12 @@ package shared
 
 // DestinationDefinitionSpecificationRead - Successful operation
 type DestinationDefinitionSpecificationRead struct {
+	AdvancedAuth      *AdvancedAuth                 `json:"advancedAuth,omitempty"`
+	AuthSpecification *DestinationAuthSpecification `json:"authSpecification,omitempty"`
 	// The specification for what values are required to configure the destinationDefinition.
 	ConnectionSpecification       interface{}               `json:"connectionSpecification,omitempty"`
 	DestinationDefinitionID       string                    `json:"destinationDefinitionId"`
 	DocumentationURL              *string                   `json:"documentationUrl,omitempty"`
 	JobInfo                       SynchronousJobRead        `json:"jobInfo"`
 	SupportedDestinationSyncModes []DestinationSyncModeEnum `json:"supportedDestinationSyncModes,omitempty"`
-	SupportsDbt                   *bool                     `json:"supportsDbt,omitempty"`
-	SupportsNormalization         *bool                     `json:"supportsNormalization,omitempty"`
 }

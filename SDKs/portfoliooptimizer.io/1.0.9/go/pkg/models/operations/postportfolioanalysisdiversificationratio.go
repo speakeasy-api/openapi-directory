@@ -3,20 +3,106 @@
 package operations
 
 import (
+	"bytes"
+	"encoding/json"
+	"errors"
 	"net/http"
 )
 
-type PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios struct {
+type PostPortfolioAnalysisDiversificationRatioRequestBody2Assets struct {
+	// assetPrices[t] is the price of the asset at the time t; all the assetPrices arrays must have the same length
+	AssetPrices []float64 `json:"assetPrices"`
+}
+
+type PostPortfolioAnalysisDiversificationRatioRequestBody2Portfolios struct {
+	// portfolioValues[t] is the value of the portfolio at the time t; all the portfolioValues arrays must have the same length, equal to the common length of the assetPrices arrays
+	PortfolioValues []float64 `json:"portfolioValues"`
+}
+
+type PostPortfolioAnalysisDiversificationRatioRequestBody2 struct {
+	Assets     []PostPortfolioAnalysisDiversificationRatioRequestBody2Assets     `json:"assets"`
+	Portfolios []PostPortfolioAnalysisDiversificationRatioRequestBody2Portfolios `json:"portfolios"`
+}
+
+type PostPortfolioAnalysisDiversificationRatioRequestBody1Portfolios struct {
 	// assetsWeights[i] is the weight of the asset i in the portfolio, in percentage
 	AssetsWeights []float64 `json:"assetsWeights"`
 }
 
-type PostPortfolioAnalysisDiversificationRatioRequestBody struct {
+type PostPortfolioAnalysisDiversificationRatioRequestBody1 struct {
 	// The number of assets
 	Assets int64 `json:"assets"`
 	// assetsCovarianceMatrix[i][j] is the covariance between the asset i and the asset j
-	AssetsCovarianceMatrix [][]float64                                                      `json:"assetsCovarianceMatrix"`
-	Portfolios             []PostPortfolioAnalysisDiversificationRatioRequestBodyPortfolios `json:"portfolios"`
+	AssetsCovarianceMatrix [][]float64                                                       `json:"assetsCovarianceMatrix"`
+	Portfolios             []PostPortfolioAnalysisDiversificationRatioRequestBody1Portfolios `json:"portfolios"`
+}
+
+type PostPortfolioAnalysisDiversificationRatioRequestBodyType string
+
+const (
+	PostPortfolioAnalysisDiversificationRatioRequestBodyTypePostPortfolioAnalysisDiversificationRatioRequestBody1 PostPortfolioAnalysisDiversificationRatioRequestBodyType = "post_/portfolio/analysis/diversification-ratio_requestBody_1"
+	PostPortfolioAnalysisDiversificationRatioRequestBodyTypePostPortfolioAnalysisDiversificationRatioRequestBody2 PostPortfolioAnalysisDiversificationRatioRequestBodyType = "post_/portfolio/analysis/diversification-ratio_requestBody_2"
+)
+
+type PostPortfolioAnalysisDiversificationRatioRequestBody struct {
+	PostPortfolioAnalysisDiversificationRatioRequestBody1 *PostPortfolioAnalysisDiversificationRatioRequestBody1
+	PostPortfolioAnalysisDiversificationRatioRequestBody2 *PostPortfolioAnalysisDiversificationRatioRequestBody2
+
+	Type PostPortfolioAnalysisDiversificationRatioRequestBodyType
+}
+
+func CreatePostPortfolioAnalysisDiversificationRatioRequestBodyPostPortfolioAnalysisDiversificationRatioRequestBody1(postPortfolioAnalysisDiversificationRatioRequestBody1 PostPortfolioAnalysisDiversificationRatioRequestBody1) PostPortfolioAnalysisDiversificationRatioRequestBody {
+	typ := PostPortfolioAnalysisDiversificationRatioRequestBodyTypePostPortfolioAnalysisDiversificationRatioRequestBody1
+
+	return PostPortfolioAnalysisDiversificationRatioRequestBody{
+		PostPortfolioAnalysisDiversificationRatioRequestBody1: &postPortfolioAnalysisDiversificationRatioRequestBody1,
+		Type: typ,
+	}
+}
+
+func CreatePostPortfolioAnalysisDiversificationRatioRequestBodyPostPortfolioAnalysisDiversificationRatioRequestBody2(postPortfolioAnalysisDiversificationRatioRequestBody2 PostPortfolioAnalysisDiversificationRatioRequestBody2) PostPortfolioAnalysisDiversificationRatioRequestBody {
+	typ := PostPortfolioAnalysisDiversificationRatioRequestBodyTypePostPortfolioAnalysisDiversificationRatioRequestBody2
+
+	return PostPortfolioAnalysisDiversificationRatioRequestBody{
+		PostPortfolioAnalysisDiversificationRatioRequestBody2: &postPortfolioAnalysisDiversificationRatioRequestBody2,
+		Type: typ,
+	}
+}
+
+func (u *PostPortfolioAnalysisDiversificationRatioRequestBody) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	postPortfolioAnalysisDiversificationRatioRequestBody1 := new(PostPortfolioAnalysisDiversificationRatioRequestBody1)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&postPortfolioAnalysisDiversificationRatioRequestBody1); err == nil {
+		u.PostPortfolioAnalysisDiversificationRatioRequestBody1 = postPortfolioAnalysisDiversificationRatioRequestBody1
+		u.Type = PostPortfolioAnalysisDiversificationRatioRequestBodyTypePostPortfolioAnalysisDiversificationRatioRequestBody1
+		return nil
+	}
+
+	postPortfolioAnalysisDiversificationRatioRequestBody2 := new(PostPortfolioAnalysisDiversificationRatioRequestBody2)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&postPortfolioAnalysisDiversificationRatioRequestBody2); err == nil {
+		u.PostPortfolioAnalysisDiversificationRatioRequestBody2 = postPortfolioAnalysisDiversificationRatioRequestBody2
+		u.Type = PostPortfolioAnalysisDiversificationRatioRequestBodyTypePostPortfolioAnalysisDiversificationRatioRequestBody2
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u PostPortfolioAnalysisDiversificationRatioRequestBody) MarshalJSON() ([]byte, error) {
+	if u.PostPortfolioAnalysisDiversificationRatioRequestBody1 != nil {
+		return json.Marshal(u.PostPortfolioAnalysisDiversificationRatioRequestBody1)
+	}
+
+	if u.PostPortfolioAnalysisDiversificationRatioRequestBody2 != nil {
+		return json.Marshal(u.PostPortfolioAnalysisDiversificationRatioRequestBody2)
+	}
+
+	return nil, nil
 }
 
 type PostPortfolioAnalysisDiversificationRatioRequest struct {

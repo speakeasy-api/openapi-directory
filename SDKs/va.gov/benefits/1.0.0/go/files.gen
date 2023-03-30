@@ -16,6 +16,7 @@ pkg/models/operations/getbenefitsdocumentuploaddownload.go
 pkg/models/operations/getbenefitsdocumentuploadstatus.go
 pkg/models/operations/getbenefitsdocumentuploadstatusreport.go
 pkg/models/operations/postbenefitsdocumentupload.go
+pkg/models/operations/postbenefitsdocumentuploadvalidatedocument.go
 pkg/models/operations/putbenefitsdocumentupload.go
 pkg/models/shared/security.go
 pkg/models/shared/documentuploadstatus.go
@@ -26,5 +27,6 @@ pkg/models/shared/errormodel.go
 pkg/models/shared/documentuploadstatusguidlist.go
 pkg/models/shared/documentuploadpath.go
 pkg/models/shared/documentuploadattributes.go
+pkg/models/shared/documentvalidationerrormodel.go
 pkg/models/shared/documentuploadfailure.go
 USAGE.md

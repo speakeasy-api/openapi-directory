@@ -2,7 +2,7 @@
 
 package shared
 
-// AutoMLContainerDefinition - A list of container definitions that describe the different containers that make up an AutoML candidate. For more information, see .
+// AutoMLContainerDefinition - A list of container definitions that describe the different containers that make up an AutoML candidate. For more information, see <code> <a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html"> ContainerDefinition</a> </code>.
 type AutoMLContainerDefinition struct {
 	Environment  map[string]string `json:"Environment,omitempty"`
 	Image        string            `json:"Image"`

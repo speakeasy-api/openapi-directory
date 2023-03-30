@@ -5,4 +5,6 @@ package shared
 type PurchaseInvoiceInvoiceLineAllowanceCharge struct {
 	// The amount of the allowance or charge.
 	Amount *float64 `json:"amount,omitempty"`
+	// The reason for the allowance or charge.
+	Reason *string `json:"reason,omitempty"`
 }

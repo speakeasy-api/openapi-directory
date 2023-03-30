@@ -6,7 +6,7 @@ type ViasAddress struct {
 	// The name of the city. Required if the `houseNumberOrName`, `street`, `postalCode`, or `stateOrProvince` are provided.
 	City *string `json:"city,omitempty"`
 	// The two-character country code of the address in ISO-3166-1 alpha-2 format. For example, **NL**.
-	Country string `json:"country"`
+	Country *string `json:"country,omitempty"`
 	// The number or name of the house.
 	HouseNumberOrName *string `json:"houseNumberOrName,omitempty"`
 	// The postal code. Required if the `houseNumberOrName`, `street`, `city`, or `stateOrProvince` are provided.

@@ -4,6 +4,7 @@ package shared
 
 // DestinationConfig - The configuration of the stream destination.
 type DestinationConfig struct {
+	// BigQuery destination configuration
 	BigqueryDestinationConfig *BigQueryDestinationConfig `json:"bigqueryDestinationConfig,omitempty"`
 	// Required. Destination connection profile resource. Format: `projects/{project}/locations/{location}/connectionProfiles/{name}`
 	DestinationConnectionProfile *string `json:"destinationConnectionProfile,omitempty"`

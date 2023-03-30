@@ -74,12 +74,12 @@ func (s *employee) AddEmployee(ctx context.Context, request operations.AddEmploy
 	case httpRes.StatusCode == 201:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.EmployeeIDResponse
+			var out *shared.EmployeeIDResponse
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.EmployeeIDResponses = out
+			res.EmployeeIDResponse = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -202,12 +202,12 @@ func (s *employee) GetEmployee(ctx context.Context, request operations.GetEmploy
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out []shared.Employee
+			var out *shared.Employee
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.Employees = out
+			res.Employee = out
 		}
 	case httpRes.StatusCode == 401:
 		fallthrough

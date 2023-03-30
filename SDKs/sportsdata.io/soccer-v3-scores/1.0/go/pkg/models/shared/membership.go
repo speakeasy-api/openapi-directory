@@ -5,6 +5,7 @@ package shared
 type Membership struct {
 	Active       *bool   `json:"Active,omitempty"`
 	EndDate      *string `json:"EndDate,omitempty"`
+	Jersey       *int64  `json:"Jersey,omitempty"`
 	MembershipID *int64  `json:"MembershipId,omitempty"`
 	PlayerID     *int64  `json:"PlayerId,omitempty"`
 	PlayerName   *string `json:"PlayerName,omitempty"`

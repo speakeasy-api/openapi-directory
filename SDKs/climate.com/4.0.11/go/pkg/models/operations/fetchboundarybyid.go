@@ -13,6 +13,7 @@ type FetchBoundaryByIDSecurity struct {
 }
 
 type FetchBoundaryByIDPathParams struct {
+	// Unique identifier of the Boundary
 	BoundaryID string `pathParam:"style=simple,explode=false,name=boundaryId"`
 }
 

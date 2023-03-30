@@ -54,6 +54,7 @@ func String(s string) *string { return &s }
 type SDK struct {
 	AccountHolders          *accountHolders
 	BalanceAccounts         *balanceAccounts
+	BankAccountValidation   *bankAccountValidation
 	Documents               *documents
 	LegalEntities           *legalEntities
 	PaymentInstrumentGroups *paymentInstrumentGroups
@@ -132,6 +133,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.BalanceAccounts = newBalanceAccounts(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.BankAccountValidation = newBankAccountValidation(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

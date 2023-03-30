@@ -8,7 +8,7 @@ import (
 )
 
 type WebBackendListConnectionsForWorkspaceRequest struct {
-	Request shared.WorkspaceIDRequestBody `request:"mediaType=application/json"`
+	Request shared.WebBackendConnectionListRequestBody `request:"mediaType=application/json"`
 }
 
 type WebBackendListConnectionsForWorkspaceResponse struct {

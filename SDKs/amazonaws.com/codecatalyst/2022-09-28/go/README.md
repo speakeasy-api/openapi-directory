@@ -32,7 +32,7 @@ func main() {
 
     req := operations.CreateAccessTokenRequest{
         Request: operations.CreateAccessTokenRequestBody{
-            ExpiresTime: "2022-09-10T04:54:19.643Z",
+            ExpiresTime: "2022-09-10T16:15:55.093Z",
             Name: "deserunt",
         },
     }
@@ -56,7 +56,7 @@ func main() {
 ### SDK SDK
 
 * `CreateAccessToken` - Creates a personal access token (PAT) for the current user. A personal access token (PAT) is similar to a password. It is associated with your user account. You use PATs to access Amazon CodeCatalyst resources such as source repositories from third-party applications like Git and integrated development environments (IDEs). For more information, see <a href="https://docs.aws.amazon.com/codecatalyst/latest/userguide/ipa-tokens-keys.html">Managing personal access tokens in Amazon CodeCatalyst</a>.
-* `CreateDevEnvironment` - Creates a Dev Environment in Amazon CodeCatalyst, a cloud-based development Dev Environment that you can use to quickly work on the code stored in the source repositories of your project. By default, a Dev Environment is configured to have a 2 core processor, 4GB of RAM, and 16GB of persistent storage. 
+* `CreateDevEnvironment` - <p>Creates a Dev Environment in Amazon CodeCatalyst, a cloud-based development Dev Environment that you can use to quickly work on the code stored in the source repositories of your project. </p> <note> <p>When created in the Amazon CodeCatalyst console, by default a Dev Environment is configured to have a 2 core processor, 4GB of RAM, and 16GB of persistent storage. None of these defaults apply to a Dev Environment created programmatically.</p> </note>
 * `CreateProject` - Creates a project in a specified space.
 * `CreateSourceRepositoryBranch` - <p>Creates a branch in a specified source repository in Amazon CodeCatalyst. </p> <note> <p>This API only creates a branch in a source repository hosted in Amazon CodeCatalyst. You cannot use this API to create a branch in a linked repository.</p> </note>
 * `DeleteAccessToken` - Deletes a specified personal access token (PAT). A personal access token can only be deleted by the user who created it.
@@ -77,6 +77,7 @@ func main() {
 * `StartDevEnvironment` - Starts a specified Dev Environment and puts it into an active state. 
 * `StartDevEnvironmentSession` - Starts a session for a specified Dev Environment.
 * `StopDevEnvironment` - Pauses a specified Dev Environment and places it in a non-running state. Stopped Dev Environments do not consume compute minutes.
+* `StopDevEnvironmentSession` - Stops a session for a specified Dev Environment.
 * `UpdateDevEnvironment` - Changes one or more values for a Dev Environment. Updating certain values of the Dev Environment will cause a restart.
 * `VerifySession` - Verifies whether the calling user has a valid Amazon CodeCatalyst login and session. If successful, this returns the ID of the user in Amazon CodeCatalyst.
 <!-- End SDK Available Operations -->

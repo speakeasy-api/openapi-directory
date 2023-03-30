@@ -81,4 +81,5 @@ type PaymentMethod struct {
 	// * **invalid**
 	// * **rejected**
 	VerificationStatus *PaymentMethodVerificationStatusEnum `json:"verificationStatus,omitempty"`
+	Vipps              *VippsInfo                           `json:"vipps,omitempty"`
 }

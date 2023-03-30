@@ -81,6 +81,16 @@ func (e *ProjectResponseColorEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// ProjectResponseCreatedFromTemplate - A *project template* is an object that allows new projects to be created with a predefined setup, which may include tasks, sections, Rules, etc. It simplifies the process of running a workflow that involves a similar set of work every time.
+type ProjectResponseCreatedFromTemplate struct {
+	// Globally unique identifier of the resource, as a string.
+	Gid *string `json:"gid,omitempty"`
+	// Name of the project template.
+	Name *string `json:"name,omitempty"`
+	// The base type of this resource.
+	ResourceType *string `json:"resource_type,omitempty"`
+}
+
 // ProjectResponseCurrentStatusColorEnum - The color associated with the status update.
 type ProjectResponseCurrentStatusColorEnum string
 
@@ -111,7 +121,8 @@ func (e *ProjectResponseCurrentStatusColorEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-// ProjectResponseCurrentStatus - A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: "green" for projects that are on track, "yellow" for projects at risk, and "red" for projects that are behind.
+// ProjectResponseCurrentStatus - *Deprecated: new integrations should prefer the `status_update` resource.*
+// A *project status* is an update on the progress of a particular project, and is sent out to all project followers when created. These updates include both text describing the update and a color code intended to represent the overall state of the project: "green" for projects that are on track, "yellow" for projects at risk, and "red" for projects that are behind.
 type ProjectResponseCurrentStatus struct {
 	Author *UserCompact `json:"author,omitempty"`
 	// The color associated with the status update.
@@ -131,6 +142,47 @@ type ProjectResponseCurrentStatus struct {
 	// The text content of the status update.
 	Text string `json:"text"`
 	// The title of the project status update.
+	Title *string `json:"title,omitempty"`
+}
+
+// ProjectResponseCurrentStatusUpdateResourceSubtypeEnum - The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+// The `resource_subtype`s for `status` objects represent the type of their parent.
+type ProjectResponseCurrentStatusUpdateResourceSubtypeEnum string
+
+const (
+	ProjectResponseCurrentStatusUpdateResourceSubtypeEnumProjectStatusUpdate   ProjectResponseCurrentStatusUpdateResourceSubtypeEnum = "project_status_update"
+	ProjectResponseCurrentStatusUpdateResourceSubtypeEnumPortfolioStatusUpdate ProjectResponseCurrentStatusUpdateResourceSubtypeEnum = "portfolio_status_update"
+	ProjectResponseCurrentStatusUpdateResourceSubtypeEnumGoalStatusUpdate      ProjectResponseCurrentStatusUpdateResourceSubtypeEnum = "goal_status_update"
+)
+
+func (e *ProjectResponseCurrentStatusUpdateResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "project_status_update":
+		fallthrough
+	case "portfolio_status_update":
+		fallthrough
+	case "goal_status_update":
+		*e = ProjectResponseCurrentStatusUpdateResourceSubtypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for ProjectResponseCurrentStatusUpdateResourceSubtypeEnum: %s", s)
+	}
+}
+
+// ProjectResponseCurrentStatusUpdate - A *status update* is an update on the progress of a particular project, portfolio, or goal, and is sent out to all of its parent's followers when created. These updates include both text describing the update and a `status_type` intended to represent the overall state of the project.
+type ProjectResponseCurrentStatusUpdate struct {
+	// Globally unique identifier of the resource, as a string.
+	Gid *string `json:"gid,omitempty"`
+	// The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+	// The `resource_subtype`s for `status` objects represent the type of their parent.
+	ResourceSubtype *ProjectResponseCurrentStatusUpdateResourceSubtypeEnum `json:"resource_subtype,omitempty"`
+	// The base type of this resource.
+	ResourceType *string `json:"resource_type,omitempty"`
+	// The title of the status update.
 	Title *string `json:"title,omitempty"`
 }
 
@@ -288,6 +340,14 @@ type ProjectResponseOwner struct {
 	ResourceType *string `json:"resource_type,omitempty"`
 }
 
+// ProjectResponseProjectBrief - A *Project Brief* allows you to explain the what and why of the project to your team.
+type ProjectResponseProjectBrief struct {
+	// Globally unique identifier of the resource, as a string.
+	Gid *string `json:"gid,omitempty"`
+	// The base type of this resource.
+	ResourceType *string `json:"resource_type,omitempty"`
+}
+
 // ProjectResponseTeam - A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
 type ProjectResponseTeam struct {
 	// Globally unique identifier of the resource, as a string.
@@ -314,20 +374,29 @@ type ProjectResponse struct {
 	Archived *bool `json:"archived,omitempty"`
 	// Color of the project.
 	Color *ProjectResponseColorEnum `json:"color,omitempty"`
+	// True if the project is currently marked complete, false if not.
+	Completed *bool `json:"completed,omitempty"`
+	// The time at which this project was completed, or null if the project is not completed.
+	CompletedAt *time.Time   `json:"completed_at,omitempty"`
+	CompletedBy *UserCompact `json:"completed_by,omitempty"`
 	// The time at which this resource was created.
-	CreatedAt     *time.Time                    `json:"created_at,omitempty"`
+	CreatedAt           *time.Time                          `json:"created_at,omitempty"`
+	CreatedFromTemplate *ProjectResponseCreatedFromTemplate `json:"created_from_template,omitempty"`
+	// *Deprecated: new integrations should prefer the `current_status_update` resource.*
 	CurrentStatus *ProjectResponseCurrentStatus `json:"current_status,omitempty"`
+	// The latest `status_update` posted to this project.
+	CurrentStatusUpdate *ProjectResponseCurrentStatusUpdate `json:"current_status_update,omitempty"`
 	// Array of Custom Field Settings (in compact form).
-	CustomFieldSettings []CustomFieldSettingCompact `json:"custom_field_settings,omitempty"`
+	CustomFieldSettings []CustomFieldSettingResponse `json:"custom_field_settings,omitempty"`
 	// Array of Custom Fields.
 	CustomFields []CustomFieldCompact `json:"custom_fields,omitempty"`
 	// The default view (list, board, calendar, or timeline) of a project.
 	DefaultView *ProjectResponseDefaultViewEnum `json:"default_view,omitempty"`
-	// *Deprecated: new integrations should prefer the due_on field.*
+	// *Deprecated: new integrations should prefer the `due_on` field.*
 	DueDate *time.Time `json:"due_date,omitempty"`
 	// The day on which this project is due. This takes a date with format YYYY-MM-DD.
 	DueOn *time.Time `json:"due_on,omitempty"`
-	// Array of users following this project. Followers are a subset of members who receive all notifications for a project, the default notification setting when adding members to a project in-product.
+	// Array of users following this project. Followers are a subset of members who have opted in to receive "tasks added" notifications for a project.
 	Followers []UserCompact `json:"followers,omitempty"`
 	// Globally unique identifier of the resource, as a string.
 	Gid *string `json:"gid,omitempty"`
@@ -335,7 +404,7 @@ type ProjectResponse struct {
 	HTMLNotes *string `json:"html_notes,omitempty"`
 	// The icon for a project.
 	Icon *ProjectResponseIconEnum `json:"icon,omitempty"`
-	// [Opt In](/docs/input-output-options). Determines if the project is a template.
+	// [Opt In](/docs/input-output-options). *Deprecated - please use a project template endpoint instead (more in [this forum post](https://forum.asana.com/t/a-new-api-for-project-templates/156432)).* Determines if the project is a template.
 	IsTemplate *bool `json:"is_template,omitempty"`
 	// Array of users who are members of this project.
 	Members []UserCompact `json:"members,omitempty"`
@@ -349,12 +418,13 @@ type ProjectResponse struct {
 	// The current owner of the project, may be null.
 	Owner *ProjectResponseOwner `json:"owner,omitempty"`
 	// A url that points directly to the object within Asana.
-	PermalinkURL *string `json:"permalink_url,omitempty"`
-	// True if the project is public to the organization. If false, do not share this project with other users in this organization without explicitly checking to see if they have access.
+	PermalinkURL *string                      `json:"permalink_url,omitempty"`
+	ProjectBrief *ProjectResponseProjectBrief `json:"project_brief,omitempty"`
+	// True if the project is public to its team.
 	Public *bool `json:"public,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
-	// The day on which work for this project begins, or null if the project has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, start_on and due_on cannot be the same date.*
+	// The day on which work for this project begins, or null if the project has no start date. This takes a date with `YYYY-MM-DD` format. *Note: `due_on` or `due_at` must be present in the request when setting or unsetting the `start_on` parameter. Additionally, `start_on` and `due_on` cannot be the same date.*
 	StartOn   *types.Date               `json:"start_on,omitempty"`
 	Team      *ProjectResponseTeam      `json:"team,omitempty"`
 	Workspace *ProjectResponseWorkspace `json:"workspace,omitempty"`

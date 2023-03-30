@@ -19,6 +19,7 @@ type DescribeAppVersionResourceHeaders struct {
 
 // DescribeAppVersionResourceRequestBodyLogicalResourceID - Defines a logical resource identifier.
 type DescribeAppVersionResourceRequestBodyLogicalResourceID struct {
+	EksSourceName       *string `json:"eksSourceName,omitempty"`
 	Identifier          *string `json:"identifier,omitempty"`
 	LogicalStackName    *string `json:"logicalStackName,omitempty"`
 	ResourceGroupName   *string `json:"resourceGroupName,omitempty"`

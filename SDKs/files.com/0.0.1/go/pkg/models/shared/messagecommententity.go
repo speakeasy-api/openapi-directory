@@ -8,6 +8,6 @@ type MessageCommentEntity struct {
 	Body *string `json:"body,omitempty"`
 	// Message Comment ID
 	ID *int `json:"id,omitempty"`
-	// List Message Comment Reactions
-	Reactions *MessageCommentReactionEntity `json:"reactions,omitempty"`
+	// Reactions to this comment.
+	Reactions []MessageCommentReactionEntity `json:"reactions,omitempty"`
 }

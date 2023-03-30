@@ -2,7 +2,7 @@
 
 package shared
 
-// PhysicalResource - Defines a physical resource. A physical resource is a resource that exists in your account. It can be identified using an Amazon Resource Name (ARN) or an AWS Resilience Hub-native identifier.
+// PhysicalResource - Defines a physical resource. A physical resource is a resource that exists in your account. It can be identified using an Amazon Resource Name (ARN) or an Resilience Hub-native identifier.
 type PhysicalResource struct {
 	AdditionalInfo     map[string][]string `json:"additionalInfo,omitempty"`
 	AppComponents      []AppComponent      `json:"appComponents,omitempty"`

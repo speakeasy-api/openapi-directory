@@ -5,5 +5,5 @@ package shared
 // ArticleHandle - OK
 type ArticleHandle struct {
 	// Reserved Handle
-	Handle *string `json:"handle,omitempty"`
+	Handle string `json:"handle"`
 }

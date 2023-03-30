@@ -51,68 +51,37 @@ func main() {
             UploadProtocol: "eum",
         },
         Request: &shared.InstanceInput{
-            Accelerators: []shared.Accelerator{
-                shared.Accelerator{
-                    AcceleratorType: "CDC",
-                    State: "UNKNOWN",
-                },
-                shared.Accelerator{
-                    AcceleratorType: "ACCELERATOR_TYPE_UNSPECIFIED",
-                    State: "UNKNOWN",
-                },
-            },
-            AvailableVersion: []shared.Version{
-                shared.Version{
-                    AvailableFeatures: []string{
-                        "voluptatum",
-                        "autem",
-                    },
-                    DefaultVersion: false,
-                    Type: "TYPE_GENERAL_AVAILABILITY",
-                    VersionNumber: "non",
-                },
-                shared.Version{
-                    AvailableFeatures: []string{
-                        "similique",
-                        "reprehenderit",
-                    },
-                    DefaultVersion: false,
-                    Type: "TYPE_GENERAL_AVAILABILITY",
-                    VersionNumber: "quo",
-                },
-            },
             CryptoKeyConfig: &shared.CryptoKeyConfig{
-                KeyReference: "quasi",
+                KeyReference: "iusto",
             },
-            DataprocServiceAccount: "laboriosam",
-            Description: "dicta",
-            DisplayName: "est",
+            DataprocServiceAccount: "ullam",
+            Description: "saepe",
+            DisplayName: "inventore",
             EnableRbac: false,
             EnableStackdriverLogging: false,
             EnableStackdriverMonitoring: false,
             EnableZoneSeparation: false,
             EventPublishConfig: &shared.EventPublishConfig{
                 Enabled: false,
-                Topic: "voluptatem",
+                Topic: "sapiente",
             },
             Labels: map[string]string{
-                "fugiat": "a",
-                "omnis": "eos",
+                "eum": "voluptatum",
+                "autem": "vel",
             },
             NetworkConfig: &shared.NetworkConfig{
-                IPAllocation: "accusamus",
-                Network: "accusamus",
+                IPAllocation: "non",
+                Network: "deleniti",
             },
             Options: map[string]string{
-                "rem": "quibusdam",
-                "et": "praesentium",
-                "occaecati": "dolor",
-                "soluta": "sed",
+                "reprehenderit": "molestiae",
+                "quo": "quasi",
+                "laboriosam": "dicta",
             },
             PrivateInstance: false,
             Type: "ENTERPRISE",
-            Version: "rerum",
-            Zone: "culpa",
+            Version: "voluptatem",
+            Zone: "consequatur",
         },
     }
 
@@ -150,7 +119,7 @@ func main() {
 * `DatafusionProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `DatafusionProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `DatafusionProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `DatafusionProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `DatafusionProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `DatafusionProjectsLocationsRemoveIamPolicy` - Remove IAM policy that is currently set on the given resource.
 * `DatafusionProjectsLocationsVersionsList` - Lists possible versions for Data Fusion instances in the specified project and location.
 <!-- End SDK Available Operations -->

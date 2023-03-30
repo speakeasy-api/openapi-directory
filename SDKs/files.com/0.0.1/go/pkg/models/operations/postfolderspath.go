@@ -5,6 +5,7 @@ package operations
 import (
 	"net/http"
 	"openapi/pkg/models/shared"
+	"time"
 )
 
 type PostFoldersPathPathParams struct {
@@ -12,8 +13,16 @@ type PostFoldersPathPathParams struct {
 	Path string `pathParam:"style=simple,explode=false,name=path"`
 }
 
+type PostFoldersPathRequestBody struct {
+	// Create parent directories if they do not exist?
+	MkdirParents *bool `multipartForm:"name=mkdir_parents"`
+	// User provided modification time.
+	ProvidedMtime *time.Time `multipartForm:"name=provided_mtime"`
+}
+
 type PostFoldersPathRequest struct {
 	PathParams PostFoldersPathPathParams
+	Request    *PostFoldersPathRequestBody `request:"mediaType=multipart/form-data"`
 }
 
 type PostFoldersPathResponse struct {

@@ -30,7 +30,8 @@ func newProperties(defaultClient, securityClient HTTPClient, serverURL, language
 	}
 }
 
-// DeleteCommitHostedPropertyValue - Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a commit.
+// DeleteCommitHostedPropertyValue - Delete a commit application property
+// Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a commit.
 func (s *properties) DeleteCommitHostedPropertyValue(ctx context.Context, request operations.DeleteCommitHostedPropertyValueRequest) (*operations.DeleteCommitHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request.PathParams, nil)
@@ -65,7 +66,8 @@ func (s *properties) DeleteCommitHostedPropertyValue(ctx context.Context, reques
 	return res, nil
 }
 
-// DeletePullRequestHostedPropertyValue - Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a pull request.
+// DeletePullRequestHostedPropertyValue - Delete a pull request application property
+// Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a pull request.
 func (s *properties) DeletePullRequestHostedPropertyValue(ctx context.Context, request operations.DeletePullRequestHostedPropertyValueRequest) (*operations.DeletePullRequestHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request.PathParams, nil)
@@ -100,7 +102,8 @@ func (s *properties) DeletePullRequestHostedPropertyValue(ctx context.Context, r
 	return res, nil
 }
 
-// DeleteRepositoryHostedPropertyValue - Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a repository.
+// DeleteRepositoryHostedPropertyValue - Delete a repository application property
+// Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a repository.
 func (s *properties) DeleteRepositoryHostedPropertyValue(ctx context.Context, request operations.DeleteRepositoryHostedPropertyValueRequest) (*operations.DeleteRepositoryHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request.PathParams, nil)
@@ -135,7 +138,8 @@ func (s *properties) DeleteRepositoryHostedPropertyValue(ctx context.Context, re
 	return res, nil
 }
 
-// DeleteUserHostedPropertyValue - Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a user.
+// DeleteUserHostedPropertyValue - Delete a user application property
+// Delete an [application property](/cloud/bitbucket/application-properties/) value stored against a user.
 func (s *properties) DeleteUserHostedPropertyValue(ctx context.Context, request operations.DeleteUserHostedPropertyValueRequest) (*operations.DeleteUserHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/properties/{app_key}/{property_name}", request.PathParams, nil)
@@ -170,7 +174,8 @@ func (s *properties) DeleteUserHostedPropertyValue(ctx context.Context, request 
 	return res, nil
 }
 
-// GetCommitHostedPropertyValue - Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a commit.
+// GetCommitHostedPropertyValue - Get a commit application property
+// Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a commit.
 func (s *properties) GetCommitHostedPropertyValue(ctx context.Context, request operations.GetCommitHostedPropertyValueRequest) (*operations.GetCommitHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request.PathParams, nil)
@@ -200,12 +205,22 @@ func (s *properties) GetCommitHostedPropertyValue(ctx context.Context, request o
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ApplicationProperty = out
+		}
 	}
 
 	return res, nil
 }
 
-// GetPullRequestHostedPropertyValue - Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a pull request.
+// GetPullRequestHostedPropertyValue - Get a pull request application property
+// Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a pull request.
 func (s *properties) GetPullRequestHostedPropertyValue(ctx context.Context, request operations.GetPullRequestHostedPropertyValueRequest) (*operations.GetPullRequestHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request.PathParams, nil)
@@ -235,12 +250,22 @@ func (s *properties) GetPullRequestHostedPropertyValue(ctx context.Context, requ
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ApplicationProperty = out
+		}
 	}
 
 	return res, nil
 }
 
-// GetRepositoryHostedPropertyValue - Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a repository.
+// GetRepositoryHostedPropertyValue - Get a repository application property
+// Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a repository.
 func (s *properties) GetRepositoryHostedPropertyValue(ctx context.Context, request operations.GetRepositoryHostedPropertyValueRequest) (*operations.GetRepositoryHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request.PathParams, nil)
@@ -270,12 +295,22 @@ func (s *properties) GetRepositoryHostedPropertyValue(ctx context.Context, reque
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ApplicationProperty = out
+		}
 	}
 
 	return res, nil
 }
 
-// RetrieveUserHostedPropertyValue - Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a user.
+// RetrieveUserHostedPropertyValue - Get a user application property
+// Retrieve an [application property](/cloud/bitbucket/application-properties/) value stored against a user.
 func (s *properties) RetrieveUserHostedPropertyValue(ctx context.Context, request operations.RetrieveUserHostedPropertyValueRequest) (*operations.RetrieveUserHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/properties/{app_key}/{property_name}", request.PathParams, nil)
@@ -305,20 +340,40 @@ func (s *properties) RetrieveUserHostedPropertyValue(ctx context.Context, reques
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ApplicationProperty = out
+		}
 	}
 
 	return res, nil
 }
 
-// UpdateCommitHostedPropertyValue - Update an [application property](/cloud/bitbucket/application-properties/) value stored against a commit.
+// UpdateCommitHostedPropertyValue - Update a commit application property
+// Update an [application property](/cloud/bitbucket/application-properties/) value stored against a commit.
 func (s *properties) UpdateCommitHostedPropertyValue(ctx context.Context, request operations.UpdateCommitHostedPropertyValueRequest) (*operations.UpdateCommitHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/properties/{app_key}/{property_name}", request.PathParams, nil)
 
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+
+	req.Header.Set("Content-Type", reqContentType)
 
 	client := s.defaultClient
 
@@ -345,15 +400,26 @@ func (s *properties) UpdateCommitHostedPropertyValue(ctx context.Context, reques
 	return res, nil
 }
 
-// UpdatePullRequestHostedPropertyValue - Update an [application property](/cloud/bitbucket/application-properties/) value stored against a pull request.
+// UpdatePullRequestHostedPropertyValue - Update a pull request application property
+// Update an [application property](/cloud/bitbucket/application-properties/) value stored against a pull request.
 func (s *properties) UpdatePullRequestHostedPropertyValue(ctx context.Context, request operations.UpdatePullRequestHostedPropertyValueRequest) (*operations.UpdatePullRequestHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pullrequest_id}/properties/{app_key}/{property_name}", request.PathParams, nil)
 
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+
+	req.Header.Set("Content-Type", reqContentType)
 
 	client := s.defaultClient
 
@@ -380,15 +446,26 @@ func (s *properties) UpdatePullRequestHostedPropertyValue(ctx context.Context, r
 	return res, nil
 }
 
-// UpdateRepositoryHostedPropertyValue - Update an [application property](/cloud/bitbucket/application-properties/) value stored against a repository.
+// UpdateRepositoryHostedPropertyValue - Update a repository application property
+// Update an [application property](/cloud/bitbucket/application-properties/) value stored against a repository.
 func (s *properties) UpdateRepositoryHostedPropertyValue(ctx context.Context, request operations.UpdateRepositoryHostedPropertyValueRequest) (*operations.UpdateRepositoryHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/properties/{app_key}/{property_name}", request.PathParams, nil)
 
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+
+	req.Header.Set("Content-Type", reqContentType)
 
 	client := s.defaultClient
 
@@ -415,15 +492,26 @@ func (s *properties) UpdateRepositoryHostedPropertyValue(ctx context.Context, re
 	return res, nil
 }
 
-// UpdateUserHostedPropertyValue - Update an [application property](/cloud/bitbucket/application-properties/) value stored against a user.
+// UpdateUserHostedPropertyValue - Update a user application property
+// Update an [application property](/cloud/bitbucket/application-properties/) value stored against a user.
 func (s *properties) UpdateUserHostedPropertyValue(ctx context.Context, request operations.UpdateUserHostedPropertyValueRequest) (*operations.UpdateUserHostedPropertyValueResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/properties/{app_key}/{property_name}", request.PathParams, nil)
 
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+
+	req.Header.Set("Content-Type", reqContentType)
 
 	client := s.defaultClient
 

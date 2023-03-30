@@ -4,6 +4,7 @@ package shared
 
 // LogicalResourceID - Defines a logical resource identifier.
 type LogicalResourceID struct {
+	EksSourceName       *string `json:"eksSourceName,omitempty"`
 	Identifier          string  `json:"identifier"`
 	LogicalStackName    *string `json:"logicalStackName,omitempty"`
 	ResourceGroupName   *string `json:"resourceGroupName,omitempty"`

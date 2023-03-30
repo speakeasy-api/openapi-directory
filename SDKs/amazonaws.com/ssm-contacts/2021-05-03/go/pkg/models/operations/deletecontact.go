@@ -49,7 +49,9 @@ type DeleteContactRequest struct {
 type DeleteContactResponse struct {
 	// AccessDeniedException
 	AccessDeniedException interface{}
-	ContentType           string
+	// ConflictException
+	ConflictException interface{}
+	ContentType       string
 	// Success
 	DeleteContactResult map[string]interface{}
 	// InternalServerException

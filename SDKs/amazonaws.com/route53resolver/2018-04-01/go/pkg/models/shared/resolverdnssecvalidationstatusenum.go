@@ -10,10 +10,12 @@ import (
 type ResolverDNSSECValidationStatusEnum string
 
 const (
-	ResolverDNSSECValidationStatusEnumEnabling  ResolverDNSSECValidationStatusEnum = "ENABLING"
-	ResolverDNSSECValidationStatusEnumEnabled   ResolverDNSSECValidationStatusEnum = "ENABLED"
-	ResolverDNSSECValidationStatusEnumDisabling ResolverDNSSECValidationStatusEnum = "DISABLING"
-	ResolverDNSSECValidationStatusEnumDisabled  ResolverDNSSECValidationStatusEnum = "DISABLED"
+	ResolverDNSSECValidationStatusEnumEnabling                          ResolverDNSSECValidationStatusEnum = "ENABLING"
+	ResolverDNSSECValidationStatusEnumEnabled                           ResolverDNSSECValidationStatusEnum = "ENABLED"
+	ResolverDNSSECValidationStatusEnumDisabling                         ResolverDNSSECValidationStatusEnum = "DISABLING"
+	ResolverDNSSECValidationStatusEnumDisabled                          ResolverDNSSECValidationStatusEnum = "DISABLED"
+	ResolverDNSSECValidationStatusEnumUpdatingToUseLocalResourceSetting ResolverDNSSECValidationStatusEnum = "UPDATING_TO_USE_LOCAL_RESOURCE_SETTING"
+	ResolverDNSSECValidationStatusEnumUseLocalResourceSetting           ResolverDNSSECValidationStatusEnum = "USE_LOCAL_RESOURCE_SETTING"
 )
 
 func (e *ResolverDNSSECValidationStatusEnum) UnmarshalJSON(data []byte) error {
@@ -29,6 +31,10 @@ func (e *ResolverDNSSECValidationStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DISABLING":
 		fallthrough
 	case "DISABLED":
+		fallthrough
+	case "UPDATING_TO_USE_LOCAL_RESOURCE_SETTING":
+		fallthrough
+	case "USE_LOCAL_RESOURCE_SETTING":
 		*e = ResolverDNSSECValidationStatusEnum(s)
 		return nil
 	default:

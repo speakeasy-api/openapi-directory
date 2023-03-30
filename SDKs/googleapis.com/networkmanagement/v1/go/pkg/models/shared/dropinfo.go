@@ -35,6 +35,7 @@ const (
 	DropInfoCauseEnumDroppedInsideGkeService                         DropInfoCauseEnum = "DROPPED_INSIDE_GKE_SERVICE"
 	DropInfoCauseEnumDroppedInsideCloudSQLService                    DropInfoCauseEnum = "DROPPED_INSIDE_CLOUD_SQL_SERVICE"
 	DropInfoCauseEnumGoogleManagedServiceNoPeering                   DropInfoCauseEnum = "GOOGLE_MANAGED_SERVICE_NO_PEERING"
+	DropInfoCauseEnumGkePscEndpointMissing                           DropInfoCauseEnum = "GKE_PSC_ENDPOINT_MISSING"
 	DropInfoCauseEnumCloudSQLInstanceNoIPAddress                     DropInfoCauseEnum = "CLOUD_SQL_INSTANCE_NO_IP_ADDRESS"
 	DropInfoCauseEnumGkeControlPlaneRegionMismatch                   DropInfoCauseEnum = "GKE_CONTROL_PLANE_REGION_MISMATCH"
 	DropInfoCauseEnumPublicGkeControlPlaneToPrivateDestination       DropInfoCauseEnum = "PUBLIC_GKE_CONTROL_PLANE_TO_PRIVATE_DESTINATION"
@@ -47,6 +48,7 @@ const (
 	DropInfoCauseEnumVpcConnectorNotRunning                          DropInfoCauseEnum = "VPC_CONNECTOR_NOT_RUNNING"
 	DropInfoCauseEnumPscConnectionNotAccepted                        DropInfoCauseEnum = "PSC_CONNECTION_NOT_ACCEPTED"
 	DropInfoCauseEnumCloudRunRevisionNotReady                        DropInfoCauseEnum = "CLOUD_RUN_REVISION_NOT_READY"
+	DropInfoCauseEnumDroppedInsidePscServiceProducer                 DropInfoCauseEnum = "DROPPED_INSIDE_PSC_SERVICE_PRODUCER"
 )
 
 func (e *DropInfoCauseEnum) UnmarshalJSON(data []byte) error {
@@ -103,6 +105,8 @@ func (e *DropInfoCauseEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "GOOGLE_MANAGED_SERVICE_NO_PEERING":
 		fallthrough
+	case "GKE_PSC_ENDPOINT_MISSING":
+		fallthrough
 	case "CLOUD_SQL_INSTANCE_NO_IP_ADDRESS":
 		fallthrough
 	case "GKE_CONTROL_PLANE_REGION_MISMATCH":
@@ -126,6 +130,8 @@ func (e *DropInfoCauseEnum) UnmarshalJSON(data []byte) error {
 	case "PSC_CONNECTION_NOT_ACCEPTED":
 		fallthrough
 	case "CLOUD_RUN_REVISION_NOT_READY":
+		fallthrough
+	case "DROPPED_INSIDE_PSC_SERVICE_PRODUCER":
 		*e = DropInfoCauseEnum(s)
 		return nil
 	default:

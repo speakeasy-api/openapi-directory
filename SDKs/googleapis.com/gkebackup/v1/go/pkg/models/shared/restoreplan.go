@@ -2,7 +2,7 @@
 
 package shared
 
-// RestorePlan - The configuration of a potential series of Restore operations to be performed against Backups belong to a particular BackupPlan. Next id: 11
+// RestorePlan - The configuration of a potential series of Restore operations to be performed against Backups belong to a particular BackupPlan. Next id: 13
 type RestorePlan struct {
 	// Required. Immutable. A reference to the BackupPlan from which Backups may be used as the source for Restores created via this RestorePlan. Format: `projects/*/locations/*/backupPlans/*`.
 	BackupPlan *string `json:"backupPlan,omitempty"`
@@ -18,7 +18,7 @@ type RestorePlan struct {
 	Labels map[string]string `json:"labels,omitempty"`
 	// Output only. The full name of the RestorePlan resource. Format: `projects/*/locations/*/restorePlans/*`.
 	Name *string `json:"name,omitempty"`
-	// Configuration of a restore. Next id: 9
+	// Configuration of a restore. Next id: 12
 	RestoreConfig *RestoreConfig `json:"restoreConfig,omitempty"`
 	// Output only. Server generated global unique identifier of [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
 	UID *string `json:"uid,omitempty"`
@@ -26,7 +26,7 @@ type RestorePlan struct {
 	UpdateTime *string `json:"updateTime,omitempty"`
 }
 
-// RestorePlanInput - The configuration of a potential series of Restore operations to be performed against Backups belong to a particular BackupPlan. Next id: 11
+// RestorePlanInput - The configuration of a potential series of Restore operations to be performed against Backups belong to a particular BackupPlan. Next id: 13
 type RestorePlanInput struct {
 	// Required. Immutable. A reference to the BackupPlan from which Backups may be used as the source for Restores created via this RestorePlan. Format: `projects/*/locations/*/backupPlans/*`.
 	BackupPlan *string `json:"backupPlan,omitempty"`
@@ -36,6 +36,6 @@ type RestorePlanInput struct {
 	Description *string `json:"description,omitempty"`
 	// A set of custom labels supplied by user.
 	Labels map[string]string `json:"labels,omitempty"`
-	// Configuration of a restore. Next id: 9
+	// Configuration of a restore. Next id: 12
 	RestoreConfig *RestoreConfig `json:"restoreConfig,omitempty"`
 }

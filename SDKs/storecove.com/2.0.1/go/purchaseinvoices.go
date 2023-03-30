@@ -32,7 +32,7 @@ func newPurchaseInvoices(defaultClient, securityClient HTTPClient, serverURL, la
 }
 
 // GetInvoiceJSON - Get Purchase invoice data as JSON
-// Get a specific PurchaseInvoice, in JSON format. Recommended way of getting a PurchaseInvoice, since it provides the data in a JSON object and the JSON format is the richest we have that supports all features a PurchaseInvoice can have.
+// Get a specific PurchaseInvoice, in JSON format.
 func (s *purchaseInvoices) GetInvoiceJSON(ctx context.Context, request operations.GetInvoiceJSONRequest) (*operations.GetInvoiceJSONResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/purchase_invoices/{guid}", request.PathParams, nil)
@@ -85,8 +85,8 @@ func (s *purchaseInvoices) GetInvoiceJSON(ctx context.Context, request operation
 	return res, nil
 }
 
-// GetInvoiceUbl - Get Purchase invoice data as JSON with a Base64-encoded SI-1.2 UBL string
-// Get a specific PurchaseInvoice. Using /json as {packaging} is recommended (in which case you can just omit it), however, this endpoint allows getting the invoice in a differently serialized format such as UBL.
+// GetInvoiceUbl - Get Purchase invoice data in a selectable format
+// Get a specific PurchaseInvoice.
 func (s *purchaseInvoices) GetInvoiceUbl(ctx context.Context, request operations.GetInvoiceUblRequest) (*operations.GetInvoiceUblResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/purchase_invoices/{guid}/{packaging}", request.PathParams, nil)
@@ -94,6 +94,10 @@ func (s *purchaseInvoices) GetInvoiceUbl(ctx context.Context, request operations
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
 	client := s.securityClient
@@ -136,7 +140,7 @@ func (s *purchaseInvoices) GetInvoiceUbl(ctx context.Context, request operations
 }
 
 // GetInvoiceUblVersioned - Get Purchase invoice data as JSON with a Base64-encoded UBL string in the specified version
-// Get a specific PurchaseInvoice in a non-JSON serialized format with version.
+// Get a specific PurchaseInvoice in UBL format
 func (s *purchaseInvoices) GetInvoiceUblVersioned(ctx context.Context, request operations.GetInvoiceUblVersionedRequest) (*operations.GetInvoiceUblVersionedResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/purchase_invoices/{guid}/{packaging}/{package_version}", request.PathParams, nil)

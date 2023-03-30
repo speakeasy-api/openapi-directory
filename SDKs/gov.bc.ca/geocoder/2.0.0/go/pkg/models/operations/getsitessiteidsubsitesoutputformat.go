@@ -8,7 +8,9 @@ import (
 	"net/http"
 )
 
-// GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+// GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+//
+// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 type GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum string
 
 const (
@@ -48,13 +50,15 @@ func (e *GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum) UnmarshalJSON(data 
 }
 
 type GetSitesSiteIDSubsitesOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 	OutputFormat GetSitesSiteIDSubsitesOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 	// A unique, but not immutable, site identifier.
 	SiteID string `pathParam:"style=simple,explode=false,name=siteID"`
 }
 
-// GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+// GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
 type GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum string
 
 const (
@@ -90,7 +94,7 @@ func (e *GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum) UnmarshalJSON
 	}
 }
 
-// GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+// GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum string
 
 const (
@@ -135,9 +139,9 @@ func (e *GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum) UnmarshalJSON(data []b
 type GetSitesSiteIDSubsitesOutputFormatQueryParams struct {
 	// If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
 	Brief *bool `queryParam:"style=form,explode=true,name=brief"`
-	// Describes the nature of the address location. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+	// Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
 	LocationDescriptor *GetSitesSiteIDSubsitesOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetSitesSiteIDSubsitesOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 	// The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
 	SetBack *int64 `queryParam:"style=form,explode=true,name=setBack"`

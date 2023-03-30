@@ -50,7 +50,7 @@ type TrackJourneyEvent500ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// TrackJourneyEvent500ApplicationJSON - The error message should specify what cause the error
+// TrackJourneyEvent500ApplicationJSON - The message specifies what is done
 type TrackJourneyEvent500ApplicationJSON struct {
 	Message string                                  `json:"message"`
 	Meta    TrackJourneyEvent500ApplicationJSONMeta `json:"meta"`
@@ -61,7 +61,7 @@ type TrackJourneyEvent429ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// TrackJourneyEvent429ApplicationJSON - The error message should specify what cause the error
+// TrackJourneyEvent429ApplicationJSON - The message specifies what is done
 type TrackJourneyEvent429ApplicationJSON struct {
 	Message string                                  `json:"message"`
 	Meta    TrackJourneyEvent429ApplicationJSONMeta `json:"meta"`
@@ -72,7 +72,7 @@ type TrackJourneyEvent403ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// TrackJourneyEvent403ApplicationJSON - The error message should specify what cause the error
+// TrackJourneyEvent403ApplicationJSON - The message specifies what is done
 type TrackJourneyEvent403ApplicationJSON struct {
 	Message string                                  `json:"message"`
 	Meta    TrackJourneyEvent403ApplicationJSONMeta `json:"meta"`
@@ -83,7 +83,7 @@ type TrackJourneyEvent401ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// TrackJourneyEvent401ApplicationJSON - The error message should specify what cause the error
+// TrackJourneyEvent401ApplicationJSON - The message specifies what is done
 type TrackJourneyEvent401ApplicationJSON struct {
 	Message string                                  `json:"message"`
 	Meta    TrackJourneyEvent401ApplicationJSONMeta `json:"meta"`
@@ -109,7 +109,7 @@ type TrackJourneyEvent400ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// TrackJourneyEvent400ApplicationJSON - The error message should specify what cause the error
+// TrackJourneyEvent400ApplicationJSON - The message specifies what is done
 type TrackJourneyEvent400ApplicationJSON struct {
 	// Map that sums up all received values that seemed incorrect
 	Errors  TrackJourneyEvent400ApplicationJSONErrors `json:"errors"`
@@ -122,7 +122,7 @@ type TrackJourneyEvent201ApplicationJSONMeta struct {
 	Status    float64 `json:"status"`
 }
 
-// TrackJourneyEvent201ApplicationJSON - The object was created
+// TrackJourneyEvent201ApplicationJSON - The message specifies what is done
 type TrackJourneyEvent201ApplicationJSON struct {
 	Message string                                  `json:"message"`
 	Meta    TrackJourneyEvent201ApplicationJSONMeta `json:"meta"`

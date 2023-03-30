@@ -2,23 +2,23 @@
 
 package shared
 
-// UserScheduleResponse - The type that defines the fields for a paginated result set of available schedules. The response consists of 0 or more sequenced pages where each page has 0 or more items.
+// UserScheduleResponse - The type that defines the fields for a paginated result set of available schedules. The response consists of 0 or more sequenced <em> pages</em> where each page has 0 or more items.
 type UserScheduleResponse struct {
 	// The creation date of the schedule in hours based on the 24-hour Coordinated Universal Time (UTC) clock.
 	CreationDate *string `json:"creationDate,omitempty"`
-	// The feedType associated with the schedule.
+	// The <strong>feedType</strong> associated with the schedule.
 	FeedType *string `json:"feedType,omitempty"`
 	// The date the schedule was last modified.
 	LastModifiedDate *string `json:"lastModifiedDate,omitempty"`
-	// The preferred day of the month to trigger the schedule. This field can be used with preferredTriggerHour for monthly schedules. The last day of the month is used for numbers larger than the number of days in the month.
+	// The preferred day of the month to trigger the schedule. This field can be used with <strong>preferredTriggerHour</strong> for monthly schedules. The last day of the month is used for numbers larger than the number of days in the month.
 	PreferredTriggerDayOfMonth *int `json:"preferredTriggerDayOfMonth,omitempty"`
-	// The preferred day of the week to trigger the schedule. This field can be used with preferredTriggerHour for weekly schedules. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:DayOfWeekEnum'>eBay API documentation</a>
+	// The preferred day of the week to trigger the schedule. This field can be used with <strong>preferredTriggerHour</strong> for weekly schedules. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:DayOfWeekEnum'>eBay API documentation</a>
 	PreferredTriggerDayOfWeek *string `json:"preferredTriggerDayOfWeek,omitempty"`
-	// The preferred two-digit hour of the day to trigger the schedule. Format: UTC hhZ For example, the following represents 11:00 am UTC: 11Z
+	// The preferred two-digit hour of the day to trigger the schedule. <br /><br /><b>Format:</b> UTC <code>hhZ</code><br /><br />For example, the following represents 11:00 am UTC:<br /><br /><code>11Z</code><br /><br />
 	PreferredTriggerHour *string `json:"preferredTriggerHour,omitempty"`
-	// The timestamp on which the report generation (subscription) ends. After this date, the schedule status becomes INACTIVE.
+	// The timestamp on which the report generation (subscription) ends. After this date, the schedule status becomes <code>INACTIVE</code>.
 	ScheduleEndDate *string `json:"scheduleEndDate,omitempty"`
-	// The ID of the schedule. This ID is generated when the schedule was created by the createSchedule method.
+	// The ID of the schedule. This ID is generated when the schedule was created by the <strong>createSchedule</strong> method.
 	ScheduleID *string `json:"scheduleId,omitempty"`
 	// The schedule name assigned by the user for the created schedule. Users assign this name for their reference.
 	ScheduleName *string `json:"scheduleName,omitempty"`

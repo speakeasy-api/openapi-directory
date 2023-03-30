@@ -9,6 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetClassificationInclusionsSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 // GetClassificationInclusionsClassificationTypeEnum - The type of classification that the classification inclusions are linked to.
 // Depending on the permissions of your credential, only a subset of these types are usable.
 type GetClassificationInclusionsClassificationTypeEnum string
@@ -134,6 +138,7 @@ type GetClassificationInclusionsQueryParams struct {
 
 type GetClassificationInclusionsRequest struct {
 	QueryParams GetClassificationInclusionsQueryParams
+	Security    GetClassificationInclusionsSecurity
 }
 
 // GetClassificationInclusions400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

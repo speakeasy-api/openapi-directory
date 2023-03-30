@@ -3,33 +3,33 @@
 package shared
 
 type Article struct {
-	// Type of article identificator
-	DefinedType *int64 `json:"defined_type,omitempty"`
-	// Name of the article type identificator
-	DefinedTypeName *string `json:"defined_type_name,omitempty"`
+	// Type of article identifier
+	DefinedType int64 `json:"defined_type"`
+	// Name of the article type identifier
+	DefinedTypeName string `json:"defined_type_name"`
 	// DOI
-	Doi *string `json:"doi,omitempty"`
+	Doi string `json:"doi"`
 	// Group ID
-	GroupID *float64 `json:"group_id,omitempty"`
+	GroupID float64 `json:"group_id"`
 	// Handle
-	Handle *string `json:"handle,omitempty"`
+	Handle string `json:"handle"`
 	// Unique identifier for article
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Posted date
-	PublishedDate *string `json:"published_date,omitempty"`
+	PublishedDate string `json:"published_date"`
 	// Thumbnail image
-	Thumb    *string   `json:"thumb,omitempty"`
-	Timeline *Timeline `json:"timeline,omitempty"`
+	Thumb    string   `json:"thumb"`
+	Timeline Timeline `json:"timeline"`
 	// Title of article
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 	// Api endpoint for article
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 	// Private Api endpoint for article
-	URLPrivateAPI *string `json:"url_private_api,omitempty"`
+	URLPrivateAPI string `json:"url_private_api"`
 	// Private site endpoint for article
-	URLPrivateHTML *string `json:"url_private_html,omitempty"`
+	URLPrivateHTML string `json:"url_private_html"`
 	// Public Api endpoint for article
-	URLPublicAPI *string `json:"url_public_api,omitempty"`
+	URLPublicAPI string `json:"url_public_api"`
 	// Public site endpoint for article
-	URLPublicHTML *string `json:"url_public_html,omitempty"`
+	URLPublicHTML string `json:"url_public_html"`
 }

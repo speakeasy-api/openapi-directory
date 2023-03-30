@@ -18,5 +18,5 @@ type ConfigSettingValueModel struct {
 	SettingTags  []SettingTagModel  `json:"settingTags,omitempty"`
 	UpdatedAt    *time.Time         `json:"updatedAt,omitempty"`
 	// The value to serve. It must respect the setting type.
-	Value map[string]interface{} `json:"value,omitempty"`
+	Value interface{} `json:"value,omitempty"`
 }

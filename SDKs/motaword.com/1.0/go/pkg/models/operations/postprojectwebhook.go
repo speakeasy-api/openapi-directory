@@ -12,14 +12,9 @@ type PostProjectWebhookPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
-type PostProjectWebhookRequestBody struct {
-	// Webhook URL. We will send POST callbacks when the status of the current project is changed. Possible status changes are, 'translated', 'proofread', 'completed'.
-	CallbackURL *string `json:"callback_url,omitempty"`
-}
-
 type PostProjectWebhookRequest struct {
 	PathParams PostProjectWebhookPathParams
-	Request    *PostProjectWebhookRequestBody `request:"mediaType=application/json"`
+	Request    *shared.Webhook `request:"mediaType=application/json"`
 }
 
 type PostProjectWebhookResponse struct {

@@ -21,6 +21,8 @@ type CreatePermissionGroupResponse struct {
 	ContentType string
 	// When the creation was successful.
 	PermissionGroupModel *shared.PermissionGroupModel
-	StatusCode           int
-	RawResponse          *http.Response
+	// When the creation was successful.
+	PermissionGroupModelHaljson *shared.PermissionGroupModelHaljson
+	StatusCode                  int
+	RawResponse                 *http.Response
 }

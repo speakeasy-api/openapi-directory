@@ -10,7 +10,7 @@ type ContactAddress struct {
 	AddressLine2 *string `json:"addressLine2,omitempty"`
 	// The city in which the address is located.
 	City *string `json:"city,omitempty"`
-	// The country of the address, represented as two-letter ISO 3166 country code. For example, US represents the United States and DE represents Germany. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/logistics/types/bas:CountryCodeEnum'>eBay API documentation</a>
+	// The country of the address, represented as two-letter <a href="https://www.iso.org/iso-3166-country-codes.html" title="https://www.iso.org" target="_blank">ISO 3166</a> country code. For example, <code>US</code> represents the United States and <code>DE</code> represents Germany. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/logistics/types/bas:CountryCodeEnum'>eBay API documentation</a>
 	CountryCode *string `json:"countryCode,omitempty"`
 	// The county (not country) in which the address is located. Counties typically contain multiple cities or towns.
 	County *string `json:"county,omitempty"`

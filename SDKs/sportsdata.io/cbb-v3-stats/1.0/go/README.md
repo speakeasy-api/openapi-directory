@@ -60,6 +60,7 @@ func main() {
 * `BoxScoresByDateDelta` - Box Scores by Date Delta
 * `CurrentSeason` - Current Season
 * `GamesByDate` - Games by Date
+* `InjuredPlayers` - Injured Players
 * `LeagueHierarchy` - League Hierarchy
 * `PlayerDetailsByActive` - Player Details by Active
 * `PlayerDetailsByPlayer` - Player Details by Player
@@ -74,6 +75,7 @@ func main() {
 * `ProjectedPlayerGameStatsByPlayer` - Projected Player Game Stats by Player
 * `Schedules` - Schedules
 * `Stadiums` - Stadiums
+* `TeamGameLogsBySeason` - Team Game Logs By Season
 * `TeamGameStatsByDate` - Team Game Stats by Date
 * `TeamSeasonStats` - Team Season Stats
 * `Teams` - Teams

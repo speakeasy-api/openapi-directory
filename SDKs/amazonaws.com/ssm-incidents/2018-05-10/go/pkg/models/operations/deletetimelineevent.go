@@ -17,7 +17,7 @@ type DeleteTimelineEventHeaders struct {
 }
 
 type DeleteTimelineEventRequestBody struct {
-	// The ID of the event you are updating. You can find this by using <code>ListTimelineEvents</code>.
+	// The ID of the event to update. You can use <code>ListTimelineEvents</code> to find an event's ID.
 	EventID string `json:"eventId"`
 	// The Amazon Resource Name (ARN) of the incident that includes the timeline event.
 	IncidentRecordArn string `json:"incidentRecordArn"`

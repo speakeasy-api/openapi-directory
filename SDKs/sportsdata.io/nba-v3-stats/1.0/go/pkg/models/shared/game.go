@@ -3,6 +3,7 @@
 package shared
 
 type Game struct {
+	AlternateID                  *int64    `json:"AlternateID,omitempty"`
 	Attendance                   *int64    `json:"Attendance,omitempty"`
 	AwayRotationNumber           *int64    `json:"AwayRotationNumber,omitempty"`
 	AwayTeam                     *string   `json:"AwayTeam,omitempty"`
@@ -10,7 +11,9 @@ type Game struct {
 	AwayTeamMoneyLine            *int64    `json:"AwayTeamMoneyLine,omitempty"`
 	AwayTeamScore                *int64    `json:"AwayTeamScore,omitempty"`
 	Channel                      *string   `json:"Channel,omitempty"`
+	CrewChiefID                  *int64    `json:"CrewChiefID,omitempty"`
 	DateTime                     *string   `json:"DateTime,omitempty"`
+	DateTimeUTC                  *string   `json:"DateTimeUTC,omitempty"`
 	Day                          *string   `json:"Day,omitempty"`
 	GameEndDateTime              *string   `json:"GameEndDateTime,omitempty"`
 	GameID                       *int64    `json:"GameID,omitempty"`
@@ -32,12 +35,15 @@ type Game struct {
 	PointSpreadHomeTeamMoneyLine *int64    `json:"PointSpreadHomeTeamMoneyLine,omitempty"`
 	Quarter                      *string   `json:"Quarter,omitempty"`
 	Quarters                     []Quarter `json:"Quarters,omitempty"`
+	RefereeID                    *int64    `json:"RefereeID,omitempty"`
 	Season                       *int64    `json:"Season,omitempty"`
 	SeasonType                   *int64    `json:"SeasonType,omitempty"`
+	SeriesInfo                   *Series   `json:"SeriesInfo,omitempty"`
 	StadiumID                    *int64    `json:"StadiumID,omitempty"`
 	Status                       *string   `json:"Status,omitempty"`
 	TimeRemainingMinutes         *int64    `json:"TimeRemainingMinutes,omitempty"`
 	TimeRemainingSeconds         *int64    `json:"TimeRemainingSeconds,omitempty"`
+	UmpireID                     *int64    `json:"UmpireID,omitempty"`
 	UnderPayout                  *int64    `json:"UnderPayout,omitempty"`
 	Updated                      *string   `json:"Updated,omitempty"`
 }

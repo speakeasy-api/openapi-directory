@@ -41,7 +41,7 @@ func main() {
                     Value: shared.TypedAttributeValue{
                         BinaryValue: "iusto",
                         BooleanValue: false,
-                        DatetimeValue: "2022-12-10T22:06:23.429Z",
+                        DatetimeValue: "2022-12-11T09:27:20.839Z",
                         NumberValue: "saepe",
                         StringValue: "inventore",
                     },
@@ -55,7 +55,7 @@ func main() {
                     Value: shared.TypedAttributeValue{
                         BinaryValue: "voluptatum",
                         BooleanValue: false,
-                        DatetimeValue: "2022-06-13T12:59:54.581Z",
+                        DatetimeValue: "2022-06-14T00:20:51.991Z",
                         NumberValue: "vel",
                         StringValue: "non",
                     },

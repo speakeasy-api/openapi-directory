@@ -124,7 +124,7 @@ type LineItemInput struct {
 	PartnerCosts []PartnerCost `json:"partnerCosts,omitempty"`
 	// Settings that control how partner revenue is calculated.
 	PartnerRevenueModel *PartnerRevenueModel `json:"partnerRevenueModel,omitempty"`
-	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level.
+	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
 	TargetingExpansion *TargetingExpansionConfig `json:"targetingExpansion,omitempty"`
 }
 
@@ -179,6 +179,7 @@ const (
 	LineItemWarningMessagesEnumCreativeSizeNotInUseForTargetedDeals         LineItemWarningMessagesEnum = "CREATIVE_SIZE_NOT_IN_USE_FOR_TARGETED_DEALS"
 	LineItemWarningMessagesEnumNoCreativeForTargetedDeals                   LineItemWarningMessagesEnum = "NO_CREATIVE_FOR_TARGETED_DEALS"
 	LineItemWarningMessagesEnumTargetingDeprecatedGeoTarget                 LineItemWarningMessagesEnum = "TARGETING_DEPRECATED_GEO_TARGET"
+	LineItemWarningMessagesEnumDeprecatedFirstPartyAudienceExclusion        LineItemWarningMessagesEnum = "DEPRECATED_FIRST_PARTY_AUDIENCE_EXCLUSION"
 )
 
 func (e *LineItemWarningMessagesEnum) UnmarshalJSON(data []byte) error {
@@ -222,6 +223,8 @@ func (e *LineItemWarningMessagesEnum) UnmarshalJSON(data []byte) error {
 	case "NO_CREATIVE_FOR_TARGETED_DEALS":
 		fallthrough
 	case "TARGETING_DEPRECATED_GEO_TARGET":
+		fallthrough
+	case "DEPRECATED_FIRST_PARTY_AUDIENCE_EXCLUSION":
 		*e = LineItemWarningMessagesEnum(s)
 		return nil
 	default:
@@ -275,7 +278,7 @@ type LineItem struct {
 	PartnerRevenueModel *PartnerRevenueModel `json:"partnerRevenueModel,omitempty"`
 	// Output only. The reservation type of the line item.
 	ReservationType *LineItemReservationTypeEnum `json:"reservationType,omitempty"`
-	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level.
+	// Settings that control the targeting expansion of the line item. Targeting expansion allows the line item to reach a larger audience based on the original audience list and the targeting expansion level. Beginning **March 25, 2023**, these settings may represent the [optimized targeting feature](//support.google.com/displayvideo/answer/12060859) in place of targeting expansion. This feature will be rolled out to all partners by mid-April 2023.
 	TargetingExpansion *TargetingExpansionConfig `json:"targetingExpansion,omitempty"`
 	// Output only. The timestamp when the line item was last updated. Assigned by the system.
 	UpdateTime *string `json:"updateTime,omitempty"`

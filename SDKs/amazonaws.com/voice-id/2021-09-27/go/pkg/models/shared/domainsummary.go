@@ -17,4 +17,5 @@ type DomainSummary struct {
 	ServerSideEncryptionConfiguration *ServerSideEncryptionConfiguration `json:"ServerSideEncryptionConfiguration,omitempty"`
 	ServerSideEncryptionUpdateDetails *ServerSideEncryptionUpdateDetails `json:"ServerSideEncryptionUpdateDetails,omitempty"`
 	UpdatedAt                         *time.Time                         `json:"UpdatedAt,omitempty"`
+	WatchlistDetails                  *WatchlistDetails                  `json:"WatchlistDetails,omitempty"`
 }

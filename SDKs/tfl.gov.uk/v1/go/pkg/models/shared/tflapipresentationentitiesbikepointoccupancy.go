@@ -6,12 +6,16 @@ package shared
 type TflAPIPresentationEntitiesBikePointOccupancy struct {
 	// Total bike counts
 	BikesCount *int `json:"bikesCount,omitempty"`
+	// Total ebikes count
+	EBikesCount *int `json:"eBikesCount,omitempty"`
 	// Empty docks
 	EmptyDocks *int `json:"emptyDocks,omitempty"`
 	// Id of the bike point such as BikePoints_1
 	ID *string `json:"id,omitempty"`
 	// Name / Common name of the bike point
 	Name *string `json:"name,omitempty"`
+	// Total standard bikes count
+	StandardBikesCount *int `json:"standardBikesCount,omitempty"`
 	// Total docks available
 	TotalDocks *int `json:"totalDocks,omitempty"`
 }

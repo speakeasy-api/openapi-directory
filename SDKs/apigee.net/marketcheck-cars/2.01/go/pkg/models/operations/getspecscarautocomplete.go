@@ -78,6 +78,8 @@ type GetSpecsCarAutoCompleteQueryParams struct {
 	EngineBlock *string `queryParam:"style=form,explode=true,name=engine_block"`
 	// Engine Size to match. Valid filter values are those that our Search facets API returns for unique engine size. You can pass in multiple engine size values comma separated
 	EngineSize *string `queryParam:"style=form,explode=true,name=engine_size"`
+	// Provide minimum count value for facets
+	FacetMinCount *float64 `queryParam:"style=form,explode=true,name=facet_min_count"`
 	// Field name for which you want auto-completion
 	Field GetSpecsCarAutoCompleteFieldEnum `queryParam:"style=form,explode=true,name=field"`
 	// To filter listing on their fuel type

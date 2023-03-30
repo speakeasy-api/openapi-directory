@@ -33,7 +33,7 @@ type SourceOfFunds struct {
 	AcquiringBusinessLineID *string `json:"acquiringBusinessLineId,omitempty"`
 	// Indicates whether the funds are coming from transactions processed by Adyen. If **false**, a `description` is required.
 	AdyenProcessedFunds *bool `json:"adyenProcessedFunds,omitempty"`
-	// Text describing the source of funds. For example, for `type` **business**, provide a description of the business. Required when `adyenProcessedFunds` is **false**.
+	// Text describing the source of funds. For example, for `type` **business**, provide a description of where the business transactions come from, such as payments through bank transfer. Required when `adyenProcessedFunds` is **false**.
 	Description *string `json:"description,omitempty"`
 	// The type of the source of funds. Possible value: **business**.
 	Type *SourceOfFundsTypeEnum `json:"type,omitempty"`

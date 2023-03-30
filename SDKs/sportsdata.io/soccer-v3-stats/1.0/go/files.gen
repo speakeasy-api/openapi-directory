@@ -50,6 +50,11 @@ pkg/models/shared/area.go
 pkg/models/shared/competition.go
 pkg/models/shared/season.go
 pkg/models/shared/round.go
+pkg/models/shared/teamseason.go
+pkg/models/shared/standing.go
+pkg/models/shared/playerseason.go
+pkg/models/shared/game.go
+pkg/models/shared/playoffaggregatescore.go
 pkg/models/shared/boxscore.go
 pkg/models/shared/referee.go
 pkg/models/shared/teamgame.go
@@ -58,8 +63,6 @@ pkg/models/shared/penaltyshootout.go
 pkg/models/shared/lineup.go
 pkg/models/shared/coach.go
 pkg/models/shared/goal.go
-pkg/models/shared/game.go
-pkg/models/shared/playoffaggregatescore.go
 pkg/models/shared/booking.go
 pkg/models/shared/competitiondetail.go
 pkg/models/shared/teamdetail.go
@@ -68,11 +71,8 @@ pkg/models/shared/dfsslate.go
 pkg/models/shared/dfsslateplayer.go
 pkg/models/shared/dfsslategame.go
 pkg/models/shared/membership.go
-pkg/models/shared/playerseason.go
 pkg/models/shared/seasonteam.go
 pkg/models/shared/team.go
-pkg/models/shared/standing.go
-pkg/models/shared/teamseason.go
 pkg/models/shared/venue.go
 pkg/models/shared/security.go
 USAGE.md

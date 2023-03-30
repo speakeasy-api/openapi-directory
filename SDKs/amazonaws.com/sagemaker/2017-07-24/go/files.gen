@@ -21,6 +21,7 @@ pkg/models/operations/createapp.go
 pkg/models/operations/createappimageconfig.go
 pkg/models/operations/createartifact.go
 pkg/models/operations/createautomljob.go
+pkg/models/operations/createautomljobv2.go
 pkg/models/operations/createcoderepository.go
 pkg/models/operations/createcompilationjob.go
 pkg/models/operations/createcontext.go
@@ -120,6 +121,7 @@ pkg/models/operations/describeapp.go
 pkg/models/operations/describeappimageconfig.go
 pkg/models/operations/describeartifact.go
 pkg/models/operations/describeautomljob.go
+pkg/models/operations/describeautomljobv2.go
 pkg/models/operations/describecoderepository.go
 pkg/models/operations/describecompilationjob.go
 pkg/models/operations/describecontext.go
@@ -413,6 +415,12 @@ pkg/models/shared/automljobcompletioncriteria.go
 pkg/models/shared/automlcandidategenerationconfig.go
 pkg/models/shared/automlalgorithmconfig.go
 pkg/models/shared/automlalgorithmenum.go
+pkg/models/shared/createautomljobv2response.go
+pkg/models/shared/createautomljobv2request.go
+pkg/models/shared/automlproblemtypeconfig.go
+pkg/models/shared/textclassificationjobconfig.go
+pkg/models/shared/imageclassificationjobconfig.go
+pkg/models/shared/automljobchannel.go
 pkg/models/shared/createcoderepositoryoutput.go
 pkg/models/shared/createcoderepositoryinput.go
 pkg/models/shared/gitconfig.go
@@ -849,6 +857,7 @@ pkg/models/shared/deleteworkteamrequest.go
 pkg/models/shared/deregisterdevicesrequest.go
 pkg/models/shared/describeactionresponse.go
 pkg/models/shared/usercontext.go
+pkg/models/shared/iamidentity.go
 pkg/models/shared/describeactionrequest.go
 pkg/models/shared/describealgorithmoutput.go
 pkg/models/shared/algorithmstatusdetails.go
@@ -884,6 +893,8 @@ pkg/models/shared/automljobstatusenum.go
 pkg/models/shared/automljobsecondarystatusenum.go
 pkg/models/shared/automljobartifacts.go
 pkg/models/shared/describeautomljobrequest.go
+pkg/models/shared/describeautomljobv2response.go
+pkg/models/shared/describeautomljobv2request.go
 pkg/models/shared/describecoderepositoryoutput.go
 pkg/models/shared/describecoderepositoryinput.go
 pkg/models/shared/describecompilationjobresponse.go

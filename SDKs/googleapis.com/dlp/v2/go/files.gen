@@ -199,6 +199,10 @@ pkg/models/shared/googleprivacydlpv2cloudstorageregexfileset.go
 pkg/models/shared/googleprivacydlpv2bigqueryoptions.go
 pkg/models/shared/googleprivacydlpv2error.go
 pkg/models/shared/googlerpcstatus.go
+pkg/models/shared/googleprivacydlpv2actiondetails.go
+pkg/models/shared/googleprivacydlpv2deidentifydatasourcedetails.go
+pkg/models/shared/googleprivacydlpv2requesteddeidentifyoptions.go
+pkg/models/shared/googleprivacydlpv2deidentifydatasourcestats.go
 pkg/models/shared/googleprivacydlpv2createdlpjobrequest.go
 pkg/models/shared/googleprivacydlpv2listdlpjobsresponse.go
 pkg/models/shared/googleprivacydlpv2redactimageresponse.go

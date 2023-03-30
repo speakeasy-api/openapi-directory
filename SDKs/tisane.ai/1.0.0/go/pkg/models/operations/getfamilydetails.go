@@ -11,8 +11,14 @@ type GetFamilyDetailsQueryParams struct {
 	ID *string `queryParam:"style=form,explode=true,name=id"`
 }
 
+type GetFamilyDetailsHeaders struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
+}
+
 type GetFamilyDetailsRequest struct {
 	QueryParams GetFamilyDetailsQueryParams
+	Headers     GetFamilyDetailsHeaders
 }
 
 // GetFamilyDetails200ApplicationJSON - Details of the family for 'plot twist'

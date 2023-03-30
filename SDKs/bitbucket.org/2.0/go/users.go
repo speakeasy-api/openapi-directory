@@ -7,7 +7,6 @@ import (
 	"fmt"
 	"net/http"
 	"openapi/pkg/models/operations"
-	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
 	"strings"
 )
@@ -35,112 +34,8 @@ func newUsers(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 	}
 }
 
-// DeleteUsersSelectedUserHooksUID - Deletes the specified webhook subscription from the given user
-// account.
-//
-// Note that the username path parameter has been deprecated due to
-// [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-// Use the account's UUID or account_id instead.
-//
-// **This endpoint has been deprecated, and you should
-// use the new [workspace hooks](../../../workspaces/%7Bworkspace%7D/hooks/%7Buid%7D#delete) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *users) DeleteUsersSelectedUserHooksUID(ctx context.Context, request operations.DeleteUsersSelectedUserHooksUIDRequest) (*operations.DeleteUsersSelectedUserHooksUIDResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/hooks/{uid}", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.DeleteUsersSelectedUserHooksUIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 204:
-	case httpRes.StatusCode == 403:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetTeamsWorkspaceRepositories - All repositories in the given workspace. This includes any private
-// repositories the calling user has access to.
-//
-// **This endpoint has been deprecated,
-// and you should use the [repository list](../../repositories/%7Bworkspace%7D) endpoint.
-// For more information, see the [deprecation announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *users) GetTeamsWorkspaceRepositories(ctx context.Context, request operations.GetTeamsWorkspaceRepositoriesRequest) (*operations.GetTeamsWorkspaceRepositoriesResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/teams/{workspace}/repositories", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetTeamsWorkspaceRepositoriesResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetUser - Returns the currently logged in user.
+// GetUser - Get current user
+// Returns the currently logged in user.
 func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) (*operations.GetUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user"
@@ -177,7 +72,7 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 				return nil, err
 			}
 
-			res.User = out
+			res.Account = out
 		}
 	case httpRes.StatusCode == 401:
 		switch {
@@ -194,7 +89,8 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 	return res, nil
 }
 
-// GetUserEmails - Returns all the authenticated user's email addresses. Both
+// GetUserEmails - List email addresses for current user
+// Returns all the authenticated user's email addresses. Both
 // confirmed and unconfirmed.
 func (s *users) GetUserEmails(ctx context.Context, request operations.GetUserEmailsRequest) (*operations.GetUserEmailsResponse, error) {
 	baseURL := s.serverURL
@@ -239,7 +135,8 @@ func (s *users) GetUserEmails(ctx context.Context, request operations.GetUserEma
 	return res, nil
 }
 
-// GetUserEmailsEmail - Returns details about a specific one of the authenticated user's
+// GetUserEmailsEmail - Get an email address for current user
+// Returns details about a specific one of the authenticated user's
 // email addresses.
 //
 // Details describe whether the address has been confirmed by the user and
@@ -287,7 +184,8 @@ func (s *users) GetUserEmailsEmail(ctx context.Context, request operations.GetUs
 	return res, nil
 }
 
-// GetUsersSelectedUser - Gets the public information associated with a user account.
+// GetUsersSelectedUser - Get a user
+// Gets the public information associated with a user account.
 //
 // If the user's profile is private, `location`, `website` and
 // `created_on` elements are omitted.
@@ -330,383 +228,8 @@ func (s *users) GetUsersSelectedUser(ctx context.Context, request operations.Get
 				return nil, err
 			}
 
-			res.User = out
+			res.Account = out
 		}
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetUsersSelectedUserHooks - Returns a paginated list of webhooks installed on this user account.
-//
-// Note that the username path parameter has been deprecated due to
-// [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-// Use the account's UUID or account_id instead.
-//
-// **This endpoint has been deprecated, and you should
-// use the new [workspace hooks](../../workspaces/%7Bworkspace%7D/hooks#get) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *users) GetUsersSelectedUserHooks(ctx context.Context, request operations.GetUsersSelectedUserHooksRequest) (*operations.GetUsersSelectedUserHooksResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/hooks", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersSelectedUserHooksResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaginatedWebhookSubscriptions
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PaginatedWebhookSubscriptions = out
-		}
-	case httpRes.StatusCode == 403:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetUsersSelectedUserHooksUID - Returns the webhook with the specified id installed on the given
-// user account.
-//
-// Note that the username path parameter has been deprecated due to
-// [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-// Use the account's UUID or account_id instead.
-//
-// **This endpoint has been deprecated, and you should
-// use the new [workspace hook details](../../../workspaces/%7Bworkspace%7D/hooks/%7Buid%7D#get) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *users) GetUsersSelectedUserHooksUID(ctx context.Context, request operations.GetUsersSelectedUserHooksUIDRequest) (*operations.GetUsersSelectedUserHooksUIDResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/hooks/{uid}", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersSelectedUserHooksUIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.WebhookSubscription = out
-		}
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetUsersUsernameMembers - **This endpoint has been deprecated,
-// and you should use the [workspaces](../../workspaces/%7Bworkspace%7D/members) endpoint.
-// For more information, see [this post](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *users) GetUsersUsernameMembers(ctx context.Context, request operations.GetUsersUsernameMembersRequest) (*operations.GetUsersUsernameMembersResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{username}/members", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersUsernameMembersResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.User = out
-		}
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetUsersWorkspaceRepositories - All repositories in the given workspace. This includes any private
-// repositories the calling user has access to.
-//
-// **This endpoint has been deprecated,
-// and you should use the [repository list](../../repositories/%7Bworkspace%7D) endpoint.
-// For more information, see the [deprecation announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *users) GetUsersWorkspaceRepositories(ctx context.Context, request operations.GetUsersWorkspaceRepositoriesRequest) (*operations.GetUsersWorkspaceRepositoriesResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{workspace}/repositories", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetUsersWorkspaceRepositoriesResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	default:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// PostUsersSelectedUserHooks - Creates a new webhook on the specified user account.
-//
-// Account-level webhooks are fired for events from all repositories
-// belonging to that account.
-//
-// Note that one can only register webhooks on one's own account, not that
-// of others.
-//
-// Also, note that the username path parameter has been deprecated due to
-// [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-// Use the account's UUID or account_id instead.
-//
-// **This endpoint has been deprecated, and you should
-// use the new [workspace hooks](../../workspaces/%7Bworkspace%7D/hooks#post) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *users) PostUsersSelectedUserHooks(ctx context.Context, request operations.PostUsersSelectedUserHooksRequest) (*operations.PostUsersSelectedUserHooksResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/hooks", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PostUsersSelectedUserHooksResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 201:
-		res.Headers = httpRes.Header
-
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.WebhookSubscription = out
-		}
-	case httpRes.StatusCode == 403:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// PutUsersSelectedUserHooksUID - Updates the specified webhook subscription.
-//
-// The following properties can be mutated:
-//
-// * `description`
-// * `url`
-// * `active`
-// * `events`
-//
-// Note that the username path parameter has been deprecated due to
-// [privacy changes](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-changes-gdpr/#removal-of-usernames-from-user-referencing-apis).
-// Use the account's UUID or account_id instead.
-//
-// **This endpoint has been deprecated, and you should
-// use the new [workspace hook details](../../../workspaces/%7Bworkspace%7D/hooks/%7Buid%7D#put) endpoint.
-// For more information, see [the announcement](https://developer.atlassian.com/cloud/bitbucket/bitbucket-api-teams-deprecation/).**
-func (s *users) PutUsersSelectedUserHooksUID(ctx context.Context, request operations.PutUsersSelectedUserHooksUIDRequest) (*operations.PutUsersSelectedUserHooksUIDResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/users/{selected_user}/hooks/{uid}", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PutUsersSelectedUserHooksUIDResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.WebhookSubscription = out
-		}
-	case httpRes.StatusCode == 403:
-		fallthrough
 	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):

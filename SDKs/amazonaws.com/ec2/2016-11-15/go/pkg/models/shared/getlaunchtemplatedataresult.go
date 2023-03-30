@@ -1208,6 +1208,25 @@ const (
 	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR6idn16xlarge   GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r6idn.16xlarge"
 	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR6idn24xlarge   GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r6idn.24xlarge"
 	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR6idn32xlarge   GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r6idn.32xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumC7gMetal        GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "c7g.metal"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumM7gMedium       GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "m7g.medium"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumM7gLarge        GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "m7g.large"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumM7gXlarge       GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "m7g.xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumM7g2xlarge      GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "m7g.2xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumM7g4xlarge      GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "m7g.4xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumM7g8xlarge      GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "m7g.8xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumM7g12xlarge     GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "m7g.12xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumM7g16xlarge     GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "m7g.16xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumM7gMetal        GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "m7g.metal"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR7gMedium       GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r7g.medium"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR7gLarge        GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r7g.large"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR7gXlarge       GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r7g.xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR7g2xlarge      GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r7g.2xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR7g4xlarge      GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r7g.4xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR7g8xlarge      GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r7g.8xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR7g12xlarge     GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r7g.12xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR7g16xlarge     GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r7g.16xlarge"
+	GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnumR7gMetal        GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -2453,6 +2472,44 @@ func (e *GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum) Unmarsha
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum(s)
 		return nil
 	default:

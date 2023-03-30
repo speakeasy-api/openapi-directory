@@ -4,7 +4,7 @@ package shared
 
 // Resource - This message defines core attributes for a resource. A resource is an addressable (named) entity provided by the destination service. For example, a file stored on a network storage service.
 type Resource struct {
-	// Annotations is an unstructured key-value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: https://kubernetes.io/docs/user-guide/annotations
+	// Annotations is an unstructured key-value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
 	Annotations map[string]string `json:"annotations,omitempty"`
 	// Output only. The timestamp when the resource was created. This may be either the time creation was initiated or when it was completed.
 	CreateTime *string `json:"createTime,omitempty"`

@@ -39,7 +39,8 @@ func newIssueTracker(defaultClient, securityClient HTTPClient, serverURL, langua
 	}
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID - Deletes the specified issue. This requires write access to the
+// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID - Delete an issue
+// Deletes the specified issue. This requires write access to the
 // repository.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
 	baseURL := s.serverURL
@@ -96,7 +97,8 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx cont
 	return res, nil
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath - Deletes an attachment.
+// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath - Delete an attachment for an issue
+// Deletes an attachment.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPathResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/attachments/{path}", request.PathParams, nil)
@@ -143,25 +145,16 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmen
 	return res, nil
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID - Deletes the specified comment.
+// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID - Delete a comment on an issue
+// Deletes the specified comment.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "DELETE", url, bodyReader)
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
-
-	req.Header.Set("Content-Type", reqContentType)
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
@@ -188,7 +181,8 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsC
 	return res, nil
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote - Retract your vote.
+// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote - Remove vote for an issue
+// Retract your vote.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/vote", request.PathParams, nil)
@@ -232,7 +226,8 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx 
 	return res, nil
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch - Stop watching this issue.
+// DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch - Stop watching an issue
+// Stop watching this issue.
 func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/watch", request.PathParams, nil)
@@ -280,7 +275,8 @@ func (s *issueTracker) DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugComponents - Returns the components that have been defined in the issue tracker.
+// GetRepositoriesWorkspaceRepoSlugComponents - List components
+// Returns the components that have been defined in the issue tracker.
 //
 // This resource is only available on repositories that have the issue
 // tracker enabled.
@@ -337,7 +333,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponents(ctx context.Co
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugComponentsComponentID - Returns the specified issue tracker component object.
+// GetRepositoriesWorkspaceRepoSlugComponentsComponentID - Get a component for issues
+// Returns the specified issue tracker component object.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponentsComponentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/components/{component_id}", request.PathParams, nil)
@@ -391,7 +388,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugComponentsComponentID(ctx
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssues - Returns the issues in the issue tracker.
+// GetRepositoriesWorkspaceRepoSlugIssues - List issues
+// Returns the issues in the issue tracker.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssues(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues", request.PathParams, nil)
@@ -445,7 +443,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssues(ctx context.Contex
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZip - This endpoint is used to poll for the progress of an issue export
+// GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIDZip - Check issue export status
+// This endpoint is used to poll for the progress of an issue export
 // job and return the zip file after the job is complete.
 // As long as the job is running, this will return a 200 response
 // with in the response body a description of the current status.
@@ -531,7 +530,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssue
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesImport - When using GET, this endpoint reports the status of the current import task. Request example:
+// GetRepositoriesWorkspaceRepoSlugIssuesImport - Check issue import status
+// When using GET, this endpoint reports the status of the current import task. Request example:
 //
 // ```
 // $ curl -u <username> -X GET https://api.bitbucket.org/2.0/repositories/<owner_username>/<repo_slug>/issues/import
@@ -615,7 +615,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesImport(ctx context.
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesIssueID - Returns the specified issue.
+// GetRepositoriesWorkspaceRepoSlugIssuesIssueID - Get an issue
+// Returns the specified issue.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}", request.PathParams, nil)
@@ -673,7 +674,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments - Returns all attachments for this issue.
+// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments - List attachments for an issue
+// Returns all attachments for this issue.
 //
 // This returns the files' meta data. This does not return the files'
 // actual contents.
@@ -733,7 +735,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments(
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath - Returns the contents of the specified file attachment.
+// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsPath - Get attachment for an issue
+// Returns the contents of the specified file attachment.
 //
 // Note that this endpoint does not return a JSON response, but instead
 // returns a redirect pointing to the actual file that in turn will return
@@ -788,7 +791,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsP
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges - Returns the list of all changes that have been made to the specified
+// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges - List changes on an issue
+// Returns the list of all changes that have been made to the specified
 // issue. Changes are returned in chronological order with the oldest
 // change first.
 //
@@ -894,7 +898,7 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachmentsP
 //
 // ```
 //
-// Changes support [filtering and sorting](../../../meta/filtering) that
+// Changes support [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) that
 // can be used to search for specific changes. For instance, to see
 // when an issue transitioned to "resolved":
 //
@@ -974,7 +978,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx 
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeID - Returns the specified issue change object.
+// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChangeID - Get issue change object
+// Returns the specified issue change object.
 //
 // This resource is only available on repositories that have the issue
 // tracker enabled.
@@ -1031,14 +1036,15 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDChangesChang
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDComments - Returns a paginated list of all comments that were made on the
+// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDComments - List comments on an issue
+// Returns a paginated list of all comments that were made on the
 // specified issue.
 //
 // The default sorting is oldest to newest and can be overridden with
 // the `sort` query parameter.
 //
 // This endpoint also supports filtering and sorting of the results. See
-// [filtering and sorting](../../../../../../meta/filtering) for more details.
+// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments", request.PathParams, nil)
@@ -1086,7 +1092,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ctx
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID - Returns the specified issue comment object.
+// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID - Get a comment on an issue
+// Returns the specified issue comment object.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/issues/{issue_id}/comments/{comment_id}", request.PathParams, nil)
@@ -1130,7 +1137,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsComm
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVote - Check whether the authenticated user has voted for this issue.
+// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVote - Check if current user voted for an issue
+// Check whether the authenticated user has voted for this issue.
 // A 204 status code indicates that the user has voted, while a 404
 // implies they haven't.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVoteResponse, error) {
@@ -1180,7 +1188,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx con
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch - Indicated whether or not the authenticated user is watching this
+// GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch - Check if current user is watching a issue
+// Indicated whether or not the authenticated user is watching this
 // issue.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchRequest) (*operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatchResponse, error) {
 	baseURL := s.serverURL
@@ -1229,7 +1238,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch(ctx co
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugMilestones - Returns the milestones that have been defined in the issue tracker.
+// GetRepositoriesWorkspaceRepoSlugMilestones - List milestones
+// Returns the milestones that have been defined in the issue tracker.
 //
 // This resource is only available on repositories that have the issue
 // tracker enabled.
@@ -1286,7 +1296,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestones(ctx context.Co
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID - Returns the specified issue tracker milestone object.
+// GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID - Get a milestone
+// Returns the specified issue tracker milestone object.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/milestones/{milestone_id}", request.PathParams, nil)
@@ -1340,7 +1351,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneID(ctx
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugVersions - Returns the versions that have been defined in the issue tracker.
+// GetRepositoriesWorkspaceRepoSlugVersions - List defined versions for issues
+// Returns the versions that have been defined in the issue tracker.
 //
 // This resource is only available on repositories that have the issue
 // tracker enabled.
@@ -1397,7 +1409,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersions(ctx context.Cont
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugVersionsVersionID - Returns the specified issue tracker version object.
+// GetRepositoriesWorkspaceRepoSlugVersionsVersionID - Get a defined version for issues
+// Returns the specified issue tracker version object.
 func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersionsVersionID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/versions/{version_id}", request.PathParams, nil)
@@ -1451,7 +1464,8 @@ func (s *issueTracker) GetRepositoriesWorkspaceRepoSlugVersionsVersionID(ctx con
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugIssues - Creates a new issue.
+// PostRepositoriesWorkspaceRepoSlugIssues - Create an issue
+// Creates a new issue.
 //
 // This call requires authentication. Private repositories or private
 // issue trackers require the caller to authenticate with an account that
@@ -1527,7 +1541,8 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssues(ctx context.Conte
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugIssuesExport - A POST request to this endpoint initiates a new background celery task that archives the repo's issues.
+// PostRepositoriesWorkspaceRepoSlugIssuesExport - Export issues
+// A POST request to this endpoint initiates a new background celery task that archives the repo's issues.
 //
 // For example, you can run:
 //
@@ -1591,7 +1606,8 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesExport(ctx context
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugIssuesImport - A POST request to this endpoint will import the zip file given by the archive parameter into the repository. All
+// PostRepositoriesWorkspaceRepoSlugIssuesImport - Import issues
+// A POST request to this endpoint will import the zip file given by the archive parameter into the repository. All
 // existing issues will be deleted and replaced by the contents of the imported zip file.
 //
 // Imports are done through a multipart/form-data POST. There is one valid and required form field, with the name
@@ -1675,7 +1691,8 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesImport(ctx context
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments - Upload new issue attachments.
+// PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments - Upload an attachment to an issue
+// Upload new issue attachments.
 //
 // To upload files, perform a `multipart/form-data` POST containing one
 // or more file fields.
@@ -1731,7 +1748,8 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDAttachments
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges - Makes a change to the specified issue.
+// PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges - Modify the state of an issue
+// Makes a change to the specified issue.
 //
 // For example, to change an issue's state and assignee, create a new
 // change object that modifies these fields:
@@ -1840,7 +1858,8 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDChanges(ctx
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments - Creates a new issue comment.
+// PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments - Create a comment on an issue
+// Creates a new issue comment.
 //
 // ```
 //
@@ -1906,7 +1925,8 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ct
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugIssuesIssueID - Modifies the issue.
+// PutRepositoriesWorkspaceRepoSlugIssuesIssueID - Update an issue
+// Modifies the issue.
 //
 // ```
 //
@@ -1915,7 +1935,7 @@ func (s *issueTracker) PostRepositoriesWorkspaceRepoSlugIssuesIssueIDComments(ct
 //	  -d '{
 //	  "title": "Updated title",
 //	  "assignee": {
-//	    "username": "evzijst"
+//	    "account_id": "5d5355e8c6b9320d9ea5b28d"
 //	  },
 //	  "priority": "minor",
 //	  "version": {
@@ -1989,7 +2009,8 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueID(ctx context
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID - Updates the content of the specified issue comment. Note that only
+// PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsCommentID - Update a comment on an issue
+// Updates the content of the specified issue comment. Note that only
 // the `content.raw` field can be modified.
 //
 // ```
@@ -2063,7 +2084,8 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDCommentsComm
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVote - Vote for this issue.
+// PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVote - Vote for an issue
+// Vote for this issue.
 //
 // To cast your vote, do an empty PUT. The 204 status code indicates that
 // the operation was successful.
@@ -2114,7 +2136,8 @@ func (s *issueTracker) PutRepositoriesWorkspaceRepoSlugIssuesIssueIDVote(ctx con
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch - Start watching this issue.
+// PutRepositoriesWorkspaceRepoSlugIssuesIssueIDWatch - Watch an issue
+// Start watching this issue.
 //
 // To start watching this issue, do an empty PUT. The 204 status code
 // indicates that the operation was successful.

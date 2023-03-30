@@ -10,8 +10,9 @@ import (
 type ContactTypeEnum string
 
 const (
-	ContactTypeEnumPersonal   ContactTypeEnum = "PERSONAL"
-	ContactTypeEnumEscalation ContactTypeEnum = "ESCALATION"
+	ContactTypeEnumPersonal       ContactTypeEnum = "PERSONAL"
+	ContactTypeEnumEscalation     ContactTypeEnum = "ESCALATION"
+	ContactTypeEnumOncallSchedule ContactTypeEnum = "ONCALL_SCHEDULE"
 )
 
 func (e *ContactTypeEnum) UnmarshalJSON(data []byte) error {
@@ -23,6 +24,8 @@ func (e *ContactTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PERSONAL":
 		fallthrough
 	case "ESCALATION":
+		fallthrough
+	case "ONCALL_SCHEDULE":
 		*e = ContactTypeEnum(s)
 		return nil
 	default:

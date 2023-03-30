@@ -4,7 +4,7 @@ package shared
 
 // ContainerPort - ContainerPort represents a network port in a single container.
 type ContainerPort struct {
-	// Port number the container listens on. This must be a valid port number, 0 < x < 65536.
+	// Port number the container listens on. If present, this must be a valid port number, 0 < x < 65536. If not present, it will default to port 8080. For more information, see https://cloud.google.com/run/docs/container-contract#port
 	ContainerPort *int `json:"containerPort,omitempty"`
 	// If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
 	Name *string `json:"name,omitempty"`

@@ -8,10 +8,14 @@ import (
 
 // SettingsChangeEntity - List Settings Changes
 type SettingsChangeEntity struct {
-	// Specifics on what changed.
-	ChangeDetails map[string]interface{} `json:"change_details,omitempty"`
+	// Markdown-formatted change messages.
+	Changes []string `json:"changes,omitempty"`
 	// The time this change was made
 	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// The user id responsible for this change
 	UserID *int `json:"user_id,omitempty"`
+	// true if this change was performed by Files.com support.
+	UserIsFilesSupport *bool `json:"user_is_files_support,omitempty"`
+	// The username of the user responsible for this change
+	Username *string `json:"username,omitempty"`
 }

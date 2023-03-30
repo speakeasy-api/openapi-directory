@@ -20,7 +20,9 @@ pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/createcategories.go
+pkg/models/operations/deletecategory.go
 pkg/models/operations/getproducttypes.go
+pkg/models/operations/renamecategory.go
 pkg/models/operations/creatediscount.go
 pkg/models/operations/deletediscount.go
 pkg/models/operations/getalldiscounts.go
@@ -49,10 +51,11 @@ pkg/models/operations/gettaxrates.go
 pkg/models/operations/gettaxsettings.go
 pkg/models/operations/settaxationmode.go
 pkg/models/operations/updatetaxrate.go
-pkg/models/shared/categoryrequest.go
+pkg/models/shared/createcategoriesrequest.go
 pkg/models/shared/categorydto.go
 pkg/models/shared/security.go
 pkg/models/shared/categoryresponse.go
+pkg/models/shared/renamecategoryrequest.go
 pkg/models/shared/errorresponse.go
 pkg/models/shared/constraintviolation.go
 pkg/models/shared/discountrequest.go
@@ -81,7 +84,6 @@ pkg/models/shared/productcountresponse.go
 pkg/models/shared/productcreaterequest.go
 pkg/models/shared/variantoptionsresponse.go
 pkg/models/shared/option.go
-pkg/models/shared/productupdaterequest.go
 pkg/models/shared/slugresponse.go
 pkg/models/shared/createslugrequest.go
 pkg/models/shared/taxratesresponse.go

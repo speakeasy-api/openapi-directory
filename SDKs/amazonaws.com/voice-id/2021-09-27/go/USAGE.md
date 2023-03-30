@@ -19,8 +19,8 @@ func main() {
         }),
     )
 
-    req := operations.CreateDomainRequest{
-        Headers: operations.CreateDomainHeaders{
+    req := operations.AssociateFraudsterRequest{
+        Headers: operations.AssociateFraudsterHeaders{
             XAmzAlgorithm: "unde",
             XAmzContentSha256: "deserunt",
             XAmzCredential: "porro",
@@ -28,35 +28,22 @@ func main() {
             XAmzSecurityToken: "id",
             XAmzSignature: "vero",
             XAmzSignedHeaders: "perspiciatis",
-            XAmzTarget: "VoiceID.CreateDomain",
+            XAmzTarget: "VoiceID.AssociateFraudster",
         },
-        Request: shared.CreateDomainRequest{
-            ClientToken: "nihil",
-            Description: "fuga",
-            Name: "facilis",
-            ServerSideEncryptionConfiguration: shared.ServerSideEncryptionConfiguration{
-                KmsKeyID: "eum",
-            },
-            Tags: []shared.Tag{
-                shared.Tag{
-                    Key: "ullam",
-                    Value: "saepe",
-                },
-                shared.Tag{
-                    Key: "inventore",
-                    Value: "sapiente",
-                },
-            },
+        Request: shared.AssociateFraudsterRequest{
+            DomainID: "nihil",
+            FraudsterID: "fuga",
+            WatchlistID: "facilis",
         },
     }
 
     ctx := context.Background()
-    res, err := s.CreateDomain(ctx, req)
+    res, err := s.AssociateFraudster(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CreateDomainResponse != nil {
+    if res.AssociateFraudsterResponse != nil {
         // handle response
     }
 }

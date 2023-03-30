@@ -8,7 +8,7 @@ import (
 )
 
 type GetSourceDefinitionSpecificationRequest struct {
-	Request shared.SourceDefinitionIDRequestBody `request:"mediaType=application/json"`
+	Request shared.SourceDefinitionIDWithWorkspaceID `request:"mediaType=application/json"`
 }
 
 type GetSourceDefinitionSpecificationResponse struct {

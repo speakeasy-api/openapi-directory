@@ -5,6 +5,7 @@ package shared
 // ResourceMapping - Defines a resource mapping.
 type ResourceMapping struct {
 	AppRegistryAppName  *string                 `json:"appRegistryAppName,omitempty"`
+	EksSourceName       *string                 `json:"eksSourceName,omitempty"`
 	LogicalStackName    *string                 `json:"logicalStackName,omitempty"`
 	MappingType         ResourceMappingTypeEnum `json:"mappingType"`
 	PhysicalResourceID  PhysicalResourceID      `json:"physicalResourceId"`

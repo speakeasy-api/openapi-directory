@@ -3,7 +3,11 @@
 package shared
 
 type EnvironmentAccessModel struct {
+	Color                 *string                    `json:"color,omitempty"`
+	Description           *string                    `json:"description,omitempty"`
 	EnvironmentAccessType *EnvironmentAccessTypeEnum `json:"environmentAccessType,omitempty"`
 	EnvironmentID         *string                    `json:"environmentId,omitempty"`
 	Name                  *string                    `json:"name,omitempty"`
+	Order                 *int                       `json:"order,omitempty"`
+	ReasonRequired        *bool                      `json:"reasonRequired,omitempty"`
 }

@@ -4,7 +4,7 @@ package shared
 
 // SpeakerDiarizationConfigInput - Config to enable speaker diarization.
 type SpeakerDiarizationConfigInput struct {
-	// If 'true', enables speaker detection for each recognized word in the top alternative of the recognition result using a speaker_tag provided in the WordInfo.
+	// If 'true', enables speaker detection for each recognized word in the top alternative of the recognition result using a speaker_label provided in the WordInfo.
 	EnableSpeakerDiarization *bool `json:"enableSpeakerDiarization,omitempty"`
 	// Maximum number of speakers in the conversation. This range gives you more flexibility by allowing the system to automatically determine the correct number of speakers. If not set, the default value is 6.
 	MaxSpeakerCount *int `json:"maxSpeakerCount,omitempty"`

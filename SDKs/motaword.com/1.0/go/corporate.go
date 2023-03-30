@@ -32,8 +32,8 @@ func newCorporate(defaultClient, securityClient HTTPClient, serverURL, language,
 	}
 }
 
-// GetAvailableCorporatePermissions - Get a list of available permissions for this corporate account. They are used when assigning permissions to corporate users.
-// Get a list of available permissions for this corporate account. They are used when assigning permissions to corporate users.
+// GetAvailableCorporatePermissions - View available permissions
+// View a list of available permissions for your corporate account. They are used when assigning permissions to your corporate users.
 func (s *corporate) GetAvailableCorporatePermissions(ctx context.Context) (*operations.GetAvailableCorporatePermissionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/corporate/permissions"
@@ -122,8 +122,8 @@ func (s *corporate) GetAvailableCorporatePermissionsByID(ctx context.Context, re
 	return res, nil
 }
 
-// GetCorporate - Get details of my corporate account
-// Get details of my corporate account
+// GetCorporate - View your corporate account
+// View the details of the corporate account that your user account belongs to.
 func (s *corporate) GetCorporate(ctx context.Context) (*operations.GetCorporateResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/corporate"
@@ -212,8 +212,8 @@ func (s *corporate) GetCorporateByID(ctx context.Context, request operations.Get
 	return res, nil
 }
 
-// GetCorporateUserGroups - Get a list of user groups for my corporate account
-// Get a list of user groups for my corporate account
+// GetCorporateUserGroups - View user groups
+// View a list of user groups under my corporate account. User groups are a part of our RBAC implementation and can be used to configure complex permission scenarios.
 func (s *corporate) GetCorporateUserGroups(ctx context.Context) (*operations.GetCorporateUserGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/corporate/user-groups"
@@ -302,8 +302,8 @@ func (s *corporate) GetCorporateUserGroupsByID(ctx context.Context, request oper
 	return res, nil
 }
 
-// GetCorporateUsers - Get a list of users for my corporate account
-// Get a list of users for my corporate account
+// GetCorporateUsers - View users
+// View a list of users under your corporate account. This endpoint will only return information if your user account is permitted to view corporate account users, configured by your administrator.
 func (s *corporate) GetCorporateUsers(ctx context.Context) (*operations.GetCorporateUsersResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/corporate/users"
@@ -392,8 +392,53 @@ func (s *corporate) GetCorporateUsersByID(ctx context.Context, request operation
 	return res, nil
 }
 
-// SaveCorporateUser - Create or update a corporate user
-// Create or update a corporate user
+// GetCorporatesList - Get a list of corporate accounts
+// Get a list of corporate accounts
+func (s *corporate) GetCorporatesList(ctx context.Context) (*operations.GetCorporatesListResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/corporates/all"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetCorporatesListResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.CorporateAccount
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.CorporateAccounts = out
+		}
+	}
+
+	return res, nil
+}
+
+// SaveCorporateUser - Create or update a user
+// Create or update a user under your corporate account. This endpoint requires permissions for corporate user management, configured by your administrator.
 func (s *corporate) SaveCorporateUser(ctx context.Context, request operations.SaveCorporateUserRequest) (*operations.SaveCorporateUserResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/corporate/users"

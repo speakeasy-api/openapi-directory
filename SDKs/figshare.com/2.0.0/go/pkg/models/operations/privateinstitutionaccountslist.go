@@ -14,6 +14,10 @@ type PrivateInstitutionAccountsListSecurity struct {
 type PrivateInstitutionAccountsListQueryParams struct {
 	// Filter by email
 	Email *string `queryParam:"style=form,explode=true,name=email"`
+	// Retrieve accounts with an ID greater or equal to the specified value
+	IDGte *int64 `queryParam:"style=form,explode=true,name=id_gte"`
+	// Retrieve accounts with an ID lower or equal to the specified value
+	IDLte *int64 `queryParam:"style=form,explode=true,name=id_lte"`
 	// Filter by institution_user_id
 	InstitutionUserID *string `queryParam:"style=form,explode=true,name=institution_user_id"`
 	// Filter by active status

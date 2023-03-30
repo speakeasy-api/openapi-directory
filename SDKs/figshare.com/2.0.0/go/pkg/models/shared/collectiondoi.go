@@ -5,5 +5,5 @@ package shared
 // CollectionDOI - OK
 type CollectionDOI struct {
 	// Reserved DOI
-	Doi *string `json:"doi,omitempty"`
+	Doi string `json:"doi"`
 }

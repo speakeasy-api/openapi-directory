@@ -8,18 +8,12 @@ import (
 )
 
 type GetPipelineVariablesForTeamPathParams struct {
-	// Automatically added
+	// The account.
 	Username string `pathParam:"style=simple,explode=false,name=username"`
 }
 
-type GetPipelineVariablesForTeamQueryParams struct {
-	// This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
-	Workspace string `queryParam:"style=form,explode=true,name=workspace"`
-}
-
 type GetPipelineVariablesForTeamRequest struct {
-	PathParams  GetPipelineVariablesForTeamPathParams
-	QueryParams GetPipelineVariablesForTeamQueryParams
+	PathParams GetPipelineVariablesForTeamPathParams
 }
 
 type GetPipelineVariablesForTeamResponse struct {

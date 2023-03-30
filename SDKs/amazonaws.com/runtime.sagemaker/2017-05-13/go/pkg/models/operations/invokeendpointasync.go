@@ -30,9 +30,9 @@ type InvokeEndpointAsyncHeaders struct {
 	XAmznSageMakerInferenceID *string `header:"style=simple,explode=false,name=X-Amzn-SageMaker-Inference-Id"`
 	// The Amazon S3 URI where the inference request payload is stored.
 	XAmznSageMakerInputLocation string `header:"style=simple,explode=false,name=X-Amzn-SageMaker-InputLocation"`
-	// Maximum amount of time in seconds a request can be processed before it is marked as expired.
+	// Maximum amount of time in seconds a request can be processed before it is marked as expired. The default is 15 minutes, or 900 seconds.
 	XAmznSageMakerInvocationTimeoutSeconds *int64 `header:"style=simple,explode=false,name=X-Amzn-SageMaker-InvocationTimeoutSeconds"`
-	// Maximum age in seconds a request can be in the queue before it is marked as expired.
+	// Maximum age in seconds a request can be in the queue before it is marked as expired. The default is 6 hours, or 21,600 seconds.
 	XAmznSageMakerRequestTTLSeconds *int64 `header:"style=simple,explode=false,name=X-Amzn-SageMaker-RequestTTLSeconds"`
 }
 

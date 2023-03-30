@@ -26,10 +26,10 @@ type GetPullrequestsSelectedUserPathParams struct {
 type GetPullrequestsSelectedUserStateEnum string
 
 const (
-	GetPullrequestsSelectedUserStateEnumMerged     GetPullrequestsSelectedUserStateEnum = "MERGED"
-	GetPullrequestsSelectedUserStateEnumSuperseded GetPullrequestsSelectedUserStateEnum = "SUPERSEDED"
 	GetPullrequestsSelectedUserStateEnumOpen       GetPullrequestsSelectedUserStateEnum = "OPEN"
+	GetPullrequestsSelectedUserStateEnumMerged     GetPullrequestsSelectedUserStateEnum = "MERGED"
 	GetPullrequestsSelectedUserStateEnumDeclined   GetPullrequestsSelectedUserStateEnum = "DECLINED"
+	GetPullrequestsSelectedUserStateEnumSuperseded GetPullrequestsSelectedUserStateEnum = "SUPERSEDED"
 )
 
 func (e *GetPullrequestsSelectedUserStateEnum) UnmarshalJSON(data []byte) error {
@@ -38,13 +38,13 @@ func (e *GetPullrequestsSelectedUserStateEnum) UnmarshalJSON(data []byte) error 
 		return err
 	}
 	switch s {
-	case "MERGED":
-		fallthrough
-	case "SUPERSEDED":
-		fallthrough
 	case "OPEN":
 		fallthrough
+	case "MERGED":
+		fallthrough
 	case "DECLINED":
+		fallthrough
+	case "SUPERSEDED":
 		*e = GetPullrequestsSelectedUserStateEnum(s)
 		return nil
 	default:

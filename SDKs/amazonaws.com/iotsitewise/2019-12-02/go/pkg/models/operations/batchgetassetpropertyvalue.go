@@ -23,7 +23,7 @@ type BatchGetAssetPropertyValueHeaders struct {
 }
 
 type BatchGetAssetPropertyValueRequestBody struct {
-	// The list of asset property value entries for the batch get request. You can specify up to 16 entries per request.
+	// The list of asset property value entries for the batch get request. You can specify up to 128 entries per request.
 	Entries []shared.BatchGetAssetPropertyValueEntry `json:"entries"`
 	// The token to be used for the next set of paginated results.
 	NextToken *string `json:"nextToken,omitempty"`

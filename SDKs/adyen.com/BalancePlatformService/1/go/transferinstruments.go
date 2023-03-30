@@ -62,16 +62,7 @@ func (s *transferInstruments) DeleteTransferInstrumentsID(ctx context.Context, r
 		RawResponse: httpRes,
 	}
 	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.VoidResponse = out
-		}
+	case httpRes.StatusCode == 204:
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 401:
@@ -96,7 +87,7 @@ func (s *transferInstruments) DeleteTransferInstrumentsID(ctx context.Context, r
 }
 
 // GetTransferInstrumentsID - Get a transfer instrument
-// Returns a transfer instrument.
+// Returns the details of a transfer instrument.
 func (s *transferInstruments) GetTransferInstrumentsID(ctx context.Context, request operations.GetTransferInstrumentsIDRequest) (*operations.GetTransferInstrumentsIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/transferInstruments/{id}", request.PathParams, nil)
@@ -231,7 +222,7 @@ func (s *transferInstruments) PatchTransferInstrumentsID(ctx context.Context, re
 // PostTransferInstruments - Create a transfer instrument
 // Creates a transfer instrument.
 //
-// A transfer instrument is a bank account or other payment details that a legal entity owns. Adyen performs verification checks on the transfer instrument as required by payment industry regulations. We inform you of the verification results through webhooks or API responses.
+// A transfer instrument is a bank account that a legal entity owns. Adyen performs verification checks on the transfer instrument as required by payment industry regulations. We inform you of the verification results through webhooks or API responses.
 //
 // When the transfer instrument passes the verification checks, you can start sending funds from the balance platform to the transfer instrument (such as payouts).
 func (s *transferInstruments) PostTransferInstruments(ctx context.Context, request operations.PostTransferInstrumentsRequest) (*operations.PostTransferInstrumentsResponse, error) {

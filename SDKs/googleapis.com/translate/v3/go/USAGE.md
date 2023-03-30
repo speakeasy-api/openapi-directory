@@ -40,6 +40,7 @@ func main() {
         },
         Request: &shared.BatchTranslateDocumentRequest{
             CustomizedAttribution: "eum",
+            EnableShadowRemovalNativePdf: false,
             FormatConversions: map[string]string{
                 "ullam": "saepe",
                 "inventore": "sapiente",

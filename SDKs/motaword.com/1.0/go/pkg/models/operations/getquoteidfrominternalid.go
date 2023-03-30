@@ -16,18 +16,12 @@ type GetQuoteIDFromInternalIDRequest struct {
 	PathParams GetQuoteIDFromInternalIDPathParams
 }
 
-// GetQuoteIDFromInternalID200ApplicationJSON - QuoteId
-type GetQuoteIDFromInternalID200ApplicationJSON struct {
-	InternalID *int64 `json:"internal-id,omitempty"`
-	PublicID   *int64 `json:"public-id,omitempty"`
-}
-
 type GetQuoteIDFromInternalIDResponse struct {
 	ContentType string
 	// ProjectNotFound
-	Error       *shared.Error
+	Error *shared.Error
+	// QuoteId
+	ProjectID   *shared.ProjectID
 	StatusCode  int
 	RawResponse *http.Response
-	// QuoteId
-	GetQuoteIDFromInternalID200ApplicationJSONObject *GetQuoteIDFromInternalID200ApplicationJSON
 }

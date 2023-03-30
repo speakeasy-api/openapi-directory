@@ -9,6 +9,7 @@ import (
 	"openapi/pkg/models/operations"
 	"openapi/pkg/models/shared"
 	"openapi/pkg/utils"
+	"strings"
 )
 
 // attachments - An *attachment* object represents any file attached to a task in Asana, whether it’s an uploaded file or one associated via a third-party service such as Dropbox or Google Drive.
@@ -32,27 +33,26 @@ func newAttachments(defaultClient, securityClient HTTPClient, serverURL, languag
 	}
 }
 
-// CreateAttachmentForTask - Upload an attachment
+// CreateAttachmentForObject - Upload an attachment
 // Upload an attachment.
 //
-// This method uploads an attachment to a task and returns the compact
-// record for the created attachment object. It is not possible to attach
-// files from third party services such as Dropbox, Box & Google Drive via
-// the API. You must download the file content first and then upload it as
-// any other attachment.
+// This method uploads an attachment on an object and returns the compact
+// record for the created attachment object. This is possible by either:
+//
+// - Providing the URL of the external resource being attached, or
+// - Downloading the file content first and then uploading it as any other attachment. Note that it is not possible to attach
+// files from third party services such as Dropbox, Box, Vimeo & Google Drive via the API
 //
 // The 100MB size limit on attachments in Asana is enforced on this endpoint.
 //
-// This endpoint expects a multipart/form-data encoded request containing
-// the full contents of the file to be uploaded.
+// This endpoint expects a multipart/form-data encoded request containing the full contents of the file to be uploaded.
 //
 // Requests made should follow the HTTP/1.1 specification that line
 // terminators are of the form `CRLF` or `\r\n` outlined
-// [here](http://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01#Basic-Rules)
-// in order for the server to reliably and properly handle the request.
-func (s *attachments) CreateAttachmentForTask(ctx context.Context, request operations.CreateAttachmentForTaskRequest) (*operations.CreateAttachmentForTaskResponse, error) {
+// [here](http://www.w3.org/Protocols/HTTP/1.1/draft-ietf-http-v11-spec-01#Basic-Rules) in order for the server to reliably and properly handle the request.
+func (s *attachments) CreateAttachmentForObject(ctx context.Context, request operations.CreateAttachmentForObjectRequest) (*operations.CreateAttachmentForObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/attachments", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/attachments"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
 	if err != nil {
@@ -86,7 +86,7 @@ func (s *attachments) CreateAttachmentForTask(ctx context.Context, request opera
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.CreateAttachmentForTaskResponse{
+	res := &operations.CreateAttachmentForObjectResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -95,12 +95,12 @@ func (s *attachments) CreateAttachmentForTask(ctx context.Context, request opera
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.CreateAttachmentForTask200ApplicationJSON
+			var out *operations.CreateAttachmentForObject200ApplicationJSON
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.CreateAttachmentForTask200ApplicationJSONObject = out
+			res.CreateAttachmentForObject200ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough
@@ -271,11 +271,13 @@ func (s *attachments) GetAttachment(ctx context.Context, request operations.GetA
 	return res, nil
 }
 
-// GetAttachmentsForTask - Get attachments for a task
-// Returns the compact records for all attachments on the task.
-func (s *attachments) GetAttachmentsForTask(ctx context.Context, request operations.GetAttachmentsForTaskRequest) (*operations.GetAttachmentsForTaskResponse, error) {
+// GetAttachmentsForObject - Get attachments from an object
+// Returns the compact records for all attachments on the object.
+//
+// There are three possible `parent` values for this request: `project`, `project_brief`, and `task`. For a project, an attachment refers to a file uploaded to the "Key resources" section in the project Overview. For a project brief, an attachment refers to inline files in the project brief itself. For a task, an attachment refers to a file directly associated to that task.
+func (s *attachments) GetAttachmentsForObject(ctx context.Context, request operations.GetAttachmentsForObjectRequest) (*operations.GetAttachmentsForObjectResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/tasks/{task_gid}/attachments", request.PathParams, nil)
+	url := strings.TrimSuffix(baseURL, "/") + "/attachments"
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -299,7 +301,7 @@ func (s *attachments) GetAttachmentsForTask(ctx context.Context, request operati
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetAttachmentsForTaskResponse{
+	res := &operations.GetAttachmentsForObjectResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -308,12 +310,12 @@ func (s *attachments) GetAttachmentsForTask(ctx context.Context, request operati
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.GetAttachmentsForTask200ApplicationJSON
+			var out *operations.GetAttachmentsForObject200ApplicationJSON
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.GetAttachmentsForTask200ApplicationJSONObject = out
+			res.GetAttachmentsForObject200ApplicationJSONObject = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough

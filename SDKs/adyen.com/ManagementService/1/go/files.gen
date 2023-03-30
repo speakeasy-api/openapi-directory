@@ -202,6 +202,7 @@ pkg/models/shared/meapicredential.go
 pkg/models/shared/createallowedoriginrequest.go
 pkg/models/shared/paymentmethodresponse.go
 pkg/models/shared/paymentmethod.go
+pkg/models/shared/vippsinfo.go
 pkg/models/shared/swishinfo.go
 pkg/models/shared/sofortinfo.go
 pkg/models/shared/paypalinfo.go
@@ -262,6 +263,8 @@ pkg/models/shared/standalone.go
 pkg/models/shared/signature.go
 pkg/models/shared/receiptprinting.go
 pkg/models/shared/receiptoptions.go
+pkg/models/shared/payment.go
+pkg/models/shared/payattable.go
 pkg/models/shared/passcodes.go
 pkg/models/shared/opi.go
 pkg/models/shared/offlineprocessing.go

@@ -50,11 +50,8 @@ const (
 	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnumDataRetentionSettings                 GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum = "DATA_RETENTION_SETTINGS"
 	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnumDisplayVideo360AdvertiserLink         GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum = "DISPLAY_VIDEO_360_ADVERTISER_LINK"
 	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnumDisplayVideo360AdvertiserLinkProposal GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum = "DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL"
-	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnumSearchAds360Link                      GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum = "SEARCH_ADS_360_LINK"
 	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnumDataStream                            GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum = "DATA_STREAM"
 	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnumAttributionSettings                   GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum = "ATTRIBUTION_SETTINGS"
-	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnumExpandedDataSet                       GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum = "EXPANDED_DATA_SET"
-	GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnumChannelGroup                          GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum = "CHANNEL_GROUP"
 )
 
 func (e *GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -85,15 +82,9 @@ func (e *GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeE
 		fallthrough
 	case "DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL":
 		fallthrough
-	case "SEARCH_ADS_360_LINK":
-		fallthrough
 	case "DATA_STREAM":
 		fallthrough
 	case "ATTRIBUTION_SETTINGS":
-		fallthrough
-	case "EXPANDED_DATA_SET":
-		fallthrough
-	case "CHANNEL_GROUP":
 		*e = GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequestResourceTypeEnum(s)
 		return nil
 	default:

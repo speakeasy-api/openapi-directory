@@ -42,36 +42,22 @@ func main() {
             UploadProtocol: "eum",
         },
         Request: &shared.EkmConnectionInput{
-            Etag: "iusto",
+            CryptoSpacePath: "iusto",
+            Etag: "ullam",
+            KeyManagementMode: "CLOUD_KMS",
             ServiceResolvers: []shared.ServiceResolverInput{
                 shared.ServiceResolverInput{
-                    EndpointFilter: "saepe",
-                    Hostname: "anahi.org",
+                    EndpointFilter: "sapiente",
+                    Hostname: "donny.info",
                     ServerCertificates: []shared.CertificateInput{
                         shared.CertificateInput{
-                            RawDer: "eum",
+                            RawDer: "autem",
                         },
                         shared.CertificateInput{
-                            RawDer: "voluptatum",
+                            RawDer: "vel",
                         },
                     },
-                    ServiceDirectoryService: "autem",
-                },
-                shared.ServiceResolverInput{
-                    EndpointFilter: "vel",
-                    Hostname: "june.info",
-                    ServerCertificates: []shared.CertificateInput{
-                        shared.CertificateInput{
-                            RawDer: "reprehenderit",
-                        },
-                        shared.CertificateInput{
-                            RawDer: "molestiae",
-                        },
-                        shared.CertificateInput{
-                            RawDer: "quo",
-                        },
-                    },
-                    ServiceDirectoryService: "quasi",
+                    ServiceDirectoryService: "non",
                 },
             },
         },

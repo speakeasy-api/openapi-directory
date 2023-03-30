@@ -22,6 +22,8 @@ type RemoveDraftAppVersionResourceMappingsRequestBody struct {
 	AppArn string `json:"appArn"`
 	// The names of the registered applications you want to remove from the resource mappings.
 	AppRegistryAppNames []string `json:"appRegistryAppNames,omitempty"`
+	// <p>The names of the Amazon Elastic Kubernetes Service clusters and namespaces you want to remove from the resource mappings.</p> <note> <p>This parameter accepts values in "eks-cluster/namespace" format.</p> </note>
+	EksSourceNames []string `json:"eksSourceNames,omitempty"`
 	// The names of the CloudFormation stacks you want to remove from the resource mappings.
 	LogicalStackNames []string `json:"logicalStackNames,omitempty"`
 	// The names of the resource groups you want to remove from the resource mappings.

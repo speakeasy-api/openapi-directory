@@ -32,7 +32,7 @@ func newOEMIncentiveSearch(defaultClient, securityClient HTTPClient, serverURL, 
 	}
 }
 
-// GetSearchCarIncentiveOem - Gets oem incentive listings for the given search criteria
+// OemSearch - Gets oem incentive listings for the given search criteria
 // This endpoint is the meat of the API and serves many purposes. This API produces a list of currently active oem incentive from the market for the given search criteria. The API results are limited to allow pagination upto 10000 rows.
 //
 //	The search API facilitates the following use cases -
@@ -47,7 +47,7 @@ func newOEMIncentiveSearch(defaultClient, securityClient HTTPClient, serverURL, 
 // 8. Search cars for a given City / State combination
 // 9. Get Facets to build the search drill downs
 // 10. Get Market averages for price/miles/dom for your search
-func (s *oemIncentiveSearch) GetSearchCarIncentiveOem(ctx context.Context, request operations.GetSearchCarIncentiveOemRequest) (*operations.GetSearchCarIncentiveOemResponse, error) {
+func (s *oemIncentiveSearch) OemSearch(ctx context.Context, request operations.OemSearchRequest) (*operations.OemSearchResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/search/car/incentive/oem"
 
@@ -60,7 +60,7 @@ func (s *oemIncentiveSearch) GetSearchCarIncentiveOem(ctx context.Context, reque
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.defaultClient
+	client := s.securityClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -73,7 +73,7 @@ func (s *oemIncentiveSearch) GetSearchCarIncentiveOem(ctx context.Context, reque
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetSearchCarIncentiveOemResponse{
+	res := &operations.OemSearchResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

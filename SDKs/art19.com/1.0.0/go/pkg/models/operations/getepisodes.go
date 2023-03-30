@@ -10,6 +10,10 @@ import (
 	"time"
 )
 
+type GetEpisodesSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetEpisodesSortEnum string
 
 const (
@@ -94,6 +98,7 @@ type GetEpisodesQueryParams struct {
 
 type GetEpisodesRequest struct {
 	QueryParams GetEpisodesQueryParams
+	Security    GetEpisodesSecurity
 }
 
 // GetEpisodes400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

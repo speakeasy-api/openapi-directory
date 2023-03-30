@@ -463,7 +463,7 @@ func (s *customers) ChromemanagementCustomersReportsCountPrintJobsByUser(ctx con
 	return res, nil
 }
 
-// ChromemanagementCustomersReportsFindInstalledAppDevices - Generate report of devices that have a specified app installed.
+// ChromemanagementCustomersReportsFindInstalledAppDevices - Generate report of managed Chrome browser devices that have a specified app installed.
 func (s *customers) ChromemanagementCustomersReportsFindInstalledAppDevices(ctx context.Context, request operations.ChromemanagementCustomersReportsFindInstalledAppDevicesRequest) (*operations.ChromemanagementCustomersReportsFindInstalledAppDevicesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v1/{customer}/reports:findInstalledAppDevices", request.PathParams, nil)

@@ -5,7 +5,8 @@ package shared
 // DNSRecord - The record to create
 type DNSRecord struct {
 	// Variable data depending on the record type.
-	// <ul><li>A: the IPv4 address.</li><li>CNAME: canonical name of an alias.</li><li>MX: fully qualified domain name of a mail host.</li><li>SRV: does not apply. Data for the SRV records can be found in specific properties.</li><li>TXT: free form text data.</li><li>ALIAS: canonical name of an alias.</li><li>TLSA: format should match specific values for usage, selector, matching type and data: "{usage} {selector} {matching_type} {data}"
+	// <ul><li>A: the IPv4 address.</li><li>CNAME: canonical name of an alias.</li><li>MX: fully qualified domain name of a mail host.</li><li>SRV: does not apply. Data for the SRV records can be found in specific properties.</li><li>TXT: free form text data.</li><li>CAA: format should match specific values for flag, tag and ca: "{flag} {tag} {ca}".
+	//         <ul><li>The flag. The values 128 (critical) or 0 (non-critical) are expected, with 0 as the default.</li><li>The tag. A tag specifies which actions an authorized CA can take in terms of issuing SSL/TLS certificates.<br /><ul><li>The value "issue": explicitly authorizes a single certificate authority to issue a certificate (any type) for the hostname.</li><li>The value "issuewild": explicitly authorizes a single certificate authority to issue a wildcard certificate (and only wildcard) for the hostname.</li><li>The value "iodef": specifies a URL to which a certificate authority may report policy violations.</li></ul></li><li>The ca. This is the domain of the CA (Certification Authority) that has the authority to issue certificates for the domain in question. If the value is a semicolon (;), it means that no CA has the authority to issue a certificate for that domain.</li></ul></li><li>ALIAS: canonical name of an alias.</li><li>TLSA: format should match specific values for usage, selector, matching type and data: "{usage} {selector} {matching_type} {data}"
 	//         <ul><li>The usage. The first field after the TLSA text in the DNS RR, specifies how to verify the certificate.<br /><ul><li>A value of 0 is for what is commonly called CA constraint (and PKIX-TA). The certificate provided when establishing TLS must be issued by the listed root-CA or one of its intermediate CAs, with a valid certification path to a root-CA already trusted by the application doing the verification.</li><li>A value of 1 is for what is commonly called Service certificate constraint (and PKIX-EE). The certificate used must match the TLSA record exactly, and it must also pass PKIX certification path validation to a trusted root-CA.</li><li>A value of 2 is for what is commonly called Trust Anchor Assertion (and DANE-TA). The certificate used has a valid certification path pointing back to the certificate mention in this record, but there is no need for it to pass the PKIX certification path validation to a trusted root-CA.</li><li>A value of 3 is for what is commonly called Domain issued certificate (and DANE-EE). The services uses a self-signed certificate. It is not signed by anyone else, and is exactly this record.</li></ul></li><li>The selector. When connecting to the service and a certificate is received, the selector field specifies which parts of it should be checked.<br /><ul><li>A value of 0 means to select the entire certificate for matching.</li><li>A value of 1 means to select just the public key for certificate matching. Matching the public key is often sufficient, as this is likely to be unique.</li></ul></li><li>The matching type.<br /><ul><li>A type of 0 means the entire information selected is present in the certificate association data.</li><li>A type of 1 means to do a SHA-256 hash of the selected data.</li><li>A type of 2 means to do a SHA-512 hash of the selected data.</li></ul></li><li>The actual data to be matched given the settings of the other fields. This is a long text string of hexadecimal data.</li></ul></li></ul>
 	Content *string `json:"content,omitempty"`
 	// The id of the record
@@ -25,7 +26,7 @@ type DNSRecord struct {
 	// The name of the record.<br />
 	// This is the host name, alias defined by the record.<br />
 	// An empty record or '@' is equal to the domain name.<br />
-	// Applies to A, MX, CNAME, TXT, ALIAS and TLSA records.<br />
+	// Applies to A, MX, CNAME, TXT, CAA, ALIAS and TLSA records.<br />
 	// When type is TLSA the recommended value format is port number, protocol and host: _25._tcp.<br />
 	// Does not apply for SRV records.
 	RecordName *string `json:"record_name,omitempty"`
@@ -39,7 +40,7 @@ type DNSRecord struct {
 	// It defines the time frame that clients can cache the information.<br />
 	// The value MUST be between 60 and 86400. The default value is 3600 (= 1 hour).
 	TTL *int `json:"ttl,omitempty"`
-	// The type of the record (A, MX, CNAME, SRV, TXT, ALIAS and TLSA).
+	// The type of the record (A, MX, CNAME, SRV, TXT, CAA, ALIAS and TLSA).
 	Type *string `json:"type,omitempty"`
 	// The weight for SRV records with the same priority.<br />
 	// A higher value means more preferred.

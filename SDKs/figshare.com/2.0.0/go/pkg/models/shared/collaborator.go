@@ -4,9 +4,9 @@ package shared
 
 type Collaborator struct {
 	// Collaborator name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// Collaborator role
-	RoleName *string `json:"role_name,omitempty"`
+	RoleName string `json:"role_name"`
 	// Collaborator id
-	UserID *int64 `json:"user_id,omitempty"`
+	UserID int64 `json:"user_id"`
 }

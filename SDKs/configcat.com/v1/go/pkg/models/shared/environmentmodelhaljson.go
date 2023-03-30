@@ -22,15 +22,19 @@ type EnvironmentModelHaljsonEmbeddedProductLinks struct {
 	Environments     *string `json:"environments,omitempty"`
 	Members          *string `json:"members,omitempty"`
 	PermissionGroups *string `json:"permission-groups,omitempty"`
+	Segments         *string `json:"segments,omitempty"`
 	Self             *string `json:"self,omitempty"`
 	Tags             *string `json:"tags,omitempty"`
 }
 
 type EnvironmentModelHaljsonEmbeddedProduct struct {
-	Embedded  *EnvironmentModelHaljsonEmbeddedProductEmbedded `json:"_embedded,omitempty"`
-	Links     *EnvironmentModelHaljsonEmbeddedProductLinks    `json:"_links,omitempty"`
-	Name      *string                                         `json:"name,omitempty"`
-	ProductID *string                                         `json:"productId,omitempty"`
+	Embedded       *EnvironmentModelHaljsonEmbeddedProductEmbedded `json:"_embedded,omitempty"`
+	Links          *EnvironmentModelHaljsonEmbeddedProductLinks    `json:"_links,omitempty"`
+	Description    *string                                         `json:"description,omitempty"`
+	Name           *string                                         `json:"name,omitempty"`
+	Order          *int                                            `json:"order,omitempty"`
+	ProductID      *string                                         `json:"productId,omitempty"`
+	ReasonRequired *bool                                           `json:"reasonRequired,omitempty"`
 }
 
 type EnvironmentModelHaljsonEmbedded struct {
@@ -43,8 +47,12 @@ type EnvironmentModelHaljsonLinks struct {
 
 // EnvironmentModelHaljson - When everything is ok, the environment data returned.
 type EnvironmentModelHaljson struct {
-	Embedded      *EnvironmentModelHaljsonEmbedded `json:"_embedded,omitempty"`
-	Links         *EnvironmentModelHaljsonLinks    `json:"_links,omitempty"`
-	EnvironmentID *string                          `json:"environmentId,omitempty"`
-	Name          *string                          `json:"name,omitempty"`
+	Embedded       *EnvironmentModelHaljsonEmbedded `json:"_embedded,omitempty"`
+	Links          *EnvironmentModelHaljsonLinks    `json:"_links,omitempty"`
+	Color          *string                          `json:"color,omitempty"`
+	Description    *string                          `json:"description,omitempty"`
+	EnvironmentID  *string                          `json:"environmentId,omitempty"`
+	Name           *string                          `json:"name,omitempty"`
+	Order          *int                             `json:"order,omitempty"`
+	ReasonRequired *bool                            `json:"reasonRequired,omitempty"`
 }

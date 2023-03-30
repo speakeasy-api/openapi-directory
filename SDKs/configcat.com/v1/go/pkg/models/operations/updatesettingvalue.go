@@ -22,7 +22,7 @@ type UpdateSettingValueQueryParams struct {
 type UpdateSettingValueRequest struct {
 	PathParams  UpdateSettingValuePathParams
 	QueryParams UpdateSettingValueQueryParams
-	Request     []shared.Operation `request:"mediaType=application/json"`
+	Request     shared.JSONPatchInput `request:"mediaType=application/json"`
 }
 
 type UpdateSettingValueResponse struct {

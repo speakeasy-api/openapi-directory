@@ -11,6 +11,7 @@ type Game struct {
 	AwayTeamScore                *int64   `json:"AwayTeamScore,omitempty"`
 	Channel                      *string  `json:"Channel,omitempty"`
 	DateTime                     *string  `json:"DateTime,omitempty"`
+	DateTimeUTC                  *string  `json:"DateTimeUTC,omitempty"`
 	Day                          *string  `json:"Day,omitempty"`
 	GameEndDateTime              *string  `json:"GameEndDateTime,omitempty"`
 	GameID                       *int64   `json:"GameID,omitempty"`
@@ -34,6 +35,7 @@ type Game struct {
 	PointSpreadHomeTeamMoneyLine *int64   `json:"PointSpreadHomeTeamMoneyLine,omitempty"`
 	Season                       *int64   `json:"Season,omitempty"`
 	SeasonType                   *int64   `json:"SeasonType,omitempty"`
+	SeriesInfo                   *Series  `json:"SeriesInfo,omitempty"`
 	StadiumID                    *int64   `json:"StadiumID,omitempty"`
 	Status                       *string  `json:"Status,omitempty"`
 	TimeRemainingMinutes         *int64   `json:"TimeRemainingMinutes,omitempty"`

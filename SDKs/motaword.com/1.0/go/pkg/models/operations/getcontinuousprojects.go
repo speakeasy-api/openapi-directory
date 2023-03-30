@@ -3,9 +3,41 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
+
+// GetContinuousProjectsTypeEnum - Type of continuous project.
+type GetContinuousProjectsTypeEnum string
+
+const (
+	GetContinuousProjectsTypeEnumActive GetContinuousProjectsTypeEnum = "active"
+)
+
+func (e *GetContinuousProjectsTypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "active":
+		*e = GetContinuousProjectsTypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for GetContinuousProjectsTypeEnum: %s", s)
+	}
+}
+
+type GetContinuousProjectsQueryParams struct {
+	// Type of continuous project.
+	Type *GetContinuousProjectsTypeEnum `queryParam:"style=form,explode=true,name=type"`
+}
+
+type GetContinuousProjectsRequest struct {
+	QueryParams GetContinuousProjectsQueryParams
+}
 
 type GetContinuousProjectsResponse struct {
 	ContentType string

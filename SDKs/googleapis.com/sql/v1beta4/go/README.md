@@ -128,7 +128,10 @@ func main() {
 
 ### Projects
 
+* `SQLProjectsInstancesGetDiskShrinkConfig` - Get Disk Shrink Config for a given instance.
+* `SQLProjectsInstancesPerformDiskShrink` - Perform Disk Shrink on primary instance.
 * `SQLProjectsInstancesRescheduleMaintenance` - Reschedules the maintenance on the given instance.
+* `SQLProjectsInstancesResetReplicaSize` - Reset Replica Size to primary instance disk size.
 * `SQLProjectsInstancesStartExternalSync` - Start External primary instance migration.
 * `SQLProjectsInstancesVerifyExternalSyncSettings` - Verify External primary instance external sync settings.
 

@@ -62,4 +62,6 @@ type GetResolverConfigResponse struct {
 	RawResponse               *http.Response
 	// ThrottlingException
 	ThrottlingException interface{}
+	// ValidationException
+	ValidationException interface{}
 }

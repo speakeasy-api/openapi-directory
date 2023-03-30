@@ -17,13 +17,13 @@ type PutConfigurationHeaders struct {
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
-// PutConfigurationRequestBodyConfiguration -  Includes all of the Service Catalog AppRegistry settings.
+// PutConfigurationRequestBodyConfiguration -  Includes all of the AppRegistry settings.
 type PutConfigurationRequestBodyConfiguration struct {
 	TagQueryConfiguration *shared.TagQueryConfiguration `json:"tagQueryConfiguration,omitempty"`
 }
 
 type PutConfigurationRequestBody struct {
-	//  Includes all of the Service Catalog AppRegistry settings.
+	//  Includes all of the AppRegistry settings.
 	Configuration PutConfigurationRequestBodyConfiguration `json:"configuration"`
 }
 

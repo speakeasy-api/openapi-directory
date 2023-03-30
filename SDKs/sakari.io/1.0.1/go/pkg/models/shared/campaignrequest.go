@@ -13,7 +13,7 @@ type CampaignRequestFilters struct {
 	Tags       []string `json:"tags,omitempty"`
 }
 
-// CampaignRequestTriggerCodeEnum - Campaign type specifies how it sources contacts and what event triggers its execution Sort order
+// CampaignRequestTriggerCodeEnum - Campaign type specifies how it sources contacts and what event triggers its execution  Sort order
 //   - `M` - Manual
 //   - `S` - Scheduled
 //   - `FU` - File Upload
@@ -44,7 +44,7 @@ func (e *CampaignRequestTriggerCodeEnum) UnmarshalJSON(data []byte) error {
 }
 
 type CampaignRequestTrigger struct {
-	// Campaign type specifies how it sources contacts and what event triggers its execution Sort order
+	// Campaign type specifies how it sources contacts and what event triggers its execution  Sort order
 	//   * `M` - Manual
 	//   * `S` - Scheduled
 	//   * `FU` - File Upload

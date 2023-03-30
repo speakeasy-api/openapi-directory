@@ -93,7 +93,7 @@ func main() {
 * `DriveDrivesHide` - Hides a shared drive from the default view.
 * `DriveDrivesList` - Lists the user's shared drives.
 * `DriveDrivesUnhide` - Restores a shared drive to the default view.
-* `DriveDrivesUpdate` - Updates the metadate for a shared drive.
+* `DriveDrivesUpdate` - Updates the metadata for a shared drive.
 
 ### Files
 

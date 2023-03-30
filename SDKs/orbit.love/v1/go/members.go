@@ -30,10 +30,10 @@ func newMembers(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-// DeleteWorkspaceIDMembersID - Delete a member
-func (s *members) DeleteWorkspaceIDMembersID(ctx context.Context, request operations.DeleteWorkspaceIDMembersIDRequest) (*operations.DeleteWorkspaceIDMembersIDResponse, error) {
+// DeleteWorkspaceSlugMembersMemberSlug - Delete a member
+func (s *members) DeleteWorkspaceSlugMembersMemberSlug(ctx context.Context, request operations.DeleteWorkspaceSlugMembersMemberSlugRequest) (*operations.DeleteWorkspaceSlugMembersMemberSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
 	if err != nil {
@@ -53,22 +53,24 @@ func (s *members) DeleteWorkspaceIDMembersID(ctx context.Context, request operat
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.DeleteWorkspaceIDMembersIDResponse{
+	res := &operations.DeleteWorkspaceSlugMembersMemberSlugResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+		fallthrough
+	case httpRes.StatusCode == 403:
 	}
 
 	return res, nil
 }
 
-// DeleteWorkspaceIDMembersMemberIDIdentities - Remove identity from a member
-func (s *members) DeleteWorkspaceIDMembersMemberIDIdentities(ctx context.Context, request operations.DeleteWorkspaceIDMembersMemberIDIdentitiesRequest) (*operations.DeleteWorkspaceIDMembersMemberIDIdentitiesResponse, error) {
+// DeleteWorkspaceSlugMembersMemberSlugIdentities - Remove identity from a member
+func (s *members) DeleteWorkspaceSlugMembersMemberSlugIdentities(ctx context.Context, request operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesRequest) (*operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{member_id}/identities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/identities", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -95,7 +97,7 @@ func (s *members) DeleteWorkspaceIDMembersMemberIDIdentities(ctx context.Context
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.DeleteWorkspaceIDMembersMemberIDIdentitiesResponse{
+	res := &operations.DeleteWorkspaceSlugMembersMemberSlugIdentitiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -103,16 +105,18 @@ func (s *members) DeleteWorkspaceIDMembersMemberIDIdentities(ctx context.Context
 	switch {
 	case httpRes.StatusCode == 204:
 		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
 	case httpRes.StatusCode == 422:
 	}
 
 	return res, nil
 }
 
-// GetWorkspaceIDMembers - List members in a workspace
-func (s *members) GetWorkspaceIDMembers(ctx context.Context, request operations.GetWorkspaceIDMembersRequest) (*operations.GetWorkspaceIDMembersResponse, error) {
+// GetWorkspaceSlugMembers - List members in a workspace
+func (s *members) GetWorkspaceSlugMembers(ctx context.Context, request operations.GetWorkspaceSlugMembersRequest) (*operations.GetWorkspaceSlugMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -136,7 +140,7 @@ func (s *members) GetWorkspaceIDMembers(ctx context.Context, request operations.
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspaceIDMembersResponse{
+	res := &operations.GetWorkspaceSlugMembersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -148,11 +152,11 @@ func (s *members) GetWorkspaceIDMembers(ctx context.Context, request operations.
 	return res, nil
 }
 
-// GetWorkspaceIDMembersFind - Find a member by an identity
+// GetWorkspaceSlugMembersFind - Find a member by an identity
 // Provide a source and one of username/uid/email params to return a member with that identity, if one exists. Common values for source include github, twitter, and email.
-func (s *members) GetWorkspaceIDMembersFind(ctx context.Context, request operations.GetWorkspaceIDMembersFindRequest) (*operations.GetWorkspaceIDMembersFindResponse, error) {
+func (s *members) GetWorkspaceSlugMembersFind(ctx context.Context, request operations.GetWorkspaceSlugMembersFindRequest) (*operations.GetWorkspaceSlugMembersFindResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/find", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/find", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -176,7 +180,7 @@ func (s *members) GetWorkspaceIDMembersFind(ctx context.Context, request operati
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspaceIDMembersFindResponse{
+	res := &operations.GetWorkspaceSlugMembersFindResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -190,10 +194,10 @@ func (s *members) GetWorkspaceIDMembersFind(ctx context.Context, request operati
 	return res, nil
 }
 
-// GetWorkspaceIDMembersID - Get a member
-func (s *members) GetWorkspaceIDMembersID(ctx context.Context, request operations.GetWorkspaceIDMembersIDRequest) (*operations.GetWorkspaceIDMembersIDResponse, error) {
+// GetWorkspaceSlugMembersMemberSlug - Get a member
+func (s *members) GetWorkspaceSlugMembersMemberSlug(ctx context.Context, request operations.GetWorkspaceSlugMembersMemberSlugRequest) (*operations.GetWorkspaceSlugMembersMemberSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
@@ -213,7 +217,7 @@ func (s *members) GetWorkspaceIDMembersID(ctx context.Context, request operation
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetWorkspaceIDMembersIDResponse{
+	res := &operations.GetWorkspaceSlugMembersMemberSlugResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -225,11 +229,50 @@ func (s *members) GetWorkspaceIDMembersID(ctx context.Context, request operation
 	return res, nil
 }
 
-// PostWorkspaceIDMembers - Create or update a member
+// GetWorkspaceSlugOrganizationsOrganizationIDMembers - List members in an organization
+func (s *members) GetWorkspaceSlugOrganizationsOrganizationIDMembers(ctx context.Context, request operations.GetWorkspaceSlugOrganizationsOrganizationIDMembersRequest) (*operations.GetWorkspaceSlugOrganizationsOrganizationIDMembersResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/organizations/{organization_id}/members", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspaceSlugOrganizationsOrganizationIDMembersResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+	}
+
+	return res, nil
+}
+
+// PostWorkspaceSlugMembers - Create or update a member
 // This method is useful when you know a member's identity in another system and want to create or update the corresponding Orbit member. Identities can be specified in the identity object or member attributes like member.github. If no member exists, a new member will be created and linked to any provided identities.
-func (s *members) PostWorkspaceIDMembers(ctx context.Context, request operations.PostWorkspaceIDMembersRequest) (*operations.PostWorkspaceIDMembersResponse, error) {
+func (s *members) PostWorkspaceSlugMembers(ctx context.Context, request operations.PostWorkspaceSlugMembersRequest) (*operations.PostWorkspaceSlugMembersResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -256,7 +299,7 @@ func (s *members) PostWorkspaceIDMembers(ctx context.Context, request operations
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostWorkspaceIDMembersResponse{
+	res := &operations.PostWorkspaceSlugMembersResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -266,16 +309,18 @@ func (s *members) PostWorkspaceIDMembers(ctx context.Context, request operations
 		fallthrough
 	case httpRes.StatusCode == 201:
 		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
 	case httpRes.StatusCode == 422:
 	}
 
 	return res, nil
 }
 
-// PostWorkspaceIDMembersMemberIDIdentities - Add identity to a member
-func (s *members) PostWorkspaceIDMembersMemberIDIdentities(ctx context.Context, request operations.PostWorkspaceIDMembersMemberIDIdentitiesRequest) (*operations.PostWorkspaceIDMembersMemberIDIdentitiesResponse, error) {
+// PostWorkspaceSlugMembersMemberSlugIdentities - Add identity to a member
+func (s *members) PostWorkspaceSlugMembersMemberSlugIdentities(ctx context.Context, request operations.PostWorkspaceSlugMembersMemberSlugIdentitiesRequest) (*operations.PostWorkspaceSlugMembersMemberSlugIdentitiesResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{member_id}/identities", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}/identities", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -302,7 +347,7 @@ func (s *members) PostWorkspaceIDMembersMemberIDIdentities(ctx context.Context, 
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostWorkspaceIDMembersMemberIDIdentitiesResponse{
+	res := &operations.PostWorkspaceSlugMembersMemberSlugIdentitiesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -310,16 +355,18 @@ func (s *members) PostWorkspaceIDMembersMemberIDIdentities(ctx context.Context, 
 	switch {
 	case httpRes.StatusCode == 201:
 		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
 	case httpRes.StatusCode == 422:
 	}
 
 	return res, nil
 }
 
-// PutWorkspaceIDMembersID - Update a member
-func (s *members) PutWorkspaceIDMembersID(ctx context.Context, request operations.PutWorkspaceIDMembersIDRequest) (*operations.PutWorkspaceIDMembersIDResponse, error) {
+// PutWorkspaceSlugMembersMemberSlug - Update a member
+func (s *members) PutWorkspaceSlugMembersMemberSlug(ctx context.Context, request operations.PutWorkspaceSlugMembersMemberSlugRequest) (*operations.PutWorkspaceSlugMembersMemberSlugResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/{workspace_id}/members/{id}", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/{workspace_slug}/members/{member_slug}", request.PathParams, nil)
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -346,13 +393,15 @@ func (s *members) PutWorkspaceIDMembersID(ctx context.Context, request operation
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PutWorkspaceIDMembersIDResponse{
+	res := &operations.PutWorkspaceSlugMembersMemberSlugResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+		fallthrough
+	case httpRes.StatusCode == 403:
 	}
 
 	return res, nil

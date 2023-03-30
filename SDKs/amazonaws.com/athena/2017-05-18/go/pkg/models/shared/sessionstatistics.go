@@ -2,7 +2,7 @@
 
 package shared
 
-// SessionStatistics - Contains statistics for a notebook session.
+// SessionStatistics - Contains statistics for a session.
 type SessionStatistics struct {
 	DpuExecutionInMillis *int64 `json:"DpuExecutionInMillis,omitempty"`
 }

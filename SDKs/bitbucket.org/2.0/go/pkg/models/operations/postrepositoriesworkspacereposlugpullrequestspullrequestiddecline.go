@@ -38,6 +38,6 @@ type PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDeclineResponse s
 	// If the decline took too long and timed out.
 	// In this case the caller should retry the request later.
 	Error map[string]interface{}
-	// The pull request object.
+	// The pull request was successfully declined.
 	Pullrequest map[string]interface{}
 }

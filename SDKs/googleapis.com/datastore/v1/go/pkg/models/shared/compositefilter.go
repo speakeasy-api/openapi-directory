@@ -13,6 +13,7 @@ type CompositeFilterOpEnum string
 const (
 	CompositeFilterOpEnumOperatorUnspecified CompositeFilterOpEnum = "OPERATOR_UNSPECIFIED"
 	CompositeFilterOpEnumAnd                 CompositeFilterOpEnum = "AND"
+	CompositeFilterOpEnumOr                  CompositeFilterOpEnum = "OR"
 )
 
 func (e *CompositeFilterOpEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *CompositeFilterOpEnum) UnmarshalJSON(data []byte) error {
 	case "OPERATOR_UNSPECIFIED":
 		fallthrough
 	case "AND":
+		fallthrough
+	case "OR":
 		*e = CompositeFilterOpEnum(s)
 		return nil
 	default:

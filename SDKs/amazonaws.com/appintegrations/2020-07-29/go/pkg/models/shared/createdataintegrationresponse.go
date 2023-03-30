@@ -4,13 +4,15 @@ package shared
 
 // CreateDataIntegrationResponse - Success
 type CreateDataIntegrationResponse struct {
-	Arn                   *string                `json:"Arn,omitempty"`
-	ClientToken           *string                `json:"ClientToken,omitempty"`
-	Description           *string                `json:"Description,omitempty"`
-	ID                    *string                `json:"Id,omitempty"`
-	KmsKey                *string                `json:"KmsKey,omitempty"`
-	Name                  *string                `json:"Name,omitempty"`
-	ScheduleConfiguration *ScheduleConfiguration `json:"ScheduleConfiguration,omitempty"`
-	SourceURI             *string                `json:"SourceURI,omitempty"`
-	Tags                  map[string]string      `json:"Tags,omitempty"`
+	Arn                   *string                        `json:"Arn,omitempty"`
+	ClientToken           *string                        `json:"ClientToken,omitempty"`
+	Description           *string                        `json:"Description,omitempty"`
+	FileConfiguration     *FileConfiguration             `json:"FileConfiguration,omitempty"`
+	ID                    *string                        `json:"Id,omitempty"`
+	KmsKey                *string                        `json:"KmsKey,omitempty"`
+	Name                  *string                        `json:"Name,omitempty"`
+	ObjectConfiguration   map[string]map[string][]string `json:"ObjectConfiguration,omitempty"`
+	ScheduleConfiguration *ScheduleConfiguration         `json:"ScheduleConfiguration,omitempty"`
+	SourceURI             *string                        `json:"SourceURI,omitempty"`
+	Tags                  map[string]string              `json:"Tags,omitempty"`
 }

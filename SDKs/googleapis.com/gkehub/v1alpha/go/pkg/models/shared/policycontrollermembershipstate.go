@@ -56,8 +56,10 @@ func (e *PolicyControllerMembershipStateStateEnum) UnmarshalJSON(data []byte) er
 type PolicyControllerMembershipState struct {
 	// Currently these include (also serving as map keys): 1. "admission" 2. "audit" 3. "mutation"
 	ComponentStates map[string]PolicyControllerOnClusterState `json:"componentStates,omitempty"`
-	// The state of the template library and any bundles included in the chosen version of the manifest
+	// The state of the template library and any bundles included in the chosen version of the manifest TODO (b/271878194): Remove this
 	ContentStates map[string]PolicyControllerOnClusterState `json:"contentStates,omitempty"`
+	// The state of the policy controller policy content
+	PolicyContentState *PolicyControllerPolicyContentState `json:"policyContentState,omitempty"`
 	// The overall Policy Controller lifecycle state observed by the Hub Feature controller.
 	State *PolicyControllerMembershipStateStateEnum `json:"state,omitempty"`
 }

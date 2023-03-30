@@ -8,6 +8,15 @@ import (
 )
 
 type GetAccountsQueryParams struct {
+	// The type of account for which to return records. This
+	// can be used to filter Savers from spending accounts.
+	//
+	FilterAccountType *shared.AccountTypeEnumEnum `queryParam:"style=form,explode=true,name=filter[accountType]"`
+	// The account ownership structure for which to return
+	// records. This can be used to filter 2Up accounts from Up
+	// accounts.
+	//
+	FilterOwnershipType *shared.OwnershipTypeEnumEnum `queryParam:"style=form,explode=true,name=filter[ownershipType]"`
 	// The number of records to return in each page.
 	//
 	PageSize *int64 `queryParam:"style=form,explode=true,name=page[size]"`

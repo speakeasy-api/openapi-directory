@@ -33,4 +33,6 @@ type GetRepositoriesWorkspaceRepoSlugWatchersResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
+	// A paginated list of all the watchers on the specified repository.
+	PaginatedAccounts *shared.PaginatedAccounts
 }

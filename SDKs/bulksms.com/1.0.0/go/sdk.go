@@ -162,6 +162,7 @@ func String(s string) *string { return &s }
 type SDK struct {
 	Attachments    *attachments
 	BlockedNumbers *blockedNumbers
+	Credits        *credits
 	Message        *message
 	Profile        *profile
 	Webhooks       *webhooks
@@ -247,6 +248,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.BlockedNumbers = newBlockedNumbers(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.Credits = newCredits(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

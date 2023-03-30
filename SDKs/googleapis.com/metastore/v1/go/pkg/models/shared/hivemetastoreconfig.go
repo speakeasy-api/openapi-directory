@@ -4,6 +4,20 @@ package shared
 
 // HiveMetastoreConfig - Specifies configuration information specific to running Hive metastore software as the metastore service.
 type HiveMetastoreConfig struct {
+	// A mapping of Hive metastore version to the auxiliary version configuration. When specified, a secondary Hive metastore service is created along with the primary service. All auxiliary versions must be less than the service's primary version. The key is the auxiliary service name and it must match the regular expression a-z?. This means that the first character must be a lowercase letter, and all the following characters must be hyphens, lowercase letters, or digits, except the last character, which cannot be a hyphen.
+	AuxiliaryVersions map[string]AuxiliaryVersionConfig `json:"auxiliaryVersions,omitempty"`
+	// A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden). These overrides are also applied to auxiliary versions and can be further customized in the auxiliary version's AuxiliaryVersionConfig.
+	ConfigOverrides map[string]string `json:"configOverrides,omitempty"`
+	// Configuration information for a Kerberos principal.
+	KerberosConfig *KerberosConfig `json:"kerberosConfig,omitempty"`
+	// Immutable. The Hive metastore schema version.
+	Version *string `json:"version,omitempty"`
+}
+
+// HiveMetastoreConfigInput - Specifies configuration information specific to running Hive metastore software as the metastore service.
+type HiveMetastoreConfigInput struct {
+	// A mapping of Hive metastore version to the auxiliary version configuration. When specified, a secondary Hive metastore service is created along with the primary service. All auxiliary versions must be less than the service's primary version. The key is the auxiliary service name and it must match the regular expression a-z?. This means that the first character must be a lowercase letter, and all the following characters must be hyphens, lowercase letters, or digits, except the last character, which cannot be a hyphen.
+	AuxiliaryVersions map[string]AuxiliaryVersionConfigInput `json:"auxiliaryVersions,omitempty"`
 	// A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml). The mappings override system defaults (some keys cannot be overridden). These overrides are also applied to auxiliary versions and can be further customized in the auxiliary version's AuxiliaryVersionConfig.
 	ConfigOverrides map[string]string `json:"configOverrides,omitempty"`
 	// Configuration information for a Kerberos principal.

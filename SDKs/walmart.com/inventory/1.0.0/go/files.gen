@@ -20,5 +20,4 @@ pkg/models/operations/updatebulkinventory.go
 pkg/models/operations/updateinventoryforanitemjson.go
 pkg/models/operations/updateinventoryforanitemraw.go
 pkg/models/operations/updatemultinodeinventory.go
-pkg/models/shared/security.go
 USAGE.md

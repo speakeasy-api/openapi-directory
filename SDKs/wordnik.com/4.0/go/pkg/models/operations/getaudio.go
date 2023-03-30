@@ -13,7 +13,7 @@ type GetAudioPathParams struct {
 	Word string `pathParam:"style=simple,explode=false,name=word"`
 }
 
-// GetAudioUseCanonicalEnum - Use the canonical form of the word
+// GetAudioUseCanonicalEnum - If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 type GetAudioUseCanonicalEnum string
 
 const (
@@ -40,7 +40,7 @@ func (e *GetAudioUseCanonicalEnum) UnmarshalJSON(data []byte) error {
 type GetAudioQueryParams struct {
 	// Maximum number of results to return
 	Limit *int `queryParam:"style=form,explode=true,name=limit"`
-	// Use the canonical form of the word
+	// If true will try to return the correct word root ('cats' -> 'cat'). If false returns exactly what was requested.
 	UseCanonical *GetAudioUseCanonicalEnum `queryParam:"style=form,explode=true,name=useCanonical"`
 }
 

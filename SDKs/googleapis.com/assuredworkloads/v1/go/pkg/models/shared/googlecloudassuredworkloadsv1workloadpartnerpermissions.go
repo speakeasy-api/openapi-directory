@@ -4,7 +4,7 @@ package shared
 
 // GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions - Permissions granted to the AW Partner SA account for the customer workload
 type GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions struct {
-	// Allow partner to view data and logs
+	// Allow the partner to view inspectability logs and monitoring violations.
 	DataLogsViewer *bool `json:"dataLogsViewer,omitempty"`
 	// Allow partner to monitor folder and remediate violations
 	RemediateFolderViolations *bool `json:"remediateFolderViolations,omitempty"`

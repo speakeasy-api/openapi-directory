@@ -64,6 +64,8 @@ type GetUsersIDBudgetSummaryResponse struct {
 	// Success
 	BudgetAnalysisPackages []shared.BudgetAnalysisPackage
 	ContentType            string
-	StatusCode             int
-	RawResponse            *http.Response
+	// Bad Request
+	Error       *shared.Error
+	StatusCode  int
+	RawResponse *http.Response
 }

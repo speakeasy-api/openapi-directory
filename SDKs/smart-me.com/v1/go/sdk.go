@@ -42,8 +42,10 @@ type SDK struct {
 	MeterFolderInformation              *meterFolderInformation
 	MeterValues                         *meterValues
 	OAuth                               *oAuth
+	Pico                                *pico
 	PicoCharging                        *picoCharging
 	PicoChargingHistory                 *picoChargingHistory
+	PicoEnableFixCableLock              *picoEnableFixCableLock
 	PicoLoadmanagementGroup             *picoLoadmanagementGroup
 	PicoLoadmanagementSetDynamicCurrent *picoLoadmanagementSetDynamicCurrent
 	PicoSettings                        *picoSettings
@@ -62,6 +64,7 @@ type SDK struct {
 	VirtualTariff                       *virtualTariff
 	VirtualTariffConsumption            *virtualTariffConsumption
 	VirtualTariffsForProperty           *virtualTariffsForProperty
+	VirtualTariffsStatusForProperty     *virtualTariffsStatusForProperty
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -294,6 +297,15 @@ func New(opts ...SDKOption) *SDK {
 		sdk._genVersion,
 	)
 
+	sdk.Pico = newPico(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
 	sdk.PicoCharging = newPicoCharging(
 		sdk._defaultClient,
 		sdk._securityClient,
@@ -304,6 +316,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.PicoChargingHistory = newPicoChargingHistory(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.PicoEnableFixCableLock = newPicoEnableFixCableLock(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,
@@ -466,6 +487,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.VirtualTariffsForProperty = newVirtualTariffsForProperty(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.VirtualTariffsStatusForProperty = newVirtualTariffsStatusForProperty(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

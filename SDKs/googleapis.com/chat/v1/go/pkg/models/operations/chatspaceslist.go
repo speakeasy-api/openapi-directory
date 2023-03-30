@@ -43,7 +43,7 @@ type ChatSpacesListQueryParams struct {
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
-	// Optional. The maximum number of spaces to return. The service may return fewer than this value. If unspecified, at most 100 spaces are returned. The maximum value is 1000; values above 1000 are coerced to 1000. Negative values return an INVALID_ARGUMENT error.
+	// Optional. The maximum number of spaces to return. The service may return fewer than this value. If unspecified, at most 100 spaces are returned. The maximum value is 1000; values above 1000 are coerced to 1000. Negative values return an `INVALID_ARGUMENT` error.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
 	// Optional. A page token, received from a previous list spaces call. Provide this to retrieve the subsequent page. When paginating, the filter value should match the call that provided the page token. Passing a different value may lead to unexpected results.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`

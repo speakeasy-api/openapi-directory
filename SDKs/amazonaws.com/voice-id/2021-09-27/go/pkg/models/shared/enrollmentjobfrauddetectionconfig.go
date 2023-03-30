@@ -2,8 +2,9 @@
 
 package shared
 
-// EnrollmentJobFraudDetectionConfig - The configuration defining the action to take when a speaker is flagged by the fraud detection system during a batch speaker enrollment job, and the risk threshold to use for identification.
+// EnrollmentJobFraudDetectionConfig - The fraud detection configuration to be used during the batch speaker enrollment job.
 type EnrollmentJobFraudDetectionConfig struct {
 	FraudDetectionAction *FraudDetectionActionEnum `json:"FraudDetectionAction,omitempty"`
 	RiskThreshold        *int64                    `json:"RiskThreshold,omitempty"`
+	WatchlistIds         []string                  `json:"WatchlistIds,omitempty"`
 }

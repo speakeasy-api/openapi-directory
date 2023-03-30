@@ -87,6 +87,8 @@ type TagRequestInput struct {
 	Followers []string `json:"followers,omitempty"`
 	// Name of the tag. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.
 	Name *string `json:"name,omitempty"`
+	// Free-form textual information associated with the tag (i.e. its description).
+	Notes *string `json:"notes,omitempty"`
 	// Gid of an object.
 	Workspace *string `json:"workspace,omitempty"`
 }

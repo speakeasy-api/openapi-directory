@@ -11,4 +11,5 @@ type DataCellsFilter struct {
 	RowFilter      *RowFilter      `json:"RowFilter,omitempty"`
 	TableCatalogID string          `json:"TableCatalogId"`
 	TableName      string          `json:"TableName"`
+	VersionID      *string         `json:"VersionId,omitempty"`
 }

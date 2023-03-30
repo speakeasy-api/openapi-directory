@@ -14,8 +14,10 @@ type TermsOfServiceAcceptanceInfoTypeEnum string
 const (
 	TermsOfServiceAcceptanceInfoTypeEnumAdyenAccount              TermsOfServiceAcceptanceInfoTypeEnum = "adyenAccount"
 	TermsOfServiceAcceptanceInfoTypeEnumAdyenCapital              TermsOfServiceAcceptanceInfoTypeEnum = "adyenCapital"
+	TermsOfServiceAcceptanceInfoTypeEnumAdyenCard                 TermsOfServiceAcceptanceInfoTypeEnum = "adyenCard"
 	TermsOfServiceAcceptanceInfoTypeEnumAdyenForPlatformsAdvanced TermsOfServiceAcceptanceInfoTypeEnum = "adyenForPlatformsAdvanced"
 	TermsOfServiceAcceptanceInfoTypeEnumAdyenForPlatformsManage   TermsOfServiceAcceptanceInfoTypeEnum = "adyenForPlatformsManage"
+	TermsOfServiceAcceptanceInfoTypeEnumAdyenFranchisee           TermsOfServiceAcceptanceInfoTypeEnum = "adyenFranchisee"
 	TermsOfServiceAcceptanceInfoTypeEnumAdyenIssuing              TermsOfServiceAcceptanceInfoTypeEnum = "adyenIssuing"
 )
 
@@ -29,9 +31,13 @@ func (e *TermsOfServiceAcceptanceInfoTypeEnum) UnmarshalJSON(data []byte) error 
 		fallthrough
 	case "adyenCapital":
 		fallthrough
+	case "adyenCard":
+		fallthrough
 	case "adyenForPlatformsAdvanced":
 		fallthrough
 	case "adyenForPlatformsManage":
+		fallthrough
+	case "adyenFranchisee":
 		fallthrough
 	case "adyenIssuing":
 		*e = TermsOfServiceAcceptanceInfoTypeEnum(s)

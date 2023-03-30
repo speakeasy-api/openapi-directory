@@ -696,6 +696,25 @@ const (
 	RequestSpotLaunchSpecificationInstanceTypeEnumR6idn16xlarge   RequestSpotLaunchSpecificationInstanceTypeEnum = "r6idn.16xlarge"
 	RequestSpotLaunchSpecificationInstanceTypeEnumR6idn24xlarge   RequestSpotLaunchSpecificationInstanceTypeEnum = "r6idn.24xlarge"
 	RequestSpotLaunchSpecificationInstanceTypeEnumR6idn32xlarge   RequestSpotLaunchSpecificationInstanceTypeEnum = "r6idn.32xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumC7gMetal        RequestSpotLaunchSpecificationInstanceTypeEnum = "c7g.metal"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM7gMedium       RequestSpotLaunchSpecificationInstanceTypeEnum = "m7g.medium"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM7gLarge        RequestSpotLaunchSpecificationInstanceTypeEnum = "m7g.large"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM7gXlarge       RequestSpotLaunchSpecificationInstanceTypeEnum = "m7g.xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM7g2xlarge      RequestSpotLaunchSpecificationInstanceTypeEnum = "m7g.2xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM7g4xlarge      RequestSpotLaunchSpecificationInstanceTypeEnum = "m7g.4xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM7g8xlarge      RequestSpotLaunchSpecificationInstanceTypeEnum = "m7g.8xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM7g12xlarge     RequestSpotLaunchSpecificationInstanceTypeEnum = "m7g.12xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM7g16xlarge     RequestSpotLaunchSpecificationInstanceTypeEnum = "m7g.16xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumM7gMetal        RequestSpotLaunchSpecificationInstanceTypeEnum = "m7g.metal"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR7gMedium       RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.medium"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR7gLarge        RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.large"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR7gXlarge       RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR7g2xlarge      RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.2xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR7g4xlarge      RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.4xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR7g8xlarge      RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.8xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR7g12xlarge     RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.12xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR7g16xlarge     RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.16xlarge"
+	RequestSpotLaunchSpecificationInstanceTypeEnumR7gMetal        RequestSpotLaunchSpecificationInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *RequestSpotLaunchSpecificationInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -1941,6 +1960,44 @@ func (e *RequestSpotLaunchSpecificationInstanceTypeEnum) UnmarshalJSON(data []by
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = RequestSpotLaunchSpecificationInstanceTypeEnum(s)
 		return nil
 	default:

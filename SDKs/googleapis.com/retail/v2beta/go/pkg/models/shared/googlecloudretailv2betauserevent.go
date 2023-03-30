@@ -8,6 +8,8 @@ type GoogleCloudRetailV2betaUserEventInput struct {
 	Attributes map[string]GoogleCloudRetailV2betaCustomAttribute `json:"attributes,omitempty"`
 	// Highly recommended for user events that are the result of PredictionService.Predict. This field enables accurate attribution of recommendation model performance. The value must be a valid PredictResponse.attribution_token for user events that are the result of PredictionService.Predict. The value must be a valid SearchResponse.attribution_token for user events that are the result of SearchService.Search. This token enables us to accurately attribute page view or purchase back to the event and the particular predict response containing this clicked/purchased product. If user clicks on product K in the recommendation results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When recording events on product K's page, log the PredictResponse.attribution_token to this field.
 	AttributionToken *string `json:"attributionToken,omitempty"`
+	// Represents the banner of the user event, for projects that combine banners. For example: retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-meds, etc. under one project.
+	Banner *string `json:"banner,omitempty"`
 	// The ID or name of the associated shopping cart. This ID is used to associate multiple items added or present in the cart before purchase. This can only be set for `add-to-cart`, `purchase-complete`, or `shopping-cart-page-view` events.
 	CartID *string `json:"cartId,omitempty"`
 	// Detailed completion information including completion attribution token and clicked completion info.
@@ -52,6 +54,8 @@ type GoogleCloudRetailV2betaUserEvent struct {
 	Attributes map[string]GoogleCloudRetailV2betaCustomAttribute `json:"attributes,omitempty"`
 	// Highly recommended for user events that are the result of PredictionService.Predict. This field enables accurate attribution of recommendation model performance. The value must be a valid PredictResponse.attribution_token for user events that are the result of PredictionService.Predict. The value must be a valid SearchResponse.attribution_token for user events that are the result of SearchService.Search. This token enables us to accurately attribute page view or purchase back to the event and the particular predict response containing this clicked/purchased product. If user clicks on product K in the recommendation results, pass PredictResponse.attribution_token as a URL parameter to product K's page. When recording events on product K's page, log the PredictResponse.attribution_token to this field.
 	AttributionToken *string `json:"attributionToken,omitempty"`
+	// Represents the banner of the user event, for projects that combine banners. For example: retailer can have events from multiple banners like retailer-main, retailer-baby, retailer-meds, etc. under one project.
+	Banner *string `json:"banner,omitempty"`
 	// The ID or name of the associated shopping cart. This ID is used to associate multiple items added or present in the cart before purchase. This can only be set for `add-to-cart`, `purchase-complete`, or `shopping-cart-page-view` events.
 	CartID *string `json:"cartId,omitempty"`
 	// Detailed completion information including completion attribution token and clicked completion info.

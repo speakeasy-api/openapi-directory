@@ -70,6 +70,7 @@ pkg/models/shared/calendar.go
 pkg/models/shared/colors.go
 pkg/models/shared/colordefinition.go
 pkg/models/shared/event.go
+pkg/models/shared/eventworkinglocationproperties.go
 pkg/models/shared/eventdatetime.go
 pkg/models/shared/conferencedata.go
 pkg/models/shared/conferenceparameters.go

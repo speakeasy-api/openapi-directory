@@ -12,16 +12,9 @@ type InsertSalesActivityPathParams struct {
 	ID int64 `pathParam:"style=simple,explode=false,name=id"`
 }
 
-type InsertSalesActivityRequestBody struct {
-	Subject   *string `multipartForm:"name=subject"`
-	Timestamp *int64  `multipartForm:"name=timestamp"`
-	// Activity Type
-	Type *string `multipartForm:"name=type"`
-}
-
 type InsertSalesActivityRequest struct {
 	PathParams InsertSalesActivityPathParams
-	Request    *InsertSalesActivityRequestBody `request:"mediaType=multipart/form-data"`
+	Request    *shared.NewSalesActivity `request:"mediaType=application/json"`
 }
 
 type InsertSalesActivityResponse struct {

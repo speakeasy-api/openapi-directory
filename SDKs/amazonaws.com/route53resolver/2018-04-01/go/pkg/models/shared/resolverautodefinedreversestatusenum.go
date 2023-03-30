@@ -10,10 +10,12 @@ import (
 type ResolverAutodefinedReverseStatusEnum string
 
 const (
-	ResolverAutodefinedReverseStatusEnumEnabling  ResolverAutodefinedReverseStatusEnum = "ENABLING"
-	ResolverAutodefinedReverseStatusEnumEnabled   ResolverAutodefinedReverseStatusEnum = "ENABLED"
-	ResolverAutodefinedReverseStatusEnumDisabling ResolverAutodefinedReverseStatusEnum = "DISABLING"
-	ResolverAutodefinedReverseStatusEnumDisabled  ResolverAutodefinedReverseStatusEnum = "DISABLED"
+	ResolverAutodefinedReverseStatusEnumEnabling                          ResolverAutodefinedReverseStatusEnum = "ENABLING"
+	ResolverAutodefinedReverseStatusEnumEnabled                           ResolverAutodefinedReverseStatusEnum = "ENABLED"
+	ResolverAutodefinedReverseStatusEnumDisabling                         ResolverAutodefinedReverseStatusEnum = "DISABLING"
+	ResolverAutodefinedReverseStatusEnumDisabled                          ResolverAutodefinedReverseStatusEnum = "DISABLED"
+	ResolverAutodefinedReverseStatusEnumUpdatingToUseLocalResourceSetting ResolverAutodefinedReverseStatusEnum = "UPDATING_TO_USE_LOCAL_RESOURCE_SETTING"
+	ResolverAutodefinedReverseStatusEnumUseLocalResourceSetting           ResolverAutodefinedReverseStatusEnum = "USE_LOCAL_RESOURCE_SETTING"
 )
 
 func (e *ResolverAutodefinedReverseStatusEnum) UnmarshalJSON(data []byte) error {
@@ -29,6 +31,10 @@ func (e *ResolverAutodefinedReverseStatusEnum) UnmarshalJSON(data []byte) error 
 	case "DISABLING":
 		fallthrough
 	case "DISABLED":
+		fallthrough
+	case "UPDATING_TO_USE_LOCAL_RESOURCE_SETTING":
+		fallthrough
+	case "USE_LOCAL_RESOURCE_SETTING":
 		*e = ResolverAutodefinedReverseStatusEnum(s)
 		return nil
 	default:

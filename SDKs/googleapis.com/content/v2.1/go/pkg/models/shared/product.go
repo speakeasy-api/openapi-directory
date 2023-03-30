@@ -67,7 +67,7 @@ type Product struct {
 	ExpirationDate *string `json:"expirationDate,omitempty"`
 	// Required for multi-seller accounts. Use this attribute if you're a marketplace uploading products for various sellers to your multi-seller account.
 	ExternalSellerID *string `json:"externalSellerId,omitempty"`
-	// Feed label for the item. Either `targetCountry` or `feedLabel` is required.
+	// Feed label for the item. Either `targetCountry` or `feedLabel` is required. Must be less than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-).
 	FeedLabel *string `json:"feedLabel,omitempty"`
 	// Target gender of the item.
 	Gender *string `json:"gender,omitempty"`
@@ -90,7 +90,7 @@ type Product struct {
 	ItemGroupID *string `json:"itemGroupId,omitempty"`
 	// Identifies what kind of resource this is. Value: the fixed string "`content#product`"
 	Kind *string `json:"kind,omitempty"`
-	// Additional URLs of lifestyle images of the item, used to explicitly identify images that showcase your item in a real-world context. See the Help Center article for more information.
+	// Additional URLs of lifestyle images of the item. Used to explicitly identify images that showcase your item in a real-world context. See the Help Center article for more information.
 	LifestyleImageLinks []string `json:"lifestyleImageLinks,omitempty"`
 	// URL directly linking to your item's page on your website.
 	Link *string `json:"link,omitempty"`

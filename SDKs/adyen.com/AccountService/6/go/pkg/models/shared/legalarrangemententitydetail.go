@@ -109,8 +109,8 @@ type LegalArrangementEntityDetail struct {
 	// The legal entity type.
 	//
 	// Possible values: **Business**, **Individual**, **NonProfit**, **PublicCompany**, or **Partnership**.
-	LegalEntityType LegalArrangementEntityDetailLegalEntityTypeEnum `json:"legalEntityType"`
-	PhoneNumber     *ViasPhoneNumber                                `json:"phoneNumber,omitempty"`
+	LegalEntityType *LegalArrangementEntityDetailLegalEntityTypeEnum `json:"legalEntityType,omitempty"`
+	PhoneNumber     *ViasPhoneNumber                                 `json:"phoneNumber,omitempty"`
 	// The URL of the website of the contact.
 	WebAddress *string `json:"webAddress,omitempty"`
 }

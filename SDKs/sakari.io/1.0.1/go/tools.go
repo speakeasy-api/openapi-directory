@@ -36,7 +36,7 @@ func newTools(defaultClient, securityClient HTTPClient, serverURL, language, sdk
 // ToolsShareFileMultipart - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
 func (s *tools) ToolsShareFileMultipart(ctx context.Context, request operations.ToolsShareFileMultipartRequest) (*operations.ToolsShareFileMultipartResponse, error) {
 	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/tools/sharefile"
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/tools/sharefile"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
 	if err != nil {
@@ -102,7 +102,7 @@ func (s *tools) ToolsShareFileMultipart(ctx context.Context, request operations.
 // ToolsShareFileRaw - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
 func (s *tools) ToolsShareFileRaw(ctx context.Context, request operations.ToolsShareFileRawRequest) (*operations.ToolsShareFileRawResponse, error) {
 	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/tools/sharefile"
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/tools/sharefile"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "raw")
 	if err != nil {

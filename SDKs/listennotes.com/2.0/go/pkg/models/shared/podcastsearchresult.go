@@ -4,6 +4,8 @@ package shared
 
 // PodcastSearchResult - When **type** is *podcast*.
 type PodcastSearchResult struct {
+	// Average audio length of all episodes of this podcast. In seconds.
+	AudioLengthSec *int64 `json:"audio_length_sec,omitempty"`
 	// Highlighted segment of podcast description
 	DescriptionHighlighted *string `json:"description_highlighted,omitempty"`
 	// Plain text of podcast description
@@ -15,7 +17,7 @@ type PodcastSearchResult struct {
 	// Whether this podcast contains explicit language.
 	ExplicitContent *bool   `json:"explicit_content,omitempty"`
 	GenreIds        []int64 `json:"genre_ids,omitempty"`
-	// Podcast id.
+	// Podcast id, which can be used to further fetch detailed podcast metadata via `GET /podcasts/{id}`.
 	ID *string `json:"id,omitempty"`
 	// Image url for this podcast's artwork. If you are using PRO/ENTERPRISE plan, then it's
 	// a high resolution image (1400x1400). If you are using FREE plan, then it's the same as **thumbnail**,
@@ -24,6 +26,8 @@ type PodcastSearchResult struct {
 	Image *string `json:"image,omitempty"`
 	// iTunes id for this podcast.
 	ItunesID *int64 `json:"itunes_id,omitempty"`
+	// The id of the most recently published episode of this podcast, which can be used to further fetch detailed episode metadata via `GET /episodes/{id}`.
+	LatestEpisodeID *string `json:"latest_episode_id,omitempty"`
 	// The published date of the latest episode of this podcast. In milliseconds
 	LatestPubDateMs *int64 `json:"latest_pub_date_ms,omitempty"`
 	// The estimated popularity score of a podcast compared to all other rss-based public podcasts in the world on a scale from 0 to 100.
@@ -51,6 +55,8 @@ type PodcastSearchResult struct {
 	TitleOriginal *string `json:"title_original,omitempty"`
 	// Total number of episodes in this podcast.
 	TotalEpisodes *int64 `json:"total_episodes,omitempty"`
+	// How frequently does this podcast release a new episode? In hours. For example, if the value is 166, then it's every 166 hours (or weekly).
+	UpdateFrequencyHours *int64 `json:"update_frequency_hours,omitempty"`
 	// Website url of this podcast.
 	Website *string `json:"website,omitempty"`
 }

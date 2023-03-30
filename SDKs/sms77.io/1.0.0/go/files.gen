@@ -28,6 +28,10 @@ pkg/models/operations/contactspost.go
 pkg/models/operations/hooksget.go
 pkg/models/operations/hookspost.go
 pkg/models/operations/lookup.go
+pkg/models/operations/lookupcnam.go
+pkg/models/operations/lookupformat.go
+pkg/models/operations/lookuphlr.go
+pkg/models/operations/lookupmnp.go
 pkg/models/operations/pricing.go
 pkg/models/operations/sms.go
 pkg/models/operations/status.go

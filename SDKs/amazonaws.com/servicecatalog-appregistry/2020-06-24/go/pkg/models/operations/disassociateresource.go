@@ -67,6 +67,8 @@ type DisassociateResourceResponse struct {
 	ResourceNotFoundException interface{}
 	StatusCode                int
 	RawResponse               *http.Response
+	// ThrottlingException
+	ThrottlingException interface{}
 	// ValidationException
 	ValidationException interface{}
 }

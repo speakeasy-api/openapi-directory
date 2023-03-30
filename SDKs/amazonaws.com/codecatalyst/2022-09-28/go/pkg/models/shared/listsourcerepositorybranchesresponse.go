@@ -4,6 +4,6 @@ package shared
 
 // ListSourceRepositoryBranchesResponse - Success
 type ListSourceRepositoryBranchesResponse struct {
-	Items     []ListSourceRepositoryBranchesItem `json:"items,omitempty"`
+	Items     []ListSourceRepositoryBranchesItem `json:"items"`
 	NextToken *string                            `json:"nextToken,omitempty"`
 }

@@ -2,12 +2,51 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// TaskCompactResourceSubtypeEnum - The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+// The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.
+type TaskCompactResourceSubtypeEnum string
+
+const (
+	TaskCompactResourceSubtypeEnumDefaultTask TaskCompactResourceSubtypeEnum = "default_task"
+	TaskCompactResourceSubtypeEnumMilestone   TaskCompactResourceSubtypeEnum = "milestone"
+	TaskCompactResourceSubtypeEnumSection     TaskCompactResourceSubtypeEnum = "section"
+	TaskCompactResourceSubtypeEnumApproval    TaskCompactResourceSubtypeEnum = "approval"
+)
+
+func (e *TaskCompactResourceSubtypeEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "default_task":
+		fallthrough
+	case "milestone":
+		fallthrough
+	case "section":
+		fallthrough
+	case "approval":
+		*e = TaskCompactResourceSubtypeEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for TaskCompactResourceSubtypeEnum: %s", s)
+	}
+}
+
 // TaskCompact - The *task* is the basic object around which many operations in Asana are centered.
 type TaskCompact struct {
 	// Globally unique identifier of the resource, as a string.
 	Gid *string `json:"gid,omitempty"`
 	// The name of the task.
 	Name *string `json:"name,omitempty"`
+	// The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
+	// The resource_subtype `milestone` represent a single moment in time. This means tasks with this subtype cannot have a start_date.
+	ResourceSubtype *TaskCompactResourceSubtypeEnum `json:"resource_subtype,omitempty"`
 	// The base type of this resource.
 	ResourceType *string `json:"resource_type,omitempty"`
 }

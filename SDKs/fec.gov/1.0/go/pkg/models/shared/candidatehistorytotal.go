@@ -35,13 +35,20 @@ type CandidateHistoryTotal struct {
 	//         - N not yet a candidate
 	//         - P prior candidate
 	//
-	CandidateStatus     *string  `json:"candidate_status,omitempty"`
+	CandidateStatus *string `json:"candidate_status,omitempty"`
+	// Ending cash balance on the most recent filing
 	CashOnHandEndPeriod *float64 `json:"cash_on_hand_end_period,omitempty"`
 	// Ending date of the reporting period
 	CoverageEndDate *types.Date `json:"coverage_end_date,omitempty"`
 	// Beginning date of the reporting period
 	CoverageStartDate *types.Date `json:"coverage_start_date,omitempty"`
-	Cycle             int         `json:"cycle"`
+	// Filter records to only those that are applicable to a given two-year
+	// period. This cycle follows the traditional House election cycle and
+	// subdivides the presidential and Senate elections into comparable
+	// two-year blocks. The cycle begins with an odd year and is named for its
+	// ending, even year.
+	//
+	Cycle int `json:"cycle"`
 	// Two-year election cycle in which a candidate runs for office.
 	// Calculated from Form 2. The cycle begins with
 	// an odd year and is named for its ending, even year. This cycle follows
@@ -50,7 +57,8 @@ type CandidateHistoryTotal struct {
 	// the entire four years of a presidential term or six years of a senatorial term,
 	// you will need the `election_full` flag.
 	//
-	Cycles               []int    `json:"cycles,omitempty"`
+	Cycles []int `json:"cycles,omitempty"`
+	// Debts owed by the committee
 	DebtsOwedByCommittee *float64 `json:"debts_owed_by_committee,omitempty"`
 	Disbursements        *float64 `json:"disbursements,omitempty"`
 	// Two-digit US House distirict of the office the candidate is running for. Presidential, Senate and House at-large candidates will have District 00.
@@ -64,7 +72,8 @@ type CandidateHistoryTotal struct {
 	DistrictNumber *int `json:"district_number,omitempty"`
 	// Two-digit US House distirict of the office the candidate is running for. Presidential, Senate and House at-large candidates will have District 00.
 	ElectionDistricts []string `json:"election_districts,omitempty"`
-	ElectionYear      *int     `json:"election_year,omitempty"`
+	// Year of election
+	ElectionYear *int `json:"election_year,omitempty"`
 	// Years in which a candidate ran for office.
 	ElectionYears []int `json:"election_years,omitempty"`
 	// FEC cycles are included in candidate election years.
@@ -80,7 +89,9 @@ type CandidateHistoryTotal struct {
 	IncumbentChallenge *string `json:"incumbent_challenge,omitempty"`
 	// Explains if the candidate is an incumbent, a challenger, or if the seat is open.
 	IncumbentChallengeFull *string `json:"incumbent_challenge_full,omitempty"`
-	IsElection             bool    `json:"is_election"`
+	// Individual itemized contributions are from individuals whose aggregate contributions total over $200 per individual per year. Be aware, some filers choose to itemize donations $200 or less.
+	IndividualItemizedContributions *float64 `json:"individual_itemized_contributions,omitempty"`
+	IsElection                      bool     `json:"is_election"`
 	// The day the FEC received the candidate's most recent Form 2
 	LastF2Date *types.Date `json:"last_f2_date,omitempty"`
 	// The day the FEC received the candidate's most recent filing
@@ -93,6 +104,8 @@ type CandidateHistoryTotal struct {
 	Office *string `json:"office,omitempty"`
 	// Federal office candidate runs for: House, Senate or presidential
 	OfficeFull *string `json:"office_full,omitempty"`
+	// Other committees contributions
+	OtherPoliticalCommitteeContributions *float64 `json:"other_political_committee_contributions,omitempty"`
 	// Three-letter code for the party affiliated with a candidate or committee. For example, DEM for Democratic Party and REP for Republican Party.
 	Party *string `json:"party,omitempty"`
 	// Party affiliated with a candidate or committee
@@ -102,6 +115,8 @@ type CandidateHistoryTotal struct {
 	RoundedElectionYears []int `json:"rounded_election_years,omitempty"`
 	// US state or territory where a candidate runs for office
 	State *string `json:"state,omitempty"`
+	// Transfers from authorized committees
+	TransfersFromOtherAuthorizedCommittee *float64 `json:"transfers_from_other_authorized_committee,omitempty"`
 	// Two-year election cycle in which a candidate runs for office.
 	// Calculated from Form 2. The cycle begins with
 	// an odd year and is named for its ending, even year. This cycle follows

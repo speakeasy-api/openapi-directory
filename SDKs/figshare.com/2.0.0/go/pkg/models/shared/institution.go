@@ -5,9 +5,9 @@ package shared
 // Institution - OK. An array of institutions
 type Institution struct {
 	// Institution domain
-	Domain *string `json:"domain,omitempty"`
+	Domain string `json:"domain"`
 	// Institution id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Institution name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 }

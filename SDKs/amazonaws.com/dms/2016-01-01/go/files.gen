@@ -13,6 +13,7 @@ pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/addtagstoresource.go
 pkg/models/operations/applypendingmaintenanceaction.go
+pkg/models/operations/batchstartrecommendations.go
 pkg/models/operations/cancelreplicationtaskassessmentrun.go
 pkg/models/operations/createendpoint.go
 pkg/models/operations/createeventsubscription.go
@@ -47,6 +48,8 @@ pkg/models/operations/describefleetadvisorschemaobjectsummary.go
 pkg/models/operations/describefleetadvisorschemas.go
 pkg/models/operations/describeorderablereplicationinstances.go
 pkg/models/operations/describependingmaintenanceactions.go
+pkg/models/operations/describerecommendationlimitations.go
+pkg/models/operations/describerecommendations.go
 pkg/models/operations/describerefreshschemasstatus.go
 pkg/models/operations/describereplicationinstancetasklogs.go
 pkg/models/operations/describereplicationinstances.go
@@ -70,6 +73,7 @@ pkg/models/operations/refreshschemas.go
 pkg/models/operations/reloadtables.go
 pkg/models/operations/removetagsfromresource.go
 pkg/models/operations/runfleetadvisorlsaanalysis.go
+pkg/models/operations/startrecommendations.go
 pkg/models/operations/startreplicationtask.go
 pkg/models/operations/startreplicationtaskassessment.go
 pkg/models/operations/startreplicationtaskassessmentrun.go
@@ -82,6 +86,11 @@ pkg/models/shared/applypendingmaintenanceactionresponse.go
 pkg/models/shared/resourcependingmaintenanceactions.go
 pkg/models/shared/pendingmaintenanceaction.go
 pkg/models/shared/applypendingmaintenanceactionmessage.go
+pkg/models/shared/batchstartrecommendationsresponse.go
+pkg/models/shared/batchstartrecommendationserrorentry.go
+pkg/models/shared/batchstartrecommendationsrequest.go
+pkg/models/shared/startrecommendationsrequestentry.go
+pkg/models/shared/recommendationsettings.go
 pkg/models/shared/cancelreplicationtaskassessmentrunresponse.go
 pkg/models/shared/replicationtaskassessmentrun.go
 pkg/models/shared/replicationtaskassessmentrunprogress.go
@@ -115,11 +124,13 @@ pkg/models/shared/nestinglevelvalueenum.go
 pkg/models/shared/authtypevalueenum.go
 pkg/models/shared/authmechanismvalueenum.go
 pkg/models/shared/microsoftsqlserversettings.go
+pkg/models/shared/tlogaccessmodeenum.go
 pkg/models/shared/safeguardpolicyenum.go
 pkg/models/shared/kinesissettings.go
 pkg/models/shared/messageformatvalueenum.go
 pkg/models/shared/kafkasettings.go
 pkg/models/shared/kafkasecurityprotocolenum.go
+pkg/models/shared/kafkasaslmechanismenum.go
 pkg/models/shared/ibmdb2settings.go
 pkg/models/shared/gcpmysqlsettings.go
 pkg/models/shared/replicationendpointtypevalueenum.go
@@ -225,6 +236,16 @@ pkg/models/shared/releasestatusvaluesenum.go
 pkg/models/shared/describeorderablereplicationinstancesmessage.go
 pkg/models/shared/describependingmaintenanceactionsresponse.go
 pkg/models/shared/describependingmaintenanceactionsmessage.go
+pkg/models/shared/describerecommendationlimitationsresponse.go
+pkg/models/shared/limitation.go
+pkg/models/shared/describerecommendationlimitationsrequest.go
+pkg/models/shared/describerecommendationsresponse.go
+pkg/models/shared/recommendation.go
+pkg/models/shared/recommendationdata.go
+pkg/models/shared/rdsrecommendation.go
+pkg/models/shared/rdsconfiguration.go
+pkg/models/shared/rdsrequirements.go
+pkg/models/shared/describerecommendationsrequest.go
 pkg/models/shared/describerefreshschemasstatusresponse.go
 pkg/models/shared/refreshschemasstatus.go
 pkg/models/shared/refreshschemasstatustypevalueenum.go
@@ -277,6 +298,7 @@ pkg/models/shared/tabletoreload.go
 pkg/models/shared/reloadoptionvalueenum.go
 pkg/models/shared/removetagsfromresourcemessage.go
 pkg/models/shared/runfleetadvisorlsaanalysisresponse.go
+pkg/models/shared/startrecommendationsrequest.go
 pkg/models/shared/startreplicationtaskresponse.go
 pkg/models/shared/startreplicationtaskmessage.go
 pkg/models/shared/startreplicationtasktypevalueenum.go

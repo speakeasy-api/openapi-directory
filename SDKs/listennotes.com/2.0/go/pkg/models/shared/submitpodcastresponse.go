@@ -13,6 +13,7 @@ type SubmitPodcastResponseStatusEnum string
 const (
 	SubmitPodcastResponseStatusEnumFound    SubmitPodcastResponseStatusEnum = "found"
 	SubmitPodcastResponseStatusEnumInReview SubmitPodcastResponseStatusEnum = "in review"
+	SubmitPodcastResponseStatusEnumRejected SubmitPodcastResponseStatusEnum = "rejected"
 )
 
 func (e *SubmitPodcastResponseStatusEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *SubmitPodcastResponseStatusEnum) UnmarshalJSON(data []byte) error {
 	case "found":
 		fallthrough
 	case "in review":
+		fallthrough
+	case "rejected":
 		*e = SubmitPodcastResponseStatusEnum(s)
 		return nil
 	default:

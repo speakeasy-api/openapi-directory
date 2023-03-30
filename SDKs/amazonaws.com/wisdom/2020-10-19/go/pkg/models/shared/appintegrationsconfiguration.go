@@ -5,5 +5,5 @@ package shared
 // AppIntegrationsConfiguration - Configuration information for Amazon AppIntegrations to automatically ingest content.
 type AppIntegrationsConfiguration struct {
 	AppIntegrationArn string   `json:"appIntegrationArn"`
-	ObjectFields      []string `json:"objectFields"`
+	ObjectFields      []string `json:"objectFields,omitempty"`
 }

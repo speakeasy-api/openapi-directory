@@ -41,7 +41,7 @@ type PrivateProjectArticlesCreateResponse struct {
 	ErrorMessage *shared.ErrorMessage
 	Headers      map[string][]string
 	// Created
-	Location    *shared.Location
-	StatusCode  int
-	RawResponse *http.Response
+	LocationWarnings *shared.LocationWarnings
+	StatusCode       int
+	RawResponse      *http.Response
 }

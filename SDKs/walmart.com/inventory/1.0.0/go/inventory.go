@@ -49,7 +49,7 @@ func (s *inventory) GetInventory(ctx context.Context, request operations.GetInve
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -91,7 +91,7 @@ func (s *inventory) GetInventory(ctx context.Context, request operations.GetInve
 }
 
 // GetMultiNodeInventoryForAllSkuAndAllShipNodes - Multiple Item Inventory for All Ship Nodes
-// This API will retrieve the inventory count for all of a seller's items across all ship nodes by item to ship node mapping. Inventory can be zero or non-zero.
+// This API will retrieve the inventory count for all of a seller's items across all ship nodes by item to ship node mapping. Inventory can be zero or non-zero. Please note that NextCursor value changes and it needs to be passed on from the previous call to next call.
 func (s *inventory) GetMultiNodeInventoryForAllSkuAndAllShipNodes(ctx context.Context, request operations.GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest) (*operations.GetMultiNodeInventoryForAllSkuAndAllShipNodesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/inventories"
@@ -107,7 +107,7 @@ func (s *inventory) GetMultiNodeInventoryForAllSkuAndAllShipNodes(ctx context.Co
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -158,7 +158,7 @@ func (s *inventory) GetMultiNodeInventoryForSkuAndAllShipnodes(ctx context.Conte
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -209,7 +209,7 @@ func (s *inventory) GetWFSInventory(ctx context.Context, request operations.GetW
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -244,7 +244,16 @@ func (s *inventory) GetWFSInventory(ctx context.Context, request operations.GetW
 }
 
 // UpdateBulkInventory - Bulk Item Inventory Update
-// Updates inventory for items in bulk. Refer to the throttling limits before uploading the Feed files.
+// Updates inventory for items in bulk.
+// Seller Can either use feed type "inventory" or "MP_INVENTORY"
+// * Inventory spec 1.4 feed type: inventory
+// * Inventory spec 1.5 feed type: MP_INVENTORY
+//
+// Please Note: Multi Node Inventory Update Feed (feedType=MP_INVENTORY) only supports JSON Request and Responses. Refer to "MultiNode_Bulk_Inventory_Update_Request.json" for the corresponding request sample
+//
+// Refer to the <a href="https://developer.walmart.com/doc/us/us-mp/us-mp-inventory/">guide section</a> for more detailed guide around each of the feed types
+//
+//	Refer to the throttling limits before uploading the Feed Files.
 func (s *inventory) UpdateBulkInventory(ctx context.Context, request operations.UpdateBulkInventoryRequest) (*operations.UpdateBulkInventoryResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v3/feeds"
@@ -252,9 +261,6 @@ func (s *inventory) UpdateBulkInventory(ctx context.Context, request operations.
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
@@ -270,7 +276,7 @@ func (s *inventory) UpdateBulkInventory(ctx context.Context, request operations.
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -338,7 +344,7 @@ func (s *inventory) UpdateInventoryForAnItemJSON(ctx context.Context, request op
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -406,7 +412,7 @@ func (s *inventory) UpdateInventoryForAnItemRaw(ctx context.Context, request ope
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -470,7 +476,7 @@ func (s *inventory) UpdateMultiNodeInventory(ctx context.Context, request operat
 
 	utils.PopulateHeaders(ctx, req, request.Headers)
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

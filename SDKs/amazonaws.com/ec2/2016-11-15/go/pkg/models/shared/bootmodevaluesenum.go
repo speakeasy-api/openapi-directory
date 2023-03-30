@@ -10,8 +10,9 @@ import (
 type BootModeValuesEnum string
 
 const (
-	BootModeValuesEnumLegacyBios BootModeValuesEnum = "legacy-bios"
-	BootModeValuesEnumUefi       BootModeValuesEnum = "uefi"
+	BootModeValuesEnumLegacyBios    BootModeValuesEnum = "legacy-bios"
+	BootModeValuesEnumUefi          BootModeValuesEnum = "uefi"
+	BootModeValuesEnumUefiPreferred BootModeValuesEnum = "uefi-preferred"
 )
 
 func (e *BootModeValuesEnum) UnmarshalJSON(data []byte) error {
@@ -23,6 +24,8 @@ func (e *BootModeValuesEnum) UnmarshalJSON(data []byte) error {
 	case "legacy-bios":
 		fallthrough
 	case "uefi":
+		fallthrough
+	case "uefi-preferred":
 		*e = BootModeValuesEnum(s)
 		return nil
 	default:

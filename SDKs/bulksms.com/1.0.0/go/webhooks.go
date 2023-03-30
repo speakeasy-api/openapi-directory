@@ -202,6 +202,19 @@ func (s *webhooks) GetWebhooksID(ctx context.Context, request operations.GetWebh
 // - It is good idea to add a secret to your URL in order to make it more secure. Here is an example:
 // `https://www.example.com/hook.php?secret=pass763265word`
 // - You can use a non-standard port if necessary, for example: `https://www.example.com:8321/hook.php?secret=pass763265word`
+// - Your webhook can be called from a dynamic range of IP addresses, and you should be prepared to accept that the source IP can change in the future, without notice. This practice has become common with cloud-hosted solutions. If this is an insurmountable problem for your organisation, please contact support.
+//
+// ### Testing and troubleshooting
+//
+// Use `curl` to test your webhook.  The command below is a template that shows how the BulkSMS system invokes your code. It must return `200` for your URL before you can register it as a webhook.
+//
+// ```
+// curl -i -X POST 'YOUR_URL_HERE' --header 'Content-Type: application/json' --header 'User-Agent: BulkSMS Invoker' --data-raw '[]'
+// ```
+//
+// When a `200` is returned for an empty array, modify the template to post multiple messages by adding JSON between the square brackets ('[]').
+//
+// After your webhook is successfully registered, you can send a message to `1111111` for an end-to-end test.  The delivery to this test number will fail, but your webhook will be invoked (and there are no charges).
 //
 // ### The retry process
 //
@@ -213,7 +226,7 @@ func (s *webhooks) GetWebhooksID(ctx context.Context, request operations.GetWebh
 // ### Problem reports via email
 //
 // Your are strongly advised to provide an email address when you register your webhook.
-// An notice will be sent to this email address to keep you in the loop whenever there are problems with your webhook.
+// A notice will be sent to this email address to keep you in the loop whenever there are problems with your webhook.
 // In order to prevent your inbox from being flooded, the system sends a notice about an observed error no more than once in a 24 hour period.
 //
 // The following emails can be expected

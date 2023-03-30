@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// StandardSQLDataTypeTypeKindEnum - Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
+// StandardSQLDataTypeTypeKindEnum - Required. The top level type of this field. Can be any GoogleSQL data type (e.g., "INT64", "DATE", "ARRAY").
 type StandardSQLDataTypeTypeKindEnum string
 
 const (
@@ -81,6 +81,6 @@ type StandardSQLDataType struct {
 	// The data type of a variable such as a function argument. Examples include: * INT64: `{"typeKind": "INT64"}` * ARRAY: { "typeKind": "ARRAY", "arrayElementType": {"typeKind": "STRING"} } * STRUCT>: { "typeKind": "STRUCT", "structType": { "fields": [ { "name": "x", "type": {"typeKind": "STRING"} }, { "name": "y", "type": { "typeKind": "ARRAY", "arrayElementType": {"typeKind": "DATE"} } } ] } }
 	ArrayElementType *StandardSQLDataType   `json:"arrayElementType,omitempty"`
 	StructType       *StandardSQLStructType `json:"structType,omitempty"`
-	// Required. The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
+	// Required. The top level type of this field. Can be any GoogleSQL data type (e.g., "INT64", "DATE", "ARRAY").
 	TypeKind *StandardSQLDataTypeTypeKindEnum `json:"typeKind,omitempty"`
 }

@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetClassificationsIDSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetClassificationsIDPathParams struct {
 	// The ID of the classification resource to load.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -14,6 +18,7 @@ type GetClassificationsIDPathParams struct {
 
 type GetClassificationsIDRequest struct {
 	PathParams GetClassificationsIDPathParams
+	Security   GetClassificationsIDSecurity
 }
 
 // GetClassificationsID200ApplicationVndAPIPlusJSON - Success

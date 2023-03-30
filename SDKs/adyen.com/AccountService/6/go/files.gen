@@ -77,6 +77,9 @@ pkg/models/shared/ultimateparentcompanybusinessdetails.go
 pkg/models/shared/bankaccountdetail.go
 pkg/models/shared/createaccountholderrequest.go
 pkg/models/shared/getaccountholderresponse.go
+pkg/models/shared/migrationdata.go
+pkg/models/shared/migratedstores.go
+pkg/models/shared/migratedaccounts.go
 pkg/models/shared/account.go
 pkg/models/shared/payoutscheduleresponse.go
 pkg/models/shared/getaccountholderrequest.go

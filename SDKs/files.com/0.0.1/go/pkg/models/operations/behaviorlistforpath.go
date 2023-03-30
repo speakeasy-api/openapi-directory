@@ -15,25 +15,25 @@ type BehaviorListForPathPathParams struct {
 type BehaviorListForPathQueryParams struct {
 	// DEPRECATED: If set only shows folder behaviors matching this behavior type. Use `filter[behavior]` instead.
 	Behavior *string `queryParam:"style=form,explode=true,name=behavior"`
-	// Used for pagination.  Send a cursor value to resume an existing list from the point at which you left off.  Get a cursor from an existing list via the X-Files-Cursor-Next header.
+	// Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
-	// If set, return records where the specifiied field is equal to the supplied value. Valid fields are `behavior`.
+	// If set, return records where the specified field is equal to the supplied value. Valid fields are `behavior`.
 	Filter map[string]interface{} `queryParam:"style=form,explode=true,name=filter"`
-	// If set, return records where the specifiied field is greater than the supplied value. Valid fields are `behavior`.
+	// If set, return records where the specified field is greater than the supplied value. Valid fields are `behavior`.
 	FilterGt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gt"`
-	// If set, return records where the specifiied field is greater than or equal to the supplied value. Valid fields are `behavior`.
+	// If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `behavior`.
 	FilterGteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_gteq"`
-	// If set, return records where the specifiied field is equal to the supplied value. Valid fields are `behavior`.
+	// If set, return records where the specified field is equal to the supplied value. Valid fields are `behavior`.
 	FilterLike map[string]interface{} `queryParam:"style=form,explode=true,name=filter_like"`
-	// If set, return records where the specifiied field is less than the supplied value. Valid fields are `behavior`.
+	// If set, return records where the specified field is less than the supplied value. Valid fields are `behavior`.
 	FilterLt map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lt"`
-	// If set, return records where the specifiied field is less than or equal to the supplied value. Valid fields are `behavior`.
+	// If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `behavior`.
 	FilterLteq map[string]interface{} `queryParam:"style=form,explode=true,name=filter_lteq"`
 	// Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
 	// Show behaviors above this path?
 	Recursive *string `queryParam:"style=form,explode=true,name=recursive"`
-	// If set, sort records by the specified field in either 'asc' or 'desc' direction (e.g. sort_by[last_login_at]=desc). Valid fields are `behavior`.
+	// If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[behavior]=desc`). Valid fields are `behavior`.
 	SortBy map[string]interface{} `queryParam:"style=form,explode=true,name=sort_by"`
 }
 

@@ -3,6 +3,7 @@
 package shared
 
 type PlayerRound struct {
+	BackNineStart                        *bool        `json:"BackNineStart,omitempty"`
 	Birdies                              *int64       `json:"Birdies,omitempty"`
 	BogeyFree                            *bool        `json:"BogeyFree,omitempty"`
 	Bogeys                               *int64       `json:"Bogeys,omitempty"`

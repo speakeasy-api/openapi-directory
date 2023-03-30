@@ -26,6 +26,7 @@ type ApplicationComponentDetail struct {
 	OsVersion                      *string                        `json:"osVersion,omitempty"`
 	RecommendationSet              *RecommendationSet             `json:"recommendationSet,omitempty"`
 	ResourceSubType                *ResourceSubTypeEnum           `json:"resourceSubType,omitempty"`
+	ResultList                     []Result                       `json:"resultList,omitempty"`
 	RuntimeStatus                  *RuntimeAnalysisStatusEnum     `json:"runtimeStatus,omitempty"`
 	RuntimeStatusMessage           *string                        `json:"runtimeStatusMessage,omitempty"`
 	SourceCodeRepositories         []SourceCodeRepository         `json:"sourceCodeRepositories,omitempty"`

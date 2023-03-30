@@ -26,12 +26,13 @@ func main() {
 
     req := operations.GetBestPodcastsRequest{
         QueryParams: operations.GetBestPodcastsQueryParams{
-            GenreID: "93",
-            Language: "unde",
-            Page: 2,
-            PublisherRegion: "deserunt",
-            Region: "us",
+            GenreID: "unde",
+            Language: "deserunt",
+            Page: 715190,
+            PublisherRegion: "nulla",
+            Region: "id",
             SafeMode: "1",
+            Sort: "recent_published_first",
         },
         Headers: operations.GetBestPodcastsHeaders{
             XListenAPIKey: "nulla",
@@ -71,6 +72,10 @@ func main() {
 * `GetRegions` - Fetch a list of supported countries/regions for best podcasts
 * `JustListen` - Fetch a random podcast episode
 
+### InsightsAPI
+
+* `GetPodcastAudience` - Fetch audience demographics for a podcast
+
 ### PlaylistAPI
 
 * `GetPlaylistByID` - Fetch a playlist's info and items (i.e., episodes or podcasts).
@@ -83,7 +88,10 @@ func main() {
 
 ### SearchAPI
 
+* `GetRelatedSearches` - Fetch related search terms
+* `GetTrendingSearches` - Fetch trending search terms
 * `Search` - Full-text search
+* `Spellcheck` - Spell check on a search term
 * `Typeahead` - Typeahead search
 <!-- End SDK Available Operations -->
 

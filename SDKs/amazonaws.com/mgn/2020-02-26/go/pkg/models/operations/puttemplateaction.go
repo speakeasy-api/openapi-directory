@@ -3,6 +3,8 @@
 package operations
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -17,6 +19,54 @@ type PutTemplateActionHeaders struct {
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
+// PutTemplateActionRequestBodyCategoryEnum - Template post migration custom action category.
+type PutTemplateActionRequestBodyCategoryEnum string
+
+const (
+	PutTemplateActionRequestBodyCategoryEnumDisasterRecovery       PutTemplateActionRequestBodyCategoryEnum = "DISASTER_RECOVERY"
+	PutTemplateActionRequestBodyCategoryEnumOperatingSystem        PutTemplateActionRequestBodyCategoryEnum = "OPERATING_SYSTEM"
+	PutTemplateActionRequestBodyCategoryEnumLicenseAndSubscription PutTemplateActionRequestBodyCategoryEnum = "LICENSE_AND_SUBSCRIPTION"
+	PutTemplateActionRequestBodyCategoryEnumValidation             PutTemplateActionRequestBodyCategoryEnum = "VALIDATION"
+	PutTemplateActionRequestBodyCategoryEnumObservability          PutTemplateActionRequestBodyCategoryEnum = "OBSERVABILITY"
+	PutTemplateActionRequestBodyCategoryEnumSecurity               PutTemplateActionRequestBodyCategoryEnum = "SECURITY"
+	PutTemplateActionRequestBodyCategoryEnumNetworking             PutTemplateActionRequestBodyCategoryEnum = "NETWORKING"
+	PutTemplateActionRequestBodyCategoryEnumConfiguration          PutTemplateActionRequestBodyCategoryEnum = "CONFIGURATION"
+	PutTemplateActionRequestBodyCategoryEnumBackup                 PutTemplateActionRequestBodyCategoryEnum = "BACKUP"
+	PutTemplateActionRequestBodyCategoryEnumOther                  PutTemplateActionRequestBodyCategoryEnum = "OTHER"
+)
+
+func (e *PutTemplateActionRequestBodyCategoryEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "DISASTER_RECOVERY":
+		fallthrough
+	case "OPERATING_SYSTEM":
+		fallthrough
+	case "LICENSE_AND_SUBSCRIPTION":
+		fallthrough
+	case "VALIDATION":
+		fallthrough
+	case "OBSERVABILITY":
+		fallthrough
+	case "SECURITY":
+		fallthrough
+	case "NETWORKING":
+		fallthrough
+	case "CONFIGURATION":
+		fallthrough
+	case "BACKUP":
+		fallthrough
+	case "OTHER":
+		*e = PutTemplateActionRequestBodyCategoryEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for PutTemplateActionRequestBodyCategoryEnum: %s", s)
+	}
+}
+
 type PutTemplateActionRequestBody struct {
 	// Template post migration custom action ID.
 	ActionID string `json:"actionID"`
@@ -24,10 +74,16 @@ type PutTemplateActionRequestBody struct {
 	ActionName string `json:"actionName"`
 	// Template post migration custom action active status.
 	Active *bool `json:"active,omitempty"`
+	// Template post migration custom action category.
+	Category *PutTemplateActionRequestBodyCategoryEnum `json:"category,omitempty"`
+	// Template post migration custom action description.
+	Description *string `json:"description,omitempty"`
 	// Template post migration custom action document identifier.
 	DocumentIdentifier string `json:"documentIdentifier"`
 	// Template post migration custom action document version.
 	DocumentVersion *string `json:"documentVersion,omitempty"`
+	// Template post migration custom action external parameters.
+	ExternalParameters map[string]shared.SsmExternalParameter `json:"externalParameters,omitempty"`
 	// Launch configuration template ID.
 	LaunchConfigurationTemplateID string `json:"launchConfigurationTemplateID"`
 	// Template post migration custom action must succeed for cutover.

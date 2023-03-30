@@ -26,6 +26,7 @@ type ResourceDetails struct {
 	AwsEc2LaunchTemplate             *AwsEc2LaunchTemplateDetails             `json:"AwsEc2LaunchTemplate,omitempty"`
 	AwsEc2NetworkACL                 *AwsEc2NetworkACLDetails                 `json:"AwsEc2NetworkAcl,omitempty"`
 	AwsEc2NetworkInterface           *AwsEc2NetworkInterfaceDetails           `json:"AwsEc2NetworkInterface,omitempty"`
+	AwsEc2RouteTable                 *AwsEc2RouteTableDetails                 `json:"AwsEc2RouteTable,omitempty"`
 	AwsEc2SecurityGroup              *AwsEc2SecurityGroupDetails              `json:"AwsEc2SecurityGroup,omitempty"`
 	AwsEc2Subnet                     *AwsEc2SubnetDetails                     `json:"AwsEc2Subnet,omitempty"`
 	AwsEc2TransitGateway             *AwsEc2TransitGatewayDetails             `json:"AwsEc2TransitGateway,omitempty"`

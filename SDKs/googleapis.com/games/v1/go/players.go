@@ -80,6 +80,54 @@ func (s *players) GamesPlayersGet(ctx context.Context, request operations.GamesP
 	return res, nil
 }
 
+// GamesPlayersGetMultipleApplicationPlayerIds - Get the application player ids for the currently authenticated player across all requested games by the same developer as the calling application. This will only return ids for players that actually have an id (scoped or otherwise) with that game.
+func (s *players) GamesPlayersGetMultipleApplicationPlayerIds(ctx context.Context, request operations.GamesPlayersGetMultipleApplicationPlayerIdsRequest) (*operations.GamesPlayersGetMultipleApplicationPlayerIdsResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/games/v1/players/me/multipleApplicationPlayerIds"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GamesPlayersGetMultipleApplicationPlayerIdsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GetMultipleApplicationPlayerIdsResponse
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GetMultipleApplicationPlayerIdsResponse = out
+		}
+	}
+
+	return res, nil
+}
+
 // GamesPlayersGetScopedPlayerIds - Retrieves scoped player identifiers for currently authenticated user.
 func (s *players) GamesPlayersGetScopedPlayerIds(ctx context.Context, request operations.GamesPlayersGetScopedPlayerIdsRequest) (*operations.GamesPlayersGetScopedPlayerIdsResponse, error) {
 	baseURL := s.serverURL

@@ -84,6 +84,8 @@ const (
 	ExchangeConfigEnabledExchangeExchangeEnumExchangePlaceExchange     ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_PLACE_EXCHANGE"
 	ExchangeConfigEnabledExchangeExchangeEnumExchangeApplovin          ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_APPLOVIN"
 	ExchangeConfigEnabledExchangeExchangeEnumExchangeConnatix          ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_CONNATIX"
+	ExchangeConfigEnabledExchangeExchangeEnumExchangeResetDigital      ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_RESET_DIGITAL"
+	ExchangeConfigEnabledExchangeExchangeEnumExchangeHivestack         ExchangeConfigEnabledExchangeExchangeEnum = "EXCHANGE_HIVESTACK"
 )
 
 func (e *ExchangeConfigEnabledExchangeExchangeEnum) UnmarshalJSON(data []byte) error {
@@ -237,6 +239,10 @@ func (e *ExchangeConfigEnabledExchangeExchangeEnum) UnmarshalJSON(data []byte) e
 	case "EXCHANGE_APPLOVIN":
 		fallthrough
 	case "EXCHANGE_CONNATIX":
+		fallthrough
+	case "EXCHANGE_RESET_DIGITAL":
+		fallthrough
+	case "EXCHANGE_HIVESTACK":
 		*e = ExchangeConfigEnabledExchangeExchangeEnum(s)
 		return nil
 	default:

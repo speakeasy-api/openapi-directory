@@ -2,6 +2,38 @@
 
 package shared
 
+import (
+	"encoding/json"
+	"fmt"
+)
+
+// TeamRequestVisibilityEnum - The visibility of the team to users in the same organization
+type TeamRequestVisibilityEnum string
+
+const (
+	TeamRequestVisibilityEnumSecret        TeamRequestVisibilityEnum = "secret"
+	TeamRequestVisibilityEnumRequestToJoin TeamRequestVisibilityEnum = "request_to_join"
+	TeamRequestVisibilityEnumPublic        TeamRequestVisibilityEnum = "public"
+)
+
+func (e *TeamRequestVisibilityEnum) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	switch s {
+	case "secret":
+		fallthrough
+	case "request_to_join":
+		fallthrough
+	case "public":
+		*e = TeamRequestVisibilityEnum(s)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for TeamRequestVisibilityEnum: %s", s)
+	}
+}
+
 // TeamRequestInput - A *team* is used to group related projects and people together within an organization. Each project in an organization is associated with a team.
 type TeamRequestInput struct {
 	// The description of the team.
@@ -12,7 +44,10 @@ type TeamRequestInput struct {
 	HTMLDescription *string `json:"html_description,omitempty"`
 	// The name of the team.
 	Name *string `json:"name,omitempty"`
-	// The organization/workspace the team belongs to.
+	// The organization/workspace the team belongs to. This must be the same organization you are in and cannot be changed once set.
 	//
 	Organization *string `json:"organization,omitempty"`
+	// The visibility of the team to users in the same organization
+	//
+	Visibility *TeamRequestVisibilityEnum `json:"visibility,omitempty"`
 }

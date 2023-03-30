@@ -2,22 +2,6 @@
 
 package shared
 
-// ServerTLSPolicyInput - ServerTlsPolicy is a resource that specifies how a server should authenticate incoming requests. This resource itself does not affect configuration unless it is attached to a target HTTPS proxy or endpoint config selector resource.
-type ServerTLSPolicyInput struct {
-	//  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility. Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS and non-TLS traffic reaching port :80.
-	AllowOpen *bool `json:"allowOpen,omitempty"`
-	// Free-text description of the resource.
-	Description *string `json:"description,omitempty"`
-	// Set of label tags associated with the resource.
-	Labels map[string]string `json:"labels,omitempty"`
-	// Specification of the MTLSPolicy.
-	MtlsPolicy *MTLSPolicy `json:"mtlsPolicy,omitempty"`
-	// Required. Name of the ServerTlsPolicy resource. It matches the pattern `projects/*/locations/{location}/serverTlsPolicies/{server_tls_policy}`
-	Name *string `json:"name,omitempty"`
-	// Specification of certificate provider. Defines the mechanism to obtain the certificate and private key for peer to peer authentication.
-	ServerCertificate *GoogleCloudNetworksecurityV1beta1CertificateProvider `json:"serverCertificate,omitempty"`
-}
-
 // ServerTLSPolicy - ServerTlsPolicy is a resource that specifies how a server should authenticate incoming requests. This resource itself does not affect configuration unless it is attached to a target HTTPS proxy or endpoint config selector resource.
 type ServerTLSPolicy struct {
 	//  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility. Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS and non-TLS traffic reaching port :80.
@@ -36,4 +20,20 @@ type ServerTLSPolicy struct {
 	ServerCertificate *GoogleCloudNetworksecurityV1beta1CertificateProvider `json:"serverCertificate,omitempty"`
 	// Output only. The timestamp when the resource was updated.
 	UpdateTime *string `json:"updateTime,omitempty"`
+}
+
+// ServerTLSPolicyInput - ServerTlsPolicy is a resource that specifies how a server should authenticate incoming requests. This resource itself does not affect configuration unless it is attached to a target HTTPS proxy or endpoint config selector resource.
+type ServerTLSPolicyInput struct {
+	//  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility. Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS and non-TLS traffic reaching port :80.
+	AllowOpen *bool `json:"allowOpen,omitempty"`
+	// Free-text description of the resource.
+	Description *string `json:"description,omitempty"`
+	// Set of label tags associated with the resource.
+	Labels map[string]string `json:"labels,omitempty"`
+	// Specification of the MTLSPolicy.
+	MtlsPolicy *MTLSPolicy `json:"mtlsPolicy,omitempty"`
+	// Required. Name of the ServerTlsPolicy resource. It matches the pattern `projects/*/locations/{location}/serverTlsPolicies/{server_tls_policy}`
+	Name *string `json:"name,omitempty"`
+	// Specification of certificate provider. Defines the mechanism to obtain the certificate and private key for peer to peer authentication.
+	ServerCertificate *GoogleCloudNetworksecurityV1beta1CertificateProvider `json:"serverCertificate,omitempty"`
 }

@@ -4,6 +4,7 @@ package shared
 
 type CreateTableRequest struct {
 	CapacitySpecification   *CapacitySpecification   `json:"capacitySpecification,omitempty"`
+	ClientSideTimestamps    *ClientSideTimestamps    `json:"clientSideTimestamps,omitempty"`
 	Comment                 *Comment                 `json:"comment,omitempty"`
 	DefaultTimeToLive       *int64                   `json:"defaultTimeToLive,omitempty"`
 	EncryptionSpecification *EncryptionSpecification `json:"encryptionSpecification,omitempty"`

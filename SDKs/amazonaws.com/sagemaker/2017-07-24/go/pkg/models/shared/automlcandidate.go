@@ -16,8 +16,9 @@ type AutoMLCandidate struct {
 	EndTime             *time.Time            `json:"EndTime,omitempty"`
 	FailureReason       *string               `json:"FailureReason,omitempty"`
 	// The best candidate result from an AutoML training job.
-	FinalAutoMLJobObjectiveMetric *FinalAutoMLJobObjectiveMetric `json:"FinalAutoMLJobObjectiveMetric,omitempty"`
-	InferenceContainers           []AutoMLContainerDefinition    `json:"InferenceContainers,omitempty"`
-	LastModifiedTime              time.Time                      `json:"LastModifiedTime"`
-	ObjectiveStatus               ObjectiveStatusEnum            `json:"ObjectiveStatus"`
+	FinalAutoMLJobObjectiveMetric *FinalAutoMLJobObjectiveMetric         `json:"FinalAutoMLJobObjectiveMetric,omitempty"`
+	InferenceContainerDefinitions map[string][]AutoMLContainerDefinition `json:"InferenceContainerDefinitions,omitempty"`
+	InferenceContainers           []AutoMLContainerDefinition            `json:"InferenceContainers,omitempty"`
+	LastModifiedTime              time.Time                              `json:"LastModifiedTime"`
+	ObjectiveStatus               ObjectiveStatusEnum                    `json:"ObjectiveStatus"`
 }

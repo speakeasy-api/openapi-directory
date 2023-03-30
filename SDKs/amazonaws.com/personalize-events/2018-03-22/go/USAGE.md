@@ -45,7 +45,7 @@ func main() {
                     },
                     Properties: "sapiente",
                     RecommendationID: "enim",
-                    SentAt: "2022-11-09T13:35:32.249Z",
+                    SentAt: "2022-11-10T01:02:50.336Z",
                 },
                 shared.Event{
                     EventID: "voluptatum",
@@ -62,7 +62,7 @@ func main() {
                     },
                     Properties: "quasi",
                     RecommendationID: "laboriosam",
-                    SentAt: "2023-02-25T17:17:14.260Z",
+                    SentAt: "2023-02-26T04:44:32.347Z",
                 },
                 shared.Event{
                     EventID: "est",
@@ -80,7 +80,7 @@ func main() {
                     },
                     Properties: "rem",
                     RecommendationID: "quibusdam",
-                    SentAt: "2022-06-10T04:33:42.993Z",
+                    SentAt: "2022-06-10T16:01:01.080Z",
                 },
                 shared.Event{
                     EventID: "praesentium",
@@ -97,7 +97,7 @@ func main() {
                     },
                     Properties: "sed",
                     RecommendationID: "rerum",
-                    SentAt: "2022-06-25T15:04:02.236Z",
+                    SentAt: "2022-06-26T02:31:20.322Z",
                 },
             },
             SessionID: "occaecati",

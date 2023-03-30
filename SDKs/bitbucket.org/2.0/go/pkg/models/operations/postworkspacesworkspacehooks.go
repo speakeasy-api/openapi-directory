@@ -30,8 +30,8 @@ type PostWorkspacesWorkspaceHooksResponse struct {
 	Headers     map[string][]string
 	StatusCode  int
 	RawResponse *http.Response
-	// If the authenticated user is not an owner on the specified workspace.
+	// If the authenticated user does not have permission to install webhooks on the specified workspace.
 	Error map[string]interface{}
-	// The newly installed webhook.
+	// If the webhook was registered successfully.
 	WebhookSubscription map[string]interface{}
 }

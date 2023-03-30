@@ -27,7 +27,7 @@ func String(s string) *string { return &s }
 //
 // ```
 // curl
-// -U "ws12345@Scope.BalancePlatform_YourBalancePlatform":"YourWsPassword" \
+// -U "ws_123456@Scope.BalancePlatform_YourBalancePlatform":"YourWsPassword" \
 // -H "Content-Type: application/json" \
 // ...
 // ```

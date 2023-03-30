@@ -66,8 +66,6 @@ func (s *info) GetGeomarksGeomarkIDFileFormatExtension(ctx context.Context, requ
 	switch {
 	case httpRes.StatusCode == 200:
 		fallthrough
-	case httpRes.StatusCode == 400:
-		fallthrough
 	case httpRes.StatusCode == 404:
 		fallthrough
 	case httpRes.StatusCode == 500:

@@ -13,6 +13,7 @@ const (
 	RecommendationTypeEnumDkim  RecommendationTypeEnum = "DKIM"
 	RecommendationTypeEnumDmarc RecommendationTypeEnum = "DMARC"
 	RecommendationTypeEnumSpf   RecommendationTypeEnum = "SPF"
+	RecommendationTypeEnumBimi  RecommendationTypeEnum = "BIMI"
 )
 
 func (e *RecommendationTypeEnum) UnmarshalJSON(data []byte) error {
@@ -26,6 +27,8 @@ func (e *RecommendationTypeEnum) UnmarshalJSON(data []byte) error {
 	case "DMARC":
 		fallthrough
 	case "SPF":
+		fallthrough
+	case "BIMI":
 		*e = RecommendationTypeEnum(s)
 		return nil
 	default:

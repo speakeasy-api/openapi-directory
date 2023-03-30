@@ -19,7 +19,7 @@ pkg/models/operations/price.go
 pkg/models/operations/priceprediction.go
 pkg/models/operations/quantmetricstier1.go
 pkg/models/operations/quantmetricstier2.go
-pkg/models/operations/resistanceandsupport.go
+pkg/models/operations/resistancesupport.go
 pkg/models/operations/scenarioanalysis.go
 pkg/models/operations/sentiments.go
 pkg/models/operations/tokens.go

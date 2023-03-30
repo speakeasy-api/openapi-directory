@@ -26,6 +26,7 @@ const (
 	TestNotificationConfigurationRequestEventTypesEnumBeneficiarySetup               TestNotificationConfigurationRequestEventTypesEnum = "BENEFICIARY_SETUP"
 	TestNotificationConfigurationRequestEventTypesEnumCompensateNegativeBalance      TestNotificationConfigurationRequestEventTypesEnum = "COMPENSATE_NEGATIVE_BALANCE"
 	TestNotificationConfigurationRequestEventTypesEnumDirectDebitInitiated           TestNotificationConfigurationRequestEventTypesEnum = "DIRECT_DEBIT_INITIATED"
+	TestNotificationConfigurationRequestEventTypesEnumFundsMigrated                  TestNotificationConfigurationRequestEventTypesEnum = "FUNDS_MIGRATED"
 	TestNotificationConfigurationRequestEventTypesEnumPaymentFailure                 TestNotificationConfigurationRequestEventTypesEnum = "PAYMENT_FAILURE"
 	TestNotificationConfigurationRequestEventTypesEnumPendingCredit                  TestNotificationConfigurationRequestEventTypesEnum = "PENDING_CREDIT"
 	TestNotificationConfigurationRequestEventTypesEnumRefundFundsTransfer            TestNotificationConfigurationRequestEventTypesEnum = "REFUND_FUNDS_TRANSFER"
@@ -73,6 +74,8 @@ func (e *TestNotificationConfigurationRequestEventTypesEnum) UnmarshalJSON(data 
 	case "COMPENSATE_NEGATIVE_BALANCE":
 		fallthrough
 	case "DIRECT_DEBIT_INITIATED":
+		fallthrough
+	case "FUNDS_MIGRATED":
 		fallthrough
 	case "PAYMENT_FAILURE":
 		fallthrough

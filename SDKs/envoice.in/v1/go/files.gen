@@ -67,6 +67,7 @@ pkg/models/operations/invoiceapidetails.go
 pkg/models/operations/invoiceapinewform.go
 pkg/models/operations/invoiceapinewjson.go
 pkg/models/operations/invoiceapinewraw.go
+pkg/models/operations/invoiceapipdf.go
 pkg/models/operations/invoiceapisendtoaccountantform.go
 pkg/models/operations/invoiceapisendtoaccountantjson.go
 pkg/models/operations/invoiceapisendtoaccountantraw.go
@@ -184,12 +185,12 @@ pkg/models/shared/invoiceactivityapimodel.go
 pkg/models/shared/invoicecreateapimodel.go
 pkg/models/shared/invoicecreateitemapimodel.go
 pkg/models/shared/invoicecreateattachmentapimodel.go
+pkg/models/shared/invoiceuriapimodel.go
 pkg/models/shared/sendinvoicetoaccountantapimodel.go
 pkg/models/shared/sendinvoicetoclientapimodel.go
 pkg/models/shared/invoiceupdateapimodel.go
 pkg/models/shared/invoiceupdateitemapimodel.go
 pkg/models/shared/invoiceupdateattachmentapimodel.go
-pkg/models/shared/invoiceuriapimodel.go
 pkg/models/shared/listresultinvoicecategoryapimodel.go
 pkg/models/shared/invoicecategoryapimodel.go
 pkg/models/shared/invoicecategorydeleteapimodel.go

@@ -120,6 +120,7 @@ func main() {
 * `SeasonUpcoming` - Season Upcoming
 * `Stadiums` - Stadiums
 * `Standings` - Standings
+* `TeamGameLogsBySeason` - Team Game Logs By Season
 * `TeamGameStats` - Team Game Stats
 * `TeamSeasonStats` - Team Season Stats
 * `TeamsActive` - Teams (Active)

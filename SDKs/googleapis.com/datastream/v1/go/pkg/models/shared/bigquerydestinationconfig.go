@@ -2,6 +2,7 @@
 
 package shared
 
+// BigQueryDestinationConfig - BigQuery destination configuration
 type BigQueryDestinationConfig struct {
 	// The guaranteed data freshness (in seconds) when querying tables created by the stream. Editing this field will only affect new tables created in the future, but existing tables will not be impacted. Lower values mean that queries will return fresher data, but may result in higher cost.
 	DataFreshness *string `json:"dataFreshness,omitempty"`

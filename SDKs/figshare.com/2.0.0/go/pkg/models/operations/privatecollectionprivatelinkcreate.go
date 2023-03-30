@@ -28,7 +28,7 @@ type PrivateCollectionPrivateLinkCreateResponse struct {
 	ErrorMessage *shared.ErrorMessage
 	Headers      map[string][]string
 	// Created
-	Location    *shared.Location
-	StatusCode  int
-	RawResponse *http.Response
+	PrivateLinkResponse *shared.PrivateLinkResponse
+	StatusCode          int
+	RawResponse         *http.Response
 }

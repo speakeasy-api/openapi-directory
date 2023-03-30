@@ -37,10 +37,10 @@ func (e *CardInfoFormFactorEnum) UnmarshalJSON(data []byte) error {
 
 type CardInfo struct {
 	Authentication *Authentication `json:"authentication,omitempty"`
-	// The brand of the payment instrument.
+	// The brand of the physical or the virtual card.
 	// Possible values: **visa**, **mc**.
 	Brand string `json:"brand"`
-	// The brand variant of the payment instrument.
+	// The brand variant of the physical or the virtual card.
 	// >Contact your Adyen Implementation Manager to get the values that are relevant to your integration. Examples: **visadebit**, **mcprepaid**.
 	BrandVariant string `json:"brandVariant"`
 	// The name of the cardholder.

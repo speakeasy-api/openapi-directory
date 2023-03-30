@@ -7,7 +7,6 @@ import (
 	"fmt"
 )
 
-// VirtualTariffTypeEnum - The Type of the tariff
 type VirtualTariffTypeEnum string
 
 const (
@@ -34,18 +33,13 @@ func (e *VirtualTariffTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// VirtualTariff - Container class for the virtual tariffs
 type VirtualTariff struct {
 	// Says how many of the active power is used in this tariff. This is calculated from the last meter values.
-	Factor *float64 `json:"Factor,omitempty"`
-	// The ID of the virtual tariff
-	ID *string `json:"Id,omitempty"`
-	// The name of this tariff
-	Name *string `json:"Name,omitempty"`
-	// The Type of the tariff
-	Type *VirtualTariffTypeEnum `json:"Type,omitempty"`
-	// The Unit of this value
-	Unit *string `json:"Unit,omitempty"`
+	Factor *float64               `json:"Factor,omitempty"`
+	ID     *string                `json:"Id,omitempty"`
+	Name   *string                `json:"Name,omitempty"`
+	Type   *VirtualTariffTypeEnum `json:"Type,omitempty"`
+	Unit   *string                `json:"Unit,omitempty"`
 	// The Counter Value of this tariff
 	Value *float64 `json:"Value,omitempty"`
 }

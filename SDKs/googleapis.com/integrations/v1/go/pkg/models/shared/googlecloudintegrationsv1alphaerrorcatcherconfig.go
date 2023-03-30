@@ -6,12 +6,14 @@ package shared
 type GoogleCloudIntegrationsV1alphaErrorCatcherConfig struct {
 	// Optional. User-provided description intended to give more business context about the error catcher config.
 	Description *string `json:"description,omitempty"`
-	// Required. An error catcher id is string representation for the error catcher config. Within a workflow, error_catch_id uniquely identifies an error catcher config among all error catcher configs for the workflow
-	ErrorCatchID *string `json:"errorCatchId,omitempty"`
+	// Required. An error catcher id is string representation for the error catcher config. Within a workflow, error_catcher_id uniquely identifies an error catcher config among all error catcher configs for the workflow
+	ErrorCatcherID *string `json:"errorCatcherId,omitempty"`
 	// Required. A number to uniquely identify each error catcher config within the workflow on UI.
 	ErrorCatcherNumber *string `json:"errorCatcherNumber,omitempty"`
 	// Optional. The user created label for a particular error catcher. Optional.
 	Label *string `json:"label,omitempty"`
+	// Configuration detail of coordinate, it used for UI
+	Position *GoogleCloudIntegrationsV1alphaCoordinate `json:"position,omitempty"`
 	// Required. The set of start tasks that are to be executed for the error catch flow
 	StartErrorTasks []GoogleCloudIntegrationsV1alphaNextTask `json:"startErrorTasks,omitempty"`
 }

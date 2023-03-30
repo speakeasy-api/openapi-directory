@@ -994,6 +994,25 @@ const (
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR6idn16xlarge   ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6idn.16xlarge"
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR6idn24xlarge   ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6idn.24xlarge"
 	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR6idn32xlarge   ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r6idn.32xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumC7gMetal        ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "c7g.metal"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM7gMedium       ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.medium"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM7gLarge        ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.large"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM7gXlarge       ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM7g2xlarge      ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.2xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM7g4xlarge      ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.4xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM7g8xlarge      ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.8xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM7g12xlarge     ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.12xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM7g16xlarge     ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.16xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumM7gMetal        ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "m7g.metal"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7gMedium       ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.medium"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7gLarge        ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.large"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7gXlarge       ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7g2xlarge      ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.2xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7g4xlarge      ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.4xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7g8xlarge      ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.8xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7g12xlarge     ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.12xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7g16xlarge     ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.16xlarge"
+	ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnumR7gMetal        ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -2239,6 +2258,44 @@ func (e *ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceType
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum(s)
 		return nil
 	default:

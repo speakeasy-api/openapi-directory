@@ -42,6 +42,7 @@ pkg/models/operations/getcandidatecandidateidtotals.go
 pkg/models/operations/getcandidates.go
 pkg/models/operations/getcandidatessearch.go
 pkg/models/operations/getcandidatestotals.go
+pkg/models/operations/getcandidatestotalsaggregates.go
 pkg/models/operations/getcandidatestotalsbyoffice.go
 pkg/models/operations/getcandidatestotalsbyofficebyparty.go
 pkg/models/operations/getcommitteecommitteeidcandidates.go
@@ -144,14 +145,16 @@ pkg/models/shared/candidatepage.go
 pkg/models/shared/candidate.go
 pkg/models/shared/candidatehistorytotalpage.go
 pkg/models/shared/candidatehistorytotal.go
+pkg/models/shared/candidatetotalaggregatepage.go
+pkg/models/shared/candidatetotalaggregate.go
 pkg/models/shared/totalbyofficepage.go
 pkg/models/shared/totalbyoffice.go
 pkg/models/shared/totalbyofficebypartypage.go
 pkg/models/shared/totalbyofficebyparty.go
 pkg/models/shared/committeedetailpage.go
 pkg/models/shared/committeedetail.go
-pkg/models/shared/committeehistorypage.go
-pkg/models/shared/committeehistory.go
+pkg/models/shared/committeehistoryprofilepage.go
+pkg/models/shared/committeehistoryprofile.go
 pkg/models/shared/committeepage.go
 pkg/models/shared/committee.go
 pkg/models/shared/communicationcostpage.go
@@ -164,6 +167,7 @@ pkg/models/shared/calendardatepage.go
 pkg/models/shared/calendardate.go
 pkg/models/shared/electiondate.go
 pkg/models/shared/reportdate.go
+pkg/models/shared/committeehistory.go
 pkg/models/shared/schedulebpage.go
 pkg/models/shared/scheduleb.go
 pkg/models/shared/seekinfo.go

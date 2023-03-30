@@ -20,9 +20,9 @@ const (
 	GoogleCloudMlV1AcceleratorConfigTypeEnumNvidiaTeslaA100            GoogleCloudMlV1AcceleratorConfigTypeEnum = "NVIDIA_TESLA_A100"
 	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV2                      GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V2"
 	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV3                      GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V3"
+	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV4                      GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V4"
 	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV2Pod                   GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V2_POD"
 	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV3Pod                   GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V3_POD"
-	GoogleCloudMlV1AcceleratorConfigTypeEnumTpuV4Pod                   GoogleCloudMlV1AcceleratorConfigTypeEnum = "TPU_V4_POD"
 )
 
 func (e *GoogleCloudMlV1AcceleratorConfigTypeEnum) UnmarshalJSON(data []byte) error {
@@ -49,11 +49,11 @@ func (e *GoogleCloudMlV1AcceleratorConfigTypeEnum) UnmarshalJSON(data []byte) er
 		fallthrough
 	case "TPU_V3":
 		fallthrough
+	case "TPU_V4":
+		fallthrough
 	case "TPU_V2_POD":
 		fallthrough
 	case "TPU_V3_POD":
-		fallthrough
-	case "TPU_V4_POD":
 		*e = GoogleCloudMlV1AcceleratorConfigTypeEnum(s)
 		return nil
 	default:

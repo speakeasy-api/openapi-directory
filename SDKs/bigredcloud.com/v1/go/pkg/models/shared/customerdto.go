@@ -6,6 +6,7 @@ package shared
 type CustomerDto struct {
 	AccountName                    *string                          `json:"accountName,omitempty"`
 	AccountNumber                  *string                          `json:"accountNumber,omitempty"`
+	AdditionalEmails               []string                         `json:"additionalEmails,omitempty"`
 	Address                        []string                         `json:"address,omitempty"`
 	AuthCode                       *string                          `json:"authCode,omitempty"`
 	Bank                           *EFTBankDto                      `json:"bank,omitempty"`

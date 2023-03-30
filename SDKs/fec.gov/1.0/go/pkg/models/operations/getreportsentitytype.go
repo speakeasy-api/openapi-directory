@@ -133,6 +133,25 @@ type GetReportsEntityTypeQueryParams struct {
 	// A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
 	//
 	CommitteeID []string `queryParam:"style=form,explode=true,name=committee_id"`
+	// The one-letter type code of the organization:
+	//         - C communication cost
+	//         - D delegate
+	//         - E electioneering communication
+	//         - H House
+	//         - I independent expenditure filer (not a committee)
+	//         - N PAC - nonqualified
+	//         - O independent expenditure-only (super PACs)
+	//         - P presidential
+	//         - Q PAC - qualified
+	//         - S Senate
+	//         - U single candidate independent expenditure
+	//         - V PAC with non-contribution account, nonqualified
+	//         - W PAC with non-contribution account, qualified
+	//         - X party, nonqualified
+	//         - Y party, qualified
+	//         - Z national party non-federal account
+	//
+	CommitteeType []string `queryParam:"style=form,explode=true,name=committee_type"`
 	// Filter records to only those that were applicable to a given
 	// two-year period.The cycle begins with an odd year and is named
 	// for its ending, even year.
@@ -198,6 +217,12 @@ type GetReportsEntityTypeQueryParams struct {
 	Page *int `queryParam:"style=form,explode=true,name=page"`
 	// The number of results returned per page. Defaults to 20.
 	PerPage *int `queryParam:"style=form,explode=true,name=per_page"`
+	// Keyword search for filer name or ID
+	//
+	QFiler []string `queryParam:"style=form,explode=true,name=q_filer"`
+	// Keyword search for spender name or ID
+	//
+	QSpender []string `queryParam:"style=form,explode=true,name=q_spender"`
 	// Report type; prefix with "-" to exclude. Name of report where the underlying data comes from:
 	//     - 10D Pre-Election
 	//     - 10G Pre-General
@@ -237,7 +262,8 @@ type GetReportsEntityTypeQueryParams struct {
 	//     - CA  COMPREHENSIVE AMEND
 	//
 	ReportType []string `queryParam:"style=form,explode=true,name=report_type"`
-	// Provide a field to sort by. Use - for descending order.
+	// Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
+	//
 	Sort []string `queryParam:"style=form,explode=true,name=sort"`
 	// Hide null values on sorted column(s).
 	SortHideNull *bool `queryParam:"style=form,explode=true,name=sort_hide_null"`
@@ -245,25 +271,6 @@ type GetReportsEntityTypeQueryParams struct {
 	SortNullOnly *bool `queryParam:"style=form,explode=true,name=sort_null_only"`
 	// Toggle that sorts null values last
 	SortNullsLast *bool `queryParam:"style=form,explode=true,name=sort_nulls_last"`
-	// The one-letter type code of the organization:
-	//         - C communication cost
-	//         - D delegate
-	//         - E electioneering communication
-	//         - H House
-	//         - I independent expenditor (person or group)
-	//         - N PAC - nonqualified
-	//         - O independent expenditure-only (super PACs)
-	//         - P presidential
-	//         - Q PAC - qualified
-	//         - S Senate
-	//         - U single candidate independent expenditure
-	//         - V PAC with non-contribution account, nonqualified
-	//         - W PAC with non-contribution account, qualified
-	//         - X party, nonqualified
-	//         - Y party, qualified
-	//         - Z national party non-federal account
-	//
-	Type []string `queryParam:"style=form,explode=true,name=type"`
 	// Forms with coverage date -
 	//     year from the coverage ending date.
 	// Forms without coverage date -

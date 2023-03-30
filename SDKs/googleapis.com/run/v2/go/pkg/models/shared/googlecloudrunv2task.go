@@ -80,6 +80,8 @@ type GoogleCloudRunV2Task struct {
 	Reconciling *bool `json:"reconciling,omitempty"`
 	// Output only. The number of times this Task was retried. Tasks are retried when they fail up to the maxRetries limit.
 	Retried *int `json:"retried,omitempty"`
+	// Output only. Reserved for future use.
+	SatisfiesPzs *bool `json:"satisfiesPzs,omitempty"`
 	// Email address of the IAM service account associated with the Task of a Job. The service account represents the identity of the running task, and determines what permissions the task has. If not provided, the task will use the project's default service account.
 	ServiceAccount *string `json:"serviceAccount,omitempty"`
 	// Output only. Represents time when the task started to run. It is not guaranteed to be set in happens-before order across separate operations.

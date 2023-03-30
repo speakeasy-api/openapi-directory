@@ -19,9 +19,9 @@ const (
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumNvidiaTeslaA100            GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "NVIDIA_TESLA_A100"
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV2                      GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V2"
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV3                      GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V3"
+	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV4                      GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V4"
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV2Pod                   GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V2_POD"
 	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV3Pod                   GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V3_POD"
-	GoogleCloudMlV1CapabilityAvailableAcceleratorsEnumTpuV4Pod                   GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum = "TPU_V4_POD"
 )
 
 func (e *GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum) UnmarshalJSON(data []byte) error {
@@ -48,11 +48,11 @@ func (e *GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum) UnmarshalJSON(data 
 		fallthrough
 	case "TPU_V3":
 		fallthrough
+	case "TPU_V4":
+		fallthrough
 	case "TPU_V2_POD":
 		fallthrough
 	case "TPU_V3_POD":
-		fallthrough
-	case "TPU_V4_POD":
 		*e = GoogleCloudMlV1CapabilityAvailableAcceleratorsEnum(s)
 		return nil
 	default:

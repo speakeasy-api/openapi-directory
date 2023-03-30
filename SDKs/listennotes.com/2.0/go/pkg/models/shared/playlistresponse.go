@@ -35,7 +35,7 @@ func (e *PlaylistResponseTypeEnum) UnmarshalJSON(data []byte) error {
 type PlaylistResponse struct {
 	// Playlist description.
 	Description *string `json:"description,omitempty"`
-	// A 11-character playlist id.
+	// A 11-character playlist id, which can be used to further fetch detailed playlist metadata via `GET /playlists/{id}`.
 	ID *string `json:"id,omitempty"`
 	// High resolution image url of the playlist.
 	Image *string `json:"image,omitempty"`
@@ -52,6 +52,8 @@ type PlaylistResponse struct {
 	Thumbnail *string `json:"thumbnail,omitempty"`
 	// Total number of items in this playlist.
 	Total *int64 `json:"total,omitempty"`
+	// Total audio length of all episodes in this playlist, in seconds. It will have a valid value only when type is **episode_list**. In other words, it will be 0 if type is **podcast_list**.
+	TotalAudioLengthSec *int64 `json:"total_audio_length_sec,omitempty"`
 	// The type of this playlist, which should be either **episode_list** or **podcast_list**.
 	//
 	Type *PlaylistResponseTypeEnum `json:"type,omitempty"`

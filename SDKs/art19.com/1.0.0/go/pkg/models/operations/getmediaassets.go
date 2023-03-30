@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetMediaAssetsSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetMediaAssetsQueryParams struct {
 	// The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
 	// The brackets *MUST* be percent-encoded, per the requirements in
@@ -17,6 +21,7 @@ type GetMediaAssetsQueryParams struct {
 
 type GetMediaAssetsRequest struct {
 	QueryParams GetMediaAssetsQueryParams
+	Security    GetMediaAssetsSecurity
 }
 
 // GetMediaAssets400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

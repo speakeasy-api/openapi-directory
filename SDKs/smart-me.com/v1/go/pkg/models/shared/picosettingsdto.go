@@ -35,12 +35,14 @@ func (e *PicoSettingsDtoAuthenticationTypeEnum) UnmarshalJSON(data []byte) error
 type PicoSettingsDto struct {
 	// The authentication type
 	AuthenticationType *PicoSettingsDtoAuthenticationTypeEnum `json:"AuthenticationType,omitempty"`
+	// Flag if the car id detection is enabled
+	CarIDDetection *bool `json:"CarIdDetection,omitempty"`
 	// The Brightness of the LCD Matrix display. 0 = minimum, 255 = maximum
 	DisplayBrightness *string `json:"DisplayBrightness,omitempty"`
 	// The DNS name of the pico's internal ip
 	DNSName *string `json:"DnsName,omitempty"`
-	// The base 64 string for the "no car connected" image
-	IdleImageData *string `json:"IdleImageData,omitempty"`
+	// Enable the fix lock of the charging cable
+	FixCableLockEnable *bool `json:"FixCableLockEnable,omitempty"`
 	// The url of the idle image
 	IdleImageURL *string `json:"IdleImageUrl,omitempty"`
 	// The internal IP address
@@ -55,4 +57,6 @@ type PicoSettingsDto struct {
 	ModbusTCP *bool `json:"ModbusTcp,omitempty"`
 	// The name of the station
 	Name *string `json:"Name,omitempty"`
+	// The Serial number of the station
+	SerialNumber *string `json:"SerialNumber,omitempty"`
 }

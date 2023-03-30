@@ -800,6 +800,61 @@ func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluat
 	return res, nil
 }
 
+// DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersion - Imports a processor version from source processor version.
+func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersion(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionRequest) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1beta3/{parent}/processorVersions:importProcessorVersion", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsImportProcessorVersionResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.GoogleLongrunningOperation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.GoogleLongrunningOperation = out
+		}
+	}
+
+	return res, nil
+}
+
 // DocumentaiProjectsLocationsProcessorsProcessorVersionsList - Lists all versions of a processor.
 func (s *projects) DocumentaiProjectsLocationsProcessorsProcessorVersionsList(ctx context.Context, request operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest) (*operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse, error) {
 	baseURL := s.serverURL

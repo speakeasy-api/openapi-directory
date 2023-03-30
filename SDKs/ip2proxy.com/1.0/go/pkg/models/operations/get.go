@@ -37,7 +37,7 @@ type GetQueryParams struct {
 	Format *GetFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// IP address (IPv4) for lookup purpose. If not present, the server IP address will be used for the lookup.
 	IP string `queryParam:"style=form,explode=true,name=ip"`
-	// API key.
+	// API key. Please sign up free trial license key at ip2location.com
 	Key string `queryParam:"style=form,explode=true,name=key"`
 	// Package name from PX1 to PX11. If not present, the web service will assume the PX1 package query.
 	Package *string `queryParam:"style=form,explode=true,name=package"`

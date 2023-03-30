@@ -84,6 +84,8 @@ const (
 	GuaranteedOrderExchangeEnumExchangePlaceExchange     GuaranteedOrderExchangeEnum = "EXCHANGE_PLACE_EXCHANGE"
 	GuaranteedOrderExchangeEnumExchangeApplovin          GuaranteedOrderExchangeEnum = "EXCHANGE_APPLOVIN"
 	GuaranteedOrderExchangeEnumExchangeConnatix          GuaranteedOrderExchangeEnum = "EXCHANGE_CONNATIX"
+	GuaranteedOrderExchangeEnumExchangeResetDigital      GuaranteedOrderExchangeEnum = "EXCHANGE_RESET_DIGITAL"
+	GuaranteedOrderExchangeEnumExchangeHivestack         GuaranteedOrderExchangeEnum = "EXCHANGE_HIVESTACK"
 )
 
 func (e *GuaranteedOrderExchangeEnum) UnmarshalJSON(data []byte) error {
@@ -237,6 +239,10 @@ func (e *GuaranteedOrderExchangeEnum) UnmarshalJSON(data []byte) error {
 	case "EXCHANGE_APPLOVIN":
 		fallthrough
 	case "EXCHANGE_CONNATIX":
+		fallthrough
+	case "EXCHANGE_RESET_DIGITAL":
+		fallthrough
+	case "EXCHANGE_HIVESTACK":
 		*e = GuaranteedOrderExchangeEnum(s)
 		return nil
 	default:

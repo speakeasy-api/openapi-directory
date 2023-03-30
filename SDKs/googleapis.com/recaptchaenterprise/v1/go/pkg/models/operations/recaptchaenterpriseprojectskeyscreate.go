@@ -45,7 +45,7 @@ type RecaptchaenterpriseProjectsKeysCreateQueryParams struct {
 type RecaptchaenterpriseProjectsKeysCreateRequest struct {
 	PathParams  RecaptchaenterpriseProjectsKeysCreatePathParams
 	QueryParams RecaptchaenterpriseProjectsKeysCreateQueryParams
-	Request     *shared.GoogleCloudRecaptchaenterpriseV1Key `request:"mediaType=application/json"`
+	Request     *shared.GoogleCloudRecaptchaenterpriseV1KeyInput `request:"mediaType=application/json"`
 	Security    RecaptchaenterpriseProjectsKeysCreateSecurity
 }
 

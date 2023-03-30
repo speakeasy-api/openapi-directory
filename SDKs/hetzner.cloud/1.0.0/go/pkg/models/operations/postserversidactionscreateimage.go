@@ -228,8 +228,6 @@ func (e *PostServersIDActionsCreateImage201ApplicationJSONImageTypeEnum) Unmarsh
 type PostServersIDActionsCreateImage201ApplicationJSONImage struct {
 	// ID of Server the Image is bound to. Only set for Images of type `backup`.
 	BoundTo int64 `json:"bound_to"`
-	// Build ID of the Image
-	BuildID *string `json:"build_id,omitempty"`
 	// Point in time when the Resource was created (in ISO-8601 format)
 	Created string `json:"created"`
 	// Information about the Server the Image was created from

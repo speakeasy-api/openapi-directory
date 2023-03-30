@@ -61,6 +61,8 @@ func (s *users) GetUser(ctx context.Context, request operations.GetUserRequest) 
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		fallthrough
+	case httpRes.StatusCode == 401:
 	}
 
 	return res, nil

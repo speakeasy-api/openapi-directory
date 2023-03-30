@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 )
 
 // TagResponseColorEnum - Color of the tag.
@@ -83,12 +84,16 @@ func (e *TagResponseColorEnum) UnmarshalJSON(data []byte) error {
 type TagResponse struct {
 	// Color of the tag.
 	Color *TagResponseColorEnum `json:"color,omitempty"`
+	// The time at which this resource was created.
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Array of users following this tag.
 	Followers []UserCompact `json:"followers,omitempty"`
 	// Globally unique identifier of the resource, as a string.
 	Gid *string `json:"gid,omitempty"`
 	// Name of the tag. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.
 	Name *string `json:"name,omitempty"`
+	// Free-form textual information associated with the tag (i.e. its description).
+	Notes *string `json:"notes,omitempty"`
 	// A url that points directly to the object within Asana.
 	PermalinkURL *string `json:"permalink_url,omitempty"`
 	// The base type of this resource.
@@ -101,6 +106,8 @@ type TagResponseInput struct {
 	// Color of the tag.
 	Color *TagResponseColorEnum `json:"color,omitempty"`
 	// Name of the tag. This is generally a short sentence fragment that fits on a line in the UI for maximum readability. However, it can be longer.
-	Name      *string                `json:"name,omitempty"`
+	Name *string `json:"name,omitempty"`
+	// Free-form textual information associated with the tag (i.e. its description).
+	Notes     *string                `json:"notes,omitempty"`
 	Workspace *WorkspaceCompactInput `json:"workspace,omitempty"`
 }

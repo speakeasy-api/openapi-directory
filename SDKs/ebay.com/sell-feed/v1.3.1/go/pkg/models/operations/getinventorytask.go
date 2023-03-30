@@ -12,7 +12,7 @@ type GetInventoryTaskSecurity struct {
 }
 
 type GetInventoryTaskPathParams struct {
-	// The ID of the task. This ID was generated when the task was created by the createInventoryTask method
+	// The ID of the task. This ID was generated when the task was created by the <strong>createInventoryTask</strong> method
 	TaskID string `pathParam:"style=simple,explode=false,name=task_id"`
 }
 

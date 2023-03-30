@@ -13,7 +13,7 @@ type PostLegalEntitiesSecurity struct {
 }
 
 type PostLegalEntitiesRequest struct {
-	Request  *shared.LegalEntityInfoInput `request:"mediaType=application/json"`
+	Request  *shared.LegalEntityInfoRequiredTypeInput `request:"mediaType=application/json"`
 	Security PostLegalEntitiesSecurity
 }
 

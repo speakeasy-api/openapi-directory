@@ -16,6 +16,7 @@ type PaymentInfoCorporate struct {
 type PaymentInfo struct {
 	Billing    *BillingAddress       `json:"billing,omitempty"`
 	Card       *CreditCard           `json:"card,omitempty"`
+	Cards      []CreditCard          `json:"cards,omitempty"`
 	Corporate  *PaymentInfoCorporate `json:"corporate,omitempty"`
 	SharedCard *CreditCard           `json:"shared_card,omitempty"`
 }

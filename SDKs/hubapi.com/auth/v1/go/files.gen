@@ -14,10 +14,10 @@ pkg/utils/requestbody.go
 pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
-pkg/models/operations/getoauthv1accesstokenstokengetaccesstoken.go
-pkg/models/operations/deleteoauthv1refreshtokenstokenarchiverefreshtoken.go
-pkg/models/operations/getoauthv1refreshtokenstokengetrefreshtoken.go
-pkg/models/operations/postoauthv1tokencreatetoken.go
+pkg/models/operations/getoauthv1accesstokenstokenget.go
+pkg/models/operations/deleteoauthv1refreshtokenstokenarchive.go
+pkg/models/operations/getoauthv1refreshtokenstokenget.go
+pkg/models/operations/postoauthv1tokencreate.go
 pkg/models/shared/error.go
 pkg/models/shared/errordetail.go
 pkg/models/shared/accesstokeninforesponse.go

@@ -6,5 +6,6 @@ package shared
 type CreditCard struct {
 	Bin         *string `json:"bin,omitempty"`
 	ID          *int64  `json:"id,omitempty"`
+	IsDefault   *bool   `json:"is_default,omitempty"`
 	PaymentCode *string `json:"payment_code,omitempty"`
 }

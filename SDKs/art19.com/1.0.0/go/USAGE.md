@@ -11,15 +11,14 @@ import (
 )
 
 func main() {
-    s := sdk.New(
-        sdk.WithSecurity(shared.Security{
+    s := sdk.New()
+
+    req := operations.GetClassificationsRequest{
+        Security: operations.GetClassificationsSecurity{
             APIKey: shared.SchemeAPIKey{
                 APIKey: "YOUR_API_KEY_HERE",
             },
-        }),
-    )
-
-    req := operations.GetClassificationsRequest{
+        },
         QueryParams: operations.GetClassificationsQueryParams{
             Ids: []string{
                 "9bd9d8d6-9a67-44e0-b467-cc8796ed151a",

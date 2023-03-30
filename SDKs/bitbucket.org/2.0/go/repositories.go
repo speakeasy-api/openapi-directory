@@ -36,7 +36,8 @@ func newRepositories(defaultClient, securityClient HTTPClient, serverURL, langua
 	}
 }
 
-// DeleteRepositoriesWorkspaceRepoSlug - Deletes the repository. This is an irreversible operation.
+// DeleteRepositoriesWorkspaceRepoSlug - Delete a repository
+// Deletes the repository. This is an irreversible operation.
 //
 // This does not affect its forks.
 func (s *repositories) DeleteRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugResponse, error) {
@@ -89,7 +90,8 @@ func (s *repositories) DeleteRepositoriesWorkspaceRepoSlug(ctx context.Context, 
 	return res, nil
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugHooksUID - Deletes the specified webhook subscription from the given
+// DeleteRepositoriesWorkspaceRepoSlugHooksUID - Delete a webhook for a repository
+// Deletes the specified webhook subscription from the given
 // repository.
 func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
@@ -137,10 +139,131 @@ func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugHooksUID(ctx context.C
 	return res, nil
 }
 
-// GetRepositories - Returns a paginated list of all public repositories.
+// DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug - Delete an explicit group permission for a repository
+// Deletes the repository group permission between the requested repository and group, if one exists.
+//
+// Only users with admin permission for the repository may access this resource.
+//
+// Example:
+//
+// $ curl -X DELETE https://api.bitbucket.org/2.0/repositories/atlassian_tutorial
+// /geordi/permissions-config/groups/developers
+//
+// HTTP/1.1 204
+func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID - Delete an explicit user permission for a repository
+// Deletes the repository user permission between the requested repository and user, if one exists.
+//
+// Only users with admin permission for the repository may access this resource.
+//
+// The only authentication method for this endpoint is via app passwords.
+//
+// ```
+// $ curl -X DELETE https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+// permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a
+//
+// HTTP/1.1 204
+// ```
+func (s *repositories) DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.DeleteRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRepositories - List public repositories
+// Returns a paginated list of all public repositories.
 //
 // This endpoint also supports filtering and sorting of the results. See
-// [filtering and sorting](../meta/filtering) for more details.
+// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
 func (s *repositories) GetRepositories(ctx context.Context, request operations.GetRepositoriesRequest) (*operations.GetRepositoriesResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/repositories"
@@ -188,8 +311,9 @@ func (s *repositories) GetRepositories(ctx context.Context, request operations.G
 	return res, nil
 }
 
-// GetRepositoriesWorkspace - Returns a paginated list of all repositories owned by the specified
-// account or UUID.
+// GetRepositoriesWorkspace - List repositories in a workspace
+// Returns a paginated list of all repositories owned by the specified
+// workspace.
 //
 // The result can be narrowed down based on the authenticated user's role.
 //
@@ -198,7 +322,7 @@ func (s *repositories) GetRepositories(ctx context.Context, request operations.G
 // repo the user is an admin on, as that implies write access).
 //
 // This endpoint also supports filtering and sorting of the results. See
-// [filtering and sorting](../../meta/filtering) for more details.
+// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
 func (s *repositories) GetRepositoriesWorkspace(ctx context.Context, request operations.GetRepositoriesWorkspaceRequest) (*operations.GetRepositoriesWorkspaceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}", request.PathParams, nil)
@@ -258,7 +382,8 @@ func (s *repositories) GetRepositoriesWorkspace(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlug - Returns the object describing this repository.
+// GetRepositoriesWorkspaceRepoSlug - Get a repository
+// Returns the object describing this repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlug(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugRequest) (*operations.GetRepositoriesWorkspaceRepoSlugResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}", request.PathParams, nil)
@@ -314,128 +439,13 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlug(ctx context.Context, req
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugCommitCommitStatuses - Returns all statuses (e.g. build results) for a specific commit.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugCommitCommitStatuses(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaginatedCommitstatuses
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PaginatedCommitstatuses = out
-		}
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Returns the specified build status for a commit.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest) (*operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Commitstatus = out
-		}
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath - Returns a paginated list of commits that modified the specified file.
+// GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath - List commits that modified a file
+// Returns a paginated list of commits that modified the specified file.
 //
 // Commits are returned in reverse chronological order. This is roughly
 // equivalent to the following commands:
 //
 //	$ git log --follow --date-order <sha> <path>
-//
-//	$ hg log --follow <path>
 //
 // By default, Bitbucket will follow renames and the path name in the
 // returned entries reflects that. This can be turned off using the
@@ -443,7 +453,7 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild
 //
 // Results are returned in descending chronological order by default, and
 // like most endpoints you can
-// [filter and sort](../../../../../../meta/filtering) the response to
+// [filter and sort](/cloud/bitbucket/rest/intro/#filtering) the response to
 // only provide exactly the data you want.
 //
 // For example, if you wanted to find commits made before 2011-05-18
@@ -539,7 +549,8 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(ctx
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugForks - Returns a paginated list of all the forks of the specified
+// GetRepositoriesWorkspaceRepoSlugForks - List repository forks
+// Returns a paginated list of all the forks of the specified
 // repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugForks(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugForksRequest) (*operations.GetRepositoriesWorkspaceRepoSlugForksResponse, error) {
 	baseURL := s.serverURL
@@ -588,7 +599,8 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugForks(ctx context.Context
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugHooks - Returns a paginated list of webhooks installed on this repository.
+// GetRepositoriesWorkspaceRepoSlugHooks - List webhooks for a repository
+// Returns a paginated list of webhooks installed on this repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooks(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksRequest) (*operations.GetRepositoriesWorkspaceRepoSlugHooksResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/hooks", request.PathParams, nil)
@@ -644,7 +656,8 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooks(ctx context.Context
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugHooksUID - Returns the webhook with the specified id installed on the specified
+// GetRepositoriesWorkspaceRepoSlugHooksUID - Get a webhook for a repository
+// Returns the webhook with the specified id installed on the specified
 // repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugHooksUIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugHooksUIDResponse, error) {
 	baseURL := s.serverURL
@@ -699,19 +712,14 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Cont
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses - Returns all statuses (e.g. build results) for the given pull
-// request.
-func (s *repositories) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesResponse, error) {
+// GetRepositoriesWorkspaceRepoSlugOverrideSettings - Retrieve the inheritance state for repository settings
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugOverrideSettings(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsResponse, error) {
 	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/statuses", request.PathParams, nil)
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request.PathParams, nil)
 
 	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
@@ -727,7 +735,7 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesResponse{
+	res := &operations.GetRepositoriesWorkspaceRepoSlugOverrideSettingsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -736,14 +744,13 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaginatedCommitstatuses
+			var out map[string]interface{}
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PaginatedCommitstatuses = out
+			res.RepositoryInheritanceState = out
 		}
-	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
@@ -759,7 +766,429 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugSrc - This endpoint redirects the client to the directory listing of the
+// GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroups - List explicit group permissions for a repository
+// Returns a paginated list of explicit group permissions for the given repository.
+// This endpoint does not support BBQL features.
+//
+// Example:
+//
+// ```
+// $ curl https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups
+//
+// HTTP/1.1 200
+// Location: https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups
+//
+//	{
+//	  "pagelen": 10,
+//	  "values": [
+//	    {
+//	      "type": "repository_group_permission",
+//	      "group": {
+//	        "type": "group",
+//	        "name": "Administrators",
+//	        "slug": "administrators"
+//	      },
+//	      "permission": "admin",
+//	      "links": {
+//	        "self": {
+//	          "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/
+//	                   geordi/permissions-config/groups/administrators"
+//	        }
+//	      }
+//	    },
+//	    {
+//	      "type": "repository_group_permission",
+//	      "group": {
+//	        "type": "group",
+//	        "name": "Developers",
+//	        "slug": "developers"
+//	      },
+//	      "permission": "read",
+//	      "links": {
+//	        "self": {
+//	          "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/
+//	                   geordi/permissions-config/groups/developers"
+//	        }
+//	      }
+//	    }
+//	  ],
+//	  "page": 1,
+//	  "size": 2
+//	}
+//
+// ```
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroups(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedRepositoryGroupPermissions
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedRepositoryGroupPermissions = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug - Get an explicit group permission for a repository
+// Returns the group permission for a given group slug and repository
+//
+// Only users with admin permission for the repository may access this resource.
+//
+// Permissions can be:
+//
+// * `admin`
+// * `write`
+// * `read`
+// * `none`
+//
+// Example:
+//
+// ```
+// $ curl https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers
+//
+// HTTP/1.1 200
+// Location:
+// https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers
+//
+//	{
+//	    "type": "repository_group_permission",
+//	    "group": {
+//	        "type": "group",
+//	        "name": "Developers",
+//	        "slug": "developers"
+//	    },
+//	    "repository": {
+//	        "type": "repository",
+//	        "name": "geordi",
+//	        "full_name": "atlassian_tutorial/geordi",
+//	        "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+//	    },
+//	    "permission": "read",
+//	    "links": {
+//	      "self": {
+//	        "href":
+//	        "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers"
+//	      }
+//	    }
+//	}
+//
+// ```
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RepositoryGroupPermission = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsers - List explicit user permissions for a repository
+// Returns a paginated list of explicit user permissions for the given repository.
+// This endpoint does not support BBQL features.
+//
+// Example:
+//
+// ```
+// $ curl https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/users
+//
+//	{
+//	  "pagelen": 10,
+//	  "values": [
+//	    {
+//	        "type": "repository_user_permission",
+//	        "user": {
+//	            "type": "user",
+//	            "display_name": "Colin Cameron",
+//	            "uuid": "{d301aafa-d676-4ee0-88be-962be7417567}",
+//	            "account_id": "557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+//	        },
+//	        "permission": "admin",
+//	        "links": {
+//	          "self": {
+//	            "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+//	                     permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+//	          }
+//	        }
+//	    },
+//	    {
+//	      "type": "repository_user_permission",
+//	      "user": {
+//	        "type": "user",
+//	        "display_name": "Sean Conaty",
+//	        "uuid": "{504c3b62-8120-4f0c-a7bc-87800b9d6f70}",
+//	        "account_id": "557058:ba8948b2-49da-43a9-9e8b-e7249b8e324c"
+//	      },
+//	      "permission": "write",
+//	      "links": {
+//	        "self": {
+//	          "href": "https://api.bitbucket.org/2.0//repositories/atlassian_tutorial/geordi/
+//	                   permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324c"
+//	        }
+//	      }
+//	    }
+//	  ],
+//	  "page": 1,
+//	  "size": 2
+//	}
+//
+// ```
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedRepositoryUserPermissions
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedRepositoryUserPermissions = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID - Get an explicit user permission for a repository
+// Returns the explicit user permission for a given user and repository.
+//
+// Only users with admin permission for the repository may access this resource.
+//
+// Permissions can be:
+//
+// * `admin`
+// * `write`
+// * `read`
+// * `none`
+//
+// Example:
+//
+// ```
+// $ curl 'https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+//
+//	permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a'
+//
+// HTTP/1.1 200
+// Location: 'https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+//
+//	permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a'
+//
+//	{
+//	    "type": "repository_user_permission",
+//	    "user": {
+//	        "type": "user",
+//	        "display_name": "Colin Cameron",
+//	        "uuid": "{d301aafa-d676-4ee0-88be-962be7417567}",
+//	        "account_id": "557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+//	    },
+//	    "repository": {
+//	        "type": "repository",
+//	        "name": "geordi",
+//	        "full_name": "atlassian_tutorial/geordi",
+//	        "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+//	    },
+//	    "permission": "admin",
+//	    "links": {
+//	        "self": {
+//	            "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+//	                     permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+//	        }
+//	    }
+//	}
+//
+// ```
+func (s *repositories) GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RepositoryUserPermission = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRepositoriesWorkspaceRepoSlugSrc - Get the root directory of the main branch
+// This endpoint redirects the client to the directory listing of the
 // root directory on the main branch.
 //
 // This is equivalent to directly hitting
@@ -824,10 +1253,11 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, 
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugSrcCommitPath - This endpoints is used to retrieve the contents of a single file,
+// GetRepositoriesWorkspaceRepoSlugSrcCommitPath - Get file or directory contents
+// This endpoints is used to retrieve the contents of a single file,
 // or the contents of a directory at a specified revision.
 //
-// ## Raw file contents
+// #### Raw file contents
 //
 // When `path` points to a file, this endpoint returns the raw contents.
 // The response's Content-Type is derived from the filename
@@ -846,7 +1276,7 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, 
 // returns the same ETag, regardless on the directory it lives in, or the
 // commit it is on.
 //
-// ## File meta data
+// #### File meta data
 //
 // When the request for a file path includes the query parameter
 // `?format=meta`, instead of returning the file's raw contents, Bitbucket
@@ -899,7 +1329,7 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, 
 // used to check for the existence of a file, or a file's size without
 // incurring the overhead of receiving its full contents.
 //
-// ## Directory listings
+// #### Directory listings
 //
 // When `path` points to a directory instead of a file, the response is a
 // paginated list of directory and file objects in the same order as the
@@ -1013,7 +1443,7 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, 
 //
 // ```
 //
-// ## Querying, filtering and sorting
+// #### Querying, filtering and sorting
 //
 // Like most API endpoints, this API supports the Bitbucket
 // querying/filtering syntax and so you could filter a directory listing
@@ -1030,7 +1460,7 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrc(ctx context.Context, 
 //
 // `.../src/eefd5ef/?sort=-size`
 //
-// See [filtering and sorting](../../../../../../meta/filtering) for more
+// See [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
 // details.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest) (*operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse, error) {
 	baseURL := s.serverURL
@@ -1091,7 +1521,8 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugSrcCommitPath(ctx context
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugWatchers - Returns a paginated list of all the watchers on the specified
+// GetRepositoriesWorkspaceRepoSlugWatchers - List repositories watchers
+// Returns a paginated list of all the watchers on the specified
 // repository.
 func (s *repositories) GetRepositoriesWorkspaceRepoSlugWatchers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugWatchersRequest) (*operations.GetRepositoriesWorkspaceRepoSlugWatchersResponse, error) {
 	baseURL := s.serverURL
@@ -1122,16 +1553,26 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugWatchers(ctx context.Cont
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedAccounts
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedAccounts = out
+		}
 	}
 
 	return res, nil
 }
 
-// GetUserPermissionsRepositories - Returns an object for each repository the caller has explicit access
+// GetUserPermissionsRepositories - List repository permissions for a user
+// Returns an object for each repository the caller has explicit access
 // to and their effective permission — the highest level of permission the
 // caller has. This does not return public repositories that the user was
 // not granted any specific permission in, and does not distinguish between
-// direct and indirect privileges.
+// explicit and implicit privileges.
 //
 // Permissions can be:
 //
@@ -1170,7 +1611,7 @@ func (s *repositories) GetRepositoriesWorkspaceRepoSlugWatchers(ctx context.Cont
 //
 // ```
 //
-// Results may be further [filtered or sorted](../../../meta/filtering) by
+// Results may be further [filtered or sorted](/cloud/bitbucket/rest/intro/#filtering) by
 // repository or permission by adding the following query string
 // parameters:
 //
@@ -1226,7 +1667,8 @@ func (s *repositories) GetUserPermissionsRepositories(ctx context.Context, reque
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlug - Creates a new repository.
+// PostRepositoriesWorkspaceRepoSlug - Create a repository
+// Creates a new repository.
 //
 // Note: In order to set the project for the newly created repository,
 // pass in either the project key or the project UUID as part of the
@@ -1323,96 +1765,10 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlug(ctx context.Context, re
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild - Creates a new build status against the specified commit.
+// PostRepositoriesWorkspaceRepoSlugForks - Fork a repository
+// Creates a new fork of the specified repository.
 //
-// If the specified key already exists, the existing status object will
-// be overwritten.
-//
-// Example:
-//
-// ```
-//
-//	curl https://api.bitbucket.org/2.0/repositories/my-workspace/my-repo/commit/e10dae226959c2194f2b07b077c07762d93821cf/statuses/build/           -X POST -u jdoe -H 'Content-Type: application/json'           -d '{
-//	    "key": "MY-BUILD",
-//	    "state": "SUCCESSFUL",
-//	    "description": "42 tests passed",
-//	    "url": "https://www.example.org/my-build-result"
-//	  }'
-//
-// ```
-//
-// When creating a new commit status, you can use a URI template for the URL.
-// Templates are URLs that contain variable names that Bitbucket will
-// evaluate at runtime whenever the URL is displayed anywhere similar to
-// parameter substitution in
-// [Bitbucket Connect](https://developer.atlassian.com/bitbucket/concepts/context-parameters.html).
-// For example, one could use `https://foo.com/builds/{repository.full_name}`
-// which Bitbucket will turn into `https://foo.com/builds/foo/bar` at render time.
-// The context variables available are `repository` and `commit`.
-func (s *repositories) PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuild(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildRequest) (*operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build", request.PathParams, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 201:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Commitstatus = out
-		}
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// PostRepositoriesWorkspaceRepoSlugForks - Creates a new fork of the specified repository.
-//
-// ## Forking a repository
+// #### Forking a repository
 //
 // To create a fork, specify the workspace explicitly as part of the
 // request body:
@@ -1439,7 +1795,7 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuil
 //
 // You need contributor access to create new forks within a workspace.
 //
-// ## Change the properties of a new fork
+// #### Change the properties of a new fork
 //
 // By default the fork inherits most of its properties from the parent.
 // However, since the optional POST body document follows the normal
@@ -1520,7 +1876,8 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugForks(ctx context.Contex
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugHooks - Creates a new webhook on the specified repository.
+// PostRepositoriesWorkspaceRepoSlugHooks - Create a webhook for a repository
+// Creates a new webhook on the specified repository.
 //
 // Example:
 //
@@ -1605,7 +1962,8 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Contex
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugSrc - This endpoint is used to create new commits in the repository by
+// PostRepositoriesWorkspaceRepoSlugSrc - Create a commit by uploading a file
+// This endpoint is used to create new commits in the repository by
 // uploading files.
 //
 // To add a new file to a repository:
@@ -1637,7 +1995,7 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Contex
 // This endpoint accepts `multipart/form-data` (as in the examples above),
 // as well as `application/x-www-form-urlencoded`.
 //
-// ## multipart/form-data
+// #### multipart/form-data
 //
 // A `multipart/form-data` post contains a series of "form fields" that
 // identify both the individual files that are being uploaded, as well as
@@ -1659,7 +2017,7 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Contex
 // `Content-Disposition` header will contain the `filename` parameter to
 // distinguish between a file named "message" and the commit message field.
 //
-// ## application/x-www-form-urlencoded
+// #### application/x-www-form-urlencoded
 //
 // It is also possible to upload new files using a simple
 // `application/x-www-form-urlencoded` POST. This can be convenient when
@@ -1684,7 +2042,7 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugHooks(ctx context.Contex
 // a meta data parameter, then it is interpreted as meta data, not as a
 // file.
 //
-// ## Executables and links
+// #### Executables and links
 //
 // While this API aims to facilitate the most common use cases, it is
 // possible to perform some more advanced operations like creating a new
@@ -1782,15 +2140,16 @@ func (s *repositories) PostRepositoriesWorkspaceRepoSlugSrc(ctx context.Context,
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlug - Since this endpoint can be used to both update and to create a
+// PutRepositoriesWorkspaceRepoSlug - Update a repository
+// Since this endpoint can be used to both update and to create a
 // repository, the request body depends on the intent.
 //
-// ### Creation
+// #### Creation
 //
 // See the POST documentation for the repository endpoint for an example
 // of the request body.
 //
-// ### Update
+// #### Update
 //
 // Note: Changing the `name` of the repository will cause the location to
 // be changed. This is because the URL of the repo is derived from the
@@ -1865,81 +2224,8 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlug(ctx context.Context, req
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey - Used to update the current status of a build status object on the
-// specific commit.
-//
-// This operation can also be used to change other properties of the
-// build status:
-//
-// * `state`
-// * `name`
-// * `description`
-// * `url`
-// * `refname`
-//
-// The `key` cannot be changed.
-func (s *repositories) PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKey(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest) (*operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build/{key}", request.PathParams, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PutRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Commitstatus = out
-		}
-	case httpRes.StatusCode == 401:
-	case httpRes.StatusCode == 404:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out map[string]interface{}
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Error = out
-		}
-	}
-
-	return res, nil
-}
-
-// PutRepositoriesWorkspaceRepoSlugHooksUID - Updates the specified webhook subscription.
+// PutRepositoriesWorkspaceRepoSlugHooksUID - Update a webhook for a repository
+// Updates the specified webhook subscription.
 //
 // The following properties can be mutated:
 //
@@ -1985,6 +2271,274 @@ func (s *repositories) PutRepositoriesWorkspaceRepoSlugHooksUID(ctx context.Cont
 
 			res.WebhookSubscription = out
 		}
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutRepositoriesWorkspaceRepoSlugOverrideSettings - Set the inheritance state for repository settings
+func (s *repositories) PutRepositoriesWorkspaceRepoSlugOverrideSettings(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsRequest) (*operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/override-settings", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug - Update an explicit group permission for a repository
+// Updates the group permission if it exists.
+//
+// Only users with admin permission for the repository may access this resource.
+//
+// The only authentication method supported for this endpoint is via app passwords.
+//
+// Permissions can be:
+//
+// * `admin`
+// * `write`
+// * `read`
+//
+// Example:
+// ```
+// $ curl -X PUT -H "Content-Type: application/json"
+// https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers
+// -d
+//
+//	'{
+//	    "permission": "write"
+//	}'
+//
+// HTTP/1.1 200
+// Location:
+// https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers
+//
+//	{
+//	    "type": "repository_group_permission",
+//	    "group": {
+//	        "type": "group",
+//	        "name": "Developers",
+//	        "slug": "developers"
+//	    },
+//	    "repository": {
+//	        "type": "repository",
+//	        "name": "geordi",
+//	        "full_name": "atlassian_tutorial/geordi",
+//	        "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+//	    },
+//	    "permission": "write",
+//	    "links": {
+//	      "self": {
+//	        "href":
+//	        "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/permissions-config/groups/developers"
+//	      }
+//	    }
+//	}
+//
+// ```
+func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlug(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugRequest) (*operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/groups/{group_slug}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigGroupsGroupSlugResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RepositoryGroupPermission = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 402:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID - Update an explicit user permission for a repository
+// Updates the explicit user permission for a given user and repository. The selected user must be a member of
+// the workspace, and cannot be the workspace owner.
+// Only users with admin permission for the repository may access this resource.
+//
+// The only authentication method for this endpoint is via app passwords.
+//
+// Permissions can be:
+//
+// * `admin`
+// * `write`
+// * `read`
+//
+// Example:
+//
+// ```
+// $ curl -X PUT -H "Content-Type: application/json" 'https://api.bitbucket.org/2.0/repositories/
+// atlassian_tutorial/geordi/permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a'
+//
+//	-d         '{
+//	    "permission": "write"
+//	}'
+//
+// HTTP/1.1 200
+// Location: 'https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+// permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a'
+//
+//	{
+//	    "type": "repository_user_permission",
+//	    "user": {
+//	        "type": "user",
+//	        "display_name": "Colin Cameron",
+//	        "uuid": "{d301aafa-d676-4ee0-88be-962be7417567}",
+//	        "account_id": "557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+//	    },
+//	    "repository": {
+//	        "type": "repository",
+//	        "name": "geordi",
+//	        "full_name": "atlassian_tutorial/geordi",
+//	        "uuid": "{85d08b4e-571d-44e9-a507-fa476535aa98}"
+//	    },
+//	    "permission": "write",
+//	    "links": {
+//	        "self": {
+//	            "href": "https://api.bitbucket.org/2.0/repositories/atlassian_tutorial/geordi/
+//	                     permissions-config/users/557058:ba8948b2-49da-43a9-9e8b-e7249b8e324a"
+//	        }
+//	    }
+//	}
+//
+// ```
+func (s *repositories) PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/permissions-config/users/{selected_user_id}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PutRepositoriesWorkspaceRepoSlugPermissionsConfigUsersSelectedUserIDResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RepositoryUserPermission = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 402:
+		fallthrough
 	case httpRes.StatusCode == 403:
 		fallthrough
 	case httpRes.StatusCode == 404:

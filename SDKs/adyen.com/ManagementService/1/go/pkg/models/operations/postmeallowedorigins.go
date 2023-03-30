@@ -19,8 +19,8 @@ type PostMeAllowedOriginsRequest struct {
 
 type PostMeAllowedOriginsResponse struct {
 	// OK - the request has succeeded.
-	AllowedOriginsResponse *shared.AllowedOriginsResponse
-	ContentType            string
+	AllowedOrigin *shared.AllowedOrigin
+	ContentType   string
 	// Bad Request - a problem reading or understanding the request.
 	RestServiceError *shared.RestServiceError
 	StatusCode       int

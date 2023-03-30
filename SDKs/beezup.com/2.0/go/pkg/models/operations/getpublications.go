@@ -19,9 +19,13 @@ type GetPublicationsPathParams struct {
 type GetPublicationsPublicationTypesEnum string
 
 const (
-	GetPublicationsPublicationTypesEnumPublishProducts GetPublicationsPublicationTypesEnum = "PublishProducts"
-	GetPublicationsPublicationTypesEnumPublishOffers   GetPublicationsPublicationTypesEnum = "PublishOffers"
-	GetPublicationsPublicationTypesEnumUnpublish       GetPublicationsPublicationTypesEnum = "Unpublish"
+	GetPublicationsPublicationTypesEnumPublishProducts          GetPublicationsPublicationTypesEnum = "PublishProducts"
+	GetPublicationsPublicationTypesEnumPublishOffers            GetPublicationsPublicationTypesEnum = "PublishOffers"
+	GetPublicationsPublicationTypesEnumUnpublish                GetPublicationsPublicationTypesEnum = "Unpublish"
+	GetPublicationsPublicationTypesEnumPublishRelationshipsEnum GetPublicationsPublicationTypesEnum = "PublishRelationshipsEnum"
+	GetPublicationsPublicationTypesEnumPublishProductImagesEnum GetPublicationsPublicationTypesEnum = "PublishProductImagesEnum"
+	GetPublicationsPublicationTypesEnumPublishInventoryEnum     GetPublicationsPublicationTypesEnum = "PublishInventoryEnum"
+	GetPublicationsPublicationTypesEnumPublishPricingEnum       GetPublicationsPublicationTypesEnum = "PublishPricingEnum"
 )
 
 func (e *GetPublicationsPublicationTypesEnum) UnmarshalJSON(data []byte) error {
@@ -35,6 +39,14 @@ func (e *GetPublicationsPublicationTypesEnum) UnmarshalJSON(data []byte) error {
 	case "PublishOffers":
 		fallthrough
 	case "Unpublish":
+		fallthrough
+	case "PublishRelationshipsEnum":
+		fallthrough
+	case "PublishProductImagesEnum":
+		fallthrough
+	case "PublishInventoryEnum":
+		fallthrough
+	case "PublishPricingEnum":
 		*e = GetPublicationsPublicationTypesEnum(s)
 		return nil
 	default:

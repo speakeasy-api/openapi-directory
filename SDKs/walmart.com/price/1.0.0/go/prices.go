@@ -60,7 +60,7 @@ func (s *prices) OptCapProgramInPrice(ctx context.Context, request operations.Op
 
 	utils.PopulateHeaders(ctx, req, request.Headers)
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -133,7 +133,7 @@ func (s *prices) PriceBulkUploads(ctx context.Context, request operations.PriceB
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {
@@ -197,7 +197,7 @@ func (s *prices) UpdatePrice(ctx context.Context, request operations.UpdatePrice
 
 	utils.PopulateHeaders(ctx, req, request.Headers)
 
-	client := s.securityClient
+	client := s.defaultClient
 
 	httpRes, err := client.Do(req)
 	if err != nil {

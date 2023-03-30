@@ -133,12 +133,12 @@ func (s *committee) GetCandidateCandidateIDCommitteesHistory(ctx context.Context
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.CommitteeHistoryPage
+			var out *shared.CommitteeHistoryProfilePage
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.CommitteeHistoryPage = out
+			res.CommitteeHistoryProfilePage = out
 		}
 	}
 
@@ -183,12 +183,12 @@ func (s *committee) GetCandidateCandidateIDCommitteesHistoryCycle(ctx context.Co
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.CommitteeHistoryPage
+			var out *shared.CommitteeHistoryProfilePage
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.CommitteeHistoryPage = out
+			res.CommitteeHistoryProfilePage = out
 		}
 	}
 
@@ -283,12 +283,12 @@ func (s *committee) GetCommitteeCommitteeIDHistory(ctx context.Context, request 
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.CommitteeHistoryPage
+			var out *shared.CommitteeHistoryProfilePage
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.CommitteeHistoryPage = out
+			res.CommitteeHistoryProfilePage = out
 		}
 	}
 
@@ -333,12 +333,12 @@ func (s *committee) GetCommitteeCommitteeIDHistoryCycle(ctx context.Context, req
 	default:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.CommitteeHistoryPage
+			var out *shared.CommitteeHistoryProfilePage
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.CommitteeHistoryPage = out
+			res.CommitteeHistoryProfilePage = out
 		}
 	}
 

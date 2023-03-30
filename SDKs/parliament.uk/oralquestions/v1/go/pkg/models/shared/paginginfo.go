@@ -3,8 +3,10 @@
 package shared
 
 type PagingInfo struct {
-	Skip         *int          `json:"Skip,omitempty"`
-	StatusCounts []StatusCount `json:"StatusCounts,omitempty"`
-	Take         *int          `json:"Take,omitempty"`
-	Total        *int          `json:"Total,omitempty"`
+	GlobalStatusCounts []StatusCount `json:"GlobalStatusCounts,omitempty"`
+	GlobalTotal        *int          `json:"GlobalTotal,omitempty"`
+	Skip               *int          `json:"Skip,omitempty"`
+	StatusCounts       []StatusCount `json:"StatusCounts,omitempty"`
+	Take               *int          `json:"Take,omitempty"`
+	Total              *int          `json:"Total,omitempty"`
 }

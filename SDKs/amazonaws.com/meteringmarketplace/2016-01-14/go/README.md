@@ -48,7 +48,7 @@ func main() {
                     CustomerIdentifier: "facilis",
                     Dimension: "eum",
                     Quantity: 437587,
-                    Timestamp: "2022-12-10T22:07:57.076Z",
+                    Timestamp: "2022-12-11T09:34:38.330Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
                             AllocatedUsageQuantity: 56713,
@@ -140,7 +140,7 @@ func main() {
                     CustomerIdentifier: "possimus",
                     Dimension: "occaecati",
                     Quantity: 105907,
-                    Timestamp: "2022-10-29T04:05:49.539Z",
+                    Timestamp: "2022-10-29T15:32:30.787Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
                             AllocatedUsageQuantity: 264555,
@@ -166,7 +166,7 @@ func main() {
                     CustomerIdentifier: "sit",
                     Dimension: "quia",
                     Quantity: 617636,
-                    Timestamp: "2023-02-02T21:23:01.747Z",
+                    Timestamp: "2023-02-03T08:49:42.994Z",
                     UsageAllocations: []shared.UsageAllocation{
                         shared.UsageAllocation{
                             AllocatedUsageQuantity: 222321,

@@ -34,7 +34,7 @@ func (e *GetAssociatedResourceResourceTypeEnum) UnmarshalJSON(data []byte) error
 }
 
 type GetAssociatedResourcePathParams struct {
-	// The name or ID of the application.
+	//  The name, ID, or ARN of the application.
 	Application string `pathParam:"style=simple,explode=false,name=application"`
 	// The name or ID of the resource associated with the application.
 	Resource string `pathParam:"style=simple,explode=false,name=resource"`

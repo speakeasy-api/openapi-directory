@@ -71,6 +71,6 @@ type ClientLibrarySettings struct {
 	RestNumericEnums *bool `json:"restNumericEnums,omitempty"`
 	// Settings for Ruby client libraries.
 	RubySettings *RubySettings `json:"rubySettings,omitempty"`
-	// Version of the API to apply these settings to.
+	// Version of the API to apply these settings to. This is the full protobuf package for the API, ending in the version element. Examples: "google.cloud.speech.v1" and "google.spanner.admin.database.v1".
 	Version *string `json:"version,omitempty"`
 }

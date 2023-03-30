@@ -16,7 +16,7 @@ const (
 	GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnumDimensionGroup              GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum = "DIMENSION_GROUP"
 	GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnumFilter                      GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum = "FILTER"
 	GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnumMeasure                     GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum = "MEASURE"
-	GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnumParemeter                   GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum = "PAREMETER"
+	GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnumParameter                   GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum = "PARAMETER"
 )
 
 func (e *GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum) UnmarshalJSON(data []byte) error {
@@ -35,7 +35,7 @@ func (e *GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum) Unmarshal
 		fallthrough
 	case "MEASURE":
 		fallthrough
-	case "PAREMETER":
+	case "PARAMETER":
 		*e = GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum(s)
 		return nil
 	default:

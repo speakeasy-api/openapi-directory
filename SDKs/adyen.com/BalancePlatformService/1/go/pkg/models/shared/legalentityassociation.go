@@ -9,7 +9,7 @@ import (
 
 // LegalEntityAssociationTypeEnum - Defines the relationship of the legal entity to the current legal entity.
 //
-// For example, **uboThroughOwnership**, **uboThroughControl**, or **signatory**.
+// For example, **uboThroughOwnership**, **uboThroughControl**, **signatory**, or **soleProprietorship**.
 type LegalEntityAssociationTypeEnum string
 
 const (
@@ -43,7 +43,7 @@ type LegalEntityAssociationInput struct {
 	LegalEntityID string `json:"legalEntityId"`
 	// Defines the relationship of the legal entity to the current legal entity.
 	//
-	// For example, **uboThroughOwnership**, **uboThroughControl**, or **signatory**.
+	// For example, **uboThroughOwnership**, **uboThroughControl**, **signatory**, or **soleProprietorship**.
 	Type LegalEntityAssociationTypeEnum `json:"type"`
 }
 
@@ -66,6 +66,6 @@ type LegalEntityAssociation struct {
 	Name *string `json:"name,omitempty"`
 	// Defines the relationship of the legal entity to the current legal entity.
 	//
-	// For example, **uboThroughOwnership**, **uboThroughControl**, or **signatory**.
+	// For example, **uboThroughOwnership**, **uboThroughControl**, **signatory**, or **soleProprietorship**.
 	Type LegalEntityAssociationTypeEnum `json:"type"`
 }

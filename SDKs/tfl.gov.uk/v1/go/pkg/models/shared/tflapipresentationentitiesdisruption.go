@@ -52,7 +52,7 @@ type TflAPIPresentationEntitiesDisruption struct {
 	// Gets or sets the additionaInfo of this disruption.
 	AdditionalInfo *string `json:"additionalInfo,omitempty"`
 	// Gets or sets the routes affected by this disruption
-	AffectedRoutes []TflAPIPresentationEntitiesRouteSection `json:"affectedRoutes,omitempty"`
+	AffectedRoutes []TflAPIPresentationEntitiesDisruptedRoute `json:"affectedRoutes,omitempty"`
 	// Gets or sets the stops affected by this disruption
 	AffectedStops []TflAPIPresentationEntitiesStopPoint `json:"affectedStops,omitempty"`
 	// Gets or sets the category of this dispruption.

@@ -37,7 +37,7 @@ type UpdateComponentTypeRequestBody struct {
 	IsSingleton *bool `json:"isSingleton,omitempty"`
 	// An object that maps strings to the property definitions in the component type. Each string in the mapping must be unique to this object.
 	PropertyDefinitions map[string]shared.PropertyDefinitionRequest `json:"propertyDefinitions,omitempty"`
-	// The property groups
+	// The property groups.
 	PropertyGroups map[string]shared.PropertyGroupRequest `json:"propertyGroups,omitempty"`
 }
 

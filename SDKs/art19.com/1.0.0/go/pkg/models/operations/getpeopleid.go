@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetPeopleIDSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetPeopleIDPathParams struct {
 	// The ID of the person resource to load.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -14,6 +18,7 @@ type GetPeopleIDPathParams struct {
 
 type GetPeopleIDRequest struct {
 	PathParams GetPeopleIDPathParams
+	Security   GetPeopleIDSecurity
 }
 
 // GetPeopleID200ApplicationVndAPIPlusJSON - Success

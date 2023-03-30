@@ -80,14 +80,14 @@ func (e *PortfolioRequestColorEnum) UnmarshalJSON(data []byte) error {
 }
 
 // PortfolioRequestInput - A *portfolio* gives a high-level overview of the status of multiple initiatives in Asana. Portfolios provide a dashboard overview of the state of multiple projects, including a progress report and the most recent [project status](/docs/asana-project-statuses) update.
-// Portfolios have some restrictions on size. Each portfolio has a max of 250 items and, like projects, a max of 20 custom fields.
+// Portfolios have some restrictions on size. Each portfolio has a max of 500 items and, like projects, a max of 20 custom fields.
 type PortfolioRequestInput struct {
 	// Color of the portfolio.
 	Color *PortfolioRequestColorEnum `json:"color,omitempty"`
-	// An array of strings identifying users. These can either be the string "me", an email, or the gid of a user.
-	Members []string `json:"members,omitempty"`
 	// The name of the portfolio.
 	Name *string `json:"name,omitempty"`
+	// True if the portfolio is public to its workspace members.
+	Public *bool `json:"public,omitempty"`
 	// Gid of an object.
 	Workspace *string `json:"workspace,omitempty"`
 }

@@ -7,8 +7,6 @@ import (
 )
 
 type OptCapProgramInPriceHeaders struct {
-	// Basic authorization header. Base 64 encodes the Client ID and Client Secret retrieved in step two of the integration steps.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
 	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID

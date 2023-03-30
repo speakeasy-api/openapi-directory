@@ -33,12 +33,74 @@ func newProject(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
+// AssignCM - Assign a CM to the project
+func (s *project) AssignCM(ctx context.Context, request operations.AssignCMRequest) (*operations.AssignCMResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/assign-cm", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AssignCMResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.OperationStatus
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.OperationStatus = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
 // CancelProject - Cancel your translation project
+// If you haven't launched your translation project yet, we will delete it. If MotaWord already started working on your project, we will cancel the project and refund the volume that we haven't worked on yet.
 func (s *project) CancelProject(ctx context.Context, request operations.CancelProjectRequest) (*operations.CancelProjectResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/cancel", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -94,13 +156,13 @@ func (s *project) CancelProject(ctx context.Context, request operations.CancelPr
 	return res, nil
 }
 
-// CreateProject - Get a new quote
-// Create a new project
-func (s *project) CreateProject(ctx context.Context, request operations.CreateProjectRequest) (*operations.CreateProjectResponse, error) {
+// CreateProjectJSON - Create a new project
+// Create a new translation project. Projects are not launched (you are not charged) until you `/launch` the created project.
+func (s *project) CreateProjectJSON(ctx context.Context, request operations.CreateProjectJSONRequest) (*operations.CreateProjectJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/projects"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -125,7 +187,7 @@ func (s *project) CreateProject(ctx context.Context, request operations.CreatePr
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.CreateProjectResponse{
+	res := &operations.CreateProjectJSONResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -162,8 +224,76 @@ func (s *project) CreateProject(ctx context.Context, request operations.CreatePr
 	return res, nil
 }
 
-// DeleteProject - Delete a project
-// Delete(cancel) a project.
+// CreateProjectMultipart - Create a new project
+// Create a new translation project. Projects are not launched (you are not charged) until you `/launch` the created project.
+func (s *project) CreateProjectMultipart(ctx context.Context, request operations.CreateProjectMultipartRequest) (*operations.CreateProjectMultipartResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/projects"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateProjectMultipartResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Project
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Project = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 405:
+		fallthrough
+	case httpRes.StatusCode == 406:
+		fallthrough
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteProject - Delete your translation project
+// If you haven't launched your translation project yet, we will delete it. If MotaWord already started working on your project, we will cancel the project and refund the volume that we haven't worked on yet.
 func (s *project) DeleteProject(ctx context.Context, request operations.DeleteProjectRequest) (*operations.DeleteProjectResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request.PathParams, nil)
@@ -218,6 +348,7 @@ func (s *project) DeleteProject(ctx context.Context, request operations.DeletePr
 }
 
 // DeliverProject - Deliver project
+// Deliver project to the owner of the project. You can also download your translations in `/package` and `/download` endpoints.
 func (s *project) DeliverProject(ctx context.Context, request operations.DeliverProjectRequest) (*operations.DeliverProjectResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/deliver", request.PathParams, nil)
@@ -271,8 +402,8 @@ func (s *project) DeliverProject(ctx context.Context, request operations.Deliver
 	return res, nil
 }
 
-// Download - Download the latest translation package.
-// Download the latest translation package. You must have given a /package call beforehand and wait until the packaging status is 'completed'.
+// Download - Download your translated project
+// Download the latest translation package. You must have requested a `/package` call beforehand and wait until the packaging status is 'completed'.
 func (s *project) Download(ctx context.Context, request operations.DownloadRequest) (*operations.DownloadResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/download", request.PathParams, nil)
@@ -328,8 +459,8 @@ func (s *project) Download(ctx context.Context, request operations.DownloadReque
 	return res, nil
 }
 
-// DownloadHTMLInvoice - Download invoice as hmtl
-// Download invoice as html by project id.
+// DownloadHTMLInvoice - Download project invoice (HTML)
+// Download your project invoice as HTML. This is useful when you want to show your users the invoice in a webpage.
 func (s *project) DownloadHTMLInvoice(ctx context.Context, request operations.DownloadHTMLInvoiceRequest) (*operations.DownloadHTMLInvoiceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/invoice.html", request.PathParams, nil)
@@ -384,8 +515,8 @@ func (s *project) DownloadHTMLInvoice(ctx context.Context, request operations.Do
 	return res, nil
 }
 
-// DownloadLanguage - Download the latest translation package.
-// Download only the translation package of this language. You must have given a /package call beforehand and wait until the packaging status is 'completed'.
+// DownloadLanguage - Download your translated project language
+// Download the latest translation package for your target language. You must have requested a `/package` call beforehand and wait until the packaging status is 'completed'.
 func (s *project) DownloadLanguage(ctx context.Context, request operations.DownloadLanguageRequest) (*operations.DownloadLanguageResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/download/{language}", request.PathParams, nil)
@@ -441,8 +572,8 @@ func (s *project) DownloadLanguage(ctx context.Context, request operations.Downl
 	return res, nil
 }
 
-// DownloadPdfInvoice - Download invoice as pdf
-// Download invoice as pdf by project id.
+// DownloadPdfInvoice - Download project invoice (PDF)
+// Download your project invoice as PDF. Your invoice may be in "unpaid" status, in which case youn can see the payment instructions in the PDF file.
 func (s *project) DownloadPdfInvoice(ctx context.Context, request operations.DownloadPdfInvoiceRequest) (*operations.DownloadPdfInvoiceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/invoice.pdf", request.PathParams, nil)
@@ -496,8 +627,8 @@ func (s *project) DownloadPdfInvoice(ctx context.Context, request operations.Dow
 	return res, nil
 }
 
-// GetInvoice - Get invoice details
-// Get invoice details
+// GetInvoice - View project invoice
+// View your invoice details for your translation project.
 func (s *project) GetInvoice(ctx context.Context, request operations.GetInvoiceRequest) (*operations.GetInvoiceResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/invoice", request.PathParams, nil)
@@ -551,8 +682,8 @@ func (s *project) GetInvoice(ctx context.Context, request operations.GetInvoiceR
 	return res, nil
 }
 
-// GetProgress - Get project progress
-// Get the progress of an already launched project.
+// GetProgress - View progress of a project
+// Monitor the translation progress of an already launched project in real-time.
 func (s *project) GetProgress(ctx context.Context, request operations.GetProgressRequest) (*operations.GetProgressResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/progress", request.PathParams, nil)
@@ -612,8 +743,8 @@ func (s *project) GetProgress(ctx context.Context, request operations.GetProgres
 	return res, nil
 }
 
-// GetProject - Get single project
-// Get single project
+// GetProject - View a translation project
+// View the details of a translation project in your account.
 func (s *project) GetProject(ctx context.Context, request operations.GetProjectRequest) (*operations.GetProjectResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request.PathParams, nil)
@@ -728,8 +859,8 @@ func (s *project) GetProjectVendors(ctx context.Context, request operations.GetP
 	return res, nil
 }
 
-// GetProjects - Get a list of your projects
-// Get a list of your projects
+// GetProjects - View your translation projects
+// View the translation projects ordered in your account. If you have the related permission (configured by your account administrator), you can view the projects of your colleagues under the same company account.
 func (s *project) GetProjects(ctx context.Context, request operations.GetProjectsRequest) (*operations.GetProjectsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/projects"
@@ -810,12 +941,12 @@ func (s *project) GetQuoteIDFromInternalID(ctx context.Context, request operatio
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.GetQuoteIDFromInternalID200ApplicationJSON
+			var out *shared.ProjectID
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.GetQuoteIDFromInternalID200ApplicationJSONObject = out
+			res.ProjectID = out
 		}
 	case httpRes.StatusCode == 404:
 		switch {
@@ -832,8 +963,8 @@ func (s *project) GetQuoteIDFromInternalID(ctx context.Context, request operatio
 	return res, nil
 }
 
-// GetVendorProjects - Get a list of your vendor projects
-// Get a list of your vendor projects
+// GetVendorProjects - List projects as a vendor
+// Get a list of projects that are available to you to work on as a vendor. This is not a list of projects that you ordered as a customer.
 func (s *project) GetVendorProjects(ctx context.Context, request operations.GetVendorProjectsRequest) (*operations.GetVendorProjectsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/projects/vendor"
@@ -951,11 +1082,12 @@ func (s *project) GetVendorProjectsByUserID(ctx context.Context, request operati
 }
 
 // LaunchProject - Launch your translation project
+// Launch your translation project so MotaWord can actually start working on your translation.
 func (s *project) LaunchProject(ctx context.Context, request operations.LaunchProjectRequest) (*operations.LaunchProjectResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/launch", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1015,8 +1147,8 @@ func (s *project) LaunchProject(ctx context.Context, request operations.LaunchPr
 	return res, nil
 }
 
-// Package - Package the translation of all languages to be downloaded.
-// Package the translation project, make it ready to be downloaded.
+// Package - Package your translated project
+// Package the translations in your project, prepare translated documents and make it ready to be downloaded. Once packaged, you can download your translated project.
 func (s *project) Package(ctx context.Context, request operations.PackageRequest) (*operations.PackageResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/package", request.PathParams, nil)
@@ -1076,8 +1208,8 @@ func (s *project) Package(ctx context.Context, request operations.PackageRequest
 	return res, nil
 }
 
-// PackageLanguage - Package the translation of a specific target language to be downloaded.
-// Package the translation project, make it ready to be downloaded.
+// PackageLanguage - Package your translated project language
+// Package the translations in your project for a specific target language, prepare translated documents and make it ready to be downloaded. Once packaged, you can download your translated project in this target language.
 func (s *project) PackageLanguage(ctx context.Context, request operations.PackageLanguageRequest) (*operations.PackageLanguageResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/package/{language}", request.PathParams, nil)
@@ -1200,12 +1332,67 @@ func (s *project) RecreateProject(ctx context.Context, request operations.Recrea
 	return res, nil
 }
 
-// SubmitProjectReports - Submit reports for a project
+// SendQuoteEmail - Send a quote email
+// Send a quote email
+func (s *project) SendQuoteEmail(ctx context.Context, request operations.SendQuoteEmailRequest) (*operations.SendQuoteEmailResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/email-quote", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SendQuoteEmailResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.OperationStatus
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.OperationStatus = out
+		}
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// SubmitProjectReports - Submit feedback report for a project
 func (s *project) SubmitProjectReports(ctx context.Context, request operations.SubmitProjectReportsRequest) (*operations.SubmitProjectReportsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/reports", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -1263,8 +1450,8 @@ func (s *project) SubmitProjectReports(ctx context.Context, request operations.S
 	return res, nil
 }
 
-// TrackPackage - Track the status of translation packaging.
-// This request will tell you the current progress of the translation packaging. You will use the 'key' provided by the /package call.
+// TrackPackage - Track translation packaging status
+// Track the packaging status of your translations, by using the `key` from packaging request. Once packaging is completed, you can download your translations via `/download` endpoints.
 func (s *project) TrackPackage(ctx context.Context, request operations.TrackPackageRequest) (*operations.TrackPackageResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}/package/check", request.PathParams, nil)
@@ -1379,13 +1566,12 @@ func (s *project) TriggerCallback(ctx context.Context, request operations.Trigge
 	return res, nil
 }
 
-// UpdateProject - Update project language pairs
-// Update project language pairs
+// UpdateProject - Update project info and settings
 func (s *project) UpdateProject(ctx context.Context, request operations.UpdateProjectRequest) (*operations.UpdateProjectResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{id}", request.PathParams, nil)
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

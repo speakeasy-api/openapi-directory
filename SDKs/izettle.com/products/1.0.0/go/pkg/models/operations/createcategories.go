@@ -8,8 +8,7 @@ import (
 )
 
 type CreateCategoriesSecurity struct {
-	ZettleAPIKey *shared.SchemeZettleAPIKey `security:"scheme,type=apiKey,subtype=header"`
-	ZettleOauth  *shared.SchemeZettleOauth  `security:"scheme,type=oauth2"`
+	ZettleOauth shared.SchemeZettleOauth `security:"scheme,type=oauth2"`
 }
 
 type CreateCategoriesPathParams struct {
@@ -18,7 +17,7 @@ type CreateCategoriesPathParams struct {
 
 type CreateCategoriesRequest struct {
 	PathParams CreateCategoriesPathParams
-	Request    shared.CategoryRequest `request:"mediaType=application/json"`
+	Request    shared.CreateCategoriesRequest `request:"mediaType=application/json"`
 	Security   CreateCategoriesSecurity
 }
 

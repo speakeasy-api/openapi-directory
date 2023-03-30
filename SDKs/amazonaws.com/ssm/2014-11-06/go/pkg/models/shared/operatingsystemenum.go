@@ -23,6 +23,8 @@ const (
 	OperatingSystemEnumMacos                 OperatingSystemEnum = "MACOS"
 	OperatingSystemEnumRaspbian              OperatingSystemEnum = "RASPBIAN"
 	OperatingSystemEnumRockyLinux            OperatingSystemEnum = "ROCKY_LINUX"
+	OperatingSystemEnumAlmaLinux             OperatingSystemEnum = "ALMA_LINUX"
+	OperatingSystemEnumAmazonLinux2023       OperatingSystemEnum = "AMAZON_LINUX_2023"
 )
 
 func (e *OperatingSystemEnum) UnmarshalJSON(data []byte) error {
@@ -56,6 +58,10 @@ func (e *OperatingSystemEnum) UnmarshalJSON(data []byte) error {
 	case "RASPBIAN":
 		fallthrough
 	case "ROCKY_LINUX":
+		fallthrough
+	case "ALMA_LINUX":
+		fallthrough
+	case "AMAZON_LINUX_2023":
 		*e = OperatingSystemEnum(s)
 		return nil
 	default:

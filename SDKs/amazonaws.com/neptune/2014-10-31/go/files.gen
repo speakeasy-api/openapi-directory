@@ -125,6 +125,8 @@ pkg/models/shared/deletedbclusterresult.go
 pkg/models/shared/dbcluster.go
 pkg/models/shared/vpcsecuritygroupmembershiplist.go
 pkg/models/shared/serverlessv2scalingconfigurationinfo.go
+pkg/models/shared/clusterpendingmodifiedvalues.go
+pkg/models/shared/pendingcloudwatchlogsexports.go
 pkg/models/shared/dbclusteroptiongroupmemberships.go
 pkg/models/shared/dbclustermemberlist.go
 pkg/models/shared/dbclusterroles.go
@@ -135,7 +137,6 @@ pkg/models/shared/deletedbinstanceresult.go
 pkg/models/shared/dbinstance.go
 pkg/models/shared/dbinstancestatusinfolist.go
 pkg/models/shared/pendingmodifiedvalues.go
-pkg/models/shared/pendingcloudwatchlogsexports.go
 pkg/models/shared/optiongroupmembershiplist.go
 pkg/models/shared/endpoint.go
 pkg/models/shared/domainmembershiplist.go

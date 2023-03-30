@@ -11,14 +11,14 @@ type OrderListRequest struct {
 	AccountIds          []int    `json:"accountIds,omitempty"`
 	BeezUPOrderStatuses []string `json:"beezUPOrderStatuses,omitempty"`
 	// The begin period you want to make the search. \
-	// The period MUST not be greater than 30 days.
+	// The period MUST not be greater than 62 days.
 	// The begin period MUST be lower than the end period.
 	//
 	BeginPeriodUtcDate time.Time `json:"beginPeriodUtcDate"`
 	// Indicates on which date you want to make the filter
 	DateSearchType *DateSearchTypeEnum `json:"dateSearchType,omitempty"`
 	// The end period of you search. \
-	// The period MUST not be greater than 30 days. \
+	// The period MUST not be greater than 62 days. \
 	// The end period MUST be greater than the begin period.
 	// The end period MUST be lower to the current date.
 	//

@@ -19,7 +19,7 @@ type ImportResourcesToDraftAppVersionHeaders struct {
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
-// ImportResourcesToDraftAppVersionRequestBodyImportStrategyEnum - The import strategy you would like to set to import resources into AWS Resilience Hub application.
+// ImportResourcesToDraftAppVersionRequestBodyImportStrategyEnum - The import strategy you would like to set to import resources into Resilience Hub application.
 type ImportResourcesToDraftAppVersionRequestBodyImportStrategyEnum string
 
 const (
@@ -46,9 +46,11 @@ func (e *ImportResourcesToDraftAppVersionRequestBodyImportStrategyEnum) Unmarsha
 type ImportResourcesToDraftAppVersionRequestBody struct {
 	// The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:<code>partition</code>:resiliencehub:<code>region</code>:<code>account</code>:app/<code>app-id</code>. For more information about ARNs, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"> Amazon Resource Names (ARNs)</a> in the <i>AWS General Reference</i> guide.
 	AppArn string `json:"appArn"`
-	// The import strategy you would like to set to import resources into AWS Resilience Hub application.
+	// The input sources of the Amazon Elastic Kubernetes Service resources you need to import.
+	EksSources []shared.EksSource `json:"eksSources,omitempty"`
+	// The import strategy you would like to set to import resources into Resilience Hub application.
 	ImportStrategy *ImportResourcesToDraftAppVersionRequestBodyImportStrategyEnum `json:"importStrategy,omitempty"`
-	// The Amazon Resource Names (ARNs) for the resources that you want to import.
+	// The Amazon Resource Names (ARNs) for the resources.
 	SourceArns []string `json:"sourceArns,omitempty"`
 	//  A list of terraform file s3 URLs you need to import.
 	TerraformSources []shared.TerraformSource `json:"terraformSources,omitempty"`

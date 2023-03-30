@@ -10,10 +10,10 @@ type AccountHolderDetails struct {
 	BankAggregatorDataReference *string          `json:"bankAggregatorDataReference,omitempty"`
 	BusinessDetails             *BusinessDetails `json:"businessDetails,omitempty"`
 	// The email address of the account holder.
-	Email string `json:"email"`
+	Email *string `json:"email,omitempty"`
 	// The phone number of the account holder provided as a single string. It will be handled as a landline phone.
 	// **Examples:** "0031 6 11 22 33 44", "+316/1122-3344", "(0031) 611223344"
-	FullPhoneNumber   string             `json:"fullPhoneNumber"`
+	FullPhoneNumber   *string            `json:"fullPhoneNumber,omitempty"`
 	IndividualDetails *IndividualDetails `json:"individualDetails,omitempty"`
 	// Date when you last reviewed the account holder's information, in ISO-8601 YYYY-MM-DD format. For example, **2020-01-31**.
 	LastReviewDate *string `json:"lastReviewDate,omitempty"`
@@ -31,5 +31,5 @@ type AccountHolderDetails struct {
 	// Array of stores associated with the account holder. Required when onboarding account holders that have an Adyen [point of sale](https://docs.adyen.com/marketplaces-and-platforms/classic/platforms-for-pos).
 	StoreDetails []StoreDetail `json:"storeDetails,omitempty"`
 	// The URL of the website of the account holder.
-	WebAddress string `json:"webAddress"`
+	WebAddress *string `json:"webAddress,omitempty"`
 }

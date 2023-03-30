@@ -1,5 +1,8 @@
 accounts.go
 events.go
+properties.go
+segments.go
+track.go
 users.go
 validation.go
 websites.go
@@ -17,9 +20,17 @@ pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
 pkg/models/operations/addusertoaccount.go
+pkg/models/operations/deleteaccount.go
 pkg/models/operations/removeuserfromaccount.go
 pkg/models/operations/upsertaccount.go
+pkg/models/operations/getevents.go
 pkg/models/operations/trackjourneyevent.go
+pkg/models/operations/getaccountproperties.go
+pkg/models/operations/getuserproperties.go
+pkg/models/operations/getaccountsegments.go
+pkg/models/operations/getusersegments.go
+pkg/models/operations/trackevent.go
+pkg/models/operations/deleteuser.go
 pkg/models/operations/link.go
 pkg/models/operations/upsertuser.go
 pkg/models/operations/getvalidity.go

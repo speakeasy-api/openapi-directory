@@ -70,7 +70,7 @@ func main() {
 * `GetAdminsForDistrict` - Returns the admins for a district
 * `GetDistrict` - Returns a specific district
 * `GetDistrictStatus` - Returns the status of the district
-* `GetDistricts` - Returns a list of districts
+* `GetDistricts` - Returns a list of districts. In practice this will only return the one district associated with the bearer token
 * `GetSchoolsForDistrict` - Returns the schools for a district
 * `GetSectionsForDistrict` - Returns the sections for a district
 * `GetStudentsForDistrict` - Returns the students for a district

@@ -3,7 +3,7 @@
 package shared
 
 type Opi struct {
-	// Indicates if Pay at Table is enabled.
+	// Indicates if Pay at table is enabled.
 	EnablePayAtTable *bool `json:"enablePayAtTable,omitempty"`
 	// The store number to use for Pay at Table.
 	PayAtTableStoreNumber *string `json:"payAtTableStoreNumber,omitempty"`

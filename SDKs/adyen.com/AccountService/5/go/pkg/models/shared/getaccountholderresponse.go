@@ -38,9 +38,9 @@ func (e *GetAccountHolderResponseLegalEntityEnum) UnmarshalJSON(data []byte) err
 // GetAccountHolderResponse - OK - the request has succeeded.
 type GetAccountHolderResponse struct {
 	// The code of the account holder.
-	AccountHolderCode    string               `json:"accountHolderCode"`
-	AccountHolderDetails AccountHolderDetails `json:"accountHolderDetails"`
-	AccountHolderStatus  AccountHolderStatus  `json:"accountHolderStatus"`
+	AccountHolderCode    *string               `json:"accountHolderCode,omitempty"`
+	AccountHolderDetails *AccountHolderDetails `json:"accountHolderDetails,omitempty"`
+	AccountHolderStatus  *AccountHolderStatus  `json:"accountHolderStatus,omitempty"`
 	// A list of the accounts under the account holder.
 	Accounts []Account `json:"accounts,omitempty"`
 	// The description of the account holder.
@@ -48,7 +48,8 @@ type GetAccountHolderResponse struct {
 	// Contains field validation errors that would prevent requests from being processed.
 	InvalidFields []ErrorFieldType `json:"invalidFields,omitempty"`
 	// The legal entity of the account holder.
-	LegalEntity GetAccountHolderResponseLegalEntityEnum `json:"legalEntity"`
+	LegalEntity   *GetAccountHolderResponseLegalEntityEnum `json:"legalEntity,omitempty"`
+	MigrationData *MigrationData                           `json:"migrationData,omitempty"`
 	// The three-character [ISO currency code](https://docs.adyen.com/development-resources/currency-codes), with which the prospective account holder primarily deals.
 	PrimaryCurrency *string `json:"primaryCurrency,omitempty"`
 	// The reference of a request. Can be used to uniquely identify the request.
@@ -56,6 +57,6 @@ type GetAccountHolderResponse struct {
 	// The result code.
 	ResultCode *string `json:"resultCode,omitempty"`
 	// The time that shows how up to date is the information in the response.
-	SystemUpToDateTime *time.Time            `json:"systemUpToDateTime,omitempty"`
-	Verification       KYCVerificationResult `json:"verification"`
+	SystemUpToDateTime *time.Time             `json:"systemUpToDateTime,omitempty"`
+	Verification       *KYCVerificationResult `json:"verification,omitempty"`
 }

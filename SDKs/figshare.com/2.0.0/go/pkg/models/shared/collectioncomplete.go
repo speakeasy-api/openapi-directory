@@ -2,61 +2,61 @@
 
 package shared
 
-// CollectionComplete - Created
+// CollectionComplete - OK. Collection representation
 type CollectionComplete struct {
 	// Number of articles in collection
-	ArticlesCount *int64 `json:"articles_count,omitempty"`
+	ArticlesCount int64 `json:"articles_count"`
 	// List of collection authors
-	Authors []Author `json:"authors,omitempty"`
+	Authors []Author `json:"authors"`
 	// List of collection categories
-	Categories []Category `json:"categories,omitempty"`
+	Categories []Category `json:"categories"`
 	// Collection citation
-	Citation *string `json:"citation,omitempty"`
+	Citation string `json:"citation"`
 	// Date when collection was created
-	CreatedDate *string `json:"created_date,omitempty"`
+	CreatedDate string `json:"created_date"`
 	// Collection custom fields
-	CustomFields []CustomArticleField `json:"custom_fields,omitempty"`
+	CustomFields []CustomArticleField `json:"custom_fields"`
 	// Collection description
-	Description *string `json:"description,omitempty"`
+	Description string `json:"description"`
 	// Collection DOI
-	Doi *string `json:"doi,omitempty"`
+	Doi string `json:"doi"`
 	// Full Collection funding information
-	Funding []FundingInformation `json:"funding,omitempty"`
+	Funding []FundingInformation `json:"funding"`
 	// Collection group
-	GroupID *int64 `json:"group_id,omitempty"`
+	GroupID int64 `json:"group_id"`
 	// Collection group resource id
-	GroupResourceID *string `json:"group_resource_id,omitempty"`
+	GroupResourceID string `json:"group_resource_id"`
 	// Collection Handle
-	Handle *string `json:"handle,omitempty"`
+	Handle string `json:"handle"`
 	// Collection id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Collection institution
-	InstitutionID *int64 `json:"institution_id,omitempty"`
+	InstitutionID int64 `json:"institution_id"`
 	// Date when collection was last modified
-	ModifiedDate *string `json:"modified_date,omitempty"`
+	ModifiedDate string `json:"modified_date"`
 	// True if collection is published
-	Public *bool `json:"public,omitempty"`
+	Public bool `json:"public"`
 	// Date when collection was published
-	PublishedDate *string `json:"published_date,omitempty"`
+	PublishedDate string `json:"published_date"`
 	// List of collection references
-	References []string `json:"references,omitempty"`
+	References []string `json:"references"`
 	// Collection resource doi
-	ResourceDoi *string `json:"resource_doi,omitempty"`
+	ResourceDoi string `json:"resource_doi"`
 	// Collection resource id
-	ResourceID *string `json:"resource_id,omitempty"`
+	ResourceID string `json:"resource_id"`
 	// Collection resource link
-	ResourceLink *string `json:"resource_link,omitempty"`
+	ResourceLink string `json:"resource_link"`
 	// Collection resource title
-	ResourceTitle *string `json:"resource_title,omitempty"`
+	ResourceTitle string `json:"resource_title"`
 	// Collection resource version
-	ResourceVersion *int64 `json:"resource_version,omitempty"`
+	ResourceVersion int64 `json:"resource_version"`
 	// List of collection tags
-	Tags     []string  `json:"tags,omitempty"`
-	Timeline *Timeline `json:"timeline,omitempty"`
+	Tags     []string `json:"tags"`
+	Timeline Timeline `json:"timeline"`
 	// Collection title
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 	// Api endpoint
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 	// Collection version
-	Version *int64 `json:"version,omitempty"`
+	Version int64 `json:"version"`
 }

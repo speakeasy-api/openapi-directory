@@ -84,6 +84,8 @@ const (
 	ExchangeTargetingOptionDetailsExchangeEnumExchangePlaceExchange     ExchangeTargetingOptionDetailsExchangeEnum = "EXCHANGE_PLACE_EXCHANGE"
 	ExchangeTargetingOptionDetailsExchangeEnumExchangeApplovin          ExchangeTargetingOptionDetailsExchangeEnum = "EXCHANGE_APPLOVIN"
 	ExchangeTargetingOptionDetailsExchangeEnumExchangeConnatix          ExchangeTargetingOptionDetailsExchangeEnum = "EXCHANGE_CONNATIX"
+	ExchangeTargetingOptionDetailsExchangeEnumExchangeResetDigital      ExchangeTargetingOptionDetailsExchangeEnum = "EXCHANGE_RESET_DIGITAL"
+	ExchangeTargetingOptionDetailsExchangeEnumExchangeHivestack         ExchangeTargetingOptionDetailsExchangeEnum = "EXCHANGE_HIVESTACK"
 )
 
 func (e *ExchangeTargetingOptionDetailsExchangeEnum) UnmarshalJSON(data []byte) error {
@@ -237,6 +239,10 @@ func (e *ExchangeTargetingOptionDetailsExchangeEnum) UnmarshalJSON(data []byte) 
 	case "EXCHANGE_APPLOVIN":
 		fallthrough
 	case "EXCHANGE_CONNATIX":
+		fallthrough
+	case "EXCHANGE_RESET_DIGITAL":
+		fallthrough
+	case "EXCHANGE_HIVESTACK":
 		*e = ExchangeTargetingOptionDetailsExchangeEnum(s)
 		return nil
 	default:

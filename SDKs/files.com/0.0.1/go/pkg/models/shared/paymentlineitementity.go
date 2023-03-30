@@ -15,6 +15,4 @@ type PaymentLineItemEntity struct {
 	InvoiceID *int `json:"invoice_id,omitempty"`
 	// Payment ID
 	PaymentID *int `json:"payment_id,omitempty"`
-	// Payment line item updated at date/time
-	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }

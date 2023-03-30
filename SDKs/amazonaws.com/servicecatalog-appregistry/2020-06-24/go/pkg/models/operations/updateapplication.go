@@ -8,7 +8,7 @@ import (
 )
 
 type UpdateApplicationPathParams struct {
-	// The name or ID of the application that will be updated.
+	//  The name, ID, or ARN of the application that will be updated.
 	Application string `pathParam:"style=simple,explode=false,name=application"`
 }
 
@@ -45,6 +45,8 @@ type UpdateApplicationResponse struct {
 	RawResponse             *http.Response
 	// ResourceNotFoundException
 	ResourceNotFoundException interface{}
+	// ThrottlingException
+	ThrottlingException interface{}
 	// Success
 	UpdateApplicationResponse *shared.UpdateApplicationResponse
 	// ValidationException

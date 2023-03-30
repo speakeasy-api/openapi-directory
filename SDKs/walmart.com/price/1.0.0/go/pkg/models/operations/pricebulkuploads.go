@@ -38,8 +38,6 @@ type PriceBulkUploadsQueryParams struct {
 }
 
 type PriceBulkUploadsHeaders struct {
-	// Basic authorization header. Base 64 encodes the Client ID and Client Secret retrieved in step two of the integration steps.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
 	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
@@ -55,15 +53,16 @@ type PriceBulkUploadsRequestBodyFile struct {
 	File    string `multipartForm:"name=file"`
 }
 
-// PriceBulkUploadsRequestBody - Feed file to upload
+// PriceBulkUploadsRequestBody - The request body consists of a Feed file attached to the request based on the feedType selected
 type PriceBulkUploadsRequestBody struct {
-	File *PriceBulkUploadsRequestBodyFile `multipartForm:"file"`
+	// Feed file to upload
+	File PriceBulkUploadsRequestBodyFile `multipartForm:"file"`
 }
 
 type PriceBulkUploadsRequest struct {
 	QueryParams PriceBulkUploadsQueryParams
 	Headers     PriceBulkUploadsHeaders
-	// Feed file to upload
+	// The request body consists of a Feed file attached to the request based on the feedType selected
 	Request PriceBulkUploadsRequestBody `request:"mediaType=multipart/form-data"`
 }
 

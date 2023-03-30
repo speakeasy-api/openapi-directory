@@ -4,10 +4,10 @@ package shared
 
 // AspectValueDistribution - This type contains information about one value of a specified aspect. This value serves as a product refinement.
 type AspectValueDistribution struct {
-	// The localized value of the category aspect identified by refinement.aspectDistributions.localizedAspectName.
+	// The localized value of the category aspect identified by <b>refinement.aspectDistributions.localizedAspectName</b>.
 	LocalizedAspectValue *string `json:"localizedAspectValue,omitempty"`
-	// The number of times the value of localizedAspectValue has been used for eBay product listings. By comparing this quantity to the matchCount for other values of the same aspect, you can present a histogram of the values to sellers, who can use that information to select which aspect value is most appropriate for their product. You can then include the user-selected value in the the search call's aspect_filter parameter to refine your search.
+	// The number of times the value of <b>localizedAspectValue</b> has been used for eBay product listings. By comparing this quantity to the <b>matchCount</b> for other values of the same aspect, you can present a histogram of the values to sellers, who can use that information to select which aspect value is most appropriate for their product. You can then include the user-selected value in the the <b>search</b> call's <b>aspect_filter</b> parameter to refine your search.
 	MatchCount *int `json:"matchCount,omitempty"`
-	// A HATEOAS reference that further refines the search with this particular localizedAspectValue.
+	// A HATEOAS reference that further refines the search with this particular <b>localizedAspectValue</b>.
 	RefinementHref *string `json:"refinementHref,omitempty"`
 }

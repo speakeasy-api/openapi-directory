@@ -27,4 +27,6 @@ type GetPullRequestHostedPropertyValueResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
+	// The value of the property.
+	ApplicationProperty map[string]interface{}
 }

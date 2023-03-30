@@ -14,9 +14,9 @@ import (
 type CreateMerchantWebhookRequestCommunicationFormatEnum string
 
 const (
-	CreateMerchantWebhookRequestCommunicationFormatEnumHTTP CreateMerchantWebhookRequestCommunicationFormatEnum = "HTTP"
-	CreateMerchantWebhookRequestCommunicationFormatEnumJSON CreateMerchantWebhookRequestCommunicationFormatEnum = "JSON"
-	CreateMerchantWebhookRequestCommunicationFormatEnumSoap CreateMerchantWebhookRequestCommunicationFormatEnum = "SOAP"
+	CreateMerchantWebhookRequestCommunicationFormatEnumHTTP CreateMerchantWebhookRequestCommunicationFormatEnum = "http"
+	CreateMerchantWebhookRequestCommunicationFormatEnumJSON CreateMerchantWebhookRequestCommunicationFormatEnum = "json"
+	CreateMerchantWebhookRequestCommunicationFormatEnumSoap CreateMerchantWebhookRequestCommunicationFormatEnum = "soap"
 )
 
 func (e *CreateMerchantWebhookRequestCommunicationFormatEnum) UnmarshalJSON(data []byte) error {
@@ -25,11 +25,11 @@ func (e *CreateMerchantWebhookRequestCommunicationFormatEnum) UnmarshalJSON(data
 		return err
 	}
 	switch s {
-	case "HTTP":
+	case "http":
 		fallthrough
-	case "JSON":
+	case "json":
 		fallthrough
-	case "SOAP":
+	case "soap":
 		*e = CreateMerchantWebhookRequestCommunicationFormatEnum(s)
 		return nil
 	default:
@@ -74,16 +74,14 @@ func (e *CreateMerchantWebhookRequestNetworkTypeEnum) UnmarshalJSON(data []byte)
 type CreateMerchantWebhookRequestSslVersionEnum string
 
 const (
-	CreateMerchantWebhookRequestSslVersionEnumHTTP                 CreateMerchantWebhookRequestSslVersionEnum = "HTTP"
-	CreateMerchantWebhookRequestSslVersionEnumSsl                  CreateMerchantWebhookRequestSslVersionEnum = "SSL"
-	CreateMerchantWebhookRequestSslVersionEnumSslv3                CreateMerchantWebhookRequestSslVersionEnum = "SSLV3"
-	CreateMerchantWebhookRequestSslVersionEnumSslInsecureCiphers   CreateMerchantWebhookRequestSslVersionEnum = "SSL_INSECURE_CIPHERS"
-	CreateMerchantWebhookRequestSslVersionEnumTLS                  CreateMerchantWebhookRequestSslVersionEnum = "TLS"
-	CreateMerchantWebhookRequestSslVersionEnumTlsv1                CreateMerchantWebhookRequestSslVersionEnum = "TLSV1"
-	CreateMerchantWebhookRequestSslVersionEnumTlsv11               CreateMerchantWebhookRequestSslVersionEnum = "TLSV1_1"
-	CreateMerchantWebhookRequestSslVersionEnumTlsv12               CreateMerchantWebhookRequestSslVersionEnum = "TLSV1_2"
-	CreateMerchantWebhookRequestSslVersionEnumTlsv13               CreateMerchantWebhookRequestSslVersionEnum = "TLSV1_3"
-	CreateMerchantWebhookRequestSslVersionEnumTlsv1InsecureCiphers CreateMerchantWebhookRequestSslVersionEnum = "TLSV1_INSECURE_CIPHERS"
+	CreateMerchantWebhookRequestSslVersionEnumHTTP   CreateMerchantWebhookRequestSslVersionEnum = "HTTP"
+	CreateMerchantWebhookRequestSslVersionEnumSsl    CreateMerchantWebhookRequestSslVersionEnum = "SSL"
+	CreateMerchantWebhookRequestSslVersionEnumSsLv3  CreateMerchantWebhookRequestSslVersionEnum = "SSLv3"
+	CreateMerchantWebhookRequestSslVersionEnumTLS    CreateMerchantWebhookRequestSslVersionEnum = "TLS"
+	CreateMerchantWebhookRequestSslVersionEnumTlSv1  CreateMerchantWebhookRequestSslVersionEnum = "TLSv1"
+	CreateMerchantWebhookRequestSslVersionEnumTlSv11 CreateMerchantWebhookRequestSslVersionEnum = "TLSv1.1"
+	CreateMerchantWebhookRequestSslVersionEnumTlSv12 CreateMerchantWebhookRequestSslVersionEnum = "TLSv1.2"
+	CreateMerchantWebhookRequestSslVersionEnumTlSv13 CreateMerchantWebhookRequestSslVersionEnum = "TLSv1.3"
 )
 
 func (e *CreateMerchantWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) error {
@@ -96,21 +94,17 @@ func (e *CreateMerchantWebhookRequestSslVersionEnum) UnmarshalJSON(data []byte) 
 		fallthrough
 	case "SSL":
 		fallthrough
-	case "SSLV3":
-		fallthrough
-	case "SSL_INSECURE_CIPHERS":
+	case "SSLv3":
 		fallthrough
 	case "TLS":
 		fallthrough
-	case "TLSV1":
+	case "TLSv1":
 		fallthrough
-	case "TLSV1_1":
+	case "TLSv1.1":
 		fallthrough
-	case "TLSV1_2":
+	case "TLSv1.2":
 		fallthrough
-	case "TLSV1_3":
-		fallthrough
-	case "TLSV1_INSECURE_CIPHERS":
+	case "TLSv1.3":
 		*e = CreateMerchantWebhookRequestSslVersionEnum(s)
 		return nil
 	default:

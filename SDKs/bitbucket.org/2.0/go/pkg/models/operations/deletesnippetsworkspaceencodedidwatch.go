@@ -33,6 +33,4 @@ type DeleteSnippetsWorkspaceEncodedIDWatchResponse struct {
 	RawResponse *http.Response
 	// If the request was not authenticated.
 	Error map[string]interface{}
-	// Indicates the user stopped watching the snippet successfully.
-	PaginatedUsers *shared.PaginatedUsers
 }

@@ -65,7 +65,7 @@ type NotificationConfigurationDetails struct {
 	// A description of the notification subscription configuration.
 	Description *string `json:"description,omitempty"`
 	// Contains objects that define event types and their subscription settings.
-	EventConfigs []NotificationEventConfiguration `json:"eventConfigs"`
+	EventConfigs []NotificationEventConfiguration `json:"eventConfigs,omitempty"`
 	// The data format of the notification to be sent.
 	// >Permitted values: `JSON`, `SOAP`.
 	MessageFormat *NotificationConfigurationDetailsMessageFormatEnum `json:"messageFormat,omitempty"`
@@ -74,7 +74,7 @@ type NotificationConfigurationDetails struct {
 	// The password to use when accessing the notifyURL with the specified username.
 	NotifyPassword *string `json:"notifyPassword,omitempty"`
 	// The URL to which the notifications are to be sent.
-	NotifyURL string `json:"notifyURL"`
+	NotifyURL *string `json:"notifyURL,omitempty"`
 	// The username to use when accessing the notifyURL.
 	NotifyUsername *string `json:"notifyUsername,omitempty"`
 	// Indicates whether an action header should be included.

@@ -2,7 +2,7 @@
 
 package shared
 
-// DeviceGroup - LINT.IfChange A group of devices. A group is defined by a set of device selectors. A device belongs to the group if it matches any selector (logical OR).
+// DeviceGroup - A group of devices. A group is defined by a set of device selectors. A device belongs to the group if it matches any selector (logical OR).
 type DeviceGroup struct {
 	// Device selectors for this group. A device matching any of the selectors is included in this group.
 	DeviceSelectors []DeviceSelector `json:"deviceSelectors,omitempty"`

@@ -10,8 +10,9 @@ import (
 type AutoMls3DataTypeEnum string
 
 const (
-	AutoMls3DataTypeEnumManifestFile AutoMls3DataTypeEnum = "ManifestFile"
-	AutoMls3DataTypeEnumS3Prefix     AutoMls3DataTypeEnum = "S3Prefix"
+	AutoMls3DataTypeEnumManifestFile          AutoMls3DataTypeEnum = "ManifestFile"
+	AutoMls3DataTypeEnumS3Prefix              AutoMls3DataTypeEnum = "S3Prefix"
+	AutoMls3DataTypeEnumAugmentedManifestFile AutoMls3DataTypeEnum = "AugmentedManifestFile"
 )
 
 func (e *AutoMls3DataTypeEnum) UnmarshalJSON(data []byte) error {
@@ -23,6 +24,8 @@ func (e *AutoMls3DataTypeEnum) UnmarshalJSON(data []byte) error {
 	case "ManifestFile":
 		fallthrough
 	case "S3Prefix":
+		fallthrough
+	case "AugmentedManifestFile":
 		*e = AutoMls3DataTypeEnum(s)
 		return nil
 	default:

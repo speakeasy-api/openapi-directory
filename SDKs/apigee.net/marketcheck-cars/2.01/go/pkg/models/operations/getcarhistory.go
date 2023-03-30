@@ -21,6 +21,8 @@ type GetCarHistoryQueryParams struct {
 	IncludeDuplicates *bool `queryParam:"style=form,explode=true,name=include_duplicates"`
 	// Page number to fetch the results for the given criteria. Default is 1.
 	Page *float64 `queryParam:"style=form,explode=true,name=page"`
+	// Sort order - asc or desc. Default sort order is asc
+	SortOrder *shared.SortOrderEnum `queryParam:"style=form,explode=true,name=sort_order"`
 }
 
 type GetCarHistoryRequest struct {

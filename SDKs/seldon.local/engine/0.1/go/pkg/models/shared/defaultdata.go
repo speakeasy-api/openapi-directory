@@ -3,9 +3,9 @@
 package shared
 
 type DefaultData struct {
-	Names  []string      `json:"names,omitempty"`
-	Ndarry []interface{} `json:"ndarry,omitempty"`
-	Tensor *Tensor       `json:"tensor,omitempty"`
+	Names   []string      `json:"names,omitempty"`
+	Ndarray []interface{} `json:"ndarray,omitempty"`
+	Tensor  *Tensor       `json:"tensor,omitempty"`
 	// Protocol buffer representing a tensor.
 	Tftensor *TensorflowTensorProto `json:"tftensor,omitempty"`
 }

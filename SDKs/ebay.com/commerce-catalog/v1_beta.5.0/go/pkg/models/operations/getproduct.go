@@ -12,12 +12,18 @@ type GetProductSecurity struct {
 }
 
 type GetProductPathParams struct {
-	// The ePID of the product being requested. This value can be discovered by issuing the search call and examining the value of the productSummaries.epid field for the desired returned product summary.
+	// The ePID of the product being requested. This value can be discovered by issuing the <b>search</b> method and examining the value of the <b>productSummaries.epid</b> field for the desired returned product summary.
 	Epid string `pathParam:"style=simple,explode=false,name=epid"`
+}
+
+type GetProductHeaders struct {
+	// This method also uses the <code>X-EBAY-C-MARKETPLACE-ID</code> header to identify the seller's eBay marketplace. It is required for all marketplaces except EBAY_US, which is the default. <b>Note:</b> This method is limited to <code>EBAY_US</code>, <code>EBAY_AU</code>, <code>EBAY_CA</code>, and <code>EBAY_GB</code> values.
+	XEbayCMarketplaceID *string `header:"style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID"`
 }
 
 type GetProductRequest struct {
 	PathParams GetProductPathParams
+	Headers    GetProductHeaders
 	Security   GetProductSecurity
 }
 

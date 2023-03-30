@@ -2,7 +2,14 @@
 
 package shared
 
-type WebData struct {
-	// The URL of the website.
+type WebDataInput struct {
+	// The URL of the website or the app store URL.
 	WebAddress *string `json:"webAddress,omitempty"`
+}
+
+type WebData struct {
+	// The URL of the website or the app store URL.
+	WebAddress *string `json:"webAddress,omitempty"`
+	// The unique identifier of the web address.
+	WebAddressID *string `json:"webAddressId,omitempty"`
 }

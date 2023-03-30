@@ -13,6 +13,7 @@ type SendableDocumentDocumentTypeEnum string
 const (
 	SendableDocumentDocumentTypeEnumInvoice         SendableDocumentDocumentTypeEnum = "invoice"
 	SendableDocumentDocumentTypeEnumInvoiceResponse SendableDocumentDocumentTypeEnum = "invoice_response"
+	SendableDocumentDocumentTypeEnumOrder           SendableDocumentDocumentTypeEnum = "order"
 )
 
 func (e *SendableDocumentDocumentTypeEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *SendableDocumentDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "invoice":
 		fallthrough
 	case "invoice_response":
+		fallthrough
+	case "order":
 		*e = SendableDocumentDocumentTypeEnum(s)
 		return nil
 	default:
@@ -35,10 +38,12 @@ func (e *SendableDocumentDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 type SendableDocument struct {
 	// The type of document to be sent.
 	DocumentType SendableDocumentDocumentTypeEnum `json:"documentType"`
-	// The invoice to send.  Provide either invoice, or invoiceData, but not both.
+	// The invoice to send. Provide either invoice, or invoiceData, but not both.
 	Invoice *Invoice `json:"invoice,omitempty"`
 	// The invoice response to send.
 	InvoiceResponse *DocumentInvoiceResponse `json:"invoiceResponse,omitempty"`
+	// The order to send.
+	Order *DocumentOrder `json:"order,omitempty"`
 	// A document to send, in base64 encoded format.
 	RawDocumentData *RawDocumentData `json:"rawDocumentData,omitempty"`
 }

@@ -13,6 +13,6 @@ type GetEndpointsResponse struct {
 	Error       *shared.Error
 	StatusCode  int
 	RawResponse *http.Response
-	// JSON representation of our Swagger API definition.
+	// YAML representation of our OpenAPI definition.
 	GetEndpoints200ApplicationJSONObject map[string]interface{}
 }

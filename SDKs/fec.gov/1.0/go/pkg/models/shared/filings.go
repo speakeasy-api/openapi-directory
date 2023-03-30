@@ -9,13 +9,18 @@ import (
 type Filings struct {
 	// Additional banks or depositories in which the committee deposits funds, holds accounts, rents safety deposit boxes or maintains funds.
 	//
-	AdditionalBankNames []string  `json:"additional_bank_names,omitempty"`
-	AmendmentChain      []float64 `json:"amendment_chain,omitempty"`
+	AdditionalBankNames []string `json:"additional_bank_names,omitempty"`
+	// The first value in the chain is the original filing.  The ordering in the chain reflects the order the
+	// amendments were filed up to the amendment being inspected.
+	//
+	AmendmentChain []float64 `json:"amendment_chain,omitempty"`
 	// The first value in the chain is the original filing.  The ordering in the chain reflects the order the
 	// amendments were filed up to the amendment being inspected.
 	//
 	AmendmentIndicator *string `json:"amendment_indicator,omitempty"`
-	AmendmentVersion   *int    `json:"amendment_version,omitempty"`
+	// Amendment version
+	//
+	AmendmentVersion *int `json:"amendment_version,omitempty"`
 	// City of bank or depository as reported on the Form 1
 	//
 	BankDepositoryCity *string `json:"bank_depository_city,omitempty"`
@@ -55,7 +60,7 @@ type Filings struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -143,7 +148,8 @@ type Filings struct {
 	EndingImageNumber *string `json:"ending_image_number,omitempty"`
 	FecFileID         *string `json:"fec_file_id,omitempty"`
 	FecURL            *string `json:"fec_url,omitempty"`
-	FileNumber        *int    `json:"file_number,omitempty"`
+	// Filing ID number
+	FileNumber *int `json:"file_number,omitempty"`
 	// The forms filed are categorized based on the nature of the filing:
 	//     - REPORT F3, F3X, F3P, F3L, F4, F5, F7, F13
 	//     - NOTICE F5, F24, F6, F9, F10, F11
@@ -169,27 +175,40 @@ type Filings struct {
 	//     - F99  Miscellaneous Text
 	//     - FRQ  Request for Additional Information
 	//
-	FormType           *string  `json:"form_type,omitempty"`
+	FormType *string `json:"form_type,omitempty"`
+	// House personal funds
 	HousePersonalFunds *float64 `json:"house_personal_funds,omitempty"`
 	// HTML link to the filing.
 	//
-	HTMLURL   *string `json:"html_url,omitempty"`
-	IsAmended *bool   `json:"is_amended,omitempty"`
+	HTMLURL *string `json:"html_url,omitempty"`
+	// False indicates that a report is the most recent. True indicates that the report has been superseded by an amendment.
+	//
+	IsAmended *bool `json:"is_amended,omitempty"`
 	// The method used to file with the FEC, either electronic or on paper.
-	MeansFiled           *string  `json:"means_filed,omitempty"`
-	MostRecent           *bool    `json:"most_recent,omitempty"`
-	MostRecentFileNumber *int     `json:"most_recent_file_number,omitempty"`
-	NetDonations         *float64 `json:"net_donations,omitempty"`
+	MeansFiled *string `json:"means_filed,omitempty"`
+	// Report is either new or is the most-recently filed amendment
+	//
+	MostRecent           *bool `json:"most_recent,omitempty"`
+	MostRecentFileNumber *int  `json:"most_recent_file_number,omitempty"`
+	// Net donations
+	NetDonations *float64 `json:"net_donations,omitempty"`
 	// Federal office candidate runs for: H, S or P
-	Office                  *string  `json:"office,omitempty"`
+	Office *string `json:"office,omitempty"`
+	// Opposition personal funds
 	OppositionPersonalFunds *float64 `json:"opposition_personal_funds,omitempty"`
 	// Number of pages in the document
 	//
 	Pages *int `json:"pages,omitempty"`
 	// Three-letter code for the party affiliated with a candidate or committee. For example, DEM for Democratic Party and REP for Republican Party.
-	Party                   *string `json:"party,omitempty"`
-	PdfURL                  *string `json:"pdf_url,omitempty"`
-	PreviousFileNumber      *int    `json:"previous_file_number,omitempty"`
+	Party *string `json:"party,omitempty"`
+	// pdf link to the filing
+	//
+	PdfURL *string `json:"pdf_url,omitempty"`
+	// Previous filing ID number
+	//
+	PreviousFileNumber *int `json:"previous_file_number,omitempty"`
+	// Primary general indicator
+	//
 	PrimaryGeneralIndicator *string `json:"primary_general_indicator,omitempty"`
 	// Date the FEC received the electronic or paper record
 	ReceiptDate *types.Date `json:"receipt_date,omitempty"`
@@ -244,76 +263,43 @@ type Filings struct {
 	//     - QMS Quarterly Mid-Year/ Semi-Annual
 	//     - MSY Monthly Semi-Annual (YE)
 	//
-	ReportType *string `json:"report_type,omitempty"`
-	// Name of report where the underlying data comes from:
-	//     - 10D Pre-Election
-	//     - 10G Pre-General
-	//     - 10P Pre-Primary
-	//     - 10R Pre-Run-Off
-	//     - 10S Pre-Special
-	//     - 12C Pre-Convention
-	//     - 12G Pre-General
-	//     - 12P Pre-Primary
-	//     - 12R Pre-Run-Off
-	//     - 12S Pre-Special
-	//     - 30D Post-Election
-	//     - 30G Post-General
-	//     - 30P Post-Primary
-	//     - 30R Post-Run-Off
-	//     - 30S Post-Special
-	//     - 60D Post-Convention
-	//     - M1  January Monthly
-	//     - M10 October Monthly
-	//     - M11 November Monthly
-	//     - M12 December Monthly
-	//     - M2  February Monthly
-	//     - M3  March Monthly
-	//     - M4  April Monthly
-	//     - M5  May Monthly
-	//     - M6  June Monthly
-	//     - M7  July Monthly
-	//     - M8  August Monthly
-	//     - M9  September Monthly
-	//     - MY  Mid-Year Report
-	//     - Q1  April Quarterly
-	//     - Q2  July Quarterly
-	//     - Q3  October Quarterly
-	//     - TER Termination Report
-	//     - YE  Year-End
-	//     - ADJ COMP ADJUST AMEND
-	//     - CA  COMPREHENSIVE AMEND
-	//     - 90S Post Inaugural Supplement
-	//     - 90D Post Inaugural
-	//     - 48  48 Hour Notification
-	//     - 24  24 Hour Notification
-	//     - M7S July Monthly/Semi-Annual
-	//     - MSA Monthly Semi-Annual (MY)
-	//     - MYS Monthly Year End/Semi-Annual
-	//     - Q2S July Quarterly/Semi-Annual
-	//     - QSA Quarterly Semi-Annual (MY)
-	//     - QYS Quarterly Year End/Semi-Annual
-	//     - QYE Quarterly Semi-Annual (YE)
-	//     - QMS Quarterly Mid-Year/ Semi-Annual
-	//     - MSY Monthly Semi-Annual (YE)
-	//
+	ReportType     *string `json:"report_type,omitempty"`
 	ReportTypeFull *string `json:"report_type_full,omitempty"`
 	// Forms with coverage date -
 	//     year from the coverage ending date.
 	// Forms without coverage date -
 	//     year from the receipt date.
 	//
-	ReportYear          *int     `json:"report_year,omitempty"`
-	RequestType         *string  `json:"request_type,omitempty"`
+	ReportYear *int `json:"report_year,omitempty"`
+	// Requests for additional information (RFAIs) sent to filers. The request type is based on the type of document filed:
+	//     - 1 Statement of Organization
+	//     - 2 Report of Receipts and Expenditures (Form 3 and 3X)
+	//     - 3 Second Notice - Reports
+	//     - 4 Request for Additional Information
+	//     - 5 Informational - Reports
+	//     - 6 Second Notice - Statement of Organization
+	//     - 7 Failure to File
+	//     - 8 From Public Disclosure
+	//     - 9 From Multi Candidate Status
+	//
+	RequestType *string `json:"request_type,omitempty"`
+	// Senate personal funds
 	SenatePersonalFunds *float64 `json:"senate_personal_funds,omitempty"`
 	// US state or territory where a candidate runs for office
-	State                        *string  `json:"state,omitempty"`
-	SubID                        *string  `json:"sub_id,omitempty"`
-	TotalCommunicationCost       *float64 `json:"total_communication_cost,omitempty"`
-	TotalDisbursements           *float64 `json:"total_disbursements,omitempty"`
+	State *string `json:"state,omitempty"`
+	SubID *string `json:"sub_id,omitempty"`
+	// Total communications cost
+	TotalCommunicationCost *float64 `json:"total_communication_cost,omitempty"`
+	// Total disbursements
+	TotalDisbursements *float64 `json:"total_disbursements,omitempty"`
+	// Total independent expenditures
 	TotalIndependentExpenditures *float64 `json:"total_independent_expenditures,omitempty"`
+	// Total individual contributions
 	TotalIndividualContributions *float64 `json:"total_individual_contributions,omitempty"`
-	TotalReceipts                *float64 `json:"total_receipts,omitempty"`
+	// Total receipts
+	TotalReceipts *float64 `json:"total_receipts,omitempty"`
 	// Name of the Committee's treasurer. If multiple treasurers for the committee, the most recent treasurer will be shown.
-	TreasurerName *string     `json:"treasurer_name,omitempty"`
-	UpdateDate    *types.Date `json:"update_date,omitempty"`
+	TreasurerName *string `json:"treasurer_name,omitempty"`
+	// Date the record was updated
+	UpdateDate *types.Date `json:"update_date,omitempty"`
 }

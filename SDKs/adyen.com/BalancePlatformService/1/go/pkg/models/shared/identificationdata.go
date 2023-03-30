@@ -69,6 +69,8 @@ func (e *IdentificationDataTypeEnum) UnmarshalJSON(data []byte) error {
 }
 
 type IdentificationData struct {
+	// The card number of the document that was issued (AU only).
+	CardNumber *string `json:"cardNumber,omitempty"`
 	// The expiry date of the document, in YYYY-MM-DD format.
 	ExpiryDate *string `json:"expiryDate,omitempty"`
 	// The two-character [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code where the document was issued. For example, **US**.

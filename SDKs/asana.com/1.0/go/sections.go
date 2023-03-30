@@ -11,7 +11,7 @@ import (
 	"openapi/pkg/utils"
 )
 
-// sections - A *section* is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.
+// sections - A section is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.
 //
 // Sections are largely a shared idiom in Asana’s API for both list and board views of a project regardless of the project’s layout.
 //

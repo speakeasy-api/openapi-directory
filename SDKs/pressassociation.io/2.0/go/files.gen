@@ -1,4 +1,5 @@
 asset.go
+catalogue.go
 channel.go
 contributor.go
 feature.go
@@ -20,6 +21,10 @@ pkg/utils/utils.go
 pkg/models/operations/getasset.go
 pkg/models/operations/getassetcontributors.go
 pkg/models/operations/listassets.go
+pkg/models/operations/getcatalogue.go
+pkg/models/operations/getcatalogueasset.go
+pkg/models/operations/getcatalogueassetdetail.go
+pkg/models/operations/listcatalogues.go
 pkg/models/operations/getchannel.go
 pkg/models/operations/listchannels.go
 pkg/models/operations/getcontributor.go

@@ -16,14 +16,9 @@ type SuspendUserPathParams struct {
 	UserID int64 `pathParam:"style=simple,explode=false,name=userId"`
 }
 
-type SuspendUserRequestBody struct {
-	// Suspension reason for vendor
-	Reason *string `json:"reason,omitempty"`
-}
-
 type SuspendUserRequest struct {
 	PathParams SuspendUserPathParams
-	Request    *SuspendUserRequestBody `request:"mediaType=application/json"`
+	Request    *shared.SuspendUserRequest `request:"mediaType=application/json"`
 	Security   SuspendUserSecurity
 }
 

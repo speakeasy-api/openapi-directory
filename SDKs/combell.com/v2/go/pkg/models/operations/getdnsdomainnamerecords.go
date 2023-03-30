@@ -15,7 +15,7 @@ type GetDNSDomainNameRecordsPathParams struct {
 type GetDNSDomainNameRecordsQueryParams struct {
 	// The domain name.
 	DomainName string `queryParam:"style=form,explode=true,name=domain_name"`
-	// Filters records matching the record name. This filter only applies to lookups of A, CNAME, TXT, ALIAS and TLSA records.
+	// Filters records matching the record name. This filter only applies to lookups of A, CNAME, TXT, CAA, ALIAS and TLSA records.
 	RecordName *string `queryParam:"style=form,explode=true,name=record_name"`
 	// Filters records for the service. This filter only applies to lookups of SRV records.
 	Service *string `queryParam:"style=form,explode=true,name=service"`

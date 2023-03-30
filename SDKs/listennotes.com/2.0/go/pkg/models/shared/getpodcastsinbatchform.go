@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-// GetPodcastsInBatchFormShowLatestEpisodesEnum - Whether or not to fetch up to 10 latest episodes from these podcasts, sorted by pub_date. 1 is yes, and 0 is no.
+// GetPodcastsInBatchFormShowLatestEpisodesEnum - Whether or not to fetch up to 15 latest episodes from these podcasts, sorted by pub_date. 1 is yes, and 0 is no.
 type GetPodcastsInBatchFormShowLatestEpisodesEnum string
 
 const (
@@ -34,14 +34,16 @@ func (e *GetPodcastsInBatchFormShowLatestEpisodesEnum) UnmarshalJSON(data []byte
 type GetPodcastsInBatchForm struct {
 	// Comma-separated list of podcast ids.
 	Ids *string `form:"name=ids"`
-	// Comma-separated itunes ids.
+	// Comma-separated Apple Podcasts (iTunes) ids, e.g., 659155419
 	ItunesIds *string `form:"name=itunes_ids"`
-	// For latest episodes pagination. It's the value of **next_episode_pub_date** from the response of last request. If not specified, just return latest 10 episodes.
+	// For latest episodes pagination. It's the value of **next_episode_pub_date** from the response of last request. If not specified, just return latest 15 episodes.
 	//
 	NextEpisodePubDate *int64 `form:"name=next_episode_pub_date"`
 	// Comma-separated rss urls.
 	Rsses *string `form:"name=rsses"`
-	// Whether or not to fetch up to 10 latest episodes from these podcasts, sorted by pub_date. 1 is yes, and 0 is no.
+	// Whether or not to fetch up to 15 latest episodes from these podcasts, sorted by pub_date. 1 is yes, and 0 is no.
 	//
 	ShowLatestEpisodes *GetPodcastsInBatchFormShowLatestEpisodesEnum `form:"name=show_latest_episodes"`
+	// Comma-separated Spotify ids, e.g., 3DDfEsKDIDrTlnPOiG4ZF4
+	SpotifyIds *string `form:"name=spotify_ids"`
 }

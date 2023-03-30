@@ -80,50 +80,237 @@ func main() {
                             "accusamus",
                         },
                         Strategy: &shared.Strategy{
+                            Canary: &shared.Canary{
+                                CanaryDeployment: &shared.CanaryDeployment{
+                                    Percentages: []int{
+                                        978619,
+                                        473608,
+                                        799159,
+                                        800911,
+                                    },
+                                    Verify: false,
+                                },
+                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
+                                    PhaseConfigs: []shared.PhaseConfig{
+                                        shared.PhaseConfig{
+                                            Percentage: 520478,
+                                            PhaseID: "dolor",
+                                            Profiles: []string{
+                                                "sed",
+                                                "quisquam",
+                                                "rerum",
+                                            },
+                                            Verify: false,
+                                        },
+                                        shared.PhaseConfig{
+                                            Percentage: 582020,
+                                            PhaseID: "qui",
+                                            Profiles: []string{
+                                                "rerum",
+                                                "possimus",
+                                                "occaecati",
+                                            },
+                                            Verify: false,
+                                        },
+                                    },
+                                },
+                                RuntimeConfig: &shared.RuntimeConfig{
+                                    CloudRun: &shared.CloudRunConfig{
+                                        AutomaticTrafficControl: false,
+                                    },
+                                    Kubernetes: &shared.KubernetesConfig{
+                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
+                                            Deployment: "odit",
+                                            HTTPRoute: "esse",
+                                            Service: "rem",
+                                        },
+                                        ServiceNetworking: &shared.ServiceNetworking{
+                                            Deployment: "voluptatem",
+                                            Service: "amet",
+                                        },
+                                    },
+                                },
+                            },
                             Standard: &shared.Standard{
                                 Verify: false,
                             },
                         },
-                        TargetID: "accusamus",
+                        TargetID: "est",
                     },
                     shared.Stage{
                         Profiles: []string{
-                            "rem",
-                            "quibusdam",
+                            "blanditiis",
+                            "numquam",
+                            "similique",
+                        },
+                        Strategy: &shared.Strategy{
+                            Canary: &shared.Canary{
+                                CanaryDeployment: &shared.CanaryDeployment{
+                                    Percentages: []int{
+                                        18789,
+                                    },
+                                    Verify: false,
+                                },
+                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
+                                    PhaseConfigs: []shared.PhaseConfig{
+                                        shared.PhaseConfig{
+                                            Percentage: 617636,
+                                            PhaseID: "voluptatem",
+                                            Profiles: []string{
+                                                "modi",
+                                                "et",
+                                                "iure",
+                                            },
+                                            Verify: false,
+                                        },
+                                        shared.PhaseConfig{
+                                            Percentage: 943749,
+                                            PhaseID: "ut",
+                                            Profiles: []string{
+                                                "qui",
+                                                "ea",
+                                                "laborum",
+                                            },
+                                            Verify: false,
+                                        },
+                                    },
+                                },
+                                RuntimeConfig: &shared.RuntimeConfig{
+                                    CloudRun: &shared.CloudRunConfig{
+                                        AutomaticTrafficControl: false,
+                                    },
+                                    Kubernetes: &shared.KubernetesConfig{
+                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
+                                            Deployment: "iusto",
+                                            HTTPRoute: "ut",
+                                            Service: "optio",
+                                        },
+                                        ServiceNetworking: &shared.ServiceNetworking{
+                                            Deployment: "aspernatur",
+                                            Service: "inventore",
+                                        },
+                                    },
+                                },
+                            },
+                            Standard: &shared.Standard{
+                                Verify: false,
+                            },
+                        },
+                        TargetID: "ut",
+                    },
+                    shared.Stage{
+                        Profiles: []string{
                             "et",
-                            "praesentium",
+                            "libero",
+                            "ipsum",
                         },
                         Strategy: &shared.Strategy{
+                            Canary: &shared.Canary{
+                                CanaryDeployment: &shared.CanaryDeployment{
+                                    Percentages: []int{
+                                        358152,
+                                    },
+                                    Verify: false,
+                                },
+                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
+                                    PhaseConfigs: []shared.PhaseConfig{
+                                        shared.PhaseConfig{
+                                            Percentage: 750686,
+                                            PhaseID: "ipsam",
+                                            Profiles: []string{
+                                                "commodi",
+                                                "quia",
+                                                "similique",
+                                            },
+                                            Verify: false,
+                                        },
+                                    },
+                                },
+                                RuntimeConfig: &shared.RuntimeConfig{
+                                    CloudRun: &shared.CloudRunConfig{
+                                        AutomaticTrafficControl: false,
+                                    },
+                                    Kubernetes: &shared.KubernetesConfig{
+                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
+                                            Deployment: "eaque",
+                                            HTTPRoute: "odio",
+                                            Service: "harum",
+                                        },
+                                        ServiceNetworking: &shared.ServiceNetworking{
+                                            Deployment: "doloribus",
+                                            Service: "a",
+                                        },
+                                    },
+                                },
+                            },
                             Standard: &shared.Standard{
                                 Verify: false,
                             },
                         },
-                        TargetID: "occaecati",
+                        TargetID: "aut",
                     },
                     shared.Stage{
                         Profiles: []string{
-                            "soluta",
-                            "sed",
-                            "quisquam",
-                            "rerum",
+                            "non",
+                            "quidem",
+                            "neque",
                         },
                         Strategy: &shared.Strategy{
+                            Canary: &shared.Canary{
+                                CanaryDeployment: &shared.CanaryDeployment{
+                                    Percentages: []int{
+                                        653108,
+                                        581850,
+                                        253291,
+                                        414369,
+                                    },
+                                    Verify: false,
+                                },
+                                CustomCanaryDeployment: &shared.CustomCanaryDeployment{
+                                    PhaseConfigs: []shared.PhaseConfig{
+                                        shared.PhaseConfig{
+                                            Percentage: 474697,
+                                            PhaseID: "et",
+                                            Profiles: []string{
+                                                "nesciunt",
+                                                "laboriosam",
+                                                "aut",
+                                            },
+                                            Verify: false,
+                                        },
+                                        shared.PhaseConfig{
+                                            Percentage: 674752,
+                                            PhaseID: "expedita",
+                                            Profiles: []string{
+                                                "eos",
+                                                "omnis",
+                                            },
+                                            Verify: false,
+                                        },
+                                    },
+                                },
+                                RuntimeConfig: &shared.RuntimeConfig{
+                                    CloudRun: &shared.CloudRunConfig{
+                                        AutomaticTrafficControl: false,
+                                    },
+                                    Kubernetes: &shared.KubernetesConfig{
+                                        GatewayServiceMesh: &shared.GatewayServiceMesh{
+                                            Deployment: "adipisci",
+                                            HTTPRoute: "hic",
+                                            Service: "consequatur",
+                                        },
+                                        ServiceNetworking: &shared.ServiceNetworking{
+                                            Deployment: "distinctio",
+                                            Service: "qui",
+                                        },
+                                    },
+                                },
+                            },
                             Standard: &shared.Standard{
                                 Verify: false,
                             },
                         },
-                        TargetID: "culpa",
-                    },
-                    shared.Stage{
-                        Profiles: []string{
-                            "sed",
-                        },
-                        Strategy: &shared.Strategy{
-                            Standard: &shared.Standard{
-                                Verify: false,
-                            },
-                        },
-                        TargetID: "rerum",
+                        TargetID: "perferendis",
                     },
                 },
             },

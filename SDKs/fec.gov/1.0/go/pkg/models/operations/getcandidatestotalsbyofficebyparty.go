@@ -43,6 +43,9 @@ type GetCandidatesTotalsByOfficeByPartyQueryParams struct {
 	// API key for https://api.data.gov. Get one at https://api.data.gov/signup.
 	//
 	APIKey string `queryParam:"style=form,explode=true,name=api_key"`
+	// `True` indicates that full election period of a candidate.
+	// `False` indicates that two year election cycle.
+	ElectionFull *bool `queryParam:"style=form,explode=true,name=election_full"`
 	// Filter records to only those that were applicable to a given
 	// two-year period.The cycle begins with an odd year and is named
 	// for its ending, even year.

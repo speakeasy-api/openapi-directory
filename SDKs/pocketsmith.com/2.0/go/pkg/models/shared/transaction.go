@@ -57,20 +57,26 @@ func (e *TransactionTypeEnum) UnmarshalJSON(data []byte) error {
 
 // Transaction - Success
 type Transaction struct {
-	Amount       *float64  `json:"amount,omitempty"`
-	Category     *Category `json:"category,omitempty"`
-	ChequeNumber *string   `json:"cheque_number,omitempty"`
+	Amount *float64 `json:"amount,omitempty"`
+	// The amount of the transaction in the user's base currency.
+	AmountInBaseCurrency *float64  `json:"amount_in_base_currency,omitempty"`
+	Category             *Category `json:"category,omitempty"`
+	ChequeNumber         *string   `json:"cheque_number,omitempty"`
 	// The closing balance of the account at the transaction.
 	ClosingBalance *float64 `json:"closing_balance,omitempty"`
+	// When the transaction was created.
+	CreatedAt *string `json:"created_at,omitempty"`
 	// The date the transaction took place.
 	Date *string `json:"date,omitempty"`
 	// The unique identifier of the transaction.
 	ID *int64 `json:"id,omitempty"`
-	// Whether the transaction was a transfer.
+	// Whether the transaction is a transfer.
 	IsTransfer *bool    `json:"is_transfer,omitempty"`
 	Labels     []string `json:"labels,omitempty"`
 	Memo       *string  `json:"memo,omitempty"`
-	Note       *string  `json:"note,omitempty"`
+	// Whether the transaction needs to be reviewed.
+	NeedsReview *bool   `json:"needs_review,omitempty"`
+	Note        *string `json:"note,omitempty"`
 	// The payee the transaction was created with.
 	OriginalPayee *string `json:"original_payee,omitempty"`
 	// The payee/merchant of the transaction.
@@ -80,6 +86,8 @@ type Transaction struct {
 	TransactionAccount *TransactionAccount    `json:"transaction_account,omitempty"`
 	// Whether the transaction is a debit or a credit
 	Type *TransactionTypeEnum `json:"type,omitempty"`
+	// When the transaction was last updated.
+	UpdatedAt *string `json:"updated_at,omitempty"`
 	// Where the transaction came from.
 	UploadSource *string `json:"upload_source,omitempty"`
 }

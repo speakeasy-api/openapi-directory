@@ -210,7 +210,7 @@ type CreativeInput struct {
 	ImpressionTrackingUrls []string `json:"impressionTrackingUrls,omitempty"`
 	// Native content for a creative.
 	Native *NativeContent `json:"native,omitempty"`
-	// Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb/fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups"). This should be unique among all creatives for a given `accountId`.
+	// Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb/fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups"). This should be unique among all creatives for a given `accountId`. This URL should be the same as the URL returned by [generateBid()](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#32-on-device-bidding).
 	RenderURL *string `json:"renderUrl,omitempty"`
 	// All restricted categories for the ads that may be shown from this creative.
 	RestrictedCategories []CreativeRestrictedCategoriesEnum `json:"restrictedCategories,omitempty"`
@@ -284,7 +284,7 @@ type Creative struct {
 	Name *string `json:"name,omitempty"`
 	// Native content for a creative.
 	Native *NativeContent `json:"native,omitempty"`
-	// Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb/fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups"). This should be unique among all creatives for a given `accountId`.
+	// Experimental field that can be used during the [FLEDGE Origin Trial](/authorized-buyers/rtb/fledge-origin-trial). The URL to fetch an interest group ad used in [TURTLEDOVE on-device auction](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#1-browsers-record-interest-groups"). This should be unique among all creatives for a given `accountId`. This URL should be the same as the URL returned by [generateBid()](https://github.com/WICG/turtledove/blob/main/FLEDGE.md#32-on-device-bidding).
 	RenderURL *string `json:"renderUrl,omitempty"`
 	// All restricted categories for the ads that may be shown from this creative.
 	RestrictedCategories []CreativeRestrictedCategoriesEnum `json:"restrictedCategories,omitempty"`

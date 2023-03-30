@@ -24,17 +24,18 @@ import (
 func main() {
     s := sdk.New()
 
-    req := operations.AuthenticateRequest{
-        PathParams: operations.AuthenticatePathParams{
-            Username: "Katelynn_Medhurst60",
+    req := operations.GetAudioRequest{
+        PathParams: operations.GetAudioPathParams{
+            Word: "unde",
         },
-        QueryParams: operations.AuthenticateQueryParams{
-            Password: "vero",
+        QueryParams: operations.GetAudioQueryParams{
+            Limit: 592845,
+            UseCanonical: "true",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Account.Authenticate(ctx, req)
+    res, err := s.Word.GetAudio(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
@@ -50,14 +51,6 @@ func main() {
 ## SDK Available Operations
 
 
-### Account
-
-* `Authenticate` - Authenticates a User
-* `AuthenticatePost` - Authenticates a user
-* `GetAPITokenStatus` - Returns usage statistics for the API account.
-* `GetLoggedInUser` - Returns the logged-in User
-* `GetWordListsForLoggedInUser` - Fetches WordList objects for the logged-in user.
-
 ### Word
 
 * `GetAudio` - Fetches audio metadata for a word.
@@ -71,19 +64,6 @@ func main() {
 * `GetTextPronunciations` - Returns text pronunciations for a given word
 * `GetTopExample` - Returns a top example for a word
 * `GetWordFrequency` - Returns word usage over time
-
-### WordList
-
-* `AddWordsToWordList` - Adds words to a WordList
-* `DeleteWordList` - Deletes an existing WordList
-* `DeleteWordsFromWordList` - Removes words from a WordList
-* `GetWordListByPermalink` - Fetches a WordList by ID
-* `GetWordListWords` - Fetches words in a WordList
-* `UpdateWordList` - Updates an existing WordList
-
-### WordLists
-
-* `CreateWordList` - Creates a WordList.
 
 ### Words
 

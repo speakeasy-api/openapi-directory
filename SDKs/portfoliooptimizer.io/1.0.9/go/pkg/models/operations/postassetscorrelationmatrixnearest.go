@@ -7,6 +7,7 @@ import (
 )
 
 type PostAssetsCorrelationMatrixNearestRequestBody struct {
+	// The number of assets
 	Assets int64 `json:"assets"`
 	// assetsApproximateCorrelationMatrix[i][i] is the approximate correlation between the asset i and the asset j
 	AssetsApproximateCorrelationMatrix [][]float64 `json:"assetsApproximateCorrelationMatrix"`

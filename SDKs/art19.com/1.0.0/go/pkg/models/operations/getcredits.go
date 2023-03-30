@@ -9,6 +9,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetCreditsSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 // GetCreditsCreditableTypeEnum - Limit the result to credits linked to this type of entity only.
 // Depending on the privileges of the credential, this list might be further reduced to
 // only published entities.
@@ -95,6 +99,7 @@ type GetCreditsQueryParams struct {
 
 type GetCreditsRequest struct {
 	QueryParams GetCreditsQueryParams
+	Security    GetCreditsSecurity
 }
 
 // GetCredits400ApplicationVndAPIPlusJSONErrorsSource - An object containing references to the source of the error, optionally including any of the following members.

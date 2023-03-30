@@ -7,6 +7,8 @@ type BudgetAnalysis struct {
 	AverageActualAmount *float64 `json:"average_actual_amount,omitempty"`
 	// The average budgeted amount across all periods.
 	AverageForecastAmount *float64 `json:"average_forecast_amount,omitempty"`
+	// The currency of the budget analysis.
+	CurrencyCode *string `json:"currency_code,omitempty"`
 	// The end date of the budget analysis.
 	EndDate *string `json:"end_date,omitempty"`
 	// The period analyses that this budget analysis comprises.

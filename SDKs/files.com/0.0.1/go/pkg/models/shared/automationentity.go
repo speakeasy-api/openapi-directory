@@ -5,6 +5,7 @@ package shared
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 )
 
 // AutomationEntityAutomationEnum - Automation type
@@ -18,6 +19,8 @@ const (
 	AutomationEntityAutomationEnumDeleteFile     AutomationEntityAutomationEnum = "delete_file"
 	AutomationEntityAutomationEnumCopyFile       AutomationEntityAutomationEnum = "copy_file"
 	AutomationEntityAutomationEnumMoveFile       AutomationEntityAutomationEnum = "move_file"
+	AutomationEntityAutomationEnumAs2Send        AutomationEntityAutomationEnum = "as2_send"
+	AutomationEntityAutomationEnumRunSync        AutomationEntityAutomationEnum = "run_sync"
 )
 
 func (e *AutomationEntityAutomationEnum) UnmarshalJSON(data []byte) error {
@@ -39,6 +42,10 @@ func (e *AutomationEntityAutomationEnum) UnmarshalJSON(data []byte) error {
 	case "copy_file":
 		fallthrough
 	case "move_file":
+		fallthrough
+	case "as2_send":
+		fallthrough
+	case "run_sync":
 		*e = AutomationEntityAutomationEnum(s)
 		return nil
 	default:
@@ -86,32 +93,40 @@ func (e *AutomationEntityTriggerEnum) UnmarshalJSON(data []byte) error {
 type AutomationEntity struct {
 	// Automation type
 	Automation *AutomationEntityAutomationEnum `json:"automation,omitempty"`
+	// Indicates if the automation has been deleted.
+	Deleted *bool `json:"deleted,omitempty"`
+	// Description for the this Automation.
+	Description *string `json:"description,omitempty"`
 	// If set, this string in the destination path will be replaced with the value in `destination_replace_to`.
 	DestinationReplaceFrom *string `json:"destination_replace_from,omitempty"`
 	// If set, this string will replace the value `destination_replace_from` in the destination filename. You can use special patterns here.
 	DestinationReplaceTo *string `json:"destination_replace_to,omitempty"`
 	// Destination Path
-	Destinations *string `json:"destinations,omitempty"`
+	Destinations []string `json:"destinations,omitempty"`
+	// If true, this automation will not run.
+	Disabled *bool `json:"disabled,omitempty"`
 	// IDs of Groups for the Automation (i.e. who to Request File from)
 	GroupIds []int `json:"group_ids,omitempty"`
 	// Automation ID
 	ID *int `json:"id,omitempty"`
 	// If trigger is `daily`, this specifies how often to run this automation.  One of: `day`, `week`, `week_end`, `month`, `month_end`, `quarter`, `quarter_end`, `year`, `year_end`
 	Interval *string `json:"interval,omitempty"`
-	// If trigger is `daily`, date this automation will next run.
-	NextProcessOn *string `json:"next_process_on,omitempty"`
+	// Time when automation was last modified. Does not change for name or description updates.
+	LastModifiedAt *time.Time `json:"last_modified_at,omitempty"`
+	// Name for this automation.
+	Name *string `json:"name,omitempty"`
 	// Path on which this Automation runs.  Supports globs.
 	Path *string `json:"path,omitempty"`
 	// If trigger is `custom_schedule`, Custom schedule description for when the automation should be run.
 	Schedule map[string]interface{} `json:"schedule,omitempty"`
 	// Source Path
 	Source *string `json:"source,omitempty"`
+	// IDs of remote sync folder behaviors to run by this Automation
+	SyncIds []int `json:"sync_ids,omitempty"`
 	// How this automation is triggered to run. One of: `realtime`, `daily`, `custom_schedule`, `webhook`, `email`, or `action`.
 	Trigger *AutomationEntityTriggerEnum `json:"trigger,omitempty"`
-	// If trigger is `action`, this is the path to watch for the specified trigger actions.
-	TriggerActionPath *string `json:"trigger_action_path,omitempty"`
 	// If trigger is `action`, this is the list of action types on which to trigger the automation. Valid actions are create, read, update, destroy, move, copy
-	TriggerActions *string `json:"trigger_actions,omitempty"`
+	TriggerActions []string `json:"trigger_actions,omitempty"`
 	// User ID of the Automation's creator.
 	UserID *int `json:"user_id,omitempty"`
 	// IDs of Users for the Automation (i.e. who to Request File from)

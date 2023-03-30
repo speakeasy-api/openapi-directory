@@ -653,7 +653,7 @@ func (s *SDK) CreatePreparedStatement(ctx context.Context, request operations.Cr
 	return res, nil
 }
 
-// CreatePresignedNotebookURL - Gets an authentication token and the URL at which the notebook can be accessed. During programmatic access, <code>CreatePresignedNotebookUrl</code> must be called every 10 minutes to refresh the authentication token.
+// CreatePresignedNotebookURL - Gets an authentication token and the URL at which the notebook can be accessed. During programmatic access, <code>CreatePresignedNotebookUrl</code> must be called every 10 minutes to refresh the authentication token. For information about granting programmatic access, see <a href="https://docs.aws.amazon.com/athena/latest/ug/setting-up.html#setting-up-grant-programmatic-access">Grant programmatic access</a>.
 func (s *SDK) CreatePresignedNotebookURL(ctx context.Context, request operations.CreatePresignedNotebookURLRequest) (*operations.CreatePresignedNotebookURLResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.CreatePresignedNotebookUrl"
@@ -739,7 +739,7 @@ func (s *SDK) CreatePresignedNotebookURL(ctx context.Context, request operations
 	return res, nil
 }
 
-// CreateWorkGroup - Creates a workgroup with the specified name. Only one of <code>Configurations</code> or <code>Configuration</code> can be specified; <code>Configurations</code> for a workgroup with multi engine support (for example, an Apache Spark enabled workgroup) or <code>Configuration</code> for an Athena SQL workgroup.
+// CreateWorkGroup - Creates a workgroup with the specified name. A workgroup can be an Apache Spark enabled workgroup or an Athena SQL workgroup.
 func (s *SDK) CreateWorkGroup(ctx context.Context, request operations.CreateWorkGroupRequest) (*operations.CreateWorkGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.CreateWorkGroup"
@@ -1387,7 +1387,7 @@ func (s *SDK) GetCalculationExecution(ctx context.Context, request operations.Ge
 	return res, nil
 }
 
-// GetCalculationExecutionCode - Retrieves a pre-signed URL to a copy of the code that was executed for the calculation.
+// GetCalculationExecutionCode - Retrieves the unencrypted code that was executed for the calculation.
 func (s *SDK) GetCalculationExecutionCode(ctx context.Context, request operations.GetCalculationExecutionCodeRequest) (*operations.GetCalculationExecutionCodeResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.GetCalculationExecutionCode"
@@ -2045,7 +2045,7 @@ func (s *SDK) GetQueryExecution(ctx context.Context, request operations.GetQuery
 	return res, nil
 }
 
-// GetQueryResults - <p>Streams the results of a single query execution specified by <code>QueryExecutionId</code> from the Athena query results location in Amazon S3. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Query Results</a> in the <i>Amazon Athena User Guide</i>. This request does not execute the query but returns results. Use <a>StartQueryExecution</a> to run a query.</p> <p>To stream query results successfully, the IAM principal with permission to call <code>GetQueryResults</code> also must have permissions to the Amazon S3 <code>GetObject</code> action for the Athena query results location.</p> <important> <p>IAM principals with permission to the Amazon S3 <code>GetObject</code> action for the query results location are able to retrieve query results from Amazon S3 even if permission to the <code>GetQueryResults</code> action is denied. To restrict user or role access, ensure that Amazon S3 permissions to the Athena query location are denied.</p> </important>
+// GetQueryResults - <p>Streams the results of a single query execution specified by <code>QueryExecutionId</code> from the Athena query results location in Amazon S3. For more information, see <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Working with query results, recent queries, and output files</a> in the <i>Amazon Athena User Guide</i>. This request does not execute the query but returns results. Use <a>StartQueryExecution</a> to run a query.</p> <p>To stream query results successfully, the IAM principal with permission to call <code>GetQueryResults</code> also must have permissions to the Amazon S3 <code>GetObject</code> action for the Athena query results location.</p> <important> <p>IAM principals with permission to the Amazon S3 <code>GetObject</code> action for the query results location are able to retrieve query results from Amazon S3 even if permission to the <code>GetQueryResults</code> action is denied. To restrict user or role access, ensure that Amazon S3 permissions to the Athena query location are denied.</p> </important>
 func (s *SDK) GetQueryResults(ctx context.Context, request operations.GetQueryResultsRequest) (*operations.GetQueryResultsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.GetQueryResults"
@@ -2631,7 +2631,7 @@ func (s *SDK) ImportNotebook(ctx context.Context, request operations.ImportNoteb
 	return res, nil
 }
 
-// ListApplicationDPUSizes - Returns the supported DPU sizes for the supported application runtimes (for example, <code>Jupyter 1.0</code>).
+// ListApplicationDPUSizes - Returns the supported DPU sizes for the supported application runtimes (for example, <code>Athena notebook version 1</code>).
 func (s *SDK) ListApplicationDPUSizes(ctx context.Context, request operations.ListApplicationDPUSizesRequest) (*operations.ListApplicationDPUSizesResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.ListApplicationDPUSizes"
@@ -2811,7 +2811,7 @@ func (s *SDK) ListCalculationExecutions(ctx context.Context, request operations.
 	return res, nil
 }
 
-// ListDataCatalogs - Lists the data catalogs in the current Amazon Web Services account.
+// ListDataCatalogs - <p>Lists the data catalogs in the current Amazon Web Services account.</p> <note> <p>In the Athena console, data catalogs are listed as "data sources" on the <b>Data sources</b> page under the <b>Data source name</b> column.</p> </note>
 func (s *SDK) ListDataCatalogs(ctx context.Context, request operations.ListDataCatalogsRequest) (*operations.ListDataCatalogsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.ListDataCatalogs"
@@ -3061,7 +3061,7 @@ func (s *SDK) ListEngineVersions(ctx context.Context, request operations.ListEng
 	return res, nil
 }
 
-// ListExecutors - Lists, in descending order, the executors that have been submitted to a session. Newer executors are listed first; older executors are listed later. The result can be optionally filtered by state.
+// ListExecutors - Lists, in descending order, the executors that joined a session. Newer executors are listed first; older executors are listed later. The result can be optionally filtered by state.
 func (s *SDK) ListExecutors(ctx context.Context, request operations.ListExecutorsRequest) (*operations.ListExecutorsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.ListExecutors"
@@ -3913,7 +3913,7 @@ func (s *SDK) ListWorkGroups(ctx context.Context, request operations.ListWorkGro
 	return res, nil
 }
 
-// StartCalculationExecution - Submits calculations for execution within a session. You can supply the code to run as an inline code block within the request or as an Amazon S3 URL.
+// StartCalculationExecution - Submits calculations for execution within a session. You can supply the code to run as an inline code block within the request.
 func (s *SDK) StartCalculationExecution(ctx context.Context, request operations.StartCalculationExecutionRequest) (*operations.StartCalculationExecutionResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.StartCalculationExecution"
@@ -4353,7 +4353,7 @@ func (s *SDK) StopQueryExecution(ctx context.Context, request operations.StopQue
 	return res, nil
 }
 
-// TagResource - Adds one or more tags to an Athena resource. A tag is a label that you assign to a resource. In Athena, a resource can be a workgroup or data catalog. Each tag consists of a key and an optional value, both of which you define. For example, you can use tags to categorize Athena workgroups or data catalogs by purpose, owner, or environment. Use a consistent set of tag keys to make it easier to search and filter workgroups or data catalogs in your account. For best practices, see <a href="https://aws.amazon.com/answers/account-management/aws-tagging-strategies/">Tagging Best Practices</a>. Tag keys can be from 1 to 128 UTF-8 Unicode characters, and tag values can be from 0 to 256 UTF-8 Unicode characters. Tags can use letters and numbers representable in UTF-8, and the following characters: + - = . _ : / @. Tag keys and values are case-sensitive. Tag keys must be unique per resource. If you specify more than one tag, separate them by commas.
+// TagResource - Adds one or more tags to an Athena resource. A tag is a label that you assign to a resource. In Athena, a resource can be a workgroup or data catalog. Each tag consists of a key and an optional value, both of which you define. For example, you can use tags to categorize Athena workgroups or data catalogs by purpose, owner, or environment. Use a consistent set of tag keys to make it easier to search and filter workgroups or data catalogs in your account. For best practices, see <a href="https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html">Tagging Best Practices</a>. Tag keys can be from 1 to 128 UTF-8 Unicode characters, and tag values can be from 0 to 256 UTF-8 Unicode characters. Tags can use letters and numbers representable in UTF-8, and the following characters: + - = . _ : / @. Tag keys and values are case-sensitive. Tag keys must be unique per resource. If you specify more than one tag, separate them by commas.
 func (s *SDK) TagResource(ctx context.Context, request operations.TagResourceRequest) (*operations.TagResourceResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.TagResource"
@@ -5021,7 +5021,7 @@ func (s *SDK) UpdatePreparedStatement(ctx context.Context, request operations.Up
 	return res, nil
 }
 
-// UpdateWorkGroup - Updates the workgroup with the specified name. The workgroup's name cannot be changed. Only one of <code>ConfigurationsUpdates</code> or <code>ConfigurationUpdates</code> can be specified; <code>ConfigurationsUpdates</code> for a workgroup with multi engine support (for example, an Apache Spark enabled workgroup) or <code>ConfigurationUpdates</code> for an Athena SQL workgroup.
+// UpdateWorkGroup - Updates the workgroup with the specified name. The workgroup's name cannot be changed. Only <code>ConfigurationUpdates</code> can be specified.
 func (s *SDK) UpdateWorkGroup(ctx context.Context, request operations.UpdateWorkGroupRequest) (*operations.UpdateWorkGroupResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/#X-Amz-Target=AmazonAthena.UpdateWorkGroup"

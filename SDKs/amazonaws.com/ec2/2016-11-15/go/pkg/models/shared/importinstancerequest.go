@@ -687,6 +687,25 @@ const (
 	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR6idn16xlarge   ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r6idn.16xlarge"
 	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR6idn24xlarge   ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r6idn.24xlarge"
 	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR6idn32xlarge   ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r6idn.32xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumC7gMetal        ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "c7g.metal"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM7gMedium       ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m7g.medium"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM7gLarge        ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m7g.large"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM7gXlarge       ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m7g.xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM7g2xlarge      ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m7g.2xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM7g4xlarge      ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m7g.4xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM7g8xlarge      ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m7g.8xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM7g12xlarge     ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m7g.12xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM7g16xlarge     ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m7g.16xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumM7gMetal        ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "m7g.metal"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7gMedium       ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.medium"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7gLarge        ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.large"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7gXlarge       ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7g2xlarge      ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.2xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7g4xlarge      ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.4xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7g8xlarge      ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.8xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7g12xlarge     ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.12xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7g16xlarge     ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.16xlarge"
+	ImportInstanceRequestLaunchSpecificationInstanceTypeEnumR7gMetal        ImportInstanceRequestLaunchSpecificationInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *ImportInstanceRequestLaunchSpecificationInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -1932,6 +1951,44 @@ func (e *ImportInstanceRequestLaunchSpecificationInstanceTypeEnum) UnmarshalJSON
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = ImportInstanceRequestLaunchSpecificationInstanceTypeEnum(s)
 		return nil
 	default:

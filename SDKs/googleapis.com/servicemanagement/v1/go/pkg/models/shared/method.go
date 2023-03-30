@@ -11,8 +11,9 @@ import (
 type MethodSyntaxEnum string
 
 const (
-	MethodSyntaxEnumSyntaxProto2 MethodSyntaxEnum = "SYNTAX_PROTO2"
-	MethodSyntaxEnumSyntaxProto3 MethodSyntaxEnum = "SYNTAX_PROTO3"
+	MethodSyntaxEnumSyntaxProto2   MethodSyntaxEnum = "SYNTAX_PROTO2"
+	MethodSyntaxEnumSyntaxProto3   MethodSyntaxEnum = "SYNTAX_PROTO3"
+	MethodSyntaxEnumSyntaxEditions MethodSyntaxEnum = "SYNTAX_EDITIONS"
 )
 
 func (e *MethodSyntaxEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +25,8 @@ func (e *MethodSyntaxEnum) UnmarshalJSON(data []byte) error {
 	case "SYNTAX_PROTO2":
 		fallthrough
 	case "SYNTAX_PROTO3":
+		fallthrough
+	case "SYNTAX_EDITIONS":
 		*e = MethodSyntaxEnum(s)
 		return nil
 	default:

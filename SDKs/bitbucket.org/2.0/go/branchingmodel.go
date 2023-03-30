@@ -37,9 +37,10 @@ func newBranchingModel(defaultClient, securityClient HTTPClient, serverURL, lang
 	}
 }
 
-// GetRepositoriesWorkspaceRepoSlugBranchingModel - Return the branching model as applied to the repository. This view is
+// GetRepositoriesWorkspaceRepoSlugBranchingModel - Get the branching model for a repository
+// Return the branching model as applied to the repository. This view is
 // read-only. The branching model settings can be changed using the
-// [settings](branching-model/settings#get) API.
+// [settings](#api-repositories-workspace-repo-slug-branching-model-settings-get) API.
 //
 // The returned object:
 //
@@ -166,7 +167,8 @@ func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugBranchingModel(ctx cont
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugBranchingModelSettings - Return the branching model configuration for a repository. The returned
+// GetRepositoriesWorkspaceRepoSlugBranchingModelSettings - Get the branching model config for a repository
+// Return the branching model configuration for a repository. The returned
 // object:
 //
 //  1. Always has a `development` property for the development branch.
@@ -176,7 +178,7 @@ func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugBranchingModel(ctx cont
 //
 // This is the raw configuration for the branching model. A client
 // wishing to see the branching model with its actual current branches may
-// find the [active model API](../branching-model#get) more useful.
+// find the [active model API](/cloud/bitbucket/rest/api-group-branching-model/#api-repositories-workspace-repo-slug-branching-model-get) more useful.
 //
 // Example body:
 //
@@ -282,7 +284,297 @@ func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugBranchingModelSettings(
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugBranchingModelSettings - Update the branching model configuration for a repository.
+// GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModel - Get the effective, or currently applied, branching model for a repository
+func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModel(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelRequest) (*operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/effective-branching-model", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRepositoriesWorkspaceRepoSlugEffectiveBranchingModelResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.EffectiveRepoBranchingModel = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspaceProjectsProjectKeyBranchingModel - Get the branching model for a project
+// Return the branching model set at the project level. This view is
+// read-only. The branching model settings can be changed using the
+// [settings](#api-workspaces-workspace-projects-project-key-branching-model-settings-get)
+// API.
+//
+// The returned object:
+//
+//  1. Always has a `development` property. `development.name` is
+//     the user-specified branch that can be inherited by an individual repository's
+//     branching model.
+//  2. Might have a `production` property. `production` will not
+//     be present when `production` is disabled.
+//     `production.name` is the user-specified branch that can be
+//     inherited by an individual repository's branching model.
+//  3. Always has a `branch_types` array which contains all enabled branch
+//     types.
+//
+// Example body:
+//
+// ```
+//
+//	{
+//	  "development": {
+//	    "name": "master",
+//	    "use_mainbranch": true
+//	  },
+//	  "production": {
+//	    "name": "production",
+//	    "use_mainbranch": false
+//	  },
+//	  "branch_types": [
+//	    {
+//	      "kind": "release",
+//	      "prefix": "release/"
+//	    },
+//	    {
+//	      "kind": "hotfix",
+//	      "prefix": "hotfix/"
+//	    },
+//	    {
+//	      "kind": "feature",
+//	      "prefix": "feature/"
+//	    },
+//	    {
+//	      "kind": "bugfix",
+//	      "prefix": "bugfix/"
+//	    }
+//	  ],
+//	  "type": "project_branching_model",
+//	  "links": {
+//	    "self": {
+//	      "href": "https://api.bitbucket.org/.../branching-model"
+//	    }
+//	  }
+//	}
+//
+// ```
+func (s *branchingModel) GetWorkspacesWorkspaceProjectsProjectKeyBranchingModel(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/branching-model", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ProjectBranchingModel = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings - Get the branching model config for a project
+// Return the branching model configuration for a project. The returned
+// object:
+//
+//  1. Always has a `development` property for the development branch.
+//  2. Always a `production` property for the production branch. The
+//     production branch can be disabled.
+//  3. The `branch_types` contains all the branch types.
+//
+// This is the raw configuration for the branching model. A client
+// wishing to see the branching model with its actual current branches may find the
+// [active model API](#api-workspaces-workspace-projects-project-key-branching-model-get)
+// more useful.
+//
+// Example body:
+//
+// ```
+//
+//	{
+//	  "development": {
+//	    "name": null,
+//	    "use_mainbranch": true
+//	  },
+//	  "production": {
+//	    "name": "production",
+//	    "use_mainbranch": false,
+//	    "enabled": false
+//	  },
+//	  "branch_types": [
+//	    {
+//	      "kind": "release",
+//	      "enabled": true,
+//	      "prefix": "release/"
+//	    },
+//	    {
+//	      "kind": "hotfix",
+//	      "enabled": true,
+//	      "prefix": "hotfix/"
+//	    },
+//	    {
+//	      "kind": "feature",
+//	      "enabled": true,
+//	      "prefix": "feature/"
+//	    },
+//	    {
+//	      "kind": "bugfix",
+//	      "enabled": false,
+//	      "prefix": "bugfix/"
+//	    }
+//	  ],
+//	  "type": "branching_model_settings",
+//	  "links": {
+//	    "self": {
+//	      "href": "https://api.bitbucket.org/.../branching-model/settings"
+//	    }
+//	  }
+//	}
+//
+// ```
+func (s *branchingModel) GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(ctx context.Context, request operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest) (*operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BranchingModelSettings = out
+		}
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutRepositoriesWorkspaceRepoSlugBranchingModelSettings - Update the branching model config for a repository
+// Update the branching model configuration for a repository.
 //
 // The `development` branch can be configured to a specific branch or to
 // track the main branch. When set to a specific branch it must
@@ -363,6 +655,13 @@ func (s *branchingModel) GetRepositoriesWorkspaceRepoSlugBranchingModelSettings(
 //	}
 //
 // ```
+//
+// There is currently a side effect when using this API endpoint. If the
+// repository is inheriting branching model settings from its project,
+// updating the branching model for this repository will disable the
+// project setting inheritance.
+//
+// We have deprecated this side effect and will remove it on 1 August 2022.
 func (s *branchingModel) PutRepositoriesWorkspaceRepoSlugBranchingModelSettings(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsRequest) (*operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/branching-model/settings", request.PathParams, nil)
@@ -386,6 +685,135 @@ func (s *branchingModel) PutRepositoriesWorkspaceRepoSlugBranchingModelSettings(
 	contentType := httpRes.Header.Get("Content-Type")
 
 	res := &operations.PutRepositoriesWorkspaceRepoSlugBranchingModelSettingsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.BranchingModelSettings = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings - Update the branching model config for a project
+// Update the branching model configuration for a project.
+//
+// The `development` branch can be configured to a specific branch or to
+// track the main branch. Any branch name can be supplied, but will only
+// successfully be applied to a repository via inheritance if that branch
+// exists for that repository. Only the passed properties will be updated. The
+// properties not passed will be left unchanged. A request without a
+// `development` property will leave the development branch unchanged.
+//
+// The `production` branch can be a specific branch, the main
+// branch or disabled. Any branch name can be supplied, but will only
+// successfully be applied to a repository via inheritance if that branch
+// exists for that repository. The `enabled` property can be used to enable (`true`)
+// or disable (`false`) it. Only the passed properties will be updated. The
+// properties not passed will be left unchanged. A request without a
+// `production` property will leave the production branch unchanged.
+//
+// The `branch_types` property contains the branch types to be updated.
+// Only the branch types passed will be updated. All updates will be
+// rejected if it would leave the branching model in an invalid state.
+// For branch types this means that:
+//
+//  1. The prefixes for all enabled branch types are valid. For example,
+//     it is not possible to use '*' inside a Git prefix.
+//  2. A prefix of an enabled branch type must not be a prefix of another
+//     enabled branch type. This is to ensure that a branch can be easily
+//     classified by its prefix unambiguously.
+//
+// It is possible to store an invalid prefix if that branch type would be
+// left disabled. Only the passed properties will be updated. The
+// properties not passed will be left unchanged. Each branch type must
+// have a `kind` property to identify it.
+//
+// Example Body:
+//
+// ```
+//
+//	{
+//	  "development": {
+//	    "use_mainbranch": true
+//	  },
+//	  "production": {
+//	    "enabled": true,
+//	    "use_mainbranch": false,
+//	    "name": "production"
+//	  },
+//	  "branch_types": [
+//	    {
+//	      "kind": "bugfix",
+//	      "enabled": true,
+//	      "prefix": "bugfix/"
+//	    },
+//	    {
+//	      "kind": "feature",
+//	      "enabled": true,
+//	      "prefix": "feature/"
+//	    },
+//	    {
+//	      "kind": "hotfix",
+//	      "prefix": "hotfix/"
+//	    },
+//	    {
+//	      "kind": "release",
+//	      "enabled": false,
+//	    }
+//	  ]
+//	}
+//
+// ```
+func (s *branchingModel) PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettings(ctx context.Context, request operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsRequest) (*operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/workspaces/{workspace}/projects/{project_key}/branching-model/settings", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PutWorkspacesWorkspaceProjectsProjectKeyBranchingModelSettingsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

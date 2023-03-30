@@ -130,7 +130,7 @@ type Document struct {
 	// The filename of the document.
 	FileName *string `json:"fileName,omitempty"`
 	// The unique identifier of the document.
-	ID string `json:"id"`
+	ID *string `json:"id,omitempty"`
 	// The two-character [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code where the document was issued. For example, **US**.
 	IssuerCountry *string `json:"issuerCountry,omitempty"`
 	// The state or province where the document was issued (AU only).

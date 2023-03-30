@@ -4,7 +4,7 @@ package shared
 
 type CollectionVersions struct {
 	// Version number
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Api endpoint for the collection version
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 }

@@ -20,6 +20,7 @@ const (
 	IPAddressStatusEnumFailedResourceGone     IPAddressStatusEnum = "FAILED_RESOURCE_GONE"
 	IPAddressStatusEnumDeleting               IPAddressStatusEnum = "DELETING"
 	IPAddressStatusEnumDeleteFailedFasExpired IPAddressStatusEnum = "DELETE_FAILED_FAS_EXPIRED"
+	IPAddressStatusEnumUpdating               IPAddressStatusEnum = "UPDATING"
 )
 
 func (e *IPAddressStatusEnum) UnmarshalJSON(data []byte) error {
@@ -47,6 +48,8 @@ func (e *IPAddressStatusEnum) UnmarshalJSON(data []byte) error {
 	case "DELETING":
 		fallthrough
 	case "DELETE_FAILED_FAS_EXPIRED":
+		fallthrough
+	case "UPDATING":
 		*e = IPAddressStatusEnum(s)
 		return nil
 	default:

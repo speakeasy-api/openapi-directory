@@ -22,7 +22,7 @@ type DeleteAppRequestBody struct {
 	AppArn string `json:"appArn"`
 	// Used for an idempotency token. A client token is a unique, case-sensitive string of up to 64 ASCII characters. You should not reuse the same client token for other API requests.
 	ClientToken *string `json:"clientToken,omitempty"`
-	// A boolean option to force the deletion of an AWS Resilience Hub application.
+	// A boolean option to force the deletion of an Resilience Hub application.
 	ForceDelete *bool `json:"forceDelete,omitempty"`
 }
 

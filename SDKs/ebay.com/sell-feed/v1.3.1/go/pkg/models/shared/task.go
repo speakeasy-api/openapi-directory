@@ -4,17 +4,17 @@ package shared
 
 // Task - The type that defines the fields for the task details.
 type Task struct {
-	// The timestamp when the task went into the COMPLETED or COMPLETED_WITH_ERROR state. This state means that eBay has compiled the report for the seller based on the seller&rsquo;s filter criteria, and the seller can run a getResultFile call to download the report.
+	// The timestamp when the task went into the <code>COMPLETED</code> or <code>COMPLETED_WITH_ERROR</code> state. This state means that eBay has compiled the report for the seller based on the seller’s filter criteria, and the seller can run a <strong>getResultFile</strong> call to download the report.
 	CompletionDate *string `json:"completionDate,omitempty"`
 	// The date the task was created.
 	CreationDate *string `json:"creationDate,omitempty"`
-	// The path to the call URI used to retrieve the task. This field points to the GetOrderTask URI if the task is for LMS_ORDER_REPORT or will be null if this task is for LMS_ORDER_ACK.
+	// The path to the call URI used to retrieve the task. This field points to the GetOrderTask URI if the task is for <code>LMS_ORDER_REPORT</code> or will be null if this task is for <code>LMS_ORDER_ACK</code>.
 	DetailHref *string `json:"detailHref,omitempty"`
 	// The feed type associated with the task.
 	FeedType *string `json:"feedType,omitempty"`
 	// The schema version number associated with the task.
 	SchemaVersion *string `json:"schemaVersion,omitempty"`
-	// The enumeration value that indicates the state of the task that was submitted in the request. See FeedStatusEnum for information. The values COMPLETED and COMPLETED_WITH_ERROR indicate the Order Report file is ready to download. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:FeedStatusEnum'>eBay API documentation</a>
+	// The enumeration value that indicates the state of the task that was submitted in the request. See <strong>FeedStatusEnum</strong> for information. <p>The values <code>COMPLETED </code>and<code> COMPLETED_WITH_ERROR</code> indicate the Order Report file is ready to download.</p> For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:FeedStatusEnum'>eBay API documentation</a>
 	Status *string `json:"status,omitempty"`
 	// The ID of the task that was submitted in the request.
 	TaskID *string `json:"taskId,omitempty"`

@@ -5,4 +5,6 @@ package shared
 // JobReadList - Successful operation
 type JobReadList struct {
 	Jobs []JobWithAttemptsRead `json:"jobs"`
+	// the total count of jobs for the specified connection
+	TotalJobCount int64 `json:"totalJobCount"`
 }

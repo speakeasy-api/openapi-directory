@@ -12,13 +12,13 @@ import (
 type PlayMediaIntentHandlingInvocationResponseType string
 
 const (
-	PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingHandle                       PlayMediaIntentHandlingInvocationResponseType = "PlayMediaIntentHandling.handle"
-	PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolveMediaItems            PlayMediaIntentHandlingInvocationResponseType = "PlayMediaIntentHandling.resolveMediaItems"
 	PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolvePlayShuffled          PlayMediaIntentHandlingInvocationResponseType = "PlayMediaIntentHandling.resolvePlayShuffled"
 	PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolvePlaybackQueueLocation PlayMediaIntentHandlingInvocationResponseType = "PlayMediaIntentHandling.resolvePlaybackQueueLocation"
 	PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolvePlaybackRepeatMode    PlayMediaIntentHandlingInvocationResponseType = "PlayMediaIntentHandling.resolvePlaybackRepeatMode"
 	PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolveResumePlayback        PlayMediaIntentHandlingInvocationResponseType = "PlayMediaIntentHandling.resolveResumePlayback"
 	PlayMediaIntentHandlingInvocationResponseTypeProtocolException                                   PlayMediaIntentHandlingInvocationResponseType = "ProtocolException"
+	PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingHandle                       PlayMediaIntentHandlingInvocationResponseType = "PlayMediaIntentHandling.handle"
+	PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolveMediaItems            PlayMediaIntentHandlingInvocationResponseType = "PlayMediaIntentHandling.resolveMediaItems"
 )
 
 type PlayMediaIntentHandlingInvocationResponse struct {
@@ -31,28 +31,6 @@ type PlayMediaIntentHandlingInvocationResponse struct {
 	ProtocolExceptionInvocationResponse                                   *ProtocolExceptionInvocationResponse
 
 	Type PlayMediaIntentHandlingInvocationResponseType
-}
-
-func CreatePlayMediaIntentHandlingInvocationResponsePlayMediaIntentHandlingHandle(playMediaIntentHandlingHandle PlayMediaIntentHandlingHandleInvocationResponse) PlayMediaIntentHandlingInvocationResponse {
-	typ := PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingHandle
-	typStr := string(typ)
-	playMediaIntentHandlingHandle.Method = typStr
-
-	return PlayMediaIntentHandlingInvocationResponse{
-		PlayMediaIntentHandlingHandleInvocationResponse: &playMediaIntentHandlingHandle,
-		Type: typ,
-	}
-}
-
-func CreatePlayMediaIntentHandlingInvocationResponsePlayMediaIntentHandlingResolveMediaItems(playMediaIntentHandlingResolveMediaItems PlayMediaIntentHandlingResolveMediaItemsInvocationResponse) PlayMediaIntentHandlingInvocationResponse {
-	typ := PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolveMediaItems
-	typStr := string(typ)
-	playMediaIntentHandlingResolveMediaItems.Method = typStr
-
-	return PlayMediaIntentHandlingInvocationResponse{
-		PlayMediaIntentHandlingResolveMediaItemsInvocationResponse: &playMediaIntentHandlingResolveMediaItems,
-		Type: typ,
-	}
 }
 
 func CreatePlayMediaIntentHandlingInvocationResponsePlayMediaIntentHandlingResolvePlayShuffled(playMediaIntentHandlingResolvePlayShuffled PlayMediaIntentHandlingResolvePlayShuffledInvocationResponse) PlayMediaIntentHandlingInvocationResponse {
@@ -110,6 +88,28 @@ func CreatePlayMediaIntentHandlingInvocationResponseProtocolException(protocolEx
 	}
 }
 
+func CreatePlayMediaIntentHandlingInvocationResponsePlayMediaIntentHandlingHandle(playMediaIntentHandlingHandle PlayMediaIntentHandlingHandleInvocationResponse) PlayMediaIntentHandlingInvocationResponse {
+	typ := PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingHandle
+	typStr := string(typ)
+	playMediaIntentHandlingHandle.Method = typStr
+
+	return PlayMediaIntentHandlingInvocationResponse{
+		PlayMediaIntentHandlingHandleInvocationResponse: &playMediaIntentHandlingHandle,
+		Type: typ,
+	}
+}
+
+func CreatePlayMediaIntentHandlingInvocationResponsePlayMediaIntentHandlingResolveMediaItems(playMediaIntentHandlingResolveMediaItems PlayMediaIntentHandlingResolveMediaItemsInvocationResponse) PlayMediaIntentHandlingInvocationResponse {
+	typ := PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolveMediaItems
+	typStr := string(typ)
+	playMediaIntentHandlingResolveMediaItems.Method = typStr
+
+	return PlayMediaIntentHandlingInvocationResponse{
+		PlayMediaIntentHandlingResolveMediaItemsInvocationResponse: &playMediaIntentHandlingResolveMediaItems,
+		Type: typ,
+	}
+}
+
 func (u *PlayMediaIntentHandlingInvocationResponse) UnmarshalJSON(data []byte) error {
 	var d *json.Decoder
 
@@ -123,28 +123,6 @@ func (u *PlayMediaIntentHandlingInvocationResponse) UnmarshalJSON(data []byte) e
 	}
 
 	switch dis.Method {
-	case "PlayMediaIntentHandling.handle":
-		d = json.NewDecoder(bytes.NewReader(data))
-		d.DisallowUnknownFields()
-		playMediaIntentHandlingHandleInvocationResponse := new(PlayMediaIntentHandlingHandleInvocationResponse)
-		if err := d.Decode(&playMediaIntentHandlingHandleInvocationResponse); err != nil {
-			return fmt.Errorf("could not unmarshal expected type: %w", err)
-		}
-
-		u.PlayMediaIntentHandlingHandleInvocationResponse = playMediaIntentHandlingHandleInvocationResponse
-		u.Type = PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingHandle
-		return nil
-	case "PlayMediaIntentHandling.resolveMediaItems":
-		d = json.NewDecoder(bytes.NewReader(data))
-		d.DisallowUnknownFields()
-		playMediaIntentHandlingResolveMediaItemsInvocationResponse := new(PlayMediaIntentHandlingResolveMediaItemsInvocationResponse)
-		if err := d.Decode(&playMediaIntentHandlingResolveMediaItemsInvocationResponse); err != nil {
-			return fmt.Errorf("could not unmarshal expected type: %w", err)
-		}
-
-		u.PlayMediaIntentHandlingResolveMediaItemsInvocationResponse = playMediaIntentHandlingResolveMediaItemsInvocationResponse
-		u.Type = PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolveMediaItems
-		return nil
 	case "PlayMediaIntentHandling.resolvePlayShuffled":
 		d = json.NewDecoder(bytes.NewReader(data))
 		d.DisallowUnknownFields()
@@ -199,6 +177,28 @@ func (u *PlayMediaIntentHandlingInvocationResponse) UnmarshalJSON(data []byte) e
 
 		u.ProtocolExceptionInvocationResponse = protocolExceptionInvocationResponse
 		u.Type = PlayMediaIntentHandlingInvocationResponseTypeProtocolException
+		return nil
+	case "PlayMediaIntentHandling.handle":
+		d = json.NewDecoder(bytes.NewReader(data))
+		d.DisallowUnknownFields()
+		playMediaIntentHandlingHandleInvocationResponse := new(PlayMediaIntentHandlingHandleInvocationResponse)
+		if err := d.Decode(&playMediaIntentHandlingHandleInvocationResponse); err != nil {
+			return fmt.Errorf("could not unmarshal expected type: %w", err)
+		}
+
+		u.PlayMediaIntentHandlingHandleInvocationResponse = playMediaIntentHandlingHandleInvocationResponse
+		u.Type = PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingHandle
+		return nil
+	case "PlayMediaIntentHandling.resolveMediaItems":
+		d = json.NewDecoder(bytes.NewReader(data))
+		d.DisallowUnknownFields()
+		playMediaIntentHandlingResolveMediaItemsInvocationResponse := new(PlayMediaIntentHandlingResolveMediaItemsInvocationResponse)
+		if err := d.Decode(&playMediaIntentHandlingResolveMediaItemsInvocationResponse); err != nil {
+			return fmt.Errorf("could not unmarshal expected type: %w", err)
+		}
+
+		u.PlayMediaIntentHandlingResolveMediaItemsInvocationResponse = playMediaIntentHandlingResolveMediaItemsInvocationResponse
+		u.Type = PlayMediaIntentHandlingInvocationResponseTypePlayMediaIntentHandlingResolveMediaItems
 		return nil
 	}
 

@@ -3,6 +3,7 @@
 package shared
 
 type Score struct {
+	Attendance                   *int64   `json:"Attendance,omitempty"`
 	AwayRotationNumber           *int64   `json:"AwayRotationNumber,omitempty"`
 	AwayScore                    *int64   `json:"AwayScore,omitempty"`
 	AwayScoreOvertime            *int64   `json:"AwayScoreOvertime,omitempty"`
@@ -13,11 +14,13 @@ type Score struct {
 	AwayTeam                     *string  `json:"AwayTeam,omitempty"`
 	AwayTeamID                   *int64   `json:"AwayTeamID,omitempty"`
 	AwayTeamMoneyLine            *int64   `json:"AwayTeamMoneyLine,omitempty"`
+	AwayTimeouts                 *int64   `json:"AwayTimeouts,omitempty"`
 	Canceled                     *bool    `json:"Canceled,omitempty"`
 	Channel                      *string  `json:"Channel,omitempty"`
 	Closed                       *bool    `json:"Closed,omitempty"`
 	Date                         *string  `json:"Date,omitempty"`
 	DateTime                     *string  `json:"DateTime,omitempty"`
+	DateTimeUTC                  *string  `json:"DateTimeUTC,omitempty"`
 	Day                          *string  `json:"Day,omitempty"`
 	Distance                     *string  `json:"Distance,omitempty"`
 	Down                         *int64   `json:"Down,omitempty"`
@@ -49,6 +52,7 @@ type Score struct {
 	HomeTeam                     *string  `json:"HomeTeam,omitempty"`
 	HomeTeamID                   *int64   `json:"HomeTeamID,omitempty"`
 	HomeTeamMoneyLine            *int64   `json:"HomeTeamMoneyLine,omitempty"`
+	HomeTimeouts                 *int64   `json:"HomeTimeouts,omitempty"`
 	IsInProgress                 *bool    `json:"IsInProgress,omitempty"`
 	IsOver                       *bool    `json:"IsOver,omitempty"`
 	IsOvertime                   *bool    `json:"IsOvertime,omitempty"`

@@ -30,39 +30,35 @@ func main() {
         }),
     )
 
-    req := operations.CreateAttachmentForTaskRequest{
-        PathParams: operations.CreateAttachmentForTaskPathParams{
-            TaskGid: "unde",
-        },
-        QueryParams: operations.CreateAttachmentForTaskQueryParams{
-            Limit: 592845,
-            Offset: "porro",
+    req := operations.CreateAttachmentForObjectRequest{
+        QueryParams: operations.CreateAttachmentForObjectQueryParams{
             OptFields: []string{
-                "id",
-                "vero",
-                "perspiciatis",
+                "deserunt",
+                "porro",
                 "nulla",
             },
             OptPretty: false,
         },
         Request: shared.AttachmentRequest{
+            ConnectToApp: false,
             File: &shared.AttachmentRequestFile{
-                Content: []byte("nihil"),
-                File: "fuga",
+                Content: []byte("id"),
+                File: "vero",
             },
-            Name: "facilis",
-            ResourceSubtype: "asana_file_attachments",
-            URL: "iusto",
+            Name: "perspiciatis",
+            Parent: "nulla",
+            ResourceSubtype: "external",
+            URL: "nihil",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Attachments.CreateAttachmentForTask(ctx, req)
+    res, err := s.Attachments.CreateAttachmentForObject(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CreateAttachmentForTask200ApplicationJSONObject != nil {
+    if res.CreateAttachmentForObject200ApplicationJSONObject != nil {
         // handle response
     }
 }
@@ -75,10 +71,14 @@ func main() {
 
 ### Attachments
 
-* `CreateAttachmentForTask` - Upload an attachment
+* `CreateAttachmentForObject` - Upload an attachment
 * `DeleteAttachment` - Delete an attachment
 * `GetAttachment` - Get an attachment
-* `GetAttachmentsForTask` - Get attachments for a task
+* `GetAttachmentsForObject` - Get attachments from an object
+
+### AuditLogAPI
+
+* `GetAuditLogEvents` - Get audit log events
 
 ### BatchAPI
 
@@ -104,22 +104,24 @@ func main() {
 
 * `GetEvents` - Get events on a resource
 
+### GoalRelationships
+
+* `AddSupportingRelationship` - Add a supporting goal relationship
+* `GetGoalRelationship` - Get a goal relationship
+* `GetGoalRelationships` - Get goal relationships
+* `RemoveSupportingRelationship` - Removes a supporting goal relationship
+* `UpdateGoalRelationship` - Update a goal relationship
+
 ### Goals
 
 * `AddFollowers` - Add a collaborator to a goal
-* `AddSubgoal` - Add a subgoal to a parent goal
-* `AddSupportingWorkForGoal` - Add a project/portfolio as supporting work for a goal.
 * `CreateGoal` - Create a goal
 * `CreateGoalMetric` - Create a goal metric
 * `DeleteGoal` - Delete a goal
 * `GetGoal` - Get a goal
 * `GetGoals` - Get goals
 * `GetParentGoalsForGoal` - Get parent goals from a goal
-* `GetSubgoalsForGoal` - Get subgoals from a goal
 * `RemoveFollowers` - Remove a collaborator from a goal
-* `RemoveSubgoal` - Remove a subgoal from a goal
-* `RemoveSupportingWorkForGoal` - Remove a project/portfolio as supporting work for a goal.
-* `SupportingWork` - Get supporting work from a goal
 * `UpdateGoal` - Update a goal
 * `UpdateGoalMetric` - Update a goal metric
 
@@ -153,6 +155,13 @@ func main() {
 * `RemoveMembersForPortfolio` - Remove users from a portfolio
 * `UpdatePortfolio` - Update a portfolio
 
+### ProjectBriefs
+
+* `CreateProjectBrief` - Create a project brief
+* `DeleteProjectBrief` - Delete a project brief
+* `GetProjectBrief` - Get a project brief
+* `UpdateProjectBrief` - Update a project brief
+
 ### ProjectMemberships
 
 * `GetProjectMembership` - Get a project membership
@@ -164,6 +173,13 @@ func main() {
 * `DeleteProjectStatus` - Delete a project status
 * `GetProjectStatus` - Get a project status
 * `GetProjectStatusesForProject` - Get statuses from a project
+
+### ProjectTemplates
+
+* `GetProjectTemplate` - Get a project template
+* `GetProjectTemplates` - Get multiple project templates
+* `GetProjectTemplatesForTeam` - Get a team's project templates
+* `InstantiateProject` - Instantiate a project from a project template
 
 ### Projects
 
@@ -181,6 +197,7 @@ func main() {
 * `GetProjectsForTeam` - Get a team's projects
 * `GetProjectsForWorkspace` - Get all projects in a workspace
 * `GetTaskCountsForProject` - Get task count of a project
+* `ProjectSaveAsTemplate` - Create a project template from a project
 * `RemoveCustomFieldSettingForProject` - Remove a custom field from a project
 * `RemoveFollowersForProject` - Remove followers from a project
 * `RemoveMembersForProject` - Remove users from a project
@@ -195,6 +212,13 @@ func main() {
 * `GetSectionsForProject` - Get sections in a project
 * `InsertSectionForProject` - Move or Insert sections
 * `UpdateSection` - Update a section
+
+### StatusUpdates
+
+* `CreateStatusForObject` - Create a status update
+* `DeleteStatus` - Delete a status update
+* `GetStatus` - Get a status update
+* `GetStatusesForObject` - Get status updates from an object
 
 ### Stories
 
@@ -256,9 +280,10 @@ func main() {
 * `AddUserForTeam` - Add a user to a team
 * `CreateTeam` - Create a team
 * `GetTeam` - Get a team
-* `GetTeamsForOrganization` - Get teams in an organization
 * `GetTeamsForUser` - Get teams for a user
+* `GetTeamsForWorkspace` - Get teams in a workspace
 * `RemoveUserForTeam` - Remove a user from a team
+* `UpdateTeam` - Update a team
 
 ### TimePeriods
 
@@ -288,6 +313,7 @@ func main() {
 * `DeleteWebhook` - Delete a webhook
 * `GetWebhook` - Get a webhook
 * `GetWebhooks` - Get multiple webhooks
+* `UpdateWebhook` - Update a webhook
 
 ### WorkspaceMemberships
 

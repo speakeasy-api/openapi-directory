@@ -16,6 +16,7 @@ const (
 	CategoryGoalTypeEnumTbd  CategoryGoalTypeEnum = "TBD"
 	CategoryGoalTypeEnumMf   CategoryGoalTypeEnum = "MF"
 	CategoryGoalTypeEnumNeed CategoryGoalTypeEnum = "NEED"
+	CategoryGoalTypeEnumDebt CategoryGoalTypeEnum = "DEBT"
 	CategoryGoalTypeEnumNull CategoryGoalTypeEnum = "null"
 )
 
@@ -32,6 +33,8 @@ func (e *CategoryGoalTypeEnum) UnmarshalJSON(data []byte) error {
 	case "MF":
 		fallthrough
 	case "NEED":
+		fallthrough
+	case "DEBT":
 		fallthrough
 	case "null":
 		*e = CategoryGoalTypeEnum(s)
@@ -51,8 +54,14 @@ type Category struct {
 	CategoryGroupID string `json:"category_group_id"`
 	// Whether or not the category has been deleted.  Deleted categories will only be included in delta requests.
 	Deleted bool `json:"deleted"`
+	// The goal cadence
+	GoalCadence *int `json:"goal_cadence,omitempty"`
+	// The goal cadence frequency
+	GoalCadenceFrequency *int `json:"goal_cadence_frequency,omitempty"`
 	// The month a goal was created
 	GoalCreationMonth *types.Date `json:"goal_creation_month,omitempty"`
+	// The day of the goal
+	GoalDay *int `json:"goal_day,omitempty"`
 	// The number of months, including the current month, left in the current goal period.
 	GoalMonthsToBudget *int `json:"goal_months_to_budget,omitempty"`
 	// The total amount funded towards the goal within the current goal period.

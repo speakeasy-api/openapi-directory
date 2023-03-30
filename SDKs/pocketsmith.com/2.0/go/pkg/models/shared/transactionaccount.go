@@ -20,6 +20,7 @@ const (
 	TransactionAccountTypeEnumVehicle        TransactionAccountTypeEnum = "vehicle"
 	TransactionAccountTypeEnumProperty       TransactionAccountTypeEnum = "property"
 	TransactionAccountTypeEnumInsurance      TransactionAccountTypeEnum = "insurance"
+	TransactionAccountTypeEnumOtherAsset     TransactionAccountTypeEnum = "other_asset"
 	TransactionAccountTypeEnumOtherLiability TransactionAccountTypeEnum = "other_liability"
 )
 
@@ -46,6 +47,8 @@ func (e *TransactionAccountTypeEnum) UnmarshalJSON(data []byte) error {
 	case "property":
 		fallthrough
 	case "insurance":
+		fallthrough
+	case "other_asset":
 		fallthrough
 	case "other_liability":
 		*e = TransactionAccountTypeEnum(s)

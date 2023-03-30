@@ -595,66 +595,6 @@ func (s *conversions) ConversionsGetStatisticsSingle(ctx context.Context, reques
 	return res, nil
 }
 
-// ConversionsGetTops - Retrieve a top report connected to this conversion
-func (s *conversions) ConversionsGetTops(ctx context.Context, request operations.ConversionsGetTopsRequest) (*operations.ConversionsGetTopsResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/conversions/{conversionId}/reports", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.ConversionsGetTopsResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.APICoreDtoTopsTop
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.APICoreDtoTopsTop = out
-		case utils.MatchContentType(contentType, `text/json`):
-			var out *shared.APICoreDtoTopsTop
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.APICoreDtoTopsTop = out
-		}
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
-}
-
 // ConversionsPatchNotesForm - Fast patch the "notes" field of a conversion
 func (s *conversions) ConversionsPatchNotesForm(ctx context.Context, request operations.ConversionsPatchNotesFormRequest) (*operations.ConversionsPatchNotesFormResponse, error) {
 	baseURL := s.serverURL

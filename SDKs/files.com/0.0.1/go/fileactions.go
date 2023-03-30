@@ -177,9 +177,9 @@ func (s *fileActions) FileActionCopy(ctx context.Context, request operations.Fil
 	return res, nil
 }
 
-// FileActionMetadata - Return metadata for file/folder
-// Return metadata for file/folder
-func (s *fileActions) FileActionMetadata(ctx context.Context, request operations.FileActionMetadataRequest) (*operations.FileActionMetadataResponse, error) {
+// FileActionFind - Find file/folder by path
+// Find file/folder by path
+func (s *fileActions) FileActionFind(ctx context.Context, request operations.FileActionFindRequest) (*operations.FileActionFindResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/file_actions/metadata/{path}", request.PathParams, nil)
 
@@ -205,7 +205,7 @@ func (s *fileActions) FileActionMetadata(ctx context.Context, request operations
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.FileActionMetadataResponse{
+	res := &operations.FileActionFindResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

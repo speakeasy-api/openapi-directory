@@ -28,11 +28,11 @@ type GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsPathParams struct {
 
 type GetRepositoriesWorkspaceRepoSlugCommitCommitCommentsQueryParams struct {
 	// Query string to narrow down the response as per
-	// [filtering and sorting](../../../../../../meta/filtering).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Q *string `queryParam:"style=form,explode=true,name=q"`
 	// Field by which the results should be sorted as per
-	// [filtering and sorting](../../../../../../meta/filtering).
+	// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
 	//
 	Sort *string `queryParam:"style=form,explode=true,name=sort"`
 }

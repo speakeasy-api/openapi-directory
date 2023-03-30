@@ -13,6 +13,8 @@ type TerminalSettings struct {
 	OfflineProcessing *OfflineProcessing `json:"offlineProcessing,omitempty"`
 	Opi               *Opi               `json:"opi,omitempty"`
 	Passcodes         *Passcodes         `json:"passcodes,omitempty"`
+	PayAtTable        *PayAtTable        `json:"payAtTable,omitempty"`
+	Payment           *Payment           `json:"payment,omitempty"`
 	ReceiptOptions    *ReceiptOptions    `json:"receiptOptions,omitempty"`
 	ReceiptPrinting   *ReceiptPrinting   `json:"receiptPrinting,omitempty"`
 	Signature         *Signature         `json:"signature,omitempty"`

@@ -8,7 +8,9 @@ import (
 	"net/http"
 )
 
-// GetIntersectionsWithinOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormattarget="_blank">outputFormat</a>
+// GetIntersectionsWithinOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+//
+// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 type GetIntersectionsWithinOutputFormatOutputFormatEnum string
 
 const (
@@ -48,11 +50,13 @@ func (e *GetIntersectionsWithinOutputFormatOutputFormatEnum) UnmarshalJSON(data 
 }
 
 type GetIntersectionsWithinOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormattarget="_blank">outputFormat</a>
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 	OutputFormat GetIntersectionsWithinOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 }
 
-// GetIntersectionsWithinOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+// GetIntersectionsWithinOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetIntersectionsWithinOutputFormatOutputSrsEnum string
 
 const (
@@ -95,7 +99,7 @@ func (e *GetIntersectionsWithinOutputFormatOutputSrsEnum) UnmarshalJSON(data []b
 }
 
 type GetIntersectionsWithinOutputFormatQueryParams struct {
-	// A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgovapi-specs/blob/master/geocoder/glossary.md#bbox target="_blank">bbox</a>
+	// A bounding box (xmin,ymin,xmax,ymax) used to limit the search area. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#bbox target="_blank">bbox</a>
 	Bbox string `queryParam:"style=form,explode=true,name=bbox"`
 	// The maximum degree an interesection can have to be included in results. A four-way stop has a degree of 4.
 	MaxDegree *int64 `queryParam:"style=form,explode=true,name=maxDegree"`
@@ -103,7 +107,7 @@ type GetIntersectionsWithinOutputFormatQueryParams struct {
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
 	// The minimum degree an intersection can have to be included in results. A dead-end has a degree of 1.
 	MinDegree *int64 `queryParam:"style=form,explode=true,name=minDegree"`
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetIntersectionsWithinOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
 }
 

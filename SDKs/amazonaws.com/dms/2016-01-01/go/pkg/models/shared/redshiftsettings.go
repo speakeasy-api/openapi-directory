@@ -18,6 +18,7 @@ type RedshiftSettings struct {
 	ExplicitIds                  *bool                    `json:"ExplicitIds,omitempty"`
 	FileTransferUploadStreams    *int64                   `json:"FileTransferUploadStreams,omitempty"`
 	LoadTimeout                  *int64                   `json:"LoadTimeout,omitempty"`
+	MapBooleanAsBoolean          *bool                    `json:"MapBooleanAsBoolean,omitempty"`
 	MaxFileSize                  *int64                   `json:"MaxFileSize,omitempty"`
 	Password                     *string                  `json:"Password,omitempty"`
 	Port                         *int64                   `json:"Port,omitempty"`

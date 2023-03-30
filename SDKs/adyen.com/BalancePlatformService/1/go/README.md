@@ -66,6 +66,10 @@ func main() {
 * `PatchBalanceAccountsID` - Update a balance account
 * `PostBalanceAccounts` - Create a balance account
 
+### BankAccountValidation
+
+* `PostValidateBankAccountIdentification` - Validate a bank account
+
 ### Documents
 
 * `DeleteDocumentsID` - Delete a document
@@ -88,6 +92,7 @@ func main() {
 ### PaymentInstruments
 
 * `GetPaymentInstrumentsID` - Get a payment instrument
+* `GetPaymentInstrumentsIDReveal` - Get the reveal information of a payment instrument
 * `GetPaymentInstrumentsIDTransactionRules` - Get all transaction rules for a payment instrument
 * `PatchPaymentInstrumentsID` - Update a payment instrument
 * `PostPaymentInstruments` - Create a payment instrument

@@ -3,8 +3,6 @@
 package operations
 
 import (
-	"encoding/json"
-	"fmt"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -14,33 +12,9 @@ type GetPodcastRecommendationsPathParams struct {
 	ID string `pathParam:"style=simple,explode=false,name=id"`
 }
 
-// GetPodcastRecommendationsSafeModeEnum - Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
-type GetPodcastRecommendationsSafeModeEnum string
-
-const (
-	GetPodcastRecommendationsSafeModeEnumZero GetPodcastRecommendationsSafeModeEnum = "0"
-	GetPodcastRecommendationsSafeModeEnumOne  GetPodcastRecommendationsSafeModeEnum = "1"
-)
-
-func (e *GetPodcastRecommendationsSafeModeEnum) UnmarshalJSON(data []byte) error {
-	var s string
-	if err := json.Unmarshal(data, &s); err != nil {
-		return err
-	}
-	switch s {
-	case "0":
-		fallthrough
-	case "1":
-		*e = GetPodcastRecommendationsSafeModeEnum(s)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for GetPodcastRecommendationsSafeModeEnum: %s", s)
-	}
-}
-
 type GetPodcastRecommendationsQueryParams struct {
 	// Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
-	SafeMode *GetPodcastRecommendationsSafeModeEnum `queryParam:"style=form,explode=true,name=safe_mode"`
+	SafeMode *shared.SafeModeParamEnum `queryParam:"style=form,explode=true,name=safe_mode"`
 }
 
 type GetPodcastRecommendationsHeaders struct {

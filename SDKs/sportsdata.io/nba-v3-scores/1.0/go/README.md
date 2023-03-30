@@ -56,6 +56,7 @@ func main() {
 
 * `AreGamesInProgress` - Are Games In Progress
 * `CurrentSeason` - Current Season
+* `DepthCharts` - Depth Charts
 * `GamesByDate` - Games by Date
 * `News` - News
 * `NewsByDate` - News by Date
@@ -63,9 +64,12 @@ func main() {
 * `PlayerDetailsByActive` - Player Details by Active
 * `PlayerDetailsByFreeAgent` - Player Details by Free Agent
 * `PlayerDetailsByPlayer` - Player Details by Player
+* `PlayersByTeam` - Players by Team
+* `Referees` - Referees
 * `Schedules` - Schedules
 * `Stadiums` - Stadiums
 * `Standings` - Standings
+* `TeamGameLogsBySeason` - Team Game Logs By Season
 * `TeamGameStatsByDate` - Team Game Stats by Date
 * `TeamSeasonStats` - Team Season Stats
 * `TeamsActive` - Teams (Active)

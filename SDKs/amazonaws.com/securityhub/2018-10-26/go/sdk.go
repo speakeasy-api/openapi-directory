@@ -1419,7 +1419,7 @@ func (s *SDK) CreateMembers(ctx context.Context, request operations.CreateMember
 	return res, nil
 }
 
-// DeclineInvitations - <p>Declines invitations to become a member account.</p> <p>This operation is only used by accounts that are not part of an organization. Organization accounts do not receive invitations.</p>
+// DeclineInvitations - <p>Declines invitations to become a member account.</p> <p>A prospective member account uses this operation to decline an invitation to become a member.</p> <p>This operation is only called by member accounts that aren't part of an organization. Organization accounts don't receive invitations.</p>
 func (s *SDK) DeclineInvitations(ctx context.Context, request operations.DeclineInvitationsRequest) (*operations.DeclineInvitationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invitations/decline"
@@ -1803,7 +1803,7 @@ func (s *SDK) DeleteInsight(ctx context.Context, request operations.DeleteInsigh
 	return res, nil
 }
 
-// DeleteInvitations - <p>Deletes invitations received by the Amazon Web Services account to become a member account.</p> <p>This operation is only used by accounts that are not part of an organization. Organization accounts do not receive invitations.</p>
+// DeleteInvitations - <p>Deletes invitations received by the Amazon Web Services account to become a member account.</p> <p>A Security Hub administrator account can use this operation to delete invitations sent to one or more member accounts.</p> <p>This operation is only used to delete invitations that are sent to member accounts that aren't part of an organization. Organization accounts don't receive invitations.</p>
 func (s *SDK) DeleteInvitations(ctx context.Context, request operations.DeleteInvitationsRequest) (*operations.DeleteInvitationsResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/invitations/delete"

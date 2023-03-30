@@ -6,6 +6,6 @@ package shared
 type GoogleAnalyticsAdminV1alphaConnectedSiteTag struct {
 	// Required. User-provided display name for the connected site tag. Must be less than 256 characters.
 	DisplayName *string `json:"displayName,omitempty"`
-	// Required. Measurement ID to forward events to. Also known as “G-ID” (For example: G-12345).
-	MeasurementID *string `json:"measurementId,omitempty"`
+	// Required. "Tag ID to forward events to. Also known as the Measurement ID, or the "G-ID" (For example: G-12345).
+	TagID *string `json:"tagId,omitempty"`
 }

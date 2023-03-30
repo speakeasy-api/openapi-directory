@@ -22,7 +22,7 @@ type UserTaskListResponseWorkspace struct {
 	ResourceType *string `json:"resource_type,omitempty"`
 }
 
-// UserTaskListResponse - A user task list represents the tasks assigned to a particular user. It provides API access to a user’s “My Tasks” view in Asana.
+// UserTaskListResponse - A user task list represents the tasks assigned to a particular user. It provides API access to a user’s [My Tasks](https://asana.com/guide/help/fundamentals/my-tasks) view in Asana.
 type UserTaskListResponse struct {
 	// Globally unique identifier of the resource, as a string.
 	Gid *string `json:"gid,omitempty"`

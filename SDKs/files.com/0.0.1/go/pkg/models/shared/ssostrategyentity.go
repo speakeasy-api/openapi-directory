@@ -186,7 +186,7 @@ type SsoStrategyEntity struct {
 	DeprovisionGroups *bool `json:"deprovision_groups,omitempty"`
 	// Auto-deprovision users?
 	DeprovisionUsers *bool `json:"deprovision_users,omitempty"`
-	// Is strategy enabled?
+	// Is strategy enabled?  This may become automatically set to `false` after a high number and duration of failures.
 	Enabled *bool `json:"enabled,omitempty"`
 	// ID
 	ID *int `json:"id,omitempty"`

@@ -33,7 +33,237 @@ func newStrings(defaultClient, securityClient HTTPClient, serverURL, language, s
 	}
 }
 
-// GetProjectStrings - Get a list of strings and its translations in the project.
+// ClearTranslationCache - Clear translation cache
+// Clear/delete continuous project translation cache.
+func (s *stringsT) ClearTranslationCache(ctx context.Context, request operations.ClearTranslationCacheRequest) (*operations.ClearTranslationCacheResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings/cached", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "DELETE", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.ClearTranslationCacheResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.OperationStatus
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.OperationStatus = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetContinuousProjectFileStrings - View strings their translations in a continuous document
+// View the strings from a document and their translations in your continuous translation project, for all target languages. If you need the translated version of your source document/file, then you need to use package and download endpoints.
+func (s *stringsT) GetContinuousProjectFileStrings(ctx context.Context, request operations.GetContinuousProjectFileStringsRequest) (*operations.GetContinuousProjectFileStringsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/{documentId}/strings", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetContinuousProjectFileStringsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.StringList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.StringList = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetContinuousProjectStrings - View strings and translations in continuous project
+// View the strings and their translations in your continuous translation project, for all target languages. If you need the translated version of your source document/file, then you need to use package and download endpoints.
+func (s *stringsT) GetContinuousProjectStrings(ctx context.Context, request operations.GetContinuousProjectStringsRequest) (*operations.GetContinuousProjectStringsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetContinuousProjectStringsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.StringList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.StringList = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetDocumentTranslations - View strings and translations of a document
+// View the strings and their translations in your translation project for the specified source document. The list of translations is live if your project is not completed yet. If you need the translated version of your source document/file, then you need to use package and download endpoints.
+func (s *stringsT) GetDocumentTranslations(ctx context.Context, request operations.GetDocumentTranslationsRequest) (*operations.GetDocumentTranslationsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/translations", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetDocumentTranslationsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.StringList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.StringList = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetDocumentTranslationsForLanguage - View strings and translations of a document for target language
+// View the strings and their translations in the given target language for the specified source document. The list of translations is live if your project is not completed yet. If you need the translated version of your source document/file, then you need to use package and download endpoints.
+func (s *stringsT) GetDocumentTranslationsForLanguage(ctx context.Context, request operations.GetDocumentTranslationsForLanguageRequest) (*operations.GetDocumentTranslationsForLanguageResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/documents/{documentId}/translations/{language}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetDocumentTranslationsForLanguageResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.StringList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.StringList = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetProjectStrings - View project strings and translations
+// View the strings and their translations in your translation project, for all target languages. The list of translations is live if your project is not completed yet. If you need the translated version of your source document/file, then you need to use package and download endpoints.
 func (s *stringsT) GetProjectStrings(ctx context.Context, request operations.GetProjectStringsRequest) (*operations.GetProjectStringsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings", request.PathParams, nil)
@@ -77,7 +307,8 @@ func (s *stringsT) GetProjectStrings(ctx context.Context, request operations.Get
 	return res, nil
 }
 
-// GetProjectStringsForLanguage - Get a list of strings and its translations in the project for this target language in the project.
+// GetProjectStringsForLanguage - View strings and translations for target language
+// View the strings and their translations in your translation project for the specified target language. The list of translations is live if your project is not completed yet. If you need the translated version of your source document/file, then you need to use package and download endpoints.
 func (s *stringsT) GetProjectStringsForLanguage(ctx context.Context, request operations.GetProjectStringsForLanguageRequest) (*operations.GetProjectStringsForLanguageResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/{language}", request.PathParams, nil)
@@ -121,7 +352,96 @@ func (s *stringsT) GetProjectStringsForLanguage(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetStrings - Get a list of client/corporate strings (20 per page)
+// GetProjectTranslations - Deprecated. Use /projects/{projectId}/strings instead.
+func (s *stringsT) GetProjectTranslations(ctx context.Context, request operations.GetProjectTranslationsRequest) (*operations.GetProjectTranslationsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/translations", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetProjectTranslationsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.StringList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.StringList = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetProjectTranslationsForLanguage - Deprecated. use /projects/{projectId}/strings/{language} instead.
+func (s *stringsT) GetProjectTranslationsForLanguage(ctx context.Context, request operations.GetProjectTranslationsForLanguageRequest) (*operations.GetProjectTranslationsForLanguageResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/translations/{language}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetProjectTranslationsForLanguageResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.StringList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.StringList = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetStrings - View account strings (translation memory)
+// Get a list of all strings and their translations under your account, from all projects. This is your MotaWord translation memory. If you have the related permission, this endpoint will also return strings from your company account.
 func (s *stringsT) GetStrings(ctx context.Context, request operations.GetStringsRequest) (*operations.GetStringsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/strings"
@@ -169,7 +489,57 @@ func (s *stringsT) GetStrings(ctx context.Context, request operations.GetStrings
 	return res, nil
 }
 
-// PackageProjectTranslationMemory - Get the translation memory of a project in TMX format
+// GetTranslationCache - View cached strings translations in continuous project
+// MotaWord caches your account intensively (and in a smart way) in real-time translation environments. This endpoint will return the currently cached strings and translations in your continuous translation project.
+func (s *stringsT) GetTranslationCache(ctx context.Context, request operations.GetTranslationCacheRequest) (*operations.GetTranslationCacheResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings/cached", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetTranslationCacheResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ContinuousProjectCache
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ContinuousProjectCache = out
+		}
+	}
+
+	return res, nil
+}
+
+// PackageProjectTranslationMemory - Download project translation memory
+// Package and download project translation memory in TMX format
 func (s *stringsT) PackageProjectTranslationMemory(ctx context.Context, request operations.PackageProjectTranslationMemoryRequest) (*operations.PackageProjectTranslationMemoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/package", request.PathParams, nil)
@@ -224,7 +594,8 @@ func (s *stringsT) PackageProjectTranslationMemory(ctx context.Context, request 
 	return res, nil
 }
 
-// PackageProjectTranslationMemoryForLanguage - Get the translation memory of a project in TMX format
+// PackageProjectTranslationMemoryForLanguage - Download language-specific project translation memory
+// Package and download project translation memory in TMX format for a specific target language.
 func (s *stringsT) PackageProjectTranslationMemoryForLanguage(ctx context.Context, request operations.PackageProjectTranslationMemoryForLanguageRequest) (*operations.PackageProjectTranslationMemoryForLanguageResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/{languageCode}/package", request.PathParams, nil)
@@ -279,7 +650,8 @@ func (s *stringsT) PackageProjectTranslationMemoryForLanguage(ctx context.Contex
 	return res, nil
 }
 
-// PackageProjectTranslationMemoryForLanguageStatus - If package call was async, check the status of the request
+// PackageProjectTranslationMemoryForLanguageStatus - Check language-specific translation memory packaging status
+// Check translation memory packaging status for async packaging requests, using the key returned from strings/package call.
 func (s *stringsT) PackageProjectTranslationMemoryForLanguageStatus(ctx context.Context, request operations.PackageProjectTranslationMemoryForLanguageStatusRequest) (*operations.PackageProjectTranslationMemoryForLanguageStatusResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/{languageCode}/package/status", request.PathParams, nil)
@@ -327,7 +699,8 @@ func (s *stringsT) PackageProjectTranslationMemoryForLanguageStatus(ctx context.
 	return res, nil
 }
 
-// PackageProjectTranslationMemoryStatus - If package call was async, check the status of the request
+// PackageProjectTranslationMemoryStatus - Check translation memory packaging status
+// Check translation memory packaging status for async packaging requests, using the key returned from strings/package call.
 func (s *stringsT) PackageProjectTranslationMemoryStatus(ctx context.Context, request operations.PackageProjectTranslationMemoryStatusRequest) (*operations.PackageProjectTranslationMemoryStatusResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/projects/{projectId}/strings/package/status", request.PathParams, nil)
@@ -375,7 +748,8 @@ func (s *stringsT) PackageProjectTranslationMemoryStatus(ctx context.Context, re
 	return res, nil
 }
 
-// PackageUserTranslationMemory - Get the translation memory of a client or corporate in TMX format
+// PackageUserTranslationMemory - Download account translation memory
+// Package and download account translation memory in TMX format. If you have the related permission, this will also download your company translation memory.
 func (s *stringsT) PackageUserTranslationMemory(ctx context.Context, request operations.PackageUserTranslationMemoryRequest) (*operations.PackageUserTranslationMemoryResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/strings/{languageCode}/package", request.PathParams, nil)
@@ -430,7 +804,8 @@ func (s *stringsT) PackageUserTranslationMemory(ctx context.Context, request ope
 	return res, nil
 }
 
-// PackageUserTranslationMemoryForLanguageStatus - If package call was async, check the status of the request
+// PackageUserTranslationMemoryForLanguageStatus - Check account translation memory packaging status
+// Check translation memory packaging status for async packaging requests, using the key returned from strings/package call.
 func (s *stringsT) PackageUserTranslationMemoryForLanguageStatus(ctx context.Context, request operations.PackageUserTranslationMemoryForLanguageStatusRequest) (*operations.PackageUserTranslationMemoryForLanguageStatusResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/strings/{languageCode}/package/status", request.PathParams, nil)
@@ -478,7 +853,59 @@ func (s *stringsT) PackageUserTranslationMemoryForLanguageStatus(ctx context.Con
 	return res, nil
 }
 
+// PostContinuousProjectFileStrings - Get a list of strings and its translations in the project.
+func (s *stringsT) PostContinuousProjectFileStrings(ctx context.Context, request operations.PostContinuousProjectFileStringsRequest) (*operations.PostContinuousProjectFileStringsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/documents/strings", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostContinuousProjectFileStringsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.StringList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.StringList = out
+		}
+	}
+
+	return res, nil
+}
+
 // PostStrings - Translate Strings with MT
+// Deprecated, use instant translation mechanism for continuous projects.
 func (s *stringsT) PostStrings(ctx context.Context, request operations.PostStringsRequest) (*operations.PostStringsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/strings"
@@ -529,8 +956,57 @@ func (s *stringsT) PostStrings(ctx context.Context, request operations.PostStrin
 	return res, nil
 }
 
-// UpdateTranslationMemoryUnit - Update translation
-// Update a translation by adding a new translation memory unit item
+// RecacheTranslations - Recache translations
+// Recache translations for the continuous project.
+func (s *stringsT) RecacheTranslations(ctx context.Context, request operations.RecacheTranslationsRequest) (*operations.RecacheTranslationsResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/continuous_projects/{projectId}/strings/recache-tms", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.RecacheTranslationsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.OperationStatus
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.OperationStatus = out
+		}
+	}
+
+	return res, nil
+}
+
+// UpdateTranslationMemoryUnit - Update string translation
+// Update the translation of a string from your account strings/translation memory.
 func (s *stringsT) UpdateTranslationMemoryUnit(ctx context.Context, request operations.UpdateTranslationMemoryUnitRequest) (*operations.UpdateTranslationMemoryUnitResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/strings"
@@ -567,12 +1043,29 @@ func (s *stringsT) UpdateTranslationMemoryUnit(ctx context.Context, request oper
 	}
 	switch {
 	case httpRes.StatusCode == 200:
-		fallthrough
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.OperationStatus
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.OperationStatus = out
+		}
 	case httpRes.StatusCode == 400:
 		fallthrough
 	case httpRes.StatusCode == 404:
 		fallthrough
 	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
 	}
 
 	return res, nil

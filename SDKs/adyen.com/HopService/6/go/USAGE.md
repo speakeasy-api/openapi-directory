@@ -30,9 +30,10 @@ func main() {
                 ShareholderDetails: false,
             },
             EditMode: false,
-            PlatformName: "deserunt",
-            ReturnURL: "porro",
-            ShopperLocale: "nulla",
+            MobileOAuthCallbackURL: "deserunt",
+            PlatformName: "porro",
+            ReturnURL: "nulla",
+            ShopperLocale: "id",
             ShowPages: &shared.ShowPages{
                 BankDetailsSummaryPage: false,
                 BankVerificationPage: false,

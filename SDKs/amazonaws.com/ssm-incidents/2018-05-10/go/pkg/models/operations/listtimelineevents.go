@@ -26,7 +26,7 @@ type ListTimelineEventsHeaders struct {
 	XAmzSignedHeaders *string `header:"style=simple,explode=false,name=X-Amz-SignedHeaders"`
 }
 
-// ListTimelineEventsRequestBodySortByEnum - Sort by the specified key value pair.
+// ListTimelineEventsRequestBodySortByEnum - Sort timeline events by the specified key value pair.
 type ListTimelineEventsRequestBodySortByEnum string
 
 const (
@@ -72,7 +72,7 @@ func (e *ListTimelineEventsRequestBodySortOrderEnum) UnmarshalJSON(data []byte) 
 }
 
 type ListTimelineEventsRequestBody struct {
-	// <p>Filters the timeline events based on the provided conditional values. You can filter timeline events using the following keys:</p> <ul> <li> <p> <code>eventTime</code> </p> </li> <li> <p> <code>eventType</code> </p> </li> </ul> <p>Note the following when deciding how to use Filters:</p> <ul> <li> <p>If you don't specify a Filter, the response includes all timeline events.</p> </li> <li> <p>If you specify more than one filter in a single request, the response returns timeline events that match all filters.</p> </li> <li> <p>If you specify a filter with more than one value, the response returns timeline events that match any of the values provided.</p> </li> </ul>
+	// <p>Filters the timeline events based on the provided conditional values. You can filter timeline events with the following keys:</p> <ul> <li> <p> <code>eventTime</code> </p> </li> <li> <p> <code>eventType</code> </p> </li> </ul> <p>Note the following when deciding how to use Filters:</p> <ul> <li> <p>If you don't specify a Filter, the response includes all timeline events.</p> </li> <li> <p>If you specify more than one filter in a single request, the response returns timeline events that match all filters.</p> </li> <li> <p>If you specify a filter with more than one value, the response returns timeline events that match any of the values provided.</p> </li> </ul>
 	Filters []shared.Filter `json:"filters,omitempty"`
 	// The Amazon Resource Name (ARN) of the incident that includes the timeline event.
 	IncidentRecordArn string `json:"incidentRecordArn"`
@@ -80,7 +80,7 @@ type ListTimelineEventsRequestBody struct {
 	MaxResults *int64 `json:"maxResults,omitempty"`
 	// The pagination token to continue to the next page of results.
 	NextToken *string `json:"nextToken,omitempty"`
-	// Sort by the specified key value pair.
+	// Sort timeline events by the specified key value pair.
 	SortBy *ListTimelineEventsRequestBodySortByEnum `json:"sortBy,omitempty"`
 	// Sorts the order of timeline events by the value specified in the <code>sortBy</code> field.
 	SortOrder *ListTimelineEventsRequestBodySortOrderEnum `json:"sortOrder,omitempty"`

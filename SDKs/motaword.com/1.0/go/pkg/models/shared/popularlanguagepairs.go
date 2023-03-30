@@ -2,7 +2,7 @@
 
 package shared
 
-// PopularLanguagePairs - User's most ordered language pairs
+// PopularLanguagePairs - Your most ordered language pairs
 type PopularLanguagePairs struct {
 	Pairs []LanguagePair `json:"pairs,omitempty"`
 }

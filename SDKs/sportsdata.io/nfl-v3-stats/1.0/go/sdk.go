@@ -14,10 +14,8 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"http://api.sportsdata.io",
-	"https://api.sportsdata.io",
-	"http://azure-api.sportsdata.io",
-	"https://azure-api.sportsdata.io",
+	"http://azure-api.sportsdata.io/v3/nfl/stats",
+	"https://azure-api.sportsdata.io/v3/nfl/stats",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -2806,7 +2804,7 @@ func (s *SDK) ScoresByWeekSimulation(ctx context.Context, request operations.Sco
 }
 
 // SeasonCurrent - Season Current
-// Year of the current NFL season. This value changes on July 1st. The earliest season for Fantasy data is 2001. The earliest season for Team data is 1985. The earliest season for Fantasy data is 2001. The earliest season for Team data is 1985.
+// Year of the current NFL season. This value changes at the start of the new NFL league year. The earliest season for Fantasy data is 2001. The earliest season for Team data is 1985. The earliest season for Fantasy data is 2001. The earliest season for Team data is 1985.
 func (s *SDK) SeasonCurrent(ctx context.Context, request operations.SeasonCurrentRequest) (*operations.SeasonCurrentResponse, error) {
 	baseURL := s._serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/{format}/CurrentSeason", request.PathParams, nil)
@@ -3023,6 +3021,51 @@ func (s *SDK) Standings(ctx context.Context, request operations.StandingsRequest
 			}
 
 			res.Standings = out
+		}
+	}
+
+	return res, nil
+}
+
+// TeamGameLogsBySeason - Team Game Logs By Season
+// Game by game log of total team statistics.
+func (s *SDK) TeamGameLogsBySeason(ctx context.Context, request operations.TeamGameLogsBySeasonRequest) (*operations.TeamGameLogsBySeasonResponse, error) {
+	baseURL := s._serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{format}/TeamGameStatsBySeason/{season}/{teamid}/{numberofgames}", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s._securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.TeamGameLogsBySeasonResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.TeamGame
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.TeamGames = out
 		}
 	}
 

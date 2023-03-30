@@ -3,6 +3,7 @@
 package shared
 
 type UpdateVocabularyRequest struct {
+	DataAccessRoleArn *string          `json:"DataAccessRoleArn,omitempty"`
 	LanguageCode      LanguageCodeEnum `json:"LanguageCode"`
 	Phrases           []string         `json:"Phrases,omitempty"`
 	VocabularyFileURI *string          `json:"VocabularyFileUri,omitempty"`

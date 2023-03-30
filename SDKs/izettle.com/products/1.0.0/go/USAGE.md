@@ -15,14 +15,14 @@ func main() {
 
     req := operations.CreateCategoriesRequest{
         Security: operations.CreateCategoriesSecurity{
-            ZettleAPIKey: &shared.SchemeZettleAPIKey{
-                APIKey: "YOUR_API_KEY_HERE",
+            ZettleOauth: shared.SchemeZettleOauth{
+                Authorization: "Bearer YOUR_ACCESS_TOKEN_HERE",
             },
         },
         PathParams: operations.CreateCategoriesPathParams{
             OrganizationUUID: "89bd9d8d-69a6-474e-8f46-7cc8796ed151",
         },
-        Request: shared.CategoryRequest{
+        Request: shared.CreateCategoriesRequest{
             Categories: []shared.CategoryDTO{
                 shared.CategoryDTO{
                     Name: "voluptatem",

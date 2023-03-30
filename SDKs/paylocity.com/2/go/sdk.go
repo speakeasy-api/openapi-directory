@@ -234,6 +234,7 @@ type SDK struct {
 	NonPrimaryStateTax    *nonPrimaryStateTax
 	PayStatements         *payStatements
 	PrimaryStateTax       *primaryStateTax
+	SensitiveData         *sensitiveData
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -422,6 +423,15 @@ func New(opts ...SDKOption) *SDK {
 	)
 
 	sdk.PrimaryStateTax = newPrimaryStateTax(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.SensitiveData = newSensitiveData(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

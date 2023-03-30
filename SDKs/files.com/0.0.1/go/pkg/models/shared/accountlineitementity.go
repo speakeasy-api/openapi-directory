@@ -19,11 +19,13 @@ type AccountLineItemEntity struct {
 	// Line item download uri
 	DownloadURI *string `json:"download_uri,omitempty"`
 	// Line item Id
-	ID               *int                   `json:"id,omitempty"`
-	InvoiceLineItems *InvoiceLineItemEntity `json:"invoice_line_items,omitempty"`
+	ID *int `json:"id,omitempty"`
+	// Associated invoice line items
+	InvoiceLineItems []InvoiceLineItemEntity `json:"invoice_line_items,omitempty"`
 	// Line item payment method
-	Method           *string                `json:"method,omitempty"`
-	PaymentLineItems *PaymentLineItemEntity `json:"payment_line_items,omitempty"`
+	Method *string `json:"method,omitempty"`
+	// Associated payment line items
+	PaymentLineItems []PaymentLineItemEntity `json:"payment_line_items,omitempty"`
 	// Date/time payment was reversed if applicable
 	PaymentReversedAt *time.Time `json:"payment_reversed_at,omitempty"`
 	// Type of payment if applicable

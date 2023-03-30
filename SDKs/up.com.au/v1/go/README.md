@@ -32,7 +32,9 @@ func main() {
 
     req := operations.GetAccountsRequest{
         QueryParams: operations.GetAccountsQueryParams{
-            PageSize: 548814,
+            FilterAccountType: "TRANSACTIONAL",
+            FilterOwnershipType: "JOINT",
+            PageSize: 715190,
         },
     }
 
@@ -62,6 +64,7 @@ func main() {
 
 * `GetCategories` - List categories
 * `GetCategoriesID` - Retrieve category
+* `PatchTransactionsTransactionIDRelationshipsCategory` - Categorize transaction
 
 ### Tags
 

@@ -4,9 +4,9 @@ package shared
 
 type CustomArticleField struct {
 	// True if field completion is mandatory
-	IsMandatory *bool `json:"is_mandatory,omitempty"`
+	IsMandatory bool `json:"is_mandatory"`
 	// Custom  metadata name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// Custom metadata value
-	Value *string `json:"value,omitempty"`
+	Value string `json:"value"`
 }

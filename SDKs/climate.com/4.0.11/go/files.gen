@@ -1,7 +1,9 @@
 boundaries.go
+exports.go
 farmorganizations.go
 fields.go
 layers.go
+operations.go
 resourceowners.go
 uploads.go
 sdk.go
@@ -20,7 +22,11 @@ pkg/utils/utils.go
 pkg/models/operations/fetchboundaries.go
 pkg/models/operations/fetchboundarybyid.go
 pkg/models/operations/uploadboundary.go
+pkg/models/operations/fetchexportcontentsbyid.go
+pkg/models/operations/fetchexportstatusbyid.go
+pkg/models/operations/postexport.go
 pkg/models/operations/fetchfarmorganizationbytypeandid.go
+pkg/models/operations/fetchallfields.go
 pkg/models/operations/fetchfieldbyid.go
 pkg/models/operations/fetchfields.go
 pkg/models/operations/getv4layersasapplied.go
@@ -33,6 +39,7 @@ pkg/models/operations/getv4layersscoutingobservations.go
 pkg/models/operations/getv4layersscoutingobservationsscoutingobservationid.go
 pkg/models/operations/getv4layersscoutingobservationsscoutingobservationidattachments.go
 pkg/models/operations/getv4layersscoutingobservationsscoutingobservationidattachmentsattachmentidcontents.go
+pkg/models/operations/fetchoperations.go
 pkg/models/operations/getresourceowner.go
 pkg/models/operations/chunkedupload.go
 pkg/models/operations/fetchuploadstatusbyid.go
@@ -49,11 +56,15 @@ pkg/models/shared/boundariesquery.go
 pkg/models/shared/security.go
 pkg/models/shared/uploadedboundaryid.go
 pkg/models/shared/boundaryupload.go
+pkg/models/shared/exportcontents.go
+pkg/models/shared/exportstatus.go
+pkg/models/shared/createdexport.go
+pkg/models/shared/export.go
 pkg/models/shared/farmorganization.go
 pkg/models/shared/farmorganizationtypeenum.go
+pkg/models/shared/fields.go
 pkg/models/shared/field.go
 pkg/models/shared/parent.go
-pkg/models/shared/fields.go
 pkg/models/shared/applicationactivities.go
 pkg/models/shared/applicationactivitysummary.go
 pkg/models/shared/applicationactivitycontents.go
@@ -70,6 +81,8 @@ pkg/models/shared/scoutingtag.go
 pkg/models/shared/scoutingobservationattachments.go
 pkg/models/shared/scoutingobservationattachment.go
 pkg/models/shared/scoutingobservationattachmentcontents.go
+pkg/models/shared/operations.go
+pkg/models/shared/operation.go
 pkg/models/shared/resourceowner.go
 pkg/models/shared/uploadstatus.go
 pkg/models/shared/uploadstatuses.go

@@ -107,6 +107,7 @@ func main() {
 ### Players
 
 * `GamesPlayersGet` - Retrieves the Player resource with the given ID. To retrieve the player for the currently authenticated user, set `playerId` to `me`.
+* `GamesPlayersGetMultipleApplicationPlayerIds` - Get the application player ids for the currently authenticated player across all requested games by the same developer as the calling application. This will only return ids for players that actually have an id (scoped or otherwise) with that game.
 * `GamesPlayersGetScopedPlayerIds` - Retrieves scoped player identifiers for currently authenticated user.
 * `GamesPlayersList` - Get the collection of players for the currently authenticated user.
 

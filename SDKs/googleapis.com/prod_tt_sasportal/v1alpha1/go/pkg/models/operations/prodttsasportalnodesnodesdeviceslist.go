@@ -7,9 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type ProdTtSasportalNodesNodesDevicesListSecurity struct {
+type ProdTtSasportalNodesNodesDevicesListSecurityOption1 struct {
 	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
 	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type ProdTtSasportalNodesNodesDevicesListSecurityOption2 struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type ProdTtSasportalNodesNodesDevicesListSecurity struct {
+	Option1 *ProdTtSasportalNodesNodesDevicesListSecurityOption1 `security:"option"`
+	Option2 *ProdTtSasportalNodesNodesDevicesListSecurityOption2 `security:"option"`
 }
 
 type ProdTtSasportalNodesNodesDevicesListPathParams struct {

@@ -630,6 +630,25 @@ const (
 	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR6idn16xlarge   DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r6idn.16xlarge"
 	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR6idn24xlarge   DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r6idn.24xlarge"
 	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR6idn32xlarge   DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r6idn.32xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumC7gMetal        DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "c7g.metal"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM7gMedium       DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m7g.medium"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM7gLarge        DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m7g.large"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM7gXlarge       DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m7g.xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM7g2xlarge      DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m7g.2xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM7g4xlarge      DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m7g.4xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM7g8xlarge      DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m7g.8xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM7g12xlarge     DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m7g.12xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM7g16xlarge     DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m7g.16xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumM7gMetal        DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "m7g.metal"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7gMedium       DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.medium"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7gLarge        DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.large"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7gXlarge       DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7g2xlarge      DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.2xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7g4xlarge      DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.4xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7g8xlarge      DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.8xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7g12xlarge     DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.12xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7g16xlarge     DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.16xlarge"
+	DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnumR7gMetal        DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -1875,6 +1894,44 @@ func (e *DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnu
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = DescribeInstanceTypeOfferingsResultInstanceTypeOfferingsInstanceTypeEnum(s)
 		return nil
 	default:

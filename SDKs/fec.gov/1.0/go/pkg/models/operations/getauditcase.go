@@ -38,7 +38,7 @@ type GetAuditCaseQueryParams struct {
 	//         - D delegate
 	//         - E electioneering communication
 	//         - H House
-	//         - I independent expenditor (person or group)
+	//         - I independent expenditure filer (not a committee)
 	//         - N PAC - nonqualified
 	//         - O independent expenditure-only (super PACs)
 	//         - P presidential
@@ -84,7 +84,8 @@ type GetAuditCaseQueryParams struct {
 	Q []string `queryParam:"style=form,explode=true,name=q"`
 	// Name of candidate running for office
 	Qq []string `queryParam:"style=form,explode=true,name=qq"`
-	// Provide a field to sort by. Use - for descending order.
+	// Provide a field to sort by. Use `-` for descending order. ex: `-case_no`
+	//
 	Sort []string `queryParam:"style=form,explode=true,name=sort"`
 	// Hide null values on sorted column(s).
 	SortHideNull *bool `queryParam:"style=form,explode=true,name=sort_hide_null"`

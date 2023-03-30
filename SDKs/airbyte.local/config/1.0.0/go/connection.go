@@ -236,10 +236,11 @@ func (s *connection) GetConnection(ctx context.Context, request operations.GetCo
 	return res, nil
 }
 
-// GetState - Fetch the current state for a connection.
-func (s *connection) GetState(ctx context.Context, request operations.GetStateRequest) (*operations.GetStateResponse, error) {
+// ListAllConnectionsForWorkspace - Returns all connections for a workspace, including deleted connections.
+// List connections for workspace, including deleted connections.
+func (s *connection) ListAllConnectionsForWorkspace(ctx context.Context, request operations.ListAllConnectionsForWorkspaceRequest) (*operations.ListAllConnectionsForWorkspaceResponse, error) {
 	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/v1/state/get"
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/connections/list_all"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -269,7 +270,7 @@ func (s *connection) GetState(ctx context.Context, request operations.GetStateRe
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.GetStateResponse{
+	res := &operations.ListAllConnectionsForWorkspaceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -278,12 +279,12 @@ func (s *connection) GetState(ctx context.Context, request operations.GetStateRe
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.ConnectionState
+			var out *shared.ConnectionReadList
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.ConnectionState = out
+			res.ConnectionReadList = out
 		}
 	case httpRes.StatusCode == 404:
 		switch {
@@ -459,6 +460,70 @@ func (s *connection) ResetConnection(ctx context.Context, request operations.Res
 	return res, nil
 }
 
+// SearchConnections - Search connections
+func (s *connection) SearchConnections(ctx context.Context, request operations.SearchConnectionsRequest) (*operations.SearchConnectionsResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/v1/connections/search"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.SearchConnectionsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.ConnectionReadList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.ConnectionReadList = out
+		}
+	case httpRes.StatusCode == 422:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.InvalidInputExceptionInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.InvalidInputExceptionInfo = out
+		}
+	}
+
+	return res, nil
+}
+
 // SyncConnection - Trigger a manual sync of the connection
 func (s *connection) SyncConnection(ctx context.Context, request operations.SyncConnectionRequest) (*operations.SyncConnectionResponse, error) {
 	baseURL := s.serverURL
@@ -534,6 +599,10 @@ func (s *connection) SyncConnection(ctx context.Context, request operations.Sync
 }
 
 // UpdateConnection - Update a connection
+// Apply a patch-style update to a connection. Only fields present on the update request body will be updated.
+// Note that if a catalog is present in the request body, the connection's entire catalog will be replaced
+// with the catalog from the request. This means that to modify a single stream, the entire new catalog
+// containing the updated stream needs to be sent.
 func (s *connection) UpdateConnection(ctx context.Context, request operations.UpdateConnectionRequest) (*operations.UpdateConnectionResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/v1/connections/update"

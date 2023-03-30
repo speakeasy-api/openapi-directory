@@ -31,8 +31,8 @@ func newFirmware(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// FirmwareAccountsFirmwareFirmwareHashAccountsGet - Get default accounts and password hashes of a firmware
-func (s *firmware) FirmwareAccountsFirmwareFirmwareHashAccountsGet(ctx context.Context, request operations.FirmwareAccountsFirmwareFirmwareHashAccountsGetRequest) (*operations.FirmwareAccountsFirmwareFirmwareHashAccountsGetResponse, error) {
+// GetAccounts - Get default accounts and password hashes of a firmware
+func (s *firmware) GetAccounts(ctx context.Context, request operations.GetAccountsRequest) (*operations.GetAccountsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/accounts", request.PathParams, nil)
 
@@ -54,7 +54,7 @@ func (s *firmware) FirmwareAccountsFirmwareFirmwareHashAccountsGet(ctx context.C
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.FirmwareAccountsFirmwareFirmwareHashAccountsGetResponse{
+	res := &operations.GetAccountsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -85,8 +85,8 @@ func (s *firmware) FirmwareAccountsFirmwareFirmwareHashAccountsGet(ctx context.C
 	return res, nil
 }
 
-// FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGet - Get default OS configuration issues of a device firmware
-func (s *firmware) FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGet(ctx context.Context, request operations.FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetRequest) (*operations.FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetResponse, error) {
+// GetConfigIssues - Get default OS configuration issues of a device firmware
+func (s *firmware) GetConfigIssues(ctx context.Context, request operations.GetConfigIssuesRequest) (*operations.GetConfigIssuesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/config-issues", request.PathParams, nil)
 
@@ -108,7 +108,7 @@ func (s *firmware) FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGet(ctx c
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGetResponse{
+	res := &operations.GetConfigIssuesResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -139,8 +139,8 @@ func (s *firmware) FirmwareConfigIssuesFirmwareFirmwareHashConfigIssuesGet(ctx c
 	return res, nil
 }
 
-// FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGet - Get expired digital certificates embedded in a device firmware
-func (s *firmware) FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGet(ctx context.Context, request operations.FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGetRequest) (*operations.FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGetResponse, error) {
+// GetExpiredCerts - Get expired digital certificates embedded in a device firmware
+func (s *firmware) GetExpiredCerts(ctx context.Context, request operations.GetExpiredCertsRequest) (*operations.GetExpiredCertsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/expired-certs", request.PathParams, nil)
 
@@ -162,7 +162,7 @@ func (s *firmware) FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGet(ctx c
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGetResponse{
+	res := &operations.GetExpiredCertsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -193,8 +193,8 @@ func (s *firmware) FirmwareExpiredCertsFirmwareFirmwareHashExpiredCertsGet(ctx c
 	return res, nil
 }
 
-// FirmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGet - Get private crypto keys embedded in a device firmware
-func (s *firmware) FirmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGet(ctx context.Context, request operations.FirmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGetRequest) (*operations.FirmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGetResponse, error) {
+// GetPrivateKeys - Get private crypto keys embedded in a device firmware
+func (s *firmware) GetPrivateKeys(ctx context.Context, request operations.GetPrivateKeysRequest) (*operations.GetPrivateKeysResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/private-keys", request.PathParams, nil)
 
@@ -216,7 +216,7 @@ func (s *firmware) FirmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGet(ctx con
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.FirmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGetResponse{
+	res := &operations.GetPrivateKeysResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -247,8 +247,8 @@ func (s *firmware) FirmwarePrivateKeysFirmwareFirmwareHashPrivateKeysGet(ctx con
 	return res, nil
 }
 
-// FirmwareRiskFirmwareFirmwareHashRiskGet - Get iot device firmware risk analysis
-func (s *firmware) FirmwareRiskFirmwareFirmwareHashRiskGet(ctx context.Context, request operations.FirmwareRiskFirmwareFirmwareHashRiskGetRequest) (*operations.FirmwareRiskFirmwareFirmwareHashRiskGetResponse, error) {
+// GetRisk - Get iot device firmware risk analysis
+func (s *firmware) GetRisk(ctx context.Context, request operations.GetRiskRequest) (*operations.GetRiskResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/risk", request.PathParams, nil)
 
@@ -270,7 +270,7 @@ func (s *firmware) FirmwareRiskFirmwareFirmwareHashRiskGet(ctx context.Context, 
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.FirmwareRiskFirmwareFirmwareHashRiskGetResponse{
+	res := &operations.GetRiskResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -301,8 +301,8 @@ func (s *firmware) FirmwareRiskFirmwareFirmwareHashRiskGet(ctx context.Context, 
 	return res, nil
 }
 
-// FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGet - Get certificates with weak fingerprinting algorithms that are mebedded in a device firmware
-func (s *firmware) FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGet(ctx context.Context, request operations.FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetRequest) (*operations.FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetResponse, error) {
+// GetWeakCerts - Get certificates with weak fingerprinting algorithms that are mebedded in a device firmware
+func (s *firmware) GetWeakCerts(ctx context.Context, request operations.GetWeakCertsRequest) (*operations.GetWeakCertsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/weak-certs", request.PathParams, nil)
 
@@ -324,7 +324,7 @@ func (s *firmware) FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGet(ctx context
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGetResponse{
+	res := &operations.GetWeakCertsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -355,8 +355,8 @@ func (s *firmware) FirmwareWeakCertsFirmwareFirmwareHashWeakCertsGet(ctx context
 	return res, nil
 }
 
-// FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGet - Get weak crypto keys with short length
-func (s *firmware) FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGet(ctx context.Context, request operations.FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetRequest) (*operations.FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetResponse, error) {
+// GetWeakKeys - Get weak crypto keys with short length
+func (s *firmware) GetWeakKeys(ctx context.Context, request operations.GetWeakKeysRequest) (*operations.GetWeakKeysResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/firmware/{firmware_hash}/weak-keys", request.PathParams, nil)
 
@@ -378,7 +378,7 @@ func (s *firmware) FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGet(ctx context.C
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.FirmwareWeakKeysFirmwareFirmwareHashWeakKeysGetResponse{
+	res := &operations.GetWeakKeysResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

@@ -10,7 +10,7 @@ import (
 )
 
 type CreateSubscriptionNotificationConfigurationPathParams struct {
-	// The subscription ID for the notification subscription/
+	// The subscription ID for the notification subscription.
 	SubscriptionID string `pathParam:"style=simple,explode=false,name=subscriptionId"`
 }
 
@@ -57,7 +57,7 @@ type CreateSubscriptionNotificationConfigurationRequestBody struct {
 	HTTPSAPIKeyValue *string `json:"httpsApiKeyValue,omitempty"`
 	// The HTTPS method used for the notification subscription.
 	HTTPSMethod *CreateSubscriptionNotificationConfigurationRequestBodyHTTPSMethodEnum `json:"httpsMethod,omitempty"`
-	// The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created.
+	// The Amazon Resource Name (ARN) of the EventBridge API destinations IAM role that you created. For more information about ARNs and how to use them in policies, see <a href="https://docs.aws.amazon.com//security-lake/latest/userguide/subscriber-data-access.html">Managing data access</a> and <a href="https://docs.aws.amazon.com/security-lake/latest/userguide/security-iam-awsmanpol.html">Amazon Web Services Managed Policies</a> in the Amazon Security Lake User Guide.
 	RoleArn *string `json:"roleArn,omitempty"`
 	// The subscription endpoint in Security Lake. If you prefer notification with an HTTPs endpoint, populate this field.
 	SubscriptionEndpoint *string `json:"subscriptionEndpoint,omitempty"`

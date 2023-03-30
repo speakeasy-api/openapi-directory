@@ -78,6 +78,10 @@ func main() {
 ### Lookup
 
 * `Lookup`
+* `LookupCnam`
+* `LookupFormat`
+* `LookupHlr`
+* `LookupMnp`
 
 ### Pricing
 

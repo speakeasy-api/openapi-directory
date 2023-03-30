@@ -11,10 +11,15 @@ import (
 type NonDefaultCountryEnum string
 
 const (
-	NonDefaultCountryEnumUsUpper NonDefaultCountryEnum = "US"
-	NonDefaultCountryEnumCaUpper NonDefaultCountryEnum = "CA"
-	NonDefaultCountryEnumUsLower NonDefaultCountryEnum = "us"
-	NonDefaultCountryEnumCaLower NonDefaultCountryEnum = "ca"
+	NonDefaultCountryEnumUsUpper        NonDefaultCountryEnum = "US"
+	NonDefaultCountryEnumCaUpper        NonDefaultCountryEnum = "CA"
+	NonDefaultCountryEnumUsLower        NonDefaultCountryEnum = "us"
+	NonDefaultCountryEnumCaLower        NonDefaultCountryEnum = "ca"
+	NonDefaultCountryEnumUk             NonDefaultCountryEnum = "uk"
+	NonDefaultCountryEnumEngland        NonDefaultCountryEnum = "england"
+	NonDefaultCountryEnumScotland       NonDefaultCountryEnum = "scotland"
+	NonDefaultCountryEnumNorthanIreland NonDefaultCountryEnum = "northan ireland"
+	NonDefaultCountryEnumWales          NonDefaultCountryEnum = "wales"
 )
 
 func (e *NonDefaultCountryEnum) UnmarshalJSON(data []byte) error {
@@ -30,6 +35,16 @@ func (e *NonDefaultCountryEnum) UnmarshalJSON(data []byte) error {
 	case "us":
 		fallthrough
 	case "ca":
+		fallthrough
+	case "uk":
+		fallthrough
+	case "england":
+		fallthrough
+	case "scotland":
+		fallthrough
+	case "northan ireland":
+		fallthrough
+	case "wales":
 		*e = NonDefaultCountryEnum(s)
 		return nil
 	default:

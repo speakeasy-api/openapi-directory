@@ -141,6 +141,7 @@ const (
 	CurrencyCodeEnumSek CurrencyCodeEnum = "SEK"
 	CurrencyCodeEnumSgd CurrencyCodeEnum = "SGD"
 	CurrencyCodeEnumShp CurrencyCodeEnum = "SHP"
+	CurrencyCodeEnumSle CurrencyCodeEnum = "SLE"
 	CurrencyCodeEnumSll CurrencyCodeEnum = "SLL"
 	CurrencyCodeEnumSos CurrencyCodeEnum = "SOS"
 	CurrencyCodeEnumSrd CurrencyCodeEnum = "SRD"
@@ -456,6 +457,8 @@ func (e *CurrencyCodeEnum) UnmarshalJSON(data []byte) error {
 	case "SGD":
 		fallthrough
 	case "SHP":
+		fallthrough
+	case "SLE":
 		fallthrough
 	case "SLL":
 		fallthrough

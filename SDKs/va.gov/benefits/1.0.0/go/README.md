@@ -58,6 +58,7 @@ func main() {
 * `GetBenefitsDocumentUploadStatus` - Get status for a previous benefits document upload
 * `GetBenefitsDocumentUploadStatusReport` - Get a bulk status report for a list of previous uploads
 * `PostBenefitsDocumentUpload` - Get a location for subsequent document upload PUT request
+* `PostBenefitsDocumentUploadValidateDocument` - Validate an individual document against system file requirements
 * `PutBenefitsDocumentUpload` - Accepts document upload.
 <!-- End SDK Available Operations -->
 

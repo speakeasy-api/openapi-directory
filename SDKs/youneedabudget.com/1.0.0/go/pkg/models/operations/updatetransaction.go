@@ -17,7 +17,7 @@ type UpdateTransactionPathParams struct {
 type UpdateTransactionRequest struct {
 	PathParams UpdateTransactionPathParams
 	// The transaction to update
-	Request shared.SaveTransactionWrapper `request:"mediaType=application/json"`
+	Request shared.PutTransactionWrapper `request:"mediaType=application/json"`
 }
 
 type UpdateTransactionResponse struct {

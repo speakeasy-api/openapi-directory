@@ -174,6 +174,93 @@ const (
 	ResourceTypeEnumAwsSesContactList                                 ResourceTypeEnum = "AWS::SES::ContactList"
 	ResourceTypeEnumAwsSesConfigurationSet                            ResourceTypeEnum = "AWS::SES::ConfigurationSet"
 	ResourceTypeEnumAwsRoute53HostedZone                              ResourceTypeEnum = "AWS::Route53::HostedZone"
+	ResourceTypeEnumAwsIoTEventsInput                                 ResourceTypeEnum = "AWS::IoTEvents::Input"
+	ResourceTypeEnumAwsIoTEventsDetectorModel                         ResourceTypeEnum = "AWS::IoTEvents::DetectorModel"
+	ResourceTypeEnumAwsIoTEventsAlarmModel                            ResourceTypeEnum = "AWS::IoTEvents::AlarmModel"
+	ResourceTypeEnumAwsServiceDiscoveryHTTPNamespace                  ResourceTypeEnum = "AWS::ServiceDiscovery::HttpNamespace"
+	ResourceTypeEnumAwsEventsEventBus                                 ResourceTypeEnum = "AWS::Events::EventBus"
+	ResourceTypeEnumAwsImageBuilderContainerRecipe                    ResourceTypeEnum = "AWS::ImageBuilder::ContainerRecipe"
+	ResourceTypeEnumAwsImageBuilderDistributionConfiguration          ResourceTypeEnum = "AWS::ImageBuilder::DistributionConfiguration"
+	ResourceTypeEnumAwsImageBuilderInfrastructureConfiguration        ResourceTypeEnum = "AWS::ImageBuilder::InfrastructureConfiguration"
+	ResourceTypeEnumAwsDataSyncLocationObjectStorage                  ResourceTypeEnum = "AWS::DataSync::LocationObjectStorage"
+	ResourceTypeEnumAwsDataSyncLocationHdfs                           ResourceTypeEnum = "AWS::DataSync::LocationHDFS"
+	ResourceTypeEnumAwsGlueClassifier                                 ResourceTypeEnum = "AWS::Glue::Classifier"
+	ResourceTypeEnumAwsRoute53RecoveryReadinessCell                   ResourceTypeEnum = "AWS::Route53RecoveryReadiness::Cell"
+	ResourceTypeEnumAwsRoute53RecoveryReadinessReadinessCheck         ResourceTypeEnum = "AWS::Route53RecoveryReadiness::ReadinessCheck"
+	ResourceTypeEnumAwsEcrRegistryPolicy                              ResourceTypeEnum = "AWS::ECR::RegistryPolicy"
+	ResourceTypeEnumAwsBackupReportPlan                               ResourceTypeEnum = "AWS::Backup::ReportPlan"
+	ResourceTypeEnumAwsLightsailCertificate                           ResourceTypeEnum = "AWS::Lightsail::Certificate"
+	ResourceTypeEnumAwsRumAppMonitor                                  ResourceTypeEnum = "AWS::RUM::AppMonitor"
+	ResourceTypeEnumAwsEventsEndpoint                                 ResourceTypeEnum = "AWS::Events::Endpoint"
+	ResourceTypeEnumAwsSesReceiptRuleSet                              ResourceTypeEnum = "AWS::SES::ReceiptRuleSet"
+	ResourceTypeEnumAwsEventsArchive                                  ResourceTypeEnum = "AWS::Events::Archive"
+	ResourceTypeEnumAwsEventsAPIDestination                           ResourceTypeEnum = "AWS::Events::ApiDestination"
+	ResourceTypeEnumAwsLightsailDisk                                  ResourceTypeEnum = "AWS::Lightsail::Disk"
+	ResourceTypeEnumAwsFisExperimentTemplate                          ResourceTypeEnum = "AWS::FIS::ExperimentTemplate"
+	ResourceTypeEnumAwsDataSyncLocationFSxWindows                     ResourceTypeEnum = "AWS::DataSync::LocationFSxWindows"
+	ResourceTypeEnumAwsSesReceiptFilter                               ResourceTypeEnum = "AWS::SES::ReceiptFilter"
+	ResourceTypeEnumAwsGuardDutyFilter                                ResourceTypeEnum = "AWS::GuardDuty::Filter"
+	ResourceTypeEnumAwsSesTemplate                                    ResourceTypeEnum = "AWS::SES::Template"
+	ResourceTypeEnumAwsAmazonMqBroker                                 ResourceTypeEnum = "AWS::AmazonMQ::Broker"
+	ResourceTypeEnumAwsAppConfigEnvironment                           ResourceTypeEnum = "AWS::AppConfig::Environment"
+	ResourceTypeEnumAwsAppConfigConfigurationProfile                  ResourceTypeEnum = "AWS::AppConfig::ConfigurationProfile"
+	ResourceTypeEnumAwsCloud9EnvironmentEc2                           ResourceTypeEnum = "AWS::Cloud9::EnvironmentEC2"
+	ResourceTypeEnumAwsEventSchemasRegistry                           ResourceTypeEnum = "AWS::EventSchemas::Registry"
+	ResourceTypeEnumAwsEventSchemasRegistryPolicy                     ResourceTypeEnum = "AWS::EventSchemas::RegistryPolicy"
+	ResourceTypeEnumAwsEventSchemasDiscoverer                         ResourceTypeEnum = "AWS::EventSchemas::Discoverer"
+	ResourceTypeEnumAwsFraudDetectorLabel                             ResourceTypeEnum = "AWS::FraudDetector::Label"
+	ResourceTypeEnumAwsFraudDetectorEntityType                        ResourceTypeEnum = "AWS::FraudDetector::EntityType"
+	ResourceTypeEnumAwsFraudDetectorVariable                          ResourceTypeEnum = "AWS::FraudDetector::Variable"
+	ResourceTypeEnumAwsFraudDetectorOutcome                           ResourceTypeEnum = "AWS::FraudDetector::Outcome"
+	ResourceTypeEnumAwsIoTAuthorizer                                  ResourceTypeEnum = "AWS::IoT::Authorizer"
+	ResourceTypeEnumAwsIoTSecurityProfile                             ResourceTypeEnum = "AWS::IoT::SecurityProfile"
+	ResourceTypeEnumAwsIoTRoleAlias                                   ResourceTypeEnum = "AWS::IoT::RoleAlias"
+	ResourceTypeEnumAwsIoTDimension                                   ResourceTypeEnum = "AWS::IoT::Dimension"
+	ResourceTypeEnumAwsIoTAnalyticsDatastore                          ResourceTypeEnum = "AWS::IoTAnalytics::Datastore"
+	ResourceTypeEnumAwsLightsailBucket                                ResourceTypeEnum = "AWS::Lightsail::Bucket"
+	ResourceTypeEnumAwsLightsailStaticIP                              ResourceTypeEnum = "AWS::Lightsail::StaticIp"
+	ResourceTypeEnumAwsMediaPackagePackagingGroup                     ResourceTypeEnum = "AWS::MediaPackage::PackagingGroup"
+	ResourceTypeEnumAwsRoute53RecoveryReadinessRecoveryGroup          ResourceTypeEnum = "AWS::Route53RecoveryReadiness::RecoveryGroup"
+	ResourceTypeEnumAwsResilienceHubResiliencyPolicy                  ResourceTypeEnum = "AWS::ResilienceHub::ResiliencyPolicy"
+	ResourceTypeEnumAwsTransferWorkflow                               ResourceTypeEnum = "AWS::Transfer::Workflow"
+	ResourceTypeEnumAwsEksIdentityProviderConfig                      ResourceTypeEnum = "AWS::EKS::IdentityProviderConfig"
+	ResourceTypeEnumAwsEksAddon                                       ResourceTypeEnum = "AWS::EKS::Addon"
+	ResourceTypeEnumAwsGlueMlTransform                                ResourceTypeEnum = "AWS::Glue::MLTransform"
+	ResourceTypeEnumAwsIoTPolicy                                      ResourceTypeEnum = "AWS::IoT::Policy"
+	ResourceTypeEnumAwsIoTMitigationAction                            ResourceTypeEnum = "AWS::IoT::MitigationAction"
+	ResourceTypeEnumAwsIoTTwinMakerWorkspace                          ResourceTypeEnum = "AWS::IoTTwinMaker::Workspace"
+	ResourceTypeEnumAwsIoTTwinMakerEntity                             ResourceTypeEnum = "AWS::IoTTwinMaker::Entity"
+	ResourceTypeEnumAwsIoTAnalyticsDataset                            ResourceTypeEnum = "AWS::IoTAnalytics::Dataset"
+	ResourceTypeEnumAwsIoTAnalyticsPipeline                           ResourceTypeEnum = "AWS::IoTAnalytics::Pipeline"
+	ResourceTypeEnumAwsIoTAnalyticsChannel                            ResourceTypeEnum = "AWS::IoTAnalytics::Channel"
+	ResourceTypeEnumAwsIoTSiteWiseDashboard                           ResourceTypeEnum = "AWS::IoTSiteWise::Dashboard"
+	ResourceTypeEnumAwsIoTSiteWiseProject                             ResourceTypeEnum = "AWS::IoTSiteWise::Project"
+	ResourceTypeEnumAwsIoTSiteWisePortal                              ResourceTypeEnum = "AWS::IoTSiteWise::Portal"
+	ResourceTypeEnumAwsIoTSiteWiseAssetModel                          ResourceTypeEnum = "AWS::IoTSiteWise::AssetModel"
+	ResourceTypeEnumAwsIvsChannel                                     ResourceTypeEnum = "AWS::IVS::Channel"
+	ResourceTypeEnumAwsIvsRecordingConfiguration                      ResourceTypeEnum = "AWS::IVS::RecordingConfiguration"
+	ResourceTypeEnumAwsIvsPlaybackKeyPair                             ResourceTypeEnum = "AWS::IVS::PlaybackKeyPair"
+	ResourceTypeEnumAwsKinesisAnalyticsV2Application                  ResourceTypeEnum = "AWS::KinesisAnalyticsV2::Application"
+	ResourceTypeEnumAwsRdsGlobalCluster                               ResourceTypeEnum = "AWS::RDS::GlobalCluster"
+	ResourceTypeEnumAwsS3MultiRegionAccessPoint                       ResourceTypeEnum = "AWS::S3::MultiRegionAccessPoint"
+	ResourceTypeEnumAwsDeviceFarmTestGridProject                      ResourceTypeEnum = "AWS::DeviceFarm::TestGridProject"
+	ResourceTypeEnumAwsBudgetsBudgetsAction                           ResourceTypeEnum = "AWS::Budgets::BudgetsAction"
+	ResourceTypeEnumAwsLexBot                                         ResourceTypeEnum = "AWS::Lex::Bot"
+	ResourceTypeEnumAwsCodeGuruReviewerRepositoryAssociation          ResourceTypeEnum = "AWS::CodeGuruReviewer::RepositoryAssociation"
+	ResourceTypeEnumAwsIoTCustomMetric                                ResourceTypeEnum = "AWS::IoT::CustomMetric"
+	ResourceTypeEnumAwsRoute53ResolverFirewallDomainList              ResourceTypeEnum = "AWS::Route53Resolver::FirewallDomainList"
+	ResourceTypeEnumAwsRoboMakerRobotApplicationVersion               ResourceTypeEnum = "AWS::RoboMaker::RobotApplicationVersion"
+	ResourceTypeEnumAwsEc2TrafficMirrorSession                        ResourceTypeEnum = "AWS::EC2::TrafficMirrorSession"
+	ResourceTypeEnumAwsIoTSiteWiseGateway                             ResourceTypeEnum = "AWS::IoTSiteWise::Gateway"
+	ResourceTypeEnumAwsLexBotAlias                                    ResourceTypeEnum = "AWS::Lex::BotAlias"
+	ResourceTypeEnumAwsLookoutMetricsAlert                            ResourceTypeEnum = "AWS::LookoutMetrics::Alert"
+	ResourceTypeEnumAwsIoTAccountAuditConfiguration                   ResourceTypeEnum = "AWS::IoT::AccountAuditConfiguration"
+	ResourceTypeEnumAwsEc2TrafficMirrorTarget                         ResourceTypeEnum = "AWS::EC2::TrafficMirrorTarget"
+	ResourceTypeEnumAwsS3StorageLens                                  ResourceTypeEnum = "AWS::S3::StorageLens"
+	ResourceTypeEnumAwsIoTScheduledAudit                              ResourceTypeEnum = "AWS::IoT::ScheduledAudit"
+	ResourceTypeEnumAwsEventsConnection                               ResourceTypeEnum = "AWS::Events::Connection"
+	ResourceTypeEnumAwsEventSchemasSchema                             ResourceTypeEnum = "AWS::EventSchemas::Schema"
+	ResourceTypeEnumAwsMediaPackagePackagingConfiguration             ResourceTypeEnum = "AWS::MediaPackage::PackagingConfiguration"
 )
 
 func (e *ResourceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -509,6 +596,180 @@ func (e *ResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "AWS::SES::ConfigurationSet":
 		fallthrough
 	case "AWS::Route53::HostedZone":
+		fallthrough
+	case "AWS::IoTEvents::Input":
+		fallthrough
+	case "AWS::IoTEvents::DetectorModel":
+		fallthrough
+	case "AWS::IoTEvents::AlarmModel":
+		fallthrough
+	case "AWS::ServiceDiscovery::HttpNamespace":
+		fallthrough
+	case "AWS::Events::EventBus":
+		fallthrough
+	case "AWS::ImageBuilder::ContainerRecipe":
+		fallthrough
+	case "AWS::ImageBuilder::DistributionConfiguration":
+		fallthrough
+	case "AWS::ImageBuilder::InfrastructureConfiguration":
+		fallthrough
+	case "AWS::DataSync::LocationObjectStorage":
+		fallthrough
+	case "AWS::DataSync::LocationHDFS":
+		fallthrough
+	case "AWS::Glue::Classifier":
+		fallthrough
+	case "AWS::Route53RecoveryReadiness::Cell":
+		fallthrough
+	case "AWS::Route53RecoveryReadiness::ReadinessCheck":
+		fallthrough
+	case "AWS::ECR::RegistryPolicy":
+		fallthrough
+	case "AWS::Backup::ReportPlan":
+		fallthrough
+	case "AWS::Lightsail::Certificate":
+		fallthrough
+	case "AWS::RUM::AppMonitor":
+		fallthrough
+	case "AWS::Events::Endpoint":
+		fallthrough
+	case "AWS::SES::ReceiptRuleSet":
+		fallthrough
+	case "AWS::Events::Archive":
+		fallthrough
+	case "AWS::Events::ApiDestination":
+		fallthrough
+	case "AWS::Lightsail::Disk":
+		fallthrough
+	case "AWS::FIS::ExperimentTemplate":
+		fallthrough
+	case "AWS::DataSync::LocationFSxWindows":
+		fallthrough
+	case "AWS::SES::ReceiptFilter":
+		fallthrough
+	case "AWS::GuardDuty::Filter":
+		fallthrough
+	case "AWS::SES::Template":
+		fallthrough
+	case "AWS::AmazonMQ::Broker":
+		fallthrough
+	case "AWS::AppConfig::Environment":
+		fallthrough
+	case "AWS::AppConfig::ConfigurationProfile":
+		fallthrough
+	case "AWS::Cloud9::EnvironmentEC2":
+		fallthrough
+	case "AWS::EventSchemas::Registry":
+		fallthrough
+	case "AWS::EventSchemas::RegistryPolicy":
+		fallthrough
+	case "AWS::EventSchemas::Discoverer":
+		fallthrough
+	case "AWS::FraudDetector::Label":
+		fallthrough
+	case "AWS::FraudDetector::EntityType":
+		fallthrough
+	case "AWS::FraudDetector::Variable":
+		fallthrough
+	case "AWS::FraudDetector::Outcome":
+		fallthrough
+	case "AWS::IoT::Authorizer":
+		fallthrough
+	case "AWS::IoT::SecurityProfile":
+		fallthrough
+	case "AWS::IoT::RoleAlias":
+		fallthrough
+	case "AWS::IoT::Dimension":
+		fallthrough
+	case "AWS::IoTAnalytics::Datastore":
+		fallthrough
+	case "AWS::Lightsail::Bucket":
+		fallthrough
+	case "AWS::Lightsail::StaticIp":
+		fallthrough
+	case "AWS::MediaPackage::PackagingGroup":
+		fallthrough
+	case "AWS::Route53RecoveryReadiness::RecoveryGroup":
+		fallthrough
+	case "AWS::ResilienceHub::ResiliencyPolicy":
+		fallthrough
+	case "AWS::Transfer::Workflow":
+		fallthrough
+	case "AWS::EKS::IdentityProviderConfig":
+		fallthrough
+	case "AWS::EKS::Addon":
+		fallthrough
+	case "AWS::Glue::MLTransform":
+		fallthrough
+	case "AWS::IoT::Policy":
+		fallthrough
+	case "AWS::IoT::MitigationAction":
+		fallthrough
+	case "AWS::IoTTwinMaker::Workspace":
+		fallthrough
+	case "AWS::IoTTwinMaker::Entity":
+		fallthrough
+	case "AWS::IoTAnalytics::Dataset":
+		fallthrough
+	case "AWS::IoTAnalytics::Pipeline":
+		fallthrough
+	case "AWS::IoTAnalytics::Channel":
+		fallthrough
+	case "AWS::IoTSiteWise::Dashboard":
+		fallthrough
+	case "AWS::IoTSiteWise::Project":
+		fallthrough
+	case "AWS::IoTSiteWise::Portal":
+		fallthrough
+	case "AWS::IoTSiteWise::AssetModel":
+		fallthrough
+	case "AWS::IVS::Channel":
+		fallthrough
+	case "AWS::IVS::RecordingConfiguration":
+		fallthrough
+	case "AWS::IVS::PlaybackKeyPair":
+		fallthrough
+	case "AWS::KinesisAnalyticsV2::Application":
+		fallthrough
+	case "AWS::RDS::GlobalCluster":
+		fallthrough
+	case "AWS::S3::MultiRegionAccessPoint":
+		fallthrough
+	case "AWS::DeviceFarm::TestGridProject":
+		fallthrough
+	case "AWS::Budgets::BudgetsAction":
+		fallthrough
+	case "AWS::Lex::Bot":
+		fallthrough
+	case "AWS::CodeGuruReviewer::RepositoryAssociation":
+		fallthrough
+	case "AWS::IoT::CustomMetric":
+		fallthrough
+	case "AWS::Route53Resolver::FirewallDomainList":
+		fallthrough
+	case "AWS::RoboMaker::RobotApplicationVersion":
+		fallthrough
+	case "AWS::EC2::TrafficMirrorSession":
+		fallthrough
+	case "AWS::IoTSiteWise::Gateway":
+		fallthrough
+	case "AWS::Lex::BotAlias":
+		fallthrough
+	case "AWS::LookoutMetrics::Alert":
+		fallthrough
+	case "AWS::IoT::AccountAuditConfiguration":
+		fallthrough
+	case "AWS::EC2::TrafficMirrorTarget":
+		fallthrough
+	case "AWS::S3::StorageLens":
+		fallthrough
+	case "AWS::IoT::ScheduledAudit":
+		fallthrough
+	case "AWS::Events::Connection":
+		fallthrough
+	case "AWS::EventSchemas::Schema":
+		fallthrough
+	case "AWS::MediaPackage::PackagingConfiguration":
 		*e = ResourceTypeEnum(s)
 		return nil
 	default:

@@ -31,7 +31,7 @@ func newProductsOnline(defaultClient, securityClient HTTPClient, serverURL, lang
 	}
 }
 
-// CreateProductSlug - Creates a product identifier
+// CreateProductSlug - Create a product identifier
 // Creates a unique slug (identifier) for a product. The slug is used to create a product URL
 func (s *productsOnline) CreateProductSlug(ctx context.Context, request operations.CreateProductSlugRequest) (*operations.CreateProductSlugResponse, error) {
 	baseURL := s.serverURL

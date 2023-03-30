@@ -63,11 +63,11 @@ type WorkflowexecutionsProjectsLocationsWorkflowsExecutionsListQueryParams struc
 	Key *string `queryParam:"style=form,explode=true,name=key"`
 	// OAuth 2.0 token for the current user.
 	OauthToken *string `queryParam:"style=form,explode=true,name=oauth_token"`
-	// Optional. The orderding applied to the [Executions.ListExecutions] results. By default the ordering is based on descending start time. The following fields are supported for order by: executionID, startTime, endTime, duration, state, and workflowRevisionID.
+	// Optional. The ordering applied to the [Executions.ListExecutions] results. By default the ordering is based on descending start time. The following fields are supported for order by: executionID, startTime, endTime, duration, state, and workflowRevisionID.
 	OrderBy *string `queryParam:"style=form,explode=true,name=orderBy"`
 	// Maximum number of executions to return per call. Max supported value depends on the selected Execution view: it's 1000 for BASIC and 100 for FULL. The default value used if the field is not specified is 100, regardless of the selected view. Values greater than the max value will be coerced down to it.
 	PageSize *int64 `queryParam:"style=form,explode=true,name=pageSize"`
-	// A page token, received from a previous `ListExecutions` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListExecutions` must match the call that provided the page token.
+	// A page token, received from a previous `ListExecutions` call. Provide this to retrieve the subsequent page. When paginating, all other parameters provided to `ListExecutions` must match the call that provided the page token. Note that pagination is applied to dynamic data. The list of executions returned can change between page requests.
 	PageToken *string `queryParam:"style=form,explode=true,name=pageToken"`
 	// Returns response with indentations and line breaks.
 	PrettyPrint *bool `queryParam:"style=form,explode=true,name=prettyPrint"`

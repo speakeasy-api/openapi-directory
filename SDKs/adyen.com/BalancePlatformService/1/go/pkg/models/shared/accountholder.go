@@ -77,7 +77,7 @@ type AccountHolder struct {
 	// * **Closed**: The account holder is permanently deactivated by you. This action cannot be undone.
 	Status *AccountHolderStatusEnum `json:"status,omitempty"`
 	// The [time zone](https://www.iana.org/time-zones) of the account holder. For example, **Europe/Amsterdam**.
-	// If not set, the time zone of the balance account will be used. For possible values, see the [list of time zone codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+	// Defaults to the time zone of the balance platform if no time zone is set. For possible values, see the [list of time zone codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 	TimeZone *string `json:"timeZone,omitempty"`
 }
 
@@ -108,6 +108,6 @@ type AccountHolderInput struct {
 	// * **Closed**: The account holder is permanently deactivated by you. This action cannot be undone.
 	Status *AccountHolderStatusEnum `json:"status,omitempty"`
 	// The [time zone](https://www.iana.org/time-zones) of the account holder. For example, **Europe/Amsterdam**.
-	// If not set, the time zone of the balance account will be used. For possible values, see the [list of time zone codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
+	// Defaults to the time zone of the balance platform if no time zone is set. For possible values, see the [list of time zone codes](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 	TimeZone *string `json:"timeZone,omitempty"`
 }

@@ -12,6 +12,7 @@ type BackendMetastoreMetastoreTypeEnum string
 
 const (
 	BackendMetastoreMetastoreTypeEnumMetastoreTypeUnspecified BackendMetastoreMetastoreTypeEnum = "METASTORE_TYPE_UNSPECIFIED"
+	BackendMetastoreMetastoreTypeEnumDataplex                 BackendMetastoreMetastoreTypeEnum = "DATAPLEX"
 	BackendMetastoreMetastoreTypeEnumBigquery                 BackendMetastoreMetastoreTypeEnum = "BIGQUERY"
 	BackendMetastoreMetastoreTypeEnumDataprocMetastore        BackendMetastoreMetastoreTypeEnum = "DATAPROC_METASTORE"
 )
@@ -23,6 +24,8 @@ func (e *BackendMetastoreMetastoreTypeEnum) UnmarshalJSON(data []byte) error {
 	}
 	switch s {
 	case "METASTORE_TYPE_UNSPECIFIED":
+		fallthrough
+	case "DATAPLEX":
 		fallthrough
 	case "BIGQUERY":
 		fallthrough

@@ -9,7 +9,7 @@ type CreateDBInstanceMessage struct {
 	BackupRetentionPeriod           *int64
 	CharacterSetName                *string
 	CopyTagsToSnapshot              *bool
-	DBClusterIdentifier             *string
+	DBClusterIdentifier             string
 	DBInstanceClass                 string
 	DBInstanceIdentifier            string
 	DBName                          *string

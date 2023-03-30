@@ -39,10 +39,6 @@ func (e *InstanceTypeEnum) UnmarshalJSON(data []byte) error {
 
 // InstanceInput - Represents a Data Fusion instance.
 type InstanceInput struct {
-	// List of accelerators enabled for this CDF instance.
-	Accelerators []Accelerator `json:"accelerators,omitempty"`
-	// Available versions that the instance can be upgraded to using UpdateInstanceRequest.
-	AvailableVersion []Version `json:"availableVersion,omitempty"`
 	// The crypto key configuration. This field is used by the Customer-managed encryption keys (CMEK) feature.
 	CryptoKeyConfig *CryptoKeyConfig `json:"cryptoKeyConfig,omitempty"`
 	// User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc's accesses to cloud resources.
@@ -153,11 +149,11 @@ func (e *InstanceStateEnum) UnmarshalJSON(data []byte) error {
 
 // Instance - Represents a Data Fusion instance.
 type Instance struct {
-	// List of accelerators enabled for this CDF instance.
+	// Output only. List of accelerators enabled for this CDF instance.
 	Accelerators []Accelerator `json:"accelerators,omitempty"`
 	// Output only. Endpoint on which the REST APIs is accessible.
 	APIEndpoint *string `json:"apiEndpoint,omitempty"`
-	// Available versions that the instance can be upgraded to using UpdateInstanceRequest.
+	// Output only. Available versions that the instance can be upgraded to using UpdateInstanceRequest.
 	AvailableVersion []Version `json:"availableVersion,omitempty"`
 	// Output only. The time the instance was created.
 	CreateTime *string `json:"createTime,omitempty"`

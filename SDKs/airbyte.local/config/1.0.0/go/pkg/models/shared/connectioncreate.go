@@ -3,21 +3,29 @@
 package shared
 
 type ConnectionCreate struct {
-	DestinationID string `json:"destinationId"`
+	DestinationID string         `json:"destinationId"`
+	Geography     *GeographyEnum `json:"geography,omitempty"`
 	// Optional name of the connection
 	Name *string `json:"name,omitempty"`
 	// Method used for computing final namespace in destination
 	NamespaceDefinition *NamespaceDefinitionTypeEnum `json:"namespaceDefinition,omitempty"`
 	// Used when namespaceDefinition is 'customformat'. If blank then behaves like namespaceDefinition = 'destination'. If "${SOURCE_NAMESPACE}" then behaves like namespaceDefinition = 'source'.
-	NamespaceFormat *string  `json:"namespaceFormat,omitempty"`
-	OperationIds    []string `json:"operationIds,omitempty"`
+	NamespaceFormat              *string                           `json:"namespaceFormat,omitempty"`
+	NonBreakingChangesPreference *NonBreakingChangesPreferenceEnum `json:"nonBreakingChangesPreference,omitempty"`
+	NotifySchemaChanges          *bool                             `json:"notifySchemaChanges,omitempty"`
+	OperationIds                 []string                          `json:"operationIds,omitempty"`
 	// Prefix that will be prepended to the name of each stream when it is written to the destination.
 	Prefix *string `json:"prefix,omitempty"`
 	// optional resource requirements to run workers (blank for unbounded allocations)
 	ResourceRequirements *ResourceRequirements `json:"resourceRequirements,omitempty"`
 	// if null, then no schedule is set.
 	Schedule *ConnectionSchedule `json:"schedule,omitempty"`
-	SourceID string              `json:"sourceId"`
+	// schedule for when the the connection should run, per the schedule type
+	ScheduleData *ConnectionScheduleData `json:"scheduleData,omitempty"`
+	// determine how the schedule data should be interpreted
+	ScheduleType    *ConnectionScheduleTypeEnum `json:"scheduleType,omitempty"`
+	SourceCatalogID *string                     `json:"sourceCatalogId,omitempty"`
+	SourceID        string                      `json:"sourceId"`
 	// Active means that data is flowing through the connection. Inactive means it is not. Deprecated means the connection is off and cannot be re-activated. the schema field describes the elements of the schema that will be synced.
 	Status ConnectionStatusEnum `json:"status"`
 	// describes the available schema (catalog).

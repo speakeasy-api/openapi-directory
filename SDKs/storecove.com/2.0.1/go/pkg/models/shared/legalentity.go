@@ -13,6 +13,9 @@ type LegalEntityDocumentTypeEnum string
 const (
 	LegalEntityDocumentTypeEnumInvoice         LegalEntityDocumentTypeEnum = "invoice"
 	LegalEntityDocumentTypeEnumInvoiceResponse LegalEntityDocumentTypeEnum = "invoice_response"
+	LegalEntityDocumentTypeEnumOrder           LegalEntityDocumentTypeEnum = "order"
+	LegalEntityDocumentTypeEnumOrdering        LegalEntityDocumentTypeEnum = "ordering"
+	LegalEntityDocumentTypeEnumOrderResponse   LegalEntityDocumentTypeEnum = "order_response"
 )
 
 func (e *LegalEntityDocumentTypeEnum) UnmarshalJSON(data []byte) error {
@@ -24,6 +27,12 @@ func (e *LegalEntityDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 	case "invoice":
 		fallthrough
 	case "invoice_response":
+		fallthrough
+	case "order":
+		fallthrough
+	case "ordering":
+		fallthrough
+	case "order_response":
 		*e = LegalEntityDocumentTypeEnum(s)
 		return nil
 	default:
@@ -33,8 +42,10 @@ func (e *LegalEntityDocumentTypeEnum) UnmarshalJSON(data []byte) error {
 
 // LegalEntity - Success
 type LegalEntity struct {
+	AdditionalTaxIdentifiers []AdditionalTaxIdentifier `json:"additional_tax_identifiers,omitempty"`
 	// A list of document types to advertise. Use if this LegalEntity needs the ability to receive more than only invoice documents.
 	Advertisements []LegalEntityDocumentTypeEnum `json:"advertisements,omitempty"`
+	APIKeys        []string                      `json:"api_keys,omitempty"`
 	// The city.
 	City *string `json:"city,omitempty"`
 	// An ISO 3166-1 alpha-2 country code.
@@ -52,8 +63,15 @@ type LegalEntity struct {
 	PeppolIdentifiers []PeppolIdentifier `json:"peppol_identifiers,omitempty"`
 	// Whether or not this LegalEntity is public. Public means it will be listed in the PEPPOL directory at https://directory.peppol.eu/ which is normally what you want. If you have a good reason to not want the LegalEntity listed, provide false. This property is ignored when for country SG, where it is always true.
 	Public *bool `json:"public,omitempty"`
+	Rea    *Rea  `json:"rea,omitempty"`
+	// DEPRECATED. Use the <<_openapi_receiveddocuments_resource>> endpoint. The email address of the Smart Inbox for this LegalEntity.
+	SmartInbox *string `json:"smart_inbox,omitempty"`
 	// The id of the tenant, to be used in case of multi-tenant solutions. This property will included in webhook events.
 	TenantID *string `json:"tenant_id,omitempty"`
+	// The password to use to authenticate to a system through which to send the document, or to obtain tax authority approval to send it. This field is currently relevant only for India and mandatory when creating an IN LegalEntity.
+	ThirdPartyPassword *string `json:"third_party_password,omitempty"`
+	// The username to use to authenticate to a system through which to send the document, or to obtain tax authority approval to send it. This field is currently relevant only for India and mandatory when creating an IN LegalEntity.
+	ThirdPartyUsername *string `json:"third_party_username,omitempty"`
 	// The zipcode.
 	Zip *string `json:"zip,omitempty"`
 }

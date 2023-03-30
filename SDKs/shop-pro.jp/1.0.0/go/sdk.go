@@ -271,6 +271,12 @@ func String(s string) *string { return &s }
 // signature = Base64.strict_encode64(OpenSSL::HMAC.digest('sha256', WEBHOOK_SECRET, payload_body))
 // ActiveSupport::SecurityUtils.secure_compare(signature, request.env['HTTP_X_APPSTORE_SIGNATURE'])
 // ```
+//
+// ### 発信元IPアドレスについて
+//
+// 発信元IPアドレスは固定ではありません。そのためIPアドレスが固定されていることを前提としてアプリケーションを開発しないでください。
+//
+// インストールフックおよびアンインストールフックのリクエストの発信元を検証する場合は上記の署名検証を行なってください。
 type SDK struct {
 	ApplicationCharge *applicationCharge
 	// InlineScript - インラインスクリプトを挿入するAPIです。※新規デベロッパーはこのエンドポイントを利用できません

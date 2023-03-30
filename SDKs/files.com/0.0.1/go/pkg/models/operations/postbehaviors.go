@@ -17,6 +17,10 @@ type PostBehaviorsRequestBody struct {
 	AttachmentFile *PostBehaviorsRequestBodyAttachmentFile `multipartForm:"file"`
 	// Behavior type.
 	Behavior string `multipartForm:"name=behavior"`
+	// Description for this behavior.
+	Description *string `multipartForm:"name=description"`
+	// Name for this behavior.
+	Name *string `multipartForm:"name=name"`
 	// Folder behaviors path.
 	Path string `multipartForm:"name=path"`
 	// The value of the folder behavior.  Can be a integer, array, or hash depending on the type of folder behavior. See The Behavior Types section for example values for each type of behavior.

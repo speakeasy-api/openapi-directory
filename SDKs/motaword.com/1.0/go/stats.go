@@ -147,7 +147,7 @@ func (s *stats) GetCommissionStatsByFilter(ctx context.Context, request operatio
 	return res, nil
 }
 
-// GetPopularPairs - Returns the language pairs that you have ordered most.
+// GetPopularPairs - View your popular language pairs
 func (s *stats) GetPopularPairs(ctx context.Context) (*operations.GetPopularPairsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stats/popular-pairs"
@@ -201,7 +201,7 @@ func (s *stats) GetPopularPairs(ctx context.Context) (*operations.GetPopularPair
 	return res, nil
 }
 
-// GetProjectStats - Returns your project statistics.
+// GetProjectStats - View your project statistics
 func (s *stats) GetProjectStats(ctx context.Context) (*operations.GetProjectStatsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stats/projects"
@@ -255,7 +255,7 @@ func (s *stats) GetProjectStats(ctx context.Context) (*operations.GetProjectStat
 	return res, nil
 }
 
-// GetStringStats - Returns your string statistics.
+// GetStringStats - View your translation statistics
 func (s *stats) GetStringStats(ctx context.Context) (*operations.GetStringStatsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stats/strings"

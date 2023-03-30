@@ -60,15 +60,15 @@ func (e *ProjectPrivateStorageEnum) UnmarshalJSON(data []byte) error {
 
 type ProjectPrivate struct {
 	// Project id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// Date when project was published
-	PublishedDate *string `json:"published_date,omitempty"`
+	PublishedDate string `json:"published_date"`
 	// Role inside this project
-	Role *ProjectPrivateRoleEnum `json:"role,omitempty"`
+	Role ProjectPrivateRoleEnum `json:"role"`
 	// Project storage type
-	Storage *ProjectPrivateStorageEnum `json:"storage,omitempty"`
+	Storage ProjectPrivateStorageEnum `json:"storage"`
 	// Project title
-	Title *string `json:"title,omitempty"`
+	Title string `json:"title"`
 	// Api endpoint
-	URL *string `json:"url,omitempty"`
+	URL string `json:"url"`
 }

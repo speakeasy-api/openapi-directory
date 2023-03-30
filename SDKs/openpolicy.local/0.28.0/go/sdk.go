@@ -31,6 +31,7 @@ func String(s string) *string { return &s }
 type SDK struct {
 	// CompileAPI - Posting partial queries to OPA
 	CompileAPI *compileAPI
+	ConfigAPI  *configAPI
 	// DataAPI - Exposes endpoints for reading and writing documents in OPA. For an explanation of the different types of documents, see [the OPA document model](https://www.openpolicyagent.org/docs/latest/philosophy/#the-opa-document-model)
 	DataAPI *dataAPI
 	// HealthAPI - Executes a simple built-in policy query to verify that the server is operational
@@ -101,6 +102,15 @@ func New(opts ...SDKOption) *SDK {
 	}
 
 	sdk.CompileAPI = newCompileAPI(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
+
+	sdk.ConfigAPI = newConfigAPI(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

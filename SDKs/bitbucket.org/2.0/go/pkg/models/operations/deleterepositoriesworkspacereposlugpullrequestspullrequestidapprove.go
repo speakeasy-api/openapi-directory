@@ -35,6 +35,6 @@ type DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveResponse
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// The request wasn't authenticated.
+	// Pull request cannot be unapproved because the pull request has already been merged.
 	Error map[string]interface{}
 }

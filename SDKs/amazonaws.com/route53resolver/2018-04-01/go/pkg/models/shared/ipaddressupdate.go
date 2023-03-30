@@ -6,5 +6,6 @@ package shared
 type IPAddressUpdate struct {
 	IP       *string `json:"Ip,omitempty"`
 	IPID     *string `json:"IpId,omitempty"`
+	Ipv6     *string `json:"Ipv6,omitempty"`
 	SubnetID *string `json:"SubnetId,omitempty"`
 }

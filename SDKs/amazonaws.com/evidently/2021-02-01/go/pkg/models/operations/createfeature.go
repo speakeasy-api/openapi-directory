@@ -53,7 +53,7 @@ type CreateFeatureRequestBody struct {
 	DefaultVariation *string `json:"defaultVariation,omitempty"`
 	// An optional description of the feature.
 	Description *string `json:"description,omitempty"`
-	// Specify users that should always be served a specific variation of a feature. Each user is specified by a key-value pair . For each key, specify a user by entering their user ID, account ID, or some other identifier. For the value, specify the name of the variation that they are to be served.
+	// <p>Specify users that should always be served a specific variation of a feature. Each user is specified by a key-value pair . For each key, specify a user by entering their user ID, account ID, or some other identifier. For the value, specify the name of the variation that they are to be served.</p> <p>This parameter is limited to 2500 overrides or a total of 40KB. The 40KB limit includes an overhead of 6 bytes per override.</p>
 	EntityOverrides map[string]string `json:"entityOverrides,omitempty"`
 	// Specify <code>ALL_RULES</code> to activate the traffic allocation specified by any ongoing launches or experiments. Specify <code>DEFAULT_VARIATION</code> to serve the default variation to all users instead.
 	EvaluationStrategy *CreateFeatureRequestBodyEvaluationStrategyEnum `json:"evaluationStrategy,omitempty"`

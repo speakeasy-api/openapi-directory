@@ -50,6 +50,7 @@ pkg/models/shared/altermetadataresourcelocationrequest.go
 pkg/models/shared/backup.go
 pkg/models/shared/service.go
 pkg/models/shared/telemetryconfig.go
+pkg/models/shared/scalingconfig.go
 pkg/models/shared/networkconfig.go
 pkg/models/shared/consumer.go
 pkg/models/shared/metadataintegration.go

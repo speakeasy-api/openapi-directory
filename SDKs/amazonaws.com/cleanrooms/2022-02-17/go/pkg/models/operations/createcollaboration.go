@@ -66,6 +66,8 @@ type CreateCollaborationRequestBody struct {
 	Name string `json:"name"`
 	// An indicator as to whether query logging has been enabled or disabled for the collaboration.
 	QueryLogStatus CreateCollaborationRequestBodyQueryLogStatusEnum `json:"queryLogStatus"`
+	// Map of tags assigned to a resource
+	Tags map[string]string `json:"tags,omitempty"`
 }
 
 type CreateCollaborationRequest struct {

@@ -21,6 +21,8 @@ type UpdatePullRequestHostedPropertyValuePathParams struct {
 
 type UpdatePullRequestHostedPropertyValueRequest struct {
 	PathParams UpdatePullRequestHostedPropertyValuePathParams
+	// The application property to create or update.
+	Request map[string]interface{} `request:"mediaType=application/json"`
 }
 
 type UpdatePullRequestHostedPropertyValueResponse struct {

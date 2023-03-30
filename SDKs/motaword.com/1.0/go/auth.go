@@ -32,13 +32,13 @@ func newAuth(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 	}
 }
 
-// GetAccessToken - Retrieve an access token to interact with the API.
-// MotaWord API is using OAuth2 procedures when authenticating or authorizing your API call. Currently, we only allow Client Credential type flow.
+// GetAccessToken - Retrieve an access token
+// MotaWord API is using OAuth2 procedures when authenticating or authorizing your API call.
 func (s *auth) GetAccessToken(ctx context.Context, request operations.GetAccessTokenRequest) (*operations.GetAccessTokenResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/token"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}

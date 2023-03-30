@@ -12,8 +12,6 @@ type BandwidthSnapshotEntity struct {
 	BytesReceived *float64 `json:"bytes_received,omitempty"`
 	// Site bandwidth report bytes sent
 	BytesSent *float64 `json:"bytes_sent,omitempty"`
-	// Site bandwidth report created at date/time
-	CreatedAt *time.Time `json:"created_at,omitempty"`
 	// Site bandwidth ID
 	ID *int `json:"id,omitempty"`
 	// Time the site bandwidth report was logged
@@ -28,6 +26,4 @@ type BandwidthSnapshotEntity struct {
 	SyncBytesReceived *float64 `json:"sync_bytes_received,omitempty"`
 	// Site sync bandwidth report bytes sent
 	SyncBytesSent *float64 `json:"sync_bytes_sent,omitempty"`
-	// The last time this site bandwidth report was updated
-	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }

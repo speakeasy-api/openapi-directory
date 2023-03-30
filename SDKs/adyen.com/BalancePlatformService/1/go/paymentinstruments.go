@@ -95,6 +95,69 @@ func (s *paymentInstruments) GetPaymentInstrumentsID(ctx context.Context, reques
 	return res, nil
 }
 
+// GetPaymentInstrumentsIDReveal - Get the reveal information of a payment instrument
+// Returns the reveal information of a payment instrument.
+func (s *paymentInstruments) GetPaymentInstrumentsIDReveal(ctx context.Context, request operations.GetPaymentInstrumentsIDRevealRequest) (*operations.GetPaymentInstrumentsIDRevealResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/paymentInstruments/{id}/reveal", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetPaymentInstrumentsIDRevealResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaymentInstrumentRevealInfo
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaymentInstrumentRevealInfo = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 401:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 422:
+		fallthrough
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.RestServiceError
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.RestServiceError = out
+		}
+	}
+
+	return res, nil
+}
+
 // GetPaymentInstrumentsIDTransactionRules - Get all transaction rules for a payment instrument
 // Returns a list of transaction rules associated with a payment instrument.
 func (s *paymentInstruments) GetPaymentInstrumentsIDTransactionRules(ctx context.Context, request operations.GetPaymentInstrumentsIDTransactionRulesRequest) (*operations.GetPaymentInstrumentsIDTransactionRulesResponse, error) {
@@ -198,12 +261,12 @@ func (s *paymentInstruments) PatchPaymentInstrumentsID(ctx context.Context, requ
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaymentInstrument
+			var out *shared.UpdatePaymentInstrument
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PaymentInstrument = out
+			res.UpdatePaymentInstrument = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough

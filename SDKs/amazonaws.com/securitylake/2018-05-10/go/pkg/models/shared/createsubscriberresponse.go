@@ -4,8 +4,10 @@ package shared
 
 // CreateSubscriberResponse - Success
 type CreateSubscriberResponse struct {
-	RoleArn        *string `json:"roleArn,omitempty"`
-	S3BucketArn    *string `json:"s3BucketArn,omitempty"`
-	SnsArn         *string `json:"snsArn,omitempty"`
-	SubscriptionID string  `json:"subscriptionId"`
+	ResourceShareArn  *string `json:"resourceShareArn,omitempty"`
+	ResourceShareName *string `json:"resourceShareName,omitempty"`
+	RoleArn           *string `json:"roleArn,omitempty"`
+	S3BucketArn       *string `json:"s3BucketArn,omitempty"`
+	SnsArn            *string `json:"snsArn,omitempty"`
+	SubscriptionID    string  `json:"subscriptionId"`
 }

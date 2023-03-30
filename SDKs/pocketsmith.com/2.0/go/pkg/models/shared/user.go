@@ -6,6 +6,10 @@ package shared
 type User struct {
 	// Whether the user wants to see all accounts in their base currency instead of the native account currency.
 	AlwaysShowBaseCurrency *bool `json:"always_show_base_currency,omitempty"`
+	// The user's total number of available accounts.
+	AvailableAccounts *int64 `json:"available_accounts,omitempty"`
+	// The user's total number of available budgets.
+	AvailableBudgets *int64 `json:"available_budgets,omitempty"`
 	// The URL to the user's avatar.
 	AvatarURL *string `json:"avatar_url,omitempty"`
 	// The user's base currency.
@@ -16,8 +20,22 @@ type User struct {
 	CreatedAt *string `json:"created_at,omitempty"`
 	// The user's email address.
 	Email *string `json:"email,omitempty"`
+	// Whether the user's forecast recalculation should be deferred.
+	ForecastDeferRecalculate *bool `json:"forecast_defer_recalculate,omitempty"`
+	// The date that the user's forecast ends.
+	ForecastEndDate *string `json:"forecast_end_date,omitempty"`
+	// When the user's forecast was last accessed.
+	ForecastLastAccessedAt *string `json:"forecast_last_accessed_at,omitempty"`
+	// When the user's forecast was last updated.
+	ForecastLastUpdatedAt *string `json:"forecast_last_updated_at,omitempty"`
+	// Whether the user's forecast needs to be recalculated.
+	ForecastNeedsRecalculate *bool `json:"forecast_needs_recalculate,omitempty"`
+	// The date that the user's forecast starts.
+	ForecastStartDate *string `json:"forecast_start_date,omitempty"`
 	// The unique identifier of the user.
 	ID *int64 `json:"id,omitempty"`
+	// Whether the user wants to review new transactions, transfer transactions or categorisation.
+	IsReviewingTransactions *bool `json:"is_reviewing_transactions,omitempty"`
 	// When the user last interacted with PocketSmith, via any application or the API.
 	LastActivityAt *string `json:"last_activity_at,omitempty"`
 	// When the user last logged into PocketSmith.

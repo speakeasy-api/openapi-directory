@@ -5,6 +5,8 @@ package shared
 type QueryRequest struct {
 	// Connection properties.
 	ConnectionProperties []ConnectionProperty `json:"connectionProperties,omitempty"`
+	// [Optional] Specifies whether the query should be executed as a continuous query. The default value is false.
+	Continuous *bool `json:"continuous,omitempty"`
 	// If true, creates a new session, where session id will be a server generated random id. If false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs query in non-session mode.
 	CreateSession  *bool             `json:"createSession,omitempty"`
 	DefaultDataset *DatasetReference `json:"defaultDataset,omitempty"`

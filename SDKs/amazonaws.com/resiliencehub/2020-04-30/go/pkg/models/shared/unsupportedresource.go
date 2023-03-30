@@ -2,9 +2,10 @@
 
 package shared
 
-// UnsupportedResource - Defines a resource that is not supported by AWS Resilience Hub.
+// UnsupportedResource - Defines a resource that is not supported by Resilience Hub.
 type UnsupportedResource struct {
-	LogicalResourceID  LogicalResourceID  `json:"logicalResourceId"`
-	PhysicalResourceID PhysicalResourceID `json:"physicalResourceId"`
-	ResourceType       string             `json:"resourceType"`
+	LogicalResourceID         LogicalResourceID  `json:"logicalResourceId"`
+	PhysicalResourceID        PhysicalResourceID `json:"physicalResourceId"`
+	ResourceType              string             `json:"resourceType"`
+	UnsupportedResourceStatus *string            `json:"unsupportedResourceStatus,omitempty"`
 }

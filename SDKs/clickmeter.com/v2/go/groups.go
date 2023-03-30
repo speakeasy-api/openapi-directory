@@ -719,66 +719,6 @@ func (s *groups) GroupsGetStatisticsSingle(ctx context.Context, request operatio
 	return res, nil
 }
 
-// GroupsGetTops - Retrieve a top report connected to this group
-func (s *groups) GroupsGetTops(ctx context.Context, request operations.GroupsGetTopsRequest) (*operations.GroupsGetTopsResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/groups/{id}/reports", request.PathParams, nil)
-
-	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.GroupsGetTopsResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.APICoreDtoTopsTop
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.APICoreDtoTopsTop = out
-		case utils.MatchContentType(contentType, `text/json`):
-			var out *shared.APICoreDtoTopsTop
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.APICoreDtoTopsTop = out
-		}
-	case httpRes.StatusCode == 401:
-		fallthrough
-	case httpRes.StatusCode == 404:
-		fallthrough
-	case httpRes.StatusCode == 500:
-	}
-
-	return res, nil
-}
-
 // GroupsPatchFavourite - Fast switch the "favourite" field of a group
 func (s *groups) GroupsPatchFavourite(ctx context.Context, request operations.GroupsPatchFavouriteRequest) (*operations.GroupsPatchFavouriteResponse, error) {
 	baseURL := s.serverURL

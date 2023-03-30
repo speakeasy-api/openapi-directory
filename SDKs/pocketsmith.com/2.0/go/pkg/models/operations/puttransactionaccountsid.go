@@ -15,6 +15,10 @@ type PutTransactionAccountsIDPathParams struct {
 type PutTransactionAccountsIDRequestBody struct {
 	// The unique identifier of a new institution for the transaction account.
 	InstitutionID *int64 `json:"institution_id,omitempty"`
+	// The starting balance amount of the transaction account.
+	StartingBalance *float64 `json:"starting_balance,omitempty"`
+	// The starting balance date of the transaction account.
+	StartingBalanceDate *string `json:"starting_balance_date,omitempty"`
 }
 
 type PutTransactionAccountsIDRequest struct {

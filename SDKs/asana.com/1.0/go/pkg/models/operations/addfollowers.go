@@ -8,7 +8,7 @@ import (
 )
 
 type AddFollowersPathParams struct {
-	// Automatically added
+	// Globally unique identifier for the goal.
 	GoalGid string `pathParam:"style=simple,explode=false,name=goal_gid"`
 }
 
@@ -34,8 +34,8 @@ type AddFollowersRequest struct {
 	Request AddFollowersRequestBody `request:"mediaType=application/json"`
 }
 
-// AddFollowers201ApplicationJSON - Successfully added users as collaborators.
-type AddFollowers201ApplicationJSON struct {
+// AddFollowers200ApplicationJSON - Successfully added users as collaborators.
+type AddFollowers200ApplicationJSON struct {
 	Data *shared.GoalResponse `json:"data,omitempty"`
 }
 
@@ -46,5 +46,5 @@ type AddFollowersResponse struct {
 	StatusCode    int
 	RawResponse   *http.Response
 	// Successfully added users as collaborators.
-	AddFollowers201ApplicationJSONObject *AddFollowers201ApplicationJSON
+	AddFollowers200ApplicationJSONObject *AddFollowers200ApplicationJSON
 }

@@ -70,6 +70,8 @@ type CalendarEventsWatchQueryParams struct {
 	Alt *shared.AltEnum `queryParam:"style=form,explode=true,name=alt"`
 	// Deprecated and ignored. A value will always be returned in the email field for the organizer, creator and attendees, even if no real email address is available (i.e. a generated, non-working value will be provided).
 	AlwaysIncludeEmail *bool `queryParam:"style=form,explode=true,name=alwaysIncludeEmail"`
+	// Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"]. This is used by the Working Location developer preview and only the default value is allowed for non-opted-in users.
+	EventTypes []string `queryParam:"style=form,explode=true,name=eventTypes"`
 	// Selector specifying which fields to include in a partial response.
 	Fields *string `queryParam:"style=form,explode=true,name=fields"`
 	// Specifies an event ID in the iCalendar format to be provided in the response. Optional. Use this if you want to search for an event by its iCalendar ID.

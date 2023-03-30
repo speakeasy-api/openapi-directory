@@ -7,4 +7,6 @@ type TransferInstrumentReference struct {
 	AccountIdentifier string `json:"accountIdentifier"`
 	// The unique identifier of the resource.
 	ID string `json:"id"`
+	// Four last digits of the bank account number.
+	RealLastFour *string `json:"realLastFour,omitempty"`
 }

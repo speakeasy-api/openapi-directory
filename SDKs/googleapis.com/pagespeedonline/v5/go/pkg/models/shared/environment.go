@@ -6,6 +6,8 @@ package shared
 type Environment struct {
 	// The benchmark index number that indicates rough device class.
 	BenchmarkIndex *float64 `json:"benchmarkIndex,omitempty"`
+	// The version of libraries with which these results were generated. Ex: axe-core.
+	Credits map[string]string `json:"credits,omitempty"`
 	// The user agent string of the version of Chrome used.
 	HostUserAgent *string `json:"hostUserAgent,omitempty"`
 	// The user agent string that was sent over the network.

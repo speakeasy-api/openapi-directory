@@ -7,6 +7,10 @@ import (
 	"openapi/pkg/models/shared"
 )
 
+type GetCreditsIDSecurity struct {
+	APIKey shared.SchemeAPIKey `security:"scheme,type=apiKey,subtype=header"`
+}
+
 type GetCreditsIDPathParams struct {
 	// The ID of the credit resource to load.
 	ID string `pathParam:"style=simple,explode=false,name=id"`
@@ -14,6 +18,7 @@ type GetCreditsIDPathParams struct {
 
 type GetCreditsIDRequest struct {
 	PathParams GetCreditsIDPathParams
+	Security   GetCreditsIDSecurity
 }
 
 // GetCreditsID200ApplicationVndAPIPlusJSON - Success

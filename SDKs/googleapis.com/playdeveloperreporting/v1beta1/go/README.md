@@ -77,6 +77,8 @@ func main() {
 
 ### Vitals
 
+* `PlaydeveloperreportingVitalsErrorsIssuesSearch` - Searches all error issues in which reports have been grouped.
+* `PlaydeveloperreportingVitalsErrorsReportsSearch` - Searches all error reports received for an app.
 * `PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGet` - Describes the properties of the metric set.
 * `PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQuery` - Queries the metrics in the metric set.
 <!-- End SDK Available Operations -->

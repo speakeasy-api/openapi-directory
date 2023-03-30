@@ -42,6 +42,10 @@ func (s *institutions) DeleteInstitutionsID(ctx context.Context, request operati
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
 	client := s.securityClient
 
 	httpRes, err := client.Do(req)

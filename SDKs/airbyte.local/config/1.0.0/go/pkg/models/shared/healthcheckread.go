@@ -4,5 +4,5 @@ package shared
 
 // HealthCheckRead - Successful operation
 type HealthCheckRead struct {
-	Db bool `json:"db"`
+	Available bool `json:"available"`
 }

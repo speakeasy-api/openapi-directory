@@ -85,7 +85,64 @@ func (s *user) ApproveVendorApplication(ctx context.Context, request operations.
 	return res, nil
 }
 
-// DeleteAccount - Delete requester account
+// CreateUser - Create a new user
+// Create a new platform user
+func (s *user) CreateUser(ctx context.Context, request operations.CreateUserRequest) (*operations.CreateUserResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/users"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.CreateUserResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.User
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.User = out
+		}
+	}
+
+	return res, nil
+}
+
+// DeleteAccount - Delete your account
+// Delete your MotaWord account. Be careful; once deleted, you will not have access to MotaWord via API or your dashboards.
 func (s *user) DeleteAccount(ctx context.Context) (*operations.DeleteAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/delete-account"
@@ -299,7 +356,8 @@ func (s *user) DowngradeUserProofreader(ctx context.Context, request operations.
 	return res, nil
 }
 
-// FreezeAccount - Freeze requester account for project notifications
+// FreezeAccount - Freeze account
+// Freeze your account temporarily, especially to stop receiving project notifications.
 func (s *user) FreezeAccount(ctx context.Context) (*operations.FreezeAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/freeze-account"
@@ -409,7 +467,53 @@ func (s *user) FreezeUserAccount(ctx context.Context, request operations.FreezeU
 	return res, nil
 }
 
-// GetEarnings - Returns your vendor earnings. Includes real-time earnings from ongoing projects, and fixed earnings from completed projects. Also includes total earnings and string edits.
+// GetAllVendorTags - Returns all vendor tags for vendors filter
+// Returns all vendor tags for vendors filter
+func (s *user) GetAllVendorTags(ctx context.Context) (*operations.GetAllVendorTagsResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/users/tags"
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetAllVendorTagsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out []shared.VendorTag
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.VendorTags = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetEarnings - View your vendor earnings
+// View your vendor earnings from your translation activites. Includes real-time earnings from ongoing projects, and fixed earnings from completed projects, as well as total earnings and string edits.
 func (s *user) GetEarnings(ctx context.Context) (*operations.GetEarningsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/earnings"
@@ -463,7 +567,64 @@ func (s *user) GetEarnings(ctx context.Context) (*operations.GetEarningsResponse
 	return res, nil
 }
 
-// GetMe - Get your user information, including client or vendor specific info.
+// GetFilteredVendors - Filter vendors based on provided parameters
+// Get a list of vendors available for the criteria given
+func (s *user) GetFilteredVendors(ctx context.Context, request operations.GetFilteredVendorsRequest) (*operations.GetFilteredVendorsResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/users/filter"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetFilteredVendorsResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UserList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UserList = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetMe - View your account info
+// Get your user information, including client, corporate account and vendor account information.
 func (s *user) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me"
@@ -517,7 +678,8 @@ func (s *user) GetMe(ctx context.Context) (*operations.GetMeResponse, error) {
 	return res, nil
 }
 
-// GetPaymentInfo - Get your payment Info
+// GetPaymentInfo - View your payment and billing info
+// Returns billing and saved credit card information for user, and their corporate account if present & allowed.
 func (s *user) GetPaymentInfo(ctx context.Context) (*operations.GetPaymentInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment"
@@ -571,7 +733,8 @@ func (s *user) GetPaymentInfo(ctx context.Context) (*operations.GetPaymentInfoRe
 	return res, nil
 }
 
-// GetPermissions - Returns a list of permissions that this user is authorized for.
+// GetPermissions - View your permissions
+// View a list of permissions that your user account is authorized for, configured either by default, or by your account administator.
 func (s *user) GetPermissions(ctx context.Context) (*operations.GetPermissionsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/permissions"
@@ -615,7 +778,8 @@ func (s *user) GetPermissions(ctx context.Context) (*operations.GetPermissionsRe
 	return res, nil
 }
 
-// GetResponsivity - Returns your vendor responsivity stats
+// GetResponsivity - View your vendor responsiveness
+// View your statistical analysis of responsiveness to our translation projects, invitations, notifications and such.
 func (s *user) GetResponsivity(ctx context.Context, request operations.GetResponsivityRequest) (*operations.GetResponsivityResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/responsivity"
@@ -675,7 +839,8 @@ func (s *user) GetResponsivity(ctx context.Context, request operations.GetRespon
 	return res, nil
 }
 
-// GetStats - Returns your client and vendor statistics. This used to be called "summary" (\@deprecated).
+// GetStats - View your account statistics
+// View your client and vendor statistics.
 func (s *user) GetStats(ctx context.Context) (*operations.GetStatsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/stats"
@@ -881,7 +1046,8 @@ func (s *user) GetUserEarnings(ctx context.Context, request operations.GetUserEa
 	return res, nil
 }
 
-// GetUserGroups - Returns a list of user groups that this user belongs to.
+// GetUserGroups - View your user groups
+// View the user groups that your user account belongs to. This is typically configured by your account administator's dashboard.
 func (s *user) GetUserGroups(ctx context.Context) (*operations.GetUserGroupsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/user-groups"
@@ -925,7 +1091,8 @@ func (s *user) GetUserGroups(ctx context.Context) (*operations.GetUserGroupsResp
 	return res, nil
 }
 
-// GetUserPaymentInfo - Get user payment Info
+// GetUserPaymentInfo - View user's payment and billing info
+// Returns billing and saved credit card information for user, and their corporate account if present & allowed.
 func (s *user) GetUserPaymentInfo(ctx context.Context, request operations.GetUserPaymentInfoRequest) (*operations.GetUserPaymentInfoResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/{userId}/payment", request.PathParams, nil)
@@ -1683,6 +1850,9 @@ func (s *user) SendUserEmailConfirmation(ctx context.Context, request operations
 
 	return res, nil
 }
+
+// SubscribeNotification - Subscribe to push notifications
+// Subscribe to push notifications to receive project and platform notifications.
 func (s *user) SubscribeNotification(ctx context.Context, request operations.SubscribeNotificationRequest) (*operations.SubscribeNotificationResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/notifications/subscribe"
@@ -1865,7 +2035,8 @@ func (s *user) SuspendUser(ctx context.Context, request operations.SuspendUserRe
 	return res, nil
 }
 
-// UnfreezeAccount - Unfreeze requester account for project notifications
+// UnfreezeAccount - Defreeze your account
+// Reactive your account to start receiving notifications.
 func (s *user) UnfreezeAccount(ctx context.Context) (*operations.UnfreezeAccountResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/unfreeze-account"
@@ -2097,7 +2268,7 @@ func (s *user) UnsubscribeUserNotification(ctx context.Context, request operatio
 	return res, nil
 }
 
-// UpdateMe - Update your user information.
+// UpdateMe - Update your account info
 func (s *user) UpdateMe(ctx context.Context, request operations.UpdateMeRequest) (*operations.UpdateMeResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/me"
@@ -2160,7 +2331,8 @@ func (s *user) UpdateMe(ctx context.Context, request operations.UpdateMeRequest)
 	return res, nil
 }
 
-// UpdatePassword - Update user password. Password should contain at least one uppercase, lowercase character and one number
+// UpdatePassword - Update your account password
+// Password should contain at least one uppercase, lowercase character and one number
 func (s *user) UpdatePassword(ctx context.Context, request operations.UpdatePasswordRequest) (*operations.UpdatePasswordResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/password"
@@ -2222,6 +2394,7 @@ func (s *user) UpdatePassword(ctx context.Context, request operations.UpdatePass
 }
 
 // UpdatePaymentInfo - Update payment info
+// Update your billing and saved credit card information
 func (s *user) UpdatePaymentInfo(ctx context.Context, request operations.UpdatePaymentInfoRequest) (*operations.UpdatePaymentInfoResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/payment"
@@ -2340,8 +2513,68 @@ func (s *user) UpdateUser(ctx context.Context, request operations.UpdateUserRequ
 
 	return res, nil
 }
+func (s *user) UpdateUserGroup(ctx context.Context, request operations.UpdateUserGroupRequest) (*operations.UpdateUserGroupResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{userId}/user-groups", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UpdateUserGroupResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.UserGroupList
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.UserGroupList = out
+		}
+	case httpRes.StatusCode == 400:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
 
 // UpdateUserPaymentInfo - Update user payment info
+// Update user's billing and saved credit card information
 func (s *user) UpdateUserPaymentInfo(ctx context.Context, request operations.UpdateUserPaymentInfoRequest) (*operations.UpdateUserPaymentInfoResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/{userId}/payment", request.PathParams, nil)
@@ -2401,11 +2634,14 @@ func (s *user) UpdateUserPaymentInfo(ctx context.Context, request operations.Upd
 
 	return res, nil
 }
-func (s *user) UploadProfilePicture(ctx context.Context, request operations.UploadProfilePictureRequest) (*operations.UploadProfilePictureResponse, error) {
+
+// UploadProfilePictureJSON - Upload profile picture
+// Upload a profile picture on your account. This is used where your profile is mentioned throughout the platform. Your picture is not used publicly.
+func (s *user) UploadProfilePictureJSON(ctx context.Context, request operations.UploadProfilePictureJSONRequest) (*operations.UploadProfilePictureJSONResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/profile-picture"
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
@@ -2430,7 +2666,7 @@ func (s *user) UploadProfilePicture(ctx context.Context, request operations.Uplo
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.UploadProfilePictureResponse{
+	res := &operations.UploadProfilePictureJSONResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -2462,7 +2698,132 @@ func (s *user) UploadProfilePicture(ctx context.Context, request operations.Uplo
 
 	return res, nil
 }
-func (s *user) UploadUserProfilePicture(ctx context.Context, request operations.UploadUserProfilePictureRequest) (*operations.UploadUserProfilePictureResponse, error) {
+
+// UploadProfilePictureMultipart - Upload profile picture
+// Upload a profile picture on your account. This is used where your profile is mentioned throughout the platform. Your picture is not used publicly.
+func (s *user) UploadProfilePictureMultipart(ctx context.Context, request operations.UploadProfilePictureMultipartRequest) (*operations.UploadProfilePictureMultipartResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/profile-picture"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UploadProfilePictureMultipartResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.OperationStatus
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.OperationStatus = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+func (s *user) UploadUserProfilePictureJSON(ctx context.Context, request operations.UploadUserProfilePictureJSONRequest) (*operations.UploadUserProfilePictureJSONResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/{userId}/profile-picture", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.UploadUserProfilePictureJSONResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.OperationStatus
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.OperationStatus = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 404:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Error
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+func (s *user) UploadUserProfilePictureMultipart(ctx context.Context, request operations.UploadUserProfilePictureMultipartRequest) (*operations.UploadUserProfilePictureMultipartResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/{userId}/profile-picture", request.PathParams, nil)
 
@@ -2491,7 +2852,7 @@ func (s *user) UploadUserProfilePicture(ctx context.Context, request operations.
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.UploadUserProfilePictureResponse{
+	res := &operations.UploadUserProfilePictureMultipartResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

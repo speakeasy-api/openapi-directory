@@ -8,7 +8,7 @@ import (
 )
 
 // SplitTypeEnum - The type of split.
-// Possible values: **Default**, **PaymentFee**, **VAT**, **Commission**, **MarketPlace**, **BalanceAccount**, **Remainder**.
+// Possible values: **Default**, **PaymentFee**, **VAT**, **Commission**, **MarketPlace**, **BalanceAccount**, **Remainder**, **Surcharge**, **Tip**.
 type SplitTypeEnum string
 
 const (
@@ -18,6 +18,8 @@ const (
 	SplitTypeEnumMarketPlace    SplitTypeEnum = "MarketPlace"
 	SplitTypeEnumPaymentFee     SplitTypeEnum = "PaymentFee"
 	SplitTypeEnumRemainder      SplitTypeEnum = "Remainder"
+	SplitTypeEnumSurcharge      SplitTypeEnum = "Surcharge"
+	SplitTypeEnumTip            SplitTypeEnum = "Tip"
 	SplitTypeEnumVat            SplitTypeEnum = "VAT"
 	SplitTypeEnumVerification   SplitTypeEnum = "Verification"
 )
@@ -39,6 +41,10 @@ func (e *SplitTypeEnum) UnmarshalJSON(data []byte) error {
 	case "PaymentFee":
 		fallthrough
 	case "Remainder":
+		fallthrough
+	case "Surcharge":
+		fallthrough
+	case "Tip":
 		fallthrough
 	case "VAT":
 		fallthrough
@@ -63,6 +69,6 @@ type Split struct {
 	// This is required if `type` is **MarketPlace** or **BalanceAccount**. For the other types, we also recommend sending a reference so you can reconcile the split and the associated payment in the transaction overview and in the reports. If the reference is not provided, the split is reported as part of the aggregated [TransferBalance record type](https://docs.adyen.com/reporting/marketpay-payments-accounting-report) in Adyen for Platforms.
 	Reference *string `json:"reference,omitempty"`
 	// The type of split.
-	// Possible values: **Default**, **PaymentFee**, **VAT**, **Commission**, **MarketPlace**, **BalanceAccount**, **Remainder**.
+	// Possible values: **Default**, **PaymentFee**, **VAT**, **Commission**, **MarketPlace**, **BalanceAccount**, **Remainder**, **Surcharge**, **Tip**.
 	Type SplitTypeEnum `json:"type"`
 }

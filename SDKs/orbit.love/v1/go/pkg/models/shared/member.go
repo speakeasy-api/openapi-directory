@@ -6,7 +6,7 @@ type Member struct {
 	Bio      *string `json:"bio,omitempty"`
 	Birthday *string `json:"birthday,omitempty"`
 	Company  *string `json:"company,omitempty"`
-	// The member's dev.to username
+	// The member's DEV username
 	Devto *string `json:"devto,omitempty"`
 	// The member's email
 	Email *string `json:"email,omitempty"`

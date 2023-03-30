@@ -7,7 +7,6 @@ domains.go
 groups.go
 hits.go
 me.go
-reports.go
 retargeting.go
 tags.go
 sdk.go
@@ -71,7 +70,6 @@ pkg/models/operations/conversionsgethits.go
 pkg/models/operations/conversionsgetstatisticsalllist.go
 pkg/models/operations/conversionsgetstatisticslist.go
 pkg/models/operations/conversionsgetstatisticssingle.go
-pkg/models/operations/conversionsgettops.go
 pkg/models/operations/conversionspatchnotesform.go
 pkg/models/operations/conversionspatchnotesjson.go
 pkg/models/operations/conversionspatchnotesraw.go
@@ -97,7 +95,6 @@ pkg/models/operations/datapointsgetstatisticsaggregatedsingle.go
 pkg/models/operations/datapointsgetstatisticsalllist.go
 pkg/models/operations/datapointsgetstatisticslist.go
 pkg/models/operations/datapointsgetstatisticssingle.go
-pkg/models/operations/datapointsgettops.go
 pkg/models/operations/datapointspatchfavourite.go
 pkg/models/operations/datapointspatchnotesform.go
 pkg/models/operations/datapointspatchnotesjson.go
@@ -126,7 +123,6 @@ pkg/models/operations/groupsgetstatisticsaggregatedsingle.go
 pkg/models/operations/groupsgetstatisticsalllist.go
 pkg/models/operations/groupsgetstatisticslist.go
 pkg/models/operations/groupsgetstatisticssingle.go
-pkg/models/operations/groupsgettops.go
 pkg/models/operations/groupspatchfavourite.go
 pkg/models/operations/groupspatchnotesform.go
 pkg/models/operations/groupspatchnotesjson.go
@@ -138,7 +134,6 @@ pkg/models/operations/getgroupsid.go
 pkg/models/operations/hitsgethits.go
 pkg/models/operations/megetme.go
 pkg/models/operations/megetmeplan.go
-pkg/models/operations/reportsget.go
 pkg/models/operations/retargetingcount.go
 pkg/models/operations/retargetingdelete.go
 pkg/models/operations/retargetingget.go
@@ -200,8 +195,6 @@ pkg/models/shared/apicoredtotagstag.go
 pkg/models/shared/apicoredtoclickstreamhitconversioninfo.go
 pkg/models/shared/apicoredtoclickstreamhitbrowserinfo.go
 pkg/models/shared/apicoredtoclickstreamhitlistpage.go
-pkg/models/shared/apicoredtotopstop.go
-pkg/models/shared/apicoredtotopstopitem.go
 pkg/models/shared/apicorerequestsgenerictextpatch.go
 pkg/models/shared/apicorerequestsconversionpatchbody.go
 pkg/models/shared/apicoredtoconversionsconversion.go

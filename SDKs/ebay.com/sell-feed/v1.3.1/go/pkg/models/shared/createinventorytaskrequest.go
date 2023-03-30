@@ -4,12 +4,10 @@ package shared
 
 // CreateInventoryTaskRequest - The request payload containing the version, feedType, and optional filterCriteria.
 type CreateInventoryTaskRequest struct {
-	// The feed type associated with the inventory task you are about to create. Use a feedType that is available for your API. Presently, only one feed type is available: LMS_ACTIVE_INVENTORY_REPORT
+	// The feed type associated with the inventory task you are about to create. Use a <strong>feedType</strong> that is available for your API. Presently, only one feed type is available:<ul><li><code>LMS_ACTIVE_INVENTORY_REPORT</code></li></ul><br/>See <a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#merchant-data-reports-download-feed-types" target="_blank">Report download feed types</a> for more information.
 	FeedType *string `json:"feedType,omitempty"`
-	// The container for the filter fields. This container is used to set the filter criteria for the order report. A seller can set date range filters and/or can retrieve orders in a specific state.
+	// The container for the filter fields. This container is used to set the filter criteria for the order report. A seller can retrieve listings for a specified format.
 	FilterCriteria *InventoryFilterCriteria `json:"filterCriteria,omitempty"`
-	// The inventory file template used to return specific types of inventory tasks. Presently not applicable for LMS_ACTIVE_INVENTORY_REPORT. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/feed/types/api:InventoryFileTemplateEnum'>eBay API documentation</a>
-	InventoryFileTemplate *string `json:"inventoryFileTemplate,omitempty"`
-	// The schemaVersion/version number of the file format (use the schema version of the API to which you are programming): LMS Version Details / Schema Version File Exchange Schema Version
+	// The schemaVersion/version number of the file format (use the schema version of the API to which you are programming):<ul><li><a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#Version" target="_blank">Version Details / Schema Version</a></li><li><a href="/api-docs/sell/static/feed/fx-feeds-quick-reference.html#schema" target="_blank">Seller Hub feed schema version</a></li></ul>
 	SchemaVersion *string `json:"schemaVersion,omitempty"`
 }

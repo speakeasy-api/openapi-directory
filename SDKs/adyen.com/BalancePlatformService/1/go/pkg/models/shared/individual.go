@@ -2,15 +2,28 @@
 
 package shared
 
+type IndividualInput struct {
+	BirthData *BirthData `json:"birthData,omitempty"`
+	// The email address of the legal entity.
+	Email              *string             `json:"email,omitempty"`
+	IdentificationData *IdentificationData `json:"identificationData,omitempty"`
+	Name               Name3               `json:"name"`
+	// The individual's nationality.
+	Nationality        *string       `json:"nationality,omitempty"`
+	Phone              *PhoneNumber2 `json:"phone,omitempty"`
+	ResidentialAddress Address3      `json:"residentialAddress"`
+	WebData            *WebDataInput `json:"webData,omitempty"`
+}
+
 type Individual struct {
 	BirthData *BirthData `json:"birthData,omitempty"`
 	// The email address of the legal entity.
 	Email              *string             `json:"email,omitempty"`
 	IdentificationData *IdentificationData `json:"identificationData,omitempty"`
-	Name               Name                `json:"name"`
+	Name               Name3               `json:"name"`
 	// The individual's nationality.
-	Nationality        *string      `json:"nationality,omitempty"`
-	Phone              *PhoneNumber `json:"phone,omitempty"`
-	ResidentialAddress Address      `json:"residentialAddress"`
-	WebData            *WebData     `json:"webData,omitempty"`
+	Nationality        *string       `json:"nationality,omitempty"`
+	Phone              *PhoneNumber2 `json:"phone,omitempty"`
+	ResidentialAddress Address3      `json:"residentialAddress"`
+	WebData            *WebData      `json:"webData,omitempty"`
 }

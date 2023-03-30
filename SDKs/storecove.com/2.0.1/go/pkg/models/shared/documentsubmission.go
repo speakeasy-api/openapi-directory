@@ -4,9 +4,9 @@ package shared
 
 // DocumentSubmission - The document you want Storecove to send, with some meta-data.
 type DocumentSubmission struct {
-	// An array of attachments. You may provide up to 10 attchments, but the total size must not exceed 10MB after Base64 encoding.
+	// DEPRECATED. Use the attachments array inside the 'document' property. An array of attachments. You may provide up to 10 attchments, but the total size must not exceed 10MB after Base64 encoding.
 	Attachments []Attachment `json:"attachments,omitempty"`
-	// Whether or not to create a primary image (PDF) if one is not provided.
+	// DEPRECATED. In the future we will no longer support creating PDF invoices. Whether or not to create a primary image (PDF) if one is not provided. For customers who started from December 1st 2022, the default is false. For customers who started before that, the default is true.
 	CreatePrimaryImage *bool `json:"createPrimaryImage,omitempty"`
 	// The document to send.
 	Document *SendableDocument `json:"document,omitempty"`
@@ -14,7 +14,7 @@ type DocumentSubmission struct {
 	IdempotencyGUID *string `json:"idempotencyGuid,omitempty"`
 	// The id of the LegalEntity this document should be sent on behalf of. Either legalEntityId or receiveGuid is mandatory.
 	LegalEntityID *int64 `json:"legalEntityId,omitempty"`
-	// The GUID that was in the received_invoice webhook. Either legalEntityId or receiveGuid is mandatory.
+	// The GUID that was in the received_document webhook. Either legalEntityId or receiveGuid is mandatory. This field is used for sending response documents, such as InvoiceReponse and OrderResponse.
 	ReceiveGUID *string `json:"receiveGuid,omitempty"`
 	// The different ways to send the invoice to the recipient. The publicIdentifiers are used to send via the Peppol network, if the recipient is not registered on the Peppol network, the invoice will be sent to the email addresses in the emails property. This property is only mandatory when sending the invoice data using the <<_openapi_invoice>> property, not when sending using the <<_openapi_invoicedata>> property, in which case this information will be extracted from the <<_openapi_invoicedata>> object. If you do specify an <<_openapi_invoicerecipient>> object and an <<_openapi_invoicedata>> object, the data from the two will be merged.
 	Routing *Routing `json:"routing,omitempty"`

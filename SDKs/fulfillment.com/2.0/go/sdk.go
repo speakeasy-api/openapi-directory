@@ -188,6 +188,7 @@ func String(s string) *string { return &s }
 // | 050101 | Cancelled | Cancelled | |
 // | 060101 | Test | Test | Test |
 type SDK struct {
+	Accounting *accounting
 	// Auth - Please note that in keeping with the OAuth standard, parameters are underscored however all other API parameters are camelCase.
 	Auth      *auth
 	Inventory *inventory
@@ -258,6 +259,15 @@ func New(opts ...SDKOption) *SDK {
 	if sdk._serverURL == "" {
 		sdk._serverURL = ServerList[0]
 	}
+
+	sdk.Accounting = newAccounting(
+		sdk._defaultClient,
+		sdk._securityClient,
+		sdk._serverURL,
+		sdk._language,
+		sdk._sdkVersion,
+		sdk._genVersion,
+	)
 
 	sdk.Auth = newAuth(
 		sdk._defaultClient,

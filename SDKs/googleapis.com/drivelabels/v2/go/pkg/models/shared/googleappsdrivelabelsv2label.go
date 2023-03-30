@@ -44,6 +44,8 @@ type GoogleAppsDriveLabelsV2Label struct {
 	CreateTime *string `json:"createTime,omitempty"`
 	// Information about a user.
 	Creator *GoogleAppsDriveLabelsV2UserInfo `json:"creator,omitempty"`
+	// Output only. The customer this label belongs to. For example: "customers/123abc789."
+	Customer *string `json:"customer,omitempty"`
 	// Output only. The time this label was disabled. This value has no meaning when the label is not disabled.
 	DisableTime *string `json:"disableTime,omitempty"`
 	// Information about a user.
@@ -76,6 +78,36 @@ type GoogleAppsDriveLabelsV2Label struct {
 	RevisionCreator *GoogleAppsDriveLabelsV2UserInfo `json:"revisionCreator,omitempty"`
 	// Output only. Revision ID of the label. Revision ID might be part of the label `name` depending on the request issued. A new revision is created whenever revisioned properties of a label are changed. Matches the regex: `([a-zA-Z0-9])+`
 	RevisionID *string `json:"revisionId,omitempty"`
+	// The capabilities related to this label when editing the label.
+	SchemaCapabilities *GoogleAppsDriveLabelsV2LabelSchemaCapabilities `json:"schemaCapabilities,omitempty"`
+}
+
+// GoogleAppsDriveLabelsV2LabelInput - A label defines a taxonomy that can be applied to Drive items in order to organize and search across items. Labels can be simple strings, or can contain fields that describe additional metadata that can be further used to organize and search Drive items.
+type GoogleAppsDriveLabelsV2LabelInput struct {
+	// The capabilities a user has on this label's applied metadata.
+	AppliedCapabilities *GoogleAppsDriveLabelsV2LabelAppliedCapabilities `json:"appliedCapabilities,omitempty"`
+	// Behavior of this label when it's applied to Drive items.
+	AppliedLabelPolicy *GoogleAppsDriveLabelsV2LabelAppliedLabelPolicy `json:"appliedLabelPolicy,omitempty"`
+	// Information about a user.
+	Creator *GoogleAppsDriveLabelsV2UserInfo `json:"creator,omitempty"`
+	// Information about a user.
+	Disabler *GoogleAppsDriveLabelsV2UserInfo `json:"disabler,omitempty"`
+	// UI display hints for rendering the label.
+	DisplayHints *GoogleAppsDriveLabelsV2LabelDisplayHints `json:"displayHints,omitempty"`
+	// List of fields in descending priority order.
+	Fields []GoogleAppsDriveLabelsV2FieldInput `json:"fields,omitempty"`
+	// Required. The type of label.
+	LabelType *GoogleAppsDriveLabelsV2LabelLabelTypeEnum `json:"labelType,omitempty"`
+	// Custom URL to present to users to allow them to learn more about this label and how it should be used.
+	LearnMoreURI *string `json:"learnMoreUri,omitempty"`
+	// The lifecycle state of an object, such as label, field, or choice. The lifecycle enforces the following transitions: * `UNPUBLISHED_DRAFT` (starting state) * `UNPUBLISHED_DRAFT` -> `PUBLISHED` * `UNPUBLISHED_DRAFT` -> (Deleted) * `PUBLISHED` -> `DISABLED` * `DISABLED` -> `PUBLISHED` * `DISABLED` -> (Deleted) The published and disabled states have some distinct characteristics: * Published—Some kinds of changes might be made to an object in this state, in which case `has_unpublished_changes` will be true. Also, some kinds of changes are not permitted. Generally, any change that would invalidate or cause new restrictions on existing metadata related to the label are rejected. * Disabled—When disabled, the configured `DisabledPolicy` takes effect.
+	Lifecycle *GoogleAppsDriveLabelsV2LifecycleInput `json:"lifecycle,omitempty"`
+	// Basic properties of the label.
+	Properties *GoogleAppsDriveLabelsV2LabelProperties `json:"properties,omitempty"`
+	// Information about a user.
+	Publisher *GoogleAppsDriveLabelsV2UserInfo `json:"publisher,omitempty"`
+	// Information about a user.
+	RevisionCreator *GoogleAppsDriveLabelsV2UserInfo `json:"revisionCreator,omitempty"`
 	// The capabilities related to this label when editing the label.
 	SchemaCapabilities *GoogleAppsDriveLabelsV2LabelSchemaCapabilities `json:"schemaCapabilities,omitempty"`
 }

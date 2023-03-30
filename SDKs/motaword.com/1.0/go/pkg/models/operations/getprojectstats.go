@@ -8,7 +8,7 @@ import (
 )
 
 type GetProjectStatsResponse struct {
-	// User stats for client and vendors
+	// Project statistics for your account
 	ClientProjectStats *shared.ClientProjectStats
 	ContentType        string
 	// UserNotFound

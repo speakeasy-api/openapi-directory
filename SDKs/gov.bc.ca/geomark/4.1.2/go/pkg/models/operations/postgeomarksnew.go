@@ -98,6 +98,7 @@ const (
 	PostGeomarksNewRequestBodyFormatEnumShpz    PostGeomarksNewRequestBodyFormatEnum = "shpz"
 	PostGeomarksNewRequestBodyFormatEnumGeojson PostGeomarksNewRequestBodyFormatEnum = "geojson"
 	PostGeomarksNewRequestBodyFormatEnumGml     PostGeomarksNewRequestBodyFormatEnum = "gml"
+	PostGeomarksNewRequestBodyFormatEnumGpkg    PostGeomarksNewRequestBodyFormatEnum = "gpkg"
 	PostGeomarksNewRequestBodyFormatEnumWkt     PostGeomarksNewRequestBodyFormatEnum = "wkt"
 )
 
@@ -122,6 +123,8 @@ func (e *PostGeomarksNewRequestBodyFormatEnum) UnmarshalJSON(data []byte) error 
 	case "geojson":
 		fallthrough
 	case "gml":
+		fallthrough
+	case "gpkg":
 		fallthrough
 	case "wkt":
 		*e = PostGeomarksNewRequestBodyFormatEnum(s)
@@ -167,6 +170,7 @@ const (
 	PostGeomarksNewRequestBodyResultFormatEnumShpz    PostGeomarksNewRequestBodyResultFormatEnum = "shpz"
 	PostGeomarksNewRequestBodyResultFormatEnumGeojson PostGeomarksNewRequestBodyResultFormatEnum = "geojson"
 	PostGeomarksNewRequestBodyResultFormatEnumGml     PostGeomarksNewRequestBodyResultFormatEnum = "gml"
+	PostGeomarksNewRequestBodyResultFormatEnumGpkg    PostGeomarksNewRequestBodyResultFormatEnum = "gpkg"
 	PostGeomarksNewRequestBodyResultFormatEnumWkt     PostGeomarksNewRequestBodyResultFormatEnum = "wkt"
 )
 
@@ -191,6 +195,8 @@ func (e *PostGeomarksNewRequestBodyResultFormatEnum) UnmarshalJSON(data []byte) 
 	case "geojson":
 		fallthrough
 	case "gml":
+		fallthrough
+	case "gpkg":
 		fallthrough
 	case "wkt":
 		*e = PostGeomarksNewRequestBodyResultFormatEnum(s)

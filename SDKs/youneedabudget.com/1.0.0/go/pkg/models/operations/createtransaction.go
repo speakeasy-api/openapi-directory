@@ -15,7 +15,7 @@ type CreateTransactionPathParams struct {
 type CreateTransactionRequest struct {
 	PathParams CreateTransactionPathParams
 	// The transaction or transactions to create.  To create a single transaction you can specify a value for the `transaction` object and to create multiple transactions you can specify an array of `transactions`.  It is expected that you will only provide a value for one of these objects.
-	Request shared.SaveTransactionsWrapper `request:"mediaType=application/json"`
+	Request shared.PostTransactionsWrapper `request:"mediaType=application/json"`
 }
 
 type CreateTransactionResponse struct {

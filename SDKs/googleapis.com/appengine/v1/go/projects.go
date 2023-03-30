@@ -31,6 +31,61 @@ func newProjects(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
+// AppengineProjectsLocationsApplicationsCreate - Creates an App Engine application for a Google Cloud Platform project. Required fields: id - The ID of the target Cloud Platform project. location - The region (https://cloud.google.com/appengine/docs/locations) where you want the App Engine application located.For more information about App Engine applications, see Managing Projects, Applications, and Billing (https://cloud.google.com/appengine/docs/standard/python/console/).
+func (s *projects) AppengineProjectsLocationsApplicationsCreate(ctx context.Context, request operations.AppengineProjectsLocationsApplicationsCreateRequest) (*operations.AppengineProjectsLocationsApplicationsCreateResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/v1/projects/{projectsId}/locations/{locationsId}/applications", request.PathParams, nil)
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.AppengineProjectsLocationsApplicationsCreateResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.Operation
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Operation = out
+		}
+	}
+
+	return res, nil
+}
+
 // AppengineProjectsLocationsApplicationsGet - Gets information about an application.
 func (s *projects) AppengineProjectsLocationsApplicationsGet(ctx context.Context, request operations.AppengineProjectsLocationsApplicationsGetRequest) (*operations.AppengineProjectsLocationsApplicationsGetResponse, error) {
 	baseURL := s.serverURL

@@ -32,9 +32,9 @@ func newDevice(defaultClient, securityClient HTTPClient, serverURL, language, sd
 	}
 }
 
-// DetectDeviceDetectPost - Detect iot device by service banners and mac address
+// DetectDevice - Detect iot device by service banners and mac address
 // Use device service banners and mac address captured by your network port scanner, vulnerability assessment or asset discovery tools to detect device maker, model and firmware information
-func (s *device) DetectDeviceDetectPost(ctx context.Context, request operations.DetectDeviceDetectPostRequest) (*operations.DetectDeviceDetectPostResponse, error) {
+func (s *device) DetectDevice(ctx context.Context, request operations.DetectDeviceRequest) (*operations.DetectDeviceResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/device/detect"
 
@@ -66,7 +66,7 @@ func (s *device) DetectDeviceDetectPost(ctx context.Context, request operations.
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.DetectDeviceDetectPostResponse{
+	res := &operations.DetectDeviceResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

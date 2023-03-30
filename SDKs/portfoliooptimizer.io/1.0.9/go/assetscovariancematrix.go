@@ -33,9 +33,9 @@ func newAssetsCovarianceMatrix(defaultClient, securityClient HTTPClient, serverU
 
 // PostAssetsCovarianceMatrix - Covariance Matrix
 // Compute the covariance matrix of assets from either:
-// * The assets correlation matrix and their volatilities (i.e., standard deviations)
-// * The assets correlation matrix and their variances
-// * The assets returns
+// * The asset correlation matrix and their volatilities (i.e., standard deviations)
+// * The asset correlation matrix and their variances
+// * The asset returns
 //
 // References
 // * [Wikipedia, Covariance Matrix](https://en.wikipedia.org/wiki/Covariance_matrix)
@@ -92,16 +92,14 @@ func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrix(ctx context.Context,
 	return res, nil
 }
 
-// PostAssetsCovarianceMatrixSample - Sample Covariance Matrix
-// Compute the sample covariance matrix of assets returns.
-//
-// > This endpoint is similar to the endpoint [`/assets/covariance/matrix`](#post-/assets/covariance/matrix), but uses [Bessel's correction](https://en.wikipedia.org/wiki/Bessel%27s_correction) to compute the covariance matrix.
+// PostAssetsCovarianceMatrixEffectiveRank - Covariance Matrix Effective Rank
+// Compute the effective rank of an asset covariance matrix.
 //
 // References
-// * [Wikipedia, Sample Mean and Covariance](https://en.wikipedia.org/wiki/Sample_mean_and_covariance)
-func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixSample(ctx context.Context, request operations.PostAssetsCovarianceMatrixSampleRequest) (*operations.PostAssetsCovarianceMatrixSampleResponse, error) {
+// * [Olivier Roy and Martin Vetterli, The effective rank: A measure of effective dimensionality, 15th European Signal Processing Conference, 2007](https://ieeexplore.ieee.org/document/7098875)
+func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixEffectiveRank(ctx context.Context, request operations.PostAssetsCovarianceMatrixEffectiveRankRequest) (*operations.PostAssetsCovarianceMatrixEffectiveRankResponse, error) {
 	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/assets/covariance/matrix/sample"
+	url := strings.TrimSuffix(baseURL, "/") + "/assets/covariance/matrix/effective-rank"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -131,7 +129,7 @@ func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixSample(ctx context.Co
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostAssetsCovarianceMatrixSampleResponse{
+	res := &operations.PostAssetsCovarianceMatrixEffectiveRankResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -140,12 +138,70 @@ func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixSample(ctx context.Co
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.PostAssetsCovarianceMatrixSample200ApplicationJSON
+			var out *operations.PostAssetsCovarianceMatrixEffectiveRank200ApplicationJSON
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PostAssetsCovarianceMatrixSample200ApplicationJSONObject = out
+			res.PostAssetsCovarianceMatrixEffectiveRank200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostAssetsCovarianceMatrixExponentiallyWeighted - Exponentially Weighted Covariance Matrix
+// Compute an exponentially weighted covariance matrix of assets returns.
+//
+// References
+// * [RiskMetrics Group. Longerstaey, J. (1996). RiskMetrics technical document, Technical Report fourth edition](https://www.msci.com/documents/10199/5915b101-4206-4ba0-aee2-3449d5c7e95a)
+func (s *assetsCovarianceMatrix) PostAssetsCovarianceMatrixExponentiallyWeighted(ctx context.Context, request operations.PostAssetsCovarianceMatrixExponentiallyWeightedRequest) (*operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/assets/covariance/matrix/exponentially-weighted"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostAssetsCovarianceMatrixExponentiallyWeightedResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostAssetsCovarianceMatrixExponentiallyWeighted200ApplicationJSONObject = out
 		}
 	}
 

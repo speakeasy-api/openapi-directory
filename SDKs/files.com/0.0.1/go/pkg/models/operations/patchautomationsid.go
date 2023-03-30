@@ -25,6 +25,8 @@ const (
 	PatchAutomationsIDRequestBodyAutomationEnumDeleteFile     PatchAutomationsIDRequestBodyAutomationEnum = "delete_file"
 	PatchAutomationsIDRequestBodyAutomationEnumCopyFile       PatchAutomationsIDRequestBodyAutomationEnum = "copy_file"
 	PatchAutomationsIDRequestBodyAutomationEnumMoveFile       PatchAutomationsIDRequestBodyAutomationEnum = "move_file"
+	PatchAutomationsIDRequestBodyAutomationEnumAs2Send        PatchAutomationsIDRequestBodyAutomationEnum = "as2_send"
+	PatchAutomationsIDRequestBodyAutomationEnumRunSync        PatchAutomationsIDRequestBodyAutomationEnum = "run_sync"
 )
 
 func (e *PatchAutomationsIDRequestBodyAutomationEnum) UnmarshalJSON(data []byte) error {
@@ -46,6 +48,10 @@ func (e *PatchAutomationsIDRequestBodyAutomationEnum) UnmarshalJSON(data []byte)
 	case "copy_file":
 		fallthrough
 	case "move_file":
+		fallthrough
+	case "as2_send":
+		fallthrough
+	case "run_sync":
 		*e = PatchAutomationsIDRequestBodyAutomationEnum(s)
 		return nil
 	default:
@@ -91,7 +97,9 @@ func (e *PatchAutomationsIDRequestBodyTriggerEnum) UnmarshalJSON(data []byte) er
 
 type PatchAutomationsIDRequestBody struct {
 	// Automation type
-	Automation PatchAutomationsIDRequestBodyAutomationEnum `multipartForm:"name=automation"`
+	Automation *PatchAutomationsIDRequestBodyAutomationEnum `multipartForm:"name=automation"`
+	// Description for the this Automation.
+	Description *string `multipartForm:"name=description"`
 	// DEPRECATED: Destination Path. Use `destinations` instead.
 	Destination *string `multipartForm:"name=destination"`
 	// If set, this string in the destination path will be replaced with the value in `destination_replace_to`.
@@ -100,20 +108,24 @@ type PatchAutomationsIDRequestBody struct {
 	DestinationReplaceTo *string `multipartForm:"name=destination_replace_to"`
 	// A list of String destination paths or Hash of folder_path and optional file_path.
 	Destinations []string `multipartForm:"name=destinations"`
+	// If true, this automation will not run.
+	Disabled *bool `multipartForm:"name=disabled"`
 	// A list of group IDs the automation is associated with. If sent as a string, it should be comma-delimited.
 	GroupIds *string `multipartForm:"name=group_ids"`
 	// How often to run this automation? One of: `day`, `week`, `week_end`, `month`, `month_end`, `quarter`, `quarter_end`, `year`, `year_end`
 	Interval *string `multipartForm:"name=interval"`
+	// Name for this automation.
+	Name *string `multipartForm:"name=name"`
 	// Path on which this Automation runs.  Supports globs.
 	Path *string `multipartForm:"name=path"`
 	// Custom schedule for running this automation.
 	Schedule map[string]interface{} `multipartForm:"name=schedule,json"`
 	// Source Path
 	Source *string `multipartForm:"name=source"`
+	// A list of sync IDs the automation is associated with. If sent as a string, it should be comma-delimited.
+	SyncIds *string `multipartForm:"name=sync_ids"`
 	// How this automation is triggered to run. One of: `realtime`, `daily`, `custom_schedule`, `webhook`, `email`, or `action`.
 	Trigger *PatchAutomationsIDRequestBodyTriggerEnum `multipartForm:"name=trigger"`
-	// If trigger is `action`, this is the path to watch for the specified trigger actions.
-	TriggerActionPath *string `multipartForm:"name=trigger_action_path"`
 	// If trigger is `action`, this is the list of action types on which to trigger the automation. Valid actions are create, read, update, destroy, move, copy
 	TriggerActions []string `multipartForm:"name=trigger_actions"`
 	// A list of user IDs the automation is associated with. If sent as a string, it should be comma-delimited.
@@ -124,7 +136,7 @@ type PatchAutomationsIDRequestBody struct {
 
 type PatchAutomationsIDRequest struct {
 	PathParams PatchAutomationsIDPathParams
-	Request    PatchAutomationsIDRequestBody `request:"mediaType=multipart/form-data"`
+	Request    *PatchAutomationsIDRequestBody `request:"mediaType=multipart/form-data"`
 }
 
 type PatchAutomationsIDResponse struct {

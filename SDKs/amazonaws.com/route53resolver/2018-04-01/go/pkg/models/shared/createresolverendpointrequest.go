@@ -3,10 +3,11 @@
 package shared
 
 type CreateResolverEndpointRequest struct {
-	CreatorRequestID string                        `json:"CreatorRequestId"`
-	Direction        ResolverEndpointDirectionEnum `json:"Direction"`
-	IPAddresses      []IPAddressRequest            `json:"IpAddresses"`
-	Name             *string                       `json:"Name,omitempty"`
-	SecurityGroupIds []string                      `json:"SecurityGroupIds"`
-	Tags             []Tag                         `json:"Tags,omitempty"`
+	CreatorRequestID     string                        `json:"CreatorRequestId"`
+	Direction            ResolverEndpointDirectionEnum `json:"Direction"`
+	IPAddresses          []IPAddressRequest            `json:"IpAddresses"`
+	Name                 *string                       `json:"Name,omitempty"`
+	ResolverEndpointType *ResolverEndpointTypeEnum     `json:"ResolverEndpointType,omitempty"`
+	SecurityGroupIds     []string                      `json:"SecurityGroupIds"`
+	Tags                 []Tag                         `json:"Tags,omitempty"`
 }

@@ -83,8 +83,6 @@ type SearchTasksForWorkspaceQueryParams struct {
 	// Comma-separated list of user identifiers
 	AssigneeNot *string `queryParam:"style=form,explode=true,name=assignee.not"`
 	// Comma-separated list of user identifiers
-	CommentedOnByAny *string `queryParam:"style=form,explode=true,name=commented_on_by.any"`
-	// Comma-separated list of user identifiers
 	CommentedOnByNot *string `queryParam:"style=form,explode=true,name=commented_on_by.not"`
 	// Filter to completed tasks
 	Completed *bool `queryParam:"style=form,explode=true,name=completed"`
@@ -123,8 +121,6 @@ type SearchTasksForWorkspaceQueryParams struct {
 	// ISO 8601 date string
 	DueOnBefore *types.Date `queryParam:"style=form,explode=true,name=due_on.before"`
 	// Comma-separated list of user identifiers
-	FollowersAny *string `queryParam:"style=form,explode=true,name=followers.any"`
-	// Comma-separated list of user identifiers
 	FollowersNot *string `queryParam:"style=form,explode=true,name=followers.not"`
 	// Filter to tasks with attachments
 	HasAttachment *bool `queryParam:"style=form,explode=true,name=has_attachment"`
@@ -134,8 +130,6 @@ type SearchTasksForWorkspaceQueryParams struct {
 	IsBlocking *bool `queryParam:"style=form,explode=true,name=is_blocking"`
 	// Filter to subtasks
 	IsSubtask *bool `queryParam:"style=form,explode=true,name=is_subtask"`
-	// Comma-separated list of user identifiers
-	LikedByAny *string `queryParam:"style=form,explode=true,name=liked_by.any"`
 	// Comma-separated list of user identifiers
 	LikedByNot *string `queryParam:"style=form,explode=true,name=liked_by.not"`
 	// ISO 8601 datetime string

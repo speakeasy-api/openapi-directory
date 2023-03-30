@@ -10,4 +10,6 @@ type GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse struct {
 	PhoneAuthInfo *GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneResponseInfo `json:"phoneAuthInfo,omitempty"`
 	// Refresh token updated to reflect MFA enrollment.
 	RefreshToken *string `json:"refreshToken,omitempty"`
+	// Mfa response info specific to TOTP auth for FinalizeMfa.
+	TotpAuthInfo map[string]interface{} `json:"totpAuthInfo,omitempty"`
 }

@@ -46,12 +46,12 @@ pkg/models/shared/servicemetricstask.go
 pkg/models/shared/customerservicemetrictaskcollection.go
 pkg/models/shared/createinventorytaskrequest.go
 pkg/models/shared/inventoryfiltercriteria.go
-pkg/models/shared/daterange.go
 pkg/models/shared/inventorytask.go
 pkg/models/shared/uploadsummary.go
 pkg/models/shared/inventorytaskcollection.go
 pkg/models/shared/createordertaskrequest.go
 pkg/models/shared/orderfiltercriteria.go
+pkg/models/shared/daterange.go
 pkg/models/shared/ordertask.go
 pkg/models/shared/ordertaskcollection.go
 pkg/models/shared/createuserschedulerequest.go

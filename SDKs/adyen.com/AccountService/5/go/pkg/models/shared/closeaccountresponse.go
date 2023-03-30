@@ -50,5 +50,5 @@ type CloseAccountResponse struct {
 	ResultCode *string `json:"resultCode,omitempty"`
 	// The new status of the account.
 	// >Permitted values: `Active`, `Inactive`, `Suspended`, `Closed`.
-	Status CloseAccountResponseStatusEnum `json:"status"`
+	Status *CloseAccountResponseStatusEnum `json:"status,omitempty"`
 }

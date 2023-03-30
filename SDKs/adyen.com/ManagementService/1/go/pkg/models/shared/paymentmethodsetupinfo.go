@@ -43,12 +43,15 @@ func (e *PaymentMethodSetupInfoShopperInteractionEnum) UnmarshalJSON(data []byte
 type PaymentMethodSetupInfoTypeEnum string
 
 const (
+	PaymentMethodSetupInfoTypeEnumAfterpaytouch   PaymentMethodSetupInfoTypeEnum = "afterpaytouch"
 	PaymentMethodSetupInfoTypeEnumAlipay          PaymentMethodSetupInfoTypeEnum = "alipay"
+	PaymentMethodSetupInfoTypeEnumAlipayHk        PaymentMethodSetupInfoTypeEnum = "alipay_hk"
 	PaymentMethodSetupInfoTypeEnumAmex            PaymentMethodSetupInfoTypeEnum = "amex"
 	PaymentMethodSetupInfoTypeEnumApplepay        PaymentMethodSetupInfoTypeEnum = "applepay"
 	PaymentMethodSetupInfoTypeEnumBcmc            PaymentMethodSetupInfoTypeEnum = "bcmc"
 	PaymentMethodSetupInfoTypeEnumBlik            PaymentMethodSetupInfoTypeEnum = "blik"
 	PaymentMethodSetupInfoTypeEnumCartebancaire   PaymentMethodSetupInfoTypeEnum = "cartebancaire"
+	PaymentMethodSetupInfoTypeEnumClearpay        PaymentMethodSetupInfoTypeEnum = "clearpay"
 	PaymentMethodSetupInfoTypeEnumCup             PaymentMethodSetupInfoTypeEnum = "cup"
 	PaymentMethodSetupInfoTypeEnumDiners          PaymentMethodSetupInfoTypeEnum = "diners"
 	PaymentMethodSetupInfoTypeEnumDirectEbanking  PaymentMethodSetupInfoTypeEnum = "directEbanking"
@@ -77,10 +80,12 @@ const (
 	PaymentMethodSetupInfoTypeEnumMealVoucherFr   PaymentMethodSetupInfoTypeEnum = "mealVoucher_FR"
 	PaymentMethodSetupInfoTypeEnumMobilepay       PaymentMethodSetupInfoTypeEnum = "mobilepay"
 	PaymentMethodSetupInfoTypeEnumMultibanco      PaymentMethodSetupInfoTypeEnum = "multibanco"
+	PaymentMethodSetupInfoTypeEnumOnlineBankingPl PaymentMethodSetupInfoTypeEnum = "onlineBanking_PL"
 	PaymentMethodSetupInfoTypeEnumPaypal          PaymentMethodSetupInfoTypeEnum = "paypal"
 	PaymentMethodSetupInfoTypeEnumPayshop         PaymentMethodSetupInfoTypeEnum = "payshop"
 	PaymentMethodSetupInfoTypeEnumSwish           PaymentMethodSetupInfoTypeEnum = "swish"
 	PaymentMethodSetupInfoTypeEnumTrustly         PaymentMethodSetupInfoTypeEnum = "trustly"
+	PaymentMethodSetupInfoTypeEnumVipps           PaymentMethodSetupInfoTypeEnum = "vipps"
 	PaymentMethodSetupInfoTypeEnumVisa            PaymentMethodSetupInfoTypeEnum = "visa"
 	PaymentMethodSetupInfoTypeEnumVisadebit       PaymentMethodSetupInfoTypeEnum = "visadebit"
 	PaymentMethodSetupInfoTypeEnumVpay            PaymentMethodSetupInfoTypeEnum = "vpay"
@@ -94,7 +99,11 @@ func (e *PaymentMethodSetupInfoTypeEnum) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	switch s {
+	case "afterpaytouch":
+		fallthrough
 	case "alipay":
+		fallthrough
+	case "alipay_hk":
 		fallthrough
 	case "amex":
 		fallthrough
@@ -105,6 +114,8 @@ func (e *PaymentMethodSetupInfoTypeEnum) UnmarshalJSON(data []byte) error {
 	case "blik":
 		fallthrough
 	case "cartebancaire":
+		fallthrough
+	case "clearpay":
 		fallthrough
 	case "cup":
 		fallthrough
@@ -162,6 +173,8 @@ func (e *PaymentMethodSetupInfoTypeEnum) UnmarshalJSON(data []byte) error {
 		fallthrough
 	case "multibanco":
 		fallthrough
+	case "onlineBanking_PL":
+		fallthrough
 	case "paypal":
 		fallthrough
 	case "payshop":
@@ -169,6 +182,8 @@ func (e *PaymentMethodSetupInfoTypeEnum) UnmarshalJSON(data []byte) error {
 	case "swish":
 		fallthrough
 	case "trustly":
+		fallthrough
+	case "vipps":
 		fallthrough
 	case "visa":
 		fallthrough
@@ -214,5 +229,6 @@ type PaymentMethodSetupInfo struct {
 	StoreID *string    `json:"storeId,omitempty"`
 	Swish   *SwishInfo `json:"swish,omitempty"`
 	// Payment method [variant](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api).
-	Type *PaymentMethodSetupInfoTypeEnum `json:"type,omitempty"`
+	Type  *PaymentMethodSetupInfoTypeEnum `json:"type,omitempty"`
+	Vipps *VippsInfo                      `json:"vipps,omitempty"`
 }

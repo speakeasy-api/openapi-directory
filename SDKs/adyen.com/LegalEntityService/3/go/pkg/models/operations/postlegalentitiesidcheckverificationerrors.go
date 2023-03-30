@@ -19,7 +19,6 @@ type PostLegalEntitiesIDCheckVerificationErrorsPathParams struct {
 
 type PostLegalEntitiesIDCheckVerificationErrorsRequest struct {
 	PathParams PostLegalEntitiesIDCheckVerificationErrorsPathParams
-	Request    []byte `request:"mediaType=application/json"`
 	Security   PostLegalEntitiesIDCheckVerificationErrorsSecurity
 }
 

@@ -15,6 +15,7 @@ pkg/utils/utils.go
 pkg/models/operations/vpcaccessprojectslocationsconnectorscreate.go
 pkg/models/operations/vpcaccessprojectslocationsconnectorsdelete.go
 pkg/models/operations/vpcaccessprojectslocationsconnectorslist.go
+pkg/models/operations/vpcaccessprojectslocationsconnectorspatch.go
 pkg/models/operations/vpcaccessprojectslocationslist.go
 pkg/models/operations/vpcaccessprojectslocationsoperationsget.go
 pkg/models/operations/vpcaccessprojectslocationsoperationslist.go

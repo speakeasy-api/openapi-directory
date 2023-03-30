@@ -34,7 +34,7 @@ type GetTeamRequest struct {
 	QueryParams GetTeamQueryParams
 }
 
-// GetTeam200ApplicationJSON - Successsfully retrieved the record for a single team.
+// GetTeam200ApplicationJSON - Successfully retrieved the record for a single team.
 type GetTeam200ApplicationJSON struct {
 	Data *shared.TeamResponse `json:"data,omitempty"`
 }
@@ -45,6 +45,6 @@ type GetTeamResponse struct {
 	ErrorResponse *shared.ErrorResponse
 	StatusCode    int
 	RawResponse   *http.Response
-	// Successsfully retrieved the record for a single team.
+	// Successfully retrieved the record for a single team.
 	GetTeam200ApplicationJSONObject *GetTeam200ApplicationJSON
 }

@@ -64,6 +64,8 @@ func (e *GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum) Unmars
 type GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig struct {
 	// A list of usable second factors for this project.
 	EnabledProviders []GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigEnabledProvidersEnum `json:"enabledProviders,omitempty"`
+	// A list of usable second factors for this project along with their configurations. This field does not support phone based MFA, for that use the 'enabled_providers' field.
+	ProviderConfigs []GoogleCloudIdentitytoolkitAdminV2ProviderConfig `json:"providerConfigs,omitempty"`
 	// Whether MultiFactor Authentication has been enabled for this project.
 	State *GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfigStateEnum `json:"state,omitempty"`
 }

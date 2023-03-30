@@ -7,9 +7,19 @@ import (
 	"openapi/pkg/models/shared"
 )
 
-type SasportalInstallerGenerateSecretSecurity struct {
+type SasportalInstallerGenerateSecretSecurityOption1 struct {
 	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
 	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type SasportalInstallerGenerateSecretSecurityOption2 struct {
+	Oauth2  shared.SchemeOauth2  `security:"scheme,type=oauth2"`
+	Oauth2c shared.SchemeOauth2c `security:"scheme,type=oauth2"`
+}
+
+type SasportalInstallerGenerateSecretSecurity struct {
+	Option1 *SasportalInstallerGenerateSecretSecurityOption1 `security:"option"`
+	Option2 *SasportalInstallerGenerateSecretSecurityOption2 `security:"option"`
 }
 
 type SasportalInstallerGenerateSecretQueryParams struct {

@@ -62,7 +62,7 @@ type GetNetworksID200ApplicationJSONNetworkSubnets struct {
 	Gateway string `json:"gateway"`
 	// Range to allocate IPs from. Must be a Subnet of the ip_range of the parent network object and must not overlap with any other subnets or with any destinations in routes. Minimum Network size is /30. We suggest that you pick a bigger Network with a /24 netmask.
 	IPRange *string `json:"ip_range,omitempty"`
-	// Name of Network zone. Currently eu-central is the only available zone.
+	// Name of Network zone. The Location object contains the `network_zone` property each Location belongs to.
 	NetworkZone string `json:"network_zone"`
 	// Type of Subnetwork
 	Type GetNetworksID200ApplicationJSONNetworkSubnetsTypeEnum `json:"type"`

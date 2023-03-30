@@ -3,5 +3,7 @@
 package shared
 
 type CreateEnvironmentModel struct {
-	Name string `json:"name"`
+	Color       *string `json:"color,omitempty"`
+	Description *string `json:"description,omitempty"`
+	Name        string  `json:"name"`
 }

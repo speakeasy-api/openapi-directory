@@ -2,7 +2,7 @@
 
 package shared
 
-// DataCatalog - Contains information about a data catalog in an Amazon Web Services account.
+// DataCatalog - <p>Contains information about a data catalog in an Amazon Web Services account.</p> <note> <p>In the Athena console, data catalogs are listed as "data sources" on the <b>Data sources</b> page under the <b>Data source name</b> column.</p> </note>
 type DataCatalog struct {
 	Description *string             `json:"Description,omitempty"`
 	Name        string              `json:"Name"`

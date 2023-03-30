@@ -8,7 +8,9 @@ import (
 	"net/http"
 )
 
-// GetAddressesOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+// GetAddressesOutputFormatOutputFormatEnum - Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+//
+// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 type GetAddressesOutputFormatOutputFormatEnum string
 
 const (
@@ -48,11 +50,13 @@ func (e *GetAddressesOutputFormatOutputFormatEnum) UnmarshalJSON(data []byte) er
 }
 
 type GetAddressesOutputFormatPathParams struct {
-	// Results format. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputFormat target="_blank">outputFormat</a>
+	// Results format. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank">outputFormat</a>.
+	//
+	// Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
 	OutputFormat GetAddressesOutputFormatOutputFormatEnum `pathParam:"style=simple,explode=false,name=outputFormat"`
 }
 
-// GetAddressesOutputFormatInterpolationEnum - accessPoint interpolation method. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#interpolation target="_blank">interpolation</a>
+// GetAddressesOutputFormatInterpolationEnum - accessPoint interpolation method. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#interpolation target="_blank">interpolation</a>
 type GetAddressesOutputFormatInterpolationEnum string
 
 const (
@@ -79,7 +83,7 @@ func (e *GetAddressesOutputFormatInterpolationEnum) UnmarshalJSON(data []byte) e
 	}
 }
 
-// GetAddressesOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+// GetAddressesOutputFormatLocationDescriptorEnum - Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
 type GetAddressesOutputFormatLocationDescriptorEnum string
 
 const (
@@ -115,7 +119,7 @@ func (e *GetAddressesOutputFormatLocationDescriptorEnum) UnmarshalJSON(data []by
 	}
 }
 
-// GetAddressesOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+// GetAddressesOutputFormatOutputSrsEnum - The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 type GetAddressesOutputFormatOutputSrsEnum string
 
 const (
@@ -157,7 +161,7 @@ func (e *GetAddressesOutputFormatOutputSrsEnum) UnmarshalJSON(data []byte) error
 	}
 }
 
-// GetAddressesOutputFormatStreetDirectionEnum - The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#streetDirection target="_blank">streetDirection</a>
+// GetAddressesOutputFormatStreetDirectionEnum - The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#streetDirection target="_blank">streetDirection</a>
 type GetAddressesOutputFormatStreetDirectionEnum string
 
 const (
@@ -208,7 +212,7 @@ func (e *GetAddressesOutputFormatStreetDirectionEnum) UnmarshalJSON(data []byte)
 	}
 }
 
-// GetAddressesOutputFormatUnitDesignatorEnum - The type of unit within a house or building. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#unitDesignator target="_blank">unitDesignator</a>
+// GetAddressesOutputFormatUnitDesignatorEnum - The type of unit within a house or building. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#unitDesignator target="_blank">unitDesignator</a>
 type GetAddressesOutputFormatUnitDesignatorEnum string
 
 const (
@@ -275,63 +279,63 @@ func (e *GetAddressesOutputFormatUnitDesignatorEnum) UnmarshalJSON(data []byte) 
 }
 
 type GetAddressesOutputFormatQueryParams struct {
-	// Civic or intersection address as a single string. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#addressString target="_blank">addressString</a>
+	// Civic or intersection address as a single string. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#addressString target="_blank">addressString</a>
 	AddressString *string `queryParam:"style=form,explode=true,name=addressString"`
 	// If true, addressString is expected to contain a partial address that requires completion. Not supported for shp, csv, gml formats.
 	AutoComplete *bool `queryParam:"style=form,explode=true,name=autoComplete"`
-	// Example: -126.07929,49.7628,-126.0163,49.7907.  A bounding box (xmin,ymin,xmax,ymax) that limits the search area. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#bbox target="_blank">bbox</a>
+	// Example: -126.07929,49.7628,-126.0163,49.7907.  A bounding box (xmin,ymin,xmax,ymax) that limits the search area. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#bbox target="_blank">bbox</a>
 	Bbox *string `queryParam:"style=form,explode=true,name=bbox"`
 	// If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
 	Brief *bool `queryParam:"style=form,explode=true,name=brief"`
-	// Example: -124.0165926,49.2296251 .  The coordinates of a centre point (x,y) used to define a bounding circle that will limit the search area. This parameter must be specified together with 'maxDistance'. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#centre target='_blank'>centre</a>
+	// Example: -124.0165926,49.2296251 .  The coordinates of a centre point (x,y) used to define a bounding circle that will limit the search area. This parameter must be specified together with 'maxDistance'. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#centre target='_blank'>centre</a>
 	Centre *string `queryParam:"style=form,explode=true,name=centre"`
-	// The official number assigned to a site by an address authority. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#civicNumber target="_blank">civicNumber</a>
+	// The official number assigned to a site by an address authority. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#civicNumber target="_blank">civicNumber</a>
 	CivicNumber *string `queryParam:"style=form,explode=true,name=civicNumber"`
-	// A letter or fraction that follows the civic number (e.g., the A in 1039A Bledsoe St). See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#civicNumberSuffix target="_blank">civicNumberSuffix</a>
+	// A letter or fraction that follows the civic number (e.g., the A in 1039A Bledsoe St). See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#civicNumberSuffix target="_blank">civicNumberSuffix</a>
 	CivicNumberSuffix *string `queryParam:"style=form,explode=true,name=civicNumberSuffix"`
 	// If true, include unmatched address details such as site name in results.
 	Echo *bool `queryParam:"style=form,explode=true,name=echo"`
-	// If true, uses supplied parcelPoint to derive an appropriate accessPoint.           See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#extrapolate target="_blank">extrapolate</a>
+	// If true, uses supplied parcelPoint to derive an appropriate accessPoint.           See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#extrapolate target="_blank">extrapolate</a>
 	Extrapolate *bool `queryParam:"style=form,explode=true,name=extrapolate"`
-	// accessPoint interpolation method. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#interpolation target="_blank">interpolation</a>
+	// accessPoint interpolation method. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#interpolation target="_blank">interpolation</a>
 	Interpolation *GetAddressesOutputFormatInterpolationEnum `queryParam:"style=form,explode=true,name=interpolation"`
 	// A comma separated list of locality names that matched addresses must belong to. For example, setting localities to Nanaimo only returns addresses in Nanaimo
 	Localities *string `queryParam:"style=form,explode=true,name=localities"`
-	// The name of the locality assigned to a given site by an address authority. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#localityName target="_blank">localityName</a>
+	// The name of the locality assigned to a given site by an address authority. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#localityName target="_blank">localityName</a>
 	LocalityName *string `queryParam:"style=form,explode=true,name=localityName"`
-	// Describes the nature of the address location. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
+	// Describes the nature of the address location. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank">locationDescriptor</a>
 	LocationDescriptor *GetAddressesOutputFormatLocationDescriptorEnum `queryParam:"style=form,explode=true,name=locationDescriptor"`
-	// Example: street,locality.  A comma separated list of individual match precision levels to include in results. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#matchPrecision target="_blank">matchPrecision</a>
+	// Example: street,locality.  A comma separated list of individual match precision levels to include in results. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#matchPrecision target="_blank">matchPrecision</a>
 	MatchPrecision *string `queryParam:"style=form,explode=true,name=matchPrecision"`
-	// Example: street,locality.  A comma separated list of individual match precision levels to exclude from results. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#matchPrecisionNot target="_blank">matchPrecisionNot</a>
+	// Example: street,locality.  A comma separated list of individual match precision levels to exclude from results. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#matchPrecisionNot target="_blank">matchPrecisionNot</a>
 	MatchPrecisionNot *string `queryParam:"style=form,explode=true,name=matchPrecisionNot"`
 	// The maximum distance (in metres) to search from the given point.  If not specified, the search distance is unlimited.
 	MaxDistance *float64 `queryParam:"style=form,explode=true,name=maxDistance"`
 	// The maximum number of search results to return.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`
-	// The minimum score required for a match to be returned. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#minScore target="_blank">minScore</a>
+	// The minimum score required for a match to be returned. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#minScore target="_blank">minScore</a>
 	MinScore *int64 `queryParam:"style=form,explode=true,name=minScore"`
 	// A comma-separated list of localities to exclude from the search.
 	NotLocalities *string `queryParam:"style=form,explode=true,name=notLocalities"`
-	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS target="_blank">outputSRS</a>
+	// The EPSG code of the spatial reference system (SRS) to use for output geometries. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank">outputSRS</a>
 	OutputSRS *GetAddressesOutputFormatOutputSrsEnum `queryParam:"style=form,explode=true,name=outputSRS"`
-	// The coordinates of a point (x,y) known to be inside the parcel containing a given address. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#parcelPoint target="_blank">parcelPoint</a>
+	// The coordinates of a point (x,y) known to be inside the parcel containing a given address. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#parcelPoint target="_blank">parcelPoint</a>
 	ParcelPoint *string `queryParam:"style=form,explode=true,name=parcelPoint"`
 	// The ISO 3166-2 Sub-Country Code. The code for British Columbia is BC.
 	ProvinceCode *string `queryParam:"style=form,explode=true,name=provinceCode"`
 	// The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
 	SetBack *int64 `queryParam:"style=form,explode=true,name=setBack"`
-	// A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House).See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#siteName target="_blank">siteName</a>
+	// A string containing the name of the building, facility, or institution (e.g., Duck Building, Casa Del Mar, Crystal Garden, Bluebird House).See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#siteName target="_blank">siteName</a>
 	SiteName *string `queryParam:"style=form,explode=true,name=siteName"`
-	// The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#streetDirection target="_blank">streetDirection</a>
+	// The abbreviated compass direction as defined by Canada Post and B.C. civic addressing authorities. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#streetDirection target="_blank">streetDirection</a>
 	StreetDirection *GetAddressesOutputFormatStreetDirectionEnum `queryParam:"style=form,explode=true,name=streetDirection"`
-	// The official name of the street as assigned by an address authority (e.g., the Douglas in 1175 Douglas Street). See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#streetName target="_blank">streetName</a>
+	// The official name of the street as assigned by an address authority (e.g., the Douglas in 1175 Douglas Street). See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#streetName target="_blank">streetName</a>
 	StreetName *string `queryParam:"style=form,explode=true,name=streetName"`
-	// Example: the Bridge in Johnson St Bridge. The qualifier of a street name. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#streetQualifier target="_blank">streetQualifier</a>
+	// Example: the Bridge in Johnson St Bridge. The qualifier of a street name. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#streetQualifier target="_blank">streetQualifier</a>
 	StreetQualifier *string `queryParam:"style=form,explode=true,name=streetQualifier"`
-	// The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS St). See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#streetType target="_blank">streetType</a>
+	// The type of street as assigned by a municipality (e.g., the ST in 1175 DOUGLAS St). See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#streetType target="_blank">streetType</a>
 	StreetType *string `queryParam:"style=form,explode=true,name=streetType"`
-	// The type of unit within a house or building. See <a href=https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#unitDesignator target="_blank">unitDesignator</a>
+	// The type of unit within a house or building. See <a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#unitDesignator target="_blank">unitDesignator</a>
 	UnitDesignator *GetAddressesOutputFormatUnitDesignatorEnum `queryParam:"style=form,explode=true,name=unitDesignator"`
 	// The number of the unit, suite, or apartment within a house or building.
 	UnitNumber *string `queryParam:"style=form,explode=true,name=unitNumber"`

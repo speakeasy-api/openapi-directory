@@ -4,7 +4,7 @@ package shared
 
 // Refinement - This type identifies a product category and the aspects associated with that category. Each aspect distribution container returns the distribution of values that have been used for the aspect.
 type Refinement struct {
-	// Contains information about one or more aspects that are associated with the category identified by dominantCategoryId.
+	// Contains information about one or more aspects that are associated with the category identified by <b>dominantCategoryId</b>.
 	AspectDistributions []AspectDistribution `json:"aspectDistributions,omitempty"`
 	// The ID of the category that eBay determines is most likely to cover the products matching the search criteria.
 	DominantCategoryID *string `json:"dominantCategoryId,omitempty"`

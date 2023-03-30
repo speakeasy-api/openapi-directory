@@ -231,9 +231,6 @@ func (s *automations) PatchAutomationsID(ctx context.Context, request operations
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
 	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
 
 	req, err := http.NewRequestWithContext(ctx, "PATCH", url, bodyReader)
 	if err != nil {
@@ -304,9 +301,6 @@ func (s *automations) PostAutomations(ctx context.Context, request operations.Po
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "multipart")
 	if err != nil {
 		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
 	}
 
 	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)

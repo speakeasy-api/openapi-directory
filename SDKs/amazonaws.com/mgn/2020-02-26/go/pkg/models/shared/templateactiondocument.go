@@ -7,8 +7,11 @@ type TemplateActionDocument struct {
 	ActionID              *string                                 `json:"actionID,omitempty"`
 	ActionName            *string                                 `json:"actionName,omitempty"`
 	Active                *bool                                   `json:"active,omitempty"`
+	Category              *ActionCategoryEnum                     `json:"category,omitempty"`
+	Description           *string                                 `json:"description,omitempty"`
 	DocumentIdentifier    *string                                 `json:"documentIdentifier,omitempty"`
 	DocumentVersion       *string                                 `json:"documentVersion,omitempty"`
+	ExternalParameters    map[string]SsmExternalParameter         `json:"externalParameters,omitempty"`
 	MustSucceedForCutover *bool                                   `json:"mustSucceedForCutover,omitempty"`
 	OperatingSystem       *string                                 `json:"operatingSystem,omitempty"`
 	Order                 *int64                                  `json:"order,omitempty"`

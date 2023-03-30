@@ -13,7 +13,7 @@ type Attachment struct {
 	Filename *string `json:"filename,omitempty"`
 	// Specifies which side of the ID card is uploaded.
 	//
-	// * When `type` is **driversLicense**, set this to **front** or **back**.
+	// * When `type` is **driversLicense** or **identityCard**, set this to **front** or **back**.
 	//
 	// * When omitted, we infer the page number based on the order of attachments.
 	PageType *string `json:"pageType,omitempty"`

@@ -19,9 +19,9 @@ import (
 //
 // * **instant**: Instant way to transfer funds in [SEPA countries](https://www.ecb.europa.eu/paym/integration/retail/sepa/html/index.en.html).
 //
-// * **crossBorder**: High value transfer to receipt in a different country.
+// * **crossBorder**: High-value transfer to a recipient in a different country.
 //
-// * **internal**: Bank transfers to a bank account held at Adyen (by bank account number/IBAN).
+// * **internal**: Transfer to an Adyen-issued business bank account (by bank account number/IBAN).
 type BankPriorityEnum string
 
 const (
@@ -73,8 +73,8 @@ type Bank struct {
 	//
 	// * **instant**: Instant way to transfer funds in [SEPA countries](https://www.ecb.europa.eu/paym/integration/retail/sepa/html/index.en.html).
 	//
-	// * **crossBorder**: High value transfer to receipt in a different country.
+	// * **crossBorder**: High-value transfer to a recipient in a different country.
 	//
-	// * **internal**: Bank transfers to a bank account held at Adyen (by bank account number/IBAN).
+	// * **internal**: Transfer to an Adyen-issued business bank account (by bank account number/IBAN).
 	Priority *BankPriorityEnum `json:"priority,omitempty"`
 }

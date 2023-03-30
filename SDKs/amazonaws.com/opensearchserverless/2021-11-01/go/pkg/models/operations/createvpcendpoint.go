@@ -56,6 +56,8 @@ type CreateVpcEndpointResponse struct {
 	InternalServerException interface{}
 	StatusCode              int
 	RawResponse             *http.Response
+	// ServiceQuotaExceededException
+	ServiceQuotaExceededException interface{}
 	// ValidationException
 	ValidationException interface{}
 }

@@ -15,7 +15,7 @@ type CreateAccountPathParams struct {
 type CreateAccountRequest struct {
 	PathParams CreateAccountPathParams
 	// The account to create.
-	Request shared.SaveAccountWrapper `request:"mediaType=application/json"`
+	Request shared.PostAccountWrapper `request:"mediaType=application/json"`
 }
 
 type CreateAccountResponse struct {

@@ -8,7 +8,7 @@ import (
 )
 
 type GetParentGoalsForGoalPathParams struct {
-	// Automatically added
+	// Globally unique identifier for the goal.
 	GoalGid string `pathParam:"style=simple,explode=false,name=goal_gid"`
 }
 

@@ -19,6 +19,7 @@ const (
 	GoogleCloudDocumentaiV1ProcessorVersionStateEnumCreating         GoogleCloudDocumentaiV1ProcessorVersionStateEnum = "CREATING"
 	GoogleCloudDocumentaiV1ProcessorVersionStateEnumDeleting         GoogleCloudDocumentaiV1ProcessorVersionStateEnum = "DELETING"
 	GoogleCloudDocumentaiV1ProcessorVersionStateEnumFailed           GoogleCloudDocumentaiV1ProcessorVersionStateEnum = "FAILED"
+	GoogleCloudDocumentaiV1ProcessorVersionStateEnumImporting        GoogleCloudDocumentaiV1ProcessorVersionStateEnum = "IMPORTING"
 )
 
 func (e *GoogleCloudDocumentaiV1ProcessorVersionStateEnum) UnmarshalJSON(data []byte) error {
@@ -42,6 +43,8 @@ func (e *GoogleCloudDocumentaiV1ProcessorVersionStateEnum) UnmarshalJSON(data []
 	case "DELETING":
 		fallthrough
 	case "FAILED":
+		fallthrough
+	case "IMPORTING":
 		*e = GoogleCloudDocumentaiV1ProcessorVersionStateEnum(s)
 		return nil
 	default:

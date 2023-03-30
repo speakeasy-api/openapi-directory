@@ -11,6 +11,7 @@ type AwsS3BucketDetails struct {
 	BucketVersioningConfiguration     *AwsS3BucketBucketVersioningConfiguration       `json:"BucketVersioningConfiguration,omitempty"`
 	BucketWebsiteConfiguration        *AwsS3BucketWebsiteConfiguration                `json:"BucketWebsiteConfiguration,omitempty"`
 	CreatedAt                         *string                                         `json:"CreatedAt,omitempty"`
+	ObjectLockConfiguration           *AwsS3BucketObjectLockConfiguration             `json:"ObjectLockConfiguration,omitempty"`
 	OwnerAccountID                    *string                                         `json:"OwnerAccountId,omitempty"`
 	OwnerID                           *string                                         `json:"OwnerId,omitempty"`
 	OwnerName                         *string                                         `json:"OwnerName,omitempty"`

@@ -35,7 +35,8 @@ func newPullrequests(defaultClient, securityClient HTTPClient, serverURL, langua
 	}
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Removes a default reviewer from the repository.
+// DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Remove a user from the default reviewers
+// Removes a default reviewer from the repository.
 func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers/{target_username}", request.PathParams, nil)
@@ -64,7 +65,10 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTarget
 		RawResponse: httpRes,
 	}
 	switch {
-	default:
+	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out map[string]interface{}
@@ -79,7 +83,8 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTarget
 	return res, nil
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove - Redact the authenticated user's approval of the specified pull
+// DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove - Unapprove a pull request
+// Redact the authenticated user's approval of the specified pull
 // request.
 func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveResponse, error) {
 	baseURL := s.serverURL
@@ -110,6 +115,8 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullReques
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 400:
+		fallthrough
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -127,7 +134,8 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullReques
 	return res, nil
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID - Deletes a specific pull request comment.
+// DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID - Delete a comment on a pull request
+// Deletes a specific pull request comment.
 func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}", request.PathParams, nil)
@@ -173,6 +181,8 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullReques
 
 	return res, nil
 }
+
+// DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges - Remove change request for a pull request
 func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/request-changes", request.PathParams, nil)
@@ -202,6 +212,8 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullReques
 	}
 	switch {
 	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 400:
+		fallthrough
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -219,7 +231,8 @@ func (s *pullrequests) DeleteRepositoriesWorkspaceRepoSlugPullrequestsPullReques
 	return res, nil
 }
 
-// GetPullrequestsForCommit - Returns a paginated list of all pull requests as part of which this commit was reviewed. Pull Request Commit Links app must be installed first before using this API; installation automatically occurs when 'Go to pull request' is clicked from the web interface for a commit's details.
+// GetPullrequestsForCommit - List pull requests that contain a commit
+// Returns a paginated list of all pull requests as part of which this commit was reviewed. Pull Request Commit Links app must be installed first before using this API; installation automatically occurs when 'Go to pull request' is clicked from the web interface for a commit's details.
 func (s *pullrequests) GetPullrequestsForCommit(ctx context.Context, request operations.GetPullrequestsForCommitRequest) (*operations.GetPullrequestsForCommitResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/commit/{commit}/pullrequests", request.PathParams, nil)
@@ -279,7 +292,8 @@ func (s *pullrequests) GetPullrequestsForCommit(ctx context.Context, request ope
 	return res, nil
 }
 
-// GetPullrequestsSelectedUser - Returns all pull requests authored by the specified user.
+// GetPullrequestsSelectedUser - List pull requests for a user
+// Returns all pull requests authored by the specified user.
 //
 // By default only open pull requests are returned. This can be controlled
 // using the `state` query parameter. To retrieve pull requests that are
@@ -287,7 +301,7 @@ func (s *pullrequests) GetPullrequestsForCommit(ctx context.Context, request ope
 // individual state.
 //
 // This endpoint also supports filtering and sorting of the results. See
-// [filtering and sorting](../../../../meta/filtering) for more details.
+// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
 func (s *pullrequests) GetPullrequestsSelectedUser(ctx context.Context, request operations.GetPullrequestsSelectedUserRequest) (*operations.GetPullrequestsSelectedUserResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/pullrequests/{selected_user}", request.PathParams, nil)
@@ -345,10 +359,13 @@ func (s *pullrequests) GetPullrequestsSelectedUser(ctx context.Context, request 
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugDefaultReviewers - Returns the repository's default reviewers.
+// GetRepositoriesWorkspaceRepoSlugDefaultReviewers - List default reviewers
+// Returns the repository's default reviewers.
 //
 // These are the users that are automatically added as reviewers on every
-// new pull request that is created.
+// new pull request that is created. To obtain the repository's default reviewers
+// as well as the default reviewers inherited from the project, use the
+// [effective-default-reveiwers](#api-repositories-workspace-repo-slug-effective-default-reviewers-get) endpoint.
 func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersRequest) (*operations.GetRepositoriesWorkspaceRepoSlugDefaultReviewersResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/default-reviewers", request.PathParams, nil)
@@ -378,12 +395,32 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewers(ctx cont
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedAccounts
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedAccounts = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
 	}
 
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Returns the specified reviewer.
+// GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Get a default reviewer
+// Returns the specified reviewer.
 //
 // This can be used to test whether a user is among the repository's
 // default reviewers list. A 404 indicates that that specified user is not
@@ -416,7 +453,19 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUse
 		RawResponse: httpRes,
 	}
 	switch {
-	default:
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Account = out
+		}
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out map[string]interface{}
@@ -431,7 +480,96 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUse
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequests - Returns all pull requests on the specified repository.
+// GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewers - List effective default reviewers
+// Returns the repository's effective default reviewers. This includes both default
+// reviewers defined at the repository level as well as those inherited from its project.
+//
+// These are the users that are automatically added as reviewers on every
+// new pull request that is created.
+//
+// ```
+// $ curl https://api.bitbucket.org/2.0/repositories/{workspace_slug}/{repo_slug}/effective-default-reviewers?page=1&pagelen=20
+//
+//	{
+//	    "pagelen": 20,
+//	    "values": [
+//	        {
+//	            "user": {
+//	                "display_name": "Patrick Wolf",
+//	                "uuid": "{9565301a-a3cf-4b5d-88f4-dd6af8078d7e}"
+//	            },
+//	            "reviewer_type": "project",
+//	            "type": "default_reviewer",
+//	        },
+//	        {
+//	            "user": {
+//	                "display_name": "Davis Lee",
+//	                "uuid": "{f0e0e8e9-66c1-4b85-a784-44a9eb9ef1a6}"
+//	            },
+//	            "reviewer_type": "repository",
+//	            "type": "default_reviewer",
+//	        }
+//	    ],
+//	    "page": 1,
+//	    "size": 2
+//	}
+//
+// ```
+func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewers(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersRequest) (*operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse, error) {
+	baseURL := s.serverURL
+	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/effective-default-reviewers", request.PathParams, nil)
+
+	req, err := http.NewRequestWithContext(ctx, "GET", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.GetRepositoriesWorkspaceRepoSlugEffectiveDefaultReviewersResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *shared.PaginatedDefaultReviewerAndType
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PaginatedDefaultReviewerAndType = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Error = out
+		}
+	}
+
+	return res, nil
+}
+
+// GetRepositoriesWorkspaceRepoSlugPullrequests - List pull requests
+// Returns all pull requests on the specified repository.
 //
 // By default only open pull requests are returned. This can be controlled
 // using the `state` query parameter. To retrieve pull requests that are
@@ -439,7 +577,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUse
 // individual state.
 //
 // This endpoint also supports filtering and sorting of the results. See
-// [filtering and sorting](../../../../meta/filtering) for more details.
+// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more details.
 func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests", request.PathParams, nil)
@@ -498,7 +636,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsActivity - Returns a paginated list of the pull request's activity log.
+// GetRepositoriesWorkspaceRepoSlugPullrequestsActivity - List a pull request activity log
+// Returns a paginated list of the pull request's activity log.
 //
 // This handler serves both a v20 and internal endpoint. The v20 endpoint
 // returns reviewer comments, updates, approvals and request changes. The internal
@@ -516,7 +655,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	            "comment": {
 //	                "links": {
 //	                    "self": {
-//	                        "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695/comments/118571088"
+//	                        "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695/comments/118571088"
 //	                    },
 //	                    "html": {
 //	                        "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695/_/diff#comment-118571088"
@@ -528,7 +667,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                    "id": 5695,
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                            "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -548,7 +687,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                    "uuid": "{}",
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+//	                            "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/%7B%7D/"
@@ -567,7 +706,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                    "uuid": "{}",
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+//	                            "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/%7B%7D/"
@@ -596,7 +735,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                "id": 5695,
 //	                "links": {
 //	                    "self": {
-//	                        "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                        "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                    },
 //	                    "html": {
 //	                        "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -628,7 +767,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                        "hash": "6a2c16e4a152",
 //	                        "links": {
 //	                            "self": {
-//	                                "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/commit/6a2c16e4a152"
+//	                                "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/commit/6a2c16e4a152"
 //	                            },
 //	                            "html": {
 //	                                "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/commits/6a2c16e4a152"
@@ -644,7 +783,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                        "full_name": "atlassian/atlaskit-mk-2",
 //	                        "links": {
 //	                            "self": {
-//	                                "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2"
+//	                                "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2"
 //	                            },
 //	                            "html": {
 //	                                "href": "https://bitbucket.org/atlassian/atlaskit-mk-2"
@@ -663,7 +802,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                        "hash": "728c8bad1813",
 //	                        "links": {
 //	                            "self": {
-//	                                "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/commit/728c8bad1813"
+//	                                "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/commit/728c8bad1813"
 //	                            },
 //	                            "html": {
 //	                                "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/commits/728c8bad1813"
@@ -679,7 +818,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                        "full_name": "atlassian/atlaskit-mk-2",
 //	                        "links": {
 //	                            "self": {
-//	                                "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2"
+//	                                "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2"
 //	                            },
 //	                            "html": {
 //	                                "href": "https://bitbucket.org/atlassian/atlaskit-mk-2"
@@ -697,7 +836,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                    "uuid": "{}",
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+//	                            "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/%7B%7D/"
@@ -717,7 +856,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                "id": 5695,
 //	                "links": {
 //	                    "self": {
-//	                        "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                        "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                    },
 //	                    "html": {
 //	                        "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -745,7 +884,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                    "id": 5695,
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                            "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -758,7 +897,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                    "uuid": "{}",
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+//	                            "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/%7B%7D/"
@@ -777,7 +916,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequests(ctx context.
 //	                "id": 5695,
 //	                "links": {
 //	                    "self": {
-//	                        "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                        "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                    },
 //	                    "html": {
 //	                        "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -836,7 +975,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsActivity(ctx 
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID - Returns the specified pull request.
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID - Get a pull request
+// Returns the specified pull request.
 func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}", request.PathParams, nil)
@@ -891,7 +1031,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDActivity - Returns a paginated list of the pull request's activity log.
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDActivity - List a pull request activity log
+// Returns a paginated list of the pull request's activity log.
 //
 // This handler serves both a v20 and internal endpoint. The v20 endpoint
 // returns reviewer comments, updates, approvals and request changes. The internal
@@ -909,7 +1050,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	            "comment": {
 //	                "links": {
 //	                    "self": {
-//	                        "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695/comments/118571088"
+//	                        "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695/comments/118571088"
 //	                    },
 //	                    "html": {
 //	                        "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695/_/diff#comment-118571088"
@@ -921,7 +1062,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                    "id": 5695,
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                            "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -941,7 +1082,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                    "uuid": "{}",
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+//	                            "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/%7B%7D/"
@@ -960,7 +1101,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                    "uuid": "{}",
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+//	                            "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/%7B%7D/"
@@ -989,7 +1130,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                "id": 5695,
 //	                "links": {
 //	                    "self": {
-//	                        "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                        "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                    },
 //	                    "html": {
 //	                        "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -1021,7 +1162,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                        "hash": "6a2c16e4a152",
 //	                        "links": {
 //	                            "self": {
-//	                                "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/commit/6a2c16e4a152"
+//	                                "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/commit/6a2c16e4a152"
 //	                            },
 //	                            "html": {
 //	                                "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/commits/6a2c16e4a152"
@@ -1037,7 +1178,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                        "full_name": "atlassian/atlaskit-mk-2",
 //	                        "links": {
 //	                            "self": {
-//	                                "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2"
+//	                                "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2"
 //	                            },
 //	                            "html": {
 //	                                "href": "https://bitbucket.org/atlassian/atlaskit-mk-2"
@@ -1056,7 +1197,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                        "hash": "728c8bad1813",
 //	                        "links": {
 //	                            "self": {
-//	                                "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/commit/728c8bad1813"
+//	                                "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/commit/728c8bad1813"
 //	                            },
 //	                            "html": {
 //	                                "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/commits/728c8bad1813"
@@ -1072,7 +1213,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                        "full_name": "atlassian/atlaskit-mk-2",
 //	                        "links": {
 //	                            "self": {
-//	                                "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2"
+//	                                "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2"
 //	                            },
 //	                            "html": {
 //	                                "href": "https://bitbucket.org/atlassian/atlaskit-mk-2"
@@ -1090,7 +1231,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                    "uuid": "{}",
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+//	                            "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/%7B%7D/"
@@ -1110,7 +1251,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                "id": 5695,
 //	                "links": {
 //	                    "self": {
-//	                        "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                        "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                    },
 //	                    "html": {
 //	                        "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -1138,7 +1279,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                    "id": 5695,
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                            "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -1151,7 +1292,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                    "uuid": "{}",
 //	                    "links": {
 //	                        "self": {
-//	                            "href": "https://bitbucket.org/!api/2.0/users/%7B%7D"
+//	                            "href": "https://api.bitbucket.org/2.0/users/%7B%7D"
 //	                        },
 //	                        "html": {
 //	                            "href": "https://bitbucket.org/%7B%7D/"
@@ -1170,7 +1311,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //	                "id": 5695,
 //	                "links": {
 //	                    "self": {
-//	                        "href": "https://bitbucket.org/!api/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
+//	                        "href": "https://api.bitbucket.org/2.0/repositories/atlassian/atlaskit-mk-2/pullrequests/5695"
 //	                    },
 //	                    "html": {
 //	                        "href": "https://bitbucket.org/atlassian/atlaskit-mk-2/pull-requests/5695"
@@ -1229,7 +1370,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments - Returns a paginated list of the pull request's comments.
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments - List comments on a pull request
+// Returns a paginated list of the pull request's comments.
 //
 // This includes both global, inline comments and replies.
 //
@@ -1237,7 +1379,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 // the `sort` query parameter.
 //
 // This endpoint also supports filtering and sorting of the results. See
-// [filtering and sorting](../../../../../../meta/filtering) for more
+// [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
 // details.
 func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsResponse, error) {
 	baseURL := s.serverURL
@@ -1294,7 +1436,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID - Returns a specific pull request comment.
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID - Get a comment on a pull request
+// Returns a specific pull request comment.
 func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}", request.PathParams, nil)
@@ -1350,7 +1493,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommits - Returns a paginated list of the pull request's commits.
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommits - List commits on a pull request
+// Returns a paginated list of the pull request's commits.
 //
 // These are the commits that are being merged into the destination
 // branch when the pull requests gets accepted.
@@ -1382,7 +1526,10 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 		RawResponse: httpRes,
 	}
 	switch {
-	default:
+	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out map[string]interface{}
@@ -1397,7 +1544,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiff - Redirects to the [repository diff](../../diff/%7Bspec%7D)
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiff - List changes in a pull request
+// Redirects to the [repository diff](/cloud/bitbucket/rest/api-group-commits/#api-repositories-workspace-repo-slug-diff-spec-get)
 // with the revspec that corresponds to the pull request.
 func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiff(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffResponse, error) {
 	baseURL := s.serverURL
@@ -1433,7 +1581,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstat - Redirects to the [repository diffstat](../../diffstat/%7Bspec%7D)
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstat - Get the diff stat for a pull request
+// Redirects to the [repository diffstat](/cloud/bitbucket/rest/api-group-commits/#api-repositories-workspace-repo-slug-diffstat-spec-get)
 // with the revspec that corresponds to the pull request.
 func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstat(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstatRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDiffstatResponse, error) {
 	baseURL := s.serverURL
@@ -1469,7 +1618,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeTaskStatusTaskID - When merging a pull request takes too long, the client receives a
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeTaskStatusTaskID - Get the merge task status for a pull request
+// When merging a pull request takes too long, the client receives a
 // task ID along with a 202 status code. The task ID can be used in a call
 // to this endpoint to check the status of a merge task.
 //
@@ -1560,7 +1710,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatch - Redirects to the [repository patch](../../patch/%7Bspec%7D)
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatch - Get the patch for a pull request
+// Redirects to the [repository patch](/cloud/bitbucket/rest/api-group-commits/#api-repositories-workspace-repo-slug-patch-spec-get)
 // with the revspec that corresponds to pull request.
 func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatch(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatchRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDPatchResponse, error) {
 	baseURL := s.serverURL
@@ -1596,7 +1747,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses - Returns all statuses (e.g. build results) for the given pull
+// GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses - List commit statuses for a pull request
+// Returns all statuses (e.g. build results) for the given pull
 // request.
 func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatuses(ctx context.Context, request operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesRequest) (*operations.GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDStatusesResponse, error) {
 	baseURL := s.serverURL
@@ -1656,7 +1808,8 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugPullrequests - Creates a new pull request where the destination repository is
+// PostRepositoriesWorkspaceRepoSlugPullrequests - Create a pull request
+// Creates a new pull request where the destination repository is
 // this repository and the author is the authenticated user.
 //
 // The minimum required fields to create a pull request are `title` and
@@ -1664,7 +1817,7 @@ func (s *pullrequests) GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 //
 // ```
 //
-//	curl https://api.bitbucket.org/2.0/repositories/my-username/my-repository/pullrequests \
+//	curl https://api.bitbucket.org/2.0/repositories/my-workspace/my-repository/pullrequests \
 //	    -u my-username:my-password \
 //	    --request POST \
 //	    --header 'Content-Type: application/json' \
@@ -1791,7 +1944,8 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequests(ctx context
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove - Approve the specified pull request as the authenticated user.
+// PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove - Approve a pull request
+// Approve the specified pull request as the authenticated user.
 func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApprove(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDApproveResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/approve", request.PathParams, nil)
@@ -1847,7 +2001,8 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments - Creates a new pull request comment.
+// PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments - Create a comment on a pull request
+// Creates a new pull request comment.
 //
 // Returns the newly created pull request comment.
 func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDComments(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsResponse, error) {
@@ -1917,7 +2072,8 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDecline - Declines the pull request.
+// PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDecline - Decline a pull request
+// Declines the pull request.
 func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDecline(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDeclineRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDDeclineResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/decline", request.PathParams, nil)
@@ -1971,7 +2127,8 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMerge - Merges the pull request.
+// PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMerge - Merge a pull request
+// Merges the pull request.
 func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMerge(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDMergeResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/merge", request.PathParams, nil)
@@ -2036,6 +2193,8 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 
 	return res, nil
 }
+
+// PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges - Request changes for a pull request
 func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChanges(ctx context.Context, request operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesRequest) (*operations.PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDRequestChangesResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/request-changes", request.PathParams, nil)
@@ -2074,6 +2233,8 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 
 			res.Participant = out
 		}
+	case httpRes.StatusCode == 400:
+		fallthrough
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -2091,7 +2252,8 @@ func (s *pullrequests) PostRepositoriesWorkspaceRepoSlugPullrequestsPullRequestI
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Adds the specified user to the repository's list of default
+// PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsername - Add a user to the default reviewers
+// Adds the specified user to the repository's list of default
 // reviewers.
 //
 // This method is idempotent. Adding a user a second time has no effect.
@@ -2123,7 +2285,21 @@ func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUse
 		RawResponse: httpRes,
 	}
 	switch {
-	default:
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.Account = out
+		}
+	case httpRes.StatusCode == 400:
+		fallthrough
+	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out map[string]interface{}
@@ -2138,7 +2314,8 @@ func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUse
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID - Mutates the specified pull request.
+// PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID - Update a pull request
+// Mutates the specified pull request.
 //
 // This can be used to change the pull request's branches or description.
 //
@@ -2207,7 +2384,8 @@ func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestID
 	return res, nil
 }
 
-// PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID - Updates a specific pull request comment.
+// PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID - Update a comment on a pull request
+// Updates a specific pull request comment.
 func (s *pullrequests) PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentID(ctx context.Context, request operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDRequest) (*operations.PutRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/pullrequests/{pull_request_id}/comments/{comment_id}", request.PathParams, nil)

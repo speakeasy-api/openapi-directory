@@ -4,6 +4,10 @@ package shared
 
 // BaseListing - Minimal set of attributes describing a listing
 type BaseListing struct {
+	// Base exterior color of the car
+	BaseExtColor *string `json:"base_ext_color,omitempty"`
+	// Base interior color of the car
+	BaseIntColor *string `json:"base_int_color,omitempty"`
 	// Describes the Car specification
 	Build *Build `json:"build,omitempty"`
 	// Flag to indicate whether listing is carfax_1_owner
@@ -33,12 +37,16 @@ type BaseListing struct {
 	Heading *string `json:"heading,omitempty"`
 	// Unique identifier representing a specific listing from the Marketcheck database
 	ID *string `json:"id,omitempty"`
+	// in_transit of the listing
+	InTransit *bool `json:"in_transit,omitempty"`
 	// Interior color of the car
 	InteriorColor *string `json:"interior_color,omitempty"`
 	// Inventory type of car
 	InventoryType *string `json:"inventory_type,omitempty"`
 	// Certified car
 	IsCertified *int64 `json:"is_certified,omitempty"`
+	// is_translated of the listing
+	IsTranslated *bool `json:"is_translated,omitempty"`
 	// Listing last seen at (most recent) timestamp
 	LastSeenAt *int64 `json:"last_seen_at,omitempty"`
 	// Listing last seen at (most recent) date
@@ -54,6 +62,8 @@ type BaseListing struct {
 	Msrp *int64 `json:"msrp,omitempty"`
 	// Asking price for the car
 	Price *int64 `json:"price,omitempty"`
+	// Percentage difference between the cars's current price and ref_price i.e. last reported price
+	PriceChangePercent *float64 `json:"price_change_percent,omitempty"`
 	// Last Odometer reading / reported miles usage for the car. If the asking miles value is not or is available then the last_miles could perhaps be used. last_miles is the miles for the car listed on the source website as of last_miles_dt date
 	RefMiles *string `json:"ref_miles,omitempty"`
 	// The date at which the last miles was reported online. This is earlier to last_seen_date
@@ -72,6 +82,8 @@ type BaseListing struct {
 	Source *string `json:"source,omitempty"`
 	// Stock number of car in dealers inventory
 	StockNo *string `json:"stock_no,omitempty"`
+	// title_type of the listing
+	TitleType *string `json:"title_type,omitempty"`
 	// Vehicle Details Page url of the specific car
 	VdpURL *string `json:"vdp_url,omitempty"`
 	// VIN for the car

@@ -52,6 +52,7 @@ pkg/models/shared/securitymarks.go
 pkg/models/shared/process.go
 pkg/models/shared/file.go
 pkg/models/shared/environmentvariable.go
+pkg/models/shared/orgpolicyconstraint.go
 pkg/models/shared/mitreattack.go
 pkg/models/shared/kubernetes.go
 pkg/models/shared/role.go
@@ -78,6 +79,8 @@ pkg/models/shared/contactdetails.go
 pkg/models/shared/contact.go
 pkg/models/shared/connection.go
 pkg/models/shared/compliance.go
+pkg/models/shared/clouddlpinspection.go
+pkg/models/shared/clouddlpdataprofile.go
 pkg/models/shared/access.go
 pkg/models/shared/serviceaccountdelegationinfo.go
 pkg/models/shared/geolocation.go

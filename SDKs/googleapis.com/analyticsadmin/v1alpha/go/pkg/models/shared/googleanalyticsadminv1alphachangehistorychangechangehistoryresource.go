@@ -24,6 +24,8 @@ type GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource struct 
 	DisplayVideo360AdvertiserLink *GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLink `json:"displayVideo360AdvertiserLink,omitempty"`
 	// A proposal for a link between a GA4 property and a Display & Video 360 advertiser. A proposal is converted to a DisplayVideo360AdvertiserLink once approved. Google Analytics admins approve inbound proposals while Display & Video 360 admins approve outbound proposals.
 	DisplayVideo360AdvertiserLinkProposal *GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal `json:"displayVideo360AdvertiserLinkProposal,omitempty"`
+	// Singleton resource under a WebDataStream, configuring measurement of additional site interactions and content.
+	EnhancedMeasurementSettings *GoogleAnalyticsAdminV1alphaEnhancedMeasurementSettings `json:"enhancedMeasurementSettings,omitempty"`
 	// A resource message representing a GA4 ExpandedDataSet.
 	ExpandedDataSet *GoogleAnalyticsAdminV1alphaExpandedDataSet `json:"expandedDataSet,omitempty"`
 	// A link between a GA4 property and a Firebase project.

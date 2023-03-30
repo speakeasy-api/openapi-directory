@@ -34,7 +34,8 @@ type CreateDBInstanceReadReplicaMessage struct {
 	ProcessorFeatures                  []ProcessorFeatureList
 	PubliclyAccessible                 *bool
 	ReplicaMode                        *ReplicaModeEnum
-	SourceDBInstanceIdentifier         string
+	SourceDBClusterIdentifier          *string
+	SourceDBInstanceIdentifier         *string
 	SourceRegion                       *string
 	StorageThroughput                  *int64
 	StorageType                        *string

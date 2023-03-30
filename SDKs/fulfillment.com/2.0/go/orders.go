@@ -263,6 +263,8 @@ func (s *orders) PostOrders(ctx context.Context, request operations.PostOrdersRe
 		}
 	case httpRes.StatusCode == 401:
 	case httpRes.StatusCode == 409:
+		fallthrough
+	case httpRes.StatusCode == 422:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
 			var out *operations.PostOrdersErrorStandardWithContextV2

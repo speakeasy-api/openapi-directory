@@ -5,7 +5,7 @@ package shared
 // ArticleConfidentiality - OK. Article categories
 type ArticleConfidentiality struct {
 	// True if article is confidential
-	IsConfidential *bool `json:"is_confidential,omitempty"`
+	IsConfidential bool `json:"is_confidential"`
 	// Reason for confidentiality
-	Reason *string `json:"reason,omitempty"`
+	Reason string `json:"reason"`
 }

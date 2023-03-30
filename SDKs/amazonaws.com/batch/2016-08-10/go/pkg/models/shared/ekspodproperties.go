@@ -7,6 +7,7 @@ type EksPodProperties struct {
 	Containers         []EksContainer `json:"containers,omitempty"`
 	DNSPolicy          *string        `json:"dnsPolicy,omitempty"`
 	HostNetwork        *bool          `json:"hostNetwork,omitempty"`
+	Metadata           *EksMetadata   `json:"metadata,omitempty"`
 	ServiceAccountName *string        `json:"serviceAccountName,omitempty"`
 	Volumes            []EksVolume    `json:"volumes,omitempty"`
 }

@@ -421,8 +421,120 @@ func (s *vbaDocuments) PostBenefitsDocumentUpload(ctx context.Context, request o
 	return res, nil
 }
 
+// PostBenefitsDocumentUploadValidateDocument - Validate an individual document against system file requirements
+// Using this endpoint will decrease the likelihood of errors associated with individual documents during
+// the submission process. Validations performed:
+// * Document is a valid PDF (Note: `Content-Type` header value must be "application/pdf")
+// * Document does not have a user password (an owner password is acceptable)
+// * File size does not exceed 100 MB
+// * Page size does not exceed 21" x 21"
+//
+// Each PDF document is sent as a direct file upload. The request body should contain nothing other than the document in
+// binary format. Binary multipart/form-data encoding is not supported. This endpoint does NOT validate metadata in JSON
+// format.
+//
+// This endpoint does NOT initiate the claims intake process or submit data to that process. After using this endpoint,
+// individual PDF documents can be combined and submitted as a payload using PUT `/path`.
+//
+// A `200` response confirms that the individual document provided passes the system requirements.
+//
+// A `422` response indicates one or more problems with the document that should be resolved before submitting it in the
+// full document submission payload.
+func (s *vbaDocuments) PostBenefitsDocumentUploadValidateDocument(ctx context.Context) (*operations.PostBenefitsDocumentUploadValidateDocumentResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/uploads/validate_document"
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, nil)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	client := s.defaultClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostBenefitsDocumentUploadValidateDocumentResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostBenefitsDocumentUploadValidateDocument200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostBenefitsDocumentUploadValidateDocument200ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 401:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostBenefitsDocumentUploadValidateDocument401ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostBenefitsDocumentUploadValidateDocument401ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 403:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostBenefitsDocumentUploadValidateDocument403ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostBenefitsDocumentUploadValidateDocument403ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 422:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostBenefitsDocumentUploadValidateDocument422ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostBenefitsDocumentUploadValidateDocument422ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 429:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostBenefitsDocumentUploadValidateDocument429ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostBenefitsDocumentUploadValidateDocument429ApplicationJSONObject = out
+		}
+	case httpRes.StatusCode == 500:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostBenefitsDocumentUploadValidateDocument500ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostBenefitsDocumentUploadValidateDocument500ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // PutBenefitsDocumentUpload - Accepts document upload.
-// Accepts document metadata, document binary, and attachment binaries.Full URL, including
+// Accepts document metadata, document binary, and attachment binaries. Full URL, including
 // query parameters, provided from POST `/document_uploads`.
 //
 // ## Example Payload

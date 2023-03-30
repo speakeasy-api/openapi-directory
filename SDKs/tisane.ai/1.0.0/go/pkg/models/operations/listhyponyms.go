@@ -13,8 +13,14 @@ type ListHyponymsQueryParams struct {
 	MaxLevel *string `queryParam:"style=form,explode=true,name=maxLevel"`
 }
 
+type ListHyponymsHeaders struct {
+	// {{apiKeyDescription}}
+	OcpApimSubscriptionKey *string `header:"style=simple,explode=false,name=Ocp-Apim-Subscription-Key"`
+}
+
 type ListHyponymsRequest struct {
 	QueryParams ListHyponymsQueryParams
+	Headers     ListHyponymsHeaders
 }
 
 type ListHyponymsResponse struct {

@@ -25,7 +25,7 @@ type GetOrdersQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// A CSV of merchant id, '123' or '1,2,3'
 	MerchantIds []int64 `queryParam:"style=form,explode=false,name=merchantIds"`
-	// A multiplier of the number of items (limit paramater) to skip before returning results
+	// A multiplier of the number of items (limit parameter) to skip before returning results
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Date-time in ISO 8601 format for selecting orders before, or at, the specified time
 	ToDate string `queryParam:"style=form,explode=true,name=toDate"`

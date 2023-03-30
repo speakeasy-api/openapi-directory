@@ -10,9 +10,15 @@ import (
 type EntityTypeEnum string
 
 const (
-	EntityTypeEnumKey          EntityTypeEnum = "KEY"
-	EntityTypeEnumValue        EntityTypeEnum = "VALUE"
-	EntityTypeEnumColumnHeader EntityTypeEnum = "COLUMN_HEADER"
+	EntityTypeEnumKey                 EntityTypeEnum = "KEY"
+	EntityTypeEnumValue               EntityTypeEnum = "VALUE"
+	EntityTypeEnumColumnHeader        EntityTypeEnum = "COLUMN_HEADER"
+	EntityTypeEnumTableTitle          EntityTypeEnum = "TABLE_TITLE"
+	EntityTypeEnumTableFooter         EntityTypeEnum = "TABLE_FOOTER"
+	EntityTypeEnumTableSectionTitle   EntityTypeEnum = "TABLE_SECTION_TITLE"
+	EntityTypeEnumTableSummary        EntityTypeEnum = "TABLE_SUMMARY"
+	EntityTypeEnumStructuredTable     EntityTypeEnum = "STRUCTURED_TABLE"
+	EntityTypeEnumSemiStructuredTable EntityTypeEnum = "SEMI_STRUCTURED_TABLE"
 )
 
 func (e *EntityTypeEnum) UnmarshalJSON(data []byte) error {
@@ -26,6 +32,18 @@ func (e *EntityTypeEnum) UnmarshalJSON(data []byte) error {
 	case "VALUE":
 		fallthrough
 	case "COLUMN_HEADER":
+		fallthrough
+	case "TABLE_TITLE":
+		fallthrough
+	case "TABLE_FOOTER":
+		fallthrough
+	case "TABLE_SECTION_TITLE":
+		fallthrough
+	case "TABLE_SUMMARY":
+		fallthrough
+	case "STRUCTURED_TABLE":
+		fallthrough
+	case "SEMI_STRUCTURED_TABLE":
 		*e = EntityTypeEnum(s)
 		return nil
 	default:

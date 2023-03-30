@@ -47,6 +47,8 @@ func (e *PostSiteAPIKeysRequestBodyPermissionSetEnum) UnmarshalJSON(data []byte)
 }
 
 type PostSiteAPIKeysRequestBody struct {
+	// User-supplied description of API key.
+	Description *string `multipartForm:"name=description"`
 	// API Key expiration date
 	ExpiresAt *time.Time `multipartForm:"name=expires_at"`
 	// Internal name for the API Key.  For your use.

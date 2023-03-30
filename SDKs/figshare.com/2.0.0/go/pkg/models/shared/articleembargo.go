@@ -5,15 +5,15 @@ package shared
 // ArticleEmbargo - OK. Embargo for article
 type ArticleEmbargo struct {
 	// Date when embargo lifts
-	EmbargoDate *string `json:"embargo_date,omitempty"`
+	EmbargoDate string `json:"embargo_date"`
 	// List of embargo permissions that are associated with the article. If the type is logged_in and the group_ids list is empty, then the whole institution can see the article; if there are multiple group_ids, then only users that are under those groups can see the article.
-	EmbargoOptions []map[string]interface{} `json:"embargo_options,omitempty"`
+	EmbargoOptions []map[string]interface{} `json:"embargo_options"`
 	// Reason for embargo
-	EmbargoReason *string `json:"embargo_reason,omitempty"`
+	EmbargoReason string `json:"embargo_reason"`
 	// Title for embargo
-	EmbargoTitle *string `json:"embargo_title,omitempty"`
+	EmbargoTitle string `json:"embargo_title"`
 	// Embargo type
-	EmbargoType *string `json:"embargo_type,omitempty"`
+	EmbargoType string `json:"embargo_type"`
 	// True if embargoed
-	IsEmbargoed *bool `json:"is_embargoed,omitempty"`
+	IsEmbargoed bool `json:"is_embargoed"`
 }

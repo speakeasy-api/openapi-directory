@@ -30,12 +30,16 @@ func (e *AttachmentMimeTypeEnum) UnmarshalJSON(data []byte) error {
 
 // Attachment - A document attachment to the invoice.
 type Attachment struct {
+	// A description for the file attachment.
+	Description *string `json:"description,omitempty"`
 	// The base64 encoded version of the document attachment.
 	Document string `json:"document"`
+	// An id for the file attachment.
+	DocumentID *string `json:"documentId,omitempty"`
 	// The name of the file attachment.
 	Filename *string `json:"filename,omitempty"`
 	// The document attachment mime type. Currently only application/pdf is allowed.
 	MimeType AttachmentMimeTypeEnum `json:"mimeType"`
-	// Whether or not this document is a visual representation of the invoice data.
+	// Whether or not this document is a visual representation of the invoice data. Note that although this property is not yet deprecated, using value 'true' is discouraged, since the invoice data itself is leading, not the image, and including an image may lead to confusion. Peppol no longer allows including primary images.
 	PrimaryImage *bool `json:"primaryImage,omitempty"`
 }

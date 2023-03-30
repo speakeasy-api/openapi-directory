@@ -328,12 +328,12 @@ func (s *myAPICredential) PostMeAllowedOrigins(ctx context.Context, request oper
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.AllowedOriginsResponse
+			var out *shared.AllowedOrigin
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.AllowedOriginsResponse = out
+			res.AllowedOrigin = out
 		}
 	case httpRes.StatusCode == 400:
 		fallthrough

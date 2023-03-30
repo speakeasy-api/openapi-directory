@@ -60,6 +60,7 @@ pkg/models/shared/logmatch.go
 pkg/models/shared/metricabsence.go
 pkg/models/shared/alertstrategy.go
 pkg/models/shared/notificationratelimit.go
+pkg/models/shared/notificationchannelstrategy.go
 pkg/models/shared/altenum.go
 pkg/models/shared/xgafvenum.go
 pkg/models/shared/security.go

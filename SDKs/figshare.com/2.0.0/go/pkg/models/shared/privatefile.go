@@ -5,27 +5,29 @@ package shared
 // PrivateFile - OK. Article private file
 type PrivateFile struct {
 	// File computed md5
-	ComputedMd5 *string `json:"computed_md5,omitempty"`
+	ComputedMd5 string `json:"computed_md5"`
 	// Url for file download
-	DownloadURL *string `json:"download_url,omitempty"`
+	DownloadURL string `json:"download_url"`
 	// File id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
+	// True if the file is attached to a public item version
+	IsAttachedToPublicVersion bool `json:"is_attached_to_public_version"`
 	// True if file is hosted somewhere else
-	IsLinkOnly *bool `json:"is_link_only,omitempty"`
+	IsLinkOnly bool `json:"is_link_only"`
 	// File name
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name"`
 	// File preview state
-	PreviewState *string `json:"preview_state,omitempty"`
+	PreviewState string `json:"preview_state"`
 	// File size
-	Size *int64 `json:"size,omitempty"`
+	Size int64 `json:"size"`
 	// Status for file upload
-	Status *string `json:"status,omitempty"`
+	Status string `json:"status"`
 	// File supplied md5
-	SuppliedMd5 *string `json:"supplied_md5,omitempty"`
+	SuppliedMd5 string `json:"supplied_md5"`
 	// Token for file upload
-	UploadToken *string `json:"upload_token,omitempty"`
+	UploadToken string `json:"upload_token"`
 	// Upload url for file
-	UploadURL *string `json:"upload_url,omitempty"`
+	UploadURL string `json:"upload_url"`
 	// File viewer type
-	ViewerType *string `json:"viewer_type,omitempty"`
+	ViewerType string `json:"viewer_type"`
 }

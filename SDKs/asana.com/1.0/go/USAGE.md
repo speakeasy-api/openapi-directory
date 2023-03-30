@@ -19,39 +19,35 @@ func main() {
         }),
     )
 
-    req := operations.CreateAttachmentForTaskRequest{
-        PathParams: operations.CreateAttachmentForTaskPathParams{
-            TaskGid: "unde",
-        },
-        QueryParams: operations.CreateAttachmentForTaskQueryParams{
-            Limit: 592845,
-            Offset: "porro",
+    req := operations.CreateAttachmentForObjectRequest{
+        QueryParams: operations.CreateAttachmentForObjectQueryParams{
             OptFields: []string{
-                "id",
-                "vero",
-                "perspiciatis",
+                "deserunt",
+                "porro",
                 "nulla",
             },
             OptPretty: false,
         },
         Request: shared.AttachmentRequest{
+            ConnectToApp: false,
             File: &shared.AttachmentRequestFile{
-                Content: []byte("nihil"),
-                File: "fuga",
+                Content: []byte("id"),
+                File: "vero",
             },
-            Name: "facilis",
-            ResourceSubtype: "asana_file_attachments",
-            URL: "iusto",
+            Name: "perspiciatis",
+            Parent: "nulla",
+            ResourceSubtype: "external",
+            URL: "nihil",
         },
     }
 
     ctx := context.Background()
-    res, err := s.Attachments.CreateAttachmentForTask(ctx, req)
+    res, err := s.Attachments.CreateAttachmentForObject(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.CreateAttachmentForTask200ApplicationJSONObject != nil {
+    if res.CreateAttachmentForObject200ApplicationJSONObject != nil {
         // handle response
     }
 }

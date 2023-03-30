@@ -11,17 +11,18 @@ import (
 type OccurrenceKindEnum string
 
 const (
-	OccurrenceKindEnumNoteKindUnspecified OccurrenceKindEnum = "NOTE_KIND_UNSPECIFIED"
-	OccurrenceKindEnumVulnerability       OccurrenceKindEnum = "VULNERABILITY"
-	OccurrenceKindEnumBuild               OccurrenceKindEnum = "BUILD"
-	OccurrenceKindEnumImage               OccurrenceKindEnum = "IMAGE"
-	OccurrenceKindEnumPackage             OccurrenceKindEnum = "PACKAGE"
-	OccurrenceKindEnumDeployment          OccurrenceKindEnum = "DEPLOYMENT"
-	OccurrenceKindEnumDiscovery           OccurrenceKindEnum = "DISCOVERY"
-	OccurrenceKindEnumAttestation         OccurrenceKindEnum = "ATTESTATION"
-	OccurrenceKindEnumUpgrade             OccurrenceKindEnum = "UPGRADE"
-	OccurrenceKindEnumCompliance          OccurrenceKindEnum = "COMPLIANCE"
-	OccurrenceKindEnumDsseAttestation     OccurrenceKindEnum = "DSSE_ATTESTATION"
+	OccurrenceKindEnumNoteKindUnspecified     OccurrenceKindEnum = "NOTE_KIND_UNSPECIFIED"
+	OccurrenceKindEnumVulnerability           OccurrenceKindEnum = "VULNERABILITY"
+	OccurrenceKindEnumBuild                   OccurrenceKindEnum = "BUILD"
+	OccurrenceKindEnumImage                   OccurrenceKindEnum = "IMAGE"
+	OccurrenceKindEnumPackage                 OccurrenceKindEnum = "PACKAGE"
+	OccurrenceKindEnumDeployment              OccurrenceKindEnum = "DEPLOYMENT"
+	OccurrenceKindEnumDiscovery               OccurrenceKindEnum = "DISCOVERY"
+	OccurrenceKindEnumAttestation             OccurrenceKindEnum = "ATTESTATION"
+	OccurrenceKindEnumUpgrade                 OccurrenceKindEnum = "UPGRADE"
+	OccurrenceKindEnumCompliance              OccurrenceKindEnum = "COMPLIANCE"
+	OccurrenceKindEnumDsseAttestation         OccurrenceKindEnum = "DSSE_ATTESTATION"
+	OccurrenceKindEnumVulnerabilityAssessment OccurrenceKindEnum = "VULNERABILITY_ASSESSMENT"
 )
 
 func (e *OccurrenceKindEnum) UnmarshalJSON(data []byte) error {
@@ -51,6 +52,8 @@ func (e *OccurrenceKindEnum) UnmarshalJSON(data []byte) error {
 	case "COMPLIANCE":
 		fallthrough
 	case "DSSE_ATTESTATION":
+		fallthrough
+	case "VULNERABILITY_ASSESSMENT":
 		*e = OccurrenceKindEnum(s)
 		return nil
 	default:

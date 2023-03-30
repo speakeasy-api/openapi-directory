@@ -12,11 +12,11 @@ import (
 type AddMediaIntentHandlingInvocationResponseType string
 
 const (
-	AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingHandle                  AddMediaIntentHandlingInvocationResponseType = "AddMediaIntentHandling.handle"
 	AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingResolveMediaDestination AddMediaIntentHandlingInvocationResponseType = "AddMediaIntentHandling.resolveMediaDestination"
 	AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingResolveMediaItems       AddMediaIntentHandlingInvocationResponseType = "AddMediaIntentHandling.resolveMediaItems"
 	AddMediaIntentHandlingInvocationResponseTypeProtocolException                             AddMediaIntentHandlingInvocationResponseType = "ProtocolException"
 	AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingConfirm                 AddMediaIntentHandlingInvocationResponseType = "AddMediaIntentHandling.confirm"
+	AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingHandle                  AddMediaIntentHandlingInvocationResponseType = "AddMediaIntentHandling.handle"
 )
 
 type AddMediaIntentHandlingInvocationResponse struct {
@@ -27,17 +27,6 @@ type AddMediaIntentHandlingInvocationResponse struct {
 	ProtocolExceptionInvocationResponse                             *ProtocolExceptionInvocationResponse
 
 	Type AddMediaIntentHandlingInvocationResponseType
-}
-
-func CreateAddMediaIntentHandlingInvocationResponseAddMediaIntentHandlingHandle(addMediaIntentHandlingHandle AddMediaIntentHandlingHandleInvocationResponse) AddMediaIntentHandlingInvocationResponse {
-	typ := AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingHandle
-	typStr := string(typ)
-	addMediaIntentHandlingHandle.Method = typStr
-
-	return AddMediaIntentHandlingInvocationResponse{
-		AddMediaIntentHandlingHandleInvocationResponse: &addMediaIntentHandlingHandle,
-		Type: typ,
-	}
 }
 
 func CreateAddMediaIntentHandlingInvocationResponseAddMediaIntentHandlingResolveMediaDestination(addMediaIntentHandlingResolveMediaDestination AddMediaIntentHandlingResolveMediaDestinationInvocationResponse) AddMediaIntentHandlingInvocationResponse {
@@ -84,6 +73,17 @@ func CreateAddMediaIntentHandlingInvocationResponseAddMediaIntentHandlingConfirm
 	}
 }
 
+func CreateAddMediaIntentHandlingInvocationResponseAddMediaIntentHandlingHandle(addMediaIntentHandlingHandle AddMediaIntentHandlingHandleInvocationResponse) AddMediaIntentHandlingInvocationResponse {
+	typ := AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingHandle
+	typStr := string(typ)
+	addMediaIntentHandlingHandle.Method = typStr
+
+	return AddMediaIntentHandlingInvocationResponse{
+		AddMediaIntentHandlingHandleInvocationResponse: &addMediaIntentHandlingHandle,
+		Type: typ,
+	}
+}
+
 func (u *AddMediaIntentHandlingInvocationResponse) UnmarshalJSON(data []byte) error {
 	var d *json.Decoder
 
@@ -97,17 +97,6 @@ func (u *AddMediaIntentHandlingInvocationResponse) UnmarshalJSON(data []byte) er
 	}
 
 	switch dis.Method {
-	case "AddMediaIntentHandling.handle":
-		d = json.NewDecoder(bytes.NewReader(data))
-		d.DisallowUnknownFields()
-		addMediaIntentHandlingHandleInvocationResponse := new(AddMediaIntentHandlingHandleInvocationResponse)
-		if err := d.Decode(&addMediaIntentHandlingHandleInvocationResponse); err != nil {
-			return fmt.Errorf("could not unmarshal expected type: %w", err)
-		}
-
-		u.AddMediaIntentHandlingHandleInvocationResponse = addMediaIntentHandlingHandleInvocationResponse
-		u.Type = AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingHandle
-		return nil
 	case "AddMediaIntentHandling.resolveMediaDestination":
 		d = json.NewDecoder(bytes.NewReader(data))
 		d.DisallowUnknownFields()
@@ -151,6 +140,17 @@ func (u *AddMediaIntentHandlingInvocationResponse) UnmarshalJSON(data []byte) er
 
 		u.AddMediaIntentHandlingConfirmInvocationResponse = addMediaIntentHandlingConfirmInvocationResponse
 		u.Type = AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingConfirm
+		return nil
+	case "AddMediaIntentHandling.handle":
+		d = json.NewDecoder(bytes.NewReader(data))
+		d.DisallowUnknownFields()
+		addMediaIntentHandlingHandleInvocationResponse := new(AddMediaIntentHandlingHandleInvocationResponse)
+		if err := d.Decode(&addMediaIntentHandlingHandleInvocationResponse); err != nil {
+			return fmt.Errorf("could not unmarshal expected type: %w", err)
+		}
+
+		u.AddMediaIntentHandlingHandleInvocationResponse = addMediaIntentHandlingHandleInvocationResponse
+		u.Type = AddMediaIntentHandlingInvocationResponseTypeAddMediaIntentHandlingHandle
 		return nil
 	}
 

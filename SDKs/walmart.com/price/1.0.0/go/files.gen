@@ -15,5 +15,4 @@ pkg/utils/utils.go
 pkg/models/operations/optcapprograminprice.go
 pkg/models/operations/pricebulkuploads.go
 pkg/models/operations/updateprice.go
-pkg/models/shared/security.go
 USAGE.md

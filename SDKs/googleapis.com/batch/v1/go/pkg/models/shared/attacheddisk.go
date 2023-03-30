@@ -8,6 +8,6 @@ type AttachedDisk struct {
 	DeviceName *string `json:"deviceName,omitempty"`
 	// Name of an existing PD.
 	ExistingDisk *string `json:"existingDisk,omitempty"`
-	// A new persistent disk or a local ssd. A VM can only have one local SSD setting but multiple local SSD partitions. https://cloud.google.com/compute/docs/disks#pdspecs. https://cloud.google.com/compute/docs/disks#localssds.
+	// A new persistent disk or a local ssd. A VM can only have one local SSD setting but multiple local SSD partitions. See https://cloud.google.com/compute/docs/disks#pdspecs and https://cloud.google.com/compute/docs/disks#localssds.
 	NewDisk *Disk `json:"newDisk,omitempty"`
 }

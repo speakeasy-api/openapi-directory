@@ -7,6 +7,7 @@ type IPAddressResponse struct {
 	CreationTime     *string              `json:"CreationTime,omitempty"`
 	IP               *string              `json:"Ip,omitempty"`
 	IPID             *string              `json:"IpId,omitempty"`
+	Ipv6             *string              `json:"Ipv6,omitempty"`
 	ModificationTime *string              `json:"ModificationTime,omitempty"`
 	Status           *IPAddressStatusEnum `json:"Status,omitempty"`
 	StatusMessage    *string              `json:"StatusMessage,omitempty"`

@@ -29,8 +29,8 @@ type GetUsersSelectedUserResponse struct {
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
+	// The user object
+	Account map[string]interface{}
 	// If no user exists for the specified UUID, or if the specified account is a team account, not a personal account.
 	Error map[string]interface{}
-	// The user object
-	User map[string]interface{}
 }

@@ -4,7 +4,11 @@ package shared
 
 // EnvironmentModel - When everything is ok, the environment data returned.
 type EnvironmentModel struct {
-	EnvironmentID *string       `json:"environmentId,omitempty"`
-	Name          *string       `json:"name,omitempty"`
-	Product       *ProductModel `json:"product,omitempty"`
+	Color          *string       `json:"color,omitempty"`
+	Description    *string       `json:"description,omitempty"`
+	EnvironmentID  *string       `json:"environmentId,omitempty"`
+	Name           *string       `json:"name,omitempty"`
+	Order          *int          `json:"order,omitempty"`
+	Product        *ProductModel `json:"product,omitempty"`
+	ReasonRequired *bool         `json:"reasonRequired,omitempty"`
 }

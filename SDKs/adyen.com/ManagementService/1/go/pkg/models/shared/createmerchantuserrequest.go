@@ -5,6 +5,8 @@ package shared
 type CreateMerchantUserRequest struct {
 	// The list of [account groups](https://docs.adyen.com/account/account-structure#account-groups) associated with this user.
 	AccountGroups []string `json:"accountGroups,omitempty"`
+	// Set of authn apps to add to this user
+	AuthnApps []string `json:"authnApps,omitempty"`
 	// The email address of the user.
 	Email string `json:"email"`
 	Name  Name   `json:"name"`

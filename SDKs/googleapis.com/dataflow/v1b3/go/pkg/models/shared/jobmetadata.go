@@ -18,4 +18,6 @@ type JobMetadata struct {
 	SDKVersion *SDKVersion `json:"sdkVersion,omitempty"`
 	// Identification of a Spanner source used in the Dataflow job.
 	SpannerDetails []SpannerIODetails `json:"spannerDetails,omitempty"`
+	// List of display properties to help UI filter jobs.
+	UserDisplayProperties map[string]string `json:"userDisplayProperties,omitempty"`
 }

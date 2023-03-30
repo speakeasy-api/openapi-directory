@@ -85,6 +85,54 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsElasti
 	Name *string
 }
 
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatefulRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatefulRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatefulRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatefulRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatefulRule - The Network Firewall stateful rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatefulRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatefulRuleDestinationPorts
+	Destinations     []string
+	Direction        *string
+	Protocol         *string
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatefulRuleSourcePorts
+	Sources          []string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule - The Network Firewall stateless rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleDestinationPorts
+	Destinations     []string
+	Priority         *int64
+	Protocols        []int64
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRuleSourcePorts
+	Sources          []string
+}
+
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsIngressRouteTable - The route table.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsIngressRouteTable struct {
 	Arn  *string
@@ -164,11 +212,14 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsRouteT
 
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsRouteTableRoute - The route table route.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsRouteTableRoute struct {
+	CarrierGatewayID            *string
+	CoreNetworkArn              *string
 	DestinationCidr             *string
 	DestinationPrefixListID     *string
 	EgressOnlyInternetGatewayID *string
 	GatewayID                   *string
 	InstanceID                  *string
+	LocalGatewayID              *string
 	NatGatewayID                *string
 	NetworkInterfaceID          *string
 	Origin                      *string
@@ -314,6 +365,8 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanations struc
 	Direction                     *string
 	ElasticLoadBalancerListener   *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsElasticLoadBalancerListener
 	ExplanationCode               *string
+	FirewallStatefulRule          *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatefulRule
+	FirewallStatelessRule         *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsFirewallStatelessRule
 	IngressRouteTable             *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsIngressRouteTable
 	InternetGateway               *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisExplanationsInternetGateway
 	LoadBalancerArn               *string
@@ -373,10 +426,54 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathCompone
 	Name *string
 }
 
-// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetails - Describes an additional detail for a path analysis.
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsLoadBalancers - Describes a path component.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsLoadBalancers struct {
+	Arn  *string
+	ID   *string
+	Name *string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions - Describes additional settings for a stateful rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions struct {
+	Keyword  *string
+	Settings []string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs - Describes the rule options for a stateful rule group.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs struct {
+	RuleGroupArn *string
+	RuleOptions  []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleGroupTypePairs - Describes the type of a stateful rule group.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleGroupTypePairs struct {
+	RuleGroupArn  *string
+	RuleGroupType *string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleOptions - Describes additional settings for a stateful rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleOptions struct {
+	Keyword  *string
+	Settings []string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsVpcEndpointService - The VPC endpoint service.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsVpcEndpointService struct {
+	Arn  *string
+	ID   *string
+	Name *string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetails - Describes an additional detail for a path analysis. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/reachability/additional-detail-codes.html">Reachability Analyzer additional detail codes</a>.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetails struct {
-	AdditionalDetailType *string
-	Component            *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsComponent
+	AdditionalDetailType      *string
+	Component                 *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsComponent
+	LoadBalancers             []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsLoadBalancers
+	RuleGroupRuleOptionsPairs []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs
+	RuleGroupTypePairs        []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleGroupTypePairs
+	RuleOptions               []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsRuleOptions
+	ServiceName               *string
+	VpcEndpointService        *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAdditionalDetailsVpcEndpointService
 }
 
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsAttachedTo - The resource to which the path component is attached.
@@ -478,6 +575,54 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathCompone
 	Name *string
 }
 
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRule - The Network Firewall stateful rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleDestinationPorts
+	Destinations     []string
+	Direction        *string
+	Protocol         *string
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRuleSourcePorts
+	Sources          []string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatelessRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatelessRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatelessRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatelessRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatelessRule - The Network Firewall stateless rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatelessRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatelessRuleDestinationPorts
+	Destinations     []string
+	Priority         *int64
+	Protocols        []int64
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatelessRuleSourcePorts
+	Sources          []string
+}
+
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsIngressRouteTable - The route table.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsIngressRouteTable struct {
 	Arn  *string
@@ -557,11 +702,14 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathCompone
 
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsRouteTableRoute - The route table route.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsRouteTableRoute struct {
+	CarrierGatewayID            *string
+	CoreNetworkArn              *string
 	DestinationCidr             *string
 	DestinationPrefixListID     *string
 	EgressOnlyInternetGatewayID *string
 	GatewayID                   *string
 	InstanceID                  *string
+	LocalGatewayID              *string
 	NatGatewayID                *string
 	NetworkInterfaceID          *string
 	Origin                      *string
@@ -707,6 +855,8 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathCompone
 	Direction                     *string
 	ElasticLoadBalancerListener   *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsElasticLoadBalancerListener
 	ExplanationCode               *string
+	FirewallStatefulRule          *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatefulRule
+	FirewallStatelessRule         *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsFirewallStatelessRule
 	IngressRouteTable             *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsIngressRouteTable
 	InternetGateway               *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsInternetGateway
 	LoadBalancerArn               *string
@@ -741,6 +891,54 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathCompone
 	VpcPeeringConnection          *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsVpcPeeringConnection
 	VpnConnection                 *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsVpnConnection
 	VpnGateway                    *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanationsVpnGateway
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatefulRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatefulRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatefulRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatefulRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatefulRule - The Network Firewall stateful rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatefulRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatefulRuleDestinationPorts
+	Destinations     []string
+	Direction        *string
+	Protocol         *string
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatefulRuleSourcePorts
+	Sources          []string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatelessRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatelessRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatelessRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatelessRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatelessRule - The Network Firewall stateless rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatelessRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatelessRuleDestinationPorts
+	Destinations     []string
+	Priority         *int64
+	Protocols        []int64
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatelessRuleSourcePorts
+	Sources          []string
 }
 
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsInboundHeaderDestinationPortRanges - Describes a range of ports.
@@ -787,11 +985,14 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathCompone
 
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsRouteTableRoute - The route table route.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsRouteTableRoute struct {
+	CarrierGatewayID            *string
+	CoreNetworkArn              *string
 	DestinationCidr             *string
 	DestinationPrefixListID     *string
 	EgressOnlyInternetGatewayID *string
 	GatewayID                   *string
 	InstanceID                  *string
+	LocalGatewayID              *string
 	NatGatewayID                *string
 	NetworkInterfaceID          *string
 	Origin                      *string
@@ -864,11 +1065,14 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathCompone
 	DestinationVpc                *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsDestinationVpc
 	ElasticLoadBalancerListener   *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsElasticLoadBalancerListener
 	Explanations                  []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsExplanations
+	FirewallStatefulRule          *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatefulRule
+	FirewallStatelessRule         *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsFirewallStatelessRule
 	InboundHeader                 *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsInboundHeader
 	OutboundHeader                *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsOutboundHeader
 	RouteTableRoute               *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsRouteTableRoute
 	SecurityGroupRule             *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsSecurityGroupRule
 	SequenceNumber                *int64
+	ServiceName                   *string
 	SourceVpc                     *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsSourceVpc
 	Subnet                        *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsSubnet
 	TransitGateway                *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisForwardPathComponentsTransitGateway
@@ -899,10 +1103,54 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponen
 	Name *string
 }
 
-// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails - Describes an additional detail for a path analysis.
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsLoadBalancers - Describes a path component.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsLoadBalancers struct {
+	Arn  *string
+	ID   *string
+	Name *string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions - Describes additional settings for a stateful rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions struct {
+	Keyword  *string
+	Settings []string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs - Describes the rule options for a stateful rule group.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs struct {
+	RuleGroupArn *string
+	RuleOptions  []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupTypePairs - Describes the type of a stateful rule group.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupTypePairs struct {
+	RuleGroupArn  *string
+	RuleGroupType *string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleOptions - Describes additional settings for a stateful rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleOptions struct {
+	Keyword  *string
+	Settings []string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsVpcEndpointService - The VPC endpoint service.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsVpcEndpointService struct {
+	Arn  *string
+	ID   *string
+	Name *string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails - Describes an additional detail for a path analysis. For more information, see <a href="https://docs.aws.amazon.com/vpc/latest/reachability/additional-detail-codes.html">Reachability Analyzer additional detail codes</a>.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetails struct {
-	AdditionalDetailType *string
-	Component            *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsComponent
+	AdditionalDetailType      *string
+	Component                 *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsComponent
+	LoadBalancers             []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsLoadBalancers
+	RuleGroupRuleOptionsPairs []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs
+	RuleGroupTypePairs        []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupTypePairs
+	RuleOptions               []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleOptions
+	ServiceName               *string
+	VpcEndpointService        *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsVpcEndpointService
 }
 
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAttachedTo - The resource to which the path component is attached.
@@ -1004,6 +1252,54 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponen
 	Name *string
 }
 
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatefulRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatefulRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatefulRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatefulRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatefulRule - The Network Firewall stateful rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatefulRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatefulRuleDestinationPorts
+	Destinations     []string
+	Direction        *string
+	Protocol         *string
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatefulRuleSourcePorts
+	Sources          []string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatelessRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatelessRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatelessRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatelessRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatelessRule - The Network Firewall stateless rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatelessRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatelessRuleDestinationPorts
+	Destinations     []string
+	Priority         *int64
+	Protocols        []int64
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatelessRuleSourcePorts
+	Sources          []string
+}
+
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsIngressRouteTable - The route table.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsIngressRouteTable struct {
 	Arn  *string
@@ -1083,11 +1379,14 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponen
 
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsRouteTableRoute - The route table route.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsRouteTableRoute struct {
+	CarrierGatewayID            *string
+	CoreNetworkArn              *string
 	DestinationCidr             *string
 	DestinationPrefixListID     *string
 	EgressOnlyInternetGatewayID *string
 	GatewayID                   *string
 	InstanceID                  *string
+	LocalGatewayID              *string
 	NatGatewayID                *string
 	NetworkInterfaceID          *string
 	Origin                      *string
@@ -1233,6 +1532,8 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponen
 	Direction                     *string
 	ElasticLoadBalancerListener   *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsElasticLoadBalancerListener
 	ExplanationCode               *string
+	FirewallStatefulRule          *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatefulRule
+	FirewallStatelessRule         *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsFirewallStatelessRule
 	IngressRouteTable             *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsIngressRouteTable
 	InternetGateway               *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsInternetGateway
 	LoadBalancerArn               *string
@@ -1267,6 +1568,54 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponen
 	VpcPeeringConnection          *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsVpcPeeringConnection
 	VpnConnection                 *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsVpnConnection
 	VpnGateway                    *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanationsVpnGateway
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatefulRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatefulRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatefulRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatefulRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatefulRule - The Network Firewall stateful rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatefulRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatefulRuleDestinationPorts
+	Destinations     []string
+	Direction        *string
+	Protocol         *string
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatefulRuleSourcePorts
+	Sources          []string
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatelessRuleDestinationPorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatelessRuleDestinationPorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatelessRuleSourcePorts - Describes a range of ports.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatelessRuleSourcePorts struct {
+	From *int64
+	To   *int64
+}
+
+// StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatelessRule - The Network Firewall stateless rule.
+type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatelessRule struct {
+	DestinationPorts []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatelessRuleDestinationPorts
+	Destinations     []string
+	Priority         *int64
+	Protocols        []int64
+	RuleAction       *string
+	RuleGroupArn     *string
+	SourcePorts      []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatelessRuleSourcePorts
+	Sources          []string
 }
 
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsInboundHeaderDestinationPortRanges - Describes a range of ports.
@@ -1313,11 +1662,14 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponen
 
 // StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsRouteTableRoute - The route table route.
 type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsRouteTableRoute struct {
+	CarrierGatewayID            *string
+	CoreNetworkArn              *string
 	DestinationCidr             *string
 	DestinationPrefixListID     *string
 	EgressOnlyInternetGatewayID *string
 	GatewayID                   *string
 	InstanceID                  *string
+	LocalGatewayID              *string
 	NatGatewayID                *string
 	NetworkInterfaceID          *string
 	Origin                      *string
@@ -1390,11 +1742,14 @@ type StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponen
 	DestinationVpc                *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsDestinationVpc
 	ElasticLoadBalancerListener   *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsElasticLoadBalancerListener
 	Explanations                  []StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsExplanations
+	FirewallStatefulRule          *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatefulRule
+	FirewallStatelessRule         *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsFirewallStatelessRule
 	InboundHeader                 *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsInboundHeader
 	OutboundHeader                *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsOutboundHeader
 	RouteTableRoute               *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsRouteTableRoute
 	SecurityGroupRule             *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsSecurityGroupRule
 	SequenceNumber                *int64
+	ServiceName                   *string
 	SourceVpc                     *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsSourceVpc
 	Subnet                        *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsSubnet
 	TransitGateway                *StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsTransitGateway

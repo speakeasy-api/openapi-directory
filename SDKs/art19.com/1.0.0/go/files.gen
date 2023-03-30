@@ -45,6 +45,7 @@ pkg/models/operations/getseries.go
 pkg/models/operations/getseriesid.go
 pkg/models/shared/links.go
 pkg/models/shared/classification.go
+pkg/models/shared/security.go
 pkg/models/shared/resourcelink.go
 pkg/models/shared/classificationinclusion.go
 pkg/models/shared/resourceidentifier.go
@@ -56,5 +57,4 @@ pkg/models/shared/network.go
 pkg/models/shared/person.go
 pkg/models/shared/season.go
 pkg/models/shared/series.go
-pkg/models/shared/security.go
 USAGE.md

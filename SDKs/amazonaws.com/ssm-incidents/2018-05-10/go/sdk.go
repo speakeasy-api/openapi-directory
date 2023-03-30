@@ -343,7 +343,7 @@ func (s *SDK) CreateResponsePlan(ctx context.Context, request operations.CreateR
 	return res, nil
 }
 
-// CreateTimelineEvent - Creates a custom timeline event on the incident details page of an incident record. Timeline events are automatically created by Incident Manager, marking key moment during an incident. You can create custom timeline events to mark important events that are automatically detected by Incident Manager.
+// CreateTimelineEvent - Creates a custom timeline event on the incident details page of an incident record. Incident Manager automatically creates timeline events that mark key moments during an incident. You can create custom timeline events to mark important events that Incident Manager can detect automatically.
 func (s *SDK) CreateTimelineEvent(ctx context.Context, request operations.CreateTimelineEventRequest) (*operations.CreateTimelineEventResponse, error) {
 	baseURL := s._serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/createTimelineEvent"

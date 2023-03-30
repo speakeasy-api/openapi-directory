@@ -4,8 +4,8 @@ package shared
 
 // GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest - Request message for DeleteConnectedSiteTag RPC.
 type GoogleAnalyticsAdminV1alphaDeleteConnectedSiteTagRequest struct {
-	// The measurement ID of the tag to remove from the Universal Analytics property. Also known as "G-ID". Example: "G-12345"
-	MeasurementID *string `json:"measurementId,omitempty"`
 	// The Universal Analytics property to delete connected site tags for. This API does not support GA4 properties. Format: properties/{universalAnalyticsPropertyId} Example: properties/1234
 	Property *string `json:"property,omitempty"`
+	// Tag ID to forward events to. Also known as the Measurement ID, or the "G-ID" (For example: G-12345).
+	TagID *string `json:"tagId,omitempty"`
 }

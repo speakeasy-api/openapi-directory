@@ -254,7 +254,7 @@ type GetQueryParams struct {
 	Format *GetFormatEnum `queryParam:"style=form,explode=true,name=format"`
 	// IP address (IPv4 or IPv6) for reverse IP location lookup purpose. If not present, the server IP address will be used for the location lookup.
 	IP string `queryParam:"style=form,explode=true,name=ip"`
-	// API Key.
+	// API Key. Please sign up free trial license key at ip2location.com
 	Key string `queryParam:"style=form,explode=true,name=key"`
 	// Translation information. The translation only applicable for continent, country, region and city name for the addon package.
 	Lang *GetLangEnum `queryParam:"style=form,explode=true,name=lang"`

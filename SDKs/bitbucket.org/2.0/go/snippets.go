@@ -42,7 +42,8 @@ func newSnippets(defaultClient, securityClient HTTPClient, serverURL, language, 
 	}
 }
 
-// DeleteSnippetsWorkspaceEncodedID - Deletes a snippet and returns an empty response.
+// DeleteSnippetsWorkspaceEncodedID - Delete a snippet
+// Deletes a snippet and returns an empty response.
 func (s *snippets) DeleteSnippetsWorkspaceEncodedID(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDRequest) (*operations.DeleteSnippetsWorkspaceEncodedIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}", request.PathParams, nil)
@@ -91,9 +92,10 @@ func (s *snippets) DeleteSnippetsWorkspaceEncodedID(ctx context.Context, request
 	return res, nil
 }
 
-// DeleteSnippetsWorkspaceEncodedIDCommentsCommentID - Deletes a snippet comment.
+// DeleteSnippetsWorkspaceEncodedIDCommentsCommentID - Delete a comment on a snippet
+// Deletes a snippet comment.
 //
-// Comments can only be removed by their author.
+// Comments can only be removed by the comment author, snippet creator, or workspace admin.
 func (s *snippets) DeleteSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDCommentsCommentIDRequest) (*operations.DeleteSnippetsWorkspaceEncodedIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request.PathParams, nil)
@@ -140,7 +142,8 @@ func (s *snippets) DeleteSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context
 	return res, nil
 }
 
-// DeleteSnippetsWorkspaceEncodedIDWatch - Used to stop watching a specific snippet. Returns 204 (No Content)
+// DeleteSnippetsWorkspaceEncodedIDWatch - Stop watching a snippet
+// Used to stop watching a specific snippet. Returns 204 (No Content)
 // to indicate success.
 func (s *snippets) DeleteSnippetsWorkspaceEncodedIDWatch(ctx context.Context, request operations.DeleteSnippetsWorkspaceEncodedIDWatchRequest) (*operations.DeleteSnippetsWorkspaceEncodedIDWatchResponse, error) {
 	baseURL := s.serverURL
@@ -171,15 +174,6 @@ func (s *snippets) DeleteSnippetsWorkspaceEncodedIDWatch(ctx context.Context, re
 	}
 	switch {
 	case httpRes.StatusCode == 204:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaginatedUsers
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PaginatedUsers = out
-		}
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -197,7 +191,8 @@ func (s *snippets) DeleteSnippetsWorkspaceEncodedIDWatch(ctx context.Context, re
 	return res, nil
 }
 
-// DeleteSnippetsWorkspaceEncodedIDNodeID - Deletes the snippet.
+// DeleteSnippetsWorkspaceEncodedIDNodeID - Delete a previous revision of a snippet
+// Deletes the snippet.
 //
 // Note that this only works for versioned URLs that point to the latest
 // commit of the snippet. Pointing to an older commit results in a 405
@@ -255,7 +250,8 @@ func (s *snippets) DeleteSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, r
 	return res, nil
 }
 
-// GetSnippets - Returns all snippets. Like pull requests, repositories and workspaces, the
+// GetSnippets - List snippets
+// Returns all snippets. Like pull requests, repositories and workspaces, the
 // full set of snippets is defined by what the current user has access to.
 //
 // This includes all snippets owned by any of the workspaces the user is a member of,
@@ -334,7 +330,8 @@ func (s *snippets) GetSnippets(ctx context.Context, request operations.GetSnippe
 	return res, nil
 }
 
-// GetSnippetsWorkspace - Identical to [`/snippets`](../snippets), except that the result is further filtered
+// GetSnippetsWorkspace - List snippets in a workspace
+// Identical to [`/snippets`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-get), except that the result is further filtered
 // by the snippet owner and only those that are owned by `{workspace}` are
 // returned.
 func (s *snippets) GetSnippetsWorkspace(ctx context.Context, request operations.GetSnippetsWorkspaceRequest) (*operations.GetSnippetsWorkspaceResponse, error) {
@@ -394,7 +391,8 @@ func (s *snippets) GetSnippetsWorkspace(ctx context.Context, request operations.
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedID - Retrieves a single snippet.
+// GetSnippetsWorkspaceEncodedID - Get a snippet
+// Retrieves a single snippet.
 //
 // Snippets support multiple content types:
 //
@@ -665,7 +663,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedID(ctx context.Context, request op
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDComments - Used to retrieve a paginated list of all comments for a specific
+// GetSnippetsWorkspaceEncodedIDComments - List comments on a snippet
+// Used to retrieve a paginated list of all comments for a specific
 // snippet.
 //
 // This resource works identical to commit and pull request comments.
@@ -727,7 +726,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDComments(ctx context.Context, re
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDCommentsCommentID - Returns the specific snippet comment.
+// GetSnippetsWorkspaceEncodedIDCommentsCommentID - Get a comment on a snippet
+// Returns the specific snippet comment.
 func (s *snippets) GetSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommentsCommentIDRequest) (*operations.GetSnippetsWorkspaceEncodedIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request.PathParams, nil)
@@ -783,7 +783,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Co
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDCommits - Returns the changes (commits) made on this snippet.
+// GetSnippetsWorkspaceEncodedIDCommits - List snippet changes
+// Returns the changes (commits) made on this snippet.
 func (s *snippets) GetSnippetsWorkspaceEncodedIDCommits(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommitsRequest) (*operations.GetSnippetsWorkspaceEncodedIDCommitsResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/commits", request.PathParams, nil)
@@ -839,7 +840,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDCommits(ctx context.Context, req
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDCommitsRevision - Returns the changes made on this snippet in this commit.
+// GetSnippetsWorkspaceEncodedIDCommitsRevision - Get a previous snippet change
+// Returns the changes made on this snippet in this commit.
 func (s *snippets) GetSnippetsWorkspaceEncodedIDCommitsRevision(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDCommitsRevisionRequest) (*operations.GetSnippetsWorkspaceEncodedIDCommitsRevisionResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/commits/{revision}", request.PathParams, nil)
@@ -895,7 +897,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDCommitsRevision(ctx context.Cont
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDFilesPath - Convenience resource for getting to a snippet's raw files without the
+// GetSnippetsWorkspaceEncodedIDFilesPath - Get a snippet's raw file at HEAD
+// Convenience resource for getting to a snippet's raw files without the
 // need for first having to retrieve the snippet itself and having to pull
 // out the versioned file links.
 func (s *snippets) GetSnippetsWorkspaceEncodedIDFilesPath(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDFilesPathRequest) (*operations.GetSnippetsWorkspaceEncodedIDFilesPathResponse, error) {
@@ -946,7 +949,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDFilesPath(ctx context.Context, r
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDWatch - Used to check if the current user is watching a specific snippet.
+// GetSnippetsWorkspaceEncodedIDWatch - Check if the current user is watching a snippet
+// Used to check if the current user is watching a specific snippet.
 //
 // Returns 204 (No Content) if the user is watching the snippet and 404 if
 // not.
@@ -981,15 +985,6 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDWatch(ctx context.Context, reque
 	}
 	switch {
 	case httpRes.StatusCode == 204:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaginatedUsers
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PaginatedUsers = out
-		}
 	case httpRes.StatusCode == 404:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
@@ -1005,7 +1000,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDWatch(ctx context.Context, reque
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDWatchers - Returns a paginated list of all users watching a specific snippet.
+// GetSnippetsWorkspaceEncodedIDWatchers - List users watching a snippet
+// Returns a paginated list of all users watching a specific snippet.
 func (s *snippets) GetSnippetsWorkspaceEncodedIDWatchers(ctx context.Context, request operations.GetSnippetsWorkspaceEncodedIDWatchersRequest) (*operations.GetSnippetsWorkspaceEncodedIDWatchersResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watchers", request.PathParams, nil)
@@ -1037,12 +1033,12 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDWatchers(ctx context.Context, re
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaginatedUsers
+			var out *shared.PaginatedAccounts
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PaginatedUsers = out
+			res.PaginatedAccounts = out
 		}
 	case httpRes.StatusCode == 404:
 		switch {
@@ -1059,7 +1055,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDWatchers(ctx context.Context, re
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDNodeID - Identical to `GET /snippets/encoded_id`, except that this endpoint
+// GetSnippetsWorkspaceEncodedIDNodeID - Get a previous revision of a snippet
+// Identical to `GET /snippets/encoded_id`, except that this endpoint
 // can be used to retrieve the contents of the snippet as it was at an
 // older revision, while `/snippets/encoded_id` always returns the
 // snippet's current revision.
@@ -1153,7 +1150,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDNodeID(ctx context.Context, requ
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDNodeIDFilesPath - Retrieves the raw contents of a specific file in the snippet. The
+// GetSnippetsWorkspaceEncodedIDNodeIDFilesPath - Get a snippet's raw file
+// Retrieves the raw contents of a specific file in the snippet. The
 // `Content-Disposition` header will be "attachment" to avoid issues with
 // malevolent executable files.
 //
@@ -1210,7 +1208,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDNodeIDFilesPath(ctx context.Cont
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDRevisionDiff - Returns the diff of the specified commit against its first parent.
+// GetSnippetsWorkspaceEncodedIDRevisionDiff - Get snippet changes between versions
+// Returns the diff of the specified commit against its first parent.
 //
 // Note that this resource is different in functionality from the `patch`
 // resource.
@@ -1279,7 +1278,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionDiff(ctx context.Context
 	return res, nil
 }
 
-// GetSnippetsWorkspaceEncodedIDRevisionPatch - Returns the patch of the specified commit against its first
+// GetSnippetsWorkspaceEncodedIDRevisionPatch - Get snippet patch between versions
+// Returns the patch of the specified commit against its first
 // parent.
 //
 // Note that this resource is different in functionality from the `diff`
@@ -1345,7 +1345,8 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionPatch(ctx context.Contex
 	return res, nil
 }
 
-// PostSnippets - Creates a new snippet under the authenticated user's account.
+// PostSnippets - Create a snippet
+// Creates a new snippet under the authenticated user's account.
 //
 // Snippets can contain multiple files. Both text and binary files are
 // supported.
@@ -1383,7 +1384,7 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionPatch(ctx context.Contex
 //	{
 //	  "title": "My snippet",
 //	  "is_private": true,
-//	  "scm": "hg",
+//	  "scm": "git",
 //	  "files": {
 //	      "foo.txt": {},
 //	      "image.png": {}
@@ -1489,7 +1490,7 @@ func (s *snippets) GetSnippetsWorkspaceEncodedIDRevisionPatch(ctx context.Contex
 //   - **is_private=true** -- only workspace members can view the snippet
 //
 // To create the snippet under a workspace, just append the workspace ID
-// to the URL. See [`/2.0/snippets/{workspace}`](./snippets/%7Bworkspace%7D#post).
+// to the URL. See [`/2.0/snippets/{workspace}`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-workspace-post).
 func (s *snippets) PostSnippets(ctx context.Context, request operations.PostSnippetsRequest) (*operations.PostSnippetsResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/snippets"
@@ -1555,7 +1556,8 @@ func (s *snippets) PostSnippets(ctx context.Context, request operations.PostSnip
 	return res, nil
 }
 
-// PostSnippetsWorkspace - Identical to [`/snippets`](../snippets#post), except that the new snippet will be
+// PostSnippetsWorkspace - Create a snippet for a workspace
+// Identical to [`/snippets`](/cloud/bitbucket/rest/api-group-snippets/#api-snippets-post), except that the new snippet will be
 // created under the workspace specified in the path parameter
 // `{workspace}`.
 func (s *snippets) PostSnippetsWorkspace(ctx context.Context, request operations.PostSnippetsWorkspaceRequest) (*operations.PostSnippetsWorkspaceResponse, error) {
@@ -1625,7 +1627,8 @@ func (s *snippets) PostSnippetsWorkspace(ctx context.Context, request operations
 	return res, nil
 }
 
-// PostSnippetsWorkspaceEncodedIDComments - Creates a new comment.
+// PostSnippetsWorkspaceEncodedIDComments - Create a comment on a snippet
+// Creates a new comment.
 //
 // The only required field in the body is `content.raw`.
 //
@@ -1678,7 +1681,7 @@ func (s *snippets) PostSnippetsWorkspaceEncodedIDComments(ctx context.Context, r
 				return nil, err
 			}
 
-			res.Snippet = out
+			res.SnippetComment = out
 		}
 	case httpRes.StatusCode == 403:
 		fallthrough
@@ -1697,7 +1700,8 @@ func (s *snippets) PostSnippetsWorkspaceEncodedIDComments(ctx context.Context, r
 	return res, nil
 }
 
-// PutSnippetsWorkspaceEncodedID - Used to update a snippet. Use this to add and delete files and to
+// PutSnippetsWorkspaceEncodedID - Update a snippet
+// Used to update a snippet. Use this to add and delete files and to
 // change a snippet's title.
 //
 // To update a snippet, one can either PUT a full snapshot, or only the
@@ -1976,17 +1980,30 @@ func (s *snippets) PutSnippetsWorkspaceEncodedID(ctx context.Context, request op
 	return res, nil
 }
 
-// PutSnippetsWorkspaceEncodedIDCommentsCommentID - Updates a comment.
+// PutSnippetsWorkspaceEncodedIDCommentsCommentID - Update a comment on a snippet
+// Updates a comment.
+//
+// The only required field in the body is `content.raw`.
 //
 // Comments can only be updated by their author.
 func (s *snippets) PutSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDCommentsCommentIDRequest) (*operations.PutSnippetsWorkspaceEncodedIDCommentsCommentIDResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/comments/{comment_id}", request.PathParams, nil)
 
-	req, err := http.NewRequestWithContext(ctx, "PUT", url, nil)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "PUT", url, bodyReader)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
+
+	req.Header.Set("Content-Type", reqContentType)
 
 	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
 
@@ -2008,6 +2025,15 @@ func (s *snippets) PutSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Co
 	}
 	switch {
 	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out map[string]interface{}
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.SnippetComment = out
+		}
 	case httpRes.StatusCode == 403:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -2025,7 +2051,8 @@ func (s *snippets) PutSnippetsWorkspaceEncodedIDCommentsCommentID(ctx context.Co
 	return res, nil
 }
 
-// PutSnippetsWorkspaceEncodedIDWatch - Used to start watching a specific snippet. Returns 204 (No Content).
+// PutSnippetsWorkspaceEncodedIDWatch - Watch a snippet
+// Used to start watching a specific snippet. Returns 204 (No Content).
 func (s *snippets) PutSnippetsWorkspaceEncodedIDWatch(ctx context.Context, request operations.PutSnippetsWorkspaceEncodedIDWatchRequest) (*operations.PutSnippetsWorkspaceEncodedIDWatchResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/snippets/{workspace}/{encoded_id}/watch", request.PathParams, nil)
@@ -2055,15 +2082,6 @@ func (s *snippets) PutSnippetsWorkspaceEncodedIDWatch(ctx context.Context, reque
 	}
 	switch {
 	case httpRes.StatusCode == 204:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.PaginatedUsers
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PaginatedUsers = out
-		}
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 404:
@@ -2081,7 +2099,8 @@ func (s *snippets) PutSnippetsWorkspaceEncodedIDWatch(ctx context.Context, reque
 	return res, nil
 }
 
-// PutSnippetsWorkspaceEncodedIDNodeID - Identical to `UPDATE /snippets/encoded_id`, except that this endpoint
+// PutSnippetsWorkspaceEncodedIDNodeID - Update a previous revision of a snippet
+// Identical to `UPDATE /snippets/encoded_id`, except that this endpoint
 // takes an explicit commit revision. Only the snippet's "HEAD"/"tip"
 // (most recent) version can be updated and requests on all other,
 // older revisions fail by returning a 405 status.

@@ -4,13 +4,13 @@ package shared
 
 type Author struct {
 	// Author full name
-	FullName *string `json:"full_name,omitempty"`
+	FullName string `json:"full_name"`
 	// Author id
-	ID *int64 `json:"id,omitempty"`
+	ID int64 `json:"id"`
 	// True if author has published items
-	IsActive *bool `json:"is_active,omitempty"`
+	IsActive bool `json:"is_active"`
 	// Author Orcid
-	OrcidID *string `json:"orcid_id,omitempty"`
+	OrcidID string `json:"orcid_id"`
 	// Author url name
-	URLName *string `json:"url_name,omitempty"`
+	URLName string `json:"url_name"`
 }

@@ -35,7 +35,7 @@ func main() {
         Request: operations.CreateScheduleRequestBody{
             ClientToken: "nihil",
             Description: "fuga",
-            EndDate: "2022-08-05T18:30:57.871Z",
+            EndDate: "2022-08-06T05:59:46.226Z",
             FlexibleTimeWindow: operations.CreateScheduleRequestBodyFlexibleTimeWindow{
                 MaximumWindowInMinutes: 384382,
                 Mode: "OFF",
@@ -44,7 +44,7 @@ func main() {
             KmsKeyArn: "saepe",
             ScheduleExpression: "inventore",
             ScheduleExpressionTimezone: "sapiente",
-            StartDate: "2022-12-20T00:04:45.408Z",
+            StartDate: "2022-12-20T11:33:33.763Z",
             State: "ENABLED",
             Target: operations.CreateScheduleRequestBodyTarget{
                 Arn: "voluptatum",

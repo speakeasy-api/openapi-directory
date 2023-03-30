@@ -12,7 +12,7 @@ type GetShippingQuoteSecurity struct {
 }
 
 type GetShippingQuotePathParams struct {
-	// This path parameter specifies the unique eBay-assigned ID of the shipping quote you want to retrieve. The shippingQuoteId value is generated and returned by a call to createShippingQuote.
+	// This path parameter specifies the unique eBay-assigned ID of the shipping quote you want to retrieve. The <b>shippingQuoteId</b> value is generated and returned by a call to <b>createShippingQuote</b>.
 	ShippingQuoteID string `pathParam:"style=simple,explode=false,name=shippingQuoteId"`
 }
 

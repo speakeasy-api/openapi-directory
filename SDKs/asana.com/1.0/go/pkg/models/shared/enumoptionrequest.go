@@ -2,7 +2,7 @@
 
 package shared
 
-// EnumOptionRequestInput - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 50.
+// EnumOptionRequestInput - Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.
 //
 // You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
 //

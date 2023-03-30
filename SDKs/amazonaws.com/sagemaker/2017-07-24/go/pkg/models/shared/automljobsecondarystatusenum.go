@@ -27,6 +27,7 @@ const (
 	AutoMLJobSecondaryStatusEnumModelDeploymentError           AutoMLJobSecondaryStatusEnum = "ModelDeploymentError"
 	AutoMLJobSecondaryStatusEnumGeneratingModelInsightsReport  AutoMLJobSecondaryStatusEnum = "GeneratingModelInsightsReport"
 	AutoMLJobSecondaryStatusEnumModelInsightsError             AutoMLJobSecondaryStatusEnum = "ModelInsightsError"
+	AutoMLJobSecondaryStatusEnumTrainingModels                 AutoMLJobSecondaryStatusEnum = "TrainingModels"
 )
 
 func (e *AutoMLJobSecondaryStatusEnum) UnmarshalJSON(data []byte) error {
@@ -68,6 +69,8 @@ func (e *AutoMLJobSecondaryStatusEnum) UnmarshalJSON(data []byte) error {
 	case "GeneratingModelInsightsReport":
 		fallthrough
 	case "ModelInsightsError":
+		fallthrough
+	case "TrainingModels":
 		*e = AutoMLJobSecondaryStatusEnum(s)
 		return nil
 	default:

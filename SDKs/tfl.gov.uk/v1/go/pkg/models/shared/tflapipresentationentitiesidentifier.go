@@ -90,7 +90,9 @@ type TflAPIPresentationEntitiesIdentifier struct {
 	Crowding  *TflAPIPresentationEntitiesCrowding                `json:"crowding,omitempty"`
 	FullName  *string                                            `json:"fullName,omitempty"`
 	ID        *string                                            `json:"id,omitempty"`
+	MotType   *string                                            `json:"motType,omitempty"`
 	Name      *string                                            `json:"name,omitempty"`
+	Network   *string                                            `json:"network,omitempty"`
 	RouteType *TflAPIPresentationEntitiesIdentifierRouteTypeEnum `json:"routeType,omitempty"`
 	Status    *TflAPIPresentationEntitiesIdentifierStatusEnum    `json:"status,omitempty"`
 	Type      *string                                            `json:"type,omitempty"`

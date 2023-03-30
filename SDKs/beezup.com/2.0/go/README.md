@@ -389,6 +389,7 @@ func main() {
 
 ### OMInvoiceAPIGeneration
 
+* `GenerateBatchOrderInvoice` - Generate an Order Invoice batch
 * `GenerateOrderInvoice` - Generate an Order Invoice
 * `GetOrderInvoicePdf` - Returns the PDF version of the invoice
 * `GetOrderInvoicePreview` - View a preview an Order Invoice

@@ -8,6 +8,10 @@ type DiagnoseClusterRequest struct {
 	DiagnosisInterval *Interval `json:"diagnosisInterval,omitempty"`
 	// Optional. DEPRECATED Specifies the job on which diagnosis is to be performed. Format: projects/{project}/regions/{region}/jobs/{job}
 	Job *string `json:"job,omitempty"`
+	// Optional. Specifies a list of jobs on which diagnosis is to be performed. Format: projects/{project}/regions/{region}/jobs/{job}
+	Jobs []string `json:"jobs,omitempty"`
 	// Optional. DEPRECATED Specifies the yarn application on which diagnosis is to be performed.
 	YarnApplicationID *string `json:"yarnApplicationId,omitempty"`
+	// Optional. Specifies a list of yarn applications on which diagnosis is to be performed.
+	YarnApplicationIds []string `json:"yarnApplicationIds,omitempty"`
 }

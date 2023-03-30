@@ -12,9 +12,9 @@ type GetRateLimitsSecurity struct {
 }
 
 type GetRateLimitsQueryParams struct {
-	// This optional query parameter filters the result to include only the specified API context. Acceptable values for the parameter are buy, sell, commerce, and developer.
+	// This optional query parameter filters the result to include only the specified API context. <br><br><b>Valid values:</b> <ul><li><code>buy</code></li><li><code>sell</code></li> <li><code>commerce</code></li><li><code>developer</code></li><li><code>tradingapi</code></li></ul>
 	APIContext *string `queryParam:"style=form,explode=true,name=api_context"`
-	// This optional query parameter filters the result to include only the APIs specified. Example values are browse for the Buy APIs context, inventory for the Sell APIs context, and taxonomy for the Commerce APIs context.
+	// This optional query parameter filters the result to include only the APIs specified. <br><br><b>Example values:</b> <ul> <li><code>browse</code> for the <a href="/../develop/apis/restful-apis/buy-apis#buy-apis" target="_blank">Buy APIs</a></li> <li><code>inventory</code> for the <a href="/../develop/apis/restful-apis/sell-apis#sell-apis" target="_blank">Sell APIs</a></li>  <li><code>taxonomy</code> for the <a href="/../develop/apis/restful-apis/commerce-apis#commerce-apis" target="_blank">Commerce APIs</a></li>  <li><code>tradingapi</code> for the <a href="/../Devzone/XML/docs/Reference/eBay/index.html" target="_blank">Trading APIs</a></li></ul>
 	APIName *string `queryParam:"style=form,explode=true,name=api_name"`
 }
 
@@ -23,17 +23,10 @@ type GetRateLimitsRequest struct {
 	Security    GetRateLimitsSecurity
 }
 
-// GetRateLimits500ApplicationJSON - Internal Server Error
-type GetRateLimits500ApplicationJSON struct {
-	Errors []shared.Error `json:"errors,omitempty"`
-}
-
 type GetRateLimitsResponse struct {
 	ContentType string
 	// OK
 	RateLimitsResponse *shared.RateLimitsResponse
 	StatusCode         int
 	RawResponse        *http.Response
-	// Internal Server Error
-	GetRateLimits500ApplicationJSONObject *GetRateLimits500ApplicationJSON
 }

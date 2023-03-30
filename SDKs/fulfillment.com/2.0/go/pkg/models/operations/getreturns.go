@@ -17,7 +17,7 @@ type GetReturnsQueryParams struct {
 	FromDate string `queryParam:"style=form,explode=true,name=fromDate"`
 	// The numbers of items to return
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
-	// A multiplier of the number of items (limit paramater) to skip before returning results
+	// A multiplier of the number of items (limit parameter) to skip before returning results
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
 	// Date-time in ISO 8601 format for selecting orders before, or at, the specified time
 	ToDate string `queryParam:"style=form,explode=true,name=toDate"`
@@ -85,9 +85,9 @@ type GetReturnsReturnsArrayV2ReturnV2 struct {
 }
 
 type GetReturnsReturnsArrayV2MetaPaginationV2 struct {
-	// Count of records returned in response, this will be equal to or less then the limit paramater
+	// Count of records returned in response, this will be equal to or less then the limit parameter
 	Count *int64 `json:"count,omitempty"`
-	// Current page of the response, this will match the page paramater
+	// Current page of the response, this will match the page parameter
 	CurrentPage *int64 `json:"currentPage,omitempty"`
 	// Total number of records available to request
 	Total *int64 `json:"total,omitempty"`

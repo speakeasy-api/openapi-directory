@@ -130,8 +130,8 @@ type GoogleCloudIntegrationsV1alphaTaskConfig struct {
 	Description *string `json:"description,omitempty"`
 	// Optional. User-provided label that is attached to this TaskConfig in the UI.
 	DisplayName *string `json:"displayName,omitempty"`
-	// Optional. Optional Error catcher config id of the error catch flow which will be executed when execution error happens in the task
-	ErrorCatcherConfigID *string `json:"errorCatcherConfigId,omitempty"`
+	// Optional. Optional Error catcher id of the error catch flow which will be executed when execution error happens in the task
+	ErrorCatcherID *string `json:"errorCatcherId,omitempty"`
 	// Optional. External task type of the task
 	ExternalTaskType *GoogleCloudIntegrationsV1alphaTaskConfigExternalTaskTypeEnum `json:"externalTaskType,omitempty"`
 	// Policy that defines the task retry logic and failure type. If no FailurePolicy is defined for a task, all its dependent tasks will not be executed (i.e, a `retry_strategy` of NONE will be applied).
@@ -144,6 +144,8 @@ type GoogleCloudIntegrationsV1alphaTaskConfig struct {
 	NextTasksExecutionPolicy *GoogleCloudIntegrationsV1alphaTaskConfigNextTasksExecutionPolicyEnum `json:"nextTasksExecutionPolicy,omitempty"`
 	// Optional. The customized parameters the user can pass to this task.
 	Parameters map[string]GoogleCloudIntegrationsV1alphaEventParameter `json:"parameters,omitempty"`
+	// Configuration detail of coordinate, it used for UI
+	Position *GoogleCloudIntegrationsV1alphaCoordinate `json:"position,omitempty"`
 	// Policy that dictates the behavior for the task after it completes successfully.
 	SuccessPolicy *GoogleCloudIntegrationsV1alphaSuccessPolicy `json:"successPolicy,omitempty"`
 	// Policy that defines the task retry logic and failure type. If no FailurePolicy is defined for a task, all its dependent tasks will not be executed (i.e, a `retry_strategy` of NONE will be applied).

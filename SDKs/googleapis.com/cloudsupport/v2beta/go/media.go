@@ -79,63 +79,8 @@ func (s *media) CloudsupportMediaDownload(ctx context.Context, request operation
 	return res, nil
 }
 
-// CloudsupportMediaUploadJSON - Create a file attachment on a case or Cloud resource. The attachment object must have the following fields set: filename.
-func (s *media) CloudsupportMediaUploadJSON(ctx context.Context, request operations.CloudsupportMediaUploadJSONRequest) (*operations.CloudsupportMediaUploadJSONResponse, error) {
-	baseURL := s.serverURL
-	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/attachments", request.PathParams, nil)
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	if err := utils.PopulateQueryParams(ctx, req, request.QueryParams, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
-
-	client := utils.ConfigureSecurityClient(s.defaultClient, request.Security)
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.CloudsupportMediaUploadJSONResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *shared.Attachment
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.Attachment = out
-		}
-	}
-
-	return res, nil
-}
-
-// CloudsupportMediaUploadRaw - Create a file attachment on a case or Cloud resource. The attachment object must have the following fields set: filename.
-func (s *media) CloudsupportMediaUploadRaw(ctx context.Context, request operations.CloudsupportMediaUploadRawRequest) (*operations.CloudsupportMediaUploadRawResponse, error) {
+// CloudsupportMediaUpload - Create a file attachment on a case or Cloud resource. The attachment object must have the following fields set: filename.
+func (s *media) CloudsupportMediaUpload(ctx context.Context, request operations.CloudsupportMediaUploadRequest) (*operations.CloudsupportMediaUploadResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/v2beta/{parent}/attachments", request.PathParams, nil)
 
@@ -168,7 +113,7 @@ func (s *media) CloudsupportMediaUploadRaw(ctx context.Context, request operatio
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.CloudsupportMediaUploadRawResponse{
+	res := &operations.CloudsupportMediaUploadResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,

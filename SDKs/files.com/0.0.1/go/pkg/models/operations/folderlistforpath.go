@@ -13,7 +13,7 @@ type FolderListForPathPathParams struct {
 }
 
 type FolderListForPathQueryParams struct {
-	// Send cursor to resume an existing list from the point at which you left off.  Get a cursor from an existing list via the X-Files-Cursor header.
+	// Send cursor to resume an existing list from the point at which you left off.  Get a cursor from an existing list via the X-Files-Cursor-Next header or the X-Files-Cursor-Prev header.
 	Cursor *string `queryParam:"style=form,explode=true,name=cursor"`
 	// If specified, will filter folders/files list by this string.  Wildcards of `*` and `?` are acceptable here.
 	Filter *string `queryParam:"style=form,explode=true,name=filter"`
@@ -23,7 +23,7 @@ type FolderListForPathQueryParams struct {
 	PreviewSize *string `queryParam:"style=form,explode=true,name=preview_size"`
 	// If `search_all` is `true`, provide the search string here.  Otherwise, this parameter acts like an alias of `filter`.
 	Search *string `queryParam:"style=form,explode=true,name=search"`
-	// Search entire site?
+	// Search entire site?  If set, we will ignore the folder path provided and search the entire site.  This is the same API used by the search bar in the UI.  Search results are a best effort, not real time, and not guaranteed to match every file.  This field should only be used for ad-hoc (human) searching, and not as part of an automated process.
 	SearchAll *bool `queryParam:"style=form,explode=true,name=search_all"`
 	// Include file previews?
 	WithPreviews *bool `queryParam:"style=form,explode=true,name=with_previews"`

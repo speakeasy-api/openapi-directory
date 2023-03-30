@@ -18,11 +18,11 @@ type PrivateCollectionCreateRequest struct {
 }
 
 type PrivateCollectionCreateResponse struct {
-	// Created
-	CollectionComplete *shared.CollectionComplete
-	ContentType        string
+	ContentType string
 	// Forbidden
 	ErrorMessage *shared.ErrorMessage
-	StatusCode   int
-	RawResponse  *http.Response
+	// Created
+	LocationWarnings *shared.LocationWarnings
+	StatusCode       int
+	RawResponse      *http.Response
 }

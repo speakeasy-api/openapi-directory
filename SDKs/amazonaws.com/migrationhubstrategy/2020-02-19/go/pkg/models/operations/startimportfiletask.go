@@ -25,6 +25,7 @@ type StartImportFileTaskRequestBodyDataSourceTypeEnum string
 const (
 	StartImportFileTaskRequestBodyDataSourceTypeEnumApplicationDiscoveryService StartImportFileTaskRequestBodyDataSourceTypeEnum = "ApplicationDiscoveryService"
 	StartImportFileTaskRequestBodyDataSourceTypeEnumMpa                         StartImportFileTaskRequestBodyDataSourceTypeEnum = "MPA"
+	StartImportFileTaskRequestBodyDataSourceTypeEnumImport                      StartImportFileTaskRequestBodyDataSourceTypeEnum = "Import"
 )
 
 func (e *StartImportFileTaskRequestBodyDataSourceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -36,6 +37,8 @@ func (e *StartImportFileTaskRequestBodyDataSourceTypeEnum) UnmarshalJSON(data []
 	case "ApplicationDiscoveryService":
 		fallthrough
 	case "MPA":
+		fallthrough
+	case "Import":
 		*e = StartImportFileTaskRequestBodyDataSourceTypeEnum(s)
 		return nil
 	default:

@@ -18,11 +18,12 @@ type GetFavoritesForUserPathParams struct {
 type GetFavoritesForUserResourceTypeEnum string
 
 const (
-	GetFavoritesForUserResourceTypeEnumPortfolio GetFavoritesForUserResourceTypeEnum = "portfolio"
-	GetFavoritesForUserResourceTypeEnumProject   GetFavoritesForUserResourceTypeEnum = "project"
-	GetFavoritesForUserResourceTypeEnumTag       GetFavoritesForUserResourceTypeEnum = "tag"
-	GetFavoritesForUserResourceTypeEnumTask      GetFavoritesForUserResourceTypeEnum = "task"
-	GetFavoritesForUserResourceTypeEnumUser      GetFavoritesForUserResourceTypeEnum = "user"
+	GetFavoritesForUserResourceTypeEnumPortfolio       GetFavoritesForUserResourceTypeEnum = "portfolio"
+	GetFavoritesForUserResourceTypeEnumProject         GetFavoritesForUserResourceTypeEnum = "project"
+	GetFavoritesForUserResourceTypeEnumTag             GetFavoritesForUserResourceTypeEnum = "tag"
+	GetFavoritesForUserResourceTypeEnumTask            GetFavoritesForUserResourceTypeEnum = "task"
+	GetFavoritesForUserResourceTypeEnumUser            GetFavoritesForUserResourceTypeEnum = "user"
+	GetFavoritesForUserResourceTypeEnumProjectTemplate GetFavoritesForUserResourceTypeEnum = "project_template"
 )
 
 func (e *GetFavoritesForUserResourceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -40,6 +41,8 @@ func (e *GetFavoritesForUserResourceTypeEnum) UnmarshalJSON(data []byte) error {
 	case "task":
 		fallthrough
 	case "user":
+		fallthrough
+	case "project_template":
 		*e = GetFavoritesForUserResourceTypeEnum(s)
 		return nil
 	default:

@@ -24,11 +24,8 @@ func String(s string) *string { return &s }
 // SDK - Wordnik is the worlds biggest online English dictionary, by number of words
 // http://developer.wordnik.com/
 type SDK struct {
-	Account   *account
-	Word      *word
-	WordList  *wordList
-	WordLists *wordLists
-	Words     *words
+	Word  *word
+	Words *words
 
 	// Non-idiomatic field names below are to namespace fields from the fields names above to avoid name conflicts
 	_defaultClient  HTTPClient
@@ -90,34 +87,7 @@ func New(opts ...SDKOption) *SDK {
 		sdk._serverURL = ServerList[0]
 	}
 
-	sdk.Account = newAccount(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
 	sdk.Word = newWord(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.WordList = newWordList(
-		sdk._defaultClient,
-		sdk._securityClient,
-		sdk._serverURL,
-		sdk._language,
-		sdk._sdkVersion,
-		sdk._genVersion,
-	)
-
-	sdk.WordLists = newWordLists(
 		sdk._defaultClient,
 		sdk._securityClient,
 		sdk._serverURL,

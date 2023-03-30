@@ -17,8 +17,10 @@ mbus.go
 meterfolderinformation.go
 metervalues.go
 oauth.go
+pico.go
 picocharging.go
 picocharginghistory.go
+picoenablefixcablelock.go
 picoloadmanagementgroup.go
 picoloadmanagementsetdynamiccurrent.go
 picosettings.go
@@ -37,6 +39,7 @@ virtualmetercalculateformula.go
 virtualtariff.go
 virtualtariffconsumption.go
 virtualtariffsforproperty.go
+virtualtariffsstatusforproperty.go
 sdk.go
 go.mod
 go.sum
@@ -97,8 +100,10 @@ pkg/models/operations/meterfolderinformationpostraw.go
 pkg/models/operations/metervaluesget.go
 pkg/models/operations/oauthauthorize.go
 pkg/models/operations/postapioauthauthorize.go
+pkg/models/operations/picoget.go
 pkg/models/operations/picochargingget.go
 pkg/models/operations/picocharginghistoryget.go
+pkg/models/operations/picoenablefixcablelockpost.go
 pkg/models/operations/picoloadmanagementgroupget.go
 pkg/models/operations/getapipicoloadmanagementgroup.go
 pkg/models/operations/picoloadmanagementsetdynamiccurrentpost.go
@@ -117,6 +122,7 @@ pkg/models/operations/subuserget.go
 pkg/models/operations/subuserpostform.go
 pkg/models/operations/subuserpostjson.go
 pkg/models/operations/subuserpostraw.go
+pkg/models/operations/userdelete.go
 pkg/models/operations/userget.go
 pkg/models/operations/usertofolderassigndelete.go
 pkg/models/operations/usertofolderassignpost.go
@@ -136,6 +142,7 @@ pkg/models/operations/virtualtariffget.go
 pkg/models/operations/getapivirtualtariffid.go
 pkg/models/operations/virtualtariffconsumptionget.go
 pkg/models/operations/virtualtariffsforpropertyget.go
+pkg/models/operations/virtualtariffsstatusforpropertyget.go
 pkg/models/shared/accesstokentoput.go
 pkg/models/shared/actioninformation.go
 pkg/models/shared/actiontopost.go

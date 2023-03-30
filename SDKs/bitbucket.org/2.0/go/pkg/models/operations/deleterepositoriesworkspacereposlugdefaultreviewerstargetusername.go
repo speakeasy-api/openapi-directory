@@ -37,6 +37,6 @@ type DeleteRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameResponse s
 	ContentType string
 	StatusCode  int
 	RawResponse *http.Response
-	// Unexpected error.
+	// If the authenticated user does not have access modify the default reviewers
 	Error map[string]interface{}
 }

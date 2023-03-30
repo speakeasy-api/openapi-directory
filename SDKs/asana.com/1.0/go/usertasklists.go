@@ -11,7 +11,7 @@ import (
 	"openapi/pkg/utils"
 )
 
-// userTaskLists - A user task list represents the tasks assigned to a particular user.
+// userTaskLists - A user task list represents the tasks assigned to a particular user. This list is the user's [My Tasks](https://asana.com/guide/help/fundamentals/my-tasks) list.
 type userTaskLists struct {
 	defaultClient  HTTPClient
 	securityClient HTTPClient

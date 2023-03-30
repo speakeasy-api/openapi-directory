@@ -2,7 +2,7 @@
 
 package shared
 
-// Stats - User stats for client and vendors
+// Stats - Client and vendor statistics for your account
 type Stats struct {
 	Client *ClientStats `json:"client,omitempty"`
 	Vendor *VendorStats `json:"vendor,omitempty"`

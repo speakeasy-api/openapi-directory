@@ -19,20 +19,19 @@ func main() {
         }),
     )
 
-    req := operations.DfsSlatesByDateRequest{
-        PathParams: operations.DfsSlatesByDatePathParams{
-            Date: "unde",
+    req := operations.DepthChartsRequest{
+        PathParams: operations.DepthChartsPathParams{
             Format: "JSON",
         },
     }
 
     ctx := context.Background()
-    res, err := s.DfsSlatesByDate(ctx, req)
+    res, err := s.DepthCharts(ctx, req)
     if err != nil {
         log.Fatal(err)
     }
 
-    if res.DfsSlates != nil {
+    if res.TeamDepthCharts != nil {
         // handle response
     }
 }

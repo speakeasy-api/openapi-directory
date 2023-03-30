@@ -4,8 +4,8 @@ package shared
 
 // Order - This complex type defines an order from which a seller is including one or more line items in a single package to be shipped.
 type Order struct {
-	// The e-commerce platform or environment where the order was created. Use the value EBAY to get the rates available for eBay orders.
+	// The e-commerce platform or environment where the order was created. Use the value <code>EBAY</code> to get the rates available for eBay orders.
 	Channel *string `json:"channel,omitempty"`
-	// The unique ID of the order supplied by the channel of origin. For eBay orders, this would be the orderId.
+	// The unique ID of the order supplied by the channel of origin. For eBay orders, this would be the <b>orderId</b>.
 	OrderID *string `json:"orderId,omitempty"`
 }

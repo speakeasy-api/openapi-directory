@@ -6,6 +6,7 @@ package shared
 type UpdateTableInput struct {
 	AttributeDefinitions        []AttributeDefinition        `json:"AttributeDefinitions,omitempty"`
 	BillingMode                 *BillingModeEnum             `json:"BillingMode,omitempty"`
+	DeletionProtectionEnabled   *bool                        `json:"DeletionProtectionEnabled,omitempty"`
 	GlobalSecondaryIndexUpdates []GlobalSecondaryIndexUpdate `json:"GlobalSecondaryIndexUpdates,omitempty"`
 	ProvisionedThroughput       *ProvisionedThroughput       `json:"ProvisionedThroughput,omitempty"`
 	ReplicaUpdates              []ReplicationGroupUpdate     `json:"ReplicaUpdates,omitempty"`

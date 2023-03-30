@@ -16,10 +16,8 @@ type UpdateInventoryForAnItemRawQueryParams struct {
 }
 
 type UpdateInventoryForAnItemRawHeaders struct {
-	// Basic authorization header. Base 64 encodes the Client ID and Client Secret retrieved in step two of the integration steps.
-	Authorization string `header:"style=simple,explode=false,name=Authorization"`
 	// A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
-	WmConsumerChannelType string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
+	WmConsumerChannelType *string `header:"style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE"`
 	// A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
 	WmQosCorrelationID string `header:"style=simple,explode=false,name=WM_QOS.CORRELATION_ID"`
 	// The access token retrieved in the Token API call
@@ -49,14 +47,16 @@ func (e *UpdateInventoryForAnItemApplicationXMLQuantityUnitEnum) UnmarshalJSON(d
 	}
 }
 
+// UpdateInventoryForAnItemApplicationXMLQuantity - Quantity that has been ordered by the customers but not yet shipped
 type UpdateInventoryForAnItemApplicationXMLQuantity struct {
-	// The number available in the inventory
+	// Inventory Count
 	Amount float64
 	// The unit of measurement. Example: 'EACH'
 	Unit UpdateInventoryForAnItemApplicationXMLQuantityUnitEnum
 }
 
 type UpdateInventoryForAnItemApplicationXML struct {
+	// Quantity that has been ordered by the customers but not yet shipped
 	Quantity UpdateInventoryForAnItemApplicationXMLQuantity
 	// A seller-provided Product ID. Response will have decoded value.
 	Sku string
@@ -90,8 +90,9 @@ func (e *UpdateInventoryForAnItemRaw200ApplicationXMLQuantityUnitEnum) Unmarshal
 	}
 }
 
+// UpdateInventoryForAnItemRaw200ApplicationXMLQuantity - Quantity that has been ordered by the customers but not yet shipped
 type UpdateInventoryForAnItemRaw200ApplicationXMLQuantity struct {
-	// The number available in the inventory
+	// Inventory Count
 	Amount float64
 	// The unit of measurement. Example: 'EACH'
 	Unit UpdateInventoryForAnItemRaw200ApplicationXMLQuantityUnitEnum
@@ -99,6 +100,7 @@ type UpdateInventoryForAnItemRaw200ApplicationXMLQuantity struct {
 
 // UpdateInventoryForAnItemRaw200ApplicationXML - Successful Operation
 type UpdateInventoryForAnItemRaw200ApplicationXML struct {
+	// Quantity that has been ordered by the customers but not yet shipped
 	Quantity UpdateInventoryForAnItemRaw200ApplicationXMLQuantity
 	// A seller-provided Product ID. Response will have decoded value.
 	Sku string
@@ -125,8 +127,9 @@ func (e *UpdateInventoryForAnItemRaw200ApplicationJSONQuantityUnitEnum) Unmarsha
 	}
 }
 
+// UpdateInventoryForAnItemRaw200ApplicationJSONQuantity - Quantity that has been ordered by the customers but not yet shipped
 type UpdateInventoryForAnItemRaw200ApplicationJSONQuantity struct {
-	// The number available in the inventory
+	// Inventory Count
 	Amount float64 `json:"amount"`
 	// The unit of measurement. Example: 'EACH'
 	Unit UpdateInventoryForAnItemRaw200ApplicationJSONQuantityUnitEnum `json:"unit"`
@@ -134,6 +137,7 @@ type UpdateInventoryForAnItemRaw200ApplicationJSONQuantity struct {
 
 // UpdateInventoryForAnItemRaw200ApplicationJSON - Successful Operation
 type UpdateInventoryForAnItemRaw200ApplicationJSON struct {
+	// Quantity that has been ordered by the customers but not yet shipped
 	Quantity UpdateInventoryForAnItemRaw200ApplicationJSONQuantity `json:"quantity"`
 	// A seller-provided Product ID. Response will have decoded value.
 	Sku string `json:"sku"`

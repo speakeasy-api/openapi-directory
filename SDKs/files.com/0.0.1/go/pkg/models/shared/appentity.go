@@ -47,22 +47,24 @@ func (e *AppEntityAppTypeEnum) UnmarshalJSON(data []byte) error {
 type AppEntityFolderBehaviorTypeEnum string
 
 const (
-	AppEntityFolderBehaviorTypeEnumWebhook             AppEntityFolderBehaviorTypeEnum = "webhook"
-	AppEntityFolderBehaviorTypeEnumFileExpiration      AppEntityFolderBehaviorTypeEnum = "file_expiration"
-	AppEntityFolderBehaviorTypeEnumAutoEncrypt         AppEntityFolderBehaviorTypeEnum = "auto_encrypt"
-	AppEntityFolderBehaviorTypeEnumLockSubfolders      AppEntityFolderBehaviorTypeEnum = "lock_subfolders"
-	AppEntityFolderBehaviorTypeEnumStorageRegion       AppEntityFolderBehaviorTypeEnum = "storage_region"
-	AppEntityFolderBehaviorTypeEnumServePublicly       AppEntityFolderBehaviorTypeEnum = "serve_publicly"
-	AppEntityFolderBehaviorTypeEnumCreateUserFolders   AppEntityFolderBehaviorTypeEnum = "create_user_folders"
-	AppEntityFolderBehaviorTypeEnumRemoteServerSync    AppEntityFolderBehaviorTypeEnum = "remote_server_sync"
-	AppEntityFolderBehaviorTypeEnumInbox               AppEntityFolderBehaviorTypeEnum = "inbox"
-	AppEntityFolderBehaviorTypeEnumAppendTimestamp     AppEntityFolderBehaviorTypeEnum = "append_timestamp"
-	AppEntityFolderBehaviorTypeEnumLimitFileExtensions AppEntityFolderBehaviorTypeEnum = "limit_file_extensions"
-	AppEntityFolderBehaviorTypeEnumLimitFileRegex      AppEntityFolderBehaviorTypeEnum = "limit_file_regex"
-	AppEntityFolderBehaviorTypeEnumAmazonSns           AppEntityFolderBehaviorTypeEnum = "amazon_sns"
-	AppEntityFolderBehaviorTypeEnumWatermark           AppEntityFolderBehaviorTypeEnum = "watermark"
-	AppEntityFolderBehaviorTypeEnumRemoteServerMount   AppEntityFolderBehaviorTypeEnum = "remote_server_mount"
-	AppEntityFolderBehaviorTypeEnumSlackWebhook        AppEntityFolderBehaviorTypeEnum = "slack_webhook"
+	AppEntityFolderBehaviorTypeEnumWebhook                AppEntityFolderBehaviorTypeEnum = "webhook"
+	AppEntityFolderBehaviorTypeEnumFileExpiration         AppEntityFolderBehaviorTypeEnum = "file_expiration"
+	AppEntityFolderBehaviorTypeEnumAutoEncrypt            AppEntityFolderBehaviorTypeEnum = "auto_encrypt"
+	AppEntityFolderBehaviorTypeEnumLockSubfolders         AppEntityFolderBehaviorTypeEnum = "lock_subfolders"
+	AppEntityFolderBehaviorTypeEnumStorageRegion          AppEntityFolderBehaviorTypeEnum = "storage_region"
+	AppEntityFolderBehaviorTypeEnumServePublicly          AppEntityFolderBehaviorTypeEnum = "serve_publicly"
+	AppEntityFolderBehaviorTypeEnumCreateUserFolders      AppEntityFolderBehaviorTypeEnum = "create_user_folders"
+	AppEntityFolderBehaviorTypeEnumRemoteServerSync       AppEntityFolderBehaviorTypeEnum = "remote_server_sync"
+	AppEntityFolderBehaviorTypeEnumInbox                  AppEntityFolderBehaviorTypeEnum = "inbox"
+	AppEntityFolderBehaviorTypeEnumAppendTimestamp        AppEntityFolderBehaviorTypeEnum = "append_timestamp"
+	AppEntityFolderBehaviorTypeEnumLimitFileExtensions    AppEntityFolderBehaviorTypeEnum = "limit_file_extensions"
+	AppEntityFolderBehaviorTypeEnumLimitFileRegex         AppEntityFolderBehaviorTypeEnum = "limit_file_regex"
+	AppEntityFolderBehaviorTypeEnumAmazonSns              AppEntityFolderBehaviorTypeEnum = "amazon_sns"
+	AppEntityFolderBehaviorTypeEnumWatermark              AppEntityFolderBehaviorTypeEnum = "watermark"
+	AppEntityFolderBehaviorTypeEnumRemoteServerMount      AppEntityFolderBehaviorTypeEnum = "remote_server_mount"
+	AppEntityFolderBehaviorTypeEnumSlackWebhook           AppEntityFolderBehaviorTypeEnum = "slack_webhook"
+	AppEntityFolderBehaviorTypeEnumAutoDecrypt            AppEntityFolderBehaviorTypeEnum = "auto_decrypt"
+	AppEntityFolderBehaviorTypeEnumOverrideUploadFilename AppEntityFolderBehaviorTypeEnum = "override_upload_filename"
 )
 
 func (e *AppEntityFolderBehaviorTypeEnum) UnmarshalJSON(data []byte) error {
@@ -102,6 +104,10 @@ func (e *AppEntityFolderBehaviorTypeEnum) UnmarshalJSON(data []byte) error {
 	case "remote_server_mount":
 		fallthrough
 	case "slack_webhook":
+		fallthrough
+	case "auto_decrypt":
+		fallthrough
+	case "override_upload_filename":
 		*e = AppEntityFolderBehaviorTypeEnum(s)
 		return nil
 	default:
@@ -128,6 +134,9 @@ const (
 	AppEntityRemoteServerTypeEnumAzure              AppEntityRemoteServerTypeEnum = "azure"
 	AppEntityRemoteServerTypeEnumSharepoint         AppEntityRemoteServerTypeEnum = "sharepoint"
 	AppEntityRemoteServerTypeEnumS3Compatible       AppEntityRemoteServerTypeEnum = "s3_compatible"
+	AppEntityRemoteServerTypeEnumAzureFiles         AppEntityRemoteServerTypeEnum = "azure_files"
+	AppEntityRemoteServerTypeEnumFilesAgent         AppEntityRemoteServerTypeEnum = "files_agent"
+	AppEntityRemoteServerTypeEnumFilebase           AppEntityRemoteServerTypeEnum = "filebase"
 )
 
 func (e *AppEntityRemoteServerTypeEnum) UnmarshalJSON(data []byte) error {
@@ -165,6 +174,12 @@ func (e *AppEntityRemoteServerTypeEnum) UnmarshalJSON(data []byte) error {
 	case "sharepoint":
 		fallthrough
 	case "s3_compatible":
+		fallthrough
+	case "azure_files":
+		fallthrough
+	case "files_agent":
+		fallthrough
+	case "filebase":
 		*e = AppEntityRemoteServerTypeEnum(s)
 		return nil
 	default:
@@ -237,7 +252,7 @@ type AppEntity struct {
 	// The type of the App
 	AppType *AppEntityAppTypeEnum `json:"app_type,omitempty"`
 	// Collection of named links to documentation
-	DocumentationLinks *string `json:"documentation_links,omitempty"`
+	DocumentationLinks map[string]interface{} `json:"documentation_links,omitempty"`
 	// Long form description of the App
 	ExtendedDescription *string `json:"extended_description,omitempty"`
 	// Link to external homepage
@@ -259,7 +274,7 @@ type AppEntity struct {
 	// Associated Remote Server type, if any
 	RemoteServerType *AppEntityRemoteServerTypeEnum `json:"remote_server_type,omitempty"`
 	// Screenshots of the App
-	ScreenshotListUrls *string `json:"screenshot_list_urls,omitempty"`
+	ScreenshotListUrls []string `json:"screenshot_list_urls,omitempty"`
 	// Short description of the App
 	ShortDescription *string `json:"short_description,omitempty"`
 	// Associated SSO Strategy type, if any

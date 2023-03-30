@@ -90,7 +90,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisAlpha(ctx context.Context, requ
 }
 
 // PostPortfolioAnalysisBeta - Beta
-// Compute the beta of one or several portfolio(s) in the Capital Asset Pricing Model (CAPM)..
+// Compute the beta of one or several portfolio(s) in the Capital Asset Pricing Model (CAPM).
 //
 // References
 // * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
@@ -141,6 +141,65 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisBeta(ctx context.Context, reque
 			}
 
 			res.PostPortfolioAnalysisBeta200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioAnalysisConditionalValueAtRisk - Conditional Value At Risk
+// Compute the conditional value at risk of one or several portfolio(s) from portfolio values.
+//
+// References
+// * [Wikipedia, Value at risk](https://en.wikipedia.org/wiki/Value_at_risk)
+// * [Acerbi, C. and Tasche, D. (2002), Expected Shortfall: A Natural Coherent Alternative to Value at Risk. Economic Notes, 31: 379-388](https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0300.00091)
+func (s *portfolioAnalysis) PostPortfolioAnalysisConditionalValueAtRisk(ctx context.Context, request operations.PostPortfolioAnalysisConditionalValueAtRiskRequest) (*operations.PostPortfolioAnalysisConditionalValueAtRiskResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/conditional-value-at-risk"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioAnalysisConditionalValueAtRiskResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioAnalysisConditionalValueAtRisk200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioAnalysisConditionalValueAtRisk200ApplicationJSONObject = out
 		}
 	}
 
@@ -263,11 +322,70 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisContributionsRisk(ctx context.C
 	return res, nil
 }
 
+// PostPortfolioAnalysisCorrelationSpectrum - Correlation Spectrum
+// Compute the correlation spectrum of one or several portfolio(s).
+//
+// References
+// * [Tristan Froidure, Khalid Jalalzai and Yves Choueifaty, Portfolio Rho-Representativity, International Journal of Theoretical and Applied FinanceVol. 22, No. 07, 1950034 (2019)](https://www.worldscientific.com/doi/10.1142/S0219024919500341)
+func (s *portfolioAnalysis) PostPortfolioAnalysisCorrelationSpectrum(ctx context.Context, request operations.PostPortfolioAnalysisCorrelationSpectrumRequest) (*operations.PostPortfolioAnalysisCorrelationSpectrumResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/correlation-spectrum"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioAnalysisCorrelationSpectrumResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioAnalysisCorrelationSpectrum200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioAnalysisCorrelationSpectrum200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
 // PostPortfolioAnalysisDiversificationRatio - Diversification Ratio
 // Compute the diversification ratio of one or several portfolio(s).
 //
 // References
 // * [Yves Choueifaty and Yves Coignard, Toward Maximum Diversification, The Journal of Portfolio Management Fall 2008, 35 (1) 40-51](https://doi.org/10.3905/JPM.2008.35.1.40)
+// * [Tristan Froidure, Khalid Jalalzai and Yves Choueifaty, Portfolio Rho-Representativity, International Journal of Theoretical and Applied FinanceVol. 22, No. 07, 1950034 (2019)](https://www.worldscientific.com/doi/10.1142/S0219024919500341)
 func (s *portfolioAnalysis) PostPortfolioAnalysisDiversificationRatio(ctx context.Context, request operations.PostPortfolioAnalysisDiversificationRatioRequest) (*operations.PostPortfolioAnalysisDiversificationRatioResponse, error) {
 	baseURL := s.serverURL
 	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/diversification-ratio"
@@ -379,14 +497,14 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisDrawdowns(ctx context.Context, 
 	return res, nil
 }
 
-// PostPortfolioAnalysisFactorExposures - Factor Exposures
-// Compute the exposures of one or several portfolio(s) to a set of factors, using a returns-based linear regression analysis.
+// PostPortfolioAnalysisEffectiveNumberOfBets - Effective Number of Bets
+// Compute the effective number of bets of one or several portfolio(s).
 //
 // References
-// * [Measuring Factor Exposures: Uses and Abuses, Ronen Israel and Adrienne Ross, The Journal of Alternative Investments Summer 2017, 20 (1) 10-25](https://jai.pm-research.com/content/20/1/10.short)
-func (s *portfolioAnalysis) PostPortfolioAnalysisFactorExposures(ctx context.Context, request operations.PostPortfolioAnalysisFactorExposuresRequest) (*operations.PostPortfolioAnalysisFactorExposuresResponse, error) {
+// * [Meucci, Attilio and Santangelo, Alberto and Deguest, Romain, Risk Budgeting and Diversification Based on Optimized Uncorrelated Factors (November 10, 2015)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2276632)
+func (s *portfolioAnalysis) PostPortfolioAnalysisEffectiveNumberOfBets(ctx context.Context, request operations.PostPortfolioAnalysisEffectiveNumberOfBetsRequest) (*operations.PostPortfolioAnalysisEffectiveNumberOfBetsResponse, error) {
 	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/factor/exposures"
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/effective-number-of-bets"
 
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
 	if err != nil {
@@ -416,7 +534,7 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisFactorExposures(ctx context.Con
 
 	contentType := httpRes.Header.Get("Content-Type")
 
-	res := &operations.PostPortfolioAnalysisFactorExposuresResponse{
+	res := &operations.PostPortfolioAnalysisEffectiveNumberOfBetsResponse{
 		StatusCode:  httpRes.StatusCode,
 		ContentType: contentType,
 		RawResponse: httpRes,
@@ -425,12 +543,70 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisFactorExposures(ctx context.Con
 	case httpRes.StatusCode == 200:
 		switch {
 		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.PostPortfolioAnalysisFactorExposures200ApplicationJSON
+			var out *operations.PostPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSON
 			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
 				return nil, err
 			}
 
-			res.PostPortfolioAnalysisFactorExposures200ApplicationJSONObject = out
+			res.PostPortfolioAnalysisEffectiveNumberOfBets200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioAnalysisFactorsExposures - Factor Exposures
+// Compute the exposures of one or several portfolio(s) to a set of factors, using a returns-based linear regression analysis.
+//
+// References
+// * [Measuring Factor Exposures: Uses and Abuses, Ronen Israel and Adrienne Ross, The Journal of Alternative Investments Summer 2017, 20 (1) 10-25](https://jai.pm-research.com/content/20/1/10.short)
+func (s *portfolioAnalysis) PostPortfolioAnalysisFactorsExposures(ctx context.Context, request operations.PostPortfolioAnalysisFactorsExposuresRequest) (*operations.PostPortfolioAnalysisFactorsExposuresResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/factors/exposures"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioAnalysisFactorsExposuresResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioAnalysisFactorsExposures200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioAnalysisFactorsExposures200ApplicationJSONObject = out
 		}
 	}
 
@@ -680,67 +856,6 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisReturnsAverage(ctx context.Cont
 	return res, nil
 }
 
-// PostPortfolioAnalysisSharpeRatio - Sharpe Ratio
-// Compute the Sharpe ratio of one or several portfolio(s) from either:
-// * Portfolio assets arithmetic returns and assets covariance matrix
-// * Portfolio values
-//
-// References
-// * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
-// * Harry M. Markowitz, Portfolio Selection, Efficient Diversification of Investments, Second edition, Blackwell Publishers Inc.
-func (s *portfolioAnalysis) PostPortfolioAnalysisSharpeRatio(ctx context.Context, request operations.PostPortfolioAnalysisSharpeRatioRequest) (*operations.PostPortfolioAnalysisSharpeRatioResponse, error) {
-	baseURL := s.serverURL
-	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/sharpe-ratio"
-
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
-	if err != nil {
-		return nil, fmt.Errorf("error serializing request body: %w", err)
-	}
-	if bodyReader == nil {
-		return nil, fmt.Errorf("request body is required")
-	}
-
-	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
-	if err != nil {
-		return nil, fmt.Errorf("error creating request: %w", err)
-	}
-
-	req.Header.Set("Content-Type", reqContentType)
-
-	client := s.securityClient
-
-	httpRes, err := client.Do(req)
-	if err != nil {
-		return nil, fmt.Errorf("error sending request: %w", err)
-	}
-	if httpRes == nil {
-		return nil, fmt.Errorf("error sending request: no response")
-	}
-	defer httpRes.Body.Close()
-
-	contentType := httpRes.Header.Get("Content-Type")
-
-	res := &operations.PostPortfolioAnalysisSharpeRatioResponse{
-		StatusCode:  httpRes.StatusCode,
-		ContentType: contentType,
-		RawResponse: httpRes,
-	}
-	switch {
-	case httpRes.StatusCode == 200:
-		switch {
-		case utils.MatchContentType(contentType, `application/json`):
-			var out *operations.PostPortfolioAnalysisSharpeRatio200ApplicationJSON
-			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
-				return nil, err
-			}
-
-			res.PostPortfolioAnalysisSharpeRatio200ApplicationJSONObject = out
-		}
-	}
-
-	return res, nil
-}
-
 // PostPortfolioAnalysisTrackingError - Tracking Error
 // Compute the tracking error between a benchmark and one or several portfolio(s).
 //
@@ -794,6 +909,183 @@ func (s *portfolioAnalysis) PostPortfolioAnalysisTrackingError(ctx context.Conte
 			}
 
 			res.PostPortfolioAnalysisTrackingError200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioAnalysisUlcerIndex - Ulcer Index
+// Compute the Ulcer Index of one or several portfolio(s).
+//
+// References
+// * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
+// * [Peter G. Martin, Ulcer Index, An Alternative Approach to the Measurement of Investment Risk & Risk-Adjusted Performance](http://www.tangotools.com/ui/ui.htm)
+func (s *portfolioAnalysis) PostPortfolioAnalysisUlcerIndex(ctx context.Context, request operations.PostPortfolioAnalysisUlcerIndexRequest) (*operations.PostPortfolioAnalysisUlcerIndexResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/ulcer-index"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioAnalysisUlcerIndexResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioAnalysisUlcerIndex200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioAnalysisUlcerIndex200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioAnalysisUlcerPerformanceIndex - Ulcer Performance Index
+// Compute the Ulcer Performance Index of one or several portfolio(s).
+//
+// References
+// * Carl R. Bacon, Practical Portfolio Performance Measurement and Attribution
+// * [Peter G. Martin, Ulcer Index, An Alternative Approach to the Measurement of Investment Risk & Risk-Adjusted Performance](http://www.tangotools.com/ui/ui.htm)
+func (s *portfolioAnalysis) PostPortfolioAnalysisUlcerPerformanceIndex(ctx context.Context, request operations.PostPortfolioAnalysisUlcerPerformanceIndexRequest) (*operations.PostPortfolioAnalysisUlcerPerformanceIndexResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/ulcer-performance-index"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioAnalysisUlcerPerformanceIndexResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioAnalysisUlcerPerformanceIndex200ApplicationJSONObject = out
+		}
+	}
+
+	return res, nil
+}
+
+// PostPortfolioAnalysisValueAtRisk - Value At Risk
+// Compute the value at risk of one or several portfolio(s) from portfolio values.
+//
+// References
+// * [Wikipedia, Value at risk](https://en.wikipedia.org/wiki/Value_at_risk)
+// * [Acerbi, C. and Tasche, D. (2002), Expected Shortfall: A Natural Coherent Alternative to Value at Risk. Economic Notes, 31: 379-388](https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-0300.00091)
+func (s *portfolioAnalysis) PostPortfolioAnalysisValueAtRisk(ctx context.Context, request operations.PostPortfolioAnalysisValueAtRiskRequest) (*operations.PostPortfolioAnalysisValueAtRiskResponse, error) {
+	baseURL := s.serverURL
+	url := strings.TrimSuffix(baseURL, "/") + "/portfolio/analysis/value-at-risk"
+
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, "Request", "json")
+	if err != nil {
+		return nil, fmt.Errorf("error serializing request body: %w", err)
+	}
+	if bodyReader == nil {
+		return nil, fmt.Errorf("request body is required")
+	}
+
+	req, err := http.NewRequestWithContext(ctx, "POST", url, bodyReader)
+	if err != nil {
+		return nil, fmt.Errorf("error creating request: %w", err)
+	}
+
+	req.Header.Set("Content-Type", reqContentType)
+
+	client := s.securityClient
+
+	httpRes, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("error sending request: %w", err)
+	}
+	if httpRes == nil {
+		return nil, fmt.Errorf("error sending request: no response")
+	}
+	defer httpRes.Body.Close()
+
+	contentType := httpRes.Header.Get("Content-Type")
+
+	res := &operations.PostPortfolioAnalysisValueAtRiskResponse{
+		StatusCode:  httpRes.StatusCode,
+		ContentType: contentType,
+		RawResponse: httpRes,
+	}
+	switch {
+	case httpRes.StatusCode == 200:
+		switch {
+		case utils.MatchContentType(contentType, `application/json`):
+			var out *operations.PostPortfolioAnalysisValueAtRisk200ApplicationJSON
+			if err := utils.UnmarshalJsonFromResponseBody(httpRes.Body, &out); err != nil {
+				return nil, err
+			}
+
+			res.PostPortfolioAnalysisValueAtRisk200ApplicationJSONObject = out
 		}
 	}
 

@@ -82,6 +82,7 @@ func main() {
 * `Schedules` - Schedules
 * `Stadiums` - Stadiums
 * `Standings` - Standings
+* `TeamGameLogsBySeason` - Team Game Logs By Season
 * `TeamGameStatsByDate` - Team Game Stats by Date
 * `TeamHittingVsStartingPitcher` - Team Hitting vs. Starting Pitcher
 * `TeamSeasonStats` - Team Season Stats

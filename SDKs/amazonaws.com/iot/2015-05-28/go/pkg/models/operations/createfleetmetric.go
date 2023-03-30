@@ -30,7 +30,7 @@ type CreateFleetMetricRequestBodyAggregationType struct {
 	Values []string                        `json:"values,omitempty"`
 }
 
-// CreateFleetMetricRequestBodyUnitEnum - Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW metric</a>. Default to null.
+// CreateFleetMetricRequestBodyUnitEnum - Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW metric</a>. Default to null.
 type CreateFleetMetricRequestBodyUnitEnum string
 
 const (
@@ -146,7 +146,7 @@ type CreateFleetMetricRequestBody struct {
 	QueryVersion *string `json:"queryVersion,omitempty"`
 	// Metadata, which can be used to manage the fleet metric.
 	Tags []shared.Tag `json:"tags,omitempty"`
-	// Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a href="https://docs.aws.amazon.com/https:/docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW metric</a>. Default to null.
+	// Used to support unit transformation such as milliseconds to seconds. The unit must be supported by <a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricDatum.html">CW metric</a>. Default to null.
 	Unit *CreateFleetMetricRequestBodyUnitEnum `json:"unit,omitempty"`
 }
 

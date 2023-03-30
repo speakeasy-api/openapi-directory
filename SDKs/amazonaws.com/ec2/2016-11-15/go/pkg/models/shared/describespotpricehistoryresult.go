@@ -631,6 +631,25 @@ const (
 	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR6idn16xlarge   DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r6idn.16xlarge"
 	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR6idn24xlarge   DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r6idn.24xlarge"
 	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR6idn32xlarge   DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r6idn.32xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumC7gMetal        DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "c7g.metal"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM7gMedium       DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m7g.medium"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM7gLarge        DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m7g.large"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM7gXlarge       DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m7g.xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM7g2xlarge      DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m7g.2xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM7g4xlarge      DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m7g.4xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM7g8xlarge      DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m7g.8xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM7g12xlarge     DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m7g.12xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM7g16xlarge     DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m7g.16xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumM7gMetal        DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "m7g.metal"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7gMedium       DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.medium"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7gLarge        DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.large"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7gXlarge       DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7g2xlarge      DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.2xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7g4xlarge      DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.4xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7g8xlarge      DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.8xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7g12xlarge     DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.12xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7g16xlarge     DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.16xlarge"
+	DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnumR7gMetal        DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum = "r7g.metal"
 )
 
 func (e *DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum) UnmarshalJSON(data []byte) error {
@@ -1876,6 +1895,44 @@ func (e *DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum) Unmarsh
 	case "r6idn.24xlarge":
 		fallthrough
 	case "r6idn.32xlarge":
+		fallthrough
+	case "c7g.metal":
+		fallthrough
+	case "m7g.medium":
+		fallthrough
+	case "m7g.large":
+		fallthrough
+	case "m7g.xlarge":
+		fallthrough
+	case "m7g.2xlarge":
+		fallthrough
+	case "m7g.4xlarge":
+		fallthrough
+	case "m7g.8xlarge":
+		fallthrough
+	case "m7g.12xlarge":
+		fallthrough
+	case "m7g.16xlarge":
+		fallthrough
+	case "m7g.metal":
+		fallthrough
+	case "r7g.medium":
+		fallthrough
+	case "r7g.large":
+		fallthrough
+	case "r7g.xlarge":
+		fallthrough
+	case "r7g.2xlarge":
+		fallthrough
+	case "r7g.4xlarge":
+		fallthrough
+	case "r7g.8xlarge":
+		fallthrough
+	case "r7g.12xlarge":
+		fallthrough
+	case "r7g.16xlarge":
+		fallthrough
+	case "r7g.metal":
 		*e = DescribeSpotPriceHistoryResultSpotPriceHistoryInstanceTypeEnum(s)
 		return nil
 	default:

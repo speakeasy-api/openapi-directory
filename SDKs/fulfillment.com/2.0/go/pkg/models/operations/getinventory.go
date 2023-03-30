@@ -18,8 +18,10 @@ type GetInventoryQueryParams struct {
 	Limit *int64 `queryParam:"style=form,explode=true,name=limit"`
 	// A CSV of merchant id, '123' or '1,2,3'
 	MerchantIds []int64 `queryParam:"style=form,explode=false,name=merchantIds"`
-	// A multiplier of the number of items (limit paramater) to skip before returning results
+	// A multiplier of the number of items (limit parameter) to skip before returning results
 	Page *int64 `queryParam:"style=form,explode=true,name=page"`
+	// A CSV of warehouse id, '123' or '1,2,3'
+	WarehouseIds []int64 `queryParam:"style=form,explode=false,name=warehouseIds"`
 }
 
 type GetInventoryRequest struct {
@@ -59,9 +61,9 @@ type GetInventoryItemInventoryArrayV2ItemInventoryV2 struct {
 }
 
 type GetInventoryItemInventoryArrayV2MetaPaginationV2 struct {
-	// Count of records returned in response, this will be equal to or less then the limit paramater
+	// Count of records returned in response, this will be equal to or less then the limit parameter
 	Count *int64 `json:"count,omitempty"`
-	// Current page of the response, this will match the page paramater
+	// Current page of the response, this will match the page parameter
 	CurrentPage *int64 `json:"currentPage,omitempty"`
 	// Total number of records available to request
 	Total *int64 `json:"total,omitempty"`

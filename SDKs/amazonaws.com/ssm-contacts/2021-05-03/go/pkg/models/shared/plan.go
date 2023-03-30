@@ -2,7 +2,8 @@
 
 package shared
 
-// Plan - The stages that an escalation plan or engagement plan engages contacts and contact methods in.
+// Plan - Information about the stages and on-call rotation teams associated with an escalation plan or engagement plan.
 type Plan struct {
-	Stages []Stage `json:"Stages"`
+	RotationIds []string `json:"RotationIds,omitempty"`
+	Stages      []Stage  `json:"Stages,omitempty"`
 }

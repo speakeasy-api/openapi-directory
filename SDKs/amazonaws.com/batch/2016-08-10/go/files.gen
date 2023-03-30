@@ -83,6 +83,7 @@ pkg/models/shared/tmpfs.go
 pkg/models/shared/device.go
 pkg/models/shared/devicecgrouppermissionenum.go
 pkg/models/shared/fargateplatformconfiguration.go
+pkg/models/shared/ephemeralstorage.go
 pkg/models/shared/keyvaluepair.go
 pkg/models/shared/eksproperties.go
 pkg/models/shared/ekspodproperties.go
@@ -90,6 +91,7 @@ pkg/models/shared/eksvolume.go
 pkg/models/shared/ekssecret.go
 pkg/models/shared/ekshostpath.go
 pkg/models/shared/eksemptydir.go
+pkg/models/shared/eksmetadata.go
 pkg/models/shared/ekscontainer.go
 pkg/models/shared/ekscontainervolumemount.go
 pkg/models/shared/ekscontainersecuritycontext.go

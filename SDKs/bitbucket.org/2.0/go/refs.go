@@ -37,7 +37,8 @@ func newRefs(defaultClient, securityClient HTTPClient, serverURL, language, sdkV
 	}
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugRefsBranchesName - Delete a branch in the specified repository.
+// DeleteRepositoriesWorkspaceRepoSlugRefsBranchesName - Delete a branch
+// Delete a branch in the specified repository.
 //
 // The main branch is not allowed to be deleted and will return a 400
 // response.
@@ -90,11 +91,10 @@ func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.C
 	return res, nil
 }
 
-// DeleteRepositoriesWorkspaceRepoSlugRefsTagsName - Delete a tag in the specified repository.
+// DeleteRepositoriesWorkspaceRepoSlugRefsTagsName - Delete a tag
+// Delete a tag in the specified repository.
 //
-// For Git, the tag name should not include any prefixes (e.g. refs/tags).
-// For Mercurial, this adds a commit to the main branch that removes the
-// specified tag.
+// The tag name should not include any prefixes (e.g. refs/tags).
 func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context, request operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameRequest) (*operations.DeleteRepositoriesWorkspaceRepoSlugRefsTagsNameResponse, error) {
 	baseURL := s.serverURL
 	url := utils.GenerateURL(ctx, baseURL, "/repositories/{workspace}/{repo_slug}/refs/tags/{name}", request.PathParams, nil)
@@ -141,7 +141,8 @@ func (s *refs) DeleteRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Conte
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugRefs - Returns the branches and tags in the repository.
+// GetRepositoriesWorkspaceRepoSlugRefs - List branches and tags
+// Returns the branches and tags in the repository.
 //
 // By default, results will be in the order the underlying source control system returns them and identical to
 // the ordering one sees when running "$ git show-ref". Note that this follows simple
@@ -212,7 +213,8 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefs(ctx context.Context, request
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugRefsBranches - Returns a list of all open branches within the specified repository.
+// GetRepositoriesWorkspaceRepoSlugRefsBranches - List open branches
+// Returns a list of all open branches within the specified repository.
 //
 //	Results will be in the order the source control manager returns them.
 //
@@ -334,7 +336,7 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefs(ctx context.Context, request
 //	}
 //	```
 //
-//	Branches support [filtering and sorting](../../../../../meta/filtering)
+//	Branches support [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering)
 //	that can be used to search for specific branches. For instance, to find
 //	all branches that have "stab" in their name:
 //
@@ -343,7 +345,7 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefs(ctx context.Context, request
 //	```
 //
 //	By default, results will be in the order the underlying source control system returns them and identical to
-//	the ordering one sees when running "$ hg branches" or "$ git branch --list". Note that this follows simple
+//	the ordering one sees when running "$ git branch --list". Note that this follows simple
 //	lexical ordering of the ref names.
 //
 //	This can be undesirable as it does apply any natural sorting semantics, meaning for instance that tags are
@@ -410,7 +412,8 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context,
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugRefsBranchesName - Returns a branch object within the specified repository.
+// GetRepositoriesWorkspaceRepoSlugRefsBranchesName - Get a branch
+// Returns a branch object within the specified repository.
 //
 //	```
 //	$ curl -s https://api.bitbucket.org/2.0/repositories/atlassian/aui/refs/branches/master | jq .
@@ -586,10 +589,11 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsBranchesName(ctx context.Cont
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugRefsTags - Returns the tags in the repository.
+// GetRepositoriesWorkspaceRepoSlugRefsTags - List tags
+// Returns the tags in the repository.
 //
 // By default, results will be in the order the underlying source control system returns them and identical to
-// the ordering one sees when running "$ hg tags" or "$ git tag --list". Note that this follows simple
+// the ordering one sees when running "$ git tag --list". Note that this follows simple
 // lexical ordering of the ref names.
 //
 // This can be undesirable as it does apply any natural sorting semantics, meaning for instance that tags are
@@ -656,7 +660,8 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTags(ctx context.Context, req
 	return res, nil
 }
 
-// GetRepositoriesWorkspaceRepoSlugRefsTagsName - Returns the specified tag.
+// GetRepositoriesWorkspaceRepoSlugRefsTagsName - Get a tag
+// Returns the specified tag.
 //
 // ```
 // $ curl -s https://api.bitbucket.org/2.0/repositories/seanfarley/hg/refs/tags/3.8 -G | jq .
@@ -839,7 +844,8 @@ func (s *refs) GetRepositoriesWorkspaceRepoSlugRefsTagsName(ctx context.Context,
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugRefsBranches - Creates a new branch in the specified repository.
+// PostRepositoriesWorkspaceRepoSlugRefsBranches - Create a branch
+// Creates a new branch in the specified repository.
 //
 // The payload of the POST should consist of a JSON document that
 // contains the name of the tag and the target hash.
@@ -921,7 +927,8 @@ func (s *refs) PostRepositoriesWorkspaceRepoSlugRefsBranches(ctx context.Context
 	return res, nil
 }
 
-// PostRepositoriesWorkspaceRepoSlugRefsTags - Creates a new tag in the specified repository.
+// PostRepositoriesWorkspaceRepoSlugRefsTags - Create a tag
+// Creates a new tag in the specified repository.
 //
 // The payload of the POST should consist of a JSON document that
 // contains the name of the tag and the target hash.

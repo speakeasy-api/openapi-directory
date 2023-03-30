@@ -23,11 +23,11 @@ func main() {
         PathParams: operations.CreateAccountPathParams{
             BudgetID: "unde",
         },
-        Request: shared.SaveAccountWrapper{
+        Request: shared.PostAccountWrapper{
             Account: shared.SaveAccount{
                 Balance: 592845,
                 Name: "porro",
-                Type: "otherAsset",
+                Type: "personalLoan",
             },
         },
     }

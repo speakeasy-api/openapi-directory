@@ -23,6 +23,7 @@ type RegisterJobDefinitionHeaders struct {
 type RegisterJobDefinitionRequestBodyContainerProperties struct {
 	Command                      []string                             `json:"command,omitempty"`
 	Environment                  []shared.KeyValuePair                `json:"environment,omitempty"`
+	EphemeralStorage             *shared.EphemeralStorage             `json:"ephemeralStorage,omitempty"`
 	ExecutionRoleArn             *string                              `json:"executionRoleArn,omitempty"`
 	FargatePlatformConfiguration *shared.FargatePlatformConfiguration `json:"fargatePlatformConfiguration,omitempty"`
 	Image                        *string                              `json:"image,omitempty"`
