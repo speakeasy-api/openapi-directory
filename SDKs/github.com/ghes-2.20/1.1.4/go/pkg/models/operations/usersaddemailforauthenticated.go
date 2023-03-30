@@ -3,6 +3,9 @@
 package operations
 
 import (
+	"bytes"
+	"encoding/json"
+	"errors"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -12,8 +15,100 @@ type UsersAddEmailForAuthenticatedRequestBody1 struct {
 	Emails []string `json:"emails"`
 }
 
+type UsersAddEmailForAuthenticatedRequestBodyType string
+
+const (
+	UsersAddEmailForAuthenticatedRequestBodyTypeUsersAddEmailForAuthenticatedRequestBody1 UsersAddEmailForAuthenticatedRequestBodyType = "users/add-email-for-authenticated_requestBody_1"
+	UsersAddEmailForAuthenticatedRequestBodyTypeArrayOfstr                                UsersAddEmailForAuthenticatedRequestBodyType = "arrayOfstr"
+	UsersAddEmailForAuthenticatedRequestBodyTypeStr                                       UsersAddEmailForAuthenticatedRequestBodyType = "str"
+)
+
+type UsersAddEmailForAuthenticatedRequestBody struct {
+	UsersAddEmailForAuthenticatedRequestBody1 *UsersAddEmailForAuthenticatedRequestBody1
+	ArrayOfstr                                []string
+	Str                                       *string
+
+	Type UsersAddEmailForAuthenticatedRequestBodyType
+}
+
+func CreateUsersAddEmailForAuthenticatedRequestBodyUsersAddEmailForAuthenticatedRequestBody1(usersAddEmailForAuthenticatedRequestBody1 UsersAddEmailForAuthenticatedRequestBody1) UsersAddEmailForAuthenticatedRequestBody {
+	typ := UsersAddEmailForAuthenticatedRequestBodyTypeUsersAddEmailForAuthenticatedRequestBody1
+
+	return UsersAddEmailForAuthenticatedRequestBody{
+		UsersAddEmailForAuthenticatedRequestBody1: &usersAddEmailForAuthenticatedRequestBody1,
+		Type: typ,
+	}
+}
+
+func CreateUsersAddEmailForAuthenticatedRequestBodyArrayOfstr(arrayOfstr []string) UsersAddEmailForAuthenticatedRequestBody {
+	typ := UsersAddEmailForAuthenticatedRequestBodyTypeArrayOfstr
+
+	return UsersAddEmailForAuthenticatedRequestBody{
+		ArrayOfstr: arrayOfstr,
+		Type:       typ,
+	}
+}
+
+func CreateUsersAddEmailForAuthenticatedRequestBodyStr(str string) UsersAddEmailForAuthenticatedRequestBody {
+	typ := UsersAddEmailForAuthenticatedRequestBodyTypeStr
+
+	return UsersAddEmailForAuthenticatedRequestBody{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func (u *UsersAddEmailForAuthenticatedRequestBody) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	usersAddEmailForAuthenticatedRequestBody1 := new(UsersAddEmailForAuthenticatedRequestBody1)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&usersAddEmailForAuthenticatedRequestBody1); err == nil {
+		u.UsersAddEmailForAuthenticatedRequestBody1 = usersAddEmailForAuthenticatedRequestBody1
+		u.Type = UsersAddEmailForAuthenticatedRequestBodyTypeUsersAddEmailForAuthenticatedRequestBody1
+		return nil
+	}
+
+	arrayOfstr := []string{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfstr); err == nil {
+		u.ArrayOfstr = arrayOfstr
+		u.Type = UsersAddEmailForAuthenticatedRequestBodyTypeArrayOfstr
+		return nil
+	}
+
+	str := new(string)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&str); err == nil {
+		u.Str = str
+		u.Type = UsersAddEmailForAuthenticatedRequestBodyTypeStr
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u UsersAddEmailForAuthenticatedRequestBody) MarshalJSON() ([]byte, error) {
+	if u.UsersAddEmailForAuthenticatedRequestBody1 != nil {
+		return json.Marshal(u.UsersAddEmailForAuthenticatedRequestBody1)
+	}
+
+	if u.ArrayOfstr != nil {
+		return json.Marshal(u.ArrayOfstr)
+	}
+
+	if u.Str != nil {
+		return json.Marshal(u.Str)
+	}
+
+	return nil, nil
+}
+
 type UsersAddEmailForAuthenticatedRequest struct {
-	Request interface{} `request:"mediaType=application/json"`
+	Request *UsersAddEmailForAuthenticatedRequestBody `request:"mediaType=application/json"`
 }
 
 type UsersAddEmailForAuthenticatedResponse struct {

@@ -37,12 +37,12 @@ func main() {
                 "iure": "magnam",
                 "debitis": "ipsa",
             },
-            DataSetPublicationDate: "2022-04-12T09:08:38.697Z",
-            DataSetType: "daily_business_new_product_subscribers",
-            DestinationS3BucketName: "suscipit",
-            DestinationS3Prefix: "molestiae",
-            RoleNameArn: "minus",
-            SnsTopicArn: "placeat",
+            DataSetPublicationDate: "2022-03-08T10:35:32.561Z",
+            DataSetType: "monthly_revenue_annual_subscriptions",
+            DestinationS3BucketName: "molestiae",
+            DestinationS3Prefix: "minus",
+            RoleNameArn: "placeat",
+            SnsTopicArn: "voluptatum",
         },
     }
 

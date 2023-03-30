@@ -45,10 +45,10 @@ func main() {
                 AfterFragmentNumber: "illum",
                 ContinuationToken: "vel",
                 StartSelectorType: "NOW",
-                StartTimestamp: "2022-08-06T08:47:30.236Z",
+                StartTimestamp: "2022-03-26T09:37:56.283Z",
             },
-            StreamARN: "suscipit",
-            StreamName: "iure",
+            StreamARN: "iure",
+            StreamName: "magnam",
         },
     }
 

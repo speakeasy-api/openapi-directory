@@ -34,7 +34,7 @@ func main() {
                     SchemeName: "illum",
                     SecondaryIdentification: "vel",
                 },
-                ExpirationDateTime: "2022-08-14T12:42:55.042Z",
+                ExpirationDateTime: "2021-09-16T11:56:06.019Z",
             },
         },
     }

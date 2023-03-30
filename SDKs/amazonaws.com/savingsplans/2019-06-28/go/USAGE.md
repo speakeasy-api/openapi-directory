@@ -32,13 +32,13 @@ func main() {
         Request: operations.CreateSavingsPlanRequestBody{
             ClientToken: "illum",
             Commitment: "vel",
-            PurchaseTime: "2022-08-14T12:25:46.236Z",
-            SavingsPlanOfferingID: "deserunt",
+            PurchaseTime: "2021-09-16T11:56:06.019Z",
+            SavingsPlanOfferingID: "suscipit",
             Tags: map[string]string{
-                "iure": "magnam",
-                "debitis": "ipsa",
+                "magnam": "debitis",
+                "ipsa": "delectus",
             },
-            UpfrontPaymentAmount: "delectus",
+            UpfrontPaymentAmount: "tempora",
         },
     }
 

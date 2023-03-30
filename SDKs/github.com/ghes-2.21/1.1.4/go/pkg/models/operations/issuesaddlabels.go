@@ -3,6 +3,9 @@
 package operations
 
 import (
+	"bytes"
+	"encoding/json"
+	"errors"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -31,9 +34,149 @@ type IssuesAddLabelsRequestBody1 struct {
 	Labels []string `json:"labels,omitempty"`
 }
 
+type IssuesAddLabelsRequestBodyType string
+
+const (
+	IssuesAddLabelsRequestBodyTypeIssuesAddLabelsRequestBody1        IssuesAddLabelsRequestBodyType = "issues/add-labels_requestBody_1"
+	IssuesAddLabelsRequestBodyTypeArrayOfstr                         IssuesAddLabelsRequestBodyType = "arrayOfstr"
+	IssuesAddLabelsRequestBodyTypeIssuesAddLabelsRequestBody3        IssuesAddLabelsRequestBodyType = "issues/add-labels_requestBody_3"
+	IssuesAddLabelsRequestBodyTypeArrayOfissuesAddLabelsRequestBody4 IssuesAddLabelsRequestBodyType = "arrayOfissues/add-labels_requestBody_4"
+	IssuesAddLabelsRequestBodyTypeStr                                IssuesAddLabelsRequestBodyType = "str"
+)
+
+type IssuesAddLabelsRequestBody struct {
+	IssuesAddLabelsRequestBody1        *IssuesAddLabelsRequestBody1
+	ArrayOfstr                         []string
+	IssuesAddLabelsRequestBody3        *IssuesAddLabelsRequestBody3
+	ArrayOfissuesAddLabelsRequestBody4 []IssuesAddLabelsRequestBody4
+	Str                                *string
+
+	Type IssuesAddLabelsRequestBodyType
+}
+
+func CreateIssuesAddLabelsRequestBodyIssuesAddLabelsRequestBody1(issuesAddLabelsRequestBody1 IssuesAddLabelsRequestBody1) IssuesAddLabelsRequestBody {
+	typ := IssuesAddLabelsRequestBodyTypeIssuesAddLabelsRequestBody1
+
+	return IssuesAddLabelsRequestBody{
+		IssuesAddLabelsRequestBody1: &issuesAddLabelsRequestBody1,
+		Type:                        typ,
+	}
+}
+
+func CreateIssuesAddLabelsRequestBodyArrayOfstr(arrayOfstr []string) IssuesAddLabelsRequestBody {
+	typ := IssuesAddLabelsRequestBodyTypeArrayOfstr
+
+	return IssuesAddLabelsRequestBody{
+		ArrayOfstr: arrayOfstr,
+		Type:       typ,
+	}
+}
+
+func CreateIssuesAddLabelsRequestBodyIssuesAddLabelsRequestBody3(issuesAddLabelsRequestBody3 IssuesAddLabelsRequestBody3) IssuesAddLabelsRequestBody {
+	typ := IssuesAddLabelsRequestBodyTypeIssuesAddLabelsRequestBody3
+
+	return IssuesAddLabelsRequestBody{
+		IssuesAddLabelsRequestBody3: &issuesAddLabelsRequestBody3,
+		Type:                        typ,
+	}
+}
+
+func CreateIssuesAddLabelsRequestBodyArrayOfissuesAddLabelsRequestBody4(arrayOfissuesAddLabelsRequestBody4 []IssuesAddLabelsRequestBody4) IssuesAddLabelsRequestBody {
+	typ := IssuesAddLabelsRequestBodyTypeArrayOfissuesAddLabelsRequestBody4
+
+	return IssuesAddLabelsRequestBody{
+		ArrayOfissuesAddLabelsRequestBody4: arrayOfissuesAddLabelsRequestBody4,
+		Type:                               typ,
+	}
+}
+
+func CreateIssuesAddLabelsRequestBodyStr(str string) IssuesAddLabelsRequestBody {
+	typ := IssuesAddLabelsRequestBodyTypeStr
+
+	return IssuesAddLabelsRequestBody{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func (u *IssuesAddLabelsRequestBody) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	issuesAddLabelsRequestBody1 := new(IssuesAddLabelsRequestBody1)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&issuesAddLabelsRequestBody1); err == nil {
+		u.IssuesAddLabelsRequestBody1 = issuesAddLabelsRequestBody1
+		u.Type = IssuesAddLabelsRequestBodyTypeIssuesAddLabelsRequestBody1
+		return nil
+	}
+
+	arrayOfstr := []string{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfstr); err == nil {
+		u.ArrayOfstr = arrayOfstr
+		u.Type = IssuesAddLabelsRequestBodyTypeArrayOfstr
+		return nil
+	}
+
+	issuesAddLabelsRequestBody3 := new(IssuesAddLabelsRequestBody3)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&issuesAddLabelsRequestBody3); err == nil {
+		u.IssuesAddLabelsRequestBody3 = issuesAddLabelsRequestBody3
+		u.Type = IssuesAddLabelsRequestBodyTypeIssuesAddLabelsRequestBody3
+		return nil
+	}
+
+	arrayOfissuesAddLabelsRequestBody4 := []IssuesAddLabelsRequestBody4{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfissuesAddLabelsRequestBody4); err == nil {
+		u.ArrayOfissuesAddLabelsRequestBody4 = arrayOfissuesAddLabelsRequestBody4
+		u.Type = IssuesAddLabelsRequestBodyTypeArrayOfissuesAddLabelsRequestBody4
+		return nil
+	}
+
+	str := new(string)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&str); err == nil {
+		u.Str = str
+		u.Type = IssuesAddLabelsRequestBodyTypeStr
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u IssuesAddLabelsRequestBody) MarshalJSON() ([]byte, error) {
+	if u.IssuesAddLabelsRequestBody1 != nil {
+		return json.Marshal(u.IssuesAddLabelsRequestBody1)
+	}
+
+	if u.ArrayOfstr != nil {
+		return json.Marshal(u.ArrayOfstr)
+	}
+
+	if u.IssuesAddLabelsRequestBody3 != nil {
+		return json.Marshal(u.IssuesAddLabelsRequestBody3)
+	}
+
+	if u.ArrayOfissuesAddLabelsRequestBody4 != nil {
+		return json.Marshal(u.ArrayOfissuesAddLabelsRequestBody4)
+	}
+
+	if u.Str != nil {
+		return json.Marshal(u.Str)
+	}
+
+	return nil, nil
+}
+
 type IssuesAddLabelsRequest struct {
 	PathParams IssuesAddLabelsPathParams
-	Request    interface{} `request:"mediaType=application/json"`
+	Request    *IssuesAddLabelsRequestBody `request:"mediaType=application/json"`
 }
 
 type IssuesAddLabelsResponse struct {

@@ -61,7 +61,7 @@ func main() {
                 },
             },
             PipelineID: "delectus",
-            StartTimestamp: "2022-12-20T14:20:04.268Z",
+            StartTimestamp: "2022-08-14T01:03:07.567Z",
         },
     }
 

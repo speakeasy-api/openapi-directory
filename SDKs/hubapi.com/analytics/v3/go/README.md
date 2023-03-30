@@ -34,13 +34,13 @@ func main() {
             Email: "Larue_Rau85@yahoo.com",
             EventName: "corrupti",
             ObjectID: "illum",
-            OccurredAt: "2022-10-26T11:52:58.825Z",
+            OccurredAt: "2022-05-18T09:34:54.894Z",
             Properties: map[string]string{
-                "deserunt": "suscipit",
-                "iure": "magnam",
-                "debitis": "ipsa",
+                "suscipit": "iure",
+                "magnam": "debitis",
+                "ipsa": "delectus",
             },
-            Utk: "delectus",
+            Utk: "tempora",
         },
     }
 

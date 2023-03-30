@@ -19,11 +19,11 @@ func main() {
         },
         QueryParams: operations.GETAnalyticsDataUsingGETQueryParams{
             DataType: "sessionAnalytic",
-            EndDate: "2022-07-12",
-            Keys: "quibusdam",
-            Precision: "DAILY",
+            EndDate: "2021-04-24",
+            Keys: "unde",
+            Precision: "MONTHLY",
             Stage: "PREVIEW",
-            StartDate: "2022-09-12",
+            StartDate: "2021-09-24",
         },
     }
 

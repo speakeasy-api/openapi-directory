@@ -2,6 +2,80 @@
 
 package shared
 
+import (
+	"bytes"
+	"encoding/json"
+	"errors"
+)
+
+type CreateChatCompletionRequestStopType string
+
+const (
+	CreateChatCompletionRequestStopTypeStr        CreateChatCompletionRequestStopType = "str"
+	CreateChatCompletionRequestStopTypeArrayOfstr CreateChatCompletionRequestStopType = "arrayOfstr"
+)
+
+type CreateChatCompletionRequestStop struct {
+	Str        *string
+	ArrayOfstr []string
+
+	Type CreateChatCompletionRequestStopType
+}
+
+func CreateCreateChatCompletionRequestStopStr(str string) CreateChatCompletionRequestStop {
+	typ := CreateChatCompletionRequestStopTypeStr
+
+	return CreateChatCompletionRequestStop{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateCreateChatCompletionRequestStopArrayOfstr(arrayOfstr []string) CreateChatCompletionRequestStop {
+	typ := CreateChatCompletionRequestStopTypeArrayOfstr
+
+	return CreateChatCompletionRequestStop{
+		ArrayOfstr: arrayOfstr,
+		Type:       typ,
+	}
+}
+
+func (u *CreateChatCompletionRequestStop) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	str := new(string)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&str); err == nil {
+		u.Str = str
+		u.Type = CreateChatCompletionRequestStopTypeStr
+		return nil
+	}
+
+	arrayOfstr := []string{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfstr); err == nil {
+		u.ArrayOfstr = arrayOfstr
+		u.Type = CreateChatCompletionRequestStopTypeArrayOfstr
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u CreateChatCompletionRequestStop) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return json.Marshal(u.Str)
+	}
+
+	if u.ArrayOfstr != nil {
+		return json.Marshal(u.ArrayOfstr)
+	}
+
+	return nil, nil
+}
+
 type CreateChatCompletionRequest struct {
 	// Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
 	//
@@ -29,7 +103,7 @@ type CreateChatCompletionRequest struct {
 	PresencePenalty *float64 `json:"presence_penalty,omitempty"`
 	// Up to 4 sequences where the API will stop generating further tokens.
 	//
-	Stop interface{} `json:"stop,omitempty"`
+	Stop *CreateChatCompletionRequestStop `json:"stop,omitempty"`
 	// If set, partial message deltas will be sent, like in ChatGPT. Tokens will be sent as data-only [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format) as they become available, with the stream terminated by a `data: [DONE]` message.
 	//
 	Stream *bool `json:"stream,omitempty"`

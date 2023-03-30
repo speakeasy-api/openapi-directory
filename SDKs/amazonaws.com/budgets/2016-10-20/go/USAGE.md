@@ -39,27 +39,26 @@ func main() {
                         BudgetAdjustmentPeriod: 623564,
                         LookBackAvailablePeriods: 645894,
                     },
-                    LastAutoAdjustTime: "2022-11-09T19:36:36.283Z",
+                    LastAutoAdjustTime: "2022-07-25T06:44:09.184Z",
                 },
                 BudgetLimit: &shared.Spend{
-                    Amount: "iure",
-                    Unit: "magnam",
+                    Amount: "magnam",
+                    Unit: "debitis",
                 },
-                BudgetName: "debitis",
-                BudgetType: "USAGE",
+                BudgetName: "ipsa",
+                BudgetType: "SAVINGS_PLANS_COVERAGE",
                 CalculatedSpend: &shared.CalculatedSpend{
                     ActualSpend: shared.Spend{
-                        Amount: "delectus",
-                        Unit: "tempora",
+                        Amount: "tempora",
+                        Unit: "suscipit",
                     },
                     ForecastedSpend: &shared.Spend{
-                        Amount: "suscipit",
-                        Unit: "molestiae",
+                        Amount: "molestiae",
+                        Unit: "minus",
                     },
                 },
                 CostFilters: map[string][]string{
-                    "placeat": []string{
-                        "iusto",
+                    "voluptatum": []string{
                         "excepturi",
                         "nisi",
                     },
@@ -90,106 +89,78 @@ func main() {
                     UseAmortized: false,
                     UseBlended: false,
                 },
-                LastUpdatedTime: "2022-05-16T12:49:46.781Z",
+                LastUpdatedTime: "2020-01-25T09:54:35.794Z",
                 PlannedBudgetLimits: map[string]shared.Spend{
-                    "molestiae": shared.Spend{
+                    "quod": shared.Spend{
                         Amount: "quod",
-                        Unit: "quod",
+                        Unit: "esse",
                     },
-                    "esse": shared.Spend{
-                        Amount: "totam",
-                        Unit: "porro",
-                    },
-                    "dolorum": shared.Spend{
-                        Amount: "dicta",
-                        Unit: "nam",
-                    },
-                    "officia": shared.Spend{
-                        Amount: "occaecati",
-                        Unit: "fugit",
+                    "totam": shared.Spend{
+                        Amount: "porro",
+                        Unit: "dolorum",
                     },
                 },
                 TimePeriod: &shared.TimePeriod{
-                    End: "2022-09-14T23:24:15.880Z",
-                    Start: "2022-04-19T07:29:39.395Z",
+                    End: "2022-04-12T23:15:28.420Z",
+                    Start: "2021-11-02T03:00:47.309Z",
                 },
-                TimeUnit: "ANNUALLY",
+                TimeUnit: "DAILY",
             },
             NotificationsWithSubscribers: []shared.NotificationWithSubscribers{
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "GREATER_THAN",
-                        NotificationState: "OK",
-                        NotificationType: "ACTUAL",
-                        Threshold: 2645.55,
+                        ComparisonOperator: "EQUAL_TO",
+                        NotificationState: "ALARM",
+                        NotificationType: "FORECASTED",
+                        Threshold: 1059.07,
                         ThresholdType: "PERCENTAGE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "cum",
+                            Address: "modi",
                             SubscriptionType: "SNS",
                         },
                         shared.Subscriber{
-                            Address: "ipsum",
-                            SubscriptionType: "EMAIL",
-                        },
-                        shared.Subscriber{
-                            Address: "aspernatur",
-                            SubscriptionType: "SNS",
-                        },
-                        shared.Subscriber{
-                            Address: "ad",
+                            Address: "impedit",
                             SubscriptionType: "EMAIL",
                         },
                     },
                 },
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "GREATER_THAN",
-                        NotificationState: "ALARM",
-                        NotificationType: "ACTUAL",
-                        Threshold: 6169.34,
+                        ComparisonOperator: "LESS_THAN",
+                        NotificationState: "OK",
+                        NotificationType: "FORECASTED",
+                        Threshold: 1352.18,
                         ThresholdType: "PERCENTAGE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "saepe",
-                            SubscriptionType: "EMAIL",
-                        },
-                        shared.Subscriber{
-                            Address: "in",
+                            Address: "natus",
                             SubscriptionType: "SNS",
                         },
                         shared.Subscriber{
                             Address: "iste",
                             SubscriptionType: "SNS",
                         },
-                        shared.Subscriber{
-                            Address: "saepe",
-                            SubscriptionType: "EMAIL",
-                        },
                     },
                 },
                 shared.NotificationWithSubscribers{
                     Notification: shared.Notification{
-                        ComparisonOperator: "GREATER_THAN",
+                        ComparisonOperator: "LESS_THAN",
                         NotificationState: "OK",
                         NotificationType: "FORECASTED",
-                        Threshold: 6667.67,
+                        Threshold: 9025.99,
                         ThresholdType: "ABSOLUTE_VALUE",
                     },
                     Subscribers: []shared.Subscriber{
                         shared.Subscriber{
-                            Address: "dolores",
-                            SubscriptionType: "SNS",
-                        },
-                        shared.Subscriber{
                             Address: "corporis",
-                            SubscriptionType: "SNS",
+                            SubscriptionType: "EMAIL",
                         },
                         shared.Subscriber{
-                            Address: "nobis",
-                            SubscriptionType: "SNS",
+                            Address: "iure",
+                            SubscriptionType: "EMAIL",
                         },
                     },
                 },

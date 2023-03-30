@@ -21,11 +21,11 @@ func main() {
 
     req := operations.CurrenciesHistoryGETRequest{
         QueryParams: operations.CurrenciesHistoryGETQueryParams{
-            End: "2022-09-10T19:31:18.142Z",
+            End: "2021-10-25T05:21:43.948Z",
             Format: "xml",
-            Interval: "distinctio",
-            Pairs: "quibusdam",
-            Start: "2022-08-22T02:55:15.160Z",
+            Interval: "quibusdam",
+            Pairs: "unde",
+            Start: "2021-05-14T08:28:11.899Z",
         },
     }
 

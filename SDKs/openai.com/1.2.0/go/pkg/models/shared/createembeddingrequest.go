@@ -2,10 +2,132 @@
 
 package shared
 
+import (
+	"bytes"
+	"encoding/json"
+	"errors"
+)
+
+type CreateEmbeddingRequestInputType string
+
+const (
+	CreateEmbeddingRequestInputTypeStr                   CreateEmbeddingRequestInputType = "str"
+	CreateEmbeddingRequestInputTypeArrayOfstr            CreateEmbeddingRequestInputType = "arrayOfstr"
+	CreateEmbeddingRequestInputTypeArrayOfinteger        CreateEmbeddingRequestInputType = "arrayOfinteger"
+	CreateEmbeddingRequestInputTypeArrayOfarrayOfinteger CreateEmbeddingRequestInputType = "arrayOfarrayOfinteger"
+)
+
+type CreateEmbeddingRequestInput struct {
+	Str                   *string
+	ArrayOfstr            []string
+	ArrayOfinteger        []int64
+	ArrayOfarrayOfinteger [][]int64
+
+	Type CreateEmbeddingRequestInputType
+}
+
+func CreateCreateEmbeddingRequestInputStr(str string) CreateEmbeddingRequestInput {
+	typ := CreateEmbeddingRequestInputTypeStr
+
+	return CreateEmbeddingRequestInput{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateCreateEmbeddingRequestInputArrayOfstr(arrayOfstr []string) CreateEmbeddingRequestInput {
+	typ := CreateEmbeddingRequestInputTypeArrayOfstr
+
+	return CreateEmbeddingRequestInput{
+		ArrayOfstr: arrayOfstr,
+		Type:       typ,
+	}
+}
+
+func CreateCreateEmbeddingRequestInputArrayOfinteger(arrayOfinteger []int64) CreateEmbeddingRequestInput {
+	typ := CreateEmbeddingRequestInputTypeArrayOfinteger
+
+	return CreateEmbeddingRequestInput{
+		ArrayOfinteger: arrayOfinteger,
+		Type:           typ,
+	}
+}
+
+func CreateCreateEmbeddingRequestInputArrayOfarrayOfinteger(arrayOfarrayOfinteger [][]int64) CreateEmbeddingRequestInput {
+	typ := CreateEmbeddingRequestInputTypeArrayOfarrayOfinteger
+
+	return CreateEmbeddingRequestInput{
+		ArrayOfarrayOfinteger: arrayOfarrayOfinteger,
+		Type:                  typ,
+	}
+}
+
+func (u *CreateEmbeddingRequestInput) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	str := new(string)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&str); err == nil {
+		u.Str = str
+		u.Type = CreateEmbeddingRequestInputTypeStr
+		return nil
+	}
+
+	arrayOfstr := []string{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfstr); err == nil {
+		u.ArrayOfstr = arrayOfstr
+		u.Type = CreateEmbeddingRequestInputTypeArrayOfstr
+		return nil
+	}
+
+	arrayOfinteger := []int64{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfinteger); err == nil {
+		u.ArrayOfinteger = arrayOfinteger
+		u.Type = CreateEmbeddingRequestInputTypeArrayOfinteger
+		return nil
+	}
+
+	arrayOfarrayOfinteger := [][]int64{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfarrayOfinteger); err == nil {
+		u.ArrayOfarrayOfinteger = arrayOfarrayOfinteger
+		u.Type = CreateEmbeddingRequestInputTypeArrayOfarrayOfinteger
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u CreateEmbeddingRequestInput) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return json.Marshal(u.Str)
+	}
+
+	if u.ArrayOfstr != nil {
+		return json.Marshal(u.ArrayOfstr)
+	}
+
+	if u.ArrayOfinteger != nil {
+		return json.Marshal(u.ArrayOfinteger)
+	}
+
+	if u.ArrayOfarrayOfinteger != nil {
+		return json.Marshal(u.ArrayOfarrayOfinteger)
+	}
+
+	return nil, nil
+}
+
 type CreateEmbeddingRequest struct {
 	// Input text to get embeddings for, encoded as a string or array of tokens. To get embeddings for multiple inputs in a single request, pass an array of strings or array of token arrays. Each input must not exceed 8192 tokens in length.
 	//
-	Input interface{} `json:"input"`
+	Input CreateEmbeddingRequestInput `json:"input"`
 	// ID of the model to use. You can use the [List models](/docs/api-reference/models/list) API to see all of your available models, or see our [Model overview](/docs/models/overview) for descriptions of them.
 	Model string `json:"model"`
 	// A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. [Learn more](/docs/guides/safety-best-practices/end-user-ids).

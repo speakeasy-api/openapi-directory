@@ -28,8 +28,8 @@ func main() {
             AuditLogType: "organizationAdminLeft",
             ConfigID: "05dfc2dd-f7cc-478c-a1ba-928fc816742c",
             EnvironmentID: "b7392059-2939-46fe-a759-6eb10faaa235",
-            FromUtcDateTime: "2023-02-11T01:30:52.152Z",
-            ToUtcDateTime: "2022-06-29T02:53:54.442Z",
+            FromUtcDateTime: "2022-04-01T23:59:21.675Z",
+            ToUtcDateTime: "2022-05-24T03:24:11.703Z",
         },
     }
 

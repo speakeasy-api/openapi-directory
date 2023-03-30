@@ -3,6 +3,9 @@
 package operations
 
 import (
+	"bytes"
+	"encoding/json"
+	"errors"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -12,8 +15,100 @@ type UsersAddEmailForAuthenticatedUserRequestBody1 struct {
 	Emails []string `json:"emails"`
 }
 
+type UsersAddEmailForAuthenticatedUserRequestBodyType string
+
+const (
+	UsersAddEmailForAuthenticatedUserRequestBodyTypeUsersAddEmailForAuthenticatedUserRequestBody1 UsersAddEmailForAuthenticatedUserRequestBodyType = "users/add-email-for-authenticated-user_requestBody_1"
+	UsersAddEmailForAuthenticatedUserRequestBodyTypeArrayOfstr                                    UsersAddEmailForAuthenticatedUserRequestBodyType = "arrayOfstr"
+	UsersAddEmailForAuthenticatedUserRequestBodyTypeStr                                           UsersAddEmailForAuthenticatedUserRequestBodyType = "str"
+)
+
+type UsersAddEmailForAuthenticatedUserRequestBody struct {
+	UsersAddEmailForAuthenticatedUserRequestBody1 *UsersAddEmailForAuthenticatedUserRequestBody1
+	ArrayOfstr                                    []string
+	Str                                           *string
+
+	Type UsersAddEmailForAuthenticatedUserRequestBodyType
+}
+
+func CreateUsersAddEmailForAuthenticatedUserRequestBodyUsersAddEmailForAuthenticatedUserRequestBody1(usersAddEmailForAuthenticatedUserRequestBody1 UsersAddEmailForAuthenticatedUserRequestBody1) UsersAddEmailForAuthenticatedUserRequestBody {
+	typ := UsersAddEmailForAuthenticatedUserRequestBodyTypeUsersAddEmailForAuthenticatedUserRequestBody1
+
+	return UsersAddEmailForAuthenticatedUserRequestBody{
+		UsersAddEmailForAuthenticatedUserRequestBody1: &usersAddEmailForAuthenticatedUserRequestBody1,
+		Type: typ,
+	}
+}
+
+func CreateUsersAddEmailForAuthenticatedUserRequestBodyArrayOfstr(arrayOfstr []string) UsersAddEmailForAuthenticatedUserRequestBody {
+	typ := UsersAddEmailForAuthenticatedUserRequestBodyTypeArrayOfstr
+
+	return UsersAddEmailForAuthenticatedUserRequestBody{
+		ArrayOfstr: arrayOfstr,
+		Type:       typ,
+	}
+}
+
+func CreateUsersAddEmailForAuthenticatedUserRequestBodyStr(str string) UsersAddEmailForAuthenticatedUserRequestBody {
+	typ := UsersAddEmailForAuthenticatedUserRequestBodyTypeStr
+
+	return UsersAddEmailForAuthenticatedUserRequestBody{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func (u *UsersAddEmailForAuthenticatedUserRequestBody) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	usersAddEmailForAuthenticatedUserRequestBody1 := new(UsersAddEmailForAuthenticatedUserRequestBody1)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&usersAddEmailForAuthenticatedUserRequestBody1); err == nil {
+		u.UsersAddEmailForAuthenticatedUserRequestBody1 = usersAddEmailForAuthenticatedUserRequestBody1
+		u.Type = UsersAddEmailForAuthenticatedUserRequestBodyTypeUsersAddEmailForAuthenticatedUserRequestBody1
+		return nil
+	}
+
+	arrayOfstr := []string{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfstr); err == nil {
+		u.ArrayOfstr = arrayOfstr
+		u.Type = UsersAddEmailForAuthenticatedUserRequestBodyTypeArrayOfstr
+		return nil
+	}
+
+	str := new(string)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&str); err == nil {
+		u.Str = str
+		u.Type = UsersAddEmailForAuthenticatedUserRequestBodyTypeStr
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u UsersAddEmailForAuthenticatedUserRequestBody) MarshalJSON() ([]byte, error) {
+	if u.UsersAddEmailForAuthenticatedUserRequestBody1 != nil {
+		return json.Marshal(u.UsersAddEmailForAuthenticatedUserRequestBody1)
+	}
+
+	if u.ArrayOfstr != nil {
+		return json.Marshal(u.ArrayOfstr)
+	}
+
+	if u.Str != nil {
+		return json.Marshal(u.Str)
+	}
+
+	return nil, nil
+}
+
 type UsersAddEmailForAuthenticatedUserRequest struct {
-	Request interface{} `request:"mediaType=application/json"`
+	Request *UsersAddEmailForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
 }
 
 type UsersAddEmailForAuthenticatedUserResponse struct {

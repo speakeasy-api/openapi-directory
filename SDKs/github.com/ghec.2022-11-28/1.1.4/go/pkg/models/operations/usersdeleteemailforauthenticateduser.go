@@ -3,6 +3,9 @@
 package operations
 
 import (
+	"bytes"
+	"encoding/json"
+	"errors"
 	"net/http"
 	"openapi/pkg/models/shared"
 )
@@ -13,8 +16,100 @@ type UsersDeleteEmailForAuthenticatedUserRequestBody1 struct {
 	Emails []string `json:"emails"`
 }
 
+type UsersDeleteEmailForAuthenticatedUserRequestBodyType string
+
+const (
+	UsersDeleteEmailForAuthenticatedUserRequestBodyTypeUsersDeleteEmailForAuthenticatedUserRequestBody1 UsersDeleteEmailForAuthenticatedUserRequestBodyType = "users/delete-email-for-authenticated-user_requestBody_1"
+	UsersDeleteEmailForAuthenticatedUserRequestBodyTypeArrayOfstr                                       UsersDeleteEmailForAuthenticatedUserRequestBodyType = "arrayOfstr"
+	UsersDeleteEmailForAuthenticatedUserRequestBodyTypeStr                                              UsersDeleteEmailForAuthenticatedUserRequestBodyType = "str"
+)
+
+type UsersDeleteEmailForAuthenticatedUserRequestBody struct {
+	UsersDeleteEmailForAuthenticatedUserRequestBody1 *UsersDeleteEmailForAuthenticatedUserRequestBody1
+	ArrayOfstr                                       []string
+	Str                                              *string
+
+	Type UsersDeleteEmailForAuthenticatedUserRequestBodyType
+}
+
+func CreateUsersDeleteEmailForAuthenticatedUserRequestBodyUsersDeleteEmailForAuthenticatedUserRequestBody1(usersDeleteEmailForAuthenticatedUserRequestBody1 UsersDeleteEmailForAuthenticatedUserRequestBody1) UsersDeleteEmailForAuthenticatedUserRequestBody {
+	typ := UsersDeleteEmailForAuthenticatedUserRequestBodyTypeUsersDeleteEmailForAuthenticatedUserRequestBody1
+
+	return UsersDeleteEmailForAuthenticatedUserRequestBody{
+		UsersDeleteEmailForAuthenticatedUserRequestBody1: &usersDeleteEmailForAuthenticatedUserRequestBody1,
+		Type: typ,
+	}
+}
+
+func CreateUsersDeleteEmailForAuthenticatedUserRequestBodyArrayOfstr(arrayOfstr []string) UsersDeleteEmailForAuthenticatedUserRequestBody {
+	typ := UsersDeleteEmailForAuthenticatedUserRequestBodyTypeArrayOfstr
+
+	return UsersDeleteEmailForAuthenticatedUserRequestBody{
+		ArrayOfstr: arrayOfstr,
+		Type:       typ,
+	}
+}
+
+func CreateUsersDeleteEmailForAuthenticatedUserRequestBodyStr(str string) UsersDeleteEmailForAuthenticatedUserRequestBody {
+	typ := UsersDeleteEmailForAuthenticatedUserRequestBodyTypeStr
+
+	return UsersDeleteEmailForAuthenticatedUserRequestBody{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func (u *UsersDeleteEmailForAuthenticatedUserRequestBody) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	usersDeleteEmailForAuthenticatedUserRequestBody1 := new(UsersDeleteEmailForAuthenticatedUserRequestBody1)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&usersDeleteEmailForAuthenticatedUserRequestBody1); err == nil {
+		u.UsersDeleteEmailForAuthenticatedUserRequestBody1 = usersDeleteEmailForAuthenticatedUserRequestBody1
+		u.Type = UsersDeleteEmailForAuthenticatedUserRequestBodyTypeUsersDeleteEmailForAuthenticatedUserRequestBody1
+		return nil
+	}
+
+	arrayOfstr := []string{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfstr); err == nil {
+		u.ArrayOfstr = arrayOfstr
+		u.Type = UsersDeleteEmailForAuthenticatedUserRequestBodyTypeArrayOfstr
+		return nil
+	}
+
+	str := new(string)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&str); err == nil {
+		u.Str = str
+		u.Type = UsersDeleteEmailForAuthenticatedUserRequestBodyTypeStr
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u UsersDeleteEmailForAuthenticatedUserRequestBody) MarshalJSON() ([]byte, error) {
+	if u.UsersDeleteEmailForAuthenticatedUserRequestBody1 != nil {
+		return json.Marshal(u.UsersDeleteEmailForAuthenticatedUserRequestBody1)
+	}
+
+	if u.ArrayOfstr != nil {
+		return json.Marshal(u.ArrayOfstr)
+	}
+
+	if u.Str != nil {
+		return json.Marshal(u.Str)
+	}
+
+	return nil, nil
+}
+
 type UsersDeleteEmailForAuthenticatedUserRequest struct {
-	Request interface{} `request:"mediaType=application/json"`
+	Request *UsersDeleteEmailForAuthenticatedUserRequestBody `request:"mediaType=application/json"`
 }
 
 type UsersDeleteEmailForAuthenticatedUserResponse struct {

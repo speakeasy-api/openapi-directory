@@ -35,23 +35,23 @@ func main() {
                 Status: "TIMED_OUT",
             },
             CloseTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-10-26T11:38:21.298Z",
-                OldestDate: "2022-08-14T12:26:14.440Z",
+                LatestDate: "2022-05-18T09:34:54.894Z",
+                OldestDate: "2022-03-26T09:37:56.283Z",
             },
-            Domain: "deserunt",
+            Domain: "iure",
             ExecutionFilter: &shared.WorkflowExecutionFilter{
-                WorkflowID: "suscipit",
+                WorkflowID: "magnam",
             },
             StartTimeFilter: &shared.ExecutionTimeFilter{
-                LatestDate: "2022-10-21T09:35:28.731Z",
-                OldestDate: "2022-12-11T12:27:07.533Z",
+                LatestDate: "2022-10-30T21:34:57.850Z",
+                OldestDate: "2022-03-08T10:35:32.561Z",
             },
             TagFilter: &shared.TagFilter{
-                Tag: "debitis",
+                Tag: "suscipit",
             },
             TypeFilter: &shared.WorkflowTypeFilter{
-                Name: "ipsa",
-                Version: "delectus",
+                Name: "molestiae",
+                Version: "minus",
             },
         },
     }

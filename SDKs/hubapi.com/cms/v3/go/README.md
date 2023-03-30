@@ -33,19 +33,17 @@ func main() {
         QueryParams: operations.GetCmsV3DomainsGetPageQueryParams{
             After: "corrupti",
             Archived: false,
-            CreatedAfter: "2022-08-25T17:46:52.175Z",
-            CreatedAt: "2022-07-12T02:02:28.306Z",
-            CreatedBefore: "2022-05-25T23:19:55.743Z",
-            Limit: 602763,
+            CreatedAfter: "2021-07-27T21:52:56.087Z",
+            CreatedAt: "2021-03-11T23:22:42.658Z",
+            CreatedBefore: "2021-05-14T08:28:11.899Z",
+            Limit: 847252,
             Sort: []string{
-                "corrupti",
-                "illum",
-                "vel",
                 "error",
+                "deserunt",
             },
-            UpdatedAfter: "2022-08-06T09:04:03.238Z",
-            UpdatedAt: "2022-11-09T19:54:58.240Z",
-            UpdatedBefore: "2022-10-21T09:50:09.590Z",
+            UpdatedAfter: "2022-07-25T06:44:09.184Z",
+            UpdatedAt: "2022-02-09T12:04:06.508Z",
+            UpdatedBefore: "2022-01-14T06:18:51.036Z",
         },
     }
 

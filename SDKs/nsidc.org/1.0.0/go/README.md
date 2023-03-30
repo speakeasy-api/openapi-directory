@@ -27,14 +27,14 @@ func main() {
     req := operations.FacetsRequest{
         QueryParams: operations.FacetsQueryParams{
             Count: 548814,
-            EndDate: "2022-08-25",
-            FacetFilters: "distinctio",
-            SearchTerms: "quibusdam",
-            SortKeys: "temporal_duration,,asc",
+            EndDate: "2021-07-27",
+            FacetFilters: "quibusdam",
+            SearchTerms: "unde",
+            SortKeys: "updated,,desc",
             Source: "ADE",
-            Spatial: "corrupti",
-            StartDate: "2022-05-24",
-            StartIndex: 423655,
+            Spatial: "illum",
+            StartDate: "2022-05-18",
+            StartIndex: 645894,
         },
     }
 

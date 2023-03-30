@@ -25,19 +25,19 @@ func main() {
         Request: shared.CollectionItemRequest{
             Items: []shared.CollectionItem{
                 shared.CollectionItem{
-                    AddedTime: "2022-07-12T02:05:27.691Z",
-                    ID: "quibusdam",
-                    MediaType: "unde",
+                    AddedTime: "2021-04-24T16:27:50.833Z",
+                    ID: "unde",
+                    MediaType: "nulla",
                 },
                 shared.CollectionItem{
-                    AddedTime: "2022-05-20T23:32:46.580Z",
-                    ID: "corrupti",
-                    MediaType: "illum",
+                    AddedTime: "2021-04-22T12:08:58.275Z",
+                    ID: "vel",
+                    MediaType: "error",
                 },
                 shared.CollectionItem{
-                    AddedTime: "2022-10-26T11:56:01.543Z",
-                    ID: "error",
-                    MediaType: "deserunt",
+                    AddedTime: "2022-03-26T09:37:56.283Z",
+                    ID: "iure",
+                    MediaType: "magnam",
                 },
             },
         },

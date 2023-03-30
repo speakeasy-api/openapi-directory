@@ -47,7 +47,7 @@ func main() {
                 TLSPolicy: "OPTIONAL",
             },
             ReputationOptions: &operations.CreateConfigurationSetRequestBodyReputationOptions{
-                LastFreshStart: "2022-08-06T08:48:17.381Z",
+                LastFreshStart: "2022-03-26T09:37:56.283Z",
                 ReputationMetricsEnabled: false,
             },
             SendingOptions: &operations.CreateConfigurationSetRequestBodySendingOptions{
@@ -55,16 +55,16 @@ func main() {
             },
             Tags: []shared.Tag{
                 shared.Tag{
-                    Key: "iure",
-                    Value: "magnam",
+                    Key: "magnam",
+                    Value: "debitis",
                 },
                 shared.Tag{
-                    Key: "debitis",
-                    Value: "ipsa",
+                    Key: "ipsa",
+                    Value: "delectus",
                 },
             },
             TrackingOptions: &operations.CreateConfigurationSetRequestBodyTrackingOptions{
-                CustomRedirectDomain: "delectus",
+                CustomRedirectDomain: "tempora",
             },
         },
     }

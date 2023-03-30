@@ -34,11 +34,11 @@ func main() {
             AccountHolderID: "corrupti",
             BalanceAccountID: "provident",
             BalancePlatform: "distinctio",
-            CreatedSince: "2022-05-25T23:01:07.686Z",
-            CreatedUntil: "2022-08-22T02:34:46.302Z",
-            Cursor: "nulla",
-            Limit: 544883,
-            PaymentInstrumentID: "illum",
+            CreatedSince: "2021-03-11T23:22:42.658Z",
+            CreatedUntil: "2021-05-14T08:28:11.899Z",
+            Cursor: "illum",
+            Limit: 423655,
+            PaymentInstrumentID: "error",
         },
     }
 

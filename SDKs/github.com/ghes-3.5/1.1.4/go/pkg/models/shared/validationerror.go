@@ -2,13 +2,111 @@
 
 package shared
 
+import (
+	"bytes"
+	"encoding/json"
+	"errors"
+)
+
+type ValidationErrorErrorsValueType string
+
+const (
+	ValidationErrorErrorsValueTypeStr        ValidationErrorErrorsValueType = "str"
+	ValidationErrorErrorsValueTypeInteger    ValidationErrorErrorsValueType = "integer"
+	ValidationErrorErrorsValueTypeArrayOfstr ValidationErrorErrorsValueType = "arrayOfstr"
+)
+
+type ValidationErrorErrorsValue struct {
+	Str        *string
+	Integer    *int64
+	ArrayOfstr []string
+
+	Type ValidationErrorErrorsValueType
+}
+
+func CreateValidationErrorErrorsValueStr(str string) ValidationErrorErrorsValue {
+	typ := ValidationErrorErrorsValueTypeStr
+
+	return ValidationErrorErrorsValue{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateValidationErrorErrorsValueInteger(integer int64) ValidationErrorErrorsValue {
+	typ := ValidationErrorErrorsValueTypeInteger
+
+	return ValidationErrorErrorsValue{
+		Integer: &integer,
+		Type:    typ,
+	}
+}
+
+func CreateValidationErrorErrorsValueArrayOfstr(arrayOfstr []string) ValidationErrorErrorsValue {
+	typ := ValidationErrorErrorsValueTypeArrayOfstr
+
+	return ValidationErrorErrorsValue{
+		ArrayOfstr: arrayOfstr,
+		Type:       typ,
+	}
+}
+
+func (u *ValidationErrorErrorsValue) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	str := new(string)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&str); err == nil {
+		u.Str = str
+		u.Type = ValidationErrorErrorsValueTypeStr
+		return nil
+	}
+
+	integer := new(int64)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&integer); err == nil {
+		u.Integer = integer
+		u.Type = ValidationErrorErrorsValueTypeInteger
+		return nil
+	}
+
+	arrayOfstr := []string{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfstr); err == nil {
+		u.ArrayOfstr = arrayOfstr
+		u.Type = ValidationErrorErrorsValueTypeArrayOfstr
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u ValidationErrorErrorsValue) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return json.Marshal(u.Str)
+	}
+
+	if u.Integer != nil {
+		return json.Marshal(u.Integer)
+	}
+
+	if u.ArrayOfstr != nil {
+		return json.Marshal(u.ArrayOfstr)
+	}
+
+	return nil, nil
+}
+
 type ValidationErrorErrors struct {
-	Code     string      `json:"code"`
-	Field    *string     `json:"field,omitempty"`
-	Index    *int64      `json:"index,omitempty"`
-	Message  *string     `json:"message,omitempty"`
-	Resource *string     `json:"resource,omitempty"`
-	Value    interface{} `json:"value,omitempty"`
+	Code     string                      `json:"code"`
+	Field    *string                     `json:"field,omitempty"`
+	Index    *int64                      `json:"index,omitempty"`
+	Message  *string                     `json:"message,omitempty"`
+	Resource *string                     `json:"resource,omitempty"`
+	Value    *ValidationErrorErrorsValue `json:"value,omitempty"`
 }
 
 // ValidationError - Validation Error

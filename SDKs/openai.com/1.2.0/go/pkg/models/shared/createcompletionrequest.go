@@ -2,6 +2,196 @@
 
 package shared
 
+import (
+	"bytes"
+	"encoding/json"
+	"errors"
+)
+
+type CreateCompletionRequestPromptType string
+
+const (
+	CreateCompletionRequestPromptTypeStr                   CreateCompletionRequestPromptType = "str"
+	CreateCompletionRequestPromptTypeArrayOfstr            CreateCompletionRequestPromptType = "arrayOfstr"
+	CreateCompletionRequestPromptTypeArrayOfinteger        CreateCompletionRequestPromptType = "arrayOfinteger"
+	CreateCompletionRequestPromptTypeArrayOfarrayOfinteger CreateCompletionRequestPromptType = "arrayOfarrayOfinteger"
+)
+
+type CreateCompletionRequestPrompt struct {
+	Str                   *string
+	ArrayOfstr            []string
+	ArrayOfinteger        []int64
+	ArrayOfarrayOfinteger [][]int64
+
+	Type CreateCompletionRequestPromptType
+}
+
+func CreateCreateCompletionRequestPromptStr(str string) CreateCompletionRequestPrompt {
+	typ := CreateCompletionRequestPromptTypeStr
+
+	return CreateCompletionRequestPrompt{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateCreateCompletionRequestPromptArrayOfstr(arrayOfstr []string) CreateCompletionRequestPrompt {
+	typ := CreateCompletionRequestPromptTypeArrayOfstr
+
+	return CreateCompletionRequestPrompt{
+		ArrayOfstr: arrayOfstr,
+		Type:       typ,
+	}
+}
+
+func CreateCreateCompletionRequestPromptArrayOfinteger(arrayOfinteger []int64) CreateCompletionRequestPrompt {
+	typ := CreateCompletionRequestPromptTypeArrayOfinteger
+
+	return CreateCompletionRequestPrompt{
+		ArrayOfinteger: arrayOfinteger,
+		Type:           typ,
+	}
+}
+
+func CreateCreateCompletionRequestPromptArrayOfarrayOfinteger(arrayOfarrayOfinteger [][]int64) CreateCompletionRequestPrompt {
+	typ := CreateCompletionRequestPromptTypeArrayOfarrayOfinteger
+
+	return CreateCompletionRequestPrompt{
+		ArrayOfarrayOfinteger: arrayOfarrayOfinteger,
+		Type:                  typ,
+	}
+}
+
+func (u *CreateCompletionRequestPrompt) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	str := new(string)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&str); err == nil {
+		u.Str = str
+		u.Type = CreateCompletionRequestPromptTypeStr
+		return nil
+	}
+
+	arrayOfstr := []string{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfstr); err == nil {
+		u.ArrayOfstr = arrayOfstr
+		u.Type = CreateCompletionRequestPromptTypeArrayOfstr
+		return nil
+	}
+
+	arrayOfinteger := []int64{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfinteger); err == nil {
+		u.ArrayOfinteger = arrayOfinteger
+		u.Type = CreateCompletionRequestPromptTypeArrayOfinteger
+		return nil
+	}
+
+	arrayOfarrayOfinteger := [][]int64{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfarrayOfinteger); err == nil {
+		u.ArrayOfarrayOfinteger = arrayOfarrayOfinteger
+		u.Type = CreateCompletionRequestPromptTypeArrayOfarrayOfinteger
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u CreateCompletionRequestPrompt) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return json.Marshal(u.Str)
+	}
+
+	if u.ArrayOfstr != nil {
+		return json.Marshal(u.ArrayOfstr)
+	}
+
+	if u.ArrayOfinteger != nil {
+		return json.Marshal(u.ArrayOfinteger)
+	}
+
+	if u.ArrayOfarrayOfinteger != nil {
+		return json.Marshal(u.ArrayOfarrayOfinteger)
+	}
+
+	return nil, nil
+}
+
+type CreateCompletionRequestStopType string
+
+const (
+	CreateCompletionRequestStopTypeStr        CreateCompletionRequestStopType = "str"
+	CreateCompletionRequestStopTypeArrayOfstr CreateCompletionRequestStopType = "arrayOfstr"
+)
+
+type CreateCompletionRequestStop struct {
+	Str        *string
+	ArrayOfstr []string
+
+	Type CreateCompletionRequestStopType
+}
+
+func CreateCreateCompletionRequestStopStr(str string) CreateCompletionRequestStop {
+	typ := CreateCompletionRequestStopTypeStr
+
+	return CreateCompletionRequestStop{
+		Str:  &str,
+		Type: typ,
+	}
+}
+
+func CreateCreateCompletionRequestStopArrayOfstr(arrayOfstr []string) CreateCompletionRequestStop {
+	typ := CreateCompletionRequestStopTypeArrayOfstr
+
+	return CreateCompletionRequestStop{
+		ArrayOfstr: arrayOfstr,
+		Type:       typ,
+	}
+}
+
+func (u *CreateCompletionRequestStop) UnmarshalJSON(data []byte) error {
+	var d *json.Decoder
+
+	str := new(string)
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&str); err == nil {
+		u.Str = str
+		u.Type = CreateCompletionRequestStopTypeStr
+		return nil
+	}
+
+	arrayOfstr := []string{}
+	d = json.NewDecoder(bytes.NewReader(data))
+	d.DisallowUnknownFields()
+	if err := d.Decode(&arrayOfstr); err == nil {
+		u.ArrayOfstr = arrayOfstr
+		u.Type = CreateCompletionRequestStopTypeArrayOfstr
+		return nil
+	}
+
+	return errors.New("could not unmarshal into supported union types")
+}
+
+func (u CreateCompletionRequestStop) MarshalJSON() ([]byte, error) {
+	if u.Str != nil {
+		return json.Marshal(u.Str)
+	}
+
+	if u.ArrayOfstr != nil {
+		return json.Marshal(u.ArrayOfstr)
+	}
+
+	return nil, nil
+}
+
 type CreateCompletionRequest struct {
 	// Generates `best_of` completions server-side and returns the "best" (the one with the highest log probability per token). Results cannot be streamed.
 	//
@@ -51,10 +241,10 @@ type CreateCompletionRequest struct {
 	//
 	// Note that <|endoftext|> is the document separator that the model sees during training, so if a prompt is not specified the model will generate as if from the beginning of a new document.
 	//
-	Prompt interface{} `json:"prompt,omitempty"`
+	Prompt *CreateCompletionRequestPrompt `json:"prompt,omitempty"`
 	// Up to 4 sequences where the API will stop generating further tokens. The returned text will not contain the stop sequence.
 	//
-	Stop interface{} `json:"stop,omitempty"`
+	Stop *CreateCompletionRequestStop `json:"stop,omitempty"`
 	// Whether to stream back partial progress. If set, tokens will be sent as data-only [server-sent events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events#Event_stream_format) as they become available, with the stream terminated by a `data: [DONE]` message.
 	//
 	Stream *bool `json:"stream,omitempty"`

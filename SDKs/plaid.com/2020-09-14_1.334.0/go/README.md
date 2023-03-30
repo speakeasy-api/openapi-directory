@@ -46,9 +46,9 @@ func main() {
                     "unde",
                     "nulla",
                 },
-                MinLastUpdatedDatetime: "2022-09-12T05:57:57.953Z",
+                MinLastUpdatedDatetime: "2021-04-22T12:08:58.275Z",
             },
-            Secret: "illum",
+            Secret: "vel",
         },
     }
 

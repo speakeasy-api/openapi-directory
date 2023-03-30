@@ -26,13 +26,13 @@ func main() {
         QueryParams: operations.GetDirectionsOutputFormatQueryParams{
             CorrectSide: false,
             Criteria: "fastest",
-            Departure: "2022-07-12T02:02:16.444Z",
-            Disable: "quibusdam",
+            Departure: "2021-04-24T16:27:50.833Z",
+            Disable: "unde",
             DistanceUnit: "mi",
-            OutputSRS: "26910",
-            Points: "corrupti",
+            OutputSRS: "26908",
+            Points: "illum",
             RoundTrip: false,
-            RouteDescription: "illum",
+            RouteDescription: "vel",
         },
     }
 

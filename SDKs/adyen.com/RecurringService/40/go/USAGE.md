@@ -37,45 +37,45 @@ func main() {
                         SingleUse: false,
                     },
                     ResultKey: "vel",
-                    ValidTillDate: "2022-08-14T12:22:03.053Z",
-                },
-                shared.Permit{
-                    PartnerID: "deserunt",
-                    ProfileReference: "suscipit",
-                    Restriction: &shared.PermitRestriction{
-                        MaxAmount: &shared.Amount{
-                            Currency: "iure",
-                            Value: 297534,
-                        },
-                        SingleTransactionLimit: &shared.Amount{
-                            Currency: "debitis",
-                            Value: 56713,
-                        },
-                        SingleUse: false,
-                    },
-                    ResultKey: "delectus",
-                    ValidTillDate: "2022-12-20T14:18:58.532Z",
+                    ValidTillDate: "2021-09-16T11:56:06.019Z",
                 },
                 shared.Permit{
                     PartnerID: "suscipit",
-                    ProfileReference: "molestiae",
+                    ProfileReference: "iure",
                     Restriction: &shared.PermitRestriction{
                         MaxAmount: &shared.Amount{
-                            Currency: "minus",
-                            Value: 812169,
+                            Currency: "magnam",
+                            Value: 891773,
                         },
                         SingleTransactionLimit: &shared.Amount{
-                            Currency: "voluptatum",
-                            Value: 479977,
+                            Currency: "ipsa",
+                            Value: 963663,
                         },
                         SingleUse: false,
                     },
-                    ResultKey: "excepturi",
-                    ValidTillDate: "2022-11-06T17:59:26.323Z",
+                    ResultKey: "tempora",
+                    ValidTillDate: "2022-07-10T15:39:12.517Z",
+                },
+                shared.Permit{
+                    PartnerID: "minus",
+                    ProfileReference: "placeat",
+                    Restriction: &shared.PermitRestriction{
+                        MaxAmount: &shared.Amount{
+                            Currency: "voluptatum",
+                            Value: 479977,
+                        },
+                        SingleTransactionLimit: &shared.Amount{
+                            Currency: "excepturi",
+                            Value: 392785,
+                        },
+                        SingleUse: false,
+                    },
+                    ResultKey: "recusandae",
+                    ValidTillDate: "2022-10-15T05:10:19.629Z",
                 },
             },
-            RecurringDetailReference: "recusandae",
-            ShopperReference: "temporibus",
+            RecurringDetailReference: "quis",
+            ShopperReference: "veritatis",
         },
     }
 

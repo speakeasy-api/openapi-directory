@@ -49,21 +49,21 @@ func main() {
                 },
                 Permission: shared.Permission{
                     AccessMode: "STORE",
-                    DataEraseAt: "2022-08-14T12:42:09.097Z",
+                    DataEraseAt: "2021-09-16T11:56:06.019Z",
                     DateRange: shared.PermissionDateRange{
-                        From: "2022-08-06T09:05:17.035Z",
-                        To: "2022-11-09T19:56:12.037Z",
+                        From: "2022-07-25T06:44:09.184Z",
+                        To: "2022-02-09T12:04:06.508Z",
                     },
                     Frequency: shared.PermissionFrequency{
-                        Repeats: 437587,
-                        Unit: "WEEK",
-                        Value: 891773,
+                        Repeats: 56713,
+                        Unit: "YEAR",
+                        Value: 272656,
                     },
                 },
                 Purpose: shared.UsePurpose{
-                    Code: "ipsa",
-                    RefURI: "https://fatherly-geyser.info",
-                    Text: "minus",
+                    Code: "suscipit",
+                    RefURI: "http://spotted-skyline.name",
+                    Text: "iusto",
                 },
                 Requester: shared.Requester{
                     Identifier: &shared.RequesterIdentifier{
@@ -75,7 +75,7 @@ func main() {
                 },
             },
             RequestID: "499a5a4a-7dda-4f20-9b67-e24589627061",
-            Timestamp: "2022-06-06T16:31:21.065Z",
+            Timestamp: "2022-03-20T06:24:36.919Z",
         },
     }
 
