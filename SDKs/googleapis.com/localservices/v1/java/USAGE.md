@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.LocalservicesAccountReportsSearchSecurity;
+import org.openapis.openapi.models.operations.LocalservicesAccountReportsSearchQueryParams;
+import org.openapis.openapi.models.operations.LocalservicesAccountReportsSearchRequest;
+import org.openapis.openapi.models.operations.LocalservicesAccountReportsSearchResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             LocalservicesAccountReportsSearchRequest req = new LocalservicesAccountReportsSearchRequest() {{
                 security = new LocalservicesAccountReportsSearchSecurity() {{
@@ -22,28 +29,28 @@ public class Application {
                     }};
                 }};
                 queryParams = new LocalservicesAccountReportsSearchQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    endDateDay = 3390393562759376202;
-                    endDateMonth = 2669985732393126063;
-                    endDateYear = 1774932891286980153;
-                    fields = "voluptas";
-                    key = "fugit";
-                    oauthToken = "et";
-                    pageSize = 2661732831099943416;
-                    pageToken = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    endDateDay = 602763;
+                    endDateMonth = 857946;
+                    endDateYear = 544883;
+                    fields = "illum";
+                    key = "vel";
+                    oauthToken = "error";
+                    pageSize = 645894;
+                    pageToken = "suscipit";
                     prettyPrint = false;
-                    query = "debitis";
-                    quotaUser = "voluptatum";
-                    startDateDay = 2339563716805116249;
-                    startDateMonth = 7144924247938981575;
-                    startDateYear = 161231572858529631;
-                    uploadType = "et";
-                    uploadProtocol = "voluptate";
+                    query = "iure";
+                    quotaUser = "magnam";
+                    startDateDay = 891773;
+                    startDateMonth = 56713;
+                    startDateYear = 963663;
+                    uploadType = "tempora";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             LocalservicesAccountReportsSearchResponse res = sdk.accountReports.localservicesAccountReportsSearch(req);
 

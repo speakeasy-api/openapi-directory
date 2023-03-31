@@ -2,35 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedStrategyEnum;
+import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedQueryParams;
+import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedRequest;
+import org.openapis.openapi.models.operations.PagespeedonlinePagespeedapiRunpagespeedResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PagespeedonlinePagespeedapiRunpagespeedRequest req = new PagespeedonlinePagespeedapiRunpagespeedRequest() {{
                 queryParams = new PagespeedonlinePagespeedapiRunpagespeedQueryParams() {{
                     alt = "json";
-                    fields = "voluptas";
-                    filterThirdPartyResources = true;
-                    key = "expedita";
-                    locale = "consequuntur";
-                    oauthToken = "dolor";
-                    prettyPrint = true;
-                    quotaUser = "voluptas";
-                    rule = new String[]() {{
-                        add("et"),
+                    fields = "corrupti";
+                    filterThirdPartyResources = false;
+                    key = "provident";
+                    locale = "distinctio";
+                    oauthToken = "quibusdam";
+                    prettyPrint = false;
+                    quotaUser = "unde";
+                    rule = new String[]{{
+                        add("corrupti"),
+                        add("illum"),
+                        add("vel"),
+                        add("error"),
                     }};
-                    screenshot = true;
+                    screenshot = false;
                     strategy = "mobile";
-                    url = "dicta";
-                    userIp = "debitis";
+                    url = "suscipit";
+                    userIp = "iure";
                 }};
-            }};
+            }};            
 
             PagespeedonlinePagespeedapiRunpagespeedResponse res = sdk.pagespeedapi.pagespeedonlinePagespeedapiRunpagespeed(req);
 

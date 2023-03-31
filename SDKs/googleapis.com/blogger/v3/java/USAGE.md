@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BloggerBlogUserInfosGetSecurityOption1;
+import org.openapis.openapi.models.operations.BloggerBlogUserInfosGetSecurityOption2;
+import org.openapis.openapi.models.operations.BloggerBlogUserInfosGetSecurity;
+import org.openapis.openapi.models.operations.BloggerBlogUserInfosGetPathParams;
+import org.openapis.openapi.models.operations.BloggerBlogUserInfosGetQueryParams;
+import org.openapis.openapi.models.operations.BloggerBlogUserInfosGetRequest;
+import org.openapis.openapi.models.operations.BloggerBlogUserInfosGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BloggerBlogUserInfosGetRequest req = new BloggerBlogUserInfosGetRequest() {{
                 security = new BloggerBlogUserInfosGetSecurity() {{
@@ -24,24 +34,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new BloggerBlogUserInfosGetPathParams() {{
-                    blogId = "sit";
-                    userId = "voluptas";
+                    blogId = "corrupti";
+                    userId = "provident";
                 }};
                 queryParams = new BloggerBlogUserInfosGetQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "expedita";
-                    alt = "proto";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    maxPosts = 8274930044578894929;
-                    oauthToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    accessToken = "quibusdam";
+                    alt = "media";
+                    callback = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    maxPosts = 423655;
+                    oauthToken = "error";
+                    prettyPrint = false;
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             BloggerBlogUserInfosGetResponse res = sdk.blogUserInfos.bloggerBlogUserInfosGet(req);
 

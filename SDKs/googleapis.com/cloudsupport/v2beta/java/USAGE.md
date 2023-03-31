@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchSecurity;
+import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchQueryParams;
+import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchRequest;
+import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudsupportCaseClassificationsSearchRequest req = new CloudsupportCaseClassificationsSearchRequest() {{
                 security = new CloudsupportCaseClassificationsSearchSecurity() {{
@@ -22,22 +29,22 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudsupportCaseClassificationsSearchQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    pageSize = 6044372234677422456;
-                    pageToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    pageSize = 847252;
+                    pageToken = "vel";
                     prettyPrint = false;
-                    query = "nihil";
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    query = "error";
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             CloudsupportCaseClassificationsSearchResponse res = sdk.caseClassifications.cloudsupportCaseClassificationsSearch(req);
 

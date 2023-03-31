@@ -2,62 +2,68 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatOutputFormatEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatPathParams;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatInterpolationEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatLocationDescriptorEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatOutputSrsEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatStreetDirectionEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatUnitDesignatorEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatQueryParams;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     apikey = new SchemeApikey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetAddressesOutputFormatRequest req = new GetAddressesOutputFormatRequest() {{
                 pathParams = new GetAddressesOutputFormatPathParams() {{
-                    outputFormat = "csv";
+                    outputFormat = "kml";
                 }};
                 queryParams = new GetAddressesOutputFormatQueryParams() {{
-                    addressString = "voluptas";
-                    autoComplete = true;
-                    bbox = "expedita";
-                    brief = true;
-                    centre = "dolor";
-                    civicNumber = "expedita";
-                    civicNumberSuffix = "voluptas";
-                    echo = true;
+                    addressString = "provident";
+                    autoComplete = false;
+                    bbox = "distinctio";
+                    brief = false;
+                    centre = "quibusdam";
+                    civicNumber = "unde";
+                    civicNumberSuffix = "nulla";
+                    echo = false;
                     extrapolate = false;
-                    interpolation = "adaptive";
-                    localities = "rerum";
-                    localityName = "dicta";
-                    locationDescriptor = "any";
-                    matchPrecision = "voluptatum";
-                    matchPrecisionNot = "et";
-                    maxDistance = 11.100000;
-                    maxResults = 7259475919510918339;
-                    minScore = 7373105480197164748;
-                    notLocalities = "iste";
-                    outputSRS = 3930927879439176946;
-                    parcelPoint = "totam";
-                    provinceCode = "dolores";
-                    setBack = 1929546706668609706;
-                    siteName = "debitis";
-                    streetDirection = "N";
-                    streetName = "odio";
-                    streetQualifier = "dolore";
-                    streetType = "id";
-                    unitDesignator = "TH";
-                    unitNumber = "accusantium";
-                    unitNumberSuffix = "totam";
+                    interpolation = "linear";
+                    localities = "illum";
+                    localityName = "vel";
+                    locationDescriptor = "parcelPoint";
+                    matchPrecision = "deserunt";
+                    matchPrecisionNot = "suscipit";
+                    maxDistance = 4375.87;
+                    maxResults = 297534;
+                    minScore = 891773;
+                    notLocalities = "ipsa";
+                    outputSRS = "26911";
+                    parcelPoint = "tempora";
+                    provinceCode = "suscipit";
+                    setBack = 477665;
+                    siteName = "minus";
+                    streetDirection = "SE";
+                    streetName = "voluptatum";
+                    streetQualifier = "iusto";
+                    streetType = "excepturi";
+                    unitDesignator = "PAD";
+                    unitNumber = "recusandae";
+                    unitNumberSuffix = "temporibus";
                 }};
-            }};
+            }};            
 
             GetAddressesOutputFormatResponse res = sdk.intersections.getAddressesOutputFormat(req);
 

@@ -2,25 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostGet3dsAvailabilitySecurity;
+import org.openapis.openapi.models.operations.PostGet3dsAvailabilityRequest;
+import org.openapis.openapi.models.operations.PostGet3dsAvailabilityResponse;
+import org.openapis.openapi.models.shared.ThreeDSAvailabilityRequest;
+import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostGet3dsAvailabilityRequest req = new PostGet3dsAvailabilityRequest() {{
                 security = new PostGet3dsAvailabilitySecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
+                        apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
-                request = "sit";
-            }};
+                request = new ThreeDSAvailabilityRequest() {{
+                    additionalData = new java.util.HashMap<String, String>() {{
+                        put("provident", "distinctio");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                    }};
+                    brands = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
+                    }};
+                    cardNumber = "iure";
+                    merchantAccount = "magnam";
+                    recurringDetailReference = "debitis";
+                    shopperReference = "ipsa";
+                }};
+            }};            
 
             PostGet3dsAvailabilityResponse res = sdk.general.postGet3dsAvailability(req);
 

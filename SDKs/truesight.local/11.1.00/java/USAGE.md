@@ -2,24 +2,27 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CollectNowPathParams;
+import org.openapis.openapi.models.operations.CollectNowQueryParams;
+import org.openapis.openapi.models.operations.CollectNowRequest;
+import org.openapis.openapi.models.operations.CollectNowResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CollectNowRequest req = new CollectNowRequest() {{
                 pathParams = new CollectNowPathParams() {{
-                    deviceId = 8717895732742165505;
+                    deviceId = 548814;
                 }};
                 queryParams = new CollectNowQueryParams() {{
-                    monitorClass = "voluptas";
+                    monitorClass = "provident";
                 }};
-            }};
+            }};            
 
             CollectNowResponse res = sdk.actions.collectNow(req);
 

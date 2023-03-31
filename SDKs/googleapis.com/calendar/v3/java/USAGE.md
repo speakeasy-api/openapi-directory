@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CalendarAclDeleteSecurity;
+import org.openapis.openapi.models.operations.CalendarAclDeletePathParams;
+import org.openapis.openapi.models.operations.CalendarAclDeleteQueryParams;
+import org.openapis.openapi.models.operations.CalendarAclDeleteRequest;
+import org.openapis.openapi.models.operations.CalendarAclDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CalendarAclDeleteRequest req = new CalendarAclDeleteRequest() {{
                 security = new CalendarAclDeleteSecurity() {{
@@ -22,19 +29,19 @@ public class Application {
                     }};
                 }};
                 pathParams = new CalendarAclDeletePathParams() {{
-                    calendarId = "sit";
-                    ruleId = "voluptas";
+                    calendarId = "corrupti";
+                    ruleId = "provident";
                 }};
                 queryParams = new CalendarAclDeleteQueryParams() {{
                     alt = "json";
-                    fields = "expedita";
-                    key = "consequuntur";
-                    oauthToken = "dolor";
-                    prettyPrint = true;
-                    quotaUser = "voluptas";
-                    userIp = "fugit";
+                    fields = "distinctio";
+                    key = "quibusdam";
+                    oauthToken = "unde";
+                    prettyPrint = false;
+                    quotaUser = "nulla";
+                    userIp = "corrupti";
                 }};
-            }};
+            }};            
 
             CalendarAclDeleteResponse res = sdk.acl.calendarAclDelete(req);
 

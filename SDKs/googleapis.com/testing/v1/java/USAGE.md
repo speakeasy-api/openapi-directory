@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsSecurity;
+import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsQueryParams;
+import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsRequest;
+import org.openapis.openapi.models.operations.TestingApplicationDetailServiceGetApkDetailsResponse;
+import org.openapis.openapi.models.shared.FileReference;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             TestingApplicationDetailServiceGetApkDetailsRequest req = new TestingApplicationDetailServiceGetApkDetailsRequest() {{
                 security = new TestingApplicationDetailServiceGetApkDetailsSecurity() {{
@@ -22,22 +30,22 @@ public class Application {
                     }};
                 }};
                 queryParams = new TestingApplicationDetailServiceGetApkDetailsQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new FileReference() {{
-                    gcsPath = "rerum";
+                    gcsPath = "deserunt";
                 }};
-            }};
+            }};            
 
             TestingApplicationDetailServiceGetApkDetailsResponse res = sdk.applicationDetailService.testingApplicationDetailServiceGetApkDetails(req);
 

@@ -2,25 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostCloseAccountHolderSecurity;
+import org.openapis.openapi.models.operations.PostCloseAccountHolderRequest;
+import org.openapis.openapi.models.operations.PostCloseAccountHolderResponse;
+import org.openapis.openapi.models.shared.CloseAccountHolderRequest;
+import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostCloseAccountHolderRequest req = new PostCloseAccountHolderRequest() {{
                 security = new PostCloseAccountHolderSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
+                        apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
-                request = "sit";
-            }};
+                request = new CloseAccountHolderRequest() {{
+                    accountHolderCode = "corrupti";
+                }};
+            }};            
 
             PostCloseAccountHolderResponse res = sdk.accountHolders.postCloseAccountHolder(req);
 

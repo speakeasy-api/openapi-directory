@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,308 +15,476 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateLifecyclePolicyHeaders;
+import org.openapis.openapi.models.operations.CreateLifecyclePolicyRequestBodyPolicyDetails;
+import org.openapis.openapi.models.operations.CreateLifecyclePolicyRequestBodyStateEnum;
+import org.openapis.openapi.models.operations.CreateLifecyclePolicyRequestBody;
+import org.openapis.openapi.models.operations.CreateLifecyclePolicyRequest;
+import org.openapis.openapi.models.operations.CreateLifecyclePolicyResponse;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.Schedule;
+import org.openapis.openapi.models.shared.ShareRule;
+import org.openapis.openapi.models.shared.RetentionIntervalUnitValuesEnum;
+import org.openapis.openapi.models.shared.RetainRule;
+import org.openapis.openapi.models.shared.FastRestoreRule;
+import org.openapis.openapi.models.shared.DeprecateRule;
+import org.openapis.openapi.models.shared.CrossRegionCopyRule;
+import org.openapis.openapi.models.shared.CrossRegionCopyRetainRule;
+import org.openapis.openapi.models.shared.CrossRegionCopyDeprecateRule;
+import org.openapis.openapi.models.shared.CreateRule;
+import org.openapis.openapi.models.shared.LocationValuesEnum;
+import org.openapis.openapi.models.shared.IntervalUnitValuesEnum;
+import org.openapis.openapi.models.shared.ArchiveRule;
+import org.openapis.openapi.models.shared.ArchiveRetainRule;
+import org.openapis.openapi.models.shared.RetentionArchiveTier;
+import org.openapis.openapi.models.shared.ResourceTypeValuesEnum;
+import org.openapis.openapi.models.shared.ResourceLocationValuesEnum;
+import org.openapis.openapi.models.shared.PolicyTypeValuesEnum;
+import org.openapis.openapi.models.shared.Parameters;
+import org.openapis.openapi.models.shared.EventSource;
+import org.openapis.openapi.models.shared.EventSourceValuesEnum;
+import org.openapis.openapi.models.shared.EventParameters;
+import org.openapis.openapi.models.shared.EventTypeValuesEnum;
+import org.openapis.openapi.models.shared.Action;
+import org.openapis.openapi.models.shared.CrossRegionCopyAction;
+import org.openapis.openapi.models.shared.EncryptionConfiguration;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateLifecyclePolicyRequest req = new CreateLifecyclePolicyRequest() {{
                 headers = new CreateLifecyclePolicyHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateLifecyclePolicyRequestBody() {{
-                    description = "voluptas";
-                    executionRoleArn = "fugit";
+                    description = "illum";
+                    executionRoleArn = "vel";
                     policyDetails = new CreateLifecyclePolicyRequestBodyPolicyDetails() {{
-                        actions = new openapisdk.models.shared.Action[]() {{
+                        actions = new org.openapis.openapi.models.shared.Action[]{{
                             add(new Action() {{
-                                crossRegionCopy = new openapisdk.models.shared.CrossRegionCopyAction[]() {{
+                                crossRegionCopy = new org.openapis.openapi.models.shared.CrossRegionCopyAction[]{{
                                     add(new CrossRegionCopyAction() {{
                                         encryptionConfiguration = new EncryptionConfiguration() {{
-                                            cmkArn = "rerum";
+                                            cmkArn = "suscipit";
                                             encrypted = false;
                                         }};
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 2518412263346885298;
-                                            intervalUnit = "DAYS";
+                                            interval = 437587;
+                                            intervalUnit = "WEEKS";
                                         }};
-                                        target = "et";
+                                        target = "debitis";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "ipsa";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 963663;
+                                            intervalUnit = "WEEKS";
+                                        }};
+                                        target = "suscipit";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "molestiae";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 791725;
+                                            intervalUnit = "YEARS";
+                                        }};
+                                        target = "voluptatum";
                                     }}),
                                 }};
-                                name = "ut";
+                                name = "iusto";
+                            }}),
+                            add(new Action() {{
+                                crossRegionCopy = new org.openapis.openapi.models.shared.CrossRegionCopyAction[]{{
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "nisi";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 925597;
+                                            intervalUnit = "YEARS";
+                                        }};
+                                        target = "ab";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "quis";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 87129;
+                                            intervalUnit = "MONTHS";
+                                        }};
+                                        target = "perferendis";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "ipsam";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 832620;
+                                            intervalUnit = "YEARS";
+                                        }};
+                                        target = "quo";
+                                    }}),
+                                }};
+                                name = "odit";
+                            }}),
+                            add(new Action() {{
+                                crossRegionCopy = new org.openapis.openapi.models.shared.CrossRegionCopyAction[]{{
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "at";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 978619;
+                                            intervalUnit = "WEEKS";
+                                        }};
+                                        target = "quod";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "quod";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 461479;
+                                            intervalUnit = "MONTHS";
+                                        }};
+                                        target = "porro";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "dolorum";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 118274;
+                                            intervalUnit = "MONTHS";
+                                        }};
+                                        target = "officia";
+                                    }}),
+                                    add(new CrossRegionCopyAction() {{
+                                        encryptionConfiguration = new EncryptionConfiguration() {{
+                                            cmkArn = "occaecati";
+                                            encrypted = false;
+                                        }};
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 143353;
+                                            intervalUnit = "MONTHS";
+                                        }};
+                                        target = "hic";
+                                    }}),
+                                }};
+                                name = "optio";
                             }}),
                         }};
                         eventSource = new EventSource() {{
                             parameters = new EventParameters() {{
-                                descriptionRegex = "dolorem";
+                                descriptionRegex = "totam";
                                 eventType = "shareSnapshot";
-                                snapshotOwner = new String[]() {{
-                                    add("iste"),
+                                snapshotOwner = new String[]{{
+                                    add("commodi"),
                                 }};
                             }};
                             type = "MANAGED_CWE";
                         }};
                         parameters = new Parameters() {{
-                            excludeBootVolume = true;
-                            noReboot = true;
+                            excludeBootVolume = false;
+                            excludeDataVolumeTags = new org.openapis.openapi.models.shared.Tag[]{{
+                                add(new Tag() {{
+                                    key = "modi";
+                                    value = "qui";
+                                }}),
+                                add(new Tag() {{
+                                    key = "impedit";
+                                    value = "cum";
+                                }}),
+                            }};
+                            noReboot = false;
                         }};
-                        policyType = "EVENT_BASED_POLICY";
-                        resourceLocations = new openapisdk.models.shared.ResourceLocationValuesEnum[]() {{
-                            add("CLOUD"),
+                        policyType = "IMAGE_MANAGEMENT";
+                        resourceLocations = new org.openapis.openapi.models.shared.ResourceLocationValuesEnum[]{{
+                            add("OUTPOST"),
                         }};
-                        resourceTypes = new openapisdk.models.shared.ResourceTypeValuesEnum[]() {{
-                            add("INSTANCE"),
+                        resourceTypes = new org.openapis.openapi.models.shared.ResourceTypeValuesEnum[]{{
+                            add("VOLUME"),
                         }};
-                        schedules = new openapisdk.models.shared.Schedule[]() {{
+                        schedules = new org.openapis.openapi.models.shared.Schedule[]{{
                             add(new Schedule() {{
-                                copyTags = true;
-                                createRule = new CreateRule() {{
-                                    cronExpression = "accusantium";
-                                    interval = 1395437218309923052;
-                                    intervalUnit = "HOURS";
-                                    location = "CLOUD";
-                                    times = new String[]() {{
-                                        add("aut"),
-                                        add("odit"),
+                                archiveRule = new ArchiveRule() {{
+                                    retainRule = new ArchiveRetainRule() {{
+                                        retentionArchiveTier = new RetentionArchiveTier() {{
+                                            count = 617636;
+                                            interval = 149675;
+                                            intervalUnit = "MONTHS";
+                                        }};
                                     }};
                                 }};
-                                crossRegionCopyRules = new openapisdk.models.shared.CrossRegionCopyRule[]() {{
+                                copyTags = false;
+                                createRule = new CreateRule() {{
+                                    cronExpression = "dolor";
+                                    interval = 616934;
+                                    intervalUnit = "HOURS";
+                                    location = "CLOUD";
+                                    times = new String[]{{
+                                        add("saepe"),
+                                        add("fuga"),
+                                        add("in"),
+                                        add("corporis"),
+                                    }};
+                                }};
+                                crossRegionCopyRules = new org.openapis.openapi.models.shared.CrossRegionCopyRule[]{{
                                     add(new CrossRegionCopyRule() {{
-                                        cmkArn = "voluptas";
-                                        copyTags = true;
+                                        cmkArn = "iure";
+                                        copyTags = false;
                                         deprecateRule = new CrossRegionCopyDeprecateRule() {{
-                                            interval = 1059542851699319360;
+                                            interval = 902349;
+                                            intervalUnit = "MONTHS";
+                                        }};
+                                        encrypted = false;
+                                        retainRule = new CrossRegionCopyRetainRule() {{
+                                            interval = 99280;
+                                            intervalUnit = "DAYS";
+                                        }};
+                                        target = "reiciendis";
+                                        targetRegion = "est";
+                                    }}),
+                                    add(new CrossRegionCopyRule() {{
+                                        cmkArn = "mollitia";
+                                        copyTags = false;
+                                        deprecateRule = new CrossRegionCopyDeprecateRule() {{
+                                            interval = 670638;
                                             intervalUnit = "DAYS";
                                         }};
                                         encrypted = false;
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 7845762441295307478;
-                                            intervalUnit = "YEARS";
+                                            interval = 210382;
+                                            intervalUnit = "WEEKS";
                                         }};
-                                        target = "consectetur";
+                                        target = "explicabo";
                                         targetRegion = "nobis";
                                     }}),
                                     add(new CrossRegionCopyRule() {{
-                                        cmkArn = "odio";
+                                        cmkArn = "enim";
                                         copyTags = false;
                                         deprecateRule = new CrossRegionCopyDeprecateRule() {{
-                                            interval = 388440063886460141;
-                                            intervalUnit = "DAYS";
+                                            interval = 607831;
+                                            intervalUnit = "WEEKS";
                                         }};
                                         encrypted = false;
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 8902041070398994519;
-                                            intervalUnit = "YEARS";
-                                        }};
-                                        target = "sint";
-                                        targetRegion = "inventore";
-                                    }}),
-                                    add(new CrossRegionCopyRule() {{
-                                        cmkArn = "ut";
-                                        copyTags = false;
-                                        deprecateRule = new CrossRegionCopyDeprecateRule() {{
-                                            interval = 4756106358532488297;
+                                            interval = 325047;
                                             intervalUnit = "MONTHS";
                                         }};
-                                        encrypted = false;
-                                        retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 2264299874001785192;
-                                            intervalUnit = "MONTHS";
-                                        }};
-                                        target = "dolor";
-                                        targetRegion = "beatae";
+                                        target = "accusantium";
+                                        targetRegion = "iure";
                                     }}),
                                 }};
                                 deprecateRule = new DeprecateRule() {{
-                                    count = 4112921325496946042;
-                                    interval = 2671030200101705776;
-                                    intervalUnit = "WEEKS";
-                                }};
-                                fastRestoreRule = new FastRestoreRule() {{
-                                    availabilityZones = new String[]() {{
-                                        add("ipsum"),
-                                        add("ex"),
-                                    }};
-                                    count = 7014402135919778893;
-                                    interval = 3983722386484812742;
-                                    intervalUnit = "MONTHS";
-                                }};
-                                name = "rerum";
-                                retainRule = new RetainRule() {{
-                                    count = 8489437897698681073;
-                                    interval = 1938800996802160635;
+                                    count = 634274;
+                                    interval = 988374;
                                     intervalUnit = "YEARS";
                                 }};
-                                shareRules = new openapisdk.models.shared.ShareRule[]() {{
+                                fastRestoreRule = new FastRestoreRule() {{
+                                    availabilityZones = new String[]{{
+                                        add("mollitia"),
+                                    }};
+                                    count = 208876;
+                                    interval = 635059;
+                                    intervalUnit = "DAYS";
+                                }};
+                                name = "repellat";
+                                retainRule = new RetainRule() {{
+                                    count = 653108;
+                                    interval = 581850;
+                                    intervalUnit = "WEEKS";
+                                }};
+                                shareRules = new org.openapis.openapi.models.shared.ShareRule[]{{
                                     add(new ShareRule() {{
-                                        targetAccounts = new String[]() {{
-                                            add("qui"),
+                                        targetAccounts = new String[]{{
+                                            add("molestiae"),
+                                            add("velit"),
                                         }};
-                                        unshareInterval = 4308690457412179793;
-                                        unshareIntervalUnit = "YEARS";
+                                        unshareInterval = 623510;
+                                        unshareIntervalUnit = "DAYS";
+                                    }}),
+                                    add(new ShareRule() {{
+                                        targetAccounts = new String[]{{
+                                            add("vitae"),
+                                            add("laborum"),
+                                        }};
+                                        unshareInterval = 656330;
+                                        unshareIntervalUnit = "WEEKS";
                                     }}),
                                 }};
-                                tagsToAdd = new openapisdk.models.shared.Tag[]() {{
+                                tagsToAdd = new org.openapis.openapi.models.shared.Tag[]{{
                                     add(new Tag() {{
-                                        key = "qui";
-                                        value = "ut";
-                                    }}),
-                                    add(new Tag() {{
-                                        key = "itaque";
-                                        value = "ab";
+                                        key = "quo";
+                                        value = "sequi";
                                     }}),
                                 }};
-                                variableTags = new openapisdk.models.shared.Tag[]() {{
+                                variableTags = new org.openapis.openapi.models.shared.Tag[]{{
                                     add(new Tag() {{
-                                        key = "ullam";
-                                        value = "et";
+                                        key = "ipsam";
+                                        value = "id";
+                                    }}),
+                                    add(new Tag() {{
+                                        key = "possimus";
+                                        value = "aut";
+                                    }}),
+                                    add(new Tag() {{
+                                        key = "quasi";
+                                        value = "error";
+                                    }}),
+                                    add(new Tag() {{
+                                        key = "temporibus";
+                                        value = "laborum";
                                     }}),
                                 }};
                             }}),
                             add(new Schedule() {{
-                                copyTags = false;
-                                createRule = new CreateRule() {{
-                                    cronExpression = "esse";
-                                    interval = 5902760509050140210;
-                                    intervalUnit = "HOURS";
-                                    location = "OUTPOST_LOCAL";
-                                    times = new String[]() {{
-                                        add("soluta"),
-                                        add("sunt"),
+                                archiveRule = new ArchiveRule() {{
+                                    retainRule = new ArchiveRetainRule() {{
+                                        retentionArchiveTier = new RetentionArchiveTier() {{
+                                            count = 96098;
+                                            interval = 971945;
+                                            intervalUnit = "YEARS";
+                                        }};
                                     }};
                                 }};
-                                crossRegionCopyRules = new openapisdk.models.shared.CrossRegionCopyRule[]() {{
+                                copyTags = false;
+                                createRule = new CreateRule() {{
+                                    cronExpression = "vero";
+                                    interval = 468651;
+                                    intervalUnit = "HOURS";
+                                    location = "OUTPOST_LOCAL";
+                                    times = new String[]{{
+                                        add("ipsa"),
+                                        add("omnis"),
+                                        add("voluptate"),
+                                        add("cum"),
+                                    }};
+                                }};
+                                crossRegionCopyRules = new org.openapis.openapi.models.shared.CrossRegionCopyRule[]{{
                                     add(new CrossRegionCopyRule() {{
-                                        cmkArn = "magni";
+                                        cmkArn = "doloremque";
                                         copyTags = false;
                                         deprecateRule = new CrossRegionCopyDeprecateRule() {{
-                                            interval = 6651829488660799814;
-                                            intervalUnit = "MONTHS";
-                                        }};
-                                        encrypted = true;
-                                        retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 4391202566038595699;
-                                            intervalUnit = "MONTHS";
-                                        }};
-                                        target = "ut";
-                                        targetRegion = "consequatur";
-                                    }}),
-                                    add(new CrossRegionCopyRule() {{
-                                        cmkArn = "dolor";
-                                        copyTags = true;
-                                        deprecateRule = new CrossRegionCopyDeprecateRule() {{
-                                            interval = 1925401661646756611;
-                                            intervalUnit = "YEARS";
+                                            interval = 441711;
+                                            intervalUnit = "WEEKS";
                                         }};
                                         encrypted = false;
                                         retainRule = new CrossRegionCopyRetainRule() {{
-                                            interval = 2803285039048912676;
-                                            intervalUnit = "YEARS";
+                                            interval = 979587;
+                                            intervalUnit = "DAYS";
                                         }};
-                                        target = "laboriosam";
-                                        targetRegion = "sed";
+                                        target = "corporis";
+                                        targetRegion = "dolore";
                                     }}),
                                 }};
                                 deprecateRule = new DeprecateRule() {{
-                                    count = 6604365855503062775;
-                                    interval = 1836598054518427835;
-                                    intervalUnit = "DAYS";
+                                    count = 480894;
+                                    interval = 118727;
+                                    intervalUnit = "MONTHS";
                                 }};
                                 fastRestoreRule = new FastRestoreRule() {{
-                                    availabilityZones = new String[]() {{
-                                        add("consequuntur"),
-                                        add("laudantium"),
-                                        add("autem"),
+                                    availabilityZones = new String[]{{
+                                        add("accusamus"),
+                                        add("commodi"),
                                     }};
-                                    count = 1891001667378689416;
-                                    interval = 1627381309359808899;
+                                    count = 918236;
+                                    interval = 64147;
                                     intervalUnit = "DAYS";
                                 }};
-                                name = "perferendis";
+                                name = "quidem";
                                 retainRule = new RetainRule() {{
-                                    count = 8497925768463229012;
-                                    interval = 5311927246208705713;
+                                    count = 565189;
+                                    interval = 566602;
                                     intervalUnit = "YEARS";
                                 }};
-                                shareRules = new openapisdk.models.shared.ShareRule[]() {{
+                                shareRules = new org.openapis.openapi.models.shared.ShareRule[]{{
                                     add(new ShareRule() {{
-                                        targetAccounts = new String[]() {{
-                                            add("maxime"),
+                                        targetAccounts = new String[]{{
+                                            add("rem"),
+                                            add("voluptates"),
+                                            add("quasi"),
                                         }};
-                                        unshareInterval = 8392001091488039958;
+                                        unshareInterval = 921158;
+                                        unshareIntervalUnit = "MONTHS";
+                                    }}),
+                                    add(new ShareRule() {{
+                                        targetAccounts = new String[]{{
+                                            add("itaque"),
+                                        }};
+                                        unshareInterval = 277718;
                                         unshareIntervalUnit = "WEEKS";
                                     }}),
-                                    add(new ShareRule() {{
-                                        targetAccounts = new String[]() {{
-                                            add("rerum"),
-                                        }};
-                                        unshareInterval = 6394356307858046544;
-                                        unshareIntervalUnit = "WEEKS";
-                                    }}),
-                                    add(new ShareRule() {{
-                                        targetAccounts = new String[]() {{
-                                            add("minima"),
-                                            add("necessitatibus"),
-                                        }};
-                                        unshareInterval = 9205243623417456715;
-                                        unshareIntervalUnit = "DAYS";
+                                }};
+                                tagsToAdd = new org.openapis.openapi.models.shared.Tag[]{{
+                                    add(new Tag() {{
+                                        key = "est";
+                                        value = "quibusdam";
                                     }}),
                                 }};
-                                tagsToAdd = new openapisdk.models.shared.Tag[]() {{
+                                variableTags = new org.openapis.openapi.models.shared.Tag[]{{
                                     add(new Tag() {{
-                                        key = "labore";
-                                        value = "et";
-                                    }}),
-                                }};
-                                variableTags = new openapisdk.models.shared.Tag[]() {{
-                                    add(new Tag() {{
-                                        key = "ad";
-                                        value = "expedita";
-                                    }}),
-                                    add(new Tag() {{
-                                        key = "vel";
-                                        value = "qui";
+                                        key = "deserunt";
+                                        value = "distinctio";
                                     }}),
                                 }};
                             }}),
                         }};
-                        targetTags = new openapisdk.models.shared.Tag[]() {{
+                        targetTags = new org.openapis.openapi.models.shared.Tag[]{{
                             add(new Tag() {{
-                                key = "nihil";
-                                value = "tempora";
+                                key = "labore";
+                                value = "modi";
                             }}),
                             add(new Tag() {{
-                                key = "deserunt";
-                                value = "eaque";
+                                key = "qui";
+                                value = "aliquid";
+                            }}),
+                            add(new Tag() {{
+                                key = "cupiditate";
+                                value = "quos";
+                            }}),
+                            add(new Tag() {{
+                                key = "perferendis";
+                                value = "magni";
                             }}),
                         }};
                     }};
-                    state = "ENABLED";
+                    state = "DISABLED";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("autem", "quis");
-                        put("vel", "vel");
+                        put("alias", "fugit");
+                        put("dolorum", "excepturi");
                     }};
                 }};
-            }};
+            }};            
 
             CreateLifecyclePolicyResponse res = sdk.createLifecyclePolicy(req);
 
@@ -335,14 +503,24 @@ public class Application {
 ### SDK SDK
 
 * `createLifecyclePolicy` - Creates a policy to manage the lifecycle of the specified Amazon Web Services resources. You can create up to 100 lifecycle policies.
-* `deleteLifecyclePolicy` - Deletes the specified lifecycle policy and halts the automated operations that the policy specified.
+* `deleteLifecyclePolicy` - <p>Deletes the specified lifecycle policy and halts the automated operations that the policy specified.</p> <p>For more information about deleting a policy, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/view-modify-delete.html#delete">Delete lifecycle policies</a>.</p>
 * `getLifecyclePolicies` - <p>Gets summary information about all or the specified data lifecycle policies.</p> <p>To get complete information about a policy, use <a>GetLifecyclePolicy</a>.</p>
 * `getLifecyclePolicy` - Gets detailed information about the specified lifecycle policy.
 * `listTagsForResource` - Lists the tags for the specified resource.
 * `tagResource` - Adds the specified tags to the specified resource.
 * `untagResource` - Removes the specified tags from the specified resource.
-* `updateLifecyclePolicy` - Updates the specified lifecycle policy.
-
+* `updateLifecyclePolicy` - <p>Updates the specified lifecycle policy.</p> <p>For more information about updating a policy, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/view-modify-delete.html#modify">Modify lifecycle policies</a>.</p>
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

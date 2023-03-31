@@ -2,30 +2,34 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ApplicationGetPathParams;
+import org.openapis.openapi.models.operations.ApplicationGetQueryParams;
+import org.openapis.openapi.models.operations.ApplicationGetHeaders;
+import org.openapis.openapi.models.operations.ApplicationGetRequest;
+import org.openapis.openapi.models.operations.ApplicationGetResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ApplicationGetRequest req = new ApplicationGetRequest() {{
                 pathParams = new ApplicationGetPathParams() {{
-                    applicationId = "sit";
+                    applicationId = "corrupti";
                 }};
                 queryParams = new ApplicationGetQueryParams() {{
-                    apiVersion = "voluptas";
-                    timeout = 6050128673802995827;
+                    apiVersion = "provident";
+                    timeout = 715190;
                 }};
                 headers = new ApplicationGetHeaders() {{
-                    clientRequestId = "expedita";
-                    ocpDate = "consequuntur";
+                    clientRequestId = "quibusdam";
+                    ocpDate = "unde";
                     returnClientRequestId = false;
                 }};
-            }};
+            }};            
 
             ApplicationGetResponse res = sdk.applications.applicationGet(req);
 

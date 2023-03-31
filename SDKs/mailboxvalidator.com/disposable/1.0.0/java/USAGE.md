@@ -2,23 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetV1EmailDisposableFormatEnum;
+import org.openapis.openapi.models.operations.GetV1EmailDisposableQueryParams;
+import org.openapis.openapi.models.operations.GetV1EmailDisposableRequest;
+import org.openapis.openapi.models.operations.GetV1EmailDisposableResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetV1EmailDisposableRequest req = new GetV1EmailDisposableRequest() {{
                 queryParams = new GetV1EmailDisposableQueryParams() {{
-                    email = "sit";
-                    format = "json";
-                    key = "culpa";
+                    email = "Larue_Rau85@yahoo.com";
+                    format = "xml";
+                    key = "illum";
                 }};
-            }};
+            }};            
 
             GetV1EmailDisposableResponse res = sdk.getV1EmailDisposable(req);
 

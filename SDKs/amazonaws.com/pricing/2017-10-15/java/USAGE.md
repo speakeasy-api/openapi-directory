@@ -2,46 +2,48 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DescribeServicesQueryParams;
+import org.openapis.openapi.models.operations.DescribeServicesXAmzTargetEnum;
+import org.openapis.openapi.models.operations.DescribeServicesHeaders;
+import org.openapis.openapi.models.operations.DescribeServicesRequest;
+import org.openapis.openapi.models.operations.DescribeServicesResponse;
+import org.openapis.openapi.models.shared.DescribeServicesRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DescribeServicesRequest req = new DescribeServicesRequest() {{
                 queryParams = new DescribeServicesQueryParams() {{
-                    maxResults = "sit";
-                    nextToken = "voluptas";
+                    maxResults = "corrupti";
+                    nextToken = "provident";
                 }};
                 headers = new DescribeServicesHeaders() {{
-                    xAmzAlgorithm = "culpa";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "consequuntur";
-                    xAmzDate = "dolor";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "voluptas";
-                    xAmzSignedHeaders = "fugit";
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                     xAmzTarget = "AWSPriceListService.DescribeServices";
                 }};
                 request = new DescribeServicesRequest() {{
-                    formatVersion = "nihil";
-                    maxResults = 8325060299420976708;
-                    nextToken = "dicta";
-                    serviceCode = "debitis";
+                    formatVersion = "error";
+                    maxResults = 645894;
+                    nextToken = "suscipit";
+                    serviceCode = "iure";
                 }};
-            }};
+            }};            
 
             DescribeServicesResponse res = sdk.describeServices(req);
 

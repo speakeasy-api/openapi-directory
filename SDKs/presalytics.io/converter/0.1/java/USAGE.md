@@ -2,24 +2,27 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SvgconvertFileToConvertFile;
+import org.openapis.openapi.models.operations.SvgconvertFileToConvert;
+import org.openapis.openapi.models.operations.SvgconvertRequest;
+import org.openapis.openapi.models.operations.SvgconvertResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             SvgconvertRequest req = new SvgconvertRequest() {{
                 request = new SvgconvertFileToConvert() {{
                     file = new SvgconvertFileToConvertFile() {{
-                        content = "sit".getBytes();
-                        file = "voluptas";
+                        content = "corrupti".getBytes();
+                        file = "provident";
                     }};
                 }};
-            }};
+            }};            
 
             SvgconvertResponse res = sdk.svgconvert(req);
 

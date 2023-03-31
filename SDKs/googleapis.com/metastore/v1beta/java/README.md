@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,26 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateSecurity;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreatePathParams;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateQueryParams;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateRequest;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse;
+import org.openapis.openapi.models.shared.FederationInput;
+import org.openapis.openapi.models.shared.BackendMetastoreMetastoreTypeEnum;
+import org.openapis.openapi.models.shared.BackendMetastore;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             MetastoreProjectsLocationsFederationsCreateRequest req = new MetastoreProjectsLocationsFederationsCreateRequest() {{
                 security = new MetastoreProjectsLocationsFederationsCreateSecurity() {{
@@ -35,38 +46,44 @@ public class Application {
                     }};
                 }};
                 pathParams = new MetastoreProjectsLocationsFederationsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new MetastoreProjectsLocationsFederationsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    federationId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    federationId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    requestId = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    quotaUser = "error";
+                    requestId = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
                 request = new FederationInput() {{
-                    backendMetastores = new java.util.HashMap<String, openapisdk.models.shared.BackendMetastore>() {{
-                        put("et", new BackendMetastore() {{
-                            metastoreType = "DATAPROC_METASTORE";
-                            name = "dolorem";
+                    backendMetastores = new java.util.HashMap<String, org.openapis.openapi.models.shared.BackendMetastore>() {{
+                        put("debitis", new BackendMetastore() {{
+                            metastoreType = "METASTORE_TYPE_UNSPECIFIED";
+                            name = "delectus";
+                        }});
+                        put("tempora", new BackendMetastore() {{
+                            metastoreType = "DATAPLEX";
+                            name = "molestiae";
                         }});
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("voluptate", "iste");
-                        put("vitae", "totam");
+                        put("placeat", "voluptatum");
+                        put("iusto", "excepturi");
+                        put("nisi", "recusandae");
+                        put("temporibus", "ab");
                     }};
-                    name = "dolores";
-                    version = "illum";
+                    name = "quis";
+                    version = "veritatis";
                 }};
-            }};
+            }};            
 
             MetastoreProjectsLocationsFederationsCreateResponse res = sdk.projects.metastoreProjectsLocationsFederationsCreate(req);
 
@@ -82,12 +99,14 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
 * `metastoreProjectsLocationsFederationsCreate` - Creates a metastore federation in a project and location.
 * `metastoreProjectsLocationsFederationsList` - Lists federations in a project and location.
 * `metastoreProjectsLocationsList` - Lists information about the supported locations for this service.
-* `metastoreProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `metastoreProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
+* `metastoreProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 * `metastoreProjectsLocationsServicesAlterLocation` - Alter metadata resource location. The metadata resource can be a database, table, or partition. This functionality only updates the parent directory for the respective metadata resource and does not transfer any existing data to the new location.
 * `metastoreProjectsLocationsServicesBackupsCreate` - Creates a new backup in a given project and location.
 * `metastoreProjectsLocationsServicesBackupsDelete` - Deletes a single backup.
@@ -106,7 +125,17 @@ public class Application {
 * `metastoreProjectsLocationsServicesQueryMetadata` - Query DPMS metadata.
 * `metastoreProjectsLocationsServicesRemoveIamPolicy` - Removes the attached IAM policies for a resource
 * `metastoreProjectsLocationsServicesRestore` - Restores a service from a backup.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

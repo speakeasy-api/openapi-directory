@@ -2,28 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateContactInMailinglistPathParams;
+import org.openapis.openapi.models.operations.CreateContactInMailinglistRequest;
+import org.openapis.openapi.models.operations.CreateContactInMailinglistResponse;
+import org.openapis.openapi.models.shared.CreateContactInMailingList;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateContactInMailinglistRequest req = new CreateContactInMailinglistRequest() {{
                 pathParams = new CreateContactInMailinglistPathParams() {{
-                    directoryId = "sit";
-                    mailingListId = "voluptas";
+                    directoryId = "corrupti";
+                    mailingListId = "provident";
                 }};
                 request = new CreateContactInMailingList() {{
-                    email = "culpa";
-                    firstName = "expedita";
-                    lastName = "consequuntur";
+                    email = "Rosalinda_Mitchell84@hotmail.com";
+                    firstName = "Henry";
+                    lastName = "Mueller";
                     unsubscribed = false;
                 }};
-            }};
+            }};            
 
             CreateContactInMailinglistResponse res = sdk.createContactInMailinglist(req);
 

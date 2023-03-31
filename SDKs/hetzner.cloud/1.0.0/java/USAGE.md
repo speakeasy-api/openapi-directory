@@ -2,23 +2,27 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetActionsSortParameterSortEnum;
+import org.openapis.openapi.models.operations.GetActionsStatusParameterStatusEnum;
+import org.openapis.openapi.models.operations.GetActionsQueryParams;
+import org.openapis.openapi.models.operations.GetActionsRequest;
+import org.openapis.openapi.models.operations.GetActionsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetActionsRequest req = new GetActionsRequest() {{
                 queryParams = new GetActionsQueryParams() {{
-                    id = 8717895732742165505;
-                    sort = "id";
-                    status = "success";
+                    id = 548814;
+                    sort = "progress:asc";
+                    status = "error";
                 }};
-            }};
+            }};            
 
             GetActionsResponse res = sdk.actions.getActions(req);
 

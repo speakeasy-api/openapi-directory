@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListSecurityOption1;
+import org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListSecurityOption2;
+import org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListSecurity;
+import org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListQueryParams;
+import org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListRequest;
+import org.openapis.openapi.models.operations.AnalyticsadminAccountSummariesListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AnalyticsadminAccountSummariesListRequest req = new AnalyticsadminAccountSummariesListRequest() {{
                 security = new AnalyticsadminAccountSummariesListSecurity() {{
@@ -24,21 +33,21 @@ public class Application {
                     }};
                 }};
                 queryParams = new AnalyticsadminAccountSummariesListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    pageSize = 6044372234677422456;
-                    pageToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    pageSize = 847252;
+                    pageToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             AnalyticsadminAccountSummariesListResponse res = sdk.accountSummaries.analyticsadminAccountSummariesList(req);
 

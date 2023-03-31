@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,20 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesSecurity;
+import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesPathParams;
+import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesRequest;
+import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesResponse;
+import org.openapis.openapi.models.shared.AdditionalRate;
+import org.openapis.openapi.models.shared.SchemePaylocityAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AddOrUpdateAdditionalRatesRequest req = new AddOrUpdateAdditionalRatesRequest() {{
                 security = new AddOrUpdateAdditionalRatesSecurity() {{
@@ -32,24 +37,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new AddOrUpdateAdditionalRatesPathParams() {{
-                    companyId = "sit";
-                    employeeId = "voluptas";
+                    companyId = "corrupti";
+                    employeeId = "provident";
                 }};
                 request = new AdditionalRate() {{
-                    changeReason = "culpa";
-                    costCenter1 = "expedita";
-                    costCenter2 = "consequuntur";
-                    costCenter3 = "dolor";
-                    effectiveDate = "expedita";
-                    endCheckDate = "voluptas";
-                    job = "fugit";
-                    rate = 28.100000;
-                    rateCode = "rerum";
-                    rateNotes = "dicta";
-                    ratePer = "debitis";
-                    shift = "voluptatum";
+                    changeReason = "distinctio";
+                    costCenter1 = "quibusdam";
+                    costCenter2 = "unde";
+                    costCenter3 = "nulla";
+                    effectiveDate = "corrupti";
+                    endCheckDate = "illum";
+                    job = "vel";
+                    rate = 6235.64;
+                    rateCode = "deserunt";
+                    rateNotes = "suscipit";
+                    ratePer = "iure";
+                    shift = "magnam";
                 }};
-            }};
+            }};            
 
             AddOrUpdateAdditionalRatesResponse res = sdk.additionalRates.addOrUpdateAdditionalRates(req);
 
@@ -65,31 +70,32 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Additional Rates
+
+### additionalRates
 
 * `addOrUpdateAdditionalRates` - Add/update additional rates
 
-### Client Credentials
+### clientCredentials
 
 * `addClientSecret` - Obtain new client secret.
 
-### Company Codes
+### companyCodes
 
 * `getAllCompanyCodesAndDescriptionsByResource` - Get All Company Codes
 
-### Company-Specific Schema
+### companySpecificSchema
 
-* `getCompanySpecificOpenApiDocumentation` - Get Company-Specific Open API Documentation
+* `getCompanySpecificOpenAPIDocumentation` - Get Company-Specific Open API Documentation
 
-### Custom Fields
+### customFields
 
 * `getAllCustomFieldsByCategory` - Get All Custom Fields
 
-### Direct Deposit
+### directDeposit
 
 * `getAllDirectDeposit` - Get All Direct Deposit
 
-### Earnings
+### earnings
 
 * `addOrUpdateAnEmployeeEarning` - Add/Update Earning
 * `deleteEarningByEarningCodeAndStartDate` - Delete Earning by Earning Code and Start Date
@@ -97,47 +103,62 @@ public class Application {
 * `getEarningByEarningCodeAndStartDate` - Get Earning by Earning Code and Start Date
 * `getEarningsByEarningCode` - Get Earnings by Earning Code
 
-### Emergency Contacts
+### emergencyContacts
 
 * `addOrUpdateEmergencyContacts` - Add/update emergency contacts
 
-### Employee
+### employee
 
 * `addEmployee` - Add new employee
 * `getAllEmployees` - Get all employees
 * `getEmployee` - Get employee
 * `updateEmployee` - Update employee
 
-### Employee Benefit Setup
+### employeeBenefitSetup
 
 * `updateOrAddEmployeeBenefitSetup` - Add/update employee's benefit setup
 
-### Employee Staging
+### employeeStaging
 
 * `addNewEmployeeToWebLink` - Add new employee to Web Link
 
-### Local Taxes
+### localTaxes
 
 * `addLocalTax` - Add new local tax
 * `deleteLocalTaxByTaxCode` - Delete local tax by tax code
 * `getAllLocalTaxes` - Get all local taxes
 * `getLocalTaxByTaxCode` - Get local taxes by tax code
 
-### Non-Primary State Tax
+### nonPrimaryStateTax
 
 * `addOrUpdateNonPrimaryStateTax` - Add/update non-primary state tax
 
-### PayStatements
+### payStatements
 
 * `getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYear` - Get employee pay statement details data for the specified year.
 * `getsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDate` - Get employee pay statement details data for the specified year and check date.
 * `getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYear` - Get employee pay statement summary data for the specified year.
 * `getsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDate` - Get employee pay statement summary data for the specified year and check date.
 
-### Primary State Tax
+### primaryStateTax
 
 * `addOrUpdatePrimaryStateTax` - Add/update primary state tax
 
+### sensitiveData
+
+* `addOrUpdateSensitiveData` - Add/update sensitive data
+* `getSensitiveData` - Get sensitive data
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

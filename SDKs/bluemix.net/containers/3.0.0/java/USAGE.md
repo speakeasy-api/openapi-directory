@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetContainersMessagesHeaders;
+import org.openapis.openapi.models.operations.GetContainersMessagesRequest;
+import org.openapis.openapi.models.operations.GetContainersMessagesResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetContainersMessagesRequest req = new GetContainersMessagesRequest() {{
                 headers = new GetContainersMessagesHeaders() {{
-                    xAuthProjectId = "sit";
-                    xAuthToken = "voluptas";
+                    xAuthProjectId = "corrupti";
+                    xAuthToken = "provident";
                 }};
-            }};
+            }};            
 
             GetContainersMessagesResponse res = sdk.apiInfo.getContainersMessages(req);
 

@@ -2,49 +2,61 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddNotificationChannelsPathParams;
+import org.openapis.openapi.models.operations.AddNotificationChannelsHeaders;
+import org.openapis.openapi.models.operations.AddNotificationChannelsRequestBody;
+import org.openapis.openapi.models.operations.AddNotificationChannelsRequest;
+import org.openapis.openapi.models.operations.AddNotificationChannelsResponse;
+import org.openapis.openapi.models.shared.Channel;
+import org.openapis.openapi.models.shared.EventPublisherEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddNotificationChannelsRequest req = new AddNotificationChannelsRequest() {{
                 pathParams = new AddNotificationChannelsPathParams() {{
-                    profilingGroupName = "sit";
+                    profilingGroupName = "corrupti";
                 }};
                 headers = new AddNotificationChannelsHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
                 request = new AddNotificationChannelsRequestBody() {{
-                    channels = new openapisdk.models.shared.Channel[]() {{
+                    channels = new org.openapis.openapi.models.shared.Channel[]{{
                         add(new Channel() {{
-                            eventPublishers = new openapisdk.models.shared.EventPublisherEnum[]() {{
+                            eventPublishers = new org.openapis.openapi.models.shared.EventPublisherEnum[]{{
+                                add("AnomalyDetection"),
+                                add("AnomalyDetection"),
                                 add("AnomalyDetection"),
                             }};
-                            id = "rerum";
-                            uri = "dicta";
+                            id = "deserunt";
+                            uri = "http://innocent-effect.org";
+                        }}),
+                        add(new Channel() {{
+                            eventPublishers = new org.openapis.openapi.models.shared.EventPublisherEnum[]{{
+                                add("AnomalyDetection"),
+                            }};
+                            id = "delectus";
+                            uri = "http://hideous-jam.net";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             AddNotificationChannelsResponse res = sdk.addNotificationChannels(req);
 

@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetReisezentrenQueryParams;
+import org.openapis.openapi.models.operations.GetReisezentrenRequest;
+import org.openapis.openapi.models.operations.GetReisezentrenResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetReisezentrenRequest req = new GetReisezentrenRequest() {{
                 queryParams = new GetReisezentrenQueryParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
-            }};
+            }};            
 
             GetReisezentrenResponse res = sdk.getReisezentren(req);
 

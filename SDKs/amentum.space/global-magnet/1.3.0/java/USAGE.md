@@ -2,26 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AppApiWMMEndpointsWMMMagneticFieldQueryParams;
+import org.openapis.openapi.models.operations.AppApiWMMEndpointsWMMMagneticFieldRequest;
+import org.openapis.openapi.models.operations.AppApiWMMEndpointsWMMMagneticFieldResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            AppApiWmmEndpointsWmmMagneticFieldRequest req = new AppApiWmmEndpointsWmmMagneticFieldRequest() {{
-                queryParams = new AppApiWmmEndpointsWmmMagneticFieldQueryParams() {{
-                    altitude = 74.099998;
-                    latitude = 53.099998;
-                    longitude = 15.100000;
-                    year = 67.199997;
+            AppApiWMMEndpointsWMMMagneticFieldRequest req = new AppApiWMMEndpointsWMMMagneticFieldRequest() {{
+                queryParams = new AppApiWMMEndpointsWMMMagneticFieldQueryParams() {{
+                    altitude = 10;
+                    latitude = 80;
+                    longitude = 100;
+                    year = 2020.5;
                 }};
-            }};
+            }};            
 
-            AppApiWmmEndpointsWmmMagneticFieldResponse res = sdk.appApiWmmEndpointsWmmMagneticField(req);
+            AppApiWMMEndpointsWMMMagneticFieldResponse res = sdk.appApiWMMEndpointsWMMMagneticField(req);
 
             if (res.appApiWMMEndpointsWMMMagneticField200ApplicationJSONObject.isPresent()) {
                 // handle response

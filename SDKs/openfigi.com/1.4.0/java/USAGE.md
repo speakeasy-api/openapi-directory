@@ -2,29 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetMappingValuesKeyKeyEnum;
+import org.openapis.openapi.models.operations.GetMappingValuesKeyPathParams;
+import org.openapis.openapi.models.operations.GetMappingValuesKeyRequest;
+import org.openapis.openapi.models.operations.GetMappingValuesKeyResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyAuth = new SchemeApiKeyAuth() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetMappingValuesKeyRequest req = new GetMappingValuesKeyRequest() {{
                 pathParams = new GetMappingValuesKeyPathParams() {{
-                    key = "securityType";
+                    key = "currency";
                 }};
-            }};
+            }};            
 
             GetMappingValuesKeyResponse res = sdk.getMappingValuesKey(req);
 

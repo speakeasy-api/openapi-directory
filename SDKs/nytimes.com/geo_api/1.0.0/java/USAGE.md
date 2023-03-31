@@ -2,40 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetQueryJsonFacetsEnum;
+import org.openapis.openapi.models.operations.GetQueryJsonQueryParams;
+import org.openapis.openapi.models.operations.GetQueryJsonRequest;
+import org.openapis.openapi.models.operations.GetQueryJsonResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     apikey = new SchemeApikey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetQueryJsonRequest req = new GetQueryJsonRequest() {{
                 queryParams = new GetQueryJsonQueryParams() {{
-                    dateRange = "sit";
-                    elevation = 2259404117704393152;
-                    facets = 6050128673802995827;
-                    filter = "expedita";
-                    latitude = "consequuntur";
-                    limit = 2669985732393126063;
-                    longitude = "expedita";
-                    name = "voluptas";
-                    offset = 8274930044578894929;
-                    query = "et";
-                    sort = "nihil";
-                    sw = "rerum";
+                    dateRange = "corrupti";
+                    elevation = 592845;
+                    facets = "1";
+                    filter = "quibusdam";
+                    latitude = "unde";
+                    limit = 857946;
+                    longitude = "corrupti";
+                    name = "illum";
+                    offset = 423655;
+                    query = "error";
+                    sort = "deserunt";
+                    sw = "suscipit";
                 }};
-            }};
+            }};            
 
             GetQueryJsonResponse res = sdk.events.getQueryJson(req);
 

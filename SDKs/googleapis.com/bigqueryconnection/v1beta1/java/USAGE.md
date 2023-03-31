@@ -2,15 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption2;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreatePathParams;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse;
+import org.openapis.openapi.models.shared.ConnectionInput;
+import org.openapis.openapi.models.shared.CloudSqlPropertiesTypeEnum;
+import org.openapis.openapi.models.shared.CloudSqlPropertiesInput;
+import org.openapis.openapi.models.shared.CloudSqlCredential;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BigqueryconnectionProjectsLocationsConnectionsCreateRequest req = new BigqueryconnectionProjectsLocationsConnectionsCreateRequest() {{
                 security = new BigqueryconnectionProjectsLocationsConnectionsCreateSecurity() {{
@@ -24,37 +38,37 @@ public class Application {
                     }};
                 }};
                 pathParams = new BigqueryconnectionProjectsLocationsConnectionsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    connectionId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    connectionId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new ConnectionInput() {{
                     cloudSql = new CloudSqlPropertiesInput() {{
                         credential = new CloudSqlCredential() {{
-                            password = "debitis";
-                            username = "voluptatum";
+                            password = "iure";
+                            username = "Eli96";
                         }};
-                        database = "et";
-                        instanceId = "ut";
-                        type = "MYSQL";
+                        database = "tempora";
+                        instanceId = "suscipit";
+                        type = "POSTGRES";
                     }};
-                    description = "et";
-                    friendlyName = "voluptate";
-                    name = "iste";
+                    description = "minus";
+                    friendlyName = "placeat";
+                    name = "voluptatum";
                 }};
-            }};
+            }};            
 
             BigqueryconnectionProjectsLocationsConnectionsCreateResponse res = sdk.projects.bigqueryconnectionProjectsLocationsConnectionsCreate(req);
 

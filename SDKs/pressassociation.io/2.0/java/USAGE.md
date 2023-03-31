@@ -2,15 +2,20 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAssetSecurity;
+import org.openapis.openapi.models.operations.GetAssetPathParams;
+import org.openapis.openapi.models.operations.GetAssetQueryParams;
+import org.openapis.openapi.models.operations.GetAssetRequest;
+import org.openapis.openapi.models.operations.GetAssetResponse;
+import org.openapis.openapi.models.shared.SchemeApikey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAssetRequest req = new GetAssetRequest() {{
                 security = new GetAssetSecurity() {{
@@ -19,12 +24,12 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetAssetPathParams() {{
-                    assetId = "sit";
+                    assetId = "corrupti";
                 }};
                 queryParams = new GetAssetQueryParams() {{
                     aliases = false;
                 }};
-            }};
+            }};            
 
             GetAssetResponse res = sdk.asset.getAsset(req);
 

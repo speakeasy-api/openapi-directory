@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.TripsTripDetailsQueryParams;
+import org.openapis.openapi.models.operations.TripsTripDetailsRequest;
+import org.openapis.openapi.models.operations.TripsTripDetailsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             TripsTripDetailsRequest req = new TripsTripDetailsRequest() {{
                 queryParams = new TripsTripDetailsQueryParams() {{
-                    trackToken = "sit";
+                    trackToken = "corrupti";
                 }};
-            }};
+            }};            
 
             TripsTripDetailsResponse res = sdk.twoForMobileAppOptional.tripsTripDetails(req);
 

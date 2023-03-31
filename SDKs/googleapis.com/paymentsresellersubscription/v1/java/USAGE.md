@@ -2,37 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListPathParams;
+import org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListQueryParams;
+import org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListRequest;
+import org.openapis.openapi.models.operations.PaymentsresellersubscriptionPartnersProductsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PaymentsresellersubscriptionPartnersProductsListRequest req = new PaymentsresellersubscriptionPartnersProductsListRequest() {{
                 pathParams = new PaymentsresellersubscriptionPartnersProductsListPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new PaymentsresellersubscriptionPartnersProductsListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    filter = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
-                    pageSize = 1543572285742637646;
-                    pageToken = "nihil";
-                    prettyPrint = true;
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    filter = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    pageSize = 623564;
+                    pageToken = "deserunt";
+                    prettyPrint = false;
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-            }};
+            }};            
 
             PaymentsresellersubscriptionPartnersProductsListResponse res = sdk.partners.paymentsresellersubscriptionPartnersProductsList(req);
 

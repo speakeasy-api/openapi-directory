@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootSecurity;
+import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootQueryParams;
+import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootRequest;
+import org.openapis.openapi.models.operations.PolicytroubleshooterIamTroubleshootResponse;
+import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest;
+import org.openapis.openapi.models.shared.GoogleCloudPolicytroubleshooterV1AccessTuple;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PolicytroubleshooterIamTroubleshootRequest req = new PolicytroubleshooterIamTroubleshootRequest() {{
                 security = new PolicytroubleshooterIamTroubleshootSecurity() {{
@@ -22,26 +31,26 @@ public class Application {
                     }};
                 }};
                 queryParams = new PolicytroubleshooterIamTroubleshootQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest() {{
                     accessTuple = new GoogleCloudPolicytroubleshooterV1AccessTuple() {{
-                        fullResourceName = "rerum";
-                        permission = "dicta";
-                        principal = "debitis";
+                        fullResourceName = "deserunt";
+                        permission = "suscipit";
+                        principal = "iure";
                     }};
                 }};
-            }};
+            }};            
 
             PolicytroubleshooterIamTroubleshootResponse res = sdk.iam.policytroubleshooterIamTroubleshoot(req);
 

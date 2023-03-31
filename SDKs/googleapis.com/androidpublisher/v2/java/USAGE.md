@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteSecurity;
+import org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeletePathParams;
+import org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteQueryParams;
+import org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteRequest;
+import org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AndroidpublisherEditsApklistingsDeleteRequest req = new AndroidpublisherEditsApklistingsDeleteRequest() {{
                 security = new AndroidpublisherEditsApklistingsDeleteSecurity() {{
@@ -22,21 +29,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new AndroidpublisherEditsApklistingsDeletePathParams() {{
-                    apkVersionCode = 8717895732742165505;
-                    editId = "voluptas";
-                    language = "culpa";
-                    packageName = "expedita";
+                    apkVersionCode = 548814;
+                    editId = "provident";
+                    language = "distinctio";
+                    packageName = "quibusdam";
                 }};
                 queryParams = new AndroidpublisherEditsApklistingsDeleteQueryParams() {{
                     alt = "json";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    userIp = "nihil";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    userIp = "vel";
                 }};
-            }};
+            }};            
 
             AndroidpublisherEditsApklistingsDeleteResponse res = sdk.edits.androidpublisherEditsApklistingsDelete(req);
 

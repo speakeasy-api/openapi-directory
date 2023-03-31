@@ -2,49 +2,64 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddAttributesToFindingsXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AddAttributesToFindingsHeaders;
+import org.openapis.openapi.models.operations.AddAttributesToFindingsRequest;
+import org.openapis.openapi.models.operations.AddAttributesToFindingsResponse;
+import org.openapis.openapi.models.shared.AddAttributesToFindingsRequest;
+import org.openapis.openapi.models.shared.Attribute;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddAttributesToFindingsRequest req = new AddAttributesToFindingsRequest() {{
                 headers = new AddAttributesToFindingsHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "InspectorService.AddAttributesToFindings";
                 }};
                 request = new AddAttributesToFindingsRequest() {{
-                    attributes = new openapisdk.models.shared.Attribute[]() {{
+                    attributes = new org.openapis.openapi.models.shared.Attribute[]{{
                         add(new Attribute() {{
-                            key = "et";
-                            value = "nihil";
+                            key = "vel";
+                            value = "error";
+                        }}),
+                        add(new Attribute() {{
+                            key = "deserunt";
+                            value = "suscipit";
+                        }}),
+                        add(new Attribute() {{
+                            key = "iure";
+                            value = "magnam";
+                        }}),
+                        add(new Attribute() {{
+                            key = "debitis";
+                            value = "ipsa";
                         }}),
                     }};
-                    findingArns = new String[]() {{
-                        add("dicta"),
-                        add("debitis"),
-                        add("voluptatum"),
+                    findingArns = new String[]{{
+                        add("tempora"),
+                        add("suscipit"),
+                        add("molestiae"),
+                        add("minus"),
                     }};
                 }};
-            }};
+            }};            
 
             AddAttributesToFindingsResponse res = sdk.addAttributesToFindings(req);
 

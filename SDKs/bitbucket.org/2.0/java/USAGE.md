@@ -2,27 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteAddonSecurity;
+import org.openapis.openapi.models.operations.DeleteAddonRequest;
+import org.openapis.openapi.models.operations.DeleteAddonResponse;
+import org.openapis.openapi.models.shared.SchemeAPIKey;
+import org.openapis.openapi.models.shared.SchemeBasic;
+import org.openapis.openapi.models.shared.SchemeOauth2;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidRequest req = new GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidRequest() {{
-                pathParams = new GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidPathParams() {{
-                    logUuid = "sit";
-                    pipelineUuid = "voluptas";
-                    repoSlug = "culpa";
-                    stepUuid = "expedita";
-                    workspace = "consequuntur";
+            DeleteAddonRequest req = new DeleteAddonRequest() {{
+                security = new DeleteAddonSecurity() {{
+                    apiKey = new SchemeAPIKey() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
                 }};
-            }};
+            }};            
 
-            GetRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuidResponse res = sdk.getRepositoriesWorkspaceRepoSlugPipelinesPipelineUuidStepsStepUuidLogsLogUuid(req);
+            DeleteAddonResponse res = sdk.addon.deleteAddon(req);
 
             if (res.statusCode == 200) {
                 // handle response

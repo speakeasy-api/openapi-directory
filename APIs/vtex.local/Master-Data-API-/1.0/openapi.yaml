@@ -12,7 +12,8 @@ servers:
         description: Environment to use. Used as part of the URL.
 info:
   contact: {}
-  description: "# ATTENTION: **This version isn't compliant with data entities of old version (e.g. CL and AD). It's possible to use this configuration only to new data entities.**\r
+  description:
+    "# ATTENTION: **This version isn't compliant with data entities of old version (e.g. CL and AD). It's possible to use this configuration only to new data entities.**\r
 
     \r
 
@@ -107,7 +108,8 @@ security:
   - appKey: []
     appToken: []
 tags:
-  - description: "The APIs within this group are used to save documents and query them by id.\r
+  - description:
+      "The APIs within this group are used to save documents and query them by id.\r
 
       \r
 
@@ -330,7 +332,8 @@ paths:
   "/api/dataentities/{dataEntityName}/documents":
     patch:
       deprecated: false
-      description: "This request allows you to partially update a document corresponding to a given data entity.\r
+      description:
+        "This request allows you to partially update a document corresponding to a given data entity.\r
 
         \r
 
@@ -433,7 +436,8 @@ paths:
         - Documents
     post:
       deprecated: false
-      description: "This request allows you to create a new document corresponding to a given data entity. For example, you can create a new customer profile or address.\r
+      description:
+        "This request allows you to create a new document corresponding to a given data entity. For example, you can create a new customer profile or address.\r
 
         \r
 
@@ -619,7 +623,8 @@ paths:
         - Documents
     patch:
       deprecated: false
-      description: "This request allows you to partially update a document corresponding to a given data entity. For example, you can update some fields of a customer profile or address.\r
+      description:
+        "This request allows you to partially update a document corresponding to a given data entity. For example, you can update some fields of a customer profile or address.\r
 
         \r
 
@@ -722,7 +727,8 @@ paths:
         - Documents
     put:
       deprecated: false
-      description: "Update an existing document corresponding to a given data entity. For example, you can update a customer profile or address.\r
+      description:
+        "Update an existing document corresponding to a given data entity. For example, you can update a customer profile or address.\r
 
         \r
 
@@ -864,7 +870,8 @@ paths:
   "/api/dataentities/{dataEntityName}/documents/{id}/clusters":
     post:
       deprecated: false
-      description: "Check if a document is present in one or more clusters (specific set of field values).\r
+      description:
+        "Check if a document is present in one or more clusters (specific set of field values).\r
 
         \r
 
@@ -1169,7 +1176,8 @@ paths:
         - Schemas
     put:
       deprecated: false
-      description: "Creates or edits a data entity schema. Learn more about [Master Data schemas](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle)\r
+      description:
+        "Creates or edits a data entity schema. Learn more about [Master Data schemas](https://developers.vtex.com/vtex-rest-api/docs/master-data-schema-lifecycle)\r
 
         \r
 
@@ -1203,7 +1211,8 @@ paths:
   "/api/dataentities/{dataEntityName}/scroll":
     get:
       deprecated: false
-      description: "In the first request, the `X-VTEX-MD-TOKEN` token will be returned in the header. This token must be passed to the next request in the query string `_token` parameter. The token has a timeout of 10 minutes, which refreshes after each request.\r
+      description:
+        "In the first request, the `X-VTEX-MD-TOKEN` token will be returned in the header. This token must be passed to the next request in the query string `_token` parameter. The token has a timeout of 10 minutes, which refreshes after each request.\r
 
         \r
 
@@ -1269,7 +1278,8 @@ paths:
   "/api/dataentities/{dataEntityName}/search":
     get:
       deprecated: false
-      description: "Retrieves documents' information, while choosing which fields will be returned and filtering documents by specific fields.\r
+      description:
+        "Retrieves documents' information, while choosing which fields will be returned and filtering documents by specific fields.\r
 
         \r
 

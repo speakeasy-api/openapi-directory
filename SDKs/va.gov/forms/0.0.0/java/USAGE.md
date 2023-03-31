@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FindFormByFormNameSecurity;
+import org.openapis.openapi.models.operations.FindFormByFormNamePathParams;
+import org.openapis.openapi.models.operations.FindFormByFormNameRequest;
+import org.openapis.openapi.models.operations.FindFormByFormNameResponse;
+import org.openapis.openapi.models.shared.SchemeApikey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FindFormByFormNameRequest req = new FindFormByFormNameRequest() {{
                 security = new FindFormByFormNameSecurity() {{
@@ -19,9 +23,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new FindFormByFormNamePathParams() {{
-                    formName = "sit";
+                    formName = "corrupti";
                 }};
-            }};
+            }};            
 
             FindFormByFormNameResponse res = sdk.forms.findFormByFormName(req);
 

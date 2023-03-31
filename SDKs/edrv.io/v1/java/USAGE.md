@@ -2,29 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteChargeStationPathParams;
+import org.openapis.openapi.models.operations.DeleteChargeStationRequest;
+import org.openapis.openapi.models.operations.DeleteChargeStationResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DeleteChargeStationRequest req = new DeleteChargeStationRequest() {{
                 pathParams = new DeleteChargeStationPathParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
             DeleteChargeStationResponse res = sdk.chargeStations.deleteChargeStation(req);
 

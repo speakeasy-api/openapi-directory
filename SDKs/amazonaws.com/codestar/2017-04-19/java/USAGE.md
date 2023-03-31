@@ -2,43 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateTeamMemberXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AssociateTeamMemberHeaders;
+import org.openapis.openapi.models.operations.AssociateTeamMemberRequest;
+import org.openapis.openapi.models.operations.AssociateTeamMemberResponse;
+import org.openapis.openapi.models.shared.AssociateTeamMemberRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateTeamMemberRequest req = new AssociateTeamMemberRequest() {{
                 headers = new AssociateTeamMemberHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "CodeStar_20170419.AssociateTeamMember";
                 }};
                 request = new AssociateTeamMemberRequest() {{
-                    clientRequestToken = "fugit";
-                    projectId = "et";
-                    projectRole = "nihil";
-                    remoteAccessAllowed = true;
-                    userArn = "dicta";
+                    clientRequestToken = "illum";
+                    projectId = "vel";
+                    projectRole = "error";
+                    remoteAccessAllowed = false;
+                    userArn = "deserunt";
                 }};
-            }};
+            }};            
 
             AssociateTeamMemberResponse res = sdk.associateTeamMember(req);
 

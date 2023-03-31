@@ -2,15 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateSecurityOption2;
+import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateSecurity;
+import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreatePathParams;
+import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateQueryParams;
+import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateRequest;
+import org.openapis.openapi.models.operations.JobsProjectsClientEventsCreateResponse;
+import org.openapis.openapi.models.shared.CreateClientEventRequest;
+import org.openapis.openapi.models.shared.ClientEvent;
+import org.openapis.openapi.models.shared.JobEventTypeEnum;
+import org.openapis.openapi.models.shared.JobEvent;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             JobsProjectsClientEventsCreateRequest req = new JobsProjectsClientEventsCreateRequest() {{
                 security = new JobsProjectsClientEventsCreateSecurity() {{
@@ -24,41 +38,41 @@ public class Application {
                     }};
                 }};
                 pathParams = new JobsProjectsClientEventsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new JobsProjectsClientEventsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new CreateClientEventRequest() {{
                     clientEvent = new ClientEvent() {{
-                        createTime = "dicta";
-                        eventId = "debitis";
+                        createTime = "suscipit";
+                        eventId = "iure";
                         extraInfo = new java.util.HashMap<String, String>() {{
-                            put("et", "ut");
+                            put("debitis", "ipsa");
+                            put("delectus", "tempora");
                         }};
                         jobEvent = new JobEvent() {{
-                            jobs = new String[]() {{
-                                add("et"),
-                                add("voluptate"),
-                                add("iste"),
+                            jobs = new String[]{{
+                                add("molestiae"),
+                                add("minus"),
                             }};
-                            type = "APPLICATION_COMPANY_SUBMIT";
+                            type = "HIRED";
                         }};
-                        parentEventId = "totam";
-                        requestId = "dolores";
+                        parentEventId = "voluptatum";
+                        requestId = "iusto";
                     }};
                 }};
-            }};
+            }};            
 
             JobsProjectsClientEventsCreateResponse res = sdk.projects.jobsProjectsClientEventsCreate(req);
 

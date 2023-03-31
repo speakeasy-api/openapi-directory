@@ -2,28 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetForecastQueryParams;
+import org.openapis.openapi.models.operations.GetForecastHeaders;
+import org.openapis.openapi.models.operations.GetForecastRequest;
+import org.openapis.openapi.models.operations.GetForecastResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetForecastRequest req = new GetForecastRequest() {{
                 queryParams = new GetForecastQueryParams() {{
-                    alt = 74.099998;
-                    dt = "1978-05-13T03:50:47Z";
-                    lat = 6.200000;
-                    lng = 96.199997;
-                    ozone = 77.099998;
+                    alt = 1050;
+                    dt = "2018-02-04T04:39:06.467Z";
+                    lat = 78.67;
+                    lng = 115.67;
+                    ozone = 304.5;
                 }};
                 headers = new GetForecastHeaders() {{
-                    xAccessToken = "et";
+                    xAccessToken = "corrupti";
                 }};
-            }};
+            }};            
 
             GetForecastResponse res = sdk.getForecast(req);
 

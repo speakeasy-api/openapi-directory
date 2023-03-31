@@ -2,30 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GETVersionIncidentsFormatIncidentTypeEnum;
+import org.openapis.openapi.models.operations.GETVersionIncidentsFormatQueryParams;
+import org.openapis.openapi.models.operations.GETVersionIncidentsFormatRequest;
+import org.openapis.openapi.models.operations.GETVersionIncidentsFormatResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetVersionIncidentsFormatRequest req = new GetVersionIncidentsFormatRequest() {{
-                queryParams = new GetVersionIncidentsFormatQueryParams() {{
-                    incidentType = "crash";
-                    occurredAfter = 2259404117704393152;
-                    occurredBefore = 6050128673802995827;
-                    page = 501233450539197794;
-                    perPage = 3390393562759376202;
-                    proximity = "dolor";
-                    proximitySquare = 1774932891286980153;
-                    query = "voluptas";
+            GETVersionIncidentsFormatRequest req = new GETVersionIncidentsFormatRequest() {{
+                queryParams = new GETVersionIncidentsFormatQueryParams() {{
+                    incidentType = "unconfirmed";
+                    occurredAfter = 592845;
+                    occurredBefore = 715190;
+                    page = 844266;
+                    perPage = 602763;
+                    proximity = "nulla";
+                    proximitySquare = 544883;
+                    query = "illum";
                 }};
-            }};
+            }};            
 
-            GetVersionIncidentsFormatResponse res = sdk.incidents.getVersionIncidentsFormat(req);
+            GETVersionIncidentsFormatResponse res = sdk.incidents.getVersionIncidentsFormat(req);
 
             if (res.statusCode == 200) {
                 // handle response

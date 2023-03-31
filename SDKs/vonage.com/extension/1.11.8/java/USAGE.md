@@ -2,29 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDSecurity;
+import org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDPathParams;
+import org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDRequest;
+import org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDResponse;
+import org.openapis.openapi.models.shared.SchemeBearerAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            ExtensionCtrlGetAccountExtensionByIdRequest req = new ExtensionCtrlGetAccountExtensionByIdRequest() {{
-                security = new ExtensionCtrlGetAccountExtensionByIdSecurity() {{
+            ExtensionCtrlGetAccountExtensionByIDRequest req = new ExtensionCtrlGetAccountExtensionByIDRequest() {{
+                security = new ExtensionCtrlGetAccountExtensionByIDSecurity() {{
                     bearerAuth = new SchemeBearerAuth() {{
                         authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new ExtensionCtrlGetAccountExtensionByIdPathParams() {{
-                    accountId = "sit";
-                    extensionNumber = 14.200000;
+                pathParams = new ExtensionCtrlGetAccountExtensionByIDPathParams() {{
+                    accountId = "corrupti";
+                    extensionNumber = 5928.45;
                 }};
-            }};
+            }};            
 
-            ExtensionCtrlGetAccountExtensionByIdResponse res = sdk.extensionCtrlGetAccountExtensionById(req);
+            ExtensionCtrlGetAccountExtensionByIDResponse res = sdk.extensionCtrlGetAccountExtensionByID(req);
 
             if (res.endUserRouteHalResponse.isPresent()) {
                 // handle response

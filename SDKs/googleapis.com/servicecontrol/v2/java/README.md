@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,34 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckSecurityOption1;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckSecurityOption2;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckSecurity;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckPathParams;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckQueryParams;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckRequest;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckResponse;
+import org.openapis.openapi.models.shared.CheckRequest;
+import org.openapis.openapi.models.shared.ResourceInfo;
+import org.openapis.openapi.models.shared.AttributeContext;
+import org.openapis.openapi.models.shared.Peer;
+import org.openapis.openapi.models.shared.Response;
+import org.openapis.openapi.models.shared.Resource;
+import org.openapis.openapi.models.shared.Request;
+import org.openapis.openapi.models.shared.Auth;
+import org.openapis.openapi.models.shared.Api;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ServicecontrolServicesCheckRequest req = new ServicecontrolServicesCheckRequest() {{
                 security = new ServicecontrolServicesCheckSecurity() {{
@@ -37,152 +56,161 @@ public class Application {
                     }};
                 }};
                 pathParams = new ServicecontrolServicesCheckPathParams() {{
-                    serviceName = "sit";
+                    serviceName = "corrupti";
                 }};
                 queryParams = new ServicecontrolServicesCheckQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new CheckRequest() {{
                     attributes = new AttributeContext() {{
                         api = new Api() {{
-                            operation = "dicta";
-                            protocol = "debitis";
-                            service = "voluptatum";
-                            version = "et";
+                            operation = "suscipit";
+                            protocol = "iure";
+                            service = "magnam";
+                            version = "debitis";
                         }};
                         destination = new Peer() {{
-                            ip = "ut";
+                            ip = "ipsa";
                             labels = new java.util.HashMap<String, String>() {{
-                                put("et", "voluptate");
-                                put("iste", "vitae");
-                                put("totam", "dolores");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
+                                put("iusto", "excepturi");
                             }};
-                            port = "illum";
-                            principal = "debitis";
-                            regionCode = "vel";
+                            port = "nisi";
+                            principal = "recusandae";
+                            regionCode = "temporibus";
                         }};
-                        extensions = new java.util.HashMap<String, Object>[]() {{
+                        extensions = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("id", "aspernatur");
-                                put("accusantium", "totam");
+                                put("veritatis", "deserunt");
+                                put("perferendis", "ipsam");
                             }}),
                         }};
                         origin = new Peer() {{
-                            ip = "commodi";
+                            ip = "repellendus";
                             labels = new java.util.HashMap<String, String>() {{
-                                put("est", "aut");
-                                put("odit", "non");
-                                put("voluptas", "omnis");
+                                put("quo", "odit");
+                                put("at", "at");
+                                put("maiores", "molestiae");
+                                put("quod", "quod");
                             }};
-                            port = "aut";
-                            principal = "illo";
-                            regionCode = "sed";
+                            port = "esse";
+                            principal = "totam";
+                            regionCode = "porro";
                         }};
                         request = new Request() {{
                             auth = new Auth() {{
-                                accessLevels = new String[]() {{
-                                    add("autem"),
-                                    add("consectetur"),
+                                accessLevels = new String[]{{
+                                    add("dicta"),
+                                    add("nam"),
+                                    add("officia"),
                                 }};
-                                audiences = new String[]() {{
-                                    add("odio"),
+                                audiences = new String[]{{
+                                    add("fugit"),
+                                    add("deleniti"),
+                                    add("hic"),
                                 }};
                                 claims = new java.util.HashMap<String, Object>() {{
-                                    put("recusandae", "at");
+                                    put("totam", "beatae");
+                                    put("commodi", "molestiae");
+                                    put("modi", "qui");
+                                    put("impedit", "cum");
                                 }};
-                                presenter = "ipsum";
-                                principal = "eveniet";
+                                presenter = "esse";
+                                principal = "ipsum";
                             }};
                             headers = new java.util.HashMap<String, String>() {{
-                                put("sint", "inventore");
-                                put("ut", "exercitationem");
+                                put("aspernatur", "perferendis");
+                                put("ad", "natus");
+                                put("sed", "iste");
                             }};
-                            host = "aut";
-                            id = "reprehenderit";
-                            method = "tempore";
-                            path = "maiores";
-                            protocol = "incidunt";
-                            query = "dolor";
-                            reason = "beatae";
-                            scheme = "veritatis";
-                            size = "in";
-                            time = "et";
+                            host = "dolor";
+                            id = "natus";
+                            method = "laboriosam";
+                            path = "hic";
+                            protocol = "saepe";
+                            query = "fuga";
+                            reason = "in";
+                            scheme = "corporis";
+                            size = "iste";
+                            time = "iure";
                         }};
                         resource = new Resource() {{
                             annotations = new java.util.HashMap<String, String>() {{
-                                put("ipsum", "ex");
-                                put("dolores", "placeat");
+                                put("quidem", "architecto");
+                                put("ipsa", "reiciendis");
+                                put("est", "mollitia");
+                                put("laborum", "dolores");
                             }};
-                            createTime = "vel";
-                            deleteTime = "rerum";
-                            displayName = "mollitia";
-                            etag = "voluptas";
+                            createTime = "dolorem";
+                            deleteTime = "corporis";
+                            displayName = "explicabo";
+                            etag = "nobis";
                             labels = new java.util.HashMap<String, String>() {{
-                                put("reprehenderit", "qui");
+                                put("omnis", "nemo");
+                                put("minima", "excepturi");
                             }};
-                            location = "qui";
-                            name = "unde";
-                            service = "in";
-                            type = "autem";
-                            uid = "qui";
-                            updateTime = "ut";
+                            location = "accusantium";
+                            name = "iure";
+                            service = "culpa";
+                            type = "doloribus";
+                            uid = "sapiente";
+                            updateTime = "architecto";
                         }};
                         response = new Response() {{
-                            backendLatency = "itaque";
-                            code = "ab";
+                            backendLatency = "mollitia";
+                            code = "dolorem";
                             headers = new java.util.HashMap<String, String>() {{
-                                put("ullam", "et");
+                                put("consequuntur", "repellat");
+                                put("mollitia", "occaecati");
+                                put("numquam", "commodi");
                             }};
-                            size = "accusantium";
-                            time = "esse";
+                            size = "quam";
+                            time = "molestiae";
                         }};
                         source = new Peer() {{
-                            ip = "architecto";
+                            ip = "velit";
                             labels = new java.util.HashMap<String, String>() {{
-                                put("velit", "cumque");
+                                put("quia", "quis");
+                                put("vitae", "laborum");
+                                put("animi", "enim");
                             }};
-                            port = "soluta";
-                            principal = "sunt";
-                            regionCode = "voluptates";
+                            port = "odit";
+                            principal = "quo";
+                            regionCode = "sequi";
                         }};
                     }};
-                    flags = "magni";
-                    resources = new openapisdk.models.shared.ResourceInfo[]() {{
+                    flags = "tenetur";
+                    resources = new org.openapis.openapi.models.shared.ResourceInfo[]{{
                         add(new ResourceInfo() {{
-                            container = "optio";
-                            location = "qui";
-                            name = "earum";
-                            permission = "illo";
-                            type = "omnis";
-                        }}),
-                        add(new ResourceInfo() {{
-                            container = "ut";
-                            location = "consequatur";
-                            name = "dolor";
-                            permission = "commodi";
+                            container = "id";
+                            location = "possimus";
+                            name = "aut";
+                            permission = "quasi";
                             type = "error";
                         }}),
                         add(new ResourceInfo() {{
-                            container = "reprehenderit";
-                            location = "consectetur";
-                            name = "nostrum";
-                            permission = "ut";
-                            type = "laboriosam";
+                            container = "temporibus";
+                            location = "laborum";
+                            name = "quasi";
+                            permission = "reiciendis";
+                            type = "voluptatibus";
                         }}),
                     }};
-                    serviceConfigId = "sed";
+                    serviceConfigId = "vero";
                 }};
-            }};
+            }};            
 
             ServicecontrolServicesCheckResponse res = sdk.services.servicecontrolServicesCheck(req);
 
@@ -198,11 +226,22 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### services
 
 * `servicecontrolServicesCheck` - Private Preview. This feature is only available for approved services. This method provides admission control for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It checks whether an operation should be allowed based on the service configuration and relevant policies. It must be called before the operation is executed. For more information, see [Admission Control](https://cloud.google.com/service-infrastructure/docs/admission-control). NOTE: The admission control has an expected policy propagation delay of 60s. The caller **must** not depend on the most recent policy changes. NOTE: The admission control has a hard limit of 1 referenced resources per call. If an operation refers to more than 1 resources, the caller must call the Check method multiple times. This method requires the `servicemanagement.services.check` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
 * `servicecontrolServicesReport` - Private Preview. This feature is only available for approved services. This method provides telemetry reporting for services that are integrated with [Service Infrastructure](https://cloud.google.com/service-infrastructure). It reports a list of operations that have occurred on a service. It must be called after the operations have been executed. For more information, see [Telemetry Reporting](https://cloud.google.com/service-infrastructure/docs/telemetry-reporting). NOTE: The telemetry reporting has a hard limit of 1000 operations and 1MB per Report call. It is recommended to have no more than 100 operations per call. This method requires the `servicemanagement.services.report` permission on the specified service. For more information, see [Service Control API Access Control](https://cloud.google.com/service-infrastructure/docs/service-control/access-control).
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

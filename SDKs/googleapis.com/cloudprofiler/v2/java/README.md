@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,29 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurityOption1;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurityOption2;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurityOption3;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurity;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreatePathParams;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateQueryParams;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateRequest;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateResponse;
+import org.openapis.openapi.models.shared.CreateProfileRequestProfileTypeEnum;
+import org.openapis.openapi.models.shared.CreateProfileRequest;
+import org.openapis.openapi.models.shared.Deployment;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudprofilerProjectsProfilesCreateRequest req = new CloudprofilerProjectsProfilesCreateRequest() {{
                 security = new CloudprofilerProjectsProfilesCreateSecurity() {{
@@ -37,36 +51,36 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudprofilerProjectsProfilesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new CloudprofilerProjectsProfilesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new CreateProfileRequest() {{
                     deployment = new Deployment() {{
                         labels = new java.util.HashMap<String, String>() {{
-                            put("debitis", "voluptatum");
-                            put("et", "ut");
-                            put("dolorem", "et");
+                            put("iure", "magnam");
+                            put("debitis", "ipsa");
                         }};
-                        projectId = "voluptate";
-                        target = "iste";
+                        projectId = "delectus";
+                        target = "tempora";
                     }};
-                    profileType = new openapisdk.models.shared.CreateProfileRequestProfileTypeEnum[]() {{
-                        add("WALL"),
+                    profileType = new org.openapis.openapi.models.shared.CreateProfileRequestProfileTypeEnum[]{{
+                        add("HEAP"),
+                        add("PEAK_HEAP"),
                     }};
                 }};
-            }};
+            }};            
 
             CloudprofilerProjectsProfilesCreateResponse res = sdk.projects.cloudprofilerProjectsProfilesCreate(req);
 
@@ -82,12 +96,23 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
 * `cloudprofilerProjectsProfilesCreate` - CreateProfile creates a new profile resource in the online mode. The server ensures that the new profiles are created at a constant rate per deployment, so the creation request may hang for some time until the next profile session is available. The request may fail with ABORTED error if the creation is not available within ~1m, the response will indicate the duration of the backoff the client should take before attempting creating a profile again. The backoff duration is returned in google.rpc.RetryInfo extension on the response status. To a gRPC client, the extension will be return as a binary-serialized proto in the trailing metadata item named "google.rpc.retryinfo-bin". 
 * `cloudprofilerProjectsProfilesCreateOffline` - CreateOfflineProfile creates a new profile resource in the offline mode. The client provides the profile to create along with the profile bytes, the server records it.
 * `cloudprofilerProjectsProfilesPatch` - UpdateProfile updates the profile bytes and labels on the profile resource created in the online mode. Updating the bytes for profiles created in the offline mode is currently not supported: the profile content must be provided at the time of the profile creation.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

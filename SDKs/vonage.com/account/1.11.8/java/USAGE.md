@@ -2,28 +2,32 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDSecurity;
+import org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDPathParams;
+import org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDRequest;
+import org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDResponse;
+import org.openapis.openapi.models.shared.SchemeBearerAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            AccountCtrlGetAccountServicesByAccountIdRequest req = new AccountCtrlGetAccountServicesByAccountIdRequest() {{
-                security = new AccountCtrlGetAccountServicesByAccountIdSecurity() {{
+            AccountCtrlGetAccountServicesByAccountIDRequest req = new AccountCtrlGetAccountServicesByAccountIDRequest() {{
+                security = new AccountCtrlGetAccountServicesByAccountIDSecurity() {{
                     bearerAuth = new SchemeBearerAuth() {{
                         authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new AccountCtrlGetAccountServicesByAccountIdPathParams() {{
-                    accountId = 74.099998;
+                pathParams = new AccountCtrlGetAccountServicesByAccountIDPathParams() {{
+                    accountId = 5488.14;
                 }};
-            }};
+            }};            
 
-            AccountCtrlGetAccountServicesByAccountIdResponse res = sdk.accountCtrlGetAccountServicesByAccountId(req);
+            AccountCtrlGetAccountServicesByAccountIDResponse res = sdk.accountCtrlGetAccountServicesByAccountID(req);
 
             if (res.accountHalResponse.isPresent()) {
                 // handle response

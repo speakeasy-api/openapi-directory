@@ -2,34 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAudioPathParams;
+import org.openapis.openapi.models.operations.GetAudioUseCanonicalEnum;
+import org.openapis.openapi.models.operations.GetAudioQueryParams;
+import org.openapis.openapi.models.operations.GetAudioRequest;
+import org.openapis.openapi.models.operations.GetAudioResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            builder.setSecurity(
-                new Security() {{
-                    apiKey = new SchemeApiKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }}
-            );
-
-            SDK sdk = builder.build();
-
-            AuthenticateRequest req = new AuthenticateRequest() {{
-                pathParams = new AuthenticatePathParams() {{
-                    username = "sit";
+            GetAudioRequest req = new GetAudioRequest() {{
+                pathParams = new GetAudioPathParams() {{
+                    word = "corrupti";
                 }};
-                queryParams = new AuthenticateQueryParams() {{
-                    password = "voluptas";
+                queryParams = new GetAudioQueryParams() {{
+                    limit = 592845;
+                    useCanonical = "true";
                 }};
-            }};
+            }};            
 
-            AuthenticateResponse res = sdk.account.authenticate(req);
+            GetAudioResponse res = sdk.word.getAudio(req);
 
             if (res.body.isPresent()) {
                 // handle response

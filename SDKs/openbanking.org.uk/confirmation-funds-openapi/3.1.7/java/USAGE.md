@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsSecurity;
+import org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsHeaders;
+import org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsRequest;
+import org.openapis.openapi.models.operations.CreateFundsConfirmationConsentsResponse;
+import org.openapis.openapi.models.shared.OBFundsConfirmationConsent1DataDebtorAccount;
+import org.openapis.openapi.models.shared.OBFundsConfirmationConsent1Data;
+import org.openapis.openapi.models.shared.OBFundsConfirmationConsent1;
+import org.openapis.openapi.models.shared.SchemeTppoAuth2Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateFundsConfirmationConsentsRequest req = new CreateFundsConfirmationConsentsRequest() {{
                 security = new CreateFundsConfirmationConsentsSecurity() {{
@@ -19,24 +26,24 @@ public class Application {
                     }};
                 }};
                 headers = new CreateFundsConfirmationConsentsHeaders() {{
-                    authorization = "sit";
-                    xCustomerUserAgent = "voluptas";
-                    xFapiAuthDate = "culpa";
-                    xFapiCustomerIpAddress = "expedita";
-                    xFapiInteractionId = "consequuntur";
+                    authorization = "corrupti";
+                    xCustomerUserAgent = "provident";
+                    xFapiAuthDate = "distinctio";
+                    xFapiCustomerIpAddress = "quibusdam";
+                    xFapiInteractionId = "unde";
                 }};
-                request = new ObFundsConfirmationConsent1() {{
-                    data = new ObFundsConfirmationConsent1Data() {{
-                        debtorAccount = new ObFundsConfirmationConsent1DataDebtorAccount() {{
-                            identification = "dolor";
-                            name = "expedita";
-                            schemeName = "voluptas";
-                            secondaryIdentification = "fugit";
+                request = new OBFundsConfirmationConsent1() {{
+                    data = new OBFundsConfirmationConsent1Data() {{
+                        debtorAccount = new OBFundsConfirmationConsent1DataDebtorAccount() {{
+                            identification = "nulla";
+                            name = "corrupti";
+                            schemeName = "illum";
+                            secondaryIdentification = "vel";
                         }};
-                        expirationDateTime = "2011-08-12T10:11:12Z";
+                        expirationDateTime = "2021-09-16T11:56:06.019Z";
                     }};
                 }};
-            }};
+            }};            
 
             CreateFundsConfirmationConsentsResponse res = sdk.fundsConfirmations.createFundsConfirmationConsents(req);
 

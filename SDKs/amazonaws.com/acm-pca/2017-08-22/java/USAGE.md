@@ -2,206 +2,352 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateCertificateAuthorityXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateCertificateAuthorityHeaders;
+import org.openapis.openapi.models.operations.CreateCertificateAuthorityRequest;
+import org.openapis.openapi.models.operations.CreateCertificateAuthorityResponse;
+import org.openapis.openapi.models.shared.CreateCertificateAuthorityRequest;
+import org.openapis.openapi.models.shared.CertificateAuthorityUsageModeEnum;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.RevocationConfiguration;
+import org.openapis.openapi.models.shared.OcspConfiguration;
+import org.openapis.openapi.models.shared.CrlConfiguration;
+import org.openapis.openapi.models.shared.S3ObjectAclEnum;
+import org.openapis.openapi.models.shared.KeyStorageSecurityStandardEnum;
+import org.openapis.openapi.models.shared.CertificateAuthorityTypeEnum;
+import org.openapis.openapi.models.shared.CertificateAuthorityConfiguration;
+import org.openapis.openapi.models.shared.Asn1Subject;
+import org.openapis.openapi.models.shared.CustomAttribute;
+import org.openapis.openapi.models.shared.SigningAlgorithmEnum;
+import org.openapis.openapi.models.shared.KeyAlgorithmEnum;
+import org.openapis.openapi.models.shared.CsrExtensions;
+import org.openapis.openapi.models.shared.AccessDescription;
+import org.openapis.openapi.models.shared.AccessMethod;
+import org.openapis.openapi.models.shared.AccessMethodTypeEnum;
+import org.openapis.openapi.models.shared.GeneralName;
+import org.openapis.openapi.models.shared.OtherName;
+import org.openapis.openapi.models.shared.EdiPartyName;
+import org.openapis.openapi.models.shared.KeyUsage;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateCertificateAuthorityRequest req = new CreateCertificateAuthorityRequest() {{
                 headers = new CreateCertificateAuthorityHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "ACMPrivateCA.CreateCertificateAuthority";
                 }};
                 request = new CreateCertificateAuthorityRequest() {{
                     certificateAuthorityConfiguration = new CertificateAuthorityConfiguration() {{
                         csrExtensions = new CsrExtensions() {{
                             keyUsage = new KeyUsage() {{
-                                crlSign = true;
+                                crlSign = false;
                                 dataEncipherment = false;
-                                decipherOnly = true;
-                                digitalSignature = true;
+                                decipherOnly = false;
+                                digitalSignature = false;
                                 encipherOnly = false;
-                                keyAgreement = true;
-                                keyCertSign = true;
+                                keyAgreement = false;
+                                keyCertSign = false;
                                 keyEncipherment = false;
                                 nonRepudiation = false;
                             }};
-                            subjectInformationAccess = new openapisdk.models.shared.AccessDescription[]() {{
+                            subjectInformationAccess = new org.openapis.openapi.models.shared.AccessDescription[]{{
                                 add(new AccessDescription() {{
                                     accessLocation = new GeneralName() {{
                                         directoryName = new Asn1Subject() {{
-                                            commonName = "et";
-                                            country = "voluptate";
-                                            distinguishedNameQualifier = "iste";
-                                            generationQualifier = "vitae";
-                                            givenName = "totam";
-                                            initials = "dolores";
-                                            locality = "illum";
-                                            organization = "debitis";
-                                            organizationalUnit = "vel";
-                                            pseudonym = "odio";
-                                            serialNumber = "dolore";
-                                            state = "id";
-                                            surname = "aspernatur";
-                                            title = "accusantium";
+                                            commonName = "vel";
+                                            country = "Netherlands Antilles";
+                                            customAttributes = new org.openapis.openapi.models.shared.CustomAttribute[]{{
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "suscipit";
+                                                    value = "iure";
+                                                }}),
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "magnam";
+                                                    value = "debitis";
+                                                }}),
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "ipsa";
+                                                    value = "delectus";
+                                                }}),
+                                            }};
+                                            distinguishedNameQualifier = "tempora";
+                                            generationQualifier = "suscipit";
+                                            givenName = "molestiae";
+                                            initials = "minus";
+                                            locality = "placeat";
+                                            organization = "voluptatum";
+                                            organizationalUnit = "iusto";
+                                            pseudonym = "excepturi";
+                                            serialNumber = "nisi";
+                                            state = "recusandae";
+                                            surname = "temporibus";
+                                            title = "Mr.";
                                         }};
-                                        dnsName = "totam";
+                                        dnsName = "quis";
                                         ediPartyName = new EdiPartyName() {{
-                                            nameAssigner = "commodi";
-                                            partyName = "quis";
+                                            nameAssigner = "veritatis";
+                                            partyName = "deserunt";
                                         }};
-                                        ipAddress = "est";
+                                        ipAddress = "perferendis";
                                         otherName = new OtherName() {{
-                                            typeId = "aut";
-                                            value = "odit";
+                                            typeId = "ipsam";
+                                            value = "repellendus";
                                         }};
-                                        registeredId = "non";
-                                        rfc822Name = "voluptas";
-                                        uniformResourceIdentifier = "omnis";
-                                    }};
-                                    accessMethod = new AccessMethod() {{
-                                        accessMethodType = "CA_REPOSITORY";
-                                        customObjectIdentifier = "illo";
-                                    }};
-                                }}),
-                                add(new AccessDescription() {{
-                                    accessLocation = new GeneralName() {{
-                                        directoryName = new Asn1Subject() {{
-                                            commonName = "sed";
-                                            country = "officiis";
-                                            distinguishedNameQualifier = "autem";
-                                            generationQualifier = "consectetur";
-                                            givenName = "nobis";
-                                            initials = "odio";
-                                            locality = "qui";
-                                            organization = "recusandae";
-                                            organizationalUnit = "at";
-                                            pseudonym = "ipsum";
-                                            serialNumber = "eveniet";
-                                            state = "modi";
-                                            surname = "sint";
-                                            title = "inventore";
-                                        }};
-                                        dnsName = "ut";
-                                        ediPartyName = new EdiPartyName() {{
-                                            nameAssigner = "exercitationem";
-                                            partyName = "aut";
-                                        }};
-                                        ipAddress = "reprehenderit";
-                                        otherName = new OtherName() {{
-                                            typeId = "tempore";
-                                            value = "maiores";
-                                        }};
-                                        registeredId = "incidunt";
-                                        rfc822Name = "dolor";
-                                        uniformResourceIdentifier = "beatae";
-                                    }};
-                                    accessMethod = new AccessMethod() {{
-                                        accessMethodType = "RESOURCE_PKI_MANIFEST";
-                                        customObjectIdentifier = "in";
-                                    }};
-                                }}),
-                                add(new AccessDescription() {{
-                                    accessLocation = new GeneralName() {{
-                                        directoryName = new Asn1Subject() {{
-                                            commonName = "et";
-                                            country = "omnis";
-                                            distinguishedNameQualifier = "ipsum";
-                                            generationQualifier = "ex";
-                                            givenName = "dolores";
-                                            initials = "placeat";
-                                            locality = "vel";
-                                            organization = "rerum";
-                                            organizationalUnit = "mollitia";
-                                            pseudonym = "voluptas";
-                                            serialNumber = "quam";
-                                            state = "reprehenderit";
-                                            surname = "qui";
-                                            title = "qui";
-                                        }};
-                                        dnsName = "unde";
-                                        ediPartyName = new EdiPartyName() {{
-                                            nameAssigner = "in";
-                                            partyName = "autem";
-                                        }};
-                                        ipAddress = "qui";
-                                        otherName = new OtherName() {{
-                                            typeId = "ut";
-                                            value = "itaque";
-                                        }};
-                                        registeredId = "ab";
-                                        rfc822Name = "neque";
-                                        uniformResourceIdentifier = "ullam";
+                                        registeredId = "sapiente";
+                                        rfc822Name = "quo";
+                                        uniformResourceIdentifier = "odit";
                                     }};
                                     accessMethod = new AccessMethod() {{
                                         accessMethodType = "RESOURCE_PKI_NOTIFY";
-                                        customObjectIdentifier = "accusantium";
+                                        customObjectIdentifier = "at";
+                                    }};
+                                }}),
+                                add(new AccessDescription() {{
+                                    accessLocation = new GeneralName() {{
+                                        directoryName = new Asn1Subject() {{
+                                            commonName = "maiores";
+                                            country = "Kuwait";
+                                            customAttributes = new org.openapis.openapi.models.shared.CustomAttribute[]{{
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "quod";
+                                                    value = "esse";
+                                                }}),
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "totam";
+                                                    value = "porro";
+                                                }}),
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "dolorum";
+                                                    value = "dicta";
+                                                }}),
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "nam";
+                                                    value = "officia";
+                                                }}),
+                                            }};
+                                            distinguishedNameQualifier = "occaecati";
+                                            generationQualifier = "fugit";
+                                            givenName = "deleniti";
+                                            initials = "hic";
+                                            locality = "optio";
+                                            organization = "totam";
+                                            organizationalUnit = "beatae";
+                                            pseudonym = "commodi";
+                                            serialNumber = "molestiae";
+                                            state = "modi";
+                                            surname = "qui";
+                                            title = "Miss";
+                                        }};
+                                        dnsName = "cum";
+                                        ediPartyName = new EdiPartyName() {{
+                                            nameAssigner = "esse";
+                                            partyName = "ipsum";
+                                        }};
+                                        ipAddress = "excepturi";
+                                        otherName = new OtherName() {{
+                                            typeId = "aspernatur";
+                                            value = "perferendis";
+                                        }};
+                                        registeredId = "ad";
+                                        rfc822Name = "natus";
+                                        uniformResourceIdentifier = "sed";
+                                    }};
+                                    accessMethod = new AccessMethod() {{
+                                        accessMethodType = "RESOURCE_PKI_MANIFEST";
+                                        customObjectIdentifier = "dolor";
+                                    }};
+                                }}),
+                                add(new AccessDescription() {{
+                                    accessLocation = new GeneralName() {{
+                                        directoryName = new Asn1Subject() {{
+                                            commonName = "natus";
+                                            country = "Honduras";
+                                            customAttributes = new org.openapis.openapi.models.shared.CustomAttribute[]{{
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "saepe";
+                                                    value = "fuga";
+                                                }}),
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "in";
+                                                    value = "corporis";
+                                                }}),
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "iste";
+                                                    value = "iure";
+                                                }}),
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "saepe";
+                                                    value = "quidem";
+                                                }}),
+                                            }};
+                                            distinguishedNameQualifier = "architecto";
+                                            generationQualifier = "ipsa";
+                                            givenName = "reiciendis";
+                                            initials = "est";
+                                            locality = "mollitia";
+                                            organization = "laborum";
+                                            organizationalUnit = "dolores";
+                                            pseudonym = "dolorem";
+                                            serialNumber = "corporis";
+                                            state = "explicabo";
+                                            surname = "nobis";
+                                            title = "Mrs.";
+                                        }};
+                                        dnsName = "omnis";
+                                        ediPartyName = new EdiPartyName() {{
+                                            nameAssigner = "nemo";
+                                            partyName = "minima";
+                                        }};
+                                        ipAddress = "excepturi";
+                                        otherName = new OtherName() {{
+                                            typeId = "accusantium";
+                                            value = "iure";
+                                        }};
+                                        registeredId = "culpa";
+                                        rfc822Name = "doloribus";
+                                        uniformResourceIdentifier = "sapiente";
+                                    }};
+                                    accessMethod = new AccessMethod() {{
+                                        accessMethodType = "CA_REPOSITORY";
+                                        customObjectIdentifier = "mollitia";
+                                    }};
+                                }}),
+                                add(new AccessDescription() {{
+                                    accessLocation = new GeneralName() {{
+                                        directoryName = new Asn1Subject() {{
+                                            commonName = "dolorem";
+                                            country = "New Caledonia";
+                                            customAttributes = new org.openapis.openapi.models.shared.CustomAttribute[]{{
+                                                add(new CustomAttribute() {{
+                                                    objectIdentifier = "repellat";
+                                                    value = "mollitia";
+                                                }}),
+                                            }};
+                                            distinguishedNameQualifier = "occaecati";
+                                            generationQualifier = "numquam";
+                                            givenName = "commodi";
+                                            initials = "quam";
+                                            locality = "molestiae";
+                                            organization = "velit";
+                                            organizationalUnit = "error";
+                                            pseudonym = "quia";
+                                            serialNumber = "quis";
+                                            state = "vitae";
+                                            surname = "laborum";
+                                            title = "Miss";
+                                        }};
+                                        dnsName = "enim";
+                                        ediPartyName = new EdiPartyName() {{
+                                            nameAssigner = "odit";
+                                            partyName = "quo";
+                                        }};
+                                        ipAddress = "sequi";
+                                        otherName = new OtherName() {{
+                                            typeId = "tenetur";
+                                            value = "ipsam";
+                                        }};
+                                        registeredId = "id";
+                                        rfc822Name = "possimus";
+                                        uniformResourceIdentifier = "aut";
+                                    }};
+                                    accessMethod = new AccessMethod() {{
+                                        accessMethodType = "CA_REPOSITORY";
+                                        customObjectIdentifier = "error";
                                     }};
                                 }}),
                             }};
                         }};
-                        keyAlgorithm = "RSA_2048";
+                        keyAlgorithm = "EC_secp384r1";
                         signingAlgorithm = "SHA384WITHRSA";
                         subject = new Asn1Subject() {{
-                            commonName = "quam";
-                            country = "velit";
-                            distinguishedNameQualifier = "cumque";
-                            generationQualifier = "soluta";
-                            givenName = "sunt";
-                            initials = "voluptates";
-                            locality = "magni";
-                            organization = "et";
-                            organizationalUnit = "optio";
-                            pseudonym = "qui";
-                            serialNumber = "earum";
-                            state = "illo";
-                            surname = "omnis";
-                            title = "ut";
+                            commonName = "quasi";
+                            country = "Virgin Islands, British";
+                            customAttributes = new org.openapis.openapi.models.shared.CustomAttribute[]{{
+                                add(new CustomAttribute() {{
+                                    objectIdentifier = "vero";
+                                    value = "nihil";
+                                }}),
+                                add(new CustomAttribute() {{
+                                    objectIdentifier = "praesentium";
+                                    value = "voluptatibus";
+                                }}),
+                                add(new CustomAttribute() {{
+                                    objectIdentifier = "ipsa";
+                                    value = "omnis";
+                                }}),
+                                add(new CustomAttribute() {{
+                                    objectIdentifier = "voluptate";
+                                    value = "cum";
+                                }}),
+                            }};
+                            distinguishedNameQualifier = "perferendis";
+                            generationQualifier = "doloremque";
+                            givenName = "reprehenderit";
+                            initials = "ut";
+                            locality = "maiores";
+                            organization = "dicta";
+                            organizationalUnit = "corporis";
+                            pseudonym = "dolore";
+                            serialNumber = "iusto";
+                            state = "dicta";
+                            surname = "harum";
+                            title = "Mrs.";
                         }};
                     }};
-                    certificateAuthorityType = "ROOT";
-                    idempotencyToken = "dolor";
-                    keyStorageSecurityStandard = "FIPS_140_2_LEVEL_2_OR_HIGHER";
+                    certificateAuthorityType = "SUBORDINATE";
+                    idempotencyToken = "commodi";
+                    keyStorageSecurityStandard = "FIPS_140_2_LEVEL_3_OR_HIGHER";
                     revocationConfiguration = new RevocationConfiguration() {{
                         crlConfiguration = new CrlConfiguration() {{
-                            customCname = "error";
+                            customCname = "quae";
                             enabled = false;
-                            expirationInDays = 4989862523986425397;
-                            s3BucketName = "nostrum";
+                            expirationInDays = 216822;
+                            s3BucketName = "quidem";
                             s3ObjectAcl = "BUCKET_OWNER_FULL_CONTROL";
                         }};
                         ocspConfiguration = new OcspConfiguration() {{
                             enabled = false;
-                            ocspCustomCname = "sed";
+                            ocspCustomCname = "excepturi";
                         }};
                     }};
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "soluta";
-                            value = "aut";
+                            key = "modi";
+                            value = "praesentium";
+                        }}),
+                        add(new Tag() {{
+                            key = "rem";
+                            value = "voluptates";
+                        }}),
+                        add(new Tag() {{
+                            key = "quasi";
+                            value = "repudiandae";
+                        }}),
+                        add(new Tag() {{
+                            key = "sint";
+                            value = "veritatis";
                         }}),
                     }};
+                    usageMode = "SHORT_LIVED_CERTIFICATE";
                 }};
-            }};
+            }};            
 
             CreateCertificateAuthorityResponse res = sdk.createCertificateAuthority(req);
 

@@ -2,25 +2,62 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostCreateNotificationConfigurationSecurity;
+import org.openapis.openapi.models.operations.PostCreateNotificationConfigurationRequest;
+import org.openapis.openapi.models.operations.PostCreateNotificationConfigurationResponse;
+import org.openapis.openapi.models.shared.CreateNotificationConfigurationRequest;
+import org.openapis.openapi.models.shared.NotificationConfigurationDetailsMessageFormatEnum;
+import org.openapis.openapi.models.shared.NotificationConfigurationDetailsSslProtocolEnum;
+import org.openapis.openapi.models.shared.NotificationConfigurationDetails;
+import org.openapis.openapi.models.shared.NotificationEventConfigurationEventTypeEnum;
+import org.openapis.openapi.models.shared.NotificationEventConfigurationIncludeModeEnum;
+import org.openapis.openapi.models.shared.NotificationEventConfiguration;
+import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostCreateNotificationConfigurationRequest req = new PostCreateNotificationConfigurationRequest() {{
                 security = new PostCreateNotificationConfigurationSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
+                        apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
-                request = "sit";
-            }};
+                request = new CreateNotificationConfigurationRequest() {{
+                    configurationDetails = new NotificationConfigurationDetails() {{
+                        active = false;
+                        apiVersion = 548814;
+                        description = "provident";
+                        eventConfigs = new org.openapis.openapi.models.shared.NotificationEventConfiguration[]{{
+                            add(new NotificationEventConfiguration() {{
+                                eventType = "SCHEDULED_REFUNDS";
+                                includeMode = "INCLUDE";
+                            }}),
+                            add(new NotificationEventConfiguration() {{
+                                eventType = "SCHEDULED_REFUNDS";
+                                includeMode = "INCLUDE";
+                            }}),
+                            add(new NotificationEventConfiguration() {{
+                                eventType = "SCHEDULED_REFUNDS";
+                                includeMode = "EXCLUDE";
+                            }}),
+                        }};
+                        messageFormat = "SOAP";
+                        notificationId = 645894;
+                        notifyPassword = "suscipit";
+                        notifyURL = "iure";
+                        notifyUsername = "magnam";
+                        sendActionHeader = false;
+                        sslProtocol = "TLSv13";
+                    }};
+                }};
+            }};            
 
             PostCreateNotificationConfigurationResponse res = sdk.general.postCreateNotificationConfiguration(req);
 

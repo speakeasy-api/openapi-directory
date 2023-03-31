@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,24 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateSecurity;
+import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreatePathParams;
+import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateQueryParams;
+import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateRequest;
+import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateResponse;
+import org.openapis.openapi.models.shared.ApiInput;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ApigeeregistryProjectsLocationsApisCreateRequest req = new ApigeeregistryProjectsLocationsApisCreateRequest() {{
                 security = new ApigeeregistryProjectsLocationsApisCreateSecurity() {{
@@ -35,37 +44,41 @@ public class Application {
                     }};
                 }};
                 pathParams = new ApigeeregistryProjectsLocationsApisCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new ApigeeregistryProjectsLocationsApisCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    apiId = "consequuntur";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    apiId = "unde";
+                    callback = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new ApiInput() {{
                     annotations = new java.util.HashMap<String, String>() {{
-                        put("voluptatum", "et");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
-                    availability = "ut";
-                    description = "dolorem";
-                    displayName = "et";
+                    availability = "tempora";
+                    description = "suscipit";
+                    displayName = "molestiae";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("iste", "vitae");
+                        put("placeat", "voluptatum");
+                        put("iusto", "excepturi");
+                        put("nisi", "recusandae");
+                        put("temporibus", "ab");
                     }};
-                    name = "totam";
-                    recommendedDeployment = "dolores";
-                    recommendedVersion = "illum";
+                    name = "quis";
+                    recommendedDeployment = "veritatis";
+                    recommendedVersion = "deserunt";
                 }};
-            }};
+            }};            
 
             ApigeeregistryProjectsLocationsApisCreateResponse res = sdk.projects.apigeeregistryProjectsLocationsApisCreate(req);
 
@@ -80,6 +93,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### projects
 
@@ -109,7 +123,17 @@ public class Application {
 * `apigeeregistryProjectsLocationsRuntimeGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
 * `apigeeregistryProjectsLocationsRuntimeSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 * `apigeeregistryProjectsLocationsRuntimeTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

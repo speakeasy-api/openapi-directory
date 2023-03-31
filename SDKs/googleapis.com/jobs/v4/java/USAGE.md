@@ -2,15 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateSecurityOption2;
+import org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateSecurity;
+import org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreatePathParams;
+import org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateQueryParams;
+import org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateRequest;
+import org.openapis.openapi.models.operations.JobsProjectsTenantsClientEventsCreateResponse;
+import org.openapis.openapi.models.shared.ClientEvent;
+import org.openapis.openapi.models.shared.JobEventTypeEnum;
+import org.openapis.openapi.models.shared.JobEvent;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             JobsProjectsTenantsClientEventsCreateRequest req = new JobsProjectsTenantsClientEventsCreateRequest() {{
                 security = new JobsProjectsTenantsClientEventsCreateSecurity() {{
@@ -24,34 +37,37 @@ public class Application {
                     }};
                 }};
                 pathParams = new JobsProjectsTenantsClientEventsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new JobsProjectsTenantsClientEventsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new ClientEvent() {{
-                    createTime = "dicta";
-                    eventId = "debitis";
-                    eventNotes = "voluptatum";
+                    createTime = "suscipit";
+                    eventId = "iure";
+                    eventNotes = "magnam";
                     jobEvent = new JobEvent() {{
-                        jobs = new String[]() {{
-                            add("ut"),
+                        jobs = new String[]{{
+                            add("ipsa"),
+                            add("delectus"),
+                            add("tempora"),
+                            add("suscipit"),
                         }};
-                        type = "VIEW";
+                        type = "APPLICATION_REDIRECT";
                     }};
-                    requestId = "et";
+                    requestId = "minus";
                 }};
-            }};
+            }};            
 
             JobsProjectsTenantsClientEventsCreateResponse res = sdk.projects.jobsProjectsTenantsClientEventsCreate(req);
 

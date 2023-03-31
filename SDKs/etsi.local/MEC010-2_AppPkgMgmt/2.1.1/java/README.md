@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,30 +15,33 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AppDGETPathParams;
+import org.openapis.openapi.models.operations.AppDGETQueryParams;
+import org.openapis.openapi.models.operations.AppDGETRequest;
+import org.openapis.openapi.models.operations.AppDGETResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            AppDgetRequest req = new AppDgetRequest() {{
-                pathParams = new AppDgetPathParams() {{
-                    appDId = "sit";
+            AppDGETRequest req = new AppDGETRequest() {{
+                pathParams = new AppDGETPathParams() {{
+                    appDId = "corrupti";
                 }};
-                queryParams = new AppDgetQueryParams() {{
-                    allFields = "voluptas";
-                    excludeDefault = "culpa";
-                    excludeFields = "expedita";
-                    fields = "consequuntur";
-                    filter = "dolor";
+                queryParams = new AppDGETQueryParams() {{
+                    allFields = "provident";
+                    excludeDefault = "distinctio";
+                    excludeFields = "quibusdam";
+                    fields = "unde";
+                    filter = "nulla";
                 }};
-            }};
+            }};            
 
-            AppDgetResponse res = sdk.appPkgm.appDget(req);
+            AppDGETResponse res = sdk.appPkgm.appDGET(req);
 
             if (res.body.isPresent()) {
                 // handle response
@@ -52,28 +55,39 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### app-pkgm
 
-* `appDget` - Reads the content of the AppD of on-boarded individual application package resources.
-* `appDIdGet` - Fetch the onboarded application package content identified by appPkgId or appDId.
-* `appDIdPut` - Uploads the content of application package.
-* `appPkgGet` - Fetch the onboarded application package content identified by appPkgId or appDId.
-* `appPkgIdGet` - Reads the content of the AppD of on-boarded individual application package resources.
-* `appPkgPut` - Uploads the content of application package.
-* `appPackageDelete` - Deletes an individual application package resources
-* `appPackageGet` - Queries the information related to individual application package resources
-* `appPackagePatch` - Updates the operational state of an individual application package resource
-* `appPackagesGet` - Queries information relating to on-boarded application packages in the MEO
-* `appPackagesPost` - Create a resource for on-boarding an application package to a MEO
-* `individualSubscriptionDelete` - Deletes the individual subscription to notifications about application package changes in MEO.
-* `individualSubscriptionGet` - Used to represent an individual subscription to notifications about application package changes.
-* `subscriptionsGet` - used to retrieve the information of subscriptions to individual application package resource in MEO
-* `subscriptionsPost` - Subscribe to notifications about on-boarding an application package
+### appPkgm
 
-### app-pkgm-notifications
+* `appDGET` - Reads the content of the AppD of on-boarded individual application package resources.
+* `appDIdGET` - Fetch the onboarded application package content identified by appPkgId or appDId.
+* `appDIdPUT` - Uploads the content of application package.
+* `appPkgGET` - Fetch the onboarded application package content identified by appPkgId or appDId.
+* `appPkgIdGET` - Reads the content of the AppD of on-boarded individual application package resources.
+* `appPkgPUT` - Uploads the content of application package.
+* `appPackageDELETE` - Deletes an individual application package resources
+* `appPackageGET` - Queries the information related to individual application package resources
+* `appPackagePATCH` - Updates the operational state of an individual application package resource
+* `appPackagesGET` - Queries information relating to on-boarded application packages in the MEO
+* `appPackagesPOST` - Create a resource for on-boarding an application package to a MEO
+* `individualSubscriptionDELETE` - Deletes the individual subscription to notifications about application package changes in MEO.
+* `individualSubscriptionGET` - Used to represent an individual subscription to notifications about application package changes.
+* `subscriptionsGET` - used to retrieve the information of subscriptions to individual application package resource in MEO
+* `subscriptionsPOST` - Subscribe to notifications about on-boarding an application package
 
-* `appPkgNotificationPost` - Registers a notification endpoint to notify application package operations
+### appPkgmNotifications
 
+* `appPkgNotificationPOST` - Registers a notification endpoint to notify application package operations
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

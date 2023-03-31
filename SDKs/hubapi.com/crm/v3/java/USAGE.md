@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity;
+import org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams;
+import org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest;
+import org.openapis.openapi.models.operations.DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse;
+import org.openapis.openapi.models.shared.SchemeDeveloperHapikey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest req = new DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest() {{
                 security = new DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity() {{
@@ -19,10 +23,10 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams() {{
-                    appId = 8717895732742165505;
-                    cardId = "voluptas";
+                    appId = 548814;
+                    cardId = "provident";
                 }};
-            }};
+            }};            
 
             DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveResponse res = sdk.cards.deleteCrmV3ExtensionsCardsAppIdCardIdArchive(req);
 

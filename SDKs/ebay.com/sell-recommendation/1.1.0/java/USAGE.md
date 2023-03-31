@@ -2,38 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FindListingRecommendationsSecurity;
+import org.openapis.openapi.models.operations.FindListingRecommendationsQueryParams;
+import org.openapis.openapi.models.operations.FindListingRecommendationsHeaders;
+import org.openapis.openapi.models.operations.FindListingRecommendationsRequest;
+import org.openapis.openapi.models.operations.FindListingRecommendationsResponse;
+import org.openapis.openapi.models.shared.FindListingRecommendationRequest;
+import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FindListingRecommendationsRequest req = new FindListingRecommendationsRequest() {{
                 security = new FindListingRecommendationsSecurity() {{
-                    apiAuth = new SchemeApiAuth() {{
+                    apiAuth = new SchemeAPIAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
                 queryParams = new FindListingRecommendationsQueryParams() {{
-                    filter = "sit";
-                    limit = "voluptas";
-                    offset = "culpa";
+                    filter = "corrupti";
+                    limit = "provident";
+                    offset = "distinctio";
                 }};
                 headers = new FindListingRecommendationsHeaders() {{
-                    xEBAYCMARKETPLACEID = "expedita";
+                    xEbayCMarketplaceId = "quibusdam";
                 }};
                 request = new FindListingRecommendationRequest() {{
-                    listingIds = new String[]() {{
-                        add("dolor"),
-                        add("expedita"),
-                        add("voluptas"),
+                    listingIds = new String[]{{
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
                 }};
-            }};
+            }};            
 
             FindListingRecommendationsResponse res = sdk.listingRecommendation.findListingRecommendations(req);
 

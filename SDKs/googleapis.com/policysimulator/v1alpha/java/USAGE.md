@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListSecurity;
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListPathParams;
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListQueryParams;
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListRequest;
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysOperationsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PolicysimulatorProjectsLocationsReplaysOperationsListRequest req = new PolicysimulatorProjectsLocationsReplaysOperationsListRequest() {{
                 security = new PolicysimulatorProjectsLocationsReplaysOperationsListSecurity() {{
@@ -22,25 +30,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new PolicysimulatorProjectsLocationsReplaysOperationsListPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new PolicysimulatorProjectsLocationsReplaysOperationsListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    filter = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
-                    pageSize = 1543572285742637646;
-                    pageToken = "nihil";
-                    prettyPrint = true;
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    filter = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    pageSize = 623564;
+                    pageToken = "deserunt";
+                    prettyPrint = false;
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-            }};
+            }};            
 
             PolicysimulatorProjectsLocationsReplaysOperationsListResponse res = sdk.projects.policysimulatorProjectsLocationsReplaysOperationsList(req);
 

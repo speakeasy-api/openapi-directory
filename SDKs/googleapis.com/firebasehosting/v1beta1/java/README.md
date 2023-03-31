@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,26 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption1;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption2;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurity;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreatePathParams;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateQueryParams;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateRequest;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateResponse;
+import org.openapis.openapi.models.shared.SiteInput;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FirebasehostingProjectsSitesCreateRequest req = new FirebasehostingProjectsSitesCreateRequest() {{
                 security = new FirebasehostingProjectsSitesCreateSecurity() {{
@@ -37,29 +48,30 @@ public class Application {
                     }};
                 }};
                 pathParams = new FirebasehostingProjectsSitesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new FirebasehostingProjectsSitesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    siteId = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    siteId = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new SiteInput() {{
-                    appId = "debitis";
+                    appId = "iure";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("et", "ut");
+                        put("debitis", "ipsa");
+                        put("delectus", "tempora");
                     }};
                 }};
-            }};
+            }};            
 
             FirebasehostingProjectsSitesCreateResponse res = sdk.projects.firebasehostingProjectsSitesCreate(req);
 
@@ -75,6 +87,7 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
 * `firebasehostingProjectsSitesCreate` - Creates a new Hosting Site in the specified parent Firebase project. Note that Hosting sites can take several minutes to propagate through Firebase systems.
@@ -85,7 +98,6 @@ public class Application {
 * `firebasehostingSitesChannelsCreate` - Creates a new channel in the specified site.
 * `firebasehostingSitesChannelsList` - Lists the channels for the specified site. All sites have a default `live` channel.
 * `firebasehostingSitesDomainsCreate` - Creates a domain mapping on the specified site.
-* `firebasehostingSitesDomainsGet` - Gets a domain mapping on the specified site.
 * `firebasehostingSitesDomainsList` - Lists the domains for the specified site.
 * `firebasehostingSitesDomainsUpdate` - Updates the specified domain mapping, creating the mapping as if it does not exist.
 * `firebasehostingSitesReleasesCreate` - Creates a new release, which makes the content of the specified version actively display on the appropriate URL(s).
@@ -94,10 +106,21 @@ public class Application {
 * `firebasehostingSitesVersionsCreate` - Creates a new version for the specified site.
 * `firebasehostingSitesVersionsDelete` - Deletes the specified version.
 * `firebasehostingSitesVersionsFilesList` - Lists the remaining files to be uploaded for the specified version.
+* `firebasehostingSitesVersionsGet` - Get the specified version that has been created for the specified site. This can include versions that were created for the default `live` channel or for any active preview channels for the specified site.
 * `firebasehostingSitesVersionsList` - Lists the versions that have been created for the specified site. This list includes versions for both the default `live` channel and any active preview channels for the specified site.
 * `firebasehostingSitesVersionsPatch` -  Updates the specified metadata for the specified version. This method will fail with `FAILED_PRECONDITION` in the event of an invalid state transition. The supported [state](../sites.versions#versionstatus) transitions for a version are from `CREATED` to `FINALIZED`. Use [`DeleteVersion`](delete) to set the status of a version to `DELETED`.
 * `firebasehostingSitesVersionsPopulateFiles` -  Adds content files to the specified version. Each file must be under 2 GB.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

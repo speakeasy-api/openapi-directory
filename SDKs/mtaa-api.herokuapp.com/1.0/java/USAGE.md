@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DistrictsInARegionPathParams;
+import org.openapis.openapi.models.operations.DistrictsInARegionRequest;
+import org.openapis.openapi.models.operations.DistrictsInARegionResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DistrictsInARegionRequest req = new DistrictsInARegionRequest() {{
                 pathParams = new DistrictsInARegionPathParams() {{
-                    country = "sit";
-                    region = "voluptas";
+                    country = "Malta";
+                    region = "provident";
                 }};
-            }};
+            }};            
 
             DistrictsInARegionResponse res = sdk.districtsInRegion.districtsInARegion(req);
 

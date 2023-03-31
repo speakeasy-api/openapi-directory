@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SqlBackupRunsDeleteSecurityOption1;
+import org.openapis.openapi.models.operations.SqlBackupRunsDeleteSecurityOption2;
+import org.openapis.openapi.models.operations.SqlBackupRunsDeleteSecurity;
+import org.openapis.openapi.models.operations.SqlBackupRunsDeletePathParams;
+import org.openapis.openapi.models.operations.SqlBackupRunsDeleteQueryParams;
+import org.openapis.openapi.models.operations.SqlBackupRunsDeleteRequest;
+import org.openapis.openapi.models.operations.SqlBackupRunsDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             SqlBackupRunsDeleteRequest req = new SqlBackupRunsDeleteRequest() {{
                 security = new SqlBackupRunsDeleteSecurity() {{
@@ -24,24 +34,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new SqlBackupRunsDeletePathParams() {{
-                    id = "sit";
-                    instance = "voluptas";
-                    project = "culpa";
+                    id = "corrupti";
+                    instance = "provident";
+                    project = "distinctio";
                 }};
                 queryParams = new SqlBackupRunsDeleteQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "consequuntur";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "voluptas";
-                    key = "fugit";
-                    oauthToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    dollarXgafv = "2";
+                    accessToken = "unde";
+                    alt = "proto";
+                    callback = "corrupti";
+                    fields = "illum";
+                    key = "vel";
+                    oauthToken = "error";
+                    prettyPrint = false;
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             SqlBackupRunsDeleteResponse res = sdk.backupRuns.sqlBackupRunsDelete(req);
 

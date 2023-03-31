@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GlobalpageloadQueryParams;
+import org.openapis.openapi.models.operations.GlobalpageloadRequest;
+import org.openapis.openapi.models.operations.GlobalpageloadResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GlobalpageloadRequest req = new GlobalpageloadRequest() {{
                 queryParams = new GlobalpageloadQueryParams() {{
-                    license = "sit";
-                    origin = "voluptas";
-                    url = "culpa";
+                    license = "corrupti";
+                    origin = "provident";
+                    url = "distinctio";
                 }};
-            }};
+            }};            
 
             GlobalpageloadResponse res = sdk.pageLoadPerformanceTime.globalpageload(req);
 

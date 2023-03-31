@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity;
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams;
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams;
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest;
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1TransactionEvent;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             RecaptchaenterpriseProjectsAssessmentsAnnotateRequest req = new RecaptchaenterpriseProjectsAssessmentsAnnotateRequest() {{
                 security = new RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity() {{
@@ -35,29 +48,36 @@ public class Application {
                     }};
                 }};
                 pathParams = new RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest() {{
-                    annotation = "PASSWORD_INCORRECT";
-                    hashedAccountId = "debitis";
-                    reasons = new openapisdk.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum[]() {{
-                        add("TRANSACTION_ACCEPTED"),
+                    annotation = "LEGITIMATE";
+                    hashedAccountId = "iure";
+                    reasons = new org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum[]{{
+                        add("INCORRECT_PASSWORD"),
+                        add("REASON_UNSPECIFIED"),
+                    }};
+                    transactionEvent = new GoogleCloudRecaptchaenterpriseV1TransactionEvent() {{
+                        eventTime = "delectus";
+                        eventType = "AUTHORIZATION_DECLINE";
+                        reason = "suscipit";
+                        value = 4776.65;
                     }};
                 }};
-            }};
+            }};            
 
             RecaptchaenterpriseProjectsAssessmentsAnnotateResponse res = sdk.projects.recaptchaenterpriseProjectsAssessmentsAnnotate(req);
 
@@ -73,10 +93,13 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
 * `recaptchaenterpriseProjectsAssessmentsAnnotate` - Annotates a previously created Assessment to provide additional information on whether the event turned out to be authentic or fraudulent.
 * `recaptchaenterpriseProjectsAssessmentsCreate` - Creates an Assessment of the likelihood an event is legitimate.
+* `recaptchaenterpriseProjectsFirewallpoliciesCreate` - Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA Enterprise actions can be executed. A project may have a maximum of 1000 policies.
+* `recaptchaenterpriseProjectsFirewallpoliciesList` - Returns the list of all firewall policies that belong to a project.
 * `recaptchaenterpriseProjectsKeysCreate` - Creates a new reCAPTCHA Enterprise key.
 * `recaptchaenterpriseProjectsKeysDelete` - Deletes the specified key.
 * `recaptchaenterpriseProjectsKeysGetMetrics` - Get some aggregated metrics for a Key. This data can be used to build dashboards.
@@ -87,7 +110,17 @@ public class Application {
 * `recaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearch` - Search group memberships related to a given account.
 * `recaptchaenterpriseProjectsRelatedaccountgroupsList` - List groups of related accounts.
 * `recaptchaenterpriseProjectsRelatedaccountgroupsMembershipsList` - Get memberships in a group of related accounts.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

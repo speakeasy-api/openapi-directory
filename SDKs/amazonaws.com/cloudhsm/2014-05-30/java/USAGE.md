@@ -2,45 +2,51 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddTagsToResourceXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AddTagsToResourceHeaders;
+import org.openapis.openapi.models.operations.AddTagsToResourceRequest;
+import org.openapis.openapi.models.operations.AddTagsToResourceResponse;
+import org.openapis.openapi.models.shared.AddTagsToResourceRequest;
+import org.openapis.openapi.models.shared.Tag;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddTagsToResourceRequest req = new AddTagsToResourceRequest() {{
                 headers = new AddTagsToResourceHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "CloudHsmFrontendService.AddTagsToResource";
                 }};
                 request = new AddTagsToResourceRequest() {{
-                    resourceArn = "fugit";
-                    tagList = new openapisdk.models.shared.Tag[]() {{
+                    resourceArn = "illum";
+                    tagList = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "nihil";
-                            value = "rerum";
+                            key = "error";
+                            value = "deserunt";
+                        }}),
+                        add(new Tag() {{
+                            key = "suscipit";
+                            value = "iure";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             AddTagsToResourceResponse res = sdk.addTagsToResource(req);
 

@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetfullnamematchQueryParams;
+import org.openapis.openapi.models.operations.GetfullnamematchRequest;
+import org.openapis.openapi.models.operations.GetfullnamematchResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetfullnamematchRequest req = new GetfullnamematchRequest() {{
                 queryParams = new GetfullnamematchQueryParams() {{
-                    fullname = "sit";
-                    license = "voluptas";
+                    fullname = "corrupti";
+                    license = "provident";
                 }};
-            }};
+            }};            
 
             GetfullnamematchResponse res = sdk.fullNameMatchSimilarityKey.getfullnamematch(req);
 

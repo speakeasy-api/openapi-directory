@@ -2,36 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.IdeahubIdeasListQueryParams;
+import org.openapis.openapi.models.operations.IdeahubIdeasListRequest;
+import org.openapis.openapi.models.operations.IdeahubIdeasListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             IdeahubIdeasListRequest req = new IdeahubIdeasListRequest() {{
                 queryParams = new IdeahubIdeasListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    filter = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    orderBy = "fugit";
-                    pageSize = 1543572285742637646;
-                    pageToken = "nihil";
-                    parent = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    filter = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    orderBy = "vel";
+                    pageSize = 623564;
+                    pageToken = "deserunt";
+                    parent = "suscipit";
                     prettyPrint = false;
-                    quotaUser = "debitis";
-                    uploadType = "voluptatum";
-                    uploadProtocol = "et";
+                    quotaUser = "iure";
+                    uploadType = "magnam";
+                    uploadProtocol = "debitis";
                 }};
-            }};
+            }};            
 
             IdeahubIdeasListResponse res = sdk.ideas.ideahubIdeasList(req);
 

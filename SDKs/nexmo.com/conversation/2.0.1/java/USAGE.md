@@ -2,34 +2,34 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateConversationRequestBody;
+import org.openapis.openapi.models.operations.CreateConversationRequest;
+import org.openapis.openapi.models.operations.CreateConversationResponse;
+import org.openapis.openapi.models.shared.ConversationProperties;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     bearerAuth = new SchemeBearerAuth() {{
                         authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateConversationRequest req = new CreateConversationRequest() {{
                 request = new CreateConversationRequestBody() {{
-                    displayName = "sit";
-                    imageUrl = "voluptas";
-                    name = "culpa";
+                    displayName = "Customer Chat";
+                    imageUrl = "https://example.com/image.png";
+                    name = "customer_chat";
                     properties = new ConversationProperties() {{
-                        ttl = 6.200000;
+                        ttl = 60;
                     }};
                 }};
-            }};
+            }};            
 
             CreateConversationResponse res = sdk.conversation.createConversation(req);
 

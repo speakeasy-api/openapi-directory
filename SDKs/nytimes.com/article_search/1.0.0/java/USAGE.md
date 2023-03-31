@@ -2,38 +2,38 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetArticlesearchJsonSortEnum;
+import org.openapis.openapi.models.operations.GetArticlesearchJsonQueryParams;
+import org.openapis.openapi.models.operations.GetArticlesearchJsonRequest;
+import org.openapis.openapi.models.operations.GetArticlesearchJsonResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     apikey = new SchemeApikey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetArticlesearchJsonRequest req = new GetArticlesearchJsonRequest() {{
                 queryParams = new GetArticlesearchJsonQueryParams() {{
-                    beginDate = "sit";
-                    endDate = "voluptas";
-                    facetField = "culpa";
+                    beginDate = "corrupti";
+                    endDate = "provident";
+                    facetField = "distinctio";
                     facetFilter = false;
-                    fl = "consequuntur";
-                    fq = "dolor";
-                    hl = true;
-                    page = 6044372234677422456;
-                    q = "fugit";
-                    sort = "newest";
+                    fl = "quibusdam";
+                    fq = "unde";
+                    hl = false;
+                    page = 857946;
+                    q = "corrupti";
+                    sort = "oldest";
                 }};
-            }};
+            }};            
 
             GetArticlesearchJsonResponse res = sdk.stories.getArticlesearchJson(req);
 

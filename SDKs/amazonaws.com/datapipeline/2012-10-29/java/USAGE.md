@@ -2,46 +2,60 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.ActivatePipelineXAmzTargetEnum;
+import org.openapis.openapi.models.operations.ActivatePipelineHeaders;
+import org.openapis.openapi.models.operations.ActivatePipelineRequest;
+import org.openapis.openapi.models.operations.ActivatePipelineResponse;
+import org.openapis.openapi.models.shared.ActivatePipelineInput;
+import org.openapis.openapi.models.shared.ParameterValue;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             ActivatePipelineRequest req = new ActivatePipelineRequest() {{
                 headers = new ActivatePipelineHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "DataPipeline.ActivatePipeline";
                 }};
                 request = new ActivatePipelineInput() {{
-                    parameterValues = new openapisdk.models.shared.ParameterValue[]() {{
+                    parameterValues = new org.openapis.openapi.models.shared.ParameterValue[]{{
                         add(new ParameterValue() {{
-                            id = "et";
-                            stringValue = "nihil";
+                            id = "vel";
+                            stringValue = "error";
+                        }}),
+                        add(new ParameterValue() {{
+                            id = "deserunt";
+                            stringValue = "suscipit";
+                        }}),
+                        add(new ParameterValue() {{
+                            id = "iure";
+                            stringValue = "magnam";
+                        }}),
+                        add(new ParameterValue() {{
+                            id = "debitis";
+                            stringValue = "ipsa";
                         }}),
                     }};
-                    pipelineId = "rerum";
-                    startTimestamp = "2004-06-02T10:14:12Z";
+                    pipelineId = "delectus";
+                    startTimestamp = "2022-08-14T01:03:07.567Z";
                 }};
-            }};
+            }};            
 
             ActivatePipelineResponse res = sdk.activatePipeline(req);
 

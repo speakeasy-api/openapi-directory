@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,23 +15,20 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     authorization = new SchemeAuthorization() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetResponse res = sdk.apiInfo.get();
 
@@ -47,11 +44,12 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### API info
+
+### apiInfo
 
 * `get` - List supported endpoints URLs
 
-### Assessment data
+### assessmentData
 
 * `getOfferingsOfferingIdAnalyticsActivitiesResponses` - Find open response activity attempts
 * `getOfferingsOfferingIdAnalyticsMarksAssignments` - Find assessment marks
@@ -60,7 +58,7 @@ public class Application {
 * `getOfferingsOfferingIdAnalyticsSubmissionsOpenResponseAssessmentId` - Find submissions to a specified open response assessment, including marks if any
 * `getOfferingsOfferingIdAnalyticsSubmissionsUserEmailAssignmentsAssessmentId` - Find a learner's submission to a specified assessment, including marks if any
 
-### Assessment groups
+### assessmentGroups
 
 * `deleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmail` - Remove a learner from an assessment group
 * `getOfferingsOfferingIdGroups` - Find assessment groups
@@ -68,7 +66,7 @@ public class Application {
 * `postOfferingsOfferingIdGroups` - Add an assessment group
 * `postOfferingsOfferingIdGroupsGroupIdLearners` - Add a learner to an assessment group
 
-### Assessment management
+### assessmentManagement
 
 * `deleteOfferingsOfferingIdAssessmentsAssessmentIdDocumentsDocumentId` - Remove assessment document
 * `deleteOfferingsOfferingIdUsersUserEmailAssessmentsAssessmentId` - Reset user's assessment to draft state
@@ -79,13 +77,13 @@ public class Application {
 * `patchOfferingsOfferingIdAssessmentsAssessmentId` - Update assessment details
 * `patchOfferingsOfferingIdAssessmentsAssessmentIdUserEmail` - Update the due dates for a learner's quiz attempt
 
-### Badges
+### badges
 
 * `getOfferingsOfferingIdBadges` - Find offering badges
 * `getUsersUserEmailBadges` - Find user's badges
 * `postOfferingsOfferingIdUsersUserEmailBadgesAward` - Award badge
 
-### Channels
+### channels
 
 * `deleteOfferingsOfferingIdChannelsChannelIdLearners` - Remove learners from a group channel
 * `getOfferingsOfferingIdAnalyticsChannelsChannelIdComments` - Find comments
@@ -97,7 +95,7 @@ public class Application {
 * `postOfferingsOfferingIdChannels` - Add channel
 * `postOfferingsOfferingIdChannelsChannelIdLearners` - Add learners to a group channel
 
-### Course mappings
+### courseMappings
 
 * `deleteCourseMappingsOfferingIdExternalCourseId` - Remove course mapping
 * `getCourseMappings` - Find course mappings
@@ -105,14 +103,14 @@ public class Application {
 * `getCourseMappingsOfferingId` - Find course mappings by offeringId
 * `putCourseMappingsOfferingIdExternalCourseId` - Add course mapping
 
-### Course metadata
+### courseMetadata
 
 * `putCoursesContentIdMetadataCategory` - Update course category
 * `putCoursesContentIdMetadataLevel` - Update course level
 * `putCoursesContentIdMetadataTags` - Update course tags
 * `putCoursesContentIdMetadataTopic` - Update course topic
 
-### Courses
+### courses
 
 * `getCourses` - Find courses
 * `getCoursesContentId` - Find course by contentId
@@ -120,7 +118,7 @@ public class Application {
 * `getCoursesContentIdPermissions` - Find users who have access to the contentId provided
 * `postCoursesRootContentIdPermissionsUserEmail` - Update course access
 
-### Learner activity
+### learnerActivity
 
 * `getOfferingsOfferingIdAnalyticsLearnersProgress` - Find learner progress in a specified offering
 * `getOfferingsOfferingIdAnalyticsSocialNotes` - Find shared social notes in an offering
@@ -128,7 +126,7 @@ public class Application {
 * `getUsersUserEmailOfferingsOfferingIdProgress` - Find learner's progress in a specified offering
 * `getUsersUserEmailProgress` - Find learner's progress in offerings
 
-### Offering learners
+### offeringLearners
 
 * `deleteOfferingsOfferingIdUsersMarkerEmailMarks` - Remove learners from coach's marking list
 * `deleteOfferingsOfferingIdUsersUserEmail` - Removes user from the offering
@@ -138,14 +136,14 @@ public class Application {
 * `postOfferingsOfferingIdUsers` - Adds user to the offering
 * `postOfferingsOfferingIdUsersMarkerEmailMarks` - Add learners to be marked by a coach
 
-### Offering metadata
+### offeringMetadata
 
 * `putOfferingsOfferingIdMetadataCategory` - Update offering category metadata
 * `putOfferingsOfferingIdMetadataLevel` - Update offering level metadata
 * `putOfferingsOfferingIdMetadataTags` - Update offering tags metadata
 * `putOfferingsOfferingIdMetadataTopic` - Update offering topic metadata
 
-### Offerings
+### offerings
 
 * `getOfferings` - Find current, past and future offerings
 * `getOfferingsCurrent` - Find active offerings
@@ -156,16 +154,16 @@ public class Application {
 * `patchOfferingsOfferingId` - Update offering
 * `postOfferings` - Create offering
 
-### Organisation
+### organisation
 
 * `getOrg` - Gets the current organisation
 
-### Pulses
+### pulses
 
 * `getOfferingsOfferingIdAnalyticsPulses` - Find all pulse IDs in the specified offering
 * `getOfferingsOfferingIdAnalyticsPulsesPulseIdResponses` - Find pulses by offeringId and pulseId
 
-### Users in iQualify
+### usersInIQualify
 
 * `getUsersUserEmail` - Find user by email
 * `getUsersUserEmailOfferings` - Find user's offerings
@@ -175,7 +173,17 @@ public class Application {
 * `postUsersUserEmailOfferings` - Adds the user to the specified offerings as a learner
 * `postUsersUserEmailPermissionsPermissionName` - Add permission to user
 * `putUsersUserEmailSuspend` - Suspend user
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

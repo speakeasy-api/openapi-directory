@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,43 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateSecurity;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreatePathParams;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse;
+import org.openapis.openapi.models.shared.ScanConfigExportToSecurityCommandCenterEnum;
+import org.openapis.openapi.models.shared.ScanConfigRiskLevelEnum;
+import org.openapis.openapi.models.shared.ScanConfigTargetPlatformsEnum;
+import org.openapis.openapi.models.shared.ScanConfigUserAgentEnum;
+import org.openapis.openapi.models.shared.ScanConfig;
+import org.openapis.openapi.models.shared.Schedule;
+import org.openapis.openapi.models.shared.ScanRunExecutionStateEnum;
+import org.openapis.openapi.models.shared.ScanRunResultStateEnum;
+import org.openapis.openapi.models.shared.ScanRun;
+import org.openapis.openapi.models.shared.ScanRunWarningTraceCodeEnum;
+import org.openapis.openapi.models.shared.ScanRunWarningTrace;
+import org.openapis.openapi.models.shared.ScanRunErrorTraceCodeEnum;
+import org.openapis.openapi.models.shared.ScanRunErrorTrace;
+import org.openapis.openapi.models.shared.ScanConfigErrorCodeEnum;
+import org.openapis.openapi.models.shared.ScanConfigError;
+import org.openapis.openapi.models.shared.Authentication;
+import org.openapis.openapi.models.shared.IapCredential;
+import org.openapis.openapi.models.shared.IapTestServiceAccountInfo;
+import org.openapis.openapi.models.shared.GoogleAccount;
+import org.openapis.openapi.models.shared.CustomAccount;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             WebsecurityscannerProjectsScanConfigsCreateRequest req = new WebsecurityscannerProjectsScanConfigsCreateRequest() {{
                 security = new WebsecurityscannerProjectsScanConfigsCreateSecurity() {{
@@ -35,90 +63,100 @@ public class Application {
                     }};
                 }};
                 pathParams = new WebsecurityscannerProjectsScanConfigsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new WebsecurityscannerProjectsScanConfigsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new ScanConfig() {{
                     authentication = new Authentication() {{
                         customAccount = new CustomAccount() {{
-                            loginUrl = "dicta";
-                            password = "debitis";
-                            username = "voluptatum";
+                            loginUrl = "suscipit";
+                            password = "iure";
+                            username = "Eli96";
                         }};
                         googleAccount = new GoogleAccount() {{
-                            password = "et";
-                            username = "ut";
+                            password = "tempora";
+                            username = "Geraldine_Kreiger52";
                         }};
                         iapCredential = new IapCredential() {{
                             iapTestServiceAccountInfo = new IapTestServiceAccountInfo() {{
-                                targetAudienceClientId = "dolorem";
+                                targetAudienceClientId = "iusto";
                             }};
                         }};
                     }};
-                    blacklistPatterns = new String[]() {{
-                        add("voluptate"),
-                        add("iste"),
+                    blacklistPatterns = new String[]{{
+                        add("nisi"),
+                        add("recusandae"),
+                        add("temporibus"),
                     }};
-                    displayName = "vitae";
-                    exportToSecurityCommandCenter = "DISABLED";
-                    ignoreHttpStatusErrors = true;
+                    displayName = "ab";
+                    exportToSecurityCommandCenter = "ENABLED";
+                    ignoreHttpStatusErrors = false;
                     latestRun = new ScanRun() {{
-                        endTime = "illum";
+                        endTime = "veritatis";
                         errorTrace = new ScanRunErrorTrace() {{
-                            code = "AUTHENTICATION_CONFIG_ISSUE";
-                            mostCommonHttpErrorCode = 3706853784096366226;
+                            code = "TOO_MANY_REDIRECTS";
+                            mostCommonHttpErrorCode = 20218;
                             scanConfigError = new ScanConfigError() {{
-                                code = "CANNOT_USE_GOOGLE_COM_ACCOUNT";
-                                fieldName = "dolore";
+                                code = "CUSTOM_LOGIN_URL_HAS_UNRESERVED_IP_ADDRESS";
+                                fieldName = "repellendus";
                             }};
                         }};
-                        executionState = "EXECUTION_STATE_UNSPECIFIED";
-                        hasVulnerabilities = true;
-                        name = "accusantium";
-                        progressPercent = 1395437218309923052;
-                        resultState = "RESULT_STATE_UNSPECIFIED";
-                        startTime = "quis";
-                        urlsCrawledCount = "est";
-                        urlsTestedCount = "aut";
-                        warningTraces = new openapisdk.models.shared.ScanRunWarningTrace[]() {{
+                        executionState = "FINISHED";
+                        hasVulnerabilities = false;
+                        name = "quo";
+                        progressPercent = 140350;
+                        resultState = "KILLED";
+                        startTime = "at";
+                        urlsCrawledCount = "maiores";
+                        urlsTestedCount = "molestiae";
+                        warningTraces = new org.openapis.openapi.models.shared.ScanRunWarningTrace[]{{
                             add(new ScanRunWarningTrace() {{
-                                code = "NO_STARTING_URL_FOUND_FOR_MANAGED_SCAN";
+                                code = "BLOCKED_BY_IAP";
                             }}),
                             add(new ScanRunWarningTrace() {{
-                                code = "CODE_UNSPECIFIED";
+                                code = "TOO_MANY_CRAWL_RESULTS";
+                            }}),
+                            add(new ScanRunWarningTrace() {{
+                                code = "TOO_MANY_FUZZ_TASKS";
+                            }}),
+                            add(new ScanRunWarningTrace() {{
+                                code = "BLOCKED_BY_IAP";
                             }}),
                         }};
                     }};
-                    managedScan = true;
-                    maxQps = 1059542851699319360;
-                    name = "illo";
+                    managedScan = false;
+                    maxQps = 678880;
+                    name = "dicta";
                     riskLevel = "LOW";
                     schedule = new Schedule() {{
-                        intervalDurationDays = 7845762441295307478;
-                        scheduleTime = "autem";
+                        intervalDurationDays = 639921;
+                        scheduleTime = "occaecati";
                     }};
-                    startingUrls = new String[]() {{
-                        add("nobis"),
+                    startingUrls = new String[]{{
+                        add("deleniti"),
                     }};
                     staticIpScan = false;
-                    targetPlatforms = new openapisdk.models.shared.ScanConfigTargetPlatformsEnum[]() {{
+                    targetPlatforms = new org.openapis.openapi.models.shared.ScanConfigTargetPlatformsEnum[]{{
+                        add("CLOUD_RUN"),
+                        add("COMPUTE"),
                         add("TARGET_PLATFORM_UNSPECIFIED"),
+                        add("COMPUTE"),
                     }};
-                    userAgent = "USER_AGENT_UNSPECIFIED";
+                    userAgent = "CHROME_LINUX";
                 }};
-            }};
+            }};            
 
             WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req);
 
@@ -134,6 +172,7 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
 * `websecurityscannerProjectsScanConfigsCreate` - Creates a new ScanConfig.
@@ -147,7 +186,17 @@ public class Application {
 * `websecurityscannerProjectsScanConfigsScanRunsList` - Lists ScanRuns under a given ScanConfig, in descending order of ScanRun stop time.
 * `websecurityscannerProjectsScanConfigsScanRunsStop` - Stops a ScanRun. The stopped ScanRun is returned.
 * `websecurityscannerProjectsScanConfigsStart` - Start a ScanRun according to the given ScanConfig.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

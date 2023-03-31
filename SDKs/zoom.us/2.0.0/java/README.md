@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,29 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AccountPathParams;
+import org.openapis.openapi.models.operations.AccountRequest;
+import org.openapis.openapi.models.operations.AccountResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     oAuth = new SchemeOAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AccountRequest req = new AccountRequest() {{
                 pathParams = new AccountPathParams() {{
-                    accountId = "sit";
+                    accountId = "corrupti";
                 }};
-            }};
+            }};            
 
             AccountResponse res = sdk.accounts.account(req);
 
@@ -53,7 +52,8 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Accounts
+
+### accounts
 
 * `account` - Get sub account details
 * `accountCreate` - Create a sub account
@@ -64,13 +64,13 @@ public class Application {
 * `accountSettingsUpdate` - Update settings
 * `accountTrustedDomain` - Get trusted domains
 * `accounts` - List sub accounts
-* `delVb` - Delete virtual background files
+* `delVB` - Delete virtual background files
 * `getAccountLockSettings` - Get locked settings
 * `updateAccountLockSettings` - Update locked settings
 * `updateAccountOwner` - Update the account owner
-* `uploadVb` - Upload virtual background files
+* `uploadVB` - Upload virtual background files
 
-### Billing
+### billing
 
 * `accountBilling` - Get billing information
 * `accountBillingInvoices` - List billing invoices
@@ -82,11 +82,11 @@ public class Application {
 * `accountPlanBaseUpdate` - Update a base plan
 * `accountPlanCreate` - Subscribe plans
 * `accountPlans` - Get plan Information
-* `downloadInvoicePdf` - Download an invoice file
+* `downloadInvoicePDF` - Download an invoice file
 * `getAccountBillingInvoice` - Get invoice details
 * `getPlanUsage` - Get plan usage
 
-### Chat Channels
+### chatChannels
 
 * `createChannel` - Create a channel
 * `deleteUserLevelChannel` - Delete a channel
@@ -97,7 +97,7 @@ public class Application {
 * `removeAUserLevelChannelMember` - Remove a member
 * `updateUserLevelChannel` - Update a channel
 
-### Chat Channels (Account-level)
+### chatChannelsAccountLevel
 
 * `deleteChannel` - Delete a channel
 * `getChannel` - Get a channel
@@ -106,20 +106,20 @@ public class Application {
 * `removeAChannelMember` - Remove a member
 * `updateChannel` - Update a channel
 
-### Chat Messages
+### chatMessages
 
 * `deleteChatMessage` - Delete a message
 * `editMessage` - Update a message
 * `getChatMessages` - List user's chat messages
 * `sendaChatMessage` - Send a chat message
 
-### Chatbot Messages
+### chatbotMessages
 
 * `deleteAChatbotMessage` - Delete a chatbot message
 * `editChatbotMessage` - Edit a chatbot message
 * `sendchatbot` - Send chatbot messages
 
-### Cloud Recording
+### cloudRecording
 
 * `getAccountCloudRecording` - List recordings of an account
 * `listArchivedFiles` - List archived files
@@ -137,7 +137,7 @@ public class Application {
 * `recordingStatusUpdateOne` - Recover a single recording
 * `recordingsList` - List all recordings
 
-### Common Area Phones
+### commonAreaPhones
 
 * `addCommonAreaPhone` - Add a common area phone
 * `deleteCommonAreaPhone` - Delete a common area phone
@@ -145,31 +145,31 @@ public class Application {
 * `listCommonAreaPhones` - List common area phones
 * `updateCommonAreaPhone` - Update common area phone
 
-### Contacts
+### contacts
 
 * `getUserContact` - Get user's contact details
 * `getUserContacts` - List user's contacts
 * `searchCompanyContacts` - Search company contacts
 
-### Dashboards
+### dashboards
 
-* `dashboardCrc` - Get CRC port usage
+* `dashboardCRC` - Get CRC port usage
 * `dashboardClientFeedback` - List Zoom meetings client feedback
 * `dashboardClientFeedbackDetail` - Get zoom meetings client feedback
-* `dashboardIm` - Get IM metrics
+* `dashboardIM` - Get IM metrics
 * `dashboardIssueDetailZoomRoom` - Get issues of Zoom Rooms
 * `dashboardIssueZoomRoom` - Get top 25 Zoom Rooms with issues
 * `dashboardMeetingDetail` - Get meeting details
-* `dashboardMeetingParticipantQos` - Get meeting participant QoS
+* `dashboardMeetingParticipantQOS` - Get meeting participant QoS
 * `dashboardMeetingParticipantShare` - Get sharing/recording details
 * `dashboardMeetingParticipants` - List meeting participants
-* `dashboardMeetingParticipantsQos` - List meeting participants QoS
+* `dashboardMeetingParticipantsQOS` - List meeting participants QoS
 * `dashboardMeetings` - List meetings
 * `dashboardWebinarDetail` - Get webinar details
-* `dashboardWebinarParticipantQos` - Get webinar participant QoS
+* `dashboardWebinarParticipantQOS` - Get webinar participant QoS
 * `dashboardWebinarParticipantShare` - Get sharing/recording details
 * `dashboardWebinarParticipants` - Get webinar participants
-* `dashboardWebinarParticipantsQos` - List webinar participant QoS
+* `dashboardWebinarParticipantsQOS` - List webinar participant QoS
 * `dashboardWebinars` - List webinars
 * `dashboardZoomRoom` - Get Zoom Rooms details
 * `dashboardZoomRoomIssue` - Get top 25 issues of Zoom Rooms
@@ -181,21 +181,21 @@ public class Application {
 * `participantFeedback` - Get post meeting feedback
 * `participantWebinarFeedback` - Get post webinar feedback
 
-### Deprecated API Endpoints
+### deprecatedAPIEndpoints
 
 * `listPastMeetingFiles` - List past meeting's files
 * `listPastWebinarFiles` - List past webinar files
 
-### Devices
+### devices
 
 * `deviceCreate` - Create a H.323/SIP device
 * `deviceDelete` - Delete a H.323/SIP device
 * `deviceList` - List H.323/SIP devices
 * `deviceUpdate` - Update a H.323/SIP device
 
-### Groups
+### groups
 
-* `delGroupVb` - Delete virtual background files
+* `delGroupVB` - Delete virtual background files
 * `getGroupLockSettings` - Get locked settings
 * `getGroupSettings` - Get a group's settings
 * `group` - Get a group
@@ -209,16 +209,16 @@ public class Application {
 * `groups` - List groups
 * `updateAGroupMember` - Update a group member
 * `updateGroupSettings` - Update a group's settings
-* `uploadGroupVb` - Upload virtual background files
+* `uploadGroupVB` - Upload virtual background files
 
-### IM Chat
+### imChat
 
 * `imChatMessages` - Get IM chat messages
 * `imChatSessions` - Get IM chat sessions
 * `listimmessages` - Get user’s IM messages
 * `sendimmessages` - Send IM messages
 
-### IM Groups
+### imGroups
 
 * `imGroup` - Retrieve an IM directory group
 * `imGroupCreate` - Create an IM directory group
@@ -229,7 +229,7 @@ public class Application {
 * `imGroupUpdate` - Update an IM directory group
 * `imGroups` - List IM directory groups
 
-### Meetings
+### meetings
 
 * `createBatchPolls` - Perform batch poll creation
 * `getLiveStreamDetails` - Get live stream details
@@ -253,22 +253,23 @@ public class Application {
 * `meetingRegistrants` - List meeting registrants
 * `meetingRegistrantsQuestionsGet` - List registration questions 
 * `meetingStatus` - Update meeting status
-* `meetingUpdate` - Update a meeting
+* `meetingUpdateJson` - Update a meeting
+* `meetingUpdateMultipart` - Update a meeting
 * `meetingregistrantdelete` - Delete a meeting registrant
 * `meetings` - List meetings
 * `pastMeetingDetails` - Get past meeting details
 * `pastMeetingParticipants` - Get past meeting participants
 * `pastMeetings` - List ended meeting instances
 
-### PAC
+### pac
 
-* `userPaCs` - List a user's PAC accounts
+* `userPACs` - List a user's PAC accounts
 
-### Phone
+### phone
 
 * `unassignPhoneNumber` - Unassign phone number
 * `accountCallLogs` - Get account's call logs
-* `addByocNumber` - Add BYOC phone numbers
+* `addBYOCNumber` - Add BYOC phone numbers
 * `addSettingTemplate` - Add a setting template
 * `addUserSetting` - Set up shared access
 * `assignCallingPlan` - Assign calling plan to a user
@@ -281,7 +282,7 @@ public class Application {
 * `getPhoneRecordings` - Get call recordings
 * `getSettingTemplate` - Get setting template details
 * `listAccountPhoneNumbers` - List phone numbers
-* `listByocsipTrunk` - List BYOC SIP trunks
+* `listBYOCSIPTrunk` - List BYOC SIP trunks
 * `listCallingPlans` - List calling plans
 * `listPhoneUsers` - List phone users
 * `listSettingTemplates` - List setting templates
@@ -290,17 +291,17 @@ public class Application {
 * `phoneUserRecordings` - Get user's recordings
 * `phoneUserSettings` - Get user's settings
 * `phoneUserVoiceMails` - Get user's voicemails
-* `postPhoneSipTrunk` - Assign SIP trunks
+* `postPhoneSIPTrunk` - Assign SIP trunks
 * `setUpAccount` - Set up a Zoom Phone account
 * `unassignCallingPlan` - Unassign user's calling plan
 * `updatePhoneNumberDetails` - Update phone number details
-* `updatePhoneSipTrunk` - Update SIP trunk details
+* `updatePhoneSIPTrunk` - Update SIP trunk details
 * `updatePhoneSettings` - Update BYOC settings
 * `updateSettingTemplate` - Update a setting template
 * `updateUserProfile` - Update user's profile
 * `updateUserSetting` - Update shared access
 
-### Phone Auto Receptionists
+### phoneAutoReceptionists
 
 * `addAutoReceptionist` - Add an auto receptionist
 * `assignPhoneNumbersAutoReceptionist` - Assign phone numbers
@@ -308,7 +309,7 @@ public class Application {
 * `unassignAllPhoneNumsAutoReceptionist` - Unassign all phone numbers
 * `updateAutoReceptionist` - Update auto receptionist details
 
-### Phone Blocked List
+### phoneBlockedList
 
 * `addAnumberToBlockedList` - Create a blocked list
 * `deleteABlockedList` - Delete a blocked list
@@ -316,7 +317,7 @@ public class Application {
 * `listBlockedList` - List blocked lists
 * `updateBlockedList` - Update a blocked list
 
-### Phone Call Queues
+### phoneCallQueues
 
 * `addMembersToCallQueue` - Add members to a call queue
 * `assignPhoneToCallQueue` - Assign numbers to a call queue
@@ -332,7 +333,7 @@ public class Application {
 * `unassignMemberFromCallQueue` - Unassign a member
 * `updateCallQueue` - Update call queue details
 
-### Phone Devices
+### phoneDevices
 
 * `addPhoneDevice` - Add a device
 * `deleteADevice` - Delete a device
@@ -340,24 +341,24 @@ public class Application {
 * `listPhoneDevices` - List devices
 * `updateADevice` - Update a device
 
-### Phone Reports
+### phoneReports
 
-* `getPsOperationLogs` - Get operation logs report
+* `getPSOperationLogs` - Get operation logs report
 
-### Phone Shared Line Groups
+### phoneSharedLineGroups
 
 * `addMembersToSharedLineGroup` - Add members to a shared line group
-* `assignPhoneNumbersSlg` - Assign phone numbers
+* `assignPhoneNumbersSLG` - Assign phone numbers
 * `createASharedLineGroup` - Create a shared line group
-* `deleteAMemberSlg` - Unassign a member from a shared line group
-* `deleteAPhoneNumberSlg` - Unassign a phone number
+* `deleteAMemberSLG` - Unassign a member from a shared line group
+* `deleteAPhoneNumberSLG` - Unassign a phone number
 * `deleteASharedLineGroup` - Delete a shared line group
-* `deleteMembersOfSlg` - Unassign members of a shared line group
+* `deleteMembersOfSLG` - Unassign members of a shared line group
 * `getASharedLineGroup` - Get a shared line group
 * `listSharedLineGroups` - List shared line groups
 * `updateASharedLineGroup` - Update a shared line group
 
-### Phone Site
+### phoneSite
 
 * `createPhoneSite` - Create a phone site
 * `deletePhoneSite` - Delete a phone site
@@ -365,7 +366,7 @@ public class Application {
 * `listPhoneSites` - List phone sites
 * `updateSiteDetails` - Update phone site details
 
-### Reports
+### reports
 
 * `reportCloudRecording` - Get cloud recording usage report
 * `reportDaily` - Get daily usage report
@@ -380,9 +381,9 @@ public class Application {
 * `reportWebinarDetails` - Get webinar detail reports
 * `reportWebinarParticipants` - Get webinar participant reports
 * `reportWebinarPolls` - Get webinar poll reports
-* `reportWebinarQa` - Get webinar Q&A report
+* `reportWebinarQA` - Get webinar Q&A report
 
-### Roles
+### roles
 
 * `addRoleMembers` - Assign a role
 * `createRole` - Create a role
@@ -393,79 +394,79 @@ public class Application {
 * `roles` - List roles
 * `updateRole` - Update role information
 
-### Rooms
+### rooms
 
 * `addARoom` - Add a Zoom Room
-* `changeZrLocation` - Change a Zoom Room's location
+* `changeZRLocation` - Change a Zoom Room's location
 * `checkInRooms` - Check-in or check-out of a Zoom Room
 * `deleteAZoomRoom` - Delete a Zoom Room
-* `getZrProfile` - Get Zoom Room profile
-* `getZrSettings` - Get Zoom Room settings
+* `getZRProfile` - Get Zoom Room profile
+* `getZRSettings` - Get Zoom Room settings
 * `listDigitalSignageContent` - List digital signage contents
-* `listZrDevices` - List Zoom Room devices
+* `listZRDevices` - List Zoom Room devices
 * `listZoomRooms` - List Zoom Rooms
 * `manageE911signage` - Update E911 digital signage
 * `updateRoomProfile` - Update a Zoom Room profile
-* `updateZrSettings` - Update Zoom Room settings
+* `updateZRSettings` - Update Zoom Room settings
 
-### Rooms Account
+### roomsAccount
 
-* `getZrAccountProfile` - Get Zoom Room account profile
-* `getZrAccountSettings` - Get Zoom Room account settings
-* `updateZrAccProfile` - Update Zoom Room account profile
+* `getZRAccountProfile` - Get Zoom Room account profile
+* `getZRAccountSettings` - Get Zoom Room account settings
+* `updateZRAccProfile` - Update Zoom Room account profile
 * `updateZoomRoomAccSettings` - Update Zoom Room account settings
 
-### Rooms Devices
+### roomsDevices
 
 * `changeZoomRoomsAppVersion` - Change Zoom Rooms' app version
 
-### Rooms Location
+### roomsLocation
 
-* `addAzrLocation` - Add a location
+* `addAZRLocation` - Add a location
 * `changeParentLocation` - Change the assigned parent location
-* `getZrLocationProfile` - Get Zoom Room location profile
-* `getZrLocationSettings` - Get location settings
-* `getZrLocationStructure` - Get Zoom Room location structure
-* `listZrLocations` - List Zoom Room locations
-* `updateZrLocationProfile` - Update Zoom Room location profile
-* `updateZrLocationSettings` - Update location settings
+* `getZRLocationProfile` - Get Zoom Room location profile
+* `getZRLocationSettings` - Get location settings
+* `getZRLocationStructure` - Get Zoom Room location structure
+* `listZRLocations` - List Zoom Room locations
+* `updateZRLocationProfile` - Update Zoom Room location profile
+* `updateZRLocationSettings` - Update location settings
 * `updateZoomRoomsLocationStructure` - Update Zoom Rooms location structure
 
-### SIP Connected Audio
+### sipConnectedAudio
 
 * `addCalloutCountries` - Add internal call-out countries
 * `addInternalNumbers` - Add internal numbers
-* `assignSipConfig` - Assign SIP trunk configuration
-* `assignSipTrunks` - Assign SIP trunks
+* `assignSIPConfig` - Assign SIP trunk configuration
+* `assignSIPTrunks` - Assign SIP trunks
 * `assignSipTrunkNumbers` - Assign numbers
 * `deleteAllSipNumbers` - Delete all numbers
 * `deleteInternalCallOutCountry` - Delete internal call-out country
 * `deleteInternalNumber` - Delete an internal number
-* `deleteSipTrunk` - Delete a SIP trunk
+* `deleteSIPTrunk` - Delete a SIP trunk
 * `listInternalCalloutCountries` - List internal call-out countries
 * `listInternalNumbers` - List internal numbers
-* `listSipTrunks` - List SIP trunks
+* `listSIPTrunks` - List SIP trunks
 * `listSipTrunkNumbers` - List SIP trunk numbers
 
-### SIP Phone
+### sipPhone
 
-* `createSipPhone` - Enable SIP phone
-* `deleteSipPhone` - Delete SIP phone
+* `createSIPPhone` - Enable SIP phone
+* `deleteSIPPhone` - Delete SIP phone
 * `listSipPhones` - List SIP phones
-* `updateSipPhone` - Update SIP phone
+* `updateSIPPhone` - Update SIP phone
 
-### TSP
+### tsp
 
 * `tsp` - Get account's TSP information
 * `tspUpdate` - Update account's TSP information
 * `tspUrlUpdate` - Set global dial-in URL for a TSP user
-* `userTsp` - Get a user's TSP account
-* `userTspCreate` - Add a user's TSP account
-* `userTspDelete` - Delete a user's TSP account
-* `userTspUpdate` - Update a TSP account
-* `userTsPs` - List user's TSP accounts
+* `userTSP` - Get a user's TSP account
+* `userTSPCreate` - Add a user's TSP account
+* `userTSPDelete` - Delete a user's TSP account
+* `userTSPUpdate` - Update a TSP account
+* `userTSPs` - List user's TSP accounts
 
-### TrackingField
+### trackingField
 
 * `trackingfieldCreate` - Create a tracking field
 * `trackingfieldDelete` - Delete a tracking field
@@ -473,9 +474,9 @@ public class Application {
 * `trackingfieldList` - List tracking fields
 * `trackingfieldUpdate` - Update a tracking field
 
-### Users
+### users
 
-* `delUserVb` - Delete virtual background files
+* `delUserVB` - Delete virtual background files
 * `switchUserAccount` - Switch a user's account
 * `updatePresenceStatus` - Update a user's presence status
 * `uploadVBuser` - Upload virtual background files
@@ -491,7 +492,7 @@ public class Application {
 * `userPassword` - Update a user's password
 * `userPermission` - Get user permissions
 * `userPicture` - Upload a user's profile picture
-* `userSsoTokenDelete` - Revoke a user's SSO token
+* `userSSOTokenDelete` - Revoke a user's SSO token
 * `userSchedulerDelete` - Delete a scheduler
 * `userSchedulers` - List user schedulers
 * `userSchedulersDelete` - Delete user schedulers
@@ -504,13 +505,13 @@ public class Application {
 * `userZak` - Get user's ZAK
 * `users` - List users
 
-### Webinars
+### webinars
 
 * `addBatchWebinarRegistrants` - Perform batch registration
 * `deleteWebinarRegistrant` - Delete a webinar registrant
 * `getTrackingSources` - Get webinar tracking sources
 * `listPastWebinarPollResults` - List past webinar poll results
-* `listPastWebinarQa` - List Q&A of past webinar
+* `listPastWebinarQA` - List Q&A of past webinar
 * `listWebinarParticipants` - List webinar participants
 * `listWebinarTemplates` - List webinar templates
 * `pastWebinars` - List past webinar instances
@@ -534,9 +535,20 @@ public class Application {
 * `webinarRegistrants` - List webinar registrants
 * `webinarRegistrantsQuestionsGet` - List registration questions
 * `webinarStatus` - Update webinar status
-* `webinarUpdate` - Update a webinar
+* `webinarUpdateJson` - Update a webinar
+* `webinarUpdateMultipart` - Update a webinar
 * `webinars` - List webinars
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

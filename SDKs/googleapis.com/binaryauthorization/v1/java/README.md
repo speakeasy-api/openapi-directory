@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateSecurity;
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreatePathParams;
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateQueryParams;
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateRequest;
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateResponse;
+import org.openapis.openapi.models.shared.AttestorInput;
+import org.openapis.openapi.models.shared.UserOwnedGrafeasNoteInput;
+import org.openapis.openapi.models.shared.AttestorPublicKey;
+import org.openapis.openapi.models.shared.PkixPublicKeySignatureAlgorithmEnum;
+import org.openapis.openapi.models.shared.PkixPublicKey;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BinaryauthorizationProjectsAttestorsCreateRequest req = new BinaryauthorizationProjectsAttestorsCreateRequest() {{
                 security = new BinaryauthorizationProjectsAttestorsCreateSecurity() {{
@@ -35,60 +48,69 @@ public class Application {
                     }};
                 }};
                 pathParams = new BinaryauthorizationProjectsAttestorsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new BinaryauthorizationProjectsAttestorsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    attestorId = "consequuntur";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    attestorId = "unde";
+                    callback = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new AttestorInput() {{
-                    description = "debitis";
-                    etag = "voluptatum";
-                    name = "et";
+                    description = "iure";
+                    etag = "magnam";
+                    name = "debitis";
                     userOwnedGrafeasNote = new UserOwnedGrafeasNoteInput() {{
-                        noteReference = "ut";
-                        publicKeys = new openapisdk.models.shared.AttestorPublicKey[]() {{
+                        noteReference = "ipsa";
+                        publicKeys = new org.openapis.openapi.models.shared.AttestorPublicKey[]{{
                             add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "et";
-                                comment = "voluptate";
-                                id = "iste";
+                                asciiArmoredPgpPublicKey = "tempora";
+                                comment = "suscipit";
+                                id = "molestiae";
                                 pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "vitae";
+                                    publicKeyPem = "minus";
+                                    signatureAlgorithm = "ECDSA_P384_SHA384";
+                                }};
+                            }}),
+                            add(new AttestorPublicKey() {{
+                                asciiArmoredPgpPublicKey = "voluptatum";
+                                comment = "iusto";
+                                id = "excepturi";
+                                pkixPublicKey = new PkixPublicKey() {{
+                                    publicKeyPem = "nisi";
                                     signatureAlgorithm = "ECDSA_P521_SHA512";
                                 }};
                             }}),
                             add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "dolores";
-                                comment = "illum";
-                                id = "debitis";
+                                asciiArmoredPgpPublicKey = "temporibus";
+                                comment = "ab";
+                                id = "quis";
                                 pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "vel";
-                                    signatureAlgorithm = "EC_SIGN_P256_SHA256";
+                                    publicKeyPem = "veritatis";
+                                    signatureAlgorithm = "RSA_SIGN_PKCS1_4096_SHA512";
                                 }};
                             }}),
                             add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "dolore";
-                                comment = "id";
-                                id = "aspernatur";
+                                asciiArmoredPgpPublicKey = "perferendis";
+                                comment = "ipsam";
+                                id = "repellendus";
                                 pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "accusantium";
-                                    signatureAlgorithm = "ECDSA_P256_SHA256";
+                                    publicKeyPem = "sapiente";
+                                    signatureAlgorithm = "EC_SIGN_P256_SHA256";
                                 }};
                             }}),
                         }};
                     }};
                 }};
-            }};
+            }};            
 
             BinaryauthorizationProjectsAttestorsCreateResponse res = sdk.projects.binaryauthorizationProjectsAttestorsCreate(req);
 
@@ -104,6 +126,7 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
 * `binaryauthorizationProjectsAttestorsCreate` - Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the attestor already exists.
@@ -118,7 +141,17 @@ public class Application {
 ### systempolicy
 
 * `binaryauthorizationSystempolicyGetPolicy` - Gets the current system policy in the specified location.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

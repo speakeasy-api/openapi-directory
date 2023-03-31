@@ -2,40 +2,41 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AcceptQualificationRequestXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AcceptQualificationRequestHeaders;
+import org.openapis.openapi.models.operations.AcceptQualificationRequestRequest;
+import org.openapis.openapi.models.operations.AcceptQualificationRequestResponse;
+import org.openapis.openapi.models.shared.AcceptQualificationRequestRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AcceptQualificationRequestRequest req = new AcceptQualificationRequestRequest() {{
                 headers = new AcceptQualificationRequestHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "MTurkRequesterServiceV20170117.AcceptQualificationRequest";
                 }};
                 request = new AcceptQualificationRequestRequest() {{
-                    integerValue = 8274930044578894929;
-                    qualificationRequestId = "et";
+                    integerValue = 847252;
+                    qualificationRequestId = "vel";
                 }};
-            }};
+            }};            
 
             AcceptQualificationRequestResponse res = sdk.acceptQualificationRequest(req);
 

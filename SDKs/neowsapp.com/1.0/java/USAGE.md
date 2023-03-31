@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.RetrieveNEOFeedTodayQueryParams;
+import org.openapis.openapi.models.operations.RetrieveNEOFeedTodayRequest;
+import org.openapis.openapi.models.operations.RetrieveNEOFeedTodayResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            RetrieveNeoFeedTodayRequest req = new RetrieveNeoFeedTodayRequest() {{
-                queryParams = new RetrieveNeoFeedTodayQueryParams() {{
+            RetrieveNEOFeedTodayRequest req = new RetrieveNEOFeedTodayRequest() {{
+                queryParams = new RetrieveNEOFeedTodayQueryParams() {{
                     detailed = false;
                 }};
-            }};
+            }};            
 
-            RetrieveNeoFeedTodayResponse res = sdk.feed.retrieveNeoFeedToday(req);
+            RetrieveNEOFeedTodayResponse res = sdk.feed.retrieveNEOFeedToday(req);
 
             if (res.nearEarthObjectList.isPresent()) {
                 // handle response

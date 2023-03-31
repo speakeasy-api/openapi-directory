@@ -2,18 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListSecurity;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListPathParams;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListQueryParams;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListRequest;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            PrivatecaProjectsLocationsCertificateAuthoritiesActivateRequest req = new PrivatecaProjectsLocationsCertificateAuthoritiesActivateRequest() {{
-                security = new PrivatecaProjectsLocationsCertificateAuthoritiesActivateSecurity() {{
+            PrivatecaProjectsLocationsListRequest req = new PrivatecaProjectsLocationsListRequest() {{
+                security = new PrivatecaProjectsLocationsListSecurity() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
@@ -21,39 +29,30 @@ public class Application {
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new PrivatecaProjectsLocationsCertificateAuthoritiesActivatePathParams() {{
-                    name = "sit";
+                pathParams = new PrivatecaProjectsLocationsListPathParams() {{
+                    name = "corrupti";
                 }};
-                queryParams = new PrivatecaProjectsLocationsCertificateAuthoritiesActivateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                queryParams = new PrivatecaProjectsLocationsListQueryParams() {{
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    filter = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    pageSize = 623564;
+                    pageToken = "deserunt";
+                    prettyPrint = false;
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-                request = new ActivateCertificateAuthorityRequest() {{
-                    pemCaCertificate = "dicta";
-                    requestId = "debitis";
-                    subordinateConfig = new SubordinateConfig() {{
-                        certificateAuthority = "voluptatum";
-                        pemIssuerChain = new SubordinateConfigChain() {{
-                            pemCertificates = new String[]() {{
-                                add("ut"),
-                            }};
-                        }};
-                    }};
-                }};
-            }};
+            }};            
 
-            PrivatecaProjectsLocationsCertificateAuthoritiesActivateResponse res = sdk.projects.privatecaProjectsLocationsCertificateAuthoritiesActivate(req);
+            PrivatecaProjectsLocationsListResponse res = sdk.projects.privatecaProjectsLocationsList(req);
 
-            if (res.operation.isPresent()) {
+            if (res.listLocationsResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

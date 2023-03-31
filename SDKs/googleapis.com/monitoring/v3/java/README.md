@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,46 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurityOption1;
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurityOption2;
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateSecurity;
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreatePathParams;
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateQueryParams;
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateRequest;
+import org.openapis.openapi.models.operations.MonitoringProjectsAlertPoliciesCreateResponse;
+import org.openapis.openapi.models.shared.AlertPolicyCombinerEnum;
+import org.openapis.openapi.models.shared.AlertPolicy;
+import org.openapis.openapi.models.shared.Status;
+import org.openapis.openapi.models.shared.MutationRecord;
+import org.openapis.openapi.models.shared.Documentation;
+import org.openapis.openapi.models.shared.Condition;
+import org.openapis.openapi.models.shared.MetricThresholdComparisonEnum;
+import org.openapis.openapi.models.shared.MetricThresholdEvaluationMissingDataEnum;
+import org.openapis.openapi.models.shared.MetricThreshold;
+import org.openapis.openapi.models.shared.Trigger;
+import org.openapis.openapi.models.shared.ForecastOptions;
+import org.openapis.openapi.models.shared.AggregationCrossSeriesReducerEnum;
+import org.openapis.openapi.models.shared.AggregationPerSeriesAlignerEnum;
+import org.openapis.openapi.models.shared.Aggregation;
+import org.openapis.openapi.models.shared.MonitoringQueryLanguageConditionEvaluationMissingDataEnum;
+import org.openapis.openapi.models.shared.MonitoringQueryLanguageCondition;
+import org.openapis.openapi.models.shared.LogMatch;
+import org.openapis.openapi.models.shared.MetricAbsence;
+import org.openapis.openapi.models.shared.AlertStrategy;
+import org.openapis.openapi.models.shared.NotificationRateLimit;
+import org.openapis.openapi.models.shared.NotificationChannelStrategy;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             MonitoringProjectsAlertPoliciesCreateRequest req = new MonitoringProjectsAlertPoliciesCreateRequest() {{
                 security = new MonitoringProjectsAlertPoliciesCreateSecurity() {{
@@ -37,182 +68,314 @@ public class Application {
                     }};
                 }};
                 pathParams = new MonitoringProjectsAlertPoliciesCreatePathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new MonitoringProjectsAlertPoliciesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new AlertPolicy() {{
                     alertStrategy = new AlertStrategy() {{
-                        autoClose = "dicta";
+                        autoClose = "suscipit";
+                        notificationChannelStrategy = new org.openapis.openapi.models.shared.NotificationChannelStrategy[]{{
+                            add(new NotificationChannelStrategy() {{
+                                notificationChannelNames = new String[]{{
+                                    add("debitis"),
+                                    add("ipsa"),
+                                }};
+                                renotifyInterval = "delectus";
+                            }}),
+                            add(new NotificationChannelStrategy() {{
+                                notificationChannelNames = new String[]{{
+                                    add("suscipit"),
+                                    add("molestiae"),
+                                }};
+                                renotifyInterval = "minus";
+                            }}),
+                        }};
                         notificationRateLimit = new NotificationRateLimit() {{
-                            period = "debitis";
+                            period = "placeat";
                         }};
                     }};
-                    combiner = "COMBINE_UNSPECIFIED";
-                    conditions = new openapisdk.models.shared.Condition[]() {{
+                    combiner = "OR";
+                    conditions = new org.openapis.openapi.models.shared.Condition[]{{
                         add(new Condition() {{
                             conditionAbsent = new MetricAbsence() {{
-                                aggregations = new openapisdk.models.shared.Aggregation[]() {{
+                                aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
                                     add(new Aggregation() {{
-                                        alignmentPeriod = "dolorem";
-                                        crossSeriesReducer = "REDUCE_COUNT_FALSE";
-                                        groupByFields = new String[]() {{
-                                            add("iste"),
+                                        alignmentPeriod = "nisi";
+                                        crossSeriesReducer = "REDUCE_PERCENTILE_50";
+                                        groupByFields = new String[]{{
+                                            add("ab"),
+                                            add("quis"),
+                                            add("veritatis"),
+                                            add("deserunt"),
+                                        }};
+                                        perSeriesAligner = "ALIGN_NONE";
+                                    }}),
+                                    add(new Aggregation() {{
+                                        alignmentPeriod = "ipsam";
+                                        crossSeriesReducer = "REDUCE_PERCENTILE_95";
+                                        groupByFields = new String[]{{
+                                            add("quo"),
+                                            add("odit"),
+                                            add("at"),
+                                            add("at"),
                                         }};
                                         perSeriesAligner = "ALIGN_PERCENT_CHANGE";
                                     }}),
                                     add(new Aggregation() {{
-                                        alignmentPeriod = "totam";
-                                        crossSeriesReducer = "REDUCE_PERCENTILE_99";
-                                        groupByFields = new String[]() {{
-                                            add("debitis"),
-                                            add("vel"),
-                                            add("odio"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_DELTA";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "id";
-                                        crossSeriesReducer = "REDUCE_MAX";
-                                        groupByFields = new String[]() {{
+                                        alignmentPeriod = "molestiae";
+                                        crossSeriesReducer = "REDUCE_PERCENTILE_95";
+                                        groupByFields = new String[]{{
+                                            add("esse"),
                                             add("totam"),
-                                            add("commodi"),
-                                            add("quis"),
+                                            add("porro"),
+                                            add("dolorum"),
                                         }};
-                                        perSeriesAligner = "ALIGN_FRACTION_TRUE";
+                                        perSeriesAligner = "ALIGN_RATE";
                                     }}),
                                 }};
-                                duration = "aut";
-                                filter = "odit";
+                                duration = "nam";
+                                filter = "officia";
                                 trigger = new Trigger() {{
-                                    count = 5001958211167890979;
-                                    percent = 14.200000;
+                                    count = 582020;
+                                    percent = 1433.53;
                                 }};
                             }};
                             conditionMatchedLog = new LogMatch() {{
-                                filter = "aut";
+                                filter = "deleniti";
                                 labelExtractors = new java.util.HashMap<String, String>() {{
-                                    put("sed", "officiis");
+                                    put("optio", "totam");
+                                    put("beatae", "commodi");
+                                    put("molestiae", "modi");
+                                    put("qui", "impedit");
                                 }};
                             }};
                             conditionMonitoringQueryLanguage = new MonitoringQueryLanguageCondition() {{
-                                duration = "autem";
-                                evaluationMissingData = "EVALUATION_MISSING_DATA_UNSPECIFIED";
-                                query = "nobis";
+                                duration = "cum";
+                                evaluationMissingData = "EVALUATION_MISSING_DATA_INACTIVE";
+                                query = "ipsum";
                                 trigger = new Trigger() {{
-                                    count = 4345851588384648695;
-                                    percent = 77.099998;
+                                    count = 568434;
+                                    percent = 1352.18;
                                 }};
                             }};
                             conditionThreshold = new MetricThreshold() {{
-                                aggregations = new openapisdk.models.shared.Aggregation[]() {{
+                                aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
                                     add(new Aggregation() {{
-                                        alignmentPeriod = "ipsum";
-                                        crossSeriesReducer = "REDUCE_PERCENTILE_50";
-                                        groupByFields = new String[]() {{
-                                            add("sint"),
-                                            add("inventore"),
+                                        alignmentPeriod = "ad";
+                                        crossSeriesReducer = "REDUCE_COUNT_FALSE";
+                                        groupByFields = new String[]{{
+                                            add("iste"),
                                         }};
-                                        perSeriesAligner = "ALIGN_MEAN";
+                                        perSeriesAligner = "ALIGN_NEXT_OLDER";
+                                    }}),
+                                }};
+                                comparison = "COMPARISON_LE";
+                                denominatorAggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
+                                    add(new Aggregation() {{
+                                        alignmentPeriod = "hic";
+                                        crossSeriesReducer = "REDUCE_PERCENTILE_50";
+                                        groupByFields = new String[]{{
+                                            add("in"),
+                                            add("corporis"),
+                                            add("iste"),
+                                        }};
+                                        perSeriesAligner = "ALIGN_COUNT";
                                     }}),
                                     add(new Aggregation() {{
-                                        alignmentPeriod = "exercitationem";
-                                        crossSeriesReducer = "REDUCE_COUNT_FALSE";
-                                        groupByFields = new String[]() {{
-                                            add("tempore"),
+                                        alignmentPeriod = "saepe";
+                                        crossSeriesReducer = "REDUCE_FRACTION_TRUE";
+                                        groupByFields = new String[]{{
+                                            add("ipsa"),
+                                        }};
+                                        perSeriesAligner = "ALIGN_PERCENT_CHANGE";
+                                    }}),
+                                }};
+                                denominatorFilter = "est";
+                                duration = "mollitia";
+                                evaluationMissingData = "EVALUATION_MISSING_DATA_ACTIVE";
+                                filter = "dolores";
+                                forecastOptions = new ForecastOptions() {{
+                                    forecastHorizon = "dolorem";
+                                }};
+                                thresholdValue = 3581.52;
+                                trigger = new Trigger() {{
+                                    count = 128926;
+                                    percent = 7506.86;
+                                }};
+                            }};
+                            displayName = "enim";
+                            name = "omnis";
+                        }}),
+                        add(new Condition() {{
+                            conditionAbsent = new MetricAbsence() {{
+                                aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
+                                    add(new Aggregation() {{
+                                        alignmentPeriod = "minima";
+                                        crossSeriesReducer = "REDUCE_COUNT_TRUE";
+                                        groupByFields = new String[]{{
+                                            add("iure"),
+                                        }};
+                                        perSeriesAligner = "ALIGN_COUNT_FALSE";
+                                    }}),
+                                    add(new Aggregation() {{
+                                        alignmentPeriod = "doloribus";
+                                        crossSeriesReducer = "REDUCE_PERCENTILE_05";
+                                        groupByFields = new String[]{{
+                                            add("mollitia"),
+                                        }};
+                                        perSeriesAligner = "ALIGN_INTERPOLATE";
+                                    }}),
+                                }};
+                                duration = "culpa";
+                                filter = "consequuntur";
+                                trigger = new Trigger() {{
+                                    count = 995300;
+                                    percent = 6531.08;
+                                }};
+                            }};
+                            conditionMatchedLog = new LogMatch() {{
+                                filter = "occaecati";
+                                labelExtractors = new java.util.HashMap<String, String>() {{
+                                    put("commodi", "quam");
+                                    put("molestiae", "velit");
+                                }};
+                            }};
+                            conditionMonitoringQueryLanguage = new MonitoringQueryLanguageCondition() {{
+                                duration = "error";
+                                evaluationMissingData = "EVALUATION_MISSING_DATA_UNSPECIFIED";
+                                query = "quis";
+                                trigger = new Trigger() {{
+                                    count = 110375;
+                                    percent = 6747.52;
+                                }};
+                            }};
+                            conditionThreshold = new MetricThreshold() {{
+                                aggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
+                                    add(new Aggregation() {{
+                                        alignmentPeriod = "enim";
+                                        crossSeriesReducer = "REDUCE_MEAN";
+                                        groupByFields = new String[]{{
+                                            add("sequi"),
+                                            add("tenetur"),
+                                            add("ipsam"),
+                                            add("id"),
+                                        }};
+                                        perSeriesAligner = "ALIGN_PERCENTILE_95";
+                                    }}),
+                                    add(new Aggregation() {{
+                                        alignmentPeriod = "aut";
+                                        crossSeriesReducer = "REDUCE_MEAN";
+                                        groupByFields = new String[]{{
+                                            add("temporibus"),
+                                            add("laborum"),
+                                            add("quasi"),
+                                        }};
+                                        perSeriesAligner = "ALIGN_PERCENT_CHANGE";
+                                    }}),
+                                    add(new Aggregation() {{
+                                        alignmentPeriod = "voluptatibus";
+                                        crossSeriesReducer = "REDUCE_PERCENTILE_50";
+                                        groupByFields = new String[]{{
+                                            add("praesentium"),
+                                            add("voluptatibus"),
                                         }};
                                         perSeriesAligner = "ALIGN_DELTA";
                                     }}),
                                 }};
-                                comparison = "COMPARISON_EQ";
-                                denominatorAggregations = new openapisdk.models.shared.Aggregation[]() {{
+                                comparison = "COMPARISON_LE";
+                                denominatorAggregations = new org.openapis.openapi.models.shared.Aggregation[]{{
                                     add(new Aggregation() {{
-                                        alignmentPeriod = "beatae";
-                                        crossSeriesReducer = "REDUCE_COUNT_TRUE";
-                                        groupByFields = new String[]() {{
-                                            add("et"),
-                                            add("omnis"),
-                                            add("ipsum"),
-                                        }};
-                                        perSeriesAligner = "ALIGN_MEAN";
-                                    }}),
-                                    add(new Aggregation() {{
-                                        alignmentPeriod = "dolores";
-                                        crossSeriesReducer = "REDUCE_PERCENTILE_05";
-                                        groupByFields = new String[]() {{
-                                            add("rerum"),
-                                            add("mollitia"),
+                                        alignmentPeriod = "cum";
+                                        crossSeriesReducer = "REDUCE_NONE";
+                                        groupByFields = new String[]{{
+                                            add("reprehenderit"),
                                         }};
                                         perSeriesAligner = "ALIGN_MIN";
                                     }}),
+                                    add(new Aggregation() {{
+                                        alignmentPeriod = "maiores";
+                                        crossSeriesReducer = "REDUCE_MEAN";
+                                        groupByFields = new String[]{{
+                                            add("dolore"),
+                                            add("iusto"),
+                                        }};
+                                        perSeriesAligner = "ALIGN_RATE";
+                                    }}),
                                 }};
-                                denominatorFilter = "quam";
-                                duration = "reprehenderit";
-                                evaluationMissingData = "EVALUATION_MISSING_DATA_ACTIVE";
-                                filter = "qui";
+                                denominatorFilter = "harum";
+                                duration = "enim";
+                                evaluationMissingData = "EVALUATION_MISSING_DATA_NO_OP";
+                                filter = "commodi";
                                 forecastOptions = new ForecastOptions() {{
-                                    forecastHorizon = "unde";
+                                    forecastHorizon = "repudiandae";
                                 }};
-                                thresholdValue = 31.100000;
+                                thresholdValue = 641.47;
                                 trigger = new Trigger() {{
-                                    count = 8086159467323165929;
-                                    percent = 22.100000;
+                                    count = 216822;
+                                    percent = 6924.72;
                                 }};
                             }};
-                            displayName = "ab";
-                            name = "neque";
+                            displayName = "molestias";
+                            name = "excepturi";
                         }}),
                     }};
                     creationRecord = new MutationRecord() {{
-                        mutateTime = "ullam";
-                        mutatedBy = "et";
+                        mutateTime = "pariatur";
+                        mutatedBy = "modi";
                     }};
-                    displayName = "accusantium";
+                    displayName = "praesentium";
                     documentation = new Documentation() {{
-                        content = "esse";
-                        mimeType = "architecto";
+                        content = "rem";
+                        mimeType = "voluptates";
                     }};
                     enabled = false;
                     mutationRecord = new MutationRecord() {{
-                        mutateTime = "velit";
-                        mutatedBy = "cumque";
+                        mutateTime = "quasi";
+                        mutatedBy = "repudiandae";
                     }};
-                    name = "soluta";
-                    notificationChannels = new String[]() {{
-                        add("voluptates"),
-                        add("magni"),
+                    name = "sint";
+                    notificationChannels = new String[]{{
+                        add("itaque"),
                     }};
                     userLabels = new java.util.HashMap<String, String>() {{
-                        put("optio", "qui");
-                        put("earum", "illo");
-                        put("omnis", "ut");
+                        put("enim", "consequatur");
+                        put("est", "quibusdam");
                     }};
                     validity = new Status() {{
-                        code = 7442289190031176026;
-                        details = new java.util.HashMap<String, Object>[]() {{
+                        code = 131797;
+                        details = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("error", "reprehenderit");
-                                put("consectetur", "nostrum");
+                                put("quibusdam", "labore");
+                                put("modi", "qui");
+                                put("aliquid", "cupiditate");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("laboriosam", "sed");
+                                put("perferendis", "magni");
+                                put("assumenda", "ipsam");
+                                put("alias", "fugit");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("excepturi", "tempora");
+                                put("facilis", "tempore");
+                                put("labore", "delectus");
                             }}),
                         }};
-                        message = "a";
+                        message = "eum";
                     }};
                 }};
-            }};
+            }};            
 
             MonitoringProjectsAlertPoliciesCreateResponse res = sdk.projects.monitoringProjectsAlertPoliciesCreate(req);
 
@@ -227,6 +390,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### projects
 
@@ -268,7 +432,17 @@ public class Application {
 ### uptimeCheckIps
 
 * `monitoringUptimeCheckIpsList` - Returns the list of IP addresses that checkers run from
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

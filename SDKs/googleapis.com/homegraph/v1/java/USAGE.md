@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteSecurity;
+import org.openapis.openapi.models.operations.HomegraphAgentUsersDeletePathParams;
+import org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteQueryParams;
+import org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteRequest;
+import org.openapis.openapi.models.operations.HomegraphAgentUsersDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             HomegraphAgentUsersDeleteRequest req = new HomegraphAgentUsersDeleteRequest() {{
                 security = new HomegraphAgentUsersDeleteSecurity() {{
@@ -22,23 +30,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new HomegraphAgentUsersDeletePathParams() {{
-                    agentUserId = "sit";
+                    agentUserId = "corrupti";
                 }};
                 queryParams = new HomegraphAgentUsersDeleteQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    requestId = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    requestId = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             HomegraphAgentUsersDeleteResponse res = sdk.agentUsers.homegraphAgentUsersDelete(req);
 

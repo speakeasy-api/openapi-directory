@@ -2,31 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CurrenciesHistoryGETFormatEnum;
+import org.openapis.openapi.models.operations.CurrenciesHistoryGETQueryParams;
+import org.openapis.openapi.models.operations.CurrenciesHistoryGETRequest;
+import org.openapis.openapi.models.operations.CurrenciesHistoryGETResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    token = new SchemeToken() {{
+                        apiKey = "YOUR_API_KEY_HERE";
+                    }};
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetApiVVersionCurrenciesHistoryRequest req = new GetApiVVersionCurrenciesHistoryRequest() {{
-                pathParams = new GetApiVVersionCurrenciesHistoryPathParams() {{
-                    version = "sit";
-                }};
-                queryParams = new GetApiVVersionCurrenciesHistoryQueryParams() {{
-                    end = "2006-05-01T09:38:06Z";
+            CurrenciesHistoryGETRequest req = new CurrenciesHistoryGETRequest() {{
+                queryParams = new CurrenciesHistoryGETQueryParams() {{
+                    end = "2021-10-25T05:21:43.948Z";
                     format = "xml";
-                    interval = "expedita";
-                    pairs = "consequuntur";
-                    start = "2003-04-20T23:11:44Z";
-                    token = "expedita";
+                    interval = "quibusdam";
+                    pairs = "unde";
+                    start = "2021-05-14T08:28:11.899Z";
                 }};
-            }};
+            }};            
 
-            GetApiVVersionCurrenciesHistoryResponse res = sdk.currencies.getApiVVersionCurrenciesHistory(req);
+            CurrenciesHistoryGETResponse res = sdk.currencies.currenciesHistoryGET(req);
 
             if (res.intervalCollectionResponses.isPresent()) {
                 // handle response

@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteBinIdPathParams;
+import org.openapis.openapi.models.operations.DeleteBinIdRequest;
+import org.openapis.openapi.models.operations.DeleteBinIdResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeleteBinIdRequest req = new DeleteBinIdRequest() {{
                 pathParams = new DeleteBinIdPathParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
             DeleteBinIdResponse res = sdk.deleteBinId(req);
 

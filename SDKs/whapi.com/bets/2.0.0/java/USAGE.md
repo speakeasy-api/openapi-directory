@@ -2,30 +2,34 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CashinPathParams;
+import org.openapis.openapi.models.operations.CashinQueryParams;
+import org.openapis.openapi.models.operations.CashinHeaders;
+import org.openapis.openapi.models.operations.CashinRequest;
+import org.openapis.openapi.models.operations.CashinResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CashinRequest req = new CashinRequest() {{
                 pathParams = new CashinPathParams() {{
-                    betId = "sit";
+                    betId = "corrupti";
                 }};
                 queryParams = new CashinQueryParams() {{
-                    cashInValue = 14.200000;
-                    cashinBetDelayId = "expedita";
+                    cashInValue = 5928.45;
+                    cashinBetDelayId = "distinctio";
                 }};
                 headers = new CashinHeaders() {{
-                    apiKey = "consequuntur";
-                    apiSecret = "dolor";
-                    apiTicket = "expedita";
+                    apiKey = "quibusdam";
+                    apiSecret = "unde";
+                    apiTicket = "nulla";
                 }};
-            }};
+            }};            
 
             CashinResponse res = sdk.bets.cashin(req);
 

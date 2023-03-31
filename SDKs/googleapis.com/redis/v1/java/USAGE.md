@@ -2,15 +2,37 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateSecurity;
+import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreatePathParams;
+import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateQueryParams;
+import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateRequest;
+import org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateResponse;
+import org.openapis.openapi.models.shared.InstanceConnectModeEnum;
+import org.openapis.openapi.models.shared.InstanceReadReplicasModeEnum;
+import org.openapis.openapi.models.shared.InstanceSuspensionReasonsEnum;
+import org.openapis.openapi.models.shared.InstanceTierEnum;
+import org.openapis.openapi.models.shared.InstanceTransitEncryptionModeEnum;
+import org.openapis.openapi.models.shared.InstanceInput;
+import org.openapis.openapi.models.shared.PersistenceConfigPersistenceModeEnum;
+import org.openapis.openapi.models.shared.PersistenceConfigRdbSnapshotPeriodEnum;
+import org.openapis.openapi.models.shared.PersistenceConfigInput;
+import org.openapis.openapi.models.shared.MaintenanceScheduleInput;
+import org.openapis.openapi.models.shared.MaintenancePolicyInput;
+import org.openapis.openapi.models.shared.WeeklyMaintenanceWindowDayEnum;
+import org.openapis.openapi.models.shared.WeeklyMaintenanceWindowInput;
+import org.openapis.openapi.models.shared.TimeOfDay;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             RedisProjectsLocationsInstancesCreateRequest req = new RedisProjectsLocationsInstancesCreateRequest() {{
                 security = new RedisProjectsLocationsInstancesCreateSecurity() {{
@@ -22,91 +44,102 @@ public class Application {
                     }};
                 }};
                 pathParams = new RedisProjectsLocationsInstancesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new RedisProjectsLocationsInstancesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    instanceId = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    instanceId = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new InstanceInput() {{
-                    alternativeLocationId = "debitis";
-                    authEnabled = true;
-                    authorizedNetwork = "et";
-                    connectMode = "PRIVATE_SERVICE_ACCESS";
-                    customerManagedKey = "dolorem";
-                    displayName = "et";
-                    labels = new java.util.HashMap<String, String>() {{
-                        put("iste", "vitae");
+                    alternativeLocationId = "iure";
+                    authEnabled = false;
+                    authorizedNetwork = "magnam";
+                    availableMaintenanceVersions = new String[]{{
+                        add("ipsa"),
+                        add("delectus"),
+                        add("tempora"),
+                        add("suscipit"),
                     }};
-                    locationId = "totam";
+                    connectMode = "DIRECT_PEERING";
+                    customerManagedKey = "minus";
+                    displayName = "placeat";
+                    labels = new java.util.HashMap<String, String>() {{
+                        put("iusto", "excepturi");
+                        put("nisi", "recusandae");
+                        put("temporibus", "ab");
+                    }};
+                    locationId = "quis";
                     maintenancePolicy = new MaintenancePolicyInput() {{
-                        description = "dolores";
-                        weeklyMaintenanceWindow = new openapisdk.models.shared.WeeklyMaintenanceWindowInput[]() {{
+                        description = "veritatis";
+                        weeklyMaintenanceWindow = new org.openapis.openapi.models.shared.WeeklyMaintenanceWindowInput[]{{
                             add(new WeeklyMaintenanceWindowInput() {{
-                                day = "TUESDAY";
+                                day = "DAY_OF_WEEK_UNSPECIFIED";
                                 startTime = new TimeOfDay() {{
-                                    hours = 3706853784096366226;
-                                    minutes = 2627038740284806767;
-                                    nanos = 6303220950515014660;
-                                    seconds = 4035568504096476779;
-                                }};
-                            }}),
-                            add(new WeeklyMaintenanceWindowInput() {{
-                                day = "FRIDAY";
-                                startTime = new TimeOfDay() {{
-                                    hours = 2914295034816259174;
-                                    minutes = 1395437218309923052;
-                                    nanos = 6745438398739480977;
-                                    seconds = 2897681629866238117;
+                                    hours = 368241;
+                                    minutes = 832620;
+                                    nanos = 957156;
+                                    seconds = 778157;
                                 }};
                             }}),
                             add(new WeeklyMaintenanceWindowInput() {{
                                 day = "MONDAY";
                                 startTime = new TimeOfDay() {{
-                                    hours = 5974317550424871033;
-                                    minutes = 3317123977833389635;
-                                    nanos = 5001958211167890979;
-                                    seconds = 167566062957544642;
+                                    hours = 870013;
+                                    minutes = 870088;
+                                    nanos = 978619;
+                                    seconds = 473608;
+                                }};
+                            }}),
+                            add(new WeeklyMaintenanceWindowInput() {{
+                                day = "SATURDAY";
+                                startTime = new TimeOfDay() {{
+                                    hours = 800911;
+                                    minutes = 461479;
+                                    nanos = 520478;
+                                    seconds = 780529;
                                 }};
                             }}),
                         }};
                     }};
                     maintenanceSchedule = new MaintenanceScheduleInput() {{
-                        canReschedule = true;
+                        canReschedule = false;
                     }};
-                    memorySizeGb = 1059542851699319360;
-                    name = "illo";
+                    maintenanceVersion = "dolorum";
+                    memorySizeGb = 118274;
+                    name = "nam";
                     persistenceConfig = new PersistenceConfigInput() {{
-                        persistenceMode = "RDB";
-                        rdbSnapshotPeriod = "TWENTY_FOUR_HOURS";
-                        rdbSnapshotStartTime = "autem";
+                        persistenceMode = "DISABLED";
+                        rdbSnapshotPeriod = "SIX_HOURS";
+                        rdbSnapshotStartTime = "fugit";
                     }};
-                    readReplicasMode = "READ_REPLICAS_MODE_UNSPECIFIED";
+                    readReplicasMode = "READ_REPLICAS_DISABLED";
                     redisConfigs = new java.util.HashMap<String, String>() {{
-                        put("odio", "qui");
+                        put("optio", "totam");
+                        put("beatae", "commodi");
+                        put("molestiae", "modi");
+                        put("qui", "impedit");
                     }};
-                    redisVersion = "recusandae";
-                    replicaCount = 7561811714888168464;
+                    redisVersion = "cum";
+                    replicaCount = 456150;
                     reservedIpRange = "ipsum";
-                    secondaryIpRange = "eveniet";
-                    suspensionReasons = new openapisdk.models.shared.InstanceSuspensionReasonsEnum[]() {{
+                    secondaryIpRange = "excepturi";
+                    suspensionReasons = new org.openapis.openapi.models.shared.InstanceSuspensionReasonsEnum[]{{
                         add("SUSPENSION_REASON_UNSPECIFIED"),
-                        add("CUSTOMER_MANAGED_KEY_ISSUE"),
                     }};
-                    tier = "STANDARD_HA";
-                    transitEncryptionMode = "DISABLED";
+                    tier = "TIER_UNSPECIFIED";
+                    transitEncryptionMode = "SERVER_AUTHENTICATION";
                 }};
-            }};
+            }};            
 
             RedisProjectsLocationsInstancesCreateResponse res = sdk.projects.redisProjectsLocationsInstancesCreate(req);
 

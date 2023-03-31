@@ -2,27 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ExtensionConfigurationHeaders;
+import org.openapis.openapi.models.operations.ExtensionConfigurationRequest;
+import org.openapis.openapi.models.operations.ExtensionConfigurationResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ExtensionConfigurationRequest req = new ExtensionConfigurationRequest() {{
                 headers = new ExtensionConfigurationHeaders() {{
-                    acceptLanguage = "sit";
-                    cacheControl = "voluptas";
-                    ifNoneMatch = "culpa";
-                    requestTimeout = 6.200000;
-                    userAgent = "dolor";
-                    xApplecloudextensionRetryCount = 67.199997;
-                    xApplecloudextensionSessionId = "fugit";
+                    acceptLanguage = "corrupti";
+                    cacheControl = "provident";
+                    ifNoneMatch = "distinctio";
+                    requestTimeout = 8442.66;
+                    userAgent = "unde";
+                    xApplecloudextensionRetryCount = 8579.46;
+                    xApplecloudextensionSessionId = "corrupti";
                 }};
-            }};
+            }};            
 
             ExtensionConfigurationResponse res = sdk.config.extensionConfiguration(req);
 

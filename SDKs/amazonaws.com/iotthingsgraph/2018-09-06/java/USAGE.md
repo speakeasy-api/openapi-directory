@@ -2,41 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateEntityToThingXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AssociateEntityToThingHeaders;
+import org.openapis.openapi.models.operations.AssociateEntityToThingRequest;
+import org.openapis.openapi.models.operations.AssociateEntityToThingResponse;
+import org.openapis.openapi.models.shared.AssociateEntityToThingRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateEntityToThingRequest req = new AssociateEntityToThingRequest() {{
                 headers = new AssociateEntityToThingHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "IotThingsGraphFrontEndService.AssociateEntityToThing";
                 }};
                 request = new AssociateEntityToThingRequest() {{
-                    entityId = "fugit";
-                    namespaceVersion = 1543572285742637646;
-                    thingName = "nihil";
+                    entityId = "illum";
+                    namespaceVersion = 423655;
+                    thingName = "error";
                 }};
-            }};
+            }};            
 
             AssociateEntityToThingResponse res = sdk.associateEntityToThing(req);
 

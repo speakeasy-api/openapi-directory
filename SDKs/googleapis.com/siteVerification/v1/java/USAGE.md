@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteSecurity;
+import org.openapis.openapi.models.operations.SiteVerificationWebResourceDeletePathParams;
+import org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteQueryParams;
+import org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteRequest;
+import org.openapis.openapi.models.operations.SiteVerificationWebResourceDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             SiteVerificationWebResourceDeleteRequest req = new SiteVerificationWebResourceDeleteRequest() {{
                 security = new SiteVerificationWebResourceDeleteSecurity() {{
@@ -22,18 +29,18 @@ public class Application {
                     }};
                 }};
                 pathParams = new SiteVerificationWebResourceDeletePathParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
                 queryParams = new SiteVerificationWebResourceDeleteQueryParams() {{
                     alt = "json";
-                    fields = "culpa";
-                    key = "expedita";
-                    oauthToken = "consequuntur";
+                    fields = "provident";
+                    key = "distinctio";
+                    oauthToken = "quibusdam";
                     prettyPrint = false;
-                    quotaUser = "expedita";
-                    userIp = "voluptas";
+                    quotaUser = "unde";
+                    userIp = "nulla";
                 }};
-            }};
+            }};            
 
             SiteVerificationWebResourceDeleteResponse res = sdk.webResource.siteVerificationWebResourceDelete(req);
 

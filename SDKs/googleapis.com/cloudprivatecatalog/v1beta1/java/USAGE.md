@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchSecurity;
+import org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchPathParams;
+import org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchQueryParams;
+import org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchRequest;
+import org.openapis.openapi.models.operations.CloudprivatecatalogOrganizationsCatalogsSearchResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudprivatecatalogOrganizationsCatalogsSearchRequest req = new CloudprivatecatalogOrganizationsCatalogsSearchRequest() {{
                 security = new CloudprivatecatalogOrganizationsCatalogsSearchSecurity() {{
@@ -22,25 +30,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudprivatecatalogOrganizationsCatalogsSearchPathParams() {{
-                    resource = "sit";
+                    resource = "corrupti";
                 }};
                 queryParams = new CloudprivatecatalogOrganizationsCatalogsSearchQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    pageSize = 8274930044578894929;
-                    pageToken = "et";
-                    prettyPrint = true;
-                    query = "rerum";
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    pageSize = 423655;
+                    pageToken = "error";
+                    prettyPrint = false;
+                    query = "deserunt";
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-            }};
+            }};            
 
             CloudprivatecatalogOrganizationsCatalogsSearchResponse res = sdk.organizations.cloudprivatecatalogOrganizationsCatalogsSearch(req);
 

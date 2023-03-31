@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,44 +15,46 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateGroupXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateGroupHeaders;
+import org.openapis.openapi.models.operations.CreateGroupRequest;
+import org.openapis.openapi.models.operations.CreateGroupResponse;
+import org.openapis.openapi.models.shared.CreateGroupRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            DescribeGroupRequest req = new DescribeGroupRequest() {{
-                headers = new DescribeGroupHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
-                    xAmzTarget = "AWSIdentityStore.DescribeGroup";
+            CreateGroupRequest req = new CreateGroupRequest() {{
+                headers = new CreateGroupHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
+                    xAmzTarget = "AWSIdentityStore.CreateGroup";
                 }};
-                request = new DescribeGroupRequest() {{
-                    groupId = "fugit";
-                    identityStoreId = "et";
+                request = new CreateGroupRequest() {{
+                    description = "illum";
+                    displayName = "vel";
+                    identityStoreId = "error";
                 }};
-            }};
+            }};            
 
-            DescribeGroupResponse res = sdk.describeGroup(req);
+            CreateGroupResponse res = sdk.createGroup(req);
 
-            if (res.describeGroupResponse.isPresent()) {
+            if (res.createGroupResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -66,11 +68,36 @@ public class Application {
 
 ### SDK SDK
 
+* `createGroup` - Creates a group within the specified identity store.
+* `createGroupMembership` - Creates a relationship between a member and a group. The following identifiers must be specified: <code>GroupId</code>, <code>IdentityStoreId</code>, and <code>MemberId</code>.
+* `createUser` - Creates a new user within the specified identity store.
+* `deleteGroup` - Delete a group within an identity store given <code>GroupId</code>.
+* `deleteGroupMembership` - Delete a membership within a group given <code>MembershipId</code>.
+* `deleteUser` - Deletes a user within an identity store given <code>UserId</code>.
 * `describeGroup` - Retrieves the group metadata and attributes from <code>GroupId</code> in an identity store.
-* `describeUser` - Retrieves the user metadata and attributes from <code>UserId</code> in an identity store.
-* `listGroups` - Lists the attribute name and value of the group that you specified in the search. We only support <code>DisplayName</code> as a valid filter attribute path currently, and filter is required. This API returns minimum attributes, including <code>GroupId</code> and group <code>DisplayName</code> in the response.
-* `listUsers` - Lists the attribute name and value of the user that you specified in the search. We only support <code>UserName</code> as a valid filter attribute path currently, and filter is required. This API returns minimum attributes, including <code>UserId</code> and <code>UserName</code> in the response.
-
+* `describeGroupMembership` - Retrieves membership metadata and attributes from <code>MembershipId</code> in an identity store.
+* `describeUser` - Retrieves the user metadata and attributes from the <code>UserId</code> in an identity store.
+* `getGroupId` - Retrieves <code>GroupId</code> in an identity store.
+* `getGroupMembershipId` - Retrieves the <code>MembershipId</code> in an identity store.
+* `getUserId` - Retrieves the <code>UserId</code> in an identity store.
+* `isMemberInGroups` - Checks the user's membership in all requested groups and returns if the member exists in all queried groups.
+* `listGroupMemberships` - For the specified group in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
+* `listGroupMembershipsForMember` - For the specified member in the specified identity store, returns the list of all <code>GroupMembership</code> objects and returns results in paginated form.
+* `listGroups` - Lists all groups in the identity store. Returns a paginated list of complete <code>Group</code> objects. Filtering for a <code>Group</code> by the <code>DisplayName</code> attribute is deprecated. Instead, use the <code>GetGroupId</code> API action.
+* `listUsers` - Lists all users in the identity store. Returns a paginated list of complete <code>User</code> objects. Filtering for a <code>User</code> by the <code>UserName</code> attribute is deprecated. Instead, use the <code>GetUserId</code> API action.
+* `updateGroup` - For the specified group in the specified identity store, updates the group metadata and attributes.
+* `updateUser` - For the specified user in the specified identity store, updates the user metadata and attributes.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

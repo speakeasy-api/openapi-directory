@@ -2,32 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSPathParams;
+import org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSQueryParams;
+import org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSRequest;
+import org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetArrivalsAndDeparturesByCrsRequest req = new GetArrivalsAndDeparturesByCrsRequest() {{
-                pathParams = new GetArrivalsAndDeparturesByCrsPathParams() {{
-                    crs = "sit";
+            GetArrivalsAndDeparturesByCRSRequest req = new GetArrivalsAndDeparturesByCRSRequest() {{
+                pathParams = new GetArrivalsAndDeparturesByCRSPathParams() {{
+                    crs = "corrupti";
                 }};
-                queryParams = new GetArrivalsAndDeparturesByCrsQueryParams() {{
-                    apiKey = "voluptas";
-                    filterStation = "culpa";
-                    filterType = "expedita";
-                    numServices = 3390393562759376202;
+                queryParams = new GetArrivalsAndDeparturesByCRSQueryParams() {{
+                    apiKey = "provident";
+                    filterStation = "distinctio";
+                    filterType = "quibusdam";
+                    numServices = 602763;
                     serviceDetails = false;
-                    timeOffset = 1774932891286980153;
-                    timeWindow = 6044372234677422456;
+                    timeOffset = 857946;
+                    timeWindow = 544883;
                 }};
-            }};
+            }};            
 
-            GetArrivalsAndDeparturesByCrsResponse res = sdk.departuresAndArrivals.getArrivalsAndDeparturesByCrs(req);
+            GetArrivalsAndDeparturesByCRSResponse res = sdk.departuresAndArrivals.getArrivalsAndDeparturesByCRS(req);
 
             if (res.statusCode == 200) {
                 // handle response

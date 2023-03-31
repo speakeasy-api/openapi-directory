@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,199 +15,64 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SaveStatsRequest;
+import org.openapis.openapi.models.operations.SaveStatsResponse;
+import org.openapis.openapi.models.shared.SaveStatsRequestBody;
+import org.openapis.openapi.models.shared.AttemptStreamStats;
+import org.openapis.openapi.models.shared.AttemptStats;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            builder.setSecurity(
-                new Security() {{
-                    bearerAuth = new SchemeBearerAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
+            SaveStatsRequest req = new SaveStatsRequest() {{
+                request = new SaveStatsRequestBody() {{
+                    attemptNumber = 548814;
+                    jobId = 592845;
+                    stats = new AttemptStats() {{
+                        bytesEmitted = 715190;
+                        estimatedBytes = 844266;
+                        estimatedRecords = 602763;
+                        recordsCommitted = 857946;
+                        recordsEmitted = 544883;
+                        stateMessagesEmitted = 847252;
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
-
-            CreateConnectionRequest req = new CreateConnectionRequest() {{
-                request = new ConnectionCreate() {{
-                    destinationId = "sit";
-                    name = "voluptas";
-                    namespaceDefinition = "destination";
-                    namespaceFormat = "expedita";
-                    operationIds = new String[]() {{
-                        add("dolor"),
-                        add("expedita"),
-                        add("voluptas"),
-                    }};
-                    prefix = "fugit";
-                    resourceRequirements = new ResourceRequirements() {{
-                        cpuLimit = "et";
-                        cpuRequest = "nihil";
-                        memoryLimit = "rerum";
-                        memoryRequest = "dicta";
-                    }};
-                    schedule = new ConnectionSchedule() {{
-                        timeUnit = "weeks";
-                        units = 5617773211005988520;
-                    }};
-                    sourceId = "et";
-                    status = "deprecated";
-                    syncCatalog = new AirbyteCatalog() {{
-                        streams = new openapisdk.models.shared.AirbyteStreamAndConfiguration[]() {{
-                            add(new AirbyteStreamAndConfiguration() {{
-                                config = new AirbyteStreamConfiguration() {{
-                                    aliasName = "et";
-                                    cursorField = new String[]() {{
-                                        add("iste"),
-                                    }};
-                                    destinationSyncMode = "append";
-                                    primaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("illum"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("vel"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("dolore"),
-                                        }}),
-                                    }};
-                                    selected = false;
-                                    syncMode = "incremental";
-                                }};
-                                stream = new AirbyteStream() {{
-                                    defaultCursorField = new String[]() {{
-                                        add("totam"),
-                                        add("commodi"),
-                                        add("quis"),
-                                    }};
-                                    jsonSchema = new java.util.HashMap<String, Object>() {{
-                                        put("aut", "odit");
-                                        put("non", "voluptas");
-                                    }};
-                                    name = "omnis";
-                                    namespace = "aut";
-                                    sourceDefinedCursor = true;
-                                    sourceDefinedPrimaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("autem"),
-                                            add("consectetur"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("odio"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("recusandae"),
-                                        }}),
-                                    }};
-                                    supportedSyncModes = new openapisdk.models.shared.SyncModeEnum[]() {{
-                                        add("full_refresh"),
-                                        add("full_refresh"),
-                                    }};
-                                }};
-                            }}),
-                            add(new AirbyteStreamAndConfiguration() {{
-                                config = new AirbyteStreamConfiguration() {{
-                                    aliasName = "modi";
-                                    cursorField = new String[]() {{
-                                        add("inventore"),
-                                    }};
-                                    destinationSyncMode = "append_dedup";
-                                    primaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("reprehenderit"),
-                                            add("tempore"),
-                                            add("maiores"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("dolor"),
-                                            add("beatae"),
-                                            add("veritatis"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("et"),
-                                            add("omnis"),
-                                            add("ipsum"),
-                                        }}),
-                                    }};
-                                    selected = true;
-                                    syncMode = "full_refresh";
-                                }};
-                                stream = new AirbyteStream() {{
-                                    defaultCursorField = new String[]() {{
-                                        add("vel"),
-                                    }};
-                                    jsonSchema = new java.util.HashMap<String, Object>() {{
-                                        put("mollitia", "voluptas");
-                                        put("quam", "reprehenderit");
-                                        put("qui", "qui");
-                                    }};
-                                    name = "unde";
-                                    namespace = "in";
-                                    sourceDefinedCursor = false;
-                                    sourceDefinedPrimaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("itaque"),
-                                            add("ab"),
-                                            add("neque"),
-                                        }}),
-                                    }};
-                                    supportedSyncModes = new openapisdk.models.shared.SyncModeEnum[]() {{
-                                        add("full_refresh"),
-                                        add("full_refresh"),
-                                        add("full_refresh"),
-                                    }};
-                                }};
-                            }}),
-                            add(new AirbyteStreamAndConfiguration() {{
-                                config = new AirbyteStreamConfiguration() {{
-                                    aliasName = "architecto";
-                                    cursorField = new String[]() {{
-                                        add("velit"),
-                                    }};
-                                    destinationSyncMode = "overwrite";
-                                    primaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("voluptates"),
-                                            add("magni"),
-                                        }}),
-                                    }};
-                                    selected = false;
-                                    syncMode = "incremental";
-                                }};
-                                stream = new AirbyteStream() {{
-                                    defaultCursorField = new String[]() {{
-                                        add("earum"),
-                                    }};
-                                    jsonSchema = new java.util.HashMap<String, Object>() {{
-                                        put("omnis", "ut");
-                                    }};
-                                    name = "consequatur";
-                                    namespace = "dolor";
-                                    sourceDefinedCursor = true;
-                                    sourceDefinedPrimaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("consectetur"),
-                                        }}),
-                                    }};
-                                    supportedSyncModes = new openapisdk.models.shared.SyncModeEnum[]() {{
-                                        add("incremental"),
-                                    }};
-                                }};
-                            }}),
-                        }};
+                    streamStats = new org.openapis.openapi.models.shared.AttemptStreamStats[]{{
+                        add(new AttemptStreamStats() {{
+                            stats = new AttemptStats() {{
+                                bytesEmitted = 623564;
+                                estimatedBytes = 645894;
+                                estimatedRecords = 384382;
+                                recordsCommitted = 437587;
+                                recordsEmitted = 297534;
+                                stateMessagesEmitted = 891773;
+                            }};
+                            streamName = "ipsa";
+                            streamNamespace = "delectus";
+                        }}),
+                        add(new AttemptStreamStats() {{
+                            stats = new AttemptStats() {{
+                                bytesEmitted = 272656;
+                                estimatedBytes = 383441;
+                                estimatedRecords = 477665;
+                                recordsCommitted = 791725;
+                                recordsEmitted = 812169;
+                                stateMessagesEmitted = 528895;
+                            }};
+                            streamName = "iusto";
+                            streamNamespace = "excepturi";
+                        }}),
                     }};
                 }};
-            }};
+            }};            
 
-            CreateConnectionResponse res = sdk.connection.createConnection(req);
+            SaveStatsResponse res = sdk.attempt.saveStats(req);
 
-            if (res.connectionRead.isPresent()) {
+            if (res.internalOperationResult.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -219,52 +84,83 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
+### attempt
+
+* `saveStats` - For worker to set sync stats of a running attempt.
+* `saveSyncConfig` - For worker to save the AttemptSyncConfig for an attempt.
+* `setWorkflowInAttempt` - For worker to register the workflow id in attempt.
+
 ### connection
 
 * `createConnection` - Create a connection between a source and a destination
 * `deleteConnection` - Delete a connection
 * `getConnection` - Get a connection
-* `getState` - Fetch the current state for a connection.
+* `listAllConnectionsForWorkspace` - Returns all connections for a workspace, including deleted connections.
 * `listConnectionsForWorkspace` - Returns all connections for a workspace.
 * `resetConnection` - Reset the data for the connection. Deletes data generated by the connection in the destination. Resets any cursors back to initial state.
+* `searchConnections` - Search connections
 * `syncConnection` - Trigger a manual sync of the connection
 * `updateConnection` - Update a connection
-
-### deployment
-
-* `exportArchive` - Export Airbyte Configuration and Data Archive
-* `importArchive` - Import Airbyte Configuration and Data Archive
 
 ### destination
 
 * `checkConnectionToDestination` - Check connection to the destination
 * `checkConnectionToDestinationForUpdate` - Check connection for a proposed update to a destination
+* `cloneDestination` - Clone destination
 * `createDestination` - Create a destination
 * `deleteDestination` - Delete the destination
 * `getDestination` - Get configured destination
 * `listDestinationsForWorkspace` - List configured destinations for a workspace
+* `searchDestinations` - Search destinations
 * `updateDestination` - Update a destination
 
-### destination_definition
+### destinationDefinition
 
-* `createDestinationDefinition` - Creates a destinationsDefinition
+* `createCustomDestinationDefinition` - Creates a custom destinationDefinition for the given workspace
+* `deleteDestinationDefinition` - Delete a destination definition
 * `getDestinationDefinition` - Get destinationDefinition
+* `getDestinationDefinitionForWorkspace` - Get a destinationDefinition that is configured for the given workspace
+* `grantDestinationDefinitionToWorkspace` - grant a private, non-custom destinationDefinition to a given workspace
 * `listDestinationDefinitions` - List all the destinationDefinitions the current Airbyte deployment is configured to use
+* `listDestinationDefinitionsForWorkspace` - List all the destinationDefinitions the given workspace is configured to use
 * `listLatestDestinationDefinitions` - List the latest destinationDefinitions Airbyte supports
+* `listPrivateDestinationDefinitions` - List all private, non-custom destinationDefinitions, and for each indicate whether the given workspace has a grant for using the definition. Used by admins to view and modify a given workspace's grants.
+* `revokeDestinationDefinitionFromWorkspace` - revoke a grant to a private, non-custom destinationDefinition from a given workspace
 * `updateDestinationDefinition` - Update destinationDefinition
 
-### destination_definition_specification
+### destinationDefinitionSpecification
 
 * `getDestinationDefinitionSpecification` - Get specification for a destinationDefinition
+
+### destinationOauth
+
+* `completeDestinationOAuth` - Given a destination def ID generate an access/refresh token etc.
+* `getDestinationOAuthConsent` - Given a destination connector definition ID, return the URL to the consent screen where to redirect the user to.
+* `setInstancewideDestinationOauthParams` - Sets instancewide variables to be used for the oauth flow when creating this destination. When set, these variables will be injected into a connector's configuration before any interaction with the connector image itself. This enables running oauth flows with consistent variables e.g: the company's Google Ads developer_token, client_id, and client_secret without the user having to know about these variables.
+
 
 ### health
 
 * `getHealthCheck` - Health Check
 
+### internal
+
+* `createOrUpdateState` - Create or update the state for a connection.
+* `getAttemptNormalizationStatusesForJob` - Get normalization status to determine if we can bypass normalization phase
+* `saveStats` - For worker to set sync stats of a running attempt.
+* `saveSyncConfig` - For worker to save the AttemptSyncConfig for an attempt.
+* `setWorkflowInAttempt` - For worker to register the workflow id in attempt.
+* `writeDiscoverCatalogResult` - Should only called from worker, to write result from discover activity back to DB.
+
 ### jobs
 
 * `cancelJob` - Cancels a job
+* `getAttemptNormalizationStatusesForJob` - Get normalization status to determine if we can bypass normalization phase
+* `getJobDebugInfo` - Gets all information needed to debug this job
 * `getJobInfo` - Get information about a job
+* `getJobInfoLight` - Get information about a job excluding attempt info and logs
+* `getLastReplicationJob`
 * `listJobsFor` - Returns recent jobs for a connection. Jobs are returned in descending order by createdAt.
 
 ### logs
@@ -298,32 +194,60 @@ public class Application {
 
 * `checkConnectionToSource` - Check connection to the source
 * `checkConnectionToSourceForUpdate` - Check connection for a proposed update to a source
+* `cloneSource` - Clone source
 * `createSource` - Create a source
 * `deleteSource` - Delete a source
 * `discoverSchemaForSource` - Discover the schema catalog of the source
+* `getMostRecentSourceActorCatalog` - Get most recent ActorCatalog for source
 * `getSource` - Get source
 * `listSourcesForWorkspace` - List sources for workspace
+* `searchSources` - Search sources
 * `updateSource` - Update a source
+* `writeDiscoverCatalogResult` - Should only called from worker, to write result from discover activity back to DB.
 
-### source_definition
+### sourceDefinition
 
-* `createSourceDefinition` - Creates a sourceDefinition
+* `createCustomSourceDefinition` - Creates a custom sourceDefinition for the given workspace
+* `deleteSourceDefinition` - Delete a source definition
 * `getSourceDefinition` - Get source
+* `getSourceDefinitionForWorkspace` - Get a sourceDefinition that is configured for the given workspace
+* `grantSourceDefinitionToWorkspace` - grant a private, non-custom sourceDefinition to a given workspace
 * `listLatestSourceDefinitions` - List the latest sourceDefinitions Airbyte supports
+* `listPrivateSourceDefinitions` - List all private, non-custom sourceDefinitions, and for each indicate whether the given workspace has a grant for using the definition. Used by admins to view and modify a given workspace's grants.
 * `listSourceDefinitions` - List all the sourceDefinitions the current Airbyte deployment is configured to use
+* `listSourceDefinitionsForWorkspace` - List all the sourceDefinitions the given workspace is configured to use
+* `revokeSourceDefinitionFromWorkspace` - revoke a grant to a private, non-custom sourceDefinition from a given workspace
 * `updateSourceDefinition` - Update a sourceDefinition
 
-### source_definition_specification
+### sourceDefinitionSpecification
 
 * `getSourceDefinitionSpecification` - Get specification for a SourceDefinition.
 
-### web_backend
+### sourceOauth
 
+* `completeSourceOAuth` - Given a source def ID generate an access/refresh token etc.
+* `getSourceOAuthConsent` - Given a source connector definition ID, return the URL to the consent screen where to redirect the user to.
+* `setInstancewideSourceOauthParams` - Sets instancewide variables to be used for the oauth flow when creating this source. When set, these variables will be injected into a connector's configuration before any interaction with the connector image itself. This enables running oauth flows with consistent variables e.g: the company's Google Ads developer_token, client_id, and client_secret without the user having to know about these variables.
+
+
+### state
+
+* `createOrUpdateState` - Create or update the state for a connection.
+* `getState` - Fetch the current state for a connection.
+
+### webBackend
+
+* `getStateType` - Fetch the current state type for a connection.
+* `webBackendCheckUpdates` - Returns a summary of source and destination definitions that could be updated.
 * `webBackendCreateConnection` - Create a connection
 * `webBackendGetConnection` - Get a connection
-* `webBackendListConnectionsForWorkspace` - Returns all connections for a workspace.
-* `webBackendRecreateDestination` - Recreate a destination
-* `webBackendRecreateSource` - Recreate a source
+* `webBackendGetWorkspaceState` - Returns the current state of a workspace
+* `webBackendListConnectionsForWorkspace` - Returns all non-deleted connections for a workspace.
+* `webBackendListGeographies` - Returns available geographies can be selected to run data syncs in a particular geography.
+The 'auto' entry indicates that the sync will be automatically assigned to a geography according
+to the platform default behavior. Entries other than 'auto' are two-letter country codes that
+follow the ISO 3166-1 alpha-2 standard.
+
 * `webBackendUpdateConnection` - Update a connection
 
 ### workspace
@@ -331,10 +255,23 @@ public class Application {
 * `createWorkspace` - Creates a workspace
 * `deleteWorkspace` - Deletes a workspace
 * `getWorkspace` - Find workspace by ID
+* `getWorkspaceByConnectionId` - Find workspace by connection id
 * `getWorkspaceBySlug` - Find workspace by slug
 * `listWorkspaces` - List all workspaces registered in the current Airbyte deployment
 * `updateWorkspace` - Update workspace state
-
+* `updateWorkspaceFeedback` - Update workspace feedback state
+* `updateWorkspaceName` - Update workspace name
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

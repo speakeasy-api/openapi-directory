@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,35 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateSecurity;
+import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreatePathParams;
+import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateQueryParams;
+import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateRequest;
+import org.openapis.openapi.models.operations.CloudschedulerProjectsLocationsJobsCreateResponse;
+import org.openapis.openapi.models.shared.JobStateEnum;
+import org.openapis.openapi.models.shared.Job;
+import org.openapis.openapi.models.shared.Status;
+import org.openapis.openapi.models.shared.RetryConfig;
+import org.openapis.openapi.models.shared.PubsubTarget;
+import org.openapis.openapi.models.shared.HttpTargetHttpMethodEnum;
+import org.openapis.openapi.models.shared.HttpTarget;
+import org.openapis.openapi.models.shared.OidcToken;
+import org.openapis.openapi.models.shared.OAuthToken;
+import org.openapis.openapi.models.shared.AppEngineHttpTargetHttpMethodEnum;
+import org.openapis.openapi.models.shared.AppEngineHttpTarget;
+import org.openapis.openapi.models.shared.AppEngineRouting;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudschedulerProjectsLocationsJobsCreateRequest req = new CloudschedulerProjectsLocationsJobsCreateRequest() {{
                 security = new CloudschedulerProjectsLocationsJobsCreateSecurity() {{
@@ -35,91 +55,94 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudschedulerProjectsLocationsJobsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new CloudschedulerProjectsLocationsJobsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new Job() {{
                     appEngineHttpTarget = new AppEngineHttpTarget() {{
                         appEngineRouting = new AppEngineRouting() {{
-                            host = "dicta";
-                            instance = "debitis";
-                            service = "voluptatum";
-                            version = "et";
+                            host = "suscipit";
+                            instance = "iure";
+                            service = "magnam";
+                            version = "debitis";
                         }};
-                        body = "ut";
+                        body = "ipsa";
                         headers = new java.util.HashMap<String, String>() {{
-                            put("et", "voluptate");
-                            put("iste", "vitae");
-                            put("totam", "dolores");
+                            put("tempora", "suscipit");
+                            put("molestiae", "minus");
+                            put("placeat", "voluptatum");
+                            put("iusto", "excepturi");
                         }};
-                        httpMethod = "POST";
-                        relativeUri = "debitis";
+                        httpMethod = "HEAD";
+                        relativeUri = "recusandae";
                     }};
-                    attemptDeadline = "vel";
-                    description = "odio";
+                    attemptDeadline = "temporibus";
+                    description = "ab";
                     httpTarget = new HttpTarget() {{
-                        body = "dolore";
+                        body = "quis";
                         headers = new java.util.HashMap<String, String>() {{
-                            put("aspernatur", "accusantium");
-                            put("totam", "commodi");
+                            put("deserunt", "perferendis");
                         }};
-                        httpMethod = "PATCH";
+                        httpMethod = "GET";
                         oauthToken = new OAuthToken() {{
-                            scope = "est";
-                            serviceAccountEmail = "aut";
+                            scope = "repellendus";
+                            serviceAccountEmail = "sapiente";
                         }};
                         oidcToken = new OidcToken() {{
-                            audience = "odit";
-                            serviceAccountEmail = "non";
+                            audience = "quo";
+                            serviceAccountEmail = "odit";
                         }};
-                        uri = "voluptas";
+                        uri = "https://trim-wheat.info";
                     }};
-                    lastAttemptTime = "omnis";
-                    name = "aut";
+                    lastAttemptTime = "quod";
+                    name = "quod";
                     pubsubTarget = new PubsubTarget() {{
                         attributes = new java.util.HashMap<String, String>() {{
-                            put("sed", "officiis");
+                            put("totam", "porro");
+                            put("dolorum", "dicta");
                         }};
-                        data = "autem";
-                        topicName = "consectetur";
+                        data = "nam";
+                        topicName = "officia";
                     }};
                     retryConfig = new RetryConfig() {{
-                        maxBackoffDuration = "nobis";
-                        maxDoublings = 4345851588384648695;
-                        maxRetryDuration = "qui";
-                        minBackoffDuration = "recusandae";
-                        retryCount = 7561811714888168464;
+                        maxBackoffDuration = "occaecati";
+                        maxDoublings = 143353;
+                        maxRetryDuration = "deleniti";
+                        minBackoffDuration = "hic";
+                        retryCount = 758616;
                     }};
-                    schedule = "ipsum";
-                    scheduleTime = "eveniet";
-                    state = "UPDATE_FAILED";
+                    schedule = "totam";
+                    scheduleTime = "beatae";
+                    state = "PAUSED";
                     status = new Status() {{
-                        code = 7338728586234333996;
-                        details = new java.util.HashMap<String, Object>[]() {{
+                        code = 473600;
+                        details = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("exercitationem", "aut");
-                                put("reprehenderit", "tempore");
-                                put("maiores", "incidunt");
+                                put("impedit", "cum");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("ipsum", "excepturi");
+                                put("aspernatur", "perferendis");
                             }}),
                         }};
-                        message = "dolor";
+                        message = "ad";
                     }};
-                    timeZone = "beatae";
-                    userUpdateTime = "veritatis";
+                    timeZone = "natus";
+                    userUpdateTime = "sed";
                 }};
-            }};
+            }};            
 
             CloudschedulerProjectsLocationsJobsCreateResponse res = sdk.projects.cloudschedulerProjectsLocationsJobsCreate(req);
 
@@ -135,6 +158,7 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
 * `cloudschedulerProjectsLocationsJobsCreate` - Creates a job.
@@ -146,7 +170,17 @@ public class Application {
 * `cloudschedulerProjectsLocationsJobsResume` - Resume a job. This method reenables a job after it has been Job.State.PAUSED. The state of a job is stored in Job.state; after calling this method it will be set to Job.State.ENABLED. A job must be in Job.State.PAUSED to be resumed.
 * `cloudschedulerProjectsLocationsJobsRun` - Forces a job to run now. When this method is called, Cloud Scheduler will dispatch the job, even if the job is already running.
 * `cloudschedulerProjectsLocationsList` - Lists information about the supported locations for this service.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,47 +2,50 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateTokenHeaders;
+import org.openapis.openapi.models.operations.CreateTokenRequestBody;
+import org.openapis.openapi.models.operations.CreateTokenRequest;
+import org.openapis.openapi.models.operations.CreateTokenResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateTokenRequest req = new CreateTokenRequest() {{
                 headers = new CreateTokenHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateTokenRequestBody() {{
-                    clientId = "voluptas";
-                    clientSecret = "fugit";
-                    code = "et";
-                    deviceCode = "nihil";
-                    grantType = "rerum";
-                    redirectUri = "dicta";
-                    refreshToken = "debitis";
-                    scope = new String[]() {{
-                        add("et"),
+                    clientId = "illum";
+                    clientSecret = "vel";
+                    code = "error";
+                    deviceCode = "deserunt";
+                    grantType = "suscipit";
+                    redirectUri = "iure";
+                    refreshToken = "magnam";
+                    scope = new String[]{{
+                        add("ipsa"),
+                        add("delectus"),
+                        add("tempora"),
+                        add("suscipit"),
                     }};
                 }};
-            }};
+            }};            
 
             CreateTokenResponse res = sdk.createToken(req);
 

@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearSecurity;
+import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearPathParams;
+import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearRequest;
+import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearResponse;
+import org.openapis.openapi.models.shared.SchemeDeveloperHapikey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeleteWebhooksV3AppIdSettingsClearRequest req = new DeleteWebhooksV3AppIdSettingsClearRequest() {{
                 security = new DeleteWebhooksV3AppIdSettingsClearSecurity() {{
@@ -19,9 +23,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteWebhooksV3AppIdSettingsClearPathParams() {{
-                    appId = 8717895732742165505;
+                    appId = 548814;
                 }};
-            }};
+            }};            
 
             DeleteWebhooksV3AppIdSettingsClearResponse res = sdk.settings.deleteWebhooksV3AppIdSettingsClear(req);
 

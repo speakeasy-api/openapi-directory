@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,26 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreatePathParams;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateQueryParams;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateRequest;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateResponse;
+import org.openapis.openapi.models.shared.EnvironmentInput;
+import org.openapis.openapi.models.shared.VmImage;
+import org.openapis.openapi.models.shared.ContainerImage;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             NotebooksProjectsLocationsEnvironmentsCreateRequest req = new NotebooksProjectsLocationsEnvironmentsCreateRequest() {{
                 security = new NotebooksProjectsLocationsEnvironmentsCreateSecurity() {{
@@ -35,37 +46,37 @@ public class Application {
                     }};
                 }};
                 pathParams = new NotebooksProjectsLocationsEnvironmentsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new NotebooksProjectsLocationsEnvironmentsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    environmentId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    environmentId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new EnvironmentInput() {{
                     containerImage = new ContainerImage() {{
-                        repository = "debitis";
-                        tag = "voluptatum";
+                        repository = "iure";
+                        tag = "magnam";
                     }};
-                    description = "et";
-                    displayName = "ut";
-                    postStartupScript = "dolorem";
+                    description = "debitis";
+                    displayName = "ipsa";
+                    postStartupScript = "delectus";
                     vmImage = new VmImage() {{
-                        imageFamily = "et";
-                        imageName = "voluptate";
-                        project = "iste";
+                        imageFamily = "tempora";
+                        imageName = "suscipit";
+                        project = "molestiae";
                     }};
                 }};
-            }};
+            }};            
 
             NotebooksProjectsLocationsEnvironmentsCreateResponse res = sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req);
 
@@ -80,6 +91,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### projects
 
@@ -103,7 +115,7 @@ public class Application {
 * `notebooksProjectsLocationsInstancesUpgradeInternal` - Allows notebook instances to call this endpoint to upgrade themselves. Do not use this method directly.
 * `notebooksProjectsLocationsList` - Lists information about the supported locations for this service.
 * `notebooksProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `notebooksProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `notebooksProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `notebooksProjectsLocationsRuntimesCreate` - Creates a new Runtime in a given project and location.
 * `notebooksProjectsLocationsRuntimesDiagnose` - Creates a Diagnostic File and runs Diagnostic Tool given a Runtime.
 * `notebooksProjectsLocationsRuntimesGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -123,7 +135,17 @@ public class Application {
 * `notebooksProjectsLocationsSchedulesGet` - Gets details of schedule
 * `notebooksProjectsLocationsSchedulesList` - Lists schedules in a given project and location.
 * `notebooksProjectsLocationsSchedulesTrigger` - Triggers execution of an existing schedule.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

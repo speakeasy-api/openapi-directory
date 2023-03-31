@@ -2,58 +2,69 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateEnvironmentEc2XAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateEnvironmentEc2Headers;
+import org.openapis.openapi.models.operations.CreateEnvironmentEc2Request;
+import org.openapis.openapi.models.operations.CreateEnvironmentEc2Response;
+import org.openapis.openapi.models.shared.CreateEnvironmentEc2Request;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.ConnectionTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateEnvironmentEc2Request req = new CreateEnvironmentEc2Request() {{
                 headers = new CreateEnvironmentEc2Headers() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSCloud9WorkspaceManagementService.CreateEnvironmentEC2";
                 }};
                 request = new CreateEnvironmentEc2Request() {{
-                    automaticStopTimeMinutes = 8274930044578894929;
-                    clientRequestToken = "et";
-                    connectionType = "CONNECT_SSH";
-                    description = "rerum";
+                    automaticStopTimeMinutes = 847252;
+                    clientRequestToken = "vel";
+                    connectionType = "CONNECT_SSM";
+                    description = "deserunt";
                     dryRun = false;
-                    imageId = "debitis";
-                    instanceType = "voluptatum";
-                    name = "et";
-                    ownerArn = "ut";
-                    subnetId = "dolorem";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    imageId = "suscipit";
+                    instanceType = "iure";
+                    name = "magnam";
+                    ownerArn = "debitis";
+                    subnetId = "ipsa";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "voluptate";
-                            value = "iste";
+                            key = "tempora";
+                            value = "suscipit";
                         }}),
                         add(new Tag() {{
-                            key = "vitae";
-                            value = "totam";
+                            key = "molestiae";
+                            value = "minus";
+                        }}),
+                        add(new Tag() {{
+                            key = "placeat";
+                            value = "voluptatum";
+                        }}),
+                        add(new Tag() {{
+                            key = "iusto";
+                            value = "excepturi";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateEnvironmentEc2Response res = sdk.createEnvironmentEc2(req);
 

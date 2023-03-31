@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DfareportingAccountActiveAdSummariesGetSecurity;
+import org.openapis.openapi.models.operations.DfareportingAccountActiveAdSummariesGetPathParams;
+import org.openapis.openapi.models.operations.DfareportingAccountActiveAdSummariesGetQueryParams;
+import org.openapis.openapi.models.operations.DfareportingAccountActiveAdSummariesGetRequest;
+import org.openapis.openapi.models.operations.DfareportingAccountActiveAdSummariesGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DfareportingAccountActiveAdSummariesGetRequest req = new DfareportingAccountActiveAdSummariesGetRequest() {{
                 security = new DfareportingAccountActiveAdSummariesGetSecurity() {{
@@ -22,23 +30,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new DfareportingAccountActiveAdSummariesGetPathParams() {{
-                    profileId = "sit";
-                    summaryAccountId = "voluptas";
+                    profileId = "corrupti";
+                    summaryAccountId = "provident";
                 }};
                 queryParams = new DfareportingAccountActiveAdSummariesGetQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "expedita";
-                    alt = "proto";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    accessToken = "quibusdam";
+                    alt = "media";
+                    callback = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             DfareportingAccountActiveAdSummariesGetResponse res = sdk.accountActiveAdSummaries.dfareportingAccountActiveAdSummariesGet(req);
 

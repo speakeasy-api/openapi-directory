@@ -2,15 +2,20 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesSecurity;
+import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesPathParams;
+import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesRequest;
+import org.openapis.openapi.models.operations.AddOrUpdateAdditionalRatesResponse;
+import org.openapis.openapi.models.shared.AdditionalRate;
+import org.openapis.openapi.models.shared.SchemePaylocityAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AddOrUpdateAdditionalRatesRequest req = new AddOrUpdateAdditionalRatesRequest() {{
                 security = new AddOrUpdateAdditionalRatesSecurity() {{
@@ -19,24 +24,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new AddOrUpdateAdditionalRatesPathParams() {{
-                    companyId = "sit";
-                    employeeId = "voluptas";
+                    companyId = "corrupti";
+                    employeeId = "provident";
                 }};
                 request = new AdditionalRate() {{
-                    changeReason = "culpa";
-                    costCenter1 = "expedita";
-                    costCenter2 = "consequuntur";
-                    costCenter3 = "dolor";
-                    effectiveDate = "expedita";
-                    endCheckDate = "voluptas";
-                    job = "fugit";
-                    rate = 28.100000;
-                    rateCode = "rerum";
-                    rateNotes = "dicta";
-                    ratePer = "debitis";
-                    shift = "voluptatum";
+                    changeReason = "distinctio";
+                    costCenter1 = "quibusdam";
+                    costCenter2 = "unde";
+                    costCenter3 = "nulla";
+                    effectiveDate = "corrupti";
+                    endCheckDate = "illum";
+                    job = "vel";
+                    rate = 6235.64;
+                    rateCode = "deserunt";
+                    rateNotes = "suscipit";
+                    ratePer = "iure";
+                    shift = "magnam";
                 }};
-            }};
+            }};            
 
             AddOrUpdateAdditionalRatesResponse res = sdk.additionalRates.addOrUpdateAdditionalRates(req);
 

@@ -2,23 +2,18 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetAuthSecurity;
+import org.openapis.openapi.models.operations.GetAuthRequest;
+import org.openapis.openapi.models.operations.GetAuthResponse;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    jwt = new SchemeJwt() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAuthRequest req = new GetAuthRequest() {{
                 security = new GetAuthSecurity() {{
@@ -27,7 +22,7 @@ public class Application {
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-            }};
+            }};            
 
             GetAuthResponse res = sdk.auth.getAuth(req);
 

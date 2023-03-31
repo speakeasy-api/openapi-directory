@@ -2,15 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateSecurity;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivatePathParams;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateQueryParams;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateRequest;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateResponse;
+import org.openapis.openapi.models.shared.ActivateCertificateAuthorityRequest;
+import org.openapis.openapi.models.shared.SubordinateConfig;
+import org.openapis.openapi.models.shared.SubordinateConfigChain;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateRequest req = new PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateRequest() {{
                 security = new PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateSecurity() {{
@@ -22,34 +33,37 @@ public class Application {
                     }};
                 }};
                 pathParams = new PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivatePathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new ActivateCertificateAuthorityRequest() {{
-                    pemCaCertificate = "dicta";
-                    requestId = "debitis";
+                    pemCaCertificate = "suscipit";
+                    requestId = "iure";
                     subordinateConfig = new SubordinateConfig() {{
-                        certificateAuthority = "voluptatum";
+                        certificateAuthority = "magnam";
                         pemIssuerChain = new SubordinateConfigChain() {{
-                            pemCertificates = new String[]() {{
-                                add("ut"),
+                            pemCertificates = new String[]{{
+                                add("ipsa"),
+                                add("delectus"),
+                                add("tempora"),
+                                add("suscipit"),
                             }};
                         }};
                     }};
                 }};
-            }};
+            }};            
 
             PrivatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivateResponse res = sdk.projects.privatecaProjectsLocationsCaPoolsCertificateAuthoritiesActivate(req);
 

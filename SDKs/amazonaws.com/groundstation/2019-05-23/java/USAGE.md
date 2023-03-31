@@ -2,38 +2,38 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CancelContactPathParams;
+import org.openapis.openapi.models.operations.CancelContactHeaders;
+import org.openapis.openapi.models.operations.CancelContactRequest;
+import org.openapis.openapi.models.operations.CancelContactResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CancelContactRequest req = new CancelContactRequest() {{
                 pathParams = new CancelContactPathParams() {{
-                    contactId = "sit";
+                    contactId = "corrupti";
                 }};
                 headers = new CancelContactHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-            }};
+            }};            
 
             CancelContactResponse res = sdk.cancelContact(req);
 

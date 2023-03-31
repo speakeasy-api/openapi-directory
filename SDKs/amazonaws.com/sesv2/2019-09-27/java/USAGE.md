@@ -2,67 +2,91 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchGetMetricDataHeaders;
+import org.openapis.openapi.models.operations.BatchGetMetricDataRequestBody;
+import org.openapis.openapi.models.operations.BatchGetMetricDataRequest;
+import org.openapis.openapi.models.operations.BatchGetMetricDataResponse;
+import org.openapis.openapi.models.shared.BatchGetMetricDataQuery;
+import org.openapis.openapi.models.shared.MetricNamespaceEnum;
+import org.openapis.openapi.models.shared.MetricEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateConfigurationSetRequest req = new CreateConfigurationSetRequest() {{
-                headers = new CreateConfigurationSetHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+            BatchGetMetricDataRequest req = new BatchGetMetricDataRequest() {{
+                headers = new BatchGetMetricDataHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
-                request = new CreateConfigurationSetRequestBody() {{
-                    configurationSetName = "voluptas";
-                    deliveryOptions = new CreateConfigurationSetRequestBodyDeliveryOptions() {{
-                        sendingPoolName = "fugit";
-                        tlsPolicy = "REQUIRE";
-                    }};
-                    reputationOptions = new CreateConfigurationSetRequestBodyReputationOptions() {{
-                        lastFreshStart = "2003-05-13T04:57:12Z";
-                        reputationMetricsEnabled = true;
-                    }};
-                    sendingOptions = new CreateConfigurationSetRequestBodySendingOptions() {{
-                        sendingEnabled = false;
-                    }};
-                    suppressionOptions = new CreateConfigurationSetRequestBodySuppressionOptions() {{
-                        suppressedReasons = new openapisdk.models.shared.SuppressionListReasonEnum[]() {{
-                            add("BOUNCE"),
-                        }};
-                    }};
-                    tags = new openapisdk.models.shared.Tag[]() {{
-                        add(new Tag() {{
-                            key = "ut";
-                            value = "dolorem";
+                request = new BatchGetMetricDataRequestBody() {{
+                    queries = new org.openapis.openapi.models.shared.BatchGetMetricDataQuery[]{{
+                        add(new BatchGetMetricDataQuery() {{
+                            dimensions = new java.util.HashMap<String, String>() {{
+                                put("error", "deserunt");
+                                put("suscipit", "iure");
+                            }};
+                            endDate = "2022-02-09T12:04:06.508Z";
+                            id = "ipsa";
+                            metric = "DELIVERY_COMPLAINT";
+                            namespace = "VDM";
+                            startDate = "2022-08-14T01:03:07.567Z";
+                        }}),
+                        add(new BatchGetMetricDataQuery() {{
+                            dimensions = new java.util.HashMap<String, String>() {{
+                                put("minus", "placeat");
+                                put("voluptatum", "iusto");
+                            }};
+                            endDate = "2022-03-20T06:24:36.919Z";
+                            id = "recusandae";
+                            metric = "DELIVERY_CLICK";
+                            namespace = "VDM";
+                            startDate = "2022-08-30T20:24:33.984Z";
+                        }}),
+                        add(new BatchGetMetricDataQuery() {{
+                            dimensions = new java.util.HashMap<String, String>() {{
+                                put("deserunt", "perferendis");
+                            }};
+                            endDate = "2022-03-03T02:15:00.468Z";
+                            id = "sapiente";
+                            metric = "DELIVERY_OPEN";
+                            namespace = "VDM";
+                            startDate = "2022-02-17T10:41:36.857Z";
+                        }}),
+                        add(new BatchGetMetricDataQuery() {{
+                            dimensions = new java.util.HashMap<String, String>() {{
+                                put("maiores", "molestiae");
+                                put("quod", "quod");
+                                put("esse", "totam");
+                                put("porro", "dolorum");
+                            }};
+                            endDate = "2022-04-12T23:15:28.420Z";
+                            id = "officia";
+                            metric = "CLICK";
+                            namespace = "VDM";
+                            startDate = "2022-06-18T20:36:37.412Z";
                         }}),
                     }};
-                    trackingOptions = new CreateConfigurationSetRequestBodyTrackingOptions() {{
-                        customRedirectDomain = "et";
-                    }};
                 }};
-            }};
+            }};            
 
-            CreateConfigurationSetResponse res = sdk.createConfigurationSet(req);
+            BatchGetMetricDataResponse res = sdk.batchGetMetricData(req);
 
-            if (res.createConfigurationSetResponse.isPresent()) {
+            if (res.batchGetMetricDataResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

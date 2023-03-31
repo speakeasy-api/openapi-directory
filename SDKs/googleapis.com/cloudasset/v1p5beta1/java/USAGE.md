@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudassetAssetsListSecurity;
+import org.openapis.openapi.models.operations.CloudassetAssetsListPathParams;
+import org.openapis.openapi.models.operations.CloudassetAssetsListContentTypeEnum;
+import org.openapis.openapi.models.operations.CloudassetAssetsListQueryParams;
+import org.openapis.openapi.models.operations.CloudassetAssetsListRequest;
+import org.openapis.openapi.models.operations.CloudassetAssetsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudassetAssetsListRequest req = new CloudassetAssetsListRequest() {{
                 security = new CloudassetAssetsListSecurity() {{
@@ -22,31 +31,31 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudassetAssetsListPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new CloudassetAssetsListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    assetTypes = new String[]() {{
-                        add("dolor"),
-                        add("expedita"),
-                        add("voluptas"),
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    assetTypes = new String[]{{
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
-                    callback = "fugit";
+                    callback = "vel";
                     contentType = "ORG_POLICY";
-                    fields = "nihil";
-                    key = "rerum";
-                    oauthToken = "dicta";
-                    pageSize = 2518412263346885298;
-                    pageToken = "voluptatum";
+                    fields = "deserunt";
+                    key = "suscipit";
+                    oauthToken = "iure";
+                    pageSize = 297534;
+                    pageToken = "debitis";
                     prettyPrint = false;
-                    quotaUser = "ut";
-                    readTime = "dolorem";
-                    uploadType = "et";
-                    uploadProtocol = "voluptate";
+                    quotaUser = "ipsa";
+                    readTime = "delectus";
+                    uploadType = "tempora";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             CloudassetAssetsListResponse res = sdk.assets.cloudassetAssetsList(req);
 

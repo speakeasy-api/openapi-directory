@@ -2,43 +2,51 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateReplicationSetHeaders;
+import org.openapis.openapi.models.operations.CreateReplicationSetRequestBody;
+import org.openapis.openapi.models.operations.CreateReplicationSetRequest;
+import org.openapis.openapi.models.operations.CreateReplicationSetResponse;
+import org.openapis.openapi.models.shared.RegionMapInputValue;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateReplicationSetRequest req = new CreateReplicationSetRequest() {{
                 headers = new CreateReplicationSetHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateReplicationSetRequestBody() {{
-                    clientToken = "voluptas";
-                    regions = new java.util.HashMap<String, openapisdk.models.shared.RegionMapInputValue>() {{
-                        put("et", new RegionMapInputValue() {{
-                            sseKmsKeyId = "nihil";
+                    clientToken = "illum";
+                    regions = new java.util.HashMap<String, org.openapis.openapi.models.shared.RegionMapInputValue>() {{
+                        put("error", new RegionMapInputValue() {{
+                            sseKmsKeyId = "deserunt";
+                        }});
+                        put("suscipit", new RegionMapInputValue() {{
+                            sseKmsKeyId = "iure";
                         }});
                     }};
+                    tags = new java.util.HashMap<String, String>() {{
+                        put("debitis", "ipsa");
+                        put("delectus", "tempora");
+                    }};
                 }};
-            }};
+            }};            
 
             CreateReplicationSetResponse res = sdk.createReplicationSet(req);
 

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,156 +15,190 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateAppXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateAppHeaders;
+import org.openapis.openapi.models.operations.CreateAppRequest;
+import org.openapis.openapi.models.operations.CreateAppResponse;
+import org.openapis.openapi.models.shared.CreateAppRequest;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.ServerGroup;
+import org.openapis.openapi.models.shared.Server;
+import org.openapis.openapi.models.shared.VmServer;
+import org.openapis.openapi.models.shared.VmServerAddress;
+import org.openapis.openapi.models.shared.VmManagerTypeEnum;
+import org.openapis.openapi.models.shared.ServerTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateAppRequest req = new CreateAppRequest() {{
                 headers = new CreateAppHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSServerMigrationService_V2016_10_24.CreateApp";
                 }};
                 request = new CreateAppRequest() {{
-                    clientToken = "fugit";
-                    description = "et";
-                    name = "nihil";
-                    roleName = "rerum";
-                    serverGroups = new openapisdk.models.shared.ServerGroup[]() {{
+                    clientToken = "illum";
+                    description = "vel";
+                    name = "error";
+                    roleName = "deserunt";
+                    serverGroups = new org.openapis.openapi.models.shared.ServerGroup[]{{
                         add(new ServerGroup() {{
-                            name = "debitis";
-                            serverGroupId = "voluptatum";
-                            serverList = new openapisdk.models.shared.Server[]() {{
+                            name = "iure";
+                            serverGroupId = "magnam";
+                            serverList = new org.openapis.openapi.models.shared.Server[]{{
                                 add(new Server() {{
-                                    replicationJobId = "ut";
-                                    replicationJobTerminated = true;
-                                    serverId = "et";
+                                    replicationJobId = "ipsa";
+                                    replicationJobTerminated = false;
+                                    serverId = "delectus";
                                     serverType = "VIRTUAL_MACHINE";
                                     vmServer = new VmServer() {{
-                                        vmManagerName = "iste";
-                                        vmManagerType = "VSPHERE";
-                                        vmName = "totam";
-                                        vmPath = "dolores";
+                                        vmManagerName = "tempora";
+                                        vmManagerType = "SCVMM";
+                                        vmName = "molestiae";
+                                        vmPath = "minus";
                                         vmServerAddress = new VmServerAddress() {{
-                                            vmId = "illum";
-                                            vmManagerId = "debitis";
+                                            vmId = "placeat";
+                                            vmManagerId = "voluptatum";
                                         }};
                                     }};
                                 }}),
-                            }};
-                        }}),
-                        add(new ServerGroup() {{
-                            name = "vel";
-                            serverGroupId = "odio";
-                            serverList = new openapisdk.models.shared.Server[]() {{
                                 add(new Server() {{
-                                    replicationJobId = "id";
-                                    replicationJobTerminated = true;
-                                    serverId = "accusantium";
+                                    replicationJobId = "iusto";
+                                    replicationJobTerminated = false;
+                                    serverId = "excepturi";
                                     serverType = "VIRTUAL_MACHINE";
                                     vmServer = new VmServer() {{
-                                        vmManagerName = "commodi";
+                                        vmManagerName = "nisi";
                                         vmManagerType = "HYPERV-MANAGER";
-                                        vmName = "est";
-                                        vmPath = "aut";
+                                        vmName = "temporibus";
+                                        vmPath = "ab";
+                                        vmServerAddress = new VmServerAddress() {{
+                                            vmId = "quis";
+                                            vmManagerId = "veritatis";
+                                        }};
+                                    }};
+                                }}),
+                                add(new Server() {{
+                                    replicationJobId = "deserunt";
+                                    replicationJobTerminated = false;
+                                    serverId = "perferendis";
+                                    serverType = "VIRTUAL_MACHINE";
+                                    vmServer = new VmServer() {{
+                                        vmManagerName = "ipsam";
+                                        vmManagerType = "HYPERV-MANAGER";
+                                        vmName = "sapiente";
+                                        vmPath = "quo";
                                         vmServerAddress = new VmServerAddress() {{
                                             vmId = "odit";
-                                            vmManagerId = "non";
+                                            vmManagerId = "at";
                                         }};
                                     }};
                                 }}),
                                 add(new Server() {{
-                                    replicationJobId = "voluptas";
-                                    replicationJobTerminated = true;
-                                    serverId = "aut";
+                                    replicationJobId = "at";
+                                    replicationJobTerminated = false;
+                                    serverId = "maiores";
                                     serverType = "VIRTUAL_MACHINE";
                                     vmServer = new VmServer() {{
-                                        vmManagerName = "sed";
-                                        vmManagerType = "SCVMM";
-                                        vmName = "autem";
-                                        vmPath = "consectetur";
+                                        vmManagerName = "molestiae";
+                                        vmManagerType = "HYPERV-MANAGER";
+                                        vmName = "quod";
+                                        vmPath = "esse";
                                         vmServerAddress = new VmServerAddress() {{
-                                            vmId = "nobis";
-                                            vmManagerId = "odio";
+                                            vmId = "totam";
+                                            vmManagerId = "porro";
                                         }};
                                     }};
                                 }}),
                             }};
                         }}),
                         add(new ServerGroup() {{
-                            name = "qui";
-                            serverGroupId = "recusandae";
-                            serverList = new openapisdk.models.shared.Server[]() {{
+                            name = "dolorum";
+                            serverGroupId = "dicta";
+                            serverList = new org.openapis.openapi.models.shared.Server[]{{
                                 add(new Server() {{
-                                    replicationJobId = "ipsum";
-                                    replicationJobTerminated = true;
-                                    serverId = "modi";
+                                    replicationJobId = "officia";
+                                    replicationJobTerminated = false;
+                                    serverId = "occaecati";
                                     serverType = "VIRTUAL_MACHINE";
                                     vmServer = new VmServer() {{
-                                        vmManagerName = "inventore";
-                                        vmManagerType = "HYPERV-MANAGER";
-                                        vmName = "exercitationem";
-                                        vmPath = "aut";
+                                        vmManagerName = "fugit";
+                                        vmManagerType = "SCVMM";
+                                        vmName = "hic";
+                                        vmPath = "optio";
                                         vmServerAddress = new VmServerAddress() {{
-                                            vmId = "reprehenderit";
-                                            vmManagerId = "tempore";
+                                            vmId = "totam";
+                                            vmManagerId = "beatae";
                                         }};
                                     }};
                                 }}),
                                 add(new Server() {{
-                                    replicationJobId = "maiores";
+                                    replicationJobId = "commodi";
                                     replicationJobTerminated = false;
-                                    serverId = "dolor";
+                                    serverId = "molestiae";
                                     serverType = "VIRTUAL_MACHINE";
                                     vmServer = new VmServer() {{
-                                        vmManagerName = "veritatis";
-                                        vmManagerType = "HYPERV-MANAGER";
-                                        vmName = "et";
-                                        vmPath = "omnis";
+                                        vmManagerName = "modi";
+                                        vmManagerType = "VSPHERE";
+                                        vmName = "impedit";
+                                        vmPath = "cum";
                                         vmServerAddress = new VmServerAddress() {{
-                                            vmId = "ipsum";
-                                            vmManagerId = "ex";
+                                            vmId = "esse";
+                                            vmManagerId = "ipsum";
+                                        }};
+                                    }};
+                                }}),
+                                add(new Server() {{
+                                    replicationJobId = "excepturi";
+                                    replicationJobTerminated = false;
+                                    serverId = "aspernatur";
+                                    serverType = "VIRTUAL_MACHINE";
+                                    vmServer = new VmServer() {{
+                                        vmManagerName = "perferendis";
+                                        vmManagerType = "VSPHERE";
+                                        vmName = "natus";
+                                        vmPath = "sed";
+                                        vmServerAddress = new VmServerAddress() {{
+                                            vmId = "iste";
+                                            vmManagerId = "dolor";
                                         }};
                                     }};
                                 }}),
                             }};
                         }}),
                     }};
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "placeat";
-                            value = "vel";
+                            key = "laboriosam";
+                            value = "hic";
                         }}),
                         add(new Tag() {{
-                            key = "rerum";
-                            value = "mollitia";
+                            key = "saepe";
+                            value = "fuga";
                         }}),
                         add(new Tag() {{
-                            key = "voluptas";
-                            value = "quam";
+                            key = "in";
+                            value = "corporis";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateAppResponse res = sdk.createApp(req);
 
@@ -183,30 +217,30 @@ public class Application {
 ### SDK SDK
 
 * `createApp` - Creates an application. An application consists of one or more server groups. Each server group contain one or more servers.
-* `createReplicationJob` - Creates a replication job. The replication job schedules periodic replication runs to replicate your server to AWS. Each replication run creates an Amazon Machine Image (AMI).
-* `deleteApp` - Deletes the specified application. Optionally deletes the launched stack associated with the application and all AWS SMS replication jobs for servers in the application.
+* `createReplicationJob` - Creates a replication job. The replication job schedules periodic replication runs to replicate your server to Amazon Web Services. Each replication run creates an Amazon Machine Image (AMI).
+* `deleteApp` - Deletes the specified application. Optionally deletes the launched stack associated with the application and all Server Migration Service replication jobs for servers in the application.
 * `deleteAppLaunchConfiguration` - Deletes the launch configuration for the specified application.
 * `deleteAppReplicationConfiguration` - Deletes the replication configuration for the specified application.
 * `deleteAppValidationConfiguration` - Deletes the validation configuration for the specified application.
-* `deleteReplicationJob` - <p>Deletes the specified replication job.</p> <p>After you delete a replication job, there are no further replication runs. AWS deletes the contents of the Amazon S3 bucket used to store AWS SMS artifacts. The AMIs created by the replication runs are not deleted.</p>
+* `deleteReplicationJob` - <p>Deletes the specified replication job.</p> <p>After you delete a replication job, there are no further replication runs. Amazon Web Services deletes the contents of the Amazon S3 bucket used to store Server Migration Service artifacts. The AMIs created by the replication runs are not deleted.</p>
 * `deleteServerCatalog` - Deletes all servers from your server catalog.
-* `disassociateConnector` - <p>Disassociates the specified connector from AWS SMS.</p> <p>After you disassociate a connector, it is no longer available to support replication jobs.</p>
+* `disassociateConnector` - <p>Disassociates the specified connector from Server Migration Service.</p> <p>After you disassociate a connector, it is no longer available to support replication jobs.</p>
 * `generateChangeSet` - Generates a target change set for a currently launched stack and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
-* `generateTemplate` - Generates an AWS CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
+* `generateTemplate` - Generates an CloudFormation template based on the current launch configuration and writes it to an Amazon S3 object in the customer’s Amazon S3 bucket.
 * `getApp` - Retrieve information about the specified application.
 * `getAppLaunchConfiguration` - Retrieves the application launch configuration associated with the specified application.
 * `getAppReplicationConfiguration` - Retrieves the application replication configuration associated with the specified application.
 * `getAppValidationConfiguration` - Retrieves information about a configuration for validating an application.
 * `getAppValidationOutput` - Retrieves output from validating an application.
-* `getConnectors` - Describes the connectors registered with the AWS SMS.
+* `getConnectors` - Describes the connectors registered with the Server Migration Service.
 * `getReplicationJobs` - Describes the specified replication job or all of your replication jobs.
 * `getReplicationRuns` - Describes the replication runs for the specified replication job.
 * `getServers` - <p>Describes the servers in your server catalog.</p> <p>Before you can describe your servers, you must import them using <a>ImportServerCatalog</a>.</p>
-* `importAppCatalog` - Allows application import from AWS Migration Hub.
+* `importAppCatalog` - Allows application import from Migration Hub.
 * `importServerCatalog` - <p>Gathers a complete list of on-premises servers. Connectors must be installed and monitoring all servers to import.</p> <p>This call returns immediately, but might take additional time to retrieve all the servers.</p>
-* `launchApp` - Launches the specified application as a stack in AWS CloudFormation.
+* `launchApp` - Launches the specified application as a stack in CloudFormation.
 * `listApps` - Retrieves summaries for all applications.
-* `notifyAppValidationOutput` - Provides information to AWS SMS about whether application validation is successful.
+* `notifyAppValidationOutput` - Provides information to Server Migration Service about whether application validation is successful.
 * `putAppLaunchConfiguration` - Creates or updates the launch configuration for the specified application.
 * `putAppReplicationConfiguration` - Creates or updates the replication configuration for the specified application.
 * `putAppValidationConfiguration` - Creates or updates a validation configuration for the specified application.
@@ -217,7 +251,17 @@ public class Application {
 * `terminateApp` - Terminates the stack for the specified application.
 * `updateApp` - Updates the specified application.
 * `updateReplicationJob` - Updates the specified settings for the specified replication job.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

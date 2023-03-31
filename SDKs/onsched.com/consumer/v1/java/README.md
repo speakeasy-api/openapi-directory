@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,29 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdPathParams;
+import org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdRequest;
+import org.openapis.openapi.models.operations.DeleteConsumerV1AppointmentsIdResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DeleteConsumerV1AppointmentsIdRequest req = new DeleteConsumerV1AppointmentsIdRequest() {{
                 pathParams = new DeleteConsumerV1AppointmentsIdPathParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
             DeleteConsumerV1AppointmentsIdResponse res = sdk.appointments.deleteConsumerV1AppointmentsId(req);
 
@@ -53,82 +52,79 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Appointments
 
-* `deleteConsumerV1AppointmentsId` - Returns an appointment object
-* `getConsumerV1Appointments` - Returns a list of appointments.
-* `getConsumerV1AppointmentsBookingfields` - Returns a list of appointment booking fields
-* `getConsumerV1AppointmentsCustomfields` - Returns a list of appointment custom field definitions
-* `getConsumerV1AppointmentsId` - Returns an appointment object.
-* `postConsumerV1Appointments` - Returns an appointment object
-* `putConsumerV1AppointmentsIdBook` - Returns an appointment object
-* `putConsumerV1AppointmentsIdCancel` - Returns an appointment object
-* `putConsumerV1AppointmentsIdConfirm` - Set the Appointment Confirm property to true or false
-* `putConsumerV1AppointmentsIdNoshow` - For more information see <a href="https://onsched.readme.io/docs/appointments-overview">Appointment Overview</a>
-* `putConsumerV1AppointmentsIdReschedule` - Returns an appointment object
-* `putConsumerV1AppointmentsIdReserve` - Returns an appointment object
+### appointments
 
-### Availability
+* `deleteConsumerV1AppointmentsId` - Delete Appointment
+* `getConsumerV1Appointments` - Get Appointments
+* `getConsumerV1AppointmentsBookingfields` - Get Custom Fields Labels
+* `getConsumerV1AppointmentsCustomfields` - Get Custom Fields List
+* `getConsumerV1AppointmentsId` - Get Appointment
+* `postConsumerV1Appointments` - Create Appointment
+* `putConsumerV1AppointmentsIdBook` - Book Appointment
+* `putConsumerV1AppointmentsIdCancel` - Cancel Appointment
+* `putConsumerV1AppointmentsIdConfirm` - Confirm Appointment
+* `putConsumerV1AppointmentsIdNoshow` - Set NoShow Status
+* `putConsumerV1AppointmentsIdReschedule` - Reschedule Appointment
+* `putConsumerV1AppointmentsIdReserve` - Reserve Appointment
 
-* `getConsumerV1AvailabilityServiceIdStartDateEndDate` - Returns a list of available times.
-* `getConsumerV1AvailabilityServiceIdStartDateEndDateDays` - Returns a list of available days.
-* `getConsumerV1AvailabilityServiceIdStartDateEndDateTimes` - Returns a list of available times.
-* `getConsumerV1AvailabilityServiceIdStartDateEndDateUnavailable` - Returns a list of unavailable times.
-* `getConsumerV1AvailabilityServiceIdStartDateEndDateWindows` - Returns a list of available booking window times.
+### availability
 
-### Customers
+* `getConsumerV1AvailabilityServiceIdStartDateEndDate` - Get Available Times
+* `getConsumerV1AvailabilityServiceIdStartDateEndDateDays` - Get Available Days
+* `getConsumerV1AvailabilityServiceIdStartDateEndDateUnavailable` - Get Unavailable Times
 
-* `deleteConsumerV1CustomersSubscriptionsId`
-* `deleteConsumerV1CustomersId`
-* `getConsumerV1Customers` - Returns a list of customers.
-* `getConsumerV1CustomersBookingfields` - Returns a list of customer booking fields
-* `getConsumerV1CustomersCountries` - Returns a list of country objects
-* `getConsumerV1CustomersCustomfields` - Returns a list of customField objects
-* `getConsumerV1CustomersPlans` - Returns a list of customers.
-* `getConsumerV1CustomersPlansId` - Returns a customer object.
-* `getConsumerV1CustomersStates` - Returns a list of state objects
-* `getConsumerV1CustomersSubscriptions` - Returns a list of customer subscriptions.
-* `getConsumerV1CustomersSubscriptionsId` - Returns a customer subscription object.
-* `getConsumerV1CustomersId` - Returns a customer object.
-* `getConsumerV1CustomersIdPlanlimitsServiceIdResourceIdDateTimeTz` - Returns a list of customer booking limits.
-* `getConsumerV1CustomersIdSubscriptions` - Returns a customer subscription object.
-* `postConsumerV1Customers` - Creates a new customer object.
-* `postConsumerV1CustomersIdSubscriptions` - Creates a new customer subscription object.
-* `putConsumerV1CustomersSubscriptionsId` - Updates a customer subscription object.
-* `putConsumerV1CustomersId` - Updates a customer object.
+### customers
 
-### Locations
+* `deleteConsumerV1CustomersId` - Delete Customer
+* `getConsumerV1Customers` - List Customers
+* `getConsumerV1CustomersBookingfields` - Get Customer Booking Fields
+* `getConsumerV1CustomersCountries` - List Country Codes
+* `getConsumerV1CustomersCustomfields` - Get Customer Custom Fields
+* `getConsumerV1CustomersStates` - List Country States
+* `getConsumerV1CustomersId` - Get Customer
+* `postConsumerV1Customers` - Create Customer
+* `putConsumerV1CustomersId` - Update Customer
 
-* `getConsumerV1Locations` - Returns a list of business locations.
-* `getConsumerV1LocationsId` - Returns a business location object.
+### locations
 
-### Resources
+* `getConsumerV1Locations` - List Locations
+* `getConsumerV1LocationsId` - Get Location
 
-* `getConsumerV1Resources` - Returns a list of resources.
-* `getConsumerV1ResourcesId` - Returns a resource object.
-* `getConsumerV1ResourcesIdServices` - Returns a list of resource services.
+### resourceGroups
 
-### ServiceGroups
+* `getConsumerV1Resourcegroups` - List Resource Groups
+* `getConsumerV1ResourcegroupsId` - Get Resource Group
 
-* `getConsumerV1Servicegroups` - Returns a list of service groups.
-* `getConsumerV1ServicegroupsId` - Returns a serviceGroup object.
+### resources
 
-### Services
+* `getConsumerV1Resources` - List Resources
+* `getConsumerV1ResourcesId` - Get Resource
+* `getConsumerV1ResourcesIdServices` - Get Resource Linked Services
 
-* `getConsumerV1Services` - Returns a list of services.
-* `getConsumerV1ServicesAllocationsId` - Get a service allocation
-* `getConsumerV1ServicesId` - Returns a service object.
-* `getConsumerV1ServicesIdAllocations` - Returns a list of service allocations.
-* `getConsumerV1ServicesIdResources` - Returns a list of resources.
+### serviceGroups
 
-### Settings
+* `getConsumerV1Servicegroups` - List Service Groups
+* `getConsumerV1ServicegroupsId` - Get Service Group
 
-* `getConsumerV1Settings` - Returns a list of customers.
+### services
 
-### StripePlans
-
-* `getPlanId`
-
+* `getConsumerV1Services` - List Services
+* `getConsumerV1ServicesAllocationsId` - Get Service Allocation
+* `getConsumerV1ServicesId` - Get Service
+* `getConsumerV1ServicesIdAllocations` - List Service Allocations
+* `getConsumerV1ServicesIdResources` - List Resources for Service
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

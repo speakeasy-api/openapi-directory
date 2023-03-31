@@ -2,37 +2,53 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PlaydeveloperreportingAnomaliesListSecurity;
+import org.openapis.openapi.models.operations.PlaydeveloperreportingAnomaliesListPathParams;
+import org.openapis.openapi.models.operations.PlaydeveloperreportingAnomaliesListQueryParams;
+import org.openapis.openapi.models.operations.PlaydeveloperreportingAnomaliesListRequest;
+import org.openapis.openapi.models.operations.PlaydeveloperreportingAnomaliesListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PlaydeveloperreportingAnomaliesListRequest req = new PlaydeveloperreportingAnomaliesListRequest() {{
+                security = new PlaydeveloperreportingAnomaliesListSecurity() {{
+                    oauth2 = new SchemeOauth2() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                    oauth2c = new SchemeOauth2c() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                }};
                 pathParams = new PlaydeveloperreportingAnomaliesListPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new PlaydeveloperreportingAnomaliesListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    filter = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
-                    pageSize = 1543572285742637646;
-                    pageToken = "nihil";
-                    prettyPrint = true;
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    filter = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    pageSize = 623564;
+                    pageToken = "deserunt";
+                    prettyPrint = false;
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-            }};
+            }};            
 
             PlaydeveloperreportingAnomaliesListResponse res = sdk.anomalies.playdeveloperreportingAnomaliesList(req);
 

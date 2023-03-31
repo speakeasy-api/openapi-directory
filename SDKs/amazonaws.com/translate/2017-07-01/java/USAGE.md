@@ -2,49 +2,65 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateParallelDataXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateParallelDataHeaders;
+import org.openapis.openapi.models.operations.CreateParallelDataRequest;
+import org.openapis.openapi.models.operations.CreateParallelDataResponse;
+import org.openapis.openapi.models.shared.CreateParallelDataRequest;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.ParallelDataConfig;
+import org.openapis.openapi.models.shared.ParallelDataFormatEnum;
+import org.openapis.openapi.models.shared.EncryptionKey;
+import org.openapis.openapi.models.shared.EncryptionKeyTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateParallelDataRequest req = new CreateParallelDataRequest() {{
                 headers = new CreateParallelDataHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSShineFrontendService_20170701.CreateParallelData";
                 }};
                 request = new CreateParallelDataRequest() {{
-                    clientToken = "fugit";
-                    description = "et";
+                    clientToken = "illum";
+                    description = "vel";
                     encryptionKey = new EncryptionKey() {{
-                        id = "nihil";
+                        id = "error";
                         type = "KMS";
                     }};
-                    name = "dicta";
+                    name = "deserunt";
                     parallelDataConfig = new ParallelDataConfig() {{
-                        format = "TSV";
-                        s3Uri = "voluptatum";
+                        format = "CSV";
+                        s3Uri = "iure";
+                    }};
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
+                        add(new Tag() {{
+                            key = "debitis";
+                            value = "ipsa";
+                        }}),
+                        add(new Tag() {{
+                            key = "delectus";
+                            value = "tempora";
+                        }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateParallelDataResponse res = sdk.createParallelData(req);
 

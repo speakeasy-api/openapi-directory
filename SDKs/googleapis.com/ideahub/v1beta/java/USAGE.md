@@ -2,49 +2,53 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams;
+import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams;
+import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest;
+import org.openapis.openapi.models.operations.IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse;
+import org.openapis.openapi.models.shared.GoogleSearchIdeahubV1betaIdeaActivityTypeEnum;
+import org.openapis.openapi.models.shared.GoogleSearchIdeahubV1betaIdeaActivity;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest req = new IdeahubPlatformsPropertiesIdeaActivitiesCreateRequest() {{
                 pathParams = new IdeahubPlatformsPropertiesIdeaActivitiesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new IdeahubPlatformsPropertiesIdeaActivitiesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GoogleSearchIdeahubV1betaIdeaActivity() {{
-                    ideas = new String[]() {{
-                        add("debitis"),
-                        add("voluptatum"),
-                        add("et"),
+                    ideas = new String[]{{
+                        add("iure"),
+                        add("magnam"),
                     }};
-                    name = "ut";
-                    topics = new String[]() {{
-                        add("et"),
-                        add("voluptate"),
-                        add("iste"),
+                    name = "debitis";
+                    topics = new String[]{{
+                        add("delectus"),
                     }};
-                    type = "POST_DELETED";
-                    uri = "totam";
+                    type = "POST_DRAFTED";
+                    uri = "http://lasting-sex.net";
                 }};
-            }};
+            }};            
 
             IdeahubPlatformsPropertiesIdeaActivitiesCreateResponse res = sdk.platforms.ideahubPlatformsPropertiesIdeaActivitiesCreate(req);
 

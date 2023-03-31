@@ -2,53 +2,72 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateEncryptionConfigPathParams;
+import org.openapis.openapi.models.operations.AssociateEncryptionConfigHeaders;
+import org.openapis.openapi.models.operations.AssociateEncryptionConfigRequestBody;
+import org.openapis.openapi.models.operations.AssociateEncryptionConfigRequest;
+import org.openapis.openapi.models.operations.AssociateEncryptionConfigResponse;
+import org.openapis.openapi.models.shared.EncryptionConfig;
+import org.openapis.openapi.models.shared.Provider;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateEncryptionConfigRequest req = new AssociateEncryptionConfigRequest() {{
                 pathParams = new AssociateEncryptionConfigPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 headers = new AssociateEncryptionConfigHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
                 request = new AssociateEncryptionConfigRequestBody() {{
-                    clientRequestToken = "fugit";
-                    encryptionConfig = new openapisdk.models.shared.EncryptionConfig[]() {{
+                    clientRequestToken = "vel";
+                    encryptionConfig = new org.openapis.openapi.models.shared.EncryptionConfig[]{{
                         add(new EncryptionConfig() {{
                             provider = new Provider() {{
-                                keyArn = "nihil";
+                                keyArn = "deserunt";
                             }};
-                            resources = new String[]() {{
-                                add("dicta"),
-                                add("debitis"),
-                                add("voluptatum"),
+                            resources = new String[]{{
+                                add("iure"),
+                                add("magnam"),
+                            }};
+                        }}),
+                        add(new EncryptionConfig() {{
+                            provider = new Provider() {{
+                                keyArn = "debitis";
+                            }};
+                            resources = new String[]{{
+                                add("delectus"),
+                            }};
+                        }}),
+                        add(new EncryptionConfig() {{
+                            provider = new Provider() {{
+                                keyArn = "tempora";
+                            }};
+                            resources = new String[]{{
+                                add("molestiae"),
+                                add("minus"),
                             }};
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             AssociateEncryptionConfigResponse res = sdk.associateEncryptionConfig(req);
 

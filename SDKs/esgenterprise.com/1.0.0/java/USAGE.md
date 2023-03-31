@@ -2,30 +2,34 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetSearchSecurity;
+import org.openapis.openapi.models.operations.GetSearchQueryParams;
+import org.openapis.openapi.models.operations.GetSearchRequest;
+import org.openapis.openapi.models.operations.GetSearchResponse;
+import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetSearchRequest req = new GetSearchRequest() {{
                 security = new GetSearchSecurity() {{
-                    apiKey = new SchemeApiKey() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 queryParams = new GetSearchQueryParams() {{
-                    q = "sit";
+                    q = "corrupti";
                 }};
-            }};
+            }};            
 
             GetSearchResponse res = sdk.rating.getSearch(req);
 
-            if (res.getSearch200ApplicationJSONAny.isPresent()) {
+            if (res.getSearch200ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

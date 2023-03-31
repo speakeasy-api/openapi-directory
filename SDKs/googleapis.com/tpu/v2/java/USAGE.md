@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListSecurity;
+import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListPathParams;
+import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListQueryParams;
+import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListRequest;
+import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             TpuProjectsLocationsAcceleratorTypesListRequest req = new TpuProjectsLocationsAcceleratorTypesListRequest() {{
                 security = new TpuProjectsLocationsAcceleratorTypesListSecurity() {{
@@ -22,26 +30,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new TpuProjectsLocationsAcceleratorTypesListPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new TpuProjectsLocationsAcceleratorTypesListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    filter = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
-                    orderBy = "et";
-                    pageSize = 2661732831099943416;
-                    pageToken = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    filter = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    orderBy = "error";
+                    pageSize = 645894;
+                    pageToken = "suscipit";
                     prettyPrint = false;
-                    quotaUser = "debitis";
-                    uploadType = "voluptatum";
-                    uploadProtocol = "et";
+                    quotaUser = "iure";
+                    uploadType = "magnam";
+                    uploadProtocol = "debitis";
                 }};
-            }};
+            }};            
 
             TpuProjectsLocationsAcceleratorTypesListResponse res = sdk.projects.tpuProjectsLocationsAcceleratorTypesList(req);
 

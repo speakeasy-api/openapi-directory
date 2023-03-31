@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ReportsActivitiesListSecurity;
+import org.openapis.openapi.models.operations.ReportsActivitiesListApplicationNameEnum;
+import org.openapis.openapi.models.operations.ReportsActivitiesListPathParams;
+import org.openapis.openapi.models.operations.ReportsActivitiesListQueryParams;
+import org.openapis.openapi.models.operations.ReportsActivitiesListRequest;
+import org.openapis.openapi.models.operations.ReportsActivitiesListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ReportsActivitiesListRequest req = new ReportsActivitiesListRequest() {{
                 security = new ReportsActivitiesListSecurity() {{
@@ -22,33 +31,33 @@ public class Application {
                     }};
                 }};
                 pathParams = new ReportsActivitiesListPathParams() {{
-                    applicationName = "mobile";
-                    userKey = "voluptas";
+                    applicationName = "meet";
+                    userKey = "provident";
                 }};
                 queryParams = new ReportsActivitiesListQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "expedita";
-                    actorIpAddress = "consequuntur";
-                    alt = "media";
-                    callback = "expedita";
-                    customerId = "voluptas";
-                    endTime = "fugit";
-                    eventName = "et";
-                    fields = "nihil";
-                    filters = "rerum";
-                    groupIdFilter = "dicta";
-                    key = "debitis";
-                    maxResults = 5617773211005988520;
-                    oauthToken = "et";
-                    orgUnitID = "ut";
-                    pageToken = "dolorem";
+                    accessToken = "quibusdam";
+                    actorIpAddress = "unde";
+                    alt = "proto";
+                    callback = "corrupti";
+                    customerId = "illum";
+                    endTime = "vel";
+                    eventName = "error";
+                    fields = "deserunt";
+                    filters = "suscipit";
+                    groupIdFilter = "iure";
+                    key = "magnam";
+                    maxResults = 891773;
+                    oauthToken = "ipsa";
+                    orgUnitID = "delectus";
+                    pageToken = "tempora";
                     prettyPrint = false;
-                    quotaUser = "voluptate";
-                    startTime = "iste";
-                    uploadType = "vitae";
-                    uploadProtocol = "totam";
+                    quotaUser = "suscipit";
+                    startTime = "molestiae";
+                    uploadType = "minus";
+                    uploadProtocol = "placeat";
                 }};
-            }};
+            }};            
 
             ReportsActivitiesListResponse res = sdk.activities.reportsActivitiesList(req);
 

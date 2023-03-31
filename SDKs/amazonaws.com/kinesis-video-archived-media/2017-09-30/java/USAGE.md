@@ -2,46 +2,49 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetClipHeaders;
+import org.openapis.openapi.models.operations.GetClipRequestBodyClipFragmentSelector;
+import org.openapis.openapi.models.operations.GetClipRequestBody;
+import org.openapis.openapi.models.operations.GetClipRequest;
+import org.openapis.openapi.models.operations.GetClipResponse;
+import org.openapis.openapi.models.shared.ClipTimestampRange;
+import org.openapis.openapi.models.shared.ClipFragmentSelectorTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetClipRequest req = new GetClipRequest() {{
                 headers = new GetClipHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new GetClipRequestBody() {{
                     clipFragmentSelector = new GetClipRequestBodyClipFragmentSelector() {{
                         fragmentSelectorType = "SERVER_TIMESTAMP";
                         timestampRange = new ClipTimestampRange() {{
-                            endTimestamp = "2011-08-12T10:11:12Z";
-                            startTimestamp = "2003-05-13T04:57:12Z";
+                            endTimestamp = "2022-05-18T09:34:54.894Z";
+                            startTimestamp = "2022-03-26T09:37:56.283Z";
                         }};
                     }};
-                    streamARN = "rerum";
-                    streamName = "dicta";
+                    streamARN = "iure";
+                    streamName = "magnam";
                 }};
-            }};
+            }};            
 
             GetClipResponse res = sdk.getClip(req);
 

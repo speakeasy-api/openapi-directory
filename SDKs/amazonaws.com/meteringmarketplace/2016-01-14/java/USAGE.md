@@ -2,58 +2,175 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchMeterUsageXAmzTargetEnum;
+import org.openapis.openapi.models.operations.BatchMeterUsageHeaders;
+import org.openapis.openapi.models.operations.BatchMeterUsageRequest;
+import org.openapis.openapi.models.operations.BatchMeterUsageResponse;
+import org.openapis.openapi.models.shared.BatchMeterUsageRequest;
+import org.openapis.openapi.models.shared.UsageRecord;
+import org.openapis.openapi.models.shared.UsageAllocation;
+import org.openapis.openapi.models.shared.Tag;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BatchMeterUsageRequest req = new BatchMeterUsageRequest() {{
                 headers = new BatchMeterUsageHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSMPMeteringService.BatchMeterUsage";
                 }};
                 request = new BatchMeterUsageRequest() {{
-                    productCode = "fugit";
-                    usageRecords = new openapisdk.models.shared.UsageRecord[]() {{
+                    productCode = "illum";
+                    usageRecords = new org.openapis.openapi.models.shared.UsageRecord[]{{
                         add(new UsageRecord() {{
-                            customerIdentifier = "nihil";
-                            dimension = "rerum";
-                            quantity = 7837839688282259259;
-                            timestamp = "2004-06-02T10:14:12Z";
-                            usageAllocations = new openapisdk.models.shared.UsageAllocation[]() {{
+                            customerIdentifier = "error";
+                            dimension = "deserunt";
+                            quantity = 384382;
+                            timestamp = "2022-09-14T09:35:47.986Z";
+                            usageAllocations = new org.openapis.openapi.models.shared.UsageAllocation[]{{
                                 add(new UsageAllocation() {{
-                                    allocatedUsageQuantity = 2339563716805116249;
-                                    tags = new openapisdk.models.shared.Tag[]() {{
+                                    allocatedUsageQuantity = 56713;
+                                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                                         add(new Tag() {{
-                                            key = "dolorem";
-                                            value = "et";
+                                            key = "tempora";
+                                            value = "suscipit";
                                         }}),
                                         add(new Tag() {{
-                                            key = "voluptate";
-                                            value = "iste";
+                                            key = "molestiae";
+                                            value = "minus";
                                         }}),
                                         add(new Tag() {{
-                                            key = "vitae";
-                                            value = "totam";
+                                            key = "placeat";
+                                            value = "voluptatum";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "iusto";
+                                            value = "excepturi";
+                                        }}),
+                                    }};
+                                }}),
+                                add(new UsageAllocation() {{
+                                    allocatedUsageQuantity = 392785;
+                                    tags = new org.openapis.openapi.models.shared.Tag[]{{
+                                        add(new Tag() {{
+                                            key = "temporibus";
+                                            value = "ab";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "quis";
+                                            value = "veritatis";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "deserunt";
+                                            value = "perferendis";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "ipsam";
+                                            value = "repellendus";
+                                        }}),
+                                    }};
+                                }}),
+                                add(new UsageAllocation() {{
+                                    allocatedUsageQuantity = 957156;
+                                    tags = new org.openapis.openapi.models.shared.Tag[]{{
+                                        add(new Tag() {{
+                                            key = "odit";
+                                            value = "at";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "at";
+                                            value = "maiores";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "molestiae";
+                                            value = "quod";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "quod";
+                                            value = "esse";
+                                        }}),
+                                    }};
+                                }}),
+                                add(new UsageAllocation() {{
+                                    allocatedUsageQuantity = 520478;
+                                    tags = new org.openapis.openapi.models.shared.Tag[]{{
+                                        add(new Tag() {{
+                                            key = "dolorum";
+                                            value = "dicta";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "nam";
+                                            value = "officia";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "occaecati";
+                                            value = "fugit";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "deleniti";
+                                            value = "hic";
+                                        }}),
+                                    }};
+                                }}),
+                            }};
+                        }}),
+                        add(new UsageRecord() {{
+                            customerIdentifier = "optio";
+                            dimension = "totam";
+                            quantity = 105907;
+                            timestamp = "2022-07-12T03:15:36.542Z";
+                            usageAllocations = new org.openapis.openapi.models.shared.UsageAllocation[]{{
+                                add(new UsageAllocation() {{
+                                    allocatedUsageQuantity = 186332;
+                                    tags = new org.openapis.openapi.models.shared.Tag[]{{
+                                        add(new Tag() {{
+                                            key = "cum";
+                                            value = "esse";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "ipsum";
+                                            value = "excepturi";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "aspernatur";
+                                            value = "perferendis";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "ad";
+                                            value = "natus";
+                                        }}),
+                                    }};
+                                }}),
+                                add(new UsageAllocation() {{
+                                    allocatedUsageQuantity = 149675;
+                                    tags = new org.openapis.openapi.models.shared.Tag[]{{
+                                        add(new Tag() {{
+                                            key = "dolor";
+                                            value = "natus";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "laboriosam";
+                                            value = "hic";
+                                        }}),
+                                        add(new Tag() {{
+                                            key = "saepe";
+                                            value = "fuga";
                                         }}),
                                     }};
                                 }}),
@@ -61,7 +178,7 @@ public class Application {
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             BatchMeterUsageResponse res = sdk.batchMeterUsage(req);
 

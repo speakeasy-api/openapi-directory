@@ -2,15 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateFeedConnectionsSecurity;
+import org.openapis.openapi.models.operations.CreateFeedConnectionsHeaders;
+import org.openapis.openapi.models.operations.CreateFeedConnectionsRequest;
+import org.openapis.openapi.models.operations.CreateFeedConnectionsResponse;
+import org.openapis.openapi.models.shared.FeedConnections;
+import org.openapis.openapi.models.shared.Pagination;
+import org.openapis.openapi.models.shared.FeedConnectionAccountTypeEnum;
+import org.openapis.openapi.models.shared.FeedConnectionStatusEnum;
+import org.openapis.openapi.models.shared.FeedConnection;
+import org.openapis.openapi.models.shared.ErrorTypeEnum;
+import org.openapis.openapi.models.shared.Error;
+import org.openapis.openapi.models.shared.CurrencyCodeEnum;
+import org.openapis.openapi.models.shared.CountryCodeEnum;
+import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateFeedConnectionsRequest req = new CreateFeedConnectionsRequest() {{
                 security = new CreateFeedConnectionsSecurity() {{
@@ -19,36 +32,70 @@ public class Application {
                     }};
                 }};
                 headers = new CreateFeedConnectionsHeaders() {{
-                    xeroTenantId = "sit";
+                    xeroTenantId = "corrupti";
                 }};
                 request = new FeedConnections() {{
-                    items = new openapisdk.models.shared.FeedConnection[]() {{
+                    items = new org.openapis.openapi.models.shared.FeedConnection[]{{
                         add(new FeedConnection() {{
-                            accountId = "culpa";
-                            accountName = "expedita";
-                            accountNumber = "consequuntur";
-                            accountToken = "dolor";
-                            accountType = "expedita";
-                            country = "SO";
-                            currency = "GGP";
+                            accountId = "079a88ea-276d-41fb-a1f1-366ef3e22921";
+                            accountName = "Joe's Savings Account";
+                            accountNumber = "3809087654321500";
+                            accountToken = "10000123";
+                            accountType = "BANK";
+                            country = "GB";
+                            currency = "AUD";
                             error = new Error() {{
-                                detail = "et";
-                                status = 2661732831099943416;
-                                title = "rerum";
-                                type = "account-not-valid";
+                                detail = "The application has not been configured to use these API endpoints.";
+                                status = 403;
+                                title = "Invalid Application";
+                                type = "invalid-application";
                             }};
-                            id = "debitis";
-                            status = "PENDING";
+                            id = "0d3cf8d-95dc-4466-8dc0-47e6d1197e28";
+                            status = "REJECTED";
+                        }}),
+                        add(new FeedConnection() {{
+                            accountId = "079a88ea-276d-41fb-a1f1-366ef3e22921";
+                            accountName = "Joe's Savings Account";
+                            accountNumber = "3809087654321500";
+                            accountToken = "10000123";
+                            accountType = "BANK";
+                            country = "GB";
+                            currency = "AUD";
+                            error = new Error() {{
+                                detail = "The application has not been configured to use these API endpoints.";
+                                status = 403;
+                                title = "Invalid Application";
+                                type = "invalid-application";
+                            }};
+                            id = "0d3cf8d-95dc-4466-8dc0-47e6d1197e28";
+                            status = "REJECTED";
+                        }}),
+                        add(new FeedConnection() {{
+                            accountId = "079a88ea-276d-41fb-a1f1-366ef3e22921";
+                            accountName = "Joe's Savings Account";
+                            accountNumber = "3809087654321500";
+                            accountToken = "10000123";
+                            accountType = "BANK";
+                            country = "GB";
+                            currency = "AUD";
+                            error = new Error() {{
+                                detail = "The application has not been configured to use these API endpoints.";
+                                status = 403;
+                                title = "Invalid Application";
+                                type = "invalid-application";
+                            }};
+                            id = "0d3cf8d-95dc-4466-8dc0-47e6d1197e28";
+                            status = "REJECTED";
                         }}),
                     }};
                     pagination = new Pagination() {{
-                        itemCount = 2339563716805116249;
-                        page = 7144924247938981575;
-                        pageCount = 161231572858529631;
-                        pageSize = 7259475919510918339;
+                        itemCount = 2;
+                        page = 1;
+                        pageCount = 1;
+                        pageSize = 10;
                     }};
                 }};
-            }};
+            }};            
 
             CreateFeedConnectionsResponse res = sdk.bankFeeds.createFeedConnections(req);
 

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,59 +15,58 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateDevicePoolXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateDevicePoolHeaders;
+import org.openapis.openapi.models.operations.CreateDevicePoolRequest;
+import org.openapis.openapi.models.operations.CreateDevicePoolResponse;
+import org.openapis.openapi.models.shared.CreateDevicePoolRequest;
+import org.openapis.openapi.models.shared.Rule;
+import org.openapis.openapi.models.shared.RuleOperatorEnum;
+import org.openapis.openapi.models.shared.DeviceAttributeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateDevicePoolRequest req = new CreateDevicePoolRequest() {{
                 headers = new CreateDevicePoolHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "DeviceFarm_20150623.CreateDevicePool";
                 }};
                 request = new CreateDevicePoolRequest() {{
-                    description = "fugit";
-                    maxDevices = 1543572285742637646;
-                    name = "nihil";
-                    projectArn = "rerum";
-                    rules = new openapisdk.models.shared.Rule[]() {{
+                    description = "illum";
+                    maxDevices = 423655;
+                    name = "error";
+                    projectArn = "deserunt";
+                    rules = new org.openapis.openapi.models.shared.Rule[]{{
                         add(new Rule() {{
-                            attribute = "REMOTE_ACCESS_ENABLED";
-                            operator = "EQUALS";
-                            value = "et";
+                            attribute = "REMOTE_DEBUG_ENABLED";
+                            operator = "LESS_THAN_OR_EQUALS";
+                            value = "debitis";
                         }}),
                         add(new Rule() {{
                             attribute = "ARN";
-                            operator = "LESS_THAN_OR_EQUALS";
-                            value = "et";
-                        }}),
-                        add(new Rule() {{
-                            attribute = "FORM_FACTOR";
-                            operator = "GREATER_THAN";
-                            value = "vitae";
+                            operator = "CONTAINS";
+                            value = "tempora";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateDevicePoolResponse res = sdk.createDevicePool(req);
 
@@ -93,7 +92,7 @@ public class Application {
 * `createTestGridProject` - Creates a Selenium testing project. Projects are used to track <a>TestGridSession</a> instances.
 * `createTestGridUrl` - Creates a signed, short-term URL that can be passed to a Selenium <code>RemoteWebDriver</code> constructor.
 * `createUpload` - Uploads an app or test scripts.
-* `createVpceConfiguration` - Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC) endpoint.
+* `createVPCEConfiguration` - Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC) endpoint.
 * `deleteDevicePool` - Deletes a device pool given the pool ARN. Does not allow deletion of curated pools owned by the system.
 * `deleteInstanceProfile` - Deletes a profile that can be applied to one or more private device instances.
 * `deleteNetworkProfile` - Deletes a network profile.
@@ -102,7 +101,7 @@ public class Application {
 * `deleteRun` - <p>Deletes the run, given the run ARN.</p> <p> Deleting this resource does not stop an in-progress run.</p>
 * `deleteTestGridProject` - <p> Deletes a Selenium testing project and all content generated under it. </p> <important> <p>You cannot undo this operation.</p> </important> <note> <p>You cannot delete a project if it has active sessions.</p> </note>
 * `deleteUpload` - Deletes an upload given the upload ARN.
-* `deleteVpceConfiguration` - Deletes a configuration for your Amazon Virtual Private Cloud (VPC) endpoint.
+* `deleteVPCEConfiguration` - Deletes a configuration for your Amazon Virtual Private Cloud (VPC) endpoint.
 * `getAccountSettings` - Returns the number of unmetered iOS or unmetered Android devices that have been purchased by the account.
 * `getDevice` - Gets information about a unique device type.
 * `getDeviceInstance` - Returns information about a device instance that belongs to a private device fleet.
@@ -120,7 +119,7 @@ public class Application {
 * `getTestGridProject` - Retrieves information about a Selenium testing project.
 * `getTestGridSession` - <p>A session is an instance of a browser created through a <code>RemoteWebDriver</code> with the URL from <a>CreateTestGridUrlResult$url</a>. You can use the following to look up sessions:</p> <ul> <li> <p>The session ARN (<a>GetTestGridSessionRequest$sessionArn</a>).</p> </li> <li> <p>The project ARN and a session ID (<a>GetTestGridSessionRequest$projectArn</a> and <a>GetTestGridSessionRequest$sessionId</a>).</p> </li> </ul> <p/>
 * `getUpload` - Gets information about an upload.
-* `getVpceConfiguration` - Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC) endpoint.
+* `getVPCEConfiguration` - Returns information about the configuration settings for your Amazon Virtual Private Cloud (VPC) endpoint.
 * `installToRemoteAccessSession` - Installs an application to the device in a remote access session. For Android applications, the file must be in .apk format. For iOS applications, the file must be in .ipa format.
 * `listArtifacts` - Gets information about artifacts.
 * `listDeviceInstances` - Returns information about the private device instances associated with one or more AWS accounts.
@@ -145,7 +144,7 @@ public class Application {
 * `listTests` - Gets information about tests in a given test suite.
 * `listUniqueProblems` - <p>Gets information about unique problems, such as exceptions or crashes.</p> <p>Unique problems are defined as a single instance of an error across a run, job, or suite. For example, if a call in your application consistently raises an exception (<code>OutOfBoundsException in MyActivity.java:386</code>), <code>ListUniqueProblems</code> returns a single entry instead of many individual entries for that exception.</p>
 * `listUploads` - Gets information about uploads, given an AWS Device Farm project ARN.
-* `listVpceConfigurations` - Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS account.
+* `listVPCEConfigurations` - Returns information about all Amazon Virtual Private Cloud (VPC) endpoint configurations in the AWS account.
 * `purchaseOffering` - Immediately purchases offerings for an AWS account. Offerings renew with the latest total purchased quantity for an offering, unless the renewal was overridden. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. If you must be able to invoke this operation, contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a>.
 * `renewOffering` - Explicitly sets the quantity of devices to renew for an offering, starting from the <code>effectiveDate</code> of the next period. The API returns a <code>NotEligible</code> error if the user is not permitted to invoke the operation. If you must be able to invoke this operation, contact <a href="mailto:aws-devicefarm-support@amazon.com">aws-devicefarm-support@amazon.com</a>.
 * `scheduleRun` - Schedules a run.
@@ -161,8 +160,18 @@ public class Application {
 * `updateProject` - Modifies the specified project name, given the project ARN and a new name.
 * `updateTestGridProject` - Change details of a project.
 * `updateUpload` - Updates an uploaded test spec.
-* `updateVpceConfiguration` - Updates information about an Amazon Virtual Private Cloud (VPC) endpoint configuration.
-
+* `updateVPCEConfiguration` - Updates information about an Amazon Virtual Private Cloud (VPC) endpoint configuration.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,39 +2,39 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CancelChangeSetQueryParams;
+import org.openapis.openapi.models.operations.CancelChangeSetHeaders;
+import org.openapis.openapi.models.operations.CancelChangeSetRequest;
+import org.openapis.openapi.models.operations.CancelChangeSetResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CancelChangeSetRequest req = new CancelChangeSetRequest() {{
                 queryParams = new CancelChangeSetQueryParams() {{
-                    catalog = "sit";
-                    changeSetId = "voluptas";
+                    catalog = "corrupti";
+                    changeSetId = "provident";
                 }};
                 headers = new CancelChangeSetHeaders() {{
-                    xAmzAlgorithm = "culpa";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "consequuntur";
-                    xAmzDate = "dolor";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "voluptas";
-                    xAmzSignedHeaders = "fugit";
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
-            }};
+            }};            
 
             CancelChangeSetResponse res = sdk.cancelChangeSet(req);
 

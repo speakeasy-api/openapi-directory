@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,26 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity;
+import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreatePathParams;
+import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateQueryParams;
+import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest;
+import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse;
+import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest;
+import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet;
+import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpec;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DatalabelingProjectsAnnotationSpecSetsCreateRequest req = new DatalabelingProjectsAnnotationSpecSetsCreateRequest() {{
                 security = new DatalabelingProjectsAnnotationSpecSetsCreateSecurity() {{
@@ -35,51 +46,45 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatalabelingProjectsAnnotationSpecSetsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new DatalabelingProjectsAnnotationSpecSetsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest() {{
                     annotationSpecSet = new GoogleCloudDatalabelingV1beta1AnnotationSpecSet() {{
-                        annotationSpecs = new openapisdk.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpec[]() {{
+                        annotationSpecs = new org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpec[]{{
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "debitis";
-                                displayName = "voluptatum";
-                                index = 2339563716805116249;
+                                description = "iure";
+                                displayName = "magnam";
+                                index = 891773;
                             }}),
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "ut";
-                                displayName = "dolorem";
-                                index = 7259475919510918339;
-                            }}),
-                            add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "voluptate";
-                                displayName = "iste";
-                                index = 3930927879439176946;
+                                description = "ipsa";
+                                displayName = "delectus";
+                                index = 272656;
                             }}),
                         }};
-                        blockingResources = new String[]() {{
-                            add("dolores"),
-                            add("illum"),
-                            add("debitis"),
+                        blockingResources = new String[]{{
+                            add("molestiae"),
+                            add("minus"),
                         }};
-                        description = "vel";
-                        displayName = "odio";
-                        name = "dolore";
+                        description = "placeat";
+                        displayName = "voluptatum";
+                        name = "iusto";
                     }};
                 }};
-            }};
+            }};            
 
             DatalabelingProjectsAnnotationSpecSetsCreateResponse res = sdk.projects.datalabelingProjectsAnnotationSpecSetsCreate(req);
 
@@ -94,6 +99,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### projects
 
@@ -125,7 +131,17 @@ public class Application {
 * `datalabelingProjectsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `datalabelingProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 * `datalabelingProjectsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

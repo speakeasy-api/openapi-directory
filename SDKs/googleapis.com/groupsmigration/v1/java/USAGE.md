@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertSecurity;
+import org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertPathParams;
+import org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertQueryParams;
+import org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertRequest;
+import org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GroupsmigrationArchiveInsertRequest req = new GroupsmigrationArchiveInsertRequest() {{
                 security = new GroupsmigrationArchiveInsertSecurity() {{
@@ -22,22 +30,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new GroupsmigrationArchiveInsertPathParams() {{
-                    groupId = "sit";
+                    groupId = "corrupti";
                 }};
                 queryParams = new GroupsmigrationArchiveInsertQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-            }};
+            }};            
 
             GroupsmigrationArchiveInsertResponse res = sdk.archive.groupsmigrationArchiveInsert(req);
 

@@ -2,15 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateSecurity;
+import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreatePathParams;
+import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateQueryParams;
+import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateRequest;
+import org.openapis.openapi.models.operations.DatastreamProjectsLocationsConnectionProfilesCreateResponse;
+import org.openapis.openapi.models.shared.ConnectionProfileInput;
+import org.openapis.openapi.models.shared.PrivateConnectivity;
+import org.openapis.openapi.models.shared.OracleProfile;
+import org.openapis.openapi.models.shared.MysqlProfileInput;
+import org.openapis.openapi.models.shared.MysqlSslConfigInput;
+import org.openapis.openapi.models.shared.GcsProfile;
+import org.openapis.openapi.models.shared.ForwardSshTunnelConnectivity;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DatastreamProjectsLocationsConnectionProfilesCreateRequest req = new DatastreamProjectsLocationsConnectionProfilesCreateRequest() {{
                 security = new DatastreamProjectsLocationsConnectionProfilesCreateSecurity() {{
@@ -22,77 +37,81 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatastreamProjectsLocationsConnectionProfilesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new DatastreamProjectsLocationsConnectionProfilesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    connectionProfileId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    connectionProfileId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    requestId = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    quotaUser = "error";
+                    requestId = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
                 request = new ConnectionProfileInput() {{
-                    displayName = "voluptatum";
+                    displayName = "magnam";
                     forwardSshConnectivity = new ForwardSshTunnelConnectivity() {{
-                        hostname = "et";
-                        password = "ut";
-                        port = 161231572858529631;
-                        privateKey = "et";
-                        username = "voluptate";
+                        hostname = "unique-baboon.org";
+                        password = "tempora";
+                        port = 383441;
+                        privateKey = "molestiae";
+                        username = "Paxton.Schulist";
                     }};
                     gcsProfile = new GcsProfile() {{
-                        bucketName = "iste";
-                        rootPath = "vitae";
+                        bucketName = "excepturi";
+                        rootPath = "nisi";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("dolores", "illum");
-                        put("debitis", "vel");
-                        put("odio", "dolore");
+                        put("temporibus", "ab");
+                        put("quis", "veritatis");
+                        put("deserunt", "perferendis");
+                        put("ipsam", "repellendus");
                     }};
                     mysqlProfile = new MysqlProfileInput() {{
-                        hostname = "id";
-                        password = "aspernatur";
-                        port = 2914295034816259174;
+                        hostname = "well-informed-screamer.com";
+                        password = "at";
+                        port = 870088;
                         sslConfig = new MysqlSslConfigInput() {{
-                            caCertificate = "totam";
-                            clientCertificate = "commodi";
-                            clientKey = "quis";
+                            caCertificate = "maiores";
+                            clientCertificate = "molestiae";
+                            clientKey = "quod";
                         }};
-                        username = "est";
+                        username = "Presley_Koepp";
                     }};
                     noConnectivity = new java.util.HashMap<String, Object>() {{
-                        put("odit", "non");
-                        put("voluptas", "omnis");
-                        put("aut", "illo");
+                        put("dicta", "nam");
+                        put("officia", "occaecati");
+                        put("fugit", "deleniti");
                     }};
                     oracleProfile = new OracleProfile() {{
                         connectionAttributes = new java.util.HashMap<String, String>() {{
-                            put("officiis", "autem");
-                            put("consectetur", "nobis");
-                            put("odio", "qui");
+                            put("optio", "totam");
+                            put("beatae", "commodi");
+                            put("molestiae", "modi");
+                            put("qui", "impedit");
                         }};
-                        databaseService = "recusandae";
-                        hostname = "at";
-                        password = "ipsum";
-                        port = 8902041070398994519;
-                        username = "modi";
+                        databaseService = "cum";
+                        hostname = "jolly-cowboy.name";
+                        password = "aspernatur";
+                        port = 18789;
+                        username = "Enrique61";
                     }};
                     privateConnectivity = new PrivateConnectivity() {{
-                        privateConnectionName = "sint";
+                        privateConnectionName = "dolor";
                     }};
                     staticServiceIpConnectivity = new java.util.HashMap<String, Object>() {{
-                        put("ut", "exercitationem");
+                        put("laboriosam", "hic");
+                        put("saepe", "fuga");
+                        put("in", "corporis");
                     }};
                 }};
-            }};
+            }};            
 
             DatastreamProjectsLocationsConnectionProfilesCreateResponse res = sdk.projects.datastreamProjectsLocationsConnectionProfilesCreate(req);
 

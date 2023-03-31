@@ -2,15 +2,36 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateSecurity;
+import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateQueryParams;
+import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateRequest;
+import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateResponse;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequestFeaturesEnum;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequest;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1VideoContext;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1TextDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1SpeechContext;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1ShotChangeDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1VideoSegment;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1PersonDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1ObjectTrackingConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1LabelDetectionConfigLabelDetectionModeEnum;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1LabelDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1FaceDetectionConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1ExplicitContentDetectionConfig;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             VideointelligenceVideosAnnotateRequest req = new VideointelligenceVideosAnnotateRequest() {{
                 security = new VideointelligenceVideosAnnotateSecurity() {{
@@ -22,105 +43,121 @@ public class Application {
                     }};
                 }};
                 queryParams = new VideointelligenceVideosAnnotateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequest() {{
-                    features = new openapisdk.models.shared.GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequestFeaturesEnum[]() {{
-                        add("PERSON_DETECTION"),
-                        add("LOGO_RECOGNITION"),
+                    features = new org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1AnnotateVideoRequestFeaturesEnum[]{{
+                        add("EXPLICIT_CONTENT_DETECTION"),
+                        add("FACE_DETECTION"),
                         add("SHOT_CHANGE_DETECTION"),
                     }};
-                    inputContent = "et";
-                    inputUri = "ut";
-                    locationId = "dolorem";
-                    outputUri = "et";
+                    inputContent = "debitis";
+                    inputUri = "ipsa";
+                    locationId = "delectus";
+                    outputUri = "tempora";
                     videoContext = new GoogleCloudVideointelligenceV1p1beta1VideoContext() {{
                         explicitContentDetectionConfig = new GoogleCloudVideointelligenceV1p1beta1ExplicitContentDetectionConfig() {{
-                            model = "voluptate";
+                            model = "suscipit";
                         }};
                         faceDetectionConfig = new GoogleCloudVideointelligenceV1p1beta1FaceDetectionConfig() {{
-                            includeAttributes = true;
-                            includeBoundingBoxes = true;
-                            model = "totam";
+                            includeAttributes = false;
+                            includeBoundingBoxes = false;
+                            model = "molestiae";
                         }};
                         labelDetectionConfig = new GoogleCloudVideointelligenceV1p1beta1LabelDetectionConfig() {{
-                            frameConfidenceThreshold = 80.199997;
-                            labelDetectionMode = "FRAME_MODE";
-                            model = "vel";
+                            frameConfidenceThreshold = 7917.25;
+                            labelDetectionMode = "SHOT_AND_FRAME_MODE";
+                            model = "voluptatum";
                             stationaryCamera = false;
-                            videoConfidenceThreshold = 91.099998;
+                            videoConfidenceThreshold = 4799.77;
                         }};
                         objectTrackingConfig = new GoogleCloudVideointelligenceV1p1beta1ObjectTrackingConfig() {{
-                            model = "aspernatur";
+                            model = "excepturi";
                         }};
                         personDetectionConfig = new GoogleCloudVideointelligenceV1p1beta1PersonDetectionConfig() {{
-                            includeAttributes = true;
+                            includeAttributes = false;
                             includeBoundingBoxes = false;
                             includePoseLandmarks = false;
                         }};
-                        segments = new openapisdk.models.shared.GoogleCloudVideointelligenceV1p1beta1VideoSegment[]() {{
+                        segments = new org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1VideoSegment[]{{
                             add(new GoogleCloudVideointelligenceV1p1beta1VideoSegment() {{
-                                endTimeOffset = "est";
-                                startTimeOffset = "aut";
+                                endTimeOffset = "recusandae";
+                                startTimeOffset = "temporibus";
                             }}),
                             add(new GoogleCloudVideointelligenceV1p1beta1VideoSegment() {{
-                                endTimeOffset = "odit";
-                                startTimeOffset = "non";
-                            }}),
-                            add(new GoogleCloudVideointelligenceV1p1beta1VideoSegment() {{
-                                endTimeOffset = "voluptas";
-                                startTimeOffset = "omnis";
+                                endTimeOffset = "ab";
+                                startTimeOffset = "quis";
                             }}),
                         }};
                         shotChangeDetectionConfig = new GoogleCloudVideointelligenceV1p1beta1ShotChangeDetectionConfig() {{
-                            model = "aut";
+                            model = "veritatis";
                         }};
                         speechTranscriptionConfig = new GoogleCloudVideointelligenceV1p1beta1SpeechTranscriptionConfig() {{
-                            audioTracks = new Integer[]() {{
-                                add(5558237345453186302),
+                            audioTracks = new Integer[]{{
+                                add(20218),
+                                add(368241),
+                                add(832620),
                             }};
-                            diarizationSpeakerCount = 7845762441295307478;
-                            enableAutomaticPunctuation = true;
-                            enableSpeakerDiarization = true;
+                            diarizationSpeakerCount = 957156;
+                            enableAutomaticPunctuation = false;
+                            enableSpeakerDiarization = false;
                             enableWordConfidence = false;
                             filterProfanity = false;
-                            languageCode = "qui";
-                            maxAlternatives = 388440063886460141;
-                            speechContexts = new openapisdk.models.shared.GoogleCloudVideointelligenceV1p1beta1SpeechContext[]() {{
+                            languageCode = "quo";
+                            maxAlternatives = 140350;
+                            speechContexts = new org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p1beta1SpeechContext[]{{
                                 add(new GoogleCloudVideointelligenceV1p1beta1SpeechContext() {{
-                                    phrases = new String[]() {{
-                                        add("eveniet"),
+                                    phrases = new String[]{{
+                                        add("maiores"),
+                                        add("molestiae"),
+                                        add("quod"),
+                                        add("quod"),
                                     }};
                                 }}),
                                 add(new GoogleCloudVideointelligenceV1p1beta1SpeechContext() {{
-                                    phrases = new String[]() {{
-                                        add("sint"),
-                                        add("inventore"),
+                                    phrases = new String[]{{
+                                        add("totam"),
+                                        add("porro"),
+                                    }};
+                                }}),
+                                add(new GoogleCloudVideointelligenceV1p1beta1SpeechContext() {{
+                                    phrases = new String[]{{
+                                        add("dicta"),
+                                        add("nam"),
+                                        add("officia"),
+                                    }};
+                                }}),
+                                add(new GoogleCloudVideointelligenceV1p1beta1SpeechContext() {{
+                                    phrases = new String[]{{
+                                        add("fugit"),
+                                        add("deleniti"),
+                                        add("hic"),
                                     }};
                                 }}),
                             }};
                         }};
                         textDetectionConfig = new GoogleCloudVideointelligenceV1p1beta1TextDetectionConfig() {{
-                            languageHints = new String[]() {{
-                                add("exercitationem"),
-                                add("aut"),
-                                add("reprehenderit"),
+                            languageHints = new String[]{{
+                                add("totam"),
+                                add("beatae"),
+                                add("commodi"),
+                                add("molestiae"),
                             }};
-                            model = "tempore";
+                            model = "modi";
                         }};
                     }};
                 }};
-            }};
+            }};            
 
             VideointelligenceVideosAnnotateResponse res = sdk.videos.videointelligenceVideosAnnotate(req);
 

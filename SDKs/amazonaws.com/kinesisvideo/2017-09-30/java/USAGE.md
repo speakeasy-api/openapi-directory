@@ -2,48 +2,59 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateSignalingChannelHeaders;
+import org.openapis.openapi.models.operations.CreateSignalingChannelRequestBodyChannelTypeEnum;
+import org.openapis.openapi.models.operations.CreateSignalingChannelRequestBodySingleMasterConfiguration;
+import org.openapis.openapi.models.operations.CreateSignalingChannelRequestBody;
+import org.openapis.openapi.models.operations.CreateSignalingChannelRequest;
+import org.openapis.openapi.models.operations.CreateSignalingChannelResponse;
+import org.openapis.openapi.models.shared.Tag;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateSignalingChannelRequest req = new CreateSignalingChannelRequest() {{
                 headers = new CreateSignalingChannelHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateSignalingChannelRequestBody() {{
-                    channelName = "voluptas";
+                    channelName = "illum";
                     channelType = "SINGLE_MASTER";
                     singleMasterConfiguration = new CreateSignalingChannelRequestBodySingleMasterConfiguration() {{
-                        messageTtlSeconds = 1543572285742637646;
+                        messageTtlSeconds = 623564;
                     }};
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "rerum";
-                            value = "dicta";
+                            key = "suscipit";
+                            value = "iure";
+                        }}),
+                        add(new Tag() {{
+                            key = "magnam";
+                            value = "debitis";
+                        }}),
+                        add(new Tag() {{
+                            key = "ipsa";
+                            value = "delectus";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateSignalingChannelResponse res = sdk.createSignalingChannel(req);
 

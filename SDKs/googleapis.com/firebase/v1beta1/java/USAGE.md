@@ -2,15 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FirebaseAvailableProjectsListSecurityOption1;
+import org.openapis.openapi.models.operations.FirebaseAvailableProjectsListSecurityOption2;
+import org.openapis.openapi.models.operations.FirebaseAvailableProjectsListSecurityOption3;
+import org.openapis.openapi.models.operations.FirebaseAvailableProjectsListSecurityOption4;
+import org.openapis.openapi.models.operations.FirebaseAvailableProjectsListSecurity;
+import org.openapis.openapi.models.operations.FirebaseAvailableProjectsListQueryParams;
+import org.openapis.openapi.models.operations.FirebaseAvailableProjectsListRequest;
+import org.openapis.openapi.models.operations.FirebaseAvailableProjectsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FirebaseAvailableProjectsListRequest req = new FirebaseAvailableProjectsListRequest() {{
                 security = new FirebaseAvailableProjectsListSecurity() {{
@@ -24,21 +35,21 @@ public class Application {
                     }};
                 }};
                 queryParams = new FirebaseAvailableProjectsListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    pageSize = 6044372234677422456;
-                    pageToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    pageSize = 847252;
+                    pageToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             FirebaseAvailableProjectsListResponse res = sdk.availableProjects.firebaseAvailableProjectsList(req);
 

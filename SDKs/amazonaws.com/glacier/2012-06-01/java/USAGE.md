@@ -2,40 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AbortMultipartUploadPathParams;
+import org.openapis.openapi.models.operations.AbortMultipartUploadHeaders;
+import org.openapis.openapi.models.operations.AbortMultipartUploadRequest;
+import org.openapis.openapi.models.operations.AbortMultipartUploadResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AbortMultipartUploadRequest req = new AbortMultipartUploadRequest() {{
                 pathParams = new AbortMultipartUploadPathParams() {{
-                    accountId = "sit";
-                    uploadId = "voluptas";
-                    vaultName = "culpa";
+                    accountId = "corrupti";
+                    uploadId = "provident";
+                    vaultName = "distinctio";
                 }};
                 headers = new AbortMultipartUploadHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
+                    xAmzAlgorithm = "quibusdam";
+                    xAmzContentSha256 = "unde";
+                    xAmzCredential = "nulla";
+                    xAmzDate = "corrupti";
+                    xAmzSecurityToken = "illum";
+                    xAmzSignature = "vel";
+                    xAmzSignedHeaders = "error";
                 }};
-            }};
+            }};            
 
             AbortMultipartUploadResponse res = sdk.abortMultipartUpload(req);
 

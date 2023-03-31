@@ -2,15 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption1;
+import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption2;
+import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption3;
+import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption4;
+import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption5;
+import org.openapis.openapi.models.operations.Area120tablesTablesListSecurityOption6;
+import org.openapis.openapi.models.operations.Area120tablesTablesListSecurity;
+import org.openapis.openapi.models.operations.Area120tablesTablesListQueryParams;
+import org.openapis.openapi.models.operations.Area120tablesTablesListRequest;
+import org.openapis.openapi.models.operations.Area120tablesTablesListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             Area120tablesTablesListRequest req = new Area120tablesTablesListRequest() {{
                 security = new Area120tablesTablesListSecurity() {{
@@ -24,22 +37,22 @@ public class Application {
                     }};
                 }};
                 queryParams = new Area120tablesTablesListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    orderBy = "voluptas";
-                    pageSize = 8274930044578894929;
-                    pageToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    orderBy = "illum";
+                    pageSize = 423655;
+                    pageToken = "error";
+                    prettyPrint = false;
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             Area120tablesTablesListResponse res = sdk.tables.area120tablesTablesList(req);
 

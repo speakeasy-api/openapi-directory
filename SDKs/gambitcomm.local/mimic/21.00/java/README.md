@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,32 +15,31 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AccessAddPathParams;
+import org.openapis.openapi.models.operations.AccessAddRequest;
+import org.openapis.openapi.models.operations.AccessAddResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     basicAuth = new SchemeBasicAuth() {{
                         password = "YOUR_PASSWORD_HERE";
                         username = "YOUR_USERNAME_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AccessAddRequest req = new AccessAddRequest() {{
                 pathParams = new AccessAddPathParams() {{
-                    agents = "sit";
-                    mask = "voluptas";
-                    user = "culpa";
+                    agents = "corrupti";
+                    mask = "provident";
+                    user = "distinctio";
                 }};
-            }};
+            }};            
 
             AccessAddResponse res = sdk.access.accessAdd(req);
 
@@ -56,7 +55,8 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Access
+
+### access
 
 * `accessAdd` - Adds/Overwrites the user entry in the access control database.
 * `accessDel` - Clears a users entry from access control database.
@@ -70,7 +70,7 @@ public class Application {
 * `accessSetAcldb` - Allows setting the name of the current access control database.
 * `accessSetEnabled` - Allows the user to enable/disable the access control check.
 
-### Agent
+### agent
 
 * `addIpalias` - Adds a new ipalias for the agent.
 * `addTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
@@ -151,7 +151,7 @@ public class Application {
 * `trapConfigList` - List the set of trap destinations for this agent instance.
 * `trapList` - List the outstanding asynchronous traps for this agent instance.
 
-### COAP
+### coap
 
 * `protocolCoapGetArgs` - Show the agent's COAP argument structure
 * `protocolCoapGetConfig` - Show the agent's COAP configuration
@@ -161,7 +161,7 @@ public class Application {
 * `protocolCoapSetConfig` - Set the agent's COAP configuration
 * `protocolCoapSetTrace` - Set the agent's COAP traffic tracing
 
-### DHCP
+### dhcp
 
 * `protocolDhcpGetArgs` - Show the agent's DHCP argument structure
 * `protocolDhcpGetConfig` - Show the agent's DHCP configuration
@@ -172,7 +172,7 @@ public class Application {
 * `protocolDhcpSetConfig` - Set the agent's DHCP configuration
 * `protocolDhcpSetTrace` - Set the agent's DHCP traffic tracing
 
-### Daemon
+### daemon
 
 * `addDaemonTimerScript` - Add a new timer script to be executed at specified interval (in msec) with the specified argument.
 * `cfgLoad` - Load the lab configuration file file.
@@ -214,7 +214,7 @@ public class Application {
 * `storeUnset` - Deletes a variable which is currently defined.
 * `terminate` - Terminate the MIMIC daemon.
 
-### IPMI
+### ipmi
 
 * `protocolIpmiGetArgs` - Show the agent's IPMI argument structure
 * `protocolIpmiGetAttr` - Show the outgoing message's attributes
@@ -226,7 +226,7 @@ public class Application {
 * `protocolIpmiSetConfig` - Set the agent's IPMI configuration
 * `protocolIpmiSetTrace` - Set the agent's IPMI traffic tracing
 
-### MQTT
+### mqtt
 
 * `protocolMqttClientGetProtstate` - Show the agent's MQTT TCP connection state
 * `protocolMqttClientGetState` - Show the agent's MQTT state
@@ -261,7 +261,7 @@ public class Application {
 * `protocolMqttSetConfig` - Set the agent's MQTT configuration
 * `protocolMqttSetTrace` - Set the agent's MQTT traffic tracing
 
-### NETFLOW
+### netflow
 
 * `protocolNetflowChangeAttr` - Change NETFLOW export attributes
 * `protocolNetflowChangeDfs` - Change NETFLOW data export interval
@@ -280,7 +280,7 @@ public class Application {
 * `protocolNetflowSetFileName` - Swap NETFLOW configuration file
 * `protocolNetflowSetTrace` - Set the agent's NETFLOW traffic tracing
 
-### PROXY
+### proxy
 
 * `protocolProxyGetArgs` - Show the agent's PROXY argument structure
 * `protocolProxyGetConfig` - Show the agent's PROXY configuration
@@ -296,7 +296,7 @@ public class Application {
 * `protocolProxySetConfig` - Set the agent's PROXY configuration
 * `protocolProxySetTrace` - Set the agent's PROXY traffic tracing
 
-### SFLOW
+### sflow
 
 * `protocolSflowGetArgs` - Show the agent's SFLOW argument structure
 * `protocolSflowGetConfig` - Show the agent's SFLOW configuration
@@ -309,7 +309,7 @@ public class Application {
 * `protocolSflowSetConfig` - Set the agent's SFLOW configuration
 * `protocolSflowSetTrace` - Set the agent's SFLOW traffic tracing
 
-### SNMPTCP
+### snmptcp
 
 * `protocolSnmptcpGetArgs` - Show the agent's SNMPTCP argument structure
 * `protocolSnmptcpGetConfig` - Show the agent's SNMPTCP configuration
@@ -323,7 +323,7 @@ public class Application {
 * `protocolSnmptcpSetConfig` - Set the agent's SNMPTCP configuration
 * `protocolSnmptcpSetTrace` - Set the agent's SNMPTCP traffic tracing
 
-### SNMPv3
+### snmPv3
 
 * `protocolSnmpv3AccessAdd` - Adds a new access entry with the specified parameters.
 * `protocolSnmpv3AccessClear` - Clears all access entries.
@@ -352,7 +352,7 @@ public class Application {
 * `protocolSnmpv3ViewDel` - Deletes the specified view entry.
 * `protocolSnmpv3ViewList` - Returns the current view entries as an array of strings.
 
-### SSH
+### ssh
 
 * `protocolSshGetArgs` - Show the agent's SSH argument structure
 * `protocolSshGetConfig` - Show the agent's SSH configuration
@@ -366,7 +366,7 @@ public class Application {
 * `protocolSshSetConfig` - Set the agent's SSH configuration
 * `protocolSshSetTrace` - Set the agent's SSH traffic tracing
 
-### SYSLOG
+### syslog
 
 * `protocolSyslogGetArgs` - Show the agent's SYSLOG argument structure
 * `protocolSyslogGetAttr` - Show the outgoing message's attributes
@@ -379,7 +379,7 @@ public class Application {
 * `protocolSyslogSetConfig` - Set the agent's SYSLOG configuration
 * `protocolSyslogSetTrace` - Set the agent's SYSLOG traffic tracing
 
-### TELNET
+### telnet
 
 * `protocolTelnetConnectionLogon` - Changes the connection's current logon.
 * `protocolTelnetConnectionRequest` - Executes the command asynchronously .
@@ -402,7 +402,7 @@ public class Application {
 * `protocolTelnetSetConfig` - Set the agent's TELNET configuration
 * `protocolTelnetSetTrace` - Set the agent's TELNET traffic tracing
 
-### TFTP
+### tftp
 
 * `protocolTftpGetArgs` - Show the agent's TFTP argument structure
 * `protocolTftpGetConfig` - Show the agent's TFTP configuration
@@ -419,7 +419,7 @@ public class Application {
 * `protocolTftpSetConfig` - Set the agent's TFTP configuration
 * `protocolTftpSetTrace` - Set the agent's TFTP traffic tracing
 
-### TOD
+### tod
 
 * `protocolTodGetArgs` - Show the agent's TOD argument structure
 * `protocolTodGetConfig` - Show the agent's TOD configuration
@@ -430,7 +430,7 @@ public class Application {
 * `protocolTodSetConfig` - Set the agent's TOD configuration
 * `protocolTodSetTrace` - Set the agent's TOD traffic tracing
 
-### Valuespace
+### valuespace
 
 * `add` - Add an entry to a table.
 * `evalValue` - Evaluate the values of the specified instance instance for each specified MIB object object and return it as it would through SNMP requests.
@@ -451,7 +451,7 @@ public class Application {
 * `splitOid` - Split the numerical OID into the object OID and instance OID.
 * `unsetValue` - Unset a variable in the Value Space in order to free its memory.
 
-### WEB
+### web
 
 * `protocolWebGetArgs` - Show the agent's WEB argument structure
 * `protocolWebGetConfig` - Show the agent's WEB configuration
@@ -466,7 +466,17 @@ public class Application {
 * `protocolWebPortStop` - Stop the agent's WEB port
 * `protocolWebSetConfig` - Set the agent's WEB configuration
 * `protocolWebSetTrace` - Set the agent's WEB traffic tracing
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,28 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAllAccountsSecurity;
+import org.openapis.openapi.models.operations.GetAllAccountsProviderEnum;
+import org.openapis.openapi.models.operations.GetAllAccountsQueryParams;
+import org.openapis.openapi.models.operations.GetAllAccountsRequest;
+import org.openapis.openapi.models.operations.GetAllAccountsResponse;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
+import org.openapis.openapi.models.shared.SchemeBearerAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAllAccountsRequest req = new GetAllAccountsRequest() {{
                 security = new GetAllAccountsSecurity() {{
-                    bearerAuth = new SchemeBearerAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
+                    basicAuth = new SchemeBasicAuth() {{
+                        password = "YOUR_PASSWORD_HERE";
+                        username = "YOUR_USERNAME_HERE";
                     }};
                 }};
                 queryParams = new GetAllAccountsQueryParams() {{
-                    pageNumber = 8717895732742165505;
-                    pageSize = 2259404117704393152;
+                    pageNumber = 1;
+                    pageSize = 1;
                     provider = "viber_service_msg";
                 }};
-            }};
+            }};            
 
             GetAllAccountsResponse res = sdk.account.getAllAccounts(req);
 

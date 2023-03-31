@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GETHackathonsIdFormatPathParams;
+import org.openapis.openapi.models.operations.GETHackathonsIdFormatRequest;
+import org.openapis.openapi.models.operations.GETHackathonsIdFormatResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetHackathonsIdFormatRequest req = new GetHackathonsIdFormatRequest() {{
-                pathParams = new GetHackathonsIdFormatPathParams() {{
-                    id = 8717895732742165505;
+            GETHackathonsIdFormatRequest req = new GETHackathonsIdFormatRequest() {{
+                pathParams = new GETHackathonsIdFormatPathParams() {{
+                    id = 548814;
                 }};
-            }};
+            }};            
 
-            GetHackathonsIdFormatResponse res = sdk.hackathons.getHackathonsIdFormat(req);
+            GETHackathonsIdFormatResponse res = sdk.hackathons.getHackathonsIdFormat(req);
 
             if (res.statusCode == 200) {
                 // handle response

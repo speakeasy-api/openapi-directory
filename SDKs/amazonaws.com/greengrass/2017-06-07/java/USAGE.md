@@ -2,41 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateRoleToGroupPathParams;
+import org.openapis.openapi.models.operations.AssociateRoleToGroupHeaders;
+import org.openapis.openapi.models.operations.AssociateRoleToGroupRequestBody;
+import org.openapis.openapi.models.operations.AssociateRoleToGroupRequest;
+import org.openapis.openapi.models.operations.AssociateRoleToGroupResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateRoleToGroupRequest req = new AssociateRoleToGroupRequest() {{
                 pathParams = new AssociateRoleToGroupPathParams() {{
-                    groupId = "sit";
+                    groupId = "corrupti";
                 }};
                 headers = new AssociateRoleToGroupHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
                 request = new AssociateRoleToGroupRequestBody() {{
-                    roleArn = "fugit";
+                    roleArn = "vel";
                 }};
-            }};
+            }};            
 
             AssociateRoleToGroupResponse res = sdk.associateRoleToGroup(req);
 

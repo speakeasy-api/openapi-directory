@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetglobalnumberinfoQueryParams;
+import org.openapis.openapi.models.operations.GetglobalnumberinfoRequest;
+import org.openapis.openapi.models.operations.GetglobalnumberinfoResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetglobalnumberinfoRequest req = new GetglobalnumberinfoRequest() {{
                 queryParams = new GetglobalnumberinfoQueryParams() {{
-                    intlnumber = "sit";
-                    license = "voluptas";
+                    intlnumber = "corrupti";
+                    license = "provident";
                 }};
-            }};
+            }};            
 
             GetglobalnumberinfoResponse res = sdk.globalPhoneNumberInformation.getglobalnumberinfo(req);
 

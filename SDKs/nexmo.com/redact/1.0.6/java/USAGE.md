@@ -2,15 +2,21 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.RedactMessageSecurity;
+import org.openapis.openapi.models.operations.RedactMessageRequest;
+import org.openapis.openapi.models.operations.RedactMessageResponse;
+import org.openapis.openapi.models.shared.RedactTransactionProductEnum;
+import org.openapis.openapi.models.shared.RedactTransactionTypeEnum;
+import org.openapis.openapi.models.shared.RedactTransaction;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             RedactMessageRequest req = new RedactMessageRequest() {{
                 security = new RedactMessageSecurity() {{
@@ -20,11 +26,11 @@ public class Application {
                     }};
                 }};
                 request = new RedactTransaction() {{
-                    id = "sit";
+                    id = "209ab3c7536542b91e8b5aef032f6861";
                     product = "sms";
                     type = "outbound";
                 }};
-            }};
+            }};            
 
             RedactMessageResponse res = sdk.redactMessage(req);
 

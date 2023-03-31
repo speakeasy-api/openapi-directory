@@ -2,41 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteThingShadowPathParams;
+import org.openapis.openapi.models.operations.DeleteThingShadowQueryParams;
+import org.openapis.openapi.models.operations.DeleteThingShadowHeaders;
+import org.openapis.openapi.models.operations.DeleteThingShadowRequest;
+import org.openapis.openapi.models.operations.DeleteThingShadowResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DeleteThingShadowRequest req = new DeleteThingShadowRequest() {{
                 pathParams = new DeleteThingShadowPathParams() {{
-                    thingName = "sit";
+                    thingName = "corrupti";
                 }};
                 queryParams = new DeleteThingShadowQueryParams() {{
-                    name = "voluptas";
+                    name = "provident";
                 }};
                 headers = new DeleteThingShadowHeaders() {{
-                    xAmzAlgorithm = "culpa";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "consequuntur";
-                    xAmzDate = "dolor";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "voluptas";
-                    xAmzSignedHeaders = "fugit";
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
-            }};
+            }};            
 
             DeleteThingShadowResponse res = sdk.deleteThingShadow(req);
 

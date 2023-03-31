@@ -2,15 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption2;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurity;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesQueryParams;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesRequest;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesResponse;
+import org.openapis.openapi.models.shared.AnalyzeEntitiesRequestEncodingTypeEnum;
+import org.openapis.openapi.models.shared.AnalyzeEntitiesRequest;
+import org.openapis.openapi.models.shared.DocumentBoilerplateHandlingEnum;
+import org.openapis.openapi.models.shared.DocumentTypeEnum;
+import org.openapis.openapi.models.shared.Document;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             LanguageDocumentsAnalyzeEntitiesRequest req = new LanguageDocumentsAnalyzeEntitiesRequest() {{
                 security = new LanguageDocumentsAnalyzeEntitiesSecurity() {{
@@ -24,30 +38,30 @@ public class Application {
                     }};
                 }};
                 queryParams = new LanguageDocumentsAnalyzeEntitiesQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new AnalyzeEntitiesRequest() {{
                     document = new Document() {{
-                        boilerplateHandling = "KEEP_BOILERPLATE";
-                        content = "dicta";
-                        gcsContentUri = "debitis";
-                        language = "voluptatum";
-                        referenceWebUri = "et";
-                        type = "HTML";
+                        boilerplateHandling = "SKIP_BOILERPLATE";
+                        content = "suscipit";
+                        gcsContentUri = "iure";
+                        language = "magnam";
+                        referenceWebUri = "debitis";
+                        type = "TYPE_UNSPECIFIED";
                     }};
-                    encodingType = "UTF16";
+                    encodingType = "UTF32";
                 }};
-            }};
+            }};            
 
             LanguageDocumentsAnalyzeEntitiesResponse res = sdk.documents.languageDocumentsAnalyzeEntities(req);
 

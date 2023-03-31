@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteFaxSecurity;
+import org.openapis.openapi.models.operations.DeleteFaxPathParams;
+import org.openapis.openapi.models.operations.DeleteFaxRequest;
+import org.openapis.openapi.models.operations.DeleteFaxResponse;
+import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeleteFaxRequest req = new DeleteFaxRequest() {{
                 security = new DeleteFaxSecurity() {{
@@ -20,9 +24,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteFaxPathParams() {{
-                    sid = "sit";
+                    sid = "corrupti";
                 }};
-            }};
+            }};            
 
             DeleteFaxResponse res = sdk.deleteFax(req);
 

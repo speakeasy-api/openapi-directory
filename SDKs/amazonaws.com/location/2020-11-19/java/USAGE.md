@@ -2,41 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateTrackerConsumerPathParams;
+import org.openapis.openapi.models.operations.AssociateTrackerConsumerHeaders;
+import org.openapis.openapi.models.operations.AssociateTrackerConsumerRequestBody;
+import org.openapis.openapi.models.operations.AssociateTrackerConsumerRequest;
+import org.openapis.openapi.models.operations.AssociateTrackerConsumerResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateTrackerConsumerRequest req = new AssociateTrackerConsumerRequest() {{
                 pathParams = new AssociateTrackerConsumerPathParams() {{
-                    trackerName = "sit";
+                    trackerName = "corrupti";
                 }};
                 headers = new AssociateTrackerConsumerHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
                 request = new AssociateTrackerConsumerRequestBody() {{
-                    consumerArn = "fugit";
+                    consumerArn = "vel";
                 }};
-            }};
+            }};            
 
             AssociateTrackerConsumerResponse res = sdk.associateTrackerConsumer(req);
 

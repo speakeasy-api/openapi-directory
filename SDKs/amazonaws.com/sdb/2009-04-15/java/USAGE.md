@@ -2,38 +2,39 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETCreateDomainActionEnum;
+import org.openapis.openapi.models.operations.GETCreateDomainVersionEnum;
+import org.openapis.openapi.models.operations.GETCreateDomainQueryParams;
+import org.openapis.openapi.models.operations.GETCreateDomainRequest;
+import org.openapis.openapi.models.operations.GETCreateDomainResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetCreateDomainRequest req = new GetCreateDomainRequest() {{
-                queryParams = new GetCreateDomainQueryParams() {{
-                    awsAccessKeyId = "sit";
+            GETCreateDomainRequest req = new GETCreateDomainRequest() {{
+                queryParams = new GETCreateDomainQueryParams() {{
+                    awsAccessKeyId = "corrupti";
                     action = "CreateDomain";
-                    domainName = "culpa";
-                    signature = "expedita";
-                    signatureMethod = "consequuntur";
-                    signatureVersion = "dolor";
-                    timestamp = "expedita";
+                    domainName = "provident";
+                    signature = "distinctio";
+                    signatureMethod = "quibusdam";
+                    signatureVersion = "unde";
+                    timestamp = "nulla";
                     version = "2009-04-15";
                 }};
-            }};
+            }};            
 
-            GetCreateDomainResponse res = sdk.getCreateDomain(req);
+            GETCreateDomainResponse res = sdk.getCreateDomain(req);
 
             if (res.statusCode == 200) {
                 // handle response

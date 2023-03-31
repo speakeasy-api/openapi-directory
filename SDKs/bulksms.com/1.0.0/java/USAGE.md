@@ -2,24 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.PostRmmPreSignAttachmentSecurity;
+import org.openapis.openapi.models.operations.PostRmmPreSignAttachmentRequest;
+import org.openapis.openapi.models.operations.PostRmmPreSignAttachmentResponse;
+import org.openapis.openapi.models.shared.PreSignRequest;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostRmmPreSignAttachmentRequest req = new PostRmmPreSignAttachmentRequest() {{
                 security = new PostRmmPreSignAttachmentSecurity() {{
@@ -29,10 +24,10 @@ public class Application {
                     }};
                 }};
                 request = new PreSignRequest() {{
-                    fileExtension = "sit";
-                    mediaType = "voluptas";
+                    fileExtension = "pdf";
+                    mediaType = "application/pdf";
                 }};
-            }};
+            }};            
 
             PostRmmPreSignAttachmentResponse res = sdk.attachments.postRmmPreSignAttachment(req);
 

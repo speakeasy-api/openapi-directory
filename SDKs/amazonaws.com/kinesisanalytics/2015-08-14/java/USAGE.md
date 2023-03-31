@@ -2,44 +2,46 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionHeaders;
+import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionRequest;
+import org.openapis.openapi.models.operations.AddApplicationCloudWatchLoggingOptionResponse;
+import org.openapis.openapi.models.shared.AddApplicationCloudWatchLoggingOptionRequest;
+import org.openapis.openapi.models.shared.CloudWatchLoggingOption;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddApplicationCloudWatchLoggingOptionRequest req = new AddApplicationCloudWatchLoggingOptionRequest() {{
                 headers = new AddApplicationCloudWatchLoggingOptionHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "KinesisAnalytics_20150814.AddApplicationCloudWatchLoggingOption";
                 }};
                 request = new AddApplicationCloudWatchLoggingOptionRequest() {{
-                    applicationName = "fugit";
+                    applicationName = "illum";
                     cloudWatchLoggingOption = new CloudWatchLoggingOption() {{
-                        logStreamARN = "et";
-                        roleARN = "nihil";
+                        logStreamARN = "vel";
+                        roleARN = "error";
                     }};
-                    currentApplicationVersionId = 8325060299420976708;
+                    currentApplicationVersionId = 645894;
                 }};
-            }};
+            }};            
 
             AddApplicationCloudWatchLoggingOptionResponse res = sdk.addApplicationCloudWatchLoggingOption(req);
 

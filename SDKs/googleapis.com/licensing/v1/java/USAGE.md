@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteSecurity;
+import org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeletePathParams;
+import org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteQueryParams;
+import org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteRequest;
+import org.openapis.openapi.models.operations.LicensingLicenseAssignmentsDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             LicensingLicenseAssignmentsDeleteRequest req = new LicensingLicenseAssignmentsDeleteRequest() {{
                 security = new LicensingLicenseAssignmentsDeleteSecurity() {{
@@ -22,24 +30,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new LicensingLicenseAssignmentsDeletePathParams() {{
-                    productId = "sit";
-                    skuId = "voluptas";
-                    userId = "culpa";
+                    productId = "corrupti";
+                    skuId = "provident";
+                    userId = "distinctio";
                 }};
                 queryParams = new LicensingLicenseAssignmentsDeleteQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "consequuntur";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "voluptas";
-                    key = "fugit";
-                    oauthToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    dollarXgafv = "2";
+                    accessToken = "unde";
+                    alt = "proto";
+                    callback = "corrupti";
+                    fields = "illum";
+                    key = "vel";
+                    oauthToken = "error";
+                    prettyPrint = false;
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             LicensingLicenseAssignmentsDeleteResponse res = sdk.licenseAssignments.licensingLicenseAssignmentsDelete(req);
 

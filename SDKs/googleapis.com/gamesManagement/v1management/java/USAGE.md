@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GamesManagementAchievementsResetSecurity;
+import org.openapis.openapi.models.operations.GamesManagementAchievementsResetPathParams;
+import org.openapis.openapi.models.operations.GamesManagementAchievementsResetQueryParams;
+import org.openapis.openapi.models.operations.GamesManagementAchievementsResetRequest;
+import org.openapis.openapi.models.operations.GamesManagementAchievementsResetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GamesManagementAchievementsResetRequest req = new GamesManagementAchievementsResetRequest() {{
                 security = new GamesManagementAchievementsResetSecurity() {{
@@ -22,22 +30,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new GamesManagementAchievementsResetPathParams() {{
-                    achievementId = "sit";
+                    achievementId = "corrupti";
                 }};
                 queryParams = new GamesManagementAchievementsResetQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-            }};
+            }};            
 
             GamesManagementAchievementsResetResponse res = sdk.achievements.gamesManagementAchievementsReset(req);
 

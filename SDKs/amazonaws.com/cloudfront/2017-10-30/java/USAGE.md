@@ -2,36 +2,37 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateCloudFrontOriginAccessIdentity20171030Headers;
+import org.openapis.openapi.models.operations.CreateCloudFrontOriginAccessIdentity20171030RequestBodyCloudFrontOriginAccessIdentityConfig;
+import org.openapis.openapi.models.operations.CreateCloudFrontOriginAccessIdentity20171030RequestBody;
+import org.openapis.openapi.models.operations.CreateCloudFrontOriginAccessIdentity20171030Request;
+import org.openapis.openapi.models.operations.CreateCloudFrontOriginAccessIdentity20171030Response;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateCloudFrontOriginAccessIdentity20171030Request req = new CreateCloudFrontOriginAccessIdentity20171030Request() {{
                 headers = new CreateCloudFrontOriginAccessIdentity20171030Headers() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
-                request = "voluptas".getBytes();
-            }};
+                request = "illum".getBytes();
+            }};            
 
             CreateCloudFrontOriginAccessIdentity20171030Response res = sdk.createCloudFrontOriginAccessIdentity20171030(req);
 

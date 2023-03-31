@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity;
+import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams;
+import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams;
+import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest;
+import org.openapis.openapi.models.operations.IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse;
+import org.openapis.openapi.models.shared.GenerateAccessTokenRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest req = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenRequest() {{
                 security = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenSecurity() {{
@@ -22,35 +31,32 @@ public class Application {
                     }};
                 }};
                 pathParams = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new IamcredentialsProjectsServiceAccountsGenerateAccessTokenQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GenerateAccessTokenRequest() {{
-                    delegates = new String[]() {{
-                        add("debitis"),
-                        add("voluptatum"),
-                        add("et"),
+                    delegates = new String[]{{
+                        add("iure"),
+                        add("magnam"),
                     }};
-                    lifetime = "ut";
-                    scope = new String[]() {{
-                        add("et"),
-                        add("voluptate"),
-                        add("iste"),
+                    lifetime = "debitis";
+                    scope = new String[]{{
+                        add("delectus"),
                     }};
                 }};
-            }};
+            }};            
 
             IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse res = sdk.projects.iamcredentialsProjectsServiceAccountsGenerateAccessToken(req);
 

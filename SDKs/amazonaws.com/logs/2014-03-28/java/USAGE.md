@@ -2,40 +2,41 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateKmsKeyXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AssociateKmsKeyHeaders;
+import org.openapis.openapi.models.operations.AssociateKmsKeyRequest;
+import org.openapis.openapi.models.operations.AssociateKmsKeyResponse;
+import org.openapis.openapi.models.shared.AssociateKmsKeyRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateKmsKeyRequest req = new AssociateKmsKeyRequest() {{
                 headers = new AssociateKmsKeyHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "Logs_20140328.AssociateKmsKey";
                 }};
                 request = new AssociateKmsKeyRequest() {{
-                    kmsKeyId = "fugit";
-                    logGroupName = "et";
+                    kmsKeyId = "illum";
+                    logGroupName = "vel";
                 }};
-            }};
+            }};            
 
             AssociateKmsKeyResponse res = sdk.associateKmsKey(req);
 

@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurityOption1;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurityOption2;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetSecurity;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetOutputEnum;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetSamplingLevelEnum;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetQueryParams;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetRequest;
+import org.openapis.openapi.models.operations.AnalyticsDataGaGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AnalyticsDataGaGetRequest req = new AnalyticsDataGaGetRequest() {{
                 security = new AnalyticsDataGaGetSecurity() {{
@@ -25,27 +35,27 @@ public class Application {
                 }};
                 queryParams = new AnalyticsDataGaGetQueryParams() {{
                     alt = "json";
-                    dimensions = "voluptas";
-                    endDate = "culpa";
-                    fields = "expedita";
-                    filters = "consequuntur";
-                    ids = "dolor";
-                    includeEmptyRows = true;
-                    key = "voluptas";
-                    maxResults = 8274930044578894929;
-                    metrics = "et";
-                    oauthToken = "nihil";
+                    dimensions = "corrupti";
+                    endDate = "provident";
+                    fields = "distinctio";
+                    filters = "quibusdam";
+                    ids = "unde";
+                    includeEmptyRows = false;
+                    key = "nulla";
+                    maxResults = 544883;
+                    metrics = "illum";
+                    oauthToken = "vel";
                     output = "json";
                     prettyPrint = false;
-                    quotaUser = "debitis";
-                    samplingLevel = "DEFAULT";
-                    segment = "et";
-                    sort = "ut";
-                    startDate = "dolorem";
-                    startIndex = 7259475919510918339;
-                    userIp = "voluptate";
+                    quotaUser = "deserunt";
+                    samplingLevel = "FASTER";
+                    segment = "iure";
+                    sort = "magnam";
+                    startDate = "debitis";
+                    startIndex = 56713;
+                    userIp = "delectus";
                 }};
-            }};
+            }};            
 
             AnalyticsDataGaGetResponse res = sdk.data.analyticsDataGaGet(req);
 

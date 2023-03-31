@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateSecurity;
+import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateQueryParams;
+import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateRequest;
+import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             VerifiedaccessChallengeGenerateRequest req = new VerifiedaccessChallengeGenerateRequest() {{
                 security = new VerifiedaccessChallengeGenerateSecurity() {{
@@ -22,24 +29,24 @@ public class Application {
                     }};
                 }};
                 queryParams = new VerifiedaccessChallengeGenerateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("dicta", "debitis");
-                    put("voluptatum", "et");
-                    put("ut", "dolorem");
+                    put("suscipit", "iure");
+                    put("magnam", "debitis");
+                    put("ipsa", "delectus");
                 }};
-            }};
+            }};            
 
             VerifiedaccessChallengeGenerateResponse res = sdk.challenge.verifiedaccessChallengeGenerate(req);
 

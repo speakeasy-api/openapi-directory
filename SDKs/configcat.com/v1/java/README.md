@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,39 +15,38 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetAuditlogsPathParams;
+import org.openapis.openapi.models.operations.GetAuditlogsAuditLogTypeEnum;
+import org.openapis.openapi.models.operations.GetAuditlogsQueryParams;
+import org.openapis.openapi.models.operations.GetAuditlogsRequest;
+import org.openapis.openapi.models.operations.GetAuditlogsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     basic = new SchemeBasic() {{
                         password = "YOUR_PASSWORD_HERE";
                         username = "YOUR_USERNAME_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetAuditlogsRequest req = new GetAuditlogsRequest() {{
                 pathParams = new GetAuditlogsPathParams() {{
-                    productId = "sit";
+                    productId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
                 }};
                 queryParams = new GetAuditlogsQueryParams() {{
-                    auditLogType = new java.util.HashMap<String, Object>() {{
-                        put("culpa", "expedita");
-                    }};
-                    configId = "consequuntur";
-                    environmentId = "dolor";
-                    fromUtcDateTime = "2009-11-26T21:53:53Z";
-                    toUtcDateTime = "1978-05-28T16:08:43Z";
+                    auditLogType = "organizationAdminLeft";
+                    configId = "05dfc2dd-f7cc-478c-a1ba-928fc816742c";
+                    environmentId = "b7392059-2939-46fe-a759-6eb10faaa235";
+                    fromUtcDateTime = "2022-04-01T23:59:21.675Z";
+                    toUtcDateTime = "2022-05-24T03:24:11.703Z";
                 }};
-            }};
+            }};            
 
             GetAuditlogsResponse res = sdk.auditLogs.getAuditlogs(req);
 
@@ -63,13 +62,19 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Audit logs
+
+### auditLogs
 
 * `getAuditlogs` - List Audit log items for Product
 * `getDeletedSettings` - List Deleted Settings
 * `getOrganizationAuditlogs` - List Audit log items for Organization
 
-### Configs
+### codeReferences
+
+* `postV1CodeReferences`
+* `postV1CodeReferencesDeleteReports`
+
+### configs
 
 * `createConfig` - Create Config
 * `deleteConfig` - Delete Config
@@ -77,7 +82,7 @@ public class Application {
 * `getConfigs` - List Configs
 * `updateConfig` - Update Config
 
-### Environments
+### environments
 
 * `createEnvironment` - Create Environment
 * `deleteEnvironment` - Delete Environment
@@ -85,20 +90,20 @@ public class Application {
 * `getEnvironments` - List Environments
 * `updateEnvironment` - Update Environment
 
-### Feature Flag & Setting values
+### featureFlagAndSettingValues
 
 * `getSettingValue` - Get value
 * `getSettingValues` - Get values
 * `replaceSettingValue` - Replace value
 * `updateSettingValue` - Update value
 
-### Feature Flag & Setting values using SDK Key
+### featureFlagAndSettingValuesUsingSDKKey
 
 * `getSettingValueBySdkkey` - Get value
 * `replaceSettingValueBySdkkey` - Replace value
 * `updateSettingValueBySdkkey` - Update value
 
-### Feature Flags & Settings
+### featureFlagsAndSettings
 
 * `createSetting` - Create Flag
 * `deleteSetting` - Delete Flag
@@ -106,29 +111,32 @@ public class Application {
 * `getSettings` - List Flags
 * `updateSetting` - Update Flag
 
-### Integration links
+### integrationLinks
 
 * `addOrUpdateIntegrationLink` - Add or update Integration link
 * `deleteIntegrationLink` - Delete Integration link
 * `getIntegrationLinkDetails` - Get Integration link
+* `jiraAddOrUpdateIntegrationLink`
+* `postV1JiraConnect`
 
-### Me
+### me
 
 * `getMe` - Get authenticated user details
 
-### Members
+### members
 
+* `addMemberToGroup` - Update Member Permissions
 * `deleteOrganizationMember` - Delete Member from Organization
 * `deleteProductMember` - Delete Member from Product
 * `getOrganizationMembers` - List Organization Members
 * `getProductMembers` - List Product Members
 * `inviteMember` - Invite Member
 
-### Organizations
+### organizations
 
 * `getOrganizations` - List Organizations
 
-### Permission Groups
+### permissionGroups
 
 * `createPermissionGroup` - Create Permission Group
 * `deletePermissionGroup` - Delete Permission Group
@@ -136,7 +144,7 @@ public class Application {
 * `getPermissionGroups` - List Permission Groups
 * `updatePermissionGroup` - Update Permission Group
 
-### Products
+### products
 
 * `createProduct` - Create Product
 * `deleteProduct` - Delete Product
@@ -144,11 +152,19 @@ public class Application {
 * `getProducts` - List Products
 * `updateProduct` - Update Product
 
-### SDK Keys
+### sdkKeys
 
-* `getSdkKeys` - Get SDK Key
+* `getSDKKeys` - Get SDK Key
 
-### Tags
+### segments
+
+* `createSegment` - Create Segment
+* `deleteSegment` - Delete Segment
+* `getSegment` - Get Segment
+* `getSegments` - List Segments
+* `updateSegment` - Update Segment
+
+### tags
 
 * `createTag` - Create Tag
 * `deleteTag` - Delete Tag
@@ -156,7 +172,17 @@ public class Application {
 * `getTag` - Get Tag
 * `getTags` - List Tags
 * `updateTag` - Update Tag
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

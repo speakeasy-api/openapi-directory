@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetSearchV1FieldsQueryParams;
+import org.openapis.openapi.models.operations.GetSearchV1FieldsRequest;
+import org.openapis.openapi.models.operations.GetSearchV1FieldsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetSearchV1FieldsRequest req = new GetSearchV1FieldsRequest() {{
                 queryParams = new GetSearchV1FieldsQueryParams() {{
-                    callback = "sit";
+                    callback = "corrupti";
                 }};
-            }};
+            }};            
 
             GetSearchV1FieldsResponse res = sdk.getSearchV1Fields(req);
 

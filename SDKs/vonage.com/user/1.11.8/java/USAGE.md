@@ -2,29 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.UserCtrlGetUserByIDSecurity;
+import org.openapis.openapi.models.operations.UserCtrlGetUserByIDPathParams;
+import org.openapis.openapi.models.operations.UserCtrlGetUserByIDRequest;
+import org.openapis.openapi.models.operations.UserCtrlGetUserByIDResponse;
+import org.openapis.openapi.models.shared.SchemeBearerAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            UserCtrlGetUserByIdRequest req = new UserCtrlGetUserByIdRequest() {{
-                security = new UserCtrlGetUserByIdSecurity() {{
+            UserCtrlGetUserByIDRequest req = new UserCtrlGetUserByIDRequest() {{
+                security = new UserCtrlGetUserByIDSecurity() {{
                     bearerAuth = new SchemeBearerAuth() {{
                         authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new UserCtrlGetUserByIdPathParams() {{
-                    accountId = "sit";
-                    userId = 14.200000;
+                pathParams = new UserCtrlGetUserByIDPathParams() {{
+                    accountId = "corrupti";
+                    userId = 5928.45;
                 }};
-            }};
+            }};            
 
-            UserCtrlGetUserByIdResponse res = sdk.userCtrlGetUserById(req);
+            UserCtrlGetUserByIDResponse res = sdk.userCtrlGetUserByID(req);
 
             if (res.userHalResponse.isPresent()) {
                 // handle response

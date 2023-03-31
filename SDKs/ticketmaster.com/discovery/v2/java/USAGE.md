@@ -2,37 +2,46 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FindIncludeLicensedContentEnum;
+import org.openapis.openapi.models.operations.FindIncludeSpellcheckEnum;
+import org.openapis.openapi.models.operations.FindIncludeTestEnum;
+import org.openapis.openapi.models.operations.FindSourceEnum;
+import org.openapis.openapi.models.operations.FindQueryParams;
+import org.openapis.openapi.models.operations.FindRequest;
+import org.openapis.openapi.models.operations.FindResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FindRequest req = new FindRequest() {{
                 queryParams = new FindQueryParams() {{
-                    classificationId = new Object[]() {{
-                        add("voluptas"),
+                    classificationId = new Object[]{{
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
-                    classificationName = new Object[]() {{
-                        add("expedita"),
-                        add("consequuntur"),
+                    classificationName = new Object[]{{
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
-                    id = "dolor";
+                    id = "vel";
                     includeLicensedContent = " no";
                     includeSpellcheck = " no";
-                    includeTest = "yes";
-                    keyword = "et";
-                    locale = "nihil";
-                    page = "rerum";
-                    size = "dicta";
-                    sort = "debitis";
-                    source = "ticketmaster";
+                    includeTest = " no";
+                    keyword = "iure";
+                    locale = "magnam";
+                    page = "debitis";
+                    size = "ipsa";
+                    sort = "delectus";
+                    source = " universe";
                 }};
-            }};
+            }};            
 
             FindResponse res = sdk.find(req);
 

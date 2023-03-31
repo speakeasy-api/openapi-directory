@@ -2,15 +2,46 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateEmployeeSecurity;
+import org.openapis.openapi.models.operations.CreateEmployeeHeaders;
+import org.openapis.openapi.models.operations.CreateEmployeeRequest;
+import org.openapis.openapi.models.operations.CreateEmployeeResponse;
+import org.openapis.openapi.models.shared.EmployeeGenderEnum;
+import org.openapis.openapi.models.shared.EmployeeInput;
+import org.openapis.openapi.models.shared.ValidationError;
+import org.openapis.openapi.models.shared.TaxDeclarationInput;
+import org.openapis.openapi.models.shared.TFNExemptionTypeEnum;
+import org.openapis.openapi.models.shared.ResidencyStatusEnum;
+import org.openapis.openapi.models.shared.EmploymentBasisEnum;
+import org.openapis.openapi.models.shared.SuperMembership;
+import org.openapis.openapi.models.shared.EmployeeStatusEnum;
+import org.openapis.openapi.models.shared.PayTemplate;
+import org.openapis.openapi.models.shared.SuperLine;
+import org.openapis.openapi.models.shared.SuperannuationContributionTypeEnum;
+import org.openapis.openapi.models.shared.SuperannuationCalculationTypeEnum;
+import org.openapis.openapi.models.shared.ReimbursementLine;
+import org.openapis.openapi.models.shared.LeaveLine;
+import org.openapis.openapi.models.shared.EntitlementFinalPayPayoutTypeEnum;
+import org.openapis.openapi.models.shared.EmploymentTerminationPaymentTypeEnum;
+import org.openapis.openapi.models.shared.LeaveLineCalculationTypeEnum;
+import org.openapis.openapi.models.shared.EarningsLine;
+import org.openapis.openapi.models.shared.EarningsRateCalculationTypeEnum;
+import org.openapis.openapi.models.shared.DeductionLine;
+import org.openapis.openapi.models.shared.DeductionTypeCalculationTypeEnum;
+import org.openapis.openapi.models.shared.OpeningBalances;
+import org.openapis.openapi.models.shared.LeaveBalance;
+import org.openapis.openapi.models.shared.HomeAddress;
+import org.openapis.openapi.models.shared.StateEnum;
+import org.openapis.openapi.models.shared.BankAccount;
+import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateEmployeeRequest req = new CreateEmployeeRequest() {{
                 security = new CreateEmployeeSecurity() {{
@@ -19,370 +50,1139 @@ public class Application {
                     }};
                 }};
                 headers = new CreateEmployeeHeaders() {{
-                    xeroTenantId = "sit";
+                    xeroTenantId = "corrupti";
                 }};
-                request = new openapisdk.models.shared.EmployeeInput[]() {{
+                request = new org.openapis.openapi.models.shared.EmployeeInput[]{{
                     add(new EmployeeInput() {{
-                        bankAccounts = new openapisdk.models.shared.BankAccount[]() {{
+                        bankAccounts = new org.openapis.openapi.models.shared.BankAccount[]{{
                             add(new BankAccount() {{
-                                accountName = "expedita";
-                                accountNumber = "consequuntur";
-                                amount = 96.199997;
-                                bsb = "voluptas";
-                                remainder = true;
-                                statementText = "et";
-                            }}),
-                            add(new BankAccount() {{
-                                accountName = "nihil";
-                                accountNumber = "rerum";
-                                amount = 59.099998;
-                                bsb = "voluptatum";
+                                accountName = "James Lebron Savings";
+                                accountNumber = "345678";
+                                amount = 200;
+                                bsb = "122344";
                                 remainder = false;
-                                statementText = "ut";
+                                statementText = "Salary";
+                            }}),
+                            add(new BankAccount() {{
+                                accountName = "James Lebron Savings";
+                                accountNumber = "345678";
+                                amount = 200;
+                                bsb = "122344";
+                                remainder = false;
+                                statementText = "Salary";
+                            }}),
+                            add(new BankAccount() {{
+                                accountName = "James Lebron Savings";
+                                accountNumber = "345678";
+                                amount = 200;
+                                bsb = "122344";
+                                remainder = false;
+                                statementText = "Salary";
                             }}),
                         }};
-                        classification = "dolorem";
-                        dateOfBirth = "et";
-                        email = "voluptate";
-                        employeeGroupName = "iste";
-                        employeeID = "vitae";
-                        firstName = "totam";
-                        gender = "N";
+                        classification = "99383";
+                        dateOfBirth = "/Date(322560000000+0000)/";
+                        email = "developer@me.com";
+                        employeeGroupName = "marketing";
+                        employeeID = "4ff1e5cc-9835-40d5-bb18-09fdb118db9c";
+                        firstName = "Karen";
+                        gender = "F";
                         homeAddress = new HomeAddress() {{
-                            addressLine1 = "illum";
-                            addressLine2 = "debitis";
-                            city = "vel";
-                            country = "odio";
-                            postalCode = "dolore";
-                            region = "SA";
+                            addressLine1 = "123 Main St";
+                            addressLine2 = "Apt 4";
+                            city = "St. Kilda";
+                            country = "AUSTRALIA";
+                            postalCode = "3182";
+                            region = "VIC";
                         }};
-                        isAuthorisedToApproveLeave = true;
+                        isAuthorisedToApproveLeave = false;
                         isAuthorisedToApproveTimesheets = true;
-                        jobTitle = "totam";
-                        lastName = "commodi";
-                        leaveBalances = new openapisdk.models.shared.LeaveBalance[]() {{
+                        jobTitle = "Manager";
+                        lastName = "Jones";
+                        leaveBalances = new org.openapis.openapi.models.shared.LeaveBalance[]{{
                             add(new LeaveBalance() {{
-                                leaveName = "est";
-                                leaveTypeID = "aut";
-                                numberOfUnits = 10.200000;
-                                typeOfUnits = "voluptas";
+                                leaveName = "Annual Leave";
+                                leaveTypeID = "544d9292-4329-4512-bfff-a9f15236d776";
+                                numberOfUnits = 81.2602;
+                                typeOfUnits = "Hours";
                             }}),
                             add(new LeaveBalance() {{
-                                leaveName = "omnis";
-                                leaveTypeID = "aut";
-                                numberOfUnits = 76.099998;
-                                typeOfUnits = "officiis";
+                                leaveName = "Annual Leave";
+                                leaveTypeID = "544d9292-4329-4512-bfff-a9f15236d776";
+                                numberOfUnits = 81.2602;
+                                typeOfUnits = "Hours";
                             }}),
                             add(new LeaveBalance() {{
-                                leaveName = "autem";
-                                leaveTypeID = "consectetur";
-                                numberOfUnits = 0.100000;
-                                typeOfUnits = "qui";
+                                leaveName = "Annual Leave";
+                                leaveTypeID = "544d9292-4329-4512-bfff-a9f15236d776";
+                                numberOfUnits = 81.2602;
+                                typeOfUnits = "Hours";
+                            }}),
+                            add(new LeaveBalance() {{
+                                leaveName = "Annual Leave";
+                                leaveTypeID = "544d9292-4329-4512-bfff-a9f15236d776";
+                                numberOfUnits = 81.2602;
+                                typeOfUnits = "Hours";
                             }}),
                         }};
-                        leaveLines = new openapisdk.models.shared.LeaveLine[]() {{
+                        leaveLines = new org.openapis.openapi.models.shared.LeaveLine[]{{
                             add(new LeaveLine() {{
-                                annualNumberOfUnits = 88.099998;
-                                calculationType = "ENTERRATEINPAYTEMPLATE";
-                                employmentTerminationPaymentType = "R";
-                                entitlementFinalPayPayoutType = "NOTPAIDOUT";
-                                fullTimeNumberOfUnitsPerPeriod = 77.099998;
-                                includeSuperannuationGuaranteeContribution = false;
-                                leaveTypeID = "aut";
-                                numberOfUnits = 30.200001;
-                            }}),
-                            add(new LeaveLine() {{
-                                annualNumberOfUnits = 97.099998;
+                                annualNumberOfUnits = 2.5;
                                 calculationType = "";
                                 employmentTerminationPaymentType = "R";
                                 entitlementFinalPayPayoutType = "PAIDOUT";
-                                fullTimeNumberOfUnitsPerPeriod = 80.199997;
-                                includeSuperannuationGuaranteeContribution = false;
-                                leaveTypeID = "ipsum";
-                                numberOfUnits = 66.099998;
+                                fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                includeSuperannuationGuaranteeContribution = true;
+                                leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                numberOfUnits = 2.5;
                             }}),
                             add(new LeaveLine() {{
-                                annualNumberOfUnits = 47.099998;
-                                calculationType = "BASEDONORDINARYEARNINGS";
+                                annualNumberOfUnits = 2.5;
+                                calculationType = "ENTERRATEINPAYTEMPLATE";
                                 employmentTerminationPaymentType = "R";
-                                entitlementFinalPayPayoutType = "NOTPAIDOUT";
-                                fullTimeNumberOfUnitsPerPeriod = 63.200001;
+                                entitlementFinalPayPayoutType = "PAIDOUT";
+                                fullTimeNumberOfUnitsPerPeriod = 2.5;
                                 includeSuperannuationGuaranteeContribution = true;
-                                leaveTypeID = "qui";
-                                numberOfUnits = 72.199997;
+                                leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                numberOfUnits = 2.5;
+                            }}),
+                            add(new LeaveLine() {{
+                                annualNumberOfUnits = 2.5;
+                                calculationType = "FIXEDAMOUNTEACHPERIOD";
+                                employmentTerminationPaymentType = "O";
+                                entitlementFinalPayPayoutType = "NOTPAIDOUT";
+                                fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                includeSuperannuationGuaranteeContribution = true;
+                                leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                numberOfUnits = 2.5;
                             }}),
                         }};
-                        middleNames = "autem";
-                        mobile = "qui";
+                        middleNames = "Adena";
+                        mobile = "415-234-5678";
                         openingBalances = new OpeningBalances() {{
-                            deductionLines = new openapisdk.models.shared.DeductionLine[]() {{
+                            deductionLines = new org.openapis.openapi.models.shared.DeductionLine[]{{
                                 add(new DeductionLine() {{
-                                    amount = 26.100000;
+                                    amount = 10;
                                     calculationType = "FIXEDAMOUNT";
-                                    deductionTypeID = "ullam";
-                                    numberOfUnits = 92.099998;
-                                    percentage = 68.099998;
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
                                 }}),
                                 add(new DeductionLine() {{
-                                    amount = 38.200001;
+                                    amount = 10;
+                                    calculationType = "POSTTAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "FIXEDAMOUNT";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
                                     calculationType = "PRETAX";
-                                    deductionTypeID = "soluta";
-                                    numberOfUnits = 41.200001;
-                                    percentage = 89.199997;
-                                }}),
-                                add(new DeductionLine() {{
-                                    amount = 41.099998;
-                                    calculationType = "FIXEDAMOUNT";
-                                    deductionTypeID = "illo";
-                                    numberOfUnits = 6.100000;
-                                    percentage = 82.099998;
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
                                 }}),
                             }};
-                            earningsLines = new openapisdk.models.shared.EarningsLine[]() {{
+                            earningsLines = new org.openapis.openapi.models.shared.EarningsLine[]{{
                                 add(new EarningsLine() {{
-                                    amount = 8.200000;
-                                    annualSalary = 3.200000;
-                                    calculationType = "USEEARNINGSRATE";
-                                    earningsRateID = "laboriosam";
-                                    fixedAmount = 80.199997;
-                                    normalNumberOfUnits = 7.100000;
-                                    numberOfUnits = 78.099998;
-                                    numberOfUnitsPerWeek = 47.200001;
-                                    ratePerUnit = 35.200001;
-                                }}),
-                                add(new EarningsLine() {{
-                                    amount = 20.200001;
-                                    annualSalary = 26.200001;
+                                    amount = 38;
+                                    annualSalary = 40000;
                                     calculationType = "ANNUALSALARY";
-                                    earningsRateID = "explicabo";
-                                    fixedAmount = 42.099998;
-                                    normalNumberOfUnits = 15.200000;
-                                    numberOfUnits = 66.099998;
-                                    numberOfUnitsPerWeek = 94.199997;
-                                    ratePerUnit = 97.199997;
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ANNUALSALARY";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
                                 }}),
                             }};
-                            leaveLines = new openapisdk.models.shared.LeaveLine[]() {{
+                            leaveLines = new org.openapis.openapi.models.shared.LeaveLine[]{{
                                 add(new LeaveLine() {{
-                                    annualNumberOfUnits = 97.099998;
-                                    calculationType = "BASEDONORDINARYEARNINGS";
-                                    employmentTerminationPaymentType = "O";
-                                    entitlementFinalPayPayoutType = "PAIDOUT";
-                                    fullTimeNumberOfUnitsPerPeriod = 31.100000;
-                                    includeSuperannuationGuaranteeContribution = true;
-                                    leaveTypeID = "vel";
-                                    numberOfUnits = 87.099998;
-                                }}),
-                                add(new LeaveLine() {{
-                                    annualNumberOfUnits = 50.200001;
+                                    annualNumberOfUnits = 2.5;
                                     calculationType = "ENTERRATEINPAYTEMPLATE";
                                     employmentTerminationPaymentType = "R";
                                     entitlementFinalPayPayoutType = "NOTPAIDOUT";
-                                    fullTimeNumberOfUnitsPerPeriod = 68.099998;
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
                                     includeSuperannuationGuaranteeContribution = true;
-                                    leaveTypeID = "vel";
-                                    numberOfUnits = 91.099998;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
                                 }}),
-                            }};
-                            openingBalanceDate = "qui";
-                            reimbursementLines = new openapisdk.models.shared.ReimbursementLine[]() {{
-                                add(new ReimbursementLine() {{
-                                    amount = 96.099998;
-                                    description = "porro";
-                                    expenseAccount = "rerum";
-                                    reimbursementTypeID = "et";
-                                }}),
-                                add(new ReimbursementLine() {{
-                                    amount = 96.099998;
-                                    description = "laborum";
-                                    expenseAccount = "rerum";
-                                    reimbursementTypeID = "ut";
-                                }}),
-                            }};
-                            superLines = new openapisdk.models.shared.SuperLine[]() {{
-                                add(new SuperLine() {{
-                                    amount = 92.199997;
-                                    calculationType = "PERCENTAGEOFEARNINGS";
-                                    contributionType = "SALARYSACRIFICE";
-                                    expenseAccountCode = "aperiam";
-                                    liabilityAccountCode = "consequuntur";
-                                    minimumMonthlyEarnings = 54.099998;
-                                    percentage = 70.199997;
-                                    superMembershipID = "ipsa";
-                                }}),
-                                add(new SuperLine() {{
-                                    amount = 20.100000;
-                                    calculationType = "STATUTORY";
-                                    contributionType = "SGC";
-                                    expenseAccountCode = "fuga";
-                                    liabilityAccountCode = "sed";
-                                    minimumMonthlyEarnings = 83.099998;
-                                    percentage = 30.100000;
-                                    superMembershipID = "cupiditate";
-                                }}),
-                                add(new SuperLine() {{
-                                    amount = 10.200000;
-                                    calculationType = "STATUTORY";
-                                    contributionType = "EMPLOYERADDITIONAL";
-                                    expenseAccountCode = "corrupti";
-                                    liabilityAccountCode = "enim";
-                                    minimumMonthlyEarnings = 85.099998;
-                                    percentage = 84.199997;
-                                    superMembershipID = "neque";
-                                }}),
-                            }};
-                            tax = "consequuntur";
-                        }};
-                        ordinaryEarningsRateID = "quia";
-                        payTemplate = new PayTemplate() {{
-                            deductionLines = new openapisdk.models.shared.DeductionLine[]() {{
-                                add(new DeductionLine() {{
-                                    amount = 28.100000;
-                                    calculationType = "FIXEDAMOUNT";
-                                    deductionTypeID = "voluptatem";
-                                    numberOfUnits = 20.200001;
-                                    percentage = 73.099998;
-                                }}),
-                                add(new DeductionLine() {{
-                                    amount = 45.099998;
-                                    calculationType = "PRETAX";
-                                    deductionTypeID = "in";
-                                    numberOfUnits = 18.100000;
-                                    percentage = 57.099998;
-                                }}),
-                            }};
-                            earningsLines = new openapisdk.models.shared.EarningsLine[]() {{
-                                add(new EarningsLine() {{
-                                    amount = 99.199997;
-                                    annualSalary = 50.099998;
-                                    calculationType = "USEEARNINGSRATE";
-                                    earningsRateID = "et";
-                                    fixedAmount = 47.099998;
-                                    normalNumberOfUnits = 3.200000;
-                                    numberOfUnits = 58.200001;
-                                    numberOfUnitsPerWeek = 69.199997;
-                                    ratePerUnit = 66.199997;
-                                }}),
-                                add(new EarningsLine() {{
-                                    amount = 25.200001;
-                                    annualSalary = 16.200001;
-                                    calculationType = "ENTEREARNINGSRATE";
-                                    earningsRateID = "ipsam";
-                                    fixedAmount = 78.199997;
-                                    normalNumberOfUnits = 46.099998;
-                                    numberOfUnits = 84.099998;
-                                    numberOfUnitsPerWeek = 67.099998;
-                                    ratePerUnit = 26.200001;
-                                }}),
-                                add(new EarningsLine() {{
-                                    amount = 9.200000;
-                                    annualSalary = 30.100000;
-                                    calculationType = "ANNUALSALARY";
-                                    earningsRateID = "a";
-                                    fixedAmount = 80.099998;
-                                    normalNumberOfUnits = 55.200001;
-                                    numberOfUnits = 66.199997;
-                                    numberOfUnitsPerWeek = 21.100000;
-                                    ratePerUnit = 19.100000;
-                                }}),
-                            }};
-                            leaveLines = new openapisdk.models.shared.LeaveLine[]() {{
                                 add(new LeaveLine() {{
-                                    annualNumberOfUnits = 48.200001;
-                                    calculationType = "ENTERRATEINPAYTEMPLATE";
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "";
+                                    employmentTerminationPaymentType = "R";
+                                    entitlementFinalPayPayoutType = "NOTPAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "FIXEDAMOUNTEACHPERIOD";
                                     employmentTerminationPaymentType = "O";
                                     entitlementFinalPayPayoutType = "PAIDOUT";
-                                    fullTimeNumberOfUnitsPerPeriod = 47.099998;
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
                                     includeSuperannuationGuaranteeContribution = true;
-                                    leaveTypeID = "aspernatur";
-                                    numberOfUnits = 16.200001;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
                                 }}),
                             }};
-                            reimbursementLines = new openapisdk.models.shared.ReimbursementLine[]() {{
+                            openingBalanceDate = "/Date(322560000000+0000)/";
+                            reimbursementLines = new org.openapis.openapi.models.shared.ReimbursementLine[]{{
                                 add(new ReimbursementLine() {{
-                                    amount = 40.200001;
-                                    description = "illum";
-                                    expenseAccount = "accusantium";
-                                    reimbursementTypeID = "atque";
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
                                 }}),
                             }};
-                            superLines = new openapisdk.models.shared.SuperLine[]() {{
+                            superLines = new org.openapis.openapi.models.shared.SuperLine[]{{
                                 add(new SuperLine() {{
-                                    amount = 40.099998;
-                                    calculationType = "PERCENTAGEOFEARNINGS";
-                                    contributionType = "SALARYSACRIFICE";
-                                    expenseAccountCode = "vero";
-                                    liabilityAccountCode = "alias";
-                                    minimumMonthlyEarnings = 81.099998;
-                                    percentage = 2.200000;
-                                    superMembershipID = "beatae";
+                                    amount = 10;
+                                    calculationType = "STATUTORY";
+                                    contributionType = "EMPLOYEE";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
                                 }}),
                                 add(new SuperLine() {{
-                                    amount = 31.200001;
+                                    amount = 10;
+                                    calculationType = "STATUTORY";
+                                    contributionType = "SGC";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                            }};
+                            tax = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                        }};
+                        ordinaryEarningsRateID = "5gj1e5cc-9835-40d5-bb18-09fdb118db9c";
+                        payTemplate = new PayTemplate() {{
+                            deductionLines = new org.openapis.openapi.models.shared.DeductionLine[]{{
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "POSTTAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "POSTTAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "PRETAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "POSTTAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                            }};
+                            earningsLines = new org.openapis.openapi.models.shared.EarningsLine[]{{
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ENTEREARNINGSRATE";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ENTEREARNINGSRATE";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ANNUALSALARY";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ANNUALSALARY";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                            }};
+                            leaveLines = new org.openapis.openapi.models.shared.LeaveLine[]{{
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "BASEDONORDINARYEARNINGS";
+                                    employmentTerminationPaymentType = "R";
+                                    entitlementFinalPayPayoutType = "PAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                            }};
+                            reimbursementLines = new org.openapis.openapi.models.shared.ReimbursementLine[]{{
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                            }};
+                            superLines = new org.openapis.openapi.models.shared.SuperLine[]{{
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "STATUTORY";
+                                    contributionType = "EMPLOYEE";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                                add(new SuperLine() {{
+                                    amount = 10;
                                     calculationType = "PERCENTAGEOFEARNINGS";
                                     contributionType = "SGC";
-                                    expenseAccountCode = "magni";
-                                    liabilityAccountCode = "necessitatibus";
-                                    minimumMonthlyEarnings = 3.100000;
-                                    percentage = 69.199997;
-                                    superMembershipID = "ut";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
                                 }}),
                                 add(new SuperLine() {{
-                                    amount = 99.199997;
-                                    calculationType = "STATUTORY";
-                                    contributionType = "EMPLOYERADDITIONAL";
-                                    expenseAccountCode = "quo";
-                                    liabilityAccountCode = "et";
-                                    minimumMonthlyEarnings = 61.200001;
-                                    percentage = 9.100000;
-                                    superMembershipID = "asperiores";
+                                    amount = 10;
+                                    calculationType = "PERCENTAGEOFEARNINGS";
+                                    contributionType = "SALARYSACRIFICE";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
                                 }}),
                             }};
                         }};
-                        payrollCalendarID = "quo";
-                        phone = "ea";
-                        startDate = "soluta";
+                        payrollCalendarID = "2ee8e5cc-9835-40d5-bb18-09fdb118db9c";
+                        phone = "415-555-1212";
+                        startDate = "/Date(320284900000+0000)/";
                         status = "ACTIVE";
-                        superMemberships = new openapisdk.models.shared.SuperMembership[]() {{
+                        superMemberships = new org.openapis.openapi.models.shared.SuperMembership[]{{
                             add(new SuperMembership() {{
-                                employeeNumber = "blanditiis";
-                                superFundID = "facere";
-                                superMembershipID = "in";
-                            }}),
-                            add(new SuperMembership() {{
-                                employeeNumber = "et";
-                                superFundID = "odit";
-                                superMembershipID = "est";
+                                employeeNumber = "1234";
+                                superFundID = "2187a42b-639a-45cb-9eed-cd4ae488306a";
+                                superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
                             }}),
                         }};
                         taxDeclaration = new TaxDeclarationInput() {{
-                            approvedWithholdingVariationPercentage = 67.199997;
-                            australianResidentForTaxPurposes = false;
-                            eligibleToReceiveLeaveLoading = true;
-                            employeeID = "et";
+                            approvedWithholdingVariationPercentage = 75;
+                            australianResidentForTaxPurposes = true;
+                            eligibleToReceiveLeaveLoading = false;
+                            employeeID = "123 Main St";
+                            employmentBasis = "LABOURHIRE";
+                            hasHELPDebt = false;
+                            hasSFSSDebt = false;
+                            hasStudentStartupLoan = true;
+                            hasTradeSupportLoanDebt = false;
+                            residencyStatus = "WORKINGHOLIDAYMAKER";
+                            tfnExemptionType = "PENDING";
+                            taxFileNumber = "123123123";
+                            taxFreeThresholdClaimed = false;
+                            taxOffsetEstimatedAmount = 100;
+                            upwardVariationTaxWithholdingAmount = 50;
+                        }};
+                        terminationDate = "/Date(1584662400000+0000)/";
+                        title = "Mrs";
+                        twitterUserName = "xeroapi";
+                        validationErrors = new org.openapis.openapi.models.shared.ValidationError[]{{
+                            add(new ValidationError() {{
+                                message = "excepturi";
+                            }}),
+                        }};
+                    }}),
+                    add(new EmployeeInput() {{
+                        bankAccounts = new org.openapis.openapi.models.shared.BankAccount[]{{
+                            add(new BankAccount() {{
+                                accountName = "James Lebron Savings";
+                                accountNumber = "345678";
+                                amount = 200;
+                                bsb = "122344";
+                                remainder = false;
+                                statementText = "Salary";
+                            }}),
+                        }};
+                        classification = "99383";
+                        dateOfBirth = "/Date(322560000000+0000)/";
+                        email = "developer@me.com";
+                        employeeGroupName = "marketing";
+                        employeeID = "4ff1e5cc-9835-40d5-bb18-09fdb118db9c";
+                        firstName = "Karen";
+                        gender = "F";
+                        homeAddress = new HomeAddress() {{
+                            addressLine1 = "123 Main St";
+                            addressLine2 = "Apt 4";
+                            city = "St. Kilda";
+                            country = "AUSTRALIA";
+                            postalCode = "3182";
+                            region = "VIC";
+                        }};
+                        isAuthorisedToApproveLeave = false;
+                        isAuthorisedToApproveTimesheets = true;
+                        jobTitle = "Manager";
+                        lastName = "Jones";
+                        leaveBalances = new org.openapis.openapi.models.shared.LeaveBalance[]{{
+                            add(new LeaveBalance() {{
+                                leaveName = "Annual Leave";
+                                leaveTypeID = "544d9292-4329-4512-bfff-a9f15236d776";
+                                numberOfUnits = 81.2602;
+                                typeOfUnits = "Hours";
+                            }}),
+                        }};
+                        leaveLines = new org.openapis.openapi.models.shared.LeaveLine[]{{
+                            add(new LeaveLine() {{
+                                annualNumberOfUnits = 2.5;
+                                calculationType = "BASEDONORDINARYEARNINGS";
+                                employmentTerminationPaymentType = "O";
+                                entitlementFinalPayPayoutType = "PAIDOUT";
+                                fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                includeSuperannuationGuaranteeContribution = true;
+                                leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                numberOfUnits = 2.5;
+                            }}),
+                            add(new LeaveLine() {{
+                                annualNumberOfUnits = 2.5;
+                                calculationType = "FIXEDAMOUNTEACHPERIOD";
+                                employmentTerminationPaymentType = "R";
+                                entitlementFinalPayPayoutType = "NOTPAIDOUT";
+                                fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                includeSuperannuationGuaranteeContribution = true;
+                                leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                numberOfUnits = 2.5;
+                            }}),
+                        }};
+                        middleNames = "Adena";
+                        mobile = "415-234-5678";
+                        openingBalances = new OpeningBalances() {{
+                            deductionLines = new org.openapis.openapi.models.shared.DeductionLine[]{{
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "POSTTAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "POSTTAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "PRETAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "PRETAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                            }};
+                            earningsLines = new org.openapis.openapi.models.shared.EarningsLine[]{{
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ENTEREARNINGSRATE";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ANNUALSALARY";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ANNUALSALARY";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                            }};
+                            leaveLines = new org.openapis.openapi.models.shared.LeaveLine[]{{
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "NOCALCULATIONREQUIRED";
+                                    employmentTerminationPaymentType = "R";
+                                    entitlementFinalPayPayoutType = "PAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                            }};
+                            openingBalanceDate = "/Date(322560000000+0000)/";
+                            reimbursementLines = new org.openapis.openapi.models.shared.ReimbursementLine[]{{
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                            }};
+                            superLines = new org.openapis.openapi.models.shared.SuperLine[]{{
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "FIXEDAMOUNT";
+                                    contributionType = "SGC";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "PERCENTAGEOFEARNINGS";
+                                    contributionType = "SGC";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "STATUTORY";
+                                    contributionType = "SALARYSACRIFICE";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                            }};
+                            tax = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                        }};
+                        ordinaryEarningsRateID = "5gj1e5cc-9835-40d5-bb18-09fdb118db9c";
+                        payTemplate = new PayTemplate() {{
+                            deductionLines = new org.openapis.openapi.models.shared.DeductionLine[]{{
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "PRETAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "FIXEDAMOUNT";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "PRETAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                            }};
+                            earningsLines = new org.openapis.openapi.models.shared.EarningsLine[]{{
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ENTEREARNINGSRATE";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                            }};
+                            leaveLines = new org.openapis.openapi.models.shared.LeaveLine[]{{
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "";
+                                    employmentTerminationPaymentType = "R";
+                                    entitlementFinalPayPayoutType = "NOTPAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "BASEDONORDINARYEARNINGS";
+                                    employmentTerminationPaymentType = "O";
+                                    entitlementFinalPayPayoutType = "PAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "NOCALCULATIONREQUIRED";
+                                    employmentTerminationPaymentType = "R";
+                                    entitlementFinalPayPayoutType = "PAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                            }};
+                            reimbursementLines = new org.openapis.openapi.models.shared.ReimbursementLine[]{{
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                            }};
+                            superLines = new org.openapis.openapi.models.shared.SuperLine[]{{
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "PERCENTAGEOFEARNINGS";
+                                    contributionType = "SALARYSACRIFICE";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "PERCENTAGEOFEARNINGS";
+                                    contributionType = "SGC";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                            }};
+                        }};
+                        payrollCalendarID = "2ee8e5cc-9835-40d5-bb18-09fdb118db9c";
+                        phone = "415-555-1212";
+                        startDate = "/Date(320284900000+0000)/";
+                        status = "TERMINATED";
+                        superMemberships = new org.openapis.openapi.models.shared.SuperMembership[]{{
+                            add(new SuperMembership() {{
+                                employeeNumber = "1234";
+                                superFundID = "2187a42b-639a-45cb-9eed-cd4ae488306a";
+                                superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                            }}),
+                        }};
+                        taxDeclaration = new TaxDeclarationInput() {{
+                            approvedWithholdingVariationPercentage = 75;
+                            australianResidentForTaxPurposes = true;
+                            eligibleToReceiveLeaveLoading = false;
+                            employeeID = "123 Main St";
                             employmentBasis = "PARTTIME";
                             hasHELPDebt = false;
                             hasSFSSDebt = false;
                             hasStudentStartupLoan = true;
-                            hasTradeSupportLoanDebt = true;
+                            hasTradeSupportLoanDebt = false;
                             residencyStatus = "AUSTRALIANRESIDENT";
-                            tfnExemptionType = "UNDER18";
-                            taxFileNumber = "ea";
+                            tfnExemptionType = "PENSIONER";
+                            taxFileNumber = "123123123";
                             taxFreeThresholdClaimed = false;
-                            taxOffsetEstimatedAmount = 25.200001;
-                            upwardVariationTaxWithholdingAmount = 41.099998;
+                            taxOffsetEstimatedAmount = 100;
+                            upwardVariationTaxWithholdingAmount = 50;
                         }};
-                        terminationDate = "qui";
-                        title = "magni";
-                        twitterUserName = "minus";
-                        validationErrors = new openapisdk.models.shared.ValidationError[]() {{
+                        terminationDate = "/Date(1584662400000+0000)/";
+                        title = "Mrs";
+                        twitterUserName = "xeroapi";
+                        validationErrors = new org.openapis.openapi.models.shared.ValidationError[]{{
                             add(new ValidationError() {{
-                                message = "aut";
+                                message = "enim";
+                            }}),
+                            add(new ValidationError() {{
+                                message = "odit";
+                            }}),
+                            add(new ValidationError() {{
+                                message = "quo";
+                            }}),
+                        }};
+                    }}),
+                    add(new EmployeeInput() {{
+                        bankAccounts = new org.openapis.openapi.models.shared.BankAccount[]{{
+                            add(new BankAccount() {{
+                                accountName = "James Lebron Savings";
+                                accountNumber = "345678";
+                                amount = 200;
+                                bsb = "122344";
+                                remainder = false;
+                                statementText = "Salary";
+                            }}),
+                        }};
+                        classification = "99383";
+                        dateOfBirth = "/Date(322560000000+0000)/";
+                        email = "developer@me.com";
+                        employeeGroupName = "marketing";
+                        employeeID = "4ff1e5cc-9835-40d5-bb18-09fdb118db9c";
+                        firstName = "Karen";
+                        gender = "F";
+                        homeAddress = new HomeAddress() {{
+                            addressLine1 = "123 Main St";
+                            addressLine2 = "Apt 4";
+                            city = "St. Kilda";
+                            country = "AUSTRALIA";
+                            postalCode = "3182";
+                            region = "VIC";
+                        }};
+                        isAuthorisedToApproveLeave = false;
+                        isAuthorisedToApproveTimesheets = true;
+                        jobTitle = "Manager";
+                        lastName = "Jones";
+                        leaveBalances = new org.openapis.openapi.models.shared.LeaveBalance[]{{
+                            add(new LeaveBalance() {{
+                                leaveName = "Annual Leave";
+                                leaveTypeID = "544d9292-4329-4512-bfff-a9f15236d776";
+                                numberOfUnits = 81.2602;
+                                typeOfUnits = "Hours";
+                            }}),
+                            add(new LeaveBalance() {{
+                                leaveName = "Annual Leave";
+                                leaveTypeID = "544d9292-4329-4512-bfff-a9f15236d776";
+                                numberOfUnits = 81.2602;
+                                typeOfUnits = "Hours";
+                            }}),
+                            add(new LeaveBalance() {{
+                                leaveName = "Annual Leave";
+                                leaveTypeID = "544d9292-4329-4512-bfff-a9f15236d776";
+                                numberOfUnits = 81.2602;
+                                typeOfUnits = "Hours";
+                            }}),
+                            add(new LeaveBalance() {{
+                                leaveName = "Annual Leave";
+                                leaveTypeID = "544d9292-4329-4512-bfff-a9f15236d776";
+                                numberOfUnits = 81.2602;
+                                typeOfUnits = "Hours";
+                            }}),
+                        }};
+                        leaveLines = new org.openapis.openapi.models.shared.LeaveLine[]{{
+                            add(new LeaveLine() {{
+                                annualNumberOfUnits = 2.5;
+                                calculationType = "BASEDONORDINARYEARNINGS";
+                                employmentTerminationPaymentType = "R";
+                                entitlementFinalPayPayoutType = "NOTPAIDOUT";
+                                fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                includeSuperannuationGuaranteeContribution = true;
+                                leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                numberOfUnits = 2.5;
+                            }}),
+                            add(new LeaveLine() {{
+                                annualNumberOfUnits = 2.5;
+                                calculationType = "NOCALCULATIONREQUIRED";
+                                employmentTerminationPaymentType = "R";
+                                entitlementFinalPayPayoutType = "PAIDOUT";
+                                fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                includeSuperannuationGuaranteeContribution = true;
+                                leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                numberOfUnits = 2.5;
+                            }}),
+                        }};
+                        middleNames = "Adena";
+                        mobile = "415-234-5678";
+                        openingBalances = new OpeningBalances() {{
+                            deductionLines = new org.openapis.openapi.models.shared.DeductionLine[]{{
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "FIXEDAMOUNT";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "POSTTAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "POSTTAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                            }};
+                            earningsLines = new org.openapis.openapi.models.shared.EarningsLine[]{{
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ENTEREARNINGSRATE";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ENTEREARNINGSRATE";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ANNUALSALARY";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "USEEARNINGSRATE";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                            }};
+                            leaveLines = new org.openapis.openapi.models.shared.LeaveLine[]{{
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "ENTERRATEINPAYTEMPLATE";
+                                    employmentTerminationPaymentType = "R";
+                                    entitlementFinalPayPayoutType = "NOTPAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "NOCALCULATIONREQUIRED";
+                                    employmentTerminationPaymentType = "O";
+                                    entitlementFinalPayPayoutType = "NOTPAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "";
+                                    employmentTerminationPaymentType = "O";
+                                    entitlementFinalPayPayoutType = "NOTPAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                            }};
+                            openingBalanceDate = "/Date(322560000000+0000)/";
+                            reimbursementLines = new org.openapis.openapi.models.shared.ReimbursementLine[]{{
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                            }};
+                            superLines = new org.openapis.openapi.models.shared.SuperLine[]{{
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "FIXEDAMOUNT";
+                                    contributionType = "EMPLOYERADDITIONAL";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "FIXEDAMOUNT";
+                                    contributionType = "EMPLOYEE";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                            }};
+                            tax = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                        }};
+                        ordinaryEarningsRateID = "5gj1e5cc-9835-40d5-bb18-09fdb118db9c";
+                        payTemplate = new PayTemplate() {{
+                            deductionLines = new org.openapis.openapi.models.shared.DeductionLine[]{{
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "POSTTAX";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                                add(new DeductionLine() {{
+                                    amount = 10;
+                                    calculationType = "FIXEDAMOUNT";
+                                    deductionTypeID = "59cd9d04-4521-4cc3-93ac-7841651ff407";
+                                    numberOfUnits = 10;
+                                    percentage = 10;
+                                }}),
+                            }};
+                            earningsLines = new org.openapis.openapi.models.shared.EarningsLine[]{{
+                                add(new EarningsLine() {{
+                                    amount = 38;
+                                    annualSalary = 40000;
+                                    calculationType = "ANNUALSALARY";
+                                    earningsRateID = "72e962d1-fcac-4083-8a71-742bb3e7ae14";
+                                    fixedAmount = 2.5;
+                                    normalNumberOfUnits = 38;
+                                    numberOfUnits = 2.5;
+                                    numberOfUnitsPerWeek = 38;
+                                    ratePerUnit = 38;
+                                }}),
+                            }};
+                            leaveLines = new org.openapis.openapi.models.shared.LeaveLine[]{{
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "ENTERRATEINPAYTEMPLATE";
+                                    employmentTerminationPaymentType = "R";
+                                    entitlementFinalPayPayoutType = "NOTPAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "ENTERRATEINPAYTEMPLATE";
+                                    employmentTerminationPaymentType = "R";
+                                    entitlementFinalPayPayoutType = "PAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                                add(new LeaveLine() {{
+                                    annualNumberOfUnits = 2.5;
+                                    calculationType = "NOCALCULATIONREQUIRED";
+                                    employmentTerminationPaymentType = "R";
+                                    entitlementFinalPayPayoutType = "PAIDOUT";
+                                    fullTimeNumberOfUnitsPerPeriod = 2.5;
+                                    includeSuperannuationGuaranteeContribution = true;
+                                    leaveTypeID = "742998cb-7584-4ecf-aa88-d694f59c50f9";
+                                    numberOfUnits = 2.5;
+                                }}),
+                            }};
+                            reimbursementLines = new org.openapis.openapi.models.shared.ReimbursementLine[]{{
+                                add(new ReimbursementLine() {{
+                                    amount = 10;
+                                    description = "For the taxi";
+                                    expenseAccount = "420";
+                                    reimbursementTypeID = "bd246b96-c637-4767-81cf-851ba8fa93c2";
+                                }}),
+                            }};
+                            superLines = new org.openapis.openapi.models.shared.SuperLine[]{{
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "FIXEDAMOUNT";
+                                    contributionType = "SALARYSACRIFICE";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "FIXEDAMOUNT";
+                                    contributionType = "EMPLOYERADDITIONAL";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "STATUTORY";
+                                    contributionType = "SGC";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                                add(new SuperLine() {{
+                                    amount = 10;
+                                    calculationType = "PERCENTAGEOFEARNINGS";
+                                    contributionType = "EMPLOYERADDITIONAL";
+                                    expenseAccountCode = "478";
+                                    liabilityAccountCode = "826";
+                                    minimumMonthlyEarnings = 450;
+                                    percentage = 9;
+                                    superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                                }}),
+                            }};
+                        }};
+                        payrollCalendarID = "2ee8e5cc-9835-40d5-bb18-09fdb118db9c";
+                        phone = "415-555-1212";
+                        startDate = "/Date(320284900000+0000)/";
+                        status = "TERMINATED";
+                        superMemberships = new org.openapis.openapi.models.shared.SuperMembership[]{{
+                            add(new SuperMembership() {{
+                                employeeNumber = "1234";
+                                superFundID = "2187a42b-639a-45cb-9eed-cd4ae488306a";
+                                superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                            }}),
+                            add(new SuperMembership() {{
+                                employeeNumber = "1234";
+                                superFundID = "2187a42b-639a-45cb-9eed-cd4ae488306a";
+                                superMembershipID = "4333d5cd-53a5-4c31-98e5-a8b4e5676b0b";
+                            }}),
+                        }};
+                        taxDeclaration = new TaxDeclarationInput() {{
+                            approvedWithholdingVariationPercentage = 75;
+                            australianResidentForTaxPurposes = true;
+                            eligibleToReceiveLeaveLoading = false;
+                            employeeID = "123 Main St";
+                            employmentBasis = "PARTTIME";
+                            hasHELPDebt = false;
+                            hasSFSSDebt = false;
+                            hasStudentStartupLoan = true;
+                            hasTradeSupportLoanDebt = false;
+                            residencyStatus = "AUSTRALIANRESIDENT";
+                            tfnExemptionType = "PENDING";
+                            taxFileNumber = "123123123";
+                            taxFreeThresholdClaimed = false;
+                            taxOffsetEstimatedAmount = 100;
+                            upwardVariationTaxWithholdingAmount = 50;
+                        }};
+                        terminationDate = "/Date(1584662400000+0000)/";
+                        title = "Mrs";
+                        twitterUserName = "xeroapi";
+                        validationErrors = new org.openapis.openapi.models.shared.ValidationError[]{{
+                            add(new ValidationError() {{
+                                message = "quos";
+                            }}),
+                            add(new ValidationError() {{
+                                message = "perferendis";
+                            }}),
+                            add(new ValidationError() {{
+                                message = "magni";
                             }}),
                         }};
                     }}),
                 }};
-            }};
+            }};            
 
             CreateEmployeeResponse res = sdk.payrollAu.createEmployee(req);
 

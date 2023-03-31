@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AnalyticsDataGetSecurityOption1;
+import org.openapis.openapi.models.operations.AnalyticsDataGetSecurityOption2;
+import org.openapis.openapi.models.operations.AnalyticsDataGetSecurity;
+import org.openapis.openapi.models.operations.AnalyticsDataGetQueryParams;
+import org.openapis.openapi.models.operations.AnalyticsDataGetRequest;
+import org.openapis.openapi.models.operations.AnalyticsDataGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AnalyticsDataGetRequest req = new AnalyticsDataGetRequest() {{
                 security = new AnalyticsDataGetSecurity() {{
@@ -25,24 +33,24 @@ public class Application {
                 }};
                 queryParams = new AnalyticsDataGetQueryParams() {{
                     alt = "atom";
-                    dimensions = "voluptas";
-                    endDate = "culpa";
-                    fields = "expedita";
-                    filters = "consequuntur";
-                    ids = "dolor";
-                    key = "expedita";
-                    maxResults = 6044372234677422456;
-                    metrics = "fugit";
-                    oauthToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    segment = "dicta";
-                    sort = "debitis";
-                    startDate = "voluptatum";
-                    startIndex = 2339563716805116249;
-                    userIp = "ut";
+                    dimensions = "corrupti";
+                    endDate = "provident";
+                    fields = "distinctio";
+                    filters = "quibusdam";
+                    ids = "unde";
+                    key = "nulla";
+                    maxResults = 544883;
+                    metrics = "illum";
+                    oauthToken = "vel";
+                    prettyPrint = false;
+                    quotaUser = "error";
+                    segment = "deserunt";
+                    sort = "suscipit";
+                    startDate = "iure";
+                    startIndex = 297534;
+                    userIp = "debitis";
                 }};
-            }};
+            }};            
 
             AnalyticsDataGetResponse res = sdk.data.analyticsDataGet(req);
 

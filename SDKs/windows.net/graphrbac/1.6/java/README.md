@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,650 +15,447 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.ApplicationsCreatePathParams;
+import org.openapis.openapi.models.operations.ApplicationsCreateQueryParams;
+import org.openapis.openapi.models.operations.ApplicationsCreateRequest;
+import org.openapis.openapi.models.operations.ApplicationsCreateResponse;
+import org.openapis.openapi.models.shared.ApplicationCreateParameters;
+import org.openapis.openapi.models.shared.PreAuthorizedApplication;
+import org.openapis.openapi.models.shared.PreAuthorizedApplicationPermission;
+import org.openapis.openapi.models.shared.PreAuthorizedApplicationExtension;
+import org.openapis.openapi.models.shared.OptionalClaims;
+import org.openapis.openapi.models.shared.OptionalClaim;
+import org.openapis.openapi.models.shared.OAuth2Permission;
+import org.openapis.openapi.models.shared.InformationalUrl;
+import org.openapis.openapi.models.shared.GroupMembershipClaimsEnum;
+import org.openapis.openapi.models.shared.AppRole;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     azureAuth = new SchemeAzureAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             ApplicationsCreateRequest req = new ApplicationsCreateRequest() {{
                 pathParams = new ApplicationsCreatePathParams() {{
-                    tenantID = "sit";
+                    tenantID = "corrupti";
                 }};
                 queryParams = new ApplicationsCreateQueryParams() {{
-                    apiVersion = "voluptas";
+                    apiVersion = "provident";
                 }};
-                request = new ApplicationsCreateRequests() {{
-                    applicationCreateParameters = new ApplicationCreateParameters() {{
-                        allowGuestsSignIn = true;
-                        allowPassthroughUsers = false;
-                        appLogoUrl = "consequuntur";
-                        appPermissions = new String[]() {{
-                            add("expedita"),
-                            add("voluptas"),
-                        }};
-                        appRoles = new openapisdk.models.shared.AppRole[]() {{
-                            add(new AppRole() {{
-                                allowedMemberTypes = new String[]() {{
-                                    add("nihil"),
-                                }};
-                                description = "rerum";
-                                displayName = "dicta";
-                                id = "debitis";
-                                isEnabled = true;
-                                value = "et";
-                            }}),
-                        }};
-                        availableToOtherTenants = false;
-                        displayName = "dolorem";
-                        errorUrl = "et";
-                        groupMembershipClaims = "None";
-                        homepage = "iste";
-                        identifierUris = new String[]() {{
-                            add("totam"),
-                        }};
-                        informationalUrls = new InformationalUrl() {{
-                            marketing = "dolores";
-                            privacy = "illum";
-                            support = "debitis";
-                            termsOfService = "vel";
-                        }};
-                        isDeviceOnlyAuthSupported = false;
-                        keyCredentials = new java.util.HashMap<String, java.util.HashMap<String, Object>>[]() {{
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("aspernatur", new java.util.HashMap<String, Object>() {{
-                                    put("totam", "commodi");
-                                    put("quis", "est");
-                                    put("aut", "odit");
-                                }});
-                                put("non", new java.util.HashMap<String, Object>() {{
-                                    put("omnis", "aut");
-                                }});
-                            }}),
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("sed", new java.util.HashMap<String, Object>() {{
-                                    put("autem", "consectetur");
-                                    put("nobis", "odio");
-                                }});
-                            }}),
-                        }};
-                        knownClientApplications = new String[]() {{
-                            add("recusandae"),
-                        }};
-                        logoutUrl = "at";
-                        oauth2AllowImplicitFlow = false;
-                        oauth2AllowUrlPathMatching = true;
-                        oauth2Permissions = new openapisdk.models.shared.OAuth2Permission[]() {{
-                            add(new OAuth2Permission() {{
-                                adminConsentDescription = "sint";
-                                adminConsentDisplayName = "inventore";
-                                id = "ut";
-                                isEnabled = false;
-                                type = "aut";
-                                userConsentDescription = "reprehenderit";
-                                userConsentDisplayName = "tempore";
-                                value = "maiores";
-                            }}),
-                            add(new OAuth2Permission() {{
-                                adminConsentDescription = "incidunt";
-                                adminConsentDisplayName = "dolor";
-                                id = "beatae";
-                                isEnabled = true;
-                                type = "in";
-                                userConsentDescription = "et";
-                                userConsentDisplayName = "omnis";
-                                value = "ipsum";
-                            }}),
-                        }};
-                        oauth2RequirePostResponse = true;
-                        optionalClaims = new OptionalClaims() {{
-                            accessToken = new openapisdk.models.shared.OptionalClaim[]() {{
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("vel", "rerum");
-                                    }};
-                                    essential = true;
-                                    name = "voluptas";
-                                    source = "quam";
-                                }}),
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("qui", "qui");
-                                    }};
-                                    essential = false;
-                                    name = "in";
-                                    source = "autem";
-                                }}),
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("ut", "itaque");
-                                    }};
-                                    essential = false;
-                                    name = "neque";
-                                    source = "ullam";
-                                }}),
-                            }};
-                            idToken = new openapisdk.models.shared.OptionalClaim[]() {{
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("esse", "architecto");
-                                        put("quam", "velit");
-                                        put("cumque", "soluta");
-                                    }};
-                                    essential = true;
-                                    name = "voluptates";
-                                    source = "magni";
-                                }}),
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("optio", "qui");
-                                        put("earum", "illo");
-                                        put("omnis", "ut");
-                                    }};
-                                    essential = false;
-                                    name = "dolor";
-                                    source = "commodi";
-                                }}),
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("reprehenderit", "consectetur");
-                                    }};
-                                    essential = true;
-                                    name = "ut";
-                                    source = "laboriosam";
-                                }}),
-                            }};
-                            samlToken = new openapisdk.models.shared.OptionalClaim[]() {{
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("soluta", "aut");
-                                    }};
-                                    essential = true;
-                                    name = "consequuntur";
-                                    source = "laudantium";
-                                }}),
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("ipsa", "expedita");
-                                    }};
-                                    essential = false;
-                                    name = "perferendis";
-                                    source = "atque";
-                                }}),
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("quisquam", "explicabo");
-                                    }};
-                                    essential = true;
-                                    name = "maxime";
-                                    source = "eum";
-                                }}),
-                            }};
-                        }};
-                        orgRestrictions = new String[]() {{
-                            add("et"),
-                            add("rerum"),
-                        }};
-                        passwordCredentials = new java.util.HashMap<String, java.util.HashMap<String, Object>>[]() {{
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("cumque", new java.util.HashMap<String, Object>() {{
-                                    put("necessitatibus", "est");
-                                }});
-                                put("quis", new java.util.HashMap<String, Object>() {{
-                                    put("labore", "et");
-                                }});
-                                put("impedit", new java.util.HashMap<String, Object>() {{
-                                    put("expedita", "vel");
-                                    put("qui", "modi");
-                                    put("nihil", "tempora");
-                                }});
-                            }}),
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("eaque", new java.util.HashMap<String, Object>() {{
-                                    put("sit", "autem");
-                                    put("quis", "vel");
-                                }});
-                            }}),
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("placeat", new java.util.HashMap<String, Object>() {{
-                                    put("nisi", "quis");
-                                }});
-                                put("adipisci", new java.util.HashMap<String, Object>() {{
-                                    put("rerum", "et");
-                                    put("accusamus", "numquam");
-                                    put("laborum", "rerum");
-                                }});
-                            }}),
-                        }};
-                        preAuthorizedApplications = new openapisdk.models.shared.PreAuthorizedApplication[]() {{
-                            add(new PreAuthorizedApplication() {{
-                                appId = "laborum";
-                                extensions = new openapisdk.models.shared.PreAuthorizedApplicationExtension[]() {{
-                                    add(new PreAuthorizedApplicationExtension() {{
-                                        conditions = new String[]() {{
-                                            add("minus"),
-                                            add("soluta"),
-                                            add("aperiam"),
-                                        }};
-                                    }}),
-                                }};
-                                permissions = new openapisdk.models.shared.PreAuthorizedApplicationPermission[]() {{
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("mollitia"),
-                                        }};
-                                        directAccessGrant = true;
-                                    }}),
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("ipsa"),
-                                        }};
-                                        directAccessGrant = false;
-                                    }}),
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("ut"),
-                                            add("aliquam"),
-                                        }};
-                                        directAccessGrant = false;
-                                    }}),
-                                }};
-                            }}),
-                            add(new PreAuthorizedApplication() {{
-                                appId = "sed";
-                                extensions = new openapisdk.models.shared.PreAuthorizedApplicationExtension[]() {{
-                                    add(new PreAuthorizedApplicationExtension() {{
-                                        conditions = new String[]() {{
-                                            add("consequuntur"),
-                                            add("non"),
-                                            add("cupiditate"),
-                                        }};
-                                    }}),
-                                    add(new PreAuthorizedApplicationExtension() {{
-                                        conditions = new String[]() {{
-                                            add("molestiae"),
-                                            add("pariatur"),
-                                            add("quasi"),
-                                        }};
-                                    }}),
-                                    add(new PreAuthorizedApplicationExtension() {{
-                                        conditions = new String[]() {{
-                                            add("enim"),
-                                            add("qui"),
-                                            add("sit"),
-                                        }};
-                                    }}),
-                                }};
-                                permissions = new openapisdk.models.shared.PreAuthorizedApplicationPermission[]() {{
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("neque"),
-                                            add("consequuntur"),
-                                        }};
-                                        directAccessGrant = true;
-                                    }}),
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("est"),
-                                            add("occaecati"),
-                                        }};
-                                        directAccessGrant = false;
-                                    }}),
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("quia"),
-                                            add("temporibus"),
-                                        }};
-                                        directAccessGrant = false;
-                                    }}),
-                                }};
-                            }}),
-                        }};
-                        publicClient = false;
-                        publisherDomain = "est";
-                        replyUrls = new String[]() {{
-                            add("necessitatibus"),
-                            add("in"),
-                            add("possimus"),
-                        }};
-                        requiredResourceAccess = new java.util.HashMap<String, java.util.HashMap<String, Object>>[]() {{
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("doloribus", new java.util.HashMap<String, Object>() {{
-                                    put("sunt", "earum");
-                                    put("et", "ut");
-                                    put("asperiores", "et");
-                                }});
-                            }}),
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("ipsum", new java.util.HashMap<String, Object>() {{
-                                    put("voluptas", "nihil");
-                                }});
-                            }}),
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("suscipit", new java.util.HashMap<String, Object>() {{
-                                    put("non", "magnam");
-                                    put("ut", "possimus");
-                                }});
-                            }}),
-                        }};
-                        samlMetadataUrl = "illo";
-                        signInAudience = "qui";
-                        wwwHomepage = "quia";
+                request = new ApplicationCreateParameters() {{
+                    allowGuestsSignIn = false;
+                    allowPassthroughUsers = false;
+                    appLogoUrl = "distinctio";
+                    appPermissions = new String[]{{
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
-                    applicationCreateParameters1 = new ApplicationCreateParameters() {{
-                        allowGuestsSignIn = false;
-                        allowPassthroughUsers = false;
-                        appLogoUrl = "enim";
-                        appPermissions = new String[]() {{
-                            add("distinctio"),
-                            add("delectus"),
-                        }};
-                        appRoles = new openapisdk.models.shared.AppRole[]() {{
-                            add(new AppRole() {{
-                                allowedMemberTypes = new String[]() {{
-                                    add("repellat"),
-                                    add("velit"),
-                                }};
-                                description = "officia";
-                                displayName = "modi";
-                                id = "sunt";
-                                isEnabled = false;
-                                value = "amet";
-                            }}),
-                            add(new AppRole() {{
-                                allowedMemberTypes = new String[]() {{
-                                    add("a"),
-                                    add("qui"),
-                                    add("excepturi"),
-                                }};
-                                description = "autem";
-                                displayName = "corporis";
-                                id = "dicta";
-                                isEnabled = true;
-                                value = "doloremque";
-                            }}),
-                        }};
-                        availableToOtherTenants = false;
-                        displayName = "nisi";
-                        errorUrl = "recusandae";
-                        groupMembershipClaims = "None";
-                        homepage = "minus";
-                        identifierUris = new String[]() {{
-                            add("rerum"),
-                            add("ut"),
-                            add("rem"),
-                        }};
-                        informationalUrls = new InformationalUrl() {{
-                            marketing = "eos";
-                            privacy = "et";
-                            support = "reiciendis";
-                            termsOfService = "aspernatur";
-                        }};
-                        isDeviceOnlyAuthSupported = true;
-                        keyCredentials = new java.util.HashMap<String, java.util.HashMap<String, Object>>[]() {{
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("adipisci", new java.util.HashMap<String, Object>() {{
-                                    put("illum", "accusantium");
-                                    put("atque", "amet");
-                                    put("nisi", "quidem");
-                                }});
-                            }}),
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("quo", new java.util.HashMap<String, Object>() {{
-                                    put("alias", "totam");
-                                    put("deserunt", "eius");
-                                }});
-                                put("repellat", new java.util.HashMap<String, Object>() {{
-                                    put("omnis", "totam");
-                                    put("aut", "et");
-                                    put("magni", "necessitatibus");
-                                }});
-                            }}),
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("culpa", new java.util.HashMap<String, Object>() {{
-                                    put("voluptas", "ut");
-                                }});
-                                put("veniam", new java.util.HashMap<String, Object>() {{
-                                    put("molestias", "rerum");
-                                    put("quo", "et");
-                                }});
-                            }}),
-                        }};
-                        knownClientApplications = new String[]() {{
-                            add("commodi"),
-                            add("in"),
-                            add("quibusdam"),
-                        }};
-                        logoutUrl = "asperiores";
-                        oauth2AllowImplicitFlow = false;
-                        oauth2AllowUrlPathMatching = true;
-                        oauth2Permissions = new openapisdk.models.shared.OAuth2Permission[]() {{
-                            add(new OAuth2Permission() {{
-                                adminConsentDescription = "tempora";
-                                adminConsentDisplayName = "commodi";
-                                id = "blanditiis";
-                                isEnabled = true;
-                                type = "in";
-                                userConsentDescription = "et";
-                                userConsentDisplayName = "odit";
-                                value = "est";
-                            }}),
-                        }};
-                        oauth2RequirePostResponse = true;
-                        optionalClaims = new OptionalClaims() {{
-                            accessToken = new openapisdk.models.shared.OptionalClaim[]() {{
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("perspiciatis", "et");
-                                    }};
-                                    essential = true;
-                                    name = "voluptatem";
-                                    source = "ex";
-                                }}),
+                    appRoles = new org.openapis.openapi.models.shared.AppRole[]{{
+                        add(new AppRole() {{
+                            allowedMemberTypes = new String[]{{
+                                add("deserunt"),
+                                add("suscipit"),
+                                add("iure"),
                             }};
-                            idToken = new openapisdk.models.shared.OptionalClaim[]() {{
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("distinctio", "cumque");
-                                        put("ea", "non");
-                                    }};
-                                    essential = false;
-                                    name = "nam";
-                                    source = "beatae";
-                                }}),
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("qui", "magni");
-                                    }};
-                                    essential = true;
-                                    name = "sit";
-                                    source = "aut";
-                                }}),
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("iusto", "quia");
-                                    }};
-                                    essential = false;
-                                    name = "debitis";
-                                    source = "autem";
-                                }}),
+                            description = "magnam";
+                            displayName = "debitis";
+                            id = "ipsa";
+                            isEnabled = false;
+                            value = "delectus";
+                        }}),
+                        add(new AppRole() {{
+                            allowedMemberTypes = new String[]{{
+                                add("suscipit"),
+                                add("molestiae"),
                             }};
-                            samlToken = new openapisdk.models.shared.OptionalClaim[]() {{
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("ut", "non");
-                                        put("nihil", "laborum");
-                                        put("recusandae", "nihil");
-                                    }};
-                                    essential = false;
-                                    name = "iste";
-                                    source = "perferendis";
-                                }}),
-                                add(new OptionalClaim() {{
-                                    additionalProperties = new java.util.HashMap<String, Object>() {{
-                                        put("autem", "hic");
-                                        put("voluptatem", "omnis");
-                                        put("libero", "qui");
-                                    }};
-                                    essential = false;
-                                    name = "minus";
-                                    source = "nostrum";
-                                }}),
-                            }};
-                        }};
-                        orgRestrictions = new String[]() {{
-                            add("sit"),
-                            add("repellat"),
-                        }};
-                        passwordCredentials = new java.util.HashMap<String, java.util.HashMap<String, Object>>[]() {{
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("laboriosam", new java.util.HashMap<String, Object>() {{
-                                    put("ea", "tempore");
-                                    put("fugit", "aut");
-                                }});
-                            }}),
-                        }};
-                        preAuthorizedApplications = new openapisdk.models.shared.PreAuthorizedApplication[]() {{
-                            add(new PreAuthorizedApplication() {{
-                                appId = "aliquid";
-                                extensions = new openapisdk.models.shared.PreAuthorizedApplicationExtension[]() {{
-                                    add(new PreAuthorizedApplicationExtension() {{
-                                        conditions = new String[]() {{
-                                            add("magni"),
-                                            add("recusandae"),
-                                            add("illum"),
-                                        }};
-                                    }}),
-                                    add(new PreAuthorizedApplicationExtension() {{
-                                        conditions = new String[]() {{
-                                            add("dolores"),
-                                            add("hic"),
-                                        }};
-                                    }}),
-                                }};
-                                permissions = new openapisdk.models.shared.PreAuthorizedApplicationPermission[]() {{
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("ex"),
-                                            add("iure"),
-                                            add("et"),
-                                        }};
-                                        directAccessGrant = false;
-                                    }}),
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("explicabo"),
-                                        }};
-                                        directAccessGrant = false;
-                                    }}),
-                                }};
-                            }}),
-                            add(new PreAuthorizedApplication() {{
-                                appId = "veniam";
-                                extensions = new openapisdk.models.shared.PreAuthorizedApplicationExtension[]() {{
-                                    add(new PreAuthorizedApplicationExtension() {{
-                                        conditions = new String[]() {{
-                                            add("odit"),
-                                            add("molestias"),
-                                            add("corporis"),
-                                        }};
-                                    }}),
-                                }};
-                                permissions = new openapisdk.models.shared.PreAuthorizedApplicationPermission[]() {{
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("similique"),
-                                            add("mollitia"),
-                                        }};
-                                        directAccessGrant = false;
-                                    }}),
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("quam"),
-                                            add("maiores"),
-                                            add("totam"),
-                                        }};
-                                        directAccessGrant = false;
-                                    }}),
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("repellendus"),
-                                            add("sunt"),
-                                        }};
-                                        directAccessGrant = true;
-                                    }}),
-                                }};
-                            }}),
-                            add(new PreAuthorizedApplication() {{
-                                appId = "earum";
-                                extensions = new openapisdk.models.shared.PreAuthorizedApplicationExtension[]() {{
-                                    add(new PreAuthorizedApplicationExtension() {{
-                                        conditions = new String[]() {{
-                                            add("aut"),
-                                            add("dolor"),
-                                            add("quia"),
-                                        }};
-                                    }}),
-                                }};
-                                permissions = new openapisdk.models.shared.PreAuthorizedApplicationPermission[]() {{
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("et"),
-                                            add("expedita"),
-                                        }};
-                                        directAccessGrant = true;
-                                    }}),
-                                    add(new PreAuthorizedApplicationPermission() {{
-                                        accessGrants = new String[]() {{
-                                            add("qui"),
-                                        }};
-                                        directAccessGrant = false;
-                                    }}),
-                                }};
-                            }}),
-                        }};
-                        publicClient = true;
-                        publisherDomain = "cupiditate";
-                        replyUrls = new String[]() {{
-                            add("saepe"),
-                            add("sed"),
-                            add("voluptatem"),
-                        }};
-                        requiredResourceAccess = new java.util.HashMap<String, java.util.HashMap<String, Object>>[]() {{
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("nesciunt", new java.util.HashMap<String, Object>() {{
-                                    put("qui", "quis");
-                                    put("eligendi", "velit");
-                                    put("fuga", "aliquid");
-                                }});
-                                put("vero", new java.util.HashMap<String, Object>() {{
-                                    put("et", "voluptatem");
-                                }});
-                            }}),
-                            add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
-                                put("quae", new java.util.HashMap<String, Object>() {{
-                                    put("vitae", "rerum");
-                                }});
-                            }}),
-                        }};
-                        samlMetadataUrl = "officiis";
-                        signInAudience = "commodi";
-                        wwwHomepage = "sed";
+                            description = "minus";
+                            displayName = "placeat";
+                            id = "voluptatum";
+                            isEnabled = false;
+                            value = "iusto";
+                        }}),
                     }};
+                    availableToOtherTenants = false;
+                    displayName = "excepturi";
+                    errorUrl = "nisi";
+                    groupMembershipClaims = "All";
+                    homepage = "temporibus";
+                    identifierUris = new String[]{{
+                        add("quis"),
+                    }};
+                    informationalUrls = new InformationalUrl() {{
+                        marketing = "veritatis";
+                        privacy = "deserunt";
+                        support = "perferendis";
+                        termsOfService = "ipsam";
+                    }};
+                    isDeviceOnlyAuthSupported = false;
+                    keyCredentials = new java.util.HashMap<String, java.util.HashMap<String, Object>>[]{{
+                        add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
+                            put("quo", new java.util.HashMap<String, Object>() {{
+                                put("at", "at");
+                            }});
+                            put("maiores", new java.util.HashMap<String, Object>() {{
+                                put("quod", "quod");
+                                put("esse", "totam");
+                            }});
+                            put("porro", new java.util.HashMap<String, Object>() {{
+                                put("dicta", "nam");
+                                put("officia", "occaecati");
+                                put("fugit", "deleniti");
+                            }});
+                            put("hic", new java.util.HashMap<String, Object>() {{
+                                put("totam", "beatae");
+                                put("commodi", "molestiae");
+                                put("modi", "qui");
+                                put("impedit", "cum");
+                            }});
+                        }}),
+                        add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
+                            put("ipsum", new java.util.HashMap<String, Object>() {{
+                                put("aspernatur", "perferendis");
+                                put("ad", "natus");
+                                put("sed", "iste");
+                            }});
+                            put("dolor", new java.util.HashMap<String, Object>() {{
+                                put("laboriosam", "hic");
+                                put("saepe", "fuga");
+                                put("in", "corporis");
+                            }});
+                        }}),
+                        add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
+                            put("iure", new java.util.HashMap<String, Object>() {{
+                                put("quidem", "architecto");
+                                put("ipsa", "reiciendis");
+                                put("est", "mollitia");
+                                put("laborum", "dolores");
+                            }});
+                            put("dolorem", new java.util.HashMap<String, Object>() {{
+                                put("explicabo", "nobis");
+                                put("enim", "omnis");
+                            }});
+                            put("nemo", new java.util.HashMap<String, Object>() {{
+                                put("excepturi", "accusantium");
+                                put("iure", "culpa");
+                            }});
+                        }}),
+                        add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
+                            put("sapiente", new java.util.HashMap<String, Object>() {{
+                                put("mollitia", "dolorem");
+                            }});
+                            put("culpa", new java.util.HashMap<String, Object>() {{
+                                put("repellat", "mollitia");
+                            }});
+                            put("occaecati", new java.util.HashMap<String, Object>() {{
+                                put("commodi", "quam");
+                                put("molestiae", "velit");
+                            }});
+                            put("error", new java.util.HashMap<String, Object>() {{
+                                put("quis", "vitae");
+                            }});
+                        }}),
+                    }};
+                    knownClientApplications = new String[]{{
+                        add("animi"),
+                        add("enim"),
+                        add("odit"),
+                    }};
+                    logoutUrl = "quo";
+                    oauth2AllowImplicitFlow = false;
+                    oauth2AllowUrlPathMatching = false;
+                    oauth2Permissions = new org.openapis.openapi.models.shared.OAuth2Permission[]{{
+                        add(new OAuth2Permission() {{
+                            adminConsentDescription = "tenetur";
+                            adminConsentDisplayName = "ipsam";
+                            id = "id";
+                            isEnabled = false;
+                            type = "possimus";
+                            userConsentDescription = "aut";
+                            userConsentDisplayName = "quasi";
+                            value = "error";
+                        }}),
+                    }};
+                    oauth2RequirePostResponse = false;
+                    optionalClaims = new OptionalClaims() {{
+                        accessToken = new org.openapis.openapi.models.shared.OptionalClaim[]{{
+                            add(new OptionalClaim() {{
+                                additionalProperties = new java.util.HashMap<String, Object>() {{
+                                    put("quasi", "reiciendis");
+                                    put("voluptatibus", "vero");
+                                    put("nihil", "praesentium");
+                                }};
+                                essential = false;
+                                name = "voluptatibus";
+                                source = "ipsa";
+                            }}),
+                            add(new OptionalClaim() {{
+                                additionalProperties = new java.util.HashMap<String, Object>() {{
+                                    put("voluptate", "cum");
+                                    put("perferendis", "doloremque");
+                                    put("reprehenderit", "ut");
+                                }};
+                                essential = false;
+                                name = "maiores";
+                                source = "dicta";
+                            }}),
+                            add(new OptionalClaim() {{
+                                additionalProperties = new java.util.HashMap<String, Object>() {{
+                                    put("dolore", "iusto");
+                                    put("dicta", "harum");
+                                }};
+                                essential = false;
+                                name = "enim";
+                                source = "accusamus";
+                            }}),
+                            add(new OptionalClaim() {{
+                                additionalProperties = new java.util.HashMap<String, Object>() {{
+                                    put("repudiandae", "quae");
+                                    put("ipsum", "quidem");
+                                }};
+                                essential = false;
+                                name = "molestias";
+                                source = "excepturi";
+                            }}),
+                        }};
+                        idToken = new org.openapis.openapi.models.shared.OptionalClaim[]{{
+                            add(new OptionalClaim() {{
+                                additionalProperties = new java.util.HashMap<String, Object>() {{
+                                    put("praesentium", "rem");
+                                    put("voluptates", "quasi");
+                                }};
+                                essential = false;
+                                name = "repudiandae";
+                                source = "sint";
+                            }}),
+                            add(new OptionalClaim() {{
+                                additionalProperties = new java.util.HashMap<String, Object>() {{
+                                    put("itaque", "incidunt");
+                                }};
+                                essential = false;
+                                name = "enim";
+                                source = "consequatur";
+                            }}),
+                            add(new OptionalClaim() {{
+                                additionalProperties = new java.util.HashMap<String, Object>() {{
+                                    put("quibusdam", "explicabo");
+                                    put("deserunt", "distinctio");
+                                    put("quibusdam", "labore");
+                                }};
+                                essential = false;
+                                name = "modi";
+                                source = "qui";
+                            }}),
+                            add(new OptionalClaim() {{
+                                additionalProperties = new java.util.HashMap<String, Object>() {{
+                                    put("cupiditate", "quos");
+                                    put("perferendis", "magni");
+                                }};
+                                essential = false;
+                                name = "assumenda";
+                                source = "ipsam";
+                            }}),
+                        }};
+                        samlToken = new org.openapis.openapi.models.shared.OptionalClaim[]{{
+                            add(new OptionalClaim() {{
+                                additionalProperties = new java.util.HashMap<String, Object>() {{
+                                    put("dolorum", "excepturi");
+                                }};
+                                essential = false;
+                                name = "tempora";
+                                source = "facilis";
+                            }}),
+                        }};
+                    }};
+                    orgRestrictions = new String[]{{
+                        add("labore"),
+                        add("delectus"),
+                        add("eum"),
+                    }};
+                    passwordCredentials = new java.util.HashMap<String, java.util.HashMap<String, Object>>[]{{
+                        add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
+                            put("sint", new java.util.HashMap<String, Object>() {{
+                                put("provident", "necessitatibus");
+                                put("sint", "officia");
+                            }});
+                            put("dolor", new java.util.HashMap<String, Object>() {{
+                                put("a", "dolorum");
+                                put("in", "in");
+                                put("illum", "maiores");
+                                put("rerum", "dicta");
+                            }});
+                            put("magnam", new java.util.HashMap<String, Object>() {{
+                                put("facere", "ea");
+                                put("aliquid", "laborum");
+                                put("accusamus", "non");
+                                put("occaecati", "enim");
+                            }});
+                            put("accusamus", new java.util.HashMap<String, Object>() {{
+                                put("quidem", "provident");
+                                put("nam", "id");
+                                put("blanditiis", "deleniti");
+                                put("sapiente", "amet");
+                            }});
+                        }}),
+                    }};
+                    preAuthorizedApplications = new org.openapis.openapi.models.shared.PreAuthorizedApplication[]{{
+                        add(new PreAuthorizedApplication() {{
+                            appId = "nisi";
+                            extensions = new org.openapis.openapi.models.shared.PreAuthorizedApplicationExtension[]{{
+                                add(new PreAuthorizedApplicationExtension() {{
+                                    conditions = new String[]{{
+                                        add("omnis"),
+                                        add("molestiae"),
+                                        add("perferendis"),
+                                    }};
+                                }}),
+                                add(new PreAuthorizedApplicationExtension() {{
+                                    conditions = new String[]{{
+                                        add("magnam"),
+                                        add("distinctio"),
+                                    }};
+                                }}),
+                            }};
+                            permissions = new org.openapis.openapi.models.shared.PreAuthorizedApplicationPermission[]{{
+                                add(new PreAuthorizedApplicationPermission() {{
+                                    accessGrants = new String[]{{
+                                        add("labore"),
+                                        add("suscipit"),
+                                    }};
+                                    directAccessGrant = false;
+                                }}),
+                                add(new PreAuthorizedApplicationPermission() {{
+                                    accessGrants = new String[]{{
+                                        add("nobis"),
+                                        add("eum"),
+                                        add("vero"),
+                                    }};
+                                    directAccessGrant = false;
+                                }}),
+                                add(new PreAuthorizedApplicationPermission() {{
+                                    accessGrants = new String[]{{
+                                        add("architecto"),
+                                    }};
+                                    directAccessGrant = false;
+                                }}),
+                            }};
+                        }}),
+                        add(new PreAuthorizedApplication() {{
+                            appId = "magnam";
+                            extensions = new org.openapis.openapi.models.shared.PreAuthorizedApplicationExtension[]{{
+                                add(new PreAuthorizedApplicationExtension() {{
+                                    conditions = new String[]{{
+                                        add("ullam"),
+                                        add("provident"),
+                                        add("quos"),
+                                    }};
+                                }}),
+                            }};
+                            permissions = new org.openapis.openapi.models.shared.PreAuthorizedApplicationPermission[]{{
+                                add(new PreAuthorizedApplicationPermission() {{
+                                    accessGrants = new String[]{{
+                                        add("mollitia"),
+                                    }};
+                                    directAccessGrant = false;
+                                }}),
+                                add(new PreAuthorizedApplicationPermission() {{
+                                    accessGrants = new String[]{{
+                                        add("mollitia"),
+                                        add("ad"),
+                                        add("eum"),
+                                        add("dolor"),
+                                    }};
+                                    directAccessGrant = false;
+                                }}),
+                                add(new PreAuthorizedApplicationPermission() {{
+                                    accessGrants = new String[]{{
+                                        add("odit"),
+                                        add("nemo"),
+                                        add("quasi"),
+                                        add("iure"),
+                                    }};
+                                    directAccessGrant = false;
+                                }}),
+                            }};
+                        }}),
+                        add(new PreAuthorizedApplication() {{
+                            appId = "doloribus";
+                            extensions = new org.openapis.openapi.models.shared.PreAuthorizedApplicationExtension[]{{
+                                add(new PreAuthorizedApplicationExtension() {{
+                                    conditions = new String[]{{
+                                        add("maxime"),
+                                        add("deleniti"),
+                                    }};
+                                }}),
+                                add(new PreAuthorizedApplicationExtension() {{
+                                    conditions = new String[]{{
+                                        add("in"),
+                                        add("architecto"),
+                                        add("architecto"),
+                                    }};
+                                }}),
+                                add(new PreAuthorizedApplicationExtension() {{
+                                    conditions = new String[]{{
+                                        add("ullam"),
+                                        add("expedita"),
+                                        add("nihil"),
+                                        add("repellat"),
+                                    }};
+                                }}),
+                                add(new PreAuthorizedApplicationExtension() {{
+                                    conditions = new String[]{{
+                                        add("sed"),
+                                        add("saepe"),
+                                        add("pariatur"),
+                                        add("accusantium"),
+                                    }};
+                                }}),
+                            }};
+                            permissions = new org.openapis.openapi.models.shared.PreAuthorizedApplicationPermission[]{{
+                                add(new PreAuthorizedApplicationPermission() {{
+                                    accessGrants = new String[]{{
+                                        add("natus"),
+                                        add("magni"),
+                                        add("sunt"),
+                                    }};
+                                    directAccessGrant = false;
+                                }}),
+                            }};
+                        }}),
+                    }};
+                    publicClient = false;
+                    publisherDomain = "quo";
+                    replyUrls = new String[]{{
+                        add("pariatur"),
+                        add("maxime"),
+                        add("ea"),
+                        add("excepturi"),
+                    }};
+                    requiredResourceAccess = new java.util.HashMap<String, java.util.HashMap<String, Object>>[]{{
+                        add(new java.util.HashMap<String, java.util.HashMap<String, Object>>() {{
+                            put("accusantium", new java.util.HashMap<String, Object>() {{
+                                put("maiores", "quidem");
+                            }});
+                            put("ipsam", new java.util.HashMap<String, Object>() {{
+                                put("autem", "nam");
+                                put("eaque", "pariatur");
+                            }});
+                        }}),
+                    }};
+                    samlMetadataUrl = "nemo";
+                    signInAudience = "voluptatibus";
+                    wwwHomepage = "perferendis";
                 }};
-            }};
+            }};            
 
             ApplicationsCreateResponse res = sdk.application.applicationsCreate(req);
 
@@ -674,7 +471,8 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Application
+
+### application
 
 * `applicationsCreate` - Create a new application.
 * `applicationsDelete` - Delete an application.
@@ -683,28 +481,28 @@ public class Application {
 * `applicationsPatch` - Update an existing application.
 * `deletedApplicationsHardDelete` - Hard-delete an application.
 
-### ApplicationKeyCredentials
+### applicationKeyCredentials
 
 * `applicationsListKeyCredentials` - Get the keyCredentials associated with an application.
 * `applicationsUpdateKeyCredentials` - Update the keyCredentials associated with an application.
 
-### ApplicationOwners
+### applicationOwners
 
 * `applicationsAddOwner` - Add an owner to an application.
 * `applicationsListOwners` - Directory objects that are owners of the application.
 * `applicationsRemoveOwner` - Remove a member from owners.
 
-### ApplicationPasswordCredentials
+### applicationPasswordCredentials
 
 * `applicationsListPasswordCredentials` - Get the passwordCredentials associated with an application.
 * `applicationsUpdatePasswordCredentials` - Update passwordCredentials associated with an application.
 
-### Domain
+### domain
 
 * `domainsGet` - Gets a specific domain in the current tenant.
 * `domainsList` - Gets a list of domains for the current tenant.
 
-### Group
+### group
 
 * `groupsAddMember` - Add a member to a group.
 * `groupsCreate` - Create a group in the directory.
@@ -716,32 +514,32 @@ public class Application {
 * `groupsList` - Gets list of groups for the current tenant.
 * `groupsRemoveMember` - Remove a member from a group.
 
-### GroupOwners
+### groupOwners
 
 * `groupsListOwners` - Directory objects that are owners of the group.
 
-### GroupsOwners
+### groupsOwners
 
 * `groupsAddOwner` - Add an owner to a group.
 * `groupsRemoveOwner` - Remove a member from owners.
 
-### OAuth2PermissionGrant_Create
+### oAuth2PermissionGrantCreate
 
 * `oAuth2PermissionGrantCreate` - Grants OAuth2 permissions for the relevant resource Ids of an app.
 
-### OAuth2PermissionGrant_List
+### oAuth2PermissionGrantList
 
 * `oAuth2PermissionGrantList` - Queries OAuth2 permissions grants for the relevant SP ObjectId of an app.
 
-### OAuth2PermissionGrant_delete
+### oAuth2PermissionGrantDelete
 
 * `oAuth2PermissionGrantDelete` - Delete a OAuth2 permission grant for the relevant resource Ids of an app.
 
-### Objects
+### objects
 
 * `objectsGetObjectsByObjectIds` - Gets the directory objects specified in a list of object IDs. You can also specify which resource collections (users, groups, etc.) should be searched by specifying the optional types parameter.
 
-### ServicePrincipal
+### servicePrincipal
 
 * `servicePrincipalsCreate` - Creates a service principal in the directory.
 * `servicePrincipalsDelete` - Deletes a service principal from the directory.
@@ -749,40 +547,40 @@ public class Application {
 * `servicePrincipalsList` - Gets a list of service principals from the current tenant.
 * `servicePrincipalsUpdate` - Updates a service principal in the directory.
 
-### ServicePrincipalAppRoleAssignedTo
+### servicePrincipalAppRoleAssignedTo
 
 * `servicePrincipalsListAppRoleAssignedTo` - Principals (users, groups, and service principals) that are assigned to this service principal.
 
-### ServicePrincipalAppRoleAssignments
+### servicePrincipalAppRoleAssignments
 
 * `servicePrincipalsListAppRoleAssignments` - Applications that the service principal is assigned to.
 
-### ServicePrincipalKeyCredentials
+### servicePrincipalKeyCredentials
 
 * `servicePrincipalsListKeyCredentials` - Get the keyCredentials associated with the specified service principal.
 * `servicePrincipalsUpdateKeyCredentials` - Update the keyCredentials associated with a service principal.
 
-### ServicePrincipalOwners
+### servicePrincipalOwners
 
 * `servicePrincipalsAddOwner` - Add an owner to a service principal.
 * `servicePrincipalsListOwners` - Directory objects that are owners of this service principal.
 * `servicePrincipalsRemoveOwner` - Remove a member from owners.
 
-### ServicePrincipalPasswordCredentials
+### servicePrincipalPasswordCredentials
 
 * `servicePrincipalsListPasswordCredentials` - Gets the passwordCredentials associated with a service principal.
 * `servicePrincipalsUpdatePasswordCredentials` - Updates the passwordCredentials associated with a service principal.
 
-### ServicePrincipalsByAppId
+### servicePrincipalsByAppId
 
 * `applicationsGetServicePrincipalsIdByAppId` - Gets an object id for a given application id from the current tenant.
 
-### SignedInUser
+### signedInUser
 
 * `signedInUserGet` - Gets the details for the currently logged-in user.
 * `signedInUserListOwnedObjects` - Get the list of directory objects that are owned by the user.
 
-### User
+### user
 
 * `usersCreate` - Create a new user.
 * `usersDelete` - Delete a user.
@@ -795,7 +593,17 @@ public class Application {
 
 * `deletedApplicationsList` - Gets a list of deleted applications in the directory.
 * `deletedApplicationsRestore` - Restores the deleted application in the directory.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,34 +2,39 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DomainsrdapAutnumGetPathParams;
+import org.openapis.openapi.models.operations.DomainsrdapAutnumGetQueryParams;
+import org.openapis.openapi.models.operations.DomainsrdapAutnumGetRequest;
+import org.openapis.openapi.models.operations.DomainsrdapAutnumGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DomainsrdapAutnumGetRequest req = new DomainsrdapAutnumGetRequest() {{
                 pathParams = new DomainsrdapAutnumGetPathParams() {{
-                    autnumId = "sit";
+                    autnumId = "corrupti";
                 }};
                 queryParams = new DomainsrdapAutnumGetQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-            }};
+            }};            
 
             DomainsrdapAutnumGetResponse res = sdk.autnum.domainsrdapAutnumGet(req);
 

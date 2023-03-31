@@ -2,46 +2,53 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddTagsToResourceXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AddTagsToResourceHeaders;
+import org.openapis.openapi.models.operations.AddTagsToResourceRequest;
+import org.openapis.openapi.models.operations.AddTagsToResourceResponse;
+import org.openapis.openapi.models.shared.AddTagsToResourceMessage;
+import org.openapis.openapi.models.shared.Tag;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddTagsToResourceRequest req = new AddTagsToResourceRequest() {{
                 headers = new AddTagsToResourceHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AmazonDMSv20160101.AddTagsToResource";
                 }};
                 request = new AddTagsToResourceMessage() {{
-                    resourceArn = "fugit";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    resourceArn = "illum";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "nihil";
-                            resourceArn = "rerum";
-                            value = "dicta";
+                            key = "error";
+                            resourceArn = "deserunt";
+                            value = "suscipit";
+                        }}),
+                        add(new Tag() {{
+                            key = "iure";
+                            resourceArn = "magnam";
+                            value = "debitis";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             AddTagsToResourceResponse res = sdk.addTagsToResource(req);
 

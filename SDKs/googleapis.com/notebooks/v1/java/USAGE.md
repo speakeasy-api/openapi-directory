@@ -2,15 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreatePathParams;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateQueryParams;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateRequest;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateResponse;
+import org.openapis.openapi.models.shared.EnvironmentInput;
+import org.openapis.openapi.models.shared.VmImage;
+import org.openapis.openapi.models.shared.ContainerImage;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             NotebooksProjectsLocationsEnvironmentsCreateRequest req = new NotebooksProjectsLocationsEnvironmentsCreateRequest() {{
                 security = new NotebooksProjectsLocationsEnvironmentsCreateSecurity() {{
@@ -22,37 +33,37 @@ public class Application {
                     }};
                 }};
                 pathParams = new NotebooksProjectsLocationsEnvironmentsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new NotebooksProjectsLocationsEnvironmentsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    environmentId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    environmentId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new EnvironmentInput() {{
                     containerImage = new ContainerImage() {{
-                        repository = "debitis";
-                        tag = "voluptatum";
+                        repository = "iure";
+                        tag = "magnam";
                     }};
-                    description = "et";
-                    displayName = "ut";
-                    postStartupScript = "dolorem";
+                    description = "debitis";
+                    displayName = "ipsa";
+                    postStartupScript = "delectus";
                     vmImage = new VmImage() {{
-                        imageFamily = "et";
-                        imageName = "voluptate";
-                        project = "iste";
+                        imageFamily = "tempora";
+                        imageName = "suscipit";
+                        project = "molestiae";
                     }};
                 }};
-            }};
+            }};            
 
             NotebooksProjectsLocationsEnvironmentsCreateResponse res = sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req);
 

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,22 +15,25 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetFindInteractionsFormatEnum;
+import org.openapis.openapi.models.operations.GetFindInteractionsQueryParams;
+import org.openapis.openapi.models.operations.GetFindInteractionsRequest;
+import org.openapis.openapi.models.operations.GetFindInteractionsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetFindInteractionsRequest req = new GetFindInteractionsRequest() {{
                 queryParams = new GetFindInteractionsQueryParams() {{
-                    format = "json";
-                    query = "voluptas";
+                    format = "dump";
+                    query = "provident";
                 }};
-            }};
+            }};            
 
             GetFindInteractionsResponse res = sdk.allFunctions.getFindInteractions(req);
 
@@ -46,7 +49,8 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### All functions
+
+### allFunctions
 
 * `getFindInteractions` - findInteractionsFind interactions defined in WikiPathways pathways.
 * `getFindPathwaysByLiterature` - findPathwaysByLiterature
@@ -76,7 +80,7 @@ public class Application {
 * `getUpdatePathway` - updatePathwayUpdate a pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
 * `postCreatePathway` - createPathwayCreate a new pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
 
-### Curation tags
+### curationTags
 
 * `getGetCurationTagHistory` - getCurationTagHistory
 * `getGetCurationTags` - getCurationTagsGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
@@ -84,44 +88,44 @@ public class Application {
 * `getGetOntologyTermsByPathway` - getOntologyTermsByPathway
 * `getSaveCurationTag` - saveCurationTag
 
-### Download
+### download
 
 * `getGetColoredPathway` - getColoredPathwayGet a colored image version of the pathway.
 * `getGetPathwayAs` - getPathwayAsDownload a pathway in the specified file format.
 * `getGetXrefList` - getXrefList
 
-### History
+### history
 
 * `getGetCurationTagHistory` - getCurationTagHistory
 * `getGetPathwayHistory` - getPathwayHistoryGet the revision history of a pathway.
 * `getGetRecentChanges` - getRecentChangesGet the recently changed pathways.<br>Note: the recent changes table only retains items for a limited time (2 months), so there is no guarantee that you will get all changes when the timestamp points to a date that is more than 2 months in the past.
 
-### Ontology tags
+### ontologyTags
 
 * `getGetPathwaysByOntologyTerm` - getPathwaysByOntologyTerm
 * `getGetPathwaysByParentOntologyTerm` - getPathwaysByParentOntologyTerm
 * `getRemoveOntologyTag` - removeOntologyTag
 * `getSaveOntologyTag` - saveOntologyTag
 
-### Organism list
+### organismList
 
 * `getListOrganisms` - listOrganisms
 
-### Pathway information
+### pathwayInformation
 
 * `getGetCurationTags` - getCurationTagsGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
 * `getGetOntologyTermsByPathway` - getOntologyTermsByPathway
 * `getGetPathway` - getPathway
 * `getGetPathwayInfo` - getPathwayInfoGet some general info about the pathway, such as the name, species, without downloading the GPML.
 
-### Pathway list
+### pathwayList
 
 * `getGetCurationTagsByName` - getCurationTagsByNameGet all curation tags for the given tag name. Use this method if you want to find all pathways that are tagged with a specific curation tag.
 * `getGetPathwaysByOntologyTerm` - getPathwaysByOntologyTerm
 * `getGetPathwaysByParentOntologyTerm` - getPathwaysByParentOntologyTerm
 * `getListPathways` - listPathways
 
-### Search
+### search
 
 * `getFindInteractions` - findInteractionsFind interactions defined in WikiPathways pathways.
 * `getFindPathwaysByLiterature` - findPathwaysByLiterature
@@ -129,19 +133,29 @@ public class Application {
 * `getFindPathwaysByXref` - findPathwaysByXref
 * `getRemoveCurationTag` - removeCurationTagRemove a curation tag from a pathway.
 
-### User management
+### userManagement
 
 * `getGetUserByOrcid` - getUserByOrcid
 * `getLogin` - loginStart a logged in session, using an existing WikiPathways account. This function will return an authentication code that can be used to excecute methods that need authentication (e.g. updatePathway).
 
-### Write (create/update/delete)
+### writeCreateUpdateDelete
 
 * `getRemoveOntologyTag` - removeOntologyTag
 * `getSaveCurationTag` - saveCurationTag
 * `getSaveOntologyTag` - saveOntologyTag
 * `getUpdatePathway` - updatePathwayUpdate a pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
 * `postCreatePathway` - createPathwayCreate a new pathway on the wiki with the given GPML code.<br>Note: To create/modify pathways via the web service, you need to have an account with web service write permissions. Please contact us to request write access for the web service.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

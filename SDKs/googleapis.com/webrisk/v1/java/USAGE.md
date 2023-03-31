@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.WebriskHashesSearchSecurity;
+import org.openapis.openapi.models.operations.WebriskHashesSearchThreatTypesEnum;
+import org.openapis.openapi.models.operations.WebriskHashesSearchQueryParams;
+import org.openapis.openapi.models.operations.WebriskHashesSearchRequest;
+import org.openapis.openapi.models.operations.WebriskHashesSearchResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             WebriskHashesSearchRequest req = new WebriskHashesSearchRequest() {{
                 security = new WebriskHashesSearchSecurity() {{
@@ -22,23 +30,25 @@ public class Application {
                     }};
                 }};
                 queryParams = new WebriskHashesSearchQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    hashPrefix = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    threatTypes = new openapisdk.models.operations.WebriskHashesSearchThreatTypesEnum[]() {{
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    hashPrefix = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    threatTypes = new org.openapis.openapi.models.operations.WebriskHashesSearchThreatTypesEnum[]{{
+                        add("UNWANTED_SOFTWARE"),
+                        add("MALWARE"),
                         add("SOCIAL_ENGINEERING"),
                     }};
-                    uploadType = "dicta";
+                    uploadType = "magnam";
                     uploadProtocol = "debitis";
                 }};
-            }};
+            }};            
 
             WebriskHashesSearchResponse res = sdk.hashes.webriskHashesSearch(req);
 

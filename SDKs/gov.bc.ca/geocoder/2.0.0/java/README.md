@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,62 +15,68 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatOutputFormatEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatPathParams;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatInterpolationEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatLocationDescriptorEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatOutputSrsEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatStreetDirectionEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatUnitDesignatorEnum;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatQueryParams;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatRequest;
+import org.openapis.openapi.models.operations.GetAddressesOutputFormatResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     apikey = new SchemeApikey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetAddressesOutputFormatRequest req = new GetAddressesOutputFormatRequest() {{
                 pathParams = new GetAddressesOutputFormatPathParams() {{
-                    outputFormat = "csv";
+                    outputFormat = "kml";
                 }};
                 queryParams = new GetAddressesOutputFormatQueryParams() {{
-                    addressString = "voluptas";
-                    autoComplete = true;
-                    bbox = "expedita";
-                    brief = true;
-                    centre = "dolor";
-                    civicNumber = "expedita";
-                    civicNumberSuffix = "voluptas";
-                    echo = true;
+                    addressString = "provident";
+                    autoComplete = false;
+                    bbox = "distinctio";
+                    brief = false;
+                    centre = "quibusdam";
+                    civicNumber = "unde";
+                    civicNumberSuffix = "nulla";
+                    echo = false;
                     extrapolate = false;
-                    interpolation = "adaptive";
-                    localities = "rerum";
-                    localityName = "dicta";
-                    locationDescriptor = "any";
-                    matchPrecision = "voluptatum";
-                    matchPrecisionNot = "et";
-                    maxDistance = 11.100000;
-                    maxResults = 7259475919510918339;
-                    minScore = 7373105480197164748;
-                    notLocalities = "iste";
-                    outputSRS = 3930927879439176946;
-                    parcelPoint = "totam";
-                    provinceCode = "dolores";
-                    setBack = 1929546706668609706;
-                    siteName = "debitis";
-                    streetDirection = "N";
-                    streetName = "odio";
-                    streetQualifier = "dolore";
-                    streetType = "id";
-                    unitDesignator = "TH";
-                    unitNumber = "accusantium";
-                    unitNumberSuffix = "totam";
+                    interpolation = "linear";
+                    localities = "illum";
+                    localityName = "vel";
+                    locationDescriptor = "parcelPoint";
+                    matchPrecision = "deserunt";
+                    matchPrecisionNot = "suscipit";
+                    maxDistance = 4375.87;
+                    maxResults = 297534;
+                    minScore = 891773;
+                    notLocalities = "ipsa";
+                    outputSRS = "26911";
+                    parcelPoint = "tempora";
+                    provinceCode = "suscipit";
+                    setBack = 477665;
+                    siteName = "minus";
+                    streetDirection = "SE";
+                    streetName = "voluptatum";
+                    streetQualifier = "iusto";
+                    streetType = "excepturi";
+                    unitDesignator = "PAD";
+                    unitNumber = "recusandae";
+                    unitNumberSuffix = "temporibus";
                 }};
-            }};
+            }};            
 
             GetAddressesOutputFormatResponse res = sdk.intersections.getAddressesOutputFormat(req);
 
@@ -86,13 +92,14 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### intersections
 
 * `getAddressesOutputFormat` - Geocode an address
 * `getIntersectionsNearOutputFormat` - Find intersections near to a geographic point
 * `getIntersectionsNearestOutputFormat` - Find nearest intersection to a geographic point
 * `getIntersectionsWithinOutputFormat` - Find intersections in a geographic area
-* `getIntersectionsIntersectionIdOutputFormat` - Get an intersection by its unique ID
+* `getIntersectionsIntersectionIDOutputFormat` - Get an intersection by its unique ID
 
 ### occupants
 
@@ -100,11 +107,11 @@ public class Application {
 * `getOccupantsNearOutputFormat` - Find occupants of sites near to a geographic point
 * `getOccupantsNearestOutputFormat` - Find occupants of the site nearest to a geographic point
 * `getOccupantsWithinOutputFormat` - Find occupants of sites in a geographic area
-* `getOccupantsOccupantIdOutputFormat` - Get an occupant (of a site) by its unique ID
+* `getOccupantsOccupantIDOutputFormat` - Get an occupant (of a site) by its unique ID
 
 ### parcels
 
-* `getParcelsPidsSiteIdOutputFormat` - Get a comma-separated string of all pids for a given site
+* `getParcelsPidsSiteIDOutputFormat` - Get a comma-separated string of all pids for a given site
 
 ### sites
 
@@ -112,9 +119,19 @@ public class Application {
 * `getSitesNearOutputFormat` - Find sites near to a geographic point
 * `getSitesNearestOutputFormat` - Find the site nearest to a geographic point
 * `getSitesWithinOutputFormat` - Find sites in a geographic area
-* `getSitesSiteIdOutputFormat` - Get a site by its unique ID
-* `getSitesSiteIdSubsitesOutputFormat` - Represents all subsites of a given site
-
+* `getSitesSiteIDOutputFormat` - Get a site by its unique ID
+* `getSitesSiteIDSubsitesOutputFormat` - Represents all subsites of a given site
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

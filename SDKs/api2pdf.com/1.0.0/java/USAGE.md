@@ -2,35 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.ChromeFromHtmlPostRequest;
+import org.openapis.openapi.models.operations.ChromeFromHtmlPostResponse;
+import org.openapis.openapi.models.shared.ChromeHtmlToPdfRequest;
+import org.openapis.openapi.models.shared.ChromeAdvancedOptions;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    headerApiKey = new SchemeHeaderApiKey() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    headerApiKey = new SchemeHeaderAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             ChromeFromHtmlPostRequest req = new ChromeFromHtmlPostRequest() {{
                 request = new ChromeHtmlToPdfRequest() {{
-                    fileName = "sit";
-                    html = "voluptas";
+                    fileName = "test.pdf";
+                    html = "<p>Hello World</p>";
                     inlinePdf = true;
                     options = new ChromeAdvancedOptions() {{
-                        landscape = "expedita";
-                        printBackground = true;
+                        landscape = "true";
+                        printBackground = false;
                     }};
                 }};
-            }};
+            }};            
 
             ChromeFromHtmlPostResponse res = sdk.headlessChrome.chromeFromHtmlPost(req);
 

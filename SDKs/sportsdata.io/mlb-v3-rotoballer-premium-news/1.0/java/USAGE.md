@@ -2,29 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.PremiumNewsFormatEnum;
+import org.openapis.openapi.models.operations.PremiumNewsPathParams;
+import org.openapis.openapi.models.operations.PremiumNewsRequest;
+import org.openapis.openapi.models.operations.PremiumNewsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyHeader = new SchemeApiKeyHeader() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyHeader = new SchemeAPIKeyHeader() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             PremiumNewsRequest req = new PremiumNewsRequest() {{
                 pathParams = new PremiumNewsPathParams() {{
-                    format = "xml";
+                    format = "json";
                 }};
-            }};
+            }};            
 
             PremiumNewsResponse res = sdk.premiumNews(req);
 

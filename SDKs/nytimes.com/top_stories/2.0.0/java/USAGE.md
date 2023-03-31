@@ -2,33 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetSectionFormatFormatEnum;
+import org.openapis.openapi.models.operations.GetSectionFormatSectionEnum;
+import org.openapis.openapi.models.operations.GetSectionFormatPathParams;
+import org.openapis.openapi.models.operations.GetSectionFormatQueryParams;
+import org.openapis.openapi.models.operations.GetSectionFormatRequest;
+import org.openapis.openapi.models.operations.GetSectionFormatResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     apikey = new SchemeApikey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetSectionFormatRequest req = new GetSectionFormatRequest() {{
                 pathParams = new GetSectionFormatPathParams() {{
-                    format = "json";
-                    section = "travel";
+                    format = "jsonp";
+                    section = "theater";
                 }};
                 queryParams = new GetSectionFormatQueryParams() {{
-                    callback = "culpa";
+                    callback = "distinctio";
                 }};
-            }};
+            }};            
 
             GetSectionFormatResponse res = sdk.stories.getSectionFormat(req);
 

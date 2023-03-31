@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameSecurity;
+import org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNamePathParams;
+import org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameRequest;
+import org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameResponse;
+import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeleteSettingsOrganizationsOrganizationNameRequest req = new DeleteSettingsOrganizationsOrganizationNameRequest() {{
                 security = new DeleteSettingsOrganizationsOrganizationNameSecurity() {{
@@ -19,9 +23,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteSettingsOrganizationsOrganizationNamePathParams() {{
-                    organizationName = "sit";
+                    organizationName = "corrupti";
                 }};
-            }};
+            }};            
 
             DeleteSettingsOrganizationsOrganizationNameResponse res = sdk.deleteSettingsOrganizationsOrganizationName(req);
 

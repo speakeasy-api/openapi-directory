@@ -2,35 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingPathParams;
+import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingQueryParams;
+import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingRequest;
+import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             MybusinesslodgingLocationsGetLodgingRequest req = new MybusinesslodgingLocationsGetLodgingRequest() {{
                 pathParams = new MybusinesslodgingLocationsGetLodgingPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new MybusinesslodgingLocationsGetLodgingQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    readMask = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    readMask = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             MybusinesslodgingLocationsGetLodgingResponse res = sdk.locations.mybusinesslodgingLocationsGetLodging(req);
 

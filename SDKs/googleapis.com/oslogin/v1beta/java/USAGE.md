@@ -2,15 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption1;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption2;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption3;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption4;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurity;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfilePathParams;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileViewEnum;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileQueryParams;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileRequest;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             OsloginUsersGetLoginProfileRequest req = new OsloginUsersGetLoginProfileRequest() {{
                 security = new OsloginUsersGetLoginProfileSecurity() {{
@@ -24,25 +37,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new OsloginUsersGetLoginProfilePathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new OsloginUsersGetLoginProfileQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    projectId = "et";
-                    quotaUser = "nihil";
-                    systemId = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    projectId = "vel";
+                    quotaUser = "error";
+                    systemId = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                     view = "LOGIN_PROFILE_VIEW_UNSPECIFIED";
                 }};
-            }};
+            }};            
 
             OsloginUsersGetLoginProfileResponse res = sdk.users.osloginUsersGetLoginProfile(req);
 

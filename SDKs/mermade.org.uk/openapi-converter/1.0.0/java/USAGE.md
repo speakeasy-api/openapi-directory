@@ -2,23 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ConvertRequestBodyValidateEnum;
+import org.openapis.openapi.models.operations.ConvertRequestBody;
+import org.openapis.openapi.models.operations.ConvertRequest;
+import org.openapis.openapi.models.operations.ConvertResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ConvertRequest req = new ConvertRequest() {{
                 request = new ConvertRequestBody() {{
-                    filename = "sit";
-                    source = "voluptas";
+                    filename = "corrupti";
+                    source = "provident";
                     validate = "on";
                 }};
-            }};
+            }};            
 
             ConvertResponse res = sdk.conversion.convert(req);
 

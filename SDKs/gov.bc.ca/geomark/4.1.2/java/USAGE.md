@@ -2,25 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionFileFormatExtensionEnum;
+import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionPathParams;
+import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionSridEnum;
+import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionQueryParams;
+import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest;
+import org.openapis.openapi.models.operations.GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest req = new GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionRequest() {{
                 pathParams = new GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionPathParams() {{
-                    fileFormatExtension = "json";
-                    geomarkId = "voluptas";
+                    fileFormatExtension = "shpz";
+                    geomarkId = "provident";
                 }};
                 queryParams = new GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionQueryParams() {{
-                    srid = 6050128673802995827;
+                    srid = "26909";
                 }};
-            }};
+            }};            
 
             GetGeomarksGeomarkIdBoundingBoxFileFormatExtensionResponse res = sdk.boundingBox.getGeomarksGeomarkIdBoundingBoxFileFormatExtension(req);
 

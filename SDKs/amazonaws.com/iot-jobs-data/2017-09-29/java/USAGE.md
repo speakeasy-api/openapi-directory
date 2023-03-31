@@ -2,43 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DescribeJobExecutionPathParams;
+import org.openapis.openapi.models.operations.DescribeJobExecutionQueryParams;
+import org.openapis.openapi.models.operations.DescribeJobExecutionHeaders;
+import org.openapis.openapi.models.operations.DescribeJobExecutionRequest;
+import org.openapis.openapi.models.operations.DescribeJobExecutionResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DescribeJobExecutionRequest req = new DescribeJobExecutionRequest() {{
                 pathParams = new DescribeJobExecutionPathParams() {{
-                    jobId = "sit";
-                    thingName = "voluptas";
+                    jobId = "corrupti";
+                    thingName = "provident";
                 }};
                 queryParams = new DescribeJobExecutionQueryParams() {{
-                    executionNumber = 6050128673802995827;
+                    executionNumber = 715190;
                     includeJobDocument = false;
                 }};
                 headers = new DescribeJobExecutionHeaders() {{
-                    xAmzAlgorithm = "consequuntur";
-                    xAmzContentSha256 = "dolor";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "voluptas";
-                    xAmzSecurityToken = "fugit";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "nihil";
+                    xAmzAlgorithm = "quibusdam";
+                    xAmzContentSha256 = "unde";
+                    xAmzCredential = "nulla";
+                    xAmzDate = "corrupti";
+                    xAmzSecurityToken = "illum";
+                    xAmzSignature = "vel";
+                    xAmzSignedHeaders = "error";
                 }};
-            }};
+            }};            
 
             DescribeJobExecutionResponse res = sdk.describeJobExecution(req);
 

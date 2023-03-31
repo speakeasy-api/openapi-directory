@@ -2,42 +2,43 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CloneBackendPathParams;
+import org.openapis.openapi.models.operations.CloneBackendHeaders;
+import org.openapis.openapi.models.operations.CloneBackendRequestBody;
+import org.openapis.openapi.models.operations.CloneBackendRequest;
+import org.openapis.openapi.models.operations.CloneBackendResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CloneBackendRequest req = new CloneBackendRequest() {{
                 pathParams = new CloneBackendPathParams() {{
-                    appId = "sit";
-                    backendEnvironmentName = "voluptas";
+                    appId = "corrupti";
+                    backendEnvironmentName = "provident";
                 }};
                 headers = new CloneBackendHeaders() {{
-                    xAmzAlgorithm = "culpa";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "consequuntur";
-                    xAmzDate = "dolor";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "voluptas";
-                    xAmzSignedHeaders = "fugit";
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
                 request = new CloneBackendRequestBody() {{
-                    targetEnvironmentName = "et";
+                    targetEnvironmentName = "error";
                 }};
-            }};
+            }};            
 
             CloneBackendResponse res = sdk.cloneBackend(req);
 

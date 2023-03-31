@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,49 +15,46 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateApiPathParams;
+import org.openapis.openapi.models.operations.AssociateApiHeaders;
+import org.openapis.openapi.models.operations.AssociateApiRequestBody;
+import org.openapis.openapi.models.operations.AssociateApiRequest;
+import org.openapis.openapi.models.operations.AssociateApiResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateApiCacheRequest req = new CreateApiCacheRequest() {{
-                pathParams = new CreateApiCachePathParams() {{
-                    apiId = "sit";
+            AssociateApiRequest req = new AssociateApiRequest() {{
+                pathParams = new AssociateApiPathParams() {{
+                    domainName = "corrupti";
                 }};
-                headers = new CreateApiCacheHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                headers = new AssociateApiHeaders() {{
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-                request = new CreateApiCacheRequestBody() {{
-                    apiCachingBehavior = "FULL_REQUEST_CACHING";
-                    atRestEncryptionEnabled = false;
-                    transitEncryptionEnabled = true;
-                    ttl = 8325060299420976708;
-                    type = "LARGE_12X";
+                request = new AssociateApiRequestBody() {{
+                    apiId = "vel";
                 }};
-            }};
+            }};            
 
-            CreateApiCacheResponse res = sdk.createApiCache(req);
+            AssociateApiResponse res = sdk.associateApi(req);
 
-            if (res.createApiCacheResponse.isPresent()) {
+            if (res.associateApiResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -71,23 +68,31 @@ public class Application {
 
 ### SDK SDK
 
+* `associateApi` - Maps an endpoint to your custom domain.
 * `createApiCache` - Creates a cache for the GraphQL API.
-* `createApiKey` - Creates a unique key that you can distribute to clients who are executing your API.
+* `createApiKey` - Creates a unique key that you can distribute to clients who invoke your API.
 * `createDataSource` - Creates a <code>DataSource</code> object.
-* `createFunction` - <p>Creates a <code>Function</code> object.</p> <p>A function is a reusable entity. Multiple functions can be used to compose the resolver logic.</p>
+* `createDomainName` - Creates a custom <code>DomainName</code> object.
+* `createFunction` - <p>Creates a <code>Function</code> object.</p> <p>A function is a reusable entity. You can use multiple functions to compose the resolver logic.</p>
 * `createGraphqlApi` - Creates a <code>GraphqlApi</code> object.
-* `createResolver` - <p>Creates a <code>Resolver</code> object.</p> <p>A resolver converts incoming requests into a format that a data source can understand and converts the data source's responses into GraphQL.</p>
+* `createResolver` - <p>Creates a <code>Resolver</code> object.</p> <p>A resolver converts incoming requests into a format that a data source can understand, and converts the data source's responses into GraphQL.</p>
 * `createType` - Creates a <code>Type</code> object.
 * `deleteApiCache` - Deletes an <code>ApiCache</code> object.
 * `deleteApiKey` - Deletes an API key.
 * `deleteDataSource` - Deletes a <code>DataSource</code> object.
+* `deleteDomainName` - Deletes a custom <code>DomainName</code> object.
 * `deleteFunction` - Deletes a <code>Function</code>.
 * `deleteGraphqlApi` - Deletes a <code>GraphqlApi</code> object.
 * `deleteResolver` - Deletes a <code>Resolver</code> object.
 * `deleteType` - Deletes a <code>Type</code> object.
+* `disassociateApi` - Removes an <code>ApiAssociation</code> object from a custom domain.
+* `evaluateCode` - Evaluates the given code and returns the response. The code definition requirements depend on the specified runtime. For <code>APPSYNC_JS</code> runtimes, the code defines the request and response functions. The request function takes the incoming request after a GraphQL operation is parsed and converts it into a request configuration for the selected data source operation. The response function interprets responses from the data source and maps it to the shape of the GraphQL field output type. 
+* `evaluateMappingTemplate` - <p>Evaluates a given template and returns the response. The mapping template can be a request or response template.</p> <p>Request templates take the incoming request after a GraphQL operation is parsed and convert it into a request configuration for the selected data source operation. Response templates interpret responses from the data source and map it to the shape of the GraphQL field output type.</p> <p>Mapping templates are written in the Apache Velocity Template Language (VTL).</p>
 * `flushApiCache` - Flushes an <code>ApiCache</code> object.
+* `getApiAssociation` - Retrieves an <code>ApiAssociation</code> object.
 * `getApiCache` - Retrieves an <code>ApiCache</code> object.
 * `getDataSource` - Retrieves a <code>DataSource</code> object.
+* `getDomainName` - Retrieves a custom <code>DomainName</code> object.
 * `getFunction` - Get a <code>Function</code>.
 * `getGraphqlApi` - Retrieves a <code>GraphqlApi</code> object.
 * `getIntrospectionSchema` - Retrieves the introspection schema for a GraphQL API.
@@ -96,6 +101,7 @@ public class Application {
 * `getType` - Retrieves a <code>Type</code> object.
 * `listApiKeys` - <p>Lists the API keys for a given API.</p> <note> <p>API keys are deleted automatically 60 days after they expire. However, they may still be included in the response until they have actually been deleted. You can safely call <code>DeleteApiKey</code> to manually delete a key before it's automatically deleted.</p> </note>
 * `listDataSources` - Lists the data sources for a given API.
+* `listDomainNames` - Lists multiple custom domain names.
 * `listFunctions` - List multiple functions.
 * `listGraphqlApis` - Lists your GraphQL APIs.
 * `listResolvers` - Lists the resolvers for a given API and type.
@@ -106,13 +112,24 @@ public class Application {
 * `tagResource` - Tags a resource with user-supplied tags.
 * `untagResource` - Untags a resource.
 * `updateApiCache` - Updates the cache for the GraphQL API.
-* `updateApiKey` - Updates an API key. The key can be updated while it is not deleted.
+* `updateApiKey` - Updates an API key. You can update the key as long as it's not deleted.
 * `updateDataSource` - Updates a <code>DataSource</code> object.
+* `updateDomainName` - Updates a custom <code>DomainName</code> object.
 * `updateFunction` - Updates a <code>Function</code> object.
 * `updateGraphqlApi` - Updates a <code>GraphqlApi</code> object.
 * `updateResolver` - Updates a <code>Resolver</code> object.
 * `updateType` - Updates a <code>Type</code> object.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

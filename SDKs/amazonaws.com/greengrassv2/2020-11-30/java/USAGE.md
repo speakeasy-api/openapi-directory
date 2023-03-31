@@ -2,49 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateServiceRoleToAccountHeaders;
+import org.openapis.openapi.models.operations.AssociateServiceRoleToAccountRequestBody;
+import org.openapis.openapi.models.operations.AssociateServiceRoleToAccountRequest;
+import org.openapis.openapi.models.operations.AssociateServiceRoleToAccountResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            BatchAssociateClientDeviceWithCoreDeviceRequest req = new BatchAssociateClientDeviceWithCoreDeviceRequest() {{
-                pathParams = new BatchAssociateClientDeviceWithCoreDevicePathParams() {{
-                    coreDeviceThingName = "sit";
+            AssociateServiceRoleToAccountRequest req = new AssociateServiceRoleToAccountRequest() {{
+                headers = new AssociateServiceRoleToAccountHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
-                headers = new BatchAssociateClientDeviceWithCoreDeviceHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                request = new AssociateServiceRoleToAccountRequestBody() {{
+                    roleArn = "illum";
                 }};
-                request = new BatchAssociateClientDeviceWithCoreDeviceRequestBody() {{
-                    entries = new openapisdk.models.shared.AssociateClientDeviceWithCoreDeviceEntry[]() {{
-                        add(new AssociateClientDeviceWithCoreDeviceEntry() {{
-                            thingName = "et";
-                        }}),
-                    }};
-                }};
-            }};
+            }};            
 
-            BatchAssociateClientDeviceWithCoreDeviceResponse res = sdk.batchAssociateClientDeviceWithCoreDevice(req);
+            AssociateServiceRoleToAccountResponse res = sdk.associateServiceRoleToAccount(req);
 
-            if (res.batchAssociateClientDeviceWithCoreDeviceResponse.isPresent()) {
+            if (res.associateServiceRoleToAccountResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

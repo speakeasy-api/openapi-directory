@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,58 +15,68 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateConfigurationSetHeaders;
+import org.openapis.openapi.models.operations.CreateConfigurationSetRequestBodyDeliveryOptions;
+import org.openapis.openapi.models.operations.CreateConfigurationSetRequestBodyReputationOptions;
+import org.openapis.openapi.models.operations.CreateConfigurationSetRequestBodySendingOptions;
+import org.openapis.openapi.models.operations.CreateConfigurationSetRequestBodyTrackingOptions;
+import org.openapis.openapi.models.operations.CreateConfigurationSetRequestBody;
+import org.openapis.openapi.models.operations.CreateConfigurationSetRequest;
+import org.openapis.openapi.models.operations.CreateConfigurationSetResponse;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.TlsPolicyEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateConfigurationSetRequest req = new CreateConfigurationSetRequest() {{
                 headers = new CreateConfigurationSetHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateConfigurationSetRequestBody() {{
-                    configurationSetName = "voluptas";
+                    configurationSetName = "illum";
                     deliveryOptions = new CreateConfigurationSetRequestBodyDeliveryOptions() {{
-                        sendingPoolName = "fugit";
-                        tlsPolicy = "REQUIRE";
+                        sendingPoolName = "vel";
+                        tlsPolicy = "OPTIONAL";
                     }};
                     reputationOptions = new CreateConfigurationSetRequestBodyReputationOptions() {{
-                        lastFreshStart = "2003-05-13T04:57:12Z";
-                        reputationMetricsEnabled = true;
+                        lastFreshStart = "2022-03-26T09:37:56.283Z";
+                        reputationMetricsEnabled = false;
                     }};
                     sendingOptions = new CreateConfigurationSetRequestBodySendingOptions() {{
                         sendingEnabled = false;
                     }};
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "voluptatum";
-                            value = "et";
+                            key = "magnam";
+                            value = "debitis";
+                        }}),
+                        add(new Tag() {{
+                            key = "ipsa";
+                            value = "delectus";
                         }}),
                     }};
                     trackingOptions = new CreateConfigurationSetRequestBodyTrackingOptions() {{
-                        customRedirectDomain = "ut";
+                        customRedirectDomain = "tempora";
                     }};
                 }};
-            }};
+            }};            
 
             CreateConfigurationSetResponse res = sdk.createConfigurationSet(req);
 
@@ -126,7 +136,17 @@ public class Application {
 * `tagResource` - <p>Add one or more tags (keys and values) to a specified resource. A <i>tag</i> is a label that you optionally define and associate with a resource in Amazon Pinpoint. Tags can help you categorize and manage resources in different ways, such as by purpose, owner, environment, or other criteria. A resource can have as many as 50 tags.</p> <p>Each tag consists of a required <i>tag key</i> and an associated <i>tag value</i>, both of which you define. A tag key is a general label that acts as a category for more specific tag values. A tag value acts as a descriptor within a tag key.</p>
 * `untagResource` - Remove one or more tags (keys and values) from a specified resource.
 * `updateConfigurationSetEventDestination` - <p>Update the configuration of an event destination for a configuration set.</p> <p>In Amazon Pinpoint, <i>events</i> include message sends, deliveries, opens, clicks, bounces, and complaints. <i>Event destinations</i> are places that you can send information about these events to. For example, you can send event data to Amazon SNS to receive notifications when you receive bounces or complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term storage.</p>
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

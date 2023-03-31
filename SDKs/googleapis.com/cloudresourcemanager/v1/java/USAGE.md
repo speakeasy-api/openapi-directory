@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateSecurityOption1;
+import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateSecurityOption2;
+import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateSecurity;
+import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateQueryParams;
+import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateRequest;
+import org.openapis.openapi.models.operations.CloudresourcemanagerLiensCreateResponse;
+import org.openapis.openapi.models.shared.Lien;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudresourcemanagerLiensCreateRequest req = new CloudresourcemanagerLiensCreateRequest() {{
                 security = new CloudresourcemanagerLiensCreateSecurity() {{
@@ -24,31 +34,29 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudresourcemanagerLiensCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new Lien() {{
-                    createTime = "rerum";
-                    name = "dicta";
-                    origin = "debitis";
-                    parent = "voluptatum";
-                    reason = "et";
-                    restrictions = new String[]() {{
-                        add("dolorem"),
-                        add("et"),
-                        add("voluptate"),
+                    createTime = "deserunt";
+                    name = "suscipit";
+                    origin = "iure";
+                    parent = "magnam";
+                    reason = "debitis";
+                    restrictions = new String[]{{
+                        add("delectus"),
                     }};
                 }};
-            }};
+            }};            
 
             CloudresourcemanagerLiensCreateResponse res = sdk.liens.cloudresourcemanagerLiensCreate(req);
 

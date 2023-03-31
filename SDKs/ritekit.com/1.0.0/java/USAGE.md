@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AnimateImageQueryParams;
+import org.openapis.openapi.models.operations.AnimateImageRequest;
+import org.openapis.openapi.models.operations.AnimateImageResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AnimateImageRequest req = new AnimateImageRequest() {{
                 queryParams = new AnimateImageQueryParams() {{
-                    type = "sit";
-                    url = "voluptas";
+                    type = "corrupti";
+                    url = "provident";
                 }};
-            }};
+            }};            
 
             AnimateImageResponse res = sdk.animateImage(req);
 

@@ -2,27 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAllTransfersQueryParams;
+import org.openapis.openapi.models.operations.GetAllTransfersRequest;
+import org.openapis.openapi.models.operations.GetAllTransfersResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            ThreeGetEstimatedPriceRequest req = new ThreeGetEstimatedPriceRequest() {{
-                queryParams = new ThreeGetEstimatedPriceQueryParams() {{
-                    amount = "sit";
-                    currencyFrom = "voluptas";
-                    currencyTo = "culpa";
+            GetAllTransfersRequest req = new GetAllTransfersRequest() {{
+                queryParams = new GetAllTransfersQueryParams() {{
+                    id = "111";
+                    limit = "10";
+                    offset = "0";
+                    order = "ASC";
+                    status = "CREATED";
                 }};
-            }};
+            }};            
 
-            ThreeGetEstimatedPriceResponse res = sdk.threeGetEstimatedPrice(req);
+            GetAllTransfersResponse res = sdk.billingSubPartnerAPI.getAllTransfers(req);
 
-            if (res.threeGetEstimatedPrice200ApplicationJSONObject.isPresent()) {
+            if (res.getAllTransfers200ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

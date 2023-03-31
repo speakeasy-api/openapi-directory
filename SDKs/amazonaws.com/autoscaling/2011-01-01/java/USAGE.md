@@ -2,46 +2,49 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETAttachInstancesActionEnum;
+import org.openapis.openapi.models.operations.GETAttachInstancesVersionEnum;
+import org.openapis.openapi.models.operations.GETAttachInstancesQueryParams;
+import org.openapis.openapi.models.operations.GETAttachInstancesHeaders;
+import org.openapis.openapi.models.operations.GETAttachInstancesRequest;
+import org.openapis.openapi.models.operations.GETAttachInstancesResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetAttachInstancesRequest req = new GetAttachInstancesRequest() {{
-                queryParams = new GetAttachInstancesQueryParams() {{
+            GETAttachInstancesRequest req = new GETAttachInstancesRequest() {{
+                queryParams = new GETAttachInstancesQueryParams() {{
                     action = "AttachInstances";
-                    autoScalingGroupName = "voluptas";
-                    instanceIds = new String[]() {{
-                        add("expedita"),
-                        add("consequuntur"),
+                    autoScalingGroupName = "corrupti";
+                    instanceIds = new String[]{{
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
                     version = "2011-01-01";
                 }};
-                headers = new GetAttachInstancesHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "fugit";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "nihil";
-                    xAmzSignature = "rerum";
-                    xAmzSignedHeaders = "dicta";
+                headers = new GETAttachInstancesHeaders() {{
+                    xAmzAlgorithm = "nulla";
+                    xAmzContentSha256 = "corrupti";
+                    xAmzCredential = "illum";
+                    xAmzDate = "vel";
+                    xAmzSecurityToken = "error";
+                    xAmzSignature = "deserunt";
+                    xAmzSignedHeaders = "suscipit";
                 }};
-            }};
+            }};            
 
-            GetAttachInstancesResponse res = sdk.getAttachInstances(req);
+            GETAttachInstancesResponse res = sdk.getAttachInstances(req);
 
             if (res.statusCode == 200) {
                 // handle response

@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudassetIamPoliciesSearchAllSecurity;
+import org.openapis.openapi.models.operations.CloudassetIamPoliciesSearchAllPathParams;
+import org.openapis.openapi.models.operations.CloudassetIamPoliciesSearchAllQueryParams;
+import org.openapis.openapi.models.operations.CloudassetIamPoliciesSearchAllRequest;
+import org.openapis.openapi.models.operations.CloudassetIamPoliciesSearchAllResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudassetIamPoliciesSearchAllRequest req = new CloudassetIamPoliciesSearchAllRequest() {{
                 security = new CloudassetIamPoliciesSearchAllSecurity() {{
@@ -22,25 +30,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudassetIamPoliciesSearchAllPathParams() {{
-                    scope = "sit";
+                    scope = "corrupti";
                 }};
                 queryParams = new CloudassetIamPoliciesSearchAllQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    pageSize = 8274930044578894929;
-                    pageToken = "et";
-                    prettyPrint = true;
-                    query = "rerum";
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    pageSize = 423655;
+                    pageToken = "error";
+                    prettyPrint = false;
+                    query = "deserunt";
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-            }};
+            }};            
 
             CloudassetIamPoliciesSearchAllResponse res = sdk.iamPolicies.cloudassetIamPoliciesSearchAll(req);
 

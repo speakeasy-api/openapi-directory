@@ -2,15 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateSecurity;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreatePathParams;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest;
+import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse;
+import org.openapis.openapi.models.shared.ScanConfigExportToSecurityCommandCenterEnum;
+import org.openapis.openapi.models.shared.ScanConfigRiskLevelEnum;
+import org.openapis.openapi.models.shared.ScanConfigUserAgentEnum;
+import org.openapis.openapi.models.shared.ScanConfig;
+import org.openapis.openapi.models.shared.Schedule;
+import org.openapis.openapi.models.shared.Authentication;
+import org.openapis.openapi.models.shared.IapCredential;
+import org.openapis.openapi.models.shared.IapTestServiceAccountInfo;
+import org.openapis.openapi.models.shared.GoogleAccount;
+import org.openapis.openapi.models.shared.CustomAccount;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             WebsecurityscannerProjectsScanConfigsCreateRequest req = new WebsecurityscannerProjectsScanConfigsCreateRequest() {{
                 security = new WebsecurityscannerProjectsScanConfigsCreateSecurity() {{
@@ -22,60 +40,64 @@ public class Application {
                     }};
                 }};
                 pathParams = new WebsecurityscannerProjectsScanConfigsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new WebsecurityscannerProjectsScanConfigsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new ScanConfig() {{
                     authentication = new Authentication() {{
                         customAccount = new CustomAccount() {{
-                            loginUrl = "dicta";
-                            password = "debitis";
-                            username = "voluptatum";
+                            loginUrl = "suscipit";
+                            password = "iure";
+                            username = "Eli96";
                         }};
                         googleAccount = new GoogleAccount() {{
-                            password = "et";
-                            username = "ut";
+                            password = "tempora";
+                            username = "Geraldine_Kreiger52";
                         }};
                         iapCredential = new IapCredential() {{
                             iapTestServiceAccountInfo = new IapTestServiceAccountInfo() {{
-                                targetAudienceClientId = "dolorem";
+                                targetAudienceClientId = "iusto";
                             }};
                         }};
                     }};
-                    blacklistPatterns = new String[]() {{
-                        add("voluptate"),
-                        add("iste"),
+                    blacklistPatterns = new String[]{{
+                        add("nisi"),
+                        add("recusandae"),
+                        add("temporibus"),
                     }};
-                    displayName = "vitae";
-                    exportToSecurityCommandCenter = "DISABLED";
-                    ignoreHttpStatusErrors = true;
+                    displayName = "ab";
+                    exportToSecurityCommandCenter = "ENABLED";
+                    ignoreHttpStatusErrors = false;
                     managedScan = false;
-                    maxQps = 6392442863481646880;
-                    name = "vel";
+                    maxQps = 87129;
+                    name = "deserunt";
                     riskLevel = "RISK_LEVEL_UNSPECIFIED";
                     schedule = new Schedule() {{
-                        intervalDurationDays = 6303220950515014660;
-                        scheduleTime = "id";
+                        intervalDurationDays = 368241;
+                        scheduleTime = "repellendus";
                     }};
-                    startingUrls = new String[]() {{
-                        add("accusantium"),
+                    startingUrls = new String[]{{
+                        add("quo"),
+                        add("odit"),
+                        add("at"),
+                        add("at"),
                     }};
                     staticIpScan = false;
-                    userAgent = "USER_AGENT_UNSPECIFIED";
+                    userAgent = "SAFARI_IPHONE";
                 }};
-            }};
+            }};            
 
             WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req);
 

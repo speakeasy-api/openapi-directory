@@ -2,44 +2,46 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressActionEnum;
+import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressVersionEnum;
+import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressQueryParams;
+import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressHeaders;
+import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressRequest;
+import org.openapis.openapi.models.operations.GETAuthorizeCacheSecurityGroupIngressResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetAuthorizeCacheSecurityGroupIngressRequest req = new GetAuthorizeCacheSecurityGroupIngressRequest() {{
-                queryParams = new GetAuthorizeCacheSecurityGroupIngressQueryParams() {{
+            GETAuthorizeCacheSecurityGroupIngressRequest req = new GETAuthorizeCacheSecurityGroupIngressRequest() {{
+                queryParams = new GETAuthorizeCacheSecurityGroupIngressQueryParams() {{
                     action = "AuthorizeCacheSecurityGroupIngress";
-                    cacheSecurityGroupName = "voluptas";
-                    ec2SecurityGroupName = "culpa";
-                    ec2SecurityGroupOwnerId = "expedita";
+                    cacheSecurityGroupName = "corrupti";
+                    ec2SecurityGroupName = "provident";
+                    ec2SecurityGroupOwnerId = "distinctio";
                     version = "2015-02-02";
                 }};
-                headers = new GetAuthorizeCacheSecurityGroupIngressHeaders() {{
-                    xAmzAlgorithm = "dolor";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "voluptas";
-                    xAmzDate = "fugit";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "nihil";
-                    xAmzSignedHeaders = "rerum";
+                headers = new GETAuthorizeCacheSecurityGroupIngressHeaders() {{
+                    xAmzAlgorithm = "quibusdam";
+                    xAmzContentSha256 = "unde";
+                    xAmzCredential = "nulla";
+                    xAmzDate = "corrupti";
+                    xAmzSecurityToken = "illum";
+                    xAmzSignature = "vel";
+                    xAmzSignedHeaders = "error";
                 }};
-            }};
+            }};            
 
-            GetAuthorizeCacheSecurityGroupIngressResponse res = sdk.getAuthorizeCacheSecurityGroupIngress(req);
+            GETAuthorizeCacheSecurityGroupIngressResponse res = sdk.getAuthorizeCacheSecurityGroupIngress(req);
 
             if (res.body.isPresent()) {
                 // handle response

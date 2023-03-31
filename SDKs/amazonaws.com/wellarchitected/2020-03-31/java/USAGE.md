@@ -2,43 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateLensesPathParams;
+import org.openapis.openapi.models.operations.AssociateLensesHeaders;
+import org.openapis.openapi.models.operations.AssociateLensesRequestBody;
+import org.openapis.openapi.models.operations.AssociateLensesRequest;
+import org.openapis.openapi.models.operations.AssociateLensesResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateLensesRequest req = new AssociateLensesRequest() {{
                 pathParams = new AssociateLensesPathParams() {{
-                    workloadId = "sit";
+                    workloadId = "corrupti";
                 }};
                 headers = new AssociateLensesHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
                 request = new AssociateLensesRequestBody() {{
-                    lensAliases = new String[]() {{
-                        add("et"),
+                    lensAliases = new String[]{{
+                        add("error"),
+                        add("deserunt"),
                     }};
                 }};
-            }};
+            }};            
 
             AssociateLensesResponse res = sdk.associateLenses(req);
 

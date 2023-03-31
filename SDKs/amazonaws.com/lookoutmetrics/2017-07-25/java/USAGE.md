@@ -2,38 +2,38 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.ActivateAnomalyDetectorHeaders;
+import org.openapis.openapi.models.operations.ActivateAnomalyDetectorRequestBody;
+import org.openapis.openapi.models.operations.ActivateAnomalyDetectorRequest;
+import org.openapis.openapi.models.operations.ActivateAnomalyDetectorResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             ActivateAnomalyDetectorRequest req = new ActivateAnomalyDetectorRequest() {{
                 headers = new ActivateAnomalyDetectorHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new ActivateAnomalyDetectorRequestBody() {{
-                    anomalyDetectorArn = "voluptas";
+                    anomalyDetectorArn = "illum";
                 }};
-            }};
+            }};            
 
             ActivateAnomalyDetectorResponse res = sdk.activateAnomalyDetector(req);
 

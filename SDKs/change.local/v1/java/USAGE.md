@@ -2,15 +2,20 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateSecurity;
+import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateTransportationMethodEnum;
+import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateQueryParams;
+import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateRequest;
+import org.openapis.openapi.models.operations.GetApiV1DonationsCarbonCalculateResponse;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetApiV1DonationsCarbonCalculateRequest req = new GetApiV1DonationsCarbonCalculateRequest() {{
                 security = new GetApiV1DonationsCarbonCalculateSecurity() {{
@@ -20,13 +25,13 @@ public class Application {
                     }};
                 }};
                 queryParams = new GetApiV1DonationsCarbonCalculateQueryParams() {{
-                    destinationAddress = 74.099998;
-                    distanceMi = 53.099998;
-                    originAddress = 15.100000;
+                    destinationAddress = 5488.14;
+                    distanceMi = 5928.45;
+                    originAddress = 7151.9;
                     transportationMethod = "sea";
-                    weightLb = 77.099998;
+                    weightLb = 6027.63;
                 }};
-            }};
+            }};            
 
             GetApiV1DonationsCarbonCalculateResponse res = sdk.getApiV1DonationsCarbonCalculate(req);
 

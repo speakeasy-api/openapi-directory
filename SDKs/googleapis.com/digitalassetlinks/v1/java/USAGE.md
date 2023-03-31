@@ -2,135 +2,120 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DigitalassetlinksAssetlinksBulkCheckQueryParams;
+import org.openapis.openapi.models.operations.DigitalassetlinksAssetlinksBulkCheckRequest;
+import org.openapis.openapi.models.operations.DigitalassetlinksAssetlinksBulkCheckResponse;
+import org.openapis.openapi.models.shared.BulkCheckRequest;
+import org.openapis.openapi.models.shared.StatementTemplate;
+import org.openapis.openapi.models.shared.Asset;
+import org.openapis.openapi.models.shared.WebAsset;
+import org.openapis.openapi.models.shared.AndroidAppAsset;
+import org.openapis.openapi.models.shared.CertificateInfo;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DigitalassetlinksAssetlinksBulkCheckRequest req = new DigitalassetlinksAssetlinksBulkCheckRequest() {{
                 queryParams = new DigitalassetlinksAssetlinksBulkCheckQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new BulkCheckRequest() {{
-                    allowGoogleInternalDataSources = true;
-                    defaultRelation = "dicta";
+                    allowGoogleInternalDataSources = false;
+                    defaultRelation = "deserunt";
                     defaultSource = new Asset() {{
                         androidApp = new AndroidAppAsset() {{
                             certificate = new CertificateInfo() {{
-                                sha256Fingerprint = "debitis";
+                                sha256Fingerprint = "suscipit";
                             }};
-                            packageName = "voluptatum";
+                            packageName = "iure";
                         }};
                         web = new WebAsset() {{
-                            site = "et";
+                            site = "magnam";
                         }};
                     }};
                     defaultTarget = new Asset() {{
                         androidApp = new AndroidAppAsset() {{
                             certificate = new CertificateInfo() {{
-                                sha256Fingerprint = "ut";
+                                sha256Fingerprint = "debitis";
                             }};
-                            packageName = "dolorem";
+                            packageName = "ipsa";
                         }};
                         web = new WebAsset() {{
-                            site = "et";
+                            site = "delectus";
                         }};
                     }};
                     skipCacheLookup = false;
-                    statements = new openapisdk.models.shared.StatementTemplate[]() {{
+                    statements = new org.openapis.openapi.models.shared.StatementTemplate[]{{
                         add(new StatementTemplate() {{
-                            relation = "vitae";
+                            relation = "suscipit";
                             source = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "totam";
+                                        sha256Fingerprint = "molestiae";
                                     }};
-                                    packageName = "dolores";
+                                    packageName = "minus";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "illum";
+                                    site = "placeat";
                                 }};
                             }};
                             target = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "debitis";
+                                        sha256Fingerprint = "voluptatum";
                                     }};
-                                    packageName = "vel";
+                                    packageName = "iusto";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "odio";
+                                    site = "excepturi";
                                 }};
                             }};
                         }}),
                         add(new StatementTemplate() {{
-                            relation = "dolore";
+                            relation = "nisi";
                             source = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "id";
+                                        sha256Fingerprint = "recusandae";
                                     }};
-                                    packageName = "aspernatur";
+                                    packageName = "temporibus";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "accusantium";
+                                    site = "ab";
                                 }};
                             }};
                             target = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "totam";
+                                        sha256Fingerprint = "quis";
                                     }};
-                                    packageName = "commodi";
+                                    packageName = "veritatis";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "quis";
-                                }};
-                            }};
-                        }}),
-                        add(new StatementTemplate() {{
-                            relation = "est";
-                            source = new Asset() {{
-                                androidApp = new AndroidAppAsset() {{
-                                    certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "aut";
-                                    }};
-                                    packageName = "odit";
-                                }};
-                                web = new WebAsset() {{
-                                    site = "non";
-                                }};
-                            }};
-                            target = new Asset() {{
-                                androidApp = new AndroidAppAsset() {{
-                                    certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "voluptas";
-                                    }};
-                                    packageName = "omnis";
-                                }};
-                                web = new WebAsset() {{
-                                    site = "aut";
+                                    site = "deserunt";
                                 }};
                             }};
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             DigitalassetlinksAssetlinksBulkCheckResponse res = sdk.assetlinks.digitalassetlinksAssetlinksBulkCheck(req);
 

@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoverySecurity;
+import org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryPathParams;
+import org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryQueryParams;
+import org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryRequest;
+import org.openapis.openapi.models.operations.SecuritycenterOrganizationsAssetsRunDiscoveryResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             SecuritycenterOrganizationsAssetsRunDiscoveryRequest req = new SecuritycenterOrganizationsAssetsRunDiscoveryRequest() {{
                 security = new SecuritycenterOrganizationsAssetsRunDiscoverySecurity() {{
@@ -22,27 +30,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new SecuritycenterOrganizationsAssetsRunDiscoveryPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new SecuritycenterOrganizationsAssetsRunDiscoveryQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("debitis", "voluptatum");
-                    put("et", "ut");
-                    put("dolorem", "et");
+                    put("iure", "magnam");
+                    put("debitis", "ipsa");
                 }};
-            }};
+            }};            
 
             SecuritycenterOrganizationsAssetsRunDiscoveryResponse res = sdk.organizations.securitycenterOrganizationsAssetsRunDiscovery(req);
 

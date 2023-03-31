@@ -2,46 +2,47 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionPathParams;
+import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionHeaders;
+import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionRequestBody;
+import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionRequest;
+import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateWorkspaceRequest req = new CreateWorkspaceRequest() {{
-                headers = new CreateWorkspaceHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+            CreateAlertManagerDefinitionRequest req = new CreateAlertManagerDefinitionRequest() {{
+                pathParams = new CreateAlertManagerDefinitionPathParams() {{
+                    workspaceId = "corrupti";
                 }};
-                request = new CreateWorkspaceRequestBody() {{
-                    alias = "voluptas";
-                    clientToken = "fugit";
-                    tags = new java.util.HashMap<String, String>() {{
-                        put("nihil", "rerum");
-                    }};
+                headers = new CreateAlertManagerDefinitionHeaders() {{
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-            }};
+                request = new CreateAlertManagerDefinitionRequestBody() {{
+                    clientToken = "vel";
+                    data = "error";
+                }};
+            }};            
 
-            CreateWorkspaceResponse res = sdk.createWorkspace(req);
+            CreateAlertManagerDefinitionResponse res = sdk.createAlertManagerDefinition(req);
 
-            if (res.createWorkspaceResponse.isPresent()) {
+            if (res.createAlertManagerDefinitionResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

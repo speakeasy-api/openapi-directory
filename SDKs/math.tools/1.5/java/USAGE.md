@@ -2,28 +2,32 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetNumbersBaseSecurity;
+import org.openapis.openapi.models.operations.GetNumbersBaseQueryParams;
+import org.openapis.openapi.models.operations.GetNumbersBaseRequest;
+import org.openapis.openapi.models.operations.GetNumbersBaseResponse;
+import org.openapis.openapi.models.shared.SchemeXMathtoolsAPISecret;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetNumbersBaseRequest req = new GetNumbersBaseRequest() {{
                 security = new GetNumbersBaseSecurity() {{
-                    xMathtoolsApiSecret = new SchemeXMathtoolsApiSecret() {{
+                    xMathtoolsApiSecret = new SchemeXMathtoolsAPISecret() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 queryParams = new GetNumbersBaseQueryParams() {{
-                    from = 8717895732742165505;
-                    number = 2259404117704393152;
-                    to = 6050128673802995827;
+                    from = 548814;
+                    number = 592845;
+                    to = 715190;
                 }};
-            }};
+            }};            
 
             GetNumbersBaseResponse res = sdk.baseConversion.getNumbersBase(req);
 

@@ -2,118 +2,159 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddLFTagsToResourceHeaders;
+import org.openapis.openapi.models.operations.AddLFTagsToResourceRequestBodyResource;
+import org.openapis.openapi.models.operations.AddLFTagsToResourceRequestBody;
+import org.openapis.openapi.models.operations.AddLFTagsToResourceRequest;
+import org.openapis.openapi.models.operations.AddLFTagsToResourceResponse;
+import org.openapis.openapi.models.shared.TableWithColumnsResource;
+import org.openapis.openapi.models.shared.ColumnWildcard;
+import org.openapis.openapi.models.shared.TableResource;
+import org.openapis.openapi.models.shared.LFTagPolicyResource;
+import org.openapis.openapi.models.shared.ResourceTypeEnum;
+import org.openapis.openapi.models.shared.LFTag;
+import org.openapis.openapi.models.shared.LFTagKeyResource;
+import org.openapis.openapi.models.shared.DatabaseResource;
+import org.openapis.openapi.models.shared.DataLocationResource;
+import org.openapis.openapi.models.shared.DataCellsFilterResource;
+import org.openapis.openapi.models.shared.LFTagPair;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            AddLfTagsToResourceRequest req = new AddLfTagsToResourceRequest() {{
-                headers = new AddLfTagsToResourceHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
-                    xAmzTarget = "AWSLakeFormation.AddLFTagsToResource";
+            AddLFTagsToResourceRequest req = new AddLFTagsToResourceRequest() {{
+                headers = new AddLFTagsToResourceHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
-                request = new AddLfTagsToResourceRequest() {{
-                    catalogId = "fugit";
-                    lfTags = new openapisdk.models.shared.LfTagPair[]() {{
-                        add(new LfTagPair() {{
-                            catalogId = "nihil";
-                            tagKey = "rerum";
-                            tagValues = new String[]() {{
-                                add("debitis"),
-                                add("voluptatum"),
-                                add("et"),
+                request = new AddLFTagsToResourceRequestBody() {{
+                    catalogId = "illum";
+                    lfTags = new org.openapis.openapi.models.shared.LFTagPair[]{{
+                        add(new LFTagPair() {{
+                            catalogId = "error";
+                            tagKey = "deserunt";
+                            tagValues = new String[]{{
+                                add("iure"),
+                                add("magnam"),
+                            }};
+                        }}),
+                        add(new LFTagPair() {{
+                            catalogId = "debitis";
+                            tagKey = "ipsa";
+                            tagValues = new String[]{{
+                                add("tempora"),
+                                add("suscipit"),
+                                add("molestiae"),
+                                add("minus"),
                             }};
                         }}),
                     }};
-                    resource = new Resource() {{
+                    resource = new AddLFTagsToResourceRequestBodyResource() {{
                         catalog = new java.util.HashMap<String, Object>() {{
-                            put("dolorem", "et");
-                            put("voluptate", "iste");
-                            put("vitae", "totam");
+                            put("voluptatum", "iusto");
+                            put("excepturi", "nisi");
+                            put("recusandae", "temporibus");
+                            put("ab", "quis");
+                        }};
+                        dataCellsFilter = new DataCellsFilterResource() {{
+                            databaseName = "veritatis";
+                            name = "deserunt";
+                            tableCatalogId = "perferendis";
+                            tableName = "ipsam";
                         }};
                         dataLocation = new DataLocationResource() {{
-                            catalogId = "dolores";
-                            resourceArn = "illum";
+                            catalogId = "repellendus";
+                            resourceArn = "sapiente";
                         }};
                         database = new DatabaseResource() {{
-                            catalogId = "debitis";
-                            name = "vel";
+                            catalogId = "quo";
+                            name = "odit";
                         }};
-                        lfTag = new LfTagKeyResource() {{
-                            catalogId = "odio";
-                            tagKey = "dolore";
-                            tagValues = new String[]() {{
-                                add("aspernatur"),
-                                add("accusantium"),
+                        lfTag = new LFTagKeyResource() {{
+                            catalogId = "at";
+                            tagKey = "at";
+                            tagValues = new String[]{{
+                                add("molestiae"),
+                                add("quod"),
+                                add("quod"),
+                                add("esse"),
                             }};
                         }};
-                        lfTagPolicy = new LfTagPolicyResource() {{
+                        lfTagPolicy = new LFTagPolicyResource() {{
                             catalogId = "totam";
-                            expression = new openapisdk.models.shared.LfTag[]() {{
-                                add(new LfTag() {{
-                                    tagKey = "quis";
-                                    tagValues = new String[]() {{
-                                        add("aut"),
-                                        add("odit"),
+                            expression = new org.openapis.openapi.models.shared.LFTag[]{{
+                                add(new LFTag() {{
+                                    tagKey = "dolorum";
+                                    tagValues = new String[]{{
+                                        add("nam"),
                                     }};
                                 }}),
-                                add(new LfTag() {{
-                                    tagKey = "non";
-                                    tagValues = new String[]() {{
-                                        add("omnis"),
+                                add(new LFTag() {{
+                                    tagKey = "officia";
+                                    tagValues = new String[]{{
+                                        add("fugit"),
+                                        add("deleniti"),
+                                        add("hic"),
+                                    }};
+                                }}),
+                                add(new LFTag() {{
+                                    tagKey = "optio";
+                                    tagValues = new String[]{{
+                                        add("beatae"),
+                                        add("commodi"),
+                                        add("molestiae"),
+                                    }};
+                                }}),
+                                add(new LFTag() {{
+                                    tagKey = "modi";
+                                    tagValues = new String[]{{
+                                        add("impedit"),
                                     }};
                                 }}),
                             }};
-                            resourceType = "DATABASE";
+                            resourceType = "TABLE";
                         }};
                         table = new TableResource() {{
-                            catalogId = "illo";
-                            databaseName = "sed";
-                            name = "officiis";
+                            catalogId = "esse";
+                            databaseName = "ipsum";
+                            name = "excepturi";
                             tableWildcard = new java.util.HashMap<String, Object>() {{
-                                put("consectetur", "nobis");
-                                put("odio", "qui");
+                                put("perferendis", "ad");
                             }};
                         }};
                         tableWithColumns = new TableWithColumnsResource() {{
-                            catalogId = "recusandae";
-                            columnNames = new String[]() {{
-                                add("ipsum"),
-                                add("eveniet"),
+                            catalogId = "natus";
+                            columnNames = new String[]{{
+                                add("iste"),
                             }};
                             columnWildcard = new ColumnWildcard() {{
-                                excludedColumnNames = new String[]() {{
-                                    add("sint"),
-                                    add("inventore"),
+                                excludedColumnNames = new String[]{{
+                                    add("natus"),
                                 }};
                             }};
-                            databaseName = "ut";
-                            name = "exercitationem";
+                            databaseName = "laboriosam";
+                            name = "hic";
                         }};
                     }};
                 }};
-            }};
+            }};            
 
-            AddLfTagsToResourceResponse res = sdk.addLfTagsToResource(req);
+            AddLFTagsToResourceResponse res = sdk.addLFTagsToResource(req);
 
             if (res.addLFTagsToResourceResponse.isPresent()) {
                 // handle response

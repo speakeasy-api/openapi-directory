@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AddShortlinkRequest;
+import org.openapis.openapi.models.operations.AddShortlinkResponse;
+import org.openapis.openapi.models.shared.ShortlinkRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AddShortlinkRequest req = new AddShortlinkRequest() {{
                 request = new ShortlinkRequest() {{
-                    keyid = "sit";
-                    shortlink = "voluptas";
+                    keyid = "corrupti";
+                    shortlink = "provident";
                 }};
-            }};
+            }};            
 
             AddShortlinkResponse res = sdk.addShortlink.addShortlink(req);
 

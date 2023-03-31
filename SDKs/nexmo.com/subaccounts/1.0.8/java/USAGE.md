@@ -2,15 +2,20 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateSubAccountSecurity;
+import org.openapis.openapi.models.operations.CreateSubAccountPathParams;
+import org.openapis.openapi.models.operations.CreateSubAccountRequest;
+import org.openapis.openapi.models.operations.CreateSubAccountResponse;
+import org.openapis.openapi.models.shared.NewSubaccountRequest;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateSubAccountRequest req = new CreateSubAccountRequest() {{
                 security = new CreateSubAccountSecurity() {{
@@ -20,14 +25,14 @@ public class Application {
                     }};
                 }};
                 pathParams = new CreateSubAccountPathParams() {{
-                    apiKey = "sit";
+                    apiKey = "corrupti";
                 }};
                 request = new NewSubaccountRequest() {{
-                    name = "voluptas";
-                    secret = "culpa";
+                    name = "Subaccount department A";
+                    secret = "Password123";
                     usePrimaryAccountBalance = false;
                 }};
-            }};
+            }};            
 
             CreateSubAccountResponse res = sdk.subaccountManagement.createSubAccount(req);
 

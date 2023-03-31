@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,27 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateSecurity;
+import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreatePathParams;
+import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateQueryParams;
+import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateRequest;
+import org.openapis.openapi.models.operations.AppengineAppsAuthorizedCertificatesCreateResponse;
+import org.openapis.openapi.models.shared.AuthorizedCertificate;
+import org.openapis.openapi.models.shared.ManagedCertificateStatusEnum;
+import org.openapis.openapi.models.shared.ManagedCertificate;
+import org.openapis.openapi.models.shared.CertificateRawData;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AppengineAppsAuthorizedCertificatesCreateRequest req = new AppengineAppsAuthorizedCertificatesCreateRequest() {{
                 security = new AppengineAppsAuthorizedCertificatesCreateSecurity() {{
@@ -35,45 +47,45 @@ public class Application {
                     }};
                 }};
                 pathParams = new AppengineAppsAuthorizedCertificatesCreatePathParams() {{
-                    appsId = "sit";
+                    appsId = "corrupti";
                 }};
                 queryParams = new AppengineAppsAuthorizedCertificatesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new AuthorizedCertificate() {{
                     certificateRawData = new CertificateRawData() {{
-                        privateKey = "dicta";
-                        publicCertificate = "debitis";
+                        privateKey = "suscipit";
+                        publicCertificate = "iure";
                     }};
-                    displayName = "voluptatum";
-                    domainMappingsCount = 2339563716805116249;
-                    domainNames = new String[]() {{
-                        add("dolorem"),
-                        add("et"),
-                        add("voluptate"),
+                    displayName = "magnam";
+                    domainMappingsCount = 891773;
+                    domainNames = new String[]{{
+                        add("delectus"),
                     }};
-                    expireTime = "iste";
-                    id = "vitae";
+                    expireTime = "tempora";
+                    id = "suscipit";
                     managedCertificate = new ManagedCertificate() {{
-                        lastRenewalTime = "totam";
-                        status = "FAILED_RETRYING_NOT_VISIBLE";
+                        lastRenewalTime = "molestiae";
+                        status = "FAILED_RETRYING_CAA_FORBIDDEN";
                     }};
-                    name = "illum";
-                    visibleDomainMappings = new String[]() {{
-                        add("vel"),
+                    name = "placeat";
+                    visibleDomainMappings = new String[]{{
+                        add("iusto"),
+                        add("excepturi"),
+                        add("nisi"),
                     }};
                 }};
-            }};
+            }};            
 
             AppengineAppsAuthorizedCertificatesCreateResponse res = sdk.apps.appengineAppsAuthorizedCertificatesCreate(req);
 
@@ -88,6 +100,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### apps
 
@@ -113,7 +126,7 @@ public class Application {
 * `appengineAppsLocationsGet` - Gets information about a location.
 * `appengineAppsLocationsList` - Lists information about the supported locations for this service.
 * `appengineAppsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `appengineAppsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `appengineAppsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 * `appengineAppsPatch` - Updates the specified Application resource. You can update the following fields: auth_domain - Google authentication domain for controlling user access to the application. default_cookie_expiration - Cookie expiration policy for the application. iap - Identity-Aware Proxy properties for the application.
 * `appengineAppsRepair` - Recreates the required App Engine features for the specified App Engine application, for example a Cloud Storage bucket or App Engine service account. Use this method if you receive an error message about a missing feature, for example, Error retrieving the App Engine service account. If you have deleted your App Engine service account, this will not be able to recreate it. Instead, you should attempt to use the IAM undelete API if possible at https://cloud.google.com/iam/reference/rest/v1/projects.serviceAccounts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAccounts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID can be found in the Cloud Console Activity Log.
 * `appengineAppsServicesDelete` - Deletes the specified service and all enclosed versions.
@@ -138,8 +151,18 @@ public class Application {
 * `appengineProjectsLocationsGet` - Gets information about a location.
 * `appengineProjectsLocationsList` - Lists information about the supported locations for this service.
 * `appengineProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `appengineProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
+* `appengineProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,41 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetIceServerConfigHeaders;
+import org.openapis.openapi.models.operations.GetIceServerConfigRequestBodyServiceEnum;
+import org.openapis.openapi.models.operations.GetIceServerConfigRequestBody;
+import org.openapis.openapi.models.operations.GetIceServerConfigRequest;
+import org.openapis.openapi.models.operations.GetIceServerConfigResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetIceServerConfigRequest req = new GetIceServerConfigRequest() {{
                 headers = new GetIceServerConfigHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new GetIceServerConfigRequestBody() {{
-                    channelARN = "voluptas";
-                    clientId = "fugit";
+                    channelARN = "illum";
+                    clientId = "vel";
                     service = "TURN";
-                    username = "nihil";
+                    username = "Linda.Oberbrunner";
                 }};
-            }};
+            }};            
 
             GetIceServerConfigResponse res = sdk.getIceServerConfig(req);
 

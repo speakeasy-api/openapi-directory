@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateSecurityOption2;
+import org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateSecurity;
+import org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateQueryParams;
+import org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateRequest;
+import org.openapis.openapi.models.operations.CloudbillingBillingAccountsCreateResponse;
+import org.openapis.openapi.models.shared.BillingAccountInput;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudbillingBillingAccountsCreateRequest req = new CloudbillingBillingAccountsCreateRequest() {{
                 security = new CloudbillingBillingAccountsCreateSecurity() {{
@@ -24,23 +34,23 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudbillingBillingAccountsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new BillingAccountInput() {{
-                    displayName = "rerum";
-                    masterBillingAccount = "dicta";
+                    displayName = "deserunt";
+                    masterBillingAccount = "suscipit";
                 }};
-            }};
+            }};            
 
             CloudbillingBillingAccountsCreateResponse res = sdk.billingAccounts.cloudbillingBillingAccountsCreate(req);
 

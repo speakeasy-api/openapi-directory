@@ -2,79 +2,85 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetAuditCaseQueryParams;
+import org.openapis.openapi.models.operations.GetAuditCaseRequest;
+import org.openapis.openapi.models.operations.GetAuditCaseResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyHeaderAuth = new SchemeApiKeyHeaderAuth() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyHeaderAuth = new SchemeAPIKeyHeaderAuth() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                    apiKeyQueryAuth = new SchemeApiKeyQueryAuth() {{
+                    apiKeyQueryAuth = new SchemeAPIKeyQueryAuth() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                    apiKey = new SchemeApiKey() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetAuditCaseRequest req = new GetAuditCaseRequest() {{
                 queryParams = new GetAuditCaseQueryParams() {{
-                    apiKey = "sit";
-                    auditCaseId = new String[]() {{
-                        add("culpa"),
+                    apiKey = "corrupti";
+                    auditCaseId = new String[]{{
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    auditId = new Integer[]() {{
-                        add(3390393562759376202),
-                        add(2669985732393126063),
+                    auditId = new Integer[]{{
+                        add(544883),
+                        add(847252),
+                        add(423655),
+                        add(623564),
                     }};
-                    candidateId = new String[]() {{
-                        add("voluptas"),
-                        add("fugit"),
+                    candidateId = new String[]{{
+                        add("suscipit"),
+                        add("iure"),
+                        add("magnam"),
                     }};
-                    committeeDesignation = "et";
-                    committeeId = new String[]() {{
-                        add("rerum"),
+                    committeeDesignation = "debitis";
+                    committeeId = new String[]{{
+                        add("delectus"),
                     }};
-                    committeeType = new String[]() {{
-                        add("debitis"),
-                        add("voluptatum"),
-                        add("et"),
+                    committeeType = new String[]{{
+                        add("suscipit"),
+                        add("molestiae"),
                     }};
-                    cycle = new Integer[]() {{
-                        add(161231572858529631),
-                        add(7259475919510918339),
-                        add(7373105480197164748),
+                    cycle = new Integer[]{{
+                        add(812169),
+                        add(528895),
+                        add(479977),
+                        add(568045),
                     }};
-                    maxElectionCycle = 3287288577352441706;
-                    minElectionCycle = 3930927879439176946;
-                    page = 4706154865122290029;
-                    perPage = 2217592893536642650;
-                    primaryCategoryId = "illum";
-                    q = new String[]() {{
-                        add("vel"),
+                    maxElectionCycle = 392785;
+                    minElectionCycle = 925597;
+                    page = 836079;
+                    perPage = 71036;
+                    primaryCategoryId = "quis";
+                    q = new String[]{{
+                        add("deserunt"),
                     }};
-                    qq = new String[]() {{
-                        add("dolore"),
+                    qq = new String[]{{
+                        add("ipsam"),
                     }};
-                    sort = new String[]() {{
-                        add("aspernatur"),
-                        add("accusantium"),
+                    sort = new String[]{{
+                        add("sapiente"),
+                        add("quo"),
+                        add("odit"),
+                        add("at"),
                     }};
                     sortHideNull = false;
                     sortNullOnly = false;
-                    sortNullsLast = true;
-                    subCategoryId = "est";
+                    sortNullsLast = false;
+                    subCategoryId = "at";
                 }};
-            }};
+            }};            
 
             GetAuditCaseResponse res = sdk.audit.getAuditCase(req);
 

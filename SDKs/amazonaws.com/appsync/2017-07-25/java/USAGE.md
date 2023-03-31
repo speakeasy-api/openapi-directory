@@ -2,49 +2,46 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateApiPathParams;
+import org.openapis.openapi.models.operations.AssociateApiHeaders;
+import org.openapis.openapi.models.operations.AssociateApiRequestBody;
+import org.openapis.openapi.models.operations.AssociateApiRequest;
+import org.openapis.openapi.models.operations.AssociateApiResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateApiCacheRequest req = new CreateApiCacheRequest() {{
-                pathParams = new CreateApiCachePathParams() {{
-                    apiId = "sit";
+            AssociateApiRequest req = new AssociateApiRequest() {{
+                pathParams = new AssociateApiPathParams() {{
+                    domainName = "corrupti";
                 }};
-                headers = new CreateApiCacheHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                headers = new AssociateApiHeaders() {{
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-                request = new CreateApiCacheRequestBody() {{
-                    apiCachingBehavior = "FULL_REQUEST_CACHING";
-                    atRestEncryptionEnabled = false;
-                    transitEncryptionEnabled = true;
-                    ttl = 8325060299420976708;
-                    type = "LARGE_12X";
+                request = new AssociateApiRequestBody() {{
+                    apiId = "vel";
                 }};
-            }};
+            }};            
 
-            CreateApiCacheResponse res = sdk.createApiCache(req);
+            AssociateApiResponse res = sdk.associateApi(req);
 
-            if (res.createApiCacheResponse.isPresent()) {
+            if (res.associateApiResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

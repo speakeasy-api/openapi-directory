@@ -2,36 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdSecurity;
+import org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdPathParams;
+import org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdHeaders;
+import org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdRequest;
+import org.openapis.openapi.models.operations.DeleteAccountAccessConsentsConsentIdResponse;
+import org.openapis.openapi.models.shared.SchemeClientCredentialsToken;
+import org.openapis.openapi.models.shared.SchemeClientID;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeleteAccountAccessConsentsConsentIdRequest req = new DeleteAccountAccessConsentsConsentIdRequest() {{
                 security = new DeleteAccountAccessConsentsConsentIdSecurity() {{
                     clientCredentialsToken = new SchemeClientCredentialsToken() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                    clientId = new SchemeClientId() {{
+                    clientId = new SchemeClientID() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 pathParams = new DeleteAccountAccessConsentsConsentIdPathParams() {{
-                    consentId = "sit";
+                    consentId = "corrupti";
                 }};
                 headers = new DeleteAccountAccessConsentsConsentIdHeaders() {{
-                    sandboxId = "voluptas";
-                    xCustomerUserAgent = "culpa";
-                    xFapiAuthDate = "expedita";
-                    xFapiCustomerIpAddress = "consequuntur";
-                    xFapiInteractionId = "dolor";
+                    sandboxId = "provident";
+                    xCustomerUserAgent = "distinctio";
+                    xFapiAuthDate = "quibusdam";
+                    xFapiCustomerIpAddress = "unde";
+                    xFapiInteractionId = "nulla";
                 }};
-            }};
+            }};            
 
             DeleteAccountAccessConsentsConsentIdResponse res = sdk.accountAccess.deleteAccountAccessConsentsConsentId(req);
 

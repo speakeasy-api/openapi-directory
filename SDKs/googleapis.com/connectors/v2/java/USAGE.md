@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity;
+import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecutePathParams;
+import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams;
+import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteRequest;
+import org.openapis.openapi.models.operations.ConnectorsProjectsLocationsConnectionsActionsExecuteResponse;
+import org.openapis.openapi.models.shared.ExecuteActionRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ConnectorsProjectsLocationsConnectionsActionsExecuteRequest req = new ConnectorsProjectsLocationsConnectionsActionsExecuteRequest() {{
                 security = new ConnectorsProjectsLocationsConnectionsActionsExecuteSecurity() {{
@@ -22,29 +31,28 @@ public class Application {
                     }};
                 }};
                 pathParams = new ConnectorsProjectsLocationsConnectionsActionsExecutePathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new ConnectorsProjectsLocationsConnectionsActionsExecuteQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new ExecuteActionRequest() {{
                     parameters = new java.util.HashMap<String, Object>() {{
-                        put("debitis", "voluptatum");
-                        put("et", "ut");
-                        put("dolorem", "et");
+                        put("iure", "magnam");
+                        put("debitis", "ipsa");
                     }};
                 }};
-            }};
+            }};            
 
             ConnectorsProjectsLocationsConnectionsActionsExecuteResponse res = sdk.projects.connectorsProjectsLocationsConnectionsActionsExecute(req);
 

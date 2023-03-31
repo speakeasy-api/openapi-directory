@@ -2,34 +2,47 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.UpdateBankAccountSecurity;
+import org.openapis.openapi.models.operations.UpdateBankAccountPathParams;
+import org.openapis.openapi.models.operations.UpdateBankAccountHeaders;
+import org.openapis.openapi.models.operations.UpdateBankAccountUpdateRequestBodyForBankAccountAccountStatusEnum;
+import org.openapis.openapi.models.operations.UpdateBankAccountUpdateRequestBodyForBankAccountDefaultAccountEnum;
+import org.openapis.openapi.models.operations.UpdateBankAccountUpdateRequestBodyForBankAccount;
+import org.openapis.openapi.models.operations.UpdateBankAccountRequest;
+import org.openapis.openapi.models.operations.UpdateBankAccountResponse;
+import org.openapis.openapi.models.shared.SchemeAPISecretKey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             UpdateBankAccountRequest req = new UpdateBankAccountRequest() {{
                 security = new UpdateBankAccountSecurity() {{
-                    apiSecretKey = new SchemeApiSecretKey() {{
+                    apiSecretKey = new SchemeAPISecretKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 pathParams = new UpdateBankAccountPathParams() {{
-                    bankAccountId = "sit";
+                    bankAccountId = "corrupti";
                 }};
                 headers = new UpdateBankAccountHeaders() {{
-                    xApiKey = "voluptas";
+                    xApiKey = "provident";
                 }};
-                request = "culpa";
-            }};
+                request = new UpdateBankAccountUpdateRequestBodyForBankAccount() {{
+                    accountName = "distinctio";
+                    accountStatus = "inactive";
+                    defaultAccount = "no";
+                    referenceVersion = 1;
+                }};
+            }};            
 
             UpdateBankAccountResponse res = sdk.bankAccounts.updateBankAccount(req);
 
-            if (res.updateBankAccount201ApplicationJSONAny.isPresent()) {
+            if (res.updateBankAccount201ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

@@ -2,29 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteAPISpecificationSecurity;
+import org.openapis.openapi.models.operations.DeleteAPISpecificationPathParams;
+import org.openapis.openapi.models.operations.DeleteAPISpecificationRequest;
+import org.openapis.openapi.models.operations.DeleteAPISpecificationResponse;
+import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            DeleteApiSpecificationRequest req = new DeleteApiSpecificationRequest() {{
-                security = new DeleteApiSpecificationSecurity() {{
-                    apiKey = new SchemeApiKey() {{
+            DeleteAPISpecificationRequest req = new DeleteAPISpecificationRequest() {{
+                security = new DeleteAPISpecificationSecurity() {{
+                    apiKey = new SchemeAPIKey() {{
                         password = "YOUR_PASSWORD_HERE";
                         username = "YOUR_USERNAME_HERE";
                     }};
                 }};
-                pathParams = new DeleteApiSpecificationPathParams() {{
-                    id = "sit";
+                pathParams = new DeleteAPISpecificationPathParams() {{
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
-            DeleteApiSpecificationResponse res = sdk.apiSpecification.deleteApiSpecification(req);
+            DeleteAPISpecificationResponse res = sdk.apiSpecification.deleteAPISpecification(req);
 
             if (res.statusCode == 200) {
                 // handle response

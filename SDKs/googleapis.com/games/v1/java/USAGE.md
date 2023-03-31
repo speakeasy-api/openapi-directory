@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GamesAchievementDefinitionsListSecurity;
+import org.openapis.openapi.models.operations.GamesAchievementDefinitionsListQueryParams;
+import org.openapis.openapi.models.operations.GamesAchievementDefinitionsListRequest;
+import org.openapis.openapi.models.operations.GamesAchievementDefinitionsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GamesAchievementDefinitionsListRequest req = new GamesAchievementDefinitionsListRequest() {{
                 security = new GamesAchievementDefinitionsListSecurity() {{
@@ -22,22 +29,22 @@ public class Application {
                     }};
                 }};
                 queryParams = new GamesAchievementDefinitionsListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    language = "expedita";
-                    maxResults = 6044372234677422456;
-                    oauthToken = "fugit";
-                    pageToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    language = "corrupti";
+                    maxResults = 847252;
+                    oauthToken = "vel";
+                    pageToken = "error";
+                    prettyPrint = false;
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             GamesAchievementDefinitionsListResponse res = sdk.achievementDefinitions.gamesAchievementDefinitionsList(req);
 

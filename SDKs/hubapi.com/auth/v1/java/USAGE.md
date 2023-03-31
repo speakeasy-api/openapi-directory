@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetPathParams;
+import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetRequest;
+import org.openapis.openapi.models.operations.GetOauthV1AccessTokensTokenGetResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetOauthV1AccessTokensTokenGetAccessTokenRequest req = new GetOauthV1AccessTokensTokenGetAccessTokenRequest() {{
-                pathParams = new GetOauthV1AccessTokensTokenGetAccessTokenPathParams() {{
-                    token = "sit";
+            GetOauthV1AccessTokensTokenGetRequest req = new GetOauthV1AccessTokensTokenGetRequest() {{
+                pathParams = new GetOauthV1AccessTokensTokenGetPathParams() {{
+                    token = "corrupti";
                 }};
-            }};
+            }};            
 
-            GetOauthV1AccessTokensTokenGetAccessTokenResponse res = sdk.accessTokens.getOauthV1AccessTokensTokenGetAccessToken(req);
+            GetOauthV1AccessTokensTokenGetResponse res = sdk.accessTokens.getOauthV1AccessTokensTokenGet(req);
 
             if (res.accessTokenInfoResponse.isPresent()) {
                 // handle response

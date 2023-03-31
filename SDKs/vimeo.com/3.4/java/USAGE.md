@@ -2,29 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetEndpointsQueryParams;
+import org.openapis.openapi.models.operations.GetEndpointsRequest;
+import org.openapis.openapi.models.operations.GetEndpointsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetEndpointsRequest req = new GetEndpointsRequest() {{
                 queryParams = new GetEndpointsQueryParams() {{
-                    openapi = false;
+                    openapi = true;
                 }};
-            }};
+            }};            
 
             GetEndpointsResponse res = sdk.apiInformation.getEndpoints(req);
 

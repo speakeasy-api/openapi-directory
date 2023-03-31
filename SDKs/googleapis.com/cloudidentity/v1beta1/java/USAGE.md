@@ -2,39 +2,43 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelPathParams;
+import org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelQueryParams;
+import org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelRequest;
+import org.openapis.openapi.models.operations.CloudidentityCustomersUserinvitationsCancelResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudidentityCustomersUserinvitationsCancelRequest req = new CloudidentityCustomersUserinvitationsCancelRequest() {{
                 pathParams = new CloudidentityCustomersUserinvitationsCancelPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new CloudidentityCustomersUserinvitationsCancelQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("debitis", "voluptatum");
-                    put("et", "ut");
-                    put("dolorem", "et");
+                    put("iure", "magnam");
+                    put("debitis", "ipsa");
                 }};
-            }};
+            }};            
 
             CloudidentityCustomersUserinvitationsCancelResponse res = sdk.customers.cloudidentityCustomersUserinvitationsCancel(req);
 

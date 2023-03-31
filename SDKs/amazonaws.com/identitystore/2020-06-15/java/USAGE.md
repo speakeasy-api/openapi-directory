@@ -2,44 +2,46 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateGroupXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateGroupHeaders;
+import org.openapis.openapi.models.operations.CreateGroupRequest;
+import org.openapis.openapi.models.operations.CreateGroupResponse;
+import org.openapis.openapi.models.shared.CreateGroupRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            DescribeGroupRequest req = new DescribeGroupRequest() {{
-                headers = new DescribeGroupHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
-                    xAmzTarget = "AWSIdentityStore.DescribeGroup";
+            CreateGroupRequest req = new CreateGroupRequest() {{
+                headers = new CreateGroupHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
+                    xAmzTarget = "AWSIdentityStore.CreateGroup";
                 }};
-                request = new DescribeGroupRequest() {{
-                    groupId = "fugit";
-                    identityStoreId = "et";
+                request = new CreateGroupRequest() {{
+                    description = "illum";
+                    displayName = "vel";
+                    identityStoreId = "error";
                 }};
-            }};
+            }};            
 
-            DescribeGroupResponse res = sdk.describeGroup(req);
+            CreateGroupResponse res = sdk.createGroup(req);
 
-            if (res.describeGroupResponse.isPresent()) {
+            if (res.createGroupResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

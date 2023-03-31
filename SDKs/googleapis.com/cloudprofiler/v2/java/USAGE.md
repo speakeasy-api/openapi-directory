@@ -2,15 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurityOption1;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurityOption2;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurityOption3;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateSecurity;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreatePathParams;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateQueryParams;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateRequest;
+import org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateResponse;
+import org.openapis.openapi.models.shared.CreateProfileRequestProfileTypeEnum;
+import org.openapis.openapi.models.shared.CreateProfileRequest;
+import org.openapis.openapi.models.shared.Deployment;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudprofilerProjectsProfilesCreateRequest req = new CloudprofilerProjectsProfilesCreateRequest() {{
                 security = new CloudprofilerProjectsProfilesCreateSecurity() {{
@@ -24,36 +38,36 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudprofilerProjectsProfilesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new CloudprofilerProjectsProfilesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new CreateProfileRequest() {{
                     deployment = new Deployment() {{
                         labels = new java.util.HashMap<String, String>() {{
-                            put("debitis", "voluptatum");
-                            put("et", "ut");
-                            put("dolorem", "et");
+                            put("iure", "magnam");
+                            put("debitis", "ipsa");
                         }};
-                        projectId = "voluptate";
-                        target = "iste";
+                        projectId = "delectus";
+                        target = "tempora";
                     }};
-                    profileType = new openapisdk.models.shared.CreateProfileRequestProfileTypeEnum[]() {{
-                        add("WALL"),
+                    profileType = new org.openapis.openapi.models.shared.CreateProfileRequestProfileTypeEnum[]{{
+                        add("HEAP"),
+                        add("PEAK_HEAP"),
                     }};
                 }};
-            }};
+            }};            
 
             CloudprofilerProjectsProfilesCreateResponse res = sdk.projects.cloudprofilerProjectsProfilesCreate(req);
 

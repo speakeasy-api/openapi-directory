@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetSecurity;
+import org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetPathParams;
+import org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetQueryParams;
+import org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetRequest;
+import org.openapis.openapi.models.operations.AndroidpublisherInapppurchasesGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AndroidpublisherInapppurchasesGetRequest req = new AndroidpublisherInapppurchasesGetRequest() {{
                 security = new AndroidpublisherInapppurchasesGetSecurity() {{
@@ -22,20 +29,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new AndroidpublisherInapppurchasesGetPathParams() {{
-                    packageName = "sit";
-                    productId = "voluptas";
-                    token = "culpa";
+                    packageName = "corrupti";
+                    productId = "provident";
+                    token = "distinctio";
                 }};
                 queryParams = new AndroidpublisherInapppurchasesGetQueryParams() {{
                     alt = "json";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    userIp = "et";
+                    fields = "quibusdam";
+                    key = "unde";
+                    oauthToken = "nulla";
+                    prettyPrint = false;
+                    quotaUser = "corrupti";
+                    userIp = "illum";
                 }};
-            }};
+            }};            
 
             AndroidpublisherInapppurchasesGetResponse res = sdk.inapppurchases.androidpublisherInapppurchasesGet(req);
 

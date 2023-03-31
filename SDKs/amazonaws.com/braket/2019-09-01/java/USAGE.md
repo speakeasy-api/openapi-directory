@@ -2,45 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CancelJobPathParams;
+import org.openapis.openapi.models.operations.CancelJobHeaders;
+import org.openapis.openapi.models.operations.CancelJobRequest;
+import org.openapis.openapi.models.operations.CancelJobResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CancelQuantumTaskRequest req = new CancelQuantumTaskRequest() {{
-                pathParams = new CancelQuantumTaskPathParams() {{
-                    quantumTaskArn = "sit";
+            CancelJobRequest req = new CancelJobRequest() {{
+                pathParams = new CancelJobPathParams() {{
+                    jobArn = "corrupti";
                 }};
-                headers = new CancelQuantumTaskHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                headers = new CancelJobHeaders() {{
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-                request = new CancelQuantumTaskRequestBody() {{
-                    clientToken = "fugit";
-                }};
-            }};
+            }};            
 
-            CancelQuantumTaskResponse res = sdk.cancelQuantumTask(req);
+            CancelJobResponse res = sdk.cancelJob(req);
 
-            if (res.cancelQuantumTaskResponse.isPresent()) {
+            if (res.cancelJobResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

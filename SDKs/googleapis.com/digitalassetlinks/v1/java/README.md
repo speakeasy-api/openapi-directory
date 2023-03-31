@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,135 +15,120 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DigitalassetlinksAssetlinksBulkCheckQueryParams;
+import org.openapis.openapi.models.operations.DigitalassetlinksAssetlinksBulkCheckRequest;
+import org.openapis.openapi.models.operations.DigitalassetlinksAssetlinksBulkCheckResponse;
+import org.openapis.openapi.models.shared.BulkCheckRequest;
+import org.openapis.openapi.models.shared.StatementTemplate;
+import org.openapis.openapi.models.shared.Asset;
+import org.openapis.openapi.models.shared.WebAsset;
+import org.openapis.openapi.models.shared.AndroidAppAsset;
+import org.openapis.openapi.models.shared.CertificateInfo;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DigitalassetlinksAssetlinksBulkCheckRequest req = new DigitalassetlinksAssetlinksBulkCheckRequest() {{
                 queryParams = new DigitalassetlinksAssetlinksBulkCheckQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new BulkCheckRequest() {{
-                    allowGoogleInternalDataSources = true;
-                    defaultRelation = "dicta";
+                    allowGoogleInternalDataSources = false;
+                    defaultRelation = "deserunt";
                     defaultSource = new Asset() {{
                         androidApp = new AndroidAppAsset() {{
                             certificate = new CertificateInfo() {{
-                                sha256Fingerprint = "debitis";
+                                sha256Fingerprint = "suscipit";
                             }};
-                            packageName = "voluptatum";
+                            packageName = "iure";
                         }};
                         web = new WebAsset() {{
-                            site = "et";
+                            site = "magnam";
                         }};
                     }};
                     defaultTarget = new Asset() {{
                         androidApp = new AndroidAppAsset() {{
                             certificate = new CertificateInfo() {{
-                                sha256Fingerprint = "ut";
+                                sha256Fingerprint = "debitis";
                             }};
-                            packageName = "dolorem";
+                            packageName = "ipsa";
                         }};
                         web = new WebAsset() {{
-                            site = "et";
+                            site = "delectus";
                         }};
                     }};
                     skipCacheLookup = false;
-                    statements = new openapisdk.models.shared.StatementTemplate[]() {{
+                    statements = new org.openapis.openapi.models.shared.StatementTemplate[]{{
                         add(new StatementTemplate() {{
-                            relation = "vitae";
+                            relation = "suscipit";
                             source = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "totam";
+                                        sha256Fingerprint = "molestiae";
                                     }};
-                                    packageName = "dolores";
+                                    packageName = "minus";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "illum";
+                                    site = "placeat";
                                 }};
                             }};
                             target = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "debitis";
+                                        sha256Fingerprint = "voluptatum";
                                     }};
-                                    packageName = "vel";
+                                    packageName = "iusto";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "odio";
+                                    site = "excepturi";
                                 }};
                             }};
                         }}),
                         add(new StatementTemplate() {{
-                            relation = "dolore";
+                            relation = "nisi";
                             source = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "id";
+                                        sha256Fingerprint = "recusandae";
                                     }};
-                                    packageName = "aspernatur";
+                                    packageName = "temporibus";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "accusantium";
+                                    site = "ab";
                                 }};
                             }};
                             target = new Asset() {{
                                 androidApp = new AndroidAppAsset() {{
                                     certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "totam";
+                                        sha256Fingerprint = "quis";
                                     }};
-                                    packageName = "commodi";
+                                    packageName = "veritatis";
                                 }};
                                 web = new WebAsset() {{
-                                    site = "quis";
-                                }};
-                            }};
-                        }}),
-                        add(new StatementTemplate() {{
-                            relation = "est";
-                            source = new Asset() {{
-                                androidApp = new AndroidAppAsset() {{
-                                    certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "aut";
-                                    }};
-                                    packageName = "odit";
-                                }};
-                                web = new WebAsset() {{
-                                    site = "non";
-                                }};
-                            }};
-                            target = new Asset() {{
-                                androidApp = new AndroidAppAsset() {{
-                                    certificate = new CertificateInfo() {{
-                                        sha256Fingerprint = "voluptas";
-                                    }};
-                                    packageName = "omnis";
-                                }};
-                                web = new WebAsset() {{
-                                    site = "aut";
+                                    site = "deserunt";
                                 }};
                             }};
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             DigitalassetlinksAssetlinksBulkCheckResponse res = sdk.assetlinks.digitalassetlinksAssetlinksBulkCheck(req);
 
@@ -159,6 +144,7 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### assetlinks
 
 * `digitalassetlinksAssetlinksBulkCheck` - Send a bundle of statement checks in a single RPC to minimize latency and service load. Statements need not be all for the same source and/or target. We recommend using this method when you need to check more than one statement in a short period of time.
@@ -167,7 +153,17 @@ public class Application {
 ### statements
 
 * `digitalassetlinksStatementsList` - Retrieves a list of all statements from a given source that match the specified target and statement string. The API guarantees that all statements with secure source assets, such as HTTPS websites or Android apps, have been made in a secure way by the owner of those assets, as described in the [Digital Asset Links technical design specification](https://github.com/google/digitalassetlinks/blob/master/well-known/details.md). Specifically, you should consider that for insecure websites (that is, where the URL starts with `http://` instead of `https://`), this guarantee cannot be made. The `List` command is most useful in cases where the API client wants to know all the ways in which two assets are related, or enumerate all the relationships from a particular source asset. Example: a feature that helps users navigate to related items. When a mobile app is running on a device, the feature would make it easy to navigate to the corresponding web site or Google+ profile.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

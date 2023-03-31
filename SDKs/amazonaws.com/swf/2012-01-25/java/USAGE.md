@@ -2,60 +2,67 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CountClosedWorkflowExecutionsXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CountClosedWorkflowExecutionsHeaders;
+import org.openapis.openapi.models.operations.CountClosedWorkflowExecutionsRequest;
+import org.openapis.openapi.models.operations.CountClosedWorkflowExecutionsResponse;
+import org.openapis.openapi.models.shared.CountClosedWorkflowExecutionsInput;
+import org.openapis.openapi.models.shared.WorkflowTypeFilter;
+import org.openapis.openapi.models.shared.TagFilter;
+import org.openapis.openapi.models.shared.ExecutionTimeFilter;
+import org.openapis.openapi.models.shared.WorkflowExecutionFilter;
+import org.openapis.openapi.models.shared.CloseStatusFilter;
+import org.openapis.openapi.models.shared.CloseStatusEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CountClosedWorkflowExecutionsRequest req = new CountClosedWorkflowExecutionsRequest() {{
                 headers = new CountClosedWorkflowExecutionsHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "SimpleWorkflowService.CountClosedWorkflowExecutions";
                 }};
                 request = new CountClosedWorkflowExecutionsInput() {{
                     closeStatusFilter = new CloseStatusFilter() {{
-                        status = "COMPLETED";
+                        status = "TIMED_OUT";
                     }};
                     closeTimeFilter = new ExecutionTimeFilter() {{
-                        latestDate = "2011-08-12T10:11:12Z";
-                        oldestDate = "2003-05-13T04:57:12Z";
+                        latestDate = "2022-05-18T09:34:54.894Z";
+                        oldestDate = "2022-03-26T09:37:56.283Z";
                     }};
-                    domain = "rerum";
+                    domain = "iure";
                     executionFilter = new WorkflowExecutionFilter() {{
-                        workflowId = "dicta";
+                        workflowId = "magnam";
                     }};
                     startTimeFilter = new ExecutionTimeFilter() {{
-                        latestDate = "2004-06-02T10:14:12Z";
-                        oldestDate = "1981-07-21T06:30:48Z";
+                        latestDate = "2022-10-30T21:34:57.850Z";
+                        oldestDate = "2022-03-08T10:35:32.561Z";
                     }};
                     tagFilter = new TagFilter() {{
-                        tag = "et";
+                        tag = "suscipit";
                     }};
                     typeFilter = new WorkflowTypeFilter() {{
-                        name = "ut";
-                        version = "dolorem";
+                        name = "molestiae";
+                        version = "minus";
                     }};
                 }};
-            }};
+            }};            
 
             CountClosedWorkflowExecutionsResponse res = sdk.countClosedWorkflowExecutions(req);
 

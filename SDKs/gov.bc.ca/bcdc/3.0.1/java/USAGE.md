@@ -2,29 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetActionOrganizationActivityListQueryParams;
+import org.openapis.openapi.models.operations.GetActionOrganizationActivityListRequest;
+import org.openapis.openapi.models.operations.GetActionOrganizationActivityListResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     githubAccessCode = new SchemeGithubAccessCode() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetActionOrganizationActivityListRequest req = new GetActionOrganizationActivityListRequest() {{
                 queryParams = new GetActionOrganizationActivityListQueryParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
             GetActionOrganizationActivityListResponse res = sdk.action.getActionOrganizationActivityList(req);
 

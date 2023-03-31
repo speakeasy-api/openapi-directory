@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,42 +15,43 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CloneBackendPathParams;
+import org.openapis.openapi.models.operations.CloneBackendHeaders;
+import org.openapis.openapi.models.operations.CloneBackendRequestBody;
+import org.openapis.openapi.models.operations.CloneBackendRequest;
+import org.openapis.openapi.models.operations.CloneBackendResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CloneBackendRequest req = new CloneBackendRequest() {{
                 pathParams = new CloneBackendPathParams() {{
-                    appId = "sit";
-                    backendEnvironmentName = "voluptas";
+                    appId = "corrupti";
+                    backendEnvironmentName = "provident";
                 }};
                 headers = new CloneBackendHeaders() {{
-                    xAmzAlgorithm = "culpa";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "consequuntur";
-                    xAmzDate = "dolor";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "voluptas";
-                    xAmzSignedHeaders = "fugit";
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
                 request = new CloneBackendRequestBody() {{
-                    targetEnvironmentName = "et";
+                    targetEnvironmentName = "error";
                 }};
-            }};
+            }};            
 
             CloneBackendResponse res = sdk.cloneBackend(req);
 
@@ -70,30 +71,46 @@ public class Application {
 
 * `cloneBackend` - This operation clones an existing backend.
 * `createBackend` - This operation creates a backend for an Amplify app. Backends are automatically created at the time of app creation.
-* `createBackendApi` - Creates a new backend API resource.
+* `createBackendAPI` - Creates a new backend API resource.
 * `createBackendAuth` - Creates a new backend authentication resource.
 * `createBackendConfig` - Creates a config object for a backend.
+* `createBackendStorage` - Creates a backend storage resource.
 * `createToken` - Generates a one-time challenge code to authenticate a user into your Amplify Admin UI.
 * `deleteBackend` - Removes an existing environment from your Amplify project.
-* `deleteBackendApi` - Deletes an existing backend API resource.
+* `deleteBackendAPI` - Deletes an existing backend API resource.
 * `deleteBackendAuth` - Deletes an existing backend authentication resource.
+* `deleteBackendStorage` - Removes the specified backend storage resource.
 * `deleteToken` - Deletes the challenge token based on the given appId and sessionId.
-* `generateBackendApiModels` - Generates a model schema for an existing backend API resource.
+* `generateBackendAPIModels` - Generates a model schema for an existing backend API resource.
 * `getBackend` - Provides project-level details for your Amplify UI project.
-* `getBackendApi` - Gets the details for a backend API.
-* `getBackendApiModels` - Generates a model schema for existing backend API resource.
+* `getBackendAPI` - Gets the details for a backend API.
+* `getBackendAPIModels` - Gets a model introspection schema for an existing backend API resource.
 * `getBackendAuth` - Gets a backend auth details.
 * `getBackendJob` - Returns information about a specific job.
+* `getBackendStorage` - Gets details for a backend storage resource.
 * `getToken` - Gets the challenge token based on the given appId and sessionId.
 * `importBackendAuth` - Imports an existing backend authentication resource.
+* `importBackendStorage` - Imports an existing backend storage resource.
 * `listBackendJobs` - Lists the jobs for the backend of an Amplify app.
+* `listS3Buckets` - The list of S3 buckets in your account.
 * `removeAllBackends` - Removes all backend environments from your Amplify project.
 * `removeBackendConfig` - Removes the AWS resources required to access the Amplify Admin UI.
-* `updateBackendApi` - Updates an existing backend API resource.
+* `updateBackendAPI` - Updates an existing backend API resource.
 * `updateBackendAuth` - Updates an existing backend authentication resource.
 * `updateBackendConfig` - Updates the AWS resources required to access the Amplify Admin UI.
 * `updateBackendJob` - Updates a specific job.
-
+* `updateBackendStorage` - Updates an existing backend storage resource.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

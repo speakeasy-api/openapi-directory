@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,70 +15,94 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateConnectorHeaders;
+import org.openapis.openapi.models.operations.CreateConnectorRequestBodyCapacity;
+import org.openapis.openapi.models.operations.CreateConnectorRequestBodyKafkaCluster;
+import org.openapis.openapi.models.operations.CreateConnectorRequestBodyKafkaClusterClientAuthentication;
+import org.openapis.openapi.models.operations.CreateConnectorRequestBodyKafkaClusterEncryptionInTransit;
+import org.openapis.openapi.models.operations.CreateConnectorRequestBodyLogDelivery;
+import org.openapis.openapi.models.operations.CreateConnectorRequestBodyWorkerConfiguration;
+import org.openapis.openapi.models.operations.CreateConnectorRequestBody;
+import org.openapis.openapi.models.operations.CreateConnectorRequest;
+import org.openapis.openapi.models.operations.CreateConnectorResponse;
+import org.openapis.openapi.models.shared.Plugin;
+import org.openapis.openapi.models.shared.CustomPlugin;
+import org.openapis.openapi.models.shared.WorkerLogDelivery;
+import org.openapis.openapi.models.shared.S3LogDelivery;
+import org.openapis.openapi.models.shared.FirehoseLogDelivery;
+import org.openapis.openapi.models.shared.CloudWatchLogsLogDelivery;
+import org.openapis.openapi.models.shared.KafkaClusterEncryptionInTransitTypeEnum;
+import org.openapis.openapi.models.shared.KafkaClusterClientAuthenticationTypeEnum;
+import org.openapis.openapi.models.shared.ApacheKafkaCluster;
+import org.openapis.openapi.models.shared.Vpc;
+import org.openapis.openapi.models.shared.ProvisionedCapacity;
+import org.openapis.openapi.models.shared.AutoScaling;
+import org.openapis.openapi.models.shared.ScaleOutPolicy;
+import org.openapis.openapi.models.shared.ScaleInPolicy;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateConnectorRequest req = new CreateConnectorRequest() {{
                 headers = new CreateConnectorHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateConnectorRequestBody() {{
                     capacity = new CreateConnectorRequestBodyCapacity() {{
                         autoScaling = new AutoScaling() {{
-                            maxWorkerCount = 6044372234677422456;
-                            mcuCount = 8274930044578894929;
-                            minWorkerCount = 1543572285742637646;
+                            maxWorkerCount = 847252;
+                            mcuCount = 423655;
+                            minWorkerCount = 623564;
                             scaleInPolicy = new ScaleInPolicy() {{
-                                cpuUtilizationPercentage = 2661732831099943416;
+                                cpuUtilizationPercentage = 645894;
                             }};
                             scaleOutPolicy = new ScaleOutPolicy() {{
-                                cpuUtilizationPercentage = 8325060299420976708;
+                                cpuUtilizationPercentage = 384382;
                             }};
                         }};
                         provisionedCapacity = new ProvisionedCapacity() {{
-                            mcuCount = 7837839688282259259;
-                            workerCount = 2518412263346885298;
+                            mcuCount = 437587;
+                            workerCount = 297534;
                         }};
                     }};
                     connectorConfiguration = new java.util.HashMap<String, String>() {{
-                        put("et", "ut");
+                        put("ipsa", "delectus");
+                        put("tempora", "suscipit");
+                        put("molestiae", "minus");
+                        put("placeat", "voluptatum");
                     }};
-                    connectorDescription = "dolorem";
-                    connectorName = "et";
+                    connectorDescription = "iusto";
+                    connectorName = "excepturi";
                     kafkaCluster = new CreateConnectorRequestBodyKafkaCluster() {{
                         apacheKafkaCluster = new ApacheKafkaCluster() {{
-                            bootstrapServers = "voluptate";
+                            bootstrapServers = "nisi";
                             vpc = new Vpc() {{
-                                securityGroups = new String[]() {{
-                                    add("vitae"),
-                                    add("totam"),
-                                    add("dolores"),
+                                securityGroups = new String[]{{
+                                    add("temporibus"),
+                                    add("ab"),
+                                    add("quis"),
+                                    add("veritatis"),
                                 }};
-                                subnets = new String[]() {{
-                                    add("debitis"),
-                                    add("vel"),
-                                    add("odio"),
+                                subnets = new String[]{{
+                                    add("perferendis"),
+                                    add("ipsam"),
+                                    add("repellendus"),
                                 }};
                             }};
                         }};
@@ -87,53 +111,59 @@ public class Application {
                         authenticationType = "IAM";
                     }};
                     kafkaClusterEncryptionInTransit = new CreateConnectorRequestBodyKafkaClusterEncryptionInTransit() {{
-                        encryptionType = "PLAINTEXT";
+                        encryptionType = "TLS";
                     }};
-                    kafkaConnectVersion = "aspernatur";
+                    kafkaConnectVersion = "odit";
                     logDelivery = new CreateConnectorRequestBodyLogDelivery() {{
                         workerLogDelivery = new WorkerLogDelivery() {{
                             cloudWatchLogs = new CloudWatchLogsLogDelivery() {{
-                                enabled = true;
-                                logGroup = "totam";
+                                enabled = false;
+                                logGroup = "at";
                             }};
                             firehose = new FirehoseLogDelivery() {{
-                                deliveryStream = "commodi";
-                                enabled = true;
+                                deliveryStream = "at";
+                                enabled = false;
                             }};
                             s3 = new S3LogDelivery() {{
-                                bucket = "est";
-                                enabled = true;
-                                prefix = "odit";
+                                bucket = "maiores";
+                                enabled = false;
+                                prefix = "molestiae";
                             }};
                         }};
                     }};
-                    plugins = new openapisdk.models.shared.Plugin[]() {{
+                    plugins = new org.openapis.openapi.models.shared.Plugin[]{{
                         add(new Plugin() {{
                             customPlugin = new CustomPlugin() {{
-                                customPluginArn = "voluptas";
-                                revision = 4778690082005258714;
+                                customPluginArn = "quod";
+                                revision = 461479;
                             }};
                         }}),
                         add(new Plugin() {{
                             customPlugin = new CustomPlugin() {{
-                                customPluginArn = "aut";
-                                revision = 6972732843819909978;
+                                customPluginArn = "totam";
+                                revision = 780529;
                             }};
                         }}),
                         add(new Plugin() {{
                             customPlugin = new CustomPlugin() {{
-                                customPluginArn = "sed";
-                                revision = 7845762441295307478;
+                                customPluginArn = "dolorum";
+                                revision = 118274;
+                            }};
+                        }}),
+                        add(new Plugin() {{
+                            customPlugin = new CustomPlugin() {{
+                                customPluginArn = "nam";
+                                revision = 639921;
                             }};
                         }}),
                     }};
-                    serviceExecutionRoleArn = "autem";
+                    serviceExecutionRoleArn = "occaecati";
                     workerConfiguration = new CreateConnectorRequestBodyWorkerConfiguration() {{
-                        revision = 8514850266767180993;
-                        workerConfigurationArn = "nobis";
+                        revision = 143353;
+                        workerConfigurationArn = "deleniti";
                     }};
                 }};
-            }};
+            }};            
 
             CreateConnectorResponse res = sdk.createConnector(req);
 
@@ -155,6 +185,7 @@ public class Application {
 * `createCustomPlugin` - Creates a custom plugin using the specified properties.
 * `createWorkerConfiguration` - Creates a worker configuration using the specified properties.
 * `deleteConnector` - Deletes the specified connector.
+* `deleteCustomPlugin` - Deletes a custom plugin.
 * `describeConnector` - Returns summary information about the connector.
 * `describeCustomPlugin` - A summary description of the custom plugin.
 * `describeWorkerConfiguration` - Returns information about a worker configuration.
@@ -162,7 +193,17 @@ public class Application {
 * `listCustomPlugins` - Returns a list of all of the custom plugins in this account and Region.
 * `listWorkerConfigurations` - Returns a list of all of the worker configurations in this account and Region.
 * `updateConnector` - Updates the specified connector.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

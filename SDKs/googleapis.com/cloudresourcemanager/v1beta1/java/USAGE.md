@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetSecurityOption1;
+import org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetSecurityOption2;
+import org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetSecurity;
+import org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetPathParams;
+import org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetQueryParams;
+import org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetRequest;
+import org.openapis.openapi.models.operations.CloudresourcemanagerOrganizationsGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudresourcemanagerOrganizationsGetRequest req = new CloudresourcemanagerOrganizationsGetRequest() {{
                 security = new CloudresourcemanagerOrganizationsGetSecurity() {{
@@ -24,23 +34,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudresourcemanagerOrganizationsGetPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new CloudresourcemanagerOrganizationsGetQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    organizationId = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    organizationId = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             CloudresourcemanagerOrganizationsGetResponse res = sdk.organizations.cloudresourcemanagerOrganizationsGet(req);
 

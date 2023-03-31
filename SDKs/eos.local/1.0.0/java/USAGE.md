@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ConnectRequestBody;
+import org.openapis.openapi.models.operations.ConnectRequest;
+import org.openapis.openapi.models.operations.ConnectResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ConnectRequest req = new ConnectRequest() {{
                 request = new ConnectRequestBody() {{
-                    endpoint = "sit";
+                    endpoint = "corrupti";
                 }};
-            }};
+            }};            
 
             ConnectResponse res = sdk.connect(req);
 

@@ -2,45 +2,51 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateContainerXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateContainerHeaders;
+import org.openapis.openapi.models.operations.CreateContainerRequest;
+import org.openapis.openapi.models.operations.CreateContainerResponse;
+import org.openapis.openapi.models.shared.CreateContainerInput;
+import org.openapis.openapi.models.shared.Tag;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateContainerRequest req = new CreateContainerRequest() {{
                 headers = new CreateContainerHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "MediaStore_20170901.CreateContainer";
                 }};
                 request = new CreateContainerInput() {{
-                    containerName = "fugit";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    containerName = "illum";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "nihil";
-                            value = "rerum";
+                            key = "error";
+                            value = "deserunt";
+                        }}),
+                        add(new Tag() {{
+                            key = "suscipit";
+                            value = "iure";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateContainerResponse res = sdk.createContainer(req);
 

@@ -2,15 +2,20 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetVeteranStatusSecurity;
+import org.openapis.openapi.models.operations.GetVeteranStatusRequest;
+import org.openapis.openapi.models.operations.GetVeteranStatusResponse;
+import org.openapis.openapi.models.shared.VeteranStatusRequestGenderEnum;
+import org.openapis.openapi.models.shared.VeteranStatusRequest;
+import org.openapis.openapi.models.shared.SchemeApikey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetVeteranStatusRequest req = new GetVeteranStatusRequest() {{
                 security = new GetVeteranStatusSecurity() {{
@@ -19,14 +24,14 @@ public class Application {
                     }};
                 }};
                 request = new VeteranStatusRequest() {{
-                    birthDate = "sit";
-                    firstName = "voluptas";
-                    gender = "F";
-                    lastName = "expedita";
-                    middleName = "consequuntur";
-                    ssn = "dolor";
+                    birthDate = "1965-01-01";
+                    firstName = "John";
+                    gender = "M";
+                    lastName = "Doe";
+                    middleName = "Theodore";
+                    ssn = "555-55-5555";
                 }};
-            }};
+            }};            
 
             GetVeteranStatusResponse res = sdk.veteranConfirmationStatus.getVeteranStatus(req);
 

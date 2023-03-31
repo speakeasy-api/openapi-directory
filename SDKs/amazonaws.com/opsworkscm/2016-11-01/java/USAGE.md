@@ -2,46 +2,60 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateNodeXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AssociateNodeHeaders;
+import org.openapis.openapi.models.operations.AssociateNodeRequest;
+import org.openapis.openapi.models.operations.AssociateNodeResponse;
+import org.openapis.openapi.models.shared.AssociateNodeRequest;
+import org.openapis.openapi.models.shared.EngineAttribute;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateNodeRequest req = new AssociateNodeRequest() {{
                 headers = new AssociateNodeHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "OpsWorksCM_V2016_11_01.AssociateNode";
                 }};
                 request = new AssociateNodeRequest() {{
-                    engineAttributes = new openapisdk.models.shared.EngineAttribute[]() {{
+                    engineAttributes = new org.openapis.openapi.models.shared.EngineAttribute[]{{
                         add(new EngineAttribute() {{
-                            name = "et";
-                            value = "nihil";
+                            name = "vel";
+                            value = "error";
+                        }}),
+                        add(new EngineAttribute() {{
+                            name = "deserunt";
+                            value = "suscipit";
+                        }}),
+                        add(new EngineAttribute() {{
+                            name = "iure";
+                            value = "magnam";
+                        }}),
+                        add(new EngineAttribute() {{
+                            name = "debitis";
+                            value = "ipsa";
                         }}),
                     }};
-                    nodeName = "rerum";
-                    serverName = "dicta";
+                    nodeName = "delectus";
+                    serverName = "tempora";
                 }};
-            }};
+            }};            
 
             AssociateNodeResponse res = sdk.associateNode(req);
 

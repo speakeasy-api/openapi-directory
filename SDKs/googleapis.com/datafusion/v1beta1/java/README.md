@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreateSecurity;
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreatePathParams;
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreateQueryParams;
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreateRequest;
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreateResponse;
+import org.openapis.openapi.models.shared.InstanceTypeEnum;
+import org.openapis.openapi.models.shared.InstanceInput;
+import org.openapis.openapi.models.shared.NetworkConfig;
+import org.openapis.openapi.models.shared.EventPublishConfig;
+import org.openapis.openapi.models.shared.CryptoKeyConfig;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DatafusionProjectsLocationsInstancesCreateRequest req = new DatafusionProjectsLocationsInstancesCreateRequest() {{
                 security = new DatafusionProjectsLocationsInstancesCreateSecurity() {{
@@ -35,71 +48,56 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatafusionProjectsLocationsInstancesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new DatafusionProjectsLocationsInstancesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    instanceId = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    instanceId = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new InstanceInput() {{
-                    accelerators = new openapisdk.models.shared.Accelerator[]() {{
-                        add(new Accelerator() {{
-                            acceleratorType = "ACCELERATOR_TYPE_UNSPECIFIED";
-                        }}),
-                    }};
-                    availableVersion = new openapisdk.models.shared.Version[]() {{
-                        add(new Version() {{
-                            availableFeatures = new String[]() {{
-                                add("dolorem"),
-                                add("et"),
-                                add("voluptate"),
-                            }};
-                            defaultVersion = true;
-                            type = "TYPE_UNSPECIFIED";
-                            versionNumber = "totam";
-                        }}),
-                    }};
                     cryptoKeyConfig = new CryptoKeyConfig() {{
-                        keyReference = "dolores";
+                        keyReference = "iure";
                     }};
-                    dataprocServiceAccount = "illum";
+                    dataprocServiceAccount = "magnam";
                     description = "debitis";
-                    displayName = "vel";
+                    displayName = "ipsa";
                     enableRbac = false;
-                    enableStackdriverLogging = true;
+                    enableStackdriverLogging = false;
                     enableStackdriverMonitoring = false;
+                    enableZoneSeparation = false;
                     eventPublishConfig = new EventPublishConfig() {{
-                        enabled = true;
-                        topic = "accusantium";
+                        enabled = false;
+                        topic = "delectus";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("commodi", "quis");
-                        put("est", "aut");
-                        put("odit", "non");
+                        put("suscipit", "molestiae");
+                        put("minus", "placeat");
                     }};
                     networkConfig = new NetworkConfig() {{
-                        ipAllocation = "voluptas";
-                        network = "omnis";
+                        ipAllocation = "voluptatum";
+                        network = "iusto";
                     }};
                     options = new java.util.HashMap<String, String>() {{
-                        put("illo", "sed");
+                        put("nisi", "recusandae");
+                        put("temporibus", "ab");
+                        put("quis", "veritatis");
                     }};
                     privateInstance = false;
-                    type = "DEVELOPER";
-                    version = "consectetur";
-                    zone = "nobis";
+                    type = "ENTERPRISE";
+                    version = "perferendis";
+                    zone = "ipsam";
                 }};
-            }};
+            }};            
 
             DatafusionProjectsLocationsInstancesCreateResponse res = sdk.projects.datafusionProjectsLocationsInstancesCreate(req);
 
@@ -114,6 +112,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### projects
 
@@ -132,10 +131,20 @@ public class Application {
 * `datafusionProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `datafusionProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `datafusionProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `datafusionProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `datafusionProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `datafusionProjectsLocationsRemoveIamPolicy` - Remove IAM policy that is currently set on the given resource.
 * `datafusionProjectsLocationsVersionsList` - Lists possible versions for Data Fusion instances in the specified project and location.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,42 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETDeleteListenerActionEnum;
+import org.openapis.openapi.models.operations.GETDeleteListenerVersionEnum;
+import org.openapis.openapi.models.operations.GETDeleteListenerQueryParams;
+import org.openapis.openapi.models.operations.GETDeleteListenerHeaders;
+import org.openapis.openapi.models.operations.GETDeleteListenerRequest;
+import org.openapis.openapi.models.operations.GETDeleteListenerResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetDeleteListenerRequest req = new GetDeleteListenerRequest() {{
-                queryParams = new GetDeleteListenerQueryParams() {{
+            GETDeleteListenerRequest req = new GETDeleteListenerRequest() {{
+                queryParams = new GETDeleteListenerQueryParams() {{
                     action = "DeleteListener";
-                    listenerArn = "voluptas";
+                    listenerArn = "corrupti";
                     version = "2015-12-01";
                 }};
-                headers = new GetDeleteListenerHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
+                headers = new GETDeleteListenerHeaders() {{
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-            }};
+            }};            
 
-            GetDeleteListenerResponse res = sdk.getDeleteListener(req);
+            GETDeleteListenerResponse res = sdk.getDeleteListener(req);
 
             if (res.body.isPresent()) {
                 // handle response

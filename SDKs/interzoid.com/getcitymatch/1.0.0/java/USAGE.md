@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetcitymatchQueryParams;
+import org.openapis.openapi.models.operations.GetcitymatchRequest;
+import org.openapis.openapi.models.operations.GetcitymatchResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetcitymatchRequest req = new GetcitymatchRequest() {{
                 queryParams = new GetcitymatchQueryParams() {{
-                    city = "sit";
-                    license = "voluptas";
+                    city = "Laruecester";
+                    license = "quibusdam";
                 }};
-            }};
+            }};            
 
             GetcitymatchResponse res = sdk.cityNameSimilarityKey.getcitymatch(req);
 

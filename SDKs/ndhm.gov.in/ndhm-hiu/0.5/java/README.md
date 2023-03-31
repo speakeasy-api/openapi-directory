@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,15 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetV05WellKnownOpenidConfigurationResponse res = sdk.gateway.getV05WellKnownOpenidConfiguration();
 
@@ -39,41 +39,59 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Gateway
+
+### gateway
 
 * `getV05WellKnownOpenidConfiguration` - Get openid configuration
 * `getV05Certs` - Get certs for JWT verification
-* `postV05ConsentRequestsInit` - Create consent request
-* `postV05ConsentRequestsStatus` - Get consent request status
+* `postV05ConsentRequestsInitJson` - Create consent request
+* `postV05ConsentRequestsInitRaw` - Create consent request
+* `postV05ConsentRequestsStatusJson` - Get consent request status
+* `postV05ConsentRequestsStatusRaw` - Get consent request status
 * `postV05ConsentsFetch` - Get consent artefact
 * `postV05ConsentsHiuOnNotify` - Consent notification
-* `postV05HealthInformationCmRequest` - Health information data request
-* `postV05HealthInformationNotify` - Notifications corresponding to events during data flow
-* `postV05PatientsFind` - Identify a patient by her consent-manager user-id
-* `postV05Sessions` - Get access token
-* `postV05SubscriptionRequestsCmInit` - Request for subscription
+* `postV05HealthInformationCmRequestJson` - Health information data request
+* `postV05HealthInformationCmRequestRaw` - Health information data request
+* `postV05HealthInformationNotifyJson` - Notifications corresponding to events during data flow
+* `postV05HealthInformationNotifyRaw` - Notifications corresponding to events during data flow
+* `postV05PatientsFindJson` - Identify a patient by her consent-manager user-id
+* `postV05PatientsFindRaw` - Identify a patient by her consent-manager user-id
+* `postV05SessionsJson` - Get access token
+* `postV05SessionsRaw` - Get access token
+* `postV05SubscriptionRequestsCmInitJson` - Request for subscription
+* `postV05SubscriptionRequestsCmInitRaw` - Request for subscription
 * `postV05SubscriptionRequestsHiuOnNotify` - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
 * `postV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
-* `postV05UsersAuthConfirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-* `postV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
-* `postV05UsersAuthInit` - Initialize authentication from HIP
-* `postV05UsersAuthOnNotify` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `postV05UsersAuthConfirmJson` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `postV05UsersAuthConfirmRaw` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `postV05UsersAuthFetchModesJson` - Get a patient's authentication modes relevant to specified purpose
+* `postV05UsersAuthFetchModesRaw` - Get a patient's authentication modes relevant to specified purpose
+* `postV05UsersAuthInitJson` - Initialize authentication from HIP
+* `postV05UsersAuthInitRaw` - Initialize authentication from HIP
+* `postV05UsersAuthOnNotifyJson` - callback API by HIU/HIPs as acknowledgement of auth notification
+* `postV05UsersAuthOnNotifyRaw` - callback API by HIU/HIPs as acknowledgement of auth notification
 
-### consent flow
+### consentFlow
 
-* `postV05ConsentRequestsOnInit` - Response to consent request
-* `postV05ConsentRequestsOnStatus` - Result of consent request status
+* `postV05ConsentRequestsOnInitJson` - Response to consent request
+* `postV05ConsentRequestsOnInitRaw` - Response to consent request
+* `postV05ConsentRequestsOnStatusJson` - Result of consent request status
+* `postV05ConsentRequestsOnStatusRaw` - Result of consent request status
 * `postV05ConsentsHiuNotify` - Consent notification
-* `postV05ConsentsOnFetch` - Result of fetch request for a consent artefact
+* `postV05ConsentsOnFetchJson` - Result of fetch request for a consent artefact
+* `postV05ConsentsOnFetchRaw` - Result of fetch request for a consent artefact
 
-### data flow
+### dataFlow
 
-* `postV05HealthInformationHiuOnRequest` - Health information data request
-* `postV05HealthInformationTransfer` - health information transfer API
+* `postV05HealthInformationHiuOnRequestJson` - Health information data request
+* `postV05HealthInformationHiuOnRequestRaw` - Health information data request
+* `postV05HealthInformationTransferJson` - health information transfer API
+* `postV05HealthInformationTransferRaw` - health information transfer API
 
 ### identification
 
-* `postV05PatientsOnFind` - Identification result for a consent-manager user-id
+* `postV05PatientsOnFindJson` - Identification result for a consent-manager user-id
+* `postV05PatientsOnFindRaw` - Identification result for a consent-manager user-id
 
 ### monitoring
 
@@ -81,17 +99,33 @@ public class Application {
 
 ### subscriptions
 
-* `postV05SubscriptionRequestsHiuNotify` - Notification for subscription grant/deny/revoke
+* `postV05SubscriptionRequestsHiuNotifyJson` - Notification for subscription grant/deny/revoke
+* `postV05SubscriptionRequestsHiuNotifyRaw` - Notification for subscription grant/deny/revoke
 * `postV05SubscriptionRequestsHiuOnInit` - callback API for the /subscription-requests/cm/init to notify a HIU on acceptance/acknowledgement of the request for subscription.
-* `postV05SubscriptionsHiuNotify` - Notification to HIU on basis of a granted subscription
+* `postV05SubscriptionsHiuNotifyJson` - Notification to HIU on basis of a granted subscription
+* `postV05SubscriptionsHiuNotifyRaw` - Notification to HIU on basis of a granted subscription
 
-### user auth
+### userAuth
 
-* `postV05UsersAuthNotify` - notification API in case of DIRECT mode of authentication by the CM
-* `postV05UsersAuthOnConfirm` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
-* `postV05UsersAuthOnFetchModes` - Identification result for a consent-manager user-id
-* `postV05UsersAuthOnInit` - Response to user authentication initialization from HIP
-
+* `postV05UsersAuthNotifyJson` - notification API in case of DIRECT mode of authentication by the CM
+* `postV05UsersAuthNotifyRaw` - notification API in case of DIRECT mode of authentication by the CM
+* `postV05UsersAuthOnConfirmJson` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `postV05UsersAuthOnConfirmRaw` - callback API for /auth/confirm (in case of MEDIATED auth) to confirm user authentication or not
+* `postV05UsersAuthOnFetchModesJson` - Identification result for a consent-manager user-id
+* `postV05UsersAuthOnFetchModesRaw` - Identification result for a consent-manager user-id
+* `postV05UsersAuthOnInitJson` - Response to user authentication initialization from HIP
+* `postV05UsersAuthOnInitRaw` - Response to user authentication initialization from HIP
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

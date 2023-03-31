@@ -2,29 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetBestPodcastsSortEnum;
+import org.openapis.openapi.models.operations.GetBestPodcastsQueryParams;
+import org.openapis.openapi.models.operations.GetBestPodcastsHeaders;
+import org.openapis.openapi.models.operations.GetBestPodcastsRequest;
+import org.openapis.openapi.models.operations.GetBestPodcastsResponse;
+import org.openapis.openapi.models.shared.SafeModeParamEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetBestPodcastsRequest req = new GetBestPodcastsRequest() {{
                 queryParams = new GetBestPodcastsQueryParams() {{
-                    genreId = "sit";
-                    language = "voluptas";
-                    page = 6050128673802995827;
-                    publisherRegion = "expedita";
-                    region = "consequuntur";
-                    safeMode = 2669985732393126063;
+                    genreId = "corrupti";
+                    language = "provident";
+                    page = 715190;
+                    publisherRegion = "quibusdam";
+                    region = "unde";
+                    safeMode = "1";
+                    sort = "recent_published_first";
                 }};
                 headers = new GetBestPodcastsHeaders() {{
-                    xListenAPIKey = "expedita";
+                    xListenAPIKey = "illum";
                 }};
-            }};
+            }};            
 
             GetBestPodcastsResponse res = sdk.directoryAPI.getBestPodcasts(req);
 

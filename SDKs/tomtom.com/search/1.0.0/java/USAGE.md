@@ -2,34 +2,37 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtExtEnum;
+import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtPathParams;
+import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum;
+import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtQueryParams;
+import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtRequest;
+import org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtResponse;
+import org.openapis.openapi.models.shared.VersionNumberEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKey = new SchemeApiKey() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetSearchVersionNumberAdditionalDataExtRequest req = new GetSearchVersionNumberAdditionalDataExtRequest() {{
                 pathParams = new GetSearchVersionNumberAdditionalDataExtPathParams() {{
                     ext = "json";
-                    versionNumber = 2259404117704393152;
+                    versionNumber = "2";
                 }};
                 queryParams = new GetSearchVersionNumberAdditionalDataExtQueryParams() {{
-                    geometries = "culpa";
-                    geometriesZoom = 501233450539197794;
+                    geometries = "corrupti";
+                    geometriesZoom = "13";
                 }};
-            }};
+            }};            
 
             GetSearchVersionNumberAdditionalDataExtResponse res = sdk.additionalData.getSearchVersionNumberAdditionalDataExt(req);
 

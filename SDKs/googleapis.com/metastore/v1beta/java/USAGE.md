@@ -2,15 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateSecurity;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreatePathParams;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateQueryParams;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateRequest;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse;
+import org.openapis.openapi.models.shared.FederationInput;
+import org.openapis.openapi.models.shared.BackendMetastoreMetastoreTypeEnum;
+import org.openapis.openapi.models.shared.BackendMetastore;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             MetastoreProjectsLocationsFederationsCreateRequest req = new MetastoreProjectsLocationsFederationsCreateRequest() {{
                 security = new MetastoreProjectsLocationsFederationsCreateSecurity() {{
@@ -22,38 +33,44 @@ public class Application {
                     }};
                 }};
                 pathParams = new MetastoreProjectsLocationsFederationsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new MetastoreProjectsLocationsFederationsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    federationId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    federationId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    requestId = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    quotaUser = "error";
+                    requestId = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
                 request = new FederationInput() {{
-                    backendMetastores = new java.util.HashMap<String, openapisdk.models.shared.BackendMetastore>() {{
-                        put("et", new BackendMetastore() {{
-                            metastoreType = "DATAPROC_METASTORE";
-                            name = "dolorem";
+                    backendMetastores = new java.util.HashMap<String, org.openapis.openapi.models.shared.BackendMetastore>() {{
+                        put("debitis", new BackendMetastore() {{
+                            metastoreType = "METASTORE_TYPE_UNSPECIFIED";
+                            name = "delectus";
+                        }});
+                        put("tempora", new BackendMetastore() {{
+                            metastoreType = "DATAPLEX";
+                            name = "molestiae";
                         }});
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("voluptate", "iste");
-                        put("vitae", "totam");
+                        put("placeat", "voluptatum");
+                        put("iusto", "excepturi");
+                        put("nisi", "recusandae");
+                        put("temporibus", "ab");
                     }};
-                    name = "dolores";
-                    version = "illum";
+                    name = "quis";
+                    version = "veritatis";
                 }};
-            }};
+            }};            
 
             MetastoreProjectsLocationsFederationsCreateResponse res = sdk.projects.metastoreProjectsLocationsFederationsCreate(req);
 

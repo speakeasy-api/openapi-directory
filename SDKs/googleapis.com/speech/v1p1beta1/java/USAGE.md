@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SpeechOperationsGetSecurity;
+import org.openapis.openapi.models.operations.SpeechOperationsGetPathParams;
+import org.openapis.openapi.models.operations.SpeechOperationsGetQueryParams;
+import org.openapis.openapi.models.operations.SpeechOperationsGetRequest;
+import org.openapis.openapi.models.operations.SpeechOperationsGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             SpeechOperationsGetRequest req = new SpeechOperationsGetRequest() {{
                 security = new SpeechOperationsGetSecurity() {{
@@ -22,22 +30,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new SpeechOperationsGetPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new SpeechOperationsGetQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-            }};
+            }};            
 
             SpeechOperationsGetResponse res = sdk.operations.speechOperationsGet(req);
 

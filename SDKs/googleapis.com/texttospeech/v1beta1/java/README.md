@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,18 +15,26 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetSecurity;
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetPathParams;
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetQueryParams;
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetRequest;
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            TexttospeechProjectsLocationsVoicesSynthesizeLongAudioRequest req = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioRequest() {{
-                security = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioSecurity() {{
+            TexttospeechProjectsLocationsOperationsGetRequest req = new TexttospeechProjectsLocationsOperationsGetRequest() {{
+                security = new TexttospeechProjectsLocationsOperationsGetSecurity() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
@@ -34,51 +42,25 @@ public class Application {
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioPathParams() {{
-                    parent = "sit";
+                pathParams = new TexttospeechProjectsLocationsOperationsGetPathParams() {{
+                    name = "corrupti";
                 }};
-                queryParams = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                queryParams = new TexttospeechProjectsLocationsOperationsGetQueryParams() {{
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-                request = new SynthesizeLongAudioRequest() {{
-                    audioConfig = new AudioConfig() {{
-                        audioEncoding = "OGG_OPUS";
-                        effectsProfileId = new String[]() {{
-                            add("voluptatum"),
-                        }};
-                        pitch = 26.200001;
-                        sampleRateHertz = 161231572858529631;
-                        speakingRate = 50.099998;
-                        volumeGainDb = 15.100000;
-                    }};
-                    input = new SynthesisInput() {{
-                        ssml = "totam";
-                        text = "dolores";
-                    }};
-                    outputGcsUri = "illum";
-                    voice = new VoiceSelectionParams() {{
-                        customVoice = new CustomVoiceParams() {{
-                            model = "debitis";
-                            reportedUsage = "REALTIME";
-                        }};
-                        languageCode = "odio";
-                        name = "dolore";
-                        ssmlGender = "SSML_VOICE_GENDER_UNSPECIFIED";
-                    }};
-                }};
-            }};
+            }};            
 
-            TexttospeechProjectsLocationsVoicesSynthesizeLongAudioResponse res = sdk.projects.texttospeechProjectsLocationsVoicesSynthesizeLongAudio(req);
+            TexttospeechProjectsLocationsOperationsGetResponse res = sdk.projects.texttospeechProjectsLocationsOperationsGet(req);
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -92,9 +74,12 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
-* `texttospeechProjectsLocationsVoicesSynthesizeLongAudio` - Synthesizes long form text asynchronously.
+* `texttospeechProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* `texttospeechProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* `texttospeechProjectsLocationsSynthesizeLongAudio` - Synthesizes long form text asynchronously.
 
 ### text
 
@@ -103,7 +88,17 @@ public class Application {
 ### voices
 
 * `texttospeechVoicesList` - Returns a list of Voice supported for synthesis.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,43 +2,46 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AcceptMatchXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AcceptMatchHeaders;
+import org.openapis.openapi.models.operations.AcceptMatchRequest;
+import org.openapis.openapi.models.operations.AcceptMatchResponse;
+import org.openapis.openapi.models.shared.AcceptMatchInput;
+import org.openapis.openapi.models.shared.AcceptanceTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AcceptMatchRequest req = new AcceptMatchRequest() {{
                 headers = new AcceptMatchHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "GameLift.AcceptMatch";
                 }};
                 request = new AcceptMatchInput() {{
-                    acceptanceType = "ACCEPT";
-                    playerIds = new String[]() {{
-                        add("nihil"),
+                    acceptanceType = "REJECT";
+                    playerIds = new String[]{{
+                        add("error"),
+                        add("deserunt"),
                     }};
-                    ticketId = "rerum";
+                    ticketId = "suscipit";
                 }};
-            }};
+            }};            
 
             AcceptMatchResponse res = sdk.acceptMatch(req);
 

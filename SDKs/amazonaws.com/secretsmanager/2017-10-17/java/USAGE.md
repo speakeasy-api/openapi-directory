@@ -2,39 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CancelRotateSecretXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CancelRotateSecretHeaders;
+import org.openapis.openapi.models.operations.CancelRotateSecretRequest;
+import org.openapis.openapi.models.operations.CancelRotateSecretResponse;
+import org.openapis.openapi.models.shared.CancelRotateSecretRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CancelRotateSecretRequest req = new CancelRotateSecretRequest() {{
                 headers = new CancelRotateSecretHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "secretsmanager.CancelRotateSecret";
                 }};
                 request = new CancelRotateSecretRequest() {{
-                    secretId = "fugit";
+                    secretId = "illum";
                 }};
-            }};
+            }};            
 
             CancelRotateSecretResponse res = sdk.cancelRotateSecret(req);
 

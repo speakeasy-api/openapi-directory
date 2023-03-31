@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveSecurity;
+import org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApprovePathParams;
+import org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveQueryParams;
+import org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveRequest;
+import org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveResponse;
+import org.openapis.openapi.models.shared.ApproveApprovalRequestMessage;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AccessapprovalProjectsApprovalRequestsApproveRequest req = new AccessapprovalProjectsApprovalRequestsApproveRequest() {{
                 security = new AccessapprovalProjectsApprovalRequestsApproveSecurity() {{
@@ -22,25 +31,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new AccessapprovalProjectsApprovalRequestsApprovePathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new AccessapprovalProjectsApprovalRequestsApproveQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new ApproveApprovalRequestMessage() {{
-                    expireTime = "dicta";
+                    expireTime = "suscipit";
                 }};
-            }};
+            }};            
 
             AccessapprovalProjectsApprovalRequestsApproveResponse res = sdk.projects.accessapprovalProjectsApprovalRequestsApprove(req);
 

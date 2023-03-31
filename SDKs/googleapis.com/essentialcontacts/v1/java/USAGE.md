@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeSecurity;
+import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputePathParams;
+import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum;
+import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeQueryParams;
+import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeRequest;
+import org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             EssentialcontactsProjectsContactsComputeRequest req = new EssentialcontactsProjectsContactsComputeRequest() {{
                 security = new EssentialcontactsProjectsContactsComputeSecurity() {{
@@ -22,29 +31,30 @@ public class Application {
                     }};
                 }};
                 pathParams = new EssentialcontactsProjectsContactsComputePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new EssentialcontactsProjectsContactsComputeQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    notificationCategories = new openapisdk.models.operations.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum[]() {{
-                        add("NOTIFICATION_CATEGORY_UNSPECIFIED"),
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    notificationCategories = new org.openapis.openapi.models.operations.EssentialcontactsProjectsContactsComputeNotificationCategoriesEnum[]{{
                         add("SECURITY"),
-                        add("LEGAL"),
+                        add("BILLING"),
+                        add("BILLING"),
+                        add("SECURITY"),
                     }};
-                    oauthToken = "rerum";
-                    pageSize = 7837839688282259259;
+                    oauthToken = "iure";
+                    pageSize = 297534;
                     pageToken = "debitis";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "ut";
-                    uploadProtocol = "dolorem";
+                    prettyPrint = false;
+                    quotaUser = "ipsa";
+                    uploadType = "delectus";
+                    uploadProtocol = "tempora";
                 }};
-            }};
+            }};            
 
             EssentialcontactsProjectsContactsComputeResponse res = sdk.projects.essentialcontactsProjectsContactsCompute(req);
 

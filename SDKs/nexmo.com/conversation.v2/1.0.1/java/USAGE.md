@@ -2,27 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetUsersQueryParams;
+import org.openapis.openapi.models.operations.GetUsersRequest;
+import org.openapis.openapi.models.operations.GetUsersResponse;
+import org.openapis.openapi.models.shared.OrderEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetUsersRequest req = new GetUsersRequest() {{
                 queryParams = new GetUsersQueryParams() {{
-                    cursor = "sit";
-                    order = "asc";
-                    pageSize = 6050128673802995827;
+                    cursor = "corrupti";
+                    order = "desc";
+                    pageSize = 715190;
                 }};
-            }};
+            }};            
 
             GetUsersResponse res = sdk.getUsers(req);
 
-            if (res.getUsers200ApplicationJSONAny.isPresent()) {
+            if (res.getUsers200ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

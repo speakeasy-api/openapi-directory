@@ -2,26 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteQuoteSecurity;
+import org.openapis.openapi.models.operations.DeleteQuoteQueryParams;
+import org.openapis.openapi.models.operations.DeleteQuoteRequest;
+import org.openapis.openapi.models.operations.DeleteQuoteResponse;
+import org.openapis.openapi.models.shared.SchemeXTheySaidSoAPISecret;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeleteQuoteRequest req = new DeleteQuoteRequest() {{
                 security = new DeleteQuoteSecurity() {{
-                    xTheySaidSoApiSecret = new SchemeXTheySaidSoApiSecret() {{
+                    xTheySaidSoApiSecret = new SchemeXTheySaidSoAPISecret() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 queryParams = new DeleteQuoteQueryParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
             DeleteQuoteResponse res = sdk.privateQuotes.deleteQuote(req);
 

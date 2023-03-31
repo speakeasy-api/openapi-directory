@@ -2,44 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.SendSSHPublicKeyXAmzTargetEnum;
+import org.openapis.openapi.models.operations.SendSSHPublicKeyHeaders;
+import org.openapis.openapi.models.operations.SendSSHPublicKeyRequest;
+import org.openapis.openapi.models.operations.SendSSHPublicKeyResponse;
+import org.openapis.openapi.models.shared.SendSSHPublicKeyRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            SendSshPublicKeyRequest req = new SendSshPublicKeyRequest() {{
-                headers = new SendSshPublicKeyHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+            SendSSHPublicKeyRequest req = new SendSSHPublicKeyRequest() {{
+                headers = new SendSSHPublicKeyHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSEC2InstanceConnectService.SendSSHPublicKey";
                 }};
-                request = new SendSshPublicKeyRequest() {{
-                    availabilityZone = "fugit";
-                    instanceId = "et";
-                    instanceOSUser = "nihil";
-                    sshPublicKey = "rerum";
+                request = new SendSSHPublicKeyRequest() {{
+                    availabilityZone = "illum";
+                    instanceId = "vel";
+                    instanceOSUser = "error";
+                    sshPublicKey = "deserunt";
                 }};
-            }};
+            }};            
 
-            SendSshPublicKeyResponse res = sdk.sendSshPublicKey(req);
+            SendSSHPublicKeyResponse res = sdk.sendSSHPublicKey(req);
 
             if (res.sendSSHPublicKeyResponse.isPresent()) {
                 // handle response

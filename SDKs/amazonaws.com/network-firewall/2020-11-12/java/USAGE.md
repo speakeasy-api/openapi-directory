@@ -2,42 +2,43 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateFirewallPolicyXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AssociateFirewallPolicyHeaders;
+import org.openapis.openapi.models.operations.AssociateFirewallPolicyRequest;
+import org.openapis.openapi.models.operations.AssociateFirewallPolicyResponse;
+import org.openapis.openapi.models.shared.AssociateFirewallPolicyRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateFirewallPolicyRequest req = new AssociateFirewallPolicyRequest() {{
                 headers = new AssociateFirewallPolicyHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "NetworkFirewall_20201112.AssociateFirewallPolicy";
                 }};
                 request = new AssociateFirewallPolicyRequest() {{
-                    firewallArn = "fugit";
-                    firewallName = "et";
-                    firewallPolicyArn = "nihil";
-                    updateToken = "rerum";
+                    firewallArn = "illum";
+                    firewallName = "vel";
+                    firewallPolicyArn = "error";
+                    updateToken = "deserunt";
                 }};
-            }};
+            }};            
 
             AssociateFirewallPolicyResponse res = sdk.associateFirewallPolicy(req);
 

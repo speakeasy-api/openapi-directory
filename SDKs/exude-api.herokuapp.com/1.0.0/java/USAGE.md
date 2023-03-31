@@ -2,27 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FilterFileDataStoppingsPathParams;
+import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequestBodyFile;
+import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequestBody;
+import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequest;
+import org.openapis.openapi.models.operations.FilterFileDataStoppingsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FilterFileDataStoppingsRequest req = new FilterFileDataStoppingsRequest() {{
                 pathParams = new FilterFileDataStoppingsPathParams() {{
-                    type = "sit";
+                    type = "corrupti";
                 }};
                 request = new FilterFileDataStoppingsRequestBody() {{
                     file = new FilterFileDataStoppingsRequestBodyFile() {{
-                        content = "voluptas".getBytes();
-                        file = "culpa";
+                        content = "provident".getBytes();
+                        file = "distinctio";
                     }};
                 }};
-            }};
+            }};            
 
             FilterFileDataStoppingsResponse res = sdk.exude.filterFileDataStoppings(req);
 

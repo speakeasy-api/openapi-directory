@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity;
+import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams;
+import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams;
+import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest;
+import org.openapis.openapi.models.operations.NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse;
+import org.openapis.openapi.models.shared.HubInput;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest req = new NetworkconnectivityProjectsLocationsGlobalHubsCreateRequest() {{
                 security = new NetworkconnectivityProjectsLocationsGlobalHubsCreateSecurity() {{
@@ -22,35 +31,33 @@ public class Application {
                     }};
                 }};
                 pathParams = new NetworkconnectivityProjectsLocationsGlobalHubsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new NetworkconnectivityProjectsLocationsGlobalHubsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    hubId = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    hubId = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    requestId = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    quotaUser = "error";
+                    requestId = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
                 request = new HubInput() {{
-                    createTime = "voluptatum";
-                    description = "et";
+                    createTime = "magnam";
+                    description = "debitis";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("dolorem", "et");
-                        put("voluptate", "iste");
-                        put("vitae", "totam");
+                        put("delectus", "tempora");
                     }};
-                    name = "dolores";
-                    updateTime = "illum";
+                    name = "suscipit";
+                    updateTime = "molestiae";
                 }};
-            }};
+            }};            
 
             NetworkconnectivityProjectsLocationsGlobalHubsCreateResponse res = sdk.projects.networkconnectivityProjectsLocationsGlobalHubsCreate(req);
 

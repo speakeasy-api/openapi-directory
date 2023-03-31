@@ -2,58 +2,57 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateDatasetXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateDatasetHeaders;
+import org.openapis.openapi.models.operations.CreateDatasetRequest;
+import org.openapis.openapi.models.operations.CreateDatasetResponse;
+import org.openapis.openapi.models.shared.CreateDatasetRequest;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.DatasetSchema;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateDatasetRequest req = new CreateDatasetRequest() {{
                 headers = new CreateDatasetHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSLookoutEquipmentFrontendService.CreateDataset";
                 }};
                 request = new CreateDatasetRequest() {{
-                    clientToken = "fugit";
-                    datasetName = "et";
+                    clientToken = "illum";
+                    datasetName = "vel";
                     datasetSchema = new DatasetSchema() {{
-                        inlineDataSchema = "nihil";
+                        inlineDataSchema = "error";
                     }};
-                    serverSideKmsKeyId = "rerum";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    serverSideKmsKeyId = "deserunt";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
+                        add(new Tag() {{
+                            key = "iure";
+                            value = "magnam";
+                        }}),
                         add(new Tag() {{
                             key = "debitis";
-                            value = "voluptatum";
-                        }}),
-                        add(new Tag() {{
-                            key = "et";
-                            value = "ut";
-                        }}),
-                        add(new Tag() {{
-                            key = "dolorem";
-                            value = "et";
+                            value = "ipsa";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateDatasetResponse res = sdk.createDataset(req);
 

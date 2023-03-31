@@ -2,25 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetPathParams;
+import org.openapis.openapi.models.operations.GetHeaders;
+import org.openapis.openapi.models.operations.GetRequest;
+import org.openapis.openapi.models.operations.GetResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetRequest req = new GetRequest() {{
                 pathParams = new GetPathParams() {{
-                    orderId = "sit";
+                    orderId = "corrupti";
                 }};
                 headers = new GetHeaders() {{
-                    xMarketId = "voluptas";
-                    xShopperId = "culpa";
+                    xMarketId = "provident";
+                    xShopperId = "distinctio";
                 }};
-            }};
+            }};            
 
             GetResponse res = sdk.v1.get(req);
 

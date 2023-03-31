@@ -2,30 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DriverDetailsFormatEnum;
+import org.openapis.openapi.models.operations.DriverDetailsPathParams;
+import org.openapis.openapi.models.operations.DriverDetailsRequest;
+import org.openapis.openapi.models.operations.DriverDetailsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyHeader = new SchemeApiKeyHeader() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyHeader = new SchemeAPIKeyHeader() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DriverDetailsRequest req = new DriverDetailsRequest() {{
                 pathParams = new DriverDetailsPathParams() {{
-                    driverid = "sit";
-                    format = "xml";
+                    driverid = "corrupti";
+                    format = "json";
                 }};
-            }};
+            }};            
 
             DriverDetailsResponse res = sdk.driverDetails(req);
 

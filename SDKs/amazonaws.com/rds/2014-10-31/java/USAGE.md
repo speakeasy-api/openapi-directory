@@ -2,44 +2,46 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETAddRoleToDBClusterActionEnum;
+import org.openapis.openapi.models.operations.GETAddRoleToDBClusterVersionEnum;
+import org.openapis.openapi.models.operations.GETAddRoleToDBClusterQueryParams;
+import org.openapis.openapi.models.operations.GETAddRoleToDBClusterHeaders;
+import org.openapis.openapi.models.operations.GETAddRoleToDBClusterRequest;
+import org.openapis.openapi.models.operations.GETAddRoleToDBClusterResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetAddRoleToDbClusterRequest req = new GetAddRoleToDbClusterRequest() {{
-                queryParams = new GetAddRoleToDbClusterQueryParams() {{
+            GETAddRoleToDBClusterRequest req = new GETAddRoleToDBClusterRequest() {{
+                queryParams = new GETAddRoleToDBClusterQueryParams() {{
                     action = "AddRoleToDBCluster";
-                    dbClusterIdentifier = "voluptas";
-                    featureName = "culpa";
-                    roleArn = "expedita";
+                    dbClusterIdentifier = "corrupti";
+                    featureName = "provident";
+                    roleArn = "distinctio";
                     version = "2014-10-31";
                 }};
-                headers = new GetAddRoleToDbClusterHeaders() {{
-                    xAmzAlgorithm = "dolor";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "voluptas";
-                    xAmzDate = "fugit";
-                    xAmzSecurityToken = "et";
-                    xAmzSignature = "nihil";
-                    xAmzSignedHeaders = "rerum";
+                headers = new GETAddRoleToDBClusterHeaders() {{
+                    xAmzAlgorithm = "quibusdam";
+                    xAmzContentSha256 = "unde";
+                    xAmzCredential = "nulla";
+                    xAmzDate = "corrupti";
+                    xAmzSecurityToken = "illum";
+                    xAmzSignature = "vel";
+                    xAmzSignedHeaders = "error";
                 }};
-            }};
+            }};            
 
-            GetAddRoleToDbClusterResponse res = sdk.getAddRoleToDbCluster(req);
+            GETAddRoleToDBClusterResponse res = sdk.getAddRoleToDBCluster(req);
 
             if (res.statusCode == 200) {
                 // handle response

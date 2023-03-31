@@ -2,15 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewSecurityOption1;
+import org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewSecurityOption2;
+import org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewSecurity;
+import org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewPathParams;
+import org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewQueryParams;
+import org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewRequest;
+import org.openapis.openapi.models.operations.DeploymentmanagerDeploymentsCancelPreviewResponse;
+import org.openapis.openapi.models.shared.DeploymentsCancelPreviewRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeploymentmanagerDeploymentsCancelPreviewRequest req = new DeploymentmanagerDeploymentsCancelPreviewRequest() {{
                 security = new DeploymentmanagerDeploymentsCancelPreviewSecurity() {{
@@ -24,26 +35,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeploymentmanagerDeploymentsCancelPreviewPathParams() {{
-                    deployment = "sit";
-                    project = "voluptas";
+                    deployment = "corrupti";
+                    project = "provident";
                 }};
                 queryParams = new DeploymentmanagerDeploymentsCancelPreviewQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "expedita";
-                    alt = "proto";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    accessToken = "quibusdam";
+                    alt = "media";
+                    callback = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new DeploymentsCancelPreviewRequest() {{
-                    fingerprint = "debitis";
+                    fingerprint = "iure";
                 }};
-            }};
+            }};            
 
             DeploymentmanagerDeploymentsCancelPreviewResponse res = sdk.deployments.deploymentmanagerDeploymentsCancelPreview(req);
 

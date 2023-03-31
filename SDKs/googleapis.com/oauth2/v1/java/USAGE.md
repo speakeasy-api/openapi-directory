@@ -2,29 +2,32 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.Oauth2TokeninfoQueryParams;
+import org.openapis.openapi.models.operations.Oauth2TokeninfoRequest;
+import org.openapis.openapi.models.operations.Oauth2TokeninfoResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             Oauth2TokeninfoRequest req = new Oauth2TokeninfoRequest() {{
                 queryParams = new Oauth2TokeninfoQueryParams() {{
-                    accessToken = "sit";
+                    accessToken = "corrupti";
                     alt = "json";
-                    fields = "culpa";
-                    idToken = "expedita";
-                    key = "consequuntur";
-                    oauthToken = "dolor";
-                    prettyPrint = true;
-                    quotaUser = "voluptas";
-                    userIp = "fugit";
+                    fields = "provident";
+                    idToken = "distinctio";
+                    key = "quibusdam";
+                    oauthToken = "unde";
+                    prettyPrint = false;
+                    quotaUser = "nulla";
+                    userIp = "corrupti";
                 }};
-            }};
+            }};            
 
             Oauth2TokeninfoResponse res = sdk.oauth2Tokeninfo(req);
 

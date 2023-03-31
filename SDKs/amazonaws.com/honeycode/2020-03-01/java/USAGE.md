@@ -2,58 +2,100 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsPathParams;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsHeaders;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsRequestBody;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsRequest;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsResponse;
+import org.openapis.openapi.models.shared.CreateRowData;
+import org.openapis.openapi.models.shared.CellInput;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BatchCreateTableRowsRequest req = new BatchCreateTableRowsRequest() {{
                 pathParams = new BatchCreateTableRowsPathParams() {{
-                    tableId = "sit";
-                    workbookId = "voluptas";
+                    tableId = "corrupti";
+                    workbookId = "provident";
                 }};
                 headers = new BatchCreateTableRowsHeaders() {{
-                    xAmzAlgorithm = "culpa";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "consequuntur";
-                    xAmzDate = "dolor";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "voluptas";
-                    xAmzSignedHeaders = "fugit";
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
                 request = new BatchCreateTableRowsRequestBody() {{
-                    clientRequestToken = "et";
-                    rowsToCreate = new openapisdk.models.shared.CreateRowData[]() {{
+                    clientRequestToken = "error";
+                    rowsToCreate = new org.openapis.openapi.models.shared.CreateRowData[]{{
                         add(new CreateRowData() {{
-                            batchItemId = "rerum";
-                            cellsToCreate = new java.util.HashMap<String, openapisdk.models.shared.CellInput>() {{
-                                put("debitis", new CellInput() {{
-                                    fact = "voluptatum";
+                            batchItemId = "suscipit";
+                            cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
+                                put("magnam", new CellInput() {{
+                                    fact = "debitis";
+                                    facts = new String[]{{
+                                        add("delectus"),
+                                    }};
                                 }});
-                                put("et", new CellInput() {{
-                                    fact = "ut";
+                                put("tempora", new CellInput() {{
+                                    fact = "suscipit";
+                                    facts = new String[]{{
+                                        add("minus"),
+                                        add("placeat"),
+                                    }};
                                 }});
-                                put("dolorem", new CellInput() {{
-                                    fact = "et";
+                            }};
+                        }}),
+                        add(new CreateRowData() {{
+                            batchItemId = "voluptatum";
+                            cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
+                                put("excepturi", new CellInput() {{
+                                    fact = "nisi";
+                                    facts = new String[]{{
+                                        add("temporibus"),
+                                        add("ab"),
+                                        add("quis"),
+                                        add("veritatis"),
+                                    }};
+                                }});
+                                put("deserunt", new CellInput() {{
+                                    fact = "perferendis";
+                                    facts = new String[]{{
+                                        add("repellendus"),
+                                        add("sapiente"),
+                                    }};
+                                }});
+                            }};
+                        }}),
+                        add(new CreateRowData() {{
+                            batchItemId = "quo";
+                            cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
+                                put("at", new CellInput() {{
+                                    fact = "at";
+                                    facts = new String[]{{
+                                        add("molestiae"),
+                                        add("quod"),
+                                        add("quod"),
+                                        add("esse"),
+                                    }};
                                 }});
                             }};
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             BatchCreateTableRowsResponse res = sdk.batchCreateTableRows(req);
 

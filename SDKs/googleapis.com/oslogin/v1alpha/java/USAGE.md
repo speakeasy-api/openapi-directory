@@ -2,15 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption1;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption2;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption3;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurityOption4;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileSecurity;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfilePathParams;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileOperatingSystemTypeEnum;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileViewEnum;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileQueryParams;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileRequest;
+import org.openapis.openapi.models.operations.OsloginUsersGetLoginProfileResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             OsloginUsersGetLoginProfileRequest req = new OsloginUsersGetLoginProfileRequest() {{
                 security = new OsloginUsersGetLoginProfileSecurity() {{
@@ -24,26 +38,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new OsloginUsersGetLoginProfilePathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new OsloginUsersGetLoginProfileQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    operatingSystemType = "OPERATING_SYSTEM_TYPE_UNSPECIFIED";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    operatingSystemType = "LINUX";
                     prettyPrint = false;
-                    projectId = "nihil";
-                    quotaUser = "rerum";
-                    systemId = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
-                    view = "LOGIN_PROFILE_VIEW_UNSPECIFIED";
+                    projectId = "error";
+                    quotaUser = "deserunt";
+                    systemId = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
+                    view = "SECURITY_KEY";
                 }};
-            }};
+            }};            
 
             OsloginUsersGetLoginProfileResponse res = sdk.users.osloginUsersGetLoginProfile(req);
 

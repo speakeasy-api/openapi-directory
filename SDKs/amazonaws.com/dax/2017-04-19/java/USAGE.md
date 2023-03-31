@@ -2,65 +2,85 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateClusterXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateClusterHeaders;
+import org.openapis.openapi.models.operations.CreateClusterRequest;
+import org.openapis.openapi.models.operations.CreateClusterResponse;
+import org.openapis.openapi.models.shared.CreateClusterRequest;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.SSESpecification;
+import org.openapis.openapi.models.shared.ClusterEndpointEncryptionTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateClusterRequest req = new CreateClusterRequest() {{
                 headers = new CreateClusterHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AmazonDAXV3.CreateCluster";
                 }};
                 request = new CreateClusterRequest() {{
-                    availabilityZones = new String[]() {{
-                        add("et"),
+                    availabilityZones = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
                     clusterEndpointEncryptionType = "NONE";
-                    clusterName = "rerum";
-                    description = "dicta";
-                    iamRoleArn = "debitis";
-                    nodeType = "voluptatum";
-                    notificationTopicArn = "et";
-                    parameterGroupName = "ut";
-                    preferredMaintenanceWindow = "dolorem";
-                    replicationFactor = 7259475919510918339;
-                    sseSpecification = new SseSpecification() {{
+                    clusterName = "magnam";
+                    description = "debitis";
+                    iamRoleArn = "ipsa";
+                    nodeType = "delectus";
+                    notificationTopicArn = "tempora";
+                    parameterGroupName = "suscipit";
+                    preferredMaintenanceWindow = "molestiae";
+                    replicationFactor = 791725;
+                    sseSpecification = new SSESpecification() {{
                         enabled = false;
                     }};
-                    securityGroupIds = new String[]() {{
-                        add("vitae"),
-                        add("totam"),
-                        add("dolores"),
+                    securityGroupIds = new String[]{{
+                        add("voluptatum"),
+                        add("iusto"),
+                        add("excepturi"),
+                        add("nisi"),
                     }};
-                    subnetGroupName = "illum";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    subnetGroupName = "recusandae";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "vel";
-                            value = "odio";
+                            key = "ab";
+                            value = "quis";
+                        }}),
+                        add(new Tag() {{
+                            key = "veritatis";
+                            value = "deserunt";
+                        }}),
+                        add(new Tag() {{
+                            key = "perferendis";
+                            value = "ipsam";
+                        }}),
+                        add(new Tag() {{
+                            key = "repellendus";
+                            value = "sapiente";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateClusterResponse res = sdk.createCluster(req);
 

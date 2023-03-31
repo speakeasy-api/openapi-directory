@@ -2,43 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateAssetsPathParams;
+import org.openapis.openapi.models.operations.AssociateAssetsHeaders;
+import org.openapis.openapi.models.operations.AssociateAssetsRequestBody;
+import org.openapis.openapi.models.operations.AssociateAssetsRequest;
+import org.openapis.openapi.models.operations.AssociateAssetsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateAssetsRequest req = new AssociateAssetsRequest() {{
                 pathParams = new AssociateAssetsPathParams() {{
-                    assetId = "sit";
+                    assetId = "corrupti";
                 }};
                 headers = new AssociateAssetsHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
                 request = new AssociateAssetsRequestBody() {{
-                    childAssetId = "fugit";
-                    clientToken = "et";
-                    hierarchyId = "nihil";
+                    childAssetId = "vel";
+                    clientToken = "error";
+                    hierarchyId = "deserunt";
                 }};
-            }};
+            }};            
 
             AssociateAssetsResponse res = sdk.associateAssets(req);
 

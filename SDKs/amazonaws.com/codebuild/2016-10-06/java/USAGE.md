@@ -2,41 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchDeleteBuildsXAmzTargetEnum;
+import org.openapis.openapi.models.operations.BatchDeleteBuildsHeaders;
+import org.openapis.openapi.models.operations.BatchDeleteBuildsRequest;
+import org.openapis.openapi.models.operations.BatchDeleteBuildsResponse;
+import org.openapis.openapi.models.shared.BatchDeleteBuildsInput;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BatchDeleteBuildsRequest req = new BatchDeleteBuildsRequest() {{
                 headers = new BatchDeleteBuildsHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "CodeBuild_20161006.BatchDeleteBuilds";
                 }};
                 request = new BatchDeleteBuildsInput() {{
-                    ids = new String[]() {{
-                        add("et"),
+                    ids = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
                 }};
-            }};
+            }};            
 
             BatchDeleteBuildsResponse res = sdk.batchDeleteBuilds(req);
 

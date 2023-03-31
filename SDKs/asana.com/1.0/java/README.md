@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,51 +15,51 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateAttachmentForObjectQueryParams;
+import org.openapis.openapi.models.operations.CreateAttachmentForObjectRequest;
+import org.openapis.openapi.models.operations.CreateAttachmentForObjectResponse;
+import org.openapis.openapi.models.shared.AttachmentRequestFile;
+import org.openapis.openapi.models.shared.AttachmentRequestResourceSubtypeEnum;
+import org.openapis.openapi.models.shared.AttachmentRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    personalAccessToken = new SchemePersonalAccessToken() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    oauth2 = new SchemeOauth2() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateAttachmentForTaskRequest req = new CreateAttachmentForTaskRequest() {{
-                pathParams = new CreateAttachmentForTaskPathParams() {{
-                    taskGid = "sit";
-                }};
-                queryParams = new CreateAttachmentForTaskQueryParams() {{
-                    limit = 2259404117704393152;
-                    offset = "culpa";
-                    optFields = new String[]() {{
-                        add("consequuntur"),
-                        add("dolor"),
+            CreateAttachmentForObjectRequest req = new CreateAttachmentForObjectRequest() {{
+                queryParams = new CreateAttachmentForObjectQueryParams() {{
+                    optFields = new String[]{{
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
-                    optPretty = true;
+                    optPretty = false;
                 }};
                 request = new AttachmentRequest() {{
+                    connectToApp = false;
                     file = new AttachmentRequestFile() {{
-                        content = "voluptas".getBytes();
-                        file = "fugit";
+                        content = "unde".getBytes();
+                        file = "nulla";
                     }};
-                    name = "et";
-                    resourceSubtype = "asana_file_attachments";
-                    url = "rerum";
+                    name = "corrupti";
+                    parent = "illum";
+                    resourceSubtype = "external";
+                    url = "vel";
                 }};
-            }};
+            }};            
 
-            CreateAttachmentForTaskResponse res = sdk.attachments.createAttachmentForTask(req);
+            CreateAttachmentForObjectResponse res = sdk.attachments.createAttachmentForObject(req);
 
-            if (res.createAttachmentForTask200ApplicationJSONObject.isPresent()) {
+            if (res.createAttachmentForObject200ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -71,23 +71,28 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Attachments
 
-* `createAttachmentForTask` - Upload an attachment
+### attachments
+
+* `createAttachmentForObject` - Upload an attachment
 * `deleteAttachment` - Delete an attachment
 * `getAttachment` - Get an attachment
-* `getAttachmentsForTask` - Get attachments for a task
+* `getAttachmentsForObject` - Get attachments from an object
 
-### Batch API
+### auditLogAPI
+
+* `getAuditLogEvents` - Get audit log events
+
+### batchAPI
 
 * `createBatchRequest` - Submit parallel requests
 
-### Custom Field Settings
+### customFieldSettings
 
 * `getCustomFieldSettingsForPortfolio` - Get a portfolio's custom fields
 * `getCustomFieldSettingsForProject` - Get a project's custom fields
 
-### Custom Fields
+### customFields
 
 * `createCustomField` - Create a custom field
 * `createEnumOptionForCustomField` - Create an enum option
@@ -98,45 +103,47 @@ public class Application {
 * `updateCustomField` - Update a custom field
 * `updateEnumOption` - Update an enum option
 
-### Events
+### events
 
 * `getEvents` - Get events on a resource
 
-### Goals
+### goalRelationships
+
+* `addSupportingRelationship` - Add a supporting goal relationship
+* `getGoalRelationship` - Get a goal relationship
+* `getGoalRelationships` - Get goal relationships
+* `removeSupportingRelationship` - Removes a supporting goal relationship
+* `updateGoalRelationship` - Update a goal relationship
+
+### goals
 
 * `addFollowers` - Add a collaborator to a goal
-* `addSubgoal` - Add a subgoal to a parent goal
-* `addSupportingWorkForGoal` - Add a project/portfolio as supporting work for a goal.
 * `createGoal` - Create a goal
 * `createGoalMetric` - Create a goal metric
 * `deleteGoal` - Delete a goal
 * `getGoal` - Get a goal
 * `getGoals` - Get goals
 * `getParentGoalsForGoal` - Get parent goals from a goal
-* `getSubgoalsForGoal` - Get subgoals from a goal
 * `removeFollowers` - Remove a collaborator from a goal
-* `removeSubgoal` - Remove a subgoal from a goal
-* `removeSupportingWorkForGoal` - Remove a project/portfolio as supporting work for a goal.
-* `supportingWork` - Get supporting work from a goal
 * `updateGoal` - Update a goal
 * `updateGoalMetric` - Update a goal metric
 
-### Jobs
+### jobs
 
 * `getJob` - Get a job by id
 
-### Organization Exports
+### organizationExports
 
 * `createOrganizationExport` - Create an organization export request
 * `getOrganizationExport` - Get details on an org export request
 
-### Portfolio Memberships
+### portfolioMemberships
 
 * `getPortfolioMembership` - Get a portfolio membership
 * `getPortfolioMemberships` - Get multiple portfolio memberships
 * `getPortfolioMembershipsForPortfolio` - Get memberships from a portfolio
 
-### Portfolios
+### portfolios
 
 * `addCustomFieldSettingForPortfolio` - Add a custom field to a portfolio
 * `addItemForPortfolio` - Add a portfolio item
@@ -151,19 +158,33 @@ public class Application {
 * `removeMembersForPortfolio` - Remove users from a portfolio
 * `updatePortfolio` - Update a portfolio
 
-### Project Memberships
+### projectBriefs
+
+* `createProjectBrief` - Create a project brief
+* `deleteProjectBrief` - Delete a project brief
+* `getProjectBrief` - Get a project brief
+* `updateProjectBrief` - Update a project brief
+
+### projectMemberships
 
 * `getProjectMembership` - Get a project membership
 * `getProjectMembershipsForProject` - Get memberships from a project
 
-### Project Statuses
+### projectStatuses
 
 * `createProjectStatusForProject` - Create a project status
 * `deleteProjectStatus` - Delete a project status
 * `getProjectStatus` - Get a project status
 * `getProjectStatusesForProject` - Get statuses from a project
 
-### Projects
+### projectTemplates
+
+* `getProjectTemplate` - Get a project template
+* `getProjectTemplates` - Get multiple project templates
+* `getProjectTemplatesForTeam` - Get a team's project templates
+* `instantiateProject` - Instantiate a project from a project template
+
+### projects
 
 * `addCustomFieldSettingForProject` - Add a custom field to a project
 * `addFollowersForProject` - Add followers to a project
@@ -179,12 +200,13 @@ public class Application {
 * `getProjectsForTeam` - Get a team's projects
 * `getProjectsForWorkspace` - Get all projects in a workspace
 * `getTaskCountsForProject` - Get task count of a project
+* `projectSaveAsTemplate` - Create a project template from a project
 * `removeCustomFieldSettingForProject` - Remove a custom field from a project
 * `removeFollowersForProject` - Remove followers from a project
 * `removeMembersForProject` - Remove users from a project
 * `updateProject` - Update a project
 
-### Sections
+### sections
 
 * `addTaskForSection` - Add task to section
 * `createSectionForProject` - Create a section in a project
@@ -194,7 +216,14 @@ public class Application {
 * `insertSectionForProject` - Move or Insert sections
 * `updateSection` - Update a section
 
-### Stories
+### statusUpdates
+
+* `createStatusForObject` - Create a status update
+* `deleteStatus` - Delete a status update
+* `getStatus` - Get a status update
+* `getStatusesForObject` - Get status updates from an object
+
+### stories
 
 * `createStoryForTask` - Create a story on a task
 * `deleteStory` - Delete a story
@@ -202,7 +231,7 @@ public class Application {
 * `getStory` - Get a story
 * `updateStory` - Update a story
 
-### Tags
+### tags
 
 * `createTag` - Create a tag
 * `createTagForWorkspace` - Create a tag in a workspace
@@ -213,7 +242,7 @@ public class Application {
 * `getTagsForWorkspace` - Get tags in a workspace
 * `updateTag` - Update a tag
 
-### Tasks
+### tasks
 
 * `addDependenciesForTask` - Set dependencies for a task
 * `addDependentsForTask` - Set dependents for a task
@@ -242,37 +271,38 @@ public class Application {
 * `setParentForTask` - Set the parent of a task
 * `updateTask` - Update a task
 
-### Team Memberships
+### teamMemberships
 
 * `getTeamMembership` - Get a team membership
 * `getTeamMemberships` - Get team memberships
 * `getTeamMembershipsForTeam` - Get memberships from a team
 * `getTeamMembershipsForUser` - Get memberships from a user
 
-### Teams
+### teams
 
 * `addUserForTeam` - Add a user to a team
 * `createTeam` - Create a team
 * `getTeam` - Get a team
-* `getTeamsForOrganization` - Get teams in an organization
 * `getTeamsForUser` - Get teams for a user
+* `getTeamsForWorkspace` - Get teams in a workspace
 * `removeUserForTeam` - Remove a user from a team
+* `updateTeam` - Update a team
 
-### Time Periods
+### timePeriods
 
 * `getTimePeriod` - Get a time period
 * `getTimePeriods` - Get time periods
 
-### Typeahead
+### typeahead
 
 * `typeaheadForWorkspace` - Get objects via typeahead
 
-### User Task Lists
+### userTaskLists
 
 * `getUserTaskList` - Get a user task list
 * `getUserTaskListForUser` - Get a user's task list
 
-### Users
+### users
 
 * `getFavoritesForUser` - Get a user's favorites
 * `getUser` - Get a user
@@ -280,27 +310,38 @@ public class Application {
 * `getUsersForTeam` - Get users in a team
 * `getUsersForWorkspace` - Get users in a workspace or organization
 
-### Webhooks
+### webhooks
 
 * `createWebhook` - Establish a webhook
 * `deleteWebhook` - Delete a webhook
 * `getWebhook` - Get a webhook
 * `getWebhooks` - Get multiple webhooks
+* `updateWebhook` - Update a webhook
 
-### Workspace Memberships
+### workspaceMemberships
 
 * `getWorkspaceMembership` - Get a workspace membership
 * `getWorkspaceMembershipsForUser` - Get workspace memberships for a user
 * `getWorkspaceMembershipsForWorkspace` - Get the workspace memberships for a workspace
 
-### Workspaces
+### workspaces
 
 * `addUserForWorkspace` - Add a user to a workspace or organization
 * `getWorkspace` - Get a workspace
 * `getWorkspaces` - Get multiple workspaces
 * `removeUserForWorkspace` - Remove a user from a workspace or organization
 * `updateWorkspace` - Update a workspace
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

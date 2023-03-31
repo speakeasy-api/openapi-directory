@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,34 +15,42 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateAdditionalTaxIdentifierPathParams;
+import org.openapis.openapi.models.operations.CreateAdditionalTaxIdentifierRequest;
+import org.openapis.openapi.models.operations.CreateAdditionalTaxIdentifierResponse;
+import org.openapis.openapi.models.shared.AdditionalTaxIdentifierCreate;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     bearer = new SchemeBearer() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateAdministrationRequest req = new CreateAdministrationRequest() {{
-                pathParams = new CreateAdministrationPathParams() {{
-                    legalEntityId = 8717895732742165505;
+            CreateAdditionalTaxIdentifierRequest req = new CreateAdditionalTaxIdentifierRequest() {{
+                pathParams = new CreateAdditionalTaxIdentifierPathParams() {{
+                    legalEntityId = 548814;
                 }};
-                request = "voluptas";
-            }};
+                request = new AdditionalTaxIdentifierCreate() {{
+                    country = "Montenegro";
+                    county = "distinctio";
+                    identifier = "quibusdam";
+                    scheme = "unde";
+                    superscheme = "nulla";
+                    thirdPartyPassword = "corrupti";
+                    thirdPartyUsername = "illum";
+                }};
+            }};            
 
-            CreateAdministrationResponse res = sdk.administrations.createAdministration(req);
+            CreateAdditionalTaxIdentifierResponse res = sdk.additionalTaxIdentifiers.createAdditionalTaxIdentifier(req);
 
-            if (res.administration.isPresent()) {
+            if (res.additionalTaxIdentifier.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -54,50 +62,77 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Administrations
+
+### additionalTaxIdentifiers
+
+* `createAdditionalTaxIdentifier` - Create a new AdditionalTaxIdentifier
+* `deleteAdditionalTaxIdentifier` - Delete AdditionalTaxIdentifier
+* `getAdditionalTaxIdentifier` - Get AdditionalTaxIdentifier
+* `updateAdditionalTaxIdentifier` - Update AdditionalTaxIdentifier
+
+### administrations
 
 * `createAdministration` - Create a new Administration
 * `deleteAdministration` - Delete Administration
 * `getAdministration` - Get Administration
 * `updateAdministration` - Update Administration
 
-### Discovery
+### discovery
 
+* `discoveryExists` - Discover Network Participant Existence
+* `discoveryIdentifiers` - Discover Country Identifiers ** EXPERIMENTAL
 * `discoveryReceives` - Disover Network Participant
 
-### DocumentSubmissions
+### documentSubmissions
 
-* `createDocumentSubmission` - *** NOTE: Experimental. Only to be used for sending Invoice Response documents. *** Submit a new document.
+* `createDocumentSubmission` - Submit a new document.
+* `showDocumentSubmissionEvidence` - Get DocumentSubmission Evidence
 
-### InvoiceSubmissions
+### invoiceSubmissions
 
 * `createInvoiceSubmission` - Submit a new invoice
-* `preflightInvoiceRecipient` - Preflight an invoice recipient
-* `showInvoiceSubmissionEvidence` - Get InvoiceSubmission Evidence
+* `preflightInvoiceRecipient` - DEPRECATED. Preflight an invoice recipient
+* `showInvoiceSubmissionEvidence` - DEPRECATED. Get InvoiceSubmission Evidence
 
-### LegalEntities
+### legalEntities
 
 * `createLegalEntity` - Create a new LegalEntity
 * `deleteLegalEntity` - Delete LegalEntity
 * `getLegalEntity` - Get LegalEntity
 * `updateLegalEntity` - Update LegalEntity
 
-### PeppolIdentifiers
+### peppolIdentifiers
 
 * `createPeppolIdentifier` - Create a new PeppolIdentifier
 * `deletePeppolIdentifier` - Delete PeppolIdentifier
 
-### PurchaseInvoices
+### purchaseInvoices
 
 * `getInvoiceJson` - Get Purchase invoice data as JSON
-* `getInvoiceUbl` - Get Purchase invoice data as JSON with a Base64-encoded SI-1.2 UBL string
+* `getInvoiceUbl` - Get Purchase invoice data in a selectable format
 * `getInvoiceUblVersioned` - Get Purchase invoice data as JSON with a Base64-encoded UBL string in the specified version
 
-### WebhookInstances
+### receivedDocuments
+
+* `createReceivedDocument` - Create a new received document
+* `getReceivedDocument` - Get a new ReceivedDocument
+* `receiveDocumenht` - Receive a new Document
+
+### webhookInstances
 
 * `deleteWebhookInstance` - DELETE a WebhookInstance
 * `getWebhookInstances` - GET a WebhookInstance
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

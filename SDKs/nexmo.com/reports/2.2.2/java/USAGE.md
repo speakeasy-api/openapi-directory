@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CancelReportSecurity;
+import org.openapis.openapi.models.operations.CancelReportPathParams;
+import org.openapis.openapi.models.operations.CancelReportRequest;
+import org.openapis.openapi.models.operations.CancelReportResponse;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CancelReportRequest req = new CancelReportRequest() {{
                 security = new CancelReportSecurity() {{
@@ -20,9 +24,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new CancelReportPathParams() {{
-                    reportId = "sit";
+                    reportId = "aaaaaaaa-bbbb-cccc-dddd-0123456789ab";
                 }};
-            }};
+            }};            
 
             CancelReportResponse res = sdk.cancelReport(req);
 

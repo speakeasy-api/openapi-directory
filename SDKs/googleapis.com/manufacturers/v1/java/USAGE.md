@@ -2,18 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeleteSecurity;
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeletePathParams;
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeleteQueryParams;
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeleteRequest;
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            ManufacturersAccountsProductsDeleteRequest req = new ManufacturersAccountsProductsDeleteRequest() {{
-                security = new ManufacturersAccountsProductsDeleteSecurity() {{
+            ManufacturersAccountsLanguagesProductCertificationsDeleteRequest req = new ManufacturersAccountsLanguagesProductCertificationsDeleteRequest() {{
+                security = new ManufacturersAccountsLanguagesProductCertificationsDeleteSecurity() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
@@ -21,26 +29,25 @@ public class Application {
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new ManufacturersAccountsProductsDeletePathParams() {{
-                    name = "sit";
-                    parent = "voluptas";
+                pathParams = new ManufacturersAccountsLanguagesProductCertificationsDeletePathParams() {{
+                    name = "corrupti";
                 }};
-                queryParams = new ManufacturersAccountsProductsDeleteQueryParams() {{
+                queryParams = new ManufacturersAccountsLanguagesProductCertificationsDeleteQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "expedita";
+                    accessToken = "distinctio";
                     alt = "proto";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-            }};
+            }};            
 
-            ManufacturersAccountsProductsDeleteResponse res = sdk.accounts.manufacturersAccountsProductsDelete(req);
+            ManufacturersAccountsLanguagesProductCertificationsDeleteResponse res = sdk.accounts.manufacturersAccountsLanguagesProductCertificationsDelete(req);
 
             if (res.empty.isPresent()) {
                 // handle response

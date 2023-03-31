@@ -2,43 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateProjectQueryParams;
+import org.openapis.openapi.models.operations.CreateProjectHeaders;
+import org.openapis.openapi.models.operations.CreateProjectRequestBody;
+import org.openapis.openapi.models.operations.CreateProjectRequest;
+import org.openapis.openapi.models.operations.CreateProjectResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateProjectRequest req = new CreateProjectRequest() {{
                 queryParams = new CreateProjectQueryParams() {{
-                    name = "sit";
-                    region = "voluptas";
-                    snapshotId = "culpa";
+                    name = "corrupti";
+                    region = "provident";
+                    snapshotId = "distinctio";
                 }};
                 headers = new CreateProjectHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
+                    xAmzAlgorithm = "quibusdam";
+                    xAmzContentSha256 = "unde";
+                    xAmzCredential = "nulla";
+                    xAmzDate = "corrupti";
+                    xAmzSecurityToken = "illum";
+                    xAmzSignature = "vel";
+                    xAmzSignedHeaders = "error";
                 }};
                 request = new CreateProjectRequestBody() {{
-                    contents = "nihil";
+                    contents = "deserunt";
                 }};
-            }};
+            }};            
 
             CreateProjectResponse res = sdk.createProject(req);
 

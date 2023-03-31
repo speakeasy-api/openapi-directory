@@ -2,30 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AquiferCodesDemandListQueryParams;
+import org.openapis.openapi.models.operations.AquiferCodesDemandListRequest;
+import org.openapis.openapi.models.operations.AquiferCodesDemandListResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     bearer = new SchemeBearer() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AquiferCodesDemandListRequest req = new AquiferCodesDemandListRequest() {{
                 queryParams = new AquiferCodesDemandListQueryParams() {{
-                    limit = 8717895732742165505;
-                    offset = 2259404117704393152;
+                    limit = 548814;
+                    offset = 592845;
                 }};
-            }};
+            }};            
 
             AquiferCodesDemandListResponse res = sdk.aquiferCodes.aquiferCodesDemandList(req);
 

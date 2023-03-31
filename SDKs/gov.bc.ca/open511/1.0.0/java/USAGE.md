@@ -2,21 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAreasFormatEnum;
+import org.openapis.openapi.models.operations.GetAreasQueryParams;
+import org.openapis.openapi.models.operations.GetAreasRequest;
+import org.openapis.openapi.models.operations.GetAreasResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAreasRequest req = new GetAreasRequest() {{
                 queryParams = new GetAreasQueryParams() {{
-                    format = "json";
+                    format = "xml";
                 }};
-            }};
+            }};            
 
             GetAreasResponse res = sdk.resources.getAreas(req);
 

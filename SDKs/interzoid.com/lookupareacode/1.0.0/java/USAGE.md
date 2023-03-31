@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetareacodeQueryParams;
+import org.openapis.openapi.models.operations.GetareacodeRequest;
+import org.openapis.openapi.models.operations.GetareacodeResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetareacodeRequest req = new GetareacodeRequest() {{
                 queryParams = new GetareacodeQueryParams() {{
-                    areacode = "sit";
-                    license = "voluptas";
+                    areacode = "corrupti";
+                    license = "provident";
                 }};
-            }};
+            }};            
 
             GetareacodeResponse res = sdk.areaCodeInformation.getareacode(req);
 

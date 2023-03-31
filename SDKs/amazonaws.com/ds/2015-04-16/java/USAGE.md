@@ -2,39 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AcceptSharedDirectoryXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AcceptSharedDirectoryHeaders;
+import org.openapis.openapi.models.operations.AcceptSharedDirectoryRequest;
+import org.openapis.openapi.models.operations.AcceptSharedDirectoryResponse;
+import org.openapis.openapi.models.shared.AcceptSharedDirectoryRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AcceptSharedDirectoryRequest req = new AcceptSharedDirectoryRequest() {{
                 headers = new AcceptSharedDirectoryHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "DirectoryService_20150416.AcceptSharedDirectory";
                 }};
                 request = new AcceptSharedDirectoryRequest() {{
-                    sharedDirectoryId = "fugit";
+                    sharedDirectoryId = "illum";
                 }};
-            }};
+            }};            
 
             AcceptSharedDirectoryResponse res = sdk.acceptSharedDirectory(req);
 

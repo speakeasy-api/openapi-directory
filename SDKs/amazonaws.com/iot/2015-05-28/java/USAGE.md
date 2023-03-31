@@ -2,41 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AcceptCertificateTransferPathParams;
+import org.openapis.openapi.models.operations.AcceptCertificateTransferQueryParams;
+import org.openapis.openapi.models.operations.AcceptCertificateTransferHeaders;
+import org.openapis.openapi.models.operations.AcceptCertificateTransferRequest;
+import org.openapis.openapi.models.operations.AcceptCertificateTransferResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AcceptCertificateTransferRequest req = new AcceptCertificateTransferRequest() {{
                 pathParams = new AcceptCertificateTransferPathParams() {{
-                    certificateId = "sit";
+                    certificateId = "corrupti";
                 }};
                 queryParams = new AcceptCertificateTransferQueryParams() {{
                     setAsActive = false;
                 }};
                 headers = new AcceptCertificateTransferHeaders() {{
-                    xAmzAlgorithm = "culpa";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "consequuntur";
-                    xAmzDate = "dolor";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "voluptas";
-                    xAmzSignedHeaders = "fugit";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-            }};
+            }};            
 
             AcceptCertificateTransferResponse res = sdk.acceptCertificateTransfer(req);
 

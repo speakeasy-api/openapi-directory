@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteSecurity;
+import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeletePathParams;
+import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteQueryParams;
+import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteRequest;
+import org.openapis.openapi.models.operations.StorageBucketAccessControlsDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             StorageBucketAccessControlsDeleteRequest req = new StorageBucketAccessControlsDeleteRequest() {{
                 security = new StorageBucketAccessControlsDeleteSecurity() {{
@@ -22,19 +29,19 @@ public class Application {
                     }};
                 }};
                 pathParams = new StorageBucketAccessControlsDeletePathParams() {{
-                    bucket = "sit";
-                    entity = "voluptas";
+                    bucket = "corrupti";
+                    entity = "provident";
                 }};
                 queryParams = new StorageBucketAccessControlsDeleteQueryParams() {{
                     alt = "json";
-                    fields = "expedita";
-                    key = "consequuntur";
-                    oauthToken = "dolor";
-                    prettyPrint = true;
-                    quotaUser = "voluptas";
-                    userIp = "fugit";
+                    fields = "distinctio";
+                    key = "quibusdam";
+                    oauthToken = "unde";
+                    prettyPrint = false;
+                    quotaUser = "nulla";
+                    userIp = "corrupti";
                 }};
-            }};
+            }};            
 
             StorageBucketAccessControlsDeleteResponse res = sdk.bucketAccessControls.storageBucketAccessControlsDelete(req);
 

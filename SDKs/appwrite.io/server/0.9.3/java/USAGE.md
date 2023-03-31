@@ -2,15 +2,20 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AccountCreateRecoverySecurity;
+import org.openapis.openapi.models.operations.AccountCreateRecoveryRequestBody;
+import org.openapis.openapi.models.operations.AccountCreateRecoveryRequest;
+import org.openapis.openapi.models.operations.AccountCreateRecoveryResponse;
+import org.openapis.openapi.models.shared.SchemeJwt;
+import org.openapis.openapi.models.shared.SchemeProject;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AccountCreateRecoveryRequest req = new AccountCreateRecoveryRequest() {{
                 security = new AccountCreateRecoverySecurity() {{
@@ -22,10 +27,10 @@ public class Application {
                     }};
                 }};
                 request = new AccountCreateRecoveryRequestBody() {{
-                    email = "sit";
-                    url = "voluptas";
+                    email = "Larue_Rau85@yahoo.com";
+                    url = "corrupti";
                 }};
-            }};
+            }};            
 
             AccountCreateRecoveryResponse res = sdk.account.accountCreateRecovery(req);
 

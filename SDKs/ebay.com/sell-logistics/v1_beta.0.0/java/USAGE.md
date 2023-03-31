@@ -2,26 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CancelShipmentSecurity;
+import org.openapis.openapi.models.operations.CancelShipmentPathParams;
+import org.openapis.openapi.models.operations.CancelShipmentRequest;
+import org.openapis.openapi.models.operations.CancelShipmentResponse;
+import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CancelShipmentRequest req = new CancelShipmentRequest() {{
                 security = new CancelShipmentSecurity() {{
-                    apiAuth = new SchemeApiAuth() {{
+                    apiAuth = new SchemeAPIAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
                 pathParams = new CancelShipmentPathParams() {{
-                    shipmentId = "sit";
+                    shipmentId = "corrupti";
                 }};
-            }};
+            }};            
 
             CancelShipmentResponse res = sdk.shipment.cancelShipment(req);
 

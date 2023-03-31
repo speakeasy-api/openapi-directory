@@ -2,38 +2,41 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetPersonasQueryParams;
+import org.openapis.openapi.models.operations.GetPersonasRequest;
+import org.openapis.openapi.models.operations.GetPersonasResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    httpBearer = new SchemeHttpBearer() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    accessToken = new SchemeAccessToken() {{
+                        apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetPersonasRequest req = new GetPersonasRequest() {{
                 queryParams = new GetPersonasQueryParams() {{
-                    count = 8717895732742165505;
-                    expand = new String[]() {{
-                        add("culpa"),
+                    count = 548814;
+                    expand = new String[]{{
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    fields = new String[]() {{
-                        add("consequuntur"),
-                        add("dolor"),
+                    fields = new String[]{{
+                        add("corrupti"),
+                        add("illum"),
+                        add("vel"),
+                        add("error"),
                     }};
-                    name = "expedita";
-                    page = 6044372234677422456;
+                    name = "deserunt";
+                    page = 384382;
                 }};
-            }};
+            }};            
 
             GetPersonasResponse res = sdk.persona.getPersonas(req);
 

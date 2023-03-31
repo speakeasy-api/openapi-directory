@@ -2,50 +2,69 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PatchAttractionPathParams;
+import org.openapis.openapi.models.operations.PatchAttractionHeaders;
+import org.openapis.openapi.models.operations.PatchAttractionRequest;
+import org.openapis.openapi.models.operations.PatchAttractionResponse;
+import org.openapis.openapi.models.shared.AugmentationDataRelatedEntityTypeEnum;
+import org.openapis.openapi.models.shared.AugmentationData;
+import org.openapis.openapi.models.shared.ChangeOpEnum;
+import org.openapis.openapi.models.shared.Change;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PatchAttractionRequest req = new PatchAttractionRequest() {{
                 pathParams = new PatchAttractionPathParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
                 headers = new PatchAttractionHeaders() {{
-                    tmpsCorrelationId = "voluptas";
+                    tmpsCorrelationId = "provident";
                 }};
                 request = new AugmentationData() {{
-                    changes = new openapisdk.models.shared.Change[]() {{
+                    changes = new org.openapis.openapi.models.shared.Change[]{{
                         add(new Change() {{
-                            from = "expedita";
-                            op = "test";
-                            path = "dolor";
+                            from = "quibusdam";
+                            op = "move";
+                            path = "nulla";
                             value = new java.util.HashMap<String, Object>() {{
-                                put("voluptas", "fugit");
-                                put("et", "nihil");
+                                put("illum", "vel");
+                                put("error", "deserunt");
+                                put("suscipit", "iure");
                             }};
                         }}),
                         add(new Change() {{
-                            from = "rerum";
+                            from = "magnam";
                             op = "test";
-                            path = "debitis";
+                            path = "ipsa";
                             value = new java.util.HashMap<String, Object>() {{
-                                put("et", "ut");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
+                                put("iusto", "excepturi");
+                            }};
+                        }}),
+                        add(new Change() {{
+                            from = "nisi";
+                            op = "test";
+                            path = "temporibus";
+                            value = new java.util.HashMap<String, Object>() {{
+                                put("quis", "veritatis");
                             }};
                         }}),
                     }};
-                    relatedEntityId = "dolorem";
-                    relatedEntityType = "attraction";
-                    score = 94.199997;
-                    source = "vitae";
-                    versionNumber = 4706154865122290029;
+                    relatedEntityId = "deserunt";
+                    relatedEntityType = "event";
+                    score = 3682.41;
+                    source = "repellendus";
+                    versionNumber = 957156;
                 }};
-            }};
+            }};            
 
             PatchAttractionResponse res = sdk.patchAttraction(req);
 

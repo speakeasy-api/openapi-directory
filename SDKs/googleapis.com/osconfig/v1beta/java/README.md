@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,51 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateSecurity;
+import org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreatePathParams;
+import org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateQueryParams;
+import org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateRequest;
+import org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateResponse;
+import org.openapis.openapi.models.shared.GuestPolicyInput;
+import org.openapis.openapi.models.shared.SoftwareRecipeDesiredStateEnum;
+import org.openapis.openapi.models.shared.SoftwareRecipe;
+import org.openapis.openapi.models.shared.SoftwareRecipeStep;
+import org.openapis.openapi.models.shared.SoftwareRecipeStepRunScriptInterpreterEnum;
+import org.openapis.openapi.models.shared.SoftwareRecipeStepRunScript;
+import org.openapis.openapi.models.shared.SoftwareRecipeStepInstallRpm;
+import org.openapis.openapi.models.shared.SoftwareRecipeStepInstallMsi;
+import org.openapis.openapi.models.shared.SoftwareRecipeStepExecFile;
+import org.openapis.openapi.models.shared.SoftwareRecipeStepCopyFile;
+import org.openapis.openapi.models.shared.SoftwareRecipeStepInstallDpkg;
+import org.openapis.openapi.models.shared.SoftwareRecipeStepExtractArchiveTypeEnum;
+import org.openapis.openapi.models.shared.SoftwareRecipeStepExtractArchive;
+import org.openapis.openapi.models.shared.SoftwareRecipeArtifact;
+import org.openapis.openapi.models.shared.SoftwareRecipeArtifactRemote;
+import org.openapis.openapi.models.shared.SoftwareRecipeArtifactGcs;
+import org.openapis.openapi.models.shared.PackageDesiredStateEnum;
+import org.openapis.openapi.models.shared.PackageManagerEnum;
+import org.openapis.openapi.models.shared.Package;
+import org.openapis.openapi.models.shared.PackageRepository;
+import org.openapis.openapi.models.shared.ZypperRepository;
+import org.openapis.openapi.models.shared.YumRepository;
+import org.openapis.openapi.models.shared.GooRepository;
+import org.openapis.openapi.models.shared.AptRepositoryArchiveTypeEnum;
+import org.openapis.openapi.models.shared.AptRepository;
+import org.openapis.openapi.models.shared.Assignment;
+import org.openapis.openapi.models.shared.AssignmentOsType;
+import org.openapis.openapi.models.shared.AssignmentGroupLabel;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             OsconfigProjectsGuestPoliciesCreateRequest req = new OsconfigProjectsGuestPoliciesCreateRequest() {{
                 security = new OsconfigProjectsGuestPoliciesCreateSecurity() {{
@@ -35,781 +71,487 @@ public class Application {
                     }};
                 }};
                 pathParams = new OsconfigProjectsGuestPoliciesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new OsconfigProjectsGuestPoliciesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    guestPolicyId = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    guestPolicyId = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new GuestPolicyInput() {{
                     assignment = new Assignment() {{
-                        groupLabels = new openapisdk.models.shared.AssignmentGroupLabel[]() {{
+                        groupLabels = new org.openapis.openapi.models.shared.AssignmentGroupLabel[]{{
                             add(new AssignmentGroupLabel() {{
                                 labels = new java.util.HashMap<String, String>() {{
-                                    put("et", "ut");
+                                    put("debitis", "ipsa");
+                                    put("delectus", "tempora");
+                                }};
+                            }}),
+                            add(new AssignmentGroupLabel() {{
+                                labels = new java.util.HashMap<String, String>() {{
+                                    put("molestiae", "minus");
+                                    put("placeat", "voluptatum");
                                 }};
                             }}),
                         }};
-                        instanceNamePrefixes = new String[]() {{
-                            add("et"),
-                            add("voluptate"),
-                            add("iste"),
+                        instanceNamePrefixes = new String[]{{
+                            add("excepturi"),
+                            add("nisi"),
                         }};
-                        instances = new String[]() {{
-                            add("totam"),
+                        instances = new String[]{{
+                            add("temporibus"),
+                            add("ab"),
+                            add("quis"),
+                            add("veritatis"),
                         }};
-                        osTypes = new openapisdk.models.shared.AssignmentOsType[]() {{
+                        osTypes = new org.openapis.openapi.models.shared.AssignmentOsType[]{{
                             add(new AssignmentOsType() {{
-                                osArchitecture = "illum";
-                                osShortName = "debitis";
-                                osVersion = "vel";
+                                osArchitecture = "perferendis";
+                                osShortName = "ipsam";
+                                osVersion = "repellendus";
+                            }}),
+                            add(new AssignmentOsType() {{
+                                osArchitecture = "sapiente";
+                                osShortName = "quo";
+                                osVersion = "odit";
+                            }}),
+                            add(new AssignmentOsType() {{
+                                osArchitecture = "at";
+                                osShortName = "at";
+                                osVersion = "maiores";
                             }}),
                         }};
-                        zones = new String[]() {{
-                            add("dolore"),
+                        zones = new String[]{{
+                            add("quod"),
+                            add("quod"),
                         }};
                     }};
-                    description = "id";
-                    etag = "aspernatur";
-                    name = "accusantium";
-                    packageRepositories = new openapisdk.models.shared.PackageRepository[]() {{
-                        add(new PackageRepository() {{
-                            apt = new AptRepository() {{
-                                archiveType = "DEB";
-                                components = new String[]() {{
-                                    add("est"),
-                                    add("aut"),
-                                    add("odit"),
-                                }};
-                                distribution = "non";
-                                gpgKey = "voluptas";
-                                uri = "omnis";
-                            }};
-                            goo = new GooRepository() {{
-                                name = "aut";
-                                url = "illo";
-                            }};
-                            yum = new YumRepository() {{
-                                baseUrl = "sed";
-                                displayName = "officiis";
-                                gpgKeys = new String[]() {{
-                                    add("consectetur"),
-                                    add("nobis"),
-                                }};
-                                id = "odio";
-                            }};
-                            zypper = new ZypperRepository() {{
-                                baseUrl = "qui";
-                                displayName = "recusandae";
-                                gpgKeys = new String[]() {{
-                                    add("ipsum"),
-                                    add("eveniet"),
-                                }};
-                                id = "modi";
-                            }};
-                        }}),
+                    description = "esse";
+                    etag = "totam";
+                    name = "porro";
+                    packageRepositories = new org.openapis.openapi.models.shared.PackageRepository[]{{
                         add(new PackageRepository() {{
                             apt = new AptRepository() {{
                                 archiveType = "ARCHIVE_TYPE_UNSPECIFIED";
-                                components = new String[]() {{
-                                    add("ut"),
+                                components = new String[]{{
+                                    add("officia"),
+                                    add("occaecati"),
+                                    add("fugit"),
                                 }};
-                                distribution = "exercitationem";
-                                gpgKey = "aut";
-                                uri = "reprehenderit";
+                                distribution = "deleniti";
+                                gpgKey = "hic";
+                                uri = "https://mean-brick.info";
                             }};
                             goo = new GooRepository() {{
-                                name = "tempore";
-                                url = "maiores";
+                                name = "molestiae";
+                                url = "modi";
                             }};
                             yum = new YumRepository() {{
-                                baseUrl = "incidunt";
-                                displayName = "dolor";
-                                gpgKeys = new String[]() {{
-                                    add("veritatis"),
-                                    add("in"),
-                                    add("et"),
+                                baseUrl = "qui";
+                                displayName = "impedit";
+                                gpgKeys = new String[]{{
+                                    add("esse"),
+                                    add("ipsum"),
+                                    add("excepturi"),
                                 }};
-                                id = "omnis";
+                                id = "aspernatur";
                             }};
                             zypper = new ZypperRepository() {{
-                                baseUrl = "ipsum";
-                                displayName = "ex";
-                                gpgKeys = new String[]() {{
-                                    add("placeat"),
-                                    add("vel"),
-                                    add("rerum"),
+                                baseUrl = "perferendis";
+                                displayName = "ad";
+                                gpgKeys = new String[]{{
+                                    add("sed"),
+                                    add("iste"),
+                                    add("dolor"),
                                 }};
-                                id = "mollitia";
+                                id = "natus";
                             }};
                         }}),
                         add(new PackageRepository() {{
                             apt = new AptRepository() {{
                                 archiveType = "DEB";
-                                components = new String[]() {{
-                                    add("reprehenderit"),
+                                components = new String[]{{
+                                    add("saepe"),
+                                    add("fuga"),
+                                    add("in"),
+                                    add("corporis"),
                                 }};
-                                distribution = "qui";
-                                gpgKey = "qui";
-                                uri = "unde";
+                                distribution = "iste";
+                                gpgKey = "iure";
+                                uri = "https://rich-bouquet.com";
                             }};
                             goo = new GooRepository() {{
-                                name = "in";
-                                url = "autem";
+                                name = "reiciendis";
+                                url = "est";
                             }};
                             yum = new YumRepository() {{
-                                baseUrl = "qui";
-                                displayName = "ut";
-                                gpgKeys = new String[]() {{
-                                    add("ab"),
-                                    add("neque"),
-                                    add("ullam"),
+                                baseUrl = "mollitia";
+                                displayName = "laborum";
+                                gpgKeys = new String[]{{
+                                    add("dolorem"),
                                 }};
-                                id = "et";
+                                id = "corporis";
                             }};
                             zypper = new ZypperRepository() {{
-                                baseUrl = "accusantium";
-                                displayName = "esse";
-                                gpgKeys = new String[]() {{
-                                    add("quam"),
-                                    add("velit"),
+                                baseUrl = "explicabo";
+                                displayName = "nobis";
+                                gpgKeys = new String[]{{
+                                    add("omnis"),
+                                    add("nemo"),
                                 }};
-                                id = "cumque";
+                                id = "minima";
+                            }};
+                        }}),
+                        add(new PackageRepository() {{
+                            apt = new AptRepository() {{
+                                archiveType = "DEB";
+                                components = new String[]{{
+                                    add("iure"),
+                                }};
+                                distribution = "culpa";
+                                gpgKey = "doloribus";
+                                uri = "https://buttery-petitioner.biz";
+                            }};
+                            goo = new GooRepository() {{
+                                name = "culpa";
+                                url = "consequuntur";
+                            }};
+                            yum = new YumRepository() {{
+                                baseUrl = "repellat";
+                                displayName = "mollitia";
+                                gpgKeys = new String[]{{
+                                    add("numquam"),
+                                    add("commodi"),
+                                    add("quam"),
+                                }};
+                                id = "molestiae";
+                            }};
+                            zypper = new ZypperRepository() {{
+                                baseUrl = "velit";
+                                displayName = "error";
+                                gpgKeys = new String[]{{
+                                    add("quis"),
+                                }};
+                                id = "vitae";
                             }};
                         }}),
                     }};
-                    packages = new openapisdk.models.shared.Package[]() {{
+                    packages = new org.openapis.openapi.models.shared.Package[]{{
+                        add(new Package() {{
+                            desiredState = "UPDATED";
+                            manager = "ANY";
+                            name = "odit";
+                        }}),
+                        add(new Package() {{
+                            desiredState = "REMOVED";
+                            manager = "ANY";
+                            name = "tenetur";
+                        }}),
                         add(new Package() {{
                             desiredState = "INSTALLED";
-                            manager = "ANY";
-                            name = "magni";
+                            manager = "YUM";
+                            name = "possimus";
                         }}),
                     }};
-                    recipes = new openapisdk.models.shared.SoftwareRecipe[]() {{
+                    recipes = new org.openapis.openapi.models.shared.SoftwareRecipe[]{{
                         add(new SoftwareRecipe() {{
-                            artifacts = new openapisdk.models.shared.SoftwareRecipeArtifact[]() {{
-                                add(new SoftwareRecipeArtifact() {{
-                                    allowInsecure = true;
-                                    gcs = new SoftwareRecipeArtifactGcs() {{
-                                        bucket = "earum";
-                                        generation = "illo";
-                                        object = "omnis";
-                                    }};
-                                    id = "ut";
-                                    remote = new SoftwareRecipeArtifactRemote() {{
-                                        checksum = "consequatur";
-                                        uri = "dolor";
-                                    }};
-                                }}),
-                                add(new SoftwareRecipeArtifact() {{
-                                    allowInsecure = true;
-                                    gcs = new SoftwareRecipeArtifactGcs() {{
-                                        bucket = "error";
-                                        generation = "reprehenderit";
-                                        object = "consectetur";
-                                    }};
-                                    id = "nostrum";
-                                    remote = new SoftwareRecipeArtifactRemote() {{
-                                        checksum = "ut";
-                                        uri = "laboriosam";
-                                    }};
-                                }}),
-                                add(new SoftwareRecipeArtifact() {{
-                                    allowInsecure = true;
-                                    gcs = new SoftwareRecipeArtifactGcs() {{
-                                        bucket = "a";
-                                        generation = "soluta";
-                                        object = "aut";
-                                    }};
-                                    id = "quas";
-                                    remote = new SoftwareRecipeArtifactRemote() {{
-                                        checksum = "consequuntur";
-                                        uri = "laudantium";
-                                    }};
-                                }}),
-                            }};
-                            desiredState = "INSTALLED";
-                            installSteps = new openapisdk.models.shared.SoftwareRecipeStep[]() {{
-                                add(new SoftwareRecipeStep() {{
-                                    archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "expedita";
-                                        destination = "doloremque";
-                                        type = "TAR_GZIP";
-                                    }};
-                                    dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "atque";
-                                    }};
-                                    fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "ratione";
-                                        destination = "quisquam";
-                                        overwrite = false;
-                                        permissions = "ea";
-                                    }};
-                                    fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(8392001091488039958),
-                                        }};
-                                        args = new String[]() {{
-                                            add("et"),
-                                            add("rerum"),
-                                        }};
-                                        artifactId = "reiciendis";
-                                        localPath = "quis";
-                                    }};
-                                    msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(2718877847597668777),
-                                            add(2333048574390956331),
-                                        }};
-                                        artifactId = "est";
-                                        flags = new String[]() {{
-                                            add("eum"),
-                                            add("labore"),
-                                            add("et"),
-                                        }};
-                                    }};
-                                    rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "impedit";
-                                    }};
-                                    scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(8953538234431013647),
-                                            add(4540487686588600123),
-                                            add(5310832663795041070),
-                                        }};
-                                        interpreter = "SHELL";
-                                        script = "nihil";
-                                    }};
-                                }}),
-                            }};
-                            name = "tempora";
-                            updateSteps = new openapisdk.models.shared.SoftwareRecipeStep[]() {{
-                                add(new SoftwareRecipeStep() {{
-                                    archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "eaque";
-                                        destination = "sunt";
-                                        type = "ARCHIVE_TYPE_UNSPECIFIED";
-                                    }};
-                                    dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "autem";
-                                    }};
-                                    fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "quis";
-                                        destination = "vel";
-                                        overwrite = false;
-                                        permissions = "placeat";
-                                    }};
-                                    fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(3661602461251866513),
-                                        }};
-                                        args = new String[]() {{
-                                            add("adipisci"),
-                                            add("porro"),
-                                            add("rerum"),
-                                        }};
-                                        artifactId = "et";
-                                        localPath = "accusamus";
-                                    }};
-                                    msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(2223751782546645906),
-                                            add(8958290475970215309),
-                                        }};
-                                        artifactId = "ut";
-                                        flags = new String[]() {{
-                                            add("fugit"),
-                                            add("quis"),
-                                            add("minus"),
-                                        }};
-                                    }};
-                                    rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "soluta";
-                                    }};
-                                    scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(7686248226181626741),
-                                            add(4970157864765978097),
-                                        }};
-                                        interpreter = "SHELL";
-                                        script = "inventore";
-                                    }};
-                                }}),
-                            }};
-                            version = "delectus";
-                        }}),
-                        add(new SoftwareRecipe() {{
-                            artifacts = new openapisdk.models.shared.SoftwareRecipeArtifact[]() {{
+                            artifacts = new org.openapis.openapi.models.shared.SoftwareRecipeArtifact[]{{
                                 add(new SoftwareRecipeArtifact() {{
                                     allowInsecure = false;
                                     gcs = new SoftwareRecipeArtifactGcs() {{
-                                        bucket = "animi";
-                                        generation = "ut";
-                                        object = "aliquam";
+                                        bucket = "error";
+                                        generation = "temporibus";
+                                        object = "laborum";
                                     }};
-                                    id = "fuga";
+                                    id = "quasi";
                                     remote = new SoftwareRecipeArtifactRemote() {{
-                                        checksum = "sed";
-                                        uri = "sed";
+                                        checksum = "reiciendis";
+                                        uri = "https://twin-intent.name";
                                     }};
                                 }}),
                             }};
-                            desiredState = "UPDATED";
-                            installSteps = new openapisdk.models.shared.SoftwareRecipeStep[]() {{
+                            desiredState = "REMOVED";
+                            installSteps = new org.openapis.openapi.models.shared.SoftwareRecipeStep[]{{
                                 add(new SoftwareRecipeStep() {{
                                     archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "non";
-                                        destination = "cupiditate";
-                                        type = "ARCHIVE_TYPE_UNSPECIFIED";
+                                        artifactId = "omnis";
+                                        destination = "voluptate";
+                                        type = "TAR_XZ";
                                     }};
                                     dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "molestiae";
+                                        artifactId = "perferendis";
                                     }};
                                     fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "pariatur";
-                                        destination = "quasi";
+                                        artifactId = "doloremque";
+                                        destination = "reprehenderit";
                                         overwrite = false;
-                                        permissions = "enim";
+                                        permissions = "ut";
                                     }};
                                     fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(4450884069054898502),
+                                        allowedExitCodes = new Integer[]{{
+                                            add(120196),
+                                            add(359444),
+                                            add(296140),
+                                            add(480894),
                                         }};
-                                        args = new String[]() {{
-                                            add("modi"),
-                                            add("neque"),
-                                            add("consequuntur"),
+                                        args = new String[]{{
+                                            add("harum"),
                                         }};
-                                        artifactId = "quia";
-                                        localPath = "et";
+                                        artifactId = "enim";
+                                        localPath = "accusamus";
                                     }};
                                     msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(6028661030721431741),
-                                        }};
-                                        artifactId = "ex";
-                                        flags = new String[]() {{
-                                            add("quia"),
-                                            add("temporibus"),
-                                        }};
-                                    }};
-                                    rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "velit";
-                                    }};
-                                    scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(5042961816383320698),
-                                        }};
-                                        interpreter = "POWERSHELL";
-                                        script = "necessitatibus";
-                                    }};
-                                }}),
-                                add(new SoftwareRecipeStep() {{
-                                    archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "in";
-                                        destination = "possimus";
-                                        type = "TAR";
-                                    }};
-                                    dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "dolorum";
-                                    }};
-                                    fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "doloribus";
-                                        destination = "saepe";
-                                        overwrite = false;
-                                        permissions = "earum";
-                                    }};
-                                    fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(6499763367080957833),
-                                            add(1514803956160473307),
-                                        }};
-                                        args = new String[]() {{
-                                            add("est"),
+                                        allowedExitCodes = new Integer[]{{
+                                            add(918236),
+                                            add(64147),
                                         }};
                                         artifactId = "ipsum";
-                                        localPath = "quam";
-                                    }};
-                                    msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(8993831421611415990),
-                                        }};
-                                        artifactId = "dolores";
-                                        flags = new String[]() {{
-                                            add("impedit"),
-                                            add("non"),
+                                        flags = new String[]{{
+                                            add("molestias"),
+                                            add("excepturi"),
+                                            add("pariatur"),
                                         }};
                                     }};
                                     rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "magnam";
+                                        artifactId = "modi";
                                     }};
                                     scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(3357930257403748968),
-                                            add(371208508841907247),
-                                            add(5420076601779642085),
+                                        allowedExitCodes = new Integer[]{{
+                                            add(523248),
+                                            add(916723),
+                                            add(93940),
                                         }};
-                                        interpreter = "SHELL";
-                                        script = "ipsam";
+                                        interpreter = "POWERSHELL";
+                                        script = "sint";
                                     }};
                                 }}),
+                            }};
+                            name = "veritatis";
+                            updateSteps = new org.openapis.openapi.models.shared.SoftwareRecipeStep[]{{
                                 add(new SoftwareRecipeStep() {{
                                     archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "ducimus";
+                                        artifactId = "incidunt";
                                         destination = "enim";
                                         type = "ARCHIVE_TYPE_UNSPECIFIED";
                                     }};
                                     dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "distinctio";
+                                        artifactId = "est";
                                     }};
                                     fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "delectus";
-                                        destination = "rerum";
+                                        artifactId = "quibusdam";
+                                        destination = "explicabo";
                                         overwrite = false;
-                                        permissions = "repellat";
+                                        permissions = "deserunt";
                                     }};
                                     fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(1469755398674317289),
+                                        allowedExitCodes = new Integer[]{{
+                                            add(841386),
+                                            add(289406),
+                                            add(264730),
                                         }};
-                                        args = new String[]() {{
-                                            add("sunt"),
-                                            add("voluptas"),
+                                        args = new String[]{{
+                                            add("aliquid"),
                                         }};
-                                        artifactId = "amet";
-                                        localPath = "et";
+                                        artifactId = "cupiditate";
+                                        localPath = "quos";
                                     }};
                                     msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(6187840044538043239),
+                                        allowedExitCodes = new Integer[]{{
+                                            add(164940),
                                         }};
-                                        artifactId = "excepturi";
-                                        flags = new String[]() {{
-                                            add("corporis"),
+                                        artifactId = "assumenda";
+                                        flags = new String[]{{
+                                            add("alias"),
+                                            add("fugit"),
                                         }};
                                     }};
                                     rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "dicta";
+                                        artifactId = "dolorum";
                                     }};
                                     scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(1759572601250580224),
-                                            add(5492620638782281201),
+                                        allowedExitCodes = new Integer[]{{
+                                            add(270008),
+                                            add(703737),
+                                            add(735194),
                                         }};
-                                        interpreter = "SHELL";
-                                        script = "recusandae";
+                                        interpreter = "INTERPRETER_UNSPECIFIED";
+                                        script = "delectus";
                                     }};
                                 }}),
-                            }};
-                            name = "qui";
-                            updateSteps = new openapisdk.models.shared.SoftwareRecipeStep[]() {{
                                 add(new SoftwareRecipeStep() {{
                                     archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "et";
-                                        destination = "rerum";
+                                        artifactId = "eum";
+                                        destination = "non";
+                                        type = "TAR_XZ";
+                                    }};
+                                    dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
+                                        artifactId = "sint";
+                                    }};
+                                    fileCopy = new SoftwareRecipeStepCopyFile() {{
+                                        artifactId = "aliquid";
+                                        destination = "provident";
+                                        overwrite = false;
+                                        permissions = "necessitatibus";
+                                    }};
+                                    fileExec = new SoftwareRecipeStepExecFile() {{
+                                        allowedExitCodes = new Integer[]{{
+                                            add(638921),
+                                            add(223081),
+                                            add(891555),
+                                        }};
+                                        args = new String[]{{
+                                            add("dolorum"),
+                                            add("in"),
+                                            add("in"),
+                                            add("illum"),
+                                        }};
+                                        artifactId = "maiores";
+                                        localPath = "rerum";
+                                    }};
+                                    msiInstallation = new SoftwareRecipeStepInstallMsi() {{
+                                        allowedExitCodes = new Integer[]{{
+                                            add(297437),
+                                        }};
+                                        artifactId = "cumque";
+                                        flags = new String[]{{
+                                            add("ea"),
+                                            add("aliquid"),
+                                            add("laborum"),
+                                            add("accusamus"),
+                                        }};
+                                    }};
+                                    rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
+                                        artifactId = "non";
+                                    }};
+                                    scriptRun = new SoftwareRecipeStepRunScript() {{
+                                        allowedExitCodes = new Integer[]{{
+                                            add(313218),
+                                            add(881736),
+                                            add(965417),
+                                        }};
+                                        interpreter = "POWERSHELL";
+                                        script = "provident";
+                                    }};
+                                }}),
+                                add(new SoftwareRecipeStep() {{
+                                    archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
+                                        artifactId = "nam";
+                                        destination = "id";
                                         type = "TAR_BZIP";
                                     }};
                                     dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "rem";
+                                        artifactId = "deleniti";
                                     }};
                                     fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "eos";
-                                        destination = "et";
-                                        overwrite = true;
-                                        permissions = "aspernatur";
-                                    }};
-                                    fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(388271722783231135),
-                                        }};
-                                        args = new String[]() {{
-                                            add("adipisci"),
-                                        }};
-                                        artifactId = "consequatur";
-                                        localPath = "illum";
-                                    }};
-                                    msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(5615798573507722061),
-                                            add(1444501184389758573),
-                                            add(6965195451650017723),
-                                        }};
-                                        artifactId = "quidem";
-                                        flags = new String[]() {{
-                                            add("quo"),
-                                            add("vero"),
-                                        }};
-                                    }};
-                                    rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "alias";
-                                    }};
-                                    scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(1529447803721624558),
-                                            add(1958777829936408748),
-                                            add(5294730593135495901),
-                                        }};
-                                        interpreter = "POWERSHELL";
-                                        script = "omnis";
-                                    }};
-                                }}),
-                                add(new SoftwareRecipeStep() {{
-                                    archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "totam";
-                                        destination = "aut";
-                                        type = "TAR_XZ";
-                                    }};
-                                    dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "magni";
-                                    }};
-                                    fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "necessitatibus";
-                                        destination = "et";
+                                        artifactId = "sapiente";
+                                        destination = "amet";
                                         overwrite = false;
-                                        permissions = "repellendus";
+                                        permissions = "deserunt";
                                     }};
                                     fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(5168005730101237705),
+                                        allowedExitCodes = new Integer[]{{
+                                            add(423855),
+                                            add(618809),
                                         }};
-                                        args = new String[]() {{
-                                            add("architecto"),
-                                            add("molestias"),
-                                            add("rerum"),
+                                        args = new String[]{{
+                                            add("molestiae"),
+                                            add("perferendis"),
+                                            add("nihil"),
                                         }};
-                                        artifactId = "quo";
-                                        localPath = "et";
+                                        artifactId = "magnam";
+                                        localPath = "distinctio";
                                     }};
                                     msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(1215184329252422444),
-                                            add(4178331056796501958),
-                                            add(8590975497400104807),
+                                        allowedExitCodes = new Integer[]{{
+                                            add(287991),
+                                            add(290077),
+                                            add(383462),
                                         }};
-                                        artifactId = "asperiores";
-                                        flags = new String[]() {{
-                                            add("ea"),
-                                        }};
-                                    }};
-                                    rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "soluta";
-                                    }};
-                                    scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(5850174490929081658),
-                                            add(434570727381690637),
-                                            add(2506834319279501248),
-                                        }};
-                                        interpreter = "POWERSHELL";
-                                        script = "et";
-                                    }};
-                                }}),
-                            }};
-                            version = "odit";
-                        }}),
-                        add(new SoftwareRecipe() {{
-                            artifacts = new openapisdk.models.shared.SoftwareRecipeArtifact[]() {{
-                                add(new SoftwareRecipeArtifact() {{
-                                    allowInsecure = true;
-                                    gcs = new SoftwareRecipeArtifactGcs() {{
-                                        bucket = "ipsum";
-                                        generation = "aut";
-                                        object = "perspiciatis";
-                                    }};
-                                    id = "et";
-                                    remote = new SoftwareRecipeArtifactRemote() {{
-                                        checksum = "vero";
-                                        uri = "voluptatem";
-                                    }};
-                                }}),
-                                add(new SoftwareRecipeArtifact() {{
-                                    allowInsecure = false;
-                                    gcs = new SoftwareRecipeArtifactGcs() {{
-                                        bucket = "magni";
-                                        generation = "vero";
-                                        object = "distinctio";
-                                    }};
-                                    id = "cumque";
-                                    remote = new SoftwareRecipeArtifactRemote() {{
-                                        checksum = "ea";
-                                        uri = "non";
-                                    }};
-                                }}),
-                            }};
-                            desiredState = "INSTALLED";
-                            installSteps = new openapisdk.models.shared.SoftwareRecipeStep[]() {{
-                                add(new SoftwareRecipeStep() {{
-                                    archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "beatae";
-                                        destination = "quae";
-                                        type = "TAR_GZIP";
-                                    }};
-                                    dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "magni";
-                                    }};
-                                    fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "minus";
-                                        destination = "sit";
-                                        overwrite = false;
-                                        permissions = "neque";
-                                    }};
-                                    fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(5401654515258649126),
-                                        }};
-                                        args = new String[]() {{
-                                            add("debitis"),
-                                            add("autem"),
-                                        }};
-                                        artifactId = "odit";
-                                        localPath = "enim";
-                                    }};
-                                    msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(6332746838872275660),
-                                            add(4671696214766305422),
-                                            add(72208651011097126),
-                                        }};
-                                        artifactId = "recusandae";
-                                        flags = new String[]() {{
-                                            add("exercitationem"),
-                                            add("iste"),
-                                        }};
-                                    }};
-                                    rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "perferendis";
-                                    }};
-                                    scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(5740420119606139691),
-                                            add(8652445593437943884),
-                                            add(262877386996496551),
-                                        }};
-                                        interpreter = "SHELL";
-                                        script = "libero";
-                                    }};
-                                }}),
-                                add(new SoftwareRecipeStep() {{
-                                    archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "qui";
-                                        destination = "omnis";
-                                        type = "TAR_GZIP";
-                                    }};
-                                    dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "nostrum";
-                                    }};
-                                    fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "non";
-                                        destination = "sit";
-                                        overwrite = false;
-                                        permissions = "quo";
-                                    }};
-                                    fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(4500698545012642604),
-                                        }};
-                                        args = new String[]() {{
-                                            add("ea"),
-                                            add("tempore"),
-                                        }};
-                                        artifactId = "fugit";
-                                        localPath = "aut";
-                                    }};
-                                    msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(3633581150548432575),
-                                            add(162748198233786728),
-                                            add(2735291237831641770),
-                                        }};
-                                        artifactId = "magni";
-                                        flags = new String[]() {{
-                                            add("illum"),
-                                            add("consequatur"),
-                                            add("dolores"),
-                                        }};
-                                    }};
-                                    rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "hic";
-                                    }};
-                                    scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(1595294774483826936),
-                                            add(1547351759706903978),
-                                        }};
-                                        interpreter = "INTERPRETER_UNSPECIFIED";
-                                        script = "et";
-                                    }};
-                                }}),
-                            }};
-                            name = "quos";
-                            updateSteps = new openapisdk.models.shared.SoftwareRecipeStep[]() {{
-                                add(new SoftwareRecipeStep() {{
-                                    archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
-                                        artifactId = "explicabo";
-                                        destination = "necessitatibus";
-                                        type = "TAR_XZ";
-                                    }};
-                                    dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
-                                        artifactId = "qui";
-                                    }};
-                                    fileCopy = new SoftwareRecipeStepCopyFile() {{
-                                        artifactId = "in";
-                                        destination = "odit";
-                                        overwrite = false;
-                                        permissions = "corporis";
-                                    }};
-                                    fileExec = new SoftwareRecipeStepExecFile() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(2166251624916999313),
-                                            add(3804333472281854609),
-                                            add(8989348688501218597),
-                                        }};
-                                        args = new String[]() {{
-                                            add("laboriosam"),
-                                            add("quam"),
-                                        }};
-                                        artifactId = "maiores";
-                                        localPath = "totam";
-                                    }};
-                                    msiInstallation = new SoftwareRecipeStepInstallMsi() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(7100399552416253201),
-                                        }};
-                                        artifactId = "repellendus";
-                                        flags = new String[]() {{
+                                        artifactId = "natus";
+                                        flags = new String[]{{
                                             add("eum"),
-                                            add("earum"),
+                                            add("vero"),
+                                            add("aspernatur"),
                                         }};
                                     }};
                                     rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
-                                        artifactId = "et";
+                                        artifactId = "architecto";
                                     }};
                                     scriptRun = new SoftwareRecipeStepRunScript() {{
-                                        allowedExitCodes = new Integer[]() {{
-                                            add(6167316338759183977),
-                                            add(2826820190694642039),
-                                            add(8856257683554197028),
+                                        allowedExitCodes = new Integer[]{{
+                                            add(92373),
+                                            add(569965),
                                         }};
                                         interpreter = "SHELL";
-                                        script = "ea";
+                                        script = "provident";
+                                    }};
+                                }}),
+                                add(new SoftwareRecipeStep() {{
+                                    archiveExtraction = new SoftwareRecipeStepExtractArchive() {{
+                                        artifactId = "quos";
+                                        destination = "sint";
+                                        type = "ARCHIVE_TYPE_UNSPECIFIED";
+                                    }};
+                                    dpkgInstallation = new SoftwareRecipeStepInstallDpkg() {{
+                                        artifactId = "mollitia";
+                                    }};
+                                    fileCopy = new SoftwareRecipeStepCopyFile() {{
+                                        artifactId = "reiciendis";
+                                        destination = "mollitia";
+                                        overwrite = false;
+                                        permissions = "ad";
+                                    }};
+                                    fileExec = new SoftwareRecipeStepExecFile() {{
+                                        allowedExitCodes = new Integer[]{{
+                                            add(221262),
+                                            add(896547),
+                                        }};
+                                        args = new String[]{{
+                                            add("nemo"),
+                                        }};
+                                        artifactId = "quasi";
+                                        localPath = "iure";
+                                    }};
+                                    msiInstallation = new SoftwareRecipeStepInstallMsi() {{
+                                        allowedExitCodes = new Integer[]{{
+                                            add(891924),
+                                            add(260341),
+                                            add(806194),
+                                            add(537023),
+                                        }};
+                                        artifactId = "facilis";
+                                        flags = new String[]{{
+                                            add("architecto"),
+                                            add("architecto"),
+                                        }};
+                                    }};
+                                    rpmInstallation = new SoftwareRecipeStepInstallRpm() {{
+                                        artifactId = "repudiandae";
+                                    }};
+                                    scriptRun = new SoftwareRecipeStepRunScript() {{
+                                        allowedExitCodes = new Integer[]{{
+                                            add(714242),
+                                            add(469249),
+                                        }};
+                                        interpreter = "POWERSHELL";
+                                        script = "quibusdam";
                                     }};
                                 }}),
                             }};
-                            version = "et";
+                            version = "sed";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             OsconfigProjectsGuestPoliciesCreateResponse res = sdk.projects.osconfigProjectsGuestPoliciesCreate(req);
 
@@ -824,6 +566,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### projects
 
@@ -841,7 +584,17 @@ public class Application {
 * `osconfigProjectsPatchJobsInstanceDetailsList` - Get a list of instance details for a given patch job.
 * `osconfigProjectsPatchJobsList` - Get a list of patch jobs.
 * `osconfigProjectsZonesInstancesLookupEffectiveGuestPolicy` - Lookup the effective guest policy that applies to a VM instance. This lookup merges all policies that are assigned to the instance ancestry.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

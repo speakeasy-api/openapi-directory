@@ -2,51 +2,65 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsQueryParams;
+import org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsRequest;
+import org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsResponse;
+import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3LogImpressionsRequest;
+import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3ImpressionImpressionTypeEnum;
+import org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3Impression;
+import org.openapis.openapi.models.shared.GoogleMapsUnityClientInfoPlatformEnum;
+import org.openapis.openapi.models.shared.GoogleMapsUnityClientInfo;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PlayablelocationsLogImpressionsRequest req = new PlayablelocationsLogImpressionsRequest() {{
                 queryParams = new PlayablelocationsLogImpressionsQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new GoogleMapsPlayablelocationsV3LogImpressionsRequest() {{
                     clientInfo = new GoogleMapsUnityClientInfo() {{
-                        apiClient = "rerum";
-                        applicationId = "dicta";
-                        applicationVersion = "debitis";
-                        deviceModel = "voluptatum";
-                        languageCode = "et";
-                        operatingSystem = "ut";
-                        operatingSystemBuild = "dolorem";
+                        apiClient = "deserunt";
+                        applicationId = "suscipit";
+                        applicationVersion = "iure";
+                        deviceModel = "magnam";
+                        languageCode = "debitis";
+                        operatingSystem = "ipsa";
+                        operatingSystemBuild = "delectus";
                         platform = "MAC_OS";
                     }};
-                    impressions = new openapisdk.models.shared.GoogleMapsPlayablelocationsV3Impression[]() {{
+                    impressions = new org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3Impression[]{{
                         add(new GoogleMapsPlayablelocationsV3Impression() {{
-                            gameObjectType = 3287288577352441706;
-                            impressionType = "IMPRESSION_TYPE_UNSPECIFIED";
-                            locationName = "totam";
+                            gameObjectType = 477665;
+                            impressionType = "INTERACTED";
+                            locationName = "placeat";
+                        }}),
+                        add(new GoogleMapsPlayablelocationsV3Impression() {{
+                            gameObjectType = 528895;
+                            impressionType = "PRESENTED";
+                            locationName = "excepturi";
                         }}),
                     }};
-                    requestId = "dolores";
+                    requestId = "nisi";
                 }};
-            }};
+            }};            
 
             PlayablelocationsLogImpressionsResponse res = sdk.v3.playablelocationsLogImpressions(req);
 

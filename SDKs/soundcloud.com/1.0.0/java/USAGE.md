@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdSecurity;
+import org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdPathParams;
+import org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdRequest;
+import org.openapis.openapi.models.operations.DeleteLikesPlaylistsPlaylistIdResponse;
+import org.openapis.openapi.models.shared.SchemeAuthHeader;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeleteLikesPlaylistsPlaylistIdRequest req = new DeleteLikesPlaylistsPlaylistIdRequest() {{
                 security = new DeleteLikesPlaylistsPlaylistIdSecurity() {{
@@ -19,9 +23,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeleteLikesPlaylistsPlaylistIdPathParams() {{
-                    playlistId = 8717895732742165505;
+                    playlistId = 548814;
                 }};
-            }};
+            }};            
 
             DeleteLikesPlaylistsPlaylistIdResponse res = sdk.likes.deleteLikesPlaylistsPlaylistId(req);
 

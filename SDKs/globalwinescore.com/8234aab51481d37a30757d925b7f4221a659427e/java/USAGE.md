@@ -2,42 +2,47 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestColorEnum;
+import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestOrderingEnum;
+import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestQueryParams;
+import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestHeaders;
+import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestRequest;
+import org.openapis.openapi.models.operations.GetGlobalwinescoresLatestResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     tokenAuthentication = new SchemeTokenAuthentication() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetGlobalwinescoresLatestRequest req = new GetGlobalwinescoresLatestRequest() {{
                 queryParams = new GetGlobalwinescoresLatestQueryParams() {{
-                    color = "red";
+                    color = "white";
                     isPrimeurs = false;
-                    limit = 6050128673802995827;
-                    lwin = "expedita";
-                    lwin11 = "consequuntur";
-                    offset = 2669985732393126063;
+                    limit = 592845;
+                    lwin = "distinctio";
+                    lwin11 = "quibusdam";
+                    offset = 602763;
                     ordering = "-score";
-                    vintage = "voluptas";
-                    wineId = new Long[]() {{
-                        add(1543572285742637646),
+                    vintage = "corrupti";
+                    wineId = new Long[]{{
+                        add(423655),
+                        add(623564),
+                        add(645894),
+                        add(384382),
                     }};
                 }};
                 headers = new GetGlobalwinescoresLatestHeaders() {{
-                    authorization = "nihil";
+                    authorization = "iure";
                 }};
-            }};
+            }};            
 
             GetGlobalwinescoresLatestResponse res = sdk.globalWineScore.getGlobalwinescoresLatest(req);
 

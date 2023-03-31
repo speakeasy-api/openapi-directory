@@ -2,28 +2,32 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateApiQueryParams;
+import org.openapis.openapi.models.operations.CreateApiRequestBodyApi;
+import org.openapis.openapi.models.operations.CreateApiRequestBody;
+import org.openapis.openapi.models.operations.CreateApiRequest;
+import org.openapis.openapi.models.operations.CreateApiResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateApiRequest req = new CreateApiRequest() {{
                 queryParams = new CreateApiQueryParams() {{
-                    workspace = "sit";
+                    workspace = "{{workspaceId}}";
                 }};
                 request = new CreateApiRequestBody() {{
                     api = new CreateApiRequestBodyApi() {{
-                        description = "voluptas";
-                        name = "culpa";
-                        summary = "expedita";
+                        description = "This is description.";
+                        name = "Sync Service API";
+                        summary = "This is supposed to be a short summary.";
                     }};
                 }};
-            }};
+            }};            
 
             CreateApiResponse res = sdk.api.createApi(req);
 

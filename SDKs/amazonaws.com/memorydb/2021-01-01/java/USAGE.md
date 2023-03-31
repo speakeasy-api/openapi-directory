@@ -2,44 +2,49 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchUpdateClusterXAmzTargetEnum;
+import org.openapis.openapi.models.operations.BatchUpdateClusterHeaders;
+import org.openapis.openapi.models.operations.BatchUpdateClusterRequest;
+import org.openapis.openapi.models.operations.BatchUpdateClusterResponse;
+import org.openapis.openapi.models.shared.BatchUpdateClusterRequest;
+import org.openapis.openapi.models.shared.ServiceUpdateRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BatchUpdateClusterRequest req = new BatchUpdateClusterRequest() {{
                 headers = new BatchUpdateClusterHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AmazonMemoryDB.BatchUpdateCluster";
                 }};
                 request = new BatchUpdateClusterRequest() {{
-                    clusterNames = new String[]() {{
-                        add("et"),
+                    clusterNames = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
                     serviceUpdate = new ServiceUpdateRequest() {{
-                        serviceUpdateNameToApply = "nihil";
+                        serviceUpdateNameToApply = "iure";
                     }};
                 }};
-            }};
+            }};            
 
             BatchUpdateClusterResponse res = sdk.batchUpdateCluster(req);
 

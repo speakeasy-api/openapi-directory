@@ -2,15 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GenomicsPipelinesRunSecurityOption1;
+import org.openapis.openapi.models.operations.GenomicsPipelinesRunSecurityOption2;
+import org.openapis.openapi.models.operations.GenomicsPipelinesRunSecurity;
+import org.openapis.openapi.models.operations.GenomicsPipelinesRunQueryParams;
+import org.openapis.openapi.models.operations.GenomicsPipelinesRunRequest;
+import org.openapis.openapi.models.operations.GenomicsPipelinesRunResponse;
+import org.openapis.openapi.models.shared.RunPipelineRequest;
+import org.openapis.openapi.models.shared.Pipeline;
+import org.openapis.openapi.models.shared.Resources;
+import org.openapis.openapi.models.shared.VirtualMachine;
+import org.openapis.openapi.models.shared.Volume;
+import org.openapis.openapi.models.shared.PersistentDisk;
+import org.openapis.openapi.models.shared.NFSMount;
+import org.openapis.openapi.models.shared.ExistingDisk;
+import org.openapis.openapi.models.shared.ServiceAccount;
+import org.openapis.openapi.models.shared.Network;
+import org.openapis.openapi.models.shared.Disk;
+import org.openapis.openapi.models.shared.Accelerator;
+import org.openapis.openapi.models.shared.Secret;
+import org.openapis.openapi.models.shared.ActionFlagsEnum;
+import org.openapis.openapi.models.shared.Action;
+import org.openapis.openapi.models.shared.Mount;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GenomicsPipelinesRunRequest req = new GenomicsPipelinesRunRequest() {{
                 security = new GenomicsPipelinesRunSecurity() {{
@@ -24,229 +49,227 @@ public class Application {
                     }};
                 }};
                 queryParams = new GenomicsPipelinesRunQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new RunPipelineRequest() {{
                     labels = new java.util.HashMap<String, String>() {{
-                        put("dicta", "debitis");
-                        put("voluptatum", "et");
-                        put("ut", "dolorem");
+                        put("suscipit", "iure");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
                     pipeline = new Pipeline() {{
-                        actions = new openapisdk.models.shared.Action[]() {{
+                        actions = new org.openapis.openapi.models.shared.Action[]{{
                             add(new Action() {{
-                                commands = new String[]() {{
-                                    add("iste"),
+                                commands = new String[]{{
+                                    add("molestiae"),
+                                    add("minus"),
                                 }};
                                 credentials = new Secret() {{
-                                    cipherText = "vitae";
-                                    keyName = "totam";
+                                    cipherText = "placeat";
+                                    keyName = "voluptatum";
                                 }};
                                 encryptedEnvironment = new Secret() {{
-                                    cipherText = "dolores";
-                                    keyName = "illum";
+                                    cipherText = "iusto";
+                                    keyName = "excepturi";
                                 }};
-                                entrypoint = "debitis";
+                                entrypoint = "nisi";
                                 environment = new java.util.HashMap<String, String>() {{
-                                    put("odio", "dolore");
-                                    put("id", "aspernatur");
+                                    put("temporibus", "ab");
+                                    put("quis", "veritatis");
+                                    put("deserunt", "perferendis");
+                                    put("ipsam", "repellendus");
                                 }};
-                                flags = new openapisdk.models.shared.ActionFlagsEnum[]() {{
-                                    add("PUBLISH_EXPOSED_PORTS"),
+                                flags = new org.openapis.openapi.models.shared.ActionFlagsEnum[]{{
                                     add("DISABLE_STANDARD_ERROR_CAPTURE"),
-                                    add("BLOCK_EXTERNAL_NETWORK"),
+                                    add("IGNORE_EXIT_STATUS"),
+                                    add("DISABLE_STANDARD_ERROR_CAPTURE"),
+                                    add("DISABLE_STANDARD_ERROR_CAPTURE"),
                                 }};
-                                imageUri = "est";
+                                imageUri = "maiores";
                                 labels = new java.util.HashMap<String, String>() {{
-                                    put("odit", "non");
-                                    put("voluptas", "omnis");
-                                    put("aut", "illo");
+                                    put("quod", "quod");
+                                    put("esse", "totam");
                                 }};
-                                mounts = new openapisdk.models.shared.Mount[]() {{
+                                mounts = new org.openapis.openapi.models.shared.Mount[]{{
                                     add(new Mount() {{
-                                        disk = "officiis";
-                                        path = "autem";
-                                        readOnly = true;
-                                    }}),
-                                    add(new Mount() {{
-                                        disk = "nobis";
-                                        path = "odio";
+                                        disk = "dolorum";
+                                        path = "dicta";
                                         readOnly = false;
                                     }}),
                                     add(new Mount() {{
-                                        disk = "recusandae";
-                                        path = "at";
+                                        disk = "nam";
+                                        path = "officia";
+                                        readOnly = false;
+                                    }}),
+                                    add(new Mount() {{
+                                        disk = "occaecati";
+                                        path = "fugit";
+                                        readOnly = false;
+                                    }}),
+                                    add(new Mount() {{
+                                        disk = "deleniti";
+                                        path = "hic";
                                         readOnly = false;
                                     }}),
                                 }};
-                                name = "eveniet";
-                                pidNamespace = "modi";
+                                name = "optio";
+                                pidNamespace = "totam";
                                 portMappings = new java.util.HashMap<String, Integer>() {{
-                                    put("inventore", 7847956203786849690);
+                                    put("commodi", 473600);
                                 }};
-                                timeout = "exercitationem";
+                                timeout = "modi";
                             }}),
                             add(new Action() {{
-                                commands = new String[]() {{
-                                    add("reprehenderit"),
-                                    add("tempore"),
-                                    add("maiores"),
+                                commands = new String[]{{
+                                    add("impedit"),
                                 }};
                                 credentials = new Secret() {{
-                                    cipherText = "incidunt";
-                                    keyName = "dolor";
+                                    cipherText = "cum";
+                                    keyName = "esse";
                                 }};
                                 encryptedEnvironment = new Secret() {{
-                                    cipherText = "beatae";
-                                    keyName = "veritatis";
+                                    cipherText = "ipsum";
+                                    keyName = "excepturi";
                                 }};
-                                entrypoint = "in";
+                                entrypoint = "aspernatur";
                                 environment = new java.util.HashMap<String, String>() {{
-                                    put("omnis", "ipsum");
-                                    put("ex", "dolores");
-                                    put("placeat", "vel");
+                                    put("ad", "natus");
                                 }};
-                                flags = new openapisdk.models.shared.ActionFlagsEnum[]() {{
-                                    add("ENABLE_FUSE"),
-                                    add("ENABLE_FUSE"),
-                                    add("ALWAYS_RUN"),
+                                flags = new org.openapis.openapi.models.shared.ActionFlagsEnum[]{{
+                                    add("PUBLISH_EXPOSED_PORTS"),
                                 }};
-                                imageUri = "reprehenderit";
+                                imageUri = "dolor";
                                 labels = new java.util.HashMap<String, String>() {{
-                                    put("qui", "unde");
+                                    put("laboriosam", "hic");
+                                    put("saepe", "fuga");
+                                    put("in", "corporis");
                                 }};
-                                mounts = new openapisdk.models.shared.Mount[]() {{
+                                mounts = new org.openapis.openapi.models.shared.Mount[]{{
                                     add(new Mount() {{
-                                        disk = "autem";
-                                        path = "qui";
+                                        disk = "iure";
+                                        path = "saepe";
                                         readOnly = false;
                                     }}),
                                     add(new Mount() {{
-                                        disk = "itaque";
-                                        path = "ab";
+                                        disk = "quidem";
+                                        path = "architecto";
+                                        readOnly = false;
+                                    }}),
+                                    add(new Mount() {{
+                                        disk = "ipsa";
+                                        path = "reiciendis";
                                         readOnly = false;
                                     }}),
                                 }};
-                                name = "ullam";
-                                pidNamespace = "et";
+                                name = "est";
+                                pidNamespace = "mollitia";
                                 portMappings = new java.util.HashMap<String, Integer>() {{
-                                    put("esse", 5902760509050140210);
-                                    put("quam", 3604381780091280195);
-                                    put("cumque", 3331863358128628835);
+                                    put("dolores", 210382);
+                                    put("corporis", 128926);
+                                    put("nobis", 315428);
                                 }};
-                                timeout = "sunt";
+                                timeout = "omnis";
                             }}),
                         }};
                         encryptedEnvironment = new Secret() {{
-                            cipherText = "voluptates";
-                            keyName = "magni";
+                            cipherText = "nemo";
+                            keyName = "minima";
                         }};
                         environment = new java.util.HashMap<String, String>() {{
-                            put("optio", "qui");
-                            put("earum", "illo");
-                            put("omnis", "ut");
+                            put("accusantium", "iure");
+                            put("culpa", "doloribus");
+                            put("sapiente", "architecto");
                         }};
                         resources = new Resources() {{
-                            projectId = "consequatur";
-                            regions = new String[]() {{
-                                add("commodi"),
-                                add("error"),
+                            projectId = "mollitia";
+                            regions = new String[]{{
+                                add("culpa"),
                             }};
                             virtualMachine = new VirtualMachine() {{
-                                accelerators = new openapisdk.models.shared.Accelerator[]() {{
+                                accelerators = new org.openapis.openapi.models.shared.Accelerator[]{{
                                     add(new Accelerator() {{
-                                        count = "consectetur";
-                                        type = "nostrum";
+                                        count = "repellat";
+                                        type = "mollitia";
                                     }}),
                                 }};
-                                bootDiskSizeGb = 950400323440343118;
-                                bootImage = "laboriosam";
-                                cpuPlatform = "sed";
-                                disks = new openapisdk.models.shared.Disk[]() {{
+                                bootDiskSizeGb = 581850;
+                                bootImage = "numquam";
+                                cpuPlatform = "commodi";
+                                disks = new org.openapis.openapi.models.shared.Disk[]{{
                                     add(new Disk() {{
-                                        name = "soluta";
-                                        sizeGb = 7540276489530073149;
-                                        sourceImage = "quas";
-                                        type = "consequuntur";
+                                        name = "molestiae";
+                                        sizeGb = 244425;
+                                        sourceImage = "error";
+                                        type = "quia";
+                                    }}),
+                                    add(new Disk() {{
+                                        name = "quis";
+                                        sizeGb = 110375;
+                                        sourceImage = "laborum";
+                                        type = "animi";
                                     }}),
                                 }};
-                                dockerCacheImages = new String[]() {{
-                                    add("autem"),
+                                dockerCacheImages = new String[]{{
+                                    add("odit"),
+                                    add("quo"),
                                 }};
-                                enableStackdriverMonitoring = true;
+                                enableStackdriverMonitoring = false;
                                 labels = new java.util.HashMap<String, String>() {{
-                                    put("doloremque", "perferendis");
-                                    put("atque", "ratione");
+                                    put("tenetur", "ipsam");
                                 }};
-                                machineType = "quisquam";
+                                machineType = "id";
                                 network = new Network() {{
-                                    name = "explicabo";
-                                    subnetwork = "ea";
-                                    usePrivateAddress = true;
+                                    name = "possimus";
+                                    subnetwork = "aut";
+                                    usePrivateAddress = false;
                                 }};
-                                nvidiaDriverVersion = "eum";
+                                nvidiaDriverVersion = "quasi";
                                 preemptible = false;
-                                reservation = "et";
+                                reservation = "error";
                                 serviceAccount = new ServiceAccount() {{
-                                    email = "rerum";
-                                    scopes = new String[]() {{
-                                        add("quis"),
-                                        add("cumque"),
-                                        add("minima"),
+                                    email = "Margie_Boyer87@hotmail.com";
+                                    scopes = new String[]{{
+                                        add("praesentium"),
+                                        add("voluptatibus"),
                                     }};
                                 }};
-                                volumes = new openapisdk.models.shared.Volume[]() {{
+                                volumes = new org.openapis.openapi.models.shared.Volume[]{{
                                     add(new Volume() {{
                                         existingDisk = new ExistingDisk() {{
-                                            disk = "est";
+                                            disk = "omnis";
                                         }};
-                                        nfsMount = new NfsMount() {{
-                                            target = "quis";
-                                        }};
-                                        persistentDisk = new PersistentDisk() {{
-                                            sizeGb = 7478610059307147871;
-                                            sourceImage = "labore";
-                                            type = "et";
-                                        }};
-                                        volume = "impedit";
-                                    }}),
-                                    add(new Volume() {{
-                                        existingDisk = new ExistingDisk() {{
-                                            disk = "ad";
-                                        }};
-                                        nfsMount = new NfsMount() {{
-                                            target = "expedita";
+                                        nfsMount = new NFSMount() {{
+                                            target = "voluptate";
                                         }};
                                         persistentDisk = new PersistentDisk() {{
-                                            sizeGb = 4540487686588600123;
-                                            sourceImage = "qui";
-                                            type = "modi";
+                                            sizeGb = 739264;
+                                            sourceImage = "perferendis";
+                                            type = "doloremque";
                                         }};
-                                        volume = "nihil";
+                                        volume = "reprehenderit";
                                     }}),
                                 }};
                             }};
-                            zones = new String[]() {{
-                                add("deserunt"),
-                                add("eaque"),
-                                add("sunt"),
+                            zones = new String[]{{
+                                add("maiores"),
+                                add("dicta"),
                             }};
                         }};
-                        timeout = "sit";
+                        timeout = "corporis";
                     }};
-                    pubSubTopic = "autem";
+                    pubSubTopic = "dolore";
                 }};
-            }};
+            }};            
 
             GenomicsPipelinesRunResponse res = sdk.pipelines.genomicsPipelinesRun(req);
 

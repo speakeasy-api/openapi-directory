@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateSecurity;
+import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreatePathParams;
+import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateQueryParams;
+import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateRequest;
+import org.openapis.openapi.models.operations.ClassroomCoursesAliasesCreateResponse;
+import org.openapis.openapi.models.shared.CourseAlias;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ClassroomCoursesAliasesCreateRequest req = new ClassroomCoursesAliasesCreateRequest() {{
                 security = new ClassroomCoursesAliasesCreateSecurity() {{
@@ -22,25 +31,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new ClassroomCoursesAliasesCreatePathParams() {{
-                    courseId = "sit";
+                    courseId = "corrupti";
                 }};
                 queryParams = new ClassroomCoursesAliasesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new CourseAlias() {{
-                    alias = "dicta";
+                    alias = "suscipit";
                 }};
-            }};
+            }};            
 
             ClassroomCoursesAliasesCreateResponse res = sdk.courses.classroomCoursesAliasesCreate(req);
 

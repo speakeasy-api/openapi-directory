@@ -2,24 +2,49 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyAccount;
+import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsersIdentification;
+import org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsers;
+import org.openapis.openapi.models.operations.AddUserToAccountRequestBody;
+import org.openapis.openapi.models.operations.AddUserToAccountRequest;
+import org.openapis.openapi.models.operations.AddUserToAccountResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AddUserToAccountRequest req = new AddUserToAccountRequest() {{
-                pathParams = new AddUserToAccountPathParams() {{
-                    accountId = "sit";
-                }};
                 request = new AddUserToAccountRequestBody() {{
-                    userId = "voluptas";
+                    account = new AddUserToAccountRequestBodyAccount() {{
+                        accountId = "corrupti";
+                        domain = "provident";
+                    }};
+                    users = new org.openapis.openapi.models.operations.AddUserToAccountRequestBodyUsers[]{{
+                        add(new AddUserToAccountRequestBodyUsers() {{
+                            identification = new AddUserToAccountRequestBodyUsersIdentification() {{
+                                email = "Leda_Stiedemann@hotmail.com";
+                                userId = "vel";
+                            }};
+                        }}),
+                        add(new AddUserToAccountRequestBodyUsers() {{
+                            identification = new AddUserToAccountRequestBodyUsersIdentification() {{
+                                email = "Luna.Hoppe@yahoo.com";
+                                userId = "debitis";
+                            }};
+                        }}),
+                        add(new AddUserToAccountRequestBodyUsers() {{
+                            identification = new AddUserToAccountRequestBodyUsersIdentification() {{
+                                email = "Vincenzo.Goldner@gmail.com";
+                                userId = "minus";
+                            }};
+                        }}),
+                    }};
                 }};
-            }};
+            }};            
 
             AddUserToAccountResponse res = sdk.accounts.addUserToAccount(req);
 

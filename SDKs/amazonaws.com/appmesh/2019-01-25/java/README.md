@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,53 +15,82 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateGatewayRoutePathParams;
+import org.openapis.openapi.models.operations.CreateGatewayRouteQueryParams;
+import org.openapis.openapi.models.operations.CreateGatewayRouteHeaders;
+import org.openapis.openapi.models.operations.CreateGatewayRouteRequestBodySpec;
+import org.openapis.openapi.models.operations.CreateGatewayRouteRequestBody;
+import org.openapis.openapi.models.operations.CreateGatewayRouteRequest;
+import org.openapis.openapi.models.operations.CreateGatewayRouteResponse;
+import org.openapis.openapi.models.shared.TagRef;
+import org.openapis.openapi.models.shared.HttpGatewayRoute;
+import org.openapis.openapi.models.shared.HttpGatewayRouteMatch;
+import org.openapis.openapi.models.shared.HttpQueryParameter;
+import org.openapis.openapi.models.shared.QueryParameterMatch;
+import org.openapis.openapi.models.shared.HttpPathMatch;
+import org.openapis.openapi.models.shared.HttpMethodEnum;
+import org.openapis.openapi.models.shared.GatewayRouteHostnameMatch;
+import org.openapis.openapi.models.shared.HttpGatewayRouteHeader;
+import org.openapis.openapi.models.shared.HeaderMatchMethod;
+import org.openapis.openapi.models.shared.MatchRange;
+import org.openapis.openapi.models.shared.HttpGatewayRouteAction;
+import org.openapis.openapi.models.shared.GatewayRouteTarget;
+import org.openapis.openapi.models.shared.GatewayRouteVirtualService;
+import org.openapis.openapi.models.shared.HttpGatewayRouteRewrite;
+import org.openapis.openapi.models.shared.HttpGatewayRoutePrefixRewrite;
+import org.openapis.openapi.models.shared.DefaultGatewayRouteRewriteEnum;
+import org.openapis.openapi.models.shared.HttpGatewayRoutePathRewrite;
+import org.openapis.openapi.models.shared.GatewayRouteHostnameRewrite;
+import org.openapis.openapi.models.shared.GrpcGatewayRoute;
+import org.openapis.openapi.models.shared.GrpcGatewayRouteMatch;
+import org.openapis.openapi.models.shared.GrpcGatewayRouteMetadata;
+import org.openapis.openapi.models.shared.GrpcMetadataMatchMethod;
+import org.openapis.openapi.models.shared.GrpcGatewayRouteAction;
+import org.openapis.openapi.models.shared.GrpcGatewayRouteRewrite;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateGatewayRouteRequest req = new CreateGatewayRouteRequest() {{
                 pathParams = new CreateGatewayRoutePathParams() {{
-                    meshName = "sit";
-                    virtualGatewayName = "voluptas";
+                    meshName = "corrupti";
+                    virtualGatewayName = "provident";
                 }};
                 queryParams = new CreateGatewayRouteQueryParams() {{
-                    meshOwner = "culpa";
+                    meshOwner = "distinctio";
                 }};
                 headers = new CreateGatewayRouteHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
+                    xAmzAlgorithm = "quibusdam";
+                    xAmzContentSha256 = "unde";
+                    xAmzCredential = "nulla";
+                    xAmzDate = "corrupti";
+                    xAmzSecurityToken = "illum";
+                    xAmzSignature = "vel";
+                    xAmzSignedHeaders = "error";
                 }};
                 request = new CreateGatewayRouteRequestBody() {{
-                    clientToken = "nihil";
-                    gatewayRouteName = "rerum";
+                    clientToken = "deserunt";
+                    gatewayRouteName = "suscipit";
                     spec = new CreateGatewayRouteRequestBodySpec() {{
                         grpcRoute = new GrpcGatewayRoute() {{
                             action = new GrpcGatewayRouteAction() {{
                                 rewrite = new GrpcGatewayRouteRewrite() {{
                                     hostname = new GatewayRouteHostnameRewrite() {{
-                                        defaultTargetHostname = "DISABLED";
+                                        defaultTargetHostname = "ENABLED";
                                     }};
                                 }};
                                 target = new GatewayRouteTarget() {{
+                                    port = 297534;
                                     virtualService = new GatewayRouteVirtualService() {{
                                         virtualServiceName = "debitis";
                                     }};
@@ -69,109 +98,158 @@ public class Application {
                             }};
                             match = new GrpcGatewayRouteMatch() {{
                                 hostname = new GatewayRouteHostnameMatch() {{
-                                    exact = "voluptatum";
-                                    suffix = "et";
+                                    exact = "ipsa";
+                                    suffix = "delectus";
                                 }};
-                                metadata = new openapisdk.models.shared.GrpcGatewayRouteMetadata[]() {{
+                                metadata = new org.openapis.openapi.models.shared.GrpcGatewayRouteMetadata[]{{
                                     add(new GrpcGatewayRouteMetadata() {{
-                                        invert = true;
+                                        invert = false;
                                         match = new GrpcMetadataMatchMethod() {{
-                                            exact = "et";
-                                            prefix = "voluptate";
+                                            exact = "suscipit";
+                                            prefix = "molestiae";
                                             range = new MatchRange() {{
-                                                end = 3287288577352441706;
-                                                start = 3930927879439176946;
+                                                end = 791725;
+                                                start = 812169;
                                             }};
-                                            regex = "totam";
-                                            suffix = "dolores";
+                                            regex = "voluptatum";
+                                            suffix = "iusto";
                                         }};
-                                        name = "illum";
-                                    }}),
-                                    add(new GrpcGatewayRouteMetadata() {{
-                                        invert = true;
-                                        match = new GrpcMetadataMatchMethod() {{
-                                            exact = "vel";
-                                            prefix = "odio";
-                                            range = new MatchRange() {{
-                                                end = 6303220950515014660;
-                                                start = 4035568504096476779;
-                                            }};
-                                            regex = "aspernatur";
-                                            suffix = "accusantium";
-                                        }};
-                                        name = "totam";
+                                        name = "excepturi";
                                     }}),
                                     add(new GrpcGatewayRouteMetadata() {{
                                         invert = false;
                                         match = new GrpcMetadataMatchMethod() {{
-                                            exact = "quis";
-                                            prefix = "est";
+                                            exact = "nisi";
+                                            prefix = "recusandae";
                                             range = new MatchRange() {{
-                                                end = 5974317550424871033;
-                                                start = 3317123977833389635;
+                                                end = 836079;
+                                                start = 71036;
                                             }};
-                                            regex = "non";
-                                            suffix = "voluptas";
+                                            regex = "quis";
+                                            suffix = "veritatis";
                                         }};
-                                        name = "omnis";
+                                        name = "deserunt";
                                     }}),
                                 }};
-                                serviceName = "aut";
+                                port = 20218;
+                                serviceName = "ipsam";
                             }};
                         }};
                         http2Route = new HttpGatewayRoute() {{
                             action = new HttpGatewayRouteAction() {{
                                 rewrite = new HttpGatewayRouteRewrite() {{
                                     hostname = new GatewayRouteHostnameRewrite() {{
-                                        defaultTargetHostname = "ENABLED";
+                                        defaultTargetHostname = "DISABLED";
                                     }};
                                     path = new HttpGatewayRoutePathRewrite() {{
-                                        exact = "sed";
+                                        exact = "sapiente";
                                     }};
                                     prefix = new HttpGatewayRoutePrefixRewrite() {{
                                         defaultPrefix = "DISABLED";
-                                        value = "autem";
+                                        value = "odit";
                                     }};
                                 }};
                                 target = new GatewayRouteTarget() {{
+                                    port = 870013;
                                     virtualService = new GatewayRouteVirtualService() {{
-                                        virtualServiceName = "consectetur";
+                                        virtualServiceName = "at";
                                     }};
                                 }};
                             }};
                             match = new HttpGatewayRouteMatch() {{
-                                headers = new openapisdk.models.shared.HttpGatewayRouteHeader[]() {{
+                                headers = new org.openapis.openapi.models.shared.HttpGatewayRouteHeader[]{{
                                     add(new HttpGatewayRouteHeader() {{
                                         invert = false;
                                         match = new HeaderMatchMethod() {{
-                                            exact = "qui";
-                                            prefix = "recusandae";
+                                            exact = "molestiae";
+                                            prefix = "quod";
                                             range = new MatchRange() {{
-                                                end = 7561811714888168464;
-                                                start = 3959279844101328186;
+                                                end = 800911;
+                                                start = 461479;
                                             }};
-                                            regex = "eveniet";
+                                            regex = "totam";
+                                            suffix = "porro";
+                                        }};
+                                        name = "dolorum";
+                                    }}),
+                                    add(new HttpGatewayRouteHeader() {{
+                                        invert = false;
+                                        match = new HeaderMatchMethod() {{
+                                            exact = "dicta";
+                                            prefix = "nam";
+                                            range = new MatchRange() {{
+                                                end = 639921;
+                                                start = 582020;
+                                            }};
+                                            regex = "fugit";
+                                            suffix = "deleniti";
+                                        }};
+                                        name = "hic";
+                                    }}),
+                                    add(new HttpGatewayRouteHeader() {{
+                                        invert = false;
+                                        match = new HeaderMatchMethod() {{
+                                            exact = "optio";
+                                            prefix = "totam";
+                                            range = new MatchRange() {{
+                                                end = 105907;
+                                                start = 414662;
+                                            }};
+                                            regex = "molestiae";
                                             suffix = "modi";
                                         }};
-                                        name = "sint";
+                                        name = "qui";
+                                    }}),
+                                    add(new HttpGatewayRouteHeader() {{
+                                        invert = false;
+                                        match = new HeaderMatchMethod() {{
+                                            exact = "impedit";
+                                            prefix = "cum";
+                                            range = new MatchRange() {{
+                                                end = 456150;
+                                                start = 216550;
+                                            }};
+                                            regex = "excepturi";
+                                            suffix = "aspernatur";
+                                        }};
+                                        name = "perferendis";
                                     }}),
                                 }};
                                 hostname = new GatewayRouteHostnameMatch() {{
-                                    exact = "inventore";
-                                    suffix = "ut";
+                                    exact = "ad";
+                                    suffix = "natus";
                                 }};
-                                method = "CONNECT";
+                                method = "HEAD";
                                 path = new HttpPathMatch() {{
-                                    exact = "aut";
-                                    regex = "reprehenderit";
+                                    exact = "iste";
+                                    regex = "dolor";
                                 }};
-                                prefix = "tempore";
-                                queryParameters = new openapisdk.models.shared.HttpQueryParameter[]() {{
+                                port = 616934;
+                                prefix = "laboriosam";
+                                queryParameters = new org.openapis.openapi.models.shared.HttpQueryParameter[]{{
                                     add(new HttpQueryParameter() {{
                                         match = new QueryParameterMatch() {{
-                                            exact = "incidunt";
+                                            exact = "saepe";
                                         }};
-                                        name = "dolor";
+                                        name = "fuga";
+                                    }}),
+                                    add(new HttpQueryParameter() {{
+                                        match = new QueryParameterMatch() {{
+                                            exact = "in";
+                                        }};
+                                        name = "corporis";
+                                    }}),
+                                    add(new HttpQueryParameter() {{
+                                        match = new QueryParameterMatch() {{
+                                            exact = "iste";
+                                        }};
+                                        name = "iure";
+                                    }}),
+                                    add(new HttpQueryParameter() {{
+                                        match = new QueryParameterMatch() {{
+                                            exact = "saepe";
+                                        }};
+                                        name = "quidem";
                                     }}),
                                 }};
                             }};
@@ -180,69 +258,71 @@ public class Application {
                             action = new HttpGatewayRouteAction() {{
                                 rewrite = new HttpGatewayRouteRewrite() {{
                                     hostname = new GatewayRouteHostnameRewrite() {{
-                                        defaultTargetHostname = "DISABLED";
+                                        defaultTargetHostname = "ENABLED";
                                     }};
                                     path = new HttpGatewayRoutePathRewrite() {{
-                                        exact = "veritatis";
+                                        exact = "ipsa";
                                     }};
                                     prefix = new HttpGatewayRoutePrefixRewrite() {{
-                                        defaultPrefix = "ENABLED";
-                                        value = "et";
+                                        defaultPrefix = "DISABLED";
+                                        value = "est";
                                     }};
                                 }};
                                 target = new GatewayRouteTarget() {{
+                                    port = 653140;
                                     virtualService = new GatewayRouteVirtualService() {{
-                                        virtualServiceName = "omnis";
+                                        virtualServiceName = "laborum";
                                     }};
                                 }};
                             }};
                             match = new HttpGatewayRouteMatch() {{
-                                headers = new openapisdk.models.shared.HttpGatewayRouteHeader[]() {{
+                                headers = new org.openapis.openapi.models.shared.HttpGatewayRouteHeader[]{{
                                     add(new HttpGatewayRouteHeader() {{
-                                        invert = true;
+                                        invert = false;
                                         match = new HeaderMatchMethod() {{
-                                            exact = "dolores";
-                                            prefix = "placeat";
+                                            exact = "dolorem";
+                                            prefix = "corporis";
                                             range = new MatchRange() {{
-                                                end = 2118716725206170867;
-                                                start = 2587000937929698613;
+                                                end = 128926;
+                                                start = 750686;
                                             }};
-                                            regex = "mollitia";
-                                            suffix = "voluptas";
+                                            regex = "enim";
+                                            suffix = "omnis";
                                         }};
-                                        name = "quam";
+                                        name = "nemo";
                                     }}),
                                 }};
                                 hostname = new GatewayRouteHostnameMatch() {{
-                                    exact = "reprehenderit";
-                                    suffix = "qui";
+                                    exact = "minima";
+                                    suffix = "excepturi";
                                 }};
-                                method = "OPTIONS";
+                                method = "GET";
                                 path = new HttpPathMatch() {{
-                                    exact = "unde";
-                                    regex = "in";
+                                    exact = "iure";
+                                    regex = "culpa";
                                 }};
-                                prefix = "autem";
-                                queryParameters = new openapisdk.models.shared.HttpQueryParameter[]() {{
+                                port = 988374;
+                                prefix = "sapiente";
+                                queryParameters = new org.openapis.openapi.models.shared.HttpQueryParameter[]{{
                                     add(new HttpQueryParameter() {{
                                         match = new QueryParameterMatch() {{
-                                            exact = "ut";
+                                            exact = "mollitia";
                                         }};
-                                        name = "itaque";
+                                        name = "dolorem";
                                     }}),
                                 }};
                             }};
                         }};
-                        priority = 2006924026344156168;
+                        priority = 635059;
                     }};
-                    tags = new openapisdk.models.shared.TagRef[]() {{
+                    tags = new org.openapis.openapi.models.shared.TagRef[]{{
                         add(new TagRef() {{
-                            key = "ullam";
-                            value = "et";
+                            key = "repellat";
+                            value = "mollitia";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateGatewayRouteResponse res = sdk.createGatewayRoute(req);
 
@@ -264,7 +344,7 @@ public class Application {
 * `createMesh` - <p>Creates a service mesh.</p> <p> A service mesh is a logical boundary for network traffic between services that are represented by resources within the mesh. After you create your service mesh, you can create virtual services, virtual nodes, virtual routers, and routes to distribute traffic between the applications in your mesh.</p> <p>For more information about service meshes, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/meshes.html">Service meshes</a>.</p>
 * `createRoute` - <p>Creates a route that is associated with a virtual router.</p> <p> You can route several different protocols and define a retry policy for a route. Traffic can be routed to one or more virtual nodes.</p> <p>For more information about routes, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html">Routes</a>.</p>
 * `createVirtualGateway` - <p>Creates a virtual gateway.</p> <p>A virtual gateway allows resources outside your mesh to communicate to resources that are inside your mesh. The virtual gateway represents an Envoy proxy running in an Amazon ECS task, in a Kubernetes service, or on an Amazon EC2 instance. Unlike a virtual node, which represents an Envoy running with an application, a virtual gateway represents Envoy deployed by itself.</p> <p>For more information about virtual gateways, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html">Virtual gateways</a>. </p>
-* `createVirtualNode` - <p>Creates a virtual node within a service mesh.</p> <p> A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes deployment. When you create a virtual node, you can specify the service discovery information for your task group, and whether the proxy running in a task group will communicate with other proxies using Transport Layer Security (TLS).</p> <p>You define a <code>listener</code> for any inbound traffic that your virtual node expects. Any virtual service that your virtual node expects to communicate to is specified as a <code>backend</code>.</p> <p>The response metadata for your new virtual node contains the <code>arn</code> that is associated with the virtual node. Set this value to the full ARN; for example, <code>arn:aws:appmesh:us-west-2:123456789012:myMesh/default/virtualNode/myApp</code>) as the <code>APPMESH_RESOURCE_ARN</code> environment variable for your task group's Envoy proxy container in your task definition or pod spec. This is then mapped to the <code>node.id</code> and <code>node.cluster</code> Envoy parameters.</p> <note> <p>By default, App Mesh uses the name of the resource you specified in <code>APPMESH_RESOURCE_ARN</code> when Envoy is referring to itself in metrics and traces. You can override this behavior by setting the <code>APPMESH_RESOURCE_CLUSTER</code> environment variable with your own name.</p> </note> <p>For more information about virtual nodes, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html">Virtual nodes</a>. You must be using <code>1.15.0</code> or later of the Envoy image when setting these variables. For more information aboutApp Mesh Envoy variables, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy.html">Envoy image</a> in the AWS App Mesh User Guide.</p>
+* `createVirtualNode` - <p>Creates a virtual node within a service mesh.</p> <p> A virtual node acts as a logical pointer to a particular task group, such as an Amazon ECS service or a Kubernetes deployment. When you create a virtual node, you can specify the service discovery information for your task group, and whether the proxy running in a task group will communicate with other proxies using Transport Layer Security (TLS).</p> <p>You define a <code>listener</code> for any inbound traffic that your virtual node expects. Any virtual service that your virtual node expects to communicate to is specified as a <code>backend</code>.</p> <p>The response metadata for your new virtual node contains the <code>arn</code> that is associated with the virtual node. Set this value to the full ARN; for example, <code>arn:aws:appmesh:us-west-2:123456789012:myMesh/default/virtualNode/myApp</code>) as the <code>APPMESH_RESOURCE_ARN</code> environment variable for your task group's Envoy proxy container in your task definition or pod spec. This is then mapped to the <code>node.id</code> and <code>node.cluster</code> Envoy parameters.</p> <note> <p>By default, App Mesh uses the name of the resource you specified in <code>APPMESH_RESOURCE_ARN</code> when Envoy is referring to itself in metrics and traces. You can override this behavior by setting the <code>APPMESH_RESOURCE_CLUSTER</code> environment variable with your own name.</p> </note> <p>For more information about virtual nodes, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html">Virtual nodes</a>. You must be using <code>1.15.0</code> or later of the Envoy image when setting these variables. For more information aboutApp Mesh Envoy variables, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy.html">Envoy image</a> in the App Mesh User Guide.</p>
 * `createVirtualRouter` - <p>Creates a virtual router within a service mesh.</p> <p>Specify a <code>listener</code> for any inbound traffic that your virtual router receives. Create a virtual router for each protocol and port that you need to route. Virtual routers handle traffic for one or more virtual services within your mesh. After you create your virtual router, create and associate routes for your virtual router that direct incoming requests to different virtual nodes.</p> <p>For more information about virtual routers, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html">Virtual routers</a>.</p>
 * `createVirtualService` - <p>Creates a virtual service within a service mesh.</p> <p>A virtual service is an abstraction of a real service that is provided by a virtual node directly or indirectly by means of a virtual router. Dependent services call your virtual service by its <code>virtualServiceName</code>, and those requests are routed to the virtual node or virtual router that is specified as the provider for the virtual service.</p> <p>For more information about virtual services, see <a href="https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html">Virtual services</a>.</p>
 * `deleteGatewayRoute` - Deletes an existing gateway route.
@@ -298,7 +378,17 @@ public class Application {
 * `updateVirtualNode` - Updates an existing virtual node in a specified service mesh.
 * `updateVirtualRouter` - Updates an existing virtual router in a specified service mesh.
 * `updateVirtualService` - Updates an existing virtual service in a specified service mesh.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

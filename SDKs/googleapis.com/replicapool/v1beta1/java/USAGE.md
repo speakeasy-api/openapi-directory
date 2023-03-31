@@ -2,15 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption1;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption2;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurityOption3;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteSecurity;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeletePathParams;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteQueryParams;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteRequest;
+import org.openapis.openapi.models.operations.ReplicapoolPoolsDeleteResponse;
+import org.openapis.openapi.models.shared.PoolsDeleteRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ReplicapoolPoolsDeleteRequest req = new ReplicapoolPoolsDeleteRequest() {{
                 security = new ReplicapoolPoolsDeleteSecurity() {{
@@ -24,25 +35,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new ReplicapoolPoolsDeletePathParams() {{
-                    poolName = "sit";
-                    projectName = "voluptas";
-                    zone = "culpa";
+                    poolName = "corrupti";
+                    projectName = "provident";
+                    zone = "distinctio";
                 }};
                 queryParams = new ReplicapoolPoolsDeleteQueryParams() {{
                     alt = "json";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    userIp = "et";
+                    fields = "quibusdam";
+                    key = "unde";
+                    oauthToken = "nulla";
+                    prettyPrint = false;
+                    quotaUser = "corrupti";
+                    userIp = "illum";
                 }};
                 request = new PoolsDeleteRequest() {{
-                    abandonInstances = new String[]() {{
-                        add("rerum"),
+                    abandonInstances = new String[]{{
+                        add("error"),
+                        add("deserunt"),
                     }};
                 }};
-            }};
+            }};            
 
             ReplicapoolPoolsDeleteResponse res = sdk.pools.replicapoolPoolsDelete(req);
 

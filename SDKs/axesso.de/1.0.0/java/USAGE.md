@@ -2,24 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.KeywordSearchQueryParams;
+import org.openapis.openapi.models.operations.KeywordSearchRequest;
+import org.openapis.openapi.models.operations.KeywordSearchResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             KeywordSearchRequest req = new KeywordSearchRequest() {{
                 queryParams = new KeywordSearchQueryParams() {{
-                    domainCode = "sit";
-                    keyword = "voluptas";
-                    numberOfProducts = 6050128673802995827;
-                    sortBy = "expedita";
+                    domainCode = "corrupti";
+                    keyword = "provident";
+                    numberOfProducts = 715190;
+                    sortBy = "quibusdam";
                 }};
-            }};
+            }};            
 
             KeywordSearchResponse res = sdk.amz.keywordSearch(req);
 

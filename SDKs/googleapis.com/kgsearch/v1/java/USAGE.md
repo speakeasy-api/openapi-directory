@@ -2,46 +2,53 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.KgsearchEntitiesSearchQueryParams;
+import org.openapis.openapi.models.operations.KgsearchEntitiesSearchRequest;
+import org.openapis.openapi.models.operations.KgsearchEntitiesSearchResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             KgsearchEntitiesSearchRequest req = new KgsearchEntitiesSearchRequest() {{
                 queryParams = new KgsearchEntitiesSearchQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    ids = new String[]() {{
-                        add("expedita"),
-                        add("voluptas"),
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    ids = new String[]{{
+                        add("corrupti"),
+                        add("illum"),
+                        add("vel"),
+                        add("error"),
                     }};
-                    indent = true;
-                    key = "et";
-                    languages = new String[]() {{
-                        add("rerum"),
+                    indent = false;
+                    key = "deserunt";
+                    languages = new String[]{{
+                        add("iure"),
+                        add("magnam"),
                     }};
-                    limit = 7837839688282259259;
-                    oauthToken = "debitis";
-                    prefix = true;
+                    limit = 891773;
+                    oauthToken = "ipsa";
+                    prefix = false;
                     prettyPrint = false;
-                    query = "ut";
-                    quotaUser = "dolorem";
-                    types = new String[]() {{
-                        add("voluptate"),
-                        add("iste"),
+                    query = "delectus";
+                    quotaUser = "tempora";
+                    types = new String[]{{
+                        add("molestiae"),
+                        add("minus"),
                     }};
-                    uploadType = "vitae";
-                    uploadProtocol = "totam";
+                    uploadType = "placeat";
+                    uploadProtocol = "voluptatum";
                 }};
-            }};
+            }};            
 
             KgsearchEntitiesSearchResponse res = sdk.entities.kgsearchEntitiesSearch(req);
 

@@ -2,46 +2,49 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETApplySecurityGroupsToLoadBalancerActionEnum;
+import org.openapis.openapi.models.operations.GETApplySecurityGroupsToLoadBalancerVersionEnum;
+import org.openapis.openapi.models.operations.GETApplySecurityGroupsToLoadBalancerQueryParams;
+import org.openapis.openapi.models.operations.GETApplySecurityGroupsToLoadBalancerHeaders;
+import org.openapis.openapi.models.operations.GETApplySecurityGroupsToLoadBalancerRequest;
+import org.openapis.openapi.models.operations.GETApplySecurityGroupsToLoadBalancerResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetApplySecurityGroupsToLoadBalancerRequest req = new GetApplySecurityGroupsToLoadBalancerRequest() {{
-                queryParams = new GetApplySecurityGroupsToLoadBalancerQueryParams() {{
+            GETApplySecurityGroupsToLoadBalancerRequest req = new GETApplySecurityGroupsToLoadBalancerRequest() {{
+                queryParams = new GETApplySecurityGroupsToLoadBalancerQueryParams() {{
                     action = "ApplySecurityGroupsToLoadBalancer";
-                    loadBalancerName = "voluptas";
-                    securityGroups = new String[]() {{
-                        add("expedita"),
-                        add("consequuntur"),
+                    loadBalancerName = "corrupti";
+                    securityGroups = new String[]{{
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
                     version = "2012-06-01";
                 }};
-                headers = new GetApplySecurityGroupsToLoadBalancerHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "fugit";
-                    xAmzDate = "et";
-                    xAmzSecurityToken = "nihil";
-                    xAmzSignature = "rerum";
-                    xAmzSignedHeaders = "dicta";
+                headers = new GETApplySecurityGroupsToLoadBalancerHeaders() {{
+                    xAmzAlgorithm = "nulla";
+                    xAmzContentSha256 = "corrupti";
+                    xAmzCredential = "illum";
+                    xAmzDate = "vel";
+                    xAmzSecurityToken = "error";
+                    xAmzSignature = "deserunt";
+                    xAmzSignedHeaders = "suscipit";
                 }};
-            }};
+            }};            
 
-            GetApplySecurityGroupsToLoadBalancerResponse res = sdk.getApplySecurityGroupsToLoadBalancer(req);
+            GETApplySecurityGroupsToLoadBalancerResponse res = sdk.getApplySecurityGroupsToLoadBalancer(req);
 
             if (res.body.isPresent()) {
                 // handle response

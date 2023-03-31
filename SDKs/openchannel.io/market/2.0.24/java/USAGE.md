@@ -2,33 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteAppsAppIdPathParams;
+import org.openapis.openapi.models.operations.DeleteAppsAppIdQueryParams;
+import org.openapis.openapi.models.operations.DeleteAppsAppIdRequest;
+import org.openapis.openapi.models.operations.DeleteAppsAppIdResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     basicAuth = new SchemeBasicAuth() {{
                         password = "YOUR_PASSWORD_HERE";
                         username = "YOUR_USERNAME_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DeleteAppsAppIdRequest req = new DeleteAppsAppIdRequest() {{
                 pathParams = new DeleteAppsAppIdPathParams() {{
-                    appId = "sit";
+                    appId = "corrupti";
                 }};
                 queryParams = new DeleteAppsAppIdQueryParams() {{
-                    developerId = "voluptas";
+                    developerId = "provident";
                 }};
-            }};
+            }};            
 
             DeleteAppsAppIdResponse res = sdk.appsFindAndModifyApps.deleteAppsAppId(req);
 

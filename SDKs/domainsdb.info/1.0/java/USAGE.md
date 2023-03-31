@@ -2,25 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadPathParams;
+import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadQueryParams;
+import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadRequest;
+import org.openapis.openapi.models.operations.GetDomainsTldZoneIdDownloadResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetDomainsTldZoneIdDownloadRequest req = new GetDomainsTldZoneIdDownloadRequest() {{
                 pathParams = new GetDomainsTldZoneIdDownloadPathParams() {{
-                    zoneId = "sit";
+                    zoneId = "corrupti";
                 }};
                 queryParams = new GetDomainsTldZoneIdDownloadQueryParams() {{
-                    apiKey = "voluptas";
-                    date = "culpa";
+                    apiKey = "provident";
+                    date = "distinctio";
                 }};
-            }};
+            }};            
 
             GetDomainsTldZoneIdDownloadResponse res = sdk.domains.getDomainsTldZoneIdDownload(req);
 

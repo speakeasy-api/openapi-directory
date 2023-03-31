@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostMakePdfRequestBody;
+import org.openapis.openapi.models.operations.PostMakePdfRequest;
+import org.openapis.openapi.models.operations.PostMakePdfResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostMakePdfRequest req = new PostMakePdfRequest() {{
                 request = new PostMakePdfRequestBody() {{
-                    html = "sit";
-                    key = "voluptas";
-                    url = "culpa";
+                    html = "corrupti";
+                    key = "provident";
+                    url = "distinctio";
                 }};
-            }};
+            }};            
 
             PostMakePdfResponse res = sdk.postMakePdf(req);
 

@@ -2,30 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetYearMonthJsonPathParams;
+import org.openapis.openapi.models.operations.GetYearMonthJsonRequest;
+import org.openapis.openapi.models.operations.GetYearMonthJsonResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     apikey = new SchemeApikey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetYearMonthJsonRequest req = new GetYearMonthJsonRequest() {{
                 pathParams = new GetYearMonthJsonPathParams() {{
-                    month = 8717895732742165505;
-                    year = 2259404117704393152;
+                    month = 548814;
+                    year = 592845;
                 }};
-            }};
+            }};            
 
             GetYearMonthJsonResponse res = sdk.archive.getYearMonthJson(req);
 

@@ -2,18 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListSecurity;
+import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListPathParams;
+import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListQueryParams;
+import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest;
+import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListRequest req = new OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListRequest() {{
-                security = new OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListSecurity() {{
+            OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest req = new OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListRequest() {{
+                security = new OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListSecurity() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
@@ -21,28 +29,28 @@ public class Application {
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListPathParams() {{
-                    parent = "sit";
+                pathParams = new OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListPathParams() {{
+                    parent = "corrupti";
                 }};
-                queryParams = new OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    filter = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
-                    pageSize = 1543572285742637646;
-                    pageToken = "nihil";
-                    prettyPrint = true;
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                queryParams = new OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListQueryParams() {{
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    filter = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    pageSize = 623564;
+                    pageToken = "deserunt";
+                    prettyPrint = false;
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-            }};
+            }};            
 
-            OsconfigProjectsLocationsInstanceOsPoliciesCompliancesListResponse res = sdk.projects.osconfigProjectsLocationsInstanceOsPoliciesCompliancesList(req);
+            OsconfigProjectsLocationsInstanceOSPoliciesCompliancesListResponse res = sdk.projects.osconfigProjectsLocationsInstanceOSPoliciesCompliancesList(req);
 
             if (res.listInstanceOSPoliciesCompliancesResponse.isPresent()) {
                 // handle response

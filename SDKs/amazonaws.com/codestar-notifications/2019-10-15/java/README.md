@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,62 +15,66 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateNotificationRuleHeaders;
+import org.openapis.openapi.models.operations.CreateNotificationRuleRequestBodyDetailTypeEnum;
+import org.openapis.openapi.models.operations.CreateNotificationRuleRequestBodyStatusEnum;
+import org.openapis.openapi.models.operations.CreateNotificationRuleRequestBody;
+import org.openapis.openapi.models.operations.CreateNotificationRuleRequest;
+import org.openapis.openapi.models.operations.CreateNotificationRuleResponse;
+import org.openapis.openapi.models.shared.Target;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateNotificationRuleRequest req = new CreateNotificationRuleRequest() {{
                 headers = new CreateNotificationRuleHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateNotificationRuleRequestBody() {{
-                    clientRequestToken = "voluptas";
+                    clientRequestToken = "illum";
                     detailType = "BASIC";
-                    eventTypeIds = new String[]() {{
-                        add("nihil"),
+                    eventTypeIds = new String[]{{
+                        add("deserunt"),
+                        add("suscipit"),
+                        add("iure"),
                     }};
-                    name = "rerum";
-                    resource = "dicta";
+                    name = "magnam";
+                    resource = "debitis";
                     status = "ENABLED";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("et", "ut");
+                        put("tempora", "suscipit");
+                        put("molestiae", "minus");
+                        put("placeat", "voluptatum");
+                        put("iusto", "excepturi");
                     }};
-                    targets = new openapisdk.models.shared.Target[]() {{
+                    targets = new org.openapis.openapi.models.shared.Target[]{{
                         add(new Target() {{
-                            targetAddress = "et";
-                            targetType = "voluptate";
+                            targetAddress = "recusandae";
+                            targetType = "temporibus";
                         }}),
                         add(new Target() {{
-                            targetAddress = "iste";
-                            targetType = "vitae";
-                        }}),
-                        add(new Target() {{
-                            targetAddress = "totam";
-                            targetType = "dolores";
+                            targetAddress = "ab";
+                            targetType = "quis";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateNotificationRuleResponse res = sdk.createNotificationRule(req);
 
@@ -88,20 +92,30 @@ public class Application {
 
 ### SDK SDK
 
-* `createNotificationRule` - Creates a notification rule for a resource. The rule specifies the events you want notifications about and the targets (such as SNS topics) where you want to receive them.
+* `createNotificationRule` - Creates a notification rule for a resource. The rule specifies the events you want notifications about and the targets (such as Chatbot topics or Chatbot clients configured for Slack) where you want to receive them.
 * `deleteNotificationRule` - Deletes a notification rule for a resource.
 * `deleteTarget` - Deletes a specified target for notifications.
 * `describeNotificationRule` - Returns information about a specified notification rule.
 * `listEventTypes` - Returns information about the event types available for configuring notifications.
-* `listNotificationRules` - Returns a list of the notification rules for an AWS account.
+* `listNotificationRules` - Returns a list of the notification rules for an Amazon Web Services account.
 * `listTagsForResource` - Returns a list of the tags associated with a notification rule.
-* `listTargets` - Returns a list of the notification rule targets for an AWS account.
-* `subscribe` - Creates an association between a notification rule and an SNS topic so that the associated target can receive notifications when the events described in the rule are triggered.
+* `listTargets` - Returns a list of the notification rule targets for an Amazon Web Services account.
+* `subscribe` - Creates an association between a notification rule and an Chatbot topic or Chatbot client so that the associated target can receive notifications when the events described in the rule are triggered.
 * `tagResource` - Associates a set of provided tags with a notification rule.
-* `unsubscribe` - Removes an association between a notification rule and an Amazon SNS topic so that subscribers to that topic stop receiving notifications when the events described in the rule are triggered.
+* `unsubscribe` - Removes an association between a notification rule and an Chatbot topic so that subscribers to that topic stop receiving notifications when the events described in the rule are triggered.
 * `untagResource` - Removes the association between one or more provided tags and a notification rule.
 * `updateNotificationRule` - <p>Updates a notification rule for a resource. You can change the events that trigger the notification rule, the status of the rule, and the targets that receive the notifications.</p> <note> <p>To add or remove tags for a notification rule, you must use <a>TagResource</a> and <a>UntagResource</a>.</p> </note>
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

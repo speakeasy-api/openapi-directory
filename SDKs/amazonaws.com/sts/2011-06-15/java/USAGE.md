@@ -2,42 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETDecodeAuthorizationMessageActionEnum;
+import org.openapis.openapi.models.operations.GETDecodeAuthorizationMessageVersionEnum;
+import org.openapis.openapi.models.operations.GETDecodeAuthorizationMessageQueryParams;
+import org.openapis.openapi.models.operations.GETDecodeAuthorizationMessageHeaders;
+import org.openapis.openapi.models.operations.GETDecodeAuthorizationMessageRequest;
+import org.openapis.openapi.models.operations.GETDecodeAuthorizationMessageResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetDecodeAuthorizationMessageRequest req = new GetDecodeAuthorizationMessageRequest() {{
-                queryParams = new GetDecodeAuthorizationMessageQueryParams() {{
+            GETDecodeAuthorizationMessageRequest req = new GETDecodeAuthorizationMessageRequest() {{
+                queryParams = new GETDecodeAuthorizationMessageQueryParams() {{
                     action = "DecodeAuthorizationMessage";
-                    encodedMessage = "voluptas";
+                    encodedMessage = "corrupti";
                     version = "2011-06-15";
                 }};
-                headers = new GetDecodeAuthorizationMessageHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
+                headers = new GETDecodeAuthorizationMessageHeaders() {{
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-            }};
+            }};            
 
-            GetDecodeAuthorizationMessageResponse res = sdk.getDecodeAuthorizationMessage(req);
+            GETDecodeAuthorizationMessageResponse res = sdk.getDecodeAuthorizationMessage(req);
 
             if (res.body.isPresent()) {
                 // handle response

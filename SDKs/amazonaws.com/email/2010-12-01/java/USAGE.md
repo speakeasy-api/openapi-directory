@@ -2,43 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetActionEnum;
+import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetVersionEnum;
+import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetQueryParams;
+import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetHeaders;
+import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetRequest;
+import org.openapis.openapi.models.operations.GETCloneReceiptRuleSetResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetCloneReceiptRuleSetRequest req = new GetCloneReceiptRuleSetRequest() {{
-                queryParams = new GetCloneReceiptRuleSetQueryParams() {{
+            GETCloneReceiptRuleSetRequest req = new GETCloneReceiptRuleSetRequest() {{
+                queryParams = new GETCloneReceiptRuleSetQueryParams() {{
                     action = "CloneReceiptRuleSet";
-                    originalRuleSetName = "voluptas";
-                    ruleSetName = "culpa";
+                    originalRuleSetName = "corrupti";
+                    ruleSetName = "provident";
                     version = "2010-12-01";
                 }};
-                headers = new GetCloneReceiptRuleSetHeaders() {{
-                    xAmzAlgorithm = "consequuntur";
-                    xAmzContentSha256 = "dolor";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "voluptas";
-                    xAmzSecurityToken = "fugit";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "nihil";
+                headers = new GETCloneReceiptRuleSetHeaders() {{
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
-            }};
+            }};            
 
-            GetCloneReceiptRuleSetResponse res = sdk.getCloneReceiptRuleSet(req);
+            GETCloneReceiptRuleSetResponse res = sdk.getCloneReceiptRuleSet(req);
 
             if (res.body.isPresent()) {
                 // handle response

@@ -2,15 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreateSecurity;
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreatePathParams;
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreateQueryParams;
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreateRequest;
+import org.openapis.openapi.models.operations.DatafusionProjectsLocationsInstancesCreateResponse;
+import org.openapis.openapi.models.shared.InstanceTypeEnum;
+import org.openapis.openapi.models.shared.InstanceInput;
+import org.openapis.openapi.models.shared.NetworkConfig;
+import org.openapis.openapi.models.shared.EventPublishConfig;
+import org.openapis.openapi.models.shared.CryptoKeyConfig;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DatafusionProjectsLocationsInstancesCreateRequest req = new DatafusionProjectsLocationsInstancesCreateRequest() {{
                 security = new DatafusionProjectsLocationsInstancesCreateSecurity() {{
@@ -22,90 +35,56 @@ public class Application {
                     }};
                 }};
                 pathParams = new DatafusionProjectsLocationsInstancesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new DatafusionProjectsLocationsInstancesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    instanceId = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    instanceId = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new InstanceInput() {{
-                    accelerators = new openapisdk.models.shared.Accelerator[]() {{
-                        add(new Accelerator() {{
-                            acceleratorType = "ACCELERATOR_TYPE_UNSPECIFIED";
-                            state = "DISABLED";
-                        }}),
-                    }};
-                    availableVersion = new openapisdk.models.shared.Version[]() {{
-                        add(new Version() {{
-                            availableFeatures = new String[]() {{
-                                add("et"),
-                                add("voluptate"),
-                                add("iste"),
-                            }};
-                            defaultVersion = true;
-                            type = "TYPE_GENERAL_AVAILABILITY";
-                            versionNumber = "dolores";
-                        }}),
-                        add(new Version() {{
-                            availableFeatures = new String[]() {{
-                                add("debitis"),
-                                add("vel"),
-                                add("odio"),
-                            }};
-                            defaultVersion = true;
-                            type = "TYPE_PREVIEW";
-                            versionNumber = "aspernatur";
-                        }}),
-                        add(new Version() {{
-                            availableFeatures = new String[]() {{
-                                add("totam"),
-                                add("commodi"),
-                                add("quis"),
-                            }};
-                            defaultVersion = false;
-                            type = "TYPE_GENERAL_AVAILABILITY";
-                            versionNumber = "odit";
-                        }}),
-                    }};
                     cryptoKeyConfig = new CryptoKeyConfig() {{
-                        keyReference = "non";
+                        keyReference = "iure";
                     }};
-                    dataprocServiceAccount = "voluptas";
-                    description = "omnis";
-                    displayName = "aut";
-                    enableRbac = true;
+                    dataprocServiceAccount = "magnam";
+                    description = "debitis";
+                    displayName = "ipsa";
+                    enableRbac = false;
                     enableStackdriverLogging = false;
                     enableStackdriverMonitoring = false;
+                    enableZoneSeparation = false;
                     eventPublishConfig = new EventPublishConfig() {{
-                        enabled = true;
-                        topic = "consectetur";
+                        enabled = false;
+                        topic = "delectus";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("odio", "qui");
+                        put("suscipit", "molestiae");
+                        put("minus", "placeat");
                     }};
                     networkConfig = new NetworkConfig() {{
-                        ipAllocation = "recusandae";
-                        network = "at";
+                        ipAllocation = "voluptatum";
+                        network = "iusto";
                     }};
                     options = new java.util.HashMap<String, String>() {{
-                        put("eveniet", "modi");
+                        put("nisi", "recusandae");
+                        put("temporibus", "ab");
+                        put("quis", "veritatis");
                     }};
-                    privateInstance = true;
-                    type = "BASIC";
-                    version = "ut";
-                    zone = "exercitationem";
+                    privateInstance = false;
+                    type = "ENTERPRISE";
+                    version = "perferendis";
+                    zone = "ipsam";
                 }};
-            }};
+            }};            
 
             DatafusionProjectsLocationsInstancesCreateResponse res = sdk.projects.datafusionProjectsLocationsInstancesCreate(req);
 

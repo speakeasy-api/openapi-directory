@@ -2,35 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.StsIntrospectQueryParams;
+import org.openapis.openapi.models.operations.StsIntrospectRequest;
+import org.openapis.openapi.models.operations.StsIntrospectResponse;
+import org.openapis.openapi.models.shared.GoogleIdentityStsV1IntrospectTokenRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             StsIntrospectRequest req = new StsIntrospectRequest() {{
                 queryParams = new StsIntrospectQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new GoogleIdentityStsV1IntrospectTokenRequest() {{
-                    token = "rerum";
-                    tokenTypeHint = "dicta";
+                    token = "deserunt";
+                    tokenTypeHint = "suscipit";
                 }};
-            }};
+            }};            
 
             StsIntrospectResponse res = sdk.v1.stsIntrospect(req);
 

@@ -2,15 +2,21 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetCallLogsSecurity;
+import org.openapis.openapi.models.operations.GetCallLogsPathParams;
+import org.openapis.openapi.models.operations.GetCallLogsDirectionEnum;
+import org.openapis.openapi.models.operations.GetCallLogsQueryParams;
+import org.openapis.openapi.models.operations.GetCallLogsRequest;
+import org.openapis.openapi.models.operations.GetCallLogsResponse;
+import org.openapis.openapi.models.shared.SchemeBearerAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetCallLogsRequest req = new GetCallLogsRequest() {{
                 security = new GetCallLogsSecurity() {{
@@ -19,22 +25,22 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetCallLogsPathParams() {{
-                    accountId = "sit";
+                    accountId = "corrupti";
                 }};
                 queryParams = new GetCallLogsQueryParams() {{
-                    destinationUser = "voluptas";
+                    destinationUser = "provident";
                     direction = "Outbound";
-                    endGte = "expedita";
-                    endLte = "consequuntur";
-                    from = "dolor";
-                    page = 67.199997;
-                    pageSize = 88.099998;
-                    sourceUser = "nihil";
-                    startGte = "rerum";
-                    startLte = "dicta";
-                    to = "debitis";
+                    endGte = "quibusdam";
+                    endLte = "unde";
+                    from = "nulla";
+                    page = 5448.83;
+                    pageSize = 8472.52;
+                    sourceUser = "vel";
+                    startGte = "error";
+                    startLte = "deserunt";
+                    to = "suscipit";
                 }};
-            }};
+            }};            
 
             GetCallLogsResponse res = sdk.getCallLogs(req);
 

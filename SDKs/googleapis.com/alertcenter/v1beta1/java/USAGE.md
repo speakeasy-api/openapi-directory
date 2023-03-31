@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteSecurity;
+import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteQueryParams;
+import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteRequest;
+import org.openapis.openapi.models.operations.AlertcenterAlertsBatchDeleteResponse;
+import org.openapis.openapi.models.shared.BatchDeleteAlertsRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AlertcenterAlertsBatchDeleteRequest req = new AlertcenterAlertsBatchDeleteRequest() {{
                 security = new AlertcenterAlertsBatchDeleteSecurity() {{
@@ -22,27 +30,27 @@ public class Application {
                     }};
                 }};
                 queryParams = new AlertcenterAlertsBatchDeleteQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new BatchDeleteAlertsRequest() {{
-                    alertId = new String[]() {{
-                        add("dicta"),
-                        add("debitis"),
-                        add("voluptatum"),
+                    alertId = new String[]{{
+                        add("suscipit"),
+                        add("iure"),
+                        add("magnam"),
                     }};
-                    customerId = "et";
+                    customerId = "debitis";
                 }};
-            }};
+            }};            
 
             AlertcenterAlertsBatchDeleteResponse res = sdk.alerts.alertcenterAlertsBatchDelete(req);
 

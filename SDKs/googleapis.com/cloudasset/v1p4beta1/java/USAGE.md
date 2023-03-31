@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicySecurity;
+import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyPathParams;
+import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyQueryParams;
+import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyRequest;
+import org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudassetAnalyzeIamPolicyRequest req = new CloudassetAnalyzeIamPolicyRequest() {{
                 security = new CloudassetAnalyzeIamPolicySecurity() {{
@@ -22,39 +30,40 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudassetAnalyzeIamPolicyPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new CloudassetAnalyzeIamPolicyQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    analysisQueryAccessSelectorPermissions = new String[]() {{
-                        add("dolor"),
-                        add("expedita"),
-                        add("voluptas"),
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    analysisQueryAccessSelectorPermissions = new String[]{{
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
-                    analysisQueryAccessSelectorRoles = new String[]() {{
-                        add("et"),
+                    analysisQueryAccessSelectorRoles = new String[]{{
+                        add("error"),
+                        add("deserunt"),
                     }};
-                    analysisQueryIdentitySelectorIdentity = "nihil";
-                    analysisQueryResourceSelectorFullResourceName = "rerum";
-                    callback = "dicta";
+                    analysisQueryIdentitySelectorIdentity = "suscipit";
+                    analysisQueryResourceSelectorFullResourceName = "iure";
+                    callback = "magnam";
                     fields = "debitis";
-                    key = "voluptatum";
-                    oauthToken = "et";
+                    key = "ipsa";
+                    oauthToken = "delectus";
                     optionsAnalyzeServiceAccountImpersonation = false;
-                    optionsExecutionTimeout = "dolorem";
+                    optionsExecutionTimeout = "tempora";
                     optionsExpandGroups = false;
                     optionsExpandResources = false;
-                    optionsExpandRoles = true;
-                    optionsOutputGroupEdges = true;
-                    optionsOutputResourceEdges = true;
-                    prettyPrint = true;
-                    quotaUser = "illum";
-                    uploadType = "debitis";
-                    uploadProtocol = "vel";
+                    optionsExpandRoles = false;
+                    optionsOutputGroupEdges = false;
+                    optionsOutputResourceEdges = false;
+                    prettyPrint = false;
+                    quotaUser = "suscipit";
+                    uploadType = "molestiae";
+                    uploadProtocol = "minus";
                 }};
-            }};
+            }};            
 
             CloudassetAnalyzeIamPolicyResponse res = sdk.v1p4beta1.cloudassetAnalyzeIamPolicy(req);
 

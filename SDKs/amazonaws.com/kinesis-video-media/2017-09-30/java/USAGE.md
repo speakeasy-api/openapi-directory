@@ -2,45 +2,47 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetMediaHeaders;
+import org.openapis.openapi.models.operations.GetMediaRequestBodyStartSelector;
+import org.openapis.openapi.models.operations.GetMediaRequestBody;
+import org.openapis.openapi.models.operations.GetMediaRequest;
+import org.openapis.openapi.models.operations.GetMediaResponse;
+import org.openapis.openapi.models.shared.StartSelectorTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetMediaRequest req = new GetMediaRequest() {{
                 headers = new GetMediaHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new GetMediaRequestBody() {{
                     startSelector = new GetMediaRequestBodyStartSelector() {{
-                        afterFragmentNumber = "voluptas";
-                        continuationToken = "fugit";
-                        startSelectorType = "FRAGMENT_NUMBER";
-                        startTimestamp = "2003-05-13T04:57:12Z";
+                        afterFragmentNumber = "illum";
+                        continuationToken = "vel";
+                        startSelectorType = "NOW";
+                        startTimestamp = "2022-03-26T09:37:56.283Z";
                     }};
-                    streamARN = "rerum";
-                    streamName = "dicta";
+                    streamARN = "iure";
+                    streamName = "magnam";
                 }};
-            }};
+            }};            
 
             GetMediaResponse res = sdk.getMedia(req);
 

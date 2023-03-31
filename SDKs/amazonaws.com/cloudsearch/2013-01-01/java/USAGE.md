@@ -2,42 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETBuildSuggestersActionEnum;
+import org.openapis.openapi.models.operations.GETBuildSuggestersVersionEnum;
+import org.openapis.openapi.models.operations.GETBuildSuggestersQueryParams;
+import org.openapis.openapi.models.operations.GETBuildSuggestersHeaders;
+import org.openapis.openapi.models.operations.GETBuildSuggestersRequest;
+import org.openapis.openapi.models.operations.GETBuildSuggestersResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetBuildSuggestersRequest req = new GetBuildSuggestersRequest() {{
-                queryParams = new GetBuildSuggestersQueryParams() {{
+            GETBuildSuggestersRequest req = new GETBuildSuggestersRequest() {{
+                queryParams = new GETBuildSuggestersQueryParams() {{
                     action = "BuildSuggesters";
-                    domainName = "voluptas";
+                    domainName = "corrupti";
                     version = "2013-01-01";
                 }};
-                headers = new GetBuildSuggestersHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
+                headers = new GETBuildSuggestersHeaders() {{
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-            }};
+            }};            
 
-            GetBuildSuggestersResponse res = sdk.getBuildSuggesters(req);
+            GETBuildSuggestersResponse res = sdk.getBuildSuggesters(req);
 
             if (res.body.isPresent()) {
                 // handle response

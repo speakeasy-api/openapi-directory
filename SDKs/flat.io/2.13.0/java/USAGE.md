@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAuthenticatedUserSecurity;
+import org.openapis.openapi.models.operations.GetAuthenticatedUserQueryParams;
+import org.openapis.openapi.models.operations.GetAuthenticatedUserRequest;
+import org.openapis.openapi.models.operations.GetAuthenticatedUserResponse;
+import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAuthenticatedUserRequest req = new GetAuthenticatedUserRequest() {{
                 security = new GetAuthenticatedUserSecurity() {{
@@ -21,7 +25,7 @@ public class Application {
                 queryParams = new GetAuthenticatedUserQueryParams() {{
                     onlyId = false;
                 }};
-            }};
+            }};            
 
             GetAuthenticatedUserResponse res = sdk.account.getAuthenticatedUser(req);
 

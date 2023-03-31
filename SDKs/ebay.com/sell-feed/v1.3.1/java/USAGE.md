@@ -2,42 +2,49 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskSecurity;
+import org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskHeaders;
+import org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskRequest;
+import org.openapis.openapi.models.operations.CreateCustomerServiceMetricTaskResponse;
+import org.openapis.openapi.models.shared.CreateServiceMetricsTaskRequest;
+import org.openapis.openapi.models.shared.CustomerServiceMetricsFilterCriteria;
+import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateCustomerServiceMetricTaskRequest req = new CreateCustomerServiceMetricTaskRequest() {{
                 security = new CreateCustomerServiceMetricTaskSecurity() {{
-                    apiAuth = new SchemeApiAuth() {{
+                    apiAuth = new SchemeAPIAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
                 headers = new CreateCustomerServiceMetricTaskHeaders() {{
-                    acceptLanguage = "sit";
+                    acceptLanguage = "corrupti";
                 }};
                 request = new CreateServiceMetricsTaskRequest() {{
-                    feedType = "voluptas";
+                    feedType = "provident";
                     filterCriteria = new CustomerServiceMetricsFilterCriteria() {{
-                        customerServiceMetricType = "culpa";
-                        evaluationMarketplaceId = "expedita";
-                        listingCategories = new String[]() {{
-                            add("dolor"),
-                            add("expedita"),
-                            add("voluptas"),
+                        customerServiceMetricType = "distinctio";
+                        evaluationMarketplaceId = "quibusdam";
+                        listingCategories = new String[]{{
+                            add("nulla"),
+                            add("corrupti"),
+                            add("illum"),
                         }};
-                        shippingRegions = new String[]() {{
-                            add("et"),
+                        shippingRegions = new String[]{{
+                            add("error"),
+                            add("deserunt"),
                         }};
                     }};
-                    schemaVersion = "nihil";
+                    schemaVersion = "suscipit";
                 }};
-            }};
+            }};            
 
             CreateCustomerServiceMetricTaskResponse res = sdk.customerServiceMetricTask.createCustomerServiceMetricTask(req);
 

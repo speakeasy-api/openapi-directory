@@ -2,23 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetOrdersOrderStatusEnum;
+import org.openapis.openapi.models.operations.GetOrdersQueryParams;
+import org.openapis.openapi.models.operations.GetOrdersRequest;
+import org.openapis.openapi.models.operations.GetOrdersResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetOrdersRequest req = new GetOrdersRequest() {{
                 queryParams = new GetOrdersQueryParams() {{
-                    limit = "sit";
-                    offset = "voluptas";
-                    orderStatus = "Cancelled";
+                    limit = "corrupti";
+                    offset = "provident";
+                    orderStatus = "Completed";
                 }};
-            }};
+            }};            
 
             GetOrdersResponse res = sdk.getOrders(req);
 

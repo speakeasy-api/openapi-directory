@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,27 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption1;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption2;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurity;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryPathParams;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryQueryParams;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryRequest;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryResponse;
+import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequest;
+import org.openapis.openapi.models.shared.ApiDimensionFilterGroup;
+import org.openapis.openapi.models.shared.ApiDimensionFilter;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             WebmastersSearchanalyticsQueryRequest req = new WebmastersSearchanalyticsQueryRequest() {{
                 security = new WebmastersSearchanalyticsQuerySecurity() {{
@@ -37,54 +49,80 @@ public class Application {
                     }};
                 }};
                 pathParams = new WebmastersSearchanalyticsQueryPathParams() {{
-                    siteUrl = "sit";
+                    siteUrl = "corrupti";
                 }};
                 queryParams = new WebmastersSearchanalyticsQueryQueryParams() {{
                     alt = "json";
-                    fields = "culpa";
-                    key = "expedita";
-                    oauthToken = "consequuntur";
+                    fields = "provident";
+                    key = "distinctio";
+                    oauthToken = "quibusdam";
                     prettyPrint = false;
-                    quotaUser = "expedita";
-                    userIp = "voluptas";
+                    quotaUser = "unde";
+                    userIp = "nulla";
                 }};
                 request = new SearchAnalyticsQueryRequest() {{
-                    aggregationType = "fugit";
-                    dataState = "et";
-                    dimensionFilterGroups = new openapisdk.models.shared.ApiDimensionFilterGroup[]() {{
+                    aggregationType = "corrupti";
+                    dataState = "illum";
+                    dimensionFilterGroups = new org.openapis.openapi.models.shared.ApiDimensionFilterGroup[]{{
                         add(new ApiDimensionFilterGroup() {{
-                            filters = new openapisdk.models.shared.ApiDimensionFilter[]() {{
+                            filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "dicta";
+                                    dimension = "deserunt";
+                                    expression = "suscipit";
+                                    operator = "iure";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "magnam";
                                     expression = "debitis";
-                                    operator = "voluptatum";
+                                    operator = "ipsa";
                                 }}),
                                 add(new ApiDimensionFilter() {{
-                                    dimension = "et";
-                                    expression = "ut";
-                                    operator = "dolorem";
-                                }}),
-                                add(new ApiDimensionFilter() {{
-                                    dimension = "et";
-                                    expression = "voluptate";
-                                    operator = "iste";
+                                    dimension = "delectus";
+                                    expression = "tempora";
+                                    operator = "suscipit";
                                 }}),
                             }};
-                            groupType = "vitae";
+                            groupType = "molestiae";
+                        }}),
+                        add(new ApiDimensionFilterGroup() {{
+                            filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "placeat";
+                                    expression = "voluptatum";
+                                    operator = "iusto";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "excepturi";
+                                    expression = "nisi";
+                                    operator = "recusandae";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "temporibus";
+                                    expression = "ab";
+                                    operator = "quis";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "veritatis";
+                                    expression = "deserunt";
+                                    operator = "perferendis";
+                                }}),
+                            }};
+                            groupType = "ipsam";
                         }}),
                     }};
-                    dimensions = new String[]() {{
-                        add("dolores"),
-                        add("illum"),
-                        add("debitis"),
+                    dimensions = new String[]{{
+                        add("sapiente"),
+                        add("quo"),
+                        add("odit"),
+                        add("at"),
                     }};
-                    endDate = "vel";
-                    rowLimit = 2627038740284806767;
-                    searchType = "dolore";
-                    startDate = "id";
-                    startRow = 959367522974354090;
+                    endDate = "at";
+                    rowLimit = 978619;
+                    searchType = "molestiae";
+                    startDate = "quod";
+                    startRow = 800911;
                 }};
-            }};
+            }};            
 
             WebmastersSearchanalyticsQueryResponse res = sdk.searchanalytics.webmastersSearchanalyticsQuery(req);
 
@@ -99,6 +137,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### searchanalytics
 
@@ -119,7 +158,17 @@ When date is one of the group by values, any days without data are omitted from 
 * `webmastersSitesDelete` - Removes a site from the set of the user's Search Console sites.
 * `webmastersSitesGet` - Retrieves information about specific site.
 * `webmastersSitesList` - Lists the user's Search Console sites.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

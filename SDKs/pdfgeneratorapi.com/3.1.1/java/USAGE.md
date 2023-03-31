@@ -2,36 +2,38 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.MergeTemplateQueryParams;
+import org.openapis.openapi.models.operations.MergeTemplateRequest;
+import org.openapis.openapi.models.operations.MergeTemplateResponse;
+import org.openapis.openapi.models.shared.Data;
+import org.openapis.openapi.models.shared.OutputEnum;
+import org.openapis.openapi.models.shared.FormatEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    jsonWebTokenAuth = new SchemeJsonWebTokenAuth() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    jsonWebTokenAuth = new SchemeJSONWebTokenAuth() {{
                         authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             MergeTemplateRequest req = new MergeTemplateRequest() {{
                 queryParams = new MergeTemplateQueryParams() {{
-                    format = "zip";
-                    name = "voluptas";
-                    output = "url";
-                    templateId = 501233450539197794;
+                    format = "pdf";
+                    name = "My document";
+                    output = "base64";
+                    templateId = 19375;
                 }};
                 request = new Data() {{
-                    id = 3390393562759376202;
-                    name = "dolor";
+                    id = 12312;
+                    name = "Sample Data";
                 }};
-            }};
+            }};            
 
             MergeTemplateResponse res = sdk.documents.mergeTemplate(req);
 

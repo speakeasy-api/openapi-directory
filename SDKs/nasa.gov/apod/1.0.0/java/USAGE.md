@@ -2,27 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetApodSecurity;
+import org.openapis.openapi.models.operations.GetApodQueryParams;
+import org.openapis.openapi.models.operations.GetApodRequest;
+import org.openapis.openapi.models.operations.GetApodResponse;
+import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetApodRequest req = new GetApodRequest() {{
                 security = new GetApodSecurity() {{
-                    apiKey = new SchemeApiKey() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 queryParams = new GetApodQueryParams() {{
-                    date = "sit";
+                    date = "corrupti";
                     hd = false;
                 }};
-            }};
+            }};            
 
             GetApodResponse res = sdk.requestTag.getApod(req);
 

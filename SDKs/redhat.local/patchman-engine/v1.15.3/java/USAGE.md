@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.LatestPackageSecurity;
+import org.openapis.openapi.models.operations.LatestPackagePathParams;
+import org.openapis.openapi.models.operations.LatestPackageRequest;
+import org.openapis.openapi.models.operations.LatestPackageResponse;
+import org.openapis.openapi.models.shared.SchemeRhIdentity;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             LatestPackageRequest req = new LatestPackageRequest() {{
                 security = new LatestPackageSecurity() {{
@@ -19,9 +23,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new LatestPackagePathParams() {{
-                    packageName = "sit";
+                    packageName = "corrupti";
                 }};
-            }};
+            }};            
 
             LatestPackageResponse res = sdk.latestPackage(req);
 

@@ -2,28 +2,36 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAddonEnum;
+import org.openapis.openapi.models.operations.GetFormatEnum;
+import org.openapis.openapi.models.operations.GetLangEnum;
+import org.openapis.openapi.models.operations.GetPackageEnum;
+import org.openapis.openapi.models.operations.GetQueryParams;
+import org.openapis.openapi.models.operations.GetRequest;
+import org.openapis.openapi.models.operations.GetResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetRequest req = new GetRequest() {{
                 queryParams = new GetQueryParams() {{
-                    addon = new openapisdk.models.operations.GetAddonEnum[]() {{
-                        add("region"),
+                    addon = new org.openapis.openapi.models.operations.GetAddonEnum[]{{
+                        add("geotargeting"),
+                        add("country_groupings"),
+                        add("country_groupings"),
                     }};
                     format = "xml";
-                    ip = "expedita";
-                    key = "consequuntur";
-                    lang = "ko";
-                    package_ = "WS18";
+                    ip = "8.8.8.8";
+                    key = "nulla";
+                    lang = "ja";
+                    package_ = "WS22";
                 }};
-            }};
+            }};            
 
             GetResponse res = sdk.get(req);
 

@@ -2,46 +2,56 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CopyBackupToRegionXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CopyBackupToRegionHeaders;
+import org.openapis.openapi.models.operations.CopyBackupToRegionRequest;
+import org.openapis.openapi.models.operations.CopyBackupToRegionResponse;
+import org.openapis.openapi.models.shared.CopyBackupToRegionRequest;
+import org.openapis.openapi.models.shared.Tag;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CopyBackupToRegionRequest req = new CopyBackupToRegionRequest() {{
                 headers = new CopyBackupToRegionHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "BaldrApiService.CopyBackupToRegion";
                 }};
                 request = new CopyBackupToRegionRequest() {{
-                    backupId = "fugit";
-                    destinationRegion = "et";
-                    tagList = new openapisdk.models.shared.Tag[]() {{
+                    backupId = "illum";
+                    destinationRegion = "vel";
+                    tagList = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "rerum";
-                            value = "dicta";
+                            key = "deserunt";
+                            value = "suscipit";
+                        }}),
+                        add(new Tag() {{
+                            key = "iure";
+                            value = "magnam";
+                        }}),
+                        add(new Tag() {{
+                            key = "debitis";
+                            value = "ipsa";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CopyBackupToRegionResponse res = sdk.copyBackupToRegion(req);
 

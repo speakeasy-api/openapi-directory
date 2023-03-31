@@ -2,39 +2,39 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AcceptAdministratorInvitationHeaders;
+import org.openapis.openapi.models.operations.AcceptAdministratorInvitationRequestBody;
+import org.openapis.openapi.models.operations.AcceptAdministratorInvitationRequest;
+import org.openapis.openapi.models.operations.AcceptAdministratorInvitationResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AcceptAdministratorInvitationRequest req = new AcceptAdministratorInvitationRequest() {{
                 headers = new AcceptAdministratorInvitationHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new AcceptAdministratorInvitationRequestBody() {{
-                    administratorId = "voluptas";
-                    invitationId = "fugit";
+                    administratorId = "illum";
+                    invitationId = "vel";
                 }};
-            }};
+            }};            
 
             AcceptAdministratorInvitationResponse res = sdk.acceptAdministratorInvitation(req);
 

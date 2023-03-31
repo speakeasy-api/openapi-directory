@@ -2,23 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetV1ValidationSingleFormatEnum;
+import org.openapis.openapi.models.operations.GetV1ValidationSingleQueryParams;
+import org.openapis.openapi.models.operations.GetV1ValidationSingleRequest;
+import org.openapis.openapi.models.operations.GetV1ValidationSingleResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetV1ValidationSingleRequest req = new GetV1ValidationSingleRequest() {{
                 queryParams = new GetV1ValidationSingleQueryParams() {{
-                    email = "sit";
-                    format = "json";
-                    key = "culpa";
+                    email = "Larue_Rau85@yahoo.com";
+                    format = "xml";
+                    key = "illum";
                 }};
-            }};
+            }};            
 
             GetV1ValidationSingleResponse res = sdk.getV1ValidationSingle(req);
 

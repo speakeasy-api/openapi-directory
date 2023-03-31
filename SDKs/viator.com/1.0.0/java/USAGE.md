@@ -2,41 +2,50 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BookingAvailabilityHeaders;
+import org.openapis.openapi.models.operations.BookingAvailabilityRequestBodyAgeBands;
+import org.openapis.openapi.models.operations.BookingAvailabilityRequestBody;
+import org.openapis.openapi.models.operations.BookingAvailabilityRequest;
+import org.openapis.openapi.models.operations.BookingAvailabilityResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKey = new SchemeApiKey() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BookingAvailabilityRequest req = new BookingAvailabilityRequest() {{
                 headers = new BookingAvailabilityHeaders() {{
-                    acceptLanguage = "sit";
+                    acceptLanguage = "en-US";
                 }};
                 request = new BookingAvailabilityRequestBody() {{
-                    ageBands = new openapisdk.models.operations.BookingAvailabilityRequestBodyAgeBands[]() {{
+                    ageBands = new org.openapis.openapi.models.operations.BookingAvailabilityRequestBodyAgeBands[]{{
                         add(new BookingAvailabilityRequestBodyAgeBands() {{
-                            bandId = 6050128673802995827;
-                            count = 501233450539197794;
+                            bandId = 592845;
+                            count = 715190;
+                        }}),
+                        add(new BookingAvailabilityRequestBodyAgeBands() {{
+                            bandId = 844266;
+                            count = 602763;
+                        }}),
+                        add(new BookingAvailabilityRequestBodyAgeBands() {{
+                            bandId = 857946;
+                            count = 544883;
                         }}),
                     }};
-                    currencyCode = "consequuntur";
-                    month = "dolor";
-                    productCode = "expedita";
-                    year = "voluptas";
+                    currencyCode = "illum";
+                    month = "vel";
+                    productCode = "error";
+                    year = "deserunt";
                 }};
-            }};
+            }};            
 
             BookingAvailabilityResponse res = sdk.bookingServices.bookingAvailability(req);
 

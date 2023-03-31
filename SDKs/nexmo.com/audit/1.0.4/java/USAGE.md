@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetEventSecurity;
+import org.openapis.openapi.models.operations.GetEventPathParams;
+import org.openapis.openapi.models.operations.GetEventRequest;
+import org.openapis.openapi.models.operations.GetEventResponse;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetEventRequest req = new GetEventRequest() {{
                 security = new GetEventSecurity() {{
@@ -20,9 +24,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetEventPathParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
             GetEventResponse res = sdk.getEvent(req);
 

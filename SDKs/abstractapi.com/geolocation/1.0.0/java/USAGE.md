@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetV1QueryParams;
+import org.openapis.openapi.models.operations.GetV1Request;
+import org.openapis.openapi.models.operations.GetV1Response;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetV1Request req = new GetV1Request() {{
                 queryParams = new GetV1QueryParams() {{
-                    apiKey = "sit";
-                    fields = "voluptas";
-                    ipAddress = "culpa";
+                    apiKey = "corrupti";
+                    fields = "country,city,timezone";
+                    ipAddress = "195.154.25.40";
                 }};
-            }};
+            }};            
 
             GetV1Response res = sdk.getV1(req);
 

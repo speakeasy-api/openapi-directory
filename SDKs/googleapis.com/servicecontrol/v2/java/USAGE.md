@@ -2,15 +2,34 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckSecurityOption1;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckSecurityOption2;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckSecurity;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckPathParams;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckQueryParams;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckRequest;
+import org.openapis.openapi.models.operations.ServicecontrolServicesCheckResponse;
+import org.openapis.openapi.models.shared.CheckRequest;
+import org.openapis.openapi.models.shared.ResourceInfo;
+import org.openapis.openapi.models.shared.AttributeContext;
+import org.openapis.openapi.models.shared.Peer;
+import org.openapis.openapi.models.shared.Response;
+import org.openapis.openapi.models.shared.Resource;
+import org.openapis.openapi.models.shared.Request;
+import org.openapis.openapi.models.shared.Auth;
+import org.openapis.openapi.models.shared.Api;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ServicecontrolServicesCheckRequest req = new ServicecontrolServicesCheckRequest() {{
                 security = new ServicecontrolServicesCheckSecurity() {{
@@ -24,152 +43,161 @@ public class Application {
                     }};
                 }};
                 pathParams = new ServicecontrolServicesCheckPathParams() {{
-                    serviceName = "sit";
+                    serviceName = "corrupti";
                 }};
                 queryParams = new ServicecontrolServicesCheckQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new CheckRequest() {{
                     attributes = new AttributeContext() {{
                         api = new Api() {{
-                            operation = "dicta";
-                            protocol = "debitis";
-                            service = "voluptatum";
-                            version = "et";
+                            operation = "suscipit";
+                            protocol = "iure";
+                            service = "magnam";
+                            version = "debitis";
                         }};
                         destination = new Peer() {{
-                            ip = "ut";
+                            ip = "ipsa";
                             labels = new java.util.HashMap<String, String>() {{
-                                put("et", "voluptate");
-                                put("iste", "vitae");
-                                put("totam", "dolores");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
+                                put("iusto", "excepturi");
                             }};
-                            port = "illum";
-                            principal = "debitis";
-                            regionCode = "vel";
+                            port = "nisi";
+                            principal = "recusandae";
+                            regionCode = "temporibus";
                         }};
-                        extensions = new java.util.HashMap<String, Object>[]() {{
+                        extensions = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("id", "aspernatur");
-                                put("accusantium", "totam");
+                                put("veritatis", "deserunt");
+                                put("perferendis", "ipsam");
                             }}),
                         }};
                         origin = new Peer() {{
-                            ip = "commodi";
+                            ip = "repellendus";
                             labels = new java.util.HashMap<String, String>() {{
-                                put("est", "aut");
-                                put("odit", "non");
-                                put("voluptas", "omnis");
+                                put("quo", "odit");
+                                put("at", "at");
+                                put("maiores", "molestiae");
+                                put("quod", "quod");
                             }};
-                            port = "aut";
-                            principal = "illo";
-                            regionCode = "sed";
+                            port = "esse";
+                            principal = "totam";
+                            regionCode = "porro";
                         }};
                         request = new Request() {{
                             auth = new Auth() {{
-                                accessLevels = new String[]() {{
-                                    add("autem"),
-                                    add("consectetur"),
+                                accessLevels = new String[]{{
+                                    add("dicta"),
+                                    add("nam"),
+                                    add("officia"),
                                 }};
-                                audiences = new String[]() {{
-                                    add("odio"),
+                                audiences = new String[]{{
+                                    add("fugit"),
+                                    add("deleniti"),
+                                    add("hic"),
                                 }};
                                 claims = new java.util.HashMap<String, Object>() {{
-                                    put("recusandae", "at");
+                                    put("totam", "beatae");
+                                    put("commodi", "molestiae");
+                                    put("modi", "qui");
+                                    put("impedit", "cum");
                                 }};
-                                presenter = "ipsum";
-                                principal = "eveniet";
+                                presenter = "esse";
+                                principal = "ipsum";
                             }};
                             headers = new java.util.HashMap<String, String>() {{
-                                put("sint", "inventore");
-                                put("ut", "exercitationem");
+                                put("aspernatur", "perferendis");
+                                put("ad", "natus");
+                                put("sed", "iste");
                             }};
-                            host = "aut";
-                            id = "reprehenderit";
-                            method = "tempore";
-                            path = "maiores";
-                            protocol = "incidunt";
-                            query = "dolor";
-                            reason = "beatae";
-                            scheme = "veritatis";
-                            size = "in";
-                            time = "et";
+                            host = "dolor";
+                            id = "natus";
+                            method = "laboriosam";
+                            path = "hic";
+                            protocol = "saepe";
+                            query = "fuga";
+                            reason = "in";
+                            scheme = "corporis";
+                            size = "iste";
+                            time = "iure";
                         }};
                         resource = new Resource() {{
                             annotations = new java.util.HashMap<String, String>() {{
-                                put("ipsum", "ex");
-                                put("dolores", "placeat");
+                                put("quidem", "architecto");
+                                put("ipsa", "reiciendis");
+                                put("est", "mollitia");
+                                put("laborum", "dolores");
                             }};
-                            createTime = "vel";
-                            deleteTime = "rerum";
-                            displayName = "mollitia";
-                            etag = "voluptas";
+                            createTime = "dolorem";
+                            deleteTime = "corporis";
+                            displayName = "explicabo";
+                            etag = "nobis";
                             labels = new java.util.HashMap<String, String>() {{
-                                put("reprehenderit", "qui");
+                                put("omnis", "nemo");
+                                put("minima", "excepturi");
                             }};
-                            location = "qui";
-                            name = "unde";
-                            service = "in";
-                            type = "autem";
-                            uid = "qui";
-                            updateTime = "ut";
+                            location = "accusantium";
+                            name = "iure";
+                            service = "culpa";
+                            type = "doloribus";
+                            uid = "sapiente";
+                            updateTime = "architecto";
                         }};
                         response = new Response() {{
-                            backendLatency = "itaque";
-                            code = "ab";
+                            backendLatency = "mollitia";
+                            code = "dolorem";
                             headers = new java.util.HashMap<String, String>() {{
-                                put("ullam", "et");
+                                put("consequuntur", "repellat");
+                                put("mollitia", "occaecati");
+                                put("numquam", "commodi");
                             }};
-                            size = "accusantium";
-                            time = "esse";
+                            size = "quam";
+                            time = "molestiae";
                         }};
                         source = new Peer() {{
-                            ip = "architecto";
+                            ip = "velit";
                             labels = new java.util.HashMap<String, String>() {{
-                                put("velit", "cumque");
+                                put("quia", "quis");
+                                put("vitae", "laborum");
+                                put("animi", "enim");
                             }};
-                            port = "soluta";
-                            principal = "sunt";
-                            regionCode = "voluptates";
+                            port = "odit";
+                            principal = "quo";
+                            regionCode = "sequi";
                         }};
                     }};
-                    flags = "magni";
-                    resources = new openapisdk.models.shared.ResourceInfo[]() {{
+                    flags = "tenetur";
+                    resources = new org.openapis.openapi.models.shared.ResourceInfo[]{{
                         add(new ResourceInfo() {{
-                            container = "optio";
-                            location = "qui";
-                            name = "earum";
-                            permission = "illo";
-                            type = "omnis";
-                        }}),
-                        add(new ResourceInfo() {{
-                            container = "ut";
-                            location = "consequatur";
-                            name = "dolor";
-                            permission = "commodi";
+                            container = "id";
+                            location = "possimus";
+                            name = "aut";
+                            permission = "quasi";
                             type = "error";
                         }}),
                         add(new ResourceInfo() {{
-                            container = "reprehenderit";
-                            location = "consectetur";
-                            name = "nostrum";
-                            permission = "ut";
-                            type = "laboriosam";
+                            container = "temporibus";
+                            location = "laborum";
+                            name = "quasi";
+                            permission = "reiciendis";
+                            type = "voluptatibus";
                         }}),
                     }};
-                    serviceConfigId = "sed";
+                    serviceConfigId = "vero";
                 }};
-            }};
+            }};            
 
             ServicecontrolServicesCheckResponse res = sdk.services.servicecontrolServicesCheck(req);
 

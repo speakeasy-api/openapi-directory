@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentRequestBody;
+import org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentRequest;
+import org.openapis.openapi.models.operations.SrcSearchlyApiV1ControllersSimilarityByContentResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             SrcSearchlyApiV1ControllersSimilarityByContentRequest req = new SrcSearchlyApiV1ControllersSimilarityByContentRequest() {{
                 request = new SrcSearchlyApiV1ControllersSimilarityByContentRequestBody() {{
-                    content = "sit";
+                    content = "corrupti";
                 }};
-            }};
+            }};            
 
             SrcSearchlyApiV1ControllersSimilarityByContentResponse res = sdk.similarity.srcSearchlyApiV1ControllersSimilarityByContent(req);
 

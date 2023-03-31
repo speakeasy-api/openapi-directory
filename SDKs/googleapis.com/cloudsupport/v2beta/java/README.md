@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,22 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchSecurity;
+import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchQueryParams;
+import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchRequest;
+import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudsupportCaseClassificationsSearchRequest req = new CloudsupportCaseClassificationsSearchRequest() {{
                 security = new CloudsupportCaseClassificationsSearchSecurity() {{
@@ -35,22 +42,22 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudsupportCaseClassificationsSearchQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    pageSize = 6044372234677422456;
-                    pageToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    pageSize = 847252;
+                    pageToken = "vel";
                     prettyPrint = false;
-                    query = "nihil";
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    query = "error";
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             CloudsupportCaseClassificationsSearchResponse res = sdk.caseClassifications.cloudsupportCaseClassificationsSearch(req);
 
@@ -66,21 +73,13 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### caseClassifications
 
 * `cloudsupportCaseClassificationsSearch` - Retrieve valid classifications to be used when creating a support case. The classications are hierarchical, with each classification containing all levels of the hierarchy, separated by " > ". For example "Technical Issue > Compute > Compute Engine".
 
 ### cases
 
-* `cloudsupportCasesAttachmentsList` - Retrieve all attachments associated with a support case.
-* `cloudsupportCasesClose` - Close the specified case.
-* `cloudsupportCasesCommentsCreate` - Add a new comment to the specified Case. The comment object must have the following fields set: body.
-* `cloudsupportCasesCommentsList` - Retrieve all Comments associated with the Case object.
-* `cloudsupportCasesCreate` - Create a new case and associate it with the given Cloud resource. The case object must have the following fields set: display_name, description, classification, and severity.
-* `cloudsupportCasesEscalate` - Escalate a case. Escalating a case will initiate the Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
-* `cloudsupportCasesGet` - Retrieve the specified case.
-* `cloudsupportCasesList` - Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
-* `cloudsupportCasesPatch` - Update the specified case. Only a subset of fields (display_name, description, time_zone, subscriber_email_addresses, related_resources, severity, priority, primary_contact, and labels) can be updated.
 * `cloudsupportCasesSearch` - Search cases using the specified query.
 
 ### media
@@ -88,6 +87,28 @@ public class Application {
 * `cloudsupportMediaDownload` - Download a file attachment on a case. Note: HTTP requests must append "?alt=media" to the URL.
 * `cloudsupportMediaUpload` - Create a file attachment on a case or Cloud resource. The attachment object must have the following fields set: filename.
 
+### projects
+
+* `cloudsupportProjectsCasesAttachmentsList` - Retrieve all attachments associated with a support case.
+* `cloudsupportProjectsCasesClose` - Close the specified case.
+* `cloudsupportProjectsCasesCommentsCreate` - Add a new comment to the specified Case. The comment object must have the following fields set: body.
+* `cloudsupportProjectsCasesCommentsList` - Retrieve all Comments associated with the Case object.
+* `cloudsupportProjectsCasesCreate` - Create a new case and associate it with the given Cloud resource. The case object must have the following fields set: display_name, description, classification, and severity.
+* `cloudsupportProjectsCasesEscalate` - Escalate a case. Escalating a case will initiate the Cloud Support escalation management process. This operation is only available to certain Customer Care tiers. Go to https://cloud.google.com/support and look for 'Technical support escalations' in the feature list to find out which tiers are able to perform escalations.
+* `cloudsupportProjectsCasesGet` - Retrieve the specified case.
+* `cloudsupportProjectsCasesList` - Retrieve all cases under the specified parent. Note: Listing cases under an Organization returns only the cases directly parented by that organization. To retrieve all cases under an organization, including cases parented by projects under that organization, use `cases.search`.
+* `cloudsupportProjectsUpdateCases` - Update the specified case. Only a subset of fields can be updated.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

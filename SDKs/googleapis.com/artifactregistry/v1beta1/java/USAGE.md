@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListSecurityOption1;
+import org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListSecurityOption2;
+import org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListSecurity;
+import org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListPathParams;
+import org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListQueryParams;
+import org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListRequest;
+import org.openapis.openapi.models.operations.ArtifactregistryProjectsLocationsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ArtifactregistryProjectsLocationsListRequest req = new ArtifactregistryProjectsLocationsListRequest() {{
                 security = new ArtifactregistryProjectsLocationsListSecurity() {{
@@ -24,25 +34,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new ArtifactregistryProjectsLocationsListPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new ArtifactregistryProjectsLocationsListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    filter = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
-                    pageSize = 1543572285742637646;
-                    pageToken = "nihil";
-                    prettyPrint = true;
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    filter = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    pageSize = 623564;
+                    pageToken = "deserunt";
+                    prettyPrint = false;
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-            }};
+            }};            
 
             ArtifactregistryProjectsLocationsListResponse res = sdk.projects.artifactregistryProjectsLocationsList(req);
 

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,24 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetSecurityOption1;
+import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetSecurityOption2;
+import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetSecurity;
+import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetQueryParams;
+import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetRequest;
+import org.openapis.openapi.models.operations.PeopleContactGroupsBatchGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PeopleContactGroupsBatchGetRequest req = new PeopleContactGroupsBatchGetRequest() {{
                 security = new PeopleContactGroupsBatchGetSecurity() {{
@@ -37,26 +46,26 @@ public class Application {
                     }};
                 }};
                 queryParams = new PeopleContactGroupsBatchGetQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    groupFields = "dolor";
-                    key = "expedita";
-                    maxMembers = 6044372234677422456;
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    groupFields = "nulla";
+                    key = "corrupti";
+                    maxMembers = 847252;
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    resourceNames = new String[]() {{
-                        add("dicta"),
-                        add("debitis"),
-                        add("voluptatum"),
+                    quotaUser = "error";
+                    resourceNames = new String[]{{
+                        add("suscipit"),
+                        add("iure"),
+                        add("magnam"),
                     }};
-                    uploadType = "et";
-                    uploadProtocol = "ut";
+                    uploadType = "debitis";
+                    uploadProtocol = "ipsa";
                 }};
-            }};
+            }};            
 
             PeopleContactGroupsBatchGetResponse res = sdk.contactGroups.peopleContactGroupsBatchGet(req);
 
@@ -71,6 +80,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### contactGroups
 
@@ -103,7 +113,17 @@ public class Application {
 * `peoplePeopleSearchDirectoryPeople` - Provides a list of domain profiles and domain contacts in the authenticated user's domain directory that match the search query.
 * `peoplePeopleUpdateContact` - Update contact data for an existing contact person. Any non-contact data will not be modified. Any non-contact data in the person to update will be ignored. All fields specified in the `update_mask` will be replaced. The server returns a 400 error if `person.metadata.sources` is not specified for the contact to be updated or if there is no contact source. The server returns a 400 error with reason `"failedPrecondition"` if `person.metadata.sources.etag` is different than the contact's etag, which indicates the contact has changed since its data was read. Clients should get the latest person and merge their updates into the latest person. The server returns a 400 error if `memberships` are being updated and there are no contact group memberships specified on the person. The server returns a 400 error if more than one field is specified on a field that is a singleton for contact sources: * biographies * birthdays * genders * names Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
 * `peoplePeopleUpdateContactPhoto` - Update a contact's photo. Mutate requests for the same user should be sent sequentially to avoid increased latency and failures.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

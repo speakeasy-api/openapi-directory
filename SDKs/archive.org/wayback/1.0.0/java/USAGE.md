@@ -2,27 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetWaybackV1AvailableQueryParams;
+import org.openapis.openapi.models.operations.GetWaybackV1AvailableRequest;
+import org.openapis.openapi.models.operations.GetWaybackV1AvailableResponse;
+import org.openapis.openapi.models.shared.StatusCodeEnum;
+import org.openapis.openapi.models.shared.ClosestEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetWaybackV1AvailableRequest req = new GetWaybackV1AvailableRequest() {{
                 queryParams = new GetWaybackV1AvailableQueryParams() {{
-                    callback = "sit";
-                    closest = "either";
-                    statusCode = 6050128673802995827;
-                    tag = "expedita";
-                    timeout = 15.100000;
-                    timestamp = "expedita";
-                    url = "voluptas";
+                    callback = "corrupti";
+                    closest = "before";
+                    statusCode = "421";
+                    tag = "quibusdam";
+                    timeout = 6027.63;
+                    timestamp = "nulla";
+                    url = "corrupti";
                 }};
-            }};
+            }};            
 
             GetWaybackV1AvailableResponse res = sdk.getWaybackV1Available(req);
 

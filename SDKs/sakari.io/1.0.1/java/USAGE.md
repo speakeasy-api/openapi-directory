@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AuthTokenRequest;
+import org.openapis.openapi.models.operations.AuthTokenResponse;
+import org.openapis.openapi.models.shared.TokenRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AuthTokenRequest req = new AuthTokenRequest() {{
                 request = new TokenRequest() {{
-                    clientId = "sit";
-                    clientSecret = "voluptas";
-                    grantType = "culpa";
+                    clientId = "00000000-0000-0000-0000-00000000000";
+                    clientSecret = "00000000-0000-0000-0000-00000000000";
+                    grantType = "client_credentials";
                 }};
-            }};
+            }};            
 
             AuthTokenResponse res = sdk.authentication.authToken(req);
 

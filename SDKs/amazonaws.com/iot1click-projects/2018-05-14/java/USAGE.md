@@ -2,43 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementPathParams;
+import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementHeaders;
+import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementRequestBody;
+import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementRequest;
+import org.openapis.openapi.models.operations.AssociateDeviceWithPlacementResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateDeviceWithPlacementRequest req = new AssociateDeviceWithPlacementRequest() {{
                 pathParams = new AssociateDeviceWithPlacementPathParams() {{
-                    deviceTemplateName = "sit";
-                    placementName = "voluptas";
-                    projectName = "culpa";
+                    deviceTemplateName = "corrupti";
+                    placementName = "provident";
+                    projectName = "distinctio";
                 }};
                 headers = new AssociateDeviceWithPlacementHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
+                    xAmzAlgorithm = "quibusdam";
+                    xAmzContentSha256 = "unde";
+                    xAmzCredential = "nulla";
+                    xAmzDate = "corrupti";
+                    xAmzSecurityToken = "illum";
+                    xAmzSignature = "vel";
+                    xAmzSignedHeaders = "error";
                 }};
                 request = new AssociateDeviceWithPlacementRequestBody() {{
-                    deviceId = "nihil";
+                    deviceId = "deserunt";
                 }};
-            }};
+            }};            
 
             AssociateDeviceWithPlacementResponse res = sdk.associateDeviceWithPlacement(req);
 

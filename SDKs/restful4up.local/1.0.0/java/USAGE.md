@@ -2,19 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBodyFile;
+import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBodyIsUnpackingRequiredEnum;
+import org.openapis.openapi.models.operations.ApplyYaraRulesRequestBody;
+import org.openapis.openapi.models.operations.ApplyYaraRulesRequest;
+import org.openapis.openapi.models.operations.ApplyYaraRulesResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ApplyYaraRulesRequest req = new ApplyYaraRulesRequest() {{
-                request = "sit";
-            }};
+                request = new ApplyYaraRulesRequestBody() {{
+                    file = new ApplyYaraRulesRequestBodyFile() {{
+                        content = "corrupti".getBytes();
+                        file = "provident";
+                    }};
+                    isUnpackingRequired = "false";
+                    rules = new String[]{{
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
+                    }};
+                }};
+            }};            
 
             ApplyYaraRulesResponse res = sdk.applyYaraRules(req);
 

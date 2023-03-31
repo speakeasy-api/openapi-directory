@@ -2,30 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FindEligibleItemsSecurity;
+import org.openapis.openapi.models.operations.FindEligibleItemsQueryParams;
+import org.openapis.openapi.models.operations.FindEligibleItemsHeaders;
+import org.openapis.openapi.models.operations.FindEligibleItemsRequest;
+import org.openapis.openapi.models.operations.FindEligibleItemsResponse;
+import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FindEligibleItemsRequest req = new FindEligibleItemsRequest() {{
                 security = new FindEligibleItemsSecurity() {{
-                    apiAuth = new SchemeApiAuth() {{
+                    apiAuth = new SchemeAPIAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
                 queryParams = new FindEligibleItemsQueryParams() {{
-                    limit = "sit";
-                    offset = "voluptas";
+                    limit = "corrupti";
+                    offset = "provident";
                 }};
                 headers = new FindEligibleItemsHeaders() {{
-                    xEBAYCMARKETPLACEID = "culpa";
+                    xEbayCMarketplaceId = "distinctio";
                 }};
-            }};
+            }};            
 
             FindEligibleItemsResponse res = sdk.offer.findEligibleItems(req);
 

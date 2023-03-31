@@ -2,15 +2,27 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateSecurityOption1;
+import org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateSecurityOption2;
+import org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateSecurity;
+import org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreatePathParams;
+import org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateQueryParams;
+import org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateRequest;
+import org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateResponse;
+import org.openapis.openapi.models.shared.TraceSinkInput;
+import org.openapis.openapi.models.shared.OutputConfig;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudtraceProjectsTraceSinksCreateRequest req = new CloudtraceProjectsTraceSinksCreateRequest() {{
                 security = new CloudtraceProjectsTraceSinksCreateSecurity() {{
@@ -24,28 +36,28 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudtraceProjectsTraceSinksCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new CloudtraceProjectsTraceSinksCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new TraceSinkInput() {{
-                    name = "dicta";
+                    name = "suscipit";
                     outputConfig = new OutputConfig() {{
-                        destination = "debitis";
+                        destination = "iure";
                     }};
                 }};
-            }};
+            }};            
 
             CloudtraceProjectsTraceSinksCreateResponse res = sdk.projects.cloudtraceProjectsTraceSinksCreate(req);
 

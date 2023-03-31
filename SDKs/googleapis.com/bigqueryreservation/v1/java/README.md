@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,30 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurityOption2;
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity;
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams;
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams;
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest;
+import org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse;
+import org.openapis.openapi.models.shared.CapacityCommitmentEditionEnum;
+import org.openapis.openapi.models.shared.CapacityCommitmentPlanEnum;
+import org.openapis.openapi.models.shared.CapacityCommitmentRenewalPlanEnum;
+import org.openapis.openapi.models.shared.CapacityCommitmentInput;
+import org.openapis.openapi.models.shared.Status;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest req = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateRequest() {{
                 security = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateSecurity() {{
@@ -37,41 +52,51 @@ public class Application {
                     }};
                 }};
                 pathParams = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new BigqueryreservationProjectsLocationsCapacityCommitmentsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    capacityCommitmentId = "dolor";
-                    enforceSingleAdminProjectPerOrg = true;
-                    fields = "voluptas";
-                    key = "fugit";
-                    oauthToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    capacityCommitmentId = "nulla";
+                    enforceSingleAdminProjectPerOrg = false;
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    prettyPrint = false;
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new CapacityCommitmentInput() {{
+                    edition = "STANDARD";
                     failureStatus = new Status() {{
-                        code = 5617773211005988520;
-                        details = new java.util.HashMap<String, Object>[]() {{
+                        code = 297534;
+                        details = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
-                                put("dolorem", "et");
-                                put("voluptate", "iste");
-                                put("vitae", "totam");
+                                put("delectus", "tempora");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("excepturi", "nisi");
+                                put("recusandae", "temporibus");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("quis", "veritatis");
                             }}),
                         }};
-                        message = "dolores";
+                        message = "deserunt";
                     }};
                     multiRegionAuxiliary = false;
-                    plan = "FLEX";
+                    plan = "COMMITMENT_PLAN_UNSPECIFIED";
                     renewalPlan = "TRIAL";
-                    slotCount = "odio";
+                    slotCount = "repellendus";
                 }};
-            }};
+            }};            
 
             BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse res = sdk.projects.bigqueryreservationProjectsLocationsCapacityCommitmentsCreate(req);
 
@@ -86,6 +111,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### projects
 
@@ -103,7 +129,17 @@ public class Application {
 * `bigqueryreservationProjectsLocationsReservationsList` - Lists all the reservations for the project in the specified location.
 * `bigqueryreservationProjectsLocationsSearchAllAssignments` - Looks up assignments for a specified resource for a particular region. If the request is about a project: 1. Assignments created on the project will be returned if they exist. 2. Otherwise assignments created on the closest ancestor will be returned. 3. Assignments for different JobTypes will all be returned. The same logic applies if the request is about a folder. If the request is about an organization, then assignments created on the organization will be returned (organization doesn't have ancestors). Comparing to ListAssignments, there are some behavior differences: 1. permission on the assignee will be verified in this API. 2. Hierarchy lookup (project->folder->organization) happens in this API. 3. Parent here is `projects/*/locations/*`, instead of `projects/*/locations/*reservations/*`.
 * `bigqueryreservationProjectsLocationsSearchAssignments` - Deprecated: Looks up assignments for a specified resource for a particular region. If the request is about a project: 1. Assignments created on the project will be returned if they exist. 2. Otherwise assignments created on the closest ancestor will be returned. 3. Assignments for different JobTypes will all be returned. The same logic applies if the request is about a folder. If the request is about an organization, then assignments created on the organization will be returned (organization doesn't have ancestors). Comparing to ListAssignments, there are some behavior differences: 1. permission on the assignee will be verified in this API. 2. Hierarchy lookup (project->folder->organization) happens in this API. 3. Parent here is `projects/*/locations/*`, instead of `projects/*/locations/*reservations/*`. **Note** "-" cannot be used for projects nor locations.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

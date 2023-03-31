@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.MediaTabularExtractsheetQueryParams;
+import org.openapis.openapi.models.operations.MediaTabularExtractsheetRequest;
+import org.openapis.openapi.models.operations.MediaTabularExtractsheetResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             MediaTabularExtractsheetRequest req = new MediaTabularExtractsheetRequest() {{
                 queryParams = new MediaTabularExtractsheetQueryParams() {{
-                    arg1 = "sit";
-                    entryid = "voluptas";
-                    output = "culpa";
+                    arg1 = "corrupti";
+                    entryid = "provident";
+                    output = "distinctio";
                 }};
-            }};
+            }};            
 
             MediaTabularExtractsheetResponse res = sdk.serviceMediaTabularExtractsheet.mediaTabularExtractsheet(req);
 

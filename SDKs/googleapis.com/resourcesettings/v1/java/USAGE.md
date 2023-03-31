@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetSecurity;
+import org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetPathParams;
+import org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetViewEnum;
+import org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetQueryParams;
+import org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetRequest;
+import org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ResourcesettingsProjectsSettingsGetRequest req = new ResourcesettingsProjectsSettingsGetRequest() {{
                 security = new ResourcesettingsProjectsSettingsGetSecurity() {{
@@ -22,23 +31,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new ResourcesettingsProjectsSettingsGetPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new ResourcesettingsProjectsSettingsGetQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
-                    view = "SETTING_VIEW_LOCAL_VALUE";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
+                    view = "SETTING_VIEW_BASIC";
                 }};
-            }};
+            }};            
 
             ResourcesettingsProjectsSettingsGetResponse res = sdk.projects.resourcesettingsProjectsSettingsGet(req);
 

@@ -2,15 +2,34 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateSecurity;
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreatePathParams;
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateQueryParams;
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateRequest;
+import org.openapis.openapi.models.operations.PolicysimulatorProjectsLocationsReplaysCreateResponse;
+import org.openapis.openapi.models.shared.GoogleCloudPolicysimulatorV1ReplayInput;
+import org.openapis.openapi.models.shared.GoogleCloudPolicysimulatorV1ReplayResultsSummary;
+import org.openapis.openapi.models.shared.GoogleTypeDate;
+import org.openapis.openapi.models.shared.GoogleCloudPolicysimulatorV1ReplayConfigLogSourceEnum;
+import org.openapis.openapi.models.shared.GoogleCloudPolicysimulatorV1ReplayConfig;
+import org.openapis.openapi.models.shared.GoogleIamV1Policy;
+import org.openapis.openapi.models.shared.GoogleIamV1Binding;
+import org.openapis.openapi.models.shared.GoogleTypeExpr;
+import org.openapis.openapi.models.shared.GoogleIamV1AuditConfig;
+import org.openapis.openapi.models.shared.GoogleIamV1AuditLogConfigLogTypeEnum;
+import org.openapis.openapi.models.shared.GoogleIamV1AuditLogConfig;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PolicysimulatorProjectsLocationsReplaysCreateRequest req = new PolicysimulatorProjectsLocationsReplaysCreateRequest() {{
                 security = new PolicysimulatorProjectsLocationsReplaysCreateSecurity() {{
@@ -22,120 +41,244 @@ public class Application {
                     }};
                 }};
                 pathParams = new PolicysimulatorProjectsLocationsReplaysCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new PolicysimulatorProjectsLocationsReplaysCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GoogleCloudPolicysimulatorV1ReplayInput() {{
                     config = new GoogleCloudPolicysimulatorV1ReplayConfig() {{
-                        logSource = "RECENT_ACCESSES";
-                        policyOverlay = new java.util.HashMap<String, openapisdk.models.shared.GoogleIamV1Policy>() {{
-                            put("voluptatum", new GoogleIamV1Policy() {{
-                                auditConfigs = new openapisdk.models.shared.GoogleIamV1AuditConfig[]() {{
+                        logSource = "LOG_SOURCE_UNSPECIFIED";
+                        policyOverlay = new java.util.HashMap<String, org.openapis.openapi.models.shared.GoogleIamV1Policy>() {{
+                            put("magnam", new GoogleIamV1Policy() {{
+                                auditConfigs = new org.openapis.openapi.models.shared.GoogleIamV1AuditConfig[]{{
                                     add(new GoogleIamV1AuditConfig() {{
-                                        auditLogConfigs = new openapisdk.models.shared.GoogleIamV1AuditLogConfig[]() {{
+                                        auditLogConfigs = new org.openapis.openapi.models.shared.GoogleIamV1AuditLogConfig[]{{
                                             add(new GoogleIamV1AuditLogConfig() {{
-                                                exemptedMembers = new String[]() {{
-                                                    add("et"),
-                                                    add("voluptate"),
-                                                    add("iste"),
+                                                exemptedMembers = new String[]{{
+                                                    add("tempora"),
+                                                    add("suscipit"),
+                                                    add("molestiae"),
+                                                    add("minus"),
+                                                }};
+                                                logType = "DATA_READ";
+                                            }}),
+                                        }};
+                                        service = "voluptatum";
+                                    }}),
+                                    add(new GoogleIamV1AuditConfig() {{
+                                        auditLogConfigs = new org.openapis.openapi.models.shared.GoogleIamV1AuditLogConfig[]{{
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("nisi"),
+                                                    add("recusandae"),
+                                                    add("temporibus"),
                                                 }};
                                                 logType = "LOG_TYPE_UNSPECIFIED";
                                             }}),
                                             add(new GoogleIamV1AuditLogConfig() {{
-                                                exemptedMembers = new String[]() {{
-                                                    add("dolores"),
-                                                    add("illum"),
-                                                    add("debitis"),
-                                                }};
-                                                logType = "LOG_TYPE_UNSPECIFIED";
-                                            }}),
-                                            add(new GoogleIamV1AuditLogConfig() {{
-                                                exemptedMembers = new String[]() {{
-                                                    add("dolore"),
+                                                exemptedMembers = new String[]{{
+                                                    add("veritatis"),
+                                                    add("deserunt"),
                                                 }};
                                                 logType = "LOG_TYPE_UNSPECIFIED";
                                             }}),
                                         }};
-                                        service = "aspernatur";
+                                        service = "ipsam";
+                                    }}),
+                                    add(new GoogleIamV1AuditConfig() {{
+                                        auditLogConfigs = new org.openapis.openapi.models.shared.GoogleIamV1AuditLogConfig[]{{
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("quo"),
+                                                    add("odit"),
+                                                    add("at"),
+                                                    add("at"),
+                                                }};
+                                                logType = "DATA_READ";
+                                            }}),
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("quod"),
+                                                    add("quod"),
+                                                }};
+                                                logType = "ADMIN_READ";
+                                            }}),
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("porro"),
+                                                    add("dolorum"),
+                                                    add("dicta"),
+                                                }};
+                                                logType = "DATA_WRITE";
+                                            }}),
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("occaecati"),
+                                                    add("fugit"),
+                                                    add("deleniti"),
+                                                }};
+                                                logType = "DATA_READ";
+                                            }}),
+                                        }};
+                                        service = "optio";
+                                    }}),
+                                    add(new GoogleIamV1AuditConfig() {{
+                                        auditLogConfigs = new org.openapis.openapi.models.shared.GoogleIamV1AuditLogConfig[]{{
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("commodi"),
+                                                }};
+                                                logType = "ADMIN_READ";
+                                            }}),
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("qui"),
+                                                    add("impedit"),
+                                                }};
+                                                logType = "DATA_WRITE";
+                                            }}),
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("ipsum"),
+                                                    add("excepturi"),
+                                                }};
+                                                logType = "LOG_TYPE_UNSPECIFIED";
+                                            }}),
+                                        }};
+                                        service = "perferendis";
                                     }}),
                                 }};
-                                bindings = new openapisdk.models.shared.GoogleIamV1Binding[]() {{
+                                bindings = new org.openapis.openapi.models.shared.GoogleIamV1Binding[]{{
                                     add(new GoogleIamV1Binding() {{
                                         condition = new GoogleTypeExpr() {{
-                                            description = "totam";
-                                            expression = "commodi";
+                                            description = "natus";
+                                            expression = "sed";
+                                            location = "iste";
+                                            title = "Mrs.";
+                                        }};
+                                        members = new String[]{{
+                                            add("laboriosam"),
+                                            add("hic"),
+                                            add("saepe"),
+                                        }};
+                                        role = "fuga";
+                                    }}),
+                                    add(new GoogleIamV1Binding() {{
+                                        condition = new GoogleTypeExpr() {{
+                                            description = "in";
+                                            expression = "corporis";
+                                            location = "iste";
+                                            title = "Ms.";
+                                        }};
+                                        members = new String[]{{
+                                            add("quidem"),
+                                            add("architecto"),
+                                            add("ipsa"),
+                                            add("reiciendis"),
+                                        }};
+                                        role = "est";
+                                    }}),
+                                }};
+                                etag = "mollitia";
+                                version = 670638;
+                            }});
+                            put("dolores", new GoogleIamV1Policy() {{
+                                auditConfigs = new org.openapis.openapi.models.shared.GoogleIamV1AuditConfig[]{{
+                                    add(new GoogleIamV1AuditConfig() {{
+                                        auditLogConfigs = new org.openapis.openapi.models.shared.GoogleIamV1AuditLogConfig[]{{
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("nobis"),
+                                                }};
+                                                logType = "ADMIN_READ";
+                                            }}),
+                                            add(new GoogleIamV1AuditLogConfig() {{
+                                                exemptedMembers = new String[]{{
+                                                    add("nemo"),
+                                                    add("minima"),
+                                                    add("excepturi"),
+                                                }};
+                                                logType = "LOG_TYPE_UNSPECIFIED";
+                                            }}),
+                                        }};
+                                        service = "iure";
+                                    }}),
+                                }};
+                                bindings = new org.openapis.openapi.models.shared.GoogleIamV1Binding[]{{
+                                    add(new GoogleIamV1Binding() {{
+                                        condition = new GoogleTypeExpr() {{
+                                            description = "doloribus";
+                                            expression = "sapiente";
+                                            location = "architecto";
+                                            title = "Miss";
+                                        }};
+                                        members = new String[]{{
+                                            add("culpa"),
+                                        }};
+                                        role = "consequuntur";
+                                    }}),
+                                    add(new GoogleIamV1Binding() {{
+                                        condition = new GoogleTypeExpr() {{
+                                            description = "repellat";
+                                            expression = "mollitia";
+                                            location = "occaecati";
+                                            title = "Mrs.";
+                                        }};
+                                        members = new String[]{{
+                                            add("quam"),
+                                            add("molestiae"),
+                                        }};
+                                        role = "velit";
+                                    }}),
+                                    add(new GoogleIamV1Binding() {{
+                                        condition = new GoogleTypeExpr() {{
+                                            description = "error";
+                                            expression = "quia";
                                             location = "quis";
-                                            title = "est";
+                                            title = "Mr.";
                                         }};
-                                        members = new String[]() {{
+                                        members = new String[]{{
+                                            add("animi"),
+                                            add("enim"),
                                             add("odit"),
-                                            add("non"),
-                                            add("voluptas"),
                                         }};
-                                        role = "omnis";
-                                    }}),
-                                    add(new GoogleIamV1Binding() {{
-                                        condition = new GoogleTypeExpr() {{
-                                            description = "aut";
-                                            expression = "illo";
-                                            location = "sed";
-                                            title = "officiis";
-                                        }};
-                                        members = new String[]() {{
-                                            add("consectetur"),
-                                            add("nobis"),
-                                        }};
-                                        role = "odio";
-                                    }}),
-                                    add(new GoogleIamV1Binding() {{
-                                        condition = new GoogleTypeExpr() {{
-                                            description = "qui";
-                                            expression = "recusandae";
-                                            location = "at";
-                                            title = "ipsum";
-                                        }};
-                                        members = new String[]() {{
-                                            add("modi"),
-                                            add("sint"),
-                                        }};
-                                        role = "inventore";
+                                        role = "quo";
                                     }}),
                                 }};
-                                etag = "ut";
-                                version = 406703151708498928;
+                                etag = "sequi";
+                                version = 949572;
                             }});
                         }};
                     }};
                     resultsSummary = new GoogleCloudPolicysimulatorV1ReplayResultsSummary() {{
-                        differenceCount = 4756106358532488297;
-                        errorCount = 5837486892148644279;
-                        logCount = 4736217237333769909;
+                        differenceCount = 368725;
+                        errorCount = 662527;
+                        logCount = 820994;
                         newestDate = new GoogleTypeDate() {{
-                            day = 2264299874001785192;
-                            month = 1061380815263676471;
-                            year = 7242748068272024738;
+                            day = 13571;
+                            month = 97101;
+                            year = 622846;
                         }};
                         oldestDate = new GoogleTypeDate() {{
-                            day = 7719717197379695442;
-                            month = 4112921325496946042;
-                            year = 2671030200101705776;
+                            day = 837945;
+                            month = 673660;
+                            year = 96098;
                         }};
-                        unchangedCount = 3508963237347473586;
+                        unchangedCount = 971945;
                     }};
                 }};
-            }};
+            }};            
 
             PolicysimulatorProjectsLocationsReplaysCreateResponse res = sdk.projects.policysimulatorProjectsLocationsReplaysCreate(req);
 

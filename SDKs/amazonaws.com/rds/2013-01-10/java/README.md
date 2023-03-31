@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,43 +15,45 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionActionEnum;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionVersionEnum;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionQueryParams;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionHeaders;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionRequest;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetAddSourceIdentifierToSubscriptionRequest req = new GetAddSourceIdentifierToSubscriptionRequest() {{
-                queryParams = new GetAddSourceIdentifierToSubscriptionQueryParams() {{
+            GETAddSourceIdentifierToSubscriptionRequest req = new GETAddSourceIdentifierToSubscriptionRequest() {{
+                queryParams = new GETAddSourceIdentifierToSubscriptionQueryParams() {{
                     action = "AddSourceIdentifierToSubscription";
-                    sourceIdentifier = "voluptas";
-                    subscriptionName = "culpa";
+                    sourceIdentifier = "corrupti";
+                    subscriptionName = "provident";
                     version = "2013-01-10";
                 }};
-                headers = new GetAddSourceIdentifierToSubscriptionHeaders() {{
-                    xAmzAlgorithm = "consequuntur";
-                    xAmzContentSha256 = "dolor";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "voluptas";
-                    xAmzSecurityToken = "fugit";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "nihil";
+                headers = new GETAddSourceIdentifierToSubscriptionHeaders() {{
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
-            }};
+            }};            
 
-            GetAddSourceIdentifierToSubscriptionResponse res = sdk.getAddSourceIdentifierToSubscription(req);
+            GETAddSourceIdentifierToSubscriptionResponse res = sdk.getAddSourceIdentifierToSubscription(req);
 
             if (res.body.isPresent()) {
                 // handle response
@@ -68,95 +70,112 @@ public class Application {
 ### SDK SDK
 
 * `getAddSourceIdentifierToSubscription`
-* `getAuthorizeDbSecurityGroupIngress`
-* `getCopyDbSnapshot`
-* `getCreateDbInstanceReadReplica`
-* `getCreateDbParameterGroup`
-* `getCreateDbSecurityGroup`
-* `getCreateDbSnapshot`
+* `getAuthorizeDBSecurityGroupIngress`
+* `getCopyDBSnapshot`
+* `getCreateDBInstance`
+* `getCreateDBInstanceReadReplica`
+* `getCreateDBParameterGroup`
+* `getCreateDBSecurityGroup`
+* `getCreateDBSnapshot`
+* `getCreateDBSubnetGroup`
+* `getCreateEventSubscription`
 * `getCreateOptionGroup`
-* `getDeleteDbInstance`
-* `getDeleteDbParameterGroup`
-* `getDeleteDbSecurityGroup`
-* `getDeleteDbSnapshot`
-* `getDeleteDbSubnetGroup`
+* `getDeleteDBInstance`
+* `getDeleteDBParameterGroup`
+* `getDeleteDBSecurityGroup`
+* `getDeleteDBSnapshot`
+* `getDeleteDBSubnetGroup`
 * `getDeleteEventSubscription`
 * `getDeleteOptionGroup`
-* `getDescribeDbEngineVersions`
-* `getDescribeDbInstances`
-* `getDescribeDbParameterGroups`
-* `getDescribeDbParameters`
-* `getDescribeDbSecurityGroups`
-* `getDescribeDbSnapshots`
-* `getDescribeDbSubnetGroups`
+* `getDescribeDBEngineVersions`
+* `getDescribeDBInstances`
+* `getDescribeDBParameterGroups`
+* `getDescribeDBParameters`
+* `getDescribeDBSecurityGroups`
+* `getDescribeDBSnapshots`
+* `getDescribeDBSubnetGroups`
 * `getDescribeEngineDefaultParameters`
 * `getDescribeEventCategories`
 * `getDescribeEventSubscriptions`
+* `getDescribeEvents`
 * `getDescribeOptionGroupOptions`
 * `getDescribeOptionGroups`
-* `getDescribeOrderableDbInstanceOptions`
-* `getDescribeReservedDbInstances`
-* `getDescribeReservedDbInstancesOfferings`
+* `getDescribeOrderableDBInstanceOptions`
+* `getDescribeReservedDBInstances`
+* `getDescribeReservedDBInstancesOfferings`
 * `getListTagsForResource`
+* `getModifyDBInstance`
+* `getModifyDBSubnetGroup`
+* `getModifyEventSubscription`
 * `getPromoteReadReplica`
-* `getPurchaseReservedDbInstancesOffering`
-* `getRebootDbInstance`
+* `getPurchaseReservedDBInstancesOffering`
+* `getRebootDBInstance`
 * `getRemoveSourceIdentifierFromSubscription`
 * `getRemoveTagsFromResource`
-* `getRestoreDbInstanceFromDbSnapshot`
-* `getRestoreDbInstanceToPointInTime`
-* `getRevokeDbSecurityGroupIngress`
+* `getRestoreDBInstanceFromDBSnapshot`
+* `getRestoreDBInstanceToPointInTime`
+* `getRevokeDBSecurityGroupIngress`
 * `postAddSourceIdentifierToSubscription`
 * `postAddTagsToResource`
-* `postAuthorizeDbSecurityGroupIngress`
-* `postCopyDbSnapshot`
-* `postCreateDbInstance`
-* `postCreateDbInstanceReadReplica`
-* `postCreateDbParameterGroup`
-* `postCreateDbSecurityGroup`
-* `postCreateDbSnapshot`
-* `postCreateDbSubnetGroup`
+* `postAuthorizeDBSecurityGroupIngress`
+* `postCopyDBSnapshot`
+* `postCreateDBInstance`
+* `postCreateDBInstanceReadReplica`
+* `postCreateDBParameterGroup`
+* `postCreateDBSecurityGroup`
+* `postCreateDBSnapshot`
+* `postCreateDBSubnetGroup`
 * `postCreateEventSubscription`
 * `postCreateOptionGroup`
-* `postDeleteDbInstance`
-* `postDeleteDbParameterGroup`
-* `postDeleteDbSecurityGroup`
-* `postDeleteDbSnapshot`
-* `postDeleteDbSubnetGroup`
+* `postDeleteDBInstance`
+* `postDeleteDBParameterGroup`
+* `postDeleteDBSecurityGroup`
+* `postDeleteDBSnapshot`
+* `postDeleteDBSubnetGroup`
 * `postDeleteEventSubscription`
 * `postDeleteOptionGroup`
-* `postDescribeDbEngineVersions`
-* `postDescribeDbInstances`
-* `postDescribeDbParameterGroups`
-* `postDescribeDbParameters`
-* `postDescribeDbSecurityGroups`
-* `postDescribeDbSnapshots`
-* `postDescribeDbSubnetGroups`
+* `postDescribeDBEngineVersions`
+* `postDescribeDBInstances`
+* `postDescribeDBParameterGroups`
+* `postDescribeDBParameters`
+* `postDescribeDBSecurityGroups`
+* `postDescribeDBSnapshots`
+* `postDescribeDBSubnetGroups`
 * `postDescribeEngineDefaultParameters`
 * `postDescribeEventCategories`
 * `postDescribeEventSubscriptions`
 * `postDescribeEvents`
 * `postDescribeOptionGroupOptions`
 * `postDescribeOptionGroups`
-* `postDescribeOrderableDbInstanceOptions`
-* `postDescribeReservedDbInstances`
-* `postDescribeReservedDbInstancesOfferings`
+* `postDescribeOrderableDBInstanceOptions`
+* `postDescribeReservedDBInstances`
+* `postDescribeReservedDBInstancesOfferings`
 * `postListTagsForResource`
-* `postModifyDbInstance`
-* `postModifyDbParameterGroup`
-* `postModifyDbSubnetGroup`
+* `postModifyDBInstance`
+* `postModifyDBParameterGroup`
+* `postModifyDBSubnetGroup`
 * `postModifyEventSubscription`
 * `postModifyOptionGroup`
 * `postPromoteReadReplica`
-* `postPurchaseReservedDbInstancesOffering`
-* `postRebootDbInstance`
+* `postPurchaseReservedDBInstancesOffering`
+* `postRebootDBInstance`
 * `postRemoveSourceIdentifierFromSubscription`
 * `postRemoveTagsFromResource`
-* `postResetDbParameterGroup`
-* `postRestoreDbInstanceFromDbSnapshot`
-* `postRestoreDbInstanceToPointInTime`
-* `postRevokeDbSecurityGroupIngress`
-
+* `postResetDBParameterGroup`
+* `postRestoreDBInstanceFromDBSnapshot`
+* `postRestoreDBInstanceToPointInTime`
+* `postRevokeDBSecurityGroupIngress`
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

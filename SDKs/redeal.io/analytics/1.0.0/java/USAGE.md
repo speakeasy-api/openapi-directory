@@ -2,26 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetEventsTypeEnum;
+import org.openapis.openapi.models.operations.GetEventsQueryParams;
+import org.openapis.openapi.models.operations.GetEventsRequest;
+import org.openapis.openapi.models.operations.GetEventsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetEventsRequest req = new GetEventsRequest() {{
                 queryParams = new GetEventsQueryParams() {{
-                    company = "sit";
-                    deal = "voluptas";
-                    nexttoken = "culpa";
-                    queryexecutionid = "expedita";
-                    site = "consequuntur";
-                    type = "clicks";
+                    company = "Medhurst - Rau";
+                    deal = "quibusdam";
+                    nexttoken = "unde";
+                    queryexecutionid = "nulla";
+                    site = "corrupti";
+                    type = "contacts";
                 }};
-            }};
+            }};            
 
             GetEventsResponse res = sdk.developers.getEvents(req);
 

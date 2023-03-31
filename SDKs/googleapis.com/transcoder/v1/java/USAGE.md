@@ -2,15 +2,62 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity;
+import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreatePathParams;
+import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateQueryParams;
+import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateRequest;
+import org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateResponse;
+import org.openapis.openapi.models.shared.JobTemplate;
+import org.openapis.openapi.models.shared.JobConfig;
+import org.openapis.openapi.models.shared.SpriteSheet;
+import org.openapis.openapi.models.shared.PubsubDestination;
+import org.openapis.openapi.models.shared.Overlay;
+import org.openapis.openapi.models.shared.Image;
+import org.openapis.openapi.models.shared.NormalizedCoordinate;
+import org.openapis.openapi.models.shared.Animation;
+import org.openapis.openapi.models.shared.AnimationStatic;
+import org.openapis.openapi.models.shared.AnimationFadeFadeTypeEnum;
+import org.openapis.openapi.models.shared.AnimationFade;
+import org.openapis.openapi.models.shared.AnimationEnd;
+import org.openapis.openapi.models.shared.Output;
+import org.openapis.openapi.models.shared.MuxStream;
+import org.openapis.openapi.models.shared.SegmentSettings;
+import org.openapis.openapi.models.shared.ManifestTypeEnum;
+import org.openapis.openapi.models.shared.Manifest;
+import org.openapis.openapi.models.shared.Input;
+import org.openapis.openapi.models.shared.PreprocessingConfig;
+import org.openapis.openapi.models.shared.Pad;
+import org.openapis.openapi.models.shared.Denoise;
+import org.openapis.openapi.models.shared.Deinterlace;
+import org.openapis.openapi.models.shared.YadifConfig;
+import org.openapis.openapi.models.shared.BwdifConfig;
+import org.openapis.openapi.models.shared.Deblock;
+import org.openapis.openapi.models.shared.Crop;
+import org.openapis.openapi.models.shared.Color;
+import org.openapis.openapi.models.shared.Audio;
+import org.openapis.openapi.models.shared.ElementaryStream;
+import org.openapis.openapi.models.shared.VideoStream;
+import org.openapis.openapi.models.shared.Vp9CodecSettings;
+import org.openapis.openapi.models.shared.H265CodecSettings;
+import org.openapis.openapi.models.shared.H264CodecSettings;
+import org.openapis.openapi.models.shared.TextStream;
+import org.openapis.openapi.models.shared.TextMapping;
+import org.openapis.openapi.models.shared.AudioStream;
+import org.openapis.openapi.models.shared.AudioMapping;
+import org.openapis.openapi.models.shared.EditAtom;
+import org.openapis.openapi.models.shared.AdBreak;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             TranscoderProjectsLocationsJobTemplatesCreateRequest req = new TranscoderProjectsLocationsJobTemplatesCreateRequest() {{
                 security = new TranscoderProjectsLocationsJobTemplatesCreateSecurity() {{
@@ -22,498 +69,741 @@ public class Application {
                     }};
                 }};
                 pathParams = new TranscoderProjectsLocationsJobTemplatesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new TranscoderProjectsLocationsJobTemplatesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    jobTemplateId = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    jobTemplateId = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new JobTemplate() {{
                     config = new JobConfig() {{
-                        adBreaks = new openapisdk.models.shared.AdBreak[]() {{
+                        adBreaks = new org.openapis.openapi.models.shared.AdBreak[]{{
                             add(new AdBreak() {{
-                                startTimeOffset = "voluptatum";
+                                startTimeOffset = "magnam";
+                            }}),
+                            add(new AdBreak() {{
+                                startTimeOffset = "debitis";
                             }}),
                         }};
-                        editList = new openapisdk.models.shared.EditAtom[]() {{
+                        editList = new org.openapis.openapi.models.shared.EditAtom[]{{
                             add(new EditAtom() {{
-                                endTimeOffset = "ut";
-                                inputs = new String[]() {{
-                                    add("et"),
-                                    add("voluptate"),
-                                    add("iste"),
+                                endTimeOffset = "delectus";
+                                inputs = new String[]{{
+                                    add("suscipit"),
+                                    add("molestiae"),
                                 }};
-                                key = "vitae";
-                                startTimeOffset = "totam";
+                                key = "minus";
+                                startTimeOffset = "placeat";
                             }}),
                         }};
-                        elementaryStreams = new openapisdk.models.shared.ElementaryStream[]() {{
+                        elementaryStreams = new org.openapis.openapi.models.shared.ElementaryStream[]{{
                             add(new ElementaryStream() {{
                                 audioStream = new AudioStream() {{
-                                    bitrateBps = 1929546706668609706;
-                                    channelCount = 6392442863481646880;
-                                    channelLayout = new String[]() {{
-                                        add("odio"),
-                                        add("dolore"),
+                                    bitrateBps = 479977;
+                                    channelCount = 568045;
+                                    channelLayout = new String[]{{
+                                        add("recusandae"),
+                                        add("temporibus"),
                                     }};
-                                    codec = "id";
-                                    mapping = new openapisdk.models.shared.AudioMapping[]() {{
+                                    codec = "ab";
+                                    displayName = "quis";
+                                    languageCode = "veritatis";
+                                    mapping = new org.openapis.openapi.models.shared.AudioMapping[]{{
                                         add(new AudioMapping() {{
-                                            atomKey = "accusantium";
-                                            gainDb = 45.099998;
-                                            inputChannel = 2897681629866238117;
-                                            inputKey = "est";
-                                            inputTrack = 5974317550424871033;
-                                            outputChannel = 3317123977833389635;
+                                            atomKey = "perferendis";
+                                            gainDb = 3682.41;
+                                            inputChannel = 832620;
+                                            inputKey = "sapiente";
+                                            inputTrack = 778157;
+                                            outputChannel = 140350;
+                                        }}),
+                                        add(new AudioMapping() {{
+                                            atomKey = "at";
+                                            gainDb = 8700.88;
+                                            inputChannel = 978619;
+                                            inputKey = "molestiae";
+                                            inputTrack = 799159;
+                                            outputChannel = 800911;
+                                        }}),
+                                        add(new AudioMapping() {{
+                                            atomKey = "esse";
+                                            gainDb = 5204.78;
+                                            inputChannel = 780529;
+                                            inputKey = "dolorum";
+                                            inputTrack = 118274;
+                                            outputChannel = 720633;
                                         }}),
                                     }};
-                                    sampleRateHertz = 5001958211167890979;
+                                    sampleRateHertz = 639921;
                                 }};
-                                key = "voluptas";
+                                key = "occaecati";
                                 textStream = new TextStream() {{
-                                    codec = "omnis";
-                                    mapping = new openapisdk.models.shared.TextMapping[]() {{
+                                    codec = "fugit";
+                                    displayName = "deleniti";
+                                    languageCode = "hic";
+                                    mapping = new org.openapis.openapi.models.shared.TextMapping[]{{
                                         add(new TextMapping() {{
-                                            atomKey = "illo";
-                                            inputKey = "sed";
-                                            inputTrack = 7845762441295307478;
+                                            atomKey = "totam";
+                                            inputKey = "beatae";
+                                            inputTrack = 414662;
+                                        }}),
+                                        add(new TextMapping() {{
+                                            atomKey = "molestiae";
+                                            inputKey = "modi";
+                                            inputTrack = 186332;
+                                        }}),
+                                        add(new TextMapping() {{
+                                            atomKey = "impedit";
+                                            inputKey = "cum";
+                                            inputTrack = 456150;
+                                        }}),
+                                        add(new TextMapping() {{
+                                            atomKey = "ipsum";
+                                            inputKey = "excepturi";
+                                            inputTrack = 135218;
                                         }}),
                                     }};
                                 }};
                                 videoStream = new VideoStream() {{
                                     h264 = new H264CodecSettings() {{
-                                        allowOpenGop = true;
-                                        aqStrength = 68.099998;
-                                        bFrameCount = 4345851588384648695;
+                                        allowOpenGop = false;
+                                        aqStrength = 187.89;
+                                        bFrameCount = 324141;
                                         bPyramid = false;
-                                        bitrateBps = 388440063886460141;
-                                        crfLevel = 7561811714888168464;
+                                        bitrateBps = 617636;
+                                        crfLevel = 149675;
                                         enableTwoPass = false;
-                                        entropyCoder = "eveniet";
-                                        frameRate = 19.100000;
-                                        gopDuration = "inventore";
-                                        gopFrameCount = 7847956203786849690;
-                                        heightPixels = 406703151708498928;
-                                        pixelFormat = "aut";
-                                        preset = "reprehenderit";
-                                        profile = "tempore";
-                                        rateControlMode = "maiores";
-                                        tune = "incidunt";
-                                        vbvFullnessBits = 7242748068272024738;
-                                        vbvSizeBits = 7719717197379695442;
-                                        widthPixels = 4112921325496946042;
+                                        entropyCoder = "iste";
+                                        frameRate = 2223.21;
+                                        gopDuration = "natus";
+                                        gopFrameCount = 386489;
+                                        heightPixels = 943749;
+                                        pixelFormat = "saepe";
+                                        preset = "fuga";
+                                        profile = "in";
+                                        rateControlMode = "corporis";
+                                        tune = "iste";
+                                        vbvFullnessBits = 437032;
+                                        vbvSizeBits = 902349;
+                                        widthPixels = 697631;
                                     }};
                                     h265 = new H265CodecSettings() {{
-                                        allowOpenGop = true;
-                                        aqStrength = 69.199997;
-                                        bFrameCount = 4564823113789767141;
-                                        bPyramid = true;
-                                        bitrateBps = 7014402135919778893;
-                                        crfLevel = 3983722386484812742;
-                                        enableTwoPass = true;
-                                        frameRate = 93.199997;
-                                        gopDuration = "voluptas";
-                                        gopFrameCount = 8097022081922209513;
-                                        heightPixels = 7481608503761597087;
-                                        pixelFormat = "qui";
-                                        preset = "qui";
-                                        profile = "unde";
-                                        rateControlMode = "in";
-                                        tune = "autem";
-                                        vbvFullnessBits = 8086159467323165929;
-                                        vbvSizeBits = 35604086129376003;
-                                        widthPixels = 8559453321117178323;
+                                        allowOpenGop = false;
+                                        aqStrength = 992.8;
+                                        bFrameCount = 60225;
+                                        bPyramid = false;
+                                        bitrateBps = 969810;
+                                        crfLevel = 666767;
+                                        enableTwoPass = false;
+                                        frameRate = 6531.4;
+                                        gopDuration = "laborum";
+                                        gopFrameCount = 170909;
+                                        heightPixels = 210382;
+                                        pixelFormat = "corporis";
+                                        preset = "explicabo";
+                                        profile = "nobis";
+                                        rateControlMode = "enim";
+                                        tune = "omnis";
+                                        vbvFullnessBits = 363711;
+                                        vbvSizeBits = 325047;
+                                        widthPixels = 570197;
                                     }};
                                     vp9 = new Vp9CodecSettings() {{
-                                        bitrateBps = 2006924026344156168;
-                                        crfLevel = 8218430188258725598;
-                                        frameRate = 76.099998;
-                                        gopDuration = "accusantium";
-                                        gopFrameCount = 3462733497206508461;
-                                        heightPixels = 5902760509050140210;
-                                        pixelFormat = "quam";
-                                        profile = "velit";
-                                        rateControlMode = "cumque";
-                                        widthPixels = 3331863358128628835;
+                                        bitrateBps = 38425;
+                                        crfLevel = 438601;
+                                        frameRate = 6342.74;
+                                        gopDuration = "doloribus";
+                                        gopFrameCount = 958950;
+                                        heightPixels = 102044;
+                                        pixelFormat = "mollitia";
+                                        profile = "dolorem";
+                                        rateControlMode = "culpa";
+                                        widthPixels = 161309;
+                                    }};
+                                }};
+                            }}),
+                            add(new ElementaryStream() {{
+                                audioStream = new AudioStream() {{
+                                    bitrateBps = 995300;
+                                    channelCount = 653108;
+                                    channelLayout = new String[]{{
+                                        add("numquam"),
+                                        add("commodi"),
+                                        add("quam"),
+                                    }};
+                                    codec = "molestiae";
+                                    displayName = "velit";
+                                    languageCode = "error";
+                                    mapping = new org.openapis.openapi.models.shared.AudioMapping[]{{
+                                        add(new AudioMapping() {{
+                                            atomKey = "quis";
+                                            gainDb = 1103.75;
+                                            inputChannel = 674752;
+                                            inputKey = "animi";
+                                            inputTrack = 317202;
+                                            outputChannel = 138183;
+                                        }}),
+                                    }};
+                                    sampleRateHertz = 778346;
+                                }};
+                                key = "sequi";
+                                textStream = new TextStream() {{
+                                    codec = "tenetur";
+                                    displayName = "ipsam";
+                                    languageCode = "id";
+                                    mapping = new org.openapis.openapi.models.shared.TextMapping[]{{
+                                        add(new TextMapping() {{
+                                            atomKey = "aut";
+                                            inputKey = "quasi";
+                                            inputTrack = 622846;
+                                        }}),
+                                        add(new TextMapping() {{
+                                            atomKey = "temporibus";
+                                            inputKey = "laborum";
+                                            inputTrack = 96098;
+                                        }}),
+                                        add(new TextMapping() {{
+                                            atomKey = "reiciendis";
+                                            inputKey = "voluptatibus";
+                                            inputTrack = 878194;
+                                        }}),
+                                        add(new TextMapping() {{
+                                            atomKey = "nihil";
+                                            inputKey = "praesentium";
+                                            inputTrack = 976762;
+                                        }}),
+                                    }};
+                                }};
+                                videoStream = new VideoStream() {{
+                                    h264 = new H264CodecSettings() {{
+                                        allowOpenGop = false;
+                                        aqStrength = 557.14;
+                                        bFrameCount = 604846;
+                                        bPyramid = false;
+                                        bitrateBps = 451159;
+                                        crfLevel = 739264;
+                                        enableTwoPass = false;
+                                        entropyCoder = "perferendis";
+                                        frameRate = 391.87;
+                                        gopDuration = "reprehenderit";
+                                        gopFrameCount = 282807;
+                                        heightPixels = 979587;
+                                        pixelFormat = "dicta";
+                                        preset = "corporis";
+                                        profile = "dolore";
+                                        rateControlMode = "iusto";
+                                        tune = "dicta";
+                                        vbvFullnessBits = 688661;
+                                        vbvSizeBits = 317983;
+                                        widthPixels = 880476;
+                                    }};
+                                    h265 = new H265CodecSettings() {{
+                                        allowOpenGop = false;
+                                        aqStrength = 4142.63;
+                                        bFrameCount = 918236;
+                                        bPyramid = false;
+                                        bitrateBps = 64147;
+                                        crfLevel = 216822;
+                                        enableTwoPass = false;
+                                        frameRate = 6924.72;
+                                        gopDuration = "molestias";
+                                        gopFrameCount = 566602;
+                                        heightPixels = 865103;
+                                        pixelFormat = "modi";
+                                        preset = "praesentium";
+                                        profile = "rem";
+                                        rateControlMode = "voluptates";
+                                        tune = "quasi";
+                                        vbvFullnessBits = 921158;
+                                        vbvSizeBits = 575947;
+                                        widthPixels = 83112;
+                                    }};
+                                    vp9 = new Vp9CodecSettings() {{
+                                        bitrateBps = 929297;
+                                        crfLevel = 277718;
+                                        frameRate = 3185.69;
+                                        gopDuration = "consequatur";
+                                        gopFrameCount = 667411;
+                                        heightPixels = 842342;
+                                        pixelFormat = "explicabo";
+                                        profile = "deserunt";
+                                        rateControlMode = "distinctio";
+                                        widthPixels = 841386;
+                                    }};
+                                }};
+                            }}),
+                            add(new ElementaryStream() {{
+                                audioStream = new AudioStream() {{
+                                    bitrateBps = 289406;
+                                    channelCount = 264730;
+                                    channelLayout = new String[]{{
+                                        add("aliquid"),
+                                    }};
+                                    codec = "cupiditate";
+                                    displayName = "quos";
+                                    languageCode = "perferendis";
+                                    mapping = new org.openapis.openapi.models.shared.AudioMapping[]{{
+                                        add(new AudioMapping() {{
+                                            atomKey = "assumenda";
+                                            gainDb = 3698.08;
+                                            inputChannel = 4695;
+                                            inputKey = "fugit";
+                                            inputTrack = 677817;
+                                            outputChannel = 569618;
+                                        }}),
+                                    }};
+                                    sampleRateHertz = 270008;
+                                }};
+                                key = "facilis";
+                                textStream = new TextStream() {{
+                                    codec = "tempore";
+                                    displayName = "labore";
+                                    languageCode = "delectus";
+                                    mapping = new org.openapis.openapi.models.shared.TextMapping[]{{
+                                        add(new TextMapping() {{
+                                            atomKey = "non";
+                                            inputKey = "eligendi";
+                                            inputTrack = 576157;
+                                        }}),
+                                        add(new TextMapping() {{
+                                            atomKey = "aliquid";
+                                            inputKey = "provident";
+                                            inputTrack = 896039;
+                                        }}),
+                                    }};
+                                }};
+                                videoStream = new VideoStream() {{
+                                    h264 = new H264CodecSettings() {{
+                                        allowOpenGop = false;
+                                        aqStrength = 5722.52;
+                                        bFrameCount = 638921;
+                                        bPyramid = false;
+                                        bitrateBps = 223081;
+                                        crfLevel = 891555;
+                                        enableTwoPass = false;
+                                        entropyCoder = "a";
+                                        frameRate = 6800.56;
+                                        gopDuration = "in";
+                                        gopFrameCount = 449198;
+                                        heightPixels = 846409;
+                                        pixelFormat = "maiores";
+                                        preset = "rerum";
+                                        profile = "dicta";
+                                        rateControlMode = "magnam";
+                                        tune = "cumque";
+                                        vbvFullnessBits = 813798;
+                                        vbvSizeBits = 411820;
+                                        widthPixels = 396506;
+                                    }};
+                                    h265 = new H265CodecSettings() {{
+                                        allowOpenGop = false;
+                                        aqStrength = 6754.39;
+                                        bFrameCount = 881104;
+                                        bPyramid = false;
+                                        bitrateBps = 249796;
+                                        crfLevel = 581273;
+                                        enableTwoPass = false;
+                                        frameRate = 3132.18;
+                                        gopDuration = "accusamus";
+                                        gopFrameCount = 965417;
+                                        heightPixels = 692532;
+                                        pixelFormat = "provident";
+                                        preset = "nam";
+                                        profile = "id";
+                                        rateControlMode = "blanditiis";
+                                        tune = "deleniti";
+                                        vbvFullnessBits = 956084;
+                                        vbvSizeBits = 230533;
+                                        widthPixels = 643990;
+                                    }};
+                                    vp9 = new Vp9CodecSettings() {{
+                                        bitrateBps = 394869;
+                                        crfLevel = 423855;
+                                        frameRate = 6188.09;
+                                        gopDuration = "omnis";
+                                        gopFrameCount = 474867;
+                                        heightPixels = 19193;
+                                        pixelFormat = "nihil";
+                                        profile = "magnam";
+                                        rateControlMode = "distinctio";
+                                        widthPixels = 660174;
                                     }};
                                 }};
                             }}),
                         }};
-                        inputs = new openapisdk.models.shared.Input[]() {{
+                        inputs = new org.openapis.openapi.models.shared.Input[]{{
                             add(new Input() {{
-                                key = "voluptates";
+                                key = "labore";
                                 preprocessingConfig = new PreprocessingConfig() {{
                                     audio = new Audio() {{
                                         highBoost = false;
                                         lowBoost = false;
-                                        lufs = 41.099998;
+                                        lufs = 3834.62;
                                     }};
                                     color = new Color() {{
-                                        brightness = 59.200001;
-                                        contrast = 6.100000;
-                                        saturation = 82.099998;
+                                        brightness = 6180.16;
+                                        contrast = 7491.7;
+                                        saturation = 4287.69;
                                     }};
                                     crop = new Crop() {{
-                                        bottomPixels = 7945398411639602224;
-                                        leftPixels = 1925401661646756611;
-                                        rightPixels = 150340687756601720;
-                                        topPixels = 4989862523986425397;
-                                    }};
-                                    deblock = new Deblock() {{
-                                        enabled = true;
-                                        strength = 19.100000;
-                                    }};
-                                    deinterlace = new Deinterlace() {{
-                                        bwdif = new BwdifConfig() {{
-                                            deinterlaceAllFrames = true;
-                                            mode = "a";
-                                            parity = "soluta";
-                                        }};
-                                        yadif = new YadifConfig() {{
-                                            deinterlaceAllFrames = true;
-                                            disableSpatialInterlacing = true;
-                                            mode = "consequuntur";
-                                            parity = "laudantium";
-                                        }};
-                                    }};
-                                    denoise = new Denoise() {{
-                                        strength = 73.199997;
-                                        tune = "expedita";
-                                    }};
-                                    pad = new Pad() {{
-                                        bottomPixels = 8204648627352676445;
-                                        leftPixels = 4234137922270959652;
-                                        rightPixels = 8497925768463229012;
-                                        topPixels = 5311927246208705713;
-                                    }};
-                                }};
-                                uri = "quisquam";
-                            }}),
-                            add(new Input() {{
-                                key = "explicabo";
-                                preprocessingConfig = new PreprocessingConfig() {{
-                                    audio = new Audio() {{
-                                        highBoost = true;
-                                        lowBoost = true;
-                                        lufs = 15.200000;
-                                    }};
-                                    color = new Color() {{
-                                        brightness = 66.099998;
-                                        contrast = 94.199997;
-                                        saturation = 97.199997;
-                                    }};
-                                    crop = new Crop() {{
-                                        bottomPixels = 2333048574390956331;
-                                        leftPixels = 9205243623417456715;
-                                        rightPixels = 190417550815006435;
-                                        topPixels = 7478610059307147871;
+                                        bottomPixels = 878453;
+                                        leftPixels = 135474;
+                                        rightPixels = 102863;
+                                        topPixels = 298282;
                                     }};
                                     deblock = new Deblock() {{
                                         enabled = false;
-                                        strength = 27.200001;
+                                        strength = 923.73;
                                     }};
                                     deinterlace = new Deinterlace() {{
                                         bwdif = new BwdifConfig() {{
-                                            deinterlaceAllFrames = true;
-                                            mode = "expedita";
-                                            parity = "vel";
+                                            deinterlaceAllFrames = false;
+                                            mode = "excepturi";
+                                            parity = "ullam";
                                         }};
                                         yadif = new YadifConfig() {{
-                                            deinterlaceAllFrames = true;
+                                            deinterlaceAllFrames = false;
                                             disableSpatialInterlacing = false;
-                                            mode = "nihil";
-                                            parity = "tempora";
+                                            mode = "provident";
+                                            parity = "quos";
                                         }};
                                     }};
                                     denoise = new Denoise() {{
-                                        strength = 42.200001;
-                                        tune = "sunt";
+                                        strength = 5743.25;
+                                        tune = "accusantium";
                                     }};
                                     pad = new Pad() {{
-                                        bottomPixels = 157519078836327761;
-                                        leftPixels = 2867593906384393455;
-                                        rightPixels = 7506934391669544280;
-                                        topPixels = 952897656927189675;
+                                        bottomPixels = 653201;
+                                        leftPixels = 968962;
+                                        rightPixels = 652103;
+                                        topPixels = 320997;
                                     }};
                                 }};
-                                uri = "vel";
+                                uri = "http://easy-going-term.com";
+                            }}),
+                            add(new Input() {{
+                                key = "nemo";
+                                preprocessingConfig = new PreprocessingConfig() {{
+                                    audio = new Audio() {{
+                                        highBoost = false;
+                                        lowBoost = false;
+                                        lufs = 972.6;
+                                    }};
+                                    color = new Color() {{
+                                        brightness = 4358.65;
+                                        contrast = 9840.43;
+                                        saturation = 8919.24;
+                                    }};
+                                    crop = new Crop() {{
+                                        bottomPixels = 260341;
+                                        leftPixels = 806194;
+                                        rightPixels = 537023;
+                                        topPixels = 703889;
+                                    }};
+                                    deblock = new Deblock() {{
+                                        enabled = false;
+                                        strength = 4479.26;
+                                    }};
+                                    deinterlace = new Deinterlace() {{
+                                        bwdif = new BwdifConfig() {{
+                                            deinterlaceAllFrames = false;
+                                            mode = "architecto";
+                                            parity = "architecto";
+                                        }};
+                                        yadif = new YadifConfig() {{
+                                            deinterlaceAllFrames = false;
+                                            disableSpatialInterlacing = false;
+                                            mode = "repudiandae";
+                                            parity = "ullam";
+                                        }};
+                                    }};
+                                    denoise = new Denoise() {{
+                                        strength = 7142.42;
+                                        tune = "nihil";
+                                    }};
+                                    pad = new Pad() {{
+                                        bottomPixels = 998848;
+                                        leftPixels = 841140;
+                                        rightPixels = 149448;
+                                        topPixels = 904648;
+                                    }};
+                                }};
+                                uri = "https://another-circuit.name";
                             }}),
                         }};
-                        manifests = new openapisdk.models.shared.Manifest[]() {{
+                        manifests = new org.openapis.openapi.models.shared.Manifest[]{{
                             add(new Manifest() {{
-                                fileName = "qui";
-                                muxStreams = new String[]() {{
-                                    add("quis"),
-                                    add("adipisci"),
+                                fileName = "magni";
+                                muxStreams = new String[]{{
+                                    add("quo"),
+                                }};
+                                type = "DASH";
+                            }}),
+                            add(new Manifest() {{
+                                fileName = "pariatur";
+                                muxStreams = new String[]{{
+                                    add("ea"),
+                                    add("excepturi"),
+                                    add("odit"),
+                                    add("ea"),
+                                }};
+                                type = "MANIFEST_TYPE_UNSPECIFIED";
+                            }}),
+                            add(new Manifest() {{
+                                fileName = "ab";
+                                muxStreams = new String[]{{
+                                    add("quidem"),
+                                    add("ipsam"),
+                                    add("voluptate"),
+                                    add("autem"),
                                 }};
                                 type = "DASH";
                             }}),
                         }};
-                        muxStreams = new openapisdk.models.shared.MuxStream[]() {{
+                        muxStreams = new org.openapis.openapi.models.shared.MuxStream[]{{
                             add(new MuxStream() {{
-                                container = "et";
-                                elementaryStreams = new String[]() {{
-                                    add("numquam"),
-                                    add("laborum"),
-                                    add("rerum"),
+                                container = "pariatur";
+                                elementaryStreams = new String[]{{
+                                    add("voluptatibus"),
+                                    add("perferendis"),
                                 }};
-                                fileName = "ut";
-                                key = "laborum";
+                                fileName = "fugiat";
+                                key = "amet";
                                 segmentSettings = new SegmentSettings() {{
                                     individualSegments = false;
-                                    segmentDuration = "quis";
-                                }};
-                            }}),
-                            add(new MuxStream() {{
-                                container = "minus";
-                                elementaryStreams = new String[]() {{
-                                    add("aperiam"),
-                                }};
-                                fileName = "consequuntur";
-                                key = "excepturi";
-                                segmentSettings = new SegmentSettings() {{
-                                    individualSegments = true;
-                                    segmentDuration = "inventore";
-                                }};
-                            }}),
-                            add(new MuxStream() {{
-                                container = "delectus";
-                                elementaryStreams = new String[]() {{
-                                    add("animi"),
-                                }};
-                                fileName = "animi";
-                                key = "ut";
-                                segmentSettings = new SegmentSettings() {{
-                                    individualSegments = false;
-                                    segmentDuration = "fuga";
+                                    segmentDuration = "aut";
                                 }};
                             }}),
                         }};
                         output = new Output() {{
-                            uri = "sed";
+                            uri = "https://grubby-urge.net";
                         }};
-                        overlays = new openapisdk.models.shared.Overlay[]() {{
+                        overlays = new org.openapis.openapi.models.shared.Overlay[]{{
                             add(new Overlay() {{
-                                animations = new openapisdk.models.shared.Animation[]() {{
+                                animations = new org.openapis.openapi.models.shared.Animation[]{{
                                     add(new Animation() {{
                                         animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "consequuntur";
+                                            startTimeOffset = "quis";
                                         }};
                                         animationFade = new AnimationFade() {{
-                                            endTimeOffset = "non";
-                                            fadeType = "FADE_OUT";
-                                            startTimeOffset = "provident";
+                                            endTimeOffset = "totam";
+                                            fadeType = "FADE_IN";
+                                            startTimeOffset = "eaque";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 99.099998;
-                                                y = 22.100000;
+                                                x = 3389.85;
+                                                y = 1999.96;
                                             }};
                                         }};
                                         animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "enim";
+                                            startTimeOffset = "eos";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 85.099998;
-                                                y = 84.199997;
-                                            }};
-                                        }};
-                                    }}),
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "neque";
-                                        }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "consequuntur";
-                                            fadeType = "FADE_TYPE_UNSPECIFIED";
-                                            startTimeOffset = "et";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 28.100000;
-                                                y = 93.099998;
-                                            }};
-                                        }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "quia";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 39.200001;
-                                                y = 30.200001;
-                                            }};
-                                        }};
-                                    }}),
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "ut";
-                                        }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "necessitatibus";
-                                            fadeType = "FADE_OUT";
-                                            startTimeOffset = "possimus";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 62.200001;
-                                                y = 90.199997;
-                                            }};
-                                        }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "sunt";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 59.099998;
-                                                y = 88.099998;
+                                                x = 185.21;
+                                                y = 1709.86;
                                             }};
                                         }};
                                     }}),
                                 }};
                                 image = new Image() {{
-                                    alpha = 10.200000;
+                                    alpha = 7936.98;
                                     resolution = new NormalizedCoordinate() {{
-                                        x = 54.200001;
-                                        y = 63.099998;
+                                        x = 4634.51;
+                                        y = 2239.24;
                                     }};
-                                    uri = "dolores";
+                                    uri = "https://grandiose-urge.org";
                                 }};
                             }}),
                             add(new Overlay() {{
-                                animations = new openapisdk.models.shared.Animation[]() {{
+                                animations = new org.openapis.openapi.models.shared.Animation[]{{
                                     add(new Animation() {{
                                         animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "impedit";
+                                            startTimeOffset = "facilis";
                                         }};
                                         animationFade = new AnimationFade() {{
-                                            endTimeOffset = "non";
+                                            endTimeOffset = "perspiciatis";
                                             fadeType = "FADE_TYPE_UNSPECIFIED";
-                                            startTimeOffset = "ut";
+                                            startTimeOffset = "porro";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 63.099998;
-                                                y = 23.100000;
+                                                x = 1646.94;
+                                                y = 5000.26;
                                             }};
                                         }};
                                         animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "ipsam";
+                                            startTimeOffset = "error";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 78.199997;
-                                                y = 46.099998;
+                                                x = 503.7;
+                                                y = 5772.29;
                                             }};
                                         }};
                                     }}),
                                     add(new Animation() {{
                                         animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "delectus";
-                                        }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "rerum";
-                                            fadeType = "FADE_IN";
-                                            startTimeOffset = "repellat";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 26.200001;
-                                                y = 9.200000;
-                                            }};
-                                        }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "voluptas";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 64.199997;
-                                                y = 32.099998;
-                                            }};
-                                        }};
-                                    }}),
-                                }};
-                                image = new Image() {{
-                                    alpha = 30.200001;
-                                    resolution = new NormalizedCoordinate() {{
-                                        x = 3.100000;
-                                        y = 73.199997;
-                                    }};
-                                    uri = "quae";
-                                }};
-                            }}),
-                            add(new Overlay() {{
-                                animations = new openapisdk.models.shared.Animation[]() {{
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "recusandae";
-                                        }};
-                                        animationFade = new AnimationFade() {{
-                                            endTimeOffset = "qui";
-                                            fadeType = "FADE_IN";
-                                            startTimeOffset = "et";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 7.100000;
-                                                y = 43.200001;
-                                            }};
-                                        }};
-                                        animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "et";
-                                            xy = new NormalizedCoordinate() {{
-                                                x = 90.099998;
-                                                y = 16.200001;
-                                            }};
-                                        }};
-                                    }}),
-                                    add(new Animation() {{
-                                        animationEnd = new AnimationEnd() {{
-                                            startTimeOffset = "nihil";
+                                            startTimeOffset = "rerum";
                                         }};
                                         animationFade = new AnimationFade() {{
                                             endTimeOffset = "adipisci";
                                             fadeType = "FADE_OUT";
-                                            startTimeOffset = "illum";
+                                            startTimeOffset = "earum";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 32.099998;
-                                                y = 40.099998;
+                                                x = 2672.62;
+                                                y = 6139.66;
                                             }};
                                         }};
                                         animationStatic = new AnimationStatic() {{
-                                            startTimeOffset = "quidem";
+                                            startTimeOffset = "dolorum";
                                             xy = new NormalizedCoordinate() {{
-                                                x = 49.200001;
-                                                y = 40.200001;
+                                                x = 5356.33;
+                                                y = 8642.82;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "provident";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "nobis";
+                                            fadeType = "FADE_OUT";
+                                            startTimeOffset = "delectus";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 3119.45;
+                                                y = 5542.42;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "aliquid";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 2123.9;
+                                                y = 2098.43;
                                             }};
                                         }};
                                     }}),
                                 }};
                                 image = new Image() {{
-                                    alpha = 81.099998;
+                                    alpha = 2224.43;
                                     resolution = new NormalizedCoordinate() {{
-                                        x = 2.200000;
-                                        y = 65.199997;
+                                        x = 1861.93;
+                                        y = 2187.49;
                                     }};
-                                    uri = "totam";
+                                    uri = "https://nimble-reporter.info";
+                                }};
+                            }}),
+                            add(new Overlay() {{
+                                animations = new org.openapis.openapi.models.shared.Animation[]{{
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "reiciendis";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "amet";
+                                            fadeType = "FADE_OUT";
+                                            startTimeOffset = "numquam";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 852.95;
+                                                y = 580.29;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "ipsa";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 4344.17;
+                                                y = 4878.38;
+                                            }};
+                                        }};
+                                    }}),
+                                    add(new Animation() {{
+                                        animationEnd = new AnimationEnd() {{
+                                            startTimeOffset = "quaerat";
+                                        }};
+                                        animationFade = new AnimationFade() {{
+                                            endTimeOffset = "accusamus";
+                                            fadeType = "FADE_OUT";
+                                            startTimeOffset = "voluptatibus";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 3777.52;
+                                                y = 6176.58;
+                                            }};
+                                        }};
+                                        animationStatic = new AnimationStatic() {{
+                                            startTimeOffset = "eos";
+                                            xy = new NormalizedCoordinate() {{
+                                                x = 5424.99;
+                                                y = 246.78;
+                                            }};
+                                        }};
+                                    }}),
+                                }};
+                                image = new Image() {{
+                                    alpha = 8546.14;
+                                    resolution = new NormalizedCoordinate() {{
+                                        x = 672.49;
+                                        y = 7438.35;
+                                    }};
+                                    uri = "https://late-in-laws.net";
                                 }};
                             }}),
                         }};
                         pubsubDestination = new PubsubDestination() {{
-                            topic = "aut";
+                            topic = "deleniti";
                         }};
-                        spriteSheets = new openapisdk.models.shared.SpriteSheet[]() {{
+                        spriteSheets = new org.openapis.openapi.models.shared.SpriteSheet[]{{
                             add(new SpriteSheet() {{
-                                columnCount = 7167106058699817943;
-                                endTimeOffset = "necessitatibus";
-                                filePrefix = "et";
-                                format = "culpa";
-                                interval = "repellendus";
-                                quality = 4761677689824345557;
-                                rowCount = 5168005730101237705;
-                                spriteHeightPixels = 2118949171484888039;
-                                spriteWidthPixels = 4628132784885150210;
-                                startTimeOffset = "molestias";
-                                totalCount = 4841391702283203193;
+                                columnCount = 896672;
+                                endTimeOffset = "distinctio";
+                                filePrefix = "asperiores";
+                                format = "nihil";
+                                interval = "ipsum";
+                                quality = 456015;
+                                rowCount = 663078;
+                                spriteHeightPixels = 906418;
+                                spriteWidthPixels = 263322;
+                                startTimeOffset = "aspernatur";
+                                totalCount = 20651;
+                            }}),
+                            add(new SpriteSheet() {{
+                                columnCount = 229219;
+                                endTimeOffset = "optio";
+                                filePrefix = "accusamus";
+                                format = "ad";
+                                interval = "saepe";
+                                quality = 383464;
+                                rowCount = 645785;
+                                spriteHeightPixels = 588317;
+                                spriteWidthPixels = 324683;
+                                startTimeOffset = "repellendus";
+                                totalCount = 519711;
+                            }}),
+                            add(new SpriteSheet() {{
+                                columnCount = 628982;
+                                endTimeOffset = "alias";
+                                filePrefix = "at";
+                                format = "quaerat";
+                                interval = "tempora";
+                                quality = 425451;
+                                rowCount = 798047;
+                                spriteHeightPixels = 885338;
+                                spriteWidthPixels = 185636;
+                                startTimeOffset = "dolorum";
+                                totalCount = 952792;
                             }}),
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("et", "saepe");
-                        put("commodi", "in");
-                        put("quibusdam", "asperiores");
+                        put("harum", "iusto");
+                        put("ipsum", "quisquam");
                     }};
-                    name = "quo";
+                    name = "tenetur";
                 }};
-            }};
+            }};            
 
             TranscoderProjectsLocationsJobTemplatesCreateResponse res = sdk.projects.transcoderProjectsLocationsJobTemplatesCreate(req);
 

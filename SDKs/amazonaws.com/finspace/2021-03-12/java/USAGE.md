@@ -2,54 +2,71 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateEnvironmentHeaders;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodyFederationModeEnum;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodyFederationParameters;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodySuperuserParameters;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequestBody;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequest;
+import org.openapis.openapi.models.operations.CreateEnvironmentResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateEnvironmentRequest req = new CreateEnvironmentRequest() {{
                 headers = new CreateEnvironmentHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateEnvironmentRequestBody() {{
-                    description = "voluptas";
+                    dataBundles = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
+                    }};
+                    description = "iure";
                     federationMode = "FEDERATED";
                     federationParameters = new CreateEnvironmentRequestBodyFederationParameters() {{
-                        applicationCallBackURL = "et";
+                        applicationCallBackURL = "debitis";
                         attributeMap = new java.util.HashMap<String, String>() {{
-                            put("rerum", "dicta");
+                            put("delectus", "tempora");
                         }};
-                        federationProviderName = "debitis";
-                        federationURN = "voluptatum";
-                        samlMetadataDocument = "et";
-                        samlMetadataURL = "ut";
+                        federationProviderName = "suscipit";
+                        federationURN = "molestiae";
+                        samlMetadataDocument = "minus";
+                        samlMetadataURL = "placeat";
                     }};
-                    kmsKeyId = "dolorem";
-                    name = "et";
+                    kmsKeyId = "voluptatum";
+                    name = "iusto";
+                    superuserParameters = new CreateEnvironmentRequestBodySuperuserParameters() {{
+                        emailAddress = "excepturi";
+                        firstName = "Glen";
+                        lastName = "Walsh";
+                    }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("iste", "vitae");
+                        put("ab", "quis");
+                        put("veritatis", "deserunt");
+                        put("perferendis", "ipsam");
+                        put("repellendus", "sapiente");
                     }};
                 }};
-            }};
+            }};            
 
             CreateEnvironmentResponse res = sdk.createEnvironment(req);
 

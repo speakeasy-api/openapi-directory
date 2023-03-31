@@ -2,27 +2,36 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgPathParams;
+import org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody;
+import org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest;
+import org.openapis.openapi.models.operations.ActionsAddCustomLabelsToSelfHostedRunnerForOrgResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest req = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgRequest() {{
-                pathParams = new ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgPathParams() {{
-                    org = "sit";
-                    repositoryId = 2259404117704393152;
-                    runnerGroupId = 6050128673802995827;
+            ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest req = new ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequest() {{
+                pathParams = new ActionsAddCustomLabelsToSelfHostedRunnerForOrgPathParams() {{
+                    org = "corrupti";
+                    runnerId = 592845;
                 }};
-            }};
+                request = new ActionsAddCustomLabelsToSelfHostedRunnerForOrgRequestBody() {{
+                    labels = new String[]{{
+                        add("quibusdam"),
+                        add("unde"),
+                        add("nulla"),
+                    }};
+                }};
+            }};            
 
-            ActionsAddRepoAccessToSelfHostedRunnerGroupInOrgResponse res = sdk.actions.actionsAddRepoAccessToSelfHostedRunnerGroupInOrg(req);
+            ActionsAddCustomLabelsToSelfHostedRunnerForOrgResponse res = sdk.actions.actionsAddCustomLabelsToSelfHostedRunnerForOrg(req);
 
-            if (res.statusCode == 200) {
+            if (res.actionsAddCustomLabelsToSelfHostedRunnerForOrg200ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

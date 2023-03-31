@@ -2,46 +2,67 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetEntitlementsXAmzTargetEnum;
+import org.openapis.openapi.models.operations.GetEntitlementsHeaders;
+import org.openapis.openapi.models.operations.GetEntitlementsRequest;
+import org.openapis.openapi.models.operations.GetEntitlementsResponse;
+import org.openapis.openapi.models.shared.GetEntitlementsRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetEntitlementsRequest req = new GetEntitlementsRequest() {{
                 headers = new GetEntitlementsHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSMPEntitlementService.GetEntitlements";
                 }};
                 request = new GetEntitlementsRequest() {{
                     filter = new java.util.HashMap<String, String[]>() {{
-                        put("et", new String[]() {{
-                            add("rerum"),
+                        put("vel", new String[]{{
+                            add("deserunt"),
+                            add("suscipit"),
+                            add("iure"),
+                        }});
+                        put("magnam", new String[]{{
+                            add("ipsa"),
+                            add("delectus"),
+                            add("tempora"),
+                            add("suscipit"),
+                        }});
+                        put("molestiae", new String[]{{
+                            add("placeat"),
+                            add("voluptatum"),
+                            add("iusto"),
+                            add("excepturi"),
+                        }});
+                        put("nisi", new String[]{{
+                            add("temporibus"),
+                            add("ab"),
+                            add("quis"),
+                            add("veritatis"),
                         }});
                     }};
-                    maxResults = 7837839688282259259;
-                    nextToken = "debitis";
-                    productCode = "voluptatum";
+                    maxResults = 648172;
+                    nextToken = "perferendis";
+                    productCode = "ipsam";
                 }};
-            }};
+            }};            
 
             GetEntitlementsResponse res = sdk.getEntitlements(req);
 

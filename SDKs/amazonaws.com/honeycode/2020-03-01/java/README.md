@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,58 +15,100 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsPathParams;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsHeaders;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsRequestBody;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsRequest;
+import org.openapis.openapi.models.operations.BatchCreateTableRowsResponse;
+import org.openapis.openapi.models.shared.CreateRowData;
+import org.openapis.openapi.models.shared.CellInput;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BatchCreateTableRowsRequest req = new BatchCreateTableRowsRequest() {{
                 pathParams = new BatchCreateTableRowsPathParams() {{
-                    tableId = "sit";
-                    workbookId = "voluptas";
+                    tableId = "corrupti";
+                    workbookId = "provident";
                 }};
                 headers = new BatchCreateTableRowsHeaders() {{
-                    xAmzAlgorithm = "culpa";
-                    xAmzContentSha256 = "expedita";
-                    xAmzCredential = "consequuntur";
-                    xAmzDate = "dolor";
-                    xAmzSecurityToken = "expedita";
-                    xAmzSignature = "voluptas";
-                    xAmzSignedHeaders = "fugit";
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
                 request = new BatchCreateTableRowsRequestBody() {{
-                    clientRequestToken = "et";
-                    rowsToCreate = new openapisdk.models.shared.CreateRowData[]() {{
+                    clientRequestToken = "error";
+                    rowsToCreate = new org.openapis.openapi.models.shared.CreateRowData[]{{
                         add(new CreateRowData() {{
-                            batchItemId = "rerum";
-                            cellsToCreate = new java.util.HashMap<String, openapisdk.models.shared.CellInput>() {{
-                                put("debitis", new CellInput() {{
-                                    fact = "voluptatum";
+                            batchItemId = "suscipit";
+                            cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
+                                put("magnam", new CellInput() {{
+                                    fact = "debitis";
+                                    facts = new String[]{{
+                                        add("delectus"),
+                                    }};
                                 }});
-                                put("et", new CellInput() {{
-                                    fact = "ut";
+                                put("tempora", new CellInput() {{
+                                    fact = "suscipit";
+                                    facts = new String[]{{
+                                        add("minus"),
+                                        add("placeat"),
+                                    }};
                                 }});
-                                put("dolorem", new CellInput() {{
-                                    fact = "et";
+                            }};
+                        }}),
+                        add(new CreateRowData() {{
+                            batchItemId = "voluptatum";
+                            cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
+                                put("excepturi", new CellInput() {{
+                                    fact = "nisi";
+                                    facts = new String[]{{
+                                        add("temporibus"),
+                                        add("ab"),
+                                        add("quis"),
+                                        add("veritatis"),
+                                    }};
+                                }});
+                                put("deserunt", new CellInput() {{
+                                    fact = "perferendis";
+                                    facts = new String[]{{
+                                        add("repellendus"),
+                                        add("sapiente"),
+                                    }};
+                                }});
+                            }};
+                        }}),
+                        add(new CreateRowData() {{
+                            batchItemId = "quo";
+                            cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
+                                put("at", new CellInput() {{
+                                    fact = "at";
+                                    facts = new String[]{{
+                                        add("molestiae"),
+                                        add("quod"),
+                                        add("quod"),
+                                        add("esse"),
+                                    }};
                                 }});
                             }};
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             BatchCreateTableRowsResponse res = sdk.batchCreateTableRows(req);
 
@@ -94,9 +136,22 @@ public class Application {
 * `listTableColumns` -  The ListTableColumns API allows you to retrieve a list of all the columns in a table in a workbook. 
 * `listTableRows` -  The ListTableRows API allows you to retrieve a list of all the rows in a table in a workbook. 
 * `listTables` -  The ListTables API allows you to retrieve a list of all the tables in a workbook. 
+* `listTagsForResource` -  The ListTagsForResource API allows you to return a resource's tags. 
 * `queryTableRows` -  The QueryTableRows API allows you to use a filter formula to query for specific rows in a table. 
 * `startTableDataImportJob` -  The StartTableDataImportJob API allows you to start an import job on a table. This API will only return the id of the job that was started. To find out the status of the import request, you need to call the DescribeTableDataImportJob API. 
-
+* `tagResource` -  The TagResource API allows you to add tags to an ARN-able resource. Resource includes workbook, table, screen and screen-automation. 
+* `untagResource` -  The UntagResource API allows you to removes tags from an ARN-able resource. Resource includes workbook, table, screen and screen-automation. 
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

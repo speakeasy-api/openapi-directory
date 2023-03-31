@@ -2,41 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderPathParams;
+import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderHeaders;
+import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderRequestBody;
+import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderRequest;
+import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateAssessmentReportEvidenceFolderRequest req = new AssociateAssessmentReportEvidenceFolderRequest() {{
                 pathParams = new AssociateAssessmentReportEvidenceFolderPathParams() {{
-                    assessmentId = "sit";
+                    assessmentId = "corrupti";
                 }};
                 headers = new AssociateAssessmentReportEvidenceFolderHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
                 request = new AssociateAssessmentReportEvidenceFolderRequestBody() {{
-                    evidenceFolderId = "fugit";
+                    evidenceFolderId = "vel";
                 }};
-            }};
+            }};            
 
             AssociateAssessmentReportEvidenceFolderResponse res = sdk.associateAssessmentReportEvidenceFolder(req);
 

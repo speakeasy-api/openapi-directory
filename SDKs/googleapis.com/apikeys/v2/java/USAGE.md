@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption1;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurityOption2;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeySecurity;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeyQueryParams;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeyRequest;
+import org.openapis.openapi.models.operations.ApikeysKeysLookupKeyResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ApikeysKeysLookupKeyRequest req = new ApikeysKeysLookupKeyRequest() {{
                 security = new ApikeysKeysLookupKeySecurity() {{
@@ -24,20 +33,20 @@ public class Application {
                     }};
                 }};
                 queryParams = new ApikeysKeysLookupKeyQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    keyString = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    keyString = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-            }};
+            }};            
 
             ApikeysKeysLookupKeyResponse res = sdk.keys.apikeysKeysLookupKey(req);
 

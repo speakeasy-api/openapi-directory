@@ -2,23 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetPathParams;
+import org.openapis.openapi.models.operations.GetRequest;
+import org.openapis.openapi.models.operations.GetResponse;
+import org.openapis.openapi.models.shared.BaudrateEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetRequest req = new GetRequest() {{
                 pathParams = new GetPathParams() {{
-                    address = "sit";
-                    baudrate = 2259404117704393152;
-                    device = "culpa";
+                    address = "48";
+                    baudrate = "2400";
+                    device = "ttyAMA0";
                 }};
-            }};
+            }};            
 
             GetResponse res = sdk.get(req);
 

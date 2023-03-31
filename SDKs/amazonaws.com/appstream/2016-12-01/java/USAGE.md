@@ -2,44 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateApplicationFleetXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AssociateApplicationFleetHeaders;
+import org.openapis.openapi.models.operations.AssociateApplicationFleetRequest;
+import org.openapis.openapi.models.operations.AssociateApplicationFleetResponse;
+import org.openapis.openapi.models.shared.AssociateApplicationFleetRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            AssociateFleetRequest req = new AssociateFleetRequest() {{
-                headers = new AssociateFleetHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
-                    xAmzTarget = "PhotonAdminProxyService.AssociateFleet";
+            AssociateApplicationFleetRequest req = new AssociateApplicationFleetRequest() {{
+                headers = new AssociateApplicationFleetHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
+                    xAmzTarget = "PhotonAdminProxyService.AssociateApplicationFleet";
                 }};
-                request = new AssociateFleetRequest() {{
-                    fleetName = "fugit";
-                    stackName = "et";
+                request = new AssociateApplicationFleetRequest() {{
+                    applicationArn = "illum";
+                    fleetName = "vel";
                 }};
-            }};
+            }};            
 
-            AssociateFleetResponse res = sdk.associateFleet(req);
+            AssociateApplicationFleetResponse res = sdk.associateApplicationFleet(req);
 
-            if (res.associateFleetResult.isPresent()) {
+            if (res.associateApplicationFleetResult.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

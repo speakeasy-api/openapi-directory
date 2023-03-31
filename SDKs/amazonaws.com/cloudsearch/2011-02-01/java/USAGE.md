@@ -2,42 +2,44 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETCreateDomainActionEnum;
+import org.openapis.openapi.models.operations.GETCreateDomainVersionEnum;
+import org.openapis.openapi.models.operations.GETCreateDomainQueryParams;
+import org.openapis.openapi.models.operations.GETCreateDomainHeaders;
+import org.openapis.openapi.models.operations.GETCreateDomainRequest;
+import org.openapis.openapi.models.operations.GETCreateDomainResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetCreateDomainRequest req = new GetCreateDomainRequest() {{
-                queryParams = new GetCreateDomainQueryParams() {{
+            GETCreateDomainRequest req = new GETCreateDomainRequest() {{
+                queryParams = new GETCreateDomainQueryParams() {{
                     action = "CreateDomain";
-                    domainName = "voluptas";
+                    domainName = "corrupti";
                     version = "2011-02-01";
                 }};
-                headers = new GetCreateDomainHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
+                headers = new GETCreateDomainHeaders() {{
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-            }};
+            }};            
 
-            GetCreateDomainResponse res = sdk.getCreateDomain(req);
+            GETCreateDomainResponse res = sdk.getCreateDomain(req);
 
             if (res.body.isPresent()) {
                 // handle response

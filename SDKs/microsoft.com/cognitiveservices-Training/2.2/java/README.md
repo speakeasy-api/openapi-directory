@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,24 +15,27 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetDomainPathParams;
+import org.openapis.openapi.models.operations.GetDomainHeaders;
+import org.openapis.openapi.models.operations.GetDomainRequest;
+import org.openapis.openapi.models.operations.GetDomainResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetDomainRequest req = new GetDomainRequest() {{
                 pathParams = new GetDomainPathParams() {{
-                    domainId = "sit";
+                    domainId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
                 }};
                 headers = new GetDomainHeaders() {{
-                    trainingKey = "voluptas";
+                    trainingKey = "deserunt";
                 }};
-            }};
+            }};            
 
             GetDomainResponse res = sdk.domainsApi.getDomain(req);
 
@@ -48,14 +51,30 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### DomainsApi
+
+### domainsApi
 
 * `getDomain` - Get information about a specific domain.
 * `getDomains` - Get a list of the available domains.
 
-### ImageApi
+### imageApi
 
+* `createImageRegionsForm` - Create a set of image regions.
+* `createImageRegionsJson` - Create a set of image regions.
+* `createImageRegionsRaw` - Create a set of image regions.
+* `createImageTagsForm` - Associate a set of images with a set of tags.
+* `createImageTagsJson` - Associate a set of images with a set of tags.
+* `createImageTagsRaw` - Associate a set of images with a set of tags.
 * `createImagesFromData` - Add the provided images to the set of training images.
+* `createImagesFromFilesForm` - Add the provided batch of images to the set of training images.
+* `createImagesFromFilesJson` - Add the provided batch of images to the set of training images.
+* `createImagesFromFilesRaw` - Add the provided batch of images to the set of training images.
+* `createImagesFromPredictionsForm` - Add the specified predicted images to the set of training images.
+* `createImagesFromPredictionsJson` - Add the specified predicted images to the set of training images.
+* `createImagesFromPredictionsRaw` - Add the specified predicted images to the set of training images.
+* `createImagesFromUrlsForm` - Add the provided images urls to the set of training images.
+* `createImagesFromUrlsJson` - Add the provided images urls to the set of training images.
+* `createImagesFromUrlsRaw` - Add the provided images urls to the set of training images.
 * `deleteImageRegions` - Delete a set of image regions.
 * `deleteImageTags` - Remove a set of tags from a set of images.
 * `deleteImages` - Delete images from the set of training images.
@@ -65,17 +84,22 @@ public class Application {
 * `getUntaggedImageCount` - Gets the number of untagged images.
 * `getUntaggedImages` - Get untagged images for a given project iteration.
 
-### ImageRegionProposalApi
+### imageRegionProposalApi
 
 * `getImageRegionProposals` - Get region proposals for an image. Returns empty array if no proposals are found.
 
-### PredictionsApi
+### predictionsApi
 
 * `deletePrediction` - Delete a set of predicted images and their associated prediction results.
+* `queryPredictionsForm` - Get images that were sent to your prediction endpoint.
+* `queryPredictionsJson` - Get images that were sent to your prediction endpoint.
+* `queryPredictionsRaw` - Get images that were sent to your prediction endpoint.
 * `quickTestImage` - Quick test an image.
-* `quickTestImageUrl` - Quick test an image url.
+* `quickTestImageUrlForm` - Quick test an image url.
+* `quickTestImageUrlJson` - Quick test an image url.
+* `quickTestImageUrlRaw` - Quick test an image url.
 
-### ProjectApi
+### projectApi
 
 * `createProject` - Create a project.
 * `deleteIteration` - Delete a specific iteration of a project.
@@ -91,17 +115,33 @@ training for the provided iteration {iterationId}.
 * `getProject` - Get a specific project.
 * `getProjects` - Get your projects.
 * `trainProject` - Queues project for training.
-* `updateIteration` - Update a specific iteration.
-* `updateProject` - Update a specific project.
+* `updateIterationForm` - Update a specific iteration.
+* `updateIterationJson` - Update a specific iteration.
+* `updateIterationRaw` - Update a specific iteration.
+* `updateProjectForm` - Update a specific project.
+* `updateProjectJson` - Update a specific project.
+* `updateProjectRaw` - Update a specific project.
 
-### TagsApi
+### tagsApi
 
 * `createTag` - Create a tag for the project.
 * `deleteTag` - Delete a tag from the project.
 * `getTag` - Get information about a specific tag.
 * `getTags` - Get the tags for a given project and iteration.
-* `updateTag` - Update a tag.
-
+* `updateTagForm` - Update a tag.
+* `updateTagJson` - Update a tag.
+* `updateTagRaw` - Update a tag.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

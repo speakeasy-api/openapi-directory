@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateSecurity;
+import org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateQueryParams;
+import org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateRequest;
+import org.openapis.openapi.models.operations.CloudresourcemanagerFoldersCreateResponse;
+import org.openapis.openapi.models.shared.FolderInput;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudresourcemanagerFoldersCreateRequest req = new CloudresourcemanagerFoldersCreateRequest() {{
                 security = new CloudresourcemanagerFoldersCreateSecurity() {{
@@ -22,24 +30,24 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudresourcemanagerFoldersCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    parent = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    parent = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new FolderInput() {{
-                    displayName = "dicta";
-                    parent = "debitis";
+                    displayName = "suscipit";
+                    parent = "iure";
                 }};
-            }};
+            }};            
 
             CloudresourcemanagerFoldersCreateResponse res = sdk.folders.cloudresourcemanagerFoldersCreate(req);
 

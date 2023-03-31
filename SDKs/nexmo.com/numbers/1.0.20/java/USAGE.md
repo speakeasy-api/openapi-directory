@@ -2,34 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BuyANumberRequest;
+import org.openapis.openapi.models.operations.BuyANumberResponse;
+import org.openapis.openapi.models.shared.NumberDetails;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKey = new SchemeApiKey() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                    apiSecret = new SchemeApiSecret() {{
+                    apiSecret = new SchemeAPISecret() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BuyANumberRequest req = new BuyANumberRequest() {{
                 request = new NumberDetails() {{
-                    country = "sit";
-                    msisdn = "voluptas";
-                    targetApiKey = "culpa";
+                    country = "GB";
+                    msisdn = "447700900000";
+                    targetApiKey = "1a2345b7";
                 }};
-            }};
+            }};            
 
             BuyANumberResponse res = sdk.buyANumber(req);
 

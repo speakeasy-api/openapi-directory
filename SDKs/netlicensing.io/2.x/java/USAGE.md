@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateLicenseSecurity;
+import org.openapis.openapi.models.operations.CreateLicenseRequestBody;
+import org.openapis.openapi.models.operations.CreateLicenseRequest;
+import org.openapis.openapi.models.operations.CreateLicenseResponse;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateLicenseRequest req = new CreateLicenseRequest() {{
                 security = new CreateLicenseSecurity() {{
@@ -21,21 +25,21 @@ public class Application {
                 }};
                 request = new CreateLicenseRequestBody() {{
                     active = false;
-                    currency = "voluptas";
-                    hidden = true;
-                    licenseTemplateNumber = "expedita";
-                    licenseeNumber = "consequuntur";
-                    name = "dolor";
-                    number = "expedita";
-                    parentfeature = "voluptas";
-                    price = 88.099998;
-                    quantity = "nihil";
-                    startDate = "2004-06-02T10:14:12Z";
-                    timeVolume = "voluptatum";
-                    timeVolumePeriod = "et";
-                    usedQuantity = "ut";
+                    currency = "corrupti";
+                    hidden = false;
+                    licenseTemplateNumber = "provident";
+                    licenseeNumber = "distinctio";
+                    name = "quibusdam";
+                    number = "unde";
+                    parentfeature = "nulla";
+                    price = 5448.83;
+                    quantity = "illum";
+                    startDate = "2022-05-18T09:34:54.894Z";
+                    timeVolume = "deserunt";
+                    timeVolumePeriod = "suscipit";
+                    usedQuantity = "iure";
                 }};
-            }};
+            }};            
 
             CreateLicenseResponse res = sdk.license.createLicense(req);
 

@@ -2,25 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BranchControllerGetBranchesPathParams;
+import org.openapis.openapi.models.operations.BranchControllerGetBranchesQueryParams;
+import org.openapis.openapi.models.operations.BranchControllerGetBranchesRequest;
+import org.openapis.openapi.models.operations.BranchControllerGetBranchesResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BranchControllerGetBranchesRequest req = new BranchControllerGetBranchesRequest() {{
                 pathParams = new BranchControllerGetBranchesPathParams() {{
-                    shortName = "sit";
+                    shortName = "corrupti";
                 }};
                 queryParams = new BranchControllerGetBranchesQueryParams() {{
-                    count = 2259404117704393152;
-                    offset = 6050128673802995827;
+                    count = 592845;
+                    offset = 715190;
                 }};
-            }};
+            }};            
 
             BranchControllerGetBranchesResponse res = sdk.branchController.branchControllerGetBranches(req);
 

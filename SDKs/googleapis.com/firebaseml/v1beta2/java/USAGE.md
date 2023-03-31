@@ -2,15 +2,27 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateSecurity;
+import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreatePathParams;
+import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateQueryParams;
+import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateRequest;
+import org.openapis.openapi.models.operations.FirebasemlProjectsModelsCreateResponse;
+import org.openapis.openapi.models.shared.ModelInput;
+import org.openapis.openapi.models.shared.TfLiteModelInput;
+import org.openapis.openapi.models.shared.ModelState;
+import org.openapis.openapi.models.shared.Status;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FirebasemlProjectsModelsCreateRequest req = new FirebasemlProjectsModelsCreateRequest() {{
                 security = new FirebasemlProjectsModelsCreateSecurity() {{
@@ -22,57 +34,56 @@ public class Application {
                     }};
                 }};
                 pathParams = new FirebasemlProjectsModelsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new FirebasemlProjectsModelsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new ModelInput() {{
-                    displayName = "dicta";
-                    name = "debitis";
+                    displayName = "suscipit";
+                    name = "iure";
                     state = new ModelState() {{
-                        published = true;
+                        published = false;
                         validationError = new Status() {{
-                            code = 2339563716805116249;
-                            details = new java.util.HashMap<String, Object>[]() {{
+                            code = 297534;
+                            details = new java.util.HashMap<String, Object>[]{{
                                 add(new java.util.HashMap<String, Object>() {{
-                                    put("et", "voluptate");
-                                    put("iste", "vitae");
-                                    put("totam", "dolores");
+                                    put("delectus", "tempora");
                                 }}),
                                 add(new java.util.HashMap<String, Object>() {{
-                                    put("debitis", "vel");
-                                    put("odio", "dolore");
-                                    put("id", "aspernatur");
+                                    put("molestiae", "minus");
+                                    put("placeat", "voluptatum");
                                 }}),
                                 add(new java.util.HashMap<String, Object>() {{
-                                    put("totam", "commodi");
-                                    put("quis", "est");
-                                    put("aut", "odit");
+                                    put("excepturi", "nisi");
+                                    put("recusandae", "temporibus");
+                                }}),
+                                add(new java.util.HashMap<String, Object>() {{
+                                    put("quis", "veritatis");
                                 }}),
                             }};
-                            message = "non";
+                            message = "deserunt";
                         }};
                     }};
-                    tags = new String[]() {{
-                        add("omnis"),
+                    tags = new String[]{{
+                        add("ipsam"),
                     }};
                     tfliteModel = new TfLiteModelInput() {{
-                        automlModel = "aut";
-                        gcsTfliteUri = "illo";
+                        automlModel = "repellendus";
+                        gcsTfliteUri = "sapiente";
                     }};
                 }};
-            }};
+            }};            
 
             FirebasemlProjectsModelsCreateResponse res = sdk.projects.firebasemlProjectsModelsCreate(req);
 

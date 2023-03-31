@@ -2,29 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.RotoballerArticlesFormatEnum;
+import org.openapis.openapi.models.operations.RotoballerArticlesPathParams;
+import org.openapis.openapi.models.operations.RotoballerArticlesRequest;
+import org.openapis.openapi.models.operations.RotoballerArticlesResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyHeader = new SchemeApiKeyHeader() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyHeader = new SchemeAPIKeyHeader() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             RotoballerArticlesRequest req = new RotoballerArticlesRequest() {{
                 pathParams = new RotoballerArticlesPathParams() {{
-                    format = "xml";
+                    format = "json";
                 }};
-            }};
+            }};            
 
             RotoballerArticlesResponse res = sdk.rotoballerArticles(req);
 

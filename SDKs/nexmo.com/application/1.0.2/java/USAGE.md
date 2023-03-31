@@ -2,32 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateApplicationRequestBodyTypeEnum;
+import org.openapis.openapi.models.operations.CreateApplicationRequestBody;
+import org.openapis.openapi.models.operations.CreateApplicationRequest;
+import org.openapis.openapi.models.operations.CreateApplicationResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateApplicationRequest req = new CreateApplicationRequest() {{
                 request = new CreateApplicationRequestBody() {{
-                    answerMethod = "sit";
-                    answerUrl = "voluptas";
-                    apiKey = "culpa";
-                    apiSecret = "expedita";
-                    eventMethod = "consequuntur";
-                    eventUrl = "dolor";
-                    inboundMethod = "expedita";
-                    inboundUrl = "voluptas";
-                    name = "fugit";
-                    statusMethod = "et";
-                    statusUrl = "nihil";
-                    type = "messages";
+                    answerMethod = "GET";
+                    answerUrl = "https://example.com/webhooks/answer";
+                    apiKey = "ap1k3y";
+                    apiSecret = "230e6cf0709417176df1b4fc1e083adc";
+                    eventMethod = "POST";
+                    eventUrl = "https://example.com/webhooks/event";
+                    inboundMethod = "POST";
+                    inboundUrl = "https://example.com/webhooks/inbound";
+                    name = "My Application";
+                    statusMethod = "POST";
+                    statusUrl = "https://example.com/webhooks/status";
+                    type = "voice";
                 }};
-            }};
+            }};            
 
             CreateApplicationResponse res = sdk.createApplication(req);
 

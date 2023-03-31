@@ -2,28 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPISecurity;
+import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIPathParams;
+import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIRequest;
+import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIResponse;
+import org.openapis.openapi.models.shared.SchemeAPIKey;
+import org.openapis.openapi.models.shared.SchemeClientID;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            ImporterExporterCodeVerificationApiRequest req = new ImporterExporterCodeVerificationApiRequest() {{
-                security = new ImporterExporterCodeVerificationApiSecurity() {{
-                    apiKey = new SchemeApiKey() {{
+            ImporterExporterCodeVerificationAPIRequest req = new ImporterExporterCodeVerificationAPIRequest() {{
+                security = new ImporterExporterCodeVerificationAPISecurity() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
-                pathParams = new ImporterExporterCodeVerificationApiPathParams() {{
-                    iec = "sit";
+                pathParams = new ImporterExporterCodeVerificationAPIPathParams() {{
+                    iec = "corrupti";
                 }};
-            }};
+            }};            
 
-            ImporterExporterCodeVerificationApiResponse res = sdk.apIs.importerExporterCodeVerificationApi(req);
+            ImporterExporterCodeVerificationAPIResponse res = sdk.apIs.importerExporterCodeVerificationAPI(req);
 
             if (res.importerExporterCodeVerificationAPI200ApplicationJSONObject.isPresent()) {
                 // handle response

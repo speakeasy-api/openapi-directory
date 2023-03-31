@@ -2,45 +2,51 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateActivityXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateActivityHeaders;
+import org.openapis.openapi.models.operations.CreateActivityRequest;
+import org.openapis.openapi.models.operations.CreateActivityResponse;
+import org.openapis.openapi.models.shared.CreateActivityInput;
+import org.openapis.openapi.models.shared.Tag;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateActivityRequest req = new CreateActivityRequest() {{
                 headers = new CreateActivityHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSStepFunctions.CreateActivity";
                 }};
                 request = new CreateActivityInput() {{
-                    name = "fugit";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    name = "illum";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "nihil";
-                            value = "rerum";
+                            key = "error";
+                            value = "deserunt";
+                        }}),
+                        add(new Tag() {{
+                            key = "suscipit";
+                            value = "iure";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateActivityResponse res = sdk.createActivity(req);
 

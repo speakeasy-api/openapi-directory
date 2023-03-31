@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,77 +15,76 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateApiHeaders;
+import org.openapis.openapi.models.operations.CreateApiRequestBodyCorsConfiguration;
+import org.openapis.openapi.models.operations.CreateApiRequestBodyProtocolTypeEnum;
+import org.openapis.openapi.models.operations.CreateApiRequestBody;
+import org.openapis.openapi.models.operations.CreateApiRequest;
+import org.openapis.openapi.models.operations.CreateApiResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateApiRequest req = new CreateApiRequest() {{
                 headers = new CreateApiHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateApiRequestBody() {{
-                    apiKeySelectionExpression = "voluptas";
+                    apiKeySelectionExpression = "illum";
                     corsConfiguration = new CreateApiRequestBodyCorsConfiguration() {{
-                        allowCredentials = new java.util.HashMap<String, Object>() {{
-                            put("et", "nihil");
+                        allowCredentials = false;
+                        allowHeaders = new String[]{{
+                            add("error"),
+                            add("deserunt"),
                         }};
-                        allowHeaders = new java.util.HashMap<String, Object>() {{
-                            put("dicta", "debitis");
-                            put("voluptatum", "et");
-                            put("ut", "dolorem");
+                        allowMethods = new String[]{{
+                            add("iure"),
+                            add("magnam"),
                         }};
-                        allowMethods = new java.util.HashMap<String, Object>() {{
-                            put("voluptate", "iste");
-                            put("vitae", "totam");
+                        allowOrigins = new String[]{{
+                            add("ipsa"),
+                            add("delectus"),
+                            add("tempora"),
+                            add("suscipit"),
                         }};
-                        allowOrigins = new java.util.HashMap<String, Object>() {{
-                            put("illum", "debitis");
+                        exposeHeaders = new String[]{{
+                            add("minus"),
+                            add("placeat"),
                         }};
-                        exposeHeaders = new java.util.HashMap<String, Object>() {{
-                            put("odio", "dolore");
-                            put("id", "aspernatur");
-                        }};
-                        maxAge = new java.util.HashMap<String, Object>() {{
-                            put("totam", "commodi");
-                            put("quis", "est");
-                            put("aut", "odit");
-                        }};
+                        maxAge = 528895;
                     }};
-                    credentialsArn = "non";
-                    description = "voluptas";
-                    disableExecuteApiEndpoint = true;
+                    credentialsArn = "iusto";
+                    description = "excepturi";
+                    disableExecuteApiEndpoint = false;
                     disableSchemaValidation = false;
-                    name = "illo";
-                    protocolType = "WEBSOCKET";
-                    routeKey = "officiis";
-                    routeSelectionExpression = "autem";
+                    name = "nisi";
+                    protocolType = "HTTP";
+                    routeKey = "temporibus";
+                    routeSelectionExpression = "ab";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("nobis", "odio");
+                        put("veritatis", "deserunt");
+                        put("perferendis", "ipsam");
                     }};
-                    target = "qui";
-                    version = "recusandae";
+                    target = "repellendus";
+                    version = "sapiente";
                 }};
-            }};
+            }};            
 
             CreateApiResponse res = sdk.createApi(req);
 
@@ -175,7 +174,17 @@ public class Application {
 * `updateRouteResponse` - Updates a RouteResponse.
 * `updateStage` - Updates a Stage.
 * `updateVpcLink` - Updates a VPC link.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

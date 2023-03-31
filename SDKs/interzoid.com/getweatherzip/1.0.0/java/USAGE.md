@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetweatherzipcodeQueryParams;
+import org.openapis.openapi.models.operations.GetweatherzipcodeRequest;
+import org.openapis.openapi.models.operations.GetweatherzipcodeResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetweatherzipcodeRequest req = new GetweatherzipcodeRequest() {{
                 queryParams = new GetweatherzipcodeQueryParams() {{
-                    license = "sit";
-                    zip = "voluptas";
+                    license = "corrupti";
+                    zip = "provident";
                 }};
-            }};
+            }};            
 
             GetweatherzipcodeResponse res = sdk.weatherByZipCode.getweatherzipcode(req);
 

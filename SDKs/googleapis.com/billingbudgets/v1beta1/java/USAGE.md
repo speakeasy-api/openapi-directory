@@ -2,15 +2,37 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateSecurityOption2;
+import org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateSecurity;
+import org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreatePathParams;
+import org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateQueryParams;
+import org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateRequest;
+import org.openapis.openapi.models.operations.BillingbudgetsBillingAccountsBudgetsCreateResponse;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1BudgetInput;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1ThresholdRuleSpendBasisEnum;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1FilterCalendarPeriodEnum;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1FilterCreditTypesTreatmentEnum;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1Filter;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1CustomPeriod;
+import org.openapis.openapi.models.shared.GoogleTypeDate;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1BudgetAmount;
+import org.openapis.openapi.models.shared.GoogleTypeMoney;
+import org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1AllUpdatesRule;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BillingbudgetsBillingAccountsBudgetsCreateRequest req = new BillingbudgetsBillingAccountsBudgetsCreateRequest() {{
                 security = new BillingbudgetsBillingAccountsBudgetsCreateSecurity() {{
@@ -24,109 +46,110 @@ public class Application {
                     }};
                 }};
                 pathParams = new BillingbudgetsBillingAccountsBudgetsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new BillingbudgetsBillingAccountsBudgetsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GoogleCloudBillingBudgetsV1beta1CreateBudgetRequestInput() {{
                     budget = new GoogleCloudBillingBudgetsV1beta1BudgetInput() {{
                         allUpdatesRule = new GoogleCloudBillingBudgetsV1beta1AllUpdatesRule() {{
                             disableDefaultIamRecipients = false;
-                            monitoringNotificationChannels = new String[]() {{
-                                add("voluptatum"),
+                            monitoringNotificationChannels = new String[]{{
+                                add("iure"),
+                                add("magnam"),
                             }};
-                            pubsubTopic = "et";
-                            schemaVersion = "ut";
+                            pubsubTopic = "debitis";
+                            schemaVersion = "ipsa";
                         }};
                         amount = new GoogleCloudBillingBudgetsV1beta1BudgetAmount() {{
                             lastPeriodAmount = new java.util.HashMap<String, Object>() {{
-                                put("et", "voluptate");
-                                put("iste", "vitae");
-                                put("totam", "dolores");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
+                                put("iusto", "excepturi");
                             }};
                             specifiedAmount = new GoogleTypeMoney() {{
-                                currencyCode = "illum";
-                                nanos = 6392442863481646880;
-                                units = "vel";
+                                currencyCode = "nisi";
+                                nanos = 925597;
+                                units = "temporibus";
                             }};
                         }};
                         budgetFilter = new GoogleCloudBillingBudgetsV1beta1Filter() {{
                             calendarPeriod = "CALENDAR_PERIOD_UNSPECIFIED";
-                            creditTypes = new String[]() {{
-                                add("id"),
-                                add("aspernatur"),
+                            creditTypes = new String[]{{
+                                add("veritatis"),
+                                add("deserunt"),
                             }};
                             creditTypesTreatment = "CREDIT_TYPES_TREATMENT_UNSPECIFIED";
                             customPeriod = new GoogleCloudBillingBudgetsV1beta1CustomPeriod() {{
                                 endDate = new GoogleTypeDate() {{
-                                    day = 1395437218309923052;
-                                    month = 6745438398739480977;
-                                    year = 2897681629866238117;
+                                    day = 368241;
+                                    month = 832620;
+                                    year = 957156;
                                 }};
                                 startDate = new GoogleTypeDate() {{
-                                    day = 3398579248012586914;
-                                    month = 5974317550424871033;
-                                    year = 3317123977833389635;
+                                    day = 778157;
+                                    month = 140350;
+                                    year = 870013;
                                 }};
                             }};
                             labels = new java.util.HashMap<String, Object[]>() {{
-                                put("voluptas", new Object[]() {{
-                                    add("aut"),
-                                    add("illo"),
+                                put("maiores", new Object[]{{
+                                    add("quod"),
+                                    add("quod"),
                                 }});
-                                put("sed", new Object[]() {{
-                                    add("autem"),
-                                    add("consectetur"),
+                                put("esse", new Object[]{{
+                                    add("porro"),
+                                    add("dolorum"),
+                                    add("dicta"),
                                 }});
-                                put("nobis", new Object[]() {{
-                                    add("qui"),
+                                put("nam", new Object[]{{
+                                    add("occaecati"),
+                                    add("fugit"),
+                                    add("deleniti"),
+                                }});
+                                put("hic", new Object[]{{
+                                    add("totam"),
+                                    add("beatae"),
+                                    add("commodi"),
+                                    add("molestiae"),
                                 }});
                             }};
-                            projects = new String[]() {{
-                                add("at"),
+                            projects = new String[]{{
+                                add("qui"),
+                                add("impedit"),
+                            }};
+                            services = new String[]{{
+                                add("esse"),
                                 add("ipsum"),
-                                add("eveniet"),
+                                add("excepturi"),
                             }};
-                            services = new String[]() {{
-                                add("sint"),
-                                add("inventore"),
-                            }};
-                            subaccounts = new String[]() {{
-                                add("exercitationem"),
-                                add("aut"),
-                                add("reprehenderit"),
+                            subaccounts = new String[]{{
+                                add("perferendis"),
                             }};
                         }};
-                        displayName = "tempore";
-                        etag = "maiores";
-                        thresholdRules = new openapisdk.models.shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule[]() {{
+                        displayName = "ad";
+                        etag = "natus";
+                        thresholdRules = new org.openapis.openapi.models.shared.GoogleCloudBillingBudgetsV1beta1ThresholdRule[]{{
                             add(new GoogleCloudBillingBudgetsV1beta1ThresholdRule() {{
                                 spendBasis = "CURRENT_SPEND";
-                                thresholdPercent = 23.200001;
-                            }}),
-                            add(new GoogleCloudBillingBudgetsV1beta1ThresholdRule() {{
-                                spendBasis = "FORECASTED_SPEND";
-                                thresholdPercent = 69.199997;
-                            }}),
-                            add(new GoogleCloudBillingBudgetsV1beta1ThresholdRule() {{
-                                spendBasis = "BASIS_UNSPECIFIED";
-                                thresholdPercent = 66.099998;
+                                thresholdPercent = 2223.21;
                             }}),
                         }};
                     }};
                 }};
-            }};
+            }};            
 
             BillingbudgetsBillingAccountsBudgetsCreateResponse res = sdk.billingAccounts.billingbudgetsBillingAccountsBudgetsCreate(req);
 

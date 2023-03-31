@@ -2,15 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesSecurityOption1;
+import org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesSecurityOption2;
+import org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesSecurity;
+import org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesPathParams;
+import org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesQueryParams;
+import org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesRequest;
+import org.openapis.openapi.models.operations.CloudtraceProjectsPatchTracesResponse;
+import org.openapis.openapi.models.shared.Traces;
+import org.openapis.openapi.models.shared.Trace;
+import org.openapis.openapi.models.shared.TraceSpanKindEnum;
+import org.openapis.openapi.models.shared.TraceSpan;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudtraceProjectsPatchTracesRequest req = new CloudtraceProjectsPatchTracesRequest() {{
                 security = new CloudtraceProjectsPatchTracesSecurity() {{
@@ -24,91 +38,90 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudtraceProjectsPatchTracesPathParams() {{
-                    projectId = "sit";
+                    projectId = "corrupti";
                 }};
                 queryParams = new CloudtraceProjectsPatchTracesQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new Traces() {{
-                    traces = new openapisdk.models.shared.Trace[]() {{
+                    traces = new org.openapis.openapi.models.shared.Trace[]{{
                         add(new Trace() {{
-                            projectId = "debitis";
-                            spans = new openapisdk.models.shared.TraceSpan[]() {{
+                            projectId = "iure";
+                            spans = new org.openapis.openapi.models.shared.TraceSpan[]{{
                                 add(new TraceSpan() {{
-                                    endTime = "et";
-                                    kind = "RPC_CLIENT";
-                                    labels = new java.util.HashMap<String, String>() {{
-                                        put("et", "voluptate");
-                                        put("iste", "vitae");
-                                        put("totam", "dolores");
-                                    }};
-                                    name = "illum";
-                                    parentSpanId = "debitis";
-                                    spanId = "vel";
-                                    startTime = "odio";
-                                }}),
-                            }};
-                            traceId = "dolore";
-                        }}),
-                        add(new Trace() {{
-                            projectId = "id";
-                            spans = new openapisdk.models.shared.TraceSpan[]() {{
-                                add(new TraceSpan() {{
-                                    endTime = "accusantium";
-                                    kind = "RPC_CLIENT";
-                                    labels = new java.util.HashMap<String, String>() {{
-                                        put("quis", "est");
-                                        put("aut", "odit");
-                                    }};
-                                    name = "non";
-                                    parentSpanId = "voluptas";
-                                    spanId = "omnis";
-                                    startTime = "aut";
-                                }}),
-                            }};
-                            traceId = "illo";
-                        }}),
-                        add(new Trace() {{
-                            projectId = "sed";
-                            spans = new openapisdk.models.shared.TraceSpan[]() {{
-                                add(new TraceSpan() {{
-                                    endTime = "autem";
+                                    endTime = "debitis";
                                     kind = "SPAN_KIND_UNSPECIFIED";
                                     labels = new java.util.HashMap<String, String>() {{
-                                        put("odio", "qui");
+                                        put("tempora", "suscipit");
+                                        put("molestiae", "minus");
+                                        put("placeat", "voluptatum");
+                                        put("iusto", "excepturi");
                                     }};
-                                    name = "recusandae";
+                                    name = "nisi";
+                                    parentSpanId = "recusandae";
+                                    spanId = "temporibus";
+                                    startTime = "ab";
+                                }}),
+                                add(new TraceSpan() {{
+                                    endTime = "quis";
+                                    kind = "SPAN_KIND_UNSPECIFIED";
+                                    labels = new java.util.HashMap<String, String>() {{
+                                        put("perferendis", "ipsam");
+                                        put("repellendus", "sapiente");
+                                        put("quo", "odit");
+                                    }};
+                                    name = "at";
                                     parentSpanId = "at";
-                                    spanId = "ipsum";
-                                    startTime = "eveniet";
-                                }}),
-                                add(new TraceSpan() {{
-                                    endTime = "modi";
-                                    kind = "SPAN_KIND_UNSPECIFIED";
-                                    labels = new java.util.HashMap<String, String>() {{
-                                        put("ut", "exercitationem");
-                                    }};
-                                    name = "aut";
-                                    parentSpanId = "reprehenderit";
-                                    spanId = "tempore";
-                                    startTime = "maiores";
+                                    spanId = "maiores";
+                                    startTime = "molestiae";
                                 }}),
                             }};
-                            traceId = "incidunt";
+                            traceId = "quod";
+                        }}),
+                        add(new Trace() {{
+                            projectId = "quod";
+                            spans = new org.openapis.openapi.models.shared.TraceSpan[]{{
+                                add(new TraceSpan() {{
+                                    endTime = "totam";
+                                    kind = "RPC_CLIENT";
+                                    labels = new java.util.HashMap<String, String>() {{
+                                        put("dicta", "nam");
+                                        put("officia", "occaecati");
+                                        put("fugit", "deleniti");
+                                    }};
+                                    name = "hic";
+                                    parentSpanId = "optio";
+                                    spanId = "totam";
+                                    startTime = "beatae";
+                                }}),
+                                add(new TraceSpan() {{
+                                    endTime = "commodi";
+                                    kind = "RPC_SERVER";
+                                    labels = new java.util.HashMap<String, String>() {{
+                                        put("qui", "impedit");
+                                        put("cum", "esse");
+                                    }};
+                                    name = "ipsum";
+                                    parentSpanId = "excepturi";
+                                    spanId = "aspernatur";
+                                    startTime = "perferendis";
+                                }}),
+                            }};
+                            traceId = "ad";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CloudtraceProjectsPatchTracesResponse res = sdk.projects.cloudtraceProjectsPatchTraces(req);
 

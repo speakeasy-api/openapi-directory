@@ -2,48 +2,50 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.InvokeEndpointPathParams;
+import org.openapis.openapi.models.operations.InvokeEndpointHeaders;
+import org.openapis.openapi.models.operations.InvokeEndpointRequestBody;
+import org.openapis.openapi.models.operations.InvokeEndpointRequest;
+import org.openapis.openapi.models.operations.InvokeEndpointResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             InvokeEndpointRequest req = new InvokeEndpointRequest() {{
                 pathParams = new InvokeEndpointPathParams() {{
-                    endpointName = "sit";
+                    endpointName = "corrupti";
                 }};
                 headers = new InvokeEndpointHeaders() {{
-                    accept = "voluptas";
-                    contentType = "culpa";
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
-                    xAmznSageMakerCustomAttributes = "nihil";
-                    xAmznSageMakerInferenceId = "rerum";
-                    xAmznSageMakerTargetContainerHostname = "dicta";
+                    accept = "provident";
+                    contentType = "distinctio";
+                    xAmzAlgorithm = "quibusdam";
+                    xAmzContentSha256 = "unde";
+                    xAmzCredential = "nulla";
+                    xAmzDate = "corrupti";
+                    xAmzSecurityToken = "illum";
+                    xAmzSignature = "vel";
+                    xAmzSignedHeaders = "error";
+                    xAmznSageMakerCustomAttributes = "deserunt";
+                    xAmznSageMakerEnableExplanations = "suscipit";
+                    xAmznSageMakerInferenceId = "iure";
+                    xAmznSageMakerTargetContainerHostname = "magnam";
                     xAmznSageMakerTargetModel = "debitis";
-                    xAmznSageMakerTargetVariant = "voluptatum";
+                    xAmznSageMakerTargetVariant = "ipsa";
                 }};
                 request = new InvokeEndpointRequestBody() {{
-                    body = "et";
+                    body = "delectus";
                 }};
-            }};
+            }};            
 
             InvokeEndpointResponse res = sdk.invokeEndpoint(req);
 

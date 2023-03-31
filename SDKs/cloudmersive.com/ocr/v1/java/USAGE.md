@@ -2,15 +2,21 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationSecurity;
+import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationHeaders;
+import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationRequestBodyImageFile;
+import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationRequestBody;
+import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationRequest;
+import org.openapis.openapi.models.operations.ImageOcrImageLinesWithLocationResponse;
+import org.openapis.openapi.models.shared.SchemeApikey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ImageOcrImageLinesWithLocationRequest req = new ImageOcrImageLinesWithLocationRequest() {{
                 security = new ImageOcrImageLinesWithLocationSecurity() {{
@@ -19,16 +25,16 @@ public class Application {
                     }};
                 }};
                 headers = new ImageOcrImageLinesWithLocationHeaders() {{
-                    language = "sit";
-                    preprocessing = "voluptas";
+                    language = "corrupti";
+                    preprocessing = "provident";
                 }};
                 request = new ImageOcrImageLinesWithLocationRequestBody() {{
                     imageFile = new ImageOcrImageLinesWithLocationRequestBodyImageFile() {{
-                        content = "culpa".getBytes();
-                        imageFile = "expedita";
+                        content = "distinctio".getBytes();
+                        imageFile = "quibusdam";
                     }};
                 }};
-            }};
+            }};            
 
             ImageOcrImageLinesWithLocationResponse res = sdk.imageOcr.imageOcrImageLinesWithLocation(req);
 

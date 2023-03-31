@@ -2,27 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAccessTokensAccessTokensPathParams;
+import org.openapis.openapi.models.operations.GetAccessTokensAccessTokensQueryParams;
+import org.openapis.openapi.models.operations.GetAccessTokensAccessTokensRequest;
+import org.openapis.openapi.models.operations.GetAccessTokensAccessTokensResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAccessTokensAccessTokensRequest req = new GetAccessTokensAccessTokensRequest() {{
                 pathParams = new GetAccessTokensAccessTokensPathParams() {{
-                    accessTokens = "sit";
+                    accessTokens = "corrupti";
                 }};
                 queryParams = new GetAccessTokensAccessTokensQueryParams() {{
-                    callback = "voluptas";
-                    filter = "culpa";
-                    page = 501233450539197794;
-                    pagesize = 3390393562759376202;
+                    callback = "provident";
+                    filter = "distinctio";
+                    page = 844266;
+                    pagesize = 602763;
                 }};
-            }};
+            }};            
 
             GetAccessTokensAccessTokensResponse res = sdk.getAccessTokensAccessTokens(req);
 

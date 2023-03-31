@@ -2,27 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAccountHoldersIdSecurity;
+import org.openapis.openapi.models.operations.GetAccountHoldersIdPathParams;
+import org.openapis.openapi.models.operations.GetAccountHoldersIdRequest;
+import org.openapis.openapi.models.operations.GetAccountHoldersIdResponse;
+import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAccountHoldersIdRequest req = new GetAccountHoldersIdRequest() {{
                 security = new GetAccountHoldersIdSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
+                        apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 pathParams = new GetAccountHoldersIdPathParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
             GetAccountHoldersIdResponse res = sdk.accountHolders.getAccountHoldersId(req);
 

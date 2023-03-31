@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity;
+import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreatePathParams;
+import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateQueryParams;
+import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateRequest;
+import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateResponse;
+import org.openapis.openapi.models.shared.ChannelConnectionInput;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             EventarcProjectsLocationsChannelConnectionsCreateRequest req = new EventarcProjectsLocationsChannelConnectionsCreateRequest() {{
                 security = new EventarcProjectsLocationsChannelConnectionsCreateSecurity() {{
@@ -22,28 +31,28 @@ public class Application {
                     }};
                 }};
                 pathParams = new EventarcProjectsLocationsChannelConnectionsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new EventarcProjectsLocationsChannelConnectionsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    channelConnectionId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    channelConnectionId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new ChannelConnectionInput() {{
-                    activationToken = "debitis";
-                    channel = "voluptatum";
-                    name = "et";
+                    activationToken = "iure";
+                    channel = "magnam";
+                    name = "debitis";
                 }};
-            }};
+            }};            
 
             EventarcProjectsLocationsChannelConnectionsCreateResponse res = sdk.projects.eventarcProjectsLocationsChannelConnectionsCreate(req);
 

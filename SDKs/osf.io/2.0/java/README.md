@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,15 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AddonsListResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AddonsListResponse res = sdk.addons.addonsList();
 
@@ -39,22 +39,23 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Addons
+
+### addons
 
 * `addonsList` - List all addons
 
-### Base
+### base
 
 * `baseRead` - Root
 
-### Citations
+### citations
 
 * `citationsStylesList` - List all citation styles
 * `citationsStylesRead` - Retrieve a citation style
 
-### Collections
+### collections
 
-* `collectionsAddMetadata` - Add Metadata or Subjects to a Entitiy in a Collection
+* `collectionsAddMetadata` - Add Metadata or Subjects to a Entity in a Collection
 * `collectionsCollectedMetadata` - Retrieve subject data for a specific piece of metadata info for a collection
 * `collectionsCreate` - Create a Collection
 * `collectionsDelete` - Delete a Collection
@@ -76,20 +77,34 @@ public class Application {
 * `collectionsMetadataSubjectsRelationships` - Retrieve subject metadata for a specific piece of metadata in a collection
 * `collectionsMetadataSubjectsRelationshipsUpdate` - Update subjects for a specific piece of metadata in a collection
 
-### Comments
+### comments
 
 * `commentsDelete` - Delete a comment
 * `commentsPut` - Update a comment
 * `commentsRead` - Retrieve a comment
 
-### Files
+### draftRegistrations
+
+* `deleteDraftRegistrationsDraftId` - Delete a draft registration
+* `draftRegistrationContributorsCreate` - Add a contributor to a Draft Registration
+* `draftRegistrationContributorsList` - Retreive a list Contributors from a Draft Registration
+* `draftRegistrationsCreate` - Create a Draft Registration
+* `draftRegistrationsRead` - Retrieve a list of Draft Registrations
+* `getDraftRegistrationsDraftId` - Retrieve a Draft Registration
+* `getDraftRegistrationsDraftIdContributorsUserId` - Retreive a Contributor from a Draft Registration
+* `getDraftRegistrationsDraftIdInstitutions` - Retrieve Institutions afilliated with a Draft Registration
+* `nodesDraftRegistrationsRead` - Retrieve a Draft Registration
+* `nodesDraftRegistrationsSubjects` - Retrieve Subjects associated with a Draft Registration
+* `patchDraftRegistrationsDraftId` - Update a Draft Registration
+
+### files
 
 * `filesDetail` - Retrieve a file
 * `filesPatch` - Update a file
 * `filesVersionDetail` - Retrieve a file version
 * `filesVersions` - List all file versions
 
-### Institutions
+### institutions
 
 * `institutionsDetail` - Retrieve an institution
 * `institutionsList` - List all institutions
@@ -97,22 +112,17 @@ public class Application {
 * `institutionsRegistrationList` - List all affiliated registrations
 * `institutionsUsersList` - List all affiliated users
 
-### Licenses
+### licenses
 
 * `licenseList` - List all licenses
 * `licensesRead` - Retrieve a license
 
-### Logs
+### logs
 
 * `logsActions` - Actions
 * `logsRead` - Retrieve a log
 
-### Metaschemas
-
-* `metaschemasList` - List all metaschemas
-* `metaschemasRead` - Retrieve a metaschema
-
-### Nodes
+### nodes
 
 * `nodesAddonRead` - Retrieve an addon
 * `nodesAddonsFoldersList` - List all addon folders
@@ -130,11 +140,10 @@ public class Application {
 * `nodesContributorsRead` - Retrieve a contributor
 * `nodesCreate` - Create a node
 * `nodesDelete` - Delete a node
-* `nodesDraftRegistrationsCreate` - Create a draft registration
+* `nodesDraftRegistrationsCreate` - Create a draft registration based on your current project Node.
 * `nodesDraftRegistrationsDelete` - Delete a draft registration
 * `nodesDraftRegistrationsList` - List all draft registrations
 * `nodesDraftRegistrationsPartialUpdate` - Update a draft registration
-* `nodesDraftRegistrationsRead` - Retrieve a draft registration
 * `nodesFilesList` - List all node files
 * `nodesFilesRead` - Retrieve a file
 * `nodesForksCreate` - Create a fork of this node
@@ -155,7 +164,7 @@ public class Application {
 * `nodesViewOnlyLinksRead` - Retrieve a view only link
 * `nodesWikisList` - List all wikis
 
-### Preprint Providers
+### preprintProviders
 
 * `preprintProviderDetail` - Retrieve a preprint provider
 * `preprintProviderLicensesList` - List all licenses
@@ -163,16 +172,30 @@ public class Application {
 * `preprintProviderTaxonomiesList` - List all taxonomies
 * `preprintProvidersPreprintsList` - List all preprints
 
-### Preprints
+### preprints
 
+* `preprintsBibliographicContributorsList` - List all Bibliographic Contributors
 * `preprintsCitationList` - Retrieve citation details
 * `preprintsCitationRead` - Retrieve a styled citation
+* `preprintsContributorRead` - Retrieve a contributor
+* `preprintsContributorsCreate` - Create a Contributor
+* `preprintsContributorsList` - List all Contributors for a Preprint
 * `preprintsCreate` - Create a preprint
 * `preprintsList` - List all preprints
 * `preprintsPartialUpdate` - Update a preprint
 * `preprintsRead` - Retrieve a preprint
 
-### Registrations
+### registrationSchemaBlocks
+
+* `getSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockId` - Retrieve a Registration Schema Block
+* `schemaResponseBlocksRead` - Retrieve a list of Registration Schema Blocks for a Schema Response
+
+### registrationSchemas
+
+* `registrationSchemaRead` - Retrieve a Registration Schema
+* `registrationSchemasList` - Retrieve a list of Registration Schemas
+
+### registrations
 
 * `registrationsChildrenList` - List all child registrations
 * `registrationsCitationRead` - Retrieve a citation
@@ -196,12 +219,26 @@ public class Application {
 * `registrationsViewOnlyLinksRead` - Retrieve a view only link
 * `registrationsWikisList` - List all wikis
 
-### Taxonomies
+### schemaResponseActions
+
+* `getSchemaResponsesSchemaResponseIdActionsSchemaResponseActionId` - A Schema Response Action from a Schema Response
+* `postSchemaResponsesSchemaResponseIdActions` - Create a new Schema Response Action
+* `schemaResponseActionRead` - Retrieve a list of Schema Response Actions for a Schema Response
+
+### schemaResponses
+
+* `schemaResponseDelete` - Delete a Incomplete Schema Response
+* `schemaResponsePatch` - Update a Registration's Schema Response
+* `schemaResponsePpost` - Create a new Schema Response
+* `schemaResponsesList` - List all Schema Responses
+* `schemaResponsesRead` - Retrieve a Schema Response
+
+### taxonomies
 
 * `taxonomiesList` - List all taxonomies
 * `taxonomiesRead` - Retrieve a taxonomy
 
-### Users
+### users
 
 * `usersAddonAccountsList` - List all addon accounts
 * `usersAddonAccountsRead` - Retrieve an addon account
@@ -215,16 +252,26 @@ public class Application {
 * `usersRead` - Retrieve a user
 * `usersRegistrationsList` - List all registrations
 
-### View Only Links
+### viewOnlyLinks
 
 * `viewOnlyLinksNodeList` - List all nodes
 * `viewOnlyLinksRead` - Retrieve a view only link
 
-### Wikis
+### wikis
 
 * `wikiContent` - Retrieve the Content of a Wiki
 * `wikiRead` - Retrieve a Wiki
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

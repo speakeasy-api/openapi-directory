@@ -2,36 +2,41 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListPathParams;
+import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListQueryParams;
+import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListRequest;
+import org.openapis.openapi.models.operations.AdmobAccountsAdSourcesListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AdmobAccountsAdSourcesListRequest req = new AdmobAccountsAdSourcesListRequest() {{
                 pathParams = new AdmobAccountsAdSourcesListPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new AdmobAccountsAdSourcesListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    pageSize = 8274930044578894929;
-                    pageToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    pageSize = 423655;
+                    pageToken = "error";
+                    prettyPrint = false;
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             AdmobAccountsAdSourcesListResponse res = sdk.accounts.admobAccountsAdSourcesList(req);
 

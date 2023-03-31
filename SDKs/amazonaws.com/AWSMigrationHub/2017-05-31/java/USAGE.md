@@ -2,45 +2,47 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateCreatedArtifactXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AssociateCreatedArtifactHeaders;
+import org.openapis.openapi.models.operations.AssociateCreatedArtifactRequest;
+import org.openapis.openapi.models.operations.AssociateCreatedArtifactResponse;
+import org.openapis.openapi.models.shared.AssociateCreatedArtifactRequest;
+import org.openapis.openapi.models.shared.CreatedArtifact;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateCreatedArtifactRequest req = new AssociateCreatedArtifactRequest() {{
                 headers = new AssociateCreatedArtifactHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSMigrationHub.AssociateCreatedArtifact";
                 }};
                 request = new AssociateCreatedArtifactRequest() {{
                     createdArtifact = new CreatedArtifact() {{
-                        description = "fugit";
-                        name = "et";
+                        description = "illum";
+                        name = "vel";
                     }};
-                    dryRun = true;
-                    migrationTaskName = "rerum";
-                    progressUpdateStream = "dicta";
+                    dryRun = false;
+                    migrationTaskName = "error";
+                    progressUpdateStream = "deserunt";
                 }};
-            }};
+            }};            
 
             AssociateCreatedArtifactResponse res = sdk.associateCreatedArtifact(req);
 

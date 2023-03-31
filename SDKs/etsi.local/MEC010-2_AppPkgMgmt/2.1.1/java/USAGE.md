@@ -2,30 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AppDGETPathParams;
+import org.openapis.openapi.models.operations.AppDGETQueryParams;
+import org.openapis.openapi.models.operations.AppDGETRequest;
+import org.openapis.openapi.models.operations.AppDGETResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            AppDgetRequest req = new AppDgetRequest() {{
-                pathParams = new AppDgetPathParams() {{
-                    appDId = "sit";
+            AppDGETRequest req = new AppDGETRequest() {{
+                pathParams = new AppDGETPathParams() {{
+                    appDId = "corrupti";
                 }};
-                queryParams = new AppDgetQueryParams() {{
-                    allFields = "voluptas";
-                    excludeDefault = "culpa";
-                    excludeFields = "expedita";
-                    fields = "consequuntur";
-                    filter = "dolor";
+                queryParams = new AppDGETQueryParams() {{
+                    allFields = "provident";
+                    excludeDefault = "distinctio";
+                    excludeFields = "quibusdam";
+                    fields = "unde";
+                    filter = "nulla";
                 }};
-            }};
+            }};            
 
-            AppDgetResponse res = sdk.appPkgm.appDget(req);
+            AppDGETResponse res = sdk.appPkgm.appDGET(req);
 
             if (res.body.isPresent()) {
                 // handle response

@@ -2,15 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CommentanalyzerCommentsAnalyzeSecurity;
+import org.openapis.openapi.models.operations.CommentanalyzerCommentsAnalyzeQueryParams;
+import org.openapis.openapi.models.operations.CommentanalyzerCommentsAnalyzeRequest;
+import org.openapis.openapi.models.operations.CommentanalyzerCommentsAnalyzeResponse;
+import org.openapis.openapi.models.shared.AnalyzeCommentRequest;
+import org.openapis.openapi.models.shared.AttributeParametersScoreTypeEnum;
+import org.openapis.openapi.models.shared.AttributeParameters;
+import org.openapis.openapi.models.shared.Context;
+import org.openapis.openapi.models.shared.TextEntryTypeEnum;
+import org.openapis.openapi.models.shared.TextEntry;
+import org.openapis.openapi.models.shared.ArticleAndParentComment;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CommentanalyzerCommentsAnalyzeRequest req = new CommentanalyzerCommentsAnalyzeRequest() {{
                 security = new CommentanalyzerCommentsAnalyzeSecurity() {{
@@ -22,57 +36,75 @@ public class Application {
                     }};
                 }};
                 queryParams = new CommentanalyzerCommentsAnalyzeQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new AnalyzeCommentRequest() {{
-                    clientToken = "rerum";
+                    clientToken = "deserunt";
                     comment = new TextEntry() {{
-                        text = "dicta";
-                        type = "TEXT_TYPE_UNSPECIFIED";
+                        text = "suscipit";
+                        type = "PLAIN_TEXT";
                     }};
-                    communityId = "voluptatum";
+                    communityId = "magnam";
                     context = new Context() {{
                         articleAndParentComment = new ArticleAndParentComment() {{
                             article = new TextEntry() {{
-                                text = "et";
-                                type = "HTML";
+                                text = "debitis";
+                                type = "TEXT_TYPE_UNSPECIFIED";
                             }};
                             parentComment = new TextEntry() {{
-                                text = "dolorem";
-                                type = "PLAIN_TEXT";
+                                text = "delectus";
+                                type = "TEXT_TYPE_UNSPECIFIED";
                             }};
                         }};
-                        entries = new openapisdk.models.shared.TextEntry[]() {{
+                        entries = new org.openapis.openapi.models.shared.TextEntry[]{{
                             add(new TextEntry() {{
-                                text = "iste";
-                                type = "TEXT_TYPE_UNSPECIFIED";
+                                text = "molestiae";
+                                type = "HTML";
+                            }}),
+                            add(new TextEntry() {{
+                                text = "placeat";
+                                type = "PLAIN_TEXT";
                             }}),
                         }};
                     }};
-                    doNotStore = true;
-                    languages = new String[]() {{
-                        add("illum"),
+                    doNotStore = false;
+                    dropUnsupportedAttributes = false;
+                    languages = new String[]{{
+                        add("excepturi"),
+                        add("nisi"),
                     }};
-                    requestedAttributes = new java.util.HashMap<String, openapisdk.models.shared.AttributeParameters>() {{
-                        put("vel", new AttributeParameters() {{
-                            scoreThreshold = 20.200001;
-                            scoreType = "STD_DEV_SCORE";
+                    requestedAttributes = new java.util.HashMap<String, org.openapis.openapi.models.shared.AttributeParameters>() {{
+                        put("temporibus", new AttributeParameters() {{
+                            scoreThreshold = 710.36;
+                            scoreType = "PROBABILITY";
+                        }});
+                        put("veritatis", new AttributeParameters() {{
+                            scoreThreshold = 6481.72;
+                            scoreType = "SCORE_TYPE_UNSPECIFIED";
+                        }});
+                        put("ipsam", new AttributeParameters() {{
+                            scoreThreshold = 8326.2;
+                            scoreType = "RAW";
+                        }});
+                        put("quo", new AttributeParameters() {{
+                            scoreThreshold = 1403.5;
+                            scoreType = "RAW";
                         }});
                     }};
-                    sessionId = "aspernatur";
-                    spanAnnotations = true;
+                    sessionId = "at";
+                    spanAnnotations = false;
                 }};
-            }};
+            }};            
 
             CommentanalyzerCommentsAnalyzeResponse res = sdk.comments.commentanalyzerCommentsAnalyze(req);
 

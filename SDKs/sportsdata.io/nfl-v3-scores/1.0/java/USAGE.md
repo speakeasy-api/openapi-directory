@@ -2,29 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AreGamesInProgressFormatEnum;
+import org.openapis.openapi.models.operations.AreGamesInProgressPathParams;
+import org.openapis.openapi.models.operations.AreGamesInProgressRequest;
+import org.openapis.openapi.models.operations.AreGamesInProgressResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyHeader = new SchemeApiKeyHeader() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyHeader = new SchemeAPIKeyHeader() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AreGamesInProgressRequest req = new AreGamesInProgressRequest() {{
                 pathParams = new AreGamesInProgressPathParams() {{
-                    format = "XML";
+                    format = "JSON";
                 }};
-            }};
+            }};            
 
             AreGamesInProgressResponse res = sdk.areGamesInProgress(req);
 

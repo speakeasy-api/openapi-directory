@@ -2,15 +2,41 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FcmProjectsMessagesSendSecurityOption1;
+import org.openapis.openapi.models.operations.FcmProjectsMessagesSendSecurityOption2;
+import org.openapis.openapi.models.operations.FcmProjectsMessagesSendSecurity;
+import org.openapis.openapi.models.operations.FcmProjectsMessagesSendPathParams;
+import org.openapis.openapi.models.operations.FcmProjectsMessagesSendQueryParams;
+import org.openapis.openapi.models.operations.FcmProjectsMessagesSendRequest;
+import org.openapis.openapi.models.operations.FcmProjectsMessagesSendResponse;
+import org.openapis.openapi.models.shared.SendMessageRequest;
+import org.openapis.openapi.models.shared.Message;
+import org.openapis.openapi.models.shared.WebpushConfig;
+import org.openapis.openapi.models.shared.WebpushFcmOptions;
+import org.openapis.openapi.models.shared.Notification;
+import org.openapis.openapi.models.shared.FcmOptions;
+import org.openapis.openapi.models.shared.ApnsConfig;
+import org.openapis.openapi.models.shared.ApnsFcmOptions;
+import org.openapis.openapi.models.shared.AndroidConfigPriorityEnum;
+import org.openapis.openapi.models.shared.AndroidConfig;
+import org.openapis.openapi.models.shared.AndroidNotificationNotificationPriorityEnum;
+import org.openapis.openapi.models.shared.AndroidNotificationVisibilityEnum;
+import org.openapis.openapi.models.shared.AndroidNotification;
+import org.openapis.openapi.models.shared.LightSettings;
+import org.openapis.openapi.models.shared.Color;
+import org.openapis.openapi.models.shared.AndroidFcmOptions;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FcmProjectsMessagesSendRequest req = new FcmProjectsMessagesSendRequest() {{
                 security = new FcmProjectsMessagesSendSecurity() {{
@@ -24,132 +50,140 @@ public class Application {
                     }};
                 }};
                 pathParams = new FcmProjectsMessagesSendPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new FcmProjectsMessagesSendQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new SendMessageRequest() {{
                     message = new Message() {{
                         android = new AndroidConfig() {{
-                            collapseKey = "dicta";
+                            collapseKey = "suscipit";
                             data = new java.util.HashMap<String, String>() {{
-                                put("voluptatum", "et");
+                                put("magnam", "debitis");
+                                put("ipsa", "delectus");
                             }};
                             directBootOk = false;
                             fcmOptions = new AndroidFcmOptions() {{
-                                analyticsLabel = "dolorem";
+                                analyticsLabel = "tempora";
                             }};
                             notification = new AndroidNotification() {{
-                                body = "et";
-                                bodyLocArgs = new String[]() {{
-                                    add("iste"),
+                                body = "suscipit";
+                                bodyLocArgs = new String[]{{
+                                    add("minus"),
+                                    add("placeat"),
                                 }};
-                                bodyLocKey = "vitae";
-                                bypassProxyNotification = true;
-                                channelId = "dolores";
-                                clickAction = "illum";
-                                color = "debitis";
+                                bodyLocKey = "voluptatum";
+                                bypassProxyNotification = false;
+                                channelId = "iusto";
+                                clickAction = "excepturi";
+                                color = "nisi";
                                 defaultLightSettings = false;
                                 defaultSound = false;
-                                defaultVibrateTimings = true;
-                                eventTime = "id";
-                                icon = "aspernatur";
-                                image = "accusantium";
+                                defaultVibrateTimings = false;
+                                eventTime = "recusandae";
+                                icon = "temporibus";
+                                image = "ab";
                                 lightSettings = new LightSettings() {{
                                     color = new Color() {{
-                                        alpha = 45.099998;
-                                        blue = 78.199997;
-                                        green = 0.100000;
-                                        red = 49.099998;
+                                        alpha = 3373.96;
+                                        blue = 871.29;
+                                        green = 6481.72;
+                                        red = 202.18;
                                     }};
-                                    lightOffDuration = "omnis";
-                                    lightOnDuration = "aut";
+                                    lightOffDuration = "ipsam";
+                                    lightOnDuration = "repellendus";
                                 }};
-                                localOnly = true;
-                                notificationCount = 5558237345453186302;
-                                notificationPriority = "PRIORITY_MIN";
-                                sound = "autem";
-                                sticky = true;
-                                tag = "nobis";
-                                ticker = "odio";
-                                title = "qui";
-                                titleLocArgs = new String[]() {{
-                                    add("at"),
-                                    add("ipsum"),
-                                    add("eveniet"),
+                                localOnly = false;
+                                notificationCount = 957156;
+                                notificationPriority = "PRIORITY_HIGH";
+                                sound = "odit";
+                                sticky = false;
+                                tag = "at";
+                                ticker = "at";
+                                title = "Dr.";
+                                titleLocArgs = new String[]{{
+                                    add("quod"),
+                                    add("quod"),
                                 }};
-                                titleLocKey = "modi";
-                                vibrateTimings = new String[]() {{
-                                    add("inventore"),
+                                titleLocKey = "esse";
+                                vibrateTimings = new String[]{{
+                                    add("porro"),
+                                    add("dolorum"),
+                                    add("dicta"),
                                 }};
                                 visibility = "PUBLIC";
                             }};
-                            priority = "NORMAL";
-                            restrictedPackageName = "aut";
-                            ttl = "reprehenderit";
+                            priority = "HIGH";
+                            restrictedPackageName = "occaecati";
+                            ttl = "fugit";
                         }};
                         apns = new ApnsConfig() {{
                             fcmOptions = new ApnsFcmOptions() {{
-                                analyticsLabel = "tempore";
-                                image = "maiores";
+                                analyticsLabel = "deleniti";
+                                image = "hic";
                             }};
                             headers = new java.util.HashMap<String, String>() {{
-                                put("dolor", "beatae");
-                                put("veritatis", "in");
-                                put("et", "omnis");
+                                put("totam", "beatae");
+                                put("commodi", "molestiae");
+                                put("modi", "qui");
+                                put("impedit", "cum");
                             }};
                             payload = new java.util.HashMap<String, Object>() {{
-                                put("ex", "dolores");
+                                put("ipsum", "excepturi");
+                                put("aspernatur", "perferendis");
                             }};
                         }};
-                        condition = "placeat";
+                        condition = "ad";
                         data = new java.util.HashMap<String, String>() {{
-                            put("rerum", "mollitia");
-                            put("voluptas", "quam");
+                            put("sed", "iste");
+                            put("dolor", "natus");
+                            put("laboriosam", "hic");
                         }};
                         fcmOptions = new FcmOptions() {{
-                            analyticsLabel = "reprehenderit";
+                            analyticsLabel = "saepe";
                         }};
-                        name = "qui";
+                        name = "fuga";
                         notification = new Notification() {{
-                            body = "qui";
-                            image = "unde";
-                            title = "in";
+                            body = "in";
+                            image = "corporis";
+                            title = "Miss";
                         }};
-                        token = "autem";
-                        topic = "qui";
+                        token = "iure";
+                        topic = "saepe";
                         webpush = new WebpushConfig() {{
                             data = new java.util.HashMap<String, String>() {{
-                                put("itaque", "ab");
-                                put("neque", "ullam");
-                                put("et", "accusantium");
+                                put("architecto", "ipsa");
+                                put("reiciendis", "est");
+                                put("mollitia", "laborum");
                             }};
                             fcmOptions = new WebpushFcmOptions() {{
-                                analyticsLabel = "esse";
-                                link = "architecto";
+                                analyticsLabel = "dolores";
+                                link = "dolorem";
                             }};
                             headers = new java.util.HashMap<String, String>() {{
-                                put("velit", "cumque");
+                                put("explicabo", "nobis");
+                                put("enim", "omnis");
                             }};
                             notification = new java.util.HashMap<String, Object>() {{
-                                put("sunt", "voluptates");
+                                put("minima", "excepturi");
+                                put("accusantium", "iure");
                             }};
                         }};
                     }};
                     validateOnly = false;
                 }};
-            }};
+            }};            
 
             FcmProjectsMessagesSendResponse res = sdk.projects.fcmProjectsMessagesSend(req);
 

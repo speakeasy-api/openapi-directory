@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetCheckForUpdateQueryParams;
+import org.openapis.openapi.models.operations.GetCheckForUpdateRequest;
+import org.openapis.openapi.models.operations.GetCheckForUpdateResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetCheckForUpdateRequest req = new GetCheckForUpdateRequest() {{
                 queryParams = new GetCheckForUpdateQueryParams() {{
-                    isTestflight = 8717895732742165505;
+                    isTestflight = 548814;
                 }};
-            }};
+            }};            
 
             GetCheckForUpdateResponse res = sdk.getCheckForUpdate(req);
 

@@ -2,51 +2,51 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateAttachmentForObjectQueryParams;
+import org.openapis.openapi.models.operations.CreateAttachmentForObjectRequest;
+import org.openapis.openapi.models.operations.CreateAttachmentForObjectResponse;
+import org.openapis.openapi.models.shared.AttachmentRequestFile;
+import org.openapis.openapi.models.shared.AttachmentRequestResourceSubtypeEnum;
+import org.openapis.openapi.models.shared.AttachmentRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    personalAccessToken = new SchemePersonalAccessToken() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    oauth2 = new SchemeOauth2() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateAttachmentForTaskRequest req = new CreateAttachmentForTaskRequest() {{
-                pathParams = new CreateAttachmentForTaskPathParams() {{
-                    taskGid = "sit";
-                }};
-                queryParams = new CreateAttachmentForTaskQueryParams() {{
-                    limit = 2259404117704393152;
-                    offset = "culpa";
-                    optFields = new String[]() {{
-                        add("consequuntur"),
-                        add("dolor"),
+            CreateAttachmentForObjectRequest req = new CreateAttachmentForObjectRequest() {{
+                queryParams = new CreateAttachmentForObjectQueryParams() {{
+                    optFields = new String[]{{
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
-                    optPretty = true;
+                    optPretty = false;
                 }};
                 request = new AttachmentRequest() {{
+                    connectToApp = false;
                     file = new AttachmentRequestFile() {{
-                        content = "voluptas".getBytes();
-                        file = "fugit";
+                        content = "unde".getBytes();
+                        file = "nulla";
                     }};
-                    name = "et";
-                    resourceSubtype = "asana_file_attachments";
-                    url = "rerum";
+                    name = "corrupti";
+                    parent = "illum";
+                    resourceSubtype = "external";
+                    url = "vel";
                 }};
-            }};
+            }};            
 
-            CreateAttachmentForTaskResponse res = sdk.attachments.createAttachmentForTask(req);
+            CreateAttachmentForObjectResponse res = sdk.attachments.createAttachmentForObject(req);
 
-            if (res.createAttachmentForTask200ApplicationJSONObject.isPresent()) {
+            if (res.createAttachmentForObject200ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

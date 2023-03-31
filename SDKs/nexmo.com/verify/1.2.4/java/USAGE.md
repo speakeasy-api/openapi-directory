@@ -2,28 +2,32 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.VerifyCheckPathParams;
+import org.openapis.openapi.models.operations.VerifyCheckRequest;
+import org.openapis.openapi.models.operations.VerifyCheckResponse;
+import org.openapis.openapi.models.shared.CheckRequest;
+import org.openapis.openapi.models.shared.FormatEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             VerifyCheckRequest req = new VerifyCheckRequest() {{
                 pathParams = new VerifyCheckPathParams() {{
-                    format = "json";
+                    format = "xml";
                 }};
                 request = new CheckRequest() {{
-                    apiKey = "voluptas";
-                    apiSecret = "culpa";
-                    code = "expedita";
-                    ipAddress = "consequuntur";
-                    requestId = "dolor";
+                    apiKey = "abcd1234";
+                    apiSecret = "Sup3rS3cr3t!!";
+                    code = "1234";
+                    ipAddress = "123.0.0.255";
+                    requestId = "abcdef0123456789abcdef0123456789";
                 }};
-            }};
+            }};            
 
             VerifyCheckResponse res = sdk.verifyCheck(req);
 

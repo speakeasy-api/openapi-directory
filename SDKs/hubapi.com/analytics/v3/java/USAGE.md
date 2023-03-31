@@ -2,15 +2,21 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostEventsV3SendSecurity;
+import org.openapis.openapi.models.operations.PostEventsV3SendRequest;
+import org.openapis.openapi.models.operations.PostEventsV3SendResponse;
+import org.openapis.openapi.models.shared.BehavioralEventHttpCompletionRequest;
+import org.openapis.openapi.models.shared.SchemeHapikey;
+import org.openapis.openapi.models.shared.SchemeOauth2Legacy;
+import org.openapis.openapi.models.shared.SchemePrivateAppsLegacy;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostEventsV3SendRequest req = new PostEventsV3SendRequest() {{
                 security = new PostEventsV3SendSecurity() {{
@@ -19,18 +25,18 @@ public class Application {
                     }};
                 }};
                 request = new BehavioralEventHttpCompletionRequest() {{
-                    email = "sit";
-                    eventName = "voluptas";
-                    objectId = "culpa";
-                    occurredAt = "2019-04-21T07:38:14Z";
+                    email = "Larue_Rau85@yahoo.com";
+                    eventName = "corrupti";
+                    objectId = "illum";
+                    occurredAt = "2022-05-18T09:34:54.894Z";
                     properties = new java.util.HashMap<String, String>() {{
-                        put("dolor", "expedita");
-                        put("voluptas", "fugit");
-                        put("et", "nihil");
+                        put("suscipit", "iure");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
-                    utk = "rerum";
+                    utk = "tempora";
                 }};
-            }};
+            }};            
 
             PostEventsV3SendResponse res = sdk.behavioralEventsTracking.postEventsV3Send(req);
 

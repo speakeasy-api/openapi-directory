@@ -2,30 +2,34 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity;
+import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdPathParams;
+import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest;
+import org.openapis.openapi.models.operations.DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse;
+import org.openapis.openapi.models.shared.SchemeBearer;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            DeleteWorkspaceIdMembersMemberIdActivitiesIdRequest req = new DeleteWorkspaceIdMembersMemberIdActivitiesIdRequest() {{
-                security = new DeleteWorkspaceIdMembersMemberIdActivitiesIdSecurity() {{
+            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest req = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdRequest() {{
+                security = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdSecurity() {{
                     bearer = new SchemeBearer() {{
-                        apiKey = "YOUR_API_KEY_HERE";
+                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new DeleteWorkspaceIdMembersMemberIdActivitiesIdPathParams() {{
-                    id = "sit";
-                    memberId = "voluptas";
-                    workspaceId = "culpa";
+                pathParams = new DeleteWorkspaceSlugMembersMemberSlugActivitiesIdPathParams() {{
+                    id = "corrupti";
+                    memberSlug = "provident";
+                    workspaceSlug = "distinctio";
                 }};
-            }};
+            }};            
 
-            DeleteWorkspaceIdMembersMemberIdActivitiesIdResponse res = sdk.activities.deleteWorkspaceIdMembersMemberIdActivitiesId(req);
+            DeleteWorkspaceSlugMembersMemberSlugActivitiesIdResponse res = sdk.activities.deleteWorkspaceSlugMembersMemberSlugActivitiesId(req);
 
             if (res.statusCode == 200) {
                 // handle response

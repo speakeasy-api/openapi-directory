@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PlusActivitiesGetSecurityOption1;
+import org.openapis.openapi.models.operations.PlusActivitiesGetSecurityOption2;
+import org.openapis.openapi.models.operations.PlusActivitiesGetSecurity;
+import org.openapis.openapi.models.operations.PlusActivitiesGetPathParams;
+import org.openapis.openapi.models.operations.PlusActivitiesGetQueryParams;
+import org.openapis.openapi.models.operations.PlusActivitiesGetRequest;
+import org.openapis.openapi.models.operations.PlusActivitiesGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PlusActivitiesGetRequest req = new PlusActivitiesGetRequest() {{
                 security = new PlusActivitiesGetSecurity() {{
@@ -24,18 +33,18 @@ public class Application {
                     }};
                 }};
                 pathParams = new PlusActivitiesGetPathParams() {{
-                    activityId = "sit";
+                    activityId = "corrupti";
                 }};
                 queryParams = new PlusActivitiesGetQueryParams() {{
                     alt = "json";
-                    fields = "culpa";
-                    key = "expedita";
-                    oauthToken = "consequuntur";
+                    fields = "provident";
+                    key = "distinctio";
+                    oauthToken = "quibusdam";
                     prettyPrint = false;
-                    quotaUser = "expedita";
-                    userIp = "voluptas";
+                    quotaUser = "unde";
+                    userIp = "nulla";
                 }};
-            }};
+            }};            
 
             PlusActivitiesGetResponse res = sdk.activities.plusActivitiesGet(req);
 

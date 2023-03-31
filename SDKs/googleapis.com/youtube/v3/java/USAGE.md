@@ -2,15 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurityOption1;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurityOption2;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurity;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertQueryParams;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertRequest;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertResponse;
+import org.openapis.openapi.models.shared.AbuseReport;
+import org.openapis.openapi.models.shared.Entity;
+import org.openapis.openapi.models.shared.RelatedEntity;
+import org.openapis.openapi.models.shared.AbuseType;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             YoutubeAbuseReportsInsertRequest req = new YoutubeAbuseReportsInsertRequest() {{
                 security = new YoutubeAbuseReportsInsertSecurity() {{
@@ -24,53 +37,54 @@ public class Application {
                     }};
                 }};
                 queryParams = new YoutubeAbuseReportsInsertQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    part = new String[]() {{
-                        add("fugit"),
-                        add("et"),
-                        add("nihil"),
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    part = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
-                    prettyPrint = true;
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                    prettyPrint = false;
+                    quotaUser = "iure";
+                    uploadType = "magnam";
+                    uploadProtocol = "debitis";
                 }};
                 request = new AbuseReport() {{
-                    abuseTypes = new openapisdk.models.shared.AbuseType[]() {{
+                    abuseTypes = new org.openapis.openapi.models.shared.AbuseType[]{{
                         add(new AbuseType() {{
-                            id = "ut";
+                            id = "delectus";
                         }}),
                     }};
-                    description = "dolorem";
-                    relatedEntities = new openapisdk.models.shared.RelatedEntity[]() {{
+                    description = "tempora";
+                    relatedEntities = new org.openapis.openapi.models.shared.RelatedEntity[]{{
                         add(new RelatedEntity() {{
                             entity = new Entity() {{
-                                id = "voluptate";
-                                typeId = "iste";
-                                url = "vitae";
+                                id = "molestiae";
+                                typeId = "minus";
+                                url = "placeat";
                             }};
                         }}),
                         add(new RelatedEntity() {{
                             entity = new Entity() {{
-                                id = "totam";
-                                typeId = "dolores";
-                                url = "illum";
+                                id = "voluptatum";
+                                typeId = "iusto";
+                                url = "excepturi";
                             }};
                         }}),
                     }};
                     subject = new Entity() {{
-                        id = "debitis";
-                        typeId = "vel";
-                        url = "odio";
+                        id = "nisi";
+                        typeId = "recusandae";
+                        url = "temporibus";
                     }};
                 }};
-            }};
+            }};            
 
             YoutubeAbuseReportsInsertResponse res = sdk.abuseReports.youtubeAbuseReportsInsert(req);
 

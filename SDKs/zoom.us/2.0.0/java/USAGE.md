@@ -2,29 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AccountPathParams;
+import org.openapis.openapi.models.operations.AccountRequest;
+import org.openapis.openapi.models.operations.AccountResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     oAuth = new SchemeOAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AccountRequest req = new AccountRequest() {{
                 pathParams = new AccountPathParams() {{
-                    accountId = "sit";
+                    accountId = "corrupti";
                 }};
-            }};
+            }};            
 
             AccountResponse res = sdk.accounts.account(req);
 

@@ -2,26 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeleteRiddleSecurity;
+import org.openapis.openapi.models.operations.DeleteRiddleQueryParams;
+import org.openapis.openapi.models.operations.DeleteRiddleRequest;
+import org.openapis.openapi.models.operations.DeleteRiddleResponse;
+import org.openapis.openapi.models.shared.SchemeXFungeneratorsAPISecret;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeleteRiddleRequest req = new DeleteRiddleRequest() {{
                 security = new DeleteRiddleSecurity() {{
-                    xFungeneratorsApiSecret = new SchemeXFungeneratorsApiSecret() {{
+                    xFungeneratorsApiSecret = new SchemeXFungeneratorsAPISecret() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 queryParams = new DeleteRiddleQueryParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
             DeleteRiddleResponse res = sdk.privateRiddles.deleteRiddle(req);
 

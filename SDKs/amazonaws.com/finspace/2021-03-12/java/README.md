@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,54 +15,71 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateEnvironmentHeaders;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodyFederationModeEnum;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodyFederationParameters;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodySuperuserParameters;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequestBody;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequest;
+import org.openapis.openapi.models.operations.CreateEnvironmentResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateEnvironmentRequest req = new CreateEnvironmentRequest() {{
                 headers = new CreateEnvironmentHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateEnvironmentRequestBody() {{
-                    description = "voluptas";
+                    dataBundles = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
+                    }};
+                    description = "iure";
                     federationMode = "FEDERATED";
                     federationParameters = new CreateEnvironmentRequestBodyFederationParameters() {{
-                        applicationCallBackURL = "et";
+                        applicationCallBackURL = "debitis";
                         attributeMap = new java.util.HashMap<String, String>() {{
-                            put("rerum", "dicta");
+                            put("delectus", "tempora");
                         }};
-                        federationProviderName = "debitis";
-                        federationURN = "voluptatum";
-                        samlMetadataDocument = "et";
-                        samlMetadataURL = "ut";
+                        federationProviderName = "suscipit";
+                        federationURN = "molestiae";
+                        samlMetadataDocument = "minus";
+                        samlMetadataURL = "placeat";
                     }};
-                    kmsKeyId = "dolorem";
-                    name = "et";
+                    kmsKeyId = "voluptatum";
+                    name = "iusto";
+                    superuserParameters = new CreateEnvironmentRequestBodySuperuserParameters() {{
+                        emailAddress = "excepturi";
+                        firstName = "Glen";
+                        lastName = "Walsh";
+                    }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("iste", "vitae");
+                        put("ab", "quis");
+                        put("veritatis", "deserunt");
+                        put("perferendis", "ipsam");
+                        put("repellendus", "sapiente");
                     }};
                 }};
-            }};
+            }};            
 
             CreateEnvironmentResponse res = sdk.createEnvironment(req);
 
@@ -88,7 +105,17 @@ public class Application {
 * `tagResource` - Adds metadata tags to a FinSpace resource.
 * `untagResource` - Removes metadata tags from a FinSpace resource.
 * `updateEnvironment` - Update your FinSpace environment.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

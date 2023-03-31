@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AccountArticleReportSecurity;
+import org.openapis.openapi.models.operations.AccountArticleReportQueryParams;
+import org.openapis.openapi.models.operations.AccountArticleReportRequest;
+import org.openapis.openapi.models.operations.AccountArticleReportResponse;
+import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AccountArticleReportRequest req = new AccountArticleReportRequest() {{
                 security = new AccountArticleReportSecurity() {{
@@ -19,9 +23,9 @@ public class Application {
                     }};
                 }};
                 queryParams = new AccountArticleReportQueryParams() {{
-                    groupId = 8717895732742165505;
+                    groupId = 548814;
                 }};
-            }};
+            }};            
 
             AccountArticleReportResponse res = sdk.articles.accountArticleReport(req);
 

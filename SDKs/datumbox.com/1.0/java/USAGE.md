@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AdultContentDetectionRequestBody;
+import org.openapis.openapi.models.operations.AdultContentDetectionRequest;
+import org.openapis.openapi.models.operations.AdultContentDetectionResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AdultContentDetectionRequest req = new AdultContentDetectionRequest() {{
                 request = new AdultContentDetectionRequestBody() {{
-                    apiKey = "sit";
-                    text = "voluptas";
+                    apiKey = "corrupti";
+                    text = "provident";
                 }};
-            }};
+            }};            
 
             AdultContentDetectionResponse res = sdk.documentClassification.adultContentDetection(req);
 

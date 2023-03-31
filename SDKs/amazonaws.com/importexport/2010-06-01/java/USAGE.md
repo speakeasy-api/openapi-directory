@@ -2,40 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETCancelJobActionEnum;
+import org.openapis.openapi.models.operations.GETCancelJobOperationEnum;
+import org.openapis.openapi.models.operations.GETCancelJobVersionEnum;
+import org.openapis.openapi.models.operations.GETCancelJobQueryParams;
+import org.openapis.openapi.models.operations.GETCancelJobRequest;
+import org.openapis.openapi.models.operations.GETCancelJobResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetCancelJobRequest req = new GetCancelJobRequest() {{
-                queryParams = new GetCancelJobQueryParams() {{
-                    apiVersion = "sit";
-                    awsAccessKeyId = "voluptas";
+            GETCancelJobRequest req = new GETCancelJobRequest() {{
+                queryParams = new GETCancelJobQueryParams() {{
+                    apiVersion = "corrupti";
+                    awsAccessKeyId = "provident";
                     action = "CancelJob";
-                    jobId = "expedita";
+                    jobId = "distinctio";
                     operation = "CancelJob";
-                    signature = "dolor";
-                    signatureMethod = "expedita";
-                    signatureVersion = "voluptas";
-                    timestamp = "fugit";
+                    signature = "quibusdam";
+                    signatureMethod = "unde";
+                    signatureVersion = "nulla";
+                    timestamp = "corrupti";
                     version = "2010-06-01";
                 }};
-            }};
+            }};            
 
-            GetCancelJobResponse res = sdk.getCancelJob(req);
+            GETCancelJobResponse res = sdk.getCancelJob(req);
 
             if (res.body.isPresent()) {
                 // handle response

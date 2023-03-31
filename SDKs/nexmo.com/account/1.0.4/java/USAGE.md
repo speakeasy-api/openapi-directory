@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAccountBalanceQueryParams;
+import org.openapis.openapi.models.operations.GetAccountBalanceRequest;
+import org.openapis.openapi.models.operations.GetAccountBalanceResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAccountBalanceRequest req = new GetAccountBalanceRequest() {{
                 queryParams = new GetAccountBalanceQueryParams() {{
-                    apiKey = "sit";
-                    apiSecret = "voluptas";
+                    apiKey = "abcd1234";
+                    apiSecret = "ABCDEFGH01234abc";
                 }};
-            }};
+            }};            
 
             GetAccountBalanceResponse res = sdk.balance.getAccountBalance(req);
 

@@ -2,42 +2,43 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CompleteAttachmentUploadHeaders;
+import org.openapis.openapi.models.operations.CompleteAttachmentUploadRequestBody;
+import org.openapis.openapi.models.operations.CompleteAttachmentUploadRequest;
+import org.openapis.openapi.models.operations.CompleteAttachmentUploadResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CompleteAttachmentUploadRequest req = new CompleteAttachmentUploadRequest() {{
                 headers = new CompleteAttachmentUploadHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzBearer = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzBearer = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
                 request = new CompleteAttachmentUploadRequestBody() {{
-                    attachmentIds = new String[]() {{
-                        add("et"),
+                    attachmentIds = new String[]{{
+                        add("error"),
+                        add("deserunt"),
                     }};
-                    clientToken = "nihil";
+                    clientToken = "suscipit";
                 }};
-            }};
+            }};            
 
             CompleteAttachmentUploadResponse res = sdk.completeAttachmentUpload(req);
 

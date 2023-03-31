@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,33 +15,33 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteAppsAppIdPathParams;
+import org.openapis.openapi.models.operations.DeleteAppsAppIdQueryParams;
+import org.openapis.openapi.models.operations.DeleteAppsAppIdRequest;
+import org.openapis.openapi.models.operations.DeleteAppsAppIdResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     basicAuth = new SchemeBasicAuth() {{
                         password = "YOUR_PASSWORD_HERE";
                         username = "YOUR_USERNAME_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DeleteAppsAppIdRequest req = new DeleteAppsAppIdRequest() {{
                 pathParams = new DeleteAppsAppIdPathParams() {{
-                    appId = "sit";
+                    appId = "corrupti";
                 }};
                 queryParams = new DeleteAppsAppIdQueryParams() {{
-                    developerId = "voluptas";
+                    developerId = "provident";
                 }};
-            }};
+            }};            
 
             DeleteAppsAppIdResponse res = sdk.appsFindAndModifyApps.deleteAppsAppId(req);
 
@@ -57,7 +57,8 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### apps : Find and modify apps
+
+### appsFindAndModifyApps
 
 * `deleteAppsAppId` - Removes app and all versions
 * `deleteAppsAppIdVersionsVersion` - Removes AppVersion
@@ -74,12 +75,12 @@ public class Application {
 * `postAppsAppIdVersionsVersion` - Updates the app or creates a new version
 * `postAppsAppIdVersionsVersionStatus` - Allows a developer or administrator to change the status of apps
 
-### custom-gateway : Process payments and refunds
+### customGatewayProcessPaymentsAndRefunds
 
 * `postCustomGatewayPaymentOwnershipId` - Adds a payment for an app on behalf of a user
 * `postCustomGatewayRefundOwnershipId` - Fully or partially refund payment for an app on behalf of a user
 
-### developerAccounts : Find and modify developer accounts
+### developerAccountsFindAndModifyDeveloperAccounts
 
 * `deleteDeveloperAccountsDeveloperAccountId` - Removes the developer account
 * `getDeveloperAccounts` - Returns a paginated list of developerAccounts
@@ -87,7 +88,7 @@ public class Application {
 * `patchDeveloperAccountsDeveloperAccountId` - Updates the developer account fields
 * `postDeveloperAccountsDeveloperAccountId` - Updates the developer account or adds the developer account if it doesn't exist
 
-### developers : Find and modify developers
+### developersFindAndModifyDevelopers
 
 * `deleteDevelopersDeveloperId` - Removes a single developer
 * `getDevelopers` - Returns a paginated list of developers
@@ -95,11 +96,11 @@ public class Application {
 * `patchDevelopersDeveloperId` - Updates the developer fields
 * `postDevelopersDeveloperId` - Updates the developer record or adds the developer if it doesn't exist
 
-### events : Find events
+### eventsFindEvents
 
 * `getEventsEventId` - Returns an event
 
-### files : Upload files 
+### filesUploadFiles
 
 * `getFiles` - Returns a paginated list of files
 * `getFilesByIdOrUrl` - Get the details for a file.
@@ -107,11 +108,11 @@ public class Application {
 * `postFiles` - Uploads a file.
 * `postFilesUrl` - Uploads a file from a URL
 
-### markets : This marketplace
+### marketsThisMarketplace
 
 * `getMarketsThis` - Returns the current marketplace
 
-### ownership : Find ownership
+### ownershipFindOwnership
 
 * `getOwnership` - Returns a paginated list of app licenses
 * `getOwnershipOwnershipId` - Returns an ownership record
@@ -120,13 +121,13 @@ public class Application {
 * `postOwnershipUninstallOwnershipId` - Uninstalls a license for a particular user and app (uninstalls app)
 * `postOwnershipOwnershipId` - Updates an ownership record
 
-### permission : Add and remove permissions 
+### permissionAddAndRemovePermissions
 
 * `deletePermissionAppsAppId` - Removes permission that allows the app to access this user's data
 * `getPermissionAppsAppId` - Returns permission that allows the app to access this user's data
 * `postPermissionAppsAppId` - Adds permission to allow the app to access this user's data
 
-### reviews : Find and modify reviews 
+### reviewsFindAndModifyReviews
 
 * `deleteReviewsReviewId` - Remove a review
 * `getReviews` - Find reviews for a particular App and marketplace. Results are automatically paginated when limit is set
@@ -135,13 +136,13 @@ public class Application {
 * `postReviews` - Post a review from a User and returns the new post
 * `postReviewsReviewId` - Update a review from a User and returns the new post
 
-### stats: Find marketplace statistics
+### statsFindMarketplaceStatistics
 
 * `getStatsSeriesPeriodFields` - Return a timeseries for a particular field
 * `getStatsTotal` - Returns the total number of events for a particular field.
 * `postStatsIncrementField` - Increments a statistics field
 
-### stripe-gateway : Process payments and refunds 
+### stripeGatewayProcessPaymentsAndRefunds
 
 * `deleteStripeGatewayDeveloperDeveloperIdAccountsStripeId` - Disconnects a developer's Stripe account
 * `deleteStripeGatewayUserUserIdCardsCardId` - Removes a credit card for a user
@@ -151,14 +152,14 @@ public class Application {
 * `postStripeGatewayUserUserIdCards` - Adds credit card for this user
 * `postStripeGatewayUserUserIdCardsCardId` - Updates a credit card for this user
 
-### transactions : Find payments and refunds 
+### transactionsFindPaymentsAndRefunds
 
 * `deleteTransactionsTransactionId` - Deleted a transaction
 * `getTransactions` - Returns a paginated list of transactions
 * `getTransactionsTransactionId` - Returns a transaction
 * `postTransactionsTransactionId` - Updates a transaction
 
-### userAccounts : Find and modify user accounts 
+### userAccountsFindAndModifyUserAccounts
 
 * `deleteUserAccountsUserAccountId` - Removes the user account
 * `getUserAccounts` - Returns a paginated list of userAccounts
@@ -166,14 +167,24 @@ public class Application {
 * `patchUserAccountsUserAccountId` - Updates the user account fields
 * `postUserAccountsUserAccountId` - Updates the user account or adds the user account if it doesn't exist
 
-### users : Find and modify users 
+### usersFindAndModifyUsers
 
 * `deleteUsersUserId` - Removes a single user
 * `getUsers` - Returns a paginated list of users
 * `getUsersUserId` - Return a single user
 * `patchUsersUserId` - Updates user fields
 * `postUsersUserId` - Updates a single user or adds the user if they don't exist
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

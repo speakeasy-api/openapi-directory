@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BooksBookshelvesGetSecurity;
+import org.openapis.openapi.models.operations.BooksBookshelvesGetPathParams;
+import org.openapis.openapi.models.operations.BooksBookshelvesGetQueryParams;
+import org.openapis.openapi.models.operations.BooksBookshelvesGetRequest;
+import org.openapis.openapi.models.operations.BooksBookshelvesGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BooksBookshelvesGetRequest req = new BooksBookshelvesGetRequest() {{
                 security = new BooksBookshelvesGetSecurity() {{
@@ -22,24 +30,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new BooksBookshelvesGetPathParams() {{
-                    shelf = "sit";
-                    userId = "voluptas";
+                    shelf = "corrupti";
+                    userId = "provident";
                 }};
                 queryParams = new BooksBookshelvesGetQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "expedita";
-                    alt = "proto";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    accessToken = "quibusdam";
+                    alt = "media";
+                    callback = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    source = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    quotaUser = "error";
+                    source = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             BooksBookshelvesGetResponse res = sdk.bookshelves.booksBookshelvesGet(req);
 

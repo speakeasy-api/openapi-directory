@@ -2,55 +2,57 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateHttpNamespaceXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateHttpNamespaceHeaders;
+import org.openapis.openapi.models.operations.CreateHttpNamespaceRequest;
+import org.openapis.openapi.models.operations.CreateHttpNamespaceResponse;
+import org.openapis.openapi.models.shared.CreateHttpNamespaceRequest;
+import org.openapis.openapi.models.shared.Tag;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateHttpNamespaceRequest req = new CreateHttpNamespaceRequest() {{
                 headers = new CreateHttpNamespaceHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "Route53AutoNaming_v20170314.CreateHttpNamespace";
                 }};
                 request = new CreateHttpNamespaceRequest() {{
-                    creatorRequestId = "fugit";
-                    description = "et";
-                    name = "nihil";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    creatorRequestId = "illum";
+                    description = "vel";
+                    name = "error";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "dicta";
+                            key = "suscipit";
+                            value = "iure";
+                        }}),
+                        add(new Tag() {{
+                            key = "magnam";
                             value = "debitis";
                         }}),
                         add(new Tag() {{
-                            key = "voluptatum";
-                            value = "et";
-                        }}),
-                        add(new Tag() {{
-                            key = "ut";
-                            value = "dolorem";
+                            key = "ipsa";
+                            value = "delectus";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateHttpNamespaceResponse res = sdk.createHttpNamespace(req);
 

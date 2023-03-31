@@ -2,41 +2,48 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeparturesGetForStopRouteTypeEnum;
+import org.openapis.openapi.models.operations.DeparturesGetForStopPathParams;
+import org.openapis.openapi.models.operations.DeparturesGetForStopExpandEnum;
+import org.openapis.openapi.models.operations.DeparturesGetForStopQueryParams;
+import org.openapis.openapi.models.operations.DeparturesGetForStopRequest;
+import org.openapis.openapi.models.operations.DeparturesGetForStopResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeparturesGetForStopRequest req = new DeparturesGetForStopRequest() {{
                 pathParams = new DeparturesGetForStopPathParams() {{
-                    routeType = 8717895732742165505;
-                    stopId = 2259404117704393152;
+                    routeType = "2";
+                    stopId = 592845;
                 }};
                 queryParams = new DeparturesGetForStopQueryParams() {{
-                    dateUtc = "1978-05-13T03:50:47Z";
-                    devid = "expedita";
-                    directionId = 3390393562759376202;
-                    expand = new openapisdk.models.operations.DeparturesGetForStopExpandEnum[]() {{
+                    dateUtc = "2021-04-24T16:27:50.833Z";
+                    devid = "unde";
+                    directionId = 857946;
+                    expand = new org.openapis.openapi.models.operations.DeparturesGetForStopExpandEnum[]{{
                         add("VehiclePosition"),
-                        add("None"),
+                        add("Run"),
+                        add("Disruption"),
                     }};
-                    gtfs = true;
+                    gtfs = false;
                     includeCancelled = false;
-                    includeGeopath = true;
-                    lookBackwards = true;
-                    maxResults = 7837839688282259259;
-                    platformNumbers = new Integer[]() {{
-                        add(5617773211005988520),
+                    includeGeopath = false;
+                    lookBackwards = false;
+                    maxResults = 645894;
+                    platformNumbers = new Integer[]{{
+                        add(437587),
+                        add(297534),
                     }};
-                    signature = "et";
-                    token = "ut";
+                    signature = "debitis";
+                    token = "ipsa";
                 }};
-            }};
+            }};            
 
             DeparturesGetForStopResponse res = sdk.departures.departuresGetForStop(req);
 

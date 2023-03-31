@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,65 +15,85 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateClusterXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateClusterHeaders;
+import org.openapis.openapi.models.operations.CreateClusterRequest;
+import org.openapis.openapi.models.operations.CreateClusterResponse;
+import org.openapis.openapi.models.shared.CreateClusterRequest;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.SSESpecification;
+import org.openapis.openapi.models.shared.ClusterEndpointEncryptionTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateClusterRequest req = new CreateClusterRequest() {{
                 headers = new CreateClusterHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AmazonDAXV3.CreateCluster";
                 }};
                 request = new CreateClusterRequest() {{
-                    availabilityZones = new String[]() {{
-                        add("et"),
+                    availabilityZones = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
                     clusterEndpointEncryptionType = "NONE";
-                    clusterName = "rerum";
-                    description = "dicta";
-                    iamRoleArn = "debitis";
-                    nodeType = "voluptatum";
-                    notificationTopicArn = "et";
-                    parameterGroupName = "ut";
-                    preferredMaintenanceWindow = "dolorem";
-                    replicationFactor = 7259475919510918339;
-                    sseSpecification = new SseSpecification() {{
+                    clusterName = "magnam";
+                    description = "debitis";
+                    iamRoleArn = "ipsa";
+                    nodeType = "delectus";
+                    notificationTopicArn = "tempora";
+                    parameterGroupName = "suscipit";
+                    preferredMaintenanceWindow = "molestiae";
+                    replicationFactor = 791725;
+                    sseSpecification = new SSESpecification() {{
                         enabled = false;
                     }};
-                    securityGroupIds = new String[]() {{
-                        add("vitae"),
-                        add("totam"),
-                        add("dolores"),
+                    securityGroupIds = new String[]{{
+                        add("voluptatum"),
+                        add("iusto"),
+                        add("excepturi"),
+                        add("nisi"),
                     }};
-                    subnetGroupName = "illum";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    subnetGroupName = "recusandae";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "vel";
-                            value = "odio";
+                            key = "ab";
+                            value = "quis";
+                        }}),
+                        add(new Tag() {{
+                            key = "veritatis";
+                            value = "deserunt";
+                        }}),
+                        add(new Tag() {{
+                            key = "perferendis";
+                            value = "ipsam";
+                        }}),
+                        add(new Tag() {{
+                            key = "repellendus";
+                            value = "sapiente";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateClusterResponse res = sdk.createCluster(req);
 
@@ -112,7 +132,17 @@ public class Application {
 * `updateCluster` - Modifies the settings for a DAX cluster. You can use this action to change one or more cluster configuration parameters by specifying the parameters and the new values.
 * `updateParameterGroup` - Modifies the parameters of a parameter group. You can modify up to 20 parameters in a single request by submitting a list parameter name and value pairs.
 * `updateSubnetGroup` - Modifies an existing subnet group.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

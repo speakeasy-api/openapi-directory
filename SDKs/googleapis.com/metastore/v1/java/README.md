@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,18 +15,29 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateSecurity;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreatePathParams;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateQueryParams;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateRequest;
+import org.openapis.openapi.models.operations.MetastoreProjectsLocationsFederationsCreateResponse;
+import org.openapis.openapi.models.shared.FederationInput;
+import org.openapis.openapi.models.shared.BackendMetastoreMetastoreTypeEnum;
+import org.openapis.openapi.models.shared.BackendMetastore;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            MetastoreOperationsCancelRequest req = new MetastoreOperationsCancelRequest() {{
-                security = new MetastoreOperationsCancelSecurity() {{
+            MetastoreProjectsLocationsFederationsCreateRequest req = new MetastoreProjectsLocationsFederationsCreateRequest() {{
+                security = new MetastoreProjectsLocationsFederationsCreateSecurity() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
@@ -34,32 +45,49 @@ public class Application {
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new MetastoreOperationsCancelPathParams() {{
-                    name = "sit";
+                pathParams = new MetastoreProjectsLocationsFederationsCreatePathParams() {{
+                    parent = "corrupti";
                 }};
-                queryParams = new MetastoreOperationsCancelQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                queryParams = new MetastoreProjectsLocationsFederationsCreateQueryParams() {{
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    federationId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    prettyPrint = false;
+                    quotaUser = "error";
+                    requestId = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-                request = new java.util.HashMap<String, Object>() {{
-                    put("debitis", "voluptatum");
-                    put("et", "ut");
-                    put("dolorem", "et");
+                request = new FederationInput() {{
+                    backendMetastores = new java.util.HashMap<String, org.openapis.openapi.models.shared.BackendMetastore>() {{
+                        put("debitis", new BackendMetastore() {{
+                            metastoreType = "METASTORE_TYPE_UNSPECIFIED";
+                            name = "delectus";
+                        }});
+                        put("tempora", new BackendMetastore() {{
+                            metastoreType = "METASTORE_TYPE_UNSPECIFIED";
+                            name = "molestiae";
+                        }});
+                    }};
+                    labels = new java.util.HashMap<String, String>() {{
+                        put("placeat", "voluptatum");
+                        put("iusto", "excepturi");
+                        put("nisi", "recusandae");
+                        put("temporibus", "ab");
+                    }};
+                    name = "quis";
+                    version = "veritatis";
                 }};
-            }};
+            }};            
 
-            MetastoreOperationsCancelResponse res = sdk.operations.metastoreOperationsCancel(req);
+            MetastoreProjectsLocationsFederationsCreateResponse res = sdk.projects.metastoreProjectsLocationsFederationsCreate(req);
 
-            if (res.empty.isPresent()) {
+            if (res.operation.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -71,16 +99,14 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### operations
-
-* `metastoreOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
 
 ### projects
 
 * `metastoreProjectsLocationsFederationsCreate` - Creates a metastore federation in a project and location.
 * `metastoreProjectsLocationsFederationsList` - Lists federations in a project and location.
 * `metastoreProjectsLocationsList` - Lists information about the supported locations for this service.
-* `metastoreProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.NOTE: the name binding allows API services to override the binding to use different resource name schemes, such as users/*/operations. To override the binding, API services can add a binding such as "/v1/{name=users/*}/operations" to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* `metastoreProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns google.rpc.Code.UNIMPLEMENTED. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to Code.CANCELLED.
+* `metastoreProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns UNIMPLEMENTED.
 * `metastoreProjectsLocationsServicesBackupsCreate` - Creates a new backup in a given project and location.
 * `metastoreProjectsLocationsServicesBackupsDelete` - Deletes a single backup.
 * `metastoreProjectsLocationsServicesBackupsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
@@ -95,7 +121,17 @@ public class Application {
 * `metastoreProjectsLocationsServicesMetadataImportsPatch` - Updates a single import. Only the description field of MetadataImport is supported to be updated.
 * `metastoreProjectsLocationsServicesRestore` - Restores a service from a backup.
 * `metastoreProjectsLocationsServicesTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error.Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetSecurity;
+import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetPathParams;
+import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetQueryParams;
+import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetRequest;
+import org.openapis.openapi.models.operations.GroupsSettingsGroupsGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GroupsSettingsGroupsGetRequest req = new GroupsSettingsGroupsGetRequest() {{
                 security = new GroupsSettingsGroupsGetSecurity() {{
@@ -22,18 +29,18 @@ public class Application {
                     }};
                 }};
                 pathParams = new GroupsSettingsGroupsGetPathParams() {{
-                    groupUniqueId = "sit";
+                    groupUniqueId = "corrupti";
                 }};
                 queryParams = new GroupsSettingsGroupsGetQueryParams() {{
-                    alt = "atom";
-                    fields = "culpa";
-                    key = "expedita";
-                    oauthToken = "consequuntur";
+                    alt = "json";
+                    fields = "distinctio";
+                    key = "quibusdam";
+                    oauthToken = "unde";
                     prettyPrint = false;
-                    quotaUser = "expedita";
-                    userIp = "voluptas";
+                    quotaUser = "nulla";
+                    userIp = "corrupti";
                 }};
-            }};
+            }};            
 
             GroupsSettingsGroupsGetResponse res = sdk.groups.groupsSettingsGroupsGet(req);
 

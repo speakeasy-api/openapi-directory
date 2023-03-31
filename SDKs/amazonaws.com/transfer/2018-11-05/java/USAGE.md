@@ -2,59 +2,70 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateAccessXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateAccessHeaders;
+import org.openapis.openapi.models.operations.CreateAccessRequest;
+import org.openapis.openapi.models.operations.CreateAccessResponse;
+import org.openapis.openapi.models.shared.CreateAccessRequest;
+import org.openapis.openapi.models.shared.PosixProfile;
+import org.openapis.openapi.models.shared.HomeDirectoryTypeEnum;
+import org.openapis.openapi.models.shared.HomeDirectoryMapEntry;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateAccessRequest req = new CreateAccessRequest() {{
                 headers = new CreateAccessHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "TransferService.CreateAccess";
                 }};
                 request = new CreateAccessRequest() {{
-                    externalId = "fugit";
-                    homeDirectory = "et";
-                    homeDirectoryMappings = new openapisdk.models.shared.HomeDirectoryMapEntry[]() {{
+                    externalId = "illum";
+                    homeDirectory = "vel";
+                    homeDirectoryMappings = new org.openapis.openapi.models.shared.HomeDirectoryMapEntry[]{{
                         add(new HomeDirectoryMapEntry() {{
-                            entry = "rerum";
-                            target = "dicta";
+                            entry = "deserunt";
+                            target = "suscipit";
+                        }}),
+                        add(new HomeDirectoryMapEntry() {{
+                            entry = "iure";
+                            target = "magnam";
+                        }}),
+                        add(new HomeDirectoryMapEntry() {{
+                            entry = "debitis";
+                            target = "ipsa";
                         }}),
                     }};
-                    homeDirectoryType = "PATH";
-                    policy = "voluptatum";
+                    homeDirectoryType = "LOGICAL";
+                    policy = "tempora";
                     posixProfile = new PosixProfile() {{
-                        gid = 2339563716805116249;
-                        secondaryGids = new Long[]() {{
-                            add(161231572858529631),
-                            add(7259475919510918339),
-                            add(7373105480197164748),
+                        gid = 383441;
+                        secondaryGids = new Long[]{{
+                            add(791725),
+                            add(812169),
                         }};
-                        uid = 3287288577352441706;
+                        uid = 528895;
                     }};
-                    role = "vitae";
-                    serverId = "totam";
+                    role = "iusto";
+                    serverId = "excepturi";
                 }};
-            }};
+            }};            
 
             CreateAccessResponse res = sdk.createAccess(req);
 

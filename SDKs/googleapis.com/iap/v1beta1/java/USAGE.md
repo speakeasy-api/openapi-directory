@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.IapGetIamPolicySecurity;
+import org.openapis.openapi.models.operations.IapGetIamPolicyPathParams;
+import org.openapis.openapi.models.operations.IapGetIamPolicyQueryParams;
+import org.openapis.openapi.models.operations.IapGetIamPolicyRequest;
+import org.openapis.openapi.models.operations.IapGetIamPolicyResponse;
+import org.openapis.openapi.models.shared.GetIamPolicyRequest;
+import org.openapis.openapi.models.shared.GetPolicyOptions;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             IapGetIamPolicyRequest req = new IapGetIamPolicyRequest() {{
                 security = new IapGetIamPolicySecurity() {{
@@ -22,27 +32,27 @@ public class Application {
                     }};
                 }};
                 pathParams = new IapGetIamPolicyPathParams() {{
-                    resource = "sit";
+                    resource = "corrupti";
                 }};
                 queryParams = new IapGetIamPolicyQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GetIamPolicyRequest() {{
                     options = new GetPolicyOptions() {{
-                        requestedPolicyVersion = 7837839688282259259;
+                        requestedPolicyVersion = 384382;
                     }};
                 }};
-            }};
+            }};            
 
             IapGetIamPolicyResponse res = sdk.v1beta1.iapGetIamPolicy(req);
 

@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetSecurity;
+import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetPathParams;
+import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetQueryParams;
+import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetRequest;
+import org.openapis.openapi.models.operations.DoubleclicksearchConversionGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DoubleclicksearchConversionGetRequest req = new DoubleclicksearchConversionGetRequest() {{
                 security = new DoubleclicksearchConversionGetSecurity() {{
@@ -22,33 +30,33 @@ public class Application {
                     }};
                 }};
                 pathParams = new DoubleclicksearchConversionGetPathParams() {{
-                    advertiserId = "sit";
-                    agencyId = "voluptas";
-                    engineAccountId = "culpa";
+                    advertiserId = "corrupti";
+                    agencyId = "provident";
+                    engineAccountId = "distinctio";
                 }};
                 queryParams = new DoubleclicksearchConversionGetQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "consequuntur";
-                    adGroupId = "dolor";
-                    adId = "expedita";
+                    dollarXgafv = "2";
+                    accessToken = "unde";
+                    adGroupId = "nulla";
+                    adId = "corrupti";
                     alt = "proto";
-                    callback = "fugit";
-                    campaignId = "et";
-                    criterionId = "nihil";
-                    customerId = "rerum";
-                    endDate = 7837839688282259259;
-                    fields = "debitis";
-                    key = "voluptatum";
-                    oauthToken = "et";
+                    callback = "vel";
+                    campaignId = "error";
+                    criterionId = "deserunt";
+                    customerId = "suscipit";
+                    endDate = 437587;
+                    fields = "magnam";
+                    key = "debitis";
+                    oauthToken = "ipsa";
                     prettyPrint = false;
-                    quotaUser = "dolorem";
-                    rowCount = 7259475919510918339;
-                    startDate = 7373105480197164748;
-                    startRow = 3287288577352441706;
-                    uploadType = "vitae";
-                    uploadProtocol = "totam";
+                    quotaUser = "delectus";
+                    rowCount = 272656;
+                    startDate = 383441;
+                    startRow = 477665;
+                    uploadType = "minus";
+                    uploadProtocol = "placeat";
                 }};
-            }};
+            }};            
 
             DoubleclicksearchConversionGetResponse res = sdk.conversion.doubleclicksearchConversionGet(req);
 

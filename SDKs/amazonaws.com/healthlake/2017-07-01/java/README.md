@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,38 +15,46 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateFHIRDatastoreXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateFHIRDatastoreHeaders;
+import org.openapis.openapi.models.operations.CreateFHIRDatastoreRequest;
+import org.openapis.openapi.models.operations.CreateFHIRDatastoreResponse;
+import org.openapis.openapi.models.shared.CreateFHIRDatastoreRequest;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.SseConfiguration;
+import org.openapis.openapi.models.shared.KmsEncryptionConfig;
+import org.openapis.openapi.models.shared.CmkTypeEnum;
+import org.openapis.openapi.models.shared.PreloadDataConfig;
+import org.openapis.openapi.models.shared.PreloadDataTypeEnum;
+import org.openapis.openapi.models.shared.FHIRVersionEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateFhirDatastoreRequest req = new CreateFhirDatastoreRequest() {{
-                headers = new CreateFhirDatastoreHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+            CreateFHIRDatastoreRequest req = new CreateFHIRDatastoreRequest() {{
+                headers = new CreateFHIRDatastoreHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "HealthLake.CreateFHIRDatastore";
                 }};
-                request = new CreateFhirDatastoreRequest() {{
-                    clientToken = "fugit";
-                    datastoreName = "et";
+                request = new CreateFHIRDatastoreRequest() {{
+                    clientToken = "illum";
+                    datastoreName = "vel";
                     datastoreTypeVersion = "R4";
                     preloadDataConfig = new PreloadDataConfig() {{
                         preloadDataType = "SYNTHEA";
@@ -54,19 +62,23 @@ public class Application {
                     sseConfiguration = new SseConfiguration() {{
                         kmsEncryptionConfig = new KmsEncryptionConfig() {{
                             cmkType = "AWS_OWNED_KMS_KEY";
-                            kmsKeyId = "debitis";
+                            kmsKeyId = "deserunt";
                         }};
                     }};
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "et";
-                            value = "ut";
+                            key = "iure";
+                            value = "magnam";
+                        }}),
+                        add(new Tag() {{
+                            key = "debitis";
+                            value = "ipsa";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
-            CreateFhirDatastoreResponse res = sdk.createFhirDatastore(req);
+            CreateFHIRDatastoreResponse res = sdk.createFHIRDatastore(req);
 
             if (res.createFHIRDatastoreResponse.isPresent()) {
                 // handle response
@@ -82,20 +94,30 @@ public class Application {
 
 ### SDK SDK
 
-* `createFhirDatastore` - Creates a Data Store that can ingest and export FHIR formatted data.
-* `deleteFhirDatastore` - Deletes a Data Store. 
-* `describeFhirDatastore` - Gets the properties associated with the FHIR Data Store, including the Data Store ID, Data Store ARN, Data Store name, Data Store status, created at, Data Store type version, and Data Store endpoint.
-* `describeFhirExportJob` - Displays the properties of a FHIR export job, including the ID, ARN, name, and the status of the job.
-* `describeFhirImportJob` - Displays the properties of a FHIR import job, including the ID, ARN, name, and the status of the job. 
-* `listFhirDatastores` - Lists all FHIR Data Stores that are in the user’s account, regardless of Data Store status.
-* `listFhirExportJobs` -  Lists all FHIR export jobs associated with an account and their statuses. 
-* `listFhirImportJobs` -  Lists all FHIR import jobs associated with an account and their statuses. 
+* `createFHIRDatastore` - Creates a Data Store that can ingest and export FHIR formatted data.
+* `deleteFHIRDatastore` - Deletes a Data Store. 
+* `describeFHIRDatastore` - Gets the properties associated with the FHIR Data Store, including the Data Store ID, Data Store ARN, Data Store name, Data Store status, created at, Data Store type version, and Data Store endpoint.
+* `describeFHIRExportJob` - Displays the properties of a FHIR export job, including the ID, ARN, name, and the status of the job.
+* `describeFHIRImportJob` - Displays the properties of a FHIR import job, including the ID, ARN, name, and the status of the job. 
+* `listFHIRDatastores` - Lists all FHIR Data Stores that are in the user’s account, regardless of Data Store status.
+* `listFHIRExportJobs` -  Lists all FHIR export jobs associated with an account and their statuses. 
+* `listFHIRImportJobs` -  Lists all FHIR import jobs associated with an account and their statuses. 
 * `listTagsForResource` -  Returns a list of all existing tags associated with a Data Store. 
-* `startFhirExportJob` - Begins a FHIR export job.
-* `startFhirImportJob` - Begins a FHIR Import job.
+* `startFHIRExportJob` - Begins a FHIR export job.
+* `startFHIRImportJob` - Begins a FHIR Import job.
 * `tagResource` -  Adds a user specifed key and value tag to a Data Store. 
 * `untagResource` -  Removes tags from a Data Store. 
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,56 +2,60 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CompareFacesXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CompareFacesHeaders;
+import org.openapis.openapi.models.operations.CompareFacesRequest;
+import org.openapis.openapi.models.operations.CompareFacesResponse;
+import org.openapis.openapi.models.shared.CompareFacesRequest;
+import org.openapis.openapi.models.shared.Image;
+import org.openapis.openapi.models.shared.S3Object;
+import org.openapis.openapi.models.shared.QualityFilterEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CompareFacesRequest req = new CompareFacesRequest() {{
                 headers = new CompareFacesHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "RekognitionService.CompareFaces";
                 }};
                 request = new CompareFacesRequest() {{
-                    qualityFilter = "MEDIUM";
-                    similarityThreshold = 28.100000;
+                    qualityFilter = "HIGH";
+                    similarityThreshold = 4236.55;
                     sourceImage = new Image() {{
-                        bytes = "rerum";
+                        bytes = "error";
                         s3Object = new S3Object() {{
-                            bucket = "dicta";
-                            name = "debitis";
-                            version = "voluptatum";
+                            bucket = "deserunt";
+                            name = "suscipit";
+                            version = "iure";
                         }};
                     }};
                     targetImage = new Image() {{
-                        bytes = "et";
+                        bytes = "magnam";
                         s3Object = new S3Object() {{
-                            bucket = "ut";
-                            name = "dolorem";
-                            version = "et";
+                            bucket = "debitis";
+                            name = "ipsa";
+                            version = "delectus";
                         }};
                     }};
                 }};
-            }};
+            }};            
 
             CompareFacesResponse res = sdk.compareFaces(req);
 

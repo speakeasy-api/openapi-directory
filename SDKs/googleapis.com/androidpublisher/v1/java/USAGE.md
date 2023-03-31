@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AndroidpublisherPurchasesCancelSecurity;
+import org.openapis.openapi.models.operations.AndroidpublisherPurchasesCancelPathParams;
+import org.openapis.openapi.models.operations.AndroidpublisherPurchasesCancelQueryParams;
+import org.openapis.openapi.models.operations.AndroidpublisherPurchasesCancelRequest;
+import org.openapis.openapi.models.operations.AndroidpublisherPurchasesCancelResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AndroidpublisherPurchasesCancelRequest req = new AndroidpublisherPurchasesCancelRequest() {{
                 security = new AndroidpublisherPurchasesCancelSecurity() {{
@@ -22,20 +29,20 @@ public class Application {
                     }};
                 }};
                 pathParams = new AndroidpublisherPurchasesCancelPathParams() {{
-                    packageName = "sit";
-                    subscriptionId = "voluptas";
-                    token = "culpa";
+                    packageName = "corrupti";
+                    subscriptionId = "provident";
+                    token = "distinctio";
                 }};
                 queryParams = new AndroidpublisherPurchasesCancelQueryParams() {{
                     alt = "json";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    userIp = "et";
+                    fields = "quibusdam";
+                    key = "unde";
+                    oauthToken = "nulla";
+                    prettyPrint = false;
+                    quotaUser = "corrupti";
+                    userIp = "illum";
                 }};
-            }};
+            }};            
 
             AndroidpublisherPurchasesCancelResponse res = sdk.purchases.androidpublisherPurchasesCancel(req);
 

@@ -2,15 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity;
+import org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams;
+import org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams;
+import org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest;
+import org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1CatalogItem;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockStateEnum;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItem;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1Image;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1FeatureMap;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList;
+import org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest req = new RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateRequest() {{
                 security = new RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateSecurity() {{
@@ -22,101 +40,120 @@ public class Application {
                     }};
                 }};
                 pathParams = new RecommendationengineProjectsLocationsCatalogsCatalogItemsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GoogleCloudRecommendationengineV1beta1CatalogItem() {{
-                    categoryHierarchies = new openapisdk.models.shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy[]() {{
+                    categoryHierarchies = new org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy[]{{
                         add(new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy() {{
-                            categories = new String[]() {{
-                                add("voluptatum"),
+                            categories = new String[]{{
+                                add("magnam"),
+                                add("debitis"),
                             }};
                         }}),
                         add(new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy() {{
-                            categories = new String[]() {{
-                                add("ut"),
-                            }};
-                        }}),
-                        add(new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy() {{
-                            categories = new String[]() {{
-                                add("et"),
-                                add("voluptate"),
-                                add("iste"),
+                            categories = new String[]{{
+                                add("delectus"),
                             }};
                         }}),
                     }};
-                    description = "vitae";
-                    id = "totam";
+                    description = "tempora";
+                    id = "suscipit";
                     itemAttributes = new GoogleCloudRecommendationengineV1beta1FeatureMap() {{
-                        categoricalFeatures = new java.util.HashMap<String, openapisdk.models.shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList>() {{
-                            put("illum", new GoogleCloudRecommendationengineV1beta1FeatureMapStringList() {{
-                                value = new String[]() {{
-                                    add("vel"),
+                        categoricalFeatures = new java.util.HashMap<String, org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1FeatureMapStringList>() {{
+                            put("minus", new GoogleCloudRecommendationengineV1beta1FeatureMapStringList() {{
+                                value = new String[]{{
+                                    add("voluptatum"),
+                                    add("iusto"),
+                                    add("excepturi"),
+                                    add("nisi"),
+                                }};
+                            }});
+                            put("recusandae", new GoogleCloudRecommendationengineV1beta1FeatureMapStringList() {{
+                                value = new String[]{{
+                                    add("ab"),
+                                    add("quis"),
+                                    add("veritatis"),
+                                    add("deserunt"),
                                 }};
                             }});
                         }};
-                        numericalFeatures = new java.util.HashMap<String, openapisdk.models.shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList>() {{
-                            put("dolore", new GoogleCloudRecommendationengineV1beta1FeatureMapFloatList() {{
-                                value = new Float[]() {{
-                                    add(57.099998),
-                                    add(45.099998),
+                        numericalFeatures = new java.util.HashMap<String, org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1FeatureMapFloatList>() {{
+                            put("ipsam", new GoogleCloudRecommendationengineV1beta1FeatureMapFloatList() {{
+                                value = new Float[]{{
+                                    add(9571.56),
+                                    add(7781.57),
+                                    add(1403.5),
+                                    add(8700.13),
                                 }};
                             }});
                         }};
                     }};
-                    itemGroupId = "quis";
-                    languageCode = "est";
+                    itemGroupId = "at";
+                    languageCode = "maiores";
                     productMetadata = new GoogleCloudRecommendationengineV1beta1ProductCatalogItem() {{
-                        availableQuantity = "aut";
-                        canonicalProductUri = "odit";
+                        availableQuantity = "molestiae";
+                        canonicalProductUri = "quod";
                         costs = new java.util.HashMap<String, Float>() {{
-                            put("voluptas", 87.099998);
-                            put("illo", 78.199997);
-                            put("autem", 68.099998);
+                            put("esse", 5204.78);
+                            put("porro", 6788.8);
+                            put("dicta", 7206.33);
+                            put("officia", 5820.2);
                         }};
-                        currencyCode = "odio";
+                        currencyCode = "fugit";
                         exactPrice = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice() {{
-                            displayPrice = 77.099998;
-                            originalPrice = 88.099998;
+                            displayPrice = 5373.73;
+                            originalPrice = 9446.69;
                         }};
-                        images = new openapisdk.models.shared.GoogleCloudRecommendationengineV1beta1Image[]() {{
+                        images = new org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1Image[]{{
                             add(new GoogleCloudRecommendationengineV1beta1Image() {{
-                                height = 303089054982227392;
-                                uri = "sint";
-                                width = 5392504858645185670;
+                                height = 521848;
+                                uri = "http://immense-investor.biz";
+                                width = 186332;
                             }}),
                             add(new GoogleCloudRecommendationengineV1beta1Image() {{
-                                height = 7847956203786849690;
-                                uri = "exercitationem";
-                                width = 4756106358532488297;
+                                height = 774234;
+                                uri = "https://jolly-cowboy.name";
+                                width = 135218;
+                            }}),
+                            add(new GoogleCloudRecommendationengineV1beta1Image() {{
+                                height = 18789;
+                                uri = "http://perky-charset.name";
+                                width = 222321;
+                            }}),
+                            add(new GoogleCloudRecommendationengineV1beta1Image() {{
+                                height = 616934;
+                                uri = "http://wary-thistle.net";
+                                width = 449950;
                             }}),
                         }};
                         priceRange = new GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange() {{
-                            max = 30.200001;
-                            min = 97.099998;
+                            max = 3595.08;
+                            min = 6130.64;
                         }};
-                        stockState = "BACKORDER";
+                        stockState = "OUT_OF_STOCK";
                     }};
-                    tags = new String[]() {{
-                        add("veritatis"),
-                        add("in"),
-                        add("et"),
+                    tags = new String[]{{
+                        add("quidem"),
+                        add("architecto"),
+                        add("ipsa"),
+                        add("reiciendis"),
                     }};
-                    title = "omnis";
+                    title = "Miss";
                 }};
-            }};
+            }};            
 
             RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse res = sdk.projects.recommendationengineProjectsLocationsCatalogsCatalogItemsCreate(req);
 

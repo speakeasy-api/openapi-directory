@@ -2,32 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AppendTextUsingGETQueryParams;
+import org.openapis.openapi.models.operations.AppendTextUsingGETRequest;
+import org.openapis.openapi.models.operations.AppendTextUsingGETResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKey = new SchemeApiKey() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            AppendTextUsingGetRequest req = new AppendTextUsingGetRequest() {{
-                queryParams = new AppendTextUsingGetQueryParams() {{
-                    padID = "sit";
-                    text = "voluptas";
+            AppendTextUsingGETRequest req = new AppendTextUsingGETRequest() {{
+                queryParams = new AppendTextUsingGETQueryParams() {{
+                    padID = "corrupti";
+                    text = "provident";
                 }};
-            }};
+            }};            
 
-            AppendTextUsingGetResponse res = sdk.appendTextUsingGet(req);
+            AppendTextUsingGETResponse res = sdk.appendTextUsingGET(req);
 
             if (res.appendTextUsingGET200ApplicationJSONObject.isPresent()) {
                 // handle response

@@ -2,23 +2,27 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateConsentSecurity;
+import org.openapis.openapi.models.operations.CreateConsentHeaders;
+import org.openapis.openapi.models.operations.CreateConsentRequest;
+import org.openapis.openapi.models.operations.CreateConsentResponse;
+import org.openapis.openapi.models.shared.Consents;
+import org.openapis.openapi.models.shared.AccountAccessAllPsd2Enum;
+import org.openapis.openapi.models.shared.AccountAccessAvailableAccountsEnum;
+import org.openapis.openapi.models.shared.AccountAccessAvailableAccountsWithBalanceEnum;
+import org.openapis.openapi.models.shared.AccountAccess;
+import org.openapis.openapi.models.shared.AccountReference16CH;
+import org.openapis.openapi.models.shared.AdditionalInformationAccess;
+import org.openapis.openapi.models.shared.PSUHttpMethodEnum;
+import org.openapis.openapi.models.shared.SchemeBearerAuthOAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    bearerAuthOAuth = new SchemeBearerAuthOAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateConsentRequest req = new CreateConsentRequest() {{
                 security = new CreateConsentSecurity() {{
@@ -27,101 +31,157 @@ public class Application {
                     }};
                 }};
                 headers = new CreateConsentHeaders() {{
-                    digest = "sit";
-                    psuAccept = "voluptas";
-                    psuAcceptCharset = "culpa";
-                    psuAcceptEncoding = "expedita";
-                    psuAcceptLanguage = "consequuntur";
-                    psuCorporateID = "dolor";
-                    psuCorporateIDType = "expedita";
-                    psuDeviceID = "voluptas";
-                    psuGeoLocation = "fugit";
+                    digest = "corrupti";
+                    psuAccept = "provident";
+                    psuAcceptCharset = "distinctio";
+                    psuAcceptEncoding = "quibusdam";
+                    psuAcceptLanguage = "unde";
+                    psuCorporateID = "nulla";
+                    psuCorporateIDType = "corrupti";
+                    psuDeviceID = "illum";
+                    psuGeoLocation = "vel";
                     psuHttpMethod = "PATCH";
-                    psuID = "nihil";
-                    psuIDType = "rerum";
-                    psuIPAddress = "dicta";
-                    psuIPPort = "debitis";
-                    psuUserAgent = "voluptatum";
-                    signature = "et";
-                    tppBrandLoggingInformation = "ut";
-                    tppExplicitAuthorisationPreferred = true;
-                    tppNokRedirectURI = "et";
-                    tppNotificationContentPreferred = "voluptate";
-                    tppNotificationURI = "iste";
-                    tppRedirectPreferred = true;
-                    tppRedirectURI = "totam";
-                    tppSignatureCertificate = "dolores";
-                    xRequestID = "illum";
+                    psuId = "deserunt";
+                    psuIDType = "suscipit";
+                    psuIPAddress = "112.76.228.14";
+                    psuIPPort = "delectus";
+                    psuUserAgent = "tempora";
+                    signature = "suscipit";
+                    tppBrandLoggingInformation = "molestiae";
+                    tppExplicitAuthorisationPreferred = false;
+                    tppNokRedirectURI = "https://studious-lynx.info";
+                    tppNotificationContentPreferred = "excepturi";
+                    tppNotificationURI = "nisi";
+                    tppRedirectPreferred = false;
+                    tppRedirectURI = "https://tangible-bathroom.info";
+                    tppSignatureCertificate = "veritatis";
+                    xRequestID = "deserunt";
                 }};
                 request = new Consents() {{
                     access = new AccountAccess() {{
-                        accounts = new openapisdk.models.shared.AccountReference16Ch[]() {{
-                            add(new AccountReference16Ch() {{
-                                cashAccountType = "vel";
-                                currency = "odio";
-                                iban = "dolore";
-                                otherAccountIdentification = "id";
+                        accounts = new org.openapis.openapi.models.shared.AccountReference16CH[]{{
+                            add(new AccountReference16CH() {{
+                                cashAccountType = "ipsam";
+                                currency = "EUR";
+                                iban = "FR7612345987650123456789014";
+                                otherAccountIdentification = "90-100100-0";
                             }}),
                         }};
                         additionalInformation = new AdditionalInformationAccess() {{
-                            ownerName = new openapisdk.models.shared.AccountReference16Ch[]() {{
-                                add(new AccountReference16Ch() {{
-                                    cashAccountType = "accusantium";
-                                    currency = "totam";
-                                    iban = "commodi";
-                                    otherAccountIdentification = "quis";
+                            ownerName = new org.openapis.openapi.models.shared.AccountReference16CH[]{{
+                                add(new AccountReference16CH() {{
+                                    cashAccountType = "sapiente";
+                                    currency = "EUR";
+                                    iban = "FR7612345987650123456789014";
+                                    otherAccountIdentification = "90-100100-0";
+                                }}),
+                                add(new AccountReference16CH() {{
+                                    cashAccountType = "quo";
+                                    currency = "EUR";
+                                    iban = "FR7612345987650123456789014";
+                                    otherAccountIdentification = "90-100100-0";
+                                }}),
+                                add(new AccountReference16CH() {{
+                                    cashAccountType = "odit";
+                                    currency = "EUR";
+                                    iban = "FR7612345987650123456789014";
+                                    otherAccountIdentification = "90-100100-0";
+                                }}),
+                                add(new AccountReference16CH() {{
+                                    cashAccountType = "at";
+                                    currency = "EUR";
+                                    iban = "FR7612345987650123456789014";
+                                    otherAccountIdentification = "90-100100-0";
                                 }}),
                             }};
-                            trustedBeneficiaries = new openapisdk.models.shared.AccountReference16Ch[]() {{
-                                add(new AccountReference16Ch() {{
-                                    cashAccountType = "aut";
-                                    currency = "odit";
-                                    iban = "non";
-                                    otherAccountIdentification = "voluptas";
+                            trustedBeneficiaries = new org.openapis.openapi.models.shared.AccountReference16CH[]{{
+                                add(new AccountReference16CH() {{
+                                    cashAccountType = "maiores";
+                                    currency = "EUR";
+                                    iban = "FR7612345987650123456789014";
+                                    otherAccountIdentification = "90-100100-0";
                                 }}),
-                                add(new AccountReference16Ch() {{
-                                    cashAccountType = "omnis";
-                                    currency = "aut";
-                                    iban = "illo";
-                                    otherAccountIdentification = "sed";
+                                add(new AccountReference16CH() {{
+                                    cashAccountType = "molestiae";
+                                    currency = "EUR";
+                                    iban = "FR7612345987650123456789014";
+                                    otherAccountIdentification = "90-100100-0";
+                                }}),
+                                add(new AccountReference16CH() {{
+                                    cashAccountType = "quod";
+                                    currency = "EUR";
+                                    iban = "FR7612345987650123456789014";
+                                    otherAccountIdentification = "90-100100-0";
+                                }}),
+                                add(new AccountReference16CH() {{
+                                    cashAccountType = "quod";
+                                    currency = "EUR";
+                                    iban = "FR7612345987650123456789014";
+                                    otherAccountIdentification = "90-100100-0";
                                 }}),
                             }};
                         }};
-                        allPsd2 = "allAccountsWithOwnerName";
+                        allPsd2 = "allAccounts";
                         availableAccounts = "allAccountsWithOwnerName";
-                        availableAccountsWithBalance = "allAccounts";
-                        balances = new openapisdk.models.shared.AccountReference16Ch[]() {{
-                            add(new AccountReference16Ch() {{
-                                cashAccountType = "odio";
-                                currency = "qui";
-                                iban = "recusandae";
-                                otherAccountIdentification = "at";
+                        availableAccountsWithBalance = "allAccountsWithOwnerName";
+                        balances = new org.openapis.openapi.models.shared.AccountReference16CH[]{{
+                            add(new AccountReference16CH() {{
+                                cashAccountType = "dicta";
+                                currency = "EUR";
+                                iban = "FR7612345987650123456789014";
+                                otherAccountIdentification = "90-100100-0";
+                            }}),
+                            add(new AccountReference16CH() {{
+                                cashAccountType = "nam";
+                                currency = "EUR";
+                                iban = "FR7612345987650123456789014";
+                                otherAccountIdentification = "90-100100-0";
+                            }}),
+                            add(new AccountReference16CH() {{
+                                cashAccountType = "officia";
+                                currency = "EUR";
+                                iban = "FR7612345987650123456789014";
+                                otherAccountIdentification = "90-100100-0";
                             }}),
                         }};
-                        restrictedTo = new String[]() {{
-                            add("eveniet"),
+                        restrictedTo = new String[]{{
+                            add("fugit"),
+                            add("deleniti"),
+                            add("hic"),
                         }};
-                        transactions = new openapisdk.models.shared.AccountReference16Ch[]() {{
-                            add(new AccountReference16Ch() {{
-                                cashAccountType = "sint";
-                                currency = "inventore";
-                                iban = "ut";
-                                otherAccountIdentification = "exercitationem";
+                        transactions = new org.openapis.openapi.models.shared.AccountReference16CH[]{{
+                            add(new AccountReference16CH() {{
+                                cashAccountType = "totam";
+                                currency = "EUR";
+                                iban = "FR7612345987650123456789014";
+                                otherAccountIdentification = "90-100100-0";
                             }}),
-                            add(new AccountReference16Ch() {{
-                                cashAccountType = "aut";
-                                currency = "reprehenderit";
-                                iban = "tempore";
-                                otherAccountIdentification = "maiores";
+                            add(new AccountReference16CH() {{
+                                cashAccountType = "beatae";
+                                currency = "EUR";
+                                iban = "FR7612345987650123456789014";
+                                otherAccountIdentification = "90-100100-0";
+                            }}),
+                            add(new AccountReference16CH() {{
+                                cashAccountType = "commodi";
+                                currency = "EUR";
+                                iban = "FR7612345987650123456789014";
+                                otherAccountIdentification = "90-100100-0";
+                            }}),
+                            add(new AccountReference16CH() {{
+                                cashAccountType = "molestiae";
+                                currency = "EUR";
+                                iban = "FR7612345987650123456789014";
+                                otherAccountIdentification = "90-100100-0";
                             }}),
                         }};
                     }};
                     combinedServiceIndicator = false;
-                    frequencyPerDay = 7242748068272024738;
+                    frequencyPerDay = 4;
                     recurringIndicator = false;
-                    validUntil = "1992-08-27";
+                    validUntil = "2020-12-31";
                 }};
-            }};
+            }};            
 
             CreateConsentResponse res = sdk.accountInformationServiceAIS.createConsent(req);
 

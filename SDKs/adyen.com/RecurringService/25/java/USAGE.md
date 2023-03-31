@@ -2,25 +2,34 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostDisableSecurity;
+import org.openapis.openapi.models.operations.PostDisableRequest;
+import org.openapis.openapi.models.operations.PostDisableResponse;
+import org.openapis.openapi.models.shared.DisableRequest;
+import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostDisableRequest req = new PostDisableRequest() {{
                 security = new PostDisableSecurity() {{
-                    basicAuth = new SchemeBasicAuth() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
+                        apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
-                request = "sit";
-            }};
+                request = new DisableRequest() {{
+                    contract = "corrupti";
+                    merchantAccount = "provident";
+                    recurringDetailReference = "distinctio";
+                    shopperReference = "quibusdam";
+                }};
+            }};            
 
             PostDisableResponse res = sdk.general.postDisable(req);
 

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,29 +15,32 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AccountListNodeAgentSkusQueryParams;
+import org.openapis.openapi.models.operations.AccountListNodeAgentSkusHeaders;
+import org.openapis.openapi.models.operations.AccountListNodeAgentSkusRequest;
+import org.openapis.openapi.models.operations.AccountListNodeAgentSkusResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AccountListNodeAgentSkusRequest req = new AccountListNodeAgentSkusRequest() {{
                 queryParams = new AccountListNodeAgentSkusQueryParams() {{
-                    dollarFilter = "sit";
-                    apiVersion = "voluptas";
-                    maxresults = 6050128673802995827;
-                    timeout = 501233450539197794;
+                    dollarFilter = "corrupti";
+                    apiVersion = "provident";
+                    maxresults = 715190;
+                    timeout = 844266;
                 }};
                 headers = new AccountListNodeAgentSkusHeaders() {{
-                    clientRequestId = "consequuntur";
-                    ocpDate = "dolor";
-                    returnClientRequestId = true;
+                    clientRequestId = "unde";
+                    ocpDate = "nulla";
+                    returnClientRequestId = false;
                 }};
-            }};
+            }};            
 
             AccountListNodeAgentSkusResponse res = sdk.accounts.accountListNodeAgentSkus(req);
 
@@ -53,16 +56,17 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Accounts
+
+### accounts
 
 * `accountListNodeAgentSkus` - Lists all node agent SKUs supported by the Azure Batch service.
 
-### Applications
+### applications
 
 * `applicationGet` - Gets information about the specified application.
 * `applicationList` - Lists all of the applications available in the specified account.
 
-### Certificates
+### certificates
 
 * `certificateAdd` - Adds a certificate to the specified account.
 * `certificateCancelDeletion` - Cancels a failed deletion of a certificate from the specified account.
@@ -70,7 +74,7 @@ public class Application {
 * `certificateGet` - Gets information about the specified certificate.
 * `certificateList` - Lists all of the certificates that have been added to the specified account.
 
-### ComputeNodes
+### computeNodes
 
 * `computeNodeAddUser` - Adds a user account to the specified compute node.
 * `computeNodeDeleteUser` - Deletes a user account from the specified compute node.
@@ -85,7 +89,7 @@ public class Application {
 * `computeNodeUpdateUser` - Updates the password or expiration time of a user account on the specified compute node.
 * `poolRemoveNodes` - Removes compute nodes from the specified pool.
 
-### Files
+### files
 
 * `fileDeleteFromComputeNode` - Deletes the specified task file from the compute node.
 * `fileDeleteFromTask` - Deletes the specified task file from the compute node where the task ran.
@@ -96,7 +100,7 @@ public class Application {
 * `fileListFromComputeNode` - Lists all of the files in task directories on the specified compute node.
 * `fileListFromTask` - Lists the files in a task's directory on its compute node.
 
-### JobSchedules
+### jobSchedules
 
 * `jobScheduleAdd` - Adds a job schedule to the specified account.
 * `jobScheduleDelete` - Deletes a job schedule from the specified account.
@@ -109,7 +113,7 @@ public class Application {
 * `jobScheduleTerminate` - Terminates a job schedule.
 * `jobScheduleUpdate` - Updates the properties of the specified job schedule.
 
-### Jobs
+### jobs
 
 * `jobAdd` - Adds a job to the specified account.
 * `jobDelete` - Deletes a job.
@@ -124,7 +128,7 @@ public class Application {
 * `jobTerminate` - Terminates the specified job, marking it as completed.
 * `jobUpdate` - Updates the properties of a job.
 
-### Pools
+### pools
 
 * `poolAdd` - Adds a pool to the specified account.
 * `poolDelete` - Deletes a pool from the specified account.
@@ -140,9 +144,9 @@ public class Application {
 * `poolResize` - Changes the number of compute nodes that are assigned to a pool.
 * `poolStopResize` - Stops an ongoing resize operation on the pool. This does not restore the pool to its previous state before the resize operation: it only stops any further changes being made, and the pool maintains its current state.
 * `poolUpdateProperties` - Updates the properties of a pool.
-* `poolUpgradeOs` - Upgrades the operating system of the specified pool.
+* `poolUpgradeOS` - Upgrades the operating system of the specified pool.
 
-### Tasks
+### tasks
 
 * `taskAdd` - Adds a task to the specified job.
 * `taskAddCollection` - Adds a collection of tasks to the specified job.
@@ -152,7 +156,17 @@ public class Application {
 * `taskListSubtasks` - Lists all of the subtasks that are associated with the specified multi-instance task.
 * `taskTerminate` - Terminates the specified task.
 * `taskUpdate` - Updates the properties of the specified task.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

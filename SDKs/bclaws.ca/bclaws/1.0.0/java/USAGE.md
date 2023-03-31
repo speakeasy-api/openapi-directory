@@ -2,21 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetContentAspectIDAspectIDEnum;
+import org.openapis.openapi.models.operations.GetContentAspectIdPathParams;
+import org.openapis.openapi.models.operations.GetContentAspectIdRequest;
+import org.openapis.openapi.models.operations.GetContentAspectIdResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetContentAspectIdRequest req = new GetContentAspectIdRequest() {{
                 pathParams = new GetContentAspectIdPathParams() {{
-                    aspectId = "complete";
+                    aspectId = "oic";
                 }};
-            }};
+            }};            
 
             GetContentAspectIdResponse res = sdk.content.getContentAspectId(req);
 

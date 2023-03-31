@@ -2,51 +2,54 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetPersonalizedRankingHeaders;
+import org.openapis.openapi.models.operations.GetPersonalizedRankingRequestBody;
+import org.openapis.openapi.models.operations.GetPersonalizedRankingRequest;
+import org.openapis.openapi.models.operations.GetPersonalizedRankingResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetPersonalizedRankingRequest req = new GetPersonalizedRankingRequest() {{
                 headers = new GetPersonalizedRankingHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new GetPersonalizedRankingRequestBody() {{
-                    campaignArn = "voluptas";
+                    campaignArn = "illum";
                     context = new java.util.HashMap<String, String>() {{
-                        put("et", "nihil");
+                        put("error", "deserunt");
+                        put("suscipit", "iure");
                     }};
-                    filterArn = "rerum";
+                    filterArn = "magnam";
                     filterValues = new java.util.HashMap<String, String>() {{
-                        put("debitis", "voluptatum");
-                        put("et", "ut");
-                        put("dolorem", "et");
+                        put("ipsa", "delectus");
+                        put("tempora", "suscipit");
+                        put("molestiae", "minus");
+                        put("placeat", "voluptatum");
                     }};
-                    inputList = new String[]() {{
-                        add("iste"),
+                    inputList = new String[]{{
+                        add("excepturi"),
+                        add("nisi"),
                     }};
-                    userId = "vitae";
+                    userId = "recusandae";
                 }};
-            }};
+            }};            
 
             GetPersonalizedRankingResponse res = sdk.getPersonalizedRanking(req);
 

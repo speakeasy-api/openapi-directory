@@ -2,39 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CancelKeyDeletionXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CancelKeyDeletionHeaders;
+import org.openapis.openapi.models.operations.CancelKeyDeletionRequest;
+import org.openapis.openapi.models.operations.CancelKeyDeletionResponse;
+import org.openapis.openapi.models.shared.CancelKeyDeletionRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CancelKeyDeletionRequest req = new CancelKeyDeletionRequest() {{
                 headers = new CancelKeyDeletionHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "TrentService.CancelKeyDeletion";
                 }};
                 request = new CancelKeyDeletionRequest() {{
-                    keyId = "fugit";
+                    keyId = "illum";
                 }};
-            }};
+            }};            
 
             CancelKeyDeletionResponse res = sdk.cancelKeyDeletion(req);
 

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,18 +15,26 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeleteSecurity;
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeletePathParams;
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeleteQueryParams;
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeleteRequest;
+import org.openapis.openapi.models.operations.ManufacturersAccountsLanguagesProductCertificationsDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            ManufacturersAccountsProductsDeleteRequest req = new ManufacturersAccountsProductsDeleteRequest() {{
-                security = new ManufacturersAccountsProductsDeleteSecurity() {{
+            ManufacturersAccountsLanguagesProductCertificationsDeleteRequest req = new ManufacturersAccountsLanguagesProductCertificationsDeleteRequest() {{
+                security = new ManufacturersAccountsLanguagesProductCertificationsDeleteSecurity() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
@@ -34,26 +42,25 @@ public class Application {
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new ManufacturersAccountsProductsDeletePathParams() {{
-                    name = "sit";
-                    parent = "voluptas";
+                pathParams = new ManufacturersAccountsLanguagesProductCertificationsDeletePathParams() {{
+                    name = "corrupti";
                 }};
-                queryParams = new ManufacturersAccountsProductsDeleteQueryParams() {{
+                queryParams = new ManufacturersAccountsLanguagesProductCertificationsDeleteQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "expedita";
+                    accessToken = "distinctio";
                     alt = "proto";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-            }};
+            }};            
 
-            ManufacturersAccountsProductsDeleteResponse res = sdk.accounts.manufacturersAccountsProductsDelete(req);
+            ManufacturersAccountsLanguagesProductCertificationsDeleteResponse res = sdk.accounts.manufacturersAccountsLanguagesProductCertificationsDelete(req);
 
             if (res.empty.isPresent()) {
                 // handle response
@@ -67,13 +74,28 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### accounts
 
+* `manufacturersAccountsLanguagesProductCertificationsDelete` - Deletes a product certification by its name. This method can only be called by certification bodies.
+* `manufacturersAccountsLanguagesProductCertificationsGet` - Gets a product certification by its name. This method can only be called by certification bodies.
+* `manufacturersAccountsLanguagesProductCertificationsList` - Lists product certifications from a specified certification body. This method can only be called by certification bodies.
+* `manufacturersAccountsLanguagesProductCertificationsPatch` - Updates (or creates if allow_missing = true) a product certification which links certifications with products. This method can only be called by certification bodies.
 * `manufacturersAccountsProductsDelete` - Deletes the product from a Manufacturer Center account.
 * `manufacturersAccountsProductsGet` - Gets the product from a Manufacturer Center account, including product issues. A recently updated product takes around 15 minutes to process. Changes are only visible after it has been processed. While some issues may be available once the product has been processed, other issues may take days to appear.
 * `manufacturersAccountsProductsList` - Lists all the products in a Manufacturer Center account.
 * `manufacturersAccountsProductsUpdate` - Inserts or updates the attributes of the product in a Manufacturer Center account. Creates a product with the provided attributes. If the product already exists, then all attributes are replaced with the new ones. The checks at upload time are minimal. All required attributes need to be present for a product to be valid. Issues may show up later after the API has accepted a new upload for a product and it is possible to overwrite an existing valid product with an invalid product. To detect this, you should retrieve the product and check it for issues once the new version is available. Uploaded attributes first need to be processed before they can be retrieved. Until then, new products will be unavailable, and retrieval of previously uploaded products will return the original state of the product.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

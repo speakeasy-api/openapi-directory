@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateSecurity;
+import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateQueryParams;
+import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateRequest;
+import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateResponse;
+import org.openapis.openapi.models.shared.HttpBody;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudtasksApiQueueUpdateRequest req = new CloudtasksApiQueueUpdateRequest() {{
                 security = new CloudtasksApiQueueUpdateSecurity() {{
@@ -22,29 +30,36 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudtasksApiQueueUpdateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    appId = "expedita";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    appId = "quibusdam";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new HttpBody() {{
-                    contentType = "dicta";
-                    data = "debitis";
-                    extensions = new java.util.HashMap<String, Object>[]() {{
+                    contentType = "suscipit";
+                    data = "iure";
+                    extensions = new java.util.HashMap<String, Object>[]{{
                         add(new java.util.HashMap<String, Object>() {{
-                            put("ut", "dolorem");
+                            put("ipsa", "delectus");
+                            put("tempora", "suscipit");
+                            put("molestiae", "minus");
+                            put("placeat", "voluptatum");
+                        }}),
+                        add(new java.util.HashMap<String, Object>() {{
+                            put("excepturi", "nisi");
+                            put("recusandae", "temporibus");
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CloudtasksApiQueueUpdateResponse res = sdk.api.cloudtasksApiQueueUpdate(req);
 

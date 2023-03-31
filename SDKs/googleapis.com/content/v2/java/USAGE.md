@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ContentAccountsAuthinfoSecurity;
+import org.openapis.openapi.models.operations.ContentAccountsAuthinfoQueryParams;
+import org.openapis.openapi.models.operations.ContentAccountsAuthinfoRequest;
+import org.openapis.openapi.models.operations.ContentAccountsAuthinfoResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ContentAccountsAuthinfoRequest req = new ContentAccountsAuthinfoRequest() {{
                 security = new ContentAccountsAuthinfoSecurity() {{
@@ -22,19 +29,19 @@ public class Application {
                     }};
                 }};
                 queryParams = new ContentAccountsAuthinfoQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
-            }};
+            }};            
 
             ContentAccountsAuthinfoResponse res = sdk.accounts.contentAccountsAuthinfo(req);
 

@@ -2,15 +2,20 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchSecurity;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchPathParams;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchRequestBody;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchRequest;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse;
+import org.openapis.openapi.models.shared.SchemeUserKey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CompanyAlternativeSearchRequest req = new CompanyAlternativeSearchRequest() {{
                 security = new CompanyAlternativeSearchSecurity() {{
@@ -19,21 +24,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new CompanyAlternativeSearchPathParams() {{
-                    country = "sit";
+                    country = "corrupti";
                 }};
                 request = new CompanyAlternativeSearchRequestBody() {{
-                    address = "voluptas";
-                    name = "culpa";
-                    number = "expedita";
-                    phone = "consequuntur";
-                    url = "dolor";
-                    vat = "expedita";
+                    address = "7868 Stamm Junctions";
+                    name = "error";
+                    number = "deserunt";
+                    phone = "1-528-292-3478 x545";
+                    url = "nisi";
+                    vat = "recusandae";
                 }};
-            }};
+            }};            
 
             CompanyAlternativeSearchResponse res = sdk.v1Company.companyAlternativeSearch(req);
 
-            if (res.companyAlternativeSearch200ApplicationJSONAnies.isPresent()) {
+            if (res.companyAlternativeSearch200ApplicationJSONObjects.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

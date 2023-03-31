@@ -2,15 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption1;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption2;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurity;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreatePathParams;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateQueryParams;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateRequest;
+import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateResponse;
+import org.openapis.openapi.models.shared.SiteInput;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FirebasehostingProjectsSitesCreateRequest req = new FirebasehostingProjectsSitesCreateRequest() {{
                 security = new FirebasehostingProjectsSitesCreateSecurity() {{
@@ -24,29 +35,30 @@ public class Application {
                     }};
                 }};
                 pathParams = new FirebasehostingProjectsSitesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new FirebasehostingProjectsSitesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    siteId = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    siteId = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new SiteInput() {{
-                    appId = "debitis";
+                    appId = "iure";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("et", "ut");
+                        put("debitis", "ipsa");
+                        put("delectus", "tempora");
                     }};
                 }};
-            }};
+            }};            
 
             FirebasehostingProjectsSitesCreateResponse res = sdk.projects.firebasehostingProjectsSitesCreate(req);
 

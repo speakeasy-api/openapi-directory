@@ -2,15 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity;
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams;
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams;
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest;
+import org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestAnnotationEnum;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1TransactionEventEventTypeEnum;
+import org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1TransactionEvent;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             RecaptchaenterpriseProjectsAssessmentsAnnotateRequest req = new RecaptchaenterpriseProjectsAssessmentsAnnotateRequest() {{
                 security = new RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity() {{
@@ -22,29 +35,36 @@ public class Application {
                     }};
                 }};
                 pathParams = new RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest() {{
-                    annotation = "PASSWORD_INCORRECT";
-                    hashedAccountId = "debitis";
-                    reasons = new openapisdk.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum[]() {{
-                        add("TRANSACTION_ACCEPTED"),
+                    annotation = "LEGITIMATE";
+                    hashedAccountId = "iure";
+                    reasons = new org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequestReasonsEnum[]{{
+                        add("INCORRECT_PASSWORD"),
+                        add("REASON_UNSPECIFIED"),
+                    }};
+                    transactionEvent = new GoogleCloudRecaptchaenterpriseV1TransactionEvent() {{
+                        eventTime = "delectus";
+                        eventType = "AUTHORIZATION_DECLINE";
+                        reason = "suscipit";
+                        value = 4776.65;
                     }};
                 }};
-            }};
+            }};            
 
             RecaptchaenterpriseProjectsAssessmentsAnnotateResponse res = sdk.projects.recaptchaenterpriseProjectsAssessmentsAnnotate(req);
 

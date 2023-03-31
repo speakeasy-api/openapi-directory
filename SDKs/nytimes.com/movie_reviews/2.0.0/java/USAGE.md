@@ -2,29 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonPathParams;
+import org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonRequest;
+import org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     apikey = new SchemeApikey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetCriticsResourceTypeJsonRequest req = new GetCriticsResourceTypeJsonRequest() {{
                 pathParams = new GetCriticsResourceTypeJsonPathParams() {{
-                    resourceType = "sit";
+                    resourceType = "corrupti";
                 }};
-            }};
+            }};            
 
             GetCriticsResourceTypeJsonResponse res = sdk.getCriticsResourceTypeJson(req);
 

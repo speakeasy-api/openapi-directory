@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadSecurity;
+import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadPathParams;
+import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadRequest;
+import org.openapis.openapi.models.operations.GetBenefitsDocumentUploadDownloadResponse;
+import org.openapis.openapi.models.shared.SchemeApikey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetBenefitsDocumentUploadDownloadRequest req = new GetBenefitsDocumentUploadDownloadRequest() {{
                 security = new GetBenefitsDocumentUploadDownloadSecurity() {{
@@ -19,9 +23,9 @@ public class Application {
                     }};
                 }};
                 pathParams = new GetBenefitsDocumentUploadDownloadPathParams() {{
-                    id = "sit";
+                    id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
                 }};
-            }};
+            }};            
 
             GetBenefitsDocumentUploadDownloadResponse res = sdk.vbaDocuments.getBenefitsDocumentUploadDownload(req);
 

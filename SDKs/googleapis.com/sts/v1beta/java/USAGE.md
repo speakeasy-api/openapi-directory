@@ -2,40 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.StsTokenQueryParams;
+import org.openapis.openapi.models.operations.StsTokenRequest;
+import org.openapis.openapi.models.operations.StsTokenResponse;
+import org.openapis.openapi.models.shared.GoogleIdentityStsV1betaExchangeTokenRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             StsTokenRequest req = new StsTokenRequest() {{
                 queryParams = new StsTokenQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new GoogleIdentityStsV1betaExchangeTokenRequest() {{
-                    audience = "rerum";
-                    grantType = "dicta";
-                    options = "debitis";
-                    requestedTokenType = "voluptatum";
-                    scope = "et";
-                    subjectToken = "ut";
-                    subjectTokenType = "dolorem";
+                    audience = "deserunt";
+                    grantType = "suscipit";
+                    options = "iure";
+                    requestedTokenType = "magnam";
+                    scope = "debitis";
+                    subjectToken = "ipsa";
+                    subjectTokenType = "delectus";
                 }};
-            }};
+            }};            
 
             StsTokenResponse res = sdk.v1beta.stsToken(req);
 

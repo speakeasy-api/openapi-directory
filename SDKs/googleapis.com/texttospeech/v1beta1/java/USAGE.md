@@ -2,18 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetSecurity;
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetPathParams;
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetQueryParams;
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetRequest;
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            TexttospeechProjectsLocationsVoicesSynthesizeLongAudioRequest req = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioRequest() {{
-                security = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioSecurity() {{
+            TexttospeechProjectsLocationsOperationsGetRequest req = new TexttospeechProjectsLocationsOperationsGetRequest() {{
+                security = new TexttospeechProjectsLocationsOperationsGetSecurity() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
@@ -21,51 +29,25 @@ public class Application {
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioPathParams() {{
-                    parent = "sit";
+                pathParams = new TexttospeechProjectsLocationsOperationsGetPathParams() {{
+                    name = "corrupti";
                 }};
-                queryParams = new TexttospeechProjectsLocationsVoicesSynthesizeLongAudioQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                queryParams = new TexttospeechProjectsLocationsOperationsGetQueryParams() {{
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-                request = new SynthesizeLongAudioRequest() {{
-                    audioConfig = new AudioConfig() {{
-                        audioEncoding = "OGG_OPUS";
-                        effectsProfileId = new String[]() {{
-                            add("voluptatum"),
-                        }};
-                        pitch = 26.200001;
-                        sampleRateHertz = 161231572858529631;
-                        speakingRate = 50.099998;
-                        volumeGainDb = 15.100000;
-                    }};
-                    input = new SynthesisInput() {{
-                        ssml = "totam";
-                        text = "dolores";
-                    }};
-                    outputGcsUri = "illum";
-                    voice = new VoiceSelectionParams() {{
-                        customVoice = new CustomVoiceParams() {{
-                            model = "debitis";
-                            reportedUsage = "REALTIME";
-                        }};
-                        languageCode = "odio";
-                        name = "dolore";
-                        ssmlGender = "SSML_VOICE_GENDER_UNSPECIFIED";
-                    }};
-                }};
-            }};
+            }};            
 
-            TexttospeechProjectsLocationsVoicesSynthesizeLongAudioResponse res = sdk.projects.texttospeechProjectsLocationsVoicesSynthesizeLongAudio(req);
+            TexttospeechProjectsLocationsOperationsGetResponse res = sdk.projects.texttospeechProjectsLocationsOperationsGet(req);
 
             if (res.operation.isPresent()) {
                 // handle response

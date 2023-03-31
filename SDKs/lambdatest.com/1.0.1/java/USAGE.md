@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DevicesSecurity;
+import org.openapis.openapi.models.operations.DevicesQueryParams;
+import org.openapis.openapi.models.operations.DevicesRequest;
+import org.openapis.openapi.models.operations.DevicesResponse;
+import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DevicesRequest req = new DevicesRequest() {{
                 security = new DevicesSecurity() {{
@@ -20,9 +24,9 @@ public class Application {
                     }};
                 }};
                 queryParams = new DevicesQueryParams() {{
-                    os = "sit";
+                    os = "corrupti";
                 }};
-            }};
+            }};            
 
             DevicesResponse res = sdk.getDevices.devices(req);
 

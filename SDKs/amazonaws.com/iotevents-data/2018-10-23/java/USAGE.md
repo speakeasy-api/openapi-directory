@@ -2,57 +2,64 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchAcknowledgeAlarmHeaders;
+import org.openapis.openapi.models.operations.BatchAcknowledgeAlarmRequestBody;
+import org.openapis.openapi.models.operations.BatchAcknowledgeAlarmRequest;
+import org.openapis.openapi.models.operations.BatchAcknowledgeAlarmResponse;
+import org.openapis.openapi.models.shared.AcknowledgeAlarmActionRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BatchAcknowledgeAlarmRequest req = new BatchAcknowledgeAlarmRequest() {{
                 headers = new BatchAcknowledgeAlarmHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new BatchAcknowledgeAlarmRequestBody() {{
-                    acknowledgeActionRequests = new openapisdk.models.shared.AcknowledgeAlarmActionRequest[]() {{
+                    acknowledgeActionRequests = new org.openapis.openapi.models.shared.AcknowledgeAlarmActionRequest[]{{
                         add(new AcknowledgeAlarmActionRequest() {{
-                            alarmModelName = "fugit";
-                            keyValue = "et";
-                            note = "nihil";
-                            requestId = "rerum";
+                            alarmModelName = "vel";
+                            keyValue = "error";
+                            note = "deserunt";
+                            requestId = "suscipit";
                         }}),
                         add(new AcknowledgeAlarmActionRequest() {{
-                            alarmModelName = "dicta";
-                            keyValue = "debitis";
+                            alarmModelName = "iure";
+                            keyValue = "magnam";
+                            note = "debitis";
+                            requestId = "ipsa";
+                        }}),
+                        add(new AcknowledgeAlarmActionRequest() {{
+                            alarmModelName = "delectus";
+                            keyValue = "tempora";
+                            note = "suscipit";
+                            requestId = "molestiae";
+                        }}),
+                        add(new AcknowledgeAlarmActionRequest() {{
+                            alarmModelName = "minus";
+                            keyValue = "placeat";
                             note = "voluptatum";
-                            requestId = "et";
-                        }}),
-                        add(new AcknowledgeAlarmActionRequest() {{
-                            alarmModelName = "ut";
-                            keyValue = "dolorem";
-                            note = "et";
-                            requestId = "voluptate";
+                            requestId = "iusto";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             BatchAcknowledgeAlarmResponse res = sdk.batchAcknowledgeAlarm(req);
 

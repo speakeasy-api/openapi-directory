@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETPathParams;
+import org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETRequest;
+import org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetAffectedGenomicModelsUsingGetRequest req = new GetAffectedGenomicModelsUsingGetRequest() {{
-                pathParams = new GetAffectedGenomicModelsUsingGetPathParams() {{
-                    taxonId = "sit";
+            GETAffectedGenomicModelsUsingGETRequest req = new GETAffectedGenomicModelsUsingGETRequest() {{
+                pathParams = new GETAffectedGenomicModelsUsingGETPathParams() {{
+                    taxonId = "corrupti";
                 }};
-            }};
+            }};            
 
-            GetAffectedGenomicModelsUsingGetResponse res = sdk.agr.getAffectedGenomicModelsUsingGet(req);
+            GETAffectedGenomicModelsUsingGETResponse res = sdk.agr.getAffectedGenomicModelsUsingGET(req);
 
             if (res.body.isPresent()) {
                 // handle response

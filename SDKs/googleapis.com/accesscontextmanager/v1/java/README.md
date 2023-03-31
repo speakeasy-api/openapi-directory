@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,34 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity;
+import org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams;
+import org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams;
+import org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest;
+import org.openapis.openapi.models.operations.AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse;
+import org.openapis.openapi.models.shared.AccessLevel;
+import org.openapis.openapi.models.shared.CustomLevel;
+import org.openapis.openapi.models.shared.Expr;
+import org.openapis.openapi.models.shared.BasicLevelCombiningFunctionEnum;
+import org.openapis.openapi.models.shared.BasicLevel;
+import org.openapis.openapi.models.shared.Condition;
+import org.openapis.openapi.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum;
+import org.openapis.openapi.models.shared.DevicePolicyAllowedEncryptionStatusesEnum;
+import org.openapis.openapi.models.shared.DevicePolicy;
+import org.openapis.openapi.models.shared.OsConstraintOsTypeEnum;
+import org.openapis.openapi.models.shared.OsConstraint;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest req = new AccesscontextmanagerAccessPoliciesAccessLevelsCreateRequest() {{
                 security = new AccesscontextmanagerAccessPoliciesAccessLevelsCreateSecurity() {{
@@ -35,90 +54,147 @@ public class Application {
                     }};
                 }};
                 pathParams = new AccesscontextmanagerAccessPoliciesAccessLevelsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new AccesscontextmanagerAccessPoliciesAccessLevelsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new AccessLevel() {{
                     basic = new BasicLevel() {{
-                        combiningFunction = "OR";
-                        conditions = new openapisdk.models.shared.Condition[]() {{
+                        combiningFunction = "AND";
+                        conditions = new org.openapis.openapi.models.shared.Condition[]{{
                             add(new Condition() {{
                                 devicePolicy = new DevicePolicy() {{
-                                    allowedDeviceManagementLevels = new openapisdk.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]() {{
-                                        add("BASIC"),
+                                    allowedDeviceManagementLevels = new org.openapis.openapi.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]{{
+                                        add("COMPLETE"),
+                                        add("MANAGEMENT_UNSPECIFIED"),
                                     }};
-                                    allowedEncryptionStatuses = new openapisdk.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]() {{
-                                        add("UNENCRYPTED"),
-                                        add("UNENCRYPTED"),
-                                        add("UNENCRYPTED"),
+                                    allowedEncryptionStatuses = new org.openapis.openapi.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]{{
+                                        add("ENCRYPTION_UNSUPPORTED"),
+                                        add("ENCRYPTION_UNSUPPORTED"),
+                                        add("ENCRYPTION_UNSUPPORTED"),
+                                        add("ENCRYPTED"),
                                     }};
-                                    osConstraints = new openapisdk.models.shared.OsConstraint[]() {{
+                                    osConstraints = new org.openapis.openapi.models.shared.OsConstraint[]{{
                                         add(new OsConstraint() {{
-                                            minimumVersion = "vitae";
-                                            osType = "DESKTOP_CHROME_OS";
-                                            requireVerifiedChromeOs = true;
-                                        }}),
-                                        add(new OsConstraint() {{
-                                            minimumVersion = "illum";
+                                            minimumVersion = "voluptatum";
                                             osType = "DESKTOP_LINUX";
                                             requireVerifiedChromeOs = false;
                                         }}),
                                         add(new OsConstraint() {{
-                                            minimumVersion = "odio";
+                                            minimumVersion = "excepturi";
+                                            osType = "DESKTOP_WINDOWS";
+                                            requireVerifiedChromeOs = false;
+                                        }}),
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "recusandae";
+                                            osType = "ANDROID";
+                                            requireVerifiedChromeOs = false;
+                                        }}),
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "ab";
+                                            osType = "DESKTOP_WINDOWS";
+                                            requireVerifiedChromeOs = false;
+                                        }}),
+                                    }};
+                                    requireAdminApproval = false;
+                                    requireCorpOwned = false;
+                                    requireScreenlock = false;
+                                }};
+                                ipSubnetworks = new String[]{{
+                                    add("deserunt"),
+                                }};
+                                members = new String[]{{
+                                    add("ipsam"),
+                                }};
+                                negate = false;
+                                regions = new String[]{{
+                                    add("sapiente"),
+                                    add("quo"),
+                                    add("odit"),
+                                    add("at"),
+                                }};
+                                requiredAccessLevels = new String[]{{
+                                    add("maiores"),
+                                    add("molestiae"),
+                                    add("quod"),
+                                    add("quod"),
+                                }};
+                            }}),
+                            add(new Condition() {{
+                                devicePolicy = new DevicePolicy() {{
+                                    allowedDeviceManagementLevels = new org.openapis.openapi.models.shared.DevicePolicyAllowedDeviceManagementLevelsEnum[]{{
+                                        add("BASIC"),
+                                        add("COMPLETE"),
+                                    }};
+                                    allowedEncryptionStatuses = new org.openapis.openapi.models.shared.DevicePolicyAllowedEncryptionStatusesEnum[]{{
+                                        add("ENCRYPTION_UNSPECIFIED"),
+                                        add("UNENCRYPTED"),
+                                        add("UNENCRYPTED"),
+                                    }};
+                                    osConstraints = new org.openapis.openapi.models.shared.OsConstraint[]{{
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "fugit";
+                                            osType = "DESKTOP_LINUX";
+                                            requireVerifiedChromeOs = false;
+                                        }}),
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "hic";
+                                            osType = "ANDROID";
+                                            requireVerifiedChromeOs = false;
+                                        }}),
+                                        add(new OsConstraint() {{
+                                            minimumVersion = "totam";
                                             osType = "OS_UNSPECIFIED";
                                             requireVerifiedChromeOs = false;
                                         }}),
                                     }};
-                                    requireAdminApproval = true;
-                                    requireCorpOwned = true;
+                                    requireAdminApproval = false;
+                                    requireCorpOwned = false;
                                     requireScreenlock = false;
                                 }};
-                                ipSubnetworks = new String[]() {{
-                                    add("quis"),
-                                    add("est"),
+                                ipSubnetworks = new String[]{{
+                                    add("molestiae"),
+                                    add("modi"),
                                 }};
-                                members = new String[]() {{
-                                    add("odit"),
-                                    add("non"),
-                                    add("voluptas"),
+                                members = new String[]{{
+                                    add("impedit"),
                                 }};
-                                negate = true;
-                                regions = new String[]() {{
-                                    add("illo"),
+                                negate = false;
+                                regions = new String[]{{
+                                    add("esse"),
+                                    add("ipsum"),
+                                    add("excepturi"),
                                 }};
-                                requiredAccessLevels = new String[]() {{
-                                    add("officiis"),
-                                    add("autem"),
-                                    add("consectetur"),
+                                requiredAccessLevels = new String[]{{
+                                    add("perferendis"),
                                 }};
                             }}),
                         }};
                     }};
                     custom = new CustomLevel() {{
                         expr = new Expr() {{
-                            description = "nobis";
-                            expression = "odio";
-                            location = "qui";
-                            title = "recusandae";
+                            description = "ad";
+                            expression = "natus";
+                            location = "sed";
+                            title = "Miss";
                         }};
                     }};
-                    description = "at";
-                    name = "ipsum";
-                    title = "eveniet";
+                    description = "dolor";
+                    name = "natus";
+                    title = "Mrs.";
                 }};
-            }};
+            }};            
 
             AccesscontextmanagerAccessPoliciesAccessLevelsCreateResponse res = sdk.accessPolicies.accesscontextmanagerAccessPoliciesAccessLevelsCreate(req);
 
@@ -134,11 +210,14 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### accessPolicies
 
 * `accesscontextmanagerAccessPoliciesAccessLevelsCreate` - Creates an access level. The long-running operation from this RPC has a successful status after the access level propagates to long-lasting storage. If access levels contain errors, an error response is returned for the first error encountered.
 * `accesscontextmanagerAccessPoliciesAccessLevelsList` - Lists all access levels for an access policy.
 * `accesscontextmanagerAccessPoliciesAccessLevelsReplaceAll` - Replaces all existing access levels in an access policy with the access levels provided. This is done atomically. The long-running operation from this RPC has a successful status after all replacements propagate to long-lasting storage. If the replacement contains errors, an error response is returned for the first error encountered. Upon error, the replacement is cancelled, and existing access levels are not affected. The Operation.response field contains ReplaceAccessLevelsResponse. Removing access levels contained in existing service perimeters result in an error.
+* `accesscontextmanagerAccessPoliciesAuthorizedOrgsDescsCreate` - Creates an authorized orgs desc. The long-running operation from this RPC has a successful status after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs desc contains errors, an error response is returned for the first error encountered. The name of this `AuthorizedOrgsDesc` will be assigned during creation.
+* `accesscontextmanagerAccessPoliciesAuthorizedOrgsDescsList` - Lists all authorized orgs descs for an access policy.
 * `accesscontextmanagerAccessPoliciesCreate` - Creates an access policy. This method fails if the organization already has an access policy. The long-running operation has a successful status after the access policy propagates to long-lasting storage. Syntactic and basic semantic errors are returned in `metadata` as a BadRequest proto.
 * `accesscontextmanagerAccessPoliciesGetIamPolicy` - Gets the IAM policy for the specified Access Context Manager access policy.
 * `accesscontextmanagerAccessPoliciesList` - Lists all access policies in an organization.
@@ -160,7 +239,17 @@ public class Application {
 * `accesscontextmanagerOrganizationsGcpUserAccessBindingsGet` - Gets the GcpUserAccessBinding with the given name.
 * `accesscontextmanagerOrganizationsGcpUserAccessBindingsList` - Lists all GcpUserAccessBindings for a Google Cloud organization.
 * `accesscontextmanagerOrganizationsGcpUserAccessBindingsPatch` - Updates a GcpUserAccessBinding. Completion of this long-running operation does not necessarily signify that the changed binding is deployed onto all affected users, which may take more time.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

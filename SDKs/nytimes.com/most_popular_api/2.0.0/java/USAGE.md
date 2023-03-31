@@ -2,29 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonSecurity;
+import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonPathParams;
+import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonRequest;
+import org.openapis.openapi.models.operations.GETMostemailedSectionTimePeriodJsonResponse;
+import org.openapis.openapi.models.shared.TimePeriodEnum;
+import org.openapis.openapi.models.shared.SectionEnum;
+import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetMostemailedSectionTimePeriodJsonRequest req = new GetMostemailedSectionTimePeriodJsonRequest() {{
-                security = new GetMostemailedSectionTimePeriodJsonSecurity() {{
-                    apiKey = new SchemeApiKey() {{
+            GETMostemailedSectionTimePeriodJsonRequest req = new GETMostemailedSectionTimePeriodJsonRequest() {{
+                security = new GETMostemailedSectionTimePeriodJsonSecurity() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
-                pathParams = new GetMostemailedSectionTimePeriodJsonPathParams() {{
-                    section = "Opinion";
-                    timePeriod = "1";
+                pathParams = new GETMostemailedSectionTimePeriodJsonPathParams() {{
+                    section = "Public Editor";
+                    timePeriod = "7";
                 }};
-            }};
+            }};            
 
-            GetMostemailedSectionTimePeriodJsonResponse res = sdk.getMostemailedSectionTimePeriodJson(req);
+            GETMostemailedSectionTimePeriodJsonResponse res = sdk.getMostemailedSectionTimePeriodJson(req);
 
             if (res.getMostemailedSectionTimePeriodJSON200ApplicationJSONObject.isPresent()) {
                 // handle response

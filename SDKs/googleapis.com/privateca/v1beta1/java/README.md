@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,18 +15,26 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListSecurity;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListPathParams;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListQueryParams;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListRequest;
+import org.openapis.openapi.models.operations.PrivatecaProjectsLocationsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            PrivatecaProjectsLocationsCertificateAuthoritiesActivateRequest req = new PrivatecaProjectsLocationsCertificateAuthoritiesActivateRequest() {{
-                security = new PrivatecaProjectsLocationsCertificateAuthoritiesActivateSecurity() {{
+            PrivatecaProjectsLocationsListRequest req = new PrivatecaProjectsLocationsListRequest() {{
+                security = new PrivatecaProjectsLocationsListSecurity() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
@@ -34,39 +42,30 @@ public class Application {
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
-                pathParams = new PrivatecaProjectsLocationsCertificateAuthoritiesActivatePathParams() {{
-                    name = "sit";
+                pathParams = new PrivatecaProjectsLocationsListPathParams() {{
+                    name = "corrupti";
                 }};
-                queryParams = new PrivatecaProjectsLocationsCertificateAuthoritiesActivateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                queryParams = new PrivatecaProjectsLocationsListQueryParams() {{
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    filter = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    pageSize = 623564;
+                    pageToken = "deserunt";
+                    prettyPrint = false;
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-                request = new ActivateCertificateAuthorityRequest() {{
-                    pemCaCertificate = "dicta";
-                    requestId = "debitis";
-                    subordinateConfig = new SubordinateConfig() {{
-                        certificateAuthority = "voluptatum";
-                        pemIssuerChain = new SubordinateConfigChain() {{
-                            pemCertificates = new String[]() {{
-                                add("ut"),
-                            }};
-                        }};
-                    }};
-                }};
-            }};
+            }};            
 
-            PrivatecaProjectsLocationsCertificateAuthoritiesActivateResponse res = sdk.projects.privatecaProjectsLocationsCertificateAuthoritiesActivate(req);
+            PrivatecaProjectsLocationsListResponse res = sdk.projects.privatecaProjectsLocationsList(req);
 
-            if (res.operation.isPresent()) {
+            if (res.listLocationsResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -78,31 +77,28 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
-* `privatecaProjectsLocationsCertificateAuthoritiesActivate` - Activate a CertificateAuthority that is in state PENDING_ACTIVATION and is of type SUBORDINATE. After the parent Certificate Authority signs a certificate signing request from FetchCertificateAuthorityCsr, this method can complete the activation process.
-* `privatecaProjectsLocationsCertificateAuthoritiesCertificateRevocationListsList` - Lists CertificateRevocationLists.
-* `privatecaProjectsLocationsCertificateAuthoritiesCertificatesCreate` - Create a new Certificate in a given Project, Location from a particular CertificateAuthority.
-* `privatecaProjectsLocationsCertificateAuthoritiesCertificatesList` - Lists Certificates.
-* `privatecaProjectsLocationsCertificateAuthoritiesCertificatesPatch` - Update a Certificate. Currently, the only field you can update is the labels field.
-* `privatecaProjectsLocationsCertificateAuthoritiesCertificatesRevoke` - Revoke a Certificate.
-* `privatecaProjectsLocationsCertificateAuthoritiesCreate` - Create a new CertificateAuthority in a given Project and Location.
-* `privatecaProjectsLocationsCertificateAuthoritiesDisable` - Disable a CertificateAuthority.
-* `privatecaProjectsLocationsCertificateAuthoritiesEnable` - Enable a CertificateAuthority.
-* `privatecaProjectsLocationsCertificateAuthoritiesFetch` - Fetch a certificate signing request (CSR) from a CertificateAuthority that is in state PENDING_ACTIVATION and is of type SUBORDINATE. The CSR must then be signed by the desired parent Certificate Authority, which could be another CertificateAuthority resource, or could be an on-prem certificate authority. See also ActivateCertificateAuthority.
-* `privatecaProjectsLocationsCertificateAuthoritiesList` - Lists CertificateAuthorities.
-* `privatecaProjectsLocationsCertificateAuthoritiesRestore` - Restore a CertificateAuthority that is scheduled for deletion.
-* `privatecaProjectsLocationsCertificateAuthoritiesScheduleDelete` - Schedule a CertificateAuthority for deletion.
 * `privatecaProjectsLocationsList` - Lists information about the supported locations for this service.
 * `privatecaProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `privatecaProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `privatecaProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-* `privatecaProjectsLocationsReusableConfigsGet` - Returns a ReusableConfig.
+* `privatecaProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* `privatecaProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 * `privatecaProjectsLocationsReusableConfigsGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `privatecaProjectsLocationsReusableConfigsList` - Lists ReusableConfigs.
 * `privatecaProjectsLocationsReusableConfigsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 * `privatecaProjectsLocationsReusableConfigsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

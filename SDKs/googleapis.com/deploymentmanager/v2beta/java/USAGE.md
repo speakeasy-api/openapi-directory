@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteSecurityOption1;
+import org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteSecurityOption2;
+import org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteSecurity;
+import org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeletePathParams;
+import org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteQueryParams;
+import org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteRequest;
+import org.openapis.openapi.models.operations.DeploymentmanagerCompositeTypesDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeploymentmanagerCompositeTypesDeleteRequest req = new DeploymentmanagerCompositeTypesDeleteRequest() {{
                 security = new DeploymentmanagerCompositeTypesDeleteSecurity() {{
@@ -24,23 +34,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new DeploymentmanagerCompositeTypesDeletePathParams() {{
-                    compositeType = "sit";
-                    project = "voluptas";
+                    compositeType = "corrupti";
+                    project = "provident";
                 }};
                 queryParams = new DeploymentmanagerCompositeTypesDeleteQueryParams() {{
                     dollarXgafv = "2";
-                    accessToken = "expedita";
-                    alt = "proto";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    accessToken = "quibusdam";
+                    alt = "media";
+                    callback = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             DeploymentmanagerCompositeTypesDeleteResponse res = sdk.compositeTypes.deploymentmanagerCompositeTypesDelete(req);
 

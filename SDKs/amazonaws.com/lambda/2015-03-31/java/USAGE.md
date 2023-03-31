@@ -2,48 +2,50 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddLayerVersionPermissionPathParams;
+import org.openapis.openapi.models.operations.AddLayerVersionPermissionQueryParams;
+import org.openapis.openapi.models.operations.AddLayerVersionPermissionHeaders;
+import org.openapis.openapi.models.operations.AddLayerVersionPermissionRequestBody;
+import org.openapis.openapi.models.operations.AddLayerVersionPermissionRequest;
+import org.openapis.openapi.models.operations.AddLayerVersionPermissionResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddLayerVersionPermissionRequest req = new AddLayerVersionPermissionRequest() {{
                 pathParams = new AddLayerVersionPermissionPathParams() {{
-                    layerName = "sit";
-                    versionNumber = 2259404117704393152;
+                    layerName = "corrupti";
+                    versionNumber = 592845;
                 }};
                 queryParams = new AddLayerVersionPermissionQueryParams() {{
-                    revisionId = "culpa";
+                    revisionId = "distinctio";
                 }};
                 headers = new AddLayerVersionPermissionHeaders() {{
-                    xAmzAlgorithm = "expedita";
-                    xAmzContentSha256 = "consequuntur";
-                    xAmzCredential = "dolor";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "voluptas";
-                    xAmzSignature = "fugit";
-                    xAmzSignedHeaders = "et";
+                    xAmzAlgorithm = "quibusdam";
+                    xAmzContentSha256 = "unde";
+                    xAmzCredential = "nulla";
+                    xAmzDate = "corrupti";
+                    xAmzSecurityToken = "illum";
+                    xAmzSignature = "vel";
+                    xAmzSignedHeaders = "error";
                 }};
                 request = new AddLayerVersionPermissionRequestBody() {{
-                    action = "nihil";
-                    organizationId = "rerum";
-                    principal = "dicta";
-                    statementId = "debitis";
+                    action = "deserunt";
+                    organizationId = "suscipit";
+                    principal = "iure";
+                    statementId = "magnam";
                 }};
-            }};
+            }};            
 
             AddLayerVersionPermissionResponse res = sdk.addLayerVersionPermission(req);
 

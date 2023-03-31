@@ -2,25 +2,27 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAddressPathParams;
+import org.openapis.openapi.models.operations.GetAddressRequest;
+import org.openapis.openapi.models.operations.GetAddressResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAddressRequest req = new GetAddressRequest() {{
                 pathParams = new GetAddressPathParams() {{
-                    address = "sit";
+                    address = "5786 Little Streets";
                 }};
-            }};
+            }};            
 
             GetAddressResponse res = sdk.getAddress(req);
 
-            if (res.getAddress200ApplicationJSONAny.isPresent()) {
+            if (res.getAddress200ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

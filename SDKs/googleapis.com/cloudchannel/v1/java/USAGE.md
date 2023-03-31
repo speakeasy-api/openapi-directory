@@ -2,15 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity;
+import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams;
+import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams;
+import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest;
+import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1RepricingConfigRebillingBasisEnum;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1RepricingConfig;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1RepricingConfigEntitlementGranularity;
+import org.openapis.openapi.models.shared.GoogleTypeDate;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1ConditionalOverrideRebillingBasisEnum;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1ConditionalOverride;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1RepricingCondition;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1SkuGroupCondition;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1RepricingAdjustment;
+import org.openapis.openapi.models.shared.GoogleCloudChannelV1PercentageAdjustment;
+import org.openapis.openapi.models.shared.GoogleTypeDecimal;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest req = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest() {{
                 security = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity() {{
@@ -22,46 +42,47 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new GoogleCloudChannelV1ChannelPartnerRepricingConfigInput() {{
                     repricingConfig = new GoogleCloudChannelV1RepricingConfig() {{
                         adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
                             percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
                                 percentage = new GoogleTypeDecimal() {{
-                                    value = "dicta";
+                                    value = "suscipit";
                                 }};
                             }};
                         }};
                         channelPartnerGranularity = new java.util.HashMap<String, Object>() {{
-                            put("voluptatum", "et");
+                            put("magnam", "debitis");
+                            put("ipsa", "delectus");
                         }};
-                        conditionalOverrides = new openapisdk.models.shared.GoogleCloudChannelV1ConditionalOverride[]() {{
+                        conditionalOverrides = new org.openapis.openapi.models.shared.GoogleCloudChannelV1ConditionalOverride[]{{
                             add(new GoogleCloudChannelV1ConditionalOverride() {{
                                 adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
                                     percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
                                         percentage = new GoogleTypeDecimal() {{
-                                            value = "dolorem";
+                                            value = "suscipit";
                                         }};
                                     }};
                                 }};
                                 rebillingBasis = "COST_AT_LIST";
                                 repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
                                     skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
-                                        skuGroup = "voluptate";
+                                        skuGroup = "minus";
                                     }};
                                 }};
                             }}),
@@ -69,45 +90,30 @@ public class Application {
                                 adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
                                     percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
                                         percentage = new GoogleTypeDecimal() {{
-                                            value = "iste";
+                                            value = "placeat";
                                         }};
                                     }};
                                 }};
-                                rebillingBasis = "REBILLING_BASIS_UNSPECIFIED";
+                                rebillingBasis = "COST_AT_LIST";
                                 repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
                                     skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
-                                        skuGroup = "totam";
-                                    }};
-                                }};
-                            }}),
-                            add(new GoogleCloudChannelV1ConditionalOverride() {{
-                                adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
-                                    percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
-                                        percentage = new GoogleTypeDecimal() {{
-                                            value = "dolores";
-                                        }};
-                                    }};
-                                }};
-                                rebillingBasis = "DIRECT_CUSTOMER_COST";
-                                repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
-                                    skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
-                                        skuGroup = "debitis";
+                                        skuGroup = "iusto";
                                     }};
                                 }};
                             }}),
                         }};
                         effectiveInvoiceMonth = new GoogleTypeDate() {{
-                            day = 3706853784096366226;
-                            month = 2627038740284806767;
-                            year = 6303220950515014660;
+                            day = 568045;
+                            month = 392785;
+                            year = 925597;
                         }};
                         entitlementGranularity = new GoogleCloudChannelV1RepricingConfigEntitlementGranularity() {{
-                            entitlement = "id";
+                            entitlement = "temporibus";
                         }};
                         rebillingBasis = "REBILLING_BASIS_UNSPECIFIED";
                     }};
                 }};
-            }};
+            }};            
 
             CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse res = sdk.accounts.cloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(req);
 

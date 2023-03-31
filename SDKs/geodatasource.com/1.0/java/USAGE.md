@@ -2,24 +2,27 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetCityFormatEnum;
+import org.openapis.openapi.models.operations.GetCityQueryParams;
+import org.openapis.openapi.models.operations.GetCityRequest;
+import org.openapis.openapi.models.operations.GetCityResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetCityRequest req = new GetCityRequest() {{
                 queryParams = new GetCityQueryParams() {{
-                    format = "json";
-                    key = "voluptas";
-                    lat = 53.099998;
-                    lng = 15.100000;
+                    format = "xml";
+                    key = "provident";
+                    lat = 7151.9;
+                    lng = 8442.66;
                 }};
-            }};
+            }};            
 
             GetCityResponse res = sdk.getCity(req);
 

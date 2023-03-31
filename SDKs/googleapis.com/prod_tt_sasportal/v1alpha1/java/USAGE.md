@@ -2,41 +2,52 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ProdTtSasportalCustomersListSecurityOption1;
+import org.openapis.openapi.models.operations.ProdTtSasportalCustomersListSecurityOption2;
+import org.openapis.openapi.models.operations.ProdTtSasportalCustomersListSecurity;
+import org.openapis.openapi.models.operations.ProdTtSasportalCustomersListQueryParams;
+import org.openapis.openapi.models.operations.ProdTtSasportalCustomersListRequest;
+import org.openapis.openapi.models.operations.ProdTtSasportalCustomersListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ProdTtSasportalCustomersListRequest req = new ProdTtSasportalCustomersListRequest() {{
                 security = new ProdTtSasportalCustomersListSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    option1 = new ProdTtSasportalCustomersListSecurityOption1() {{
+                        oauth2 = new SchemeOauth2() {{
+                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                        }};
+                        oauth2c = new SchemeOauth2c() {{
+                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                        }};
                     }};
                 }};
                 queryParams = new ProdTtSasportalCustomersListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    pageSize = 6044372234677422456;
-                    pageToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    pageSize = 847252;
+                    pageToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
-            }};
+            }};            
 
             ProdTtSasportalCustomersListResponse res = sdk.customers.prodTtSasportalCustomersList(req);
 

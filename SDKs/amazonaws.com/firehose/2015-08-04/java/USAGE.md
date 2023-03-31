@@ -2,542 +2,881 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateDeliveryStreamXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateDeliveryStreamHeaders;
+import org.openapis.openapi.models.operations.CreateDeliveryStreamRequest;
+import org.openapis.openapi.models.operations.CreateDeliveryStreamResponse;
+import org.openapis.openapi.models.shared.CreateDeliveryStreamInputS3DestinationConfiguration;
+import org.openapis.openapi.models.shared.CreateDeliveryStreamInput;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.SplunkDestinationConfiguration;
+import org.openapis.openapi.models.shared.S3DestinationConfiguration;
+import org.openapis.openapi.models.shared.EncryptionConfiguration;
+import org.openapis.openapi.models.shared.NoEncryptionConfigEnum;
+import org.openapis.openapi.models.shared.KMSEncryptionConfig;
+import org.openapis.openapi.models.shared.CompressionFormatEnum;
+import org.openapis.openapi.models.shared.CloudWatchLoggingOptions;
+import org.openapis.openapi.models.shared.BufferingHints;
+import org.openapis.openapi.models.shared.SplunkS3BackupModeEnum;
+import org.openapis.openapi.models.shared.SplunkRetryOptions;
+import org.openapis.openapi.models.shared.ProcessingConfiguration;
+import org.openapis.openapi.models.shared.Processor;
+import org.openapis.openapi.models.shared.ProcessorTypeEnum;
+import org.openapis.openapi.models.shared.ProcessorParameter;
+import org.openapis.openapi.models.shared.ProcessorParameterNameEnum;
+import org.openapis.openapi.models.shared.HECEndpointTypeEnum;
+import org.openapis.openapi.models.shared.RedshiftDestinationConfiguration;
+import org.openapis.openapi.models.shared.RedshiftS3BackupModeEnum;
+import org.openapis.openapi.models.shared.RedshiftRetryOptions;
+import org.openapis.openapi.models.shared.CopyCommand;
+import org.openapis.openapi.models.shared.KinesisStreamSourceConfiguration;
+import org.openapis.openapi.models.shared.HttpEndpointDestinationConfiguration;
+import org.openapis.openapi.models.shared.HttpEndpointS3BackupModeEnum;
+import org.openapis.openapi.models.shared.HttpEndpointRetryOptions;
+import org.openapis.openapi.models.shared.HttpEndpointRequestConfiguration;
+import org.openapis.openapi.models.shared.ContentEncodingEnum;
+import org.openapis.openapi.models.shared.HttpEndpointCommonAttribute;
+import org.openapis.openapi.models.shared.HttpEndpointConfiguration;
+import org.openapis.openapi.models.shared.HttpEndpointBufferingHints;
+import org.openapis.openapi.models.shared.ExtendedS3DestinationConfiguration;
+import org.openapis.openapi.models.shared.S3BackupModeEnum;
+import org.openapis.openapi.models.shared.DynamicPartitioningConfiguration;
+import org.openapis.openapi.models.shared.RetryOptions;
+import org.openapis.openapi.models.shared.DataFormatConversionConfiguration;
+import org.openapis.openapi.models.shared.SchemaConfiguration;
+import org.openapis.openapi.models.shared.OutputFormatConfiguration;
+import org.openapis.openapi.models.shared.Serializer;
+import org.openapis.openapi.models.shared.ParquetSerDe;
+import org.openapis.openapi.models.shared.ParquetWriterVersionEnum;
+import org.openapis.openapi.models.shared.ParquetCompressionEnum;
+import org.openapis.openapi.models.shared.OrcSerDe;
+import org.openapis.openapi.models.shared.OrcFormatVersionEnum;
+import org.openapis.openapi.models.shared.OrcCompressionEnum;
+import org.openapis.openapi.models.shared.InputFormatConfiguration;
+import org.openapis.openapi.models.shared.Deserializer;
+import org.openapis.openapi.models.shared.OpenXJsonSerDe;
+import org.openapis.openapi.models.shared.HiveJsonSerDe;
+import org.openapis.openapi.models.shared.ElasticsearchDestinationConfiguration;
+import org.openapis.openapi.models.shared.VpcConfiguration;
+import org.openapis.openapi.models.shared.ElasticsearchS3BackupModeEnum;
+import org.openapis.openapi.models.shared.ElasticsearchRetryOptions;
+import org.openapis.openapi.models.shared.ElasticsearchIndexRotationPeriodEnum;
+import org.openapis.openapi.models.shared.ElasticsearchBufferingHints;
+import org.openapis.openapi.models.shared.DeliveryStreamTypeEnum;
+import org.openapis.openapi.models.shared.DeliveryStreamEncryptionConfigurationInput;
+import org.openapis.openapi.models.shared.KeyTypeEnum;
+import org.openapis.openapi.models.shared.AmazonopensearchserviceDestinationConfiguration;
+import org.openapis.openapi.models.shared.AmazonopensearchserviceS3BackupModeEnum;
+import org.openapis.openapi.models.shared.AmazonopensearchserviceRetryOptions;
+import org.openapis.openapi.models.shared.AmazonopensearchserviceIndexRotationPeriodEnum;
+import org.openapis.openapi.models.shared.AmazonopensearchserviceBufferingHints;
+import org.openapis.openapi.models.shared.AmazonOpenSearchServerlessDestinationConfiguration;
+import org.openapis.openapi.models.shared.AmazonOpenSearchServerlessS3BackupModeEnum;
+import org.openapis.openapi.models.shared.AmazonOpenSearchServerlessRetryOptions;
+import org.openapis.openapi.models.shared.AmazonOpenSearchServerlessBufferingHints;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateDeliveryStreamRequest req = new CreateDeliveryStreamRequest() {{
                 headers = new CreateDeliveryStreamHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "Firehose_20150804.CreateDeliveryStream";
                 }};
                 request = new CreateDeliveryStreamInput() {{
-                    deliveryStreamEncryptionConfigurationInput = new DeliveryStreamEncryptionConfigurationInput() {{
-                        keyARN = "fugit";
-                        keyType = "AWS_OWNED_CMK";
-                    }};
-                    deliveryStreamName = "nihil";
-                    deliveryStreamType = "KinesisStreamAsSource";
-                    elasticsearchDestinationConfiguration = new ElasticsearchDestinationConfiguration() {{
-                        bufferingHints = new ElasticsearchBufferingHints() {{
-                            intervalInSeconds = 7837839688282259259;
-                            sizeInMBs = 2518412263346885298;
+                    amazonOpenSearchServerlessDestinationConfiguration = new AmazonOpenSearchServerlessDestinationConfiguration() {{
+                        bufferingHints = new AmazonOpenSearchServerlessBufferingHints() {{
+                            intervalInSeconds = 847252;
+                            sizeInMBs = 423655;
                         }};
                         cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
-                            enabled = true;
-                            logGroupName = "et";
-                            logStreamName = "ut";
+                            enabled = false;
+                            logGroupName = "error";
+                            logStreamName = "deserunt";
                         }};
-                        clusterEndpoint = "dolorem";
-                        domainARN = "et";
-                        indexName = "voluptate";
-                        indexRotationPeriod = "NoRotation";
+                        collectionEndpoint = "suscipit";
+                        indexName = "iure";
                         processingConfiguration = new ProcessingConfiguration() {{
-                            enabled = true;
-                            processors = new openapisdk.models.shared.Processor[]() {{
+                            enabled = false;
+                            processors = new org.openapis.openapi.models.shared.Processor[]{{
                                 add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "LambdaArn";
+                                            parameterValue = "delectus";
+                                        }}),
                                         add(new ProcessorParameter() {{
                                             parameterName = "MetadataExtractionQuery";
-                                            parameterValue = "debitis";
+                                            parameterValue = "suscipit";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "RoleArn";
+                                            parameterValue = "minus";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "SubRecordType";
+                                            parameterValue = "voluptatum";
+                                        }}),
+                                    }};
+                                    type = "Lambda";
+                                }}),
+                                add(new Processor() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "JsonParsingEngine";
+                                            parameterValue = "recusandae";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "SubRecordType";
+                                            parameterValue = "ab";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "JsonParsingEngine";
+                                            parameterValue = "veritatis";
+                                        }}),
+                                    }};
+                                    type = "MetadataExtraction";
+                                }}),
+                            }};
+                        }};
+                        retryOptions = new AmazonOpenSearchServerlessRetryOptions() {{
+                            durationInSeconds = 20218;
+                        }};
+                        roleARN = "ipsam";
+                        s3BackupMode = "AllDocuments";
+                        s3Configuration = new S3DestinationConfiguration() {{
+                            bucketARN = "sapiente";
+                            bufferingHints = new BufferingHints() {{
+                                intervalInSeconds = 778157;
+                                sizeInMBs = 140350;
+                            }};
+                            cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
+                                enabled = false;
+                                logGroupName = "at";
+                                logStreamName = "at";
+                            }};
+                            compressionFormat = "HADOOP_SNAPPY";
+                            encryptionConfiguration = new EncryptionConfiguration() {{
+                                kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                    awskmsKeyARN = "molestiae";
+                                }};
+                                noEncryptionConfig = "NoEncryption";
+                            }};
+                            errorOutputPrefix = "quod";
+                            prefix = "quod";
+                            roleARN = "esse";
+                        }};
+                        vpcConfiguration = new VpcConfiguration() {{
+                            roleARN = "totam";
+                            securityGroupIds = new String[]{{
+                                add("dolorum"),
+                                add("dicta"),
+                                add("nam"),
+                                add("officia"),
+                            }};
+                            subnetIds = new String[]{{
+                                add("fugit"),
+                                add("deleniti"),
+                                add("hic"),
+                            }};
+                        }};
+                    }};
+                    amazonopensearchserviceDestinationConfiguration = new AmazonopensearchserviceDestinationConfiguration() {{
+                        bufferingHints = new AmazonopensearchserviceBufferingHints() {{
+                            intervalInSeconds = 758616;
+                            sizeInMBs = 521848;
+                        }};
+                        cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
+                            enabled = false;
+                            logGroupName = "beatae";
+                            logStreamName = "commodi";
+                        }};
+                        clusterEndpoint = "molestiae";
+                        domainARN = "modi";
+                        indexName = "qui";
+                        indexRotationPeriod = "OneWeek";
+                        processingConfiguration = new ProcessingConfiguration() {{
+                            enabled = false;
+                            processors = new org.openapis.openapi.models.shared.Processor[]{{
+                                add(new Processor() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "NumberOfRetries";
+                                            parameterValue = "excepturi";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "NumberOfRetries";
+                                            parameterValue = "perferendis";
+                                        }}),
+                                    }};
+                                    type = "Lambda";
+                                }}),
+                                add(new Processor() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "NumberOfRetries";
+                                            parameterValue = "iste";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "MetadataExtractionQuery";
+                                            parameterValue = "natus";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "JsonParsingEngine";
+                                            parameterValue = "hic";
+                                        }}),
+                                    }};
+                                    type = "AppendDelimiterToRecord";
+                                }}),
+                                add(new Processor() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "RoleArn";
+                                            parameterValue = "corporis";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "BufferSizeInMBs";
+                                            parameterValue = "iure";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "Delimiter";
+                                            parameterValue = "quidem";
                                         }}),
                                     }};
                                     type = "RecordDeAggregation";
                                 }}),
+                            }};
+                        }};
+                        retryOptions = new AmazonopensearchserviceRetryOptions() {{
+                            durationInSeconds = 60225;
+                        }};
+                        roleARN = "reiciendis";
+                        s3BackupMode = "AllDocuments";
+                        s3Configuration = new S3DestinationConfiguration() {{
+                            bucketARN = "mollitia";
+                            bufferingHints = new BufferingHints() {{
+                                intervalInSeconds = 670638;
+                                sizeInMBs = 170909;
+                            }};
+                            cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
+                                enabled = false;
+                                logGroupName = "dolorem";
+                                logStreamName = "corporis";
+                            }};
+                            compressionFormat = "UNCOMPRESSED";
+                            encryptionConfiguration = new EncryptionConfiguration() {{
+                                kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                    awskmsKeyARN = "nobis";
+                                }};
+                                noEncryptionConfig = "NoEncryption";
+                            }};
+                            errorOutputPrefix = "enim";
+                            prefix = "omnis";
+                            roleARN = "nemo";
+                        }};
+                        typeName = "minima";
+                        vpcConfiguration = new VpcConfiguration() {{
+                            roleARN = "excepturi";
+                            securityGroupIds = new String[]{{
+                                add("iure"),
+                            }};
+                            subnetIds = new String[]{{
+                                add("doloribus"),
+                                add("sapiente"),
+                                add("architecto"),
+                            }};
+                        }};
+                    }};
+                    deliveryStreamEncryptionConfigurationInput = new DeliveryStreamEncryptionConfigurationInput() {{
+                        keyARN = "mollitia";
+                        keyType = "AWS_OWNED_CMK";
+                    }};
+                    deliveryStreamName = "culpa";
+                    deliveryStreamType = "DirectPut";
+                    elasticsearchDestinationConfiguration = new ElasticsearchDestinationConfiguration() {{
+                        bufferingHints = new ElasticsearchBufferingHints() {{
+                            intervalInSeconds = 995300;
+                            sizeInMBs = 653108;
+                        }};
+                        cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
+                            enabled = false;
+                            logGroupName = "occaecati";
+                            logStreamName = "numquam";
+                        }};
+                        clusterEndpoint = "commodi";
+                        domainARN = "quam";
+                        indexName = "molestiae";
+                        indexRotationPeriod = "OneHour";
+                        processingConfiguration = new ProcessingConfiguration() {{
+                            enabled = false;
+                            processors = new org.openapis.openapi.models.shared.Processor[]{{
                                 add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
                                         add(new ProcessorParameter() {{
-                                            parameterName = "SubRecordType";
-                                            parameterValue = "id";
+                                            parameterName = "JsonParsingEngine";
+                                            parameterValue = "vitae";
                                         }}),
                                     }};
-                                    type = "Lambda";
+                                    type = "MetadataExtraction";
                                 }}),
                                 add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
-                                        add(new ProcessorParameter() {{
-                                            parameterName = "BufferSizeInMBs";
-                                            parameterValue = "commodi";
-                                        }}),
-                                        add(new ProcessorParameter() {{
-                                            parameterName = "Delimiter";
-                                            parameterValue = "est";
-                                        }}),
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
                                         add(new ProcessorParameter() {{
                                             parameterName = "MetadataExtractionQuery";
                                             parameterValue = "odit";
                                         }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "SubRecordType";
+                                            parameterValue = "sequi";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "Delimiter";
+                                            parameterValue = "ipsam";
+                                        }}),
                                     }};
-                                    type = "Lambda";
+                                    type = "MetadataExtraction";
+                                }}),
+                                add(new Processor() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "LambdaArn";
+                                            parameterValue = "quasi";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "BufferSizeInMBs";
+                                            parameterValue = "temporibus";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "BufferIntervalInSeconds";
+                                            parameterValue = "quasi";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "Delimiter";
+                                            parameterValue = "voluptatibus";
+                                        }}),
+                                    }};
+                                    type = "AppendDelimiterToRecord";
                                 }}),
                             }};
                         }};
                         retryOptions = new ElasticsearchRetryOptions() {{
-                            durationInSeconds = 167566062957544642;
+                            durationInSeconds = 468651;
                         }};
-                        roleARN = "omnis";
-                        s3BackupMode = "FailedDocumentsOnly";
+                        roleARN = "praesentium";
+                        s3BackupMode = "AllDocuments";
                         s3Configuration = new S3DestinationConfiguration() {{
-                            bucketARN = "illo";
+                            bucketARN = "ipsa";
                             bufferingHints = new BufferingHints() {{
-                                intervalInSeconds = 5558237345453186302;
-                                sizeInMBs = 7845762441295307478;
+                                intervalInSeconds = 604846;
+                                sizeInMBs = 451159;
                             }};
                             cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
-                                enabled = true;
-                                logGroupName = "consectetur";
-                                logStreamName = "nobis";
+                                enabled = false;
+                                logGroupName = "cum";
+                                logStreamName = "perferendis";
                             }};
-                            compressionFormat = "ZIP";
+                            compressionFormat = "UNCOMPRESSED";
                             encryptionConfiguration = new EncryptionConfiguration() {{
-                                kmsEncryptionConfig = new KmsEncryptionConfig() {{
-                                    awskmsKeyARN = "qui";
+                                kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                    awskmsKeyARN = "reprehenderit";
                                 }};
                                 noEncryptionConfig = "NoEncryption";
                             }};
-                            errorOutputPrefix = "at";
-                            prefix = "ipsum";
-                            roleARN = "eveniet";
+                            errorOutputPrefix = "ut";
+                            prefix = "maiores";
+                            roleARN = "dicta";
                         }};
-                        typeName = "modi";
+                        typeName = "corporis";
                         vpcConfiguration = new VpcConfiguration() {{
-                            roleARN = "sint";
-                            securityGroupIds = new String[]() {{
-                                add("ut"),
+                            roleARN = "dolore";
+                            securityGroupIds = new String[]{{
+                                add("dicta"),
+                                add("harum"),
                             }};
-                            subnetIds = new String[]() {{
-                                add("aut"),
-                                add("reprehenderit"),
-                                add("tempore"),
+                            subnetIds = new String[]{{
+                                add("accusamus"),
+                                add("commodi"),
                             }};
                         }};
                     }};
                     extendedS3DestinationConfiguration = new ExtendedS3DestinationConfiguration() {{
-                        bucketARN = "maiores";
+                        bucketARN = "repudiandae";
                         bufferingHints = new BufferingHints() {{
-                            intervalInSeconds = 1061380815263676471;
-                            sizeInMBs = 7242748068272024738;
+                            intervalInSeconds = 64147;
+                            sizeInMBs = 216822;
                         }};
                         cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
                             enabled = false;
-                            logGroupName = "veritatis";
-                            logStreamName = "in";
+                            logGroupName = "quidem";
+                            logStreamName = "molestias";
                         }};
-                        compressionFormat = "HADOOP_SNAPPY";
+                        compressionFormat = "ZIP";
                         dataFormatConversionConfiguration = new DataFormatConversionConfiguration() {{
                             enabled = false;
                             inputFormatConfiguration = new InputFormatConfiguration() {{
                                 deserializer = new Deserializer() {{
                                     hiveJsonSerDe = new HiveJsonSerDe() {{
-                                        timestampFormats = new String[]() {{
-                                            add("ex"),
+                                        timestampFormats = new String[]{{
+                                            add("modi"),
+                                            add("praesentium"),
+                                            add("rem"),
+                                            add("voluptates"),
                                         }};
                                     }};
                                     openXJsonSerDe = new OpenXJsonSerDe() {{
-                                        caseInsensitive = true;
+                                        caseInsensitive = false;
                                         columnToJsonKeyMappings = new java.util.HashMap<String, String>() {{
-                                            put("vel", "rerum");
+                                            put("repudiandae", "sint");
                                         }};
-                                        convertDotsInJsonKeysToUnderscores = true;
+                                        convertDotsInJsonKeysToUnderscores = false;
                                     }};
                                 }};
                             }};
                             outputFormatConfiguration = new OutputFormatConfiguration() {{
                                 serializer = new Serializer() {{
                                     orcSerDe = new OrcSerDe() {{
-                                        blockSizeBytes = 1938800996802160635;
-                                        bloomFilterColumns = new String[]() {{
-                                            add("reprehenderit"),
+                                        blockSizeBytes = 83112;
+                                        bloomFilterColumns = new String[]{{
+                                            add("incidunt"),
+                                            add("enim"),
+                                            add("consequatur"),
+                                            add("est"),
                                         }};
-                                        bloomFilterFalsePositiveProbability = 94.099998;
-                                        compression = "SNAPPY";
-                                        dictionaryKeyThreshold = 31.100000;
-                                        enablePadding = true;
-                                        formatVersion = "V0_11";
-                                        paddingTolerance = 26.100000;
-                                        rowIndexStride = 8218430188258725598;
-                                        stripeSizeBytes = 4255970180603226314;
+                                        bloomFilterFalsePositiveProbability = 8423.42;
+                                        compression = "NONE";
+                                        dictionaryKeyThreshold = 6471.74;
+                                        enablePadding = false;
+                                        formatVersion = "V0_12";
+                                        paddingTolerance = 8413.86;
+                                        rowIndexStride = 289406;
+                                        stripeSizeBytes = 264730;
                                     }};
                                     parquetSerDe = new ParquetSerDe() {{
-                                        blockSizeBytes = 2682844416202521633;
-                                        compression = "SNAPPY";
-                                        enableDictionaryCompression = true;
-                                        maxPaddingBytes = 5902760509050140210;
-                                        pageSizeBytes = 9021104375654741729;
-                                        writerVersion = "V2";
+                                        blockSizeBytes = 183191;
+                                        compression = "GZIP";
+                                        enableDictionaryCompression = false;
+                                        maxPaddingBytes = 586513;
+                                        pageSizeBytes = 552822;
+                                        writerVersion = "V1";
                                     }};
                                 }};
                             }};
                             schemaConfiguration = new SchemaConfiguration() {{
-                                catalogId = "cumque";
-                                databaseName = "soluta";
-                                region = "sunt";
-                                roleARN = "voluptates";
-                                tableName = "magni";
-                                versionId = "et";
+                                catalogId = "magni";
+                                databaseName = "assumenda";
+                                region = "ipsam";
+                                roleARN = "alias";
+                                tableName = "fugit";
+                                versionId = "dolorum";
                             }};
                         }};
                         dynamicPartitioningConfiguration = new DynamicPartitioningConfiguration() {{
-                            enabled = true;
+                            enabled = false;
                             retryOptions = new RetryOptions() {{
-                                durationInSeconds = 8482125374365136680;
+                                durationInSeconds = 569618;
                             }};
                         }};
                         encryptionConfiguration = new EncryptionConfiguration() {{
-                            kmsEncryptionConfig = new KmsEncryptionConfig() {{
-                                awskmsKeyARN = "earum";
+                            kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                awskmsKeyARN = "tempora";
                             }};
                             noEncryptionConfig = "NoEncryption";
                         }};
-                        errorOutputPrefix = "omnis";
-                        prefix = "ut";
+                        errorOutputPrefix = "facilis";
+                        prefix = "tempore";
                         processingConfiguration = new ProcessingConfiguration() {{
                             enabled = false;
-                            processors = new openapisdk.models.shared.Processor[]() {{
+                            processors = new org.openapis.openapi.models.shared.Processor[]{{
                                 add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "JsonParsingEngine";
+                                            parameterValue = "non";
+                                        }}),
                                         add(new ProcessorParameter() {{
                                             parameterName = "BufferIntervalInSeconds";
-                                            parameterValue = "reprehenderit";
+                                            parameterValue = "sint";
                                         }}),
                                         add(new ProcessorParameter() {{
                                             parameterName = "JsonParsingEngine";
-                                            parameterValue = "nostrum";
+                                            parameterValue = "provident";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "Delimiter";
+                                            parameterValue = "sint";
                                         }}),
                                     }};
-                                    type = "AppendDelimiterToRecord";
+                                    type = "MetadataExtraction";
                                 }}),
                                 add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
                                         add(new ProcessorParameter() {{
-                                            parameterName = "MetadataExtractionQuery";
+                                            parameterName = "Delimiter";
                                             parameterValue = "a";
                                         }}),
-                                        add(new ProcessorParameter() {{
-                                            parameterName = "LambdaArn";
-                                            parameterValue = "aut";
-                                        }}),
-                                        add(new ProcessorParameter() {{
-                                            parameterName = "BufferSizeInMBs";
-                                            parameterValue = "consequuntur";
-                                        }}),
                                     }};
-                                    type = "AppendDelimiterToRecord";
+                                    type = "MetadataExtraction";
                                 }}),
                             }};
                         }};
-                        roleARN = "autem";
+                        roleARN = "in";
                         s3BackupConfiguration = new S3DestinationConfiguration() {{
-                            bucketARN = "ipsa";
+                            bucketARN = "in";
                             bufferingHints = new BufferingHints() {{
-                                intervalInSeconds = 1627381309359808899;
-                                sizeInMBs = 8204648627352676445;
+                                intervalInSeconds = 846409;
+                                sizeInMBs = 978571;
                             }};
                             cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
-                                enabled = true;
-                                logGroupName = "atque";
-                                logStreamName = "ratione";
+                                enabled = false;
+                                logGroupName = "rerum";
+                                logStreamName = "dicta";
                             }};
-                            compressionFormat = "ZIP";
+                            compressionFormat = "GZIP";
                             encryptionConfiguration = new EncryptionConfiguration() {{
-                                kmsEncryptionConfig = new KmsEncryptionConfig() {{
-                                    awskmsKeyARN = "explicabo";
+                                kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                    awskmsKeyARN = "cumque";
                                 }};
                                 noEncryptionConfig = "NoEncryption";
                             }};
-                            errorOutputPrefix = "maxime";
-                            prefix = "eum";
-                            roleARN = "perferendis";
+                            errorOutputPrefix = "facere";
+                            prefix = "ea";
+                            roleARN = "aliquid";
                         }};
-                        s3BackupMode = "Disabled";
+                        s3BackupMode = "Enabled";
                     }};
                     httpEndpointDestinationConfiguration = new HttpEndpointDestinationConfiguration() {{
                         bufferingHints = new HttpEndpointBufferingHints() {{
-                            intervalInSeconds = 2037591971392316788;
-                            sizeInMBs = 6394356307858046544;
+                            intervalInSeconds = 881104;
+                            sizeInMBs = 249796;
                         }};
                         cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
                             enabled = false;
-                            logGroupName = "cumque";
-                            logStreamName = "minima";
+                            logGroupName = "occaecati";
+                            logStreamName = "enim";
                         }};
                         endpointConfiguration = new HttpEndpointConfiguration() {{
-                            accessKey = "necessitatibus";
-                            name = "est";
-                            url = "quis";
+                            accessKey = "accusamus";
+                            name = "delectus";
+                            url = "quidem";
                         }};
                         processingConfiguration = new ProcessingConfiguration() {{
-                            enabled = true;
-                            processors = new openapisdk.models.shared.Processor[]() {{
+                            enabled = false;
+                            processors = new org.openapis.openapi.models.shared.Processor[]{{
                                 add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
                                         add(new ProcessorParameter() {{
-                                            parameterName = "RoleArn";
-                                            parameterValue = "ad";
+                                            parameterName = "BufferSizeInMBs";
+                                            parameterValue = "blanditiis";
                                         }}),
                                         add(new ProcessorParameter() {{
                                             parameterName = "RoleArn";
-                                            parameterValue = "vel";
+                                            parameterValue = "sapiente";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "MetadataExtractionQuery";
+                                            parameterValue = "deserunt";
                                         }}),
                                     }};
-                                    type = "AppendDelimiterToRecord";
+                                    type = "Lambda";
+                                }}),
+                                add(new Processor() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "BufferSizeInMBs";
+                                            parameterValue = "omnis";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "RoleArn";
+                                            parameterValue = "perferendis";
+                                        }}),
+                                    }};
+                                    type = "Lambda";
+                                }}),
+                                add(new Processor() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "BufferIntervalInSeconds";
+                                            parameterValue = "id";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "MetadataExtractionQuery";
+                                            parameterValue = "labore";
+                                        }}),
+                                    }};
+                                    type = "Lambda";
                                 }}),
                             }};
                         }};
                         requestConfiguration = new HttpEndpointRequestConfiguration() {{
-                            commonAttributes = new openapisdk.models.shared.HttpEndpointCommonAttribute[]() {{
+                            commonAttributes = new org.openapis.openapi.models.shared.HttpEndpointCommonAttribute[]{{
                                 add(new HttpEndpointCommonAttribute() {{
-                                    attributeName = "nihil";
-                                    attributeValue = "tempora";
+                                    attributeName = "nobis";
+                                    attributeValue = "eum";
                                 }}),
                                 add(new HttpEndpointCommonAttribute() {{
-                                    attributeName = "deserunt";
-                                    attributeValue = "eaque";
+                                    attributeName = "vero";
+                                    attributeValue = "aspernatur";
+                                }}),
+                                add(new HttpEndpointCommonAttribute() {{
+                                    attributeName = "architecto";
+                                    attributeValue = "magnam";
                                 }}),
                             }};
                             contentEncoding = "NONE";
                         }};
                         retryOptions = new HttpEndpointRetryOptions() {{
-                            durationInSeconds = 157519078836327761;
+                            durationInSeconds = 569965;
                         }};
-                        roleARN = "autem";
-                        s3BackupMode = "FailedDataOnly";
+                        roleARN = "ullam";
+                        s3BackupMode = "AllData";
                         s3Configuration = new S3DestinationConfiguration() {{
-                            bucketARN = "vel";
+                            bucketARN = "quos";
                             bufferingHints = new BufferingHints() {{
-                                intervalInSeconds = 8835845053628448511;
-                                sizeInMBs = 3874550043338258151;
+                                intervalInSeconds = 574325;
+                                sizeInMBs = 33625;
                             }};
                             cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
-                                enabled = true;
-                                logGroupName = "nisi";
-                                logStreamName = "quis";
+                                enabled = false;
+                                logGroupName = "mollitia";
+                                logStreamName = "reiciendis";
                             }};
                             compressionFormat = "Snappy";
                             encryptionConfiguration = new EncryptionConfiguration() {{
-                                kmsEncryptionConfig = new KmsEncryptionConfig() {{
-                                    awskmsKeyARN = "porro";
+                                kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                    awskmsKeyARN = "ad";
                                 }};
                                 noEncryptionConfig = "NoEncryption";
                             }};
-                            errorOutputPrefix = "et";
-                            prefix = "accusamus";
-                            roleARN = "numquam";
+                            errorOutputPrefix = "eum";
+                            prefix = "dolor";
+                            roleARN = "necessitatibus";
                         }};
                     }};
                     kinesisStreamSourceConfiguration = new KinesisStreamSourceConfiguration() {{
-                        kinesisStreamARN = "laborum";
-                        roleARN = "rerum";
+                        kinesisStreamARN = "odit";
+                        roleARN = "nemo";
                     }};
                     redshiftDestinationConfiguration = new RedshiftDestinationConfiguration() {{
                         cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
-                            enabled = true;
-                            logGroupName = "laborum";
-                            logStreamName = "fugit";
+                            enabled = false;
+                            logGroupName = "quasi";
+                            logStreamName = "iure";
                         }};
-                        clusterJDBCURL = "quis";
+                        clusterJDBCURL = "doloribus";
                         copyCommand = new CopyCommand() {{
-                            copyOptions = "minus";
-                            dataTableColumns = "soluta";
-                            dataTableName = "aperiam";
+                            copyOptions = "debitis";
+                            dataTableColumns = "eius";
+                            dataTableName = "maxime";
                         }};
-                        password = "consequuntur";
+                        password = "deleniti";
                         processingConfiguration = new ProcessingConfiguration() {{
-                            enabled = true;
-                            processors = new openapisdk.models.shared.Processor[]() {{
+                            enabled = false;
+                            processors = new org.openapis.openapi.models.shared.Processor[]{{
                                 add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
                                         add(new ProcessorParameter() {{
                                             parameterName = "LambdaArn";
-                                            parameterValue = "ipsa";
+                                            parameterValue = "architecto";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "Delimiter";
+                                            parameterValue = "ullam";
                                         }}),
                                     }};
-                                    type = "RecordDeAggregation";
+                                    type = "MetadataExtraction";
                                 }}),
                                 add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
                                         add(new ProcessorParameter() {{
-                                            parameterName = "BufferSizeInMBs";
-                                            parameterValue = "aliquam";
+                                            parameterName = "Delimiter";
+                                            parameterValue = "quibusdam";
                                         }}),
                                         add(new ProcessorParameter() {{
-                                            parameterName = "LambdaArn";
-                                            parameterValue = "sed";
+                                            parameterName = "NumberOfRetries";
+                                            parameterValue = "saepe";
                                         }}),
                                     }};
                                     type = "AppendDelimiterToRecord";
+                                }}),
+                                add(new Processor() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "NumberOfRetries";
+                                            parameterValue = "praesentium";
+                                        }}),
+                                    }};
+                                    type = "MetadataExtraction";
                                 }}),
                             }};
                         }};
                         retryOptions = new RedshiftRetryOptions() {{
-                            durationInSeconds = 6464511094049078446;
+                            durationInSeconds = 166847;
                         }};
-                        roleARN = "consequuntur";
+                        roleARN = "sunt";
                         s3BackupConfiguration = new S3DestinationConfiguration() {{
-                            bucketARN = "non";
+                            bucketARN = "quo";
                             bufferingHints = new BufferingHints() {{
-                                intervalInSeconds = 5366472482114725502;
-                                sizeInMBs = 432317278959866118;
+                                intervalInSeconds = 848009;
+                                sizeInMBs = 864934;
                             }};
                             cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
-                                enabled = true;
-                                logGroupName = "pariatur";
-                                logStreamName = "quasi";
-                            }};
-                            compressionFormat = "Snappy";
-                            encryptionConfiguration = new EncryptionConfiguration() {{
-                                kmsEncryptionConfig = new KmsEncryptionConfig() {{
-                                    awskmsKeyARN = "enim";
-                                }};
-                                noEncryptionConfig = "NoEncryption";
-                            }};
-                            errorOutputPrefix = "sit";
-                            prefix = "possimus";
-                            roleARN = "modi";
-                        }};
-                        s3BackupMode = "Disabled";
-                        s3Configuration = new S3DestinationConfiguration() {{
-                            bucketARN = "consequuntur";
-                            bufferingHints = new BufferingHints() {{
-                                intervalInSeconds = 6729602721413075826;
-                                sizeInMBs = 7446022752824825204;
-                            }};
-                            cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
-                                enabled = true;
-                                logGroupName = "occaecati";
-                                logStreamName = "ex";
+                                enabled = false;
+                                logGroupName = "maxime";
+                                logStreamName = "ea";
                             }};
                             compressionFormat = "ZIP";
                             encryptionConfiguration = new EncryptionConfiguration() {{
-                                kmsEncryptionConfig = new KmsEncryptionConfig() {{
-                                    awskmsKeyARN = "quia";
+                                kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                    awskmsKeyARN = "odit";
                                 }};
                                 noEncryptionConfig = "NoEncryption";
                             }};
-                            errorOutputPrefix = "velit";
-                            prefix = "quae";
-                            roleARN = "est";
+                            errorOutputPrefix = "ea";
+                            prefix = "accusantium";
+                            roleARN = "ab";
                         }};
-                        username = "ut";
+                        s3BackupMode = "Enabled";
+                        s3Configuration = new S3DestinationConfiguration() {{
+                            bucketARN = "quidem";
+                            bufferingHints = new BufferingHints() {{
+                                intervalInSeconds = 373291;
+                                sizeInMBs = 453543;
+                            }};
+                            cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
+                                enabled = false;
+                                logGroupName = "autem";
+                                logStreamName = "nam";
+                            }};
+                            compressionFormat = "UNCOMPRESSED";
+                            encryptionConfiguration = new EncryptionConfiguration() {{
+                                kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                    awskmsKeyARN = "pariatur";
+                                }};
+                                noEncryptionConfig = "NoEncryption";
+                            }};
+                            errorOutputPrefix = "nemo";
+                            prefix = "voluptatibus";
+                            roleARN = "perferendis";
+                        }};
+                        username = "fugiat";
                     }};
                     s3DestinationConfiguration = new CreateDeliveryStreamInputS3DestinationConfiguration() {{
-                        bucketARN = "necessitatibus";
+                        bucketARN = "amet";
                         bufferingHints = new BufferingHints() {{
-                            intervalInSeconds = 546268158124317116;
-                            sizeInMBs = 7814737740801134387;
+                            intervalInSeconds = 11714;
+                            sizeInMBs = 764912;
                         }};
                         cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
                             enabled = false;
-                            logGroupName = "dolorum";
-                            logStreamName = "doloribus";
+                            logGroupName = "corporis";
+                            logStreamName = "hic";
                         }};
-                        compressionFormat = "ZIP";
+                        compressionFormat = "Snappy";
                         encryptionConfiguration = new EncryptionConfiguration() {{
-                            kmsEncryptionConfig = new KmsEncryptionConfig() {{
-                                awskmsKeyARN = "sunt";
+                            kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                awskmsKeyARN = "nobis";
                             }};
                             noEncryptionConfig = "NoEncryption";
                         }};
-                        errorOutputPrefix = "et";
-                        prefix = "ut";
-                        roleARN = "asperiores";
+                        errorOutputPrefix = "dolores";
+                        prefix = "quis";
+                        roleARN = "totam";
                     }};
                     splunkDestinationConfiguration = new SplunkDestinationConfiguration() {{
                         cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
                             enabled = false;
-                            logGroupName = "est";
-                            logStreamName = "ipsum";
+                            logGroupName = "dignissimos";
+                            logStreamName = "eaque";
                         }};
-                        hecAcknowledgmentTimeoutInSeconds = 6787227741588449494;
-                        hecEndpoint = "voluptas";
+                        hecAcknowledgmentTimeoutInSeconds = 338985;
+                        hecEndpoint = "nesciunt";
                         hecEndpointType = "Raw";
-                        hecToken = "dolores";
+                        hecToken = "perferendis";
                         processingConfiguration = new ProcessingConfiguration() {{
                             enabled = false;
-                            processors = new openapisdk.models.shared.Processor[]() {{
+                            processors = new org.openapis.openapi.models.shared.Processor[]{{
                                 add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
+                                    parameters = new org.openapis.openapi.models.shared.ProcessorParameter[]{{
                                         add(new ProcessorParameter() {{
-                                            parameterName = "JsonParsingEngine";
-                                            parameterValue = "ut";
+                                            parameterName = "RoleArn";
+                                            parameterValue = "dolor";
+                                        }}),
+                                        add(new ProcessorParameter() {{
+                                            parameterName = "SubRecordType";
+                                            parameterValue = "nostrum";
                                         }}),
                                         add(new ProcessorParameter() {{
                                             parameterName = "Delimiter";
-                                            parameterValue = "illo";
+                                            parameterValue = "recusandae";
                                         }}),
-                                    }};
-                                    type = "AppendDelimiterToRecord";
-                                }}),
-                                add(new Processor() {{
-                                    parameters = new openapisdk.models.shared.ProcessorParameter[]() {{
                                         add(new ProcessorParameter() {{
                                             parameterName = "BufferSizeInMBs";
-                                            parameterValue = "ducimus";
-                                        }}),
-                                        add(new ProcessorParameter() {{
-                                            parameterName = "NumberOfRetries";
-                                            parameterValue = "blanditiis";
+                                            parameterValue = "facilis";
                                         }}),
                                     }};
-                                    type = "RecordDeAggregation";
+                                    type = "MetadataExtraction";
                                 }}),
                             }};
                         }};
                         retryOptions = new SplunkRetryOptions() {{
-                            durationInSeconds = 1638829746864917218;
+                            durationInSeconds = 31838;
                         }};
-                        s3BackupMode = "FailedEventsOnly";
+                        s3BackupMode = "AllEvents";
                         s3Configuration = new S3DestinationConfiguration() {{
-                            bucketARN = "dolore";
+                            bucketARN = "consequuntur";
                             bufferingHints = new BufferingHints() {{
-                                intervalInSeconds = 7274936573655343394;
-                                sizeInMBs = 7796777083842162182;
+                                intervalInSeconds = 500026;
+                                sizeInMBs = 621479;
                             }};
                             cloudWatchLoggingOptions = new CloudWatchLoggingOptions() {{
                                 enabled = false;
-                                logGroupName = "modi";
-                                logStreamName = "sunt";
+                                logGroupName = "eaque";
+                                logStreamName = "occaecati";
                             }};
-                            compressionFormat = "UNCOMPRESSED";
+                            compressionFormat = "Snappy";
                             encryptionConfiguration = new EncryptionConfiguration() {{
-                                kmsEncryptionConfig = new KmsEncryptionConfig() {{
-                                    awskmsKeyARN = "amet";
+                                kmsEncryptionConfig = new KMSEncryptionConfig() {{
+                                    awskmsKeyARN = "adipisci";
                                 }};
                                 noEncryptionConfig = "NoEncryption";
                             }};
-                            errorOutputPrefix = "a";
-                            prefix = "qui";
-                            roleARN = "excepturi";
+                            errorOutputPrefix = "asperiores";
+                            prefix = "earum";
+                            roleARN = "modi";
                         }};
                     }};
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "corporis";
-                            value = "dicta";
+                            key = "dolorum";
+                            value = "deleniti";
+                        }}),
+                        add(new Tag() {{
+                            key = "pariatur";
+                            value = "provident";
+                        }}),
+                        add(new Tag() {{
+                            key = "nobis";
+                            value = "libero";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateDeliveryStreamResponse res = sdk.createDeliveryStream(req);
 

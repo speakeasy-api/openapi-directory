@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.LanguageDetectionsDetectSecurityOption1;
+import org.openapis.openapi.models.operations.LanguageDetectionsDetectSecurityOption2;
+import org.openapis.openapi.models.operations.LanguageDetectionsDetectSecurity;
+import org.openapis.openapi.models.operations.LanguageDetectionsDetectQueryParams;
+import org.openapis.openapi.models.operations.LanguageDetectionsDetectRequest;
+import org.openapis.openapi.models.operations.LanguageDetectionsDetectResponse;
+import org.openapis.openapi.models.shared.DetectLanguageRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             LanguageDetectionsDetectRequest req = new LanguageDetectionsDetectRequest() {{
                 security = new LanguageDetectionsDetectSecurity() {{
@@ -24,26 +34,27 @@ public class Application {
                     }};
                 }};
                 queryParams = new LanguageDetectionsDetectQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    bearerToken = "expedita";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    pp = true;
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    bearerToken = "quibusdam";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    pp = false;
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new DetectLanguageRequest() {{
-                    q = new String[]() {{
-                        add("voluptatum"),
+                    q = new String[]{{
+                        add("iure"),
+                        add("magnam"),
                     }};
                 }};
-            }};
+            }};            
 
             LanguageDetectionsDetectResponse res = sdk.detections.languageDetectionsDetect(req);
 

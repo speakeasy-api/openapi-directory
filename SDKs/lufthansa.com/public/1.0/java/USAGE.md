@@ -2,15 +2,21 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity;
+import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetProductCodeEnum;
+import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams;
+import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders;
+import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest;
+import org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse;
+import org.openapis.openapi.models.shared.SchemeAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest req = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetRequest() {{
                 security = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetSecurity() {{
@@ -19,15 +25,15 @@ public class Application {
                     }};
                 }};
                 pathParams = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetPathParams() {{
-                    destination = "sit";
-                    fromDate = "voluptas";
-                    origin = "culpa";
-                    productCode = "FUN";
+                    destination = "corrupti";
+                    fromDate = "provident";
+                    origin = "distinctio";
+                    productCode = "ZXB";
                 }};
                 headers = new CargoGetRouteFromDateProductCodeByOriginAndDestinationGetHeaders() {{
-                    accept = "consequuntur";
+                    accept = "unde";
                 }};
-            }};
+            }};            
 
             CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse res = sdk.cargo.cargoGetRouteFromDateProductCodeByOriginAndDestinationGet(req);
 

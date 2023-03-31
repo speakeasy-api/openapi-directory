@@ -2,46 +2,57 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddTagsXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AddTagsHeaders;
+import org.openapis.openapi.models.operations.AddTagsRequest;
+import org.openapis.openapi.models.operations.AddTagsResponse;
+import org.openapis.openapi.models.shared.AddTagsInput;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.TaggableResourceTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddTagsRequest req = new AddTagsRequest() {{
                 headers = new AddTagsHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AmazonML_20141212.AddTags";
                 }};
                 request = new AddTagsInput() {{
-                    resourceId = "fugit";
-                    resourceType = "BatchPrediction";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    resourceId = "illum";
+                    resourceType = "DataSource";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "rerum";
-                            value = "dicta";
+                            key = "deserunt";
+                            value = "suscipit";
+                        }}),
+                        add(new Tag() {{
+                            key = "iure";
+                            value = "magnam";
+                        }}),
+                        add(new Tag() {{
+                            key = "debitis";
+                            value = "ipsa";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             AddTagsResponse res = sdk.addTags(req);
 

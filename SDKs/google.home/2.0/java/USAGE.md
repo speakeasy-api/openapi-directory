@@ -2,30 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AccessibilityRequest;
+import org.openapis.openapi.models.operations.AccessibilityResponse;
+import org.openapis.openapi.models.shared.AccessibilityRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     castLocalAuthorizationToken = new SchemeCastLocalAuthorizationToken() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AccessibilityRequest req = new AccessibilityRequest() {{
                 request = new AccessibilityRequest() {{
                     endpointEnabled = false;
                     hotwordEnabled = false;
                 }};
-            }};
+            }};            
 
             AccessibilityResponse res = sdk.assistant.accessibility(req);
 

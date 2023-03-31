@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,82 +15,100 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonHeaders;
+import org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonRequest;
+import org.openapis.openapi.models.operations.PostV05ConsentRequestsInitJsonResponse;
+import org.openapis.openapi.models.shared.ConsentRequestConsentHip;
+import org.openapis.openapi.models.shared.ConsentRequestConsentHiu;
+import org.openapis.openapi.models.shared.ConsentRequestConsentPatient;
+import org.openapis.openapi.models.shared.ConsentRequestConsent;
+import org.openapis.openapi.models.shared.ConsentRequest;
+import org.openapis.openapi.models.shared.RequesterIdentifier;
+import org.openapis.openapi.models.shared.Requester;
+import org.openapis.openapi.models.shared.UsePurpose;
+import org.openapis.openapi.models.shared.PermissionAccessModeEnum;
+import org.openapis.openapi.models.shared.PermissionDateRange;
+import org.openapis.openapi.models.shared.PermissionFrequencyUnitEnum;
+import org.openapis.openapi.models.shared.PermissionFrequency;
+import org.openapis.openapi.models.shared.Permission;
+import org.openapis.openapi.models.shared.HITypeEnumEnum;
+import org.openapis.openapi.models.shared.CareContextDefinition;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            PostV05ConsentRequestsInitRequest req = new PostV05ConsentRequestsInitRequest() {{
-                headers = new PostV05ConsentRequestsInitHeaders() {{
-                    authorization = "sit";
+            PostV05ConsentRequestsInitJsonRequest req = new PostV05ConsentRequestsInitJsonRequest() {{
+                headers = new PostV05ConsentRequestsInitJsonHeaders() {{
+                    authorization = "corrupti";
                 }};
-                request = new PostV05ConsentRequestsInitRequests() {{
-                    applicationXML = "voluptas".getBytes();
-                    consentRequest = new ConsentRequest() {{
-                        consent = new ConsentRequestConsent() {{
-                            careContexts = new openapisdk.models.shared.CareContextDefinition[]() {{
-                                add(new CareContextDefinition() {{
-                                    careContextReference = "expedita";
-                                    patientReference = "consequuntur";
-                                }}),
-                                add(new CareContextDefinition() {{
-                                    careContextReference = "dolor";
-                                    patientReference = "expedita";
-                                }}),
+                request = new ConsentRequest() {{
+                    consent = new ConsentRequestConsent() {{
+                        careContexts = new org.openapis.openapi.models.shared.CareContextDefinition[]{{
+                            add(new CareContextDefinition() {{
+                                careContextReference = "Episode1";
+                                patientReference = "batman@tmh";
+                            }}),
+                            add(new CareContextDefinition() {{
+                                careContextReference = "Episode1";
+                                patientReference = "batman@tmh";
+                            }}),
+                            add(new CareContextDefinition() {{
+                                careContextReference = "Episode1";
+                                patientReference = "batman@tmh";
+                            }}),
+                        }};
+                        hiTypes = new org.openapis.openapi.models.shared.HITypeEnumEnum[]{{
+                            add("DiagnosticReport"),
+                            add("DischargeSummary"),
+                            add("DiagnosticReport"),
+                        }};
+                        hip = new ConsentRequestConsentHip() {{
+                            id = "corrupti";
+                        }};
+                        hiu = new ConsentRequestConsentHiu() {{
+                            id = "illum";
+                        }};
+                        patient = new ConsentRequestConsentPatient() {{
+                            id = "hinapatel79@ndhm";
+                        }};
+                        permission = new Permission() {{
+                            accessMode = "STORE";
+                            dataEraseAt = "2021-09-16T11:56:06.019Z";
+                            dateRange = new PermissionDateRange() {{
+                                from = "2022-07-25T06:44:09.184Z";
+                                to = "2022-02-09T12:04:06.508Z";
                             }};
-                            hiTypes = new openapisdk.models.shared.HiTypeEnumEnum[]() {{
-                                add("OPConsultation"),
-                                add("OPConsultation"),
-                                add("OPConsultation"),
-                            }};
-                            hip = new ConsentRequestConsentHip() {{
-                                id = "rerum";
-                            }};
-                            hiu = new ConsentRequestConsentHiu() {{
-                                id = "dicta";
-                            }};
-                            patient = new ConsentRequestConsentPatient() {{
-                                id = "debitis";
-                            }};
-                            permission = new Permission() {{
-                                accessMode = "VIEW";
-                                dataEraseAt = "2005-09-27T09:17:54Z";
-                                dateRange = new PermissionDateRange() {{
-                                    from = "1970-04-14T21:44:49Z";
-                                    to = "2021-10-23T13:19:10Z";
-                                }};
-                                frequency = new PermissionFrequency() {{
-                                    repeats = 7259475919510918339;
-                                    unit = "YEAR";
-                                    value = 3287288577352441706;
-                                }};
-                            }};
-                            purpose = new UsePurpose() {{
-                                code = "vitae";
-                                refUri = "totam";
-                                text = "dolores";
-                            }};
-                            requester = new Requester() {{
-                                identifier = new RequesterIdentifier() {{
-                                    system = "illum";
-                                    type = "debitis";
-                                    value = "vel";
-                                }};
-                                name = "odio";
+                            frequency = new PermissionFrequency() {{
+                                repeats = 56713;
+                                unit = "YEAR";
+                                value = 272656;
                             }};
                         }};
-                        requestId = "dolore";
-                        timestamp = "1993-03-23T22:53:08Z";
+                        purpose = new UsePurpose() {{
+                            code = "suscipit";
+                            refUri = "http://spotted-skyline.name";
+                            text = "iusto";
+                        }};
+                        requester = new Requester() {{
+                            identifier = new RequesterIdentifier() {{
+                                system = "https://www.mciindia.org";
+                                type = "REGNO";
+                                value = "MH1001";
+                            }};
+                            name = "Dr. Manju";
+                        }};
                     }};
+                    requestId = "499a5a4a-7dda-4f20-9b67-e24589627061";
+                    timestamp = "2022-03-20T06:24:36.919Z";
                 }};
-            }};
+            }};            
 
-            PostV05ConsentRequestsInitResponse res = sdk.consent.postV05ConsentRequestsInit(req);
+            PostV05ConsentRequestsInitJsonResponse res = sdk.consent.postV05ConsentRequestsInitJson(req);
 
             if (res.statusCode == 200) {
                 // handle response
@@ -104,43 +122,58 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### consent
 
-* `postV05ConsentRequestsInit` - Create consent request
-* `postV05ConsentRequestsStatus` - Get consent request status
+* `postV05ConsentRequestsInitJson` - Create consent request
+* `postV05ConsentRequestsInitRaw` - Create consent request
+* `postV05ConsentRequestsStatusJson` - Get consent request status
+* `postV05ConsentRequestsStatusRaw` - Get consent request status
 * `postV05ConsentsFetch` - Get consent artefact
-* `postV05ConsentsHipOnNotify` - Consent notification
+* `postV05ConsentsHipOnNotifyJson` - Consent notification
+* `postV05ConsentsHipOnNotifyRaw` - Consent notification
 * `postV05ConsentsHiuOnNotify` - Consent notification
 
-### data flow
+### dataFlow
 
-* `postV05HealthInformationNotify` - Notifications corresponding to events during data flow
-* `postV05HealthInformationOnRequest` - Health information data request acknowledgement from HIP
-* `postV05HealthInformationRequest` - Health information data request from HIU
+* `postV05HealthInformationNotifyJson` - Notifications corresponding to events during data flow
+* `postV05HealthInformationNotifyRaw` - Notifications corresponding to events during data flow
+* `postV05HealthInformationOnRequestJson` - Health information data request acknowledgement from HIP
+* `postV05HealthInformationOnRequestRaw` - Health information data request acknowledgement from HIP
+* `postV05HealthInformationRequestJson` - Health information data request from HIU
+* `postV05HealthInformationRequestRaw` - Health information data request from HIU
 
 ### discovery
 
-* `postV05CareContextsOnDiscover` - Response to patient's account discovery request
+* `postV05CareContextsOnDiscoverJson` - Response to patient's account discovery request
+* `postV05CareContextsOnDiscoverRaw` - Response to patient's account discovery request
 
-### hip facing
+### hipFacing
 
-* `postV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
-* `postV05UsersAuthOnNotify` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `postV05UsersAuthFetchModesJson` - Get a patient's authentication modes relevant to specified purpose
+* `postV05UsersAuthFetchModesRaw` - Get a patient's authentication modes relevant to specified purpose
+* `postV05UsersAuthOnNotifyJson` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `postV05UsersAuthOnNotifyRaw` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
 
-### hiu facing
+### hiuFacing
 
 * `postV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
-* `postV05UsersAuthOnNotify` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `postV05UsersAuthOnNotifyJson` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `postV05UsersAuthOnNotifyRaw` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
 
 ### identification
 
-* `postV05PatientsFind` - Identify a patient by her consent-manager user-id
+* `postV05PatientsFindJson` - Identify a patient by her consent-manager user-id
+* `postV05PatientsFindRaw` - Identify a patient by her consent-manager user-id
 
 ### link
 
-* `postV05LinksLinkAddContexts` - API for HIP initiated care-context linking for patient
-* `postV05LinksLinkOnConfirm` - Token authenticated by HIP, indicating completion of linkage of care-contexts
-* `postV05LinksLinkOnInit` - Response to patient's care context link request
+* `postV05LinksLinkAddContextsJson` - API for HIP initiated care-context linking for patient
+* `postV05LinksLinkAddContextsRaw` - API for HIP initiated care-context linking for patient
+* `postV05LinksLinkOnConfirmJson` - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* `postV05LinksLinkOnConfirmRaw` - Token authenticated by HIP, indicating completion of linkage of care-contexts
+* `postV05LinksLinkOnInitJson` - Response to patient's care context link request
+* `postV05LinksLinkOnInitRaw` - Response to patient's care context link request
 
 ### monitoring
 
@@ -148,21 +181,37 @@ public class Application {
 
 ### profile
 
-* `postV05PatientsProfileOnShare` - Response to patient's share profile request
+* `postV05PatientsProfileOnShareJson` - Response to patient's share profile request
+* `postV05PatientsProfileOnShareRaw` - Response to patient's share profile request
 
 ### subscriptions
 
-* `postV05SubscriptionRequestsCmInit` - Request for subscription
+* `postV05SubscriptionRequestsCmInitJson` - Request for subscription
+* `postV05SubscriptionRequestsCmInitRaw` - Request for subscription
 * `postV05SubscriptionRequestsHiuOnNotify` - Callback API for /subscription-requests/hiu/notify to acknowledge receipt of notification.
 * `postV05SubscriptionsHiuOnNotify` - Callback API for /subscriptions/hiu/notify to acknowledge receipt of notification.
 
-### user auth
+### userAuth
 
-* `postV05UsersAuthConfirm` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
-* `postV05UsersAuthFetchModes` - Get a patient's authentication modes relevant to specified purpose
-* `postV05UsersAuthInit` - Initialize authentication from HIP
-* `postV05UsersAuthOnNotify` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
-
+* `postV05UsersAuthConfirmJson` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `postV05UsersAuthConfirmRaw` - Confirmation request sending token, otp or other authentication details from HIP/HIU for confirmation
+* `postV05UsersAuthFetchModesJson` - Get a patient's authentication modes relevant to specified purpose
+* `postV05UsersAuthFetchModesRaw` - Get a patient's authentication modes relevant to specified purpose
+* `postV05UsersAuthInitJson` - Initialize authentication from HIP
+* `postV05UsersAuthInitRaw` - Initialize authentication from HIP
+* `postV05UsersAuthOnNotifyJson` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
+* `postV05UsersAuthOnNotifyRaw` - callback API from HIU/HIPs as acknowledgement of auth notification (in case of DIRECT auth)
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,85 +15,94 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateAppHeaders;
+import org.openapis.openapi.models.operations.CreateAppRequestBodyAutoBranchCreationConfig;
+import org.openapis.openapi.models.operations.CreateAppRequestBodyPlatformEnum;
+import org.openapis.openapi.models.operations.CreateAppRequestBody;
+import org.openapis.openapi.models.operations.CreateAppRequest;
+import org.openapis.openapi.models.operations.CreateAppResponse;
+import org.openapis.openapi.models.shared.CustomRule;
+import org.openapis.openapi.models.shared.StageEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateAppRequest req = new CreateAppRequest() {{
                 headers = new CreateAppHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateAppRequestBody() {{
-                    accessToken = "voluptas";
+                    accessToken = "illum";
                     autoBranchCreationConfig = new CreateAppRequestBodyAutoBranchCreationConfig() {{
-                        basicAuthCredentials = "fugit";
-                        buildSpec = "et";
-                        enableAutoBuild = true;
-                        enableBasicAuth = true;
+                        basicAuthCredentials = "vel";
+                        buildSpec = "error";
+                        enableAutoBuild = false;
+                        enableBasicAuth = false;
                         enablePerformanceMode = false;
-                        enablePullRequestPreview = true;
+                        enablePullRequestPreview = false;
                         environmentVariables = new java.util.HashMap<String, String>() {{
-                            put("et", "ut");
+                            put("suscipit", "iure");
+                            put("magnam", "debitis");
+                            put("ipsa", "delectus");
                         }};
-                        framework = "dolorem";
-                        pullRequestEnvironmentName = "et";
-                        stage = "PULL_REQUEST";
+                        framework = "tempora";
+                        pullRequestEnvironmentName = "suscipit";
+                        stage = "DEVELOPMENT";
                     }};
-                    autoBranchCreationPatterns = new String[]() {{
-                        add("vitae"),
-                        add("totam"),
-                        add("dolores"),
+                    autoBranchCreationPatterns = new String[]{{
+                        add("placeat"),
+                        add("voluptatum"),
+                        add("iusto"),
+                        add("excepturi"),
                     }};
-                    basicAuthCredentials = "illum";
-                    buildSpec = "debitis";
-                    customHeaders = "vel";
-                    customRules = new openapisdk.models.shared.CustomRule[]() {{
+                    basicAuthCredentials = "nisi";
+                    buildSpec = "recusandae";
+                    customHeaders = "temporibus";
+                    customRules = new org.openapis.openapi.models.shared.CustomRule[]{{
                         add(new CustomRule() {{
-                            condition = "dolore";
-                            source = "id";
-                            status = "aspernatur";
-                            target = "accusantium";
+                            condition = "quis";
+                            source = "veritatis";
+                            status = "deserunt";
+                            target = "perferendis";
                         }}),
                     }};
-                    description = "totam";
+                    description = "ipsam";
                     enableAutoBranchCreation = false;
-                    enableBasicAuth = true;
+                    enableBasicAuth = false;
                     enableBranchAutoBuild = false;
-                    enableBranchAutoDeletion = true;
+                    enableBranchAutoDeletion = false;
                     environmentVariables = new java.util.HashMap<String, String>() {{
-                        put("non", "voluptas");
-                        put("omnis", "aut");
+                        put("sapiente", "quo");
+                        put("odit", "at");
+                        put("at", "maiores");
+                        put("molestiae", "quod");
                     }};
-                    iamServiceRoleArn = "illo";
-                    name = "sed";
-                    oauthToken = "officiis";
-                    platform = "WEB";
-                    repository = "consectetur";
+                    iamServiceRoleArn = "quod";
+                    name = "esse";
+                    oauthToken = "totam";
+                    platform = "WEB_COMPUTE";
+                    repository = "dolorum";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("odio", "qui");
+                        put("nam", "officia");
                     }};
                 }};
-            }};
+            }};            
 
             CreateAppResponse res = sdk.createApp(req);
 
@@ -148,7 +157,17 @@ public class Application {
 * `updateBranch` -  Updates a branch for an Amplify app. 
 * `updateDomainAssociation` -  Creates a new domain association for an Amplify app.
 * `updateWebhook` -  Updates a webhook. 
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

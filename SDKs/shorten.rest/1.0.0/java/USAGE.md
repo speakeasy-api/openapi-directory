@@ -2,70 +2,80 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateAliasSecurity;
+import org.openapis.openapi.models.operations.CreateAliasQueryParams;
+import org.openapis.openapi.models.operations.CreateAliasRequest;
+import org.openapis.openapi.models.operations.CreateAliasResponse;
+import org.openapis.openapi.models.shared.CreateAliasModel;
+import org.openapis.openapi.models.shared.SnippetModel;
+import org.openapis.openapi.models.shared.MetaTagModel;
+import org.openapis.openapi.models.shared.DestinationModel;
+import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateAliasRequest req = new CreateAliasRequest() {{
                 security = new CreateAliasSecurity() {{
-                    apiKeyAuth = new SchemeApiKeyAuth() {{
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 queryParams = new CreateAliasQueryParams() {{
-                    aliasName = "sit";
-                    domainName = "voluptas";
+                    aliasName = "corrupti";
+                    domainName = "provident";
                 }};
                 request = new CreateAliasModel() {{
-                    destinations = new openapisdk.models.shared.DestinationModel[]() {{
+                    destinations = new org.openapis.openapi.models.shared.DestinationModel[]{{
                         add(new DestinationModel() {{
-                            country = "expedita";
-                            os = "consequuntur";
-                            url = "dolor";
+                            country = "Suriname";
+                            os = "unde";
+                            url = "nulla";
                         }}),
                         add(new DestinationModel() {{
-                            country = "expedita";
-                            os = "voluptas";
-                            url = "fugit";
+                            country = "Mali";
+                            os = "illum";
+                            url = "vel";
+                        }}),
+                        add(new DestinationModel() {{
+                            country = "Netherlands Antilles";
+                            os = "deserunt";
+                            url = "suscipit";
                         }}),
                     }};
-                    metatags = new openapisdk.models.shared.MetaTagModel[]() {{
+                    metatags = new org.openapis.openapi.models.shared.MetaTagModel[]{{
                         add(new MetaTagModel() {{
-                            content = "nihil";
-                            name = "rerum";
+                            content = "magnam";
+                            name = "debitis";
+                        }}),
+                        add(new MetaTagModel() {{
+                            content = "ipsa";
+                            name = "delectus";
                         }}),
                     }};
-                    snippets = new openapisdk.models.shared.SnippetModel[]() {{
+                    snippets = new org.openapis.openapi.models.shared.SnippetModel[]{{
                         add(new SnippetModel() {{
-                            id = "debitis";
+                            id = "suscipit";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("et", "ut");
+                                put("minus", "placeat");
+                                put("voluptatum", "iusto");
                             }};
                         }}),
                         add(new SnippetModel() {{
-                            id = "dolorem";
+                            id = "excepturi";
                             parameters = new java.util.HashMap<String, String>() {{
-                                put("voluptate", "iste");
-                                put("vitae", "totam");
-                            }};
-                        }}),
-                        add(new SnippetModel() {{
-                            id = "dolores";
-                            parameters = new java.util.HashMap<String, String>() {{
-                                put("debitis", "vel");
-                                put("odio", "dolore");
-                                put("id", "aspernatur");
+                                put("recusandae", "temporibus");
+                                put("ab", "quis");
                             }};
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateAliasResponse res = sdk.alias.createAlias(req);
 

@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AdsensehostAccountsAdclientsGetSecurity;
+import org.openapis.openapi.models.operations.AdsensehostAccountsAdclientsGetPathParams;
+import org.openapis.openapi.models.operations.AdsensehostAccountsAdclientsGetQueryParams;
+import org.openapis.openapi.models.operations.AdsensehostAccountsAdclientsGetRequest;
+import org.openapis.openapi.models.operations.AdsensehostAccountsAdclientsGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AdsensehostAccountsAdclientsGetRequest req = new AdsensehostAccountsAdclientsGetRequest() {{
                 security = new AdsensehostAccountsAdclientsGetSecurity() {{
@@ -22,19 +29,19 @@ public class Application {
                     }};
                 }};
                 pathParams = new AdsensehostAccountsAdclientsGetPathParams() {{
-                    accountId = "sit";
-                    adClientId = "voluptas";
+                    accountId = "corrupti";
+                    adClientId = "provident";
                 }};
                 queryParams = new AdsensehostAccountsAdclientsGetQueryParams() {{
                     alt = "json";
-                    fields = "expedita";
-                    key = "consequuntur";
-                    oauthToken = "dolor";
-                    prettyPrint = true;
-                    quotaUser = "voluptas";
-                    userIp = "fugit";
+                    fields = "quibusdam";
+                    key = "unde";
+                    oauthToken = "nulla";
+                    prettyPrint = false;
+                    quotaUser = "corrupti";
+                    userIp = "illum";
                 }};
-            }};
+            }};            
 
             AdsensehostAccountsAdclientsGetResponse res = sdk.accounts.adsensehostAccountsAdclientsGet(req);
 

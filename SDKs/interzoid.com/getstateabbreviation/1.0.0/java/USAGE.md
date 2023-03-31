@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetstateabbreviationQueryParams;
+import org.openapis.openapi.models.operations.GetstateabbreviationRequest;
+import org.openapis.openapi.models.operations.GetstateabbreviationResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetstateabbreviationRequest req = new GetstateabbreviationRequest() {{
                 queryParams = new GetstateabbreviationQueryParams() {{
-                    license = "sit";
-                    state = "voluptas";
+                    license = "corrupti";
+                    state = "provident";
                 }};
-            }};
+            }};            
 
             GetstateabbreviationResponse res = sdk.stateDataStandardization.getstateabbreviation(req);
 

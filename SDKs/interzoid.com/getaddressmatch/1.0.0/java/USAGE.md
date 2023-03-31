@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetaddressmatchQueryParams;
+import org.openapis.openapi.models.operations.GetaddressmatchRequest;
+import org.openapis.openapi.models.operations.GetaddressmatchResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetaddressmatchRequest req = new GetaddressmatchRequest() {{
                 queryParams = new GetaddressmatchQueryParams() {{
-                    address = "sit";
-                    license = "voluptas";
+                    address = "5786 Little Streets";
+                    license = "vel";
                 }};
-            }};
+            }};            
 
             GetaddressmatchResponse res = sdk.streetAddressSimilarityKey.getaddressmatch(req);
 

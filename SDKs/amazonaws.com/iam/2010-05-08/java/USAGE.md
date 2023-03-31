@@ -2,43 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderActionEnum;
+import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderVersionEnum;
+import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderQueryParams;
+import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderHeaders;
+import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderRequest;
+import org.openapis.openapi.models.operations.GETAddClientIDToOpenIDConnectProviderResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetAddClientIdToOpenIdConnectProviderRequest req = new GetAddClientIdToOpenIdConnectProviderRequest() {{
-                queryParams = new GetAddClientIdToOpenIdConnectProviderQueryParams() {{
+            GETAddClientIDToOpenIDConnectProviderRequest req = new GETAddClientIDToOpenIDConnectProviderRequest() {{
+                queryParams = new GETAddClientIDToOpenIDConnectProviderQueryParams() {{
                     action = "AddClientIDToOpenIDConnectProvider";
-                    clientID = "voluptas";
-                    openIDConnectProviderArn = "culpa";
+                    clientID = "corrupti";
+                    openIDConnectProviderArn = "provident";
                     version = "2010-05-08";
                 }};
-                headers = new GetAddClientIdToOpenIdConnectProviderHeaders() {{
-                    xAmzAlgorithm = "consequuntur";
-                    xAmzContentSha256 = "dolor";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "voluptas";
-                    xAmzSecurityToken = "fugit";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "nihil";
+                headers = new GETAddClientIDToOpenIDConnectProviderHeaders() {{
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
-            }};
+            }};            
 
-            GetAddClientIdToOpenIdConnectProviderResponse res = sdk.getAddClientIdToOpenIdConnectProvider(req);
+            GETAddClientIDToOpenIDConnectProviderResponse res = sdk.getAddClientIDToOpenIDConnectProvider(req);
 
             if (res.statusCode == 200) {
                 // handle response

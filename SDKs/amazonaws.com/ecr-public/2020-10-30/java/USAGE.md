@@ -2,43 +2,47 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityXAmzTargetEnum;
+import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityHeaders;
+import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityRequest;
+import org.openapis.openapi.models.operations.BatchCheckLayerAvailabilityResponse;
+import org.openapis.openapi.models.shared.BatchCheckLayerAvailabilityRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BatchCheckLayerAvailabilityRequest req = new BatchCheckLayerAvailabilityRequest() {{
                 headers = new BatchCheckLayerAvailabilityHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "SpencerFrontendService.BatchCheckLayerAvailability";
                 }};
                 request = new BatchCheckLayerAvailabilityRequest() {{
-                    layerDigests = new String[]() {{
-                        add("et"),
+                    layerDigests = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
-                    registryId = "nihil";
-                    repositoryName = "rerum";
+                    registryId = "iure";
+                    repositoryName = "magnam";
                 }};
-            }};
+            }};            
 
             BatchCheckLayerAvailabilityResponse res = sdk.batchCheckLayerAvailability(req);
 

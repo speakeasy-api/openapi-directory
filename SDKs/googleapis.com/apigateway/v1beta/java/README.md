@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,29 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity;
+import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams;
+import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams;
+import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreateRequest;
+import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreateResponse;
+import org.openapis.openapi.models.shared.ApigatewayApiConfigInput;
+import org.openapis.openapi.models.shared.ApigatewayApiConfigOpenApiDocument;
+import org.openapis.openapi.models.shared.ApigatewayApiConfigFile;
+import org.openapis.openapi.models.shared.ApigatewayApiConfigGrpcServiceDefinition;
+import org.openapis.openapi.models.shared.ApigatewayGatewayConfig;
+import org.openapis.openapi.models.shared.ApigatewayBackendConfig;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ApigatewayProjectsLocationsApisConfigsCreateRequest req = new ApigatewayProjectsLocationsApisConfigsCreateRequest() {{
                 security = new ApigatewayProjectsLocationsApisConfigsCreateSecurity() {{
@@ -35,117 +49,80 @@ public class Application {
                     }};
                 }};
                 pathParams = new ApigatewayProjectsLocationsApisConfigsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new ApigatewayProjectsLocationsApisConfigsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    apiConfigId = "consequuntur";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    apiConfigId = "unde";
+                    callback = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new ApigatewayApiConfigInput() {{
-                    displayName = "debitis";
+                    displayName = "iure";
                     gatewayConfig = new ApigatewayGatewayConfig() {{
                         backendConfig = new ApigatewayBackendConfig() {{
-                            googleServiceAccount = "voluptatum";
+                            googleServiceAccount = "magnam";
                         }};
                     }};
-                    gatewayServiceAccount = "et";
-                    grpcServices = new openapisdk.models.shared.ApigatewayApiConfigGrpcServiceDefinition[]() {{
+                    gatewayServiceAccount = "debitis";
+                    grpcServices = new org.openapis.openapi.models.shared.ApigatewayApiConfigGrpcServiceDefinition[]{{
                         add(new ApigatewayApiConfigGrpcServiceDefinition() {{
                             fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "dolorem";
-                                path = "et";
+                                contents = "delectus";
+                                path = "tempora";
                             }};
-                            source = new openapisdk.models.shared.ApigatewayApiConfigFile[]() {{
+                            source = new org.openapis.openapi.models.shared.ApigatewayApiConfigFile[]{{
                                 add(new ApigatewayApiConfigFile() {{
-                                    contents = "iste";
-                                    path = "vitae";
-                                }}),
-                            }};
-                        }}),
-                        add(new ApigatewayApiConfigGrpcServiceDefinition() {{
-                            fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "totam";
-                                path = "dolores";
-                            }};
-                            source = new openapisdk.models.shared.ApigatewayApiConfigFile[]() {{
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "debitis";
-                                    path = "vel";
+                                    contents = "molestiae";
+                                    path = "minus";
                                 }}),
                                 add(new ApigatewayApiConfigFile() {{
-                                    contents = "odio";
-                                    path = "dolore";
-                                }}),
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "id";
-                                    path = "aspernatur";
-                                }}),
-                            }};
-                        }}),
-                        add(new ApigatewayApiConfigGrpcServiceDefinition() {{
-                            fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "accusantium";
-                                path = "totam";
-                            }};
-                            source = new openapisdk.models.shared.ApigatewayApiConfigFile[]() {{
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "quis";
-                                    path = "est";
-                                }}),
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "aut";
-                                    path = "odit";
+                                    contents = "placeat";
+                                    path = "voluptatum";
                                 }}),
                             }};
                         }}),
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("voluptas", "omnis");
-                        put("aut", "illo");
-                        put("sed", "officiis");
+                        put("excepturi", "nisi");
+                        put("recusandae", "temporibus");
                     }};
-                    managedServiceConfigs = new openapisdk.models.shared.ApigatewayApiConfigFile[]() {{
+                    managedServiceConfigs = new org.openapis.openapi.models.shared.ApigatewayApiConfigFile[]{{
                         add(new ApigatewayApiConfigFile() {{
-                            contents = "consectetur";
-                            path = "nobis";
-                        }}),
-                        add(new ApigatewayApiConfigFile() {{
-                            contents = "odio";
-                            path = "qui";
+                            contents = "quis";
+                            path = "veritatis";
                         }}),
                     }};
-                    openapiDocuments = new openapisdk.models.shared.ApigatewayApiConfigOpenApiDocument[]() {{
+                    openapiDocuments = new org.openapis.openapi.models.shared.ApigatewayApiConfigOpenApiDocument[]{{
                         add(new ApigatewayApiConfigOpenApiDocument() {{
                             document = new ApigatewayApiConfigFile() {{
-                                contents = "at";
-                                path = "ipsum";
+                                contents = "perferendis";
+                                path = "ipsam";
                             }};
                         }}),
                         add(new ApigatewayApiConfigOpenApiDocument() {{
                             document = new ApigatewayApiConfigFile() {{
-                                contents = "eveniet";
-                                path = "modi";
+                                contents = "repellendus";
+                                path = "sapiente";
                             }};
                         }}),
                         add(new ApigatewayApiConfigOpenApiDocument() {{
                             document = new ApigatewayApiConfigFile() {{
-                                contents = "sint";
-                                path = "inventore";
+                                contents = "quo";
+                                path = "odit";
                             }};
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             ApigatewayProjectsLocationsApisConfigsCreateResponse res = sdk.projects.apigatewayProjectsLocationsApisConfigsCreate(req);
 
@@ -160,6 +137,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### projects
 
@@ -177,8 +155,18 @@ public class Application {
 * `apigatewayProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
 * `apigatewayProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 * `apigatewayProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `apigatewayProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-
+* `apigatewayProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

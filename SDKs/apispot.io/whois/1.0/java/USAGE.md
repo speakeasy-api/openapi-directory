@@ -2,29 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CheckDomainPathParams;
+import org.openapis.openapi.models.operations.CheckDomainRequest;
+import org.openapis.openapi.models.operations.CheckDomainResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyAuth = new SchemeApiKeyAuth() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CheckDomainRequest req = new CheckDomainRequest() {{
                 pathParams = new CheckDomainPathParams() {{
-                    domain = "sit";
+                    domain = "corrupti";
                 }};
-            }};
+            }};            
 
             CheckDomainResponse res = sdk.checkDomain(req);
 

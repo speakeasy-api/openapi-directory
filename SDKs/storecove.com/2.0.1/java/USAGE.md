@@ -2,34 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateAdditionalTaxIdentifierPathParams;
+import org.openapis.openapi.models.operations.CreateAdditionalTaxIdentifierRequest;
+import org.openapis.openapi.models.operations.CreateAdditionalTaxIdentifierResponse;
+import org.openapis.openapi.models.shared.AdditionalTaxIdentifierCreate;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     bearer = new SchemeBearer() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateAdministrationRequest req = new CreateAdministrationRequest() {{
-                pathParams = new CreateAdministrationPathParams() {{
-                    legalEntityId = 8717895732742165505;
+            CreateAdditionalTaxIdentifierRequest req = new CreateAdditionalTaxIdentifierRequest() {{
+                pathParams = new CreateAdditionalTaxIdentifierPathParams() {{
+                    legalEntityId = 548814;
                 }};
-                request = "voluptas";
-            }};
+                request = new AdditionalTaxIdentifierCreate() {{
+                    country = "Montenegro";
+                    county = "distinctio";
+                    identifier = "quibusdam";
+                    scheme = "unde";
+                    superscheme = "nulla";
+                    thirdPartyPassword = "corrupti";
+                    thirdPartyUsername = "illum";
+                }};
+            }};            
 
-            CreateAdministrationResponse res = sdk.administrations.createAdministration(req);
+            CreateAdditionalTaxIdentifierResponse res = sdk.additionalTaxIdentifiers.createAdditionalTaxIdentifier(req);
 
-            if (res.administration.isPresent()) {
+            if (res.additionalTaxIdentifier.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

@@ -2,42 +2,43 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchDeleteWorldsHeaders;
+import org.openapis.openapi.models.operations.BatchDeleteWorldsRequestBody;
+import org.openapis.openapi.models.operations.BatchDeleteWorldsRequest;
+import org.openapis.openapi.models.operations.BatchDeleteWorldsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BatchDeleteWorldsRequest req = new BatchDeleteWorldsRequest() {{
                 headers = new BatchDeleteWorldsHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new BatchDeleteWorldsRequestBody() {{
-                    worlds = new String[]() {{
-                        add("fugit"),
-                        add("et"),
-                        add("nihil"),
+                    worlds = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
                 }};
-            }};
+            }};            
 
             BatchDeleteWorldsResponse res = sdk.batchDeleteWorlds(req);
 

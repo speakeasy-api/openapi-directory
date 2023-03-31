@@ -2,62 +2,107 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AnalyzeDocumentXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AnalyzeDocumentHeaders;
+import org.openapis.openapi.models.operations.AnalyzeDocumentRequest;
+import org.openapis.openapi.models.operations.AnalyzeDocumentResponse;
+import org.openapis.openapi.models.shared.AnalyzeDocumentRequest;
+import org.openapis.openapi.models.shared.QueriesConfig;
+import org.openapis.openapi.models.shared.Query;
+import org.openapis.openapi.models.shared.HumanLoopConfig;
+import org.openapis.openapi.models.shared.HumanLoopDataAttributes;
+import org.openapis.openapi.models.shared.ContentClassifierEnum;
+import org.openapis.openapi.models.shared.FeatureTypeEnum;
+import org.openapis.openapi.models.shared.Document;
+import org.openapis.openapi.models.shared.S3Object;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AnalyzeDocumentRequest req = new AnalyzeDocumentRequest() {{
                 headers = new AnalyzeDocumentHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "Textract.AnalyzeDocument";
                 }};
                 request = new AnalyzeDocumentRequest() {{
                     document = new Document() {{
-                        bytes = "fugit";
+                        bytes = "illum";
                         s3Object = new S3Object() {{
-                            bucket = "et";
-                            name = "nihil";
-                            version = "rerum";
+                            bucket = "vel";
+                            name = "error";
+                            version = "deserunt";
                         }};
                     }};
-                    featureTypes = new openapisdk.models.shared.FeatureTypeEnum[]() {{
-                        add("TABLES"),
-                        add("TABLES"),
-                        add("TABLES"),
+                    featureTypes = new org.openapis.openapi.models.shared.FeatureTypeEnum[]{{
+                        add("FORMS"),
+                        add("FORMS"),
                     }};
                     humanLoopConfig = new HumanLoopConfig() {{
                         dataAttributes = new HumanLoopDataAttributes() {{
-                            contentClassifiers = new openapisdk.models.shared.ContentClassifierEnum[]() {{
+                            contentClassifiers = new org.openapis.openapi.models.shared.ContentClassifierEnum[]{{
                                 add("FreeOfPersonallyIdentifiableInformation"),
+                                add("FreeOfAdultContent"),
                                 add("FreeOfPersonallyIdentifiableInformation"),
                                 add("FreeOfPersonallyIdentifiableInformation"),
                             }};
                         }};
-                        flowDefinitionArn = "iste";
-                        humanLoopName = "vitae";
+                        flowDefinitionArn = "molestiae";
+                        humanLoopName = "minus";
+                    }};
+                    queriesConfig = new QueriesConfig() {{
+                        queries = new org.openapis.openapi.models.shared.Query[]{{
+                            add(new Query() {{
+                                alias = "voluptatum";
+                                pages = new String[]{{
+                                    add("excepturi"),
+                                    add("nisi"),
+                                }};
+                                text = "recusandae";
+                            }}),
+                            add(new Query() {{
+                                alias = "temporibus";
+                                pages = new String[]{{
+                                    add("quis"),
+                                }};
+                                text = "veritatis";
+                            }}),
+                            add(new Query() {{
+                                alias = "deserunt";
+                                pages = new String[]{{
+                                    add("ipsam"),
+                                }};
+                                text = "repellendus";
+                            }}),
+                            add(new Query() {{
+                                alias = "sapiente";
+                                pages = new String[]{{
+                                    add("odit"),
+                                    add("at"),
+                                    add("at"),
+                                    add("maiores"),
+                                }};
+                                text = "molestiae";
+                            }}),
+                        }};
                     }};
                 }};
-            }};
+            }};            
 
             AnalyzeDocumentResponse res = sdk.analyzeDocument(req);
 

@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetSecurity;
+import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetPathParams;
+import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetQueryParams;
+import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetRequest;
+import org.openapis.openapi.models.operations.AdexchangebuyerAccountsGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AdexchangebuyerAccountsGetRequest req = new AdexchangebuyerAccountsGetRequest() {{
                 security = new AdexchangebuyerAccountsGetSecurity() {{
@@ -22,18 +29,18 @@ public class Application {
                     }};
                 }};
                 pathParams = new AdexchangebuyerAccountsGetPathParams() {{
-                    id = 8717895732742165505;
+                    id = 548814;
                 }};
                 queryParams = new AdexchangebuyerAccountsGetQueryParams() {{
                     alt = "json";
-                    fields = "culpa";
-                    key = "expedita";
-                    oauthToken = "consequuntur";
+                    fields = "provident";
+                    key = "distinctio";
+                    oauthToken = "quibusdam";
                     prettyPrint = false;
-                    quotaUser = "expedita";
-                    userIp = "voluptas";
+                    quotaUser = "unde";
+                    userIp = "nulla";
                 }};
-            }};
+            }};            
 
             AdexchangebuyerAccountsGetResponse res = sdk.accounts.adexchangebuyerAccountsGet(req);
 

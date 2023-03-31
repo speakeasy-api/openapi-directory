@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,59 +15,58 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateUrlsExportPathParams;
+import org.openapis.openapi.models.operations.CreateUrlsExportAreaEnum;
+import org.openapis.openapi.models.operations.CreateUrlsExportQueryParams;
+import org.openapis.openapi.models.operations.CreateUrlsExportRequest;
+import org.openapis.openapi.models.operations.CreateUrlsExportResponse;
+import org.openapis.openapi.models.shared.UrlsQuery;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     djangoRestToken = new SchemeDjangoRestToken() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateUrlsExportRequest req = new CreateUrlsExportRequest() {{
                 pathParams = new CreateUrlsExportPathParams() {{
-                    analysisSlug = "sit";
-                    projectSlug = "voluptas";
-                    username = "culpa";
+                    analysisSlug = "corrupti";
+                    projectSlug = "provident";
+                    username = "Micheal_Sporer";
                 }};
                 queryParams = new CreateUrlsExportQueryParams() {{
                     area = "new";
                 }};
                 request = new UrlsQuery() {{
-                    fields = new String[]() {{
-                        add("dolor"),
-                        add("expedita"),
-                        add("voluptas"),
+                    fields = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
                     filters = new java.util.HashMap<String, Object>() {{
-                        put("et", "nihil");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
-                    sort = new java.util.HashMap<String, Object>[]() {{
+                    sort = new java.util.HashMap<String, Object>[]{{
                         add(new java.util.HashMap<String, Object>() {{
-                            put("debitis", "voluptatum");
-                            put("et", "ut");
-                            put("dolorem", "et");
+                            put("molestiae", "minus");
+                            put("placeat", "voluptatum");
                         }}),
                         add(new java.util.HashMap<String, Object>() {{
-                            put("iste", "vitae");
-                        }}),
-                        add(new java.util.HashMap<String, Object>() {{
-                            put("dolores", "illum");
-                            put("debitis", "vel");
-                            put("odio", "dolore");
+                            put("excepturi", "nisi");
+                            put("recusandae", "temporibus");
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateUrlsExportResponse res = sdk.analysis.createUrlsExport(req);
 
@@ -83,14 +82,15 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Analysis
+
+### analysis
 
 * `createUrlsExport` - Creates a new UrlExport object and starts a task that will export the results into a csv
 * `getAnalysisSummary` - Get an Analysis detail
 * `getCrawlStatistics` - Return global statistics for an analysis
 * `getCrawlStatisticsByFrequency` - Return crawl statistics grouped by time frequency (1 min, 5 mins or 60 min)
 * `getCrawlStatisticsUrls` - Return a list of 1000 latest URLs crawled (all crawled URLs or only URLS with HTTP errors)
-* `getGanalyticsOrphanUrLs` - List of Orphan URLs
+* `getGanalyticsOrphanURLs` - List of Orphan URLs
 * `getLinksPercentiles` - Get inlinks percentiles
 * `getLinksTopDomains` - Top domains
 * `getLinksTopSubdomains` - Top subddomains
@@ -106,7 +106,7 @@ public class Application {
 * `getUrlsExports` - A list of the CSV Exports requests and their current status
 * `getUrlsSuggestedFilters` - Return most frequent segments (= suggested patterns in the previous version)
 
-### Project
+### project
 
 * `getProjectAnalyses` - List all analyses for a project
 * `getProjectUrlsAggs` - Project Query aggregator
@@ -114,10 +114,20 @@ public class Application {
 * `getSavedFilters` - List all the project's saved filters (each filter's name, ID and filter value)
 * `testUrlRewritingRules` - Match and replace parts of a URL based on rules passed in POST data
 
-### User
+### user
 
 * `getUserProjects` - List all active projects for the user
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetClientClientIdPathParams;
+import org.openapis.openapi.models.operations.GetClientClientIdRequest;
+import org.openapis.openapi.models.operations.GetClientClientIdResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetClientClientIdRequest req = new GetClientClientIdRequest() {{
                 pathParams = new GetClientClientIdPathParams() {{
-                    clientId = "sit";
+                    clientId = "corrupti";
                 }};
-            }};
+            }};            
 
             GetClientClientIdResponse res = sdk.client.getClientClientId(req);
 

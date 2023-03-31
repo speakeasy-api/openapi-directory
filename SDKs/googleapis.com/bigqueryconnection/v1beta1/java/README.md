@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,29 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurityOption2;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateSecurity;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreatePathParams;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateRequest;
+import org.openapis.openapi.models.operations.BigqueryconnectionProjectsLocationsConnectionsCreateResponse;
+import org.openapis.openapi.models.shared.ConnectionInput;
+import org.openapis.openapi.models.shared.CloudSqlPropertiesTypeEnum;
+import org.openapis.openapi.models.shared.CloudSqlPropertiesInput;
+import org.openapis.openapi.models.shared.CloudSqlCredential;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BigqueryconnectionProjectsLocationsConnectionsCreateRequest req = new BigqueryconnectionProjectsLocationsConnectionsCreateRequest() {{
                 security = new BigqueryconnectionProjectsLocationsConnectionsCreateSecurity() {{
@@ -37,37 +51,37 @@ public class Application {
                     }};
                 }};
                 pathParams = new BigqueryconnectionProjectsLocationsConnectionsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new BigqueryconnectionProjectsLocationsConnectionsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    connectionId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    connectionId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new ConnectionInput() {{
                     cloudSql = new CloudSqlPropertiesInput() {{
                         credential = new CloudSqlCredential() {{
-                            password = "debitis";
-                            username = "voluptatum";
+                            password = "iure";
+                            username = "Eli96";
                         }};
-                        database = "et";
-                        instanceId = "ut";
-                        type = "MYSQL";
+                        database = "tempora";
+                        instanceId = "suscipit";
+                        type = "POSTGRES";
                     }};
-                    description = "et";
-                    friendlyName = "voluptate";
-                    name = "iste";
+                    description = "minus";
+                    friendlyName = "placeat";
+                    name = "voluptatum";
                 }};
-            }};
+            }};            
 
             BigqueryconnectionProjectsLocationsConnectionsCreateResponse res = sdk.projects.bigqueryconnectionProjectsLocationsConnectionsCreate(req);
 
@@ -83,6 +97,7 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### projects
 
 * `bigqueryconnectionProjectsLocationsConnectionsCreate` - Creates a new connection.
@@ -93,7 +108,17 @@ public class Application {
 * `bigqueryconnectionProjectsLocationsConnectionsSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
 * `bigqueryconnectionProjectsLocationsConnectionsTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 * `bigqueryconnectionProjectsLocationsConnectionsUpdateCredential` - Sets the credential for the specified connection.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

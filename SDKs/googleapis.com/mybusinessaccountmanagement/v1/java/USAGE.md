@@ -2,58 +2,66 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateQueryParams;
+import org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateRequest;
+import org.openapis.openapi.models.operations.MybusinessaccountmanagementAccountsCreateResponse;
+import org.openapis.openapi.models.shared.AccountTypeEnum;
+import org.openapis.openapi.models.shared.AccountInput;
+import org.openapis.openapi.models.shared.OrganizationInfoInput;
+import org.openapis.openapi.models.shared.PostalAddress;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             MybusinessaccountmanagementAccountsCreateRequest req = new MybusinessaccountmanagementAccountsCreateRequest() {{
                 queryParams = new MybusinessaccountmanagementAccountsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new AccountInput() {{
-                    accountName = "rerum";
-                    name = "dicta";
+                    accountName = "deserunt";
+                    name = "suscipit";
                     organizationInfo = new OrganizationInfoInput() {{
                         address = new PostalAddress() {{
-                            addressLines = new String[]() {{
-                                add("voluptatum"),
+                            addressLines = new String[]{{
+                                add("magnam"),
+                                add("debitis"),
                             }};
-                            administrativeArea = "et";
-                            languageCode = "ut";
-                            locality = "dolorem";
-                            organization = "et";
-                            postalCode = "voluptate";
-                            recipients = new String[]() {{
-                                add("vitae"),
-                                add("totam"),
-                                add("dolores"),
+                            administrativeArea = "ipsa";
+                            languageCode = "delectus";
+                            locality = "tempora";
+                            organization = "suscipit";
+                            postalCode = "78545";
+                            recipients = new String[]{{
+                                add("recusandae"),
+                                add("temporibus"),
                             }};
-                            regionCode = "illum";
-                            revision = 6392442863481646880;
-                            sortingCode = "vel";
-                            sublocality = "odio";
+                            regionCode = "ab";
+                            revision = 337396;
+                            sortingCode = "veritatis";
+                            sublocality = "deserunt";
                         }};
                     }};
-                    primaryOwner = "dolore";
-                    type = "LOCATION_GROUP";
+                    primaryOwner = "perferendis";
+                    type = "PERSONAL";
                 }};
-            }};
+            }};            
 
             MybusinessaccountmanagementAccountsCreateResponse res = sdk.accounts.mybusinessaccountmanagementAccountsCreate(req);
 

@@ -2,39 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteReportDefinitionXAmzTargetEnum;
+import org.openapis.openapi.models.operations.DeleteReportDefinitionHeaders;
+import org.openapis.openapi.models.operations.DeleteReportDefinitionRequest;
+import org.openapis.openapi.models.operations.DeleteReportDefinitionResponse;
+import org.openapis.openapi.models.shared.DeleteReportDefinitionRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DeleteReportDefinitionRequest req = new DeleteReportDefinitionRequest() {{
                 headers = new DeleteReportDefinitionHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSOrigamiServiceGatewayService.DeleteReportDefinition";
                 }};
                 request = new DeleteReportDefinitionRequest() {{
-                    reportName = "fugit";
+                    reportName = "illum";
                 }};
-            }};
+            }};            
 
             DeleteReportDefinitionResponse res = sdk.deleteReportDefinition(req);
 

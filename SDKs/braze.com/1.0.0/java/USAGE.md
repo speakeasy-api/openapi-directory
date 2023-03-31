@@ -2,23 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CampaignAnalyticsQueryParams;
+import org.openapis.openapi.models.operations.CampaignAnalyticsRequest;
+import org.openapis.openapi.models.operations.CampaignAnalyticsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CampaignAnalyticsRequest req = new CampaignAnalyticsRequest() {{
                 queryParams = new CampaignAnalyticsQueryParams() {{
-                    campaignId = "sit";
-                    endingAt = "voluptas";
-                    length = "culpa";
+                    campaignId = "{{campaign_identifier}}";
+                    endingAt = "2020-06-28T23:59:59-5:00";
+                    length = "7";
                 }};
-            }};
+            }};            
 
             CampaignAnalyticsResponse res = sdk.campaign.campaignAnalytics(req);
 

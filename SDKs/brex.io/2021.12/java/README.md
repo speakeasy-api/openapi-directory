@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,20 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchSecurity;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchPathParams;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchRequestBody;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchRequest;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse;
+import org.openapis.openapi.models.shared.SchemeUserKey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CompanyAlternativeSearchRequest req = new CompanyAlternativeSearchRequest() {{
                 security = new CompanyAlternativeSearchSecurity() {{
@@ -32,21 +37,21 @@ public class Application {
                     }};
                 }};
                 pathParams = new CompanyAlternativeSearchPathParams() {{
-                    country = "sit";
+                    country = "corrupti";
                 }};
                 request = new CompanyAlternativeSearchRequestBody() {{
-                    address = "voluptas";
-                    name = "culpa";
-                    number = "expedita";
-                    phone = "consequuntur";
-                    url = "dolor";
-                    vat = "expedita";
+                    address = "7868 Stamm Junctions";
+                    name = "error";
+                    number = "deserunt";
+                    phone = "1-528-292-3478 x545";
+                    url = "nisi";
+                    vat = "recusandae";
                 }};
-            }};
+            }};            
 
             CompanyAlternativeSearchResponse res = sdk.v1Company.companyAlternativeSearch(req);
 
-            if (res.companyAlternativeSearch200ApplicationJSONAnies.isPresent()) {
+            if (res.companyAlternativeSearch200ApplicationJSONObjects.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -58,12 +63,13 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### v1-company
+
+### v1Company
 
 * `companyAlternativeSearch` - Retrieves a list of companies from the KYC API company index
 * `companyAnnouncement` - Retrieves announcement data
-* `companyDeepsearchIsin` - Retrieves a list of stock exchange listings
-* `companyDeepsearchLei` - Retrieves a list of companies
+* `companyDeepsearchISIN` - Retrieves a list of stock exchange listings
+* `companyDeepsearchLEI` - Retrieves a list of companies
 * `companyDeepsearchName` - Retrieves a list of companies from the official business register
 * `companyDeepsearchNumber` - Retrieves a list of companies from the official business register
 * `companyIdAnnouncements` - Retrieves company announcements
@@ -81,23 +87,23 @@ public class Application {
 * `companySearchName` - Retrieves a list of companies from the KYC API company index
 * `companySearchNumber` - Retrieves a list of companies from the KYC API company index
 
-### v1-ein-verification
+### v1EinVerification
 
 * `einVerificationBasic` - Verifies an EIN number
 * `einVerificationComprehensive` - Verifies EIN number and retrieves company data
 * `einVerificationLookup` - Retrieves a list of EIN numbers
 
-### v1-iban-verification
+### v1IbanVerification
 
 * `ibanBasic` - Checks validity of an IBAN number
 * `ibanComprehensive` - Checks validity of an IBAN number
 
-### v1-nif-verification
+### v1NifVerification
 
 * `nifBasic` - Verifies a NIF number
 * `nifComprehensive` - Verifies a NIF number and retrieves company data
 
-### v1-pepsanction
+### v1Pepsanction
 
 * `pepMonitorList` - Retrieves a list of monitor entries
 * `pepMonitorUnregister` - Deactive a pep sanction monitor
@@ -105,7 +111,7 @@ public class Application {
 * `pepOrder` - Orders a new Pep Sanction Check Report
 * `pepRetrieve` - Returns a json or pdf report
 
-### v1-product
+### v1Product
 
 * `productAvailability` - Retrieves a document availability result
 * `productCatalog` - Returns a catalog of products
@@ -120,25 +126,35 @@ public class Application {
 * `productStatus` - Returns metadata for a order
 * `productUpdateAction` - Updates metadata of an order
 
-### v1-system
+### v1System
 
 * `healthCheck` - Returns the health information for the official business registers based on usage.
 * `systemCountries` - Returns a list of countries
 * `systemPricelist` - Returns a list of products with prices
 
-### v1-tin-verification
+### v1TinVerification
 
 * `tinVerificationBasicCheck` - Verifies a TIN number
 * `tinVerificationComprehensiveCheck` - EIN Name Lookup with TIN number and retrieves company data
 * `tinVerificationNameLookup` - EIN Name Lookup with TIN number
 
-### v1-vat-verification
+### v1VatVerification
 
 * `vatBasic` - Returns a verification result
 * `vatComprehensive` - Returns a verification result and company data
 * `vatLevelTwo` - Returns a level two verification result
 * `vatLookup` - Returns a list of vat numbers with additional data
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

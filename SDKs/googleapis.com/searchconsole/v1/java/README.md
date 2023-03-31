@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,36 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption1;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption2;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurity;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryPathParams;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryQueryParams;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryRequest;
+import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryResponse;
+import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestAggregationTypeEnum;
+import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestDataStateEnum;
+import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestDimensionsEnum;
+import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestSearchTypeEnum;
+import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestTypeEnum;
+import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequest;
+import org.openapis.openapi.models.shared.ApiDimensionFilterGroupGroupTypeEnum;
+import org.openapis.openapi.models.shared.ApiDimensionFilterGroup;
+import org.openapis.openapi.models.shared.ApiDimensionFilterDimensionEnum;
+import org.openapis.openapi.models.shared.ApiDimensionFilterOperatorEnum;
+import org.openapis.openapi.models.shared.ApiDimensionFilter;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             WebmastersSearchanalyticsQueryRequest req = new WebmastersSearchanalyticsQueryRequest() {{
                 security = new WebmastersSearchanalyticsQuerySecurity() {{
@@ -37,49 +58,90 @@ public class Application {
                     }};
                 }};
                 pathParams = new WebmastersSearchanalyticsQueryPathParams() {{
-                    siteUrl = "sit";
+                    siteUrl = "corrupti";
                 }};
                 queryParams = new WebmastersSearchanalyticsQueryQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new SearchAnalyticsQueryRequest() {{
-                    aggregationType = "BY_PAGE";
-                    dataState = "DATA_STATE_UNSPECIFIED";
-                    dimensionFilterGroups = new openapisdk.models.shared.ApiDimensionFilterGroup[]() {{
+                    aggregationType = "BY_PROPERTY";
+                    dataState = "FINAL";
+                    dimensionFilterGroups = new org.openapis.openapi.models.shared.ApiDimensionFilterGroup[]{{
                         add(new ApiDimensionFilterGroup() {{
-                            filters = new openapisdk.models.shared.ApiDimensionFilter[]() {{
+                            filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "QUERY";
+                                    expression = "delectus";
+                                    operator = "NOT_EQUALS";
+                                }}),
                                 add(new ApiDimensionFilter() {{
                                     dimension = "PAGE";
-                                    expression = "dolorem";
+                                    expression = "molestiae";
                                     operator = "INCLUDING_REGEX";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "SEARCH_APPEARANCE";
+                                    expression = "voluptatum";
+                                    operator = "CONTAINS";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "COUNTRY";
+                                    expression = "nisi";
+                                    operator = "EXCLUDING_REGEX";
+                                }}),
+                            }};
+                            groupType = "AND";
+                        }}),
+                        add(new ApiDimensionFilterGroup() {{
+                            filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "QUERY";
+                                    expression = "quis";
+                                    operator = "EQUALS";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "DEVICE";
+                                    expression = "perferendis";
+                                    operator = "CONTAINS";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "SEARCH_APPEARANCE";
+                                    expression = "sapiente";
+                                    operator = "INCLUDING_REGEX";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "QUERY";
+                                    expression = "at";
+                                    operator = "EXCLUDING_REGEX";
                                 }}),
                             }};
                             groupType = "AND";
                         }}),
                     }};
-                    dimensions = new openapisdk.models.shared.SearchAnalyticsQueryRequestDimensionsEnum[]() {{
-                        add("DATE"),
+                    dimensions = new org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestDimensionsEnum[]{{
                         add("PAGE"),
-                        add("DATE"),
+                        add("DEVICE"),
+                        add("DEVICE"),
+                        add("PAGE"),
                     }};
-                    endDate = "illum";
-                    rowLimit = 6392442863481646880;
+                    endDate = "totam";
+                    rowLimit = 780529;
                     searchType = "DISCOVER";
-                    startDate = "odio";
-                    startRow = 6303220950515014660;
-                    type = "DISCOVER";
+                    startDate = "dicta";
+                    startRow = 720633;
+                    type = "NEWS";
                 }};
-            }};
+            }};            
 
             WebmastersSearchanalyticsQueryResponse res = sdk.searchanalytics.webmastersSearchanalyticsQuery(req);
 
@@ -94,6 +156,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### searchanalytics
 
@@ -120,7 +183,17 @@ public class Application {
 ### urlTestingTools
 
 * `searchconsoleUrlTestingToolsMobileFriendlyTestRun` - Runs Mobile-Friendly Test for a given URL.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

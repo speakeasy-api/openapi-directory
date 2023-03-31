@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,42 +15,41 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetSetupV1AppointmentsQueryParams;
+import org.openapis.openapi.models.operations.GetSetupV1AppointmentsRequest;
+import org.openapis.openapi.models.operations.GetSetupV1AppointmentsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetSetupV1AppointmentsRequest req = new GetSetupV1AppointmentsRequest() {{
                 queryParams = new GetSetupV1AppointmentsQueryParams() {{
-                    bookedBy = "sit";
-                    calendarId = "voluptas";
-                    customerId = "culpa";
-                    email = "expedita";
-                    endDate = "1997-12-26T13:41:25Z";
-                    lastname = "dolor";
-                    limit = 1774932891286980153;
-                    locationId = "voluptas";
-                    offset = 8274930044578894929;
-                    resourceId = "et";
-                    serviceAllocationId = "nihil";
-                    serviceId = "rerum";
-                    startDate = "2004-06-02T10:14:12Z";
-                    status = "voluptatum";
+                    bookedBy = "corrupti";
+                    calendarId = "provident";
+                    customerId = "distinctio";
+                    email = "Leda_Stiedemann@hotmail.com";
+                    endDate = "2022-05-18T09:34:54.894Z";
+                    lastname = "Oberbrunner";
+                    limit = 384382;
+                    locationId = "iure";
+                    offset = 297534;
+                    resourceId = "debitis";
+                    serviceAllocationId = "ipsa";
+                    serviceId = "delectus";
+                    startDate = "2022-08-14T01:03:07.567Z";
+                    status = "molestiae";
                 }};
-            }};
+            }};            
 
             GetSetupV1AppointmentsResponse res = sdk.appointments.getSetupV1Appointments(req);
 
@@ -66,175 +65,185 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Appointments
 
-* `getSetupV1Appointments` - Returns a list of appointments.
-* `getSetupV1AppointmentsId` - Returns an appointment object.
-* `putSetupV1AppointmentsIdReassignResourceResourceId` - Reassigns the appointment to the supplied resourceId
+### appointments
 
-### BusinessUsers
+* `getSetupV1Appointments` - List Appointments
+* `getSetupV1AppointmentsId` - Get Appointment
+* `putSetupV1AppointmentsIdReassignResourceResourceId` - Reassign Appointment
 
-* `deleteSetupV1BusinessusersId` - Permanently deletes businessUser object.
-* `getSetupV1Businessusers` - Returns a list of business users.
-* `getSetupV1BusinessusersPermissions` - Returns a list of system roles and permission.
-* `getSetupV1BusinessusersEmailCompanies` - Returns a list of companies for the business user.
-* `getSetupV1BusinessusersId` - Returns a businessUser object.
-* `postSetupV1Businessusers` - Creates a new businessUser object.
-* `putSetupV1BusinessusersId` - Updates a businessUser object.
+### businessUsers
 
-### Calendars
+* `deleteSetupV1BusinessusersId` - Delete User
+* `getSetupV1Businessusers` - List Users
+* `getSetupV1BusinessusersPermissions` - List User Permissions
+* `getSetupV1BusinessusersEmailCompanies` - List User Companies
+* `getSetupV1BusinessusersId` - Get User
+* `postSetupV1Businessusers` - Create User
+* `putSetupV1BusinessusersId` - Update User
 
-* `deleteSetupV1CalendarsBlockId` - Delete a calendar block object
-* `deleteSetupV1CalendarsId` - Deletes a calendar object.
-* `getSetupV1Calendars` - Returns a list of calendars.
-* `getSetupV1CalendarsBlocksId` - Update a calendar block
-* `getSetupV1CalendarsId` - Returns a calendar object.
-* `getSetupV1CalendarsIdBlocks` - Returns a list of calendar blocks.
-* `getSetupV1CalendarsIdServices` - Returns a list of services linked to a calendar.
-* `postSetupV1Calendars` - Creates a new calendar object.
-* `postSetupV1CalendarsIdBlock` - Create a new calendar block
-* `putSetupV1CalendarsBlockId` - Update a calendar block
-* `putSetupV1CalendarsId` - Updates a calendar object.
-* `putSetupV1CalendarsIdRecover` - Recovers a calendar object.
+### calendars
 
-### Companies
+* `deleteSetupV1CalendarsBlockId` - Delete Calendar Block
+* `deleteSetupV1CalendarsId` - Delete Calendar
+* `getSetupV1Calendars` - List Calendars
+* `getSetupV1CalendarsBlocksId` - Get Calendar Block
+* `getSetupV1CalendarsId` - Get Calendar
+* `getSetupV1CalendarsIdBlocks` - List Calendar Blocks
+* `getSetupV1CalendarsIdServices` - List Calendar Services
+* `postSetupV1Calendars` - DEPRECATING: Create
+* `postSetupV1CalendarsIdBlock` - Create Calendar Block
+* `putSetupV1CalendarsBlockId` - Update Calendar Block
+* `putSetupV1CalendarsId` - Update Calendar
+* `putSetupV1CalendarsIdRecover` - Recover Calendar
 
-* `deleteSetupV1CompaniesDomainsId` - Deletes a whitelisted domain for the authorized company
-Returns view of domain deleted
-* `deleteSetupV1CompaniesEmailTemplatesMaster` - Deletes custom master email template settings reverting to the default
-* `deleteSetupV1CompaniesRegionsId` - Delete a region
-* `getSetupV1Companies` - Returns a company profile information of the authorized company
-* `getSetupV1CompaniesDomains` - Returns a list of whitelisted domains for the authorized company
-* `getSetupV1CompaniesDomainsId` - Returns a whitelisted domain for the authorized company
-* `getSetupV1CompaniesEmailTemplates` - Returns email template list from the authorized company
-* `getSetupV1CompaniesEmailTemplatesMaster` - Returns master email template settings
-* `getSetupV1CompaniesEmailTemplatesTemplateName` - Returns default or custom email template from the authorized company
-* `getSetupV1CompaniesRegions` - Returns a list of regions.
-* `getSetupV1CompaniesRegionsId` - Get a Region
-* `getSetupV1CompaniesTimezonesDate` - Returns timezone information for all supported Timezone's
-* `postSetupV1Companies` - Creates a company profile.
-* `postSetupV1CompaniesDomains` - Creates a whitelisted domain for the authorized company
-Returns view of domain created
-* `postSetupV1CompaniesEmailTemplatesMaster` - Updates / creates custom master email template settings
-* `postSetupV1CompaniesRegions` - Create a new region
-* `putSetupV1Companies` - Updates a company object.
-* `putSetupV1CompaniesDomainsId` - Updates a whitelisted domain for the authorized company
-Returns view of domain updated
-* `putSetupV1CompaniesRegionsId` - Update a region
+### companies
 
-### Customers
+* `deleteSetupV1CompaniesDomainsId` - Delete Company Domain
+* `deleteSetupV1CompaniesEmailTemplatesMaster` - Delete Master Template Settings
+* `deleteSetupV1CompaniesRegionsId` - Delete Region
+* `getSetupV1Companies` - Get Company
+* `getSetupV1CompaniesDomains` - List Company Domains
+* `getSetupV1CompaniesDomainsId` - Get Company Domain
+* `getSetupV1CompaniesEmailTemplates` - List Email Templates
+* `getSetupV1CompaniesEmailTemplatesMaster` - Get Master Template Settings
+* `getSetupV1CompaniesEmailTemplatesTemplateName` - Get Email Template
+* `getSetupV1CompaniesRegions` - List Regions
+* `getSetupV1CompaniesRegionsId` - Get Region
+* `getSetupV1CompaniesTimezonesDate` - List Time Zones
+* `postSetupV1Companies` - Create Company
+* `postSetupV1CompaniesDomains` - Create Company Domain
+* `postSetupV1CompaniesEmailTemplatesMaster` - Create Master Template Settings
+* `postSetupV1CompaniesRegions` - Create Region
+* `putSetupV1Companies` - Update Company
+* `putSetupV1CompaniesDomainsId` - Update Company Domain
+* `putSetupV1CompaniesRegionsId` - Update Region
 
-* `getSetupV1Customers` - Returns a list of customers.
-* `getSetupV1CustomersId` - Returns a customer object.
-* `getSetupV1CustomersIdPrivacy` - Returns a customer privacy report data.
+### customers
 
-### Locations
+* `getSetupV1Customers` - List Customers
+* `getSetupV1CustomersId` - Get Customer
+* `getSetupV1CustomersIdPrivacy` - Get Customer Data
 
-* `deleteSetupV1LocationsServicesId` - Deletes a location service from the specified location
-* `deleteSetupV1LocationsId` - Deletes a location object.
-* `deleteSetupV1LocationsIdDeleteallimages` - Deletes all images from location blob storage container
-* `deleteSetupV1LocationsIdDeleteimage` - Removes a location image
-* `deleteSetupV1LocationsIdEmailTemplatesMaster` - Deletes custom master email template settings reverting to the default
-* `deleteSetupV1LocationsIdEmailTemplatesTemplateName` - Deletes a custom email template
-* `deleteSetupV1LocationsIdGoogleServiceAccount` - Remove authorized access to all google calendar users in an organization
-* `deleteSetupV1LocationsIdServices` - Deletes all location services from the specified location
-* `getSetupV1Locations` - Returns a list of business locations.
-* `getSetupV1LocationsServicesId` - Returns a single location services.
-* `getSetupV1LocationsId` - Returns a business location object.
-* `getSetupV1LocationsIdEmailTemplates` - Returns email template list from the authorized company
-* `getSetupV1LocationsIdEmailTemplatesMaster` - Returns master email template settings
-* `getSetupV1LocationsIdEmailTemplatesTemplateName` - Returns company default or custom email template from the specified location
-* `getSetupV1LocationsIdGoogleServiceAccount` - Returns google service account info
-* `getSetupV1LocationsIdServices` - Returns a list of location services.
-* `postSetupV1Locations` - Creates a new location object.
-* `postSetupV1LocationsBulk` - Creates new location objects.
-* `postSetupV1LocationsIdEmailTemplates` - Uploads a custom email template
-* `postSetupV1LocationsIdEmailTemplatesMaster` - Saves settings for the master email template
-* `postSetupV1LocationsIdGoogleServiceAccount` - Authorize access to all google calendar users in an organization
-* `postSetupV1LocationsIdServices` - Adds location services to the specified location
-* `postSetupV1LocationsIdUploadimage` - Uploads a location image
-* `putSetupV1LocationsId` - Use this endpoint to change the scope of online booking settings
-* `putSetupV1LocationsIdHolidaysHolidayIdClosed` - Sets a business holiday to open or closed.
-* `putSetupV1LocationsIdRecover` - Recovers a location object.
-* `putSetupV1LocationsIdSettingsScopeSettingsScope` - Changes the scope of OnlineBooking Settings.
+### locations
 
-### ResourceGroups
+* `deleteSetupV1LocationsServicesId` - Unlink Service
+* `deleteSetupV1LocationsId` - Delete Location
+* `deleteSetupV1LocationsIdDeleteallimages` - Delete All Location Images
+* `deleteSetupV1LocationsIdDeleteimage` - Delete Location Image
+* `deleteSetupV1LocationsIdEmailTemplatesMaster` - Delete Master Template Settings
+* `deleteSetupV1LocationsIdEmailTemplatesTemplateName` - Delete Custom Template
+* `deleteSetupV1LocationsIdGoogleServiceAccount` - Delete Google Cal Access
+* `deleteSetupV1LocationsIdServices` - Delete Linked Services
+* `getSetupV1Locations` - List Locations
+* `getSetupV1LocationsServicesId` - Get Linked Service
+* `getSetupV1LocationsId` - Get Location
+* `getSetupV1LocationsIdAppointmentreminders` - Get Reminders
+* `getSetupV1LocationsIdEmailTemplates` - List Email Templates
+* `getSetupV1LocationsIdEmailTemplatesMaster` - Get Master Template Settings
+* `getSetupV1LocationsIdEmailTemplatesTemplateName` - Get Email Template
+* `getSetupV1LocationsIdServices` - List Location Linked Services
+* `postSetupV1Locations` - Create Location
+* `postSetupV1LocationsBulk` - Create Locations Bulk
+* `postSetupV1LocationsIdEmailTemplates` - Create Custom Template
+* `postSetupV1LocationsIdEmailTemplatesMaster` - Create Master Template Settings
+* `postSetupV1LocationsIdGoogleServiceAccount` - Create Google Cal Access
+* `postSetupV1LocationsIdServices` - Create Linked Service
+* `postSetupV1LocationsIdUploadimage` - Upload Location Image
+* `putSetupV1LocationsId` - Update Location
+* `putSetupV1LocationsIdAppointmentreminders` - Update Reminders
+* `putSetupV1LocationsIdHolidaysHolidayIdClosed` - Update Location Holidays
+* `putSetupV1LocationsIdRecover` - Recover Location
+* `putSetupV1LocationsIdSettingsScopeSettingsScope` - Update Location Scope
 
-* `deleteSetupV1ResourcegroupsId` - Deletes a resource group object.
-* `getSetupV1Resourcegroups` - Returns a list of resourcegroups.
-* `getSetupV1ResourcegroupsId` - Returns a resourceGroup object.
-* `postSetupV1Resourcegroups` - Creates a new resource group object.
-* `putSetupV1ResourcegroupsId` - Updates a resource group object.
-* `putSetupV1ResourcegroupsIdRecover` - Recovers a resource group object.
+### resourceGroups
 
-### Resources
+* `deleteSetupV1ResourcegroupsId` - Delete Resource Group
+* `getSetupV1Resourcegroups` - List Resource Groups
+* `getSetupV1ResourcegroupsId` - Get Resource Group
+* `postSetupV1Resourcegroups` - Create Resource Group
+* `putSetupV1ResourcegroupsId` - Update Resource Group
+* `putSetupV1ResourcegroupsIdRecover` - Recover Resource Group
 
-* `deleteSetupV1ResourcesAllocationsId` - Delete a resource allocation object
-* `deleteSetupV1ResourcesBlockId` - Delete a resource block object
-* `deleteSetupV1ResourcesId` - Deletes a resource object.
-* `deleteSetupV1ResourcesIdDeleteimage` - Removes a resource image
-* `deleteSetupV1ResourcesIdServices` - Deletes resource services from the specified resource
-* `getSetupV1Resources` - Returns a list of resources.
-* `getSetupV1ResourcesAllocationsId` - Update a resource allocation
-* `getSetupV1ResourcesBlocksId` - Update a resource block
-* `getSetupV1ResourcesTimezones`
-* `getSetupV1ResourcesId` - Returns a resource object.
-* `getSetupV1ResourcesIdAllocations` - Returns a list of resource allocations.
-* `getSetupV1ResourcesIdAvailability` - Returns a list of weekly availability
-* `getSetupV1ResourcesIdBlocks` - Returns a list of resource blocks.
-* `getSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddress` - Returns a resource object.
-* `getSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddress` - Returns a resource object.
-* `postSetupV1Resources` - Creates a new resource object.
-* `postSetupV1ResourcesBulk` - Creates new resource objects.
-* `postSetupV1ResourcesIdAllocations` - Create a new resource allocation
-* `postSetupV1ResourcesIdBlock` - Create a new resource block
-* `postSetupV1ResourcesIdServices` - Adds resource services to the specified resource
-* `postSetupV1ResourcesIdUploadimage` - Uploads a resource image
-* `putSetupV1ResourcesAllocationsId` - Update a resource allocation
-* `putSetupV1ResourcesBlockId` - Update a resource block
-* `putSetupV1ResourcesBulk` - Updates resource objects.
-* `putSetupV1ResourcesId` - Updates a resource object.
-* `putSetupV1ResourcesIdAvailability` - Updates Weekly Availability
-* `putSetupV1ResourcesIdReassignAppointmentsResourceId` - Reassigns appointments to another resource
-* `putSetupV1ResourcesIdRecover` - Recovers a resource object.
+### resources
 
-### Services
+* `deleteSetupV1ResourcesAllocationsId` - Delete Allocation
+* `deleteSetupV1ResourcesBlockId` - Delete Block
+* `deleteSetupV1ResourcesId` - Delete Resource
+* `deleteSetupV1ResourcesIdDeleteimage` - Delete Resource Image
+* `deleteSetupV1ResourcesIdServices` - Delete Linked Services
+* `getSetupV1Resources` - List Resources
+* `getSetupV1ResourcesAllocationsId` - Get Allocation
+* `getSetupV1ResourcesBlocksId` - Get Block
+* `getSetupV1ResourcesTimezones` - Get Time Zones
+* `getSetupV1ResourcesId` - Get Resource
+* `getSetupV1ResourcesIdAllocations` - List Resource Allocations
+* `getSetupV1ResourcesIdAvailability` - List Weekly Availability
+* `getSetupV1ResourcesIdBlocks` - List Resource Blocks
+* `getSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddress` - Get Resource Google URL
+* `getSetupV1ResourcesIdCalendarAuthOutlookOutlookEmailAddress` - Get Resource Outlook URL
+* `postSetupV1Resources` - Create Resource
+* `postSetupV1ResourcesBulk` - Create Resources Bulk
+* `postSetupV1ResourcesIdAllocations` - Create Allocation
+* `postSetupV1ResourcesIdBlock` - Create Block
+* `postSetupV1ResourcesIdServices` - Create Linked Services
+* `postSetupV1ResourcesIdUploadimage` - Upload Resource Image
+* `putSetupV1ResourcesAllocationsId` - Update Allocation
+* `putSetupV1ResourcesBlockId` - Update Block
+* `putSetupV1ResourcesBulk` - Update Resources Bulk
+* `putSetupV1ResourcesId` - Update Resource
+* `putSetupV1ResourcesIdAvailability` - Update Weekly Availability
+* `putSetupV1ResourcesIdReassignAppointmentsResourceId` - Reassign Resource
+* `putSetupV1ResourcesIdRecover` - Recover Resource
+* `putSetupV1ResourcesIdServices` - Update Linked Services
 
-* `deleteSetupV1ServicesAllocationsId` - Delete a service allocation object
-* `deleteSetupV1ServicesBlockId` - Delete a service block object
-* `deleteSetupV1ServicesBookingwindowsId` - Permanently deletes bookingWindow object.
-* `deleteSetupV1ServicesCalendarId`
-* `deleteSetupV1ServicesId` - Deletes a service object.
-* `deleteSetupV1ServicesIdDeleteimage` - Removes a service image
-* `getSetupV1Services` - Returns a list of services.
-* `getSetupV1ServicesAllocationsId` - Get a service allocation
-* `getSetupV1ServicesBlocksId` - Get a service block
-* `getSetupV1ServicesBookingwindowsId` - Get a booking window
-* `getSetupV1ServicesId` - Returns a service object.
-* `getSetupV1ServicesIdAllocations` - Returns a list of service allocations.
-* `getSetupV1ServicesIdAvailability` - Returns a list of weekly availability
-* `getSetupV1ServicesIdBlocks` - Returns a list of service blocks.
-* `getSetupV1ServicesIdBookingwindows` - Returns a list of service booking windows.
-* `getSetupV1ServicesIdCalendar` - Returns the linked calendar for the service
-* `getSetupV1ServicesIdResources` - Returns a list of resources for the specified service.
-* `postSetupV1Services` - Creates a new service object.
-* `postSetupV1ServicesBookingwindows` - Creates a new bookingWindow object.
-* `postSetupV1ServicesCalendar` - Links the service to a calendar
-* `postSetupV1ServicesIdAllocations` - Create a new service allocation
-* `postSetupV1ServicesIdAllocationsBulk` - Create new service allocations in bulk
-* `postSetupV1ServicesIdBlock` - Create a new service block
-* `postSetupV1ServicesIdUploadimage` - Uploads a service image
-* `putSetupV1ServicesAllocationsId` - Update a service allocation
-* `putSetupV1ServicesBlockId` - Update a service block
-* `putSetupV1ServicesBookingwindowsId` - Updates a bookingWindow object.
-* `putSetupV1ServicesId` - Updates a service object.
-* `putSetupV1ServicesIdAvailability` - Updates Weekly Availability
-* `putSetupV1ServicesIdRecover` - Recovers a service object.
+### serviceGroups
 
-### StripePlans
+* `deleteSetupV1ServicegroupsId` - Delete Service Group
+* `getSetupV1Servicegroups` - List Service Groups
+* `getSetupV1ServicegroupsId` - Get Service Group
+* `postSetupV1Servicegroups` - Create Service Group
+* `putSetupV1ServicegroupsId` - Update Service Group
+* `putSetupV1ServicegroupsIdRecover` - Recover Service Group
 
-* `getPlanId`
+### services
 
+* `deleteSetupV1ServicesAllocationsId` - Delete Allocation
+* `deleteSetupV1ServicesBlockId` - Delete Block
+* `deleteSetupV1ServicesCalendarId` - Delete Service Links
+* `deleteSetupV1ServicesId` - Delete Service
+* `deleteSetupV1ServicesIdDeleteimage` - Delete Service Image
+* `getSetupV1Services` - List Services
+* `getSetupV1ServicesAllocationsId` - Get Allocation
+* `getSetupV1ServicesBlocksId` - Get Block
+* `getSetupV1ServicesId` - Get Service
+* `getSetupV1ServicesIdAllocations` - List Service Allocations
+* `getSetupV1ServicesIdAvailability` - Get Weekly Availability
+* `getSetupV1ServicesIdBlocks` - List Service Blocks
+* `getSetupV1ServicesIdCalendar` - Get Linked Calendar
+* `getSetupV1ServicesIdResources` - List Resources for Service
+* `postSetupV1Services` - Create Service
+* `postSetupV1ServicesCalendar` - Link Service to Calendar
+* `postSetupV1ServicesIdAllocations` - Create Allocation
+* `postSetupV1ServicesIdAllocationsBulk` - Create Allocations Bulk
+* `postSetupV1ServicesIdBlock` - Create Block
+* `postSetupV1ServicesIdUploadimage` - Upload Service Image
+* `putSetupV1ServicesAllocationsId` - Update Allocation
+* `putSetupV1ServicesBlockId` - Update Block
+* `putSetupV1ServicesId` - Update Service
+* `putSetupV1ServicesIdAvailability` - Update Weekly Availability
+* `putSetupV1ServicesIdRecover` - Recover Service
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

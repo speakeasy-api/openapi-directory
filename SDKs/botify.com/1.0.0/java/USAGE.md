@@ -2,59 +2,58 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateUrlsExportPathParams;
+import org.openapis.openapi.models.operations.CreateUrlsExportAreaEnum;
+import org.openapis.openapi.models.operations.CreateUrlsExportQueryParams;
+import org.openapis.openapi.models.operations.CreateUrlsExportRequest;
+import org.openapis.openapi.models.operations.CreateUrlsExportResponse;
+import org.openapis.openapi.models.shared.UrlsQuery;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     djangoRestToken = new SchemeDjangoRestToken() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateUrlsExportRequest req = new CreateUrlsExportRequest() {{
                 pathParams = new CreateUrlsExportPathParams() {{
-                    analysisSlug = "sit";
-                    projectSlug = "voluptas";
-                    username = "culpa";
+                    analysisSlug = "corrupti";
+                    projectSlug = "provident";
+                    username = "Micheal_Sporer";
                 }};
                 queryParams = new CreateUrlsExportQueryParams() {{
                     area = "new";
                 }};
                 request = new UrlsQuery() {{
-                    fields = new String[]() {{
-                        add("dolor"),
-                        add("expedita"),
-                        add("voluptas"),
+                    fields = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
                     filters = new java.util.HashMap<String, Object>() {{
-                        put("et", "nihil");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
-                    sort = new java.util.HashMap<String, Object>[]() {{
+                    sort = new java.util.HashMap<String, Object>[]{{
                         add(new java.util.HashMap<String, Object>() {{
-                            put("debitis", "voluptatum");
-                            put("et", "ut");
-                            put("dolorem", "et");
+                            put("molestiae", "minus");
+                            put("placeat", "voluptatum");
                         }}),
                         add(new java.util.HashMap<String, Object>() {{
-                            put("iste", "vitae");
-                        }}),
-                        add(new java.util.HashMap<String, Object>() {{
-                            put("dolores", "illum");
-                            put("debitis", "vel");
-                            put("odio", "dolore");
+                            put("excepturi", "nisi");
+                            put("recusandae", "temporibus");
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateUrlsExportResponse res = sdk.analysis.createUrlsExport(req);
 

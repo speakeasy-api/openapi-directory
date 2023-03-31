@@ -2,44 +2,50 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordQueryParams;
+import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordRequest;
+import org.openapis.openapi.models.operations.ChromeuxreportRecordsQueryHistoryRecordResponse;
+import org.openapis.openapi.models.shared.QueryHistoryRequestFormFactorEnum;
+import org.openapis.openapi.models.shared.QueryHistoryRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            ChromeuxreportRecordsQueryRecordRequest req = new ChromeuxreportRecordsQueryRecordRequest() {{
-                queryParams = new ChromeuxreportRecordsQueryRecordQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+            ChromeuxreportRecordsQueryHistoryRecordRequest req = new ChromeuxreportRecordsQueryHistoryRecordRequest() {{
+                queryParams = new ChromeuxreportRecordsQueryHistoryRecordQueryParams() {{
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
-                request = new QueryRequest() {{
-                    effectiveConnectionType = "rerum";
-                    formFactor = "TABLET";
-                    metrics = new String[]() {{
-                        add("voluptatum"),
+                request = new QueryHistoryRequest() {{
+                    formFactor = "DESKTOP";
+                    metrics = new String[]{{
+                        add("iure"),
+                        add("magnam"),
                     }};
-                    origin = "et";
-                    url = "ut";
+                    origin = "debitis";
+                    url = "ipsa";
                 }};
-            }};
+            }};            
 
-            ChromeuxreportRecordsQueryRecordResponse res = sdk.records.chromeuxreportRecordsQueryRecord(req);
+            ChromeuxreportRecordsQueryHistoryRecordResponse res = sdk.records.chromeuxreportRecordsQueryHistoryRecord(req);
 
-            if (res.queryResponse.isPresent()) {
+            if (res.queryHistoryResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

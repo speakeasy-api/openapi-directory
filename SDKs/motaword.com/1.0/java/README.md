@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,29 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteCachePathParams;
+import org.openapis.openapi.models.operations.DeleteCacheRequest;
+import org.openapis.openapi.models.operations.DeleteCacheResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     mwoAuth = new SchemeMwoAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DeleteCacheRequest req = new DeleteCacheRequest() {{
                 pathParams = new DeleteCachePathParams() {{
-                    key = "sit";
+                    key = "corrupti";
                 }};
-            }};
+            }};            
 
             DeleteCacheResponse res = sdk.deleteCache(req);
 
@@ -57,223 +56,281 @@ public class Application {
 
 * `deleteCache` - Clear cache by key
 
-### Activity
+### activity
 
-* `getActivities` - Get a list of realtime activities.
-* `getActivity` - Get a single realtime activity.
-* `getActivityComments` - Get a list of comments belonging to this activity.
-* `getComments` - Get a list of activity comments throughout the whole project.
+* `getActivities` - Monitor project activities
+* `getActivity` - View an activity
+* `getActivityComments` - View activity comments
+* `getComments` - View all project comments
 * `getSalesActivities` - Get sales activities for a project
 * `insertSalesActivity` - Insert sales activity for a project
-* `submitComment` - Submit a comment to an activity.
+* `submitCommentJson` - Submit comment to an activity
+* `submitCommentMultipart` - Submit comment to an activity
 
-### Async
+### async
 
-* `downloadAsync` - Download async request files
+* `downloadAsync` - Download result of an async operation
 
-### Auth
+### auth
 
-* `getAccessToken` - Retrieve an access token to interact with the API.
+* `getAccessToken` - Retrieve an access token
 
-### Blog
+### blog
 
 * `getBlogPosts` - Get blog posts - ordered by created desc by default
 
-### Commission
+### commission
 
 * `getCommissions` - Returns a commission list of current client.
 * `getCommissionsByFilter` - Returns a commission list of current client.
 
-### ContinuousProject
+### continuousProject
 
+* `addDocument` - Add a new document to your continuous project
 * `collectAnalytics` - Save/collect analytics data from Active widget
-* `createActiveWidget` - Create a new Active widget. This does not create a new Active project, just a separate widget.
-* `createContinuousProject` - Create a new continuous project
+* `complete` - Complete continuous project
+* `completeContinuousDocument` - Complete a continuous project document
+* `completeLanguage` - Complete continuous project language
+* `createActiveWidget` - Create a new Active widget
+* `createContinuousProject` - Create a continuous project
+* `createSubscription` - Create subscription for continuous project
 * `deleteActiveWidget` - Delete a single widget for this Active project
-* `deleteContinuousProject` - Delete single continuous project
-* `getActiveWidget` - Get a single widget for this Active project
-* `getActiveWidgets` - Get widgets for this Active project
+* `deleteContinuousProject` - Delete a continuous project
+* `deleteSubscription` - Delete subscription for continuous project
+* `getActiveWidget` - View an Active widget
+* `getActiveWidgets` - View Active widgets
 * `getAnalyticsToken` - Get JWT token to be used in analytics dashboards
-* `getContinuousProject` - Get single continuous project
-* `getContinuousProjects` - Get a list of continuous projects
-* `resetActiveWidgetToken` - Resets the access token of the Active widget.
-* `translate` - Instantly translate your content with your existing TM and MT resources.
+* `getContinuousProject` - View a continuous project
+* `getContinuousProjectDocument` - View a continuous document
+* `getContinuousProjectDocumentProgress` - Monitor progress of a continuous document
+* `getContinuousProjectDocuments` - View continuous documents
+* `getContinuousProjectInvoices` - Invoices of a continuous project
+* `getContinuousProjectProgress` - Monitor progress and status of a continous project
+* `getContinuousProjects` - View continuous projects
+* `getQuoteForDocument` - Get a quote for a continuous project document
+* `getQuoteForDocuments` - Get quote for documents
+* `getQuoteForLanguage` - Get quote for language
+* `getQuoteForLanguages` - Get quote for languages
+* `getSubscription` - Get subscription for continuous project
+* `postContinuousProjectDocumentProgress` - Get continuous project document progress for multiple IDs
+* `resetActiveWidgetToken` - Reset Active widget token
+* `translate` - Instantly translate your content
 * `updateActiveWidget` - Update Active widget settings.
-* `updateContinuousProject` - Update continuous project
+* `updateContinuousProject` - Update a continuous project
+* `updateDocument` - Update the document
+* `updateSubscription` - Update subscription for continuous project
+* `updateSubscriptionPaymentMethod` - Update subscription payment method for continuous project
 
-### Corporate
+### corporate
 
-* `getAvailableCorporatePermissions` - Get a list of available permissions for this corporate account. They are used when assigning permissions to corporate users.
+* `getAvailableCorporatePermissions` - View available permissions
 * `getAvailableCorporatePermissionsById` - Get a list of available permissions for this corporate account. They are used when assigning permissions to corporate users.
-* `getCorporate` - Get details of my corporate account
+* `getCorporate` - View your corporate account
 * `getCorporateById` - Get details of this corporate account
-* `getCorporateUserGroups` - Get a list of user groups for my corporate account
+* `getCorporateUserGroups` - View user groups
 * `getCorporateUserGroupsById` - Get a list of user groups for this corporate account
-* `getCorporateUsers` - Get a list of users for my corporate account
+* `getCorporateUsers` - View users
 * `getCorporateUsersById` - Get a list of users for this corporate account
-* `saveCorporateUser` - Create or update a corporate user
+* `getCorporatesList` - Get a list of corporate accounts
+* `saveCorporateUser` - Create or update a user
 * `saveCorporateUserGroup` - Create or update a corporate user group
 * `saveCorporateUserGroupById` - Create or update a corporate user group for this corporate account
 
-### Document
+### document
 
-* `getDocuments` - Get a list of your documents
+* `getAllDocumentSubjects` - Get a list of subjects of projects
+* `getDocument` - View a single document
+* `getDocumentProgress` - View a document translation progress
+* `getDocuments` - View your documents
 * `getSimilarDocuments` - Find documents similar to this document.
 * `getUserDocuments` - Get a list of your documents
 * `regeneratePreview` - Regenerate preview and return preview URL for given file
 * `useAsDraft` - Use the translation of given source manual document as manual draft source for the given target document.
 * `useAsRegular` - Use the translation of the given manual document as a regular file.
 
-### Glossary
+### glossary
 
-* `createGlossary` - Upload a new glossary
-* `deleteGlossary` - Delete the glossary
-* `downloadGlobalGlossary` - Download the global glossary.
+* `createGlossaryJson` - Upload a glossary file
+* `createGlossaryMultipart` - Upload a glossary file
+* `deleteGlossary` - Delete a glossary
+* `downloadGlobalGlossary` - Download account glossary.
 * `downloadGlossary` - Download a glossary
-* `getGlossaries` - Get a list of glossaries
-* `getGlossary` - Get single glossary
-* `updateGlobalGlossary` - Create or update the global glossary.
-* `updateGlossary` - Update the glossary.
+* `getGlossaries` - View glossaries
+* `getGlossary` - View a glossary
+* `updateGlobalGlossaryJson` - Create or update the account glossary
+* `updateGlobalGlossaryMultipart` - Create or update the account glossary
+* `updateGlossaryJson` - Update a glossary
+* `updateGlossaryMultipart` - Update a glossary
 
-### Invitation
+### integrations
+
+* `getIntegrationsToken` - Generate a new access token for MotaWord's integrations service
+
+### invitation
 
 * `getInvitationVendors` - Get vendor list for compiled invitation needs
 
-### Pam
+### machineLearning
+
+* `getDeliveryPrediction` - Get a delivery prediction for a project
+
+### pam
 
 * `getClientProfileForPam` - Get the Pam profile of a client for this client ID
+* `getProjectCompletionReportForPam` - Get completion report data of a project
+* `postMessage` - Sends a message to chat
 
-### Payment
+### payment
 
-* `deleteCreditCard` - Delete credit card.
-* `getCreditCard` - Get credit card by cardId
-* `resetCardPaymentCode` - Reset credit card payment code.
-* `resetCorporatePaymentCode` - Reset corporate credit card payment code.
-* `toggleCorporateAutoCharge` - Toggle corporate auto charge option.
+* `deleteCreditCard` - Delete credit card
+* `getCreditCard` - View saved credit card
+* `resetCardPaymentCode` - Reset credit card payment code
+* `resetCorporatePaymentCode` - Reset payment code
+* `toggleCorporateAutoCharge` - Manage automatic charges on your credit card
 
-### Project
+### project
 
+* `assignCM` - Assign a CM to the project
 * `cancelProject` - Cancel your translation project
-* `createProject` - Get a new quote
-* `deleteProject` - Delete a project
+* `createProjectJson` - Create a new project
+* `createProjectMultipart` - Create a new project
+* `deleteProject` - Delete your translation project
 * `deliverProject` - Deliver project
-* `download` - Download the latest translation package.
-* `downloadHtmlInvoice` - Download invoice as hmtl
-* `downloadLanguage` - Download the latest translation package.
-* `downloadPdfInvoice` - Download invoice as pdf
-* `getInvoice` - Get invoice details
-* `getProgress` - Get project progress
-* `getProject` - Get single project
+* `download` - Download your translated project
+* `downloadHtmlInvoice` - Download project invoice (HTML)
+* `downloadLanguage` - Download your translated project language
+* `downloadPdfInvoice` - Download project invoice (PDF)
+* `getInvoice` - View project invoice
+* `getProgress` - View progress of a project
+* `getProject` - View a translation project
 * `getProjectVendors` - Get a list of vendors.
-* `getProjects` - Get a list of your projects
+* `getProjects` - View your translation projects
 * `getQuoteIdFromInternalId` - Get Quote Id
-* `getVendorProjects` - Get a list of your vendor projects
+* `getVendorProjects` - List projects as a vendor
 * `getVendorProjectsByUserId` - Get a list of user/vendor projects
 * `launchProject` - Launch your translation project
-* `package_` - Package the translation of all languages to be downloaded.
-* `packageLanguage` - Package the translation of a specific target language to be downloaded.
+* `package_` - Package your translated project
+* `packageLanguage` - Package your translated project language
 * `recreateProject` - Recreate your translation project from scratch. This is a risky action, you will lose current translations.
-* `submitProjectReports` - Submit reports for a project
-* `trackPackage` - Track the status of translation packaging.
+* `sendQuoteEmail` - Send a quote email
+* `submitProjectReports` - Submit feedback report for a project
+* `trackPackage` - Track translation packaging status
 * `triggerCallback` - Trigger a call to your callback URL related to this project.
-* `updateProject` - Update project language pairs
+* `updateProject` - Update project info and settings
 
-### Project Document
+### projectDocument
 
 * `createProjectDocument` - Upload a new document
 * `deleteProjectDocument` - Delete the document
-* `downloadProjectDocument` - Download a document
-* `downloadTranslatedDocumentForLanguage` - Download single translated file
-* `getProjectDocument` - Get single document
-* `getProjectDocuments` - Get a list of documents
-* `updateProjectDocument` - Update the document.
+* `downloadProjectDocument` - Download a project source document
+* `downloadTranslatedDocumentForLanguage` - Download translated document
+* `getProjectDocument` - View a project source document
+* `getProjectDocuments` - View project source documents
+* `updateProjectDocumentJson` - Update the document.
+* `updateProjectDocumentMultipart` - Update the document.
 
-### Project Webhooks
+### projectWebhooks
 
 * `deleteProjectWebhook` - Delete project webhooks
-* `getProjectWebhooks` - Get project information (includes callback_url for webhook)
-* `postProjectWebhook` - Update project webhook URL
-* `updateProjectWebhook` - Update project webhook URL
+* `getProjectWebhooks` - View project webhooks
+* `postProjectWebhook` - Update project webhook
+* `updateProjectWebhook` - Update project webhook
 
-### Report
+### report
 
-* `getLanguagePairsReport` - Returns a report of language pairs.
-* `getProjectsReport` - Returns a report of corporate account users.
-* `getUsersReport` - Returns a report of corporate account users.
+* `generateQAReport` - Generate a QA report for given filter
+* `getFilterContents` - Returns available options for selected timeframe.
+* `getLanguagePairsReport` - Language pairs report
+* `getProjectsReport` - Projects report
+* `getUsersReport` - Company users report
 
-### Search
+### search
 
 * `checkDocumentsReindex` - Check reindex status of the client source and translation documents.
 * `reindexDocuments` - Reindex for search all of the client source and translation documents.
-* `searchEverywhere` - Search everywhere! Including projects, documents, translations...
+* `searchEverywhere` - Search everything in your account
 
-### Static
+### static_
 
 * `getEndpoints` - Available endpoints
-* `getFormats` - Get a list of supported formats
-* `getLanguages` - Get a list of supported languages
-* `getSwaggerJson` - Get Swagger JSON
+* `getFormats` - List of supported file formats
+* `getLanguages` - List of supported languages
+* `getSwaggerYaml` - OpenAPI YAML representation of our API
 
-### Stats
+### stats
 
 * `getCommissionStats` - Returns the total commissions stats.
 * `getCommissionStatsByFilter` - Returns the total commissions stats by report filter.
-* `getPopularPairs` - Returns the language pairs that you have ordered most.
-* `getProjectStats` - Returns your project statistics.
-* `getStringStats` - Returns your string statistics.
+* `getPopularPairs` - View your popular language pairs
+* `getProjectStats` - View your project statistics
+* `getStringStats` - View your translation statistics
 
-### Strings
+### strings
 
-* `getProjectStrings` - Get a list of strings and its translations in the project.
-* `getProjectStringsForLanguage` - Get a list of strings and its translations in the project for this target language in the project.
-* `getStrings` - Get a list of client/corporate strings (20 per page)
-* `packageProjectTranslationMemory` - Get the translation memory of a project in TMX format
-* `packageProjectTranslationMemoryForLanguage` - Get the translation memory of a project in TMX format
-* `packageProjectTranslationMemoryForLanguageStatus` - If package call was async, check the status of the request
-* `packageProjectTranslationMemoryStatus` - If package call was async, check the status of the request
-* `packageUserTranslationMemory` - Get the translation memory of a client or corporate in TMX format
-* `packageUserTranslationMemoryForLanguageStatus` - If package call was async, check the status of the request
-* `postStrings` - Translate Strings with MT
-* `updateTranslationMemoryUnit` - Update translation
-
-### Style Guide
-
-* `createStyleGuide` - Upload a new style guide
-* `deleteStyleGuide` - Delete the style guide
-* `downloadGlobalStyleGuide` - Download the global style guide.
-* `downloadStyleGuide` - Download a style guide
-* `getStyleGuide` - Get single style guide
-* `getStyleGuides` - Get a list of style guides
-* `updateGlobalStyleGuide` - Create or update the global style guide.
-* `updateStyleGuide` - Update the style guide.
-
-### Translations
-
-* `getDocumentTranslations` - Get a list of strings and its translations in the document.
-* `getDocumentTranslationsForLanguage` - Get a list of strings and its translations in the document for this target language of the project.
+* `clearTranslationCache` - Clear translation cache
+* `getContinuousProjectFileStrings` - View strings their translations in a continuous document
+* `getContinuousProjectStrings` - View strings and translations in continuous project
+* `getDocumentTranslations` - View strings and translations of a document
+* `getDocumentTranslationsForLanguage` - View strings and translations of a document for target language
+* `getProjectStrings` - View project strings and translations
+* `getProjectStringsForLanguage` - View strings and translations for target language
 * `getProjectTranslations` - Deprecated. Use /projects/{projectId}/strings instead.
 * `getProjectTranslationsForLanguage` - Deprecated. use /projects/{projectId}/strings/{language} instead.
+* `getStrings` - View account strings (translation memory)
+* `getTranslationCache` - View cached strings translations in continuous project
+* `packageProjectTranslationMemory` - Download project translation memory
+* `packageProjectTranslationMemoryForLanguage` - Download language-specific project translation memory
+* `packageProjectTranslationMemoryForLanguageStatus` - Check language-specific translation memory packaging status
+* `packageProjectTranslationMemoryStatus` - Check translation memory packaging status
+* `packageUserTranslationMemory` - Download account translation memory
+* `packageUserTranslationMemoryForLanguageStatus` - Check account translation memory packaging status
+* `postContinuousProjectFileStrings` - Get a list of strings and its translations in the project.
+* `postStrings` - Translate Strings with MT
+* `recacheTranslations` - Recache translations
+* `updateTranslationMemoryUnit` - Update string translation
 
-### User
+### styleGuide
+
+* `createStyleGuideJson` - Upload a new style guide
+* `createStyleGuideMultipart` - Upload a new style guide
+* `deleteStyleGuide` - Delete a style guide
+* `downloadGlobalStyleGuide` - Download account style guide
+* `downloadStyleGuide` - Download a style guide
+* `getStyleGuide` - View a style guide
+* `getStyleGuides` - View style guides
+* `updateGlobalStyleGuideJson` - Create or update the account style guide
+* `updateGlobalStyleGuideMultipart` - Create or update the account style guide
+* `updateStyleGuideJson` - Update a style guide
+* `updateStyleGuideMultipart` - Update a style guide
+
+### surveys
+
+* `getQuestions` - Get survey questions in given scope and type
+* `submitAnswers` - Post survey answers for scope and type
+
+### user
 
 * `approveVendorApplication`
-* `deleteAccount` - Delete requester account
+* `createUser` - Create a new user
+* `deleteAccount` - Delete your account
 * `deleteUserAccount` - Delete requester account
 * `downgradeProofreader`
 * `downgradeUserProofreader`
-* `freezeAccount` - Freeze requester account for project notifications
+* `freezeAccount` - Freeze account
 * `freezeUserAccount` - Freeze requester account for project notifications
-* `getEarnings` - Returns your vendor earnings. Includes real-time earnings from ongoing projects, and fixed earnings from completed projects. Also includes total earnings and string edits.
-* `getMe` - Get your user information, including client or vendor specific info.
-* `getPaymentInfo` - Get your payment Info
-* `getPermissions` - Returns a list of permissions that this user is authorized for.
-* `getResponsivity` - Returns your vendor responsivity stats
-* `getStats` - Returns your client and vendor statistics. This used to be called "summary" (\@deprecated).
+* `getAllVendorTags` - Returns all vendor tags for vendors filter
+* `getEarnings` - View your vendor earnings
+* `getFilteredVendors` - Filter vendors based on provided parameters
+* `getMe` - View your account info
+* `getPaymentInfo` - View your payment and billing info
+* `getPermissions` - View your permissions
+* `getResponsivity` - View your vendor responsiveness
+* `getStats` - View your account statistics
 * `getThisUserGroups` - Returns a list of user groups that this user belongs to.
 * `getUser` - Get user information, including client or vendor specific info.
 * `getUserEarnings` - Returns your vendor earnings. Includes real-time earnings from ongoing projects, and fixed earnings from completed projects. Also includes total earnings and string edits.
-* `getUserGroups` - Returns a list of user groups that this user belongs to.
-* `getUserPaymentInfo` - Get user payment Info
+* `getUserGroups` - View your user groups
+* `getUserPaymentInfo` - View user's payment and billing info
 * `getUserPermissions` - Returns a list of permissions that this user is authorized for.
 * `getUserPopularPairs` - Returns the language pairs that the user has ordered most.
 * `getUserProjectStats` - Returns a user's project statistics.
@@ -287,25 +344,38 @@ public class Application {
 * `sendEmailConfirmation` - Sends email confirmation email for current user
 * `sendPasswordReminder` - Sends password reset email to the user's registered email address
 * `sendUserEmailConfirmation` - Sends email confirmation email for a user
-* `subscribeNotification`
+* `subscribeNotification` - Subscribe to push notifications
 * `subscribeUserNotification`
 * `suspendUser`
-* `unfreezeAccount` - Unfreeze requester account for project notifications
+* `unfreezeAccount` - Defreeze your account
 * `unfreezeUserAccount` - Unfreeze requester account for project notifications
 * `unsubscribeNotification`
 * `unsubscribeUserNotification`
-* `updateMe` - Update your user information.
-* `updatePassword` - Update user password. Password should contain at least one uppercase, lowercase character and one number
+* `updateMe` - Update your account info
+* `updatePassword` - Update your account password
 * `updatePaymentInfo` - Update payment info
 * `updateUser`
+* `updateUserGroup`
 * `updateUserPaymentInfo` - Update user payment info
-* `uploadProfilePicture`
-* `uploadUserProfilePicture`
+* `uploadProfilePictureJson` - Upload profile picture
+* `uploadProfilePictureMultipart` - Upload profile picture
+* `uploadUserProfilePictureJson`
+* `uploadUserProfilePictureMultipart`
 
-### Vendor
+### vendor
 
 * `getAvailableVendors` - Get a list of vendors available for the criteria given
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

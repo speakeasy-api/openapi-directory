@@ -2,19 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateTicketRequest;
+import org.openapis.openapi.models.operations.CreateTicketResponse;
+import org.openapis.openapi.models.shared.AbuseTicketCreateTypeEnum;
+import org.openapis.openapi.models.shared.AbuseTicketCreate;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateTicketRequest req = new CreateTicketRequest() {{
-                request = "sit";
-            }};
+                request = new AbuseTicketCreate() {{
+                    info = "corrupti";
+                    infoUrl = "provident";
+                    intentional = false;
+                    proxy = "distinctio";
+                    source = "quibusdam";
+                    target = "unde";
+                    type = "PHISHING";
+                }};
+            }};            
 
             CreateTicketResponse res = sdk.v1.createTicket(req);
 

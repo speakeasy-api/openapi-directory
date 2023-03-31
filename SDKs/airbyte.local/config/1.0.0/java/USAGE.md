@@ -2,199 +2,64 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SaveStatsRequest;
+import org.openapis.openapi.models.operations.SaveStatsResponse;
+import org.openapis.openapi.models.shared.SaveStatsRequestBody;
+import org.openapis.openapi.models.shared.AttemptStreamStats;
+import org.openapis.openapi.models.shared.AttemptStats;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            builder.setSecurity(
-                new Security() {{
-                    bearerAuth = new SchemeBearerAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
+            SaveStatsRequest req = new SaveStatsRequest() {{
+                request = new SaveStatsRequestBody() {{
+                    attemptNumber = 548814;
+                    jobId = 592845;
+                    stats = new AttemptStats() {{
+                        bytesEmitted = 715190;
+                        estimatedBytes = 844266;
+                        estimatedRecords = 602763;
+                        recordsCommitted = 857946;
+                        recordsEmitted = 544883;
+                        stateMessagesEmitted = 847252;
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
-
-            CreateConnectionRequest req = new CreateConnectionRequest() {{
-                request = new ConnectionCreate() {{
-                    destinationId = "sit";
-                    name = "voluptas";
-                    namespaceDefinition = "destination";
-                    namespaceFormat = "expedita";
-                    operationIds = new String[]() {{
-                        add("dolor"),
-                        add("expedita"),
-                        add("voluptas"),
-                    }};
-                    prefix = "fugit";
-                    resourceRequirements = new ResourceRequirements() {{
-                        cpuLimit = "et";
-                        cpuRequest = "nihil";
-                        memoryLimit = "rerum";
-                        memoryRequest = "dicta";
-                    }};
-                    schedule = new ConnectionSchedule() {{
-                        timeUnit = "weeks";
-                        units = 5617773211005988520;
-                    }};
-                    sourceId = "et";
-                    status = "deprecated";
-                    syncCatalog = new AirbyteCatalog() {{
-                        streams = new openapisdk.models.shared.AirbyteStreamAndConfiguration[]() {{
-                            add(new AirbyteStreamAndConfiguration() {{
-                                config = new AirbyteStreamConfiguration() {{
-                                    aliasName = "et";
-                                    cursorField = new String[]() {{
-                                        add("iste"),
-                                    }};
-                                    destinationSyncMode = "append";
-                                    primaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("illum"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("vel"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("dolore"),
-                                        }}),
-                                    }};
-                                    selected = false;
-                                    syncMode = "incremental";
-                                }};
-                                stream = new AirbyteStream() {{
-                                    defaultCursorField = new String[]() {{
-                                        add("totam"),
-                                        add("commodi"),
-                                        add("quis"),
-                                    }};
-                                    jsonSchema = new java.util.HashMap<String, Object>() {{
-                                        put("aut", "odit");
-                                        put("non", "voluptas");
-                                    }};
-                                    name = "omnis";
-                                    namespace = "aut";
-                                    sourceDefinedCursor = true;
-                                    sourceDefinedPrimaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("autem"),
-                                            add("consectetur"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("odio"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("recusandae"),
-                                        }}),
-                                    }};
-                                    supportedSyncModes = new openapisdk.models.shared.SyncModeEnum[]() {{
-                                        add("full_refresh"),
-                                        add("full_refresh"),
-                                    }};
-                                }};
-                            }}),
-                            add(new AirbyteStreamAndConfiguration() {{
-                                config = new AirbyteStreamConfiguration() {{
-                                    aliasName = "modi";
-                                    cursorField = new String[]() {{
-                                        add("inventore"),
-                                    }};
-                                    destinationSyncMode = "append_dedup";
-                                    primaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("reprehenderit"),
-                                            add("tempore"),
-                                            add("maiores"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("dolor"),
-                                            add("beatae"),
-                                            add("veritatis"),
-                                        }}),
-                                        add(new String[]() {{
-                                            add("et"),
-                                            add("omnis"),
-                                            add("ipsum"),
-                                        }}),
-                                    }};
-                                    selected = true;
-                                    syncMode = "full_refresh";
-                                }};
-                                stream = new AirbyteStream() {{
-                                    defaultCursorField = new String[]() {{
-                                        add("vel"),
-                                    }};
-                                    jsonSchema = new java.util.HashMap<String, Object>() {{
-                                        put("mollitia", "voluptas");
-                                        put("quam", "reprehenderit");
-                                        put("qui", "qui");
-                                    }};
-                                    name = "unde";
-                                    namespace = "in";
-                                    sourceDefinedCursor = false;
-                                    sourceDefinedPrimaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("itaque"),
-                                            add("ab"),
-                                            add("neque"),
-                                        }}),
-                                    }};
-                                    supportedSyncModes = new openapisdk.models.shared.SyncModeEnum[]() {{
-                                        add("full_refresh"),
-                                        add("full_refresh"),
-                                        add("full_refresh"),
-                                    }};
-                                }};
-                            }}),
-                            add(new AirbyteStreamAndConfiguration() {{
-                                config = new AirbyteStreamConfiguration() {{
-                                    aliasName = "architecto";
-                                    cursorField = new String[]() {{
-                                        add("velit"),
-                                    }};
-                                    destinationSyncMode = "overwrite";
-                                    primaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("voluptates"),
-                                            add("magni"),
-                                        }}),
-                                    }};
-                                    selected = false;
-                                    syncMode = "incremental";
-                                }};
-                                stream = new AirbyteStream() {{
-                                    defaultCursorField = new String[]() {{
-                                        add("earum"),
-                                    }};
-                                    jsonSchema = new java.util.HashMap<String, Object>() {{
-                                        put("omnis", "ut");
-                                    }};
-                                    name = "consequatur";
-                                    namespace = "dolor";
-                                    sourceDefinedCursor = true;
-                                    sourceDefinedPrimaryKey = new String[][]() {{
-                                        add(new String[]() {{
-                                            add("consectetur"),
-                                        }}),
-                                    }};
-                                    supportedSyncModes = new openapisdk.models.shared.SyncModeEnum[]() {{
-                                        add("incremental"),
-                                    }};
-                                }};
-                            }}),
-                        }};
+                    streamStats = new org.openapis.openapi.models.shared.AttemptStreamStats[]{{
+                        add(new AttemptStreamStats() {{
+                            stats = new AttemptStats() {{
+                                bytesEmitted = 623564;
+                                estimatedBytes = 645894;
+                                estimatedRecords = 384382;
+                                recordsCommitted = 437587;
+                                recordsEmitted = 297534;
+                                stateMessagesEmitted = 891773;
+                            }};
+                            streamName = "ipsa";
+                            streamNamespace = "delectus";
+                        }}),
+                        add(new AttemptStreamStats() {{
+                            stats = new AttemptStats() {{
+                                bytesEmitted = 272656;
+                                estimatedBytes = 383441;
+                                estimatedRecords = 477665;
+                                recordsCommitted = 791725;
+                                recordsEmitted = 812169;
+                                stateMessagesEmitted = 528895;
+                            }};
+                            streamName = "iusto";
+                            streamNamespace = "excepturi";
+                        }}),
                     }};
                 }};
-            }};
+            }};            
 
-            CreateConnectionResponse res = sdk.connection.createConnection(req);
+            SaveStatsResponse res = sdk.attempt.saveStats(req);
 
-            if (res.connectionRead.isPresent()) {
+            if (res.internalOperationResult.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

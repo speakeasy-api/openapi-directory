@@ -2,52 +2,64 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateSuiteDefinitionHeaders;
+import org.openapis.openapi.models.operations.CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration;
+import org.openapis.openapi.models.operations.CreateSuiteDefinitionRequestBody;
+import org.openapis.openapi.models.operations.CreateSuiteDefinitionRequest;
+import org.openapis.openapi.models.operations.CreateSuiteDefinitionResponse;
+import org.openapis.openapi.models.shared.ProtocolEnum;
+import org.openapis.openapi.models.shared.DeviceUnderTest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateSuiteDefinitionRequest req = new CreateSuiteDefinitionRequest() {{
                 headers = new CreateSuiteDefinitionHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateSuiteDefinitionRequestBody() {{
                     suiteDefinitionConfiguration = new CreateSuiteDefinitionRequestBodySuiteDefinitionConfiguration() {{
-                        devicePermissionRoleArn = "voluptas";
-                        devices = new openapisdk.models.shared.DeviceUnderTest[]() {{
+                        devicePermissionRoleArn = "illum";
+                        devices = new org.openapis.openapi.models.shared.DeviceUnderTest[]{{
                             add(new DeviceUnderTest() {{
-                                certificateArn = "et";
-                                thingArn = "nihil";
+                                certificateArn = "error";
+                                thingArn = "deserunt";
+                            }}),
+                            add(new DeviceUnderTest() {{
+                                certificateArn = "suscipit";
+                                thingArn = "iure";
                             }}),
                         }};
-                        intendedForQualification = true;
-                        rootGroup = "dicta";
-                        suiteDefinitionName = "debitis";
+                        intendedForQualification = false;
+                        isLongDurationTest = false;
+                        protocol = "MqttV3_1_1";
+                        rootGroup = "debitis";
+                        suiteDefinitionName = "ipsa";
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("et", "ut");
+                        put("tempora", "suscipit");
+                        put("molestiae", "minus");
+                        put("placeat", "voluptatum");
+                        put("iusto", "excepturi");
                     }};
                 }};
-            }};
+            }};            
 
             CreateSuiteDefinitionResponse res = sdk.createSuiteDefinition(req);
 

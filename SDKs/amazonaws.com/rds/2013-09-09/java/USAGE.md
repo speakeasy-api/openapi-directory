@@ -2,43 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionActionEnum;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionVersionEnum;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionQueryParams;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionHeaders;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionRequest;
+import org.openapis.openapi.models.operations.GETAddSourceIdentifierToSubscriptionResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetAddSourceIdentifierToSubscriptionRequest req = new GetAddSourceIdentifierToSubscriptionRequest() {{
-                queryParams = new GetAddSourceIdentifierToSubscriptionQueryParams() {{
+            GETAddSourceIdentifierToSubscriptionRequest req = new GETAddSourceIdentifierToSubscriptionRequest() {{
+                queryParams = new GETAddSourceIdentifierToSubscriptionQueryParams() {{
                     action = "AddSourceIdentifierToSubscription";
-                    sourceIdentifier = "voluptas";
-                    subscriptionName = "culpa";
+                    sourceIdentifier = "corrupti";
+                    subscriptionName = "provident";
                     version = "2013-09-09";
                 }};
-                headers = new GetAddSourceIdentifierToSubscriptionHeaders() {{
-                    xAmzAlgorithm = "consequuntur";
-                    xAmzContentSha256 = "dolor";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "voluptas";
-                    xAmzSecurityToken = "fugit";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "nihil";
+                headers = new GETAddSourceIdentifierToSubscriptionHeaders() {{
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
-            }};
+            }};            
 
-            GetAddSourceIdentifierToSubscriptionResponse res = sdk.getAddSourceIdentifierToSubscription(req);
+            GETAddSourceIdentifierToSubscriptionResponse res = sdk.getAddSourceIdentifierToSubscription(req);
 
             if (res.body.isPresent()) {
                 // handle response

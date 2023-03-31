@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.KeysApiCurrentPathParams;
+import org.openapis.openapi.models.operations.KeysApiCurrentRequest;
+import org.openapis.openapi.models.operations.KeysApiCurrentResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             KeysApiCurrentRequest req = new KeysApiCurrentRequest() {{
                 pathParams = new KeysApiCurrentPathParams() {{
-                    serial = "sit";
+                    serial = "corrupti";
                 }};
-            }};
+            }};            
 
             KeysApiCurrentResponse res = sdk.keysApi.keysApiCurrent(req);
 

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,15 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AnalyticsIndexResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AnalyticsIndexResponse res = sdk.analyticsGlobal.analyticsIndex();
 
@@ -39,12 +39,13 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Analytics - Global
+
+### analyticsGlobal
 
 * `analyticsIndex` - Get the Analytics API operation index
 * `analyticsStoreIndex` - Get the Analytics API operation index for one store
 
-### Analytics - Optimisations
+### analyticsOptimisations
 
 * `copyOptimisation` - Copy product optimisations between 2 channels
 * `optimise` - Optimise products by page
@@ -53,14 +54,14 @@ public class Application {
 * `optimiseByChannel` - Optimise products by channel
 * `optimiseByProduct` - Optimise product
 
-### Analytics - Reports
+### analyticsReports
 
 * `deleteReportFilter` - Delete the report filter
 * `getReportFilter` - Get the report filter description
 * `getReportFilters` - Get report filter list for the given store
 * `saveReportFilter` - Save the report filter
 
-### Analytics - Rules
+### analyticsRules
 
 * `createRule` - Rule creation
 * `deleteRule` - Delete Rule
@@ -75,7 +76,7 @@ public class Application {
 * `runRules` - Run all rules for this store
 * `updateRule` - Update Rule
 
-### Analytics - Statistics
+### analyticsStatistics
 
 * `getStoreReportByCategory` - Get the report by category
 * `getStoreReportByChannel` - Get the report by channel
@@ -83,7 +84,7 @@ public class Application {
 * `getStoreReportByDayPerStore` - Get the report by day for a StoreId
 * `getStoreReportByProduct` - Get the report by product
 
-### Analytics - Tracking
+### analyticsTracking
 
 * `getStoreTrackedClicks` - Get the latest tracked clicks
 * `getStoreTrackedExternalOrders` - Get the latest tracked external orders
@@ -91,7 +92,7 @@ public class Application {
 * `getStoreTrackingStatus` - Get the synchronization status of clicks and orders of a store
 * `getTrackingStatus` - Get the global synchronization status of clicks and orders
 
-### Catalogs - Auto
+### catalogsAuto
 
 * `autoConfigureAutoImportInterval` - Configure Auto Import Interval
 * `autoDeleteAutoImport` - Delete Auto Import
@@ -102,7 +103,7 @@ public class Application {
 * `autoStartAutoImport` - Start Auto Import Manually
 * `importationActivateAutoImport` - Activate the auto importation of the last successful manual catalog importation.
 
-### Catalogs - Catalog
+### catalogsCatalog
 
 * `catalogStoreIndex` - Get the index of the catalog API for this store
 * `catalogChangeCatalogColumnUserName` - Change Catalog Column User Name
@@ -121,12 +122,12 @@ public class Application {
 * `catalogSaveCustomColumn` - Create or replace a custom column
 * `importationGetManualUpdateLastInputConfig` - Get the last input configuration
 
-### Catalogs - Global
+### catalogsGlobal
 
 * `catalogIndex` - Get the index of the catalog API
-* `catalogGetBeezUpColumns` - Get the BeezUP columns
+* `catalogGetBeezUPColumns` - Get the BeezUP columns
 
-### Catalogs - Importation Catalog Info
+### catalogsImportationCatalogInfo
 
 * `importationConfigureCatalogColumn` - Configure catalog column
 * `importationDeleteCustomColumn` - Delete Custom Column
@@ -143,7 +144,7 @@ public class Application {
 * `importationUnmapCatalogColumn` - Unmap catalog column
 * `importationUnmapCustomColumn` - Unmap custom column
 
-### Catalogs - Importation Process
+### catalogsImportationProcess
 
 * `importationCancel` - Cancel importation
 * `importationCommit` - Commit Importation
@@ -157,29 +158,29 @@ public class Application {
 * `importationStartManualUpdate` - Start Manual Import
 * `importationTechnicalProgression` - Get technical progression
 
-### Channel Catalogs - Categories
+### channelCatalogsCategories
 
 * `configureChannelCatalogCategory` - Configure channel catalog category
 * `disableChannelCatalogCategoryMapping` - Disable a channel catalog category mapping
 * `getChannelCatalogCategories` - Get channel catalog categories
 * `reenableChannelCatalogCategoryMapping` - Reenable a channel catalog category mapping
 
-### Channel Catalogs - Column Mappings
+### channelCatalogsColumnMappings
 
 * `configureChannelCatalogColumnMappings` - Configure channel catalog column mappings
 
-### Channel Catalogs - Exclusion Filters
+### channelCatalogsExclusionFilters
 
 * `configureChannelCatalogExclusionFilters` - Configure channel catalog exclusion filters
 * `getChannelCatalogExclusionFilters` - Get channel catalog exclusion filters
 
-### Channel Catalogs - Exportations
+### channelCatalogsExportations
 
 * `clearChannelCatalogExportationCache` - Clear the exportation cache
 * `getChannelCatalogExportationCacheInfo` - Get the exportation cache information
 * `getChannelCatalogExportationHistory` - Get the exportation history
 
-### Channel Catalogs - Global
+### channelCatalogsGlobal
 
 * `addChannelCatalog` - Add a new channel catalog
 * `deleteChannelCatalog` - Delete the channel catalog
@@ -187,13 +188,13 @@ public class Application {
 * `getChannelCatalogFilterOperators` - Get channel catalog filter operators
 * `getChannelCatalogs` - List all your current channel catalogs
 
-### Channel Catalogs - Legacy Tracking - Global
+### channelCatalogsLegacyTrackingGlobal
 
 * `getLegacyTrackingChannelCatalog` - Get the channel catalog configured to use legacy tracking format information
 * `getLegacyTrackingChannelCatalogs` - List all your current channel catalogs configured to use legacy tracking format
 * `migrateLegacyTrackingChannelCatalog` - Migrate a channel catalog to current tracking format
 
-### Channel Catalogs - Products
+### channelCatalogsProducts
 
 * `exportChannelCatalogProductInfoList` - Export channel catalog product information list
 * `getChannelCatalogProductByChannelCatalog` - Get channel catalog products related to these channel catalogs
@@ -201,33 +202,33 @@ public class Application {
 * `getChannelCatalogProductInfoList` - Get channel catalog product information list
 * `getChannelCatalogProductsCounters` - Get channel catalog products' counters
 
-### Channel Catalogs - Products Optimisation
+### channelCatalogsProductsOptimisation
 
 * `disableChannelCatalogProduct` - Disable channel catalog product
 * `reenableChannelCatalogProduct` - Reenable channel catalog product
 
-### Channel Catalogs - Products Overrides
+### channelCatalogsProductsOverrides
 
 * `configureChannelCatalogProductValueOverrideCopy` - Copy channel catalog product value override
 * `deleteChannelCatalogProductValueOverride` - Delete a specific channel catalog product value override
 * `getChannelCatalogProductValueOverrideCopy` - Get channel catalog product value override compatibilities status
 * `overrideChannelCatalogProductValues` - Override channel catalog product values
 
-### Channel Catalogs - Settings
+### channelCatalogsSettings
 
 * `configureChannelCatalogCostSettings` - Configure channel catalog cost settings
 * `configureChannelCatalogGeneralSettings` - Configure channel catalog general settings
 * `disableChannelCatalog` - Disable a channel catalog
 * `enableChannelCatalog` - Enable a channel catalog
 
-### Channels - Channels Global
+### channelsChannelsGlobal
 
 * `getAvailableChannels` - List all available channel for this store
 * `getChannelCategories` - Get channel categories
 * `getChannelColumns` - Get channel columns
 * `getChannelInfo` - Get channel information
 
-### Customer - Account
+### customerAccount
 
 * `activateUserAccount` - Activate the user account
 * `changeEmail` - Change user email
@@ -241,12 +242,12 @@ public class Application {
 * `savePersonalInfo` - Save user personal information
 * `saveProfilePictureInfo` - Change user picture information
 
-### Customer - Alerts
+### customerAlerts
 
 * `getStoreAlerts` - Get store's alerts
 * `saveStoreAlerts` - Save store alerts
 
-### Customer - Contracts
+### customerContracts
 
 * `createContract` - Create a new contract
 * `deleteNextContract` - Delete your next contract
@@ -257,34 +258,34 @@ public class Application {
 * `reactivateCurrentContract` - Reactivate your terminated contract.
 * `terminateCurrentContract` - Schedule termination of your current contract at the end of the commitment.
 
-### Customer - Friends
+### customerFriends
 
 * `getFriendInfo` - Get friend information
 
-### Customer - Global
+### customerGlobal
 
 * `getCustomerIndex` - The index of all operations and LOV
 
-### Customer - Invoices
+### customerInvoices
 
 * `getInvoices` - Get all your invoices
 
-### Customer - Rights
+### customerRights
 
 * `getRights` - Get store's rights
 
-### Customer - Security
+### customerSecurity
 
 * `logout` - Log out the current user from go2
 * `zendeskToken` - Zendesk token
 
-### Customer - Shares
+### customerShares
 
 * `deleteStoreShare` - Delete a share of a store to another user
 * `getStoreShares` - Get shares related to this store
 * `shareStore` - Share a store to another user
 
-### Customer - Stores
+### customerStores
 
 * `createStore` - Create a new store
 * `deleteStore` - Delete a store
@@ -292,49 +293,49 @@ public class Application {
 * `getStores` - Get store list
 * `updateStore` - Update some store's information.
 
-### Marketplaces - Channel catalogs - Global
+### marketplacesChannelCatalogsGlobal
 
 * `getMarketplaceChannelCatalogs` - Get your marketplace channel catalog list
 
-### Marketplaces - Channel catalogs - Publications
+### marketplacesChannelCatalogsPublications
 
 * `getPublications` - Fetch the publication history for an account, sorted by descending start date
 * `publishCatalogToMarketplace` - [PREVIEW] Launch a publication of the catalog to the marketplace
 
-### Marketplaces - Channel catalogs - Settings
+### marketplacesChannelCatalogsSettings
 
 * `getChannelCatalogMarketplaceProperties` - Get the marketplace properties for a channel catalog
 * `getChannelCatalogMarketplaceSettings` - Get the marketplace settings for a channel catalog
 * `setChannelCatalogMarketplaceSettings` - Save new marketplace settings for a channel catalog
 
-### Marketplaces - Orders - AutoTransitions
+### marketplacesOrdersAutoTransitions
 
 * `configureAutomaticTransitions` - Configure new or existing automatic Order status transition
 * `getAutomaticTransitions` - Get list of configured automatic Order status transitions
 
-### Marketplaces - Orders - Batches
+### marketplacesOrdersBatches
 
 * `changeOrderList` - [DEPRECATED] Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
 * `clearMerchantOrderInfoList` - [DEPRECATED] Send a batch of operations to clear an Order's merchant information (max 100 items per call)
 * `setMerchantOrderInfoList` - [DEPRECATED] Send a batch of operations to set an Order's merchant information  (max 100 items per call)
 
-### Marketplaces - Orders - Exports
+### marketplacesOrdersExports
 
 * `exportOrders` - Request a new Order report exportation to be generated
 * `getOrderExportations` - Get a paginated list of Order report exportations
 
-### Marketplaces - Orders - Global
+### marketplacesOrdersGlobal
 
 * `getMarketplaceAccountsSynchronization` - [DEPRECATED] Get current synchronization status between your marketplaces and BeezUP accounts
 * `getOrderIndex` - [DEPRECATED] Get all actions you can do on the order API
 * `harvestAll` - [DEPRECATED] Send harvest request to all your marketplaces
 
-### Marketplaces - Orders - List
+### marketplacesOrdersList
 
 * `getOrderListFull` - [DEPRECATED] Get a paginated list of all Orders with all Order and Order Item(s) properties
 * `getOrderListLight` - [DEPRECATED] Get a paginated list of all Orders without details
 
-### Marketplaces - Orders - Order
+### marketplacesOrdersOrder
 
 * `changeOrder` - [DEPRECATED] Change your marketplace Order Information (accept, ship, etc.)
 * `clearMerchantOrderInfo` - [DEPRECATED] Clear an Order's merchant information
@@ -344,7 +345,7 @@ public class Application {
 * `headOrder` - [DEPRECATED] DEPRECATED - Get the meta information about the order (ETag, Last-Modified)
 * `setMerchantOrderInfo` - [DEPRECATED] Set an Order's merchant information
 
-### Marketplaces - Orders - Subscriptions - Subscriptions
+### marketplacesOrdersSubscriptionsSubscriptions
 
 * `activateSubscription` - Activate a subscription to the orders
 * `createSubscription` - Creates a subscription to the orders
@@ -355,25 +356,25 @@ public class Application {
 * `getSubscriptionPushReporting` - Get the push reporting related to this subscription
 * `retryPushOrders` - Force retry push orders immediatly
 
-### Marketplaces - Orders V3 - Batches
+### marketplacesOrdersV3Batches
 
 * `changeOrderListV2` - Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
 * `changeOrderListV3` - Send a batch of operations to change your marketplace Order information: accept, ship, etc.  (max 100 items per call)
 * `clearMerchantOrderInfoListV3` - Send a batch of operations to clear an Order's merchant information (max 100 items per call)
 * `setMerchantOrderInfoListV3` - Send a batch of operations to set an Order's merchant information  (max 100 items per call)
 
-### Marketplaces - Orders V3 - Global
+### marketplacesOrdersV3Global
 
 * `getMarketplaceAccountsSynchronizationV3` - Get current synchronization status between your marketplaces and BeezUP accounts
 * `getOrderManagementReadyMarketplaceBusinessCode` - Get the list of MarketplaceBusinessCode ready for Order Management
 * `harvestAllV3` - Send harvest request to all your marketplaces
 
-### Marketplaces - Orders V3 - List
+### marketplacesOrdersV3List
 
 * `getOrderListFullV3` - Get a paginated list of all Orders with all Order and Order Item(s) properties
 * `getOrderListLightV3` - Get a paginated list of all Orders without details
 
-### Marketplaces - Orders V3 - Order
+### marketplacesOrdersV3Order
 
 * `changeOrderV3` - Change your marketplace Order Information (accept, ship, etc.)
 * `clearMerchantOrderInfoV3` - Clear an Order's merchant information
@@ -385,13 +386,14 @@ public class Application {
 * `headOrderV3` - Get the meta information about the order (ETag, Last-Modified)
 * `setMerchantOrderInfoV3` - Set an Order's merchant information
 
-### OM Invoice - API - Generation
+### omInvoiceAPIGeneration
 
+* `generateBatchOrderInvoice` - Generate an Order Invoice batch
 * `generateOrderInvoice` - Generate an Order Invoice
 * `getOrderInvoicePdf` - Returns the PDF version of the invoice
 * `getOrderInvoicePreview` - View a preview an Order Invoice
 
-### OM Invoice - API - Settings
+### omInvoiceAPISettings
 
 * `getOrderInvoiceDesignSettings` - Get Order Invoice design settings
 * `getOrderInvoiceDesignSettingsPreview` - View a preview an Order Invoice using custom design settings
@@ -399,27 +401,37 @@ public class Application {
 * `saveOrderInvoiceDesignSettings` - Save Order Invoice design settings
 * `saveOrderInvoiceGeneralSettings` - Save Order Invoice general settings
 
-### Public - Channels - Public Channels
+### publicChannelsPublicChannels
 
 * `getChannels` - The channel list for one country
 * `getChannelsIndex` - Get public channel index
 
-### Public - List of Values - LOV
+### publicListOfValuesLOV
 
 * `getPublicListOfValues` - Get the list of values related to this list name
 * `getPublicLovIndex` - Get all list names
 
-### Public - Security - Security
+### publicSecuritySecurity
 
 * `login` - Login
 * `lostPassword` - Lost password
 * `register` - User Registration
 
-### User - List of Values - LOV
+### userListOfValuesLOV
 
 * `getUserListOfValues` - Get the list of values related to this list name
 * `getUserLovIndex` - Get all list names
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

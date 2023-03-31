@@ -2,15 +2,25 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption1;
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurityOption2;
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseSecurity;
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebasePathParams;
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseQueryParams;
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseRequest;
+import org.openapis.openapi.models.operations.FirebasestorageProjectsBucketsAddFirebaseResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FirebasestorageProjectsBucketsAddFirebaseRequest req = new FirebasestorageProjectsBucketsAddFirebaseRequest() {{
                 security = new FirebasestorageProjectsBucketsAddFirebaseSecurity() {{
@@ -24,27 +34,26 @@ public class Application {
                     }};
                 }};
                 pathParams = new FirebasestorageProjectsBucketsAddFirebasePathParams() {{
-                    bucket = "sit";
+                    bucket = "corrupti";
                 }};
                 queryParams = new FirebasestorageProjectsBucketsAddFirebaseQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("debitis", "voluptatum");
-                    put("et", "ut");
-                    put("dolorem", "et");
+                    put("iure", "magnam");
+                    put("debitis", "ipsa");
                 }};
-            }};
+            }};            
 
             FirebasestorageProjectsBucketsAddFirebaseResponse res = sdk.projects.firebasestorageProjectsBucketsAddFirebase(req);
 

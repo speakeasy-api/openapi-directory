@@ -2,15 +2,21 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ControlChargerChargingSecurity;
+import org.openapis.openapi.models.operations.ControlChargerChargingPathParams;
+import org.openapis.openapi.models.operations.ControlChargerChargingRequestBodyActionEnum;
+import org.openapis.openapi.models.operations.ControlChargerChargingRequestBody;
+import org.openapis.openapi.models.operations.ControlChargerChargingRequest;
+import org.openapis.openapi.models.operations.ControlChargerChargingResponse;
+import org.openapis.openapi.models.shared.SchemeUserAccessToken;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ControlChargerChargingRequest req = new ControlChargerChargingRequest() {{
                 security = new ControlChargerChargingSecurity() {{
@@ -19,12 +25,12 @@ public class Application {
                     }};
                 }};
                 pathParams = new ControlChargerChargingPathParams() {{
-                    chargerId = "sit";
+                    chargerId = "corrupti";
                 }};
                 request = new ControlChargerChargingRequestBody() {{
                     action = "START";
                 }};
-            }};
+            }};            
 
             ControlChargerChargingResponse res = sdk.chargers.controlChargerCharging(req);
 

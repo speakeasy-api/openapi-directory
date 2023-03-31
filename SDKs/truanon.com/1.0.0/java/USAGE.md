@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetProfileQueryParams;
+import org.openapis.openapi.models.operations.GetProfileRequest;
+import org.openapis.openapi.models.operations.GetProfileResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetProfileRequest req = new GetProfileRequest() {{
                 queryParams = new GetProfileQueryParams() {{
-                    id = "sit";
-                    service = "voluptas";
+                    id = "{{your-member-id}}";
+                    service = "{{service-identifier}}";
                 }};
-            }};
+            }};            
 
             GetProfileResponse res = sdk.getProfile(req);
 

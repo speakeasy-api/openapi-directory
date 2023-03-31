@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CertificateActionRetrievePathParams;
+import org.openapis.openapi.models.operations.CertificateActionRetrieveRequest;
+import org.openapis.openapi.models.operations.CertificateActionRetrieveResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CertificateActionRetrieveRequest req = new CertificateActionRetrieveRequest() {{
                 pathParams = new CertificateActionRetrievePathParams() {{
-                    certificateId = "sit";
+                    certificateId = "corrupti";
                 }};
-            }};
+            }};            
 
             CertificateActionRetrieveResponse res = sdk.v1.certificateActionRetrieve(req);
 

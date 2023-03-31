@@ -2,36 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SearchHeaders;
+import org.openapis.openapi.models.operations.SearchRequestBodyAddress;
+import org.openapis.openapi.models.operations.SearchRequestBody;
+import org.openapis.openapi.models.operations.SearchRequest;
+import org.openapis.openapi.models.operations.SearchResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             SearchRequest req = new SearchRequest() {{
                 headers = new SearchHeaders() {{
-                    galaxyApName = "sit";
-                    galaxyApPassword = "voluptas";
-                    galaxySearchType = "culpa";
+                    galaxyApName = "corrupti";
+                    galaxyApPassword = "provident";
+                    galaxySearchType = "distinctio";
                 }};
                 request = new SearchRequestBody() {{
                     address = new SearchRequestBodyAddress() {{
-                        addressLine1 = "expedita";
-                        addressLine2 = "consequuntur";
+                        addressLine1 = "quibusdam";
+                        addressLine2 = "unde";
                     }};
-                    age = 96.199997;
-                    dob = "voluptas";
-                    email = "fugit";
-                    firstName = "et";
-                    lastName = "nihil";
-                    middleName = "rerum";
-                    phoneNumber = "dicta";
+                    age = 8579.46;
+                    dob = "corrupti";
+                    email = "Henry.Mueller@hotmail.com";
+                    firstName = "Hunter";
+                    lastName = "Gulgowski";
+                    middleName = "debitis";
+                    phoneNumber = "ipsa";
                 }};
-            }};
+            }};            
 
             SearchResponse res = sdk.search(req);
 

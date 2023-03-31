@@ -2,25 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GenerateTokenV2RequestBodyGrantTypeEnum;
+import org.openapis.openapi.models.operations.GenerateTokenV2RequestBody;
+import org.openapis.openapi.models.operations.GenerateTokenV2Request;
+import org.openapis.openapi.models.operations.GenerateTokenV2Response;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GenerateTokenV2Request req = new GenerateTokenV2Request() {{
                 request = new GenerateTokenV2RequestBody() {{
-                    assertion = "sit";
+                    assertion = "SOME_ASSERTION_STRING";
                     grantType = "urn:ietf:params:oauth:grant-type:jwt-bearer";
-                    refreshToken = "culpa";
-                    scope = "expedita";
-                    validFor = 3390393562759376202;
+                    refreshToken = "SomeRefreshToken";
+                    scope = "offline";
+                    validFor = 120;
                 }};
-            }};
+            }};            
 
             GenerateTokenV2Response res = sdk.authorization.generateTokenV2(req);
 

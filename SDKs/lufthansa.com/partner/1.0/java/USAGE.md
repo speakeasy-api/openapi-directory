@@ -2,15 +2,20 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BaggageTripAndContactSecurity;
+import org.openapis.openapi.models.operations.BaggageTripAndContactPathParams;
+import org.openapis.openapi.models.operations.BaggageTripAndContactHeaders;
+import org.openapis.openapi.models.operations.BaggageTripAndContactRequest;
+import org.openapis.openapi.models.operations.BaggageTripAndContactResponse;
+import org.openapis.openapi.models.shared.SchemeAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BaggageTripAndContactRequest req = new BaggageTripAndContactRequest() {{
                 security = new BaggageTripAndContactSecurity() {{
@@ -19,12 +24,12 @@ public class Application {
                     }};
                 }};
                 pathParams = new BaggageTripAndContactPathParams() {{
-                    searchID = "sit";
+                    searchID = "corrupti";
                 }};
                 headers = new BaggageTripAndContactHeaders() {{
-                    accept = "voluptas";
+                    accept = "provident";
                 }};
-            }};
+            }};            
 
             BaggageTripAndContactResponse res = sdk.baggage.baggageTripAndContact(req);
 

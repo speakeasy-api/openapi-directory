@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,43 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption1;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption10;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption11;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption2;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption3;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption4;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption5;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption6;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption7;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption8;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurityOption9;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateSecurity;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreatePathParams;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateQueryParams;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateRequest;
+import org.openapis.openapi.models.operations.FitnessUsersDataSourcesCreateResponse;
+import org.openapis.openapi.models.shared.DataSourceDataQualityStandardEnum;
+import org.openapis.openapi.models.shared.DataSourceTypeEnum;
+import org.openapis.openapi.models.shared.DataSource;
+import org.openapis.openapi.models.shared.DeviceTypeEnum;
+import org.openapis.openapi.models.shared.Device;
+import org.openapis.openapi.models.shared.DataType;
+import org.openapis.openapi.models.shared.DataTypeFieldFormatEnum;
+import org.openapis.openapi.models.shared.DataTypeField;
+import org.openapis.openapi.models.shared.Application;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FitnessUsersDataSourcesCreateRequest req = new FitnessUsersDataSourcesCreateRequest() {{
                 security = new FitnessUsersDataSourcesCreateSecurity() {{
@@ -37,66 +65,59 @@ public class Application {
                     }};
                 }};
                 pathParams = new FitnessUsersDataSourcesCreatePathParams() {{
-                    userId = "sit";
+                    userId = "corrupti";
                 }};
                 queryParams = new FitnessUsersDataSourcesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new DataSource() {{
                     application = new Application() {{
-                        detailsUrl = "dicta";
-                        name = "debitis";
-                        packageName = "voluptatum";
-                        version = "et";
+                        detailsUrl = "suscipit";
+                        name = "iure";
+                        packageName = "magnam";
+                        version = "debitis";
                     }};
-                    dataQualityStandard = new openapisdk.models.shared.DataSourceDataQualityStandardEnum[]() {{
-                        add("dataQualityUnknown"),
-                        add("dataQualityUnknown"),
-                        add("dataQualityBloodPressureBhsAA"),
+                    dataQualityStandard = new org.openapis.openapi.models.shared.DataSourceDataQualityStandardEnum[]{{
+                        add("dataQualityBloodGlucoseIso151972013"),
                     }};
-                    dataStreamId = "iste";
-                    dataStreamName = "vitae";
+                    dataStreamId = "tempora";
+                    dataStreamName = "suscipit";
                     dataType = new DataType() {{
-                        field = new openapisdk.models.shared.DataTypeField[]() {{
+                        field = new org.openapis.openapi.models.shared.DataTypeField[]{{
+                            add(new DataTypeField() {{
+                                format = "floatList";
+                                name = "placeat";
+                                optional = false;
+                            }}),
                             add(new DataTypeField() {{
                                 format = "map";
-                                name = "illum";
-                                optional = true;
-                            }}),
-                            add(new DataTypeField() {{
-                                format = "floatPoint";
-                                name = "odio";
-                                optional = true;
-                            }}),
-                            add(new DataTypeField() {{
-                                format = "integerList";
-                                name = "aspernatur";
-                                optional = true;
+                                name = "iusto";
+                                optional = false;
                             }}),
                         }};
-                        name = "totam";
+                        name = "excepturi";
                     }};
                     device = new Device() {{
-                        manufacturer = "commodi";
-                        model = "quis";
-                        type = "phone";
-                        uid = "aut";
-                        version = "odit";
+                        manufacturer = "nisi";
+                        model = "recusandae";
+                        type = "headMounted";
+                        uid = "ab";
+                        version = "quis";
                     }};
-                    name = "non";
-                    type = "raw";
+                    name = "veritatis";
+                    type = "derived";
                 }};
-            }};
+            }};            
 
             FitnessUsersDataSourcesCreateResponse res = sdk.users.fitnessUsersDataSourcesCreate(req);
 
@@ -111,6 +132,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### users
 
@@ -127,7 +149,17 @@ public class Application {
 * `fitnessUsersSessionsDelete` - Deletes a session specified by the given session ID.
 * `fitnessUsersSessionsList` - Lists sessions previously created.
 * `fitnessUsersSessionsUpdate` - Updates or insert a given session.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

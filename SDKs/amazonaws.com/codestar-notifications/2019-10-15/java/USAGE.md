@@ -2,62 +2,66 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateNotificationRuleHeaders;
+import org.openapis.openapi.models.operations.CreateNotificationRuleRequestBodyDetailTypeEnum;
+import org.openapis.openapi.models.operations.CreateNotificationRuleRequestBodyStatusEnum;
+import org.openapis.openapi.models.operations.CreateNotificationRuleRequestBody;
+import org.openapis.openapi.models.operations.CreateNotificationRuleRequest;
+import org.openapis.openapi.models.operations.CreateNotificationRuleResponse;
+import org.openapis.openapi.models.shared.Target;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateNotificationRuleRequest req = new CreateNotificationRuleRequest() {{
                 headers = new CreateNotificationRuleHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateNotificationRuleRequestBody() {{
-                    clientRequestToken = "voluptas";
+                    clientRequestToken = "illum";
                     detailType = "BASIC";
-                    eventTypeIds = new String[]() {{
-                        add("nihil"),
+                    eventTypeIds = new String[]{{
+                        add("deserunt"),
+                        add("suscipit"),
+                        add("iure"),
                     }};
-                    name = "rerum";
-                    resource = "dicta";
+                    name = "magnam";
+                    resource = "debitis";
                     status = "ENABLED";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("et", "ut");
+                        put("tempora", "suscipit");
+                        put("molestiae", "minus");
+                        put("placeat", "voluptatum");
+                        put("iusto", "excepturi");
                     }};
-                    targets = new openapisdk.models.shared.Target[]() {{
+                    targets = new org.openapis.openapi.models.shared.Target[]{{
                         add(new Target() {{
-                            targetAddress = "et";
-                            targetType = "voluptate";
+                            targetAddress = "recusandae";
+                            targetType = "temporibus";
                         }}),
                         add(new Target() {{
-                            targetAddress = "iste";
-                            targetType = "vitae";
-                        }}),
-                        add(new Target() {{
-                            targetAddress = "totam";
-                            targetType = "dolores";
+                            targetAddress = "ab";
+                            targetType = "quis";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateNotificationRuleResponse res = sdk.createNotificationRule(req);
 

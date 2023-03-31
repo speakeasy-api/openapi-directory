@@ -2,62 +2,70 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonHeaders;
+import org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonRequest;
+import org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse;
+import org.openapis.openapi.models.shared.PatientDiscoveryRequestPatient;
+import org.openapis.openapi.models.shared.PatientDiscoveryRequest;
+import org.openapis.openapi.models.shared.Identifier;
+import org.openapis.openapi.models.shared.IdentifierTypeEnum;
+import org.openapis.openapi.models.shared.PatientGenderEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            PostV05CareContextsDiscoverRequest req = new PostV05CareContextsDiscoverRequest() {{
-                headers = new PostV05CareContextsDiscoverHeaders() {{
-                    authorization = "sit";
-                    xHIPID = "voluptas";
+            PostV05CareContextsDiscoverJsonRequest req = new PostV05CareContextsDiscoverJsonRequest() {{
+                headers = new PostV05CareContextsDiscoverJsonHeaders() {{
+                    authorization = "corrupti";
+                    xHipId = "provident";
                 }};
-                request = new PostV05CareContextsDiscoverRequests() {{
-                    applicationXML = "culpa".getBytes();
-                    patientDiscoveryRequest = new PatientDiscoveryRequest() {{
-                        patient = new PatientDiscoveryRequestPatient() {{
-                            gender = "O";
-                            id = "consequuntur";
-                            name = "dolor";
-                            unverifiedIdentifiers = new openapisdk.models.shared.Identifier[]() {{
-                                add(new Identifier() {{
-                                    type = "MR";
-                                    value = "fugit";
-                                }}),
-                                add(new Identifier() {{
-                                    type = "MOBILE";
-                                    value = "nihil";
-                                }}),
-                            }};
-                            verifiedIdentifiers = new openapisdk.models.shared.Identifier[]() {{
-                                add(new Identifier() {{
-                                    type = "HEALTH_ID";
-                                    value = "debitis";
-                                }}),
-                                add(new Identifier() {{
-                                    type = "MOBILE";
-                                    value = "et";
-                                }}),
-                                add(new Identifier() {{
-                                    type = "HEALTH_ID";
-                                    value = "dolorem";
-                                }}),
-                            }};
-                            yearOfBirth = 7259475919510918339;
+                request = new PatientDiscoveryRequest() {{
+                    patient = new PatientDiscoveryRequestPatient() {{
+                        gender = "O";
+                        id = "<patient-id>@<consent-manager-id>";
+                        name = "chandler bing";
+                        unverifiedIdentifiers = new org.openapis.openapi.models.shared.Identifier[]{{
+                            add(new Identifier() {{
+                                type = "NDHM_HEALTH_NUMBER";
+                                value = "+919800083232";
+                            }}),
+                            add(new Identifier() {{
+                                type = "HEALTH_ID";
+                                value = "+919800083232";
+                            }}),
+                            add(new Identifier() {{
+                                type = "NDHM_HEALTH_NUMBER";
+                                value = "+919800083232";
+                            }}),
+                            add(new Identifier() {{
+                                type = "HEALTH_ID";
+                                value = "+919800083232";
+                            }}),
                         }};
-                        requestId = "voluptate";
-                        timestamp = "1998-09-30T11:01:25Z";
-                        transactionId = "vitae";
+                        verifiedIdentifiers = new org.openapis.openapi.models.shared.Identifier[]{{
+                            add(new Identifier() {{
+                                type = "NDHM_HEALTH_NUMBER";
+                                value = "+919800083232";
+                            }}),
+                            add(new Identifier() {{
+                                type = "NDHM_HEALTH_NUMBER";
+                                value = "+919800083232";
+                            }}),
+                        }};
+                        yearOfBirth = 2000;
                     }};
+                    requestId = "499a5a4a-7dda-4f20-9b67-e24589627061";
+                    timestamp = "2022-07-25T06:44:09.184Z";
+                    transactionId = "4e0f467c-c879-46ed-951a-05dfc2ddf7cc";
                 }};
-            }};
+            }};            
 
-            PostV05CareContextsDiscoverResponse res = sdk.cmFacing.postV05CareContextsDiscover(req);
+            PostV05CareContextsDiscoverJsonResponse res = sdk.cmFacing.postV05CareContextsDiscoverJson(req);
 
             if (res.statusCode == 200) {
                 // handle response

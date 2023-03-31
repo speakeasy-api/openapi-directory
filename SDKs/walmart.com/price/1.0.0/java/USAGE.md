@@ -2,38 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.OptCapProgramInPriceHeaders;
+import org.openapis.openapi.models.operations.OptCapProgramInPriceRequestBody;
+import org.openapis.openapi.models.operations.OptCapProgramInPriceRequest;
+import org.openapis.openapi.models.operations.OptCapProgramInPriceResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    basicScheme = new SchemeBasicScheme() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             OptCapProgramInPriceRequest req = new OptCapProgramInPriceRequest() {{
                 headers = new OptCapProgramInPriceHeaders() {{
-                    authorization = "sit";
-                    wmCONSUMERCHANNELTYPE = "voluptas";
-                    wmQOSCORRELATIONID = "culpa";
-                    wmSECACCESSTOKEN = "expedita";
-                    wmSVCNAME = "consequuntur";
+                    wmConsumerChannelType = "corrupti";
+                    wmQosCorrelationId = "provident";
+                    wmSecAccessToken = "distinctio";
+                    wmSvcName = "quibusdam";
                 }};
                 request = new OptCapProgramInPriceRequestBody() {{
                     subsidyEnrolled = false;
-                    subsidyPreference = true;
+                    subsidyPreference = false;
                 }};
-            }};
+            }};            
 
             OptCapProgramInPriceResponse res = sdk.prices.optCapProgramInPrice(req);
 

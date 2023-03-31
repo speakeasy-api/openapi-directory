@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,92 +15,50 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.PostRemovebgFormRequest;
+import org.openapis.openapi.models.operations.PostRemovebgFormResponse;
+import org.openapis.openapi.models.shared.RemoveBgJsonChannelsEnum;
+import org.openapis.openapi.models.shared.RemoveBgJsonFormatEnum;
+import org.openapis.openapi.models.shared.RemoveBgJsonSizeEnum;
+import org.openapis.openapi.models.shared.RemoveBgJsonTypeEnum;
+import org.openapis.openapi.models.shared.RemoveBgJsonTypeLevelEnum;
+import org.openapis.openapi.models.shared.RemoveBgJson;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyHeader = new SchemeApiKeyHeader() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyHeader = new SchemeAPIKeyHeader() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            PostRemovebgRequest req = new PostRemovebgRequest() {{
-                request = new PostRemovebgRequests() {{
-                    removeBgJson = new RemoveBgJson() {{
-                        addShadow = false;
-                        bgColor = "voluptas";
-                        bgImageUrl = "culpa";
-                        channels = "rgba";
-                        crop = true;
-                        cropMargin = "dolor";
-                        format = "zip";
-                        imageFileB64 = "voluptas";
-                        imageUrl = "fugit";
-                        position = "et";
-                        roi = "nihil";
-                        scale = "rerum";
-                        semitransparency = false;
-                        size = "preview";
-                        type = "auto";
-                        typeLevel = "2";
-                    }};
-                    removeBgJson1 = new RemoveBgJson() {{
-                        addShadow = false;
-                        bgColor = "dolorem";
-                        bgImageUrl = "et";
-                        channels = "rgba";
-                        crop = true;
-                        cropMargin = "vitae";
-                        format = "jpg";
-                        imageFileB64 = "dolores";
-                        imageUrl = "illum";
-                        position = "debitis";
-                        roi = "vel";
-                        scale = "odio";
-                        semitransparency = true;
-                        size = "full";
-                        type = "person";
-                        typeLevel = "none";
-                    }};
-                    removeBgMultipart = new RemoveBgMultipart() {{
-                        addShadow = false;
-                        bgColor = "commodi";
-                        bgImageFile = new RemoveBgMultipartBgImageFile() {{
-                            bgImageFile = "quis";
-                            content = "est".getBytes();
-                        }};
-                        bgImageUrl = "aut";
-                        channels = "rgba";
-                        crop = true;
-                        cropMargin = "voluptas";
-                        format = "zip";
-                        imageFile = new RemoveBgMultipartImageFile() {{
-                            content = "aut".getBytes();
-                            imageFile = "illo";
-                        }};
-                        imageFileB64 = "sed";
-                        imageUrl = "officiis";
-                        position = "autem";
-                        roi = "consectetur";
-                        scale = "nobis";
-                        semitransparency = false;
-                        size = "preview";
-                        type = "product";
-                        typeLevel = "none";
-                    }};
+            PostRemovebgFormRequest req = new PostRemovebgFormRequest() {{
+                request = new RemoveBgJson() {{
+                    addShadow = false;
+                    bgColor = "corrupti";
+                    bgImageUrl = "provident";
+                    channels = "alpha";
+                    crop = false;
+                    cropMargin = "quibusdam";
+                    format = "jpg";
+                    imageFileB64 = "nulla";
+                    imageUrl = "https://www.remove.bg/example-hd.jpg";
+                    position = "corrupti";
+                    roi = "illum";
+                    scale = "vel";
+                    semitransparency = false;
+                    size = "full";
+                    type = "product";
+                    typeLevel = "1";
                 }};
-            }};
+            }};            
 
-            PostRemovebgResponse res = sdk.backgroundRemoval.postRemovebg(req);
+            PostRemovebgFormResponse res = sdk.backgroundRemoval.postRemovebgForm(req);
 
             if (res.removeBgJsonResponse.isPresent()) {
                 // handle response
@@ -114,17 +72,20 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Background Removal
 
-* `postRemovebg` - Remove the background of an image
+### backgroundRemoval
 
-### Fetch account info
+* `postRemovebgForm` - Remove the background of an image
+* `postRemovebgJson` - Remove the background of an image
+* `postRemovebgMultipart` - Remove the background of an image
+
+### fetchAccountInfo
 
 * `getAccount` - Fetch credit balance and free API calls.
 
-### Improvement Program
+### improvementProgram
 
-* `postImprove` - Submit an image to the remove.bg Improvement program
+* `postImproveForm` - Submit an image to the remove.bg Improvement program
 * Contribute an image that remove.bg is currently not able to remove the background from properly
 * Help us make remove.bg better
 * Get better results for similiar images in the future
@@ -132,13 +93,51 @@ public class Application {
 Notes:
   * By submitting images through the API you agree to the <a target="_blank" rel="noopener" href="/ipc">Improvement Program Conditions</a>
   * File size: up to 12MB
-  * up to 100 files per day (up to 1000 for Enterprise customers). <br> Higher Rate Limits are available <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
+  * up to 100 files per day. <br> Higher Rate Limits are available for Enterprise customers <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
 
 Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
 
 Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
+* `postImproveJson` - Submit an image to the remove.bg Improvement program
+* Contribute an image that remove.bg is currently not able to remove the background from properly
+* Help us make remove.bg better
+* Get better results for similiar images in the future
+
+Notes:
+  * By submitting images through the API you agree to the <a target="_blank" rel="noopener" href="/ipc">Improvement Program Conditions</a>
+  * File size: up to 12MB
+  * up to 100 files per day. <br> Higher Rate Limits are available for Enterprise customers <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
+
+Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
+
+Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
+
+* `postImproveMultipart` - Submit an image to the remove.bg Improvement program
+* Contribute an image that remove.bg is currently not able to remove the background from properly
+* Help us make remove.bg better
+* Get better results for similiar images in the future
+
+Notes:
+  * By submitting images through the API you agree to the <a target="_blank" rel="noopener" href="/ipc">Improvement Program Conditions</a>
+  * File size: up to 12MB
+  * up to 100 files per day. <br> Higher Rate Limits are available for Enterprise customers <a href="/support/contact?subject=Improvement+Program+Rate+Limit">upon request</a>.
+
+Requires either an API Key to be provided in the `X-API-Key` request header or an OAuth 2.0 access token to be provided in the `Authorization` request header.
+
+Please note that submissions are used on a best-effort basis and the extent of expected improvement varies depending on many factors, including the number of provided images, their complexity and visual similarity. Improvements usually take several weeks to become effective.
 
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

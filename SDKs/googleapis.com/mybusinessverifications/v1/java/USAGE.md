@@ -2,58 +2,67 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsPathParams;
+import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsQueryParams;
+import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsRequest;
+import org.openapis.openapi.models.operations.MybusinessverificationsLocationsFetchVerificationOptionsResponse;
+import org.openapis.openapi.models.shared.FetchVerificationOptionsRequest;
+import org.openapis.openapi.models.shared.ServiceBusinessContext;
+import org.openapis.openapi.models.shared.PostalAddress;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             MybusinessverificationsLocationsFetchVerificationOptionsRequest req = new MybusinessverificationsLocationsFetchVerificationOptionsRequest() {{
                 pathParams = new MybusinessverificationsLocationsFetchVerificationOptionsPathParams() {{
-                    location = "sit";
+                    location = "corrupti";
                 }};
                 queryParams = new MybusinessverificationsLocationsFetchVerificationOptionsQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new FetchVerificationOptionsRequest() {{
                     context = new ServiceBusinessContext() {{
                         address = new PostalAddress() {{
-                            addressLines = new String[]() {{
-                                add("debitis"),
-                                add("voluptatum"),
-                                add("et"),
+                            addressLines = new String[]{{
+                                add("iure"),
+                                add("magnam"),
                             }};
-                            administrativeArea = "ut";
-                            languageCode = "dolorem";
-                            locality = "et";
-                            organization = "voluptate";
-                            postalCode = "iste";
-                            recipients = new String[]() {{
-                                add("totam"),
+                            administrativeArea = "debitis";
+                            languageCode = "ipsa";
+                            locality = "delectus";
+                            organization = "tempora";
+                            postalCode = "47854";
+                            recipients = new String[]{{
+                                add("nisi"),
+                                add("recusandae"),
+                                add("temporibus"),
                             }};
-                            regionCode = "dolores";
-                            revision = 1929546706668609706;
-                            sortingCode = "debitis";
-                            sublocality = "vel";
+                            regionCode = "ab";
+                            revision = 337396;
+                            sortingCode = "veritatis";
+                            sublocality = "deserunt";
                         }};
                     }};
-                    languageCode = "odio";
+                    languageCode = "perferendis";
                 }};
-            }};
+            }};            
 
             MybusinessverificationsLocationsFetchVerificationOptionsResponse res = sdk.locations.mybusinessverificationsLocationsFetchVerificationOptions(req);
 

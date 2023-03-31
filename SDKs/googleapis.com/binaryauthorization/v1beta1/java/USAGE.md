@@ -2,15 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateSecurity;
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreatePathParams;
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateQueryParams;
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateRequest;
+import org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateResponse;
+import org.openapis.openapi.models.shared.AttestorInput;
+import org.openapis.openapi.models.shared.UserOwnedDrydockNoteInput;
+import org.openapis.openapi.models.shared.AttestorPublicKey;
+import org.openapis.openapi.models.shared.PkixPublicKeySignatureAlgorithmEnum;
+import org.openapis.openapi.models.shared.PkixPublicKey;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             BinaryauthorizationProjectsAttestorsCreateRequest req = new BinaryauthorizationProjectsAttestorsCreateRequest() {{
                 security = new BinaryauthorizationProjectsAttestorsCreateSecurity() {{
@@ -22,60 +35,69 @@ public class Application {
                     }};
                 }};
                 pathParams = new BinaryauthorizationProjectsAttestorsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new BinaryauthorizationProjectsAttestorsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    attestorId = "consequuntur";
-                    callback = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    attestorId = "unde";
+                    callback = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new AttestorInput() {{
-                    description = "debitis";
-                    etag = "voluptatum";
-                    name = "et";
+                    description = "iure";
+                    etag = "magnam";
+                    name = "debitis";
                     userOwnedDrydockNote = new UserOwnedDrydockNoteInput() {{
-                        noteReference = "ut";
-                        publicKeys = new openapisdk.models.shared.AttestorPublicKey[]() {{
+                        noteReference = "ipsa";
+                        publicKeys = new org.openapis.openapi.models.shared.AttestorPublicKey[]{{
                             add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "et";
-                                comment = "voluptate";
-                                id = "iste";
+                                asciiArmoredPgpPublicKey = "tempora";
+                                comment = "suscipit";
+                                id = "molestiae";
                                 pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "vitae";
+                                    publicKeyPem = "minus";
+                                    signatureAlgorithm = "ECDSA_P384_SHA384";
+                                }};
+                            }}),
+                            add(new AttestorPublicKey() {{
+                                asciiArmoredPgpPublicKey = "voluptatum";
+                                comment = "iusto";
+                                id = "excepturi";
+                                pkixPublicKey = new PkixPublicKey() {{
+                                    publicKeyPem = "nisi";
                                     signatureAlgorithm = "ECDSA_P521_SHA512";
                                 }};
                             }}),
                             add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "dolores";
-                                comment = "illum";
-                                id = "debitis";
+                                asciiArmoredPgpPublicKey = "temporibus";
+                                comment = "ab";
+                                id = "quis";
                                 pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "vel";
-                                    signatureAlgorithm = "EC_SIGN_P256_SHA256";
+                                    publicKeyPem = "veritatis";
+                                    signatureAlgorithm = "RSA_SIGN_PKCS1_4096_SHA512";
                                 }};
                             }}),
                             add(new AttestorPublicKey() {{
-                                asciiArmoredPgpPublicKey = "dolore";
-                                comment = "id";
-                                id = "aspernatur";
+                                asciiArmoredPgpPublicKey = "perferendis";
+                                comment = "ipsam";
+                                id = "repellendus";
                                 pkixPublicKey = new PkixPublicKey() {{
-                                    publicKeyPem = "accusantium";
-                                    signatureAlgorithm = "ECDSA_P256_SHA256";
+                                    publicKeyPem = "sapiente";
+                                    signatureAlgorithm = "EC_SIGN_P256_SHA256";
                                 }};
                             }}),
                         }};
                     }};
                 }};
-            }};
+            }};            
 
             BinaryauthorizationProjectsAttestorsCreateResponse res = sdk.projects.binaryauthorizationProjectsAttestorsCreate(req);
 

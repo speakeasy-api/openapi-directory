@@ -2,45 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.ArchiveApplicationHeaders;
+import org.openapis.openapi.models.operations.ArchiveApplicationRequestBody;
+import org.openapis.openapi.models.operations.ArchiveApplicationRequest;
+import org.openapis.openapi.models.operations.ArchiveApplicationResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            ChangeServerLifeCycleStateRequest req = new ChangeServerLifeCycleStateRequest() {{
-                headers = new ChangeServerLifeCycleStateHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+            ArchiveApplicationRequest req = new ArchiveApplicationRequest() {{
+                headers = new ArchiveApplicationHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
-                request = new ChangeServerLifeCycleStateRequestBody() {{
-                    lifeCycle = new ChangeServerLifeCycleStateRequestBodyLifeCycle() {{
-                        state = "CUTOVER";
-                    }};
-                    sourceServerID = "fugit";
+                request = new ArchiveApplicationRequestBody() {{
+                    applicationID = "illum";
                 }};
-            }};
+            }};            
 
-            ChangeServerLifeCycleStateResponse res = sdk.changeServerLifeCycleState(req);
+            ArchiveApplicationResponse res = sdk.archiveApplication(req);
 
-            if (res.sourceServer.isPresent()) {
+            if (res.application.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

@@ -2,25 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetVehicleDetailsByRegistrationNumberHeaders;
+import org.openapis.openapi.models.operations.GetVehicleDetailsByRegistrationNumberRequest;
+import org.openapis.openapi.models.operations.GetVehicleDetailsByRegistrationNumberResponse;
+import org.openapis.openapi.models.shared.VehicleRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetVehicleDetailsByRegistrationNumberRequest req = new GetVehicleDetailsByRegistrationNumberRequest() {{
                 headers = new GetVehicleDetailsByRegistrationNumberHeaders() {{
-                    xCorrelationId = "sit";
-                    xApiKey = "voluptas";
+                    xCorrelationId = "corrupti";
+                    xApiKey = "provident";
                 }};
                 request = new VehicleRequest() {{
-                    registrationNumber = "culpa";
+                    registrationNumber = "distinctio";
                 }};
-            }};
+            }};            
 
             GetVehicleDetailsByRegistrationNumberResponse res = sdk.vehicle.getVehicleDetailsByRegistrationNumber(req);
 

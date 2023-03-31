@@ -2,39 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.ActivateEventSourceXAmzTargetEnum;
+import org.openapis.openapi.models.operations.ActivateEventSourceHeaders;
+import org.openapis.openapi.models.operations.ActivateEventSourceRequest;
+import org.openapis.openapi.models.operations.ActivateEventSourceResponse;
+import org.openapis.openapi.models.shared.ActivateEventSourceRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             ActivateEventSourceRequest req = new ActivateEventSourceRequest() {{
                 headers = new ActivateEventSourceHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSEvents.ActivateEventSource";
                 }};
                 request = new ActivateEventSourceRequest() {{
-                    name = "fugit";
+                    name = "illum";
                 }};
-            }};
+            }};            
 
             ActivateEventSourceResponse res = sdk.activateEventSource(req);
 

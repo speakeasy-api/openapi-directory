@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistorySecurity;
+import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryPathParams;
+import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryContentTypeEnum;
+import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryQueryParams;
+import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryRequest;
+import org.openapis.openapi.models.operations.CloudassetProjectsBatchGetAssetsHistoryResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudassetProjectsBatchGetAssetsHistoryRequest req = new CloudassetProjectsBatchGetAssetsHistoryRequest() {{
                 security = new CloudassetProjectsBatchGetAssetsHistorySecurity() {{
@@ -22,30 +31,30 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudassetProjectsBatchGetAssetsHistoryPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new CloudassetProjectsBatchGetAssetsHistoryQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    assetNames = new String[]() {{
-                        add("dolor"),
-                        add("expedita"),
-                        add("voluptas"),
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    assetNames = new String[]{{
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
-                    callback = "fugit";
-                    contentType = "CONTENT_TYPE_UNSPECIFIED";
-                    fields = "nihil";
-                    key = "rerum";
-                    oauthToken = "dicta";
-                    prettyPrint = true;
-                    quotaUser = "voluptatum";
-                    readTimeWindowEndTime = "et";
-                    readTimeWindowStartTime = "ut";
-                    uploadType = "dolorem";
-                    uploadProtocol = "et";
+                    callback = "vel";
+                    contentType = "RESOURCE";
+                    fields = "deserunt";
+                    key = "suscipit";
+                    oauthToken = "iure";
+                    prettyPrint = false;
+                    quotaUser = "magnam";
+                    readTimeWindowEndTime = "debitis";
+                    readTimeWindowStartTime = "ipsa";
+                    uploadType = "delectus";
+                    uploadProtocol = "tempora";
                 }};
-            }};
+            }};            
 
             CloudassetProjectsBatchGetAssetsHistoryResponse res = sdk.projects.cloudassetProjectsBatchGetAssetsHistory(req);
 

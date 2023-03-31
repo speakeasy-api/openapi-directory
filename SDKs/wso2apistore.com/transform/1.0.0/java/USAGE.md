@@ -2,19 +2,20 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostJsontoxmlRequest;
+import org.openapis.openapi.models.operations.PostJsontoxmlResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostJsontoxmlRequest req = new PostJsontoxmlRequest() {{
-                request = "sit";
-            }};
+                request = "corrupti";
+            }};            
 
             PostJsontoxmlResponse res = sdk.postJsontoxml(req);
 

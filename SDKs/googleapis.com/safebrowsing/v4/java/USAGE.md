@@ -2,36 +2,41 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetPathParams;
+import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetQueryParams;
+import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetRequest;
+import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             SafebrowsingEncodedFullHashesGetRequest req = new SafebrowsingEncodedFullHashesGetRequest() {{
                 pathParams = new SafebrowsingEncodedFullHashesGetPathParams() {{
-                    encodedRequest = "sit";
+                    encodedRequest = "corrupti";
                 }};
                 queryParams = new SafebrowsingEncodedFullHashesGetQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    clientId = "dolor";
-                    clientVersion = "expedita";
-                    fields = "voluptas";
-                    key = "fugit";
-                    oauthToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    clientId = "nulla";
+                    clientVersion = "corrupti";
+                    fields = "illum";
+                    key = "vel";
+                    oauthToken = "error";
+                    prettyPrint = false;
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             SafebrowsingEncodedFullHashesGetResponse res = sdk.encodedFullHashes.safebrowsingEncodedFullHashesGet(req);
 

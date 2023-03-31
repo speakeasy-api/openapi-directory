@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,30 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity;
+import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams;
+import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams;
+import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest;
+import org.openapis.openapi.models.operations.NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse;
+import org.openapis.openapi.models.shared.EndpointPolicyTypeEnum;
+import org.openapis.openapi.models.shared.EndpointPolicyInput;
+import org.openapis.openapi.models.shared.TrafficPortSelector;
+import org.openapis.openapi.models.shared.EndpointMatcher;
+import org.openapis.openapi.models.shared.EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteriaEnum;
+import org.openapis.openapi.models.shared.EndpointMatcherMetadataLabelMatcher;
+import org.openapis.openapi.models.shared.EndpointMatcherMetadataLabelMatcherMetadataLabels;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest req = new NetworkservicesProjectsLocationsEndpointPoliciesCreateRequest() {{
                 security = new NetworkservicesProjectsLocationsEndpointPoliciesCreateSecurity() {{
@@ -35,61 +50,63 @@ public class Application {
                     }};
                 }};
                 pathParams = new NetworkservicesProjectsLocationsEndpointPoliciesCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new NetworkservicesProjectsLocationsEndpointPoliciesCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    endpointPolicyId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    endpointPolicyId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new EndpointPolicyInput() {{
-                    authorizationPolicy = "debitis";
-                    clientTlsPolicy = "voluptatum";
-                    description = "et";
+                    authorizationPolicy = "iure";
+                    clientTlsPolicy = "magnam";
+                    description = "debitis";
                     endpointMatcher = new EndpointMatcher() {{
                         metadataLabelMatcher = new EndpointMatcherMetadataLabelMatcher() {{
-                            metadataLabelMatchCriteria = "MATCH_ALL";
-                            metadataLabels = new openapisdk.models.shared.EndpointMatcherMetadataLabelMatcherMetadataLabels[]() {{
+                            metadataLabelMatchCriteria = "METADATA_LABEL_MATCH_CRITERIA_UNSPECIFIED";
+                            metadataLabels = new org.openapis.openapi.models.shared.EndpointMatcherMetadataLabelMatcherMetadataLabels[]{{
                                 add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
-                                    labelName = "et";
-                                    labelValue = "voluptate";
+                                    labelName = "tempora";
+                                    labelValue = "suscipit";
                                 }}),
                                 add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
-                                    labelName = "iste";
-                                    labelValue = "vitae";
+                                    labelName = "molestiae";
+                                    labelValue = "minus";
                                 }}),
                                 add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
-                                    labelName = "totam";
-                                    labelValue = "dolores";
+                                    labelName = "placeat";
+                                    labelValue = "voluptatum";
+                                }}),
+                                add(new EndpointMatcherMetadataLabelMatcherMetadataLabels() {{
+                                    labelName = "iusto";
+                                    labelValue = "excepturi";
                                 }}),
                             }};
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("debitis", "vel");
-                        put("odio", "dolore");
-                        put("id", "aspernatur");
+                        put("recusandae", "temporibus");
+                        put("ab", "quis");
                     }};
-                    name = "accusantium";
-                    serverTlsPolicy = "totam";
+                    name = "veritatis";
+                    serverTlsPolicy = "deserunt";
                     trafficPortSelector = new TrafficPortSelector() {{
-                        ports = new String[]() {{
-                            add("quis"),
-                            add("est"),
+                        ports = new String[]{{
+                            add("ipsam"),
                         }};
                     }};
                     type = "GRPC_SERVER";
                 }};
-            }};
+            }};            
 
             NetworkservicesProjectsLocationsEndpointPoliciesCreateResponse res = sdk.projects.networkservicesProjectsLocationsEndpointPoliciesCreate(req);
 
@@ -104,6 +121,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### projects
 
@@ -132,7 +150,17 @@ public class Application {
 * `networkservicesProjectsLocationsTlsRoutesGet` - Gets details of a single TlsRoute.
 * `networkservicesProjectsLocationsTlsRoutesList` - Lists TlsRoute in a given project and location.
 * `networkservicesProjectsLocationsTlsRoutesPatch` - Updates the parameters of a single TlsRoute.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

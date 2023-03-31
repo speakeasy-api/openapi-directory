@@ -2,21 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsPathParams;
+import org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsRequest;
+import org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetABatchOfConsumerTransactionClassificationResultsRequest req = new GetABatchOfConsumerTransactionClassificationResultsRequest() {{
                 pathParams = new GetABatchOfConsumerTransactionClassificationResultsPathParams() {{
-                    id = "sit";
+                    id = "247ee045-3d04-4b3c-872b-a9160b810f33";
                 }};
-            }};
+            }};            
 
             GetABatchOfConsumerTransactionClassificationResultsResponse res = sdk.batch.getABatchOfConsumerTransactionClassificationResults(req);
 

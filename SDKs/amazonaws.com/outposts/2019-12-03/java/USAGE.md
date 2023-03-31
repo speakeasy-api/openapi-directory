@@ -2,58 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CancelOrderPathParams;
+import org.openapis.openapi.models.operations.CancelOrderHeaders;
+import org.openapis.openapi.models.operations.CancelOrderRequest;
+import org.openapis.openapi.models.operations.CancelOrderResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            CreateOrderRequest req = new CreateOrderRequest() {{
-                headers = new CreateOrderHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+            CancelOrderRequest req = new CancelOrderRequest() {{
+                pathParams = new CancelOrderPathParams() {{
+                    orderId = "corrupti";
                 }};
-                request = new CreateOrderRequestBody() {{
-                    lineItems = new openapisdk.models.shared.LineItemRequest[]() {{
-                        add(new LineItemRequest() {{
-                            catalogItemId = "fugit";
-                            quantity = 1543572285742637646;
-                        }}),
-                        add(new LineItemRequest() {{
-                            catalogItemId = "nihil";
-                            quantity = 8325060299420976708;
-                        }}),
-                        add(new LineItemRequest() {{
-                            catalogItemId = "dicta";
-                            quantity = 2518412263346885298;
-                        }}),
-                    }};
-                    outpostIdentifier = "voluptatum";
-                    paymentOption = "ALL_UPFRONT";
-                    paymentTerm = "THREE_YEARS";
+                headers = new CancelOrderHeaders() {{
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
-            }};
+            }};            
 
-            CreateOrderResponse res = sdk.createOrder(req);
+            CancelOrderResponse res = sdk.cancelOrder(req);
 
-            if (res.createOrderOutput.isPresent()) {
+            if (res.cancelOrderOutput.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

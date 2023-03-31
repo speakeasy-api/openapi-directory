@@ -2,62 +2,73 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.SearchCseListImgColorTypeEnum;
+import org.openapis.openapi.models.operations.SearchCseListImgDominantColorEnum;
+import org.openapis.openapi.models.operations.SearchCseListImgSizeEnum;
+import org.openapis.openapi.models.operations.SearchCseListImgTypeEnum;
+import org.openapis.openapi.models.operations.SearchCseListSafeEnum;
+import org.openapis.openapi.models.operations.SearchCseListSearchTypeEnum;
+import org.openapis.openapi.models.operations.SearchCseListSiteSearchFilterEnum;
+import org.openapis.openapi.models.operations.SearchCseListQueryParams;
+import org.openapis.openapi.models.operations.SearchCseListRequest;
+import org.openapis.openapi.models.operations.SearchCseListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             SearchCseListRequest req = new SearchCseListRequest() {{
                 queryParams = new SearchCseListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    c2coff = "expedita";
-                    callback = "consequuntur";
-                    cr = "dolor";
-                    cx = "expedita";
-                    dateRestrict = "voluptas";
-                    exactTerms = "fugit";
-                    excludeTerms = "et";
-                    fields = "nihil";
-                    fileType = "rerum";
-                    filter = "dicta";
-                    gl = "debitis";
-                    googlehost = "voluptatum";
-                    highRange = "et";
-                    hl = "ut";
-                    hq = "dolorem";
-                    imgColorType = "imgColorTypeUndefined";
-                    imgDominantColor = "blue";
-                    imgSize = "LARGE";
-                    imgType = "face";
-                    key = "totam";
-                    linkSite = "dolores";
-                    lowRange = "illum";
-                    lr = "debitis";
-                    num = 3706853784096366226;
-                    oauthToken = "odio";
-                    orTerms = "dolore";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    c2coff = "quibusdam";
+                    callback = "unde";
+                    cr = "nulla";
+                    cx = "corrupti";
+                    dateRestrict = "illum";
+                    exactTerms = "vel";
+                    excludeTerms = "error";
+                    fields = "deserunt";
+                    fileType = "suscipit";
+                    filter = "iure";
+                    gl = "magnam";
+                    googlehost = "debitis";
+                    highRange = "ipsa";
+                    hl = "delectus";
+                    hq = "tempora";
+                    imgColorType = "mono";
+                    imgDominantColor = "orange";
+                    imgSize = "XLARGE";
+                    imgType = "photo";
+                    key = "voluptatum";
+                    linkSite = "iusto";
+                    lowRange = "excepturi";
+                    lr = "nisi";
+                    num = 925597;
+                    oauthToken = "temporibus";
+                    orTerms = "ab";
                     prettyPrint = false;
-                    q = "aspernatur";
-                    quotaUser = "accusantium";
-                    relatedSite = "totam";
-                    rights = "commodi";
-                    safe = "medium";
+                    q = "quis";
+                    quotaUser = "veritatis";
+                    relatedSite = "deserunt";
+                    rights = "perferendis";
+                    safe = "active";
                     searchType = "image";
-                    siteSearch = "aut";
-                    siteSearchFilter = "e";
-                    sort = "non";
-                    start = 167566062957544642;
-                    uploadType = "omnis";
-                    uploadProtocol = "aut";
+                    siteSearch = "sapiente";
+                    siteSearchFilter = "i";
+                    sort = "odit";
+                    start = 870013;
+                    uploadType = "at";
+                    uploadProtocol = "maiores";
                 }};
-            }};
+            }};            
 
             SearchCseListResponse res = sdk.cse.searchCseList(req);
 

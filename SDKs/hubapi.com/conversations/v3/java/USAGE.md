@@ -2,15 +2,21 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity;
+import org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenRequest;
+import org.openapis.openapi.models.operations.PostVisitorIdentificationV3TokensCreateGenerateTokenResponse;
+import org.openapis.openapi.models.shared.IdentificationTokenGenerationRequest;
+import org.openapis.openapi.models.shared.SchemeHapikey;
+import org.openapis.openapi.models.shared.SchemeOauth2Legacy;
+import org.openapis.openapi.models.shared.SchemePrivateAppsLegacy;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostVisitorIdentificationV3TokensCreateGenerateTokenRequest req = new PostVisitorIdentificationV3TokensCreateGenerateTokenRequest() {{
                 security = new PostVisitorIdentificationV3TokensCreateGenerateTokenSecurity() {{
@@ -19,11 +25,11 @@ public class Application {
                     }};
                 }};
                 request = new IdentificationTokenGenerationRequest() {{
-                    email = "sit";
-                    firstName = "voluptas";
-                    lastName = "culpa";
+                    email = "Larue_Rau85@yahoo.com";
+                    firstName = "Karley";
+                    lastName = "Stamm";
                 }};
-            }};
+            }};            
 
             PostVisitorIdentificationV3TokensCreateGenerateTokenResponse res = sdk.generate.postVisitorIdentificationV3TokensCreateGenerateToken(req);
 

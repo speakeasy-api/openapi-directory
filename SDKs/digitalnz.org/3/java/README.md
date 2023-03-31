@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,65 +15,77 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetRecordsFormatPathParams;
+import org.openapis.openapi.models.operations.GetRecordsFormatAndCategoryEnum;
+import org.openapis.openapi.models.operations.GetRecordsFormatAndHasLargeThumbnailUrlEnum;
+import org.openapis.openapi.models.operations.GetRecordsFormatAndHasLatLngEnum;
+import org.openapis.openapi.models.operations.GetRecordsFormatAndUsageEnum;
+import org.openapis.openapi.models.operations.GetRecordsFormatDirectionEnum;
+import org.openapis.openapi.models.operations.GetRecordsFormatFacetsEnum;
+import org.openapis.openapi.models.operations.GetRecordsFormatSortEnum;
+import org.openapis.openapi.models.operations.GetRecordsFormatQueryParams;
+import org.openapis.openapi.models.operations.GetRecordsFormatHeaders;
+import org.openapis.openapi.models.operations.GetRecordsFormatRequest;
+import org.openapis.openapi.models.operations.GetRecordsFormatResponse;
+import org.openapis.openapi.models.shared.FormatEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyAuth = new SchemeApiKeyAuth() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetRecordsFormatRequest req = new GetRecordsFormatRequest() {{
                 pathParams = new GetRecordsFormatPathParams() {{
-                    format = "json";
+                    format = "xml";
                 }};
                 queryParams = new GetRecordsFormatQueryParams() {{
-                    andCategory = "Manuscripts";
-                    andCentury = "culpa";
-                    andCollection = "expedita";
-                    andContentPartner = "consequuntur";
-                    andCreator = "dolor";
-                    andDate = "expedita";
-                    andDcType = "voluptas";
-                    andDecade = "fugit";
-                    andFormat = "et";
+                    andCategory = "Research papers";
+                    andCentury = "distinctio";
+                    andCollection = "quibusdam";
+                    andContentPartner = "unde";
+                    andCreator = "nulla";
+                    andDate = "corrupti";
+                    andDcType = "illum";
+                    andDecade = "vel";
+                    andFormat = "error";
                     andHasLargeThumbnailUrl = "Y";
-                    andHasLatLng = true;
+                    andHasLatLng = "false";
                     andIsCommercialUse = false;
-                    andOrFilterField = "debitis";
-                    andPlacename = "voluptatum";
-                    andPrimaryCollection = "et";
-                    andSubject = "ut";
-                    andTitle = "dolorem";
-                    andUsage = "Share";
-                    andYear = "voluptate";
-                    apiKey = "iste";
+                    andOrFilterField = "suscipit";
+                    andPlacename = "iure";
+                    andPrimaryCollection = "magnam";
+                    andSubject = "debitis";
+                    andTitle = "ipsa";
+                    andUsage = "Unknown";
+                    andYear = "tempora";
                     direction = "asc";
-                    excludeFiltersFromFacets = true;
-                    facets = new openapisdk.models.shared.FieldsEnum2[]() {{
-                        add("usage"),
+                    excludeFiltersFromFacets = false;
+                    facets = new org.openapis.openapi.models.operations.GetRecordsFormatFacetsEnum[]{{
+                        add("copyright"),
+                        add("copyright"),
                     }};
-                    facetsPage = 6392442863481646880;
-                    facetsPerPage = 3706853784096366226;
-                    fields = "odio";
-                    geoBbox = "dolore";
-                    page = 4035568504096476779;
-                    perPage = 959367522974354090;
+                    facetsPage = 528895;
+                    facetsPerPage = 479977;
+                    fields = "excepturi";
+                    geoBbox = "nisi";
+                    page = 925597;
+                    perPage = 836079;
                     sort = "syndication_date";
-                    text = "totam";
-                    withoutFilterField = "commodi";
+                    text = "quis";
+                    withoutFilterField = "veritatis";
                 }};
-            }};
+                headers = new GetRecordsFormatHeaders() {{
+                    authenticationToken = "deserunt";
+                }};
+            }};            
 
             GetRecordsFormatResponse res = sdk.apiCalls.getRecordsFormat(req);
 
@@ -89,11 +101,24 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### API calls
+
+### apiCalls
 
 * `getRecordsFormat` - Run queries against DigitalNZ metadata search service.
-* `getRecordsRecordIdJson` - View metadata associated with a single record.
+* `getRecordsRecordIdFormat` - View metadata associated with a single record.
+* `getRecordsRecordIdMoreLikeThisFormat` - The "More Like This" call returns similar records to the specified ID.
 
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,43 +2,43 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetDeploymentsHeaders;
+import org.openapis.openapi.models.operations.GetDeploymentsRequestBody;
+import org.openapis.openapi.models.operations.GetDeploymentsRequest;
+import org.openapis.openapi.models.operations.GetDeploymentsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetDeviceRegistrationRequest req = new GetDeviceRegistrationRequest() {{
-                headers = new GetDeviceRegistrationHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+            GetDeploymentsRequest req = new GetDeploymentsRequest() {{
+                headers = new GetDeploymentsHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
-                request = new GetDeviceRegistrationRequestBody() {{
-                    deviceFleetName = "voluptas";
-                    deviceName = "fugit";
+                request = new GetDeploymentsRequestBody() {{
+                    deviceFleetName = "illum";
+                    deviceName = "vel";
                 }};
-            }};
+            }};            
 
-            GetDeviceRegistrationResponse res = sdk.getDeviceRegistration(req);
+            GetDeploymentsResponse res = sdk.getDeployments(req);
 
-            if (res.getDeviceRegistrationResult.isPresent()) {
+            if (res.getDeploymentsResult.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

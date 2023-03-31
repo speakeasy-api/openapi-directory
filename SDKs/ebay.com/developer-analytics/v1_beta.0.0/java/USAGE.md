@@ -2,27 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetRateLimitsSecurity;
+import org.openapis.openapi.models.operations.GetRateLimitsQueryParams;
+import org.openapis.openapi.models.operations.GetRateLimitsRequest;
+import org.openapis.openapi.models.operations.GetRateLimitsResponse;
+import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetRateLimitsRequest req = new GetRateLimitsRequest() {{
                 security = new GetRateLimitsSecurity() {{
-                    apiAuth = new SchemeApiAuth() {{
+                    apiAuth = new SchemeAPIAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
                 queryParams = new GetRateLimitsQueryParams() {{
-                    apiContext = "sit";
-                    apiName = "voluptas";
+                    apiContext = "corrupti";
+                    apiName = "provident";
                 }};
-            }};
+            }};            
 
             GetRateLimitsResponse res = sdk.rateLimit.getRateLimits(req);
 

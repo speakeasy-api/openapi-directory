@@ -2,30 +2,35 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetCustomerServiceMetricSecurity;
+import org.openapis.openapi.models.operations.GetCustomerServiceMetricPathParams;
+import org.openapis.openapi.models.operations.GetCustomerServiceMetricQueryParams;
+import org.openapis.openapi.models.operations.GetCustomerServiceMetricRequest;
+import org.openapis.openapi.models.operations.GetCustomerServiceMetricResponse;
+import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetCustomerServiceMetricRequest req = new GetCustomerServiceMetricRequest() {{
                 security = new GetCustomerServiceMetricSecurity() {{
-                    apiAuth = new SchemeApiAuth() {{
+                    apiAuth = new SchemeAPIAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
                 pathParams = new GetCustomerServiceMetricPathParams() {{
-                    customerServiceMetricType = "sit";
-                    evaluationType = "voluptas";
+                    customerServiceMetricType = "corrupti";
+                    evaluationType = "provident";
                 }};
                 queryParams = new GetCustomerServiceMetricQueryParams() {{
-                    evaluationMarketplaceId = "culpa";
+                    evaluationMarketplaceId = "distinctio";
                 }};
-            }};
+            }};            
 
             GetCustomerServiceMetricResponse res = sdk.customerServiceMetric.getCustomerServiceMetric(req);
 

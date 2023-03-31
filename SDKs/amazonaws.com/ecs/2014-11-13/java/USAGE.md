@@ -2,64 +2,62 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateCapacityProviderXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateCapacityProviderHeaders;
+import org.openapis.openapi.models.operations.CreateCapacityProviderRequest;
+import org.openapis.openapi.models.operations.CreateCapacityProviderResponse;
+import org.openapis.openapi.models.shared.CreateCapacityProviderRequest;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.AutoScalingGroupProvider;
+import org.openapis.openapi.models.shared.ManagedTerminationProtectionEnum;
+import org.openapis.openapi.models.shared.ManagedScaling;
+import org.openapis.openapi.models.shared.ManagedScalingStatusEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateCapacityProviderRequest req = new CreateCapacityProviderRequest() {{
                 headers = new CreateCapacityProviderHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AmazonEC2ContainerServiceV20141113.CreateCapacityProvider";
                 }};
                 request = new CreateCapacityProviderRequest() {{
                     autoScalingGroupProvider = new AutoScalingGroupProvider() {{
-                        autoScalingGroupArn = "fugit";
+                        autoScalingGroupArn = "illum";
                         managedScaling = new ManagedScaling() {{
-                            instanceWarmupPeriod = 1543572285742637646;
-                            maximumScalingStepSize = 2661732831099943416;
-                            minimumScalingStepSize = 8325060299420976708;
-                            status = "DISABLED";
-                            targetCapacity = 2518412263346885298;
+                            instanceWarmupPeriod = 423655;
+                            maximumScalingStepSize = 623564;
+                            minimumScalingStepSize = 645894;
+                            status = "ENABLED";
+                            targetCapacity = 437587;
                         }};
                         managedTerminationProtection = "ENABLED";
                     }};
-                    name = "et";
-                    tags = new openapisdk.models.shared.Tag[]() {{
+                    name = "debitis";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "dolorem";
-                            value = "et";
-                        }}),
-                        add(new Tag() {{
-                            key = "voluptate";
-                            value = "iste";
-                        }}),
-                        add(new Tag() {{
-                            key = "vitae";
-                            value = "totam";
+                            key = "delectus";
+                            value = "tempora";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateCapacityProviderResponse res = sdk.createCapacityProvider(req);
 

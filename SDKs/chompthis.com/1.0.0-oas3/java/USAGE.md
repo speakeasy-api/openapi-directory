@@ -2,26 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpSecurity;
+import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpQueryParams;
+import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpRequest;
+import org.openapis.openapi.models.operations.GetFoodBrandedBarcodePhpResponse;
+import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetFoodBrandedBarcodePhpRequest req = new GetFoodBrandedBarcodePhpRequest() {{
                 security = new GetFoodBrandedBarcodePhpSecurity() {{
-                    apiKeyAuth = new SchemeApiKeyAuth() {{
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 queryParams = new GetFoodBrandedBarcodePhpQueryParams() {{
-                    code = "sit";
+                    code = "corrupti";
                 }};
-            }};
+            }};            
 
             GetFoodBrandedBarcodePhpResponse res = sdk.getFoodBrandedBarcodePhp(req);
 

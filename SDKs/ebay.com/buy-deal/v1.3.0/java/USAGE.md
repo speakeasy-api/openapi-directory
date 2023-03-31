@@ -2,33 +2,38 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetDealItemsSecurity;
+import org.openapis.openapi.models.operations.GetDealItemsQueryParams;
+import org.openapis.openapi.models.operations.GetDealItemsHeaders;
+import org.openapis.openapi.models.operations.GetDealItemsRequest;
+import org.openapis.openapi.models.operations.GetDealItemsResponse;
+import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetDealItemsRequest req = new GetDealItemsRequest() {{
                 security = new GetDealItemsSecurity() {{
-                    apiAuth = new SchemeApiAuth() {{
+                    apiAuth = new SchemeAPIAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
                 queryParams = new GetDealItemsQueryParams() {{
-                    categoryIds = "sit";
-                    commissionable = "voluptas";
-                    deliveryCountry = "culpa";
-                    limit = "expedita";
-                    offset = "consequuntur";
+                    categoryIds = "corrupti";
+                    commissionable = "provident";
+                    deliveryCountry = "distinctio";
+                    limit = "quibusdam";
+                    offset = "unde";
                 }};
                 headers = new GetDealItemsHeaders() {{
-                    xEBAYCMARKETPLACEID = "dolor";
+                    xEbayCMarketplaceId = "nulla";
                 }};
-            }};
+            }};            
 
             GetDealItemsResponse res = sdk.dealItem.getDealItems(req);
 

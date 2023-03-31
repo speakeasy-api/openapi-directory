@@ -2,24 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ConvertcurrencyQueryParams;
+import org.openapis.openapi.models.operations.ConvertcurrencyRequest;
+import org.openapis.openapi.models.operations.ConvertcurrencyResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ConvertcurrencyRequest req = new ConvertcurrencyRequest() {{
                 queryParams = new ConvertcurrencyQueryParams() {{
-                    amount = "sit";
-                    from = "voluptas";
-                    license = "culpa";
-                    to = "expedita";
+                    amount = "corrupti";
+                    from = "provident";
+                    license = "distinctio";
+                    to = "quibusdam";
                 }};
-            }};
+            }};            
 
             ConvertcurrencyResponse res = sdk.liveCurrencyRateConversion.convertcurrency(req);
 

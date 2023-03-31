@@ -2,237 +2,348 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateConnectorProfileHeaders;
+import org.openapis.openapi.models.operations.CreateConnectorProfileRequestBodyConnectionModeEnum;
+import org.openapis.openapi.models.operations.CreateConnectorProfileRequestBodyConnectorProfileConfig;
+import org.openapis.openapi.models.operations.CreateConnectorProfileRequestBodyConnectorTypeEnum;
+import org.openapis.openapi.models.operations.CreateConnectorProfileRequestBody;
+import org.openapis.openapi.models.operations.CreateConnectorProfileRequest;
+import org.openapis.openapi.models.operations.CreateConnectorProfileResponse;
+import org.openapis.openapi.models.shared.ConnectorProfileProperties;
+import org.openapis.openapi.models.shared.ZendeskConnectorProfileProperties;
+import org.openapis.openapi.models.shared.VeevaConnectorProfileProperties;
+import org.openapis.openapi.models.shared.SnowflakeConnectorProfileProperties;
+import org.openapis.openapi.models.shared.SlackConnectorProfileProperties;
+import org.openapis.openapi.models.shared.ServiceNowConnectorProfileProperties;
+import org.openapis.openapi.models.shared.SalesforceConnectorProfileProperties;
+import org.openapis.openapi.models.shared.SAPODataConnectorProfileProperties;
+import org.openapis.openapi.models.shared.OAuthProperties;
+import org.openapis.openapi.models.shared.RedshiftConnectorProfileProperties;
+import org.openapis.openapi.models.shared.PardotConnectorProfileProperties;
+import org.openapis.openapi.models.shared.MarketoConnectorProfileProperties;
+import org.openapis.openapi.models.shared.InforNexusConnectorProfileProperties;
+import org.openapis.openapi.models.shared.DynatraceConnectorProfileProperties;
+import org.openapis.openapi.models.shared.DatadogConnectorProfileProperties;
+import org.openapis.openapi.models.shared.CustomConnectorProfileProperties;
+import org.openapis.openapi.models.shared.OAuth2Properties;
+import org.openapis.openapi.models.shared.OAuth2GrantTypeEnum;
+import org.openapis.openapi.models.shared.ConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.ZendeskConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.ConnectorOAuthRequest;
+import org.openapis.openapi.models.shared.VeevaConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.TrendmicroConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.SnowflakeConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.SlackConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.SingularConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.ServiceNowConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.SalesforceConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.SAPODataConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.OAuthCredentials;
+import org.openapis.openapi.models.shared.BasicAuthCredentials;
+import org.openapis.openapi.models.shared.RedshiftConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.PardotConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.MarketoConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.InforNexusConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.HoneycodeConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.GoogleAnalyticsConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.DynatraceConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.DatadogConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.CustomConnectorProfileCredentials;
+import org.openapis.openapi.models.shared.OAuth2Credentials;
+import org.openapis.openapi.models.shared.CustomAuthCredentials;
+import org.openapis.openapi.models.shared.AuthenticationTypeEnum;
+import org.openapis.openapi.models.shared.ApiKeyCredentials;
+import org.openapis.openapi.models.shared.AmplitudeConnectorProfileCredentials;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateConnectorProfileRequest req = new CreateConnectorProfileRequest() {{
                 headers = new CreateConnectorProfileHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new CreateConnectorProfileRequestBody() {{
                     connectionMode = "Private";
+                    connectorLabel = "vel";
                     connectorProfileConfig = new CreateConnectorProfileRequestBodyConnectorProfileConfig() {{
                         connectorProfileCredentials = new ConnectorProfileCredentials() {{
                             amplitude = new AmplitudeConnectorProfileCredentials() {{
-                                apiKey = "fugit";
-                                secretKey = "et";
+                                apiKey = "error";
+                                secretKey = "deserunt";
+                            }};
+                            customConnector = new CustomConnectorProfileCredentials() {{
+                                apiKey = new ApiKeyCredentials() {{
+                                    apiKey = "suscipit";
+                                    apiSecretKey = "iure";
+                                }};
+                                authenticationType = "APIKEY";
+                                basic = new BasicAuthCredentials() {{
+                                    password = "debitis";
+                                    username = "Anahi38";
+                                }};
+                                custom = new CustomAuthCredentials() {{
+                                    credentialsMap = new java.util.HashMap<String, String>() {{
+                                        put("minus", "placeat");
+                                        put("voluptatum", "iusto");
+                                    }};
+                                    customAuthenticationType = "excepturi";
+                                }};
+                                oauth2 = new OAuth2Credentials() {{
+                                    accessToken = "nisi";
+                                    clientId = "recusandae";
+                                    clientSecret = "temporibus";
+                                    oAuthRequest = new ConnectorOAuthRequest() {{
+                                        authCode = "ab";
+                                        redirectUri = "quis";
+                                    }};
+                                    refreshToken = "veritatis";
+                                }};
                             }};
                             datadog = new DatadogConnectorProfileCredentials() {{
-                                apiKey = "nihil";
-                                applicationKey = "rerum";
+                                apiKey = "deserunt";
+                                applicationKey = "perferendis";
                             }};
                             dynatrace = new DynatraceConnectorProfileCredentials() {{
-                                apiToken = "dicta";
+                                apiToken = "ipsam";
                             }};
                             googleAnalytics = new GoogleAnalyticsConnectorProfileCredentials() {{
-                                accessToken = "debitis";
-                                clientId = "voluptatum";
-                                clientSecret = "et";
+                                accessToken = "repellendus";
+                                clientId = "sapiente";
+                                clientSecret = "quo";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "ut";
-                                    redirectUri = "dolorem";
+                                    authCode = "odit";
+                                    redirectUri = "at";
                                 }};
-                                refreshToken = "et";
+                                refreshToken = "at";
                             }};
                             honeycode = new HoneycodeConnectorProfileCredentials() {{
-                                accessToken = "voluptate";
+                                accessToken = "maiores";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "iste";
-                                    redirectUri = "vitae";
+                                    authCode = "molestiae";
+                                    redirectUri = "quod";
                                 }};
-                                refreshToken = "totam";
+                                refreshToken = "quod";
                             }};
                             inforNexus = new InforNexusConnectorProfileCredentials() {{
-                                accessKeyId = "dolores";
-                                datakey = "illum";
-                                secretAccessKey = "debitis";
-                                userId = "vel";
+                                accessKeyId = "esse";
+                                datakey = "totam";
+                                secretAccessKey = "porro";
+                                userId = "dolorum";
                             }};
                             marketo = new MarketoConnectorProfileCredentials() {{
-                                accessToken = "odio";
-                                clientId = "dolore";
-                                clientSecret = "id";
+                                accessToken = "dicta";
+                                clientId = "nam";
+                                clientSecret = "officia";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "aspernatur";
-                                    redirectUri = "accusantium";
+                                    authCode = "occaecati";
+                                    redirectUri = "fugit";
                                 }};
+                            }};
+                            pardot = new PardotConnectorProfileCredentials() {{
+                                accessToken = "deleniti";
+                                clientCredentialsArn = "hic";
+                                oAuthRequest = new ConnectorOAuthRequest() {{
+                                    authCode = "optio";
+                                    redirectUri = "totam";
+                                }};
+                                refreshToken = "beatae";
                             }};
                             redshift = new RedshiftConnectorProfileCredentials() {{
-                                password = "totam";
-                                username = "commodi";
+                                password = "commodi";
+                                username = "Jaren77";
                             }};
-                            sapoData = new SapoDataConnectorProfileCredentials() {{
+                            sapoData = new SAPODataConnectorProfileCredentials() {{
                                 basicAuthCredentials = new BasicAuthCredentials() {{
-                                    password = "quis";
-                                    username = "est";
+                                    password = "cum";
+                                    username = "Jacky.Emmerich";
                                 }};
                                 oAuthCredentials = new OAuthCredentials() {{
-                                    accessToken = "aut";
-                                    clientId = "odit";
-                                    clientSecret = "non";
+                                    accessToken = "perferendis";
+                                    clientId = "ad";
+                                    clientSecret = "natus";
                                     oAuthRequest = new ConnectorOAuthRequest() {{
-                                        authCode = "voluptas";
-                                        redirectUri = "omnis";
+                                        authCode = "sed";
+                                        redirectUri = "iste";
                                     }};
-                                    refreshToken = "aut";
+                                    refreshToken = "dolor";
                                 }};
                             }};
                             salesforce = new SalesforceConnectorProfileCredentials() {{
-                                accessToken = "illo";
-                                clientCredentialsArn = "sed";
+                                accessToken = "natus";
+                                clientCredentialsArn = "laboriosam";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "officiis";
-                                    redirectUri = "autem";
+                                    authCode = "hic";
+                                    redirectUri = "saepe";
                                 }};
-                                refreshToken = "consectetur";
+                                refreshToken = "fuga";
                             }};
                             serviceNow = new ServiceNowConnectorProfileCredentials() {{
-                                password = "nobis";
-                                username = "odio";
+                                password = "in";
+                                username = "Floy_Moore";
                             }};
                             singular = new SingularConnectorProfileCredentials() {{
-                                apiKey = "qui";
+                                apiKey = "quidem";
                             }};
                             slack = new SlackConnectorProfileCredentials() {{
-                                accessToken = "recusandae";
-                                clientId = "at";
-                                clientSecret = "ipsum";
+                                accessToken = "architecto";
+                                clientId = "ipsa";
+                                clientSecret = "reiciendis";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "eveniet";
-                                    redirectUri = "modi";
+                                    authCode = "est";
+                                    redirectUri = "mollitia";
                                 }};
                             }};
                             snowflake = new SnowflakeConnectorProfileCredentials() {{
-                                password = "sint";
-                                username = "inventore";
+                                password = "laborum";
+                                username = "Cecilia.Ebert";
                             }};
                             trendmicro = new TrendmicroConnectorProfileCredentials() {{
-                                apiSecretKey = "ut";
+                                apiSecretKey = "nobis";
                             }};
                             veeva = new VeevaConnectorProfileCredentials() {{
-                                password = "exercitationem";
-                                username = "aut";
+                                password = "enim";
+                                username = "Lenore57";
                             }};
                             zendesk = new ZendeskConnectorProfileCredentials() {{
-                                accessToken = "reprehenderit";
-                                clientId = "tempore";
-                                clientSecret = "maiores";
+                                accessToken = "accusantium";
+                                clientId = "iure";
+                                clientSecret = "culpa";
                                 oAuthRequest = new ConnectorOAuthRequest() {{
-                                    authCode = "incidunt";
-                                    redirectUri = "dolor";
+                                    authCode = "doloribus";
+                                    redirectUri = "sapiente";
                                 }};
                             }};
                         }};
                         connectorProfileProperties = new ConnectorProfileProperties() {{
                             amplitude = new java.util.HashMap<String, Object>() {{
-                                put("veritatis", "in");
-                                put("et", "omnis");
-                                put("ipsum", "ex");
+                                put("mollitia", "dolorem");
+                            }};
+                            customConnector = new CustomConnectorProfileProperties() {{
+                                oAuth2Properties = new OAuth2Properties() {{
+                                    oAuth2GrantType = "AUTHORIZATION_CODE";
+                                    tokenUrl = "consequuntur";
+                                    tokenUrlCustomProperties = new java.util.HashMap<String, String>() {{
+                                        put("mollitia", "occaecati");
+                                        put("numquam", "commodi");
+                                        put("quam", "molestiae");
+                                        put("velit", "error");
+                                    }};
+                                }};
+                                profileProperties = new java.util.HashMap<String, String>() {{
+                                    put("quis", "vitae");
+                                }};
                             }};
                             datadog = new DatadogConnectorProfileProperties() {{
-                                instanceUrl = "dolores";
+                                instanceUrl = "laborum";
                             }};
                             dynatrace = new DynatraceConnectorProfileProperties() {{
-                                instanceUrl = "placeat";
+                                instanceUrl = "animi";
                             }};
                             googleAnalytics = new java.util.HashMap<String, Object>() {{
-                                put("rerum", "mollitia");
-                                put("voluptas", "quam");
+                                put("odit", "quo");
+                                put("sequi", "tenetur");
                             }};
                             honeycode = new java.util.HashMap<String, Object>() {{
-                                put("qui", "qui");
+                                put("id", "possimus");
+                                put("aut", "quasi");
                             }};
                             inforNexus = new InforNexusConnectorProfileProperties() {{
-                                instanceUrl = "unde";
+                                instanceUrl = "error";
                             }};
                             marketo = new MarketoConnectorProfileProperties() {{
-                                instanceUrl = "in";
+                                instanceUrl = "temporibus";
                             }};
-                            redshift = new RedshiftConnectorProfileProperties() {{
-                                bucketName = "autem";
-                                bucketPrefix = "qui";
-                                databaseUrl = "ut";
-                                roleArn = "itaque";
-                            }};
-                            sapoData = new SapoDataConnectorProfileProperties() {{
-                                applicationHostUrl = "ab";
-                                applicationServicePath = "neque";
-                                clientNumber = "ullam";
-                                logonLanguage = "et";
-                                oAuthProperties = new OAuthProperties() {{
-                                    authCodeUrl = "accusantium";
-                                    oAuthScopes = new String[]() {{
-                                        add("architecto"),
-                                        add("quam"),
-                                    }};
-                                    tokenUrl = "velit";
-                                }};
-                                portNumber = 2066195468801476818;
-                                privateLinkServiceName = "soluta";
-                            }};
-                            salesforce = new SalesforceConnectorProfileProperties() {{
-                                instanceUrl = "sunt";
+                            pardot = new PardotConnectorProfileProperties() {{
+                                businessUnitId = "laborum";
+                                instanceUrl = "quasi";
                                 isSandboxEnvironment = false;
                             }};
+                            redshift = new RedshiftConnectorProfileProperties() {{
+                                bucketName = "reiciendis";
+                                bucketPrefix = "voluptatibus";
+                                clusterIdentifier = "vero";
+                                dataApiRoleArn = "nihil";
+                                databaseName = "praesentium";
+                                databaseUrl = "voluptatibus";
+                                isRedshiftServerless = false;
+                                roleArn = "ipsa";
+                                workgroupName = "omnis";
+                            }};
+                            sapoData = new SAPODataConnectorProfileProperties() {{
+                                applicationHostUrl = "voluptate";
+                                applicationServicePath = "cum";
+                                clientNumber = "perferendis";
+                                logonLanguage = "doloremque";
+                                oAuthProperties = new OAuthProperties() {{
+                                    authCodeUrl = "reprehenderit";
+                                    oAuthScopes = new String[]{{
+                                        add("maiores"),
+                                        add("dicta"),
+                                    }};
+                                    tokenUrl = "corporis";
+                                }};
+                                portNumber = 296140;
+                                privateLinkServiceName = "iusto";
+                            }};
+                            salesforce = new SalesforceConnectorProfileProperties() {{
+                                instanceUrl = "dicta";
+                                isSandboxEnvironment = false;
+                                usePrivateLinkForMetadataAndAuthorization = false;
+                            }};
                             serviceNow = new ServiceNowConnectorProfileProperties() {{
-                                instanceUrl = "magni";
+                                instanceUrl = "harum";
                             }};
                             singular = new java.util.HashMap<String, Object>() {{
-                                put("optio", "qui");
-                                put("earum", "illo");
-                                put("omnis", "ut");
+                                put("accusamus", "commodi");
+                                put("repudiandae", "quae");
                             }};
                             slack = new SlackConnectorProfileProperties() {{
-                                instanceUrl = "consequatur";
+                                instanceUrl = "ipsum";
                             }};
                             snowflake = new SnowflakeConnectorProfileProperties() {{
-                                accountName = "dolor";
-                                bucketName = "commodi";
-                                bucketPrefix = "error";
-                                privateLinkServiceName = "reprehenderit";
-                                region = "consectetur";
-                                stage = "nostrum";
-                                warehouse = "ut";
+                                accountName = "quidem";
+                                bucketName = "molestias";
+                                bucketPrefix = "excepturi";
+                                privateLinkServiceName = "pariatur";
+                                region = "modi";
+                                stage = "praesentium";
+                                warehouse = "rem";
                             }};
                             trendmicro = new java.util.HashMap<String, Object>() {{
-                                put("sed", "a");
-                                put("soluta", "aut");
-                                put("quas", "consequuntur");
+                                put("quasi", "repudiandae");
+                                put("sint", "veritatis");
+                                put("itaque", "incidunt");
+                                put("enim", "consequatur");
                             }};
                             veeva = new VeevaConnectorProfileProperties() {{
-                                instanceUrl = "laudantium";
+                                instanceUrl = "est";
                             }};
                             zendesk = new ZendeskConnectorProfileProperties() {{
-                                instanceUrl = "autem";
+                                instanceUrl = "quibusdam";
                             }};
                         }};
                     }};
-                    connectorProfileName = "ipsa";
-                    connectorType = "Honeycode";
-                    kmsArn = "doloremque";
+                    connectorProfileName = "explicabo";
+                    connectorType = "Veeva";
+                    kmsArn = "distinctio";
                 }};
-            }};
+            }};            
 
             CreateConnectorProfileResponse res = sdk.createConnectorProfile(req);
 

@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetcountrymatchQueryParams;
+import org.openapis.openapi.models.operations.GetcountrymatchRequest;
+import org.openapis.openapi.models.operations.GetcountrymatchResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetcountrymatchRequest req = new GetcountrymatchRequest() {{
                 queryParams = new GetcountrymatchQueryParams() {{
-                    country = "sit";
-                    license = "voluptas";
+                    country = "Malta";
+                    license = "provident";
                 }};
-            }};
+            }};            
 
             GetcountrymatchResponse res = sdk.countryMatchSimilarityKey.getcountrymatch(req);
 

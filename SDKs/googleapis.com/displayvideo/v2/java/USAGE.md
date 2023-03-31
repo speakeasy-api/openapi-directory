@@ -2,15 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadSecurity;
+import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadPathParams;
+import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadQueryParams;
+import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadRequest;
+import org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadResponse;
+import org.openapis.openapi.models.shared.CreateAssetRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DisplayvideoAdvertisersAssetsUploadRequest req = new DisplayvideoAdvertisersAssetsUploadRequest() {{
                 security = new DisplayvideoAdvertisersAssetsUploadSecurity() {{
@@ -22,23 +31,23 @@ public class Application {
                     }};
                 }};
                 pathParams = new DisplayvideoAdvertisersAssetsUploadPathParams() {{
-                    advertiserId = "sit";
+                    advertiserId = "corrupti";
                 }};
                 queryParams = new DisplayvideoAdvertisersAssetsUploadQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
-                request = "dicta".getBytes();
-            }};
+                request = "suscipit".getBytes();
+            }};            
 
             DisplayvideoAdvertisersAssetsUploadResponse res = sdk.advertisers.displayvideoAdvertisersAssetsUpload(req);
 

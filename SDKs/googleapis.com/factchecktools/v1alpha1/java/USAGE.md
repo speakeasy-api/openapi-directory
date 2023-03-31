@@ -2,38 +2,42 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchQueryParams;
+import org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchRequest;
+import org.openapis.openapi.models.operations.FactchecktoolsClaimsSearchResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FactchecktoolsClaimsSearchRequest req = new FactchecktoolsClaimsSearchRequest() {{
                 queryParams = new FactchecktoolsClaimsSearchQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    languageCode = "expedita";
-                    maxAgeDays = 6044372234677422456;
-                    oauthToken = "fugit";
-                    offset = 1543572285742637646;
-                    pageSize = 2661732831099943416;
-                    pageToken = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    languageCode = "corrupti";
+                    maxAgeDays = 847252;
+                    oauthToken = "vel";
+                    offset = 623564;
+                    pageSize = 645894;
+                    pageToken = "suscipit";
                     prettyPrint = false;
-                    query = "debitis";
-                    quotaUser = "voluptatum";
-                    reviewPublisherSiteFilter = "et";
-                    uploadType = "ut";
-                    uploadProtocol = "dolorem";
+                    query = "iure";
+                    quotaUser = "magnam";
+                    reviewPublisherSiteFilter = "debitis";
+                    uploadType = "ipsa";
+                    uploadProtocol = "delectus";
                 }};
-            }};
+            }};            
 
             FactchecktoolsClaimsSearchResponse res = sdk.claims.factchecktoolsClaimsSearch(req);
 

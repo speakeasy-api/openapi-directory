@@ -2,59 +2,58 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateDevicePoolXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateDevicePoolHeaders;
+import org.openapis.openapi.models.operations.CreateDevicePoolRequest;
+import org.openapis.openapi.models.operations.CreateDevicePoolResponse;
+import org.openapis.openapi.models.shared.CreateDevicePoolRequest;
+import org.openapis.openapi.models.shared.Rule;
+import org.openapis.openapi.models.shared.RuleOperatorEnum;
+import org.openapis.openapi.models.shared.DeviceAttributeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateDevicePoolRequest req = new CreateDevicePoolRequest() {{
                 headers = new CreateDevicePoolHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "DeviceFarm_20150623.CreateDevicePool";
                 }};
                 request = new CreateDevicePoolRequest() {{
-                    description = "fugit";
-                    maxDevices = 1543572285742637646;
-                    name = "nihil";
-                    projectArn = "rerum";
-                    rules = new openapisdk.models.shared.Rule[]() {{
+                    description = "illum";
+                    maxDevices = 423655;
+                    name = "error";
+                    projectArn = "deserunt";
+                    rules = new org.openapis.openapi.models.shared.Rule[]{{
                         add(new Rule() {{
-                            attribute = "REMOTE_ACCESS_ENABLED";
-                            operator = "EQUALS";
-                            value = "et";
+                            attribute = "REMOTE_DEBUG_ENABLED";
+                            operator = "LESS_THAN_OR_EQUALS";
+                            value = "debitis";
                         }}),
                         add(new Rule() {{
                             attribute = "ARN";
-                            operator = "LESS_THAN_OR_EQUALS";
-                            value = "et";
-                        }}),
-                        add(new Rule() {{
-                            attribute = "FORM_FACTOR";
-                            operator = "GREATER_THAN";
-                            value = "vitae";
+                            operator = "CONTAINS";
+                            value = "tempora";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateDevicePoolResponse res = sdk.createDevicePool(req);
 

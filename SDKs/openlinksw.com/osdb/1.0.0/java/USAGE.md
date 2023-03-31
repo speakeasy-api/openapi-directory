@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ActionHelpPathParams;
+import org.openapis.openapi.models.operations.ActionHelpRequest;
+import org.openapis.openapi.models.operations.ActionHelpResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ActionHelpRequest req = new ActionHelpRequest() {{
                 pathParams = new ActionHelpPathParams() {{
-                    actionId = "sit";
-                    serviceId = "voluptas";
+                    actionId = "corrupti";
+                    serviceId = "provident";
                 }};
-            }};
+            }};            
 
             ActionHelpResponse res = sdk.osdb.actionHelp(req);
 

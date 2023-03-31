@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetcompanymatchQueryParams;
+import org.openapis.openapi.models.operations.GetcompanymatchRequest;
+import org.openapis.openapi.models.operations.GetcompanymatchResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetcompanymatchRequest req = new GetcompanymatchRequest() {{
                 queryParams = new GetcompanymatchQueryParams() {{
-                    company = "sit";
-                    license = "voluptas";
+                    company = "Medhurst - Rau";
+                    license = "quibusdam";
                 }};
-            }};
+            }};            
 
             GetcompanymatchResponse res = sdk.companyNameSimilarityKey.getcompanymatch(req);
 

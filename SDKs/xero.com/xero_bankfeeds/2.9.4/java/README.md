@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateFeedConnectionsSecurity;
+import org.openapis.openapi.models.operations.CreateFeedConnectionsHeaders;
+import org.openapis.openapi.models.operations.CreateFeedConnectionsRequest;
+import org.openapis.openapi.models.operations.CreateFeedConnectionsResponse;
+import org.openapis.openapi.models.shared.FeedConnections;
+import org.openapis.openapi.models.shared.Pagination;
+import org.openapis.openapi.models.shared.FeedConnectionAccountTypeEnum;
+import org.openapis.openapi.models.shared.FeedConnectionStatusEnum;
+import org.openapis.openapi.models.shared.FeedConnection;
+import org.openapis.openapi.models.shared.ErrorTypeEnum;
+import org.openapis.openapi.models.shared.Error;
+import org.openapis.openapi.models.shared.CurrencyCodeEnum;
+import org.openapis.openapi.models.shared.CountryCodeEnum;
+import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateFeedConnectionsRequest req = new CreateFeedConnectionsRequest() {{
                 security = new CreateFeedConnectionsSecurity() {{
@@ -32,36 +45,70 @@ public class Application {
                     }};
                 }};
                 headers = new CreateFeedConnectionsHeaders() {{
-                    xeroTenantId = "sit";
+                    xeroTenantId = "corrupti";
                 }};
                 request = new FeedConnections() {{
-                    items = new openapisdk.models.shared.FeedConnection[]() {{
+                    items = new org.openapis.openapi.models.shared.FeedConnection[]{{
                         add(new FeedConnection() {{
-                            accountId = "culpa";
-                            accountName = "expedita";
-                            accountNumber = "consequuntur";
-                            accountToken = "dolor";
-                            accountType = "expedita";
-                            country = "SO";
-                            currency = "GGP";
+                            accountId = "079a88ea-276d-41fb-a1f1-366ef3e22921";
+                            accountName = "Joe's Savings Account";
+                            accountNumber = "3809087654321500";
+                            accountToken = "10000123";
+                            accountType = "BANK";
+                            country = "GB";
+                            currency = "AUD";
                             error = new Error() {{
-                                detail = "et";
-                                status = 2661732831099943416;
-                                title = "rerum";
-                                type = "account-not-valid";
+                                detail = "The application has not been configured to use these API endpoints.";
+                                status = 403;
+                                title = "Invalid Application";
+                                type = "invalid-application";
                             }};
-                            id = "debitis";
-                            status = "PENDING";
+                            id = "0d3cf8d-95dc-4466-8dc0-47e6d1197e28";
+                            status = "REJECTED";
+                        }}),
+                        add(new FeedConnection() {{
+                            accountId = "079a88ea-276d-41fb-a1f1-366ef3e22921";
+                            accountName = "Joe's Savings Account";
+                            accountNumber = "3809087654321500";
+                            accountToken = "10000123";
+                            accountType = "BANK";
+                            country = "GB";
+                            currency = "AUD";
+                            error = new Error() {{
+                                detail = "The application has not been configured to use these API endpoints.";
+                                status = 403;
+                                title = "Invalid Application";
+                                type = "invalid-application";
+                            }};
+                            id = "0d3cf8d-95dc-4466-8dc0-47e6d1197e28";
+                            status = "REJECTED";
+                        }}),
+                        add(new FeedConnection() {{
+                            accountId = "079a88ea-276d-41fb-a1f1-366ef3e22921";
+                            accountName = "Joe's Savings Account";
+                            accountNumber = "3809087654321500";
+                            accountToken = "10000123";
+                            accountType = "BANK";
+                            country = "GB";
+                            currency = "AUD";
+                            error = new Error() {{
+                                detail = "The application has not been configured to use these API endpoints.";
+                                status = 403;
+                                title = "Invalid Application";
+                                type = "invalid-application";
+                            }};
+                            id = "0d3cf8d-95dc-4466-8dc0-47e6d1197e28";
+                            status = "REJECTED";
                         }}),
                     }};
                     pagination = new Pagination() {{
-                        itemCount = 2339563716805116249;
-                        page = 7144924247938981575;
-                        pageCount = 161231572858529631;
-                        pageSize = 7259475919510918339;
+                        itemCount = 2;
+                        page = 1;
+                        pageCount = 1;
+                        pageSize = 10;
                     }};
                 }};
-            }};
+            }};            
 
             CreateFeedConnectionsResponse res = sdk.bankFeeds.createFeedConnections(req);
 
@@ -77,7 +124,8 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### BankFeeds
+
+### bankFeeds
 
 * `createFeedConnections` - Create one or more new feed connection
 * `createStatements` - Creates one or more new statements
@@ -86,7 +134,17 @@ public class Application {
 * `getFeedConnections` - Searches for feed connections
 * `getStatement` - Retrieve single statement based on unique id provided
 * `getStatements` - Retrieve all statements
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

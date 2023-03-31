@@ -2,29 +2,32 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AccountListNodeAgentSkusQueryParams;
+import org.openapis.openapi.models.operations.AccountListNodeAgentSkusHeaders;
+import org.openapis.openapi.models.operations.AccountListNodeAgentSkusRequest;
+import org.openapis.openapi.models.operations.AccountListNodeAgentSkusResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AccountListNodeAgentSkusRequest req = new AccountListNodeAgentSkusRequest() {{
                 queryParams = new AccountListNodeAgentSkusQueryParams() {{
-                    dollarFilter = "sit";
-                    apiVersion = "voluptas";
-                    maxresults = 6050128673802995827;
-                    timeout = 501233450539197794;
+                    dollarFilter = "corrupti";
+                    apiVersion = "provident";
+                    maxresults = 715190;
+                    timeout = 844266;
                 }};
                 headers = new AccountListNodeAgentSkusHeaders() {{
-                    clientRequestId = "consequuntur";
-                    ocpDate = "dolor";
-                    returnClientRequestId = true;
+                    clientRequestId = "unde";
+                    ocpDate = "nulla";
+                    returnClientRequestId = false;
                 }};
-            }};
+            }};            
 
             AccountListNodeAgentSkusResponse res = sdk.accounts.accountListNodeAgentSkus(req);
 

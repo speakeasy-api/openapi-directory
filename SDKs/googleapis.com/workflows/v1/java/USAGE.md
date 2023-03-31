@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListSecurity;
+import org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListPathParams;
+import org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListQueryParams;
+import org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListRequest;
+import org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             WorkflowsProjectsLocationsListRequest req = new WorkflowsProjectsLocationsListRequest() {{
                 security = new WorkflowsProjectsLocationsListSecurity() {{
@@ -22,25 +30,25 @@ public class Application {
                     }};
                 }};
                 pathParams = new WorkflowsProjectsLocationsListPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new WorkflowsProjectsLocationsListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    filter = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
-                    pageSize = 1543572285742637646;
-                    pageToken = "nihil";
-                    prettyPrint = true;
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    filter = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
+                    pageSize = 623564;
+                    pageToken = "deserunt";
+                    prettyPrint = false;
+                    quotaUser = "suscipit";
+                    uploadType = "iure";
+                    uploadProtocol = "magnam";
                 }};
-            }};
+            }};            
 
             WorkflowsProjectsLocationsListResponse res = sdk.projects.workflowsProjectsLocationsList(req);
 

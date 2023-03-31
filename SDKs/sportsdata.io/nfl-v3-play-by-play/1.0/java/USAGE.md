@@ -2,32 +2,32 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.PlayByPlayFormatEnum;
+import org.openapis.openapi.models.operations.PlayByPlayPathParams;
+import org.openapis.openapi.models.operations.PlayByPlayRequest;
+import org.openapis.openapi.models.operations.PlayByPlayResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyHeader = new SchemeApiKeyHeader() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKeyHeader = new SchemeAPIKeyHeader() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             PlayByPlayRequest req = new PlayByPlayRequest() {{
                 pathParams = new PlayByPlayPathParams() {{
-                    format = "XML";
-                    hometeam = "voluptas";
-                    season = "culpa";
-                    week = "expedita";
+                    format = "JSON";
+                    hometeam = "provident";
+                    season = "distinctio";
+                    week = "quibusdam";
                 }};
-            }};
+            }};            
 
             PlayByPlayResponse res = sdk.playByPlay(req);
 

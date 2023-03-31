@@ -2,54 +2,63 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.VectortileTerraintilesGetPathParams;
+import org.openapis.openapi.models.operations.VectortileTerraintilesGetClientInfoPlatformEnum;
+import org.openapis.openapi.models.operations.VectortileTerraintilesGetTerrainFormatsEnum;
+import org.openapis.openapi.models.operations.VectortileTerraintilesGetQueryParams;
+import org.openapis.openapi.models.operations.VectortileTerraintilesGetRequest;
+import org.openapis.openapi.models.operations.VectortileTerraintilesGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             VectortileTerraintilesGetRequest req = new VectortileTerraintilesGetRequest() {{
                 pathParams = new VectortileTerraintilesGetPathParams() {{
-                    name = "sit";
+                    name = "corrupti";
                 }};
                 queryParams = new VectortileTerraintilesGetQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    altitudePrecisionCentimeters = 3390393562759376202;
-                    callback = "dolor";
-                    clientInfoApiClient = "expedita";
-                    clientInfoApplicationId = "voluptas";
-                    clientInfoApplicationVersion = "fugit";
-                    clientInfoDeviceModel = "et";
-                    clientInfoOperatingSystem = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    altitudePrecisionCentimeters = 602763;
+                    callback = "nulla";
+                    clientInfoApiClient = "corrupti";
+                    clientInfoApplicationId = "illum";
+                    clientInfoApplicationVersion = "vel";
+                    clientInfoDeviceModel = "error";
+                    clientInfoOperatingSystem = "deserunt";
                     clientInfoPlatform = "WINDOWS";
-                    clientInfoUserId = "dicta";
-                    enableModeledVolumes = true;
-                    enablePoliticalFeatures = true;
+                    clientInfoUserId = "iure";
+                    enableModeledVolumes = false;
+                    enablePoliticalFeatures = false;
                     enablePrivateRoads = false;
                     enableUnclippedBuildings = false;
-                    fields = "dolorem";
-                    key = "et";
-                    languageCode = "voluptate";
-                    maxElevationResolutionCells = 3287288577352441706;
-                    minElevationResolutionCells = 3930927879439176946;
-                    oauthToken = "totam";
-                    prettyPrint = true;
-                    quotaUser = "illum";
-                    regionCode = "debitis";
-                    terrainFormats = new openapisdk.models.operations.VectortileTerraintilesGetTerrainFormatsEnum[]() {{
-                        add("TERRAIN_FORMAT_UNKNOWN"),
+                    fields = "magnam";
+                    key = "debitis";
+                    languageCode = "ipsa";
+                    maxElevationResolutionCells = 963663;
+                    minElevationResolutionCells = 272656;
+                    oauthToken = "suscipit";
+                    prettyPrint = false;
+                    quotaUser = "molestiae";
+                    regionCode = "minus";
+                    terrainFormats = new org.openapis.openapi.models.operations.VectortileTerraintilesGetTerrainFormatsEnum[]{{
+                        add("FIRST_DERIVATIVE"),
+                        add("FIRST_DERIVATIVE"),
+                        add("FIRST_DERIVATIVE"),
                         add("FIRST_DERIVATIVE"),
                     }};
-                    uploadType = "id";
-                    uploadProtocol = "aspernatur";
+                    uploadType = "recusandae";
+                    uploadProtocol = "temporibus";
                 }};
-            }};
+            }};            
 
             VectortileTerraintilesGetResponse res = sdk.terraintiles.vectortileTerraintilesGet(req);
 

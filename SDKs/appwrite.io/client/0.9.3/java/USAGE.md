@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AccountCreateSecurity;
+import org.openapis.openapi.models.operations.AccountCreateRequestBody;
+import org.openapis.openapi.models.operations.AccountCreateRequest;
+import org.openapis.openapi.models.operations.AccountCreateResponse;
+import org.openapis.openapi.models.shared.SchemeProject;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AccountCreateRequest req = new AccountCreateRequest() {{
                 security = new AccountCreateSecurity() {{
@@ -19,11 +23,11 @@ public class Application {
                     }};
                 }};
                 request = new AccountCreateRequestBody() {{
-                    email = "sit";
-                    name = "voluptas";
-                    password = "culpa";
+                    email = "Larue_Rau85@yahoo.com";
+                    name = "corrupti";
+                    password = "illum";
                 }};
-            }};
+            }};            
 
             AccountCreateResponse res = sdk.account.accountCreate(req);
 

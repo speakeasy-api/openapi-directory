@@ -2,15 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption1;
+import org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurityOption2;
+import org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateSecurity;
+import org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreatePathParams;
+import org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateQueryParams;
+import org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateRequest;
+import org.openapis.openapi.models.operations.CloudkmsProjectsLocationsEkmConnectionsCreateResponse;
+import org.openapis.openapi.models.shared.EkmConnectionKeyManagementModeEnum;
+import org.openapis.openapi.models.shared.EkmConnectionInput;
+import org.openapis.openapi.models.shared.ServiceResolverInput;
+import org.openapis.openapi.models.shared.CertificateInput;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudkmsProjectsLocationsEkmConnectionsCreateRequest req = new CloudkmsProjectsLocationsEkmConnectionsCreateRequest() {{
                 security = new CloudkmsProjectsLocationsEkmConnectionsCreateSecurity() {{
@@ -24,44 +38,49 @@ public class Application {
                     }};
                 }};
                 pathParams = new CloudkmsProjectsLocationsEkmConnectionsCreatePathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new CloudkmsProjectsLocationsEkmConnectionsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    ekmConnectionId = "dolor";
-                    fields = "expedita";
-                    key = "voluptas";
-                    oauthToken = "fugit";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    ekmConnectionId = "nulla";
+                    fields = "corrupti";
+                    key = "illum";
+                    oauthToken = "vel";
                     prettyPrint = false;
-                    quotaUser = "nihil";
-                    uploadType = "rerum";
-                    uploadProtocol = "dicta";
+                    quotaUser = "error";
+                    uploadType = "deserunt";
+                    uploadProtocol = "suscipit";
                 }};
                 request = new EkmConnectionInput() {{
-                    etag = "debitis";
-                    serviceResolvers = new openapisdk.models.shared.ServiceResolverInput[]() {{
+                    cryptoSpacePath = "iure";
+                    etag = "magnam";
+                    keyManagementMode = "CLOUD_KMS";
+                    serviceResolvers = new org.openapis.openapi.models.shared.ServiceResolverInput[]{{
                         add(new ServiceResolverInput() {{
-                            endpointFilter = "et";
-                            hostname = "ut";
-                            serverCertificates = new openapisdk.models.shared.CertificateInput[]() {{
+                            endpointFilter = "delectus";
+                            hostname = "fatherly-geyser.info";
+                            serverCertificates = new org.openapis.openapi.models.shared.CertificateInput[]{{
                                 add(new CertificateInput() {{
-                                    rawDer = "et";
+                                    rawDer = "placeat";
                                 }}),
                                 add(new CertificateInput() {{
-                                    rawDer = "voluptate";
+                                    rawDer = "voluptatum";
                                 }}),
                                 add(new CertificateInput() {{
-                                    rawDer = "iste";
+                                    rawDer = "iusto";
+                                }}),
+                                add(new CertificateInput() {{
+                                    rawDer = "excepturi";
                                 }}),
                             }};
-                            serviceDirectoryService = "vitae";
+                            serviceDirectoryService = "nisi";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CloudkmsProjectsLocationsEkmConnectionsCreateResponse res = sdk.projects.cloudkmsProjectsLocationsEkmConnectionsCreate(req);
 

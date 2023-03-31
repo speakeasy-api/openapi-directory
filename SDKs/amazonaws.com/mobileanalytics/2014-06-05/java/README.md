@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,58 +15,104 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.PutEventsHeaders;
+import org.openapis.openapi.models.operations.PutEventsRequestBody;
+import org.openapis.openapi.models.operations.PutEventsRequest;
+import org.openapis.openapi.models.operations.PutEventsResponse;
+import org.openapis.openapi.models.shared.Event;
+import org.openapis.openapi.models.shared.Session;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             PutEventsRequest req = new PutEventsRequest() {{
                 headers = new PutEventsHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
-                    xAmzClientContext = "voluptas";
-                    xAmzClientContextEncoding = "fugit";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
+                    xAmzClientContext = "illum";
+                    xAmzClientContextEncoding = "vel";
                 }};
                 request = new PutEventsRequestBody() {{
-                    events = new openapisdk.models.shared.Event[]() {{
+                    events = new org.openapis.openapi.models.shared.Event[]{{
                         add(new Event() {{
                             attributes = new java.util.HashMap<String, String>() {{
-                                put("rerum", "dicta");
+                                put("suscipit", "iure");
+                                put("magnam", "debitis");
+                                put("ipsa", "delectus");
                             }};
-                            eventType = "debitis";
+                            eventType = "tempora";
                             metrics = new java.util.HashMap<String, Double>() {{
-                                put("et", 11.100000);
+                                put("molestiae", 7917.25);
+                                put("placeat", 5288.95);
                             }};
                             session = new Session() {{
-                                duration = 7259475919510918339;
-                                id = "voluptate";
-                                startTimestamp = "iste";
-                                stopTimestamp = "vitae";
+                                duration = 479977;
+                                id = "excepturi";
+                                startTimestamp = "nisi";
+                                stopTimestamp = "recusandae";
                             }};
-                            timestamp = "totam";
-                            version = "dolores";
+                            timestamp = "temporibus";
+                            version = "ab";
+                        }}),
+                        add(new Event() {{
+                            attributes = new java.util.HashMap<String, String>() {{
+                                put("veritatis", "deserunt");
+                                put("perferendis", "ipsam");
+                            }};
+                            eventType = "repellendus";
+                            metrics = new java.util.HashMap<String, Double>() {{
+                                put("quo", 1403.5);
+                                put("at", 8700.88);
+                                put("maiores", 4736.08);
+                                put("quod", 8009.11);
+                            }};
+                            session = new Session() {{
+                                duration = 461479;
+                                id = "totam";
+                                startTimestamp = "porro";
+                                stopTimestamp = "dolorum";
+                            }};
+                            timestamp = "dicta";
+                            version = "nam";
+                        }}),
+                        add(new Event() {{
+                            attributes = new java.util.HashMap<String, String>() {{
+                                put("occaecati", "fugit");
+                                put("deleniti", "hic");
+                                put("optio", "totam");
+                            }};
+                            eventType = "beatae";
+                            metrics = new java.util.HashMap<String, Double>() {{
+                                put("molestiae", 2645.55);
+                                put("qui", 7742.34);
+                            }};
+                            session = new Session() {{
+                                duration = 736918;
+                                id = "esse";
+                                startTimestamp = "ipsum";
+                                stopTimestamp = "excepturi";
+                            }};
+                            timestamp = "aspernatur";
+                            version = "perferendis";
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             PutEventsResponse res = sdk.putEvents(req);
 
@@ -85,7 +131,17 @@ public class Application {
 ### SDK SDK
 
 * `putEvents` - The PutEvents operation records one or more events. You can have up to 1,500 unique custom events per app, any combination of up to 40 attributes and metrics per custom event, and any number of attribute or metric values.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,34 +2,37 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetFlightOffersTravelClassEnum;
+import org.openapis.openapi.models.operations.GetFlightOffersQueryParams;
+import org.openapis.openapi.models.operations.GetFlightOffersRequest;
+import org.openapis.openapi.models.operations.GetFlightOffersResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetFlightOffersRequest req = new GetFlightOffersRequest() {{
                 queryParams = new GetFlightOffersQueryParams() {{
-                    adults = 8717895732742165505;
-                    children = 2259404117704393152;
-                    currencyCode = "culpa";
-                    departureDate = "2019-04-21";
-                    destinationLocationCode = "consequuntur";
-                    excludedAirlineCodes = "dolor";
-                    includedAirlineCodes = "expedita";
-                    infants = 6044372234677422456;
-                    max = 8274930044578894929;
-                    maxPrice = 1543572285742637646;
-                    nonStop = true;
-                    originLocationCode = "rerum";
-                    returnDate = "2004-06-02";
-                    travelClass = "ECONOMY";
+                    adults = 548814;
+                    children = 592845;
+                    currencyCode = "distinctio";
+                    departureDate = "2021-03-11";
+                    destinationLocationCode = "nulla";
+                    excludedAirlineCodes = "corrupti";
+                    includedAirlineCodes = "illum";
+                    infants = 423655;
+                    max = 623564;
+                    maxPrice = 645894;
+                    nonStop = false;
+                    originLocationCode = "suscipit";
+                    returnDate = "2022-09-14";
+                    travelClass = "FIRST";
                 }};
-            }};
+            }};            
 
             GetFlightOffersResponse res = sdk.shopping.getFlightOffers(req);
 

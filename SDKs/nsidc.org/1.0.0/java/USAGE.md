@@ -2,29 +2,33 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.FacetsSortKeysEnum;
+import org.openapis.openapi.models.operations.FacetsSourceEnum;
+import org.openapis.openapi.models.operations.FacetsQueryParams;
+import org.openapis.openapi.models.operations.FacetsRequest;
+import org.openapis.openapi.models.operations.FacetsResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             FacetsRequest req = new FacetsRequest() {{
                 queryParams = new FacetsQueryParams() {{
-                    count = 8717895732742165505;
-                    endDate = "2006-05-01";
-                    facetFilters = "culpa";
-                    searchTerms = "expedita";
+                    count = 548814;
+                    endDate = "2021-07-27";
+                    facetFilters = "quibusdam";
+                    searchTerms = "unde";
                     sortKeys = "updated,,desc";
-                    source = "NSIDC";
-                    spatial = "expedita";
-                    startDate = "1978-05-28";
-                    startIndex = 8274930044578894929;
+                    source = "ADE";
+                    spatial = "illum";
+                    startDate = "2022-05-18";
+                    startIndex = 645894;
                 }};
-            }};
+            }};            
 
             FacetsResponse res = sdk.swaggerDocs.facets(req);
 

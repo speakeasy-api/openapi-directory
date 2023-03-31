@@ -2,15 +2,19 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DoctorsListSecurity;
+import org.openapis.openapi.models.operations.DoctorsListQueryParams;
+import org.openapis.openapi.models.operations.DoctorsListRequest;
+import org.openapis.openapi.models.operations.DoctorsListResponse;
+import org.openapis.openapi.models.shared.SchemeDrchronoOauth2;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DoctorsListRequest req = new DoctorsListRequest() {{
                 security = new DoctorsListSecurity() {{
@@ -19,11 +23,11 @@ public class Application {
                     }};
                 }};
                 queryParams = new DoctorsListQueryParams() {{
-                    cursor = "sit";
-                    doctor = 2259404117704393152;
-                    pageSize = 6050128673802995827;
+                    cursor = "corrupti";
+                    doctor = 592845;
+                    pageSize = 715190;
                 }};
-            }};
+            }};            
 
             DoctorsListResponse res = sdk.administrative.doctorsList(req);
 

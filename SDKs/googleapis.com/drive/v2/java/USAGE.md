@@ -2,15 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption1;
+import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption2;
+import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption3;
+import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption4;
+import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption5;
+import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption6;
+import org.openapis.openapi.models.operations.DriveAboutGetSecurityOption7;
+import org.openapis.openapi.models.operations.DriveAboutGetSecurity;
+import org.openapis.openapi.models.operations.DriveAboutGetQueryParams;
+import org.openapis.openapi.models.operations.DriveAboutGetRequest;
+import org.openapis.openapi.models.operations.DriveAboutGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DriveAboutGetRequest req = new DriveAboutGetRequest() {{
                 security = new DriveAboutGetSecurity() {{
@@ -25,17 +38,17 @@ public class Application {
                 }};
                 queryParams = new DriveAboutGetQueryParams() {{
                     alt = "json";
-                    fields = "voluptas";
-                    includeSubscribed = true;
-                    key = "expedita";
-                    maxChangeIdCount = "consequuntur";
-                    oauthToken = "dolor";
-                    prettyPrint = true;
-                    quotaUser = "voluptas";
-                    startChangeId = "fugit";
-                    userIp = "et";
+                    fields = "corrupti";
+                    includeSubscribed = false;
+                    key = "provident";
+                    maxChangeIdCount = "distinctio";
+                    oauthToken = "quibusdam";
+                    prettyPrint = false;
+                    quotaUser = "unde";
+                    startChangeId = "nulla";
+                    userIp = "corrupti";
                 }};
-            }};
+            }};            
 
             DriveAboutGetResponse res = sdk.about.driveAboutGet(req);
 

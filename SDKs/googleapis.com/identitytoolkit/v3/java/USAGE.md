@@ -2,15 +2,22 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriSecurity;
+import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriQueryParams;
+import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriRequest;
+import org.openapis.openapi.models.operations.IdentitytoolkitRelyingpartyCreateAuthUriResponse;
+import org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartyCreateAuthUriRequest;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             IdentitytoolkitRelyingpartyCreateAuthUriRequest req = new IdentitytoolkitRelyingpartyCreateAuthUriRequest() {{
                 security = new IdentitytoolkitRelyingpartyCreateAuthUriSecurity() {{
@@ -23,36 +30,36 @@ public class Application {
                 }};
                 queryParams = new IdentitytoolkitRelyingpartyCreateAuthUriQueryParams() {{
                     alt = "json";
-                    fields = "voluptas";
-                    key = "culpa";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "dolor";
-                    userIp = "expedita";
+                    fields = "corrupti";
+                    key = "provident";
+                    oauthToken = "distinctio";
+                    prettyPrint = false;
+                    quotaUser = "quibusdam";
+                    userIp = "unde";
                 }};
                 request = new IdentitytoolkitRelyingpartyCreateAuthUriRequest() {{
-                    appId = "voluptas";
-                    authFlowType = "fugit";
-                    clientId = "et";
-                    context = "nihil";
-                    continueUri = "rerum";
+                    appId = "nulla";
+                    authFlowType = "corrupti";
+                    clientId = "illum";
+                    context = "vel";
+                    continueUri = "error";
                     customParameter = new java.util.HashMap<String, String>() {{
-                        put("debitis", "voluptatum");
-                        put("et", "ut");
-                        put("dolorem", "et");
+                        put("suscipit", "iure");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
-                    hostedDomain = "voluptate";
-                    identifier = "iste";
-                    oauthConsumerKey = "vitae";
-                    oauthScope = "totam";
-                    openidRealm = "dolores";
-                    otaApp = "illum";
-                    providerId = "debitis";
-                    sessionId = "vel";
-                    tenantId = "odio";
-                    tenantProjectNumber = "dolore";
+                    hostedDomain = "tempora";
+                    identifier = "suscipit";
+                    oauthConsumerKey = "molestiae";
+                    oauthScope = "minus";
+                    openidRealm = "placeat";
+                    otaApp = "voluptatum";
+                    providerId = "iusto";
+                    sessionId = "excepturi";
+                    tenantId = "nisi";
+                    tenantProjectNumber = "recusandae";
                 }};
-            }};
+            }};            
 
             IdentitytoolkitRelyingpartyCreateAuthUriResponse res = sdk.relyingparty.identitytoolkitRelyingpartyCreateAuthUri(req);
 

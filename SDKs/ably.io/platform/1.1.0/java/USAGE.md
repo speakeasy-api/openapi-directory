@@ -2,37 +2,52 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.RequestAccessTokenPathParams;
+import org.openapis.openapi.models.operations.RequestAccessTokenQueryParams;
+import org.openapis.openapi.models.operations.RequestAccessTokenHeaders;
+import org.openapis.openapi.models.operations.RequestAccessTokenRequest;
+import org.openapis.openapi.models.operations.RequestAccessTokenResponse;
+import org.openapis.openapi.models.shared.TokenRequest;
+import org.openapis.openapi.models.shared.SignedTokenRequest;
+import org.openapis.openapi.models.shared.ResponseFormatEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     basicAuth = new SchemeBasicAuth() {{
                         password = "YOUR_PASSWORD_HERE";
                         username = "YOUR_USERNAME_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             RequestAccessTokenRequest req = new RequestAccessTokenRequest() {{
                 pathParams = new RequestAccessTokenPathParams() {{
-                    keyName = "sit";
+                    keyName = "corrupti";
                 }};
                 queryParams = new RequestAccessTokenQueryParams() {{
                     format = "msgpack";
                 }};
                 headers = new RequestAccessTokenHeaders() {{
-                    xAblyVersion = "culpa";
+                    xAblyVersion = "distinctio";
                 }};
-                request = "expedita";
-            }};
+                request = new SignedTokenRequest() {{
+                    capability = new java.util.HashMap<String, Object>() {{
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
+                        put("error", "deserunt");
+                    }};
+                    clientId = "suscipit";
+                    keyName = "xVLyHw.LMJZxw";
+                    mac = "iure";
+                    nonce = "magnam";
+                    timestamp = 891773;
+                }};
+            }};            
 
             RequestAccessTokenResponse res = sdk.authentication.requestAccessToken(req);
 

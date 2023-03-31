@@ -2,15 +2,26 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurityOption1;
+import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurityOption2;
+import org.openapis.openapi.models.operations.DriveactivityActivityQuerySecurity;
+import org.openapis.openapi.models.operations.DriveactivityActivityQueryQueryParams;
+import org.openapis.openapi.models.operations.DriveactivityActivityQueryRequest;
+import org.openapis.openapi.models.operations.DriveactivityActivityQueryResponse;
+import org.openapis.openapi.models.shared.QueryDriveActivityRequest;
+import org.openapis.openapi.models.shared.ConsolidationStrategy;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DriveactivityActivityQueryRequest req = new DriveactivityActivityQueryRequest() {{
                 security = new DriveactivityActivityQuerySecurity() {{
@@ -24,36 +35,38 @@ public class Application {
                     }};
                 }};
                 queryParams = new DriveactivityActivityQueryQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    quotaUser = "fugit";
-                    uploadType = "et";
-                    uploadProtocol = "nihil";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    quotaUser = "illum";
+                    uploadType = "vel";
+                    uploadProtocol = "error";
                 }};
                 request = new QueryDriveActivityRequest() {{
-                    ancestorName = "rerum";
+                    ancestorName = "deserunt";
                     consolidationStrategy = new ConsolidationStrategy() {{
                         legacy = new java.util.HashMap<String, Object>() {{
-                            put("debitis", "voluptatum");
-                            put("et", "ut");
-                            put("dolorem", "et");
+                            put("iure", "magnam");
+                            put("debitis", "ipsa");
                         }};
                         none = new java.util.HashMap<String, Object>() {{
-                            put("iste", "vitae");
+                            put("tempora", "suscipit");
+                            put("molestiae", "minus");
+                            put("placeat", "voluptatum");
+                            put("iusto", "excepturi");
                         }};
                     }};
-                    filter = "totam";
-                    itemName = "dolores";
-                    pageSize = 1929546706668609706;
-                    pageToken = "debitis";
+                    filter = "nisi";
+                    itemName = "recusandae";
+                    pageSize = 836079;
+                    pageToken = "ab";
                 }};
-            }};
+            }};            
 
             DriveactivityActivityQueryResponse res = sdk.activity.driveactivityActivityQuery(req);
 

@@ -2,64 +2,72 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypePathParams;
+import org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeVehicleEngineTypeEnum;
+import org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams;
+import org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest;
+import org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse;
+import org.openapis.openapi.models.shared.WindingnessEnum;
+import org.openapis.openapi.models.shared.TravelModeEnum;
+import org.openapis.openapi.models.shared.RouteTypeEnum;
+import org.openapis.openapi.models.shared.ReportEnum;
+import org.openapis.openapi.models.shared.HillinessEnum;
+import org.openapis.openapi.models.shared.VersionNumberEnum;
+import org.openapis.openapi.models.shared.ContentTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKey = new SchemeApiKey() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest req = new GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest() {{
                 pathParams = new GetRoutingVersionNumberCalculateReachableRangeOriginContentTypePathParams() {{
-                    contentType = "xml";
-                    origin = "voluptas";
-                    versionNumber = 6050128673802995827;
+                    contentType = "json";
+                    origin = "provident";
+                    versionNumber = "1";
                 }};
                 queryParams = new GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams() {{
-                    accelerationEfficiency = 6.200000;
-                    arriveAt = "dolor";
-                    auxiliaryPowerInLitersPerHour = 67.199997;
-                    avoid = "fugit";
-                    callback = "et";
-                    constantSpeedConsumptionInLitersPerHundredkm = "nihil";
-                    constantSpeedConsumptionInkWhPerHundredkm = "rerum";
-                    currentFuelInLiters = 59.099998;
-                    decelerationEfficiency = 52.099998;
-                    departAt = "ut";
-                    downhillEfficiency = 50.099998;
-                    energyBudgetInkWh = 94.199997;
-                    fuelBudgetInLiters = 68.099998;
-                    fuelEnergyDensityInMJoulesPerLiter = 80.199997;
-                    hilliness = "low";
+                    accelerationEfficiency = 7151.9;
+                    arriveAt = "quibusdam";
+                    auxiliaryPowerInLitersPerHour = 6027.63;
+                    avoid = "nulla";
+                    callback = "corrupti";
+                    constantSpeedConsumptionInLitersPerHundredkm = "illum";
+                    constantSpeedConsumptionInkWhPerHundredkm = "vel";
+                    currentFuelInLiters = 6235.64;
+                    decelerationEfficiency = 6458.94;
+                    departAt = "suscipit";
+                    downhillEfficiency = 4375.87;
+                    energyBudgetInkWh = 2975.34;
+                    fuelBudgetInLiters = 8917.73;
+                    fuelEnergyDensityInMJoulesPerLiter = 567.13;
+                    hilliness = "high";
                     report = "effectiveSettings";
-                    routeType = "fastest";
-                    timeBudgetInSec = 91.099998;
-                    traffic = true;
-                    travelMode = "van";
-                    uphillEfficiency = 45.099998;
-                    vehicleAxleWeight = 2897681629866238117;
+                    routeType = "shortest";
+                    timeBudgetInSec = 3834.41;
+                    traffic = false;
+                    travelMode = "bus";
+                    uphillEfficiency = 7917.25;
+                    vehicleAxleWeight = 812169;
                     vehicleCommercial = false;
-                    vehicleEngineType = "combustion";
-                    vehicleHeight = 10.200000;
-                    vehicleLength = 14.200000;
-                    vehicleLoadType = "aut";
-                    vehicleMaxSpeed = 6972732843819909978;
-                    vehicleWeight = 5558237345453186302;
-                    vehicleWidth = 19.200001;
-                    windingness = "low";
+                    vehicleEngineType = "electric";
+                    vehicleHeight = 4799.77;
+                    vehicleLength = 5680.45;
+                    vehicleLoadType = "nisi";
+                    vehicleMaxSpeed = 925597;
+                    vehicleWeight = 836079;
+                    vehicleWidth = 710.36;
+                    windingness = "normal";
                 }};
-            }};
+            }};            
 
             GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse res = sdk.routing.getRoutingVersionNumberCalculateReachableRangeOriginContentType(req);
 

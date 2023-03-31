@@ -2,66 +2,78 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.MybusinessAccountsCreateQueryParams;
+import org.openapis.openapi.models.operations.MybusinessAccountsCreateRequest;
+import org.openapis.openapi.models.operations.MybusinessAccountsCreateResponse;
+import org.openapis.openapi.models.shared.AccountPermissionLevelEnum;
+import org.openapis.openapi.models.shared.AccountRoleEnum;
+import org.openapis.openapi.models.shared.AccountTypeEnum;
+import org.openapis.openapi.models.shared.Account;
+import org.openapis.openapi.models.shared.AccountStateStatusEnum;
+import org.openapis.openapi.models.shared.AccountState;
+import org.openapis.openapi.models.shared.OrganizationInfo;
+import org.openapis.openapi.models.shared.PostalAddress;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             MybusinessAccountsCreateRequest req = new MybusinessAccountsCreateRequest() {{
                 queryParams = new MybusinessAccountsCreateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    prettyPrint = true;
-                    primaryOwner = "fugit";
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    prettyPrint = false;
+                    primaryOwner = "illum";
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new Account() {{
-                    accountName = "dicta";
-                    accountNumber = "debitis";
-                    name = "voluptatum";
+                    accountName = "suscipit";
+                    accountNumber = "iure";
+                    name = "magnam";
                     organizationInfo = new OrganizationInfo() {{
-                        phoneNumber = "et";
+                        phoneNumber = "debitis";
                         postalAddress = new PostalAddress() {{
-                            addressLines = new String[]() {{
-                                add("dolorem"),
-                                add("et"),
-                                add("voluptate"),
+                            addressLines = new String[]{{
+                                add("delectus"),
                             }};
-                            administrativeArea = "iste";
-                            languageCode = "vitae";
-                            locality = "totam";
-                            organization = "dolores";
-                            postalCode = "illum";
-                            recipients = new String[]() {{
-                                add("vel"),
+                            administrativeArea = "tempora";
+                            languageCode = "suscipit";
+                            locality = "molestiae";
+                            organization = "minus";
+                            postalCode = "54539-8030";
+                            recipients = new String[]{{
+                                add("perferendis"),
+                                add("ipsam"),
+                                add("repellendus"),
                             }};
-                            regionCode = "odio";
-                            revision = 6303220950515014660;
-                            sortingCode = "id";
-                            sublocality = "aspernatur";
+                            regionCode = "sapiente";
+                            revision = 778157;
+                            sortingCode = "odit";
+                            sublocality = "at";
                         }};
-                        registeredDomain = "accusantium";
+                        registeredDomain = "at";
                     }};
                     permissionLevel = "MEMBER_LEVEL";
-                    role = "COMMUNITY_MANAGER";
+                    role = "CO_OWNER";
                     state = new AccountState() {{
-                        status = "UNVERIFIED";
+                        status = "VERIFICATION_REQUESTED";
                     }};
-                    type = "USER_GROUP";
+                    type = "ORGANIZATION";
                 }};
-            }};
+            }};            
 
             MybusinessAccountsCreateResponse res = sdk.accounts.mybusinessAccountsCreate(req);
 

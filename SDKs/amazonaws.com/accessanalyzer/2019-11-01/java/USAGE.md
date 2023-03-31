@@ -2,40 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.ApplyArchiveRuleHeaders;
+import org.openapis.openapi.models.operations.ApplyArchiveRuleRequestBody;
+import org.openapis.openapi.models.operations.ApplyArchiveRuleRequest;
+import org.openapis.openapi.models.operations.ApplyArchiveRuleResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             ApplyArchiveRuleRequest req = new ApplyArchiveRuleRequest() {{
                 headers = new ApplyArchiveRuleHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                 }};
                 request = new ApplyArchiveRuleRequestBody() {{
-                    analyzerArn = "voluptas";
-                    clientToken = "fugit";
-                    ruleName = "et";
+                    analyzerArn = "illum";
+                    clientToken = "vel";
+                    ruleName = "error";
                 }};
-            }};
+            }};            
 
             ApplyArchiveRuleResponse res = sdk.applyArchiveRule(req);
 

@@ -2,36 +2,40 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DetectDeviceSecurity;
+import org.openapis.openapi.models.operations.DetectDeviceRequest;
+import org.openapis.openapi.models.operations.DetectDeviceResponse;
+import org.openapis.openapi.models.shared.DeviceFeatures;
+import org.openapis.openapi.models.shared.SchemeAPIKeyHeader;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            DetectDeviceDetectPostRequest req = new DetectDeviceDetectPostRequest() {{
-                security = new DetectDeviceDetectPostSecurity() {{
-                    apiKeyHeader = new SchemeApiKeyHeader() {{
+            DetectDeviceRequest req = new DetectDeviceRequest() {{
+                security = new DetectDeviceSecurity() {{
+                    apiKeyHeader = new SchemeAPIKeyHeader() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 request = new DeviceFeatures() {{
-                    ftpBanner = "sit";
-                    hostname = "voluptas";
-                    httpResponse = "culpa";
-                    httpsResponse = "expedita";
-                    nicMac = "consequuntur";
-                    snmpSysdescr = "dolor";
-                    snmpSysoid = "expedita";
-                    telnetBanner = "voluptas";
-                    upnpResponse = "fugit";
+                    ftpBanner = "corrupti";
+                    hostname = "opulent-rabbit.org";
+                    httpResponse = "unde";
+                    httpsResponse = "nulla";
+                    nicMac = "corrupti";
+                    snmpSysdescr = "illum";
+                    snmpSysoid = "vel";
+                    telnetBanner = "error";
+                    upnpResponse = "deserunt";
                 }};
-            }};
+            }};            
 
-            DetectDeviceDetectPostResponse res = sdk.device.detectDeviceDetectPost(req);
+            DetectDeviceResponse res = sdk.device.detectDevice(req);
 
             if (res.deviceInfo.isPresent()) {
                 // handle response

@@ -2,150 +2,191 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateBudgetXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateBudgetHeaders;
+import org.openapis.openapi.models.operations.CreateBudgetRequest;
+import org.openapis.openapi.models.operations.CreateBudgetResponse;
+import org.openapis.openapi.models.shared.CreateBudgetRequest;
+import org.openapis.openapi.models.shared.NotificationWithSubscribers;
+import org.openapis.openapi.models.shared.Subscriber;
+import org.openapis.openapi.models.shared.SubscriptionTypeEnum;
+import org.openapis.openapi.models.shared.Notification;
+import org.openapis.openapi.models.shared.ThresholdTypeEnum;
+import org.openapis.openapi.models.shared.NotificationTypeEnum;
+import org.openapis.openapi.models.shared.NotificationStateEnum;
+import org.openapis.openapi.models.shared.ComparisonOperatorEnum;
+import org.openapis.openapi.models.shared.Budget;
+import org.openapis.openapi.models.shared.TimeUnitEnum;
+import org.openapis.openapi.models.shared.TimePeriod;
+import org.openapis.openapi.models.shared.Spend;
+import org.openapis.openapi.models.shared.CostTypes;
+import org.openapis.openapi.models.shared.CalculatedSpend;
+import org.openapis.openapi.models.shared.BudgetTypeEnum;
+import org.openapis.openapi.models.shared.AutoAdjustData;
+import org.openapis.openapi.models.shared.HistoricalOptions;
+import org.openapis.openapi.models.shared.AutoAdjustTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateBudgetRequest req = new CreateBudgetRequest() {{
                 headers = new CreateBudgetHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AWSBudgetServiceGateway.CreateBudget";
                 }};
                 request = new CreateBudgetRequest() {{
-                    accountId = "fugit";
+                    accountId = "illum";
                     budget = new Budget() {{
-                        budgetLimit = new Spend() {{
-                            amount = "et";
-                            unit = "nihil";
+                        autoAdjustData = new AutoAdjustData() {{
+                            autoAdjustType = "HISTORICAL";
+                            historicalOptions = new HistoricalOptions() {{
+                                budgetAdjustmentPeriod = 623564;
+                                lookBackAvailablePeriods = 645894;
+                            }};
+                            lastAutoAdjustTime = "2022-07-25T06:44:09.184Z";
                         }};
-                        budgetName = "rerum";
+                        budgetLimit = new Spend() {{
+                            amount = "magnam";
+                            unit = "debitis";
+                        }};
+                        budgetName = "ipsa";
                         budgetType = "SAVINGS_PLANS_COVERAGE";
                         calculatedSpend = new CalculatedSpend() {{
                             actualSpend = new Spend() {{
-                                amount = "debitis";
-                                unit = "voluptatum";
+                                amount = "tempora";
+                                unit = "suscipit";
                             }};
                             forecastedSpend = new Spend() {{
-                                amount = "et";
-                                unit = "ut";
+                                amount = "molestiae";
+                                unit = "minus";
                             }};
                         }};
                         costFilters = new java.util.HashMap<String, String[]>() {{
-                            put("et", new String[]() {{
-                                add("iste"),
+                            put("voluptatum", new String[]{{
+                                add("excepturi"),
+                                add("nisi"),
                             }});
-                            put("vitae", new String[]() {{
-                                add("dolores"),
-                                add("illum"),
-                                add("debitis"),
+                            put("recusandae", new String[]{{
+                                add("ab"),
+                                add("quis"),
+                                add("veritatis"),
+                                add("deserunt"),
                             }});
-                            put("vel", new String[]() {{
-                                add("dolore"),
+                            put("perferendis", new String[]{{
+                                add("repellendus"),
+                                add("sapiente"),
+                            }});
+                            put("quo", new String[]{{
+                                add("at"),
                             }});
                         }};
                         costTypes = new CostTypes() {{
                             includeCredit = false;
-                            includeDiscount = true;
-                            includeOtherSubscription = true;
+                            includeDiscount = false;
+                            includeOtherSubscription = false;
                             includeRecurring = false;
                             includeRefund = false;
-                            includeSubscription = true;
+                            includeSubscription = false;
                             includeSupport = false;
-                            includeTax = true;
-                            includeUpfront = true;
-                            useAmortized = true;
+                            includeTax = false;
+                            includeUpfront = false;
+                            useAmortized = false;
                             useBlended = false;
                         }};
-                        lastUpdatedTime = "1987-09-29T10:21:53Z";
-                        plannedBudgetLimits = new java.util.HashMap<String, openapisdk.models.shared.Spend>() {{
-                            put("illo", new Spend() {{
-                                amount = "sed";
-                                unit = "officiis";
+                        lastUpdatedTime = "2020-01-25T09:54:35.794Z";
+                        plannedBudgetLimits = new java.util.HashMap<String, org.openapis.openapi.models.shared.Spend>() {{
+                            put("quod", new Spend() {{
+                                amount = "quod";
+                                unit = "esse";
+                            }});
+                            put("totam", new Spend() {{
+                                amount = "porro";
+                                unit = "dolorum";
                             }});
                         }};
                         timePeriod = new TimePeriod() {{
-                            end = "2017-04-22T14:51:53Z";
-                            start = "1990-12-08T19:16:18Z";
+                            end = "2022-04-12T23:15:28.420Z";
+                            start = "2021-11-02T03:00:47.309Z";
                         }};
-                        timeUnit = "MONTHLY";
+                        timeUnit = "DAILY";
                     }};
-                    notificationsWithSubscribers = new openapisdk.models.shared.NotificationWithSubscribers[]() {{
+                    notificationsWithSubscribers = new org.openapis.openapi.models.shared.NotificationWithSubscribers[]{{
+                        add(new NotificationWithSubscribers() {{
+                            notification = new Notification() {{
+                                comparisonOperator = "EQUAL_TO";
+                                notificationState = "ALARM";
+                                notificationType = "FORECASTED";
+                                threshold = 1059.07;
+                                thresholdType = "PERCENTAGE";
+                            }};
+                            subscribers = new org.openapis.openapi.models.shared.Subscriber[]{{
+                                add(new Subscriber() {{
+                                    address = "modi";
+                                    subscriptionType = "SNS";
+                                }}),
+                                add(new Subscriber() {{
+                                    address = "impedit";
+                                    subscriptionType = "EMAIL";
+                                }}),
+                            }};
+                        }}),
                         add(new NotificationWithSubscribers() {{
                             notification = new Notification() {{
                                 comparisonOperator = "LESS_THAN";
                                 notificationState = "OK";
-                                notificationType = "ACTUAL";
-                                threshold = 19.100000;
-                                thresholdType = "ABSOLUTE_VALUE";
+                                notificationType = "FORECASTED";
+                                threshold = 1352.18;
+                                thresholdType = "PERCENTAGE";
                             }};
-                            subscribers = new openapisdk.models.shared.Subscriber[]() {{
+                            subscribers = new org.openapis.openapi.models.shared.Subscriber[]{{
                                 add(new Subscriber() {{
-                                    address = "exercitationem";
+                                    address = "natus";
                                     subscriptionType = "SNS";
                                 }}),
                                 add(new Subscriber() {{
-                                    address = "reprehenderit";
+                                    address = "iste";
+                                    subscriptionType = "SNS";
+                                }}),
+                            }};
+                        }}),
+                        add(new NotificationWithSubscribers() {{
+                            notification = new Notification() {{
+                                comparisonOperator = "LESS_THAN";
+                                notificationState = "OK";
+                                notificationType = "FORECASTED";
+                                threshold = 9025.99;
+                                thresholdType = "ABSOLUTE_VALUE";
+                            }};
+                            subscribers = new org.openapis.openapi.models.shared.Subscriber[]{{
+                                add(new Subscriber() {{
+                                    address = "corporis";
                                     subscriptionType = "EMAIL";
                                 }}),
                                 add(new Subscriber() {{
-                                    address = "maiores";
-                                    subscriptionType = "SNS";
-                                }}),
-                            }};
-                        }}),
-                        add(new NotificationWithSubscribers() {{
-                            notification = new Notification() {{
-                                comparisonOperator = "LESS_THAN";
-                                notificationState = "ALARM";
-                                notificationType = "FORECASTED";
-                                threshold = 80.199997;
-                                thresholdType = "ABSOLUTE_VALUE";
-                            }};
-                            subscribers = new openapisdk.models.shared.Subscriber[]() {{
-                                add(new Subscriber() {{
-                                    address = "ex";
-                                    subscriptionType = "SNS";
-                                }}),
-                            }};
-                        }}),
-                        add(new NotificationWithSubscribers() {{
-                            notification = new Notification() {{
-                                comparisonOperator = "GREATER_THAN";
-                                notificationState = "OK";
-                                notificationType = "FORECASTED";
-                                threshold = 89.099998;
-                                thresholdType = "ABSOLUTE_VALUE";
-                            }};
-                            subscribers = new openapisdk.models.shared.Subscriber[]() {{
-                                add(new Subscriber() {{
-                                    address = "qui";
-                                    subscriptionType = "SNS";
+                                    address = "iure";
+                                    subscriptionType = "EMAIL";
                                 }}),
                             }};
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CreateBudgetResponse res = sdk.createBudget(req);
 

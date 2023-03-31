@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,60 +15,67 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CountClosedWorkflowExecutionsXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CountClosedWorkflowExecutionsHeaders;
+import org.openapis.openapi.models.operations.CountClosedWorkflowExecutionsRequest;
+import org.openapis.openapi.models.operations.CountClosedWorkflowExecutionsResponse;
+import org.openapis.openapi.models.shared.CountClosedWorkflowExecutionsInput;
+import org.openapis.openapi.models.shared.WorkflowTypeFilter;
+import org.openapis.openapi.models.shared.TagFilter;
+import org.openapis.openapi.models.shared.ExecutionTimeFilter;
+import org.openapis.openapi.models.shared.WorkflowExecutionFilter;
+import org.openapis.openapi.models.shared.CloseStatusFilter;
+import org.openapis.openapi.models.shared.CloseStatusEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CountClosedWorkflowExecutionsRequest req = new CountClosedWorkflowExecutionsRequest() {{
                 headers = new CountClosedWorkflowExecutionsHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "SimpleWorkflowService.CountClosedWorkflowExecutions";
                 }};
                 request = new CountClosedWorkflowExecutionsInput() {{
                     closeStatusFilter = new CloseStatusFilter() {{
-                        status = "COMPLETED";
+                        status = "TIMED_OUT";
                     }};
                     closeTimeFilter = new ExecutionTimeFilter() {{
-                        latestDate = "2011-08-12T10:11:12Z";
-                        oldestDate = "2003-05-13T04:57:12Z";
+                        latestDate = "2022-05-18T09:34:54.894Z";
+                        oldestDate = "2022-03-26T09:37:56.283Z";
                     }};
-                    domain = "rerum";
+                    domain = "iure";
                     executionFilter = new WorkflowExecutionFilter() {{
-                        workflowId = "dicta";
+                        workflowId = "magnam";
                     }};
                     startTimeFilter = new ExecutionTimeFilter() {{
-                        latestDate = "2004-06-02T10:14:12Z";
-                        oldestDate = "1981-07-21T06:30:48Z";
+                        latestDate = "2022-10-30T21:34:57.850Z";
+                        oldestDate = "2022-03-08T10:35:32.561Z";
                     }};
                     tagFilter = new TagFilter() {{
-                        tag = "et";
+                        tag = "suscipit";
                     }};
                     typeFilter = new WorkflowTypeFilter() {{
-                        name = "ut";
-                        version = "dolorem";
+                        name = "molestiae";
+                        version = "minus";
                     }};
                 }};
-            }};
+            }};            
 
             CountClosedWorkflowExecutionsResponse res = sdk.countClosedWorkflowExecutions(req);
 
@@ -123,7 +130,17 @@ public class Application {
 * `undeprecateDomain` - <p>Undeprecates a previously deprecated domain. After a domain has been undeprecated it can be used to create new workflow executions or register new types.</p> <note> <p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and changes.</p> </note> <p> <b>Access Control</b> </p> <p>You can use IAM policies to control this action's access to Amazon SWF resources as follows:</p> <ul> <li> <p>Use a <code>Resource</code> element with the domain name to limit the action to only specified domains.</p> </li> <li> <p>Use an <code>Action</code> element to allow or deny permission to call this action.</p> </li> <li> <p>You cannot use an IAM policy to constrain this action's parameters.</p> </li> </ul> <p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
 * `undeprecateWorkflowType` - <p>Undeprecates a previously deprecated <i>workflow type</i>. After a workflow type has been undeprecated, you can create new executions of that type. </p> <note> <p>This operation is eventually consistent. The results are best effort and may not exactly reflect recent updates and changes.</p> </note> <p> <b>Access Control</b> </p> <p>You can use IAM policies to control this action's access to Amazon SWF resources as follows:</p> <ul> <li> <p>Use a <code>Resource</code> element with the domain name to limit the action to only specified domains.</p> </li> <li> <p>Use an <code>Action</code> element to allow or deny permission to call this action.</p> </li> <li> <p>Constrain the following parameters by using a <code>Condition</code> element with the appropriate keys.</p> <ul> <li> <p> <code>workflowType.name</code>: String constraint. The key is <code>swf:workflowType.name</code>.</p> </li> <li> <p> <code>workflowType.version</code>: String constraint. The key is <code>swf:workflowType.version</code>.</p> </li> </ul> </li> </ul> <p>If the caller doesn't have sufficient permissions to invoke the action, or the parameter values fall outside the specified constraints, the action fails. The associated event attribute's <code>cause</code> parameter is set to <code>OPERATION_NOT_PERMITTED</code>. For details and example IAM policies, see <a href="https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html">Using IAM to Manage Access to Amazon SWF Workflows</a> in the <i>Amazon SWF Developer Guide</i>.</p>
 * `untagResource` - Remove a tag from a Amazon SWF domain.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

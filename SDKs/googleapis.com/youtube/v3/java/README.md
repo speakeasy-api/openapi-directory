@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurityOption1;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurityOption2;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertSecurity;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertQueryParams;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertRequest;
+import org.openapis.openapi.models.operations.YoutubeAbuseReportsInsertResponse;
+import org.openapis.openapi.models.shared.AbuseReport;
+import org.openapis.openapi.models.shared.Entity;
+import org.openapis.openapi.models.shared.RelatedEntity;
+import org.openapis.openapi.models.shared.AbuseType;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             YoutubeAbuseReportsInsertRequest req = new YoutubeAbuseReportsInsertRequest() {{
                 security = new YoutubeAbuseReportsInsertSecurity() {{
@@ -37,53 +50,54 @@ public class Application {
                     }};
                 }};
                 queryParams = new YoutubeAbuseReportsInsertQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    callback = "expedita";
-                    fields = "consequuntur";
-                    key = "dolor";
-                    oauthToken = "expedita";
-                    part = new String[]() {{
-                        add("fugit"),
-                        add("et"),
-                        add("nihil"),
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    callback = "quibusdam";
+                    fields = "unde";
+                    key = "nulla";
+                    oauthToken = "corrupti";
+                    part = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
-                    prettyPrint = true;
-                    quotaUser = "dicta";
-                    uploadType = "debitis";
-                    uploadProtocol = "voluptatum";
+                    prettyPrint = false;
+                    quotaUser = "iure";
+                    uploadType = "magnam";
+                    uploadProtocol = "debitis";
                 }};
                 request = new AbuseReport() {{
-                    abuseTypes = new openapisdk.models.shared.AbuseType[]() {{
+                    abuseTypes = new org.openapis.openapi.models.shared.AbuseType[]{{
                         add(new AbuseType() {{
-                            id = "ut";
+                            id = "delectus";
                         }}),
                     }};
-                    description = "dolorem";
-                    relatedEntities = new openapisdk.models.shared.RelatedEntity[]() {{
+                    description = "tempora";
+                    relatedEntities = new org.openapis.openapi.models.shared.RelatedEntity[]{{
                         add(new RelatedEntity() {{
                             entity = new Entity() {{
-                                id = "voluptate";
-                                typeId = "iste";
-                                url = "vitae";
+                                id = "molestiae";
+                                typeId = "minus";
+                                url = "placeat";
                             }};
                         }}),
                         add(new RelatedEntity() {{
                             entity = new Entity() {{
-                                id = "totam";
-                                typeId = "dolores";
-                                url = "illum";
+                                id = "voluptatum";
+                                typeId = "iusto";
+                                url = "excepturi";
                             }};
                         }}),
                     }};
                     subject = new Entity() {{
-                        id = "debitis";
-                        typeId = "vel";
-                        url = "odio";
+                        id = "nisi";
+                        typeId = "recusandae";
+                        url = "temporibus";
                     }};
                 }};
-            }};
+            }};            
 
             YoutubeAbuseReportsInsertResponse res = sdk.abuseReports.youtubeAbuseReportsInsert(req);
 
@@ -98,6 +112,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### abuseReports
 
@@ -264,7 +279,17 @@ public class Application {
 ### youtube
 
 * `youtubeYoutubeV3UpdateCommentThreads` - Updates an existing resource.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

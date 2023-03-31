@@ -2,22 +2,24 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetcitystandardQueryParams;
+import org.openapis.openapi.models.operations.GetcitystandardRequest;
+import org.openapis.openapi.models.operations.GetcitystandardResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetcitystandardRequest req = new GetcitystandardRequest() {{
                 queryParams = new GetcitystandardQueryParams() {{
-                    city = "sit";
-                    license = "voluptas";
+                    city = "Laruecester";
+                    license = "quibusdam";
                 }};
-            }};
+            }};            
 
             GetcitystandardResponse res = sdk.cityDataStandardization.getcitystandard(req);
 

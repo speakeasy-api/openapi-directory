@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,61 +15,80 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddFacetToObjectHeaders;
+import org.openapis.openapi.models.operations.AddFacetToObjectRequestBodyObjectReference;
+import org.openapis.openapi.models.operations.AddFacetToObjectRequestBodySchemaFacet;
+import org.openapis.openapi.models.operations.AddFacetToObjectRequestBody;
+import org.openapis.openapi.models.operations.AddFacetToObjectRequest;
+import org.openapis.openapi.models.operations.AddFacetToObjectResponse;
+import org.openapis.openapi.models.shared.AttributeKeyAndValue;
+import org.openapis.openapi.models.shared.TypedAttributeValue;
+import org.openapis.openapi.models.shared.AttributeKey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddFacetToObjectRequest req = new AddFacetToObjectRequest() {{
                 headers = new AddFacetToObjectHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
-                    xAmzDataPartition = "voluptas";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
+                    xAmzDataPartition = "illum";
                 }};
                 request = new AddFacetToObjectRequestBody() {{
-                    objectAttributeList = new openapisdk.models.shared.AttributeKeyAndValue[]() {{
+                    objectAttributeList = new org.openapis.openapi.models.shared.AttributeKeyAndValue[]{{
                         add(new AttributeKeyAndValue() {{
                             key = new AttributeKey() {{
-                                facetName = "et";
-                                name = "nihil";
-                                schemaArn = "rerum";
+                                facetName = "error";
+                                name = "deserunt";
+                                schemaArn = "suscipit";
                             }};
                             value = new TypedAttributeValue() {{
-                                binaryValue = "dicta";
-                                booleanValue = true;
-                                datetimeValue = "1981-07-21T06:30:48Z";
-                                numberValue = "et";
-                                stringValue = "ut";
+                                binaryValue = "iure";
+                                booleanValue = false;
+                                datetimeValue = "2022-02-09T12:04:06.508Z";
+                                numberValue = "ipsa";
+                                stringValue = "delectus";
+                            }};
+                        }}),
+                        add(new AttributeKeyAndValue() {{
+                            key = new AttributeKey() {{
+                                facetName = "tempora";
+                                name = "suscipit";
+                                schemaArn = "molestiae";
+                            }};
+                            value = new TypedAttributeValue() {{
+                                binaryValue = "minus";
+                                booleanValue = false;
+                                datetimeValue = "2021-05-31T20:38:28.793Z";
+                                numberValue = "iusto";
+                                stringValue = "excepturi";
                             }};
                         }}),
                     }};
                     objectReference = new AddFacetToObjectRequestBodyObjectReference() {{
-                        selector = "dolorem";
+                        selector = "nisi";
                     }};
                     schemaFacet = new AddFacetToObjectRequestBodySchemaFacet() {{
-                        facetName = "et";
-                        schemaArn = "voluptate";
+                        facetName = "recusandae";
+                        schemaArn = "temporibus";
                     }};
                 }};
-            }};
+            }};            
 
             AddFacetToObjectResponse res = sdk.addFacetToObject(req);
 
@@ -153,7 +172,17 @@ public class Application {
 * `updateTypedLinkFacet` - Updates a <a>TypedLinkFacet</a>. For more information, see <a href="https://docs.aws.amazon.com/clouddirectory/latest/developerguide/directory_objects_links.html#directory_objects_links_typedlink">Typed Links</a>.
 * `upgradeAppliedSchema` - Upgrades a single directory in-place using the <code>PublishedSchemaArn</code> with schema updates found in <code>MinorVersion</code>. Backwards-compatible minor version upgrades are instantaneously available for readers on all objects in the directory. Note: This is a synchronous API call and upgrades only one schema on a given directory per call. To upgrade multiple directories from one schema, you would need to call this API on each directory.
 * `upgradePublishedSchema` - Upgrades a published schema under a new minor version revision using the current contents of <code>DevelopmentSchemaArn</code>.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,29 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostCompileQueryParams;
+import org.openapis.openapi.models.operations.PostCompileRequest;
+import org.openapis.openapi.models.operations.PostCompileResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostCompileRequest req = new PostCompileRequest() {{
                 queryParams = new PostCompileQueryParams() {{
-                    explain = "sit";
+                    explain = "corrupti";
                     instrument = false;
-                    metrics = true;
+                    metrics = false;
                     pretty = false;
                 }};
                 request = new java.util.HashMap<String, Object>() {{
-                    put("dolor", "expedita");
-                    put("voluptas", "fugit");
-                    put("et", "nihil");
+                    put("distinctio", "quibusdam");
+                    put("unde", "nulla");
+                    put("corrupti", "illum");
                 }};
-            }};
+            }};            
 
             PostCompileResponse res = sdk.compileAPI.postCompile(req);
 

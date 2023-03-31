@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,41 +15,48 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DeparturesGetForStopRouteTypeEnum;
+import org.openapis.openapi.models.operations.DeparturesGetForStopPathParams;
+import org.openapis.openapi.models.operations.DeparturesGetForStopExpandEnum;
+import org.openapis.openapi.models.operations.DeparturesGetForStopQueryParams;
+import org.openapis.openapi.models.operations.DeparturesGetForStopRequest;
+import org.openapis.openapi.models.operations.DeparturesGetForStopResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             DeparturesGetForStopRequest req = new DeparturesGetForStopRequest() {{
                 pathParams = new DeparturesGetForStopPathParams() {{
-                    routeType = 8717895732742165505;
-                    stopId = 2259404117704393152;
+                    routeType = "2";
+                    stopId = 592845;
                 }};
                 queryParams = new DeparturesGetForStopQueryParams() {{
-                    dateUtc = "1978-05-13T03:50:47Z";
-                    devid = "expedita";
-                    directionId = 3390393562759376202;
-                    expand = new openapisdk.models.operations.DeparturesGetForStopExpandEnum[]() {{
+                    dateUtc = "2021-04-24T16:27:50.833Z";
+                    devid = "unde";
+                    directionId = 857946;
+                    expand = new org.openapis.openapi.models.operations.DeparturesGetForStopExpandEnum[]{{
                         add("VehiclePosition"),
-                        add("None"),
+                        add("Run"),
+                        add("Disruption"),
                     }};
-                    gtfs = true;
+                    gtfs = false;
                     includeCancelled = false;
-                    includeGeopath = true;
-                    lookBackwards = true;
-                    maxResults = 7837839688282259259;
-                    platformNumbers = new Integer[]() {{
-                        add(5617773211005988520),
+                    includeGeopath = false;
+                    lookBackwards = false;
+                    maxResults = 645894;
+                    platformNumbers = new Integer[]{{
+                        add(437587),
+                        add(297534),
                     }};
-                    signature = "et";
-                    token = "ut";
+                    signature = "debitis";
+                    token = "ipsa";
                 }};
-            }};
+            }};            
 
             DeparturesGetForStopResponse res = sdk.departures.departuresGetForStop(req);
 
@@ -65,18 +72,19 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Departures
+
+### departures
 
 * `departuresGetForStop` - View departures for all routes from a stop
 * `departuresGetForStopAndRoute` - View departures for a specific route from a stop
 
-### Directions
+### directions
 
 * `directionsForDirection` - View all routes for a direction of travel
 * `directionsForDirectionAndType` - View all routes of a particular type for a direction of travel
 * `directionsForRoute` - View directions that a route travels in
 
-### Disruptions
+### disruptions
 
 * `disruptionsGetAllDisruptions` - View all disruptions for all route types
 * `disruptionsGetDisruptionById` - View a specific disruption
@@ -85,45 +93,55 @@ public class Application {
 * `disruptionsGetDisruptionsByRouteAndStop` - View all disruptions for a particular route and stop
 * `disruptionsGetDisruptionsByStop` - View all disruptions for a particular stop
 
-### FareEstimate
+### fareEstimate
 
 * `fareEstimateGetFareEstimateByZone` - Estimate a fare by zone
 
-### Outlets
+### outlets
 
 * `outletsGetAllOutlets` - List all ticket outlets
 * `outletsGetOutletsByGeolocation` - List ticket outlets near a specific location
 
-### Patterns
+### patterns
 
 * `patternsGetPatternByRun` - View the stopping pattern for a specific trip/service run
 
-### RouteTypes
+### routeTypes
 
 * `routeTypesGetRouteTypes` - View all route types and their names
 
-### Routes
+### routes
 
 * `routesOneOrMoreRoutes` - View route names and numbers for all routes
 * `routesRouteFromId` - View route name and number for specific route ID
 
-### Runs
+### runs
 
 * `runsForRoute` - View all trip/service runs for a specific route ID
 * `runsForRouteAndRouteType` - View all trip/service runs for a specific route ID and route type
 * `runsForRun` - View all trip/service runs for a specific run_ref
 * `runsForRunAndRouteType` - View the trip/service run for a specific run_ref and route type
 
-### Search
+### search
 
 * `searchSearch` - View stops, routes and myki ticket outlets that match the search term
 
-### Stops
+### stops
 
 * `stopsStopDetails` - View facilities at a specific stop (Metro and V/Line stations only)
 * `stopsStopsByGeolocation` - View all stops near a specific location
 * `stopsStopsForRoute` - View all stops on a specific route
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

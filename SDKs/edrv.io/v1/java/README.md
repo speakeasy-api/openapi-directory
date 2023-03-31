@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,29 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteChargeStationPathParams;
+import org.openapis.openapi.models.operations.DeleteChargeStationRequest;
+import org.openapis.openapi.models.operations.DeleteChargeStationResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DeleteChargeStationRequest req = new DeleteChargeStationRequest() {{
                 pathParams = new DeleteChargeStationPathParams() {{
-                    id = "sit";
+                    id = "corrupti";
                 }};
-            }};
+            }};            
 
             DeleteChargeStationResponse res = sdk.chargeStations.deleteChargeStation(req);
 
@@ -53,7 +52,8 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Charge Stations
+
+### chargeStations
 
 * `deleteChargeStation` - Use to delete a charge station
 * `getChargeStation` - Get a single charge station's data
@@ -62,7 +62,7 @@ public class Application {
 * `patchChargeStation` - Update a charge station's data
 * `postChargeStations` - Create a new charge station
 
-### Commands
+### commands
 
 * `cancelreservation` - Use to request a delete an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 * `getCommands` - Get Commands data
@@ -74,13 +74,13 @@ public class Application {
 * `reset` - Use to request a reset command. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 * `unlockconnector` - Use to request an unlock command for a connector. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 
-### Configurations
+### configurations
 
 * `getConfiguration` - Get one Configuration data
 * `getConfigurations` - Get Configurations data
 * `postConfigurations` - Create connector with parameters
 
-### Connectors
+### connectors
 
 * `deleteConnector` - Delete a connector
 * `getConnector` - Get a connector
@@ -88,7 +88,7 @@ public class Application {
 * `patchConnector` - Update a connector's data
 * `postConnectors` - Create a new connector
 
-### Drivers
+### drivers
 
 * `deleteDriver` - Delete a driver
 * `getDriver` - Get a driver's data
@@ -96,7 +96,7 @@ public class Application {
 * `patchDriver` - Update a driver's data
 * `postDrivers` - Create a new driver
 
-### Locations
+### locations
 
 * `deleteLocation` - Delete a location
 * `getLocation` - Get a location's data
@@ -104,28 +104,28 @@ public class Application {
 * `patchLocation` - Update a location's data
 * `postLocations` - Create a new location
 
-### Organizations
+### organizations
 
 * `getOrganization` - Get one organization's data by id
 * `getOrganizations` - Get an array of all Organizations
 * `patchOrganization` - Update an organization's data
 
-### Realtime
+### realtime
 
 * `getRealtime` - Use to request a Websockets handshake
 
-### Reservations
+### reservations
 
 * `getReservation` - Get one reservation data
 * `getReservations` - Get Reservations data
 * `updatereservation` - Use to request a update an existing reservation. The request will wait for the charge station to process the command. It will timeout after 60 seconds.
 
-### Smart Charging
+### smartCharging
 
 * `deletechargingschedule` - Delete a smart charging schedule
 * `setchargingschedule` - Set one of charging power or current of a specific chargestation connector
 
-### Tokens
+### tokens
 
 * `deleteToken` - Use to delete a token
 * `getToken` - Get a single token's data
@@ -133,13 +133,13 @@ public class Application {
 * `patchToken` - Update a token
 * `postTokens` - Create a new token
 
-### Transactions
+### transactions
 
 * `getTransaction` - Get a specific transaction
 * `getTransactionCost` - Get a specific transaction's cost
 * `getTransactions` - Get a list of transactions
 
-### Vehicles
+### vehicles
 
 * `getVehicle` - Get a vehicle's data
 * `getVehicleBattery` - Get a vehicle's battery
@@ -148,7 +148,17 @@ public class Application {
 * `getVehicleOdometer` - Get a vehicle's odometer
 * `getVehicles` - List all vehicles
 * `postCharge` - Change charge
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,40 +15,42 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetAssociationFilterQueryParams;
+import org.openapis.openapi.models.operations.GetAssociationFilterRequest;
+import org.openapis.openapi.models.operations.GetAssociationFilterResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetAssociationFilterRequest req = new GetAssociationFilterRequest() {{
                 queryParams = new GetAssociationFilterQueryParams() {{
-                    datasource = "sit";
-                    datastructure = "voluptas";
-                    datatype = "culpa";
+                    datasource = "corrupti";
+                    datastructure = "provident";
+                    datatype = "distinctio";
                     direct = false;
-                    disease = "consequuntur";
+                    disease = "quibusdam";
                     facets = false;
-                    fields = "expedita";
-                    format = "voluptas";
-                    from = 88.099998;
-                    pathway = "nihil";
-                    scorevalueMax = 47.200001;
-                    scorevalueMin = 48.099998;
-                    scorevalueTypes = "et";
-                    search = "ut";
-                    size = 50.099998;
-                    sort = "voluptate";
-                    target = "iste";
-                    targetClass = "vitae";
-                    therapeuticArea = "totam";
-                    uniprotkw = "dolores";
+                    fields = "unde";
+                    format = "nulla";
+                    from = 5448.83;
+                    pathway = "illum";
+                    scorevalueMax = 4236.55;
+                    scorevalueMin = 6235.64;
+                    scorevalueTypes = "deserunt";
+                    search = "suscipit";
+                    size = 4375.87;
+                    sort = "magnam";
+                    target = "debitis";
+                    targetClass = "ipsa";
+                    therapeuticArea = "delectus";
+                    uniprotkw = "tempora";
                 }};
-            }};
+            }};            
 
             GetAssociationFilterResponse res = sdk.filter.getAssociationFilter(req);
 
@@ -64,6 +66,7 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
+
 ### filter
 
 * `getAssociationFilter` - Filter available associations
@@ -71,28 +74,28 @@ public class Application {
 * `postAssociationFilter` - Batch query available associations
 * `postEvidenceFilter` - Batch filter available evidence
 
-### private
+### private_
 
 * `getApiDocs` - Browse API documentation
-* `getApiSwaggerUi` - Browse interactive API documentation
+* `getApiSwaggerUI` - Browse interactive API documentation
 * `getAutocomplete` - Get `autocomplete` objects.
 * `getDiseaseById` - Find information about a disease
-* `getDrugById` - Get drug by ID
-* `getEcObyId` - Get evidence code by ID
+* `getDrugByID` - Get drug by ID
+* `getECObyID` - Get evidence code by ID
 * `getQuickSearch` - Search most relevant results
-* `getRelationByEfoid` - Find related entities by disease
-* `getRelationByEnsgid` - Find related entities by target
+* `getRelationByEFOID` - Find related entities by disease
+* `getRelationByENSGID` - Find related entities by target
 * `getSwagger` - Get OpenAPI schema
-* `getTargetByEnsgid` - Find information about a target
-* `getTargetExpressionByEnsgid` - Query expression levels
+* `getTargetByENSGID` - Find information about a target
+* `getTargetExpressionByENSGID` - Query expression levels
 * `postBestHitSearch` - Find the best hit
 * `postDiseaseById` - Find information about a list of diseases
 * `postEnrichmentTarget` - Enrichment analysis
 * `postRelation` - Find related entities
-* `postTargetByEnsgid` - Find information about a list of targets
-* `postTargetExpressionByEnsgid` - Batch query expression levels
+* `postTargetByENSGID` - Find information about a list of targets
+* `postTargetExpressionByENSGID` - Batch query expression levels
 
-### public
+### public_
 
 * `getAssociationById` - Get association by id
 * `getAssociationFilter` - Filter available associations
@@ -125,7 +128,17 @@ public class Application {
 * `getPing` - Ping service
 * `getTherapeuticAreas` - Get the list of therapeutic areas about the current data release
 * `getVersion` - Get API version
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

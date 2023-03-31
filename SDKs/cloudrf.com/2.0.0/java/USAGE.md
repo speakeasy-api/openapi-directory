@@ -2,35 +2,31 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.InterferenceSecurity;
+import org.openapis.openapi.models.operations.InterferenceQueryParams;
+import org.openapis.openapi.models.operations.InterferenceRequest;
+import org.openapis.openapi.models.operations.InterferenceResponse;
+import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKeyAuth = new SchemeApiKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             InterferenceRequest req = new InterferenceRequest() {{
                 security = new InterferenceSecurity() {{
-                    apiKeyAuth = new SchemeApiKeyAuth() {{
+                    apiKeyAuth = new SchemeAPIKeyAuth() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 queryParams = new InterferenceQueryParams() {{
-                    name = "sit";
-                    network = "voluptas";
+                    name = "corrupti";
+                    network = "provident";
                 }};
-            }};
+            }};            
 
             InterferenceResponse res = sdk.analyse.interference(req);
 

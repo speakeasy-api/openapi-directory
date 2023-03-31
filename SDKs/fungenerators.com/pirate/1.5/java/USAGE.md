@@ -2,26 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetPirateGenerateInsultSecurity;
+import org.openapis.openapi.models.operations.GetPirateGenerateInsultQueryParams;
+import org.openapis.openapi.models.operations.GetPirateGenerateInsultRequest;
+import org.openapis.openapi.models.operations.GetPirateGenerateInsultResponse;
+import org.openapis.openapi.models.shared.SchemeXFungeneratorsAPISecret;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetPirateGenerateInsultRequest req = new GetPirateGenerateInsultRequest() {{
                 security = new GetPirateGenerateInsultSecurity() {{
-                    xFungeneratorsApiSecret = new SchemeXFungeneratorsApiSecret() {{
+                    xFungeneratorsApiSecret = new SchemeXFungeneratorsAPISecret() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 queryParams = new GetPirateGenerateInsultQueryParams() {{
-                    limit = 8717895732742165505;
+                    limit = 548814;
                 }};
-            }};
+            }};            
 
             GetPirateGenerateInsultResponse res = sdk.generation.getPirateGenerateInsult(req);
 

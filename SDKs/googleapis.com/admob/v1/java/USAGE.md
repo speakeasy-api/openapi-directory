@@ -2,15 +2,23 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AdmobAccountsAdUnitsListSecurity;
+import org.openapis.openapi.models.operations.AdmobAccountsAdUnitsListPathParams;
+import org.openapis.openapi.models.operations.AdmobAccountsAdUnitsListQueryParams;
+import org.openapis.openapi.models.operations.AdmobAccountsAdUnitsListRequest;
+import org.openapis.openapi.models.operations.AdmobAccountsAdUnitsListResponse;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             AdmobAccountsAdUnitsListRequest req = new AdmobAccountsAdUnitsListRequest() {{
                 security = new AdmobAccountsAdUnitsListSecurity() {{
@@ -22,24 +30,24 @@ public class Application {
                     }};
                 }};
                 pathParams = new AdmobAccountsAdUnitsListPathParams() {{
-                    parent = "sit";
+                    parent = "corrupti";
                 }};
                 queryParams = new AdmobAccountsAdUnitsListQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "culpa";
-                    alt = "media";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    pageSize = 8274930044578894929;
-                    pageToken = "et";
-                    prettyPrint = true;
-                    quotaUser = "rerum";
-                    uploadType = "dicta";
-                    uploadProtocol = "debitis";
+                    dollarXgafv = "2";
+                    accessToken = "distinctio";
+                    alt = "proto";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    pageSize = 423655;
+                    pageToken = "error";
+                    prettyPrint = false;
+                    quotaUser = "deserunt";
+                    uploadType = "suscipit";
+                    uploadProtocol = "iure";
                 }};
-            }};
+            }};            
 
             AdmobAccountsAdUnitsListResponse res = sdk.accounts.admobAccountsAdUnitsList(req);
 

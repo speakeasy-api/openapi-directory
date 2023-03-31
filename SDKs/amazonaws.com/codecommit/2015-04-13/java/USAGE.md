@@ -2,40 +2,41 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AssociateApprovalRuleTemplateWithRepositoryXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AssociateApprovalRuleTemplateWithRepositoryHeaders;
+import org.openapis.openapi.models.operations.AssociateApprovalRuleTemplateWithRepositoryRequest;
+import org.openapis.openapi.models.operations.AssociateApprovalRuleTemplateWithRepositoryResponse;
+import org.openapis.openapi.models.shared.AssociateApprovalRuleTemplateWithRepositoryInput;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AssociateApprovalRuleTemplateWithRepositoryRequest req = new AssociateApprovalRuleTemplateWithRepositoryRequest() {{
                 headers = new AssociateApprovalRuleTemplateWithRepositoryHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "CodeCommit_20150413.AssociateApprovalRuleTemplateWithRepository";
                 }};
                 request = new AssociateApprovalRuleTemplateWithRepositoryInput() {{
-                    approvalRuleTemplateName = "fugit";
-                    repositoryName = "et";
+                    approvalRuleTemplateName = "illum";
+                    repositoryName = "vel";
                 }};
-            }};
+            }};            
 
             AssociateApprovalRuleTemplateWithRepositoryResponse res = sdk.associateApprovalRuleTemplateWithRepository(req);
 

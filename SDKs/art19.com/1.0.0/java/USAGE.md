@@ -2,40 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetClassificationsSecurity;
+import org.openapis.openapi.models.operations.GetClassificationsSortEnum;
+import org.openapis.openapi.models.operations.GetClassificationsTypeEnum;
+import org.openapis.openapi.models.operations.GetClassificationsQueryParams;
+import org.openapis.openapi.models.operations.GetClassificationsRequest;
+import org.openapis.openapi.models.operations.GetClassificationsResponse;
+import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKey = new SchemeApiKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetClassificationsRequest req = new GetClassificationsRequest() {{
-                queryParams = new GetClassificationsQueryParams() {{
-                    ids = new String[]() {{
-                        add("voluptas"),
+                security = new GetClassificationsSecurity() {{
+                    apiKey = new SchemeAPIKey() {{
+                        apiKey = "YOUR_API_KEY_HERE";
                     }};
-                    isCountry = "culpa";
-                    pageNumber = 501233450539197794;
-                    pageSize = 3390393562759376202;
-                    q = "dolor";
-                    sort = new openapisdk.models.operations.GetClassificationsSortEnum[]() {{
-                        add("value"),
-                        add("created_at"),
-                    }};
-                    type = "Language";
                 }};
-            }};
+                queryParams = new GetClassificationsQueryParams() {{
+                    ids = new String[]{{
+                        add("9bd9d8d6-9a67-44e0-b467-cc8796ed151a"),
+                        add("05dfc2dd-f7cc-478c-a1ba-928fc816742c"),
+                        add("b7392059-2939-46fe-a759-6eb10faaa235"),
+                    }};
+                    isCountry = "explicabo";
+                    pageNumber = 750686;
+                    pageSize = 315428;
+                    q = "omnis";
+                    sort = new org.openapis.openapi.models.operations.GetClassificationsSortEnum[]{{
+                        add("created_at"),
+                        add("updated_at"),
+                    }};
+                    type = "AlternateFeedType";
+                }};
+            }};            
 
             GetClassificationsResponse res = sdk.classification.getClassifications(req);
 

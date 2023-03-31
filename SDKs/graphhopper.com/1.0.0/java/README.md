@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,70 +15,74 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AsyncClusteringProblemRequest;
+import org.openapis.openapi.models.operations.AsyncClusteringProblemResponse;
+import org.openapis.openapi.models.shared.ClusterRequest;
+import org.openapis.openapi.models.shared.ClusterCustomer;
+import org.openapis.openapi.models.shared.ClusterCustomerAddress;
+import org.openapis.openapi.models.shared.ClusterConfiguration;
+import org.openapis.openapi.models.shared.ClusterConfigurationRouting;
+import org.openapis.openapi.models.shared.ClusterConfigurationClustering;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKey = new SchemeApiKey() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AsyncClusteringProblemRequest req = new AsyncClusteringProblemRequest() {{
                 request = new ClusterRequest() {{
                     configuration = new ClusterConfiguration() {{
                         clustering = new ClusterConfigurationClustering() {{
-                            maxQuantity = 74.099998;
-                            minQuantity = 53.099998;
-                            numClusters = 15.100000;
+                            maxQuantity = 50;
+                            minQuantity = 30;
+                            numClusters = 10;
                         }};
-                        responseType = "expedita";
+                        responseType = "json";
                         routing = new ClusterConfigurationRouting() {{
-                            costPerMeter = 77.099998;
-                            costPerSecond = 28.100000;
-                            profile = "rerum";
+                            costPerMeter = 5488.14;
+                            costPerSecond = 1;
+                            profile = "car";
                         }};
                     }};
-                    customers = new openapisdk.models.shared.ClusterCustomer[]() {{
+                    customers = new org.openapis.openapi.models.shared.ClusterCustomer[]{{
                         add(new ClusterCustomer() {{
                             address = new ClusterCustomerAddress() {{
-                                lat = 48.099998;
-                                lon = 26.200001;
-                                streetHint = "dolorem";
+                                lat = 48.118434;
+                                lon = 11.53941;
+                                streetHint = "Lindenschmitstraße 52";
                             }};
-                            id = "et";
-                            quantity = 94.199997;
+                            id = "GraphHopper GmbH";
+                            quantity = 10;
                         }}),
                         add(new ClusterCustomer() {{
                             address = new ClusterCustomerAddress() {{
-                                lat = 68.099998;
-                                lon = 80.199997;
-                                streetHint = "debitis";
+                                lat = 48.118434;
+                                lon = 11.53941;
+                                streetHint = "Lindenschmitstraße 52";
                             }};
-                            id = "vel";
-                            quantity = 20.200001;
+                            id = "GraphHopper GmbH";
+                            quantity = 10;
                         }}),
                         add(new ClusterCustomer() {{
                             address = new ClusterCustomerAddress() {{
-                                lat = 12.200000;
-                                lon = 88.199997;
-                                streetHint = "commodi";
+                                lat = 48.118434;
+                                lon = 11.53941;
+                                streetHint = "Lindenschmitstraße 52";
                             }};
-                            id = "quis";
-                            quantity = 93.099998;
+                            id = "GraphHopper GmbH";
+                            quantity = 10;
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             AsyncClusteringProblemResponse res = sdk.clusterAPI.asyncClusteringProblem(req);
 
@@ -94,43 +98,54 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### Cluster API
+
+### clusterAPI
 
 * `asyncClusteringProblem` - Batch Cluster Endpoint
 * `getClusterSolution` - GET Batch Solution Endpoint
 * `solveClusteringProblem` - POST Cluster Endpoint
 
-### Geocoding API
+### geocodingAPI
 
 * `getGeocode` - Geocoding Endpoint
 
-### Isochrone API
+### isochroneAPI
 
 * `getIsochrone` - Isochrone Endpoint
 
-### Map Matching API
+### mapMatchingAPI
 
-* `postGpx` - Map-match a GPX file
+* `postGPX` - Map-match a GPX file
 
-### Matrix API
+### matrixAPI
 
 * `calculateMatrix` - Batch Matrix Endpoint
 * `getMatrix` - GET Matrix Endpoint
 * `getMatrixSolution` - GET Batch Matrix Endpoint
 * `postMatrix` - POST Matrix Endpoint
 
-### Route Optimization API
+### routeOptimizationAPI
 
-* `asyncVrp` - POST route optimization problem (batch mode)
+* `asyncVRP` - POST route optimization problem (batch mode)
 * `getSolution` - GET the solution (batch mode)
-* `solveVrp` - POST route optimization problem
+* `solveVRP` - POST route optimization problem
 
-### Routing API
+### routingAPI
 
 * `getRoute` - GET Route Endpoint
 * `getRouteInfo` - Coverage information
 * `postRoute` - POST Route Endpoint
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

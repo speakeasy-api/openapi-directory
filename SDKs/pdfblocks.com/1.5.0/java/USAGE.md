@@ -2,38 +2,39 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddImageWatermarkV1RequestBodyFile;
+import org.openapis.openapi.models.operations.AddImageWatermarkV1RequestBodyImage;
+import org.openapis.openapi.models.operations.AddImageWatermarkV1RequestBody;
+import org.openapis.openapi.models.operations.AddImageWatermarkV1Request;
+import org.openapis.openapi.models.operations.AddImageWatermarkV1Response;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
-                    apiKey = new SchemeApiKey() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
+                    apiKey = new SchemeAPIKey() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddImageWatermarkV1Request req = new AddImageWatermarkV1Request() {{
                 request = new AddImageWatermarkV1RequestBody() {{
                     file = new AddImageWatermarkV1RequestBodyFile() {{
-                        content = "sit".getBytes();
-                        file = "voluptas";
+                        content = "corrupti".getBytes();
+                        file = "provident";
                     }};
                     image = new AddImageWatermarkV1RequestBodyImage() {{
-                        content = "culpa".getBytes();
-                        image = "expedita";
+                        content = "distinctio".getBytes();
+                        image = "quibusdam";
                     }};
-                    margin = 15.100000;
-                    transparency = 1774932891286980153;
+                    margin = 1;
+                    transparency = 50;
                 }};
-            }};
+            }};            
 
             AddImageWatermarkV1Response res = sdk.addImageWatermarkV1(req);
 

@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,22 +15,24 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserPathParams;
+import org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserRequest;
+import org.openapis.openapi.models.operations.ActivityCheckRepoIsStarredByAuthenticatedUserResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             ActivityCheckRepoIsStarredByAuthenticatedUserRequest req = new ActivityCheckRepoIsStarredByAuthenticatedUserRequest() {{
                 pathParams = new ActivityCheckRepoIsStarredByAuthenticatedUserPathParams() {{
-                    owner = "sit";
-                    repo = "voluptas";
+                    owner = "corrupti";
+                    repo = "provident";
                 }};
-            }};
+            }};            
 
             ActivityCheckRepoIsStarredByAuthenticatedUserResponse res = sdk.activity.activityCheckRepoIsStarredByAuthenticatedUser(req);
 
@@ -45,6 +47,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### activity
 
@@ -122,7 +125,7 @@ public class Application {
 * `checksSetSuitesPreferences` - Update repository preferences for check suites
 * `checksUpdate` - Update a check run
 
-### codes-of-conduct
+### codesOfConduct
 
 * `codesOfConductGetAllCodesOfConduct` - Get all codes of conduct
 * `codesOfConductGetConductCode` - Get a code of conduct
@@ -131,7 +134,7 @@ public class Application {
 
 * `emojisGet` - Get emojis
 
-### enterprise-admin
+### enterpriseAdmin
 
 * `enterpriseAdminAddAuthorizedSshKey` - Add an authorized SSH key
 * `enterpriseAdminCreateEnterpriseServerLicense` - Create a GitHub license
@@ -151,17 +154,26 @@ public class Application {
 * `enterpriseAdminDemoteSiteAdministrator` - Demote a site administrator
 * `enterpriseAdminEnableOrDisableMaintenanceMode` - Enable or disable maintenance mode
 * `enterpriseAdminGetAllAuthorizedSshKeys` - Get all authorized SSH keys
+* `enterpriseAdminGetAllStats` - Get all statistics
+* `enterpriseAdminGetCommentStats` - Get comment statistics
 * `enterpriseAdminGetConfigurationStatus` - Get the configuration status
 * `enterpriseAdminGetDownloadStatusForPreReceiveEnvironment` - Get the download status for a pre-receive environment
 * `enterpriseAdminGetGlobalWebhook` - Get a global webhook
+* `enterpriseAdminGetHooksStats` - Get hooks statistics
+* `enterpriseAdminGetIssueStats` - Get issue statistics
 * `enterpriseAdminGetLicenseInformation` - Get license information
 * `enterpriseAdminGetMaintenanceStatus` - Get the maintenance status
+* `enterpriseAdminGetMilestoneStats` - Get milestone statistics
+* `enterpriseAdminGetOrgStats` - Get organization statistics
+* `enterpriseAdminGetPagesStats` - Get pages statistics
 * `enterpriseAdminGetPreReceiveEnvironment` - Get a pre-receive environment
 * `enterpriseAdminGetPreReceiveHook` - Get a pre-receive hook
 * `enterpriseAdminGetPreReceiveHookForOrg` - Get a pre-receive hook for an organization
 * `enterpriseAdminGetPreReceiveHookForRepo` - Get a pre-receive hook for a repository
+* `enterpriseAdminGetPullRequestStats` - Get pull request statistics
+* `enterpriseAdminGetRepoStats` - Get repository statistics
 * `enterpriseAdminGetSettings` - Get settings
-* `enterpriseAdminGetTypeStats` - Get statistics
+* `enterpriseAdminGetUserStats` - Get users statistics
 * `enterpriseAdminListGlobalWebhooks` - List global webhooks
 * `enterpriseAdminListPersonalAccessTokens` - List personal access tokens
 * `enterpriseAdminListPreReceiveEnvironments` - List pre-receive environments
@@ -191,6 +203,7 @@ public class Application {
 * `enterpriseAdminUpdatePreReceiveHookEnforcementForRepo` - Update pre-receive hook enforcement for a repository
 * `enterpriseAdminUpdateUsernameForUser` - Update the username for a user
 * `enterpriseAdminUpgradeLicense` - Upgrade a license
+* `getEnterpriseStatsGists` - Get gist statistics
 
 ### gists
 
@@ -296,7 +309,7 @@ public class Application {
 * `metaGetZen` - Get the Zen of GitHub
 * `metaRoot` - GitHub API Root
 
-### oauth-authorizations
+### oauthAuthorizations
 
 * `oauthAuthorizationsCreateAuthorization` - Create a new authorization
 * `oauthAuthorizationsDeleteAuthorization` - Delete an authorization
@@ -398,7 +411,7 @@ public class Application {
 * `pullsUpdateReview` - Update a review for a pull request
 * `pullsUpdateReviewComment` - Update a review comment for a pull request
 
-### rate-limit
+### rateLimit
 
 * `rateLimitGet` - Get rate limit status for the authenticated user
 
@@ -662,7 +675,17 @@ public class Application {
 * `usersListPublicSshKeysForAuthenticated` - List public SSH keys for the authenticated user
 * `usersUnfollow` - Unfollow a user
 * `usersUpdateAuthenticated` - Update the authenticated user
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

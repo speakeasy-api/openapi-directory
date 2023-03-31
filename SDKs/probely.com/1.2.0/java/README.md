@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,29 +15,28 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteKeysIdPathParams;
+import org.openapis.openapi.models.operations.DeleteKeysIdRequest;
+import org.openapis.openapi.models.operations.DeleteKeysIdResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     jwtAuth = new SchemeJwtAuth() {{
                         authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             DeleteKeysIdRequest req = new DeleteKeysIdRequest() {{
                 pathParams = new DeleteKeysIdPathParams() {{
-                    id = "sit";
+                    id = "jMXUw-BE_2vd";
                 }};
-            }};
+            }};            
 
             DeleteKeysIdResponse res = sdk.apiKeys.deleteKeysId(req);
 
@@ -53,7 +52,8 @@ public class Application {
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
 
-### API Keys
+
+### apiKeys
 
 * `deleteKeysId` - Delete account API key
 * `deleteTargetsTargetIdKeysId` - Delete target API key
@@ -64,7 +64,7 @@ public class Application {
 * `postKeys` - Create account API key
 * `postTargetsTargetIdKeys` - Create target API key
 
-### Account
+### account
 
 * `getAccount` - Retrieve account information
 * `getBilling` - Retrieve billing information
@@ -75,13 +75,13 @@ public class Application {
 * `postTargetActions` - Available actions for the selected targets
 * `putBilling` - Update billing information
 
-### Archive
+### archive
 
 * `postTargetsActivate` - Activate targets
 * `postTargetsArchive` - Archive targets
 * `postTargetsArchived` - List archived targets
 
-### Assets
+### assets
 
 * `deleteTargetsTargetIdAssetsId` - Delete asset
 * `getTargetsTargetIdAssets` - List target's assets
@@ -91,7 +91,7 @@ public class Application {
 * `postTargetsTargetIdAssetsIdVerify` - Verify asset ownership
 * `putTargetsTargetIdAssetsId` - Update asset
 
-### Events
+### events
 
 * `deleteTargetsTargetIdWebhooksId` - Delete target webhook
 * `deleteWebhooksId` - Delete account webhook
@@ -110,7 +110,7 @@ public class Application {
 * `putTargetsTargetIdWebhooksId` - Update target webhook
 * `putWebhooksId` - Update account webhook
 
-### Findings
+### findings
 
 * `getTargetsTargetIdFindings` - List target findings
 * `getTargetsTargetIdFindingsReport` - Retrieve finding report PDF format
@@ -123,17 +123,17 @@ public class Application {
 * `postTargetsTargetIdFindingsIdRetest` - Retest finding
 * `putTargetsTargetIdFindingsId` - Update finding
 
-### Frameworks
+### frameworks
 
 * `getFrameworks` - List frameworks
 * `getFrameworksId` - Retrieve framework
 
-### Integrations
+### integrations
 
 * `getIntegrations` - Integrations available and installed in the account
 * `getTargetsTargetIdIntegrations` - Integrations available and installed for the target
 
-### Jira Cloud Integration
+### jiraCloudIntegration
 
 * `getIntegrationsJiraCloudProjects` - List Jira Projects
 * `getIntegrationsJiraCloudProjectsProjectIdIssueTypes` - Retrieve project issue types
@@ -146,7 +146,7 @@ public class Application {
 * `putTargetsTargetIdFindingsIdIntegrationsJiraCloud` - Update Jira Cloud finding configuration
 * `putTargetsTargetIdIntegrationsJiraCloud` - Update Jira Cloud target configuration
 
-### Jira Server Integration
+### jiraServerIntegration
 
 * `getIntegrationsJiraServerProjects` - List Jira Projects
 * `getIntegrationsJiraServerProjectsProjectIdIssueTypes` - Retrieve project issue types
@@ -159,7 +159,7 @@ public class Application {
 * `putTargetsTargetIdFindingsIdIntegrationsJiraServer` - Update Jira Server finding configuration
 * `putTargetsTargetIdIntegrationsJiraServer` - Update Jira Server target configuration
 
-### Labels
+### labels
 
 * `deleteLabelsId` - Delete label
 * `getLabels` - List labels
@@ -168,7 +168,7 @@ public class Application {
 * `postLabels` - Create label
 * `putLabelsId` - Update label
 
-### Login
+### login
 
 * `postAuthObtain` - Authenticate user
 * `postAuthRefresh` - Replace token with a new one
@@ -179,18 +179,18 @@ public class Application {
 * `postEnterpriseAuthRevoke` - Enterprise token revokation
 * `postEnterpriseAuthVerify` - Enterprise token verification
 
-### Password Reset
+### passwordReset
 
 * `postCheck` - Check validity of password reset token
 * `postReset` - Send reset password email
 * `postSetpassword` - Reset password after asking for a reset (with the token sent by email).
 
 
-### Plan
+### plan
 
 * `getPlans` - Subscription plans
 
-### Scans
+### scans
 
 * `getTargetsAllScans` - List scans for all targets
 * `getTargetsTargetIdScans` - List scans
@@ -205,7 +205,7 @@ public class Application {
 * `postTargetsTargetIdScanNow` - Start a scan on the target
 * `postTargetsTargetIdScansIdCancel` - Cancel running scan
 
-### Scheduled
+### scheduled
 
 * `deleteTargetsTargetIdScheduledscansId` - Delete
 * `getTargetsAllScheduledscansExpanded` - List scheduled scans for all targets expanding recurrence
@@ -216,20 +216,20 @@ public class Application {
 * `postTargetsTargetIdScheduledscans` - Create new scheduled scan
 * `putTargetsTargetIdScheduledscansId` - Update a scheduled scan
 
-### Site
+### site
 
 * `getTargetsTargetIdSite` - Retrieve target's site
 * `patchTargetsTargetIdSite` - Partial update target's site
 * `postTargetsTargetIdSiteVerify` - Verify site ownership
 * `putTargetsTargetIdSite` - Update target's site
 
-### Slack Integration
+### slackIntegration
 
 * `getTargetsTargetIdIntegrationsSlack` - Retrieve slack integration data
 * `patchTargetsTargetIdIntegrationsSlack` - Update slack integration data
 * `putTargetsTargetIdIntegrationsSlack` - Update slack integration data
 
-### Statistics
+### statistics
 
 * `getTargetsAllAverageFixTime` - Average fix time graph data (all targets)
 * `getTargetsAllNeedsAttentionPie` - Targets with open vulnerabilities pie chart data
@@ -242,7 +242,7 @@ public class Application {
 * `getTargetsTargetIdSeverityTrend` - Severity trend graph data.
 * `getTargetsTargetIdTopVulns` - Top 5 vulnerabilities
 
-### Targets
+### targets
 
 * `deleteTargetsId` - Delete target
 * `getTargets` - List targets
@@ -251,7 +251,7 @@ public class Application {
 * `postTargets` - Create target
 * `putTargetsId` - Update target
 
-### Users
+### users
 
 * `deleteUsersId` - Deactivate a user
 * `getProfile` - User data
@@ -262,11 +262,21 @@ public class Application {
 * `postUsers` - Create/Reactivate a user.
 * `putUsersId` - Update user
 
-### Vulnerabilities
+### vulnerabilities
 
 * `getVulnerabilityDefinitions` - List vulnerability definitions
 * `getVulnerabilityDefinitionsId` - Retrieve vulnerability definition
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,43 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateActionEnum;
+import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateVersionEnum;
+import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateQueryParams;
+import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateHeaders;
+import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateRequest;
+import org.openapis.openapi.models.operations.GETAbortEnvironmentUpdateResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            GetAbortEnvironmentUpdateRequest req = new GetAbortEnvironmentUpdateRequest() {{
-                queryParams = new GetAbortEnvironmentUpdateQueryParams() {{
+            GETAbortEnvironmentUpdateRequest req = new GETAbortEnvironmentUpdateRequest() {{
+                queryParams = new GETAbortEnvironmentUpdateQueryParams() {{
                     action = "AbortEnvironmentUpdate";
-                    environmentId = "voluptas";
-                    environmentName = "culpa";
+                    environmentId = "corrupti";
+                    environmentName = "provident";
                     version = "2010-12-01";
                 }};
-                headers = new GetAbortEnvironmentUpdateHeaders() {{
-                    xAmzAlgorithm = "consequuntur";
-                    xAmzContentSha256 = "dolor";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "voluptas";
-                    xAmzSecurityToken = "fugit";
-                    xAmzSignature = "et";
-                    xAmzSignedHeaders = "nihil";
+                headers = new GETAbortEnvironmentUpdateHeaders() {{
+                    xAmzAlgorithm = "distinctio";
+                    xAmzContentSha256 = "quibusdam";
+                    xAmzCredential = "unde";
+                    xAmzDate = "nulla";
+                    xAmzSecurityToken = "corrupti";
+                    xAmzSignature = "illum";
+                    xAmzSignedHeaders = "vel";
                 }};
-            }};
+            }};            
 
-            GetAbortEnvironmentUpdateResponse res = sdk.getAbortEnvironmentUpdate(req);
+            GETAbortEnvironmentUpdateResponse res = sdk.getAbortEnvironmentUpdate(req);
 
             if (res.statusCode == 200) {
                 // handle response

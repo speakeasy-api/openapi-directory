@@ -2,27 +2,30 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.DELETEAccountingCodePathParams;
+import org.openapis.openapi.models.operations.DELETEAccountingCodeHeaders;
+import org.openapis.openapi.models.operations.DELETEAccountingCodeRequest;
+import org.openapis.openapi.models.operations.DELETEAccountingCodeResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            DeleteAccountingCodeRequest req = new DeleteAccountingCodeRequest() {{
-                pathParams = new DeleteAccountingCodePathParams() {{
-                    acId = "sit";
+            DELETEAccountingCodeRequest req = new DELETEAccountingCodeRequest() {{
+                pathParams = new DELETEAccountingCodePathParams() {{
+                    acId = "corrupti";
                 }};
-                headers = new DeleteAccountingCodeHeaders() {{
-                    zuoraEntityIds = "voluptas";
-                    zuoraTrackId = "culpa";
+                headers = new DELETEAccountingCodeHeaders() {{
+                    zuoraEntityIds = "provident";
+                    zuoraTrackId = "distinctio";
                 }};
-            }};
+            }};            
 
-            DeleteAccountingCodeResponse res = sdk.accountingCodes.deleteAccountingCode(req);
+            DELETEAccountingCodeResponse res = sdk.accountingCodes.deleteAccountingCode(req);
 
             if (res.commonResponseType.isPresent()) {
                 // handle response

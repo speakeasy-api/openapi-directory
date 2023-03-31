@@ -2,27 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.AddExpiryListingsJsonRequest;
+import org.openapis.openapi.models.operations.AddExpiryListingsJsonResponse;
+import org.openapis.openapi.models.shared.AftermarketListingExpiryCreate;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
+            SDK sdk = SDK.builder()
+                .build();
 
-            SDK sdk = builder.build();
-
-            AddExpiryListingsRequest req = new AddExpiryListingsRequest() {{
-                request = new AddExpiryListingsRequests() {{
-                    aftermarketListingExpiryCreates = new Object[]() {{
-                        add("voluptas"),
-                    }};
-                    applicationXML = "culpa".getBytes();
-                    textXML = "expedita".getBytes();
+            AddExpiryListingsJsonRequest req = new AddExpiryListingsJsonRequest() {{
+                request = new org.openapis.openapi.models.shared.AftermarketListingExpiryCreate[]{{
+                    add(new AftermarketListingExpiryCreate() {{
+                        domain = "provident";
+                        expiresAt = "distinctio";
+                        losingRegistrarId = 844266;
+                        pageViewsMonthly = 602763;
+                        revenueMonthly = 857946;
+                    }}),
+                    add(new AftermarketListingExpiryCreate() {{
+                        domain = "corrupti";
+                        expiresAt = "illum";
+                        losingRegistrarId = 423655;
+                        pageViewsMonthly = 623564;
+                        revenueMonthly = 645894;
+                    }}),
+                    add(new AftermarketListingExpiryCreate() {{
+                        domain = "suscipit";
+                        expiresAt = "iure";
+                        losingRegistrarId = 297534;
+                        pageViewsMonthly = 891773;
+                        revenueMonthly = 56713;
+                    }}),
                 }};
-            }};
+            }};            
 
-            AddExpiryListingsResponse res = sdk.v1.addExpiryListings(req);
+            AddExpiryListingsJsonResponse res = sdk.v1.addExpiryListingsJson(req);
 
             if (res.body.isPresent()) {
                 // handle response

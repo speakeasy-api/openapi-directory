@@ -2,45 +2,48 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AddProfileKeyPathParams;
+import org.openapis.openapi.models.operations.AddProfileKeyHeaders;
+import org.openapis.openapi.models.operations.AddProfileKeyRequestBody;
+import org.openapis.openapi.models.operations.AddProfileKeyRequest;
+import org.openapis.openapi.models.operations.AddProfileKeyResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AddProfileKeyRequest req = new AddProfileKeyRequest() {{
                 pathParams = new AddProfileKeyPathParams() {{
-                    domainName = "sit";
+                    domainName = "corrupti";
                 }};
                 headers = new AddProfileKeyHeaders() {{
-                    xAmzAlgorithm = "voluptas";
-                    xAmzContentSha256 = "culpa";
-                    xAmzCredential = "expedita";
-                    xAmzDate = "consequuntur";
-                    xAmzSecurityToken = "dolor";
-                    xAmzSignature = "expedita";
-                    xAmzSignedHeaders = "voluptas";
+                    xAmzAlgorithm = "provident";
+                    xAmzContentSha256 = "distinctio";
+                    xAmzCredential = "quibusdam";
+                    xAmzDate = "unde";
+                    xAmzSecurityToken = "nulla";
+                    xAmzSignature = "corrupti";
+                    xAmzSignedHeaders = "illum";
                 }};
                 request = new AddProfileKeyRequestBody() {{
-                    keyName = "fugit";
-                    profileId = "et";
-                    values = new String[]() {{
-                        add("rerum"),
+                    keyName = "vel";
+                    profileId = "error";
+                    values = new String[]{{
+                        add("suscipit"),
+                        add("iure"),
+                        add("magnam"),
                     }};
                 }};
-            }};
+            }};            
 
             AddProfileKeyResponse res = sdk.addProfileKey(req);
 

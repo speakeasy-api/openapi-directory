@@ -2,26 +2,34 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.GetProductSecurity;
+import org.openapis.openapi.models.operations.GetProductPathParams;
+import org.openapis.openapi.models.operations.GetProductHeaders;
+import org.openapis.openapi.models.operations.GetProductRequest;
+import org.openapis.openapi.models.operations.GetProductResponse;
+import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             GetProductRequest req = new GetProductRequest() {{
                 security = new GetProductSecurity() {{
-                    apiAuth = new SchemeApiAuth() {{
+                    apiAuth = new SchemeAPIAuth() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
                 }};
                 pathParams = new GetProductPathParams() {{
-                    epid = "sit";
+                    epid = "corrupti";
                 }};
-            }};
+                headers = new GetProductHeaders() {{
+                    xEbayCMarketplaceId = "provident";
+                }};
+            }};            
 
             GetProductResponse res = sdk.product.getProduct(req);
 

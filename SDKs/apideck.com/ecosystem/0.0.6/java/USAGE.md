@@ -2,25 +2,28 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CategoriesAllPathParams;
+import org.openapis.openapi.models.operations.CategoriesAllQueryParams;
+import org.openapis.openapi.models.operations.CategoriesAllRequest;
+import org.openapis.openapi.models.operations.CategoriesAllResponse;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CategoriesAllRequest req = new CategoriesAllRequest() {{
                 pathParams = new CategoriesAllPathParams() {{
-                    ecosystemId = "sit";
+                    ecosystemId = "corrupti";
                 }};
                 queryParams = new CategoriesAllQueryParams() {{
-                    cursor = "voluptas";
-                    limit = 6050128673802995827;
+                    cursor = "provident";
+                    limit = 715190;
                 }};
-            }};
+            }};            
 
             CategoriesAllResponse res = sdk.category.categoriesAll(req);
 

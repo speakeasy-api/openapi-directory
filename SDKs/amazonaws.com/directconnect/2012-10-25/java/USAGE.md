@@ -2,46 +2,54 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalXAmzTargetEnum;
+import org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalHeaders;
+import org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalRequest;
+import org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalResponse;
+import org.openapis.openapi.models.shared.AcceptDirectConnectGatewayAssociationProposalRequest;
+import org.openapis.openapi.models.shared.RouteFilterPrefix;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             AcceptDirectConnectGatewayAssociationProposalRequest req = new AcceptDirectConnectGatewayAssociationProposalRequest() {{
                 headers = new AcceptDirectConnectGatewayAssociationProposalHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "OvertureService.AcceptDirectConnectGatewayAssociationProposal";
                 }};
                 request = new AcceptDirectConnectGatewayAssociationProposalRequest() {{
-                    associatedGatewayOwnerAccount = "fugit";
-                    directConnectGatewayId = "et";
-                    overrideAllowedPrefixesToDirectConnectGateway = new openapisdk.models.shared.RouteFilterPrefix[]() {{
+                    associatedGatewayOwnerAccount = "illum";
+                    directConnectGatewayId = "vel";
+                    overrideAllowedPrefixesToDirectConnectGateway = new org.openapis.openapi.models.shared.RouteFilterPrefix[]{{
                         add(new RouteFilterPrefix() {{
-                            cidr = "rerum";
+                            cidr = "deserunt";
+                        }}),
+                        add(new RouteFilterPrefix() {{
+                            cidr = "suscipit";
+                        }}),
+                        add(new RouteFilterPrefix() {{
+                            cidr = "iure";
                         }}),
                     }};
-                    proposalId = "dicta";
+                    proposalId = "magnam";
                 }};
-            }};
+            }};            
 
             AcceptDirectConnectGatewayAssociationProposalResponse res = sdk.acceptDirectConnectGatewayAssociationProposal(req);
 

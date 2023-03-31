@@ -2,57 +2,58 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.DeleteRecommendationPreferencesXAmzTargetEnum;
+import org.openapis.openapi.models.operations.DeleteRecommendationPreferencesHeaders;
+import org.openapis.openapi.models.operations.DeleteRecommendationPreferencesRequest;
+import org.openapis.openapi.models.operations.DeleteRecommendationPreferencesResponse;
+import org.openapis.openapi.models.shared.DeleteRecommendationPreferencesRequest;
+import org.openapis.openapi.models.shared.Scope;
+import org.openapis.openapi.models.shared.ScopeNameEnum;
+import org.openapis.openapi.models.shared.ResourceTypeEnum;
+import org.openapis.openapi.models.shared.RecommendationPreferenceNameEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
+                }})
+                .build();
 
-            SDK sdk = builder.build();
-
-            DescribeRecommendationExportJobsRequest req = new DescribeRecommendationExportJobsRequest() {{
-                headers = new DescribeRecommendationExportJobsHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
-                    xAmzTarget = "ComputeOptimizerService.DescribeRecommendationExportJobs";
+            DeleteRecommendationPreferencesRequest req = new DeleteRecommendationPreferencesRequest() {{
+                headers = new DeleteRecommendationPreferencesHeaders() {{
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
+                    xAmzTarget = "ComputeOptimizerService.DeleteRecommendationPreferences";
                 }};
-                request = new DescribeRecommendationExportJobsRequest() {{
-                    filters = new openapisdk.models.shared.JobFilter[]() {{
-                        add(new JobFilter() {{
-                            name = "ResourceType";
-                            values = new String[]() {{
-                                add("rerum"),
-                            }};
-                        }}),
+                request = new DeleteRecommendationPreferencesRequest() {{
+                    recommendationPreferenceNames = new org.openapis.openapi.models.shared.RecommendationPreferenceNameEnum[]{{
+                        add("InferredWorkloadTypes"),
+                        add("InferredWorkloadTypes"),
+                        add("InferredWorkloadTypes"),
+                        add("InferredWorkloadTypes"),
                     }};
-                    jobIds = new String[]() {{
-                        add("debitis"),
-                        add("voluptatum"),
-                        add("et"),
+                    resourceType = "EbsVolume";
+                    scope = new Scope() {{
+                        name = "Organization";
+                        value = "debitis";
                     }};
-                    maxResults = 7144924247938981575;
-                    nextToken = "dolorem";
                 }};
-            }};
+            }};            
 
-            DescribeRecommendationExportJobsResponse res = sdk.describeRecommendationExportJobs(req);
+            DeleteRecommendationPreferencesResponse res = sdk.deleteRecommendationPreferences(req);
 
-            if (res.describeRecommendationExportJobsResponse.isPresent()) {
+            if (res.deleteRecommendationPreferencesResponse.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

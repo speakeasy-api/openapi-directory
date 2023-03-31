@@ -2,34 +2,57 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity;
+import org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest;
+import org.openapis.openapi.models.operations.PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse;
+import org.openapis.openapi.models.shared.BatchInputCallbackCompletionBatchRequest;
+import org.openapis.openapi.models.shared.CallbackCompletionBatchRequest;
+import org.openapis.openapi.models.shared.SchemeHapikey;
+import org.openapis.openapi.models.shared.SchemeOauth2Legacy;
+import org.openapis.openapi.models.shared.SchemePrivateAppsLegacy;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest req = new PostAutomationV4ActionsCallbacksCompleteCompleteBatchRequest() {{
                 security = new PostAutomationV4ActionsCallbacksCompleteCompleteBatchSecurity() {{
-                    oauth2Legacy = new SchemeOauth2Legacy() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    hapikey = new SchemeHapikey() {{
+                        apiKey = "YOUR_API_KEY_HERE";
                     }};
                 }};
                 request = new BatchInputCallbackCompletionBatchRequest() {{
-                    inputs = new openapisdk.models.shared.CallbackCompletionBatchRequest[]() {{
+                    inputs = new org.openapis.openapi.models.shared.CallbackCompletionBatchRequest[]{{
                         add(new CallbackCompletionBatchRequest() {{
-                            callbackId = "voluptas";
+                            callbackId = "provident";
                             outputFields = new java.util.HashMap<String, String>() {{
-                                put("expedita", "consequuntur");
-                                put("dolor", "expedita");
+                                put("quibusdam", "unde");
+                                put("nulla", "corrupti");
+                                put("illum", "vel");
+                            }};
+                        }}),
+                        add(new CallbackCompletionBatchRequest() {{
+                            callbackId = "error";
+                            outputFields = new java.util.HashMap<String, String>() {{
+                                put("suscipit", "iure");
+                                put("magnam", "debitis");
+                                put("ipsa", "delectus");
+                            }};
+                        }}),
+                        add(new CallbackCompletionBatchRequest() {{
+                            callbackId = "tempora";
+                            outputFields = new java.util.HashMap<String, String>() {{
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
                             }};
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             PostAutomationV4ActionsCallbacksCompleteCompleteBatchResponse res = sdk.callbacks.postAutomationV4ActionsCallbacksCompleteCompleteBatch(req);
 

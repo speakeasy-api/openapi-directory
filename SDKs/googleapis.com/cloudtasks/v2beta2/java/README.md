@@ -1,4 +1,4 @@
-# openapisdk
+# openapi
 
 <!-- Start SDK Installation -->
 ## SDK Installation
@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'openapisdk:openapisdk:0.0.1'
+implementation 'org.openapis.openapi:openapi:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -15,15 +15,23 @@ implementation 'openapisdk:openapisdk:0.0.1'
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateSecurity;
+import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateQueryParams;
+import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateRequest;
+import org.openapis.openapi.models.operations.CloudtasksApiQueueUpdateResponse;
+import org.openapis.openapi.models.shared.HttpBody;
+import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.XgafvEnum;
+import org.openapis.openapi.models.shared.SchemeOauth2;
+import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CloudtasksApiQueueUpdateRequest req = new CloudtasksApiQueueUpdateRequest() {{
                 security = new CloudtasksApiQueueUpdateSecurity() {{
@@ -35,29 +43,36 @@ public class Application {
                     }};
                 }};
                 queryParams = new CloudtasksApiQueueUpdateQueryParams() {{
-                    dollarXgafv = "1";
-                    accessToken = "voluptas";
-                    alt = "media";
-                    appId = "expedita";
-                    callback = "consequuntur";
-                    fields = "dolor";
-                    key = "expedita";
-                    oauthToken = "voluptas";
-                    prettyPrint = true;
-                    quotaUser = "et";
-                    uploadType = "nihil";
-                    uploadProtocol = "rerum";
+                    dollarXgafv = "2";
+                    accessToken = "provident";
+                    alt = "proto";
+                    appId = "quibusdam";
+                    callback = "unde";
+                    fields = "nulla";
+                    key = "corrupti";
+                    oauthToken = "illum";
+                    prettyPrint = false;
+                    quotaUser = "vel";
+                    uploadType = "error";
+                    uploadProtocol = "deserunt";
                 }};
                 request = new HttpBody() {{
-                    contentType = "dicta";
-                    data = "debitis";
-                    extensions = new java.util.HashMap<String, Object>[]() {{
+                    contentType = "suscipit";
+                    data = "iure";
+                    extensions = new java.util.HashMap<String, Object>[]{{
                         add(new java.util.HashMap<String, Object>() {{
-                            put("ut", "dolorem");
+                            put("ipsa", "delectus");
+                            put("tempora", "suscipit");
+                            put("molestiae", "minus");
+                            put("placeat", "voluptatum");
+                        }}),
+                        add(new java.util.HashMap<String, Object>() {{
+                            put("excepturi", "nisi");
+                            put("recusandae", "temporibus");
                         }}),
                     }};
                 }};
-            }};
+            }};            
 
             CloudtasksApiQueueUpdateResponse res = sdk.api.cloudtasksApiQueueUpdate(req);
 
@@ -72,6 +87,7 @@ public class Application {
 
 <!-- Start SDK Available Operations -->
 ## SDK Available Operations
+
 
 ### api
 
@@ -99,7 +115,17 @@ public class Application {
 * `cloudtasksProjectsLocationsQueuesTasksRenewLease` - Renew the current lease of a pull task. The worker can use this method to extend the lease by a new duration, starting from now. The new task lease will be returned in the task's schedule_time.
 * `cloudtasksProjectsLocationsQueuesTasksRun` - Forces a task to run now. When this method is called, Cloud Tasks will dispatch the task, even if the task is already running, the queue has reached its RateLimits or is PAUSED. This command is meant to be used for manual debugging. For example, RunTask can be used to retry a failed task after a fix has been made or to manually force a task to be dispatched now. The dispatched task is returned. That is, the task that is returned contains the status after the task is dispatched but before the task is received by its target. If Cloud Tasks receives a successful response from the task's target, then the task will be deleted; otherwise the task's schedule_time will be reset to the time that RunTask was called plus the retry delay specified in the queue's RetryConfig. RunTask returns NOT_FOUND when it is called on a task that has already succeeded or permanently failed. RunTask cannot be called on a pull task.
 * `cloudtasksProjectsLocationsQueuesTestIamPermissions` - Returns permissions that a caller has on a Queue. If the resource does not exist, this will return an empty set of permissions, not a NOT_FOUND error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
-
 <!-- End SDK Available Operations -->
 
-### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)
+### Maturity
+
+This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage 
+to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally 
+looking for the latest version.
+
+### Contributions
+
+While we value open-source contributions to this SDK, this library is generated programmatically. 
+Feel free to open a PR or a Github issue as a proof of concept and we'll do our best to include it in a future release !
+
+### SDK Created by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

@@ -2,41 +2,45 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.BatchDetectDominantLanguageXAmzTargetEnum;
+import org.openapis.openapi.models.operations.BatchDetectDominantLanguageHeaders;
+import org.openapis.openapi.models.operations.BatchDetectDominantLanguageRequest;
+import org.openapis.openapi.models.operations.BatchDetectDominantLanguageResponse;
+import org.openapis.openapi.models.shared.BatchDetectDominantLanguageRequest;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             BatchDetectDominantLanguageRequest req = new BatchDetectDominantLanguageRequest() {{
                 headers = new BatchDetectDominantLanguageHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "Comprehend_20171127.BatchDetectDominantLanguage";
                 }};
                 request = new BatchDetectDominantLanguageRequest() {{
-                    textList = new String[]() {{
-                        add("et"),
+                    textList = new String[]{{
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
                 }};
-            }};
+            }};            
 
             BatchDetectDominantLanguageResponse res = sdk.batchDetectDominantLanguage(req);
 

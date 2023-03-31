@@ -2,25 +2,29 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+
+import org.openapis.openapi.models.operations.CreateArtifactRulePathParams;
+import org.openapis.openapi.models.operations.CreateArtifactRuleRequest;
+import org.openapis.openapi.models.operations.CreateArtifactRuleResponse;
+import org.openapis.openapi.models.shared.Rule;
+import org.openapis.openapi.models.shared.RuleTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            SDK sdk = builder.build();
+            SDK sdk = SDK.builder()
+                .build();
 
             CreateArtifactRuleRequest req = new CreateArtifactRuleRequest() {{
                 pathParams = new CreateArtifactRulePathParams() {{
-                    artifactId = "sit";
+                    artifactId = "corrupti";
                 }};
                 request = new Rule() {{
-                    config = "voluptas";
-                    type = "COMPATIBILITY";
+                    config = "provident";
+                    type = "VALIDITY";
                 }};
-            }};
+            }};            
 
             CreateArtifactRuleResponse res = sdk.artifactRules.createArtifactRule(req);
 

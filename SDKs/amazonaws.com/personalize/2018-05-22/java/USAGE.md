@@ -2,60 +2,79 @@
 ```java
 package hello.world;
 
-import openapisdk.SDK;
-import openapisdk.models.shared.Security;
+import org.openapis.openapi.SDK;
+import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateBatchInferenceJobXAmzTargetEnum;
+import org.openapis.openapi.models.operations.CreateBatchInferenceJobHeaders;
+import org.openapis.openapi.models.operations.CreateBatchInferenceJobRequest;
+import org.openapis.openapi.models.operations.CreateBatchInferenceJobResponse;
+import org.openapis.openapi.models.shared.CreateBatchInferenceJobRequest;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.BatchInferenceJobOutput;
+import org.openapis.openapi.models.shared.S3DataConfig;
+import org.openapis.openapi.models.shared.BatchInferenceJobInput;
+import org.openapis.openapi.models.shared.BatchInferenceJobConfig;
 
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     hmac = new SchemeHmac() {{
                         apiKey = "YOUR_API_KEY_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             CreateBatchInferenceJobRequest req = new CreateBatchInferenceJobRequest() {{
                 headers = new CreateBatchInferenceJobHeaders() {{
-                    xAmzAlgorithm = "sit";
-                    xAmzContentSha256 = "voluptas";
-                    xAmzCredential = "culpa";
-                    xAmzDate = "expedita";
-                    xAmzSecurityToken = "consequuntur";
-                    xAmzSignature = "dolor";
-                    xAmzSignedHeaders = "expedita";
+                    xAmzAlgorithm = "corrupti";
+                    xAmzContentSha256 = "provident";
+                    xAmzCredential = "distinctio";
+                    xAmzDate = "quibusdam";
+                    xAmzSecurityToken = "unde";
+                    xAmzSignature = "nulla";
+                    xAmzSignedHeaders = "corrupti";
                     xAmzTarget = "AmazonPersonalize.CreateBatchInferenceJob";
                 }};
                 request = new CreateBatchInferenceJobRequest() {{
                     batchInferenceJobConfig = new BatchInferenceJobConfig() {{
                         itemExplorationConfig = new java.util.HashMap<String, String>() {{
-                            put("et", "nihil");
+                            put("vel", "error");
+                            put("deserunt", "suscipit");
+                            put("iure", "magnam");
+                            put("debitis", "ipsa");
                         }};
                     }};
-                    filterArn = "rerum";
+                    filterArn = "delectus";
                     jobInput = new BatchInferenceJobInput() {{
                         s3DataSource = new S3DataConfig() {{
-                            kmsKeyArn = "dicta";
-                            path = "debitis";
+                            kmsKeyArn = "tempora";
+                            path = "suscipit";
                         }};
                     }};
-                    jobName = "voluptatum";
+                    jobName = "molestiae";
                     jobOutput = new BatchInferenceJobOutput() {{
                         s3DataDestination = new S3DataConfig() {{
-                            kmsKeyArn = "et";
-                            path = "ut";
+                            kmsKeyArn = "minus";
+                            path = "placeat";
                         }};
                     }};
-                    numResults = 161231572858529631;
-                    roleArn = "et";
-                    solutionVersionArn = "voluptate";
+                    numResults = 528895;
+                    roleArn = "iusto";
+                    solutionVersionArn = "excepturi";
+                    tags = new org.openapis.openapi.models.shared.Tag[]{{
+                        add(new Tag() {{
+                            tagKey = "recusandae";
+                            tagValue = "temporibus";
+                        }}),
+                        add(new Tag() {{
+                            tagKey = "ab";
+                            tagValue = "quis";
+                        }}),
+                    }};
                 }};
-            }};
+            }};            
 
             CreateBatchInferenceJobResponse res = sdk.createBatchInferenceJob(req);
 
