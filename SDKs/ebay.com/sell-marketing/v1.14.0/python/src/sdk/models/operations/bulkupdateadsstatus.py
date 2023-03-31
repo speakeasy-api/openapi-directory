@@ -20,7 +20,7 @@ class BulkUpdateAdsStatusRequest:
     bulk_update_ad_status_request: shared_bulkupdateadstatusrequest.BulkUpdateAdStatusRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""The bulk request to update the ads."""  
     campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
-    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\"tablenote\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\">getCampaigns</a> method.</span>"""  
+    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\\"tablenote\\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\\">getCampaigns</a> method.</span>"""  
     
 
 @dataclasses.dataclass

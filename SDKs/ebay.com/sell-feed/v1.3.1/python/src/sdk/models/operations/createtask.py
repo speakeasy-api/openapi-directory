@@ -19,7 +19,7 @@ class CreateTaskRequest:
     create_task_request: shared_createtaskrequest.CreateTaskRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""description not needed"""  
     x_ebay_c_marketplace_id: Optional[str] = dataclasses.field(default=None, metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
-    r"""The ID of the eBay marketplace where the item is hosted. <p> <span class=\"tablenote\"><strong>Note:</strong> This value is case sensitive.</span></p><p>For example:</p><p><code>X-EBAY-C-MARKETPLACE-ID:EBAY_US</code></p><p>This identifies the eBay marketplace that applies to this task. See <a href=\"/api-docs/sell/feed/types/bas:MarketplaceIdEnum\">MarketplaceIdEnum</a>.</p>"""  
+    r"""The ID of the eBay marketplace where the item is hosted. <p> <span class=\\"tablenote\\"><strong>Note:</strong> This value is case sensitive.</span></p><p>For example:</p><p><code>X-EBAY-C-MARKETPLACE-ID:EBAY_US</code></p><p>This identifies the eBay marketplace that applies to this task. See <a href=\\"/api-docs/sell/feed/types/bas:MarketplaceIdEnum\\">MarketplaceIdEnum</a>.</p>"""  
     
 
 @dataclasses.dataclass

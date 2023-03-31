@@ -17,7 +17,7 @@ class GetAdsByInventoryReferenceSecurity:
 class GetAdsByInventoryReferenceRequest:
     
     campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
-    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\"tablenote\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\">getCampaigns</a> method.</span>"""  
+    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\\"tablenote\\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\\">getCampaigns</a> method.</span>"""  
     inventory_reference_id: str = dataclasses.field(metadata={'query_param': { 'field_name': 'inventory_reference_id', 'style': 'form', 'explode': True }})
     r"""The inventory reference ID associated with the ad you want returned. A seller's inventory reference ID is the ID of either a listing or the ID of an inventory item group (the parent of a multi-variation listing, such as a shirt that is available in multiple sizes and colors). You must always supply in both an <b>inventory_reference_id</b> and an <b>inventory_reference_type</b>."""  
     inventory_reference_type: str = dataclasses.field(metadata={'query_param': { 'field_name': 'inventory_reference_type', 'style': 'form', 'explode': True }})

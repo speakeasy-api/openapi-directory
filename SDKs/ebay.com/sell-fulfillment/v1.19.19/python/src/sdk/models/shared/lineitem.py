@@ -35,7 +35,7 @@ class LineItem:
     ebay_collected_charges: Optional[shared_ebaycollectedcharges.EbayCollectedCharges] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ebayCollectedCharges'), 'exclude': lambda f: f is None }})
     r"""This type contains the breakdown of costs that are collected by eBay from the buyer."""  
     gift_details: Optional[shared_giftdetails.GiftDetails] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('giftDetails'), 'exclude': lambda f: f is None }})
-    r"""This type contains information about a digital gift card line item that was purchased as a gift and sent to the recipient by email.<br><br><span class=\"tablenote\"><strong>Note:</strong> When retrieving information for a digital gift card that is more than 90 days old, the information returned in all fields will be masked.</span>"""  
+    r"""This type contains information about a digital gift card line item that was purchased as a gift and sent to the recipient by email.<br><br><span class=\\"tablenote\\"><strong>Note:</strong> When retrieving information for a digital gift card that is more than 90 days old, the information returned in all fields will be masked.</span>"""  
     item_location: Optional[shared_itemlocation.ItemLocation] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('itemLocation'), 'exclude': lambda f: f is None }})
     r"""This type describes the physical location of an order."""  
     legacy_item_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('legacyItemId'), 'exclude': lambda f: f is None }})

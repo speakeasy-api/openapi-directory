@@ -17,7 +17,7 @@ class SuggestItemsSecurity:
 class SuggestItemsRequest:
     
     campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
-    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\"tablenote\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\">getCampaigns</a> method.</span>"""  
+    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\\"tablenote\\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\\">getCampaigns</a> method.</span>"""  
     category_ids: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'category_ids', 'style': 'form', 'explode': True }})
     r"""Specifies the category ID that is used to limit the results. This refers to an exact leaf category (the lowest level in that category and has no children). This field can have one category ID, or a comma-separated list of IDs. To return all category IDs, set to <code>null</code>. <br /><br /><b>Maximum: </b> 10"""  
     limit: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})

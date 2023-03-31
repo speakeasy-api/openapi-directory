@@ -61,7 +61,7 @@ class InvoiceRecurringAPIModel:
     status: Optional[InvoiceRecurringAPIModelStatusEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('Status'), 'exclude': lambda f: f is None }})
     r"""The status of the recurrance"""  
     title: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('Title'), 'exclude': lambda f: f is None }})
-    r"""Title of the recurring profile. 
+    r"""Title of the recurring profile.
     Ex: BRAND PACKAGE - 2017-08-16 - 2018-08-16
     """  
     

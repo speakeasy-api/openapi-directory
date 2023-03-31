@@ -17,7 +17,7 @@ class GetHazardousMaterialsLabelsSecurity:
 class GetHazardousMaterialsLabelsRequest:
     
     marketplace_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'marketplace_id', 'style': 'simple', 'explode': False }})
-    r"""A path parameter that specifies the eBay marketplace for which hazardous materials label information shall be retrieved.<p><span class=\"tablenote\"><strong>Tip:</strong> See <a href=\"/api-docs/static/rest-request-components.html#marketpl\" >Request components</a> for a list of valid eBay marketplace IDs.</span></p>"""  
+    r"""A path parameter that specifies the eBay marketplace for which hazardous materials label information shall be retrieved.<p><span class=\\"tablenote\\"><strong>Tip:</strong> See <a href=\\"/api-docs/static/rest-request-components.html#marketpl\\" >Request components</a> for a list of valid eBay marketplace IDs.</span></p>"""  
     
 
 @dataclasses.dataclass

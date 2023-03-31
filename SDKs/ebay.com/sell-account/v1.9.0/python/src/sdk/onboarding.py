@@ -22,7 +22,7 @@ class Onboarding:
         self._gen_version = gen_version
         
     def get_payments_program_onboarding(self, request: operations.GetPaymentsProgramOnboardingRequest, security: operations.GetPaymentsProgramOnboardingSecurity) -> operations.GetPaymentsProgramOnboardingResponse:
-        r"""<span class=\"tablenote\"><b>Note:</b> This method is no longer applicable, as all seller accounts globally have been enabled for the new eBay payment and checkout flow.</span><br/><br/>This method retrieves a seller's onboarding status for a payments program for a specified marketplace. The overall onboarding status of the seller and the status of each onboarding step is returned."""
+        r"""<span class=\\"tablenote\\"><b>Note:</b> This method is no longer applicable, as all seller accounts globally have been enabled for the new eBay payment and checkout flow.</span><br/><br/>This method retrieves a seller's onboarding status for a payments program for a specified marketplace. The overall onboarding status of the seller and the status of each onboarding step is returned."""
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetPaymentsProgramOnboardingRequest, base_url, '/payments_program/{marketplace_id}/{payments_program_type}/onboarding', request)

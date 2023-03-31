@@ -30,7 +30,7 @@ class UpdateNotificationByIDUpdateNotificationByIDRequestBody:
     send_email: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('sendEmail'), 'exclude': lambda f: f is None }})
     r"""Whether an email should be sent to the recipients when matching activity happens."""  
     usernames: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('usernames'), 'exclude': lambda f: f is None }})
-    r"""Determines which users' actions should trigger the notification. 
+    r"""Determines which users' actions should trigger the notification.
     
     Rather than listing  individual users, you can also use 3 special options:
     

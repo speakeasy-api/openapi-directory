@@ -15,7 +15,7 @@ class WebhookRelationshipsOwnerAccountData:
     id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""Account ID"""  
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of thing it is \"account\""""  
+    r"""Type of thing it is \\"account\\" """  
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -32,7 +32,7 @@ class WebhookRelationshipsResourceData:
     id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""ID of the resource associated with the webhook"""  
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of thing it is. \"resource\""""  
+    r"""Type of thing it is. \\"resource\\" """  
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -58,5 +58,5 @@ class Webhook:
     id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})  
     relationships: Optional[WebhookRelationships] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('relationships'), 'exclude': lambda f: f is None }})  
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of thing it is. \"webhook\""""  
+    r"""Type of thing it is. \\"webhook\\" """  
     

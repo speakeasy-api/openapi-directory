@@ -86,7 +86,7 @@ class AccessTokens:
                 res.get_access_tokens_response = out
         elif http_res.status_code == 400:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.ValueError])
+                out = utils.unmarshal_json(http_res.text, Optional[shared.ValueErrorT])
                 res.value_error = out
         elif http_res.status_code == 401:
             if utils.match_content_type(content_type, 'application/json'):
@@ -151,7 +151,7 @@ class AccessTokens:
                 res.patch_access_token_response = out
         elif http_res.status_code == 400:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.ValueError])
+                out = utils.unmarshal_json(http_res.text, Optional[shared.ValueErrorT])
                 res.value_error = out
         elif http_res.status_code == 401:
             if utils.match_content_type(content_type, 'application/json'):
@@ -188,7 +188,7 @@ class AccessTokens:
                 res.create_access_tokens_response = out
         elif http_res.status_code == 400:
             if utils.match_content_type(content_type, 'application/json'):
-                out = utils.unmarshal_json(http_res.text, Optional[shared.ValueError])
+                out = utils.unmarshal_json(http_res.text, Optional[shared.ValueErrorT])
                 res.value_error = out
         elif http_res.status_code == 401:
             if utils.match_content_type(content_type, 'application/json'):

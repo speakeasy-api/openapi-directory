@@ -20,11 +20,11 @@ class TargetedAdsPagedCollection:
     next: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('next'), 'exclude': lambda f: f is None }})
     r"""The call URI that can be used to retrieve the next page in the result set. This value is returned only if there is an additional page of results to display from the result set."""  
     offset: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('offset'), 'exclude': lambda f: f is None }})
-    r"""The number of results skipped in the result set before listing the first returned result. This value can be set in the request with the <b>offset</b> query parameter. <p><b>Default:</b> 0</p><br><span class=\"tablenote\"><b>Note: </b>The items in a paginated result set use a zero-based list, where the first item in the list has an offset of <code>0</code>.</span>"""  
+    r"""The number of results skipped in the result set before listing the first returned result. This value can be set in the request with the <b>offset</b> query parameter. <p><b>Default:</b> 0</p><br><span class=\\"tablenote\\"><b>Note: </b>The items in a paginated result set use a zero-based list, where the first item in the list has an offset of <code>0</code>.</span>"""  
     prev: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('prev'), 'exclude': lambda f: f is None }})
     r"""The call URI that can be used to retrieve the previous page in the result set. Basically, all of the request parameters will remain the same except the offset value, which will be decreased to retrieve the previous page of results."""  
     suggested_items: Optional[list[shared_targetingitems.TargetingItems]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('suggestedItems'), 'exclude': lambda f: f is None }})
     r"""A list of suggested items in the paginated collection."""  
     total: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total'), 'exclude': lambda f: f is None }})
-    r"""The total number of items retrieved in the result set.<br /><br /><span class=\"tablenote\"><b>Note: </b>If no items are found, this field is returned with a value of <code>0</code>.</span>"""  
+    r"""The total number of items retrieved in the result set.<br /><br /><span class=\\"tablenote\\"><b>Note: </b>If no items are found, this field is returned with a value of <code>0</code>.</span>"""  
     

@@ -23,7 +23,7 @@ class WebhookActivityAttributesV1WebhookV1Details:
     protocol: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('protocol'), 'exclude': lambda f: f is None }})
     r"""Type of connection used for related activity"""  
     username: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('username'), 'exclude': lambda f: f is None }})
-    r"""Username logged for related activity. May refer to someone who is not a user of the account, such as a share recipient or \"publ"""  
+    r"""Username logged for related activity. May refer to someone who is not a user of the account, such as a share recipient or \\"publ"""  
     
 class WebhookActivityAttributesV1EventEnum(str, Enum):
     r"""Event type"""

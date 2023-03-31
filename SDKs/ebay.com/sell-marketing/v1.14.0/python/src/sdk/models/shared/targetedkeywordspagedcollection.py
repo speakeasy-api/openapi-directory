@@ -14,5 +14,5 @@ class TargetedKeywordsPagedCollection:
     r"""A type that defines the keywords of the paged collection."""
     
     suggested_keywords: Optional[list[shared_suggestedkeywords.SuggestedKeywords]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('suggestedKeywords'), 'exclude': lambda f: f is None }})
-    r"""A list of suggested keywords in the paged collection. <p> <span class=\"tablenote\"><strong>Note:</strong> A relevancy check with items already present in the ad-group is performed even if item IDs associated with the ad-group are not explicitly passed in the request.</span></p>"""  
+    r"""A list of suggested keywords in the paged collection. <p> <span class=\\"tablenote\\"><strong>Note:</strong> A relevancy check with items already present in the ad-group is performed even if item IDs associated with the ad-group are not explicitly passed in the request.</span></p>"""  
     

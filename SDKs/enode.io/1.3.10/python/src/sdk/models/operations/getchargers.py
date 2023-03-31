@@ -24,7 +24,7 @@ class GetChargersFieldEnum(str, Enum):
 class GetChargersRequest:
     
     field: Optional[list[GetChargersFieldEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field[]', 'style': 'form', 'explode': True }})
-    r"""An optional array of Charger fields that should be included in the response, for example: `?field[]=information&field[]=chargeState` 
+    r"""An optional array of Charger fields that should be included in the response, for example: `?field[]=information&field[]=chargeState`
     
     By default, no optional fields are included and only the Charger ID will be returned. Response time will generally be slower the more fields you request.
     """  

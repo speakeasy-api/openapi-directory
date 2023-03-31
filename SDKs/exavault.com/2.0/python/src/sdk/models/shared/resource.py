@@ -79,7 +79,7 @@ class ResourceRelationships:
     share: Optional[ResourceRelationshipsShare] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('share'), 'exclude': lambda f: f is None }})  
     
 class ResourceTypeEnum(str, Enum):
-    r"""Type of item. \"resource\""""
+    r"""Type of item. \\"resource\\" """
     RESOURCE = 'resource'
 
 
@@ -93,5 +93,5 @@ class Resource:
     id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})  
     relationships: Optional[ResourceRelationships] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('relationships'), 'exclude': lambda f: f is None }})  
     type: Optional[ResourceTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of item. \"resource\""""  
+    r"""Type of item. \\"resource\\" """  
     

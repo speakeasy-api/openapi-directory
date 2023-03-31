@@ -50,7 +50,7 @@ class UpdateShareByIDUpdateShareRequestBody:
     password: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('password'), 'exclude': lambda f: f is None }})
     r"""New password for the share. To leave the password unchanged, do not send this parameter."""  
     recipients: Optional[list[UpdateShareByIDUpdateShareRequestBodyRecipients]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('recipients'), 'exclude': lambda f: f is None }})
-    r"""People you want to invite to the share. 
+    r"""People you want to invite to the share.
     
     **Note**: unless you also set the `subject` and `message` for the new share, invitation emails will not be sent to these recipients.
     

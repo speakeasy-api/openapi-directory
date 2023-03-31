@@ -43,7 +43,7 @@ class AddNotificationAddNotificationRequestBody:
     - **folder** to monitor activity for a folder resource
     """  
     usernames: list[str] = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('usernames') }})
-    r"""Determines which users' actions should trigger the notification. 
+    r"""Determines which users' actions should trigger the notification.
     
     Rather than listing  individual users, you can also use 3 special options:
     

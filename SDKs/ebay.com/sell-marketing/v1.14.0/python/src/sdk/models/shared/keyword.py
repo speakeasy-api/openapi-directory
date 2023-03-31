@@ -11,7 +11,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Keyword:
-    r"""A type that contains the details for keywords that are associated with an ad group.<br /><br /><span class=\"tablenote\"><b>Note:</b> This type only applies to the Cost Per Click (CPC) funding model; it does not apply to the Cost Per Sale (CPS) funding model.</span>"""
+    r"""A type that contains the details for keywords that are associated with an ad group.<br /><br /><span class=\\"tablenote\\"><b>Note:</b> This type only applies to the Cost Per Click (CPC) funding model; it does not apply to the Cost Per Sale (CPS) funding model.</span>"""
     
     ad_group_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('adGroupId'), 'exclude': lambda f: f is None }})
     r"""This field identifies the ad group that the keyword is associated with."""  

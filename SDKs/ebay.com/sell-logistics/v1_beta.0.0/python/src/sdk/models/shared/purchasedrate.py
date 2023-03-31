@@ -12,18 +12,18 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class PurchasedRate:
-    r"""The \"rate\" that has been selected and purchased for the shipment, as referenced by the <b>rateId</b> value."""
+    r"""The \\"rate\\" that has been selected and purchased for the shipment, as referenced by the <b>rateId</b> value."""
     
     additional_options: Optional[list[shared_additionaloption.AdditionalOption]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('additionalOptions'), 'exclude': lambda f: f is None }})
     r"""An list of additional, optional features that have been purchased for the shipment."""  
     base_shipping_cost: Optional[shared_amount.Amount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('baseShippingCost'), 'exclude': lambda f: f is None }})
     r"""A complex type that describes the value of a monetary amount as represented by a global currency."""  
     destination_time_zone: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('destinationTimeZone'), 'exclude': lambda f: f is None }})
-    r"""The time zone of the destination according to <a href=\"https://www.iana.org/time-zones\" target=\"_blank\">Time Zone Database</a>. For example, \"America/Los_Angeles\"."""  
+    r"""The time zone of the destination according to <a href=\\"https://www.iana.org/time-zones\\" target=\\"_blank\\">Time Zone Database</a>. For example, \\"America/Los_Angeles\\"."""  
     max_estimated_delivery_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('maxEstimatedDeliveryDate'), 'exclude': lambda f: f is None }})
-    r"""A string value representing maximum (latest) estimated delivery time, formatted as an <a href=\"https://www.iso.org/iso-8601-date-and-time-format.html\" title=\"https://www.iso.org\" target=\"_blank\">ISO 8601</a> string, which is based on the 24-hour Coordinated Universal Time (UTC) clock.  <br><br><b>Format:</b> <code>[YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[SSS]Z</code> <br><b>Example:</b> <code>2018-08-20T07:09:00.000Z</code>"""  
+    r"""A string value representing maximum (latest) estimated delivery time, formatted as an <a href=\\"https://www.iso.org/iso-8601-date-and-time-format.html\\" title=\\"https://www.iso.org\\" target=\\"_blank\\">ISO 8601</a> string, which is based on the 24-hour Coordinated Universal Time (UTC) clock.  <br><br><b>Format:</b> <code>[YYYY]-[MM]-[DD]T[HH]:[MM]:[SS].[SSS]Z</code> <br><b>Example:</b> <code>2018-08-20T07:09:00.000Z</code>"""  
     min_estimated_delivery_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('minEstimatedDeliveryDate'), 'exclude': lambda f: f is None }})
-    r"""A string value representing minimum (earliest) estimated delivery time, formatted as an <a href=\"https://www.iso.org/iso-8601-date-and-time-format.html\" title=\"https://www.iso.org\" target=\"_blank\">ISO 8601</a>ISO 8601</a> UTC string."""  
+    r"""A string value representing minimum (earliest) estimated delivery time, formatted as an <a href=\\"https://www.iso.org/iso-8601-date-and-time-format.html\\" title=\\"https://www.iso.org\\" target=\\"_blank\\">ISO 8601</a>ISO 8601</a> UTC string."""  
     pickup_networks: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pickupNetworks'), 'exclude': lambda f: f is None }})
     r"""A list of pickup networks compatible with the shipping service."""  
     pickup_slot_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('pickupSlotId'), 'exclude': lambda f: f is None }})

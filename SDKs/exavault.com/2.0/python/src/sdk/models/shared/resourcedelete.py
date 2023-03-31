@@ -8,7 +8,7 @@ from sdk import utils
 from typing import Any, Optional
 
 class ResourceDeleteTypeEnum(str, Enum):
-    r"""Type of item. \"resource\""""
+    r"""Type of item. \\"resource\\" """
     RESOURCE = 'resource'
 
 
@@ -21,5 +21,5 @@ class ResourceDelete:
     meta: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('meta'), 'exclude': lambda f: f is None }})
     r"""Meta object containing non-standard meta-information about the delete operation."""  
     type: Optional[ResourceDeleteTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of item. \"resource\""""  
+    r"""Type of item. \\"resource\\" """  
     

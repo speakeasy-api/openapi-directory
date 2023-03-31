@@ -17,7 +17,7 @@ class UpdateNegativeKeywordSecurity:
 class UpdateNegativeKeywordRequest:
     
     negative_keyword_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'negative_keyword_id', 'style': 'simple', 'explode': False }})
-    r"""The unique identifier for the negative keyword.<br /><br />This value is returned in the <b>Location</b> response header from the <a href=\"/api-docs/sell/marketing/resources/negative_keyword/methods/createNegativeKeyword\">createNegativeKeyword</a> method."""  
+    r"""The unique identifier for the negative keyword.<br /><br />This value is returned in the <b>Location</b> response header from the <a href=\\"/api-docs/sell/marketing/resources/negative_keyword/methods/createNegativeKeyword\\">createNegativeKeyword</a> method."""  
     update_negative_keyword_request: shared_updatenegativekeywordrequest.UpdateNegativeKeywordRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""A type that defines the fields for the request to update a negative keyword."""  
     

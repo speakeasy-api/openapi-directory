@@ -25,7 +25,7 @@ class ListResourceContentsRequest:
     sort: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'sort', 'style': 'form', 'explode': True }})
     r"""Endpoint support multiple sort fields by allowing array of sort params. Sort fields should be applied in the order specified. The sort order for each sort field is ascending unless it is prefixed with a minus (“-“), in which case it will be descending."""  
     type: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'type', 'style': 'form', 'explode': True }})
-    r"""Limit types of resources returned to \"file\" or \"dir\" only."""  
+    r"""Limit types of resources returned to \\"file\\" or \\"dir\\" only."""  
     
 
 @dataclasses.dataclass

@@ -27,6 +27,6 @@ class PatchV2AccessTokensUUIDResponse:
     patch_access_token_response: Optional[shared_patchaccesstokenresponse.PatchAccessTokenResponse] = dataclasses.field(default=None)
     r"""OK"""  
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
-    value_error: Optional[shared_valueerror.ValueError] = dataclasses.field(default=None)
+    value_error: Optional[shared_valueerror.ValueErrorT] = dataclasses.field(default=None)
     r"""Bad Request"""  
     

@@ -26,7 +26,7 @@ class CharityOrg:
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     r"""The name of the charitable organization."""  
     registration_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('registrationId'), 'exclude': lambda f: f is None }})
-    r"""The registration ID for the charitable organization.<br /><br /><span class=\"tablenote\"><span style=\"color:#004680\"><strong>Note:</strong></span> For the US marketplace, this is the EIN.</span>"""  
+    r"""The registration ID for the charitable organization.<br /><br /><span class=\\"tablenote\\"><span style=\\"color:#004680\\"><strong>Note:</strong></span> For the US marketplace, this is the EIN.</span>"""  
     website: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('website'), 'exclude': lambda f: f is None }})
     r"""The link to the website for the charitable organization."""  
     

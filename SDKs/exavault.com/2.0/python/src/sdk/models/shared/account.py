@@ -35,7 +35,7 @@ class AccountMasterUser:
     master_user: Optional[AccountMasterUserMasterUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('masterUser'), 'exclude': lambda f: f is None }})  
     
 class AccountTypeEnum(str, Enum):
-    r"""Type of item. \"account\""""
+    r"""Type of item. \\"account\\" """
     ACCOUNT = 'account'
 
 
@@ -49,5 +49,5 @@ class Account:
     r"""Account ID"""  
     relationships: Optional[AccountMasterUser] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('relationships'), 'exclude': lambda f: f is None }})  
     type: Optional[AccountTypeEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of item. \"account\""""  
+    r"""Type of item. \\"account\\" """  
     

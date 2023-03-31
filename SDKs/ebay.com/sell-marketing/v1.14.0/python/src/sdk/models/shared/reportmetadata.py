@@ -23,5 +23,5 @@ class ReportMetadata:
     metric_metadata: Optional[list[shared_metricmetadata.MetricMetadata]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metricMetadata'), 'exclude': lambda f: f is None }})
     r"""A list containing the metadata for the metrics in the report."""  
     report_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('reportType'), 'exclude': lambda f: f is None }})
-    r"""The <b>report_type</b>, as specified in the request to create the report task.<br/><br/><span class=\"tablenote\"><b>Note:</b> INVENTORY_PERFORMANCE_REPORT is not currently available; availability date is pending.</span> For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/marketing/types/plr:ReportTypeEnum'>eBay API documentation</a>"""  
+    r"""The <b>report_type</b>, as specified in the request to create the report task.<br/><br/><span class=\\"tablenote\\"><b>Note:</b> INVENTORY_PERFORMANCE_REPORT is not currently available; availability date is pending.</span> For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/marketing/types/plr:ReportTypeEnum'>eBay API documentation</a>"""  
     

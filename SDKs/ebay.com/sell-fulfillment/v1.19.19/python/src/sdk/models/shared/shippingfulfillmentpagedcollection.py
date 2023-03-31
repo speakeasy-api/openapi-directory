@@ -17,7 +17,7 @@ class ShippingFulfillmentPagedCollection:
     fulfillments: Optional[list[shared_shippingfulfillment.ShippingFulfillment]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fulfillments'), 'exclude': lambda f: f is None }})
     r"""This array contains one or more fulfillments required for the order that was specified in method endpoint."""  
     total: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('total'), 'exclude': lambda f: f is None }})
-    r"""The total number of fulfillments in the specified order.<br><br><span class=\"tablenote\"><strong>Note:</strong> If no fulfillments are found for the order, this field is returned with a value of <code>0</code>.</span>"""  
+    r"""The total number of fulfillments in the specified order.<br><br><span class=\\"tablenote\\"><strong>Note:</strong> If no fulfillments are found for the order, this field is returned with a value of <code>0</code>.</span>"""  
     warnings: Optional[list[shared_error.Error]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('warnings'), 'exclude': lambda f: f is None }})
     r"""This array is only returned if one or more errors or warnings occur with the call request."""  
     

@@ -41,5 +41,5 @@ class FormEntry:
     id: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('id'), 'exclude': lambda f: f is None }})
     r"""Form entry id"""  
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of item. \"formEntry\""""  
+    r"""Type of item. \\"formEntry\\" """  
     

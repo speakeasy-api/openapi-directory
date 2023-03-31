@@ -20,7 +20,7 @@ class SuggestKeywordsRequest:
     ad_group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ad_group_id', 'style': 'simple', 'explode': False }})
     r"""The ID of the ad group for which the keyword suggestions will be provided."""  
     campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
-    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\"tablenote\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\">getCampaigns</a> method.</span>"""  
+    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\\"tablenote\\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\\">getCampaigns</a> method.</span>"""  
     targeted_keyword_request: Optional[shared_targetedkeywordrequest.TargetedKeywordRequest] = dataclasses.field(default=None, metadata={'request': { 'media_type': 'application/json' }})
     r"""The required data to retrieve suggested keywords."""  
     

@@ -22,7 +22,7 @@ class GetVehiclesSecurity:
 class GetVehiclesRequest:
     
     field: Optional[list[Any]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field[]', 'style': 'form', 'explode': True }})
-    r"""An optional array of Vehicle fields that should be included in the response, for example: `?field[]=information&field[]=location` 
+    r"""An optional array of Vehicle fields that should be included in the response, for example: `?field[]=information&field[]=location`
     
     By default, no fields are included and only the Vehicle ID will be returned. Response time may be impacted by which fields you request.
     """  

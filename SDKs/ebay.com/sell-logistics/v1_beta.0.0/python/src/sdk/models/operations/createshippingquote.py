@@ -20,7 +20,7 @@ class CreateShippingQuoteRequest:
     shipping_quote_request: shared_shippingquoterequest.ShippingQuoteRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""The request object for <b>createShippingQuote</b>."""  
     x_ebay_c_marketplace_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
-    r"""This header parameter specifies the eBay marketplace for the shipping quote that is being created. For a list of valid values, refer to the section <a href=\"/api-docs/static/rest-request-components.html#marketpl\" target=\"_blank\">Marketplace ID Values</a> in the <b>Using eBay RESTful APIs</b> guide."""  
+    r"""This header parameter specifies the eBay marketplace for the shipping quote that is being created. For a list of valid values, refer to the section <a href=\\"/api-docs/static/rest-request-components.html#marketpl\\" target=\\"_blank\\">Marketplace ID Values</a> in the <b>Using eBay RESTful APIs</b> guide."""  
     
 
 @dataclasses.dataclass

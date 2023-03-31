@@ -15,5 +15,5 @@ class AdditionalInfoData:
     metric_key: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('metricKey'), 'exclude': lambda f: f is None }})
     r"""The metric used to provide additional information for the suggested keyword.<br /><br /><strong>Valid Values:</strong> <ul><li><code>ACTIVE_SELLER_COUNT</code></li><li><code>SEARCH_VOLUME</code></li></ul> For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/marketing/types/pls:MetricEnum'>eBay API documentation</a>"""  
     value: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('value'), 'exclude': lambda f: f is None }})
-    r"""The data provided for the specified metric.<br /><br /><span class=\"tablenote\"><span style=\"color:#004680\"><strong>Note:</strong></span> All metric data is compiled for the marketplace associated with the specified campaign ID.</span>"""  
+    r"""The data provided for the specified metric.<br /><br /><span class=\\"tablenote\\"><span style=\\"color:#004680\\"><strong>Note:</strong></span> All metric data is compiled for the marketplace associated with the specified campaign ID.</span>"""  
     

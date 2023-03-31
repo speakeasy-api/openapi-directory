@@ -2,7 +2,7 @@
 
 import requests as requests_http
 from . import utils
-from sdk.models import operations, operations, shared, shared
+from sdk.models import operations, shared
 from typing import Any, Optional
 
 SERVERS = [

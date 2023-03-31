@@ -21,5 +21,5 @@ class EmailList:
     relationships: Optional[shared_emaillistrelationships.EmailListRelationships] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('relationships'), 'exclude': lambda f: f is None }})
     r"""Related record summary info"""  
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of record. \"emailList\""""  
+    r"""Type of record. \\"emailList\\" """  
     

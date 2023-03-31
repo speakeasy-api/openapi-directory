@@ -13,7 +13,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ShippingQuoteRequest:
-    r"""This complex type defines the request body for <b>createShippingQuote</b>. Sellers <i>request a quote</i> for a shipment by defining the \"To\" and \"From\" addresses for the package, plus the package's size.  <br><br>Carriers respond by offering up a \"rate\" for the service of theirs that best fits seller's needs."""
+    r"""This complex type defines the request body for <b>createShippingQuote</b>. Sellers <i>request a quote</i> for a shipment by defining the \\"To\\" and \\"From\\" addresses for the package, plus the package's size.  <br><br>Carriers respond by offering up a \\"rate\\" for the service of theirs that best fits seller's needs."""
     
     orders: Optional[list[shared_order.Order]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('orders'), 'exclude': lambda f: f is None }})
     r"""A seller-defined list that contains information about the orders in the package. This allows sellers to include information about the line items in the package with the shipment information.  <br><br>A package can contain any number of line items from one or more orders, providing they all ship in the same package.  <br><br><b>Maximum list size:</b> 10"""  

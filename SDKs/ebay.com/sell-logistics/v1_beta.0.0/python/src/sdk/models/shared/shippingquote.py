@@ -15,7 +15,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class ShippingQuote:
-    r"""This complex type describes a \"shipping quote,\" which contains the parameters for a package shipment. The shipping quote contains a list of \"live quotes\" or <i>rates</i> for the shipment. Rates are offerd by a carrier for a particular service, of set of services, for shipping the package. Included in the shipping quote are the package specifications, the shipment's origin and destination addresses, and the shipping parameters specified by the seller.  <br><br>Use the <b>rateId</b> value to select the specific service you want when you create a shipment by calling <b>createFromShippingQuote</b>."""
+    r"""This complex type describes a \\"shipping quote,\\" which contains the parameters for a package shipment. The shipping quote contains a list of \\"live quotes\\" or <i>rates</i> for the shipment. Rates are offerd by a carrier for a particular service, of set of services, for shipping the package. Included in the shipping quote are the package specifications, the shipment's origin and destination addresses, and the shipping parameters specified by the seller.  <br><br>Use the <b>rateId</b> value to select the specific service you want when you create a shipment by calling <b>createFromShippingQuote</b>."""
     
     creation_date: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('creationDate'), 'exclude': lambda f: f is None }})
     r"""The date and time this quote was created, expressed as an ISO 8601 UTC string."""  

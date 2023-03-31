@@ -22,7 +22,7 @@ class Promotion:
         self._gen_version = gen_version
         
     def get_listing_set(self, request: operations.GetListingSetRequest, security: operations.GetListingSetSecurity) -> operations.GetListingSetResponse:
-        r"""This method returns the set of listings associated with the <b>promotion_id</b> specified in the path parameter. Call <a href=\"/api-docs/sell/marketing/resources/promotion/methods/getPromotions\">getPromotions</a> to retrieve the IDs of a seller's promotions.  <p>The listing details are returned in a paginated set and you can control and results returned using the following query parameters: <b>limit</b>, <b>offset</b>, <b>q</b>, <b>sort</b>, and <b>status</b>.</p>  <ul><li><b>Maximum associated listings returned:</b> 200</li>  <li><b>Default number of listings returned:</b> 200</li></ul>"""
+        r"""This method returns the set of listings associated with the <b>promotion_id</b> specified in the path parameter. Call <a href=\\"/api-docs/sell/marketing/resources/promotion/methods/getPromotions\\">getPromotions</a> to retrieve the IDs of a seller's promotions.  <p>The listing details are returned in a paginated set and you can control and results returned using the following query parameters: <b>limit</b>, <b>offset</b>, <b>q</b>, <b>sort</b>, and <b>status</b>.</p>  <ul><li><b>Maximum associated listings returned:</b> 200</li>  <li><b>Default number of listings returned:</b> 200</li></ul>"""
         base_url = self._server_url
         
         url = utils.generate_url(operations.GetListingSetRequest, base_url, '/promotion/{promotion_id}/get_listing_set', request)
@@ -70,7 +70,7 @@ class Promotion:
         return res
 
     def pause_promotion(self, request: operations.PausePromotionRequest, security: operations.PausePromotionSecurity) -> operations.PausePromotionResponse:
-        r"""This method pauses a currently-active (RUNNING) threshold promotion and changes the state of the promotion from <code>RUNNING</code> to <code>PAUSED</code>. Pausing a promotion makes the promotion temporarily unavailable to buyers and any currently-incomplete transactions will not receive the promotional offer until the promotion is resumed. Also, promotion teasers are not displayed when a promotion is paused.  <br><br>Pass the ID of the promotion you want to pause using the <b>promotion_id</b> path parameter. Call <a href=\"/api-docs/sell/marketing/resources/promotion/methods/getPromotions\">getPromotions</a> to retrieve the IDs of the seller's promotions. <br><br><b>Note:</b> You can only pause threshold promotions (you cannot pause markdown promotions)."""
+        r"""This method pauses a currently-active (RUNNING) threshold promotion and changes the state of the promotion from <code>RUNNING</code> to <code>PAUSED</code>. Pausing a promotion makes the promotion temporarily unavailable to buyers and any currently-incomplete transactions will not receive the promotional offer until the promotion is resumed. Also, promotion teasers are not displayed when a promotion is paused.  <br><br>Pass the ID of the promotion you want to pause using the <b>promotion_id</b> path parameter. Call <a href=\\"/api-docs/sell/marketing/resources/promotion/methods/getPromotions\\">getPromotions</a> to retrieve the IDs of the seller's promotions. <br><br><b>Note:</b> You can only pause threshold promotions (you cannot pause markdown promotions)."""
         base_url = self._server_url
         
         url = utils.generate_url(operations.PausePromotionRequest, base_url, '/promotion/{promotion_id}/pause', request)
@@ -87,7 +87,7 @@ class Promotion:
         return res
 
     def resume_promotion(self, request: operations.ResumePromotionRequest, security: operations.ResumePromotionSecurity) -> operations.ResumePromotionResponse:
-        r"""This method restarts a threshold promotion that was previously paused and changes the state of the promotion from <code>PAUSED</code> to <code>RUNNING</code>. Only promotions that have been previously paused can be resumed. Resuming a promotion reinstates the promotional teasers and any transactions that were in motion before the promotion was paused will again be eligible for the promotion.  <br><br>Pass the ID of the promotion you want to resume using the <b>promotion_id</b> path parameter. Call <a href=\"/api-docs/sell/marketing/resources/promotion/methods/getPromotions\">getPromotions</a> to retrieve the IDs of the seller's promotions."""
+        r"""This method restarts a threshold promotion that was previously paused and changes the state of the promotion from <code>PAUSED</code> to <code>RUNNING</code>. Only promotions that have been previously paused can be resumed. Resuming a promotion reinstates the promotional teasers and any transactions that were in motion before the promotion was paused will again be eligible for the promotion.  <br><br>Pass the ID of the promotion you want to resume using the <b>promotion_id</b> path parameter. Call <a href=\\"/api-docs/sell/marketing/resources/promotion/methods/getPromotions\\">getPromotions</a> to retrieve the IDs of the seller's promotions."""
         base_url = self._server_url
         
         url = utils.generate_url(operations.ResumePromotionRequest, base_url, '/promotion/{promotion_id}/resume', request)

@@ -14,7 +14,7 @@ class DeleteAdsByInventoryReferenceResponse:
     r"""This type defines the fields returned by request to delete a set of ads by inventory reference ID."""
     
     ad_ids: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('adIds'), 'exclude': lambda f: f is None }})
-    r"""The unique identifier of the ad that was deleted, or the ad that the seller attempted to delete.<span class=\"tablenote\"><b>Note:</b>Although the field name is plural and it is an array, only one ad ID will be returned here since there can be only one ad per listing.</span>"""  
+    r"""The unique identifier of the ad that was deleted, or the ad that the seller attempted to delete.<span class=\\"tablenote\\"><b>Note:</b>Although the field name is plural and it is an array, only one ad ID will be returned here since there can be only one ad per listing.</span>"""  
     errors: Optional[list[shared_error.Error]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('errors'), 'exclude': lambda f: f is None }})
     r"""The container for the errors associated with the request."""  
     inventory_reference_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('inventoryReferenceId'), 'exclude': lambda f: f is None }})
@@ -22,5 +22,5 @@ class DeleteAdsByInventoryReferenceResponse:
     inventory_reference_type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('inventoryReferenceType'), 'exclude': lambda f: f is None }})
     r"""The enumeration value returned here indicates if the ad was for a single-variation listing or a multiple-variation listing. For implementation help, refer to <a href='https://developer.ebay.com/api-docs/sell/marketing/types/pls:InventoryReferenceTypeEnum'>eBay API documentation</a>"""  
     status_code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('statusCode'), 'exclude': lambda f: f is None }})
-    r"""An HTTP status code indicating if the corresponding ad was successfully deleted or not. <code>200 Successful</code> should be returned for successfully deleted ads. <span class=\"tablenote\"><b>Note:</b>A status code is returned for each ad that the seller deletes, or attempts to delete.</span>"""  
+    r"""An HTTP status code indicating if the corresponding ad was successfully deleted or not. <code>200 Successful</code> should be returned for successfully deleted ads. <span class=\\"tablenote\\"><b>Note:</b>A status code is returned for each ad that the seller deletes, or attempts to delete.</span>"""  
     

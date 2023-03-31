@@ -16,7 +16,7 @@ class DeleteReportTaskSecurity:
 class DeleteReportTaskRequest:
     
     report_task_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'report_task_id', 'style': 'simple', 'explode': False }})
-    r"""A unique eBay-assigned ID for the report task that's generated when the report task is created by a call to <a href=\"/api-docs/sell/marketing/resources/ad_report_task/methods/createReportTask\">createReportTask</a>."""  
+    r"""A unique eBay-assigned ID for the report task that's generated when the report task is created by a call to <a href=\\"/api-docs/sell/marketing/resources/ad_report_task/methods/createReportTask\\">createReportTask</a>."""  
     
 
 @dataclasses.dataclass

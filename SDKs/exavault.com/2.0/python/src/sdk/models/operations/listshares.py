@@ -37,16 +37,16 @@ class ListSharesRequest:
     limit: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': True }})
     r"""Limit of records to be returned (for pagination)"""  
     message: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'message', 'style': 'form', 'explode': True }})
-    r"""When provided, only shares with a message that contains the text will be included in the list of matches. Both the subject and the body of all messages will be checked for matches. This will always be a wildcard match, so that searching for **taxes** will return any shares with a message that contains the word \"taxes\"."""  
+    r"""When provided, only shares with a message that contains the text will be included in the list of matches. Both the subject and the body of all messages will be checked for matches. This will always be a wildcard match, so that searching for **taxes** will return any shares with a message that contains the word \\"taxes\\"."""  
     name: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'name', 'style': 'form', 'explode': True }})
-    r"""When provided, only shares whose names include this value will be in the list. Supports wildcards, such as **send\*** to return everything starting with \"send\".
+    r"""When provided, only shares whose names include this value will be in the list. Supports wildcards, such as **send\*** to return everything starting with \\"send\\".
     
     Use this parameter if you are searching for shares or receives for a specific folder name. For example **/Clients/ACME/To Be Processed**.
     """  
     offset: Optional[int] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': True }})
     r"""Current offset of records (for pagination)"""  
     recipient: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'recipient', 'style': 'form', 'explode': True }})
-    r"""Filter the results to include only shares that invited a certain email address. Supports wildcard matching so that **\*@example.com** will give back entries shared with addresses ending in \"@example.com\"."""  
+    r"""Filter the results to include only shares that invited a certain email address. Supports wildcard matching so that **\*@example.com** will give back entries shared with addresses ending in \\"@example.com\\"."""  
     scope: Optional[ListSharesScopeEnum] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'scope', 'style': 'form', 'explode': True }})
     r"""Set of shares to return. (**all**=all of them, **active**=shares that are currently active, **curentUser**=shares created by you)"""  
     search: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'search', 'style': 'form', 'explode': True }})

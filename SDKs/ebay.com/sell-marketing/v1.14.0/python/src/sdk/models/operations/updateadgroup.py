@@ -19,7 +19,7 @@ class UpdateAdGroupRequest:
     ad_group_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'ad_group_id', 'style': 'simple', 'explode': False }})
     r"""The ID of the ad group that shall be updated."""  
     campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
-    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\"tablenote\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\">getCampaigns</a> method.</span>"""  
+    r"""A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.<br /><br /><span class=\\"tablenote\\"><b>Note:</b> You can retrieve the campaign IDs for a specified seller using the <a href=\\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\\">getCampaigns</a> method.</span>"""  
     update_ad_group_request: shared_updateadgrouprequest.UpdateAdGroupRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""This type defines the fields for the <b>UpdateAdGroup</b> request."""  
     

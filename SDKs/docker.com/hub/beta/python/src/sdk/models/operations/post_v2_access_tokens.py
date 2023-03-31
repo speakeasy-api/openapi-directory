@@ -19,6 +19,6 @@ class PostV2AccessTokensResponse:
     error: Optional[shared_error.Error] = dataclasses.field(default=None)
     r"""Unauthorized"""  
     raw_response: Optional[requests_http.Response] = dataclasses.field(default=None)  
-    value_error: Optional[shared_valueerror.ValueError] = dataclasses.field(default=None)
+    value_error: Optional[shared_valueerror.ValueErrorT] = dataclasses.field(default=None)
     r"""Bad Request"""  
     

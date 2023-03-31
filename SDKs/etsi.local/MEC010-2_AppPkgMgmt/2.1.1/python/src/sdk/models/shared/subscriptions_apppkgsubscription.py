@@ -10,7 +10,7 @@ from sdk import utils
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class SubscriptionsAppPkgSubscription:
-    r"""'The data type represents the input parameters of \"subscription operation\" to notification of application package management for the onboarding, or operational state change of application package.'"""
+    r"""'The data type represents the input parameters of \\"subscription operation\\" to notification of application package management for the onboarding, or operational state change of application package.'"""
     
     href: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('href') }})
     r"""The URI referring to the subscription."""  

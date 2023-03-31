@@ -11,7 +11,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class AppPkgSubscription:
-    r"""'The data type represents the input parameters of \"subscription operation\" to notification of application package management for the onboarding, or operational state change of application package.'"""
+    r"""'The data type represents the input parameters of \\"subscription operation\\" to notification of application package management for the onboarding, or operational state change of application package.'"""
     
     callback_uri: str = dataclasses.field(metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('callbackUri') }})
     r"""The URI of the endpoint for the notification to be sent to."""  

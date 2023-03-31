@@ -10,12 +10,12 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class GiftDetails:
-    r"""This type contains information about a digital gift card line item that was purchased as a gift and sent to the recipient by email.<br><br><span class=\"tablenote\"><strong>Note:</strong> When retrieving information for a digital gift card that is more than 90 days old, the information returned in all fields will be masked.</span>"""
+    r"""This type contains information about a digital gift card line item that was purchased as a gift and sent to the recipient by email.<br><br><span class=\\"tablenote\\"><strong>Note:</strong> When retrieving information for a digital gift card that is more than 90 days old, the information returned in all fields will be masked.</span>"""
     
     message: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('message'), 'exclude': lambda f: f is None }})
-    r"""This field contains the gift message from the buyer to the gift recipient. This field is only returned if the buyer of the gift included a message for the gift.<br><br><span class=\"tablenote\"><strong>Note:</strong> The <b>message</b> that is returned will be masked for any order that is more than 90 days old. For example, H****************!</span>"""  
+    r"""This field contains the gift message from the buyer to the gift recipient. This field is only returned if the buyer of the gift included a message for the gift.<br><br><span class=\\"tablenote\\"><strong>Note:</strong> The <b>message</b> that is returned will be masked for any order that is more than 90 days old. For example, H****************!</span>"""  
     recipient_email: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('recipientEmail'), 'exclude': lambda f: f is None }})
-    r"""The email address of the gift recipient. The seller will send the digital gift card to this email address.<br><br><span class=\"tablenote\"><strong>Note:</strong> The <b>recipientEmail</b> that is returned will be masked for any order that is more than 90 days old. For example, j****@******.**m</span>"""  
+    r"""The email address of the gift recipient. The seller will send the digital gift card to this email address.<br><br><span class=\\"tablenote\\"><strong>Note:</strong> The <b>recipientEmail</b> that is returned will be masked for any order that is more than 90 days old. For example, j****@******.**m</span>"""  
     sender_name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('senderName'), 'exclude': lambda f: f is None }})
-    r"""The name of the buyer, which will appear on the email that is sent to the gift recipient.<br><br><span class=\"tablenote\"><strong>Note:</strong> The <b>senderName</b> that is returned will be masked for any order that is more than 90 days old. For example, J***********h.</span>"""  
+    r"""The name of the buyer, which will appear on the email that is sent to the gift recipient.<br><br><span class=\\"tablenote\\"><strong>Note:</strong> The <b>senderName</b> that is returned will be masked for any order that is more than 90 days old. For example, J***********h.</span>"""  
     

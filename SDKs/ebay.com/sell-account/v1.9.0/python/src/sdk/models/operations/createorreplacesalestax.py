@@ -17,7 +17,7 @@ class CreateOrReplaceSalesTaxSecurity:
 class CreateOrReplaceSalesTaxRequest:
     
     country_code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'countryCode', 'style': 'simple', 'explode': False }})
-    r"""This path parameter specifies the two-letter <a href=\"https://www.iso.org/iso-3166-country-codes.html \" title=\"https://www.iso.org \" target=\"_blank\">ISO 3166</a> code for the country for which you want to create a sales tax table entry."""  
+    r"""This path parameter specifies the two-letter <a href=\\"https://www.iso.org/iso-3166-country-codes.html \\" title=\\"https://www.iso.org \\" target=\\"_blank\\">ISO 3166</a> code for the country for which you want to create a sales tax table entry."""  
     jurisdiction_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'jurisdictionId', 'style': 'simple', 'explode': False }})
     r"""This path parameter specifies the ID of the tax jurisdiction for the table entry you want to create. Retrieve valid jurisdiction IDs using <b>getSalesTaxJurisdictions</b> in the Metadata API."""  
     sales_tax_base: shared_salestaxbase.SalesTaxBase = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})

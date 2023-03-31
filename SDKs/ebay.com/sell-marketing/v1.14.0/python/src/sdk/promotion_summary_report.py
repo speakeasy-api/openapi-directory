@@ -22,7 +22,7 @@ class PromotionSummaryReport:
         self._gen_version = gen_version
         
     def get_promotion_summary_report(self, request: operations.GetPromotionSummaryReportRequest, security: operations.GetPromotionSummaryReportSecurity) -> operations.GetPromotionSummaryReportResponse:
-        r"""This method generates a report that summarizes the seller's promotions for the specified eBay marketplace. The report returns information on <code>RUNNING</code>, <code>PAUSED</code>, and <code>ENDED</code> promotions (deleted reports are not returned) and summarizes the seller's campaign performance for all promotions on a given site.  <br><br>For information about summary reports, see <a href=\"/api-docs/sell/static/marketing/pm-summary-report.html\">Reading the item promotion Summary report</a>."""
+        r"""This method generates a report that summarizes the seller's promotions for the specified eBay marketplace. The report returns information on <code>RUNNING</code>, <code>PAUSED</code>, and <code>ENDED</code> promotions (deleted reports are not returned) and summarizes the seller's campaign performance for all promotions on a given site.  <br><br>For information about summary reports, see <a href=\\"/api-docs/sell/static/marketing/pm-summary-report.html\\">Reading the item promotion Summary report</a>."""
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/promotion_summary_report'

@@ -11,7 +11,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class SummaryReportResponse:
-    r"""This type defines the fields in an Promotions Manager Summary report. Reports are formatted in JSON. For more details, see <a href=\"/api-docs/sell/static/marketing/pm-summary-reports.html\">Reading item promotion Summary reports</a>."""
+    r"""This type defines the fields in an Promotions Manager Summary report. Reports are formatted in JSON. For more details, see <a href=\\"/api-docs/sell/static/marketing/pm-summary-reports.html\\">Reading item promotion Summary reports</a>."""
     
     base_sale: Optional[shared_amount.Amount] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('baseSale'), 'exclude': lambda f: f is None }})
     r"""A complex type that describes the value of a monetary amount as represented by a global currency."""  

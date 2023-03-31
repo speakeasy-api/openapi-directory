@@ -20,5 +20,5 @@ class DeleteAdResponse:
     listing_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('listingId'), 'exclude': lambda f: f is None }})
     r"""A unique eBay-assigned ID for a listing that is generated when the listing is created."""  
     status_code: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('statusCode'), 'exclude': lambda f: f is None }})
-    r"""An HTTP status code that indicates the response-status of the request. Check this code to see if the ad was successfully deleted.<span class=\"tablenote\"><b>Note:</b>A status code is returned for each ad that the seller deletes, or attempts to delete.</span>"""  
+    r"""An HTTP status code that indicates the response-status of the request. Check this code to see if the ad was successfully deleted.<span class=\\"tablenote\\"><b>Note:</b>A status code is returned for each ad that the seller deletes, or attempts to delete.</span>"""  
     

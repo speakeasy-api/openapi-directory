@@ -22,7 +22,7 @@ class Quota:
     notice_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('noticeEnabled'), 'exclude': lambda f: f is None }})
     r"""Should a quota warning be sent to the account owner when a threshold level of space utilization is reached?"""  
     notice_threshold: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('noticeThreshold'), 'exclude': lambda f: f is None }})
-    r"""Treshold that triggers a quota notification. This represents the \"percent full\" your account must be before the quota notification is generated."""  
+    r"""Treshold that triggers a quota notification. This represents the \\"percent full\\" your account must be before the quota notification is generated."""  
     transactions_limit: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('transactionsLimit'), 'exclude': lambda f: f is None }})
     r"""Total number of transactions allowed in a 24-hour period."""  
     transactions_notice_enabled: Optional[bool] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('transactionsNoticeEnabled'), 'exclude': lambda f: f is None }})

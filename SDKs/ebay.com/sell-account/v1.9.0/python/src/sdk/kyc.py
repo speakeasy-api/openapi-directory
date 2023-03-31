@@ -22,7 +22,7 @@ class Kyc:
         self._gen_version = gen_version
         
     def get_kyc(self) -> operations.GetKYCResponse:
-        r"""<span class=\"tablenote\"><b>Note:</b>This method was originally created to see which onboarding requirements were still pending for sellers being onboarded for eBay managed payments, but now that all seller accounts are onboarded globally, this method should now just returne an empty payload with a <code>204 No Content</code> HTTP status code. </span>"""
+        r"""<span class=\\"tablenote\\"><b>Note:</b>This method was originally created to see which onboarding requirements were still pending for sellers being onboarded for eBay managed payments, but now that all seller accounts are onboarded globally, this method should now just returne an empty payload with a <code>204 No Content</code> HTTP status code. </span>"""
         base_url = self._server_url
         
         url = base_url.removesuffix('/') + '/kyc'

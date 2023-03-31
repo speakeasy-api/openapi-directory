@@ -9,7 +9,7 @@ from typing import Any, Optional
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
-class ValueError:
+class ValueErrorT:
     r"""Used to error if input validation fails."""
     
     fields_: Optional[dict[str, Any]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fields'), 'exclude': lambda f: f is None }})  

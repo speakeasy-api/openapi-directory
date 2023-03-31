@@ -17,7 +17,7 @@ class GetRateTablesSecurity:
 class GetRateTablesRequest:
     
     country_code: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'country_code', 'style': 'form', 'explode': True }})
-    r"""This query parameter specifies the two-letter <a href=\"https://www.iso.org/iso-3166-country-codes.html \" title=\"https://www.iso.org \" target=\"_blank\">ISO 3166</a> code of country for which you want shipping rate table information. If you do not specify a country code, the request returns all of the seller's defined shipping rate tables for all eBay marketplaces. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum"""  
+    r"""This query parameter specifies the two-letter <a href=\\"https://www.iso.org/iso-3166-country-codes.html \\" title=\\"https://www.iso.org \\" target=\\"_blank\\">ISO 3166</a> code of country for which you want shipping rate table information. If you do not specify a country code, the request returns all of the seller's defined shipping rate tables for all eBay marketplaces. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum"""  
     
 
 @dataclasses.dataclass

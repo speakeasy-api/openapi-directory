@@ -17,7 +17,7 @@ class GetReportMetadataForReportTypeSecurity:
 class GetReportMetadataForReportTypeRequest:
     
     report_type: str = dataclasses.field(metadata={'path_param': { 'field_name': 'report_type', 'style': 'simple', 'explode': False }})
-    r"""The name of the report type whose metadata you want to retrieve.<br /><br /><span class=\"tablenote\"><b>Tip:</b> For details about available report types and their descriptions, refer to the <a href=\"/api-docs/sell/marketing/types/plr:ReportTypeEnum\">ReportTypeEnum</a>.</span>"""  
+    r"""The name of the report type whose metadata you want to retrieve.<br /><br /><span class=\\"tablenote\\"><b>Tip:</b> For details about available report types and their descriptions, refer to the <a href=\\"/api-docs/sell/marketing/types/plr:ReportTypeEnum\\">ReportTypeEnum</a>.</span>"""  
     
 
 @dataclasses.dataclass

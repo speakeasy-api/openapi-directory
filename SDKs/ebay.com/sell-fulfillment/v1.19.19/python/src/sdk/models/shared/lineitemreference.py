@@ -15,5 +15,5 @@ class LineItemReference:
     line_item_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('lineItemId'), 'exclude': lambda f: f is None }})
     r"""This is the unique identifier of the eBay order line item that is part of the shipping fulfillment. The line item ID is created as soon as there is a commitment to buy from the seller."""  
     quantity: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('quantity'), 'exclude': lambda f: f is None }})
-    r"""This is the number of lineItems associated with the <a href=\"#request.trackingNumber\">trackingNumber</a> specified by the seller. This must be a whole number greater than zero (0)."""  
+    r"""This is the number of lineItems associated with the <a href=\\"#request.trackingNumber\\">trackingNumber</a> specified by the seller. This must be a whole number greater than zero (0)."""  
     

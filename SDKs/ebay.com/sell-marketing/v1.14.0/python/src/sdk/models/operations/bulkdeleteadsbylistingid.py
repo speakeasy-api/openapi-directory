@@ -20,7 +20,7 @@ class BulkDeleteAdsByListingIDRequest:
     bulk_delete_ad_request: shared_bulkdeleteadrequest.BulkDeleteAdRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
     r"""This request object defines the fields for the <b>bulkDeleteAdsByListingId</b> request."""  
     campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
-    r"""A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling <a href=\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\">getCampaigns</a>."""  
+    r"""A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling <a href=\\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\\">getCampaigns</a>."""  
     
 
 @dataclasses.dataclass

@@ -21,7 +21,7 @@ class MerchandisedProduct:
     market_price_details: Optional[list[shared_marketpricedetail.MarketPriceDetail]] = dataclasses.field(default=None)
     r"""An array of containers for the product market price details, such as condition and market price."""  
     rating_aspects: Optional[list[shared_ratingaspect.RatingAspect]] = dataclasses.field(default=None)
-    r"""An array of containers for ratings of the product aspects, such as \"Is it a good value\"."""  
+    r"""An array of containers for ratings of the product aspects, such as \\"Is it a good value\\"."""  
     rating_count: Optional[int] = dataclasses.field(default=None)
     r"""The total number of eBay users that rated the product."""  
     review_count: Optional[int] = dataclasses.field(default=None)

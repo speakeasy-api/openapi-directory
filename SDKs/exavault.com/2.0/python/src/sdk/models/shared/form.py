@@ -50,5 +50,5 @@ class Form:
     relationships: Optional[FormRelationships] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('relationships'), 'exclude': lambda f: f is None }})
     r"""Share relationship data of the form."""  
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type is \"form\"."""  
+    r"""Type is \\"form\\"."""  
     

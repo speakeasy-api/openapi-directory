@@ -40,7 +40,7 @@ class GetVehiclesVehicleidRequest:
     vehicle_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'vehicleId', 'style': 'simple', 'explode': False }})
     r"""ID of the Vehicle"""  
     field: Optional[list[GetVehiclesVehicleidFieldEnum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field[]', 'style': 'form', 'explode': True }})
-    r"""An optional array of Vehicle fields that should be included in the response, for example: `?field[]=information&field[]=location` 
+    r"""An optional array of Vehicle fields that should be included in the response, for example: `?field[]=information&field[]=location`
     
     By default, no fields are included and only the Vehicle ID will be returned. Response time may be impacted by which fields you request.
     """  

@@ -10,7 +10,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class Dimension:
-    r"""This type defines the annotation and dimension key used by the report. For information on how to set these values, see <a href=\"/api-docs/sell/static/marketing/pl-reports.html\">Promoted Listings reporting</a>."""
+    r"""This type defines the annotation and dimension key used by the report. For information on how to set these values, see <a href=\\"/api-docs/sell/static/marketing/pl-reports.html\\">Promoted Listings reporting</a>."""
     
     annotation_keys: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('annotationKeys'), 'exclude': lambda f: f is None }})
     r"""A list of annotations associated with the dimension of the report."""  

@@ -16,7 +16,7 @@ class DeleteSalesTaxSecurity:
 class DeleteSalesTaxRequest:
     
     country_code: str = dataclasses.field(metadata={'path_param': { 'field_name': 'countryCode', 'style': 'simple', 'explode': False }})
-    r"""This path parameter specifies the two-letter <a href=\"https://www.iso.org/iso-3166-country-codes.html \" title=\"https://www.iso.org \" target=\"_blank\">ISO 3166</a> code for the country whose sales tax table entry you want to delete."""  
+    r"""This path parameter specifies the two-letter <a href=\\"https://www.iso.org/iso-3166-country-codes.html \\" title=\\"https://www.iso.org \\" target=\\"_blank\\">ISO 3166</a> code for the country whose sales tax table entry you want to delete."""  
     jurisdiction_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'jurisdictionId', 'style': 'simple', 'explode': False }})
     r"""This path parameter specifies the ID of the sales tax jurisdiction whose table entry you want to delete. Retrieve valid jurisdiction IDs using <b>getSalesTaxJurisdictions</b> in the Metadata API."""  
     

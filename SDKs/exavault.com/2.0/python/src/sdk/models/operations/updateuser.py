@@ -11,7 +11,7 @@ from sdk import utils
 from typing import Optional
 
 class UpdateUserUpdateUserRequestBodyRoleEnum(str, Enum):
-    r"""The type of user (**admin** or **user**). Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter."""
+    r"""The type of user (**admin** or **user**). Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \\"download,upload,list,delete\\" in the `permissions` parameter."""
     USER = 'user'
     ADMIN = 'admin'
 
@@ -41,7 +41,7 @@ class UpdateUserUpdateUserRequestBody:
     r"""New password for the user"""  
     permissions: Optional[shared_userpermissions.UserPermissions] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('permissions'), 'exclude': lambda f: f is None }})  
     role: Optional[UpdateUserUpdateUserRequestBodyRoleEnum] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('role'), 'exclude': lambda f: f is None }})
-    r"""The type of user (**admin** or **user**). Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter."""  
+    r"""The type of user (**admin** or **user**). Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \\"download,upload,list,delete\\" in the `permissions` parameter."""  
     time_zone: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('timeZone'), 'exclude': lambda f: f is None }})
     r"""Time zone, used for accurate time display within the application. See <a href='https://php.net/manual/en/timezones.php' target='blank'>this page</a> for allowed values."""  
     username: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('username'), 'exclude': lambda f: f is None }})

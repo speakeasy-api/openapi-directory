@@ -17,7 +17,7 @@ class GetFormByIDRequest:
     id: int = dataclasses.field(metadata={'path_param': { 'field_name': 'id', 'style': 'simple', 'explode': False }})
     r"""Form unique ID number."""  
     include: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'include', 'style': 'form', 'explode': True }})
-    r"""Enter \"**share**\" to get information about associated receive folder."""  
+    r"""Enter \\"**share**\\" to get information about associated receive folder."""  
     
 
 @dataclasses.dataclass

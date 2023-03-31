@@ -17,7 +17,7 @@ class GetSalesTaxesSecurity:
 class GetSalesTaxesRequest:
     
     country_code: str = dataclasses.field(metadata={'query_param': { 'field_name': 'country_code', 'style': 'form', 'explode': True }})
-    r"""This path parameter specifies the two-letter <a href=\"https://www.iso.org/iso-3166-country-codes.html \" title=\"https://www.iso.org \" target=\"_blank\">ISO 3166</a> code for the country whose tax table you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum"""  
+    r"""This path parameter specifies the two-letter <a href=\\"https://www.iso.org/iso-3166-country-codes.html \\" title=\\"https://www.iso.org \\" target=\\"_blank\\">ISO 3166</a> code for the country whose tax table you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum"""  
     
 
 @dataclasses.dataclass

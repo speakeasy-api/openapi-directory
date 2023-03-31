@@ -25,7 +25,7 @@ class GetChargerRequest:
     charger_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'chargerId', 'style': 'simple', 'explode': False }})
     r"""ID of the Charger"""  
     field: Optional[list[shared_onechargers_get_parameters_0_enum.OnechargersGetParameters0Enum]] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'field[]', 'style': 'form', 'explode': True }})
-    r"""An optional array of Charger fields that should be included in the response, for example: `?field[]=information&field[]=chargeState` 
+    r"""An optional array of Charger fields that should be included in the response, for example: `?field[]=information&field[]=chargeState`
     
     By default, no optional fields are included and only the Charger ID will be returned. Response time will generally be slower the more fields you request.
     """  

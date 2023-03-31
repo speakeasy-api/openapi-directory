@@ -87,7 +87,7 @@ class WebhookActivityAttributesV2WebhookV2DetailsWebhookV2EventDataShare:
     name: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('name'), 'exclude': lambda f: f is None }})
     r"""Name of receiv"""  
     owner_hash: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('ownerHash'), 'exclude': lambda f: f is None }})
-    r"""Hash value of the user who \"owns\" the receive fo"""  
+    r"""Hash value of the user who \\"owns\\" the receive fo"""  
     paths: Optional[list[str]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('paths'), 'exclude': lambda f: f is None }})
     r"""List"""  
     recipients: Optional[list[shared_sharerecipient.ShareRecipient]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('recipients'), 'exclude': lambda f: f is None }})
@@ -101,7 +101,7 @@ class WebhookActivityAttributesV2WebhookV2DetailsWebhookV2EventDataShare:
     tracking_status: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('trackingStatus'), 'exclude': lambda f: f is None }})
     r"""Status of invitations sent for this receive folder"""  
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of share **\"receive\"**"""  
+    r"""Type of share **\\"receive\\"**"""  
     
 
 @dataclass_json(undefined=Undefined.EXCLUDE)
@@ -133,7 +133,7 @@ class WebhookActivityAttributesV2WebhookV2Details:
     protocol: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('protocol'), 'exclude': lambda f: f is None }})
     r"""Type of connection used for related activity"""  
     username: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('username'), 'exclude': lambda f: f is None }})
-    r"""Username logged for related activity. May refer to someone who is not a user of the account, such as a share recipient or \"publ"""  
+    r"""Username logged for related activity. May refer to someone who is not a user of the account, such as a share recipient or \\"publ"""  
     
 class WebhookActivityAttributesV2EventEnum(str, Enum):
     r"""Event type"""

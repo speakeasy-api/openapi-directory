@@ -17,9 +17,9 @@ class GetAdvertisingEligibilitySecurity:
 class GetAdvertisingEligibilityRequest:
     
     x_ebay_c_marketplace_id: str = dataclasses.field(metadata={'header': { 'field_name': 'X-EBAY-C-MARKETPLACE-ID', 'style': 'simple', 'explode': False }})
-    r"""The unique identifier of the eBay marketplace for which the seller eligibility status shall be checked.<br /><br /><span class=\"tablenote\"><b>Note:</b> This value is case-sensitive.</span>"""  
+    r"""The unique identifier of the eBay marketplace for which the seller eligibility status shall be checked.<br /><br /><span class=\\"tablenote\\"><b>Note:</b> This value is case-sensitive.</span>"""  
     program_types: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'program_types', 'style': 'form', 'explode': True }})
-    r"""A comma-separated list of eBay advertising programs.<br /><br /><span class=\"tablenote\"><b>Tip:</b> See the <a href=\"/api-docs/sell/account/types/plser:AdvertisingProgramEnum\"> AdvertisingProgramEnum</a> type for possible values.</span><br /><br />If no programs are specified, the results will be returned for all programs."""  
+    r"""A comma-separated list of eBay advertising programs.<br /><br /><span class=\\"tablenote\\"><b>Tip:</b> See the <a href=\\"/api-docs/sell/account/types/plser:AdvertisingProgramEnum\\"> AdvertisingProgramEnum</a> type for possible values.</span><br /><br />If no programs are specified, the results will be returned for all programs."""  
     
 
 @dataclasses.dataclass

@@ -18,9 +18,9 @@ class BulkDeleteAdsByInventoryReferenceSecurity:
 class BulkDeleteAdsByInventoryReferenceRequest:
     
     bulk_delete_ads_by_inventory_reference_request: shared_bulkdeleteadsbyinventoryreferencerequest.BulkDeleteAdsByInventoryReferenceRequest = dataclasses.field(metadata={'request': { 'media_type': 'application/json' }})
-    r"""This request works with listings created via the <a href=\"/api-docs/sell/inventory/resources/methods\">Inventory API</a>.<br /><br />The request is to delete a set of ads in bulk, as specified by a list of inventory reference IDs from the specified campaign."""  
+    r"""This request works with listings created via the <a href=\\"/api-docs/sell/inventory/resources/methods\\">Inventory API</a>.<br /><br />The request is to delete a set of ads in bulk, as specified by a list of inventory reference IDs from the specified campaign."""  
     campaign_id: str = dataclasses.field(metadata={'path_param': { 'field_name': 'campaign_id', 'style': 'simple', 'explode': False }})
-    r"""A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling <a href=\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\">getCampaigns</a>."""  
+    r"""A unique eBay-assigned ID for an ad campaign that's generated when a campaign is created. Get a seller's campaign IDs by calling <a href=\\"/api-docs/sell/marketing/resources/campaign/methods/getCampaigns\\">getCampaigns</a>."""  
     
 
 @dataclasses.dataclass

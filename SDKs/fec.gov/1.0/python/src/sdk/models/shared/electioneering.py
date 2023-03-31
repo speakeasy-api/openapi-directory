@@ -18,7 +18,7 @@ class Electioneering:
     calculated_candidate_share: Optional[float] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('calculated_candidate_share'), 'exclude': lambda f: f is None }})
     r"""\\"If an electioneering cost targets several candidates, the total cost is
     divided by the number of candidates. If it only mentions one candidate
-    the full cost of the communication is listed.\"
+    the full cost of the communication is listed.\" 
     """  
     candidate_district: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('candidate_district'), 'exclude': lambda f: f is None }})  
     candidate_id: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('candidate_id'), 'exclude': lambda f: f is None }})  

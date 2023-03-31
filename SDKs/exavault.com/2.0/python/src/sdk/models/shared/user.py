@@ -72,5 +72,5 @@ class User:
     relationships: Optional[UserRelationships] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('relationships'), 'exclude': lambda f: f is None }})
     r"""Home resource and owner account relationship data for the user."""  
     type: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('type'), 'exclude': lambda f: f is None }})
-    r"""Type of object being returned. Always \"user\""""  
+    r"""Type of object being returned. Always \\"user\\" """  
     

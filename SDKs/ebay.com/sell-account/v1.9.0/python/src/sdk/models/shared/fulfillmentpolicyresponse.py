@@ -11,7 +11,7 @@ from typing import Optional
 @dataclass_json(undefined=Undefined.EXCLUDE)
 @dataclasses.dataclass
 class FulfillmentPolicyResponse:
-    r"""The response payload for the <b>getFulfillmentPolicies</b> method.<br /><br /><span class=\"tablenote\"><b>Note</b>: Pagination has not yet been enabled for <b>getFulfillmentPolicies</b>, so all of the pagination-related fields are for future use.</span>"""
+    r"""The response payload for the <b>getFulfillmentPolicies</b> method.<br /><br /><span class=\\"tablenote\\"><b>Note</b>: Pagination has not yet been enabled for <b>getFulfillmentPolicies</b>, so all of the pagination-related fields are for future use.</span>"""
     
     fulfillment_policies: Optional[list[shared_fulfillmentpolicy.FulfillmentPolicy]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fulfillmentPolicies'), 'exclude': lambda f: f is None }})
     r"""A list of all of the seller's fulfillment policies defined for the specified marketplace. This array will be returned as empty if no fulfillment policies are defined for the specified marketplace."""  

@@ -25,7 +25,7 @@ class GetCharityOrgsRequest:
     q: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'q', 'style': 'form', 'explode': True }})
     r"""A query string that matches the keywords in name, mission statement, or description."""  
     registration_ids: Optional[str] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'registration_ids', 'style': 'form', 'explode': True }})
-    r"""A comma-separated list of charitable organization registration IDs.<br /><br /><span class=\"tablenote\"><b>Note: </b>Do not specify this parameter for query-based searches. Specify either the <b>q</b> or <b>registration_ids</b> parameter, but not both.</span><br /><br /><b>Maximum Limit:</b> <code>20</code>"""  
+    r"""A comma-separated list of charitable organization registration IDs.<br /><br /><span class=\\"tablenote\\"><b>Note: </b>Do not specify this parameter for query-based searches. Specify either the <b>q</b> or <b>registration_ids</b> parameter, but not both.</span><br /><br /><b>Maximum Limit:</b> <code>20</code>"""  
     
 
 @dataclasses.dataclass
